@@ -40,6 +40,9 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
     @NameInMap("Model")
     public Boolean model;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     /**
      * <p>Whether the operation was successful. Values: true: success; false: failure.</p>
      * 
@@ -84,6 +87,14 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
     }
     public Boolean getModel() {
         return this.model;
+    }
+
+    public FlowUnbindPhoneResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public FlowUnbindPhoneResponseBody setSuccess(Boolean success) {

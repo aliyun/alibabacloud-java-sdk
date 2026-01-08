@@ -47,6 +47,13 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>2024-01-30 00:00:00</p>
+     */
+    @NameInMap("EndTimeStr")
+    public String endTimeStr;
+
+    /**
+     * <strong>example:</strong>
      * <p>UP</p>
      */
     @NameInMap("EventAction")
@@ -87,6 +94,13 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public Long startTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2024-01-01 00:00:00</p>
+     */
+    @NameInMap("StartTimeStr")
+    public String startTimeStr;
 
     /**
      * <strong>example:</strong>
@@ -145,6 +159,14 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public ListChatappMessageShrinkRequest setEndTimeStr(String endTimeStr) {
+        this.endTimeStr = endTimeStr;
+        return this;
+    }
+    public String getEndTimeStr() {
+        return this.endTimeStr;
     }
 
     public ListChatappMessageShrinkRequest setEventAction(String eventAction) {
@@ -209,6 +231,14 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public ListChatappMessageShrinkRequest setStartTimeStr(String startTimeStr) {
+        this.startTimeStr = startTimeStr;
+        return this;
+    }
+    public String getStartTimeStr() {
+        return this.startTimeStr;
     }
 
     public ListChatappMessageShrinkRequest setTemplateCode(String templateCode) {

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class SendChatappMessageShrinkRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("AdAccountId")
+    public String adAccountId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,6 +72,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
      * <p>示例值示例值</p>
      */
     @NameInMap("CustWabaId")
+    @Deprecated
     public String custWabaId;
 
     /**
@@ -108,6 +116,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
      * <p>示例值</p>
      */
     @NameInMap("IsvCode")
+    @Deprecated
     public String isvCode;
 
     /**
@@ -123,6 +132,13 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
      */
     @NameInMap("Language")
     public String language;
+
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
+    @NameInMap("MessageCampaignId")
+    public String messageCampaignId;
 
     /**
      * <strong>example:</strong>
@@ -201,6 +217,13 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>示例值</p>
+     */
+    @NameInMap("TokenType")
+    public String tokenType;
+
+    /**
+     * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
     @NameInMap("TrackingData")
@@ -221,6 +244,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public static SendChatappMessageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SendChatappMessageShrinkRequest self = new SendChatappMessageShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendChatappMessageShrinkRequest setAdAccountId(String adAccountId) {
+        this.adAccountId = adAccountId;
+        return this;
+    }
+    public String getAdAccountId() {
+        return this.adAccountId;
     }
 
     public SendChatappMessageShrinkRequest setChannelType(String channelType) {
@@ -255,6 +286,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    @Deprecated
     public SendChatappMessageShrinkRequest setCustWabaId(String custWabaId) {
         this.custWabaId = custWabaId;
         return this;
@@ -311,6 +343,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
         return this.from;
     }
 
+    @Deprecated
     public SendChatappMessageShrinkRequest setIsvCode(String isvCode) {
         this.isvCode = isvCode;
         return this;
@@ -333,6 +366,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public SendChatappMessageShrinkRequest setMessageCampaignId(String messageCampaignId) {
+        this.messageCampaignId = messageCampaignId;
+        return this;
+    }
+    public String getMessageCampaignId() {
+        return this.messageCampaignId;
     }
 
     public SendChatappMessageShrinkRequest setMessageType(String messageType) {
@@ -437,6 +478,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getTo() {
         return this.to;
+    }
+
+    public SendChatappMessageShrinkRequest setTokenType(String tokenType) {
+        this.tokenType = tokenType;
+        return this;
+    }
+    public String getTokenType() {
+        return this.tokenType;
     }
 
     public SendChatappMessageShrinkRequest setTrackingData(String trackingData) {

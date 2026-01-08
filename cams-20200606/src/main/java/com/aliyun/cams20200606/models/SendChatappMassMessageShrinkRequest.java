@@ -25,6 +25,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
      * <p>示例值示例值示例值</p>
      */
     @NameInMap("CustWabaId")
+    @Deprecated
     public String custWabaId;
 
     /**
@@ -65,6 +66,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
      * <p>示例值示例值</p>
      */
     @NameInMap("IsvCode")
+    @Deprecated
     public String isvCode;
 
     /**
@@ -151,6 +153,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    @Deprecated
     public SendChatappMassMessageShrinkRequest setCustWabaId(String custWabaId) {
         this.custWabaId = custWabaId;
         return this;
@@ -199,6 +202,7 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
         return this.from;
     }
 
+    @Deprecated
     public SendChatappMassMessageShrinkRequest setIsvCode(String isvCode) {
         this.isvCode = isvCode;
         return this;
