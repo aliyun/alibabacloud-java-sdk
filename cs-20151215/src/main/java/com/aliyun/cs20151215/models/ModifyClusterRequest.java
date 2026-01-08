@@ -55,6 +55,9 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("control_plane_config")
     public ModifyClusterRequestControlPlaneConfig controlPlaneConfig;
 
+    @NameInMap("control_plane_endpoints_config")
+    public ModifyClusterRequestControlPlaneEndpointsConfig controlPlaneEndpointsConfig;
+
     /**
      * <p>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
      * <ul>
@@ -270,6 +273,14 @@ public class ModifyClusterRequest extends TeaModel {
     }
     public ModifyClusterRequestControlPlaneConfig getControlPlaneConfig() {
         return this.controlPlaneConfig;
+    }
+
+    public ModifyClusterRequest setControlPlaneEndpointsConfig(ModifyClusterRequestControlPlaneEndpointsConfig controlPlaneEndpointsConfig) {
+        this.controlPlaneEndpointsConfig = controlPlaneEndpointsConfig;
+        return this;
+    }
+    public ModifyClusterRequestControlPlaneEndpointsConfig getControlPlaneEndpointsConfig() {
+        return this.controlPlaneEndpointsConfig;
     }
 
     public ModifyClusterRequest setDeletionProtection(Boolean deletionProtection) {
@@ -878,6 +889,55 @@ public class ModifyClusterRequest extends TeaModel {
         }
         public String getSystemDiskSnapshotPolicyId() {
             return this.systemDiskSnapshotPolicyId;
+        }
+
+    }
+
+    public static class ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig extends TeaModel {
+        @NameInMap("bind_vpcs")
+        public java.util.List<String> bindVpcs;
+
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        public static ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig self = new ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig setBindVpcs(java.util.List<String> bindVpcs) {
+            this.bindVpcs = bindVpcs;
+            return this;
+        }
+        public java.util.List<String> getBindVpcs() {
+            return this.bindVpcs;
+        }
+
+        public ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class ModifyClusterRequestControlPlaneEndpointsConfig extends TeaModel {
+        @NameInMap("internal_dns_config")
+        public ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig internalDnsConfig;
+
+        public static ModifyClusterRequestControlPlaneEndpointsConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterRequestControlPlaneEndpointsConfig self = new ModifyClusterRequestControlPlaneEndpointsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterRequestControlPlaneEndpointsConfig setInternalDnsConfig(ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig internalDnsConfig) {
+            this.internalDnsConfig = internalDnsConfig;
+            return this;
+        }
+        public ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig getInternalDnsConfig() {
+            return this.internalDnsConfig;
         }
 
     }

@@ -188,6 +188,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("control_plane_config")
     public CreateClusterRequestControlPlaneConfig controlPlaneConfig;
 
+    @NameInMap("control_plane_endpoints_config")
+    public CreateClusterRequestControlPlaneEndpointsConfig controlPlaneEndpointsConfig;
+
     /**
      * <p>The control plane components for which you want to enable log collection.</p>
      * <p>By default, the logs of kube-apiserver, kube-controller-manager, and kube-scheduler are collected.</p>
@@ -1349,6 +1352,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public CreateClusterRequestControlPlaneConfig getControlPlaneConfig() {
         return this.controlPlaneConfig;
+    }
+
+    public CreateClusterRequest setControlPlaneEndpointsConfig(CreateClusterRequestControlPlaneEndpointsConfig controlPlaneEndpointsConfig) {
+        this.controlPlaneEndpointsConfig = controlPlaneEndpointsConfig;
+        return this;
+    }
+    public CreateClusterRequestControlPlaneEndpointsConfig getControlPlaneEndpointsConfig() {
+        return this.controlPlaneEndpointsConfig;
     }
 
     public CreateClusterRequest setControlplaneLogComponents(java.util.List<String> controlplaneLogComponents) {
@@ -2571,6 +2582,44 @@ public class CreateClusterRequest extends TeaModel {
         }
         public String getSystemDiskSnapshotPolicyId() {
             return this.systemDiskSnapshotPolicyId;
+        }
+
+    }
+
+    public static class CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig extends TeaModel {
+        @NameInMap("bind_vpcs")
+        public java.util.List<String> bindVpcs;
+
+        public static CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig self = new CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig setBindVpcs(java.util.List<String> bindVpcs) {
+            this.bindVpcs = bindVpcs;
+            return this;
+        }
+        public java.util.List<String> getBindVpcs() {
+            return this.bindVpcs;
+        }
+
+    }
+
+    public static class CreateClusterRequestControlPlaneEndpointsConfig extends TeaModel {
+        @NameInMap("internal_dns_config")
+        public CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig internalDnsConfig;
+
+        public static CreateClusterRequestControlPlaneEndpointsConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestControlPlaneEndpointsConfig self = new CreateClusterRequestControlPlaneEndpointsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestControlPlaneEndpointsConfig setInternalDnsConfig(CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig internalDnsConfig) {
+            this.internalDnsConfig = internalDnsConfig;
+            return this;
+        }
+        public CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig getInternalDnsConfig() {
+            return this.internalDnsConfig;
         }
 
     }

@@ -67,6 +67,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("control_plane_config")
     public DescribeClusterDetailResponseBodyControlPlaneConfig controlPlaneConfig;
 
+    @NameInMap("control_plane_endpoints_config")
+    public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig controlPlaneEndpointsConfig;
+
     /**
      * <p>The time when the cluster was created.</p>
      * 
@@ -470,6 +473,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public DescribeClusterDetailResponseBodyControlPlaneConfig getControlPlaneConfig() {
         return this.controlPlaneConfig;
+    }
+
+    public DescribeClusterDetailResponseBody setControlPlaneEndpointsConfig(DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig controlPlaneEndpointsConfig) {
+        this.controlPlaneEndpointsConfig = controlPlaneEndpointsConfig;
+        return this;
+    }
+    public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig getControlPlaneEndpointsConfig() {
+        return this.controlPlaneEndpointsConfig;
     }
 
     public DescribeClusterDetailResponseBody setCreated(String created) {
@@ -1190,6 +1201,55 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
         public String getSystemDiskSnapshotPolicyId() {
             return this.systemDiskSnapshotPolicyId;
+        }
+
+    }
+
+    public static class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig extends TeaModel {
+        @NameInMap("bind_vpcs")
+        public java.util.List<String> bindVpcs;
+
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        public static DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig self = new DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig setBindVpcs(java.util.List<String> bindVpcs) {
+            this.bindVpcs = bindVpcs;
+            return this;
+        }
+        public java.util.List<String> getBindVpcs() {
+            return this.bindVpcs;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig extends TeaModel {
+        @NameInMap("internal_dns_config")
+        public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig internalDnsConfig;
+
+        public static DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig self = new DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig setInternalDnsConfig(DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig internalDnsConfig) {
+            this.internalDnsConfig = internalDnsConfig;
+            return this;
+        }
+        public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig getInternalDnsConfig() {
+            return this.internalDnsConfig;
         }
 
     }

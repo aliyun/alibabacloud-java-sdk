@@ -790,6 +790,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("control_plane_config", request.controlPlaneConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.controlPlaneEndpointsConfig)) {
+            body.put("control_plane_endpoints_config", request.controlPlaneEndpointsConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.controlplaneLogComponents)) {
             body.put("controlplane_log_components", request.controlplaneLogComponents);
         }
@@ -5582,6 +5586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.controlPlaneConfig)) {
             body.put("control_plane_config", request.controlPlaneConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.controlPlaneEndpointsConfig)) {
+            body.put("control_plane_endpoints_config", request.controlPlaneEndpointsConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
