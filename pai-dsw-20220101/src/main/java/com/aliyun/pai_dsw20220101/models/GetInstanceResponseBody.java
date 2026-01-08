@@ -1104,6 +1104,9 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDatasets extends TeaModel {
+        @NameInMap("ActualMountAccess")
+        public String actualMountAccess;
+
         /**
          * <p>The dataset ID.</p>
          * 
@@ -1183,6 +1186,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static GetInstanceResponseBodyDatasets build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyDatasets self = new GetInstanceResponseBodyDatasets();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDatasets setActualMountAccess(String actualMountAccess) {
+            this.actualMountAccess = actualMountAccess;
+            return this;
+        }
+        public String getActualMountAccess() {
+            return this.actualMountAccess;
         }
 
         public GetInstanceResponseBodyDatasets setDatasetId(String datasetId) {
