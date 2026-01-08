@@ -209,6 +209,44 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
     }
 
+    public static class TextModerationPlusResponseBodyDataExtLlmContent extends TeaModel {
+        @NameInMap("OutputText")
+        public String outputText;
+
+        public static TextModerationPlusResponseBodyDataExtLlmContent build(java.util.Map<String, ?> map) throws Exception {
+            TextModerationPlusResponseBodyDataExtLlmContent self = new TextModerationPlusResponseBodyDataExtLlmContent();
+            return TeaModel.build(map, self);
+        }
+
+        public TextModerationPlusResponseBodyDataExtLlmContent setOutputText(String outputText) {
+            this.outputText = outputText;
+            return this;
+        }
+        public String getOutputText() {
+            return this.outputText;
+        }
+
+    }
+
+    public static class TextModerationPlusResponseBodyDataExt extends TeaModel {
+        @NameInMap("LlmContent")
+        public TextModerationPlusResponseBodyDataExtLlmContent llmContent;
+
+        public static TextModerationPlusResponseBodyDataExt build(java.util.Map<String, ?> map) throws Exception {
+            TextModerationPlusResponseBodyDataExt self = new TextModerationPlusResponseBodyDataExt();
+            return TeaModel.build(map, self);
+        }
+
+        public TextModerationPlusResponseBodyDataExt setLlmContent(TextModerationPlusResponseBodyDataExtLlmContent llmContent) {
+            this.llmContent = llmContent;
+            return this;
+        }
+        public TextModerationPlusResponseBodyDataExtLlmContent getLlmContent() {
+            return this.llmContent;
+        }
+
+    }
+
     public static class TextModerationPlusResponseBodyDataResultCustomizedHit extends TeaModel {
         /**
          * <p>The terms that are hit. Multiple terms are separated by commas (,).</p>
@@ -451,6 +489,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @NameInMap("DetectedLanguage")
         public String detectedLanguage;
 
+        @NameInMap("Ext")
+        public TextModerationPlusResponseBodyDataExt ext;
+
         @NameInMap("ManualTaskId")
         public String manualTaskId;
 
@@ -547,6 +588,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
         public String getDetectedLanguage() {
             return this.detectedLanguage;
+        }
+
+        public TextModerationPlusResponseBodyData setExt(TextModerationPlusResponseBodyDataExt ext) {
+            this.ext = ext;
+            return this;
+        }
+        public TextModerationPlusResponseBodyDataExt getExt() {
+            return this.ext;
         }
 
         public TextModerationPlusResponseBodyData setManualTaskId(String manualTaskId) {

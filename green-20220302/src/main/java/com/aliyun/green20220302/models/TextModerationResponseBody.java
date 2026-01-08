@@ -74,6 +74,44 @@ public class TextModerationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class TextModerationResponseBodyDataExtLlmContent extends TeaModel {
+        @NameInMap("outputText")
+        public String outputText;
+
+        public static TextModerationResponseBodyDataExtLlmContent build(java.util.Map<String, ?> map) throws Exception {
+            TextModerationResponseBodyDataExtLlmContent self = new TextModerationResponseBodyDataExtLlmContent();
+            return TeaModel.build(map, self);
+        }
+
+        public TextModerationResponseBodyDataExtLlmContent setOutputText(String outputText) {
+            this.outputText = outputText;
+            return this;
+        }
+        public String getOutputText() {
+            return this.outputText;
+        }
+
+    }
+
+    public static class TextModerationResponseBodyDataExt extends TeaModel {
+        @NameInMap("llmContent")
+        public TextModerationResponseBodyDataExtLlmContent llmContent;
+
+        public static TextModerationResponseBodyDataExt build(java.util.Map<String, ?> map) throws Exception {
+            TextModerationResponseBodyDataExt self = new TextModerationResponseBodyDataExt();
+            return TeaModel.build(map, self);
+        }
+
+        public TextModerationResponseBodyDataExt setLlmContent(TextModerationResponseBodyDataExtLlmContent llmContent) {
+            this.llmContent = llmContent;
+            return this;
+        }
+        public TextModerationResponseBodyDataExtLlmContent getLlmContent() {
+            return this.llmContent;
+        }
+
+    }
+
     public static class TextModerationResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
@@ -110,6 +148,9 @@ public class TextModerationResponseBody extends TeaModel {
          */
         @NameInMap("deviceId")
         public String deviceId;
+
+        @NameInMap("ext")
+        public TextModerationResponseBodyDataExt ext;
 
         /**
          * <p>The labels. Multiple labels are separated by commas (,). Valid values: ad: ad violation profanity: abuse contraband: contraband sexual_content: pornography violence: violence nonsense: irrigation spam: spam negative_content: undesirable content cyberbullying: cyberbullying C_customized: custom library that is hit</p>
@@ -167,6 +208,14 @@ public class TextModerationResponseBody extends TeaModel {
         }
         public String getDeviceId() {
             return this.deviceId;
+        }
+
+        public TextModerationResponseBodyData setExt(TextModerationResponseBodyDataExt ext) {
+            this.ext = ext;
+            return this;
+        }
+        public TextModerationResponseBodyDataExt getExt() {
+            return this.ext;
         }
 
         public TextModerationResponseBodyData setLabels(String labels) {
