@@ -1260,6 +1260,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改应用公网信息。</p>
+     * 
+     * @param request UpdatePrivateNetwrokRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePrivateNetwrokResponse
+     */
+    public UpdatePrivateNetwrokResponse updatePrivateNetwrokWithOptions(String appName, UpdatePrivateNetwrokRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePrivateNetwrok"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/private-networks"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrivateNetwrokResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改应用公网信息。</p>
+     * 
+     * @param request UpdatePrivateNetwrokRequest
+     * @return UpdatePrivateNetwrokResponse
+     */
+    public UpdatePrivateNetwrokResponse updatePrivateNetwrok(String appName, UpdatePrivateNetwrokRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updatePrivateNetwrokWithOptions(appName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>修改自动备份配置</p>
      * 
      * @param request UpdateSnapshotSettingRequest

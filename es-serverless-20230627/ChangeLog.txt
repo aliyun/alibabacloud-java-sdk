@@ -1,3 +1,7 @@
+2026-01-08 Version: 2.3.0
+- Support API UpdatePrivateNetwrok.
+
+
 2025-08-19 Version: 2.2.0
 - Support API UpdateNetwork.
 - Update API ListApps: add response parameters Body.result.$.tags.
