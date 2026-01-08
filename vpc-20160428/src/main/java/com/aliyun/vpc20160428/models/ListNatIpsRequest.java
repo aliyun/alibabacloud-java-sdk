@@ -37,6 +37,9 @@ public class ListNatIpsRequest extends TeaModel {
     @NameInMap("IpOrigin")
     public String ipOrigin;
 
+    @NameInMap("Ipv4Prefix")
+    public String ipv4Prefix;
+
     /**
      * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
@@ -160,6 +163,14 @@ public class ListNatIpsRequest extends TeaModel {
     }
     public String getIpOrigin() {
         return this.ipOrigin;
+    }
+
+    public ListNatIpsRequest setIpv4Prefix(String ipv4Prefix) {
+        this.ipv4Prefix = ipv4Prefix;
+        return this;
+    }
+    public String getIpv4Prefix() {
+        return this.ipv4Prefix;
     }
 
     public ListNatIpsRequest setMaxResults(String maxResults) {

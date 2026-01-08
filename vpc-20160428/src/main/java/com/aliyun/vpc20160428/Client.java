@@ -24671,6 +24671,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IpOrigin", request.ipOrigin);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4Prefix)) {
+            query.put("Ipv4Prefix", request.ipv4Prefix);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }

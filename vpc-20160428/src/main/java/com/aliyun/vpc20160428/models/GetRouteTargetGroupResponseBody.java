@@ -86,7 +86,17 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public java.util.List<GetRouteTargetGroupResponseBodyRouteTargetMemberList> routeTargetMemberList;
 
     /**
-     * <p>Status of the route target group.</p>
+     * <p>The status of the route target group. Values:</p>
+     * <ul>
+     * <li><strong>Recovering</strong>: In the process of switching back to the primary </li>
+     * <li><strong>Switched</strong>: The primary and secondary have been switched </li>
+     * <li><strong>Available</strong>: Available </li>
+     * <li><strong>Abnormal</strong>: Secondary instance is abnormal </li>
+     * <li><strong>Pending</strong>: In the process of being created </li>
+     * <li><strong>Switching</strong>: In the process of switching between primary and secondary </li>
+     * <li><strong>Deleting</strong>: In the process of being deleted </li>
+     * <li><strong>Unavailable</strong>: Both primary and secondary instances are abnormal</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
