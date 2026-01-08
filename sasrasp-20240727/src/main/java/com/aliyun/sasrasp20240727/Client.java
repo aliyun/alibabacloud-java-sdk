@@ -113,6 +113,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTimestamp", request.endTimestamp);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.handleStatus)) {
+            query.put("HandleStatus", request.handleStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.handlerType)) {
             query.put("HandlerType", request.handlerType);
         }

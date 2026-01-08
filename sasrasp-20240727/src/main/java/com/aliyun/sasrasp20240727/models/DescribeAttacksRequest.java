@@ -48,6 +48,9 @@ public class DescribeAttacksRequest extends TeaModel {
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
+    @NameInMap("HandleStatus")
+    public Integer handleStatus;
+
     /**
      * <strong>example:</strong>
      * <p>block</p>
@@ -184,6 +187,14 @@ public class DescribeAttacksRequest extends TeaModel {
     }
     public Long getEndTimestamp() {
         return this.endTimestamp;
+    }
+
+    public DescribeAttacksRequest setHandleStatus(Integer handleStatus) {
+        this.handleStatus = handleStatus;
+        return this;
+    }
+    public Integer getHandleStatus() {
+        return this.handleStatus;
     }
 
     public DescribeAttacksRequest setHandlerType(String handlerType) {
