@@ -2748,6 +2748,9 @@ public class RunInstancesRequest extends TeaModel {
         @NameInMap("RxQueueSize")
         public Integer rxQueueSize;
 
+        @NameInMap("SecondaryPrivateIpAddressCount")
+        public Integer secondaryPrivateIpAddressCount;
+
         /**
          * <p>The ID of the security group to which to assign ENI N.</p>
          * <p>Take note of the following items:</p>
@@ -2938,6 +2941,14 @@ public class RunInstancesRequest extends TeaModel {
         }
         public Integer getRxQueueSize() {
             return this.rxQueueSize;
+        }
+
+        public RunInstancesRequestNetworkInterface setSecondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
+            this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
+            return this;
+        }
+        public Integer getSecondaryPrivateIpAddressCount() {
+            return this.secondaryPrivateIpAddressCount;
         }
 
         public RunInstancesRequestNetworkInterface setSecurityGroupId(String securityGroupId) {
