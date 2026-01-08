@@ -262,9 +262,626 @@ public class HttpApiDeployConfig extends TeaModel {
 
     }
 
+    public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService extends TeaModel {
+        @NameInMap("matchType")
+        public String matchType;
+
+        @NameInMap("modalityType")
+        public String modalityType;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("requestCheckService")
+        public String requestCheckService;
+
+        @NameInMap("requestImageCheckService")
+        public String requestImageCheckService;
+
+        public static HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService self = new HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService setModalityType(String modalityType) {
+            this.modalityType = modalityType;
+            return this;
+        }
+        public String getModalityType() {
+            return this.modalityType;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService setRequestCheckService(String requestCheckService) {
+            this.requestCheckService = requestCheckService;
+            return this;
+        }
+        public String getRequestCheckService() {
+            return this.requestCheckService;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService setRequestImageCheckService(String requestImageCheckService) {
+            this.requestImageCheckService = requestImageCheckService;
+            return this;
+        }
+        public String getRequestImageCheckService() {
+            return this.requestImageCheckService;
+        }
+
+    }
+
+    public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService extends TeaModel {
+        @NameInMap("matchType")
+        public String matchType;
+
+        @NameInMap("modalityType")
+        public String modalityType;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("responseCheckService")
+        public String responseCheckService;
+
+        @NameInMap("responseImageCheckService")
+        public String responseImageCheckService;
+
+        public static HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService self = new HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService setModalityType(String modalityType) {
+            this.modalityType = modalityType;
+            return this;
+        }
+        public String getModalityType() {
+            return this.modalityType;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService setResponseCheckService(String responseCheckService) {
+            this.responseCheckService = responseCheckService;
+            return this;
+        }
+        public String getResponseCheckService() {
+            return this.responseCheckService;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService setResponseImageCheckService(String responseImageCheckService) {
+            this.responseImageCheckService = responseImageCheckService;
+            return this;
+        }
+        public String getResponseImageCheckService() {
+            return this.responseImageCheckService;
+        }
+
+    }
+
+    public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel extends TeaModel {
+        @NameInMap("level")
+        public String level;
+
+        @NameInMap("matchType")
+        public String matchType;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("type")
+        public String type;
+
+        public static HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel self = new HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules extends TeaModel {
+        @NameInMap("matchType")
+        public String matchType;
+
+        @NameInMap("pattern")
+        public String pattern;
+
+        public static HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules self = new HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+    }
+
+    public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig extends TeaModel {
+        @NameInMap("consumerRules")
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules consumerRules;
+
+        @NameInMap("level")
+        public String level;
+
+        @NameInMap("type")
+        public String type;
+
+        public static HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig self = new HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig setConsumerRules(HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules consumerRules) {
+            this.consumerRules = consumerRules;
+            return this;
+        }
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules getConsumerRules() {
+            return this.consumerRules;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig extends TeaModel {
+        @NameInMap("bufferLimit")
+        public Integer bufferLimit;
+
+        @NameInMap("checkRequest")
+        public Boolean checkRequest;
+
+        @NameInMap("checkRequestImage")
+        public Boolean checkRequestImage;
+
+        @NameInMap("checkResponse")
+        public Boolean checkResponse;
+
+        @NameInMap("checkResponseImage")
+        public Boolean checkResponseImage;
+
+        @NameInMap("consumerRequestCheckService")
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService> consumerRequestCheckService;
+
+        @NameInMap("consumerResponseCheckService")
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService> consumerResponseCheckService;
+
+        @NameInMap("consumerRiskLevel")
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel> consumerRiskLevel;
+
+        @NameInMap("requestCheckService")
+        public String requestCheckService;
+
+        @NameInMap("requestImageCheckService")
+        public String requestImageCheckService;
+
+        @NameInMap("responseCheckService")
+        public String responseCheckService;
+
+        @NameInMap("responseImageCheckService")
+        public String responseImageCheckService;
+
+        @NameInMap("riskAlertLevel")
+        public String riskAlertLevel;
+
+        @NameInMap("riskConfig")
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig> riskConfig;
+
+        @NameInMap("serviceAddress")
+        public String serviceAddress;
+
+        public static HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig self = new HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setBufferLimit(Integer bufferLimit) {
+            this.bufferLimit = bufferLimit;
+            return this;
+        }
+        public Integer getBufferLimit() {
+            return this.bufferLimit;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setCheckRequest(Boolean checkRequest) {
+            this.checkRequest = checkRequest;
+            return this;
+        }
+        public Boolean getCheckRequest() {
+            return this.checkRequest;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setCheckRequestImage(Boolean checkRequestImage) {
+            this.checkRequestImage = checkRequestImage;
+            return this;
+        }
+        public Boolean getCheckRequestImage() {
+            return this.checkRequestImage;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setCheckResponse(Boolean checkResponse) {
+            this.checkResponse = checkResponse;
+            return this;
+        }
+        public Boolean getCheckResponse() {
+            return this.checkResponse;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setCheckResponseImage(Boolean checkResponseImage) {
+            this.checkResponseImage = checkResponseImage;
+            return this;
+        }
+        public Boolean getCheckResponseImage() {
+            return this.checkResponseImage;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setConsumerRequestCheckService(java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService> consumerRequestCheckService) {
+            this.consumerRequestCheckService = consumerRequestCheckService;
+            return this;
+        }
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService> getConsumerRequestCheckService() {
+            return this.consumerRequestCheckService;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setConsumerResponseCheckService(java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService> consumerResponseCheckService) {
+            this.consumerResponseCheckService = consumerResponseCheckService;
+            return this;
+        }
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService> getConsumerResponseCheckService() {
+            return this.consumerResponseCheckService;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setConsumerRiskLevel(java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel> consumerRiskLevel) {
+            this.consumerRiskLevel = consumerRiskLevel;
+            return this;
+        }
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel> getConsumerRiskLevel() {
+            return this.consumerRiskLevel;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setRequestCheckService(String requestCheckService) {
+            this.requestCheckService = requestCheckService;
+            return this;
+        }
+        public String getRequestCheckService() {
+            return this.requestCheckService;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setRequestImageCheckService(String requestImageCheckService) {
+            this.requestImageCheckService = requestImageCheckService;
+            return this;
+        }
+        public String getRequestImageCheckService() {
+            return this.requestImageCheckService;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setResponseCheckService(String responseCheckService) {
+            this.responseCheckService = responseCheckService;
+            return this;
+        }
+        public String getResponseCheckService() {
+            return this.responseCheckService;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setResponseImageCheckService(String responseImageCheckService) {
+            this.responseImageCheckService = responseImageCheckService;
+            return this;
+        }
+        public String getResponseImageCheckService() {
+            return this.responseImageCheckService;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setRiskAlertLevel(String riskAlertLevel) {
+            this.riskAlertLevel = riskAlertLevel;
+            return this;
+        }
+        public String getRiskAlertLevel() {
+            return this.riskAlertLevel;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setRiskConfig(java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig> riskConfig) {
+            this.riskConfig = riskConfig;
+            return this;
+        }
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig> getRiskConfig() {
+            return this.riskConfig;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig setServiceAddress(String serviceAddress) {
+            this.serviceAddress = serviceAddress;
+            return this;
+        }
+        public String getServiceAddress() {
+            return this.serviceAddress;
+        }
+
+    }
+
+    public static class HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules extends TeaModel {
+        @NameInMap("limitMode")
+        public String limitMode;
+
+        @NameInMap("limitType")
+        public String limitType;
+
+        @NameInMap("limitValue")
+        public Integer limitValue;
+
+        @NameInMap("matchKey")
+        public String matchKey;
+
+        @NameInMap("matchType")
+        public String matchType;
+
+        @NameInMap("matchValue")
+        public String matchValue;
+
+        public static HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules self = new HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules setLimitMode(String limitMode) {
+            this.limitMode = limitMode;
+            return this;
+        }
+        public String getLimitMode() {
+            return this.limitMode;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules setLimitType(String limitType) {
+            this.limitType = limitType;
+            return this;
+        }
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules setLimitValue(Integer limitValue) {
+            this.limitValue = limitValue;
+            return this;
+        }
+        public Integer getLimitValue() {
+            return this.limitValue;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules setMatchKey(String matchKey) {
+            this.matchKey = matchKey;
+            return this;
+        }
+        public String getMatchKey() {
+            return this.matchKey;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules setMatchValue(String matchValue) {
+            this.matchValue = matchValue;
+            return this;
+        }
+        public String getMatchValue() {
+            return this.matchValue;
+        }
+
+    }
+
+    public static class HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules extends TeaModel {
+        @NameInMap("limitMode")
+        public String limitMode;
+
+        @NameInMap("limitType")
+        public String limitType;
+
+        @NameInMap("limitValue")
+        public Integer limitValue;
+
+        @NameInMap("matchKey")
+        public String matchKey;
+
+        @NameInMap("matchType")
+        public String matchType;
+
+        @NameInMap("matchValue")
+        public String matchValue;
+
+        public static HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules self = new HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules setLimitMode(String limitMode) {
+            this.limitMode = limitMode;
+            return this;
+        }
+        public String getLimitMode() {
+            return this.limitMode;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules setLimitType(String limitType) {
+            this.limitType = limitType;
+            return this;
+        }
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules setLimitValue(Integer limitValue) {
+            this.limitValue = limitValue;
+            return this;
+        }
+        public Integer getLimitValue() {
+            return this.limitValue;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules setMatchKey(String matchKey) {
+            this.matchKey = matchKey;
+            return this;
+        }
+        public String getMatchKey() {
+            return this.matchKey;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules setMatchValue(String matchValue) {
+            this.matchValue = matchValue;
+            return this;
+        }
+        public String getMatchValue() {
+            return this.matchValue;
+        }
+
+    }
+
+    public static class HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig extends TeaModel {
+        @NameInMap("enableGlobalRules")
+        public Boolean enableGlobalRules;
+
+        @NameInMap("globalRules")
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules> globalRules;
+
+        @NameInMap("rules")
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules> rules;
+
+        public static HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig self = new HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig setEnableGlobalRules(Boolean enableGlobalRules) {
+            this.enableGlobalRules = enableGlobalRules;
+            return this;
+        }
+        public Boolean getEnableGlobalRules() {
+            return this.enableGlobalRules;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig setGlobalRules(java.util.List<HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules> globalRules) {
+            this.globalRules = globalRules;
+            return this;
+        }
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules> getGlobalRules() {
+            return this.globalRules;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig setRules(java.util.List<HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules> rules) {
+            this.rules = rules;
+            return this;
+        }
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules> getRules() {
+            return this.rules;
+        }
+
+    }
+
     public static class HttpApiDeployConfigPolicyConfigs extends TeaModel {
         @NameInMap("aiFallbackConfig")
         public HttpApiDeployConfigPolicyConfigsAiFallbackConfig aiFallbackConfig;
+
+        @NameInMap("aiSecurityGuardConfig")
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig aiSecurityGuardConfig;
+
+        @NameInMap("aiTokenRateLimitConfig")
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig aiTokenRateLimitConfig;
 
         /**
          * <strong>example:</strong>
@@ -291,6 +908,22 @@ public class HttpApiDeployConfig extends TeaModel {
         }
         public HttpApiDeployConfigPolicyConfigsAiFallbackConfig getAiFallbackConfig() {
             return this.aiFallbackConfig;
+        }
+
+        public HttpApiDeployConfigPolicyConfigs setAiSecurityGuardConfig(HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig aiSecurityGuardConfig) {
+            this.aiSecurityGuardConfig = aiSecurityGuardConfig;
+            return this;
+        }
+        public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig getAiSecurityGuardConfig() {
+            return this.aiSecurityGuardConfig;
+        }
+
+        public HttpApiDeployConfigPolicyConfigs setAiTokenRateLimitConfig(HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig aiTokenRateLimitConfig) {
+            this.aiTokenRateLimitConfig = aiTokenRateLimitConfig;
+            return this;
+        }
+        public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig getAiTokenRateLimitConfig() {
+            return this.aiTokenRateLimitConfig;
         }
 
         public HttpApiDeployConfigPolicyConfigs setEnable(Boolean enable) {
