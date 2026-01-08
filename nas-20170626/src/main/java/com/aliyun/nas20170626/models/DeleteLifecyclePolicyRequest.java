@@ -15,8 +15,14 @@ public class DeleteLifecyclePolicyRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <strong>example:</strong>
+     * <p>lc-xxx</p>
+     */
+    @NameInMap("LifecyclePolicyId")
+    public String lifecyclePolicyId;
+
+    /**
      * <p>The name of the lifecycle policy.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>lifecyclepolicy1</p>
@@ -35,6 +41,14 @@ public class DeleteLifecyclePolicyRequest extends TeaModel {
     }
     public String getFileSystemId() {
         return this.fileSystemId;
+    }
+
+    public DeleteLifecyclePolicyRequest setLifecyclePolicyId(String lifecyclePolicyId) {
+        this.lifecyclePolicyId = lifecyclePolicyId;
+        return this;
+    }
+    public String getLifecyclePolicyId() {
+        return this.lifecyclePolicyId;
     }
 
     public DeleteLifecyclePolicyRequest setLifecyclePolicyName(String lifecyclePolicyName) {

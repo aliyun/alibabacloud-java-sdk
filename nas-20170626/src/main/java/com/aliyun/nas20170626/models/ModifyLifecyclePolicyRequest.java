@@ -15,9 +15,15 @@ public class ModifyLifecyclePolicyRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <strong>example:</strong>
+     * <p>lc-xxx</p>
+     */
+    @NameInMap("LifecyclePolicyId")
+    public String lifecyclePolicyId;
+
+    /**
      * <p>The name of the lifecycle policy.</p>
      * <p>The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>lifecyclepolicy_01</p>
@@ -72,6 +78,14 @@ public class ModifyLifecyclePolicyRequest extends TeaModel {
     }
     public String getFileSystemId() {
         return this.fileSystemId;
+    }
+
+    public ModifyLifecyclePolicyRequest setLifecyclePolicyId(String lifecyclePolicyId) {
+        this.lifecyclePolicyId = lifecyclePolicyId;
+        return this;
+    }
+    public String getLifecyclePolicyId() {
+        return this.lifecyclePolicyId;
     }
 
     public ModifyLifecyclePolicyRequest setLifecyclePolicyName(String lifecyclePolicyName) {

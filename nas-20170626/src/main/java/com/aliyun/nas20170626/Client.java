@@ -2205,12 +2205,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateLifecyclePolicyResponse createLifecyclePolicyWithOptions(CreateLifecyclePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
             query.put("FileSystemId", request.fileSystemId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lifecyclePolicyName)) {
             query.put("LifecyclePolicyName", request.lifecyclePolicyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecyclePolicyType)) {
+            query.put("LifecyclePolicyType", request.lifecyclePolicyType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lifecycleRuleName)) {
@@ -2225,8 +2233,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Paths", request.paths);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.retrieveRules)) {
+            query.put("RetrieveRules", request.retrieveRules);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
             query.put("StorageType", request.storageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transitRules)) {
+            query.put("TransitRules", request.transitRules);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3378,6 +3394,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
             query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecyclePolicyId)) {
+            query.put("LifecyclePolicyId", request.lifecyclePolicyId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lifecyclePolicyName)) {
@@ -6950,6 +6970,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
             query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecyclePolicyId)) {
+            query.put("LifecyclePolicyId", request.lifecyclePolicyId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lifecyclePolicyName)) {

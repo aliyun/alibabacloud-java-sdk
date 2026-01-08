@@ -91,6 +91,82 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>RetrieveType</p>
+         */
+        @NameInMap("Attribute")
+        public String attribute;
+
+        /**
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
+        @NameInMap("Threshold")
+        public String threshold;
+
+        public static DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules self = new DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
+    public static class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Atime</p>
+         */
+        @NameInMap("Attribute")
+        public String attribute;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("Threshold")
+        public String threshold;
+
+        public static DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules self = new DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
     public static class DescribeLifecyclePoliciesResponseBodyLifecyclePolicies extends TeaModel {
         /**
          * <p>The time when the lifecycle policy was created.</p>
@@ -103,6 +179,13 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
          * <p>The ID of the file system.</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +195,13 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
+         * <strong>example:</strong>
+         * <p>lc-xxx</p>
+         */
+        @NameInMap("LifecyclePolicyId")
+        public String lifecyclePolicyId;
+
+        /**
          * <p>The name of the lifecycle policy.</p>
          * 
          * <strong>example:</strong>
@@ -119,6 +209,13 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
          */
         @NameInMap("LifecyclePolicyName")
         public String lifecyclePolicyName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Auto</p>
+         */
+        @NameInMap("LifecyclePolicyType")
+        public String lifecyclePolicyType;
 
         /**
          * <p>The management rule that is associated with the lifecycle policy.</p>
@@ -151,6 +248,9 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
+        @NameInMap("RetrieveRules")
+        public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules> retrieveRules;
+
         /**
          * <p>The storage type of the data that is dumped to the IA storage medium.</p>
          * <p>Default value: InfrequentAccess (IA).</p>
@@ -160,6 +260,9 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
          */
         @NameInMap("StorageType")
         public String storageType;
+
+        @NameInMap("TransitRules")
+        public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules> transitRules;
 
         public static DescribeLifecyclePoliciesResponseBodyLifecyclePolicies build(java.util.Map<String, ?> map) throws Exception {
             DescribeLifecyclePoliciesResponseBodyLifecyclePolicies self = new DescribeLifecyclePoliciesResponseBodyLifecyclePolicies();
@@ -174,6 +277,14 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setFileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
@@ -182,12 +293,28 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             return this.fileSystemId;
         }
 
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setLifecyclePolicyId(String lifecyclePolicyId) {
+            this.lifecyclePolicyId = lifecyclePolicyId;
+            return this;
+        }
+        public String getLifecyclePolicyId() {
+            return this.lifecyclePolicyId;
+        }
+
         public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setLifecyclePolicyName(String lifecyclePolicyName) {
             this.lifecyclePolicyName = lifecyclePolicyName;
             return this;
         }
         public String getLifecyclePolicyName() {
             return this.lifecyclePolicyName;
+        }
+
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setLifecyclePolicyType(String lifecyclePolicyType) {
+            this.lifecyclePolicyType = lifecyclePolicyType;
+            return this;
+        }
+        public String getLifecyclePolicyType() {
+            return this.lifecyclePolicyType;
         }
 
         public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setLifecycleRuleName(String lifecycleRuleName) {
@@ -214,12 +341,28 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             return this.paths;
         }
 
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setRetrieveRules(java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules> retrieveRules) {
+            this.retrieveRules = retrieveRules;
+            return this;
+        }
+        public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules> getRetrieveRules() {
+            return this.retrieveRules;
+        }
+
         public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setStorageType(String storageType) {
             this.storageType = storageType;
             return this;
         }
         public String getStorageType() {
             return this.storageType;
+        }
+
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setTransitRules(java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules> transitRules) {
+            this.transitRules = transitRules;
+            return this;
+        }
+        public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules> getTransitRules() {
+            return this.transitRules;
         }
 
     }

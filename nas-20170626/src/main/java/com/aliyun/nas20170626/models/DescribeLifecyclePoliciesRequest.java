@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLifecyclePoliciesRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>描述</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
      * <p>The ID of the file system.</p>
      * 
      * <strong>example:</strong>
@@ -12,6 +19,13 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>lc-xxx</p>
+     */
+    @NameInMap("LifecyclePolicyId")
+    public String lifecyclePolicyId;
 
     /**
      * <p>The name of the lifecycle policy. The name must meet the following conventions:</p>
@@ -22,6 +36,13 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
      */
     @NameInMap("LifecyclePolicyName")
     public String lifecyclePolicyName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Auto</p>
+     */
+    @NameInMap("LifecyclePolicyType")
+    public String lifecyclePolicyType;
 
     /**
      * <p>The page number.</p>
@@ -43,6 +64,13 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    /**
+     * <strong>example:</strong>
+     * <p>/abc/</p>
+     */
+    @NameInMap("Path")
+    public String path;
 
     /**
      * <p>The storage class.</p>
@@ -68,6 +96,14 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeLifecyclePoliciesRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public DescribeLifecyclePoliciesRequest setFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -76,12 +112,28 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
         return this.fileSystemId;
     }
 
+    public DescribeLifecyclePoliciesRequest setLifecyclePolicyId(String lifecyclePolicyId) {
+        this.lifecyclePolicyId = lifecyclePolicyId;
+        return this;
+    }
+    public String getLifecyclePolicyId() {
+        return this.lifecyclePolicyId;
+    }
+
     public DescribeLifecyclePoliciesRequest setLifecyclePolicyName(String lifecyclePolicyName) {
         this.lifecyclePolicyName = lifecyclePolicyName;
         return this;
     }
     public String getLifecyclePolicyName() {
         return this.lifecyclePolicyName;
+    }
+
+    public DescribeLifecyclePoliciesRequest setLifecyclePolicyType(String lifecyclePolicyType) {
+        this.lifecyclePolicyType = lifecyclePolicyType;
+        return this;
+    }
+    public String getLifecyclePolicyType() {
+        return this.lifecyclePolicyType;
     }
 
     public DescribeLifecyclePoliciesRequest setPageNumber(Integer pageNumber) {
@@ -98,6 +150,14 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeLifecyclePoliciesRequest setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
     }
 
     public DescribeLifecyclePoliciesRequest setStorageType(String storageType) {

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateLifecyclePolicyResponseBody extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>lc-xxx</p>
+     */
+    @NameInMap("LifecyclePolicyId")
+    public String lifecyclePolicyId;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +37,14 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
     public static CreateLifecyclePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLifecyclePolicyResponseBody self = new CreateLifecyclePolicyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLifecyclePolicyResponseBody setLifecyclePolicyId(String lifecyclePolicyId) {
+        this.lifecyclePolicyId = lifecyclePolicyId;
+        return this;
+    }
+    public String getLifecyclePolicyId() {
+        return this.lifecyclePolicyId;
     }
 
     public CreateLifecyclePolicyResponseBody setRequestId(String requestId) {
