@@ -407,6 +407,13 @@ public class GetVideoCreationTaskResultResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("statusReason")
+        public String statusReason;
+
+        /**
+         * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("taskId")
@@ -469,6 +476,14 @@ public class GetVideoCreationTaskResultResponseBody extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public GetVideoCreationTaskResultResponseBodyData setStatusReason(String statusReason) {
+            this.statusReason = statusReason;
+            return this;
+        }
+        public String getStatusReason() {
+            return this.statusReason;
         }
 
         public GetVideoCreationTaskResultResponseBodyData setTaskId(String taskId) {
