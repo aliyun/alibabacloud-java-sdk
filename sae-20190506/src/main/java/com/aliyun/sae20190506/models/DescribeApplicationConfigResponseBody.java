@@ -1390,6 +1390,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Html")
         public String html;
 
+        @NameInMap("IdleHour")
+        public String idleHour;
+
         /**
          * <p>The ID of the corresponding secret dictionary.</p>
          * 
@@ -2378,6 +2381,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getHtml() {
             return this.html;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setIdleHour(String idleHour) {
+            this.idleHour = idleHour;
+            return this;
+        }
+        public String getIdleHour() {
+            return this.idleHour;
         }
 
         public DescribeApplicationConfigResponseBodyData setImagePullSecrets(String imagePullSecrets) {

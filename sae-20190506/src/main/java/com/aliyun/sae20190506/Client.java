@@ -5007,6 +5007,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables ARMS monitoring.</p>
+     * 
      * @param request DisableArmsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5038,6 +5041,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables ARMS monitoring.</p>
+     * 
      * @param request DisableArmsRequest
      * @return DisableArmsResponse
      */
@@ -7706,7 +7712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>恢复实例的流量</p>
+     * <p>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</p>
      * 
      * @param request ResumeTrafficRequest
      * @param headers map
@@ -7744,7 +7750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>恢复实例的流量</p>
+     * <p>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</p>
      * 
      * @param request ResumeTrafficRequest
      * @return ResumeTrafficResponse
@@ -8079,7 +8085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将流量从实例中摘除</p>
+     * <p>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</p>
      * 
      * @param request SuspendTrafficRequest
      * @param headers map
@@ -8117,7 +8123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将流量从实例中摘除</p>
+     * <p>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</p>
      * 
      * @param request SuspendTrafficRequest
      * @return SuspendTrafficResponse
@@ -8386,6 +8392,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableIdle)) {
             query.put("EnableIdle", request.enableIdle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idleHour)) {
+            query.put("IdleHour", request.idleHour);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {

@@ -30,6 +30,9 @@ public class UpdateAppModeRequest extends TeaModel {
     @NameInMap("EnableIdle")
     public Boolean enableIdle;
 
+    @NameInMap("IdleHour")
+    public String idleHour;
+
     @NameInMap("NamespaceId")
     public String namespaceId;
 
@@ -60,6 +63,14 @@ public class UpdateAppModeRequest extends TeaModel {
     }
     public Boolean getEnableIdle() {
         return this.enableIdle;
+    }
+
+    public UpdateAppModeRequest setIdleHour(String idleHour) {
+        this.idleHour = idleHour;
+        return this;
+    }
+    public String getIdleHour() {
+        return this.idleHour;
     }
 
     public UpdateAppModeRequest setNamespaceId(String namespaceId) {
