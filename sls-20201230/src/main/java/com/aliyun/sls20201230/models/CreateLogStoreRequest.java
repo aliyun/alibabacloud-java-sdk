@@ -115,6 +115,9 @@ public class CreateLogStoreRequest extends TeaModel {
     @NameInMap("processorId")
     public String processorId;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The number of shards.</p>
      * <blockquote>
@@ -237,6 +240,14 @@ public class CreateLogStoreRequest extends TeaModel {
     }
     public String getProcessorId() {
         return this.processorId;
+    }
+
+    public CreateLogStoreRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateLogStoreRequest setShardCount(Integer shardCount) {

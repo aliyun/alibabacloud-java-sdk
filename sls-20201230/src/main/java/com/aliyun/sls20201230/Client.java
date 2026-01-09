@@ -1252,6 +1252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("processorId", request.processorId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shardCount)) {
             body.put("shardCount", request.shardCount);
         }
