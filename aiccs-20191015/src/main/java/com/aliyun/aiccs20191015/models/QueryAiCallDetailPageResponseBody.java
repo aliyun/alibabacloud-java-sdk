@@ -182,6 +182,13 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>outId</p>
+         */
+        @NameInMap("OutId")
+        public String outId;
+
+        /**
+         * <strong>example:</strong>
          * <p>https://*******</p>
          */
         @NameInMap("RecordingFilePath")
@@ -300,6 +307,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
         public String getOptions() {
             return this.options;
+        }
+
+        public QueryAiCallDetailPageResponseBodyDataList setOutId(String outId) {
+            this.outId = outId;
+            return this;
+        }
+        public String getOutId() {
+            return this.outId;
         }
 
         public QueryAiCallDetailPageResponseBodyDataList setRecordingFilePath(String recordingFilePath) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCallDialogContentRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-06-06</p>
      */
@@ -12,6 +14,8 @@ public class GetCallDialogContentRequest extends TeaModel {
     public String callDate;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456^123478</p>
      */

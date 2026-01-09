@@ -177,6 +177,13 @@ public class PageQueryAgentListResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>false</p>
          */
+        @NameInMap("WithActivePrompt")
+        public Boolean withActivePrompt;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("WithConfig")
         public Boolean withConfig;
 
@@ -271,6 +278,14 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         }
         public Long getStatus() {
             return this.status;
+        }
+
+        public PageQueryAgentListResponseBodyDataList setWithActivePrompt(Boolean withActivePrompt) {
+            this.withActivePrompt = withActivePrompt;
+            return this;
+        }
+        public Boolean getWithActivePrompt() {
+            return this.withActivePrompt;
         }
 
         public PageQueryAgentListResponseBodyDataList setWithConfig(Boolean withConfig) {
