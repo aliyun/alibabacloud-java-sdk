@@ -50,6 +50,13 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String destRoleArn;
 
     /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("forceComplete")
+    public Boolean forceComplete;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +73,13 @@ public class ScheduledSQLConfiguration extends TeaModel {
      */
     @NameInMap("fromTimeExpr")
     public String fromTimeExpr;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("maxConcurrency")
+    public Long maxConcurrency;
 
     /**
      * <p>This parameter is required.</p>
@@ -201,6 +215,14 @@ public class ScheduledSQLConfiguration extends TeaModel {
         return this.destRoleArn;
     }
 
+    public ScheduledSQLConfiguration setForceComplete(Boolean forceComplete) {
+        this.forceComplete = forceComplete;
+        return this;
+    }
+    public Boolean getForceComplete() {
+        return this.forceComplete;
+    }
+
     public ScheduledSQLConfiguration setFromTime(Long fromTime) {
         this.fromTime = fromTime;
         return this;
@@ -215,6 +237,14 @@ public class ScheduledSQLConfiguration extends TeaModel {
     }
     public String getFromTimeExpr() {
         return this.fromTimeExpr;
+    }
+
+    public ScheduledSQLConfiguration setMaxConcurrency(Long maxConcurrency) {
+        this.maxConcurrency = maxConcurrency;
+        return this;
+    }
+    public Long getMaxConcurrency() {
+        return this.maxConcurrency;
     }
 
     public ScheduledSQLConfiguration setMaxRetries(Long maxRetries) {

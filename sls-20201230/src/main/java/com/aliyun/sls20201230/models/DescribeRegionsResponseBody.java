@@ -24,6 +24,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("dataRedundancyType")
         public java.util.List<String> dataRedundancyType;
 
+        @NameInMap("internalEndpoint")
+        public String internalEndpoint;
+
         /**
          * <p>The public endpoint of Simple Log Service.</p>
          */
@@ -59,6 +62,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public java.util.List<String> getDataRedundancyType() {
             return this.dataRedundancyType;
+        }
+
+        public DescribeRegionsResponseBodyRegions setInternalEndpoint(String internalEndpoint) {
+            this.internalEndpoint = internalEndpoint;
+            return this;
+        }
+        public String getInternalEndpoint() {
+            return this.internalEndpoint;
         }
 
         public DescribeRegionsResponseBodyRegions setInternetEndpoint(String internetEndpoint) {
