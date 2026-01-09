@@ -35,6 +35,9 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     @NameInMap("CheckFileName")
     public String checkFileName;
 
+    @NameInMap("DeviceRiskPlus")
+    public String deviceRiskPlus;
+
     /**
      * <p>Mini program name.</p>
      * 
@@ -114,6 +117,14 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     }
     public String getCheckFileName() {
         return this.checkFileName;
+    }
+
+    public CreateAntCloudAuthSceneRequest setDeviceRiskPlus(String deviceRiskPlus) {
+        this.deviceRiskPlus = deviceRiskPlus;
+        return this;
+    }
+    public String getDeviceRiskPlus() {
+        return this.deviceRiskPlus;
     }
 
     public CreateAntCloudAuthSceneRequest setMiniProgramName(String miniProgramName) {

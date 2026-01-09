@@ -81,6 +81,9 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         @NameInMap("Creator")
         public String creator;
 
+        @NameInMap("DeviceRiskPlus")
+        public String deviceRiskPlus;
+
         /**
          * <p>Bound domain.</p>
          * 
@@ -212,6 +215,14 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public DescribeListAntCloudAuthScenesResponseBodyScenes setDeviceRiskPlus(String deviceRiskPlus) {
+            this.deviceRiskPlus = deviceRiskPlus;
+            return this;
+        }
+        public String getDeviceRiskPlus() {
+            return this.deviceRiskPlus;
         }
 
         public DescribeListAntCloudAuthScenesResponseBodyScenes setDomain(String domain) {
