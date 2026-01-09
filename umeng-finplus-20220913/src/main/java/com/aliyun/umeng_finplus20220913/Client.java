@@ -462,6 +462,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建友准达实例任务</p>
+     * 
+     * @param request CreateInstanceTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInstanceTaskResponse
+     */
+    public CreateInstanceTaskResponse createInstanceTaskWithOptions(CreateInstanceTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calbackUrl)) {
+            body.put("CalbackUrl", request.calbackUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            body.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetIds)) {
+            body.put("DatasetIds", request.datasetIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.monitorType)) {
+            body.put("MonitorType", request.monitorType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputConfig)) {
+            body.put("OutputConfig", request.outputConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("RequestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scoreStrategyConfig)) {
+            body.put("ScoreStrategyConfig", request.scoreStrategyConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateInstanceTask"),
+            new TeaPair("version", "2022-09-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/CreateInstanceTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建友准达实例任务</p>
+     * 
+     * @param request CreateInstanceTaskRequest
+     * @return CreateInstanceTaskResponse
+     */
+    public CreateInstanceTaskResponse createInstanceTask(CreateInstanceTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createInstanceTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>友准达-创建知识库</p>
      * 
      * @param tmpReq CreateKnowLedgeRequest
