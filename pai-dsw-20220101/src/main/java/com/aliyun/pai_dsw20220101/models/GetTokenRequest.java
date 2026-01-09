@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetTokenRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
+     */
+    @NameInMap("Audience")
+    public String audience;
+
+    /**
      * <p>The validity period. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
@@ -23,9 +30,24 @@ public class GetTokenRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Access</p>
+     */
+    @NameInMap("Type")
+    public String type;
+
     public static GetTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTokenRequest self = new GetTokenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetTokenRequest setAudience(String audience) {
+        this.audience = audience;
+        return this;
+    }
+    public String getAudience() {
+        return this.audience;
     }
 
     public GetTokenRequest setExpireTime(Integer expireTime) {
@@ -42,6 +64,14 @@ public class GetTokenRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetTokenRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
