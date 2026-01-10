@@ -4,6 +4,13 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateInput extends TeaModel {
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("allowAnonymousManage")
+    public Boolean allowAnonymousManage;
+
     @NameInMap("armsConfiguration")
     public ArmsConfiguration armsConfiguration;
 
@@ -89,6 +96,14 @@ public class CreateTemplateInput extends TeaModel {
     public static CreateTemplateInput build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateInput self = new CreateTemplateInput();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTemplateInput setAllowAnonymousManage(Boolean allowAnonymousManage) {
+        this.allowAnonymousManage = allowAnonymousManage;
+        return this;
+    }
+    public Boolean getAllowAnonymousManage() {
+        return this.allowAnonymousManage;
     }
 
     public CreateTemplateInput setArmsConfiguration(ArmsConfiguration armsConfiguration) {

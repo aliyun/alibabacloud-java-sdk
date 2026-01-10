@@ -4,6 +4,12 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateSandboxInput extends TeaModel {
+    @NameInMap("nasConfig")
+    public NASConfig nasConfig;
+
+    @NameInMap("ossMountConfig")
+    public OSSMountConfig ossMountConfig;
+
     @NameInMap("sandboxId")
     public String sandboxId;
 
@@ -23,6 +29,22 @@ public class CreateSandboxInput extends TeaModel {
     public static CreateSandboxInput build(java.util.Map<String, ?> map) throws Exception {
         CreateSandboxInput self = new CreateSandboxInput();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSandboxInput setNasConfig(NASConfig nasConfig) {
+        this.nasConfig = nasConfig;
+        return this;
+    }
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
+    }
+
+    public CreateSandboxInput setOssMountConfig(OSSMountConfig ossMountConfig) {
+        this.ossMountConfig = ossMountConfig;
+        return this;
+    }
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
     }
 
     public CreateSandboxInput setSandboxId(String sandboxId) {

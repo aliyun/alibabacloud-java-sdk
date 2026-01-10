@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class Template extends TeaModel {
+    @NameInMap("allowAnonymousManage")
+    public Boolean allowAnonymousManage;
+
     @NameInMap("containerConfiguration")
     public ContainerConfiguration containerConfiguration;
 
@@ -98,6 +101,14 @@ public class Template extends TeaModel {
     public static Template build(java.util.Map<String, ?> map) throws Exception {
         Template self = new Template();
         return TeaModel.build(map, self);
+    }
+
+    public Template setAllowAnonymousManage(Boolean allowAnonymousManage) {
+        this.allowAnonymousManage = allowAnonymousManage;
+        return this;
+    }
+    public Boolean getAllowAnonymousManage() {
+        return this.allowAnonymousManage;
     }
 
     public Template setContainerConfiguration(ContainerConfiguration containerConfiguration) {
