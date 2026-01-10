@@ -43,6 +43,9 @@ public class CreateOrderRequest extends TeaModel {
     @NameInMap("PluginType")
     public String pluginType;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The IDs of the stakeholders that are involved in the ticket. Separate multiple IDs with commas (,).</p>
      * 
@@ -96,6 +99,14 @@ public class CreateOrderRequest extends TeaModel {
     }
     public String getPluginType() {
         return this.pluginType;
+    }
+
+    public CreateOrderRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public CreateOrderRequest setRelatedUserList(String relatedUserList) {

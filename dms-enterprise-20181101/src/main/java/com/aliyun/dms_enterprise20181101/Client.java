@@ -3501,6 +3501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PluginType", request.pluginType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.relatedUserList)) {
             query.put("RelatedUserList", request.relatedUserList);
         }

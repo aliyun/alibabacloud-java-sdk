@@ -115,6 +115,13 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>实例描述</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("Edition")
         public String edition;
 
@@ -139,8 +146,22 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @NameInMap("MajorVersion")
         public String majorVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>地域信息</p>
+         */
+        @NameInMap("RegionCode")
+        public String regionCode;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -173,6 +194,14 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         }
         public String getCreatedTime() {
             return this.createdTime;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListDifyInstancesResponseBodyRootData setEdition(String edition) {
@@ -239,12 +268,28 @@ public class ListDifyInstancesResponseBody extends TeaModel {
             return this.majorVersion;
         }
 
+        public ListDifyInstancesResponseBodyRootData setRegionCode(String regionCode) {
+            this.regionCode = regionCode;
+            return this;
+        }
+        public String getRegionCode() {
+            return this.regionCode;
+        }
+
         public ListDifyInstancesResponseBodyRootData setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListDifyInstancesResponseBodyRootData setVSwitchId(String vSwitchId) {
