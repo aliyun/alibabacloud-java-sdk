@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class LlmStreamChatRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>guardCustomTest</p>
+     */
+    @NameInMap("Channel")
+    public String channel;
+
+    /**
      * <p>Conversation information</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +50,14 @@ public class LlmStreamChatRequest extends TeaModel {
     public static LlmStreamChatRequest build(java.util.Map<String, ?> map) throws Exception {
         LlmStreamChatRequest self = new LlmStreamChatRequest();
         return TeaModel.build(map, self);
+    }
+
+    public LlmStreamChatRequest setChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    public String getChannel() {
+        return this.channel;
     }
 
     public LlmStreamChatRequest setMessages(Object messages) {

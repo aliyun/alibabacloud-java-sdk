@@ -3943,6 +3943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public LlmStreamChatResponse llmStreamChatWithOptions(LlmStreamChatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            body.put("Channel", request.channel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.messages)) {
             body.put("Messages", request.messages);
         }

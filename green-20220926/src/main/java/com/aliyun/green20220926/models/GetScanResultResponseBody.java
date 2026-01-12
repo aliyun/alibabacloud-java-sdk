@@ -217,6 +217,13 @@ public class GetScanResultResponseBody extends TeaModel {
         public String apiTaskId;
 
         /**
+         * <strong>example:</strong>
+         * <p>agent_01</p>
+         */
+        @NameInMap("AppId")
+        public String appId;
+
+        /**
          * <p>Attack level, returned based on the set high and low risk scores. The return values include:</p>
          * <ul>
          * <li><p>high: High risk</p>
@@ -333,6 +340,9 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         @NameInMap("ImageUrl")
         public String imageUrl;
+
+        @NameInMap("ImageUrls")
+        public java.util.List<String> imageUrls;
 
         /**
          * <p>Labels.</p>
@@ -701,6 +711,14 @@ public class GetScanResultResponseBody extends TeaModel {
             return this.apiTaskId;
         }
 
+        public GetScanResultResponseBodyDataItems setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
         public GetScanResultResponseBodyDataItems setAttackLevel(String attackLevel) {
             this.attackLevel = attackLevel;
             return this;
@@ -803,6 +821,14 @@ public class GetScanResultResponseBody extends TeaModel {
         }
         public String getImageUrl() {
             return this.imageUrl;
+        }
+
+        public GetScanResultResponseBodyDataItems setImageUrls(java.util.List<String> imageUrls) {
+            this.imageUrls = imageUrls;
+            return this;
+        }
+        public java.util.List<String> getImageUrls() {
+            return this.imageUrls;
         }
 
         public GetScanResultResponseBodyDataItems setLabels(String labels) {
