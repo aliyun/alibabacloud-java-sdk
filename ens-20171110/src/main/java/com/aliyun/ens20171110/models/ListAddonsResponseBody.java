@@ -4,11 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ListAddonsResponseBody extends TeaModel {
+    /**
+     * <p>The list of component information.</p>
+     */
     @NameInMap("Addons")
     public java.util.List<ListAddonsResponseBodyAddons> addons;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Id of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
@@ -39,6 +42,8 @@ public class ListAddonsResponseBody extends TeaModel {
 
     public static class ListAddonsResponseBodyAddonsConfigSchema extends TeaModel {
         /**
+         * <p>The application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>859e9d595b2974ed79c444658d1dea89</p>
          */
@@ -46,6 +51,8 @@ public class ListAddonsResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>The version of the configuration file.</p>
+         * 
          * <strong>example:</strong>
          * <p>4155709cd12a09bdb8cbaca71bf03233</p>
          */
@@ -53,6 +60,8 @@ public class ListAddonsResponseBody extends TeaModel {
         public String configVersion;
 
         /**
+         * <p>The component name.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -60,6 +69,8 @@ public class ListAddonsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The custom configurations of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;key1&quot;:&quot;val1&quot;}</p>
          */
@@ -107,16 +118,23 @@ public class ListAddonsResponseBody extends TeaModel {
 
     public static class ListAddonsResponseBodyAddons extends TeaModel {
         /**
+         * <p>Specifies whether to clear resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("CleanupCloudResources")
         public Boolean cleanupCloudResources;
 
+        /**
+         * <p>The schema of the custom parameters of the component.</p>
+         */
         @NameInMap("ConfigSchema")
         public java.util.List<ListAddonsResponseBodyAddonsConfigSchema> configSchema;
 
         /**
+         * <p>The component name.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -124,6 +142,8 @@ public class ListAddonsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The component version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v2</p>
          */

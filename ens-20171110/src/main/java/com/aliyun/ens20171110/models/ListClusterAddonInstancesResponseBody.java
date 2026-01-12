@@ -4,11 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ListClusterAddonInstancesResponseBody extends TeaModel {
+    /**
+     * <p>List of addon information.</p>
+     */
     @NameInMap("Addons")
     public java.util.List<ListClusterAddonInstancesResponseBodyAddons> addons;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
@@ -39,6 +42,8 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
 
     public static class ListClusterAddonInstancesResponseBodyAddonsConfigSchema extends TeaModel {
         /**
+         * <p>Application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>7380581386597434629002</p>
          */
@@ -46,6 +51,8 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>Configuration version.</p>
+         * 
          * <strong>example:</strong>
          * <p>4572581386436834662215</p>
          */
@@ -53,6 +60,8 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         public String configVersion;
 
         /**
+         * <p>Component name.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -60,6 +69,8 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Custom parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;key1&quot;: &quot;val1&quot;}</p>
          */
@@ -107,16 +118,23 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
 
     public static class ListClusterAddonInstancesResponseBodyAddons extends TeaModel {
         /**
+         * <p>Whether to automatically clean up associated cloud resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("CleanupCloudResources")
         public Boolean cleanupCloudResources;
 
+        /**
+         * <p>List of custom parameter schemas for the addon.</p>
+         */
         @NameInMap("ConfigSchema")
         public java.util.List<ListClusterAddonInstancesResponseBodyAddonsConfigSchema> configSchema;
 
         /**
+         * <p>Addon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */
@@ -124,6 +142,15 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Current addon status. Values:</p>
+         * <ul>
+         * <li><strong>enabling</strong>: Enabling.</li>
+         * <li><strong>enabled</strong>: Enabled.</li>
+         * <li><strong>disabling</strong>: Disabling.</li>
+         * <li><strong>disabled</strong>: Disabled.</li>
+         * <li><strong>upgrading</strong>: Upgrading.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -131,6 +158,8 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */

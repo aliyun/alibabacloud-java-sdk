@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterAddonInstancesRequest extends TeaModel {
     /**
+     * <p>Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
