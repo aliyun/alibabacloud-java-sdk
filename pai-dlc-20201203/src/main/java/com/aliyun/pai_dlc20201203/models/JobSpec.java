@@ -59,6 +59,9 @@ public class JobSpec extends TeaModel {
     @NameInMap("SpotSpec")
     public SpotSpec spotSpec;
 
+    @NameInMap("StartupDependencies")
+    public java.util.List<StartupDependency> startupDependencies;
+
     @NameInMap("SystemDisk")
     public SystemDisk systemDisk;
 
@@ -193,6 +196,14 @@ public class JobSpec extends TeaModel {
     }
     public SpotSpec getSpotSpec() {
         return this.spotSpec;
+    }
+
+    public JobSpec setStartupDependencies(java.util.List<StartupDependency> startupDependencies) {
+        this.startupDependencies = startupDependencies;
+        return this;
+    }
+    public java.util.List<StartupDependency> getStartupDependencies() {
+        return this.startupDependencies;
     }
 
     public JobSpec setSystemDisk(SystemDisk systemDisk) {

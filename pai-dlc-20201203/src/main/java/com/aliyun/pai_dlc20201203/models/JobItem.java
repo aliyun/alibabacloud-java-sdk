@@ -135,7 +135,7 @@ public class JobItem extends TeaModel {
     public Long jobMaxRunningTimeMinutes;
 
     @NameInMap("JobReplicaStatuses")
-    public JobReplicaStatus jobReplicaStatuses;
+    public java.util.List<JobReplicaStatus> jobReplicaStatuses;
 
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
@@ -524,11 +524,11 @@ public class JobItem extends TeaModel {
         return this.jobMaxRunningTimeMinutes;
     }
 
-    public JobItem setJobReplicaStatuses(JobReplicaStatus jobReplicaStatuses) {
+    public JobItem setJobReplicaStatuses(java.util.List<JobReplicaStatus> jobReplicaStatuses) {
         this.jobReplicaStatuses = jobReplicaStatuses;
         return this;
     }
-    public JobReplicaStatus getJobReplicaStatuses() {
+    public java.util.List<JobReplicaStatus> getJobReplicaStatuses() {
         return this.jobReplicaStatuses;
     }
 

@@ -4,6 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class AssignNodeSpec extends TeaModel {
+    @NameInMap("AntiAffinityHyperNodes")
+    public java.util.List<HyperNodeSpec> antiAffinityHyperNodes;
+
     /**
      * <strong>example:</strong>
      * <p>lingjxxxxxxxx</p>
@@ -18,6 +21,9 @@ public class AssignNodeSpec extends TeaModel {
     @NameInMap("EnableAssignNode")
     public Boolean enableAssignNode;
 
+    @NameInMap("HyperNodes")
+    public java.util.List<HyperNodeSpec> hyperNodes;
+
     /**
      * <strong>example:</strong>
      * <p>lingjxxxxxxxx</p>
@@ -28,6 +34,14 @@ public class AssignNodeSpec extends TeaModel {
     public static AssignNodeSpec build(java.util.Map<String, ?> map) throws Exception {
         AssignNodeSpec self = new AssignNodeSpec();
         return TeaModel.build(map, self);
+    }
+
+    public AssignNodeSpec setAntiAffinityHyperNodes(java.util.List<HyperNodeSpec> antiAffinityHyperNodes) {
+        this.antiAffinityHyperNodes = antiAffinityHyperNodes;
+        return this;
+    }
+    public java.util.List<HyperNodeSpec> getAntiAffinityHyperNodes() {
+        return this.antiAffinityHyperNodes;
     }
 
     public AssignNodeSpec setAntiAffinityNodeNames(String antiAffinityNodeNames) {
@@ -44,6 +58,14 @@ public class AssignNodeSpec extends TeaModel {
     }
     public Boolean getEnableAssignNode() {
         return this.enableAssignNode;
+    }
+
+    public AssignNodeSpec setHyperNodes(java.util.List<HyperNodeSpec> hyperNodes) {
+        this.hyperNodes = hyperNodes;
+        return this;
+    }
+    public java.util.List<HyperNodeSpec> getHyperNodes() {
+        return this.hyperNodes;
     }
 
     public AssignNodeSpec setNodeNames(String nodeNames) {
