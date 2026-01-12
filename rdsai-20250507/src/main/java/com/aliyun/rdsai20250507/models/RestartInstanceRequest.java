@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class RestartInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>RestartInstance</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

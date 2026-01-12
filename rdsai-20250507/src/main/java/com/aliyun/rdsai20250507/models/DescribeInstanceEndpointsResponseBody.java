@@ -4,13 +4,21 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the endpoints of the RDS instance.</p>
+     */
     @NameInMap("DBInstanceEndpoints")
     public java.util.List<DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints> DBInstanceEndpoints;
 
+    /**
+     * <p>The information about the endpoints of the RDS Supabase instance.</p>
+     */
     @NameInMap("InstanceEndpoints")
     public java.util.List<DescribeInstanceEndpointsResponseBodyInstanceEndpoints> instanceEndpoints;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
@@ -18,6 +26,8 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32DEFB4A-861F-5D1D-ADD5-918E4FD7AB8C</p>
      */
@@ -62,12 +72,34 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints extends TeaModel {
+        /**
+         * <p>The endpoint of the RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-xxxx.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The network type of the RDS instance. Valid values:</p>
+         * <ul>
+         * <li><strong>public</strong>: Internet</li>
+         * <li><strong>vpc</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
+         */
         @NameInMap("IpType")
         public String ipType;
 
+        /**
+         * <p>The port used to access the RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
+         */
         @NameInMap("Port")
         public String port;
 
@@ -104,6 +136,8 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
 
     public static class DescribeInstanceEndpointsResponseBodyInstanceEndpoints extends TeaModel {
         /**
+         * <p>The endpoint of the RDS Supabase instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>8.152.XXX.XXX:8000</p>
          */
@@ -111,6 +145,8 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         public String connectionString;
 
         /**
+         * <p>The IP address used to access the RDS Supabase instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>8.152.XXX.XXX</p>
          */
@@ -118,6 +154,12 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         public String IP;
 
         /**
+         * <p>The network type of the RDS Supabase instance. Valid values:</p>
+         * <ul>
+         * <li><strong>public</strong>: Internet</li>
+         * <li><strong>vpc</strong>: VPC</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>public</p>
          */
@@ -125,6 +167,8 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         public String ipType;
 
         /**
+         * <p>The port used to access the RDS Supabase instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>8000</p>
          */

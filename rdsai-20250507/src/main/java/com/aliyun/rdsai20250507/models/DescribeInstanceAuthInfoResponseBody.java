@@ -5,18 +5,29 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
     /**
-     * <p>API Keys</p>
+     * <p>The API keys.</p>
      */
     @NameInMap("ApiKeys")
     public DescribeInstanceAuthInfoResponseBodyApiKeys apiKeys;
 
+    /**
+     * <p>The authentication configurations.</p>
+     */
     @NameInMap("ConfigList")
     public java.util.List<DescribeInstanceAuthInfoResponseBodyConfigList> configList;
 
+    /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ra-supabase-8moov5lxba****</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
+     * <p>The JWT key.</p>
+     * 
      * <strong>example:</strong>
      * <p>i5o1XAp4sR*****oyOb3O</p>
      */
@@ -24,6 +35,8 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
     public String jwtSecret;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>87249A6F-xxx-804C-E1E0AD1FAD90</p>
      */
@@ -77,7 +90,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
     public static class DescribeInstanceAuthInfoResponseBodyApiKeys extends TeaModel {
         /**
-         * <p>Supabase ANON_KEY</p>
+         * <p>The ANON_KEY of Supabase.</p>
          * 
          * <strong>example:</strong>
          * <p>eyxxxJ9.ey****</p>
@@ -86,7 +99,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
         public String anonKey;
 
         /**
-         * <p>Supabase SERVICE_ROLE_KEY</p>
+         * <p>The SERVICE_ROLE_KEY of Supabase.</p>
          * 
          * <strong>example:</strong>
          * <p>eyxxxJ9.ey****KfQ.DaYxxxt4Q</p>
@@ -118,9 +131,34 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAuthInfoResponseBodyConfigList extends TeaModel {
+        /**
+         * <p>The name of the configuration item. Valid values:</p>
+         * <ul>
+         * <li><strong>GOTRUE_EXTERNAL_EMAIL_ENABLED</strong>: Enables authentication via external email addresses.</li>
+         * <li><strong>GOTRUE_SITE_URL</strong>: the URL that is displayed in the emails sent from the instance.</li>
+         * <li><strong>GOTRUE_SMTP_PORT</strong>: the port of the SMTP service provider.</li>
+         * <li><strong>GOTRUE_SMTP_SENDER_NAME</strong>: the name of the sender of the email.</li>
+         * <li><strong>GOTRUE_SMTP_USER</strong>: the username of the SMTP service provider.</li>
+         * <li><strong>GOTRUE_SMTP_PASS</strong>: the key of the SMTP service provider.</li>
+         * <li><strong>GOTRUE_SMTP_ADMIN_EMAIL</strong>: the email address of the SMTP service provider.</li>
+         * <li><strong>GOTRUE_SMTP_HOST</strong>: The host address of the SMTP service provider.</li>
+         * <li><strong>GOTRUE_MAILER_AUTOCONFIRM</strong>: specifies whether to enable automatic confirmation.</li>
+         * <li><strong>GOTRUE_MAILER_OTP_EXP</strong>: The validity period of the one-time password (OTP). Unit: seconds.</li>
+         * <li><strong>GOTRUE_MAILER_OTP_LENGTH</strong>: The verification code length of the one-time password (OTP). The value must be an integer greater than or equal to 6.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GOTRUE_SITE_URL</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://8.152">http://8.152</a>. XXX.XXX</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAppInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteAppInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
@@ -19,6 +23,8 @@ public class DeleteAppInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>DeleteAppInstance</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

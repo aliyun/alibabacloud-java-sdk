@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCustomAgentResponseBody extends TeaModel {
     /**
+     * <p>The creation time of the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-27 16:01:28</p>
      */
@@ -12,6 +14,8 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>Indicates whether tools are enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -27,19 +31,30 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The name of the agent.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The system prompts.</p>
+     */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
+    /**
+     * <p>The information about the tool.</p>
+     */
     @NameInMap("Tools")
     public java.util.List<String> tools;
 

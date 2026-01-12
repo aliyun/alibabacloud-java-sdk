@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatMessagesTaskStopRequest extends TeaModel {
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>ChatMessagesTaskStop</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceRAGConfigShrinkRequest extends TeaModel {
     /**
+     * <p>The value of the configuration item.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to enable the RAG agent. If you do not configure this parameter, the RAG agent state remains unchanged. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     */
     @NameInMap("ConfigList")
     public String configListShrink;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +34,8 @@ public class ModifyInstanceRAGConfigShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceRAGConfig</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -31,6 +43,8 @@ public class ModifyInstanceRAGConfigShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

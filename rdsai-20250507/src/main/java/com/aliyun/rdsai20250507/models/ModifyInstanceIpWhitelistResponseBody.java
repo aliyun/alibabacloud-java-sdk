@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceIpWhitelistResponseBody extends TeaModel {
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
@@ -12,6 +14,8 @@ public class ModifyInstanceIpWhitelistResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>87249A6F-xxx-804C-E1E0AD1FAD90</p>
      */

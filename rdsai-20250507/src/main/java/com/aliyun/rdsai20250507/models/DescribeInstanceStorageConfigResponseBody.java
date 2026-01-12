@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
+    /**
+     * <p>The storage configurations.</p>
+     */
     @NameInMap("ConfigList")
     public java.util.List<DescribeInstanceStorageConfigResponseBodyConfigList> configList;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
      */
@@ -52,6 +59,17 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
 
     public static class DescribeInstanceStorageConfigResponseBodyConfigList extends TeaModel {
         /**
+         * <p>The configuration item name. Valid values:</p>
+         * <ul>
+         * <li><strong>AWS_SESSION_TOKEN</strong>: temporary OSS access token (session token).</li>
+         * <li><strong>AWS_ACCESS_KEY_ID</strong>: the AccessKey ID of OSS.</li>
+         * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: the AccessKey secret of OSS.</li>
+         * <li><strong>GLOBAL_S3_BUCKET</strong>: the name of the OSS bucket.</li>
+         * <li><strong>TENANT_ID</strong>: the tenant ID of the OSS Prefix (prefix or directory).</li>
+         * <li><strong>GLOBAL_S3_ENDPOINT</strong>: the endpoint of OSS.</li>
+         * <li><strong>REGION</strong>: the region of OSS.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>REGION</p>
          */
@@ -59,6 +77,8 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigRequest extends TeaModel {
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
@@ -12,6 +14,8 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>eip、nat</p>
      */
@@ -19,6 +23,8 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String configName;
 
     /**
+     * <p>The name of the configuration item that you want to modify. Configure this parameter together with the ConfigValue parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>on、off</p>
      */
@@ -26,6 +32,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String configValue;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceConfig</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

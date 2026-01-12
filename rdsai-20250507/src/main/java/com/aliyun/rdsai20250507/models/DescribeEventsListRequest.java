@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsListRequest extends TeaModel {
     /**
+     * <p>The start time of the query period.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-08-28 18:00:00</p>
      */
@@ -12,6 +14,8 @@ public class DescribeEventsListRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>r-uf6ce0r08lr7xnriq2</p>
      */
@@ -19,6 +23,8 @@ public class DescribeEventsListRequest extends TeaModel {
     public String instanceIdList;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeEventsListRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The end time of the query period.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,7 @@ public class DescribeEventsListRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>DescribeEventsList</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,8 @@ public class DescribeEventsListRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The RDS Supabase instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-01 18:00:00</p>
      */

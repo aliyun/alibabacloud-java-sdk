@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ChatMessagesShrinkRequest extends TeaModel {
     /**
+     * <p>The query content.</p>
+     * 
      * <strong>example:</strong>
      * <p>fea7bdca-e848-44dd-b1ae-852472b8****</p>
      */
     @NameInMap("ConversationId")
     public String conversationId;
 
+    /**
+     * <p>The ID of the parent message.</p>
+     */
     @NameInMap("Inputs")
     public String inputsShrink;
 
     /**
+     * <p>The ID of the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>84dc9f9b-424a-404d-9c36-35e9d000****</p>
      */
@@ -22,6 +29,7 @@ public class ChatMessagesShrinkRequest extends TeaModel {
     public String parentMessageId;
 
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>ChatMessages</strong>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Query")

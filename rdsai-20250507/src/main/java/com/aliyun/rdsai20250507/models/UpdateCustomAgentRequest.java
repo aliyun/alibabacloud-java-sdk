@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAgentRequest extends TeaModel {
     /**
-     * <p>AgentId。</p>
+     * <p>The operation that you want to perform. Set the value to <strong>UpdateCustomAgent</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,18 +15,29 @@ public class UpdateCustomAgentRequest extends TeaModel {
     public String customAgentId;
 
     /**
+     * <p>The system prompts.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableTools")
     public Boolean enableTools;
 
+    /**
+     * <p>The ID of the agent.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The name of the agent.</p>
+     */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
+    /**
+     * <p>Specifies whether to enable tools.</p>
+     */
     @NameInMap("Tools")
     public java.util.List<String> tools;
 

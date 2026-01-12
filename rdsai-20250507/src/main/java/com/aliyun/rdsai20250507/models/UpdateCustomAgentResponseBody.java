@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAgentResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether tools are enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,7 +14,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
     public String enableTools;
 
     /**
-     * <p>AgentId。</p>
+     * <p>The ID of the agent.</p>
      * 
      * <strong>example:</strong>
      * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
@@ -20,19 +22,30 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The name of the agent.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The system prompts.</p>
+     */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
+    /**
+     * <p>The information about the tool.</p>
+     */
     @NameInMap("Tools")
     public java.util.List<String> tools;
 

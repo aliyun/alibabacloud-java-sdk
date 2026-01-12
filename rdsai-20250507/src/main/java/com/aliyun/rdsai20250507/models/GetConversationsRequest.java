@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetConversationsRequest extends TeaModel {
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>GetConversations</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>77be60cd-237b-4ca9-9c46-48b663cb****</p>
      */
@@ -12,6 +14,8 @@ public class GetConversationsRequest extends TeaModel {
     public String lastId;
 
     /**
+     * <p>The ID of the last conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class GetConversationsRequest extends TeaModel {
     public String limit;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class GetConversationsRequest extends TeaModel {
     public String pinned;
 
     /**
+     * <p>Specifies whether to pin the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreatedAt</p>
      */

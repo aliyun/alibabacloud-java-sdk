@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     /**
+     * <p>The name of the AI application.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-supabase</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The application type. Only <strong>supabase</strong> is supported. For more information, see <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>supabase</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String appType;
 
     /**
+     * <p>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</p>
+     * 
      * <strong>example:</strong>
      * <p>pgm-2ze49qv594vi****</p>
      */
@@ -29,6 +35,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String eipStatus;
 
     /**
+     * <p>The instance type of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>rdsai.supabase.basic</p>
      */
@@ -36,6 +44,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String instanceClass;
 
     /**
+     * <p>The minor version number of RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>20241231</p>
      */
@@ -43,6 +53,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String instanceMinorVersion;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
@@ -53,6 +65,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String natStatus;
 
     /**
+     * <p>The public endpoint of the AI application.</p>
+     * 
      * <strong>example:</strong>
      * <p>8.152. XXX.XXX:8000</p>
      */
@@ -60,6 +74,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String publicConnectionString;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -67,6 +83,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
      */
@@ -74,6 +92,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance state table</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -81,6 +101,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-2zeaepb8k4ku05ov2****</p>
      */
@@ -88,6 +110,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The internal endpoint of the AI application.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.16.XXX.XXX:8000</p>
      */
@@ -95,6 +119,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String vpcConnectionString;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-i</p>
      */

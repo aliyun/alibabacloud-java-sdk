@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
+    /**
+     * <p>The RAG agent configurations.</p>
+     */
     @NameInMap("ConfigList")
     public java.util.List<DescribeInstanceRAGConfigResponseBodyConfigList> configList;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
      */
@@ -22,6 +29,12 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the RAG agent.</p>
+     * <ul>
+     * <li><strong>true</strong>: RAG agent is enabled.</li>
+     * <li><strong>false</strong>: RAG agent is disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +80,8 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
 
     public static class DescribeInstanceRAGConfigResponseBodyConfigList extends TeaModel {
         /**
+         * <p>The name of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>LLM_MODEL</p>
          */
@@ -74,6 +89,8 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-flash</p>
          */

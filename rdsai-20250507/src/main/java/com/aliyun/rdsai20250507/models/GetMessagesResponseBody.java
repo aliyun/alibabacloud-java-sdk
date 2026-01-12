@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class GetMessagesResponseBody extends TeaModel {
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetMessagesResponseBodyData> data;
 
     /**
+     * <p>Indicates whether the current page is followed by a page.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +20,8 @@ public class GetMessagesResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
+     * <p>The maximum number of entries to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -22,6 +29,8 @@ public class GetMessagesResponseBody extends TeaModel {
     public Long limit;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -66,10 +75,15 @@ public class GetMessagesResponseBody extends TeaModel {
     }
 
     public static class GetMessagesResponseBodyData extends TeaModel {
+        /**
+         * <p>The response to the query.</p>
+         */
         @NameInMap("Answer")
         public String answer;
 
         /**
+         * <p>The ID of the conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>9cbbe885-b240-4803-9d15-6781a3fd****</p>
          */
@@ -77,6 +91,8 @@ public class GetMessagesResponseBody extends TeaModel {
         public String conversationId;
 
         /**
+         * <p>The creation time of the conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>1763986004</p>
          */
@@ -84,6 +100,8 @@ public class GetMessagesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The feedback.</p>
+         * 
          * <strong>example:</strong>
          * <p>like</p>
          */
@@ -91,15 +109,23 @@ public class GetMessagesResponseBody extends TeaModel {
         public String feedback;
 
         /**
+         * <p>The message ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>84dc9f9b-424a-404d-9c36-35e9d000****</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The query statement.</p>
+         */
         @NameInMap("Query")
         public String query;
 
+        /**
+         * <p>The retriever resources.</p>
+         */
         @NameInMap("RetrieverResources")
         public java.util.List<?> retrieverResources;
 

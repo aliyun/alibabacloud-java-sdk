@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLResponseBody extends TeaModel {
     /**
+     * <p>The type of the certificate. Set the value to <strong>custom</strong>, which indicates that a custom certificate is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String CAType;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32DEFB4A-861F-5D1D-ADD5-918E4FD7AB8C</p>
      */
@@ -26,6 +32,12 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Specifies whether to enable SSL encryption. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: enables SSL encryption.</li>
+     * <li><strong>0</strong>: disables SSL encryption.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +45,8 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String SSLEnabled;
 
     /**
+     * <p>The content of the custom certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>
      */
@@ -40,6 +54,8 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String serverCert;
 
     /**
+     * <p>The private key of the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----MIIE****ihfg==-----END PRIVATE KEY-----</p>
      */

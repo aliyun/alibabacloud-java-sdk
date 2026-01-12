@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ListCustomAgentResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCustomAgentResponseBodyData> data;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListCustomAgentResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListCustomAgentResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -29,6 +38,8 @@ public class ListCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -82,6 +93,8 @@ public class ListCustomAgentResponseBody extends TeaModel {
 
     public static class ListCustomAgentResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-27 16:01:28</p>
          */
@@ -89,6 +102,8 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>Indicates whether tools are enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -96,7 +111,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public Boolean enableTools;
 
         /**
-         * <p>AgentId。</p>
+         * <p>The ID of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
@@ -104,16 +119,27 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the dedicated agent.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The system prompts.</p>
+         */
         @NameInMap("SystemPrompt")
         public String systemPrompt;
 
+        /**
+         * <p>The information about the tool.</p>
+         */
         @NameInMap("Tools")
         public java.util.List<String> tools;
 
         /**
+         * <p>The modification time of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-27 16:02:28</p>
          */

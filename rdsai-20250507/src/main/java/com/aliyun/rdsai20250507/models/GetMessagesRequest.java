@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMessagesRequest extends TeaModel {
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>GetMessages</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>941c6f59-acf5-4e11-9adc-31e52e1f****</p>
      */
@@ -12,6 +14,8 @@ public class GetMessagesRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The ID of the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>038866af-a050-4bc5-bfad-b7bfc838****</p>
      */
@@ -19,6 +23,8 @@ public class GetMessagesRequest extends TeaModel {
     public String firstId;
 
     /**
+     * <p>The ID of the first message.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

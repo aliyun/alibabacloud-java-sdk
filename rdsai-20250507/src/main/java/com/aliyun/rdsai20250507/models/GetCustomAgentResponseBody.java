@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCustomAgentResponseBody extends TeaModel {
     /**
+     * <p>The creation time of the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-06-04T02:25:43Z</p>
      */
@@ -12,6 +14,8 @@ public class GetCustomAgentResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>Indicates whether tools are enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,29 +23,44 @@ public class GetCustomAgentResponseBody extends TeaModel {
     public Boolean enableTools;
 
     /**
+     * <p>The ID of the backup set.</p>
+     * 
      * <strong>example:</strong>
      * <p>17053</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The name of the dedicated agent.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The system prompts.</p>
+     */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
+    /**
+     * <p>The details of the tools.</p>
+     */
     @NameInMap("Tools")
     public java.util.List<String> tools;
 
     /**
+     * <p>The modification time of the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-27 16:02:28</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomAgentResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned results.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

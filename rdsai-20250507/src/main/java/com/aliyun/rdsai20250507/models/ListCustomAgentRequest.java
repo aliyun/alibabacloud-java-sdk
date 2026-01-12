@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCustomAgentRequest extends TeaModel {
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>ListCustomAgent</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListCustomAgentRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

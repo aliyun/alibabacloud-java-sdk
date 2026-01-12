@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ListCustomAgentToolsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCustomAgentToolsResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32DEFB4A-861F-5D1D-ADD5-918E4FD7****</p>
      */
@@ -37,32 +42,47 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
 
     public static class ListCustomAgentToolsResponseBodyData extends TeaModel {
         /**
+         * <p>The description in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Queries RDS instances.</p>
          */
         @NameInMap("En")
         public String en;
 
+        /**
+         * <p>The description in Japanese.</p>
+         */
         @NameInMap("Ja")
         public String ja;
 
         /**
+         * <p>The tool name.</p>
+         * 
          * <strong>example:</strong>
          * <p>describe_db_instances</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The description in Traditional Chinese.</p>
+         */
         @NameInMap("Tc")
         public String tc;
 
         /**
+         * <p>The read/write type of the tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>get</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The description in Simplified Chinese.</p>
+         */
         @NameInMap("Zh")
         public String zh;
 

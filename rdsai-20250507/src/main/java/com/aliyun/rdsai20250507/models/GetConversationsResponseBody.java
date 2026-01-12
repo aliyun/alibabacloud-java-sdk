@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class GetConversationsResponseBody extends TeaModel {
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetConversationsResponseBodyData> data;
 
     /**
+     * <p>Indicates whether the current page is followed by a page.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +20,8 @@ public class GetConversationsResponseBody extends TeaModel {
     public String hasMore;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -22,6 +29,8 @@ public class GetConversationsResponseBody extends TeaModel {
     public Long limit;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -67,6 +76,8 @@ public class GetConversationsResponseBody extends TeaModel {
 
     public static class GetConversationsResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time of the conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>1764055092</p>
          */
@@ -74,15 +85,23 @@ public class GetConversationsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The ID of the history conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>60b335ca-124d-4ee1-864b-de554987****</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The introduction to the conversation.</p>
+         */
         @NameInMap("Introduction")
         public String introduction;
 
+        /**
+         * <p>The name of the history conversation.</p>
+         */
         @NameInMap("Name")
         public String name;
 

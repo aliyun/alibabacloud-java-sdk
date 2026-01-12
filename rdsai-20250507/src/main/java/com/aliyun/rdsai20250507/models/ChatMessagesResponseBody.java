@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ChatMessagesResponseBody extends TeaModel {
+    /**
+     * <p>The answer.</p>
+     */
     @NameInMap("Answer")
     public String answer;
 
     /**
+     * <p>The ID of the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>9cbbe885-b240-4803-9d15-6781a3fd****</p>
      */
@@ -15,6 +20,8 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The creation time of the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>1763986004</p>
      */
@@ -22,6 +29,8 @@ public class ChatMessagesResponseBody extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The event.</p>
+     * 
      * <strong>example:</strong>
      * <p>MysqlIOException</p>
      */
@@ -29,6 +38,8 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String event;
 
     /**
+     * <p>The message ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>60b335ca-124d-4ee1-864b-de554987****</p>
      */
@@ -36,16 +47,23 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The message ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>oas8pwy2-slxw-sf98-bx83-cb2hkktl****</p>
      */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>The query mode.</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -53,6 +71,8 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the asynchronous task.</p>
+     * 
      * <strong>example:</strong>
      * <p>01c3d43d-9466-4bd5-8196-4cbbce08****</p>
      */

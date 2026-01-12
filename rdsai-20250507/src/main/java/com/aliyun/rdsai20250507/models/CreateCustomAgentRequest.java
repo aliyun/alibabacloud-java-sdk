@@ -5,21 +5,30 @@ import com.aliyun.tea.*;
 
 public class CreateCustomAgentRequest extends TeaModel {
     /**
+     * <p>The system prompts.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableTools")
     public Boolean enableTools;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to <strong>CreateCustomAgent</strong>.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The name of the dedicated agent.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
+    /**
+     * <p>Specifies whether to enable tools.</p>
+     */
     @NameInMap("Tools")
     public java.util.List<String> tools;
 

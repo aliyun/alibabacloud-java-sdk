@@ -4,10 +4,20 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyMessagesFeedbacksRequest extends TeaModel {
+    /**
+     * <p>The rating of the message.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>like</li>
+     * <li>dislike</li>
+     * </ul>
+     */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>ModifyMessagesFeedbacks</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>yy9rkn6q-js75-0dka-0cc2-6b5o86uj****</p>
      */
@@ -15,6 +25,8 @@ public class ModifyMessagesFeedbacksRequest extends TeaModel {
     public String messageId;
 
     /**
+     * <p>The message ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>like</p>
      */

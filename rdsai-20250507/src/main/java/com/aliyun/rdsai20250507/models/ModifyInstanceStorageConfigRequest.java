@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceStorageConfigRequest extends TeaModel {
     /**
+     * <p>The value of the configuration item.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     */
     @NameInMap("ConfigList")
     public java.util.List<ModifyInstanceStorageConfigRequestConfigList> configList;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +30,8 @@ public class ModifyInstanceStorageConfigRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceStorageConfig</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

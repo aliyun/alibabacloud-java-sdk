@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ResetInstancePasswordRequest extends TeaModel {
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_Password</p>
      */
     @NameInMap("DashboardPassword")
     public String dashboardPassword;
 
+    /**
+     * <p>The Supabase Dashboard password.</p>
+     * <p>The password must be 8 to 32 characters in length and must contain at least three of the following types: uppercase letters, lowercase letters, digits, and underscores (_).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_Password</p>
+     */
     @NameInMap("DatabasePassword")
     public String databasePassword;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +34,8 @@ public class ResetInstancePasswordRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The operation that you want to perform. Set the value to <strong>ResetInstancePassword</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

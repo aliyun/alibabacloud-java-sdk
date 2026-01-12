@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The IP address whitelists.</p>
+     */
     @NameInMap("IpWhiteListGroups")
     public java.util.List<DescribeInstanceIpWhitelistResponseBodyIpWhiteListGroups> ipWhiteListGroups;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32DEFB4A-861F-5D1D-ADD5-918E4FD7AB8C</p>
      */
@@ -52,6 +59,8 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
 
     public static class DescribeInstanceIpWhitelistResponseBodyIpWhiteListGroups extends TeaModel {
         /**
+         * <p>The IP address whitelist name.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -59,6 +68,8 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The IP addresses or CIDR blocks in the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.XXX.XXX/24,10.0.XXX.XXX/24</p>
          */
