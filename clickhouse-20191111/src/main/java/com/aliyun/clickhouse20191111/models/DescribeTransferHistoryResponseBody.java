@@ -120,6 +120,9 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         @NameInMap("SubJob")
         public String subJob;
 
+        @NameInMap("SubJobMessage")
+        public String subJobMessage;
+
         /**
          * <p>The subtask status.</p>
          * 
@@ -232,6 +235,14 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
         public String getSubJob() {
             return this.subJob;
+        }
+
+        public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setSubJobMessage(String subJobMessage) {
+            this.subJobMessage = subJobMessage;
+            return this;
+        }
+        public String getSubJobMessage() {
+            return this.subJobMessage;
         }
 
         public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setSubJobStatus(String subJobStatus) {
