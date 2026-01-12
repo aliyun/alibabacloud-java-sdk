@@ -808,6 +808,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>对包年实例升降配，对按量实例修改resource quota</p>
+     * 
+     * @param tmpReq ModifyInstanceSpecRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceSpecResponse
+     */
+    public ModifyInstanceSpecResponse modifyInstanceSpecWithOptions(ModifyInstanceSpecRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyInstanceSpecShrinkRequest request = new ModifyInstanceSpecShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.haResourceSpec)) {
+            request.haResourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haResourceSpec, "HaResourceSpec", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.haVSwitchIds)) {
+            request.haVSwitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haVSwitchIds, "HaVSwitchIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceSpec)) {
+            request.resourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceSpec, "ResourceSpec", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ha)) {
+            body.put("Ha", request.ha);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haResourceSpecShrink)) {
+            body.put("HaResourceSpec", request.haResourceSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haVSwitchIdsShrink)) {
+            body.put("HaVSwitchIds", request.haVSwitchIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            body.put("PromotionCode", request.promotionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSpecShrink)) {
+            body.put("ResourceSpec", request.resourceSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usePromotionCode)) {
+            body.put("UsePromotionCode", request.usePromotionCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceSpec"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceSpecResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>对包年实例升降配，对按量实例修改resource quota</p>
+     * 
+     * @param request ModifyInstanceSpecRequest
+     * @return ModifyInstanceSpecResponse
+     */
+    public ModifyInstanceSpecResponse modifyInstanceSpec(ModifyInstanceSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstanceSpecWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>修改集群交换机</p>
      * 
      * @deprecated OpenAPI ModifyInstanceVswitch is deprecated

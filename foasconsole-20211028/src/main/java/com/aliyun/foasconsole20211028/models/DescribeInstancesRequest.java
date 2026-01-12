@@ -20,6 +20,13 @@ public class DescribeInstancesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Elastic")
+    public Boolean elastic;
+
+    /**
+     * <strong>example:</strong>
      * <p>f-cn-wwo36qj4g06</p>
      */
     @NameInMap("InstanceId")
@@ -87,6 +94,14 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public DescribeInstancesRequest setElastic(Boolean elastic) {
+        this.elastic = elastic;
+        return this;
+    }
+    public Boolean getElastic() {
+        return this.elastic;
     }
 
     public DescribeInstancesRequest setInstanceId(String instanceId) {
