@@ -55,6 +55,12 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
 
+        @NameInMap("RayInteractiveAccessAddr")
+        public String rayInteractiveAccessAddr;
+
+        @NameInMap("RayVpcWebUIAddr")
+        public String rayVpcWebUIAddr;
+
         @NameInMap("State")
         public String state;
 
@@ -96,6 +102,22 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getProperties() {
             return this.properties;
+        }
+
+        public ListLdpsComputeGroupsResponseBodyGroupList setRayInteractiveAccessAddr(String rayInteractiveAccessAddr) {
+            this.rayInteractiveAccessAddr = rayInteractiveAccessAddr;
+            return this;
+        }
+        public String getRayInteractiveAccessAddr() {
+            return this.rayInteractiveAccessAddr;
+        }
+
+        public ListLdpsComputeGroupsResponseBodyGroupList setRayVpcWebUIAddr(String rayVpcWebUIAddr) {
+            this.rayVpcWebUIAddr = rayVpcWebUIAddr;
+            return this;
+        }
+        public String getRayVpcWebUIAddr() {
+            return this.rayVpcWebUIAddr;
         }
 
         public ListLdpsComputeGroupsResponseBodyGroupList setState(String state) {

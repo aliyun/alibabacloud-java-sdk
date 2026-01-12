@@ -2895,6 +2895,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取计算引擎资源组列表</p>
+     * 
      * @param request ListLdpsComputeGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLdpsComputeGroupsResponse
@@ -2948,6 +2951,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取计算引擎资源组列表</p>
+     * 
      * @param request ListLdpsComputeGroupsRequest
      * @return ListLdpsComputeGroupsResponse
      */
