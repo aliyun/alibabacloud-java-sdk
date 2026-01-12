@@ -1576,6 +1576,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Accessibility", request.accessibility);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeAfter)) {
+            query.put("CreateTimeAfter", request.createTimeAfter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeBefore)) {
+            query.put("CreateTimeBefore", request.createTimeBefore);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.createUserId)) {
             query.put("CreateUserId", request.createUserId);
         }

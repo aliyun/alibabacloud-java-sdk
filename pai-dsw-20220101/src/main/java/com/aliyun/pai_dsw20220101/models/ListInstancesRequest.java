@@ -30,6 +30,12 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("CreateTimeAfter")
+    public String createTimeAfter;
+
+    @NameInMap("CreateTimeBefore")
+    public String createTimeBefore;
+
     /**
      * <p>The UID of the creator.</p>
      * 
@@ -297,6 +303,22 @@ public class ListInstancesRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public ListInstancesRequest setCreateTimeAfter(String createTimeAfter) {
+        this.createTimeAfter = createTimeAfter;
+        return this;
+    }
+    public String getCreateTimeAfter() {
+        return this.createTimeAfter;
+    }
+
+    public ListInstancesRequest setCreateTimeBefore(String createTimeBefore) {
+        this.createTimeBefore = createTimeBefore;
+        return this;
+    }
+    public String getCreateTimeBefore() {
+        return this.createTimeBefore;
     }
 
     public ListInstancesRequest setCreateUserId(String createUserId) {
