@@ -147,6 +147,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>整机备份</p>
+     * 
+     * @param request BackupAndroidInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BackupAndroidInstanceResponse
+     */
+    public BackupAndroidInstanceResponse backupAndroidInstanceWithOptions(BackupAndroidInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIdList)) {
+            query.put("AndroidInstanceIdList", request.androidInstanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupFileName)) {
+            query.put("BackupFileName", request.backupFileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupFilePath)) {
+            query.put("BackupFilePath", request.backupFilePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadEndpoint)) {
+            query.put("UploadEndpoint", request.uploadEndpoint);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BackupAndroidInstance"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BackupAndroidInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>整机备份</p>
+     * 
+     * @param request BackupAndroidInstanceRequest
+     * @return BackupAndroidInstanceResponse
+     */
+    public BackupAndroidInstanceResponse backupAndroidInstance(BackupAndroidInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.backupAndroidInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用备份</p>
+     * 
+     * @param request BackupAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BackupAppResponse
+     */
+    public BackupAppResponse backupAppWithOptions(BackupAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIdList)) {
+            query.put("AndroidInstanceIdList", request.androidInstanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupFileName)) {
+            query.put("BackupFileName", request.backupFileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupFilePath)) {
+            query.put("BackupFilePath", request.backupFilePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceAppList)) {
+            query.put("SourceAppList", request.sourceAppList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadEndpoint)) {
+            query.put("UploadEndpoint", request.uploadEndpoint);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BackupApp"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BackupAppResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用备份</p>
+     * 
+     * @param request BackupAppRequest
+     * @return BackupAppResponse
+     */
+    public BackupAppResponse backupApp(BackupAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.backupAppWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Currently, this operation allows you to upload only backup files generated by cloud phones to Object Storage Service (OSS) buckets.</p>
      * 
@@ -4542,6 +4666,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RebootAndroidInstancesInGroupResponse rebootAndroidInstancesInGroup(RebootAndroidInstancesInGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rebootAndroidInstancesInGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>整机恢复</p>
+     * 
+     * @param request RecoverAndroidInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RecoverAndroidInstanceResponse
+     */
+    public RecoverAndroidInstanceResponse recoverAndroidInstanceWithOptions(RecoverAndroidInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIdList)) {
+            query.put("AndroidInstanceIdList", request.androidInstanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupFileId)) {
+            query.put("BackupFileId", request.backupFileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupFilePath)) {
+            query.put("BackupFilePath", request.backupFilePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadEndpoint)) {
+            query.put("UploadEndpoint", request.uploadEndpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadType)) {
+            query.put("UploadType", request.uploadType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecoverAndroidInstance"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecoverAndroidInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>整机恢复</p>
+     * 
+     * @param request RecoverAndroidInstanceRequest
+     * @return RecoverAndroidInstanceResponse
+     */
+    public RecoverAndroidInstanceResponse recoverAndroidInstance(RecoverAndroidInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.recoverAndroidInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复应用</p>
+     * 
+     * @param request RecoverAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RecoverAppResponse
+     */
+    public RecoverAppResponse recoverAppWithOptions(RecoverAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIdList)) {
+            query.put("AndroidInstanceIdList", request.androidInstanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupFileId)) {
+            query.put("BackupFileId", request.backupFileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupFilePath)) {
+            query.put("BackupFilePath", request.backupFilePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadEndpoint)) {
+            query.put("UploadEndpoint", request.uploadEndpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadType)) {
+            query.put("UploadType", request.uploadType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecoverApp"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecoverAppResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复应用</p>
+     * 
+     * @param request RecoverAppRequest
+     * @return RecoverAppResponse
+     */
+    public RecoverAppResponse recoverApp(RecoverAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.recoverAppWithOptions(request, runtime);
     }
 
     /**
