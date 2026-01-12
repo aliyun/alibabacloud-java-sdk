@@ -29,6 +29,9 @@ public class CreateCustomDomainInput extends TeaModel {
     @NameInMap("domainName")
     public String domainName;
 
+    @NameInMap("domainType")
+    public String domainType;
+
     /**
      * <p>域名支持的协议类型：● HTTP：仅支持 HTTP 协议。● HTTPS：仅支持 HTTPS 协议。● HTTP,HTTPS：支持 HTTP 及 HTTPS 协议。</p>
      * <p>This parameter is required.</p>
@@ -84,6 +87,14 @@ public class CreateCustomDomainInput extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public CreateCustomDomainInput setDomainType(String domainType) {
+        this.domainType = domainType;
+        return this;
+    }
+    public String getDomainType() {
+        return this.domainType;
     }
 
     public CreateCustomDomainInput setProtocol(String protocol) {
