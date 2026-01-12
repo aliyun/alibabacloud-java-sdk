@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubnetsRequest extends TeaModel {
+    @NameInMap("Eid")
+    public String eid;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -28,6 +31,14 @@ public class DescribeSubnetsRequest extends TeaModel {
     public static DescribeSubnetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSubnetsRequest self = new DescribeSubnetsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSubnetsRequest setEid(String eid) {
+        this.eid = eid;
+        return this;
+    }
+    public String getEid() {
+        return this.eid;
     }
 
     public DescribeSubnetsRequest setMaxResults(Integer maxResults) {

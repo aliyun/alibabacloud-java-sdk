@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchModifyEntitlementResponseBody extends TeaModel {
+    /**
+     * <p>The results.</p>
+     */
     @NameInMap("Entitlements")
     public BatchModifyEntitlementResponseBodyEntitlements entitlements;
 
@@ -102,6 +105,9 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
     }
 
     public static class BatchModifyEntitlementResponseBodyEntitlements extends TeaModel {
+        /**
+         * <p>The assignment results.</p>
+         */
         @NameInMap("AssignModels")
         public java.util.List<BatchModifyEntitlementResponseBodyEntitlementsAssignModels> assignModels;
 

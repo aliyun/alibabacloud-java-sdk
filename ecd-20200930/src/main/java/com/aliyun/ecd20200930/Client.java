@@ -1028,6 +1028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</li>
      * </ul>
      * 
+     * <b>summary</b> : 
+     * <p>Assigns multiple cloud computers to users in a batch.</p>
+     * 
      * @param request BatchModifyEntitlementRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchModifyEntitlementResponse
@@ -1087,6 +1090,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <code>ManagementFlags</code> response parameter indicates the assignment of the cloud computer. A value of <code>ASSIGNING</code> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</li>
      * <li>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</li>
      * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Assigns multiple cloud computers to users in a batch.</p>
      * 
      * @param request BatchModifyEntitlementRequest
      * @return BatchModifyEntitlementResponse
@@ -5081,6 +5087,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eid)) {
+            query.put("Eid", request.eid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableAdminAccess)) {
@@ -11860,6 +11870,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSubnetsResponse describeSubnetsWithOptions(DescribeSubnetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eid)) {
+            query.put("Eid", request.eid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }

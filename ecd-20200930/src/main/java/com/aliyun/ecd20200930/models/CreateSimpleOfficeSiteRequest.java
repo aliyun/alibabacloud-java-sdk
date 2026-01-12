@@ -104,6 +104,9 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("Eid")
+    public String eid;
+
     /**
      * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
      * <p>Valid values:</p>
@@ -294,6 +297,14 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public CreateSimpleOfficeSiteRequest setEid(String eid) {
+        this.eid = eid;
+        return this;
+    }
+    public String getEid() {
+        return this.eid;
     }
 
     public CreateSimpleOfficeSiteRequest setEnableAdminAccess(Boolean enableAdminAccess) {

@@ -543,6 +543,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("DomainUserName")
         public String domainUserName;
 
+        @NameInMap("Eid")
+        public String eid;
+
         /**
          * <p>Indicates whether the local administrator permissions are granted to users that are authorized to use cloud computers in the office network.</p>
          * <p>Valid values:</p>
@@ -583,6 +586,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         @NameInMap("EnableServiceRoute")
         public Boolean enableServiceRoute;
+
+        @NameInMap("EnvType")
+        public String envType;
 
         /**
          * <p>An array of File Storage NAS (NAS) file system IDs.</p>
@@ -1115,6 +1121,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             return this.domainUserName;
         }
 
+        public DescribeOfficeSitesResponseBodyOfficeSites setEid(String eid) {
+            this.eid = eid;
+            return this;
+        }
+        public String getEid() {
+            return this.eid;
+        }
+
         public DescribeOfficeSitesResponseBodyOfficeSites setEnableAdminAccess(Boolean enableAdminAccess) {
             this.enableAdminAccess = enableAdminAccess;
             return this;
@@ -1145,6 +1159,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public Boolean getEnableServiceRoute() {
             return this.enableServiceRoute;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setFileSystemIds(java.util.List<String> fileSystemIds) {
