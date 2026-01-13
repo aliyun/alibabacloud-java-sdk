@@ -193,6 +193,9 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         @NameInMap("state")
         public String state;
 
+        @NameInMap("tags")
+        public java.util.List<Tag> tags;
+
         /**
          * <p>The total number of CPU cores allocated to the job multiplied by the running duration (seconds).</p>
          * 
@@ -307,6 +310,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public ListKyuubiSparkApplicationsResponseBodyApplications setTags(java.util.List<Tag> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<Tag> getTags() {
+            return this.tags;
         }
 
         public ListKyuubiSparkApplicationsResponseBodyApplications setVcoreSeconds(Long vcoreSeconds) {

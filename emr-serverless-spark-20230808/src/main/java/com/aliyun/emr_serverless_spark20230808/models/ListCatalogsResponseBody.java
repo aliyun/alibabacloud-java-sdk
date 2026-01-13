@@ -90,6 +90,13 @@ public class ListCatalogsResponseBody extends TeaModel {
 
     public static class ListCatalogsResponseBodyCatalogs extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>alias</p>
+         */
+        @NameInMap("alias")
+        public String alias;
+
+        /**
          * <p>regionId。</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +158,14 @@ public class ListCatalogsResponseBody extends TeaModel {
         public static ListCatalogsResponseBodyCatalogs build(java.util.Map<String, ?> map) throws Exception {
             ListCatalogsResponseBodyCatalogs self = new ListCatalogsResponseBodyCatalogs();
             return TeaModel.build(map, self);
+        }
+
+        public ListCatalogsResponseBodyCatalogs setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
         }
 
         public ListCatalogsResponseBodyCatalogs setCatalogId(String catalogId) {
