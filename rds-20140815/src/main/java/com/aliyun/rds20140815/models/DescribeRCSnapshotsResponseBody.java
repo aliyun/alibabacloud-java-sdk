@@ -189,6 +189,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
+        @NameInMap("LastModifiedTime")
+        public String lastModifiedTime;
+
         /**
          * <p>The progress of the snapshot creation task in percentage.</p>
          * 
@@ -368,6 +371,14 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         }
         public Boolean getInstantAccess() {
             return this.instantAccess;
+        }
+
+        public DescribeRCSnapshotsResponseBodySnapshots setLastModifiedTime(String lastModifiedTime) {
+            this.lastModifiedTime = lastModifiedTime;
+            return this;
+        }
+        public String getLastModifiedTime() {
+            return this.lastModifiedTime;
         }
 
         public DescribeRCSnapshotsResponseBodySnapshots setProgress(String progress) {
