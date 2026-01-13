@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersV1Request extends TeaModel {
     /**
+     * <p>The name of the ECS instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>eck-xxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class DescribeClustersV1Request extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-58</p>
      */
@@ -19,6 +23,8 @@ public class DescribeClustersV1Request extends TeaModel {
     public String ensRegionId;
 
     /**
+     * <p>System specified parameters. Set the value to <strong>DescribeClustersV1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-eck-name</p>
      */

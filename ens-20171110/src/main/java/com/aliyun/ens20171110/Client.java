@@ -6152,7 +6152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群列表</p>
+     * <p>Queries a list of clusters.</p>
      * 
      * @param request DescribeClustersV1Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -6192,7 +6192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群列表</p>
+     * <p>Queries a list of clusters.</p>
      * 
      * @param request DescribeClustersV1Request
      * @return DescribeClustersV1Response
@@ -12292,6 +12292,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImportKeyPairResponse importKeyPair(ImportKeyPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importKeyPairWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为当前用户创建ENS的服务关联角色（SLR），管控资源。</p>
+     * 
+     * @param request InitializeENSECKServiceRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InitializeENSECKServiceRoleResponse
+     */
+    public InitializeENSECKServiceRoleResponse initializeENSECKServiceRoleWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InitializeENSECKServiceRole"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InitializeENSECKServiceRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为当前用户创建ENS的服务关联角色（SLR），管控资源。</p>
+     * @return InitializeENSECKServiceRoleResponse
+     */
+    public InitializeENSECKServiceRoleResponse initializeENSECKServiceRole() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.initializeENSECKServiceRoleWithOptions(runtime);
     }
 
     /**
