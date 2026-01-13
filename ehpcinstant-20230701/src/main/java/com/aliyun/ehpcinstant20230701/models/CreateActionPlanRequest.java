@@ -46,6 +46,13 @@ public class CreateActionPlanRequest extends TeaModel {
     public Double desiredCapacity;
 
     /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
+    @NameInMap("IntervalMinutes")
+    public Integer intervalMinutes;
+
+    /**
      * <p>The computing power level. This value is valid only when the resource type is Economic. The following disk categories are supported:</p>
      * <ul>
      * <li>General</li>
@@ -140,6 +147,14 @@ public class CreateActionPlanRequest extends TeaModel {
     }
     public Double getDesiredCapacity() {
         return this.desiredCapacity;
+    }
+
+    public CreateActionPlanRequest setIntervalMinutes(Integer intervalMinutes) {
+        this.intervalMinutes = intervalMinutes;
+        return this;
+    }
+    public Integer getIntervalMinutes() {
+        return this.intervalMinutes;
     }
 
     public CreateActionPlanRequest setLevel(String level) {

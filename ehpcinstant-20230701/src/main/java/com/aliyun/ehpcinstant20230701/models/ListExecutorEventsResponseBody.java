@@ -4,10 +4,15 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListExecutorEventsResponseBody extends TeaModel {
+    /**
+     * <p>The list of the running event.</p>
+     */
     @NameInMap("ExecutorEventList")
     public java.util.List<ListExecutorEventsResponseBodyExecutorEventList> executorEventList;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListExecutorEventsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -22,6 +29,8 @@ public class ListExecutorEventsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
      */
@@ -29,6 +38,8 @@ public class ListExecutorEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -82,6 +93,8 @@ public class ListExecutorEventsResponseBody extends TeaModel {
 
     public static class ListExecutorEventsResponseBodyExecutorEventList extends TeaModel {
         /**
+         * <p>The content of the running event.</p>
+         * 
          * <strong>example:</strong>
          * <p>Executor created successfully</p>
          */
@@ -89,6 +102,8 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The ID of the executor. The format is JobId-TaskName-ArrayIndex.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-xxxx-Task0-1</p>
          */
@@ -96,6 +111,8 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         public String executorId;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-xxxx</p>
          */
@@ -103,6 +120,13 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The level of the running event. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Warning</li>
+         * <li>Error</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -110,6 +134,8 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         public String level;
 
         /**
+         * <p>The event of the running event.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:13</p>
          */

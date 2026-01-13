@@ -140,6 +140,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesiredCapacity", request.desiredCapacity);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.intervalMinutes)) {
+            query.put("IntervalMinutes", request.intervalMinutes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.level)) {
             query.put("Level", request.level);
         }
@@ -1033,8 +1037,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries job executor information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Executor的事件信息</p>
+     * <p>Queries the running event list of one or more executers.</p>
      * 
      * @param tmpReq ListExecutorEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1079,8 +1086,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries job executor information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Executor的事件信息</p>
+     * <p>Queries the running event list of one or more executers.</p>
      * 
      * @param request ListExecutorEventsRequest
      * @return ListExecutorEventsResponse
@@ -1703,6 +1713,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
             query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intervalMinutes)) {
+            query.put("IntervalMinutes", request.intervalMinutes);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

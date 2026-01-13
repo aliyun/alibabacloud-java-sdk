@@ -59,6 +59,13 @@ public class GetActionPlanResponseBody extends TeaModel {
     public Float desiredCapacity;
 
     /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
+    @NameInMap("IntervalMinutes")
+    public Integer intervalMinutes;
+
+    /**
      * <p>The computing power level.</p>
      * 
      * <strong>example:</strong>
@@ -193,6 +200,14 @@ public class GetActionPlanResponseBody extends TeaModel {
     }
     public Float getDesiredCapacity() {
         return this.desiredCapacity;
+    }
+
+    public GetActionPlanResponseBody setIntervalMinutes(Integer intervalMinutes) {
+        this.intervalMinutes = intervalMinutes;
+        return this;
+    }
+    public Integer getIntervalMinutes() {
+        return this.intervalMinutes;
     }
 
     public GetActionPlanResponseBody setLevel(String level) {

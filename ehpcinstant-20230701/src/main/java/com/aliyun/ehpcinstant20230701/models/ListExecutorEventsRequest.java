@@ -4,10 +4,17 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListExecutorEventsRequest extends TeaModel {
+    /**
+     * <p>Queries the Executor filter conditions.</p>
+     */
     @NameInMap("Filter")
     public ListExecutorEventsRequestFilter filter;
 
     /**
+     * <p>The current page number.\
+     * Starting value: 1\
+     * Default value: 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +22,8 @@ public class ListExecutorEventsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on the current page. Default value: 50. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -51,10 +60,15 @@ public class ListExecutorEventsRequest extends TeaModel {
     }
 
     public static class ListExecutorEventsRequestFilter extends TeaModel {
+        /**
+         * <p>The list of executor IDs. A maximum of 100 IDs are supported.</p>
+         */
         @NameInMap("ExecutorIds")
         public java.util.List<String> executorIds;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-xxxx</p>
          */
@@ -62,6 +76,13 @@ public class ListExecutorEventsRequest extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The level of the running event. Valid value:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Warning</li>
+         * <li>Error</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -69,6 +90,8 @@ public class ListExecutorEventsRequest extends TeaModel {
         public String level;
 
         /**
+         * <p>For jobs submitted after this time, the time in the region is converted into a Unix timestamp (UI8 regionfor Aliyun sites).</p>
+         * 
          * <strong>example:</strong>
          * <p>1703820113</p>
          */
@@ -76,6 +99,8 @@ public class ListExecutorEventsRequest extends TeaModel {
         public Long timeAfter;
 
         /**
+         * <p>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (UI8 regionfor Aliyun sites).</p>
+         * 
          * <strong>example:</strong>
          * <p>1703819914</p>
          */

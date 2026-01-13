@@ -39,6 +39,13 @@ public class UpdateActionPlanRequest extends TeaModel {
     @NameInMap("Enabled")
     public String enabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
+    @NameInMap("IntervalMinutes")
+    public Integer intervalMinutes;
+
     public static UpdateActionPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateActionPlanRequest self = new UpdateActionPlanRequest();
         return TeaModel.build(map, self);
@@ -66,6 +73,14 @@ public class UpdateActionPlanRequest extends TeaModel {
     }
     public String getEnabled() {
         return this.enabled;
+    }
+
+    public UpdateActionPlanRequest setIntervalMinutes(Integer intervalMinutes) {
+        this.intervalMinutes = intervalMinutes;
+        return this;
+    }
+    public Integer getIntervalMinutes() {
+        return this.intervalMinutes;
     }
 
 }

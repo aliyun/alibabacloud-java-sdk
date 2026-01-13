@@ -4,10 +4,17 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListExecutorEventsShrinkRequest extends TeaModel {
+    /**
+     * <p>Queries the Executor filter conditions.</p>
+     */
     @NameInMap("Filter")
     public String filterShrink;
 
     /**
+     * <p>The current page number.\
+     * Starting value: 1\
+     * Default value: 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +22,8 @@ public class ListExecutorEventsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on the current page. Default value: 50. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
