@@ -8651,6 +8651,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MemorySize", request.memorySize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
             query.put("OrderBy", request.orderBy);
         }
@@ -9616,6 +9620,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopName", request.desktopName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopStatusList)) {
+            query.put("DesktopStatusList", request.desktopStatusList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopType)) {
             query.put("DesktopType", request.desktopType);
         }
@@ -9626,6 +9634,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
             query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeDesktopStatusList)) {
+            query.put("ExcludeDesktopStatusList", request.excludeDesktopStatusList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {

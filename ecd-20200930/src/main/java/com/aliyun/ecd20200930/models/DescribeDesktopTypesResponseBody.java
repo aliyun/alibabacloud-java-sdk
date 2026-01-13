@@ -80,6 +80,12 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @NameInMap("DesktopTypeStatus")
         public String desktopTypeStatus;
 
+        @NameInMap("EnvId")
+        public String envId;
+
+        @NameInMap("EnvType")
+        public String envType;
+
         /**
          * <p>The number of GPUs.</p>
          * 
@@ -206,6 +212,22 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
         public String getDesktopTypeStatus() {
             return this.desktopTypeStatus;
+        }
+
+        public DescribeDesktopTypesResponseBodyDesktopTypes setEnvId(String envId) {
+            this.envId = envId;
+            return this;
+        }
+        public String getEnvId() {
+            return this.envId;
+        }
+
+        public DescribeDesktopTypesResponseBodyDesktopTypes setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
         }
 
         public DescribeDesktopTypesResponseBodyDesktopTypes setGpuCount(Float gpuCount) {

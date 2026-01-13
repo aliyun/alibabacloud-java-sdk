@@ -926,6 +926,12 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("EntraDomainName")
         public String entraDomainName;
 
+        @NameInMap("EnvId")
+        public String envId;
+
+        @NameInMap("EnvType")
+        public String envType;
+
         /**
          * <p>The time when a subscription cloud computer expired.</p>
          * 
@@ -1533,6 +1539,22 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getEntraDomainName() {
             return this.entraDomainName;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setEnvId(String envId) {
+            this.envId = envId;
+            return this;
+        }
+        public String getEnvId() {
+            return this.envId;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
         }
 
         public DescribeDesktopsResponseBodyDesktops setExpiredTime(String expiredTime) {

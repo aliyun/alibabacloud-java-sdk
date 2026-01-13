@@ -139,6 +139,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("DiskStatus")
         public String diskStatus;
 
+        @NameInMap("EnvId")
+        public String envId;
+
+        @NameInMap("EnvType")
+        public String envType;
+
         /**
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -404,6 +410,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getDiskStatus() {
             return this.diskStatus;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setEnvId(String envId) {
+            this.envId = envId;
+            return this;
+        }
+        public String getEnvId() {
+            return this.envId;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setOsType(String osType) {

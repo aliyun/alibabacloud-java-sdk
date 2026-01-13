@@ -150,6 +150,9 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("MemorySize")
     public Integer memorySize;
 
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
     /**
      * <p>The sorting field. If this parameter is not provided, results are sorted by creation time in descending order.</p>
      * <p>Valid values:</p>
@@ -325,6 +328,14 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     }
     public Integer getMemorySize() {
         return this.memorySize;
+    }
+
+    public DescribeDesktopTypesRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     public DescribeDesktopTypesRequest setOrderBy(String orderBy) {

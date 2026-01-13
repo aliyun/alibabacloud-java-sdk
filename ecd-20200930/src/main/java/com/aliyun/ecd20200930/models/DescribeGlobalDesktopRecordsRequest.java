@@ -19,6 +19,9 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     @NameInMap("DesktopName")
     public String desktopName;
 
+    @NameInMap("DesktopStatusList")
+    public java.util.List<String> desktopStatusList;
+
     /**
      * <p>The cloud computer type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of the specifications supported by the cloud computer.</p>
      * 
@@ -48,6 +51,9 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
      */
     @NameInMap("EndUserId")
     public String endUserId;
+
+    @NameInMap("ExcludeDesktopStatusList")
+    public java.util.List<String> excludeDesktopStatusList;
 
     /**
      * <p>The office network IDs.</p>
@@ -184,6 +190,14 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
         return this.desktopName;
     }
 
+    public DescribeGlobalDesktopRecordsRequest setDesktopStatusList(java.util.List<String> desktopStatusList) {
+        this.desktopStatusList = desktopStatusList;
+        return this;
+    }
+    public java.util.List<String> getDesktopStatusList() {
+        return this.desktopStatusList;
+    }
+
     public DescribeGlobalDesktopRecordsRequest setDesktopType(String desktopType) {
         this.desktopType = desktopType;
         return this;
@@ -206,6 +220,14 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public DescribeGlobalDesktopRecordsRequest setExcludeDesktopStatusList(java.util.List<String> excludeDesktopStatusList) {
+        this.excludeDesktopStatusList = excludeDesktopStatusList;
+        return this;
+    }
+    public java.util.List<String> getExcludeDesktopStatusList() {
+        return this.excludeDesktopStatusList;
     }
 
     public DescribeGlobalDesktopRecordsRequest setOfficeSiteId(String officeSiteId) {
