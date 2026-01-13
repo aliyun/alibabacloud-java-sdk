@@ -506,31 +506,6 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
 
     }
 
-    public static class ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatchesMetadata extends TeaModel {
-        /**
-         * <p>The source of the retrieved results. 1 indicates vector retrieval, 2 indicates full-text retrieval, and 3 indicates dual-path retrieval.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("Source")
-        public Long source;
-
-        public static ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatchesMetadata build(java.util.Map<String, ?> map) throws Exception {
-            ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatchesMetadata self = new ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatchesMetadata();
-            return TeaModel.build(map, self);
-        }
-
-        public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatchesMetadata setSource(Long source) {
-            this.source = source;
-            return this;
-        }
-        public Long getSource() {
-            return this.source;
-        }
-
-    }
-
     public static class ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatches extends TeaModel {
         /**
          * <p>The content of the document.</p>
@@ -582,7 +557,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
          * <p>Metadata.</p>
          */
         @NameInMap("Metadata")
-        public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatchesMetadata metadata;
+        public java.util.Map<String, ?> metadata;
 
         /**
          * <p>The rerank score.</p>
@@ -662,11 +637,11 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             return this.loaderMetadata;
         }
 
-        public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatches setMetadata(ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatchesMetadata metadata) {
+        public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatches setMetadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;
             return this;
         }
-        public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatchesMetadata getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 

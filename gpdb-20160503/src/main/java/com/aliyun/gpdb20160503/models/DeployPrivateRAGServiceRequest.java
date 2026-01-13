@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeployPrivateRAGServiceRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,10 @@ public class DeployPrivateRAGServiceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The vSwitch ID.</p>
+     * <blockquote>
+     * <p>  The zone where the <strong>vSwitch</strong> resides must be the same as the zone that is specified by <strong>ZoneId</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,10 @@ public class DeployPrivateRAGServiceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The zone ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available regions and zones.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

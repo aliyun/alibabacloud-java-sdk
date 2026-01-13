@@ -4,10 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListDatabaseExtensionsResponseBody extends TeaModel {
+    /**
+     * <p>Extension list.</p>
+     */
     @NameInMap("Extensions")
     public java.util.List<ListDatabaseExtensionsResponseBodyExtensions> extensions;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -37,6 +42,8 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
 
     public static class ListDatabaseExtensionsResponseBodyExtensions extends TeaModel {
         /**
+         * <p>The description of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhparser</p>
          */
@@ -44,6 +51,8 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The extension name.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhparser</p>
          */
@@ -51,6 +60,8 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
         public String extensionName;
 
         /**
+         * <p>The status of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>installed</p>
          */

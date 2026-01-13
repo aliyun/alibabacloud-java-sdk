@@ -3589,7 +3589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除IP分组</p>
+     * <p>Deletes an IP whitelist group from an instance.</p>
      * 
      * @param request DeleteDBInstanceIPArrayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3625,7 +3625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除IP分组</p>
+     * <p>Deletes an IP whitelist group from an instance.</p>
      * 
      * @param request DeleteDBInstanceIPArrayRequest
      * @return DeleteDBInstanceIPArrayResponse
@@ -3751,7 +3751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据库</p>
+     * <p>Deletes a database from an instance.</p>
      * 
      * @param request DeleteDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3787,7 +3787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据库</p>
+     * <p>Deletes a database from an instance.</p>
      * 
      * @param request DeleteDatabaseRequest
      * @return DeleteDatabaseResponse
@@ -4337,7 +4337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭私有RAG服务</p>
+     * <p>Deletes a private RAG service.</p>
      * 
      * @param request DeletePrivateRAGServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4369,7 +4369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭私有RAG服务</p>
+     * <p>Deletes a private RAG service.</p>
      * 
      * @param request DeletePrivateRAGServiceRequest
      * @return DeletePrivateRAGServiceResponse
@@ -4778,8 +4778,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Before you deploy the private RAG service, create an initial account.</li>
+     * <li>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>部署私有RAG服务</p>
+     * <p>Deploy a private RAG service.</p>
      * 
      * @param request DeployPrivateRAGServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4818,8 +4824,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Before you deploy the private RAG service, create an initial account.</li>
+     * <li>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>部署私有RAG服务</p>
+     * <p>Deploy a private RAG service.</p>
      * 
      * @param request DeployPrivateRAGServiceRequest
      * @return DeployPrivateRAGServiceResponse
@@ -6733,7 +6745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>描述数据库</p>
+     * <p>Describes the basic information about an AnalyticDB for PostgreSQL database.</p>
      * 
      * @param request DescribeDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6769,7 +6781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>描述数据库</p>
+     * <p>Describes the basic information about an AnalyticDB for PostgreSQL database.</p>
      * 
      * @param request DescribeDatabaseRequest
      * @return DescribeDatabaseResponse
@@ -7227,7 +7239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安装在某个数据库上的插件信息</p>
+     * <p>Describes the extension information.</p>
      * 
      * @param request DescribeExtensionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7267,7 +7279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安装在某个数据库上的插件信息</p>
+     * <p>Describes the extension information.</p>
      * 
      * @param request DescribeExtensionRequest
      * @return DescribeExtensionResponse
@@ -8011,7 +8023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取私有RAG服务详情</p>
+     * <p>Obtains the details of a private RAG service.</p>
      * 
      * @param request DescribePrivateRAGServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8043,7 +8055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取私有RAG服务详情</p>
+     * <p>Obtains the details of a private RAG service.</p>
      * 
      * @param request DescribePrivateRAGServiceRequest
      * @return DescribePrivateRAGServiceResponse
@@ -9297,7 +9309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取私有RAG服务可部署可用区</p>
+     * <p>Obtains the deployable zone of the private RAG service.</p>
      * 
      * @param request DescribeZonesPrivateRAGServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9333,7 +9345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取私有RAG服务可部署可用区</p>
+     * <p>Obtains the deployable zone of the private RAG service.</p>
      * 
      * @param request DescribeZonesPrivateRAGServiceRequest
      * @return DescribeZonesPrivateRAGServiceResponse
@@ -10877,7 +10889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安装在某个数据库上的所有插件信息</p>
+     * <p>List all extensions installed in the instance.</p>
      * 
      * @param request ListDatabaseExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10913,7 +10925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安装在某个数据库上的所有插件信息</p>
+     * <p>List all extensions installed in the instance.</p>
      * 
      * @param request ListDatabaseExtensionsRequest
      * @return ListDatabaseExtensionsResponse
@@ -11305,7 +11317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举数据库</p>
+     * <p>List all databases in an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request ListInstanceDatabasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11345,7 +11357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举数据库</p>
+     * <p>List all databases in an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request ListInstanceDatabasesRequest
      * @return ListInstanceDatabasesResponse

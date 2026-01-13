@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeployPrivateRAGServiceResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */

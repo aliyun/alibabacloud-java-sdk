@@ -50,6 +50,7 @@ public class ChatWithKnowledgeBaseStreamShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

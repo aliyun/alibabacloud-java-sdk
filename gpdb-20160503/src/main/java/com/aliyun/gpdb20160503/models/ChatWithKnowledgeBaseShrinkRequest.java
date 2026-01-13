@@ -50,6 +50,7 @@ public class ChatWithKnowledgeBaseShrinkRequest extends TeaModel {
 
     /**
      * <p>实例所在的地域ID</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

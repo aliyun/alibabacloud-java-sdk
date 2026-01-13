@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesPrivateRAGServiceResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of zones.</p>
+     */
     @NameInMap("ZoneIds")
     public java.util.List<String> zoneIds;
 

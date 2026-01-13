@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListDatabaseExtensionsRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,12 @@ public class ListDatabaseExtensionsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The name of the database. The following restrictions apply:</p>
+     * <ul>
+     * <li>Contain letters, digits, and underscores (_).</li>
+     * <li>Must start with a letter.</li>
+     * <li>Up to 63 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

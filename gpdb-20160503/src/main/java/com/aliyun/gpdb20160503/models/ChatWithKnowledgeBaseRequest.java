@@ -50,6 +50,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     /**
      * <p>实例所在的地域ID</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -628,6 +629,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
     public static class ChatWithKnowledgeBaseRequestModelParamsMessages extends TeaModel {
         /**
          * <p>The message content.</p>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -639,6 +641,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
          * <li>user</li>
          * <li>assistant</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>

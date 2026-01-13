@@ -506,31 +506,6 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
 
     }
 
-    public static class ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatchesMetadata extends TeaModel {
-        /**
-         * <p>The source of the document.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("Source")
-        public Long source;
-
-        public static ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatchesMetadata build(java.util.Map<String, ?> map) throws Exception {
-            ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatchesMetadata self = new ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatchesMetadata();
-            return TeaModel.build(map, self);
-        }
-
-        public ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatchesMetadata setSource(Long source) {
-            this.source = source;
-            return this;
-        }
-        public Long getSource() {
-            return this.source;
-        }
-
-    }
-
     public static class ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatches extends TeaModel {
         /**
          * <p>The content of the document.</p>
@@ -579,7 +554,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
          * <p>The metadata.</p>
          */
         @NameInMap("Metadata")
-        public ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatchesMetadata metadata;
+        public java.util.Map<String, ?> metadata;
 
         /**
          * <p>The rerank score.</p>
@@ -659,11 +634,11 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             return this.loaderMetadata;
         }
 
-        public ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatches setMetadata(ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatchesMetadata metadata) {
+        public ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatches setMetadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;
             return this;
         }
-        public ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatchesMetadata getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 

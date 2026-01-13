@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeExtensionResponseBody extends TeaModel {
     /**
+     * <p>The current version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeExtensionResponseBody extends TeaModel {
     public String currentVersion;
 
     /**
+     * <p>The description of the extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>zhparser</p>
      */
@@ -19,6 +23,8 @@ public class DescribeExtensionResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The extension ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>37</p>
      */
@@ -26,6 +32,8 @@ public class DescribeExtensionResponseBody extends TeaModel {
     public String extensionId;
 
     /**
+     * <p>The extension name.</p>
+     * 
      * <strong>example:</strong>
      * <p>zhparser</p>
      */
@@ -33,6 +41,8 @@ public class DescribeExtensionResponseBody extends TeaModel {
     public String extensionName;
 
     /**
+     * <p>Indicates whether an instance restart is required after you install the extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -40,6 +50,8 @@ public class DescribeExtensionResponseBody extends TeaModel {
     public Boolean isInstallNeedRestart;
 
     /**
+     * <p>Whether it is the latest version extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -47,6 +59,8 @@ public class DescribeExtensionResponseBody extends TeaModel {
     public Boolean isLatestVersion;
 
     /**
+     * <p>The latest version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.1</p>
      */
@@ -54,6 +68,8 @@ public class DescribeExtensionResponseBody extends TeaModel {
     public String latestVersion;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -61,6 +77,8 @@ public class DescribeExtensionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>installed</p>
      */

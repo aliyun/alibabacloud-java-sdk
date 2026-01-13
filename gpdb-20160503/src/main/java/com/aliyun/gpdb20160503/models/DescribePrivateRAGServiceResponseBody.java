@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePrivateRAGServiceResponseBody extends TeaModel {
     /**
+     * <p>CA certificate Info. The returned OSS link, valid for 2 hours.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oss-xxx">https://oss-xxx</a></p>
      */
@@ -12,6 +14,8 @@ public class DescribePrivateRAGServiceResponseBody extends TeaModel {
     public String caCert;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */

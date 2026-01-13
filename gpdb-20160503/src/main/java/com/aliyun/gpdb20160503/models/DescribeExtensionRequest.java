@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeExtensionRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> Interface to query the details of all AnalyticDB PostgreSQL Instances in the target region, including Instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,12 @@ public class DescribeExtensionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Database name.</p>
+     * <ul>
+     * <li>Only contain letters, digits, and underscores (_).</li>
+     * <li>Must start with a letter.</li>
+     * <li>Up to 63 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +33,7 @@ public class DescribeExtensionRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The extension name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

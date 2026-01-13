@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteDatabaseRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +18,11 @@ public class DeleteDatabaseRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The name of the queried database.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test01</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;

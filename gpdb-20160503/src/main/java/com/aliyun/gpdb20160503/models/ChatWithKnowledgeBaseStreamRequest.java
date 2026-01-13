@@ -50,6 +50,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -628,6 +629,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends TeaModel {
     public static class ChatWithKnowledgeBaseStreamRequestModelParamsMessages extends TeaModel {
         /**
          * <p>The message content.</p>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -639,6 +641,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends TeaModel {
          * <li>user</li>
          * <li>assistant</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>

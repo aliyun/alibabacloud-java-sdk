@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListInstanceDatabasesResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The queried databases.</p>
+     */
     @NameInMap("Databases")
     public java.util.List<ListInstanceDatabasesResponseBodyDatabases> databases;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -22,6 +32,8 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -67,6 +79,13 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
 
     public static class ListInstanceDatabasesResponseBodyDatabases extends TeaModel {
         /**
+         * <p>The database name.</p>
+         * <ul>
+         * <li>Only contain letters, digits, and underscores (_).</li>
+         * <li>Must start with a letter.</li>
+         * <li>Up to 63 characters in length.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>testdatabase</p>
          */
@@ -74,6 +93,8 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
         public String databaseName;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test description</p>
          */

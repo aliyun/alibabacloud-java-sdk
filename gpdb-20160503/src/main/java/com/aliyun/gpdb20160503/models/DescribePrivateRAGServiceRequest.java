@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribePrivateRAGServiceRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> Interface to query the details of all AnalyticDB PostgreSQL Instances in the target region, including Instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
