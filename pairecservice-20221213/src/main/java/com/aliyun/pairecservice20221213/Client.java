@@ -162,6 +162,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更改召回管理服务的版本</p>
+     * 
+     * @param request ChangeRecallManagementServiceVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeRecallManagementServiceVersionResponse
+     */
+    public ChangeRecallManagementServiceVersionResponse changeRecallManagementServiceVersionWithOptions(String RecallManagementServiceId, ChangeRecallManagementServiceVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recallManagementServiceVersionId)) {
+            body.put("RecallManagementServiceVersionId", request.recallManagementServiceVersionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeRecallManagementServiceVersion"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/action/changeversion"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeRecallManagementServiceVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更改召回管理服务的版本</p>
+     * 
+     * @param request ChangeRecallManagementServiceVersionRequest
+     * @return ChangeRecallManagementServiceVersionResponse
+     */
+    public ChangeRecallManagementServiceVersionResponse changeRecallManagementServiceVersion(String RecallManagementServiceId, ChangeRecallManagementServiceVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.changeRecallManagementServiceVersionWithOptions(RecallManagementServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>检测实例下配置的资源的连接状态。</p>
      * 
      * @param request CheckInstanceResourcesRequest
@@ -1724,6 +1775,341 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建召回管理初始化配置。</p>
+     * 
+     * @param request CreateRecallManagementConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRecallManagementConfigResponse
+     */
+    public CreateRecallManagementConfigResponse createRecallManagementConfigWithOptions(CreateRecallManagementConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkConfigs)) {
+            body.put("NetworkConfigs", request.networkConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            body.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRecallManagementConfig"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementconfigs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRecallManagementConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建召回管理初始化配置。</p>
+     * 
+     * @param request CreateRecallManagementConfigRequest
+     * @return CreateRecallManagementConfigResponse
+     */
+    public CreateRecallManagementConfigResponse createRecallManagementConfig(CreateRecallManagementConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createRecallManagementConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建召回管理服务</p>
+     * 
+     * @param request CreateRecallManagementServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRecallManagementServiceResponse
+     */
+    public CreateRecallManagementServiceResponse createRecallManagementServiceWithOptions(CreateRecallManagementServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRecallManagementService"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRecallManagementServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建召回管理服务</p>
+     * 
+     * @param request CreateRecallManagementServiceRequest
+     * @return CreateRecallManagementServiceResponse
+     */
+    public CreateRecallManagementServiceResponse createRecallManagementService(CreateRecallManagementServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createRecallManagementServiceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建召回管理版本</p>
+     * 
+     * @param request CreateRecallManagementServiceVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRecallManagementServiceVersionResponse
+     */
+    public CreateRecallManagementServiceVersionResponse createRecallManagementServiceVersionWithOptions(String RecallManagementServiceId, CreateRecallManagementServiceVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configs)) {
+            body.put("Configs", request.configs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceRecallManagementServiceVersionId)) {
+            body.put("SourceRecallManagementServiceVersionId", request.sourceRecallManagementServiceVersionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRecallManagementServiceVersion"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/versions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRecallManagementServiceVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建召回管理版本</p>
+     * 
+     * @param request CreateRecallManagementServiceVersionRequest
+     * @return CreateRecallManagementServiceVersionResponse
+     */
+    public CreateRecallManagementServiceVersionResponse createRecallManagementServiceVersion(String RecallManagementServiceId, CreateRecallManagementServiceVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createRecallManagementServiceVersionWithOptions(RecallManagementServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建召回管理服务版本配置</p>
+     * 
+     * @param request CreateRecallManagementServiceVersionConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRecallManagementServiceVersionConfigResponse
+     */
+    public CreateRecallManagementServiceVersionConfigResponse createRecallManagementServiceVersionConfigWithOptions(String RecallManagementServiceId, String RecallManagementServiceVersionId, CreateRecallManagementServiceVersionConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
+            body.put("ConfigType", request.configType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mergeConfig)) {
+            body.put("MergeConfig", request.mergeConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recallConfig)) {
+            body.put("RecallConfig", request.recallConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRecallManagementServiceVersionConfig"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceVersionId) + "/configs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRecallManagementServiceVersionConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建召回管理服务版本配置</p>
+     * 
+     * @param request CreateRecallManagementServiceVersionConfigRequest
+     * @return CreateRecallManagementServiceVersionConfigResponse
+     */
+    public CreateRecallManagementServiceVersionConfigResponse createRecallManagementServiceVersionConfig(String RecallManagementServiceId, String RecallManagementServiceVersionId, CreateRecallManagementServiceVersionConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createRecallManagementServiceVersionConfigWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建召回管理表。</p>
+     * 
+     * @param request CreateRecallManagementTableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRecallManagementTableResponse
+     */
+    public CreateRecallManagementTableResponse createRecallManagementTableWithOptions(CreateRecallManagementTableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSource)) {
+            body.put("DataSource", request.dataSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDataSizeFluctuationThreshold)) {
+            body.put("EnableDataSizeFluctuationThreshold", request.enableDataSizeFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableRowCountFluctuationThreshold)) {
+            body.put("EnableRowCountFluctuationThreshold", request.enableRowCountFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fields)) {
+            body.put("Fields", request.fields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDataSizeFluctuationThreshold)) {
+            body.put("MaxDataSizeFluctuationThreshold", request.maxDataSizeFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRowCountFluctuationThreshold)) {
+            body.put("MaxRowCountFluctuationThreshold", request.maxRowCountFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxcomputeProjectName)) {
+            body.put("MaxcomputeProjectName", request.maxcomputeProjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxcomputeSchema)) {
+            body.put("MaxcomputeSchema", request.maxcomputeSchema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxcomputeTableName)) {
+            body.put("MaxcomputeTableName", request.maxcomputeTableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minDataSizeFluctuationThreshold)) {
+            body.put("MinDataSizeFluctuationThreshold", request.minDataSizeFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minRowCountFluctuationThreshold)) {
+            body.put("MinRowCountFluctuationThreshold", request.minRowCountFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recallType)) {
+            body.put("RecallType", request.recallType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRecallManagementTable"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementtables"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRecallManagementTableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建召回管理表。</p>
+     * 
+     * @param request CreateRecallManagementTableRequest
+     * @return CreateRecallManagementTableResponse
+     */
+    public CreateRecallManagementTableResponse createRecallManagementTable(CreateRecallManagementTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createRecallManagementTableWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建资源规则</p>
      * 
      * @param request CreateResourceRuleRequest
@@ -2925,6 +3311,194 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除指定召回管理服务</p>
+     * 
+     * @param request DeleteRecallManagementServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRecallManagementServiceResponse
+     */
+    public DeleteRecallManagementServiceResponse deleteRecallManagementServiceWithOptions(String RecallManagementServiceId, DeleteRecallManagementServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRecallManagementService"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRecallManagementServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指定召回管理服务</p>
+     * 
+     * @param request DeleteRecallManagementServiceRequest
+     * @return DeleteRecallManagementServiceResponse
+     */
+    public DeleteRecallManagementServiceResponse deleteRecallManagementService(String RecallManagementServiceId, DeleteRecallManagementServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指定召回管理服务版本</p>
+     * 
+     * @param request DeleteRecallManagementServiceVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRecallManagementServiceVersionResponse
+     */
+    public DeleteRecallManagementServiceVersionResponse deleteRecallManagementServiceVersionWithOptions(String RecallManagementServiceId, String RecallManagementServiceVersionId, DeleteRecallManagementServiceVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRecallManagementServiceVersion"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceVersionId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRecallManagementServiceVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指定召回管理服务版本</p>
+     * 
+     * @param request DeleteRecallManagementServiceVersionRequest
+     * @return DeleteRecallManagementServiceVersionResponse
+     */
+    public DeleteRecallManagementServiceVersionResponse deleteRecallManagementServiceVersion(String RecallManagementServiceId, String RecallManagementServiceVersionId, DeleteRecallManagementServiceVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteRecallManagementServiceVersionWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除召回管理服务版本配置</p>
+     * 
+     * @param request DeleteRecallManagementServiceVersionConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRecallManagementServiceVersionConfigResponse
+     */
+    public DeleteRecallManagementServiceVersionConfigResponse deleteRecallManagementServiceVersionConfigWithOptions(String RecallManagementServiceId, String RecallManagementServiceVersionId, String RecallManagementServiceVersionConfigId, DeleteRecallManagementServiceVersionConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRecallManagementServiceVersionConfig"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceVersionId) + "/configs/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceVersionConfigId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRecallManagementServiceVersionConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除召回管理服务版本配置</p>
+     * 
+     * @param request DeleteRecallManagementServiceVersionConfigRequest
+     * @return DeleteRecallManagementServiceVersionConfigResponse
+     */
+    public DeleteRecallManagementServiceVersionConfigResponse deleteRecallManagementServiceVersionConfig(String RecallManagementServiceId, String RecallManagementServiceVersionId, String RecallManagementServiceVersionConfigId, DeleteRecallManagementServiceVersionConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteRecallManagementServiceVersionConfigWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, RecallManagementServiceVersionConfigId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指定召回管理表。</p>
+     * 
+     * @param request DeleteRecallManagementTableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRecallManagementTableResponse
+     */
+    public DeleteRecallManagementTableResponse deleteRecallManagementTableWithOptions(String RecallManagementTableId, DeleteRecallManagementTableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRecallManagementTable"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementtables/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementTableId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRecallManagementTableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指定召回管理表。</p>
+     * 
+     * @param request DeleteRecallManagementTableRequest
+     * @return DeleteRecallManagementTableResponse
+     */
+    public DeleteRecallManagementTableResponse deleteRecallManagementTable(String RecallManagementTableId, DeleteRecallManagementTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteRecallManagementTableWithOptions(RecallManagementTableId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除资源规则</p>
      * 
      * @param request DeleteResourceRuleRequest
@@ -4035,6 +4609,288 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取召回管理初始化配置。</p>
+     * 
+     * @param request GetRecallManagementConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRecallManagementConfigResponse
+     */
+    public GetRecallManagementConfigResponse getRecallManagementConfigWithOptions(GetRecallManagementConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRecallManagementConfig"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementconfigs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecallManagementConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理初始化配置。</p>
+     * 
+     * @param request GetRecallManagementConfigRequest
+     * @return GetRecallManagementConfigResponse
+     */
+    public GetRecallManagementConfigResponse getRecallManagementConfig(GetRecallManagementConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRecallManagementConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理任务详情。</p>
+     * 
+     * @param request GetRecallManagementJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRecallManagementJobResponse
+     */
+    public GetRecallManagementJobResponse getRecallManagementJobWithOptions(String RecallManagementJobId, GetRecallManagementJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRecallManagementJob"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementjobs/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementJobId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecallManagementJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理任务详情。</p>
+     * 
+     * @param request GetRecallManagementJobRequest
+     * @return GetRecallManagementJobResponse
+     */
+    public GetRecallManagementJobResponse getRecallManagementJob(String RecallManagementJobId, GetRecallManagementJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRecallManagementJobWithOptions(RecallManagementJobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定召回管理服务详细信息</p>
+     * 
+     * @param request GetRecallManagementServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRecallManagementServiceResponse
+     */
+    public GetRecallManagementServiceResponse getRecallManagementServiceWithOptions(String RecallManagementServiceId, GetRecallManagementServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRecallManagementService"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecallManagementServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定召回管理服务详细信息</p>
+     * 
+     * @param request GetRecallManagementServiceRequest
+     * @return GetRecallManagementServiceResponse
+     */
+    public GetRecallManagementServiceResponse getRecallManagementService(String RecallManagementServiceId, GetRecallManagementServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定召回管理版本详细信息</p>
+     * 
+     * @param request GetRecallManagementServiceVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRecallManagementServiceVersionResponse
+     */
+    public GetRecallManagementServiceVersionResponse getRecallManagementServiceVersionWithOptions(String RecallManagementServiceId, String RecallManagementServiceVersionId, GetRecallManagementServiceVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRecallManagementServiceVersion"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceVersionId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecallManagementServiceVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定召回管理版本详细信息</p>
+     * 
+     * @param request GetRecallManagementServiceVersionRequest
+     * @return GetRecallManagementServiceVersionResponse
+     */
+    public GetRecallManagementServiceVersionResponse getRecallManagementServiceVersion(String RecallManagementServiceId, String RecallManagementServiceVersionId, GetRecallManagementServiceVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRecallManagementServiceVersionWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理服务版本配置详细信息</p>
+     * 
+     * @param request GetRecallManagementServiceVersionConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRecallManagementServiceVersionConfigResponse
+     */
+    public GetRecallManagementServiceVersionConfigResponse getRecallManagementServiceVersionConfigWithOptions(String RecallManagementServiceId, String RecallManagementServiceVersionId, String RecallManagementServiceVersionConfigId, GetRecallManagementServiceVersionConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRecallManagementServiceVersionConfig"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceVersionId) + "/configs/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceVersionConfigId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecallManagementServiceVersionConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理服务版本配置详细信息</p>
+     * 
+     * @param request GetRecallManagementServiceVersionConfigRequest
+     * @return GetRecallManagementServiceVersionConfigResponse
+     */
+    public GetRecallManagementServiceVersionConfigResponse getRecallManagementServiceVersionConfig(String RecallManagementServiceId, String RecallManagementServiceVersionId, String RecallManagementServiceVersionConfigId, GetRecallManagementServiceVersionConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRecallManagementServiceVersionConfigWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, RecallManagementServiceVersionConfigId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定召回管理表详细信息。</p>
+     * 
+     * @param request GetRecallManagementTableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRecallManagementTableResponse
+     */
+    public GetRecallManagementTableResponse getRecallManagementTableWithOptions(String RecallManagementTableId, GetRecallManagementTableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRecallManagementTable"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementtables/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementTableId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecallManagementTableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定召回管理表详细信息。</p>
+     * 
+     * @param request GetRecallManagementTableRequest
+     * @return GetRecallManagementTableResponse
+     */
+    public GetRecallManagementTableResponse getRecallManagementTable(String RecallManagementTableId, GetRecallManagementTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRecallManagementTableWithOptions(RecallManagementTableId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取资源规则详细信息</p>
      * 
      * @param request GetResourceRuleRequest
@@ -4172,6 +5028,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSceneWithOptions(SceneId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取服务详细信息。</p>
+     * 
+     * @param request GetServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServiceResponse
+     */
+    public GetServiceResponse getServiceWithOptions(String ServiceId, GetServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetService"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取服务详细信息。</p>
+     * 
+     * @param request GetServiceRequest
+     * @return GetServiceResponse
+     */
+    public GetServiceResponse getService(String ServiceId, GetServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getServiceWithOptions(ServiceId, request, headers, runtime);
     }
 
     /**
@@ -5480,6 +6383,361 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取召回管理任务列表。</p>
+     * 
+     * @param request ListRecallManagementJobsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRecallManagementJobsResponse
+     */
+    public ListRecallManagementJobsResponse listRecallManagementJobsWithOptions(ListRecallManagementJobsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.condition)) {
+            query.put("Condition", request.condition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRecallManagementJobs"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementjobs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRecallManagementJobsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理任务列表。</p>
+     * 
+     * @param request ListRecallManagementJobsRequest
+     * @return ListRecallManagementJobsResponse
+     */
+    public ListRecallManagementJobsResponse listRecallManagementJobs(ListRecallManagementJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRecallManagementJobsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理服务下的版本列表</p>
+     * 
+     * @param request ListRecallManagementServiceVersionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRecallManagementServiceVersionsResponse
+     */
+    public ListRecallManagementServiceVersionsResponse listRecallManagementServiceVersionsWithOptions(String RecallManagementServiceId, ListRecallManagementServiceVersionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRecallManagementServiceVersions"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/versions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRecallManagementServiceVersionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理服务下的版本列表</p>
+     * 
+     * @param request ListRecallManagementServiceVersionsRequest
+     * @return ListRecallManagementServiceVersionsResponse
+     */
+    public ListRecallManagementServiceVersionsResponse listRecallManagementServiceVersions(String RecallManagementServiceId, ListRecallManagementServiceVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRecallManagementServiceVersionsWithOptions(RecallManagementServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理服务列表</p>
+     * 
+     * @param request ListRecallManagementServicesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRecallManagementServicesResponse
+     */
+    public ListRecallManagementServicesResponse listRecallManagementServicesWithOptions(ListRecallManagementServicesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRecallManagementServices"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRecallManagementServicesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理服务列表</p>
+     * 
+     * @param request ListRecallManagementServicesRequest
+     * @return ListRecallManagementServicesResponse
+     */
+    public ListRecallManagementServicesResponse listRecallManagementServices(ListRecallManagementServicesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRecallManagementServicesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理表版本列表。</p>
+     * 
+     * @param request ListRecallManagementTableVersionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRecallManagementTableVersionsResponse
+     */
+    public ListRecallManagementTableVersionsResponse listRecallManagementTableVersionsWithOptions(String RecallManagementTableId, ListRecallManagementTableVersionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRecallManagementTableVersions"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementtables/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementTableId) + "/versions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRecallManagementTableVersionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理表版本列表。</p>
+     * 
+     * @param request ListRecallManagementTableVersionsRequest
+     * @return ListRecallManagementTableVersionsResponse
+     */
+    public ListRecallManagementTableVersionsResponse listRecallManagementTableVersions(String RecallManagementTableId, ListRecallManagementTableVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRecallManagementTableVersionsWithOptions(RecallManagementTableId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理表列表。</p>
+     * 
+     * @param request ListRecallManagementTablesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRecallManagementTablesResponse
+     */
+    public ListRecallManagementTablesResponse listRecallManagementTablesWithOptions(ListRecallManagementTablesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRecallManagementTables"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementtables"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRecallManagementTablesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取召回管理表列表。</p>
+     * 
+     * @param request ListRecallManagementTablesRequest
+     * @return ListRecallManagementTablesResponse
+     */
+    public ListRecallManagementTablesResponse listRecallManagementTables(ListRecallManagementTablesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRecallManagementTablesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取资源规则列表</p>
      * 
      * @param request ListResourceRulesRequest
@@ -6094,6 +7352,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>下线召回管理服务</p>
+     * 
+     * @param request OfflineRecallManagementServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OfflineRecallManagementServiceResponse
+     */
+    public OfflineRecallManagementServiceResponse offlineRecallManagementServiceWithOptions(String RecallManagementServiceId, OfflineRecallManagementServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OfflineRecallManagementService"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/action/offline"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OfflineRecallManagementServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>下线召回管理服务</p>
+     * 
+     * @param request OfflineRecallManagementServiceRequest
+     * @return OfflineRecallManagementServiceResponse
+     */
+    public OfflineRecallManagementServiceResponse offlineRecallManagementService(String RecallManagementServiceId, OfflineRecallManagementServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.offlineRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>上线实验</p>
      * 
      * @param request OnlineExperimentRequest
@@ -6231,6 +7536,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.onlineLaboratoryWithOptions(LaboratoryId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上线召回管理服务</p>
+     * 
+     * @param request OnlineRecallManagementServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OnlineRecallManagementServiceResponse
+     */
+    public OnlineRecallManagementServiceResponse onlineRecallManagementServiceWithOptions(String RecallManagementServiceId, OnlineRecallManagementServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OnlineRecallManagementService"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/action/online"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OnlineRecallManagementServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上线召回管理服务</p>
+     * 
+     * @param request OnlineRecallManagementServiceRequest
+     * @return OnlineRecallManagementServiceResponse
+     */
+    public OnlineRecallManagementServiceResponse onlineRecallManagementService(String RecallManagementServiceId, OnlineRecallManagementServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.onlineRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将maxcompute的表同步到召回引擎中。</p>
+     * 
+     * @param request PublishRecallManagementTableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PublishRecallManagementTableResponse
+     */
+    public PublishRecallManagementTableResponse publishRecallManagementTableWithOptions(String RecallManagementTableId, PublishRecallManagementTableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            body.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partition)) {
+            body.put("Partition", request.partition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skipThresholdCheck)) {
+            body.put("SkipThresholdCheck", request.skipThresholdCheck);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishRecallManagementTable"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementtables/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementTableId) + "/action/publish"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishRecallManagementTableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将maxcompute的表同步到召回引擎中。</p>
+     * 
+     * @param request PublishRecallManagementTableRequest
+     * @return PublishRecallManagementTableResponse
+     */
+    public PublishRecallManagementTableResponse publishRecallManagementTable(String RecallManagementTableId, PublishRecallManagementTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.publishRecallManagementTableWithOptions(RecallManagementTableId, request, headers, runtime);
     }
 
     /**
@@ -8001,6 +9412,252 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新召回管理初始化配置。</p>
+     * 
+     * @param request UpdateRecallManagementConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecallManagementConfigResponse
+     */
+    public UpdateRecallManagementConfigResponse updateRecallManagementConfigWithOptions(UpdateRecallManagementConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkConfigs)) {
+            body.put("NetworkConfigs", request.networkConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            body.put("Password", request.password);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecallManagementConfig"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementconfigs"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecallManagementConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新召回管理初始化配置。</p>
+     * 
+     * @param request UpdateRecallManagementConfigRequest
+     * @return UpdateRecallManagementConfigResponse
+     */
+    public UpdateRecallManagementConfigResponse updateRecallManagementConfig(UpdateRecallManagementConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateRecallManagementConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新召回管理服务信息</p>
+     * 
+     * @param request UpdateRecallManagementServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecallManagementServiceResponse
+     */
+    public UpdateRecallManagementServiceResponse updateRecallManagementServiceWithOptions(String RecallManagementServiceId, UpdateRecallManagementServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecallManagementService"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecallManagementServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新召回管理服务信息</p>
+     * 
+     * @param request UpdateRecallManagementServiceRequest
+     * @return UpdateRecallManagementServiceResponse
+     */
+    public UpdateRecallManagementServiceResponse updateRecallManagementService(String RecallManagementServiceId, UpdateRecallManagementServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新召回管理服务版本配置</p>
+     * 
+     * @param request UpdateRecallManagementServiceVersionConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecallManagementServiceVersionConfigResponse
+     */
+    public UpdateRecallManagementServiceVersionConfigResponse updateRecallManagementServiceVersionConfigWithOptions(String RecallManagementServiceId, String RecallManagementServiceVersionId, String RecallManagementServiceVersionConfigId, UpdateRecallManagementServiceVersionConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
+            body.put("ConfigType", request.configType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mergeConfig)) {
+            body.put("MergeConfig", request.mergeConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recallConfig)) {
+            body.put("RecallConfig", request.recallConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecallManagementServiceVersionConfig"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceVersionId) + "/configs/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceVersionConfigId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecallManagementServiceVersionConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新召回管理服务版本配置</p>
+     * 
+     * @param request UpdateRecallManagementServiceVersionConfigRequest
+     * @return UpdateRecallManagementServiceVersionConfigResponse
+     */
+    public UpdateRecallManagementServiceVersionConfigResponse updateRecallManagementServiceVersionConfig(String RecallManagementServiceId, String RecallManagementServiceVersionId, String RecallManagementServiceVersionConfigId, UpdateRecallManagementServiceVersionConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateRecallManagementServiceVersionConfigWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, RecallManagementServiceVersionConfigId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新召回管理表。</p>
+     * 
+     * @param request UpdateRecallManagementTableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecallManagementTableResponse
+     */
+    public UpdateRecallManagementTableResponse updateRecallManagementTableWithOptions(String RecallManagementTableId, UpdateRecallManagementTableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDataSizeFluctuationThreshold)) {
+            body.put("EnableDataSizeFluctuationThreshold", request.enableDataSizeFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableRowCountFluctuationThreshold)) {
+            body.put("EnableRowCountFluctuationThreshold", request.enableRowCountFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexVersionId)) {
+            body.put("IndexVersionId", request.indexVersionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDataSizeFluctuationThreshold)) {
+            body.put("MaxDataSizeFluctuationThreshold", request.maxDataSizeFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRowCountFluctuationThreshold)) {
+            body.put("MaxRowCountFluctuationThreshold", request.maxRowCountFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minDataSizeFluctuationThreshold)) {
+            body.put("MinDataSizeFluctuationThreshold", request.minDataSizeFluctuationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minRowCountFluctuationThreshold)) {
+            body.put("MinRowCountFluctuationThreshold", request.minRowCountFluctuationThreshold);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecallManagementTable"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementtables/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementTableId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecallManagementTableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新召回管理表。</p>
+     * 
+     * @param request UpdateRecallManagementTableRequest
+     * @return UpdateRecallManagementTableResponse
+     */
+    public UpdateRecallManagementTableResponse updateRecallManagementTable(String RecallManagementTableId, UpdateRecallManagementTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateRecallManagementTableWithOptions(RecallManagementTableId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取资源规则列表</p>
      * 
      * @param request UpdateResourceRuleRequest
@@ -8466,6 +10123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.statisBaeaviorConditionArray)) {
             body.put("StatisBaeaviorConditionArray", request.statisBaeaviorConditionArray);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statisBehaviorConditionArray)) {
+            body.put("StatisBehaviorConditionArray", request.statisBehaviorConditionArray);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.statisBehaviorConditionExpress)) {

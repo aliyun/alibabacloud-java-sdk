@@ -70,6 +70,9 @@ public class UpdateTrafficControlTaskRequest extends TeaModel {
     @NameInMap("StatisBaeaviorConditionArray")
     public String statisBaeaviorConditionArray;
 
+    @NameInMap("StatisBehaviorConditionArray")
+    public String statisBehaviorConditionArray;
+
     @NameInMap("StatisBehaviorConditionExpress")
     public String statisBehaviorConditionExpress;
 
@@ -270,6 +273,14 @@ public class UpdateTrafficControlTaskRequest extends TeaModel {
     }
     public String getStatisBaeaviorConditionArray() {
         return this.statisBaeaviorConditionArray;
+    }
+
+    public UpdateTrafficControlTaskRequest setStatisBehaviorConditionArray(String statisBehaviorConditionArray) {
+        this.statisBehaviorConditionArray = statisBehaviorConditionArray;
+        return this;
+    }
+    public String getStatisBehaviorConditionArray() {
+        return this.statisBehaviorConditionArray;
     }
 
     public UpdateTrafficControlTaskRequest setStatisBehaviorConditionExpress(String statisBehaviorConditionExpress) {

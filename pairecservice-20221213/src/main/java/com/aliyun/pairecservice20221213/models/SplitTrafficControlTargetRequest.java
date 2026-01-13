@@ -4,9 +4,17 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class SplitTrafficControlTargetRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Prod</p>
+     */
     @NameInMap("Environment")
     public String environment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>learn-pairec-xxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

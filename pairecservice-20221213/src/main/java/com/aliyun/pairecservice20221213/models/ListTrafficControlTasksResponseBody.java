@@ -375,6 +375,9 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         @NameInMap("StatisBehaviorConditionArray")
         public String statisBehaviorConditionArray;
 
+        @NameInMap("StatisBehaviorConditionExpress")
+        public String statisBehaviorConditionExpress;
+
         @NameInMap("StatisBehaviorConditionType")
         public String statisBehaviorConditionType;
 
@@ -655,6 +658,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         }
         public String getStatisBehaviorConditionArray() {
             return this.statisBehaviorConditionArray;
+        }
+
+        public ListTrafficControlTasksResponseBodyTrafficControlTasks setStatisBehaviorConditionExpress(String statisBehaviorConditionExpress) {
+            this.statisBehaviorConditionExpress = statisBehaviorConditionExpress;
+            return this;
+        }
+        public String getStatisBehaviorConditionExpress() {
+            return this.statisBehaviorConditionExpress;
         }
 
         public ListTrafficControlTasksResponseBodyTrafficControlTasks setStatisBehaviorConditionType(String statisBehaviorConditionType) {

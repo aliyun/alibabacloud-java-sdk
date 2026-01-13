@@ -4,6 +4,10 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6CF1E160-3F36-5E73-A170-C75504F05BBC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,8 +39,8 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         @NameInMap("Data")
         public java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> data;
 
-        @NameInMap("TrafficContorlTargetId")
-        public String trafficContorlTargetId;
+        @NameInMap("TrafficControlTargetId")
+        public String trafficControlTargetId;
 
         public static GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics build(java.util.Map<String, ?> map) throws Exception {
             GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics self = new GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics();
@@ -51,12 +55,12 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             return this.data;
         }
 
-        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics setTrafficContorlTargetId(String trafficContorlTargetId) {
-            this.trafficContorlTargetId = trafficContorlTargetId;
+        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics setTrafficControlTargetId(String trafficControlTargetId) {
+            this.trafficControlTargetId = trafficControlTargetId;
             return this;
         }
-        public String getTrafficContorlTargetId() {
-            return this.trafficContorlTargetId;
+        public String getTrafficControlTargetId() {
+            return this.trafficControlTargetId;
         }
 
     }

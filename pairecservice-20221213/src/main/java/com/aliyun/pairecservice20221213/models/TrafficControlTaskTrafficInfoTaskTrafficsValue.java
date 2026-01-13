@@ -4,6 +4,10 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class TrafficControlTaskTrafficInfoTaskTrafficsValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Traffic")
     public Double traffic;
 
