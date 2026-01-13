@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>iqs20241111</artifactId>
-  <version>1.6.3</version>
+  <version>1.6.4</version>
   <packaging>jar</packaging>
   <name>iqs20241111</name>
   <description>Alibaba Cloud IQS (20241111) SDK for Java

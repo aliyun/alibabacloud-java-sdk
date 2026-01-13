@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class GetIqsUsageRequest extends TeaModel {
+    @NameInMap("callerId")
+    public String callerId;
+
     /**
      * <strong>example:</strong>
      * <p>20241017</p>
@@ -21,6 +24,14 @@ public class GetIqsUsageRequest extends TeaModel {
     public static GetIqsUsageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetIqsUsageRequest self = new GetIqsUsageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetIqsUsageRequest setCallerId(String callerId) {
+        this.callerId = callerId;
+        return this;
+    }
+    public String getCallerId() {
+        return this.callerId;
     }
 
     public GetIqsUsageRequest setEndDate(String endDate) {
