@@ -7315,6 +7315,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询呼入CallId</p>
+     * 
+     * @param request QueryInboundCallIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryInboundCallIdResponse
+     */
+    public QueryInboundCallIdResponse queryInboundCallIdWithOptions(QueryInboundCallIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callDate)) {
+            query.put("CallDate", request.callDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryInboundCallId"),
+            new TeaPair("version", "2019-10-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryInboundCallIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询呼入CallId</p>
+     * 
+     * @param request QueryInboundCallIdRequest
+     * @return QueryInboundCallIdResponse
+     */
+    public QueryInboundCallIdResponse queryInboundCallId(QueryInboundCallIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryInboundCallIdWithOptions(request, runtime);
+    }
+
+    /**
      * @param request QueryOutboundTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryOutboundTaskResponse
