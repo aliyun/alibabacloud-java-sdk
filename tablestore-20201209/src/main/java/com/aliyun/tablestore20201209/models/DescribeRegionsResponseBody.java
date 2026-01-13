@@ -10,13 +10,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
-    /**
-     * <p>The request ID, which can be used to troubleshoot issues.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>B37BBA04-D827-55C8-B901-5264B904E8C6</p>
-     */
-    @NameInMap("requestId")
+    @NameInMap("RequestId")
     public String requestId;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {

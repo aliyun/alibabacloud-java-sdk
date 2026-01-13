@@ -28,6 +28,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>绑定vpc</p>
+     * 
+     * @param request BindInstance2VpcRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindInstance2VpcResponse
+     */
+    public BindInstance2VpcResponse bindInstance2VpcWithOptions(BindInstance2VpcRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceVpcName)) {
+            body.put("InstanceVpcName", request.instanceVpcName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.virtualSwitchId)) {
+            body.put("VirtualSwitchId", request.virtualSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            body.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindInstance2Vpc"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/bindinstance2vpc"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindInstance2VpcResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>绑定vpc</p>
+     * 
+     * @param request BindInstance2VpcRequest
+     * @return BindInstance2VpcResponse
+     */
+    public BindInstance2VpcResponse bindInstance2Vpc(BindInstance2VpcRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.bindInstance2VpcWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Changes the resource group to which an instance belongs.</p>
      * 
      * @param request ChangeResourceGroupRequest
@@ -438,6 +497,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除VCU实例</p>
+     * 
+     * @param request DeleteVCUInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVCUInstanceResponse
+     */
+    public DeleteVCUInstanceResponse deleteVCUInstanceWithOptions(DeleteVCUInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVCUInstance"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/deletevcuinstance"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVCUInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除VCU实例</p>
+     * 
+     * @param request DeleteVCUInstanceRequest
+     * @return DeleteVCUInstanceResponse
+     */
+    public DeleteVCUInstanceResponse deleteVCUInstance(DeleteVCUInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteVCUInstanceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries supported regions.</p>
      * 
      * @param request DescribeRegionsRequest
@@ -528,6 +634,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getInstanceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举集群类型</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListClusterTypeResponse
+     */
+    public ListClusterTypeResponse listClusterTypeWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListClusterType"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/listclustertype"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListClusterTypeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举集群类型</p>
+     * @return ListClusterTypeResponse
+     */
+    public ListClusterTypeResponse listClusterType() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listClusterTypeWithOptions(headers, runtime);
     }
 
     /**
@@ -686,6 +829,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取实例的vpcInfo列表</p>
+     * 
+     * @param request ListVpcInfoByInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVpcInfoByInstanceResponse
+     */
+    public ListVpcInfoByInstanceResponse listVpcInfoByInstanceWithOptions(ListVpcInfoByInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVpcInfoByInstance"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/listvpcinfobyinstance"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVpcInfoByInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例的vpcInfo列表</p>
+     * 
+     * @param request ListVpcInfoByInstanceRequest
+     * @return ListVpcInfoByInstanceResponse
+     */
+    public ListVpcInfoByInstanceResponse listVpcInfoByInstance(ListVpcInfoByInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listVpcInfoByInstanceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例的vpcInfo列表</p>
+     * 
+     * @param request ListVpcInfoByVpcRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVpcInfoByVpcResponse
+     */
+    public ListVpcInfoByVpcResponse listVpcInfoByVpcWithOptions(ListVpcInfoByVpcRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVpcInfoByVpc"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/listvpcinfobyvpc"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVpcInfoByVpcResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例的vpcInfo列表</p>
+     * 
+     * @param request ListVpcInfoByVpcRequest
+     * @return ListVpcInfoByVpcResponse
+     */
+    public ListVpcInfoByVpcResponse listVpcInfoByVpc(ListVpcInfoByVpcRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listVpcInfoByVpcWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Adds tags to instances.</p>
      * 
      * @param request TagResourcesRequest
@@ -737,6 +990,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.tagResourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑vpc</p>
+     * 
+     * @param request UnbindInstance2VpcRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindInstance2VpcResponse
+     */
+    public UnbindInstance2VpcResponse unbindInstance2VpcWithOptions(UnbindInstance2VpcRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceVpcName)) {
+            body.put("InstanceVpcName", request.instanceVpcName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnbindInstance2Vpc"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/unbindinstance2vpc"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindInstance2VpcResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑vpc</p>
+     * 
+     * @param request UnbindInstance2VpcRequest
+     * @return UnbindInstance2VpcResponse
+     */
+    public UnbindInstance2VpcResponse unbindInstance2Vpc(UnbindInstance2VpcRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.unbindInstance2VpcWithOptions(request, headers, runtime);
     }
 
     /**
