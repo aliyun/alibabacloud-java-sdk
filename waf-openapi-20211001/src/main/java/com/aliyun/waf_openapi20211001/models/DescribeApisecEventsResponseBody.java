@@ -116,6 +116,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
          * <p>{\&quot;1717498320\&quot;:500,\&quot;1717498380\&quot;:529,\&quot;1717498440\&quot;:20,\&quot;1717498260\&quot;:518,\&quot;1717498200\&quot;:481,\&quot;1717498140\&quot;:52}</p>
          */
         @NameInMap("AttackCntInfo")
+        @Deprecated
         public String attackCntInfo;
 
         /**
@@ -125,6 +126,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
          * <p>104.234.140.33</p>
          */
         @NameInMap("AttackIp")
+        @Deprecated
         public String attackIp;
 
         /**
@@ -140,12 +142,14 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
          * <p>[{\&quot;ip\&quot;:\&quot;72.<em>.</em>.119\&quot;,\&quot;country_id\&quot;:\&quot;US\&quot;,\&quot;region_id\&quot;:\&quot;\&quot;,\&quot;cnt\&quot;:\&quot;2100\&quot;}]</p>
          */
         @NameInMap("AttackIpInfo")
+        @Deprecated
         public String attackIpInfo;
 
         /**
          * <p>The source IP addresses of the attacks.</p>
          */
         @NameInMap("AttackIps")
+        @Deprecated
         public java.util.List<String> attackIps;
 
         @NameInMap("AttackerList")
@@ -181,6 +185,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
          * <p>{}</p>
          */
         @NameInMap("EventInfo")
+        @Deprecated
         public String eventInfo;
 
         /**
@@ -278,6 +283,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
          * <p>{}</p>
          */
         @NameInMap("RequestData")
+        @Deprecated
         public String requestData;
 
         /**
@@ -287,6 +293,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
          * <p>{}</p>
          */
         @NameInMap("ResponseData")
+        @Deprecated
         public String responseData;
 
         /**
@@ -357,6 +364,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             return this.attackClient;
         }
 
+        @Deprecated
         public DescribeApisecEventsResponseBodyData setAttackCntInfo(String attackCntInfo) {
             this.attackCntInfo = attackCntInfo;
             return this;
@@ -365,6 +373,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             return this.attackCntInfo;
         }
 
+        @Deprecated
         public DescribeApisecEventsResponseBodyData setAttackIp(String attackIp) {
             this.attackIp = attackIp;
             return this;
@@ -373,6 +382,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             return this.attackIp;
         }
 
+        @Deprecated
         public DescribeApisecEventsResponseBodyData setAttackIpInfo(String attackIpInfo) {
             this.attackIpInfo = attackIpInfo;
             return this;
@@ -381,6 +391,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             return this.attackIpInfo;
         }
 
+        @Deprecated
         public DescribeApisecEventsResponseBodyData setAttackIps(java.util.List<String> attackIps) {
             this.attackIps = attackIps;
             return this;
@@ -413,6 +424,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             return this.eventId;
         }
 
+        @Deprecated
         public DescribeApisecEventsResponseBodyData setEventInfo(String eventInfo) {
             this.eventInfo = eventInfo;
             return this;
@@ -485,6 +497,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             return this.remoteRegion;
         }
 
+        @Deprecated
         public DescribeApisecEventsResponseBodyData setRequestData(String requestData) {
             this.requestData = requestData;
             return this;
@@ -493,6 +506,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             return this.requestData;
         }
 
+        @Deprecated
         public DescribeApisecEventsResponseBodyData setResponseData(String responseData) {
             this.responseData = responseData;
             return this;

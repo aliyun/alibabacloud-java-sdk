@@ -78,6 +78,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
          * <p>1722268800</p>
          */
         @NameInMap("TimeStamp")
+        @Deprecated
         public Long timeStamp;
 
         /**
@@ -118,6 +119,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
             return this.abnormalMedium;
         }
 
+        @Deprecated
         public DescribeUserAbnormalTrendResponseBodyTrend setTimeStamp(Long timeStamp) {
             this.timeStamp = timeStamp;
             return this;

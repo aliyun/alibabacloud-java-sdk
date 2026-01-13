@@ -14,6 +14,7 @@ public class DescribeUserApiRequestRequest extends TeaModel {
      * <p>/api/v1/know</p>
      */
     @NameInMap("ApiFormat")
+    @Deprecated
     public String apiFormat;
 
     /**
@@ -48,6 +49,7 @@ public class DescribeUserApiRequestRequest extends TeaModel {
      * <p>c.***.com</p>
      */
     @NameInMap("Domain")
+    @Deprecated
     public String domain;
 
     /**
@@ -111,6 +113,7 @@ public class DescribeUserApiRequestRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public DescribeUserApiRequestRequest setApiFormat(String apiFormat) {
         this.apiFormat = apiFormat;
         return this;
@@ -135,6 +138,7 @@ public class DescribeUserApiRequestRequest extends TeaModel {
         return this.clusterId;
     }
 
+    @Deprecated
     public DescribeUserApiRequestRequest setDomain(String domain) {
         this.domain = domain;
         return this;

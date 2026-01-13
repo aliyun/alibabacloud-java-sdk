@@ -46,6 +46,7 @@ public class DescribeUserAssetRequest extends TeaModel {
      * <p>1723435200</p>
      */
     @NameInMap("Days")
+    @Deprecated
     public String days;
 
     /**
@@ -104,6 +105,7 @@ public class DescribeUserAssetRequest extends TeaModel {
         return this.dataType;
     }
 
+    @Deprecated
     public DescribeUserAssetRequest setDays(String days) {
         this.days = days;
         return this;

@@ -28,6 +28,7 @@ public class DescribeApiExportsRequest extends TeaModel {
      * <p>zh</p>
      */
     @NameInMap("Lang")
+    @Deprecated
     public String lang;
 
     /**
@@ -83,6 +84,7 @@ public class DescribeApiExportsRequest extends TeaModel {
         return this.instanceId;
     }
 
+    @Deprecated
     public DescribeApiExportsRequest setLang(String lang) {
         this.lang = lang;
         return this;

@@ -169,6 +169,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
          * <p>The risk-related samples.</p>
          */
         @NameInMap("Examples")
+        @Deprecated
         public java.util.List<String> examples;
 
         /**
@@ -352,6 +353,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
             return this.discoverTime;
         }
 
+        @Deprecated
         public DescribeApisecAbnormalsResponseBodyData setExamples(java.util.List<String> examples) {
             this.examples = examples;
             return this;

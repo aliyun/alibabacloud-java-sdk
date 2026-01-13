@@ -258,6 +258,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
          * <p>The sample APIs.</p>
          */
         @NameInMap("Examples")
+        @Deprecated
         public java.util.List<String> examples;
 
         /**
@@ -456,6 +457,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             return this.eventNum;
         }
 
+        @Deprecated
         public DescribeApisecApiResourcesResponseBodyData setExamples(java.util.List<String> examples) {
             this.examples = examples;
             return this;

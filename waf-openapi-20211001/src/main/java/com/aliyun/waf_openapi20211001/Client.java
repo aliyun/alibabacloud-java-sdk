@@ -4892,6 +4892,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询云产品接入资源列表</p>
+     * 
+     * @param request DescribeCloudResourceListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudResourceListResponse
+     */
+    public DescribeCloudResourceListResponse describeCloudResourceListWithOptions(DescribeCloudResourceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudResourceId)) {
+            query.put("CloudResourceId", request.cloudResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerUserId)) {
+            query.put("OwnerUserId", request.ownerUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceId)) {
+            query.put("ResourceInstanceId", request.resourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceProduct)) {
+            query.put("ResourceProduct", request.resourceProduct);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudResourceList"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudResourceListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云产品接入资源列表</p>
+     * 
+     * @param request DescribeCloudResourceListRequest
+     * @return DescribeCloudResourceListResponse
+     */
+    public DescribeCloudResourceListResponse describeCloudResourceList(DescribeCloudResourceListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudResourceListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries cloud service resources that are added to Web Application Firewall (WAF).</p>
      * 
      * @param request DescribeCloudResourcesRequest
@@ -11224,6 +11304,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeThreatEventDetailResponse describeThreatEventDetail(DescribeThreatEventDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeThreatEventDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询安全事件Top攻击统计数据</p>
+     * 
+     * @param request DescribeThreatEventTopMetricRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeThreatEventTopMetricResponse
+     */
+    public DescribeThreatEventTopMetricResponse describeThreatEventTopMetricWithOptions(DescribeThreatEventTopMetricRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metric)) {
+            query.put("Metric", request.metric);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeThreatEventTopMetric"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeThreatEventTopMetricResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询安全事件Top攻击统计数据</p>
+     * 
+     * @param request DescribeThreatEventTopMetricRequest
+     * @return DescribeThreatEventTopMetricResponse
+     */
+    public DescribeThreatEventTopMetricResponse describeThreatEventTopMetric(DescribeThreatEventTopMetricRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeThreatEventTopMetricWithOptions(request, runtime);
     }
 
     /**
