@@ -313,6 +313,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建自定义域名</p>
+     * 
+     * @param request CreateCustomDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCustomDomainResponse
+     */
+    public CreateCustomDomainResponse createCustomDomainWithOptions(CreateCustomDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCustomDomain"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/agents/custom-domains"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义域名</p>
+     * 
+     * @param request CreateCustomDomainRequest
+     * @return CreateCustomDomainResponse
+     */
+    public CreateCustomDomainResponse createCustomDomain(CreateCustomDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createCustomDomainWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建知识库</p>
      * 
      * @param request CreateKnowledgeBaseRequest
@@ -776,6 +818,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteCredentialWithOptions(credentialName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Delete a custom domain</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomDomainResponse
+     */
+    public DeleteCustomDomainResponse deleteCustomDomainWithOptions(String domainName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomDomain"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/agents/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(domainName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Delete a custom domain</p>
+     * @return DeleteCustomDomainResponse
+     */
+    public DeleteCustomDomainResponse deleteCustomDomain(String domainName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteCustomDomainWithOptions(domainName, headers, runtime);
     }
 
     /**
@@ -1272,6 +1351,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getCredentialWithOptions(credentialName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义域名详情</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomDomainResponse
+     */
+    public GetCustomDomainResponse getCustomDomainWithOptions(String domainName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomDomain"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/agents/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(domainName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义域名详情</p>
+     * @return GetCustomDomainResponse
+     */
+    public GetCustomDomainResponse getCustomDomain(String domainName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCustomDomainWithOptions(domainName, headers, runtime);
     }
 
     /**
@@ -1888,6 +2004,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listCredentialsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>自定义域名列表</p>
+     * 
+     * @param request ListCustomDomainsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomDomainsResponse
+     */
+    public ListCustomDomainsResponse listCustomDomainsWithOptions(ListCustomDomainsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("domainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceName)) {
+            query.put("resourceName", request.resourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("resourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomDomains"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/agents/custom-domains"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomDomainsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>自定义域名列表</p>
+     * 
+     * @param request ListCustomDomainsRequest
+     * @return ListCustomDomainsResponse
+     */
+    public ListCustomDomainsResponse listCustomDomains(ListCustomDomainsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listCustomDomainsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -2589,6 +2768,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateCredentialWithOptions(credentialName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义域名</p>
+     * 
+     * @param request UpdateCustomDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCustomDomainResponse
+     */
+    public UpdateCustomDomainResponse updateCustomDomainWithOptions(String domainName, UpdateCustomDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCustomDomain"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/agents/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(domainName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义域名</p>
+     * 
+     * @param request UpdateCustomDomainRequest
+     * @return UpdateCustomDomainResponse
+     */
+    public UpdateCustomDomainResponse updateCustomDomain(String domainName, UpdateCustomDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateCustomDomainWithOptions(domainName, request, headers, runtime);
     }
 
     /**
