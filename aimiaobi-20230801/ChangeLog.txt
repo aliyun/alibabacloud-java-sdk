@@ -1,3 +1,6 @@
+2026-01-14 Version: 1.39.4
+- Generated java 2023-08-01 for AiMiaoBi.
+
 2025-12-29 Version: 1.39.3
 - Update API RunTextPolishing: add request parameters TaskId.
 
