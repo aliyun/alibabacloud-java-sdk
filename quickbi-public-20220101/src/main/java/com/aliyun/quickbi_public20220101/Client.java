@@ -2160,6 +2160,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取订阅任务列表信息</p>
+     * 
+     * @param request GetMailTaskListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMailTaskListResponse
+     */
+    public GetMailTaskListResponse getMailTaskListWithOptions(GetMailTaskListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paused)) {
+            query.put("Paused", request.paused);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userNick)) {
+            query.put("UserNick", request.userNick);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMailTaskList"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMailTaskListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取订阅任务列表信息</p>
+     * 
+     * @param request GetMailTaskListRequest
+     * @return GetMailTaskListResponse
+     */
+    public GetMailTaskListResponse getMailTaskList(GetMailTaskListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMailTaskListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Check the running status of mail tasks within an organization</p>
      * 
      * @param request GetMailTaskStatusRequest
@@ -3084,6 +3140,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUserGroupsByUserIdResponse listUserGroupsByUserId(ListUserGroupsByUserIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserGroupsByUserIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据门户菜单的白名单列表</p>
+     * 
+     * @param request ListWhitePortalMenuRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWhitePortalMenuResponse
+     */
+    public ListWhitePortalMenuResponse listWhitePortalMenuWithOptions(ListWhitePortalMenuRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataportalId)) {
+            query.put("DataportalId", request.dataportalId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWhitePortalMenu"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWhitePortalMenuResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据门户菜单的白名单列表</p>
+     * 
+     * @param request ListWhitePortalMenuRequest
+     * @return ListWhitePortalMenuResponse
+     */
+    public ListWhitePortalMenuResponse listWhitePortalMenu(ListWhitePortalMenuRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWhitePortalMenuWithOptions(request, runtime);
     }
 
     /**
@@ -5036,6 +5136,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryTicketInfoResponse queryTicketInfo(QueryTicketInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryTicketInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据绑定的第三方账号ID查询UserId</p>
+     * 
+     * @param request QueryUserByMobileAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryUserByMobileAccountResponse
+     */
+    public QueryUserByMobileAccountResponse queryUserByMobileAccountWithOptions(QueryUserByMobileAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileType)) {
+            query.put("MobileType", request.mobileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileUserId)) {
+            query.put("MobileUserId", request.mobileUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryUserByMobileAccount"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryUserByMobileAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据绑定的第三方账号ID查询UserId</p>
+     * 
+     * @param request QueryUserByMobileAccountRequest
+     * @return QueryUserByMobileAccountResponse
+     */
+    public QueryUserByMobileAccountResponse queryUserByMobileAccount(QueryUserByMobileAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryUserByMobileAccountWithOptions(request, runtime);
     }
 
     /**

@@ -170,6 +170,13 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String ownerAccountName;
 
         /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("RealOwnerAccountName")
+        public String realOwnerAccountName;
+
+        /**
          * <p>Workspace description.</p>
          * 
          * <strong>example:</strong>
@@ -287,6 +294,14 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         }
         public String getOwnerAccountName() {
             return this.ownerAccountName;
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultData setRealOwnerAccountName(String realOwnerAccountName) {
+            this.realOwnerAccountName = realOwnerAccountName;
+            return this;
+        }
+        public String getRealOwnerAccountName() {
+            return this.realOwnerAccountName;
         }
 
         public QueryOrganizationWorkspaceListResponseBodyResultData setWorkspaceDescription(String workspaceDescription) {
