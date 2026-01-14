@@ -186,6 +186,9 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         @NameInMap("OrderId")
         public String orderId;
 
+        @NameInMap("SiteHost")
+        public String siteHost;
+
         public static CreateAppInstanceResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             CreateAppInstanceResponseBodyModule self = new CreateAppInstanceResponseBodyModule();
             return TeaModel.build(map, self);
@@ -213,6 +216,14 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
         public String getOrderId() {
             return this.orderId;
+        }
+
+        public CreateAppInstanceResponseBodyModule setSiteHost(String siteHost) {
+            this.siteHost = siteHost;
+            return this;
+        }
+        public String getSiteHost() {
+            return this.siteHost;
         }
 
     }
