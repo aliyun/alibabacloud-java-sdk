@@ -46,6 +46,9 @@ public class UpdateAcceleratorRequest extends TeaModel {
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
@@ -85,6 +88,7 @@ public class UpdateAcceleratorRequest extends TeaModel {
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
+    @Deprecated
     public String regionId;
 
     /**
@@ -147,6 +151,14 @@ public class UpdateAcceleratorRequest extends TeaModel {
         return this.autoUseCoupon;
     }
 
+    public UpdateAcceleratorRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
     public UpdateAcceleratorRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -171,6 +183,7 @@ public class UpdateAcceleratorRequest extends TeaModel {
         return this.name;
     }
 
+    @Deprecated
     public UpdateAcceleratorRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;

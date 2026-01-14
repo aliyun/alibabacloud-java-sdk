@@ -173,12 +173,13 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the forwarding action. Valid values:</p>
          * <ul>
-         * <li><strong>ForwardGroup:</strong> forwards a request.</li>
-         * <li><strong>Redirect:</strong> redirects a request.</li>
-         * <li><strong>FixResponse:</strong> returns a fixed response.</li>
-         * <li><strong>Rewrite:</strong> rewrites a request.</li>
-         * <li><strong>AddHeader:</strong> adds a header to a request.</li>
-         * <li><strong>RemoveHeaderConfig:</strong> deletes the header of a request.</li>
+         * <li><strong>ForwardGroup</strong>: forwards a request.</li>
+         * <li><strong>Redirect</strong>: redirects a request.</li>
+         * <li><strong>FixResponse</strong>: returns a fixed response.</li>
+         * <li><strong>Rewrite</strong>: rewrites a request.</li>
+         * <li><strong>AddHeader</strong>: adds a header to a request.</li>
+         * <li><strong>RemoveHeaderConfig</strong>: deletes the header from a request.</li>
+         * <li><strong>Drop</strong>: drops a request.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,47 +189,49 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         public String ruleActionType;
 
         /**
-         * <p>The value of the forwarding action type.</p>
-         * <p>Different JSON strings are returned based on the value of the <strong>RuleActionType</strong> parameter.</p>
+         * <p>The value of the forwarding action.</p>
+         * <p>Different JSON strings are returned based on the value of <strong>RuleActionType</strong>.</p>
          * <ul>
-         * <li><p>If you set <strong>RuleActionType</strong> to <strong>ForwardGroup</strong>, the information about a virtual endpoint group is returned. Parameter configuration:</p>
+         * <li><p>If you set <strong>RuleActionType</strong> to <strong>ForwardGroup</strong>, the information about a virtual endpoint group is returned. The following section describes the parameters:</p>
          * <ul>
-         * <li><code>type:</code> the type of the resource that is returned. The value is <code>endpointgroup</code>.</li>
-         * <li><code>value:</code> the ID of the virtual endpoint group that is returned.</li>
+         * <li><code>type</code>: <code>endpointgroup</code> is returned.</li>
+         * <li><code>value</code>: the ID of the virtual endpoint group.</li>
          * </ul>
          * </li>
-         * <li><p>If you set <strong>RuleActionType</strong> to <strong>Redirect</strong>, the redirecting configuration is returned. Parameter configuration:</p>
+         * <li><p>If you set <strong>RuleActionType</strong> to <strong>Redirect</strong>, the redirecting configuration is returned. The following section describes the parameters:</p>
          * <ul>
-         * <li><code>protocol:</code> the protocol of requests after the requests are redirected.</li>
-         * <li><code>domain:</code> the domain name to which requests are redirected.</li>
-         * <li><code>port:</code> the port to which requests are redirected.</li>
-         * <li><code>path:</code> the path to which requests are redirected.</li>
-         * <li><code>query:</code> the query string of the requests that are redirected.</li>
-         * <li><code>code:</code> the redirecting code.</li>
+         * <li><code>protocol</code>: the protocol of requests after the requests are redirected.</li>
+         * <li><code>domain</code>: the domain name to which requests are redirected.</li>
+         * <li><code>port</code>: the port to which requests are redirected.</li>
+         * <li><code>path</code>: the path to which requests are redirected.</li>
+         * <li><code>query</code>: the query string of the requests that are redirected.</li>
+         * <li><code>code</code>: the redirecting code.</li>
          * </ul>
          * </li>
-         * <li><p>If you set <strong>RuleActionType</strong> to <strong>FixResponse</strong>, the information about the fixed response that you configured is returned. Parameter configuration:</p>
+         * <li><p>If you set <strong>RuleActionType</strong> to <strong>FixResponse</strong>, the information about the fixed response that you configured is returned. The following section describes the parameters:</p>
          * <ul>
-         * <li><code>code:</code> the HTTP status code that is returned.</li>
-         * <li><code>type:</code> the type of the response content that is returned.</li>
-         * <li><code>content:</code> the response content that is returned.</li>
+         * <li><code>code</code>: the HTTP status code.</li>
+         * <li><code>type</code>: the content type of the response.</li>
+         * <li><code>content</code>: the content of the response.</li>
          * </ul>
          * </li>
-         * <li><p>If <strong>RuleActionType</strong> is set to <strong>AddHeader</strong>, the information about the HTTP header that is added is returned. Parameter configuration:</p>
+         * <li><p>If <strong>RuleActionType</strong> is set to <strong>AddHeader</strong>, the information about the HTTP header that is added is returned. The following section describes the parameters:</p>
          * <ul>
-         * <li><code>name:</code> the name of the HTTP header that is returned.</li>
-         * <li><code>type:</code> the content type of the HTTP header that is returned.</li>
-         * <li><code>value:</code> the content of the HTTP header that is returned.</li>
+         * <li><code>name</code>: the name of the HTTP header.</li>
+         * <li><code>type</code>: the content type of the HTTP header.</li>
+         * <li><code>value</code>: the content of the HTTP header.</li>
          * </ul>
          * </li>
          * <li><p>If you set <strong>RuleActionType</strong> to <strong>RemoveHeader</strong>, the information about the HTTP header that is deleted is returned.</p>
          * </li>
-         * <li><p>If you set <strong>RuleActionType</strong> to <strong>Rewrite</strong>, the rewriting configuration is returned. Parameter configuration:</p>
+         * <li><p>If you set <strong>RuleActionType</strong> to <strong>Rewrite</strong>, the rewriting configuration is returned. The following section describes the parameters:</p>
          * <ul>
-         * <li><code>domain:</code> the domain name to which requests are redirected.</li>
-         * <li><code>path:</code> the path to which requests are redirected.</li>
-         * <li><code>query:</code> the query string of the requests that are redirected.</li>
+         * <li><code>domain</code>: the domain name to which requests are redirected.</li>
+         * <li><code>path</code>: the path to which requests are redirected.</li>
+         * <li><code>query</code>: the query string of the requests that are redirected.</li>
          * </ul>
+         * </li>
+         * <li><p>If you set <strong>RuleActionType</strong> to <strong>Drop</strong>, an empty string is returned.</p>
          * </li>
          * </ul>
          * 
@@ -424,14 +427,14 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     public static class ListForwardingRulesResponseBodyForwardingRulesServiceManagedInfos extends TeaModel {
         /**
-         * <p>Managed policy action name, Valid values:</p>
+         * <p>The name of the action that you can perform on the managed instance. Valid values:</p>
          * <ul>
-         * <li>Create</li>
-         * <li>Update</li>
-         * <li>Delete</li>
-         * <li>Associate</li>
-         * <li>UserUnmanaged</li>
-         * <li>CreateChild</li>
+         * <li><strong>Create</strong>: Create an instance.</li>
+         * <li><strong>Update</strong>: Update the current instance.</li>
+         * <li><strong>Delete</strong>: Delete the current instance.</li>
+         * <li><strong>Associate</strong>: Reference the current instance.</li>
+         * <li><strong>UserUnmanaged</strong>: Unmanage the instance.</li>
+         * <li><strong>CreateChild</strong>: Create a child resource on the current instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,18 +444,18 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>Sub resource type, Valid values:</p>
+         * <p>The type of the child resource. Valid values:</p>
          * <ul>
-         * <li>Listener</li>
-         * <li>IpSet</li>
-         * <li>EndpointGroup</li>
-         * <li>ForwardingRule</li>
-         * <li>Endpoint</li>
-         * <li>EndpointGroupDestination</li>
-         * <li>EndpointPolicy</li>
+         * <li><strong>Listener</strong>: listener.</li>
+         * <li><strong>IpSet</strong>: acceleration region.</li>
+         * <li><strong>EndpointGroup</strong>: endpoint group.</li>
+         * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
+         * <li><strong>Endpoint</strong>: endpoint.</li>
+         * <li><strong>EndpointGroupDestination</strong>: the protocol mapping of an endpoint group associated with a custom routing listener.</li>
+         * <li><strong>EndpointPolicy</strong>: the traffic policy of an endpoint associated with a custom routing listener.</li>
          * </ul>
          * <blockquote>
-         * <p>Only valid when the Action parameter is CreateChild.</p>
+         * <p> This parameter is returned only if the value of <strong>Action</strong> is <strong>CreateChild</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -462,12 +465,10 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         public String childType;
 
         /**
-         * <p>Is the managed policy action managed, Valid values:</p>
+         * <p>Indicates whether the specified actions are managed. Valid values:</p>
          * <ul>
-         * <li><p>true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
-         * </li>
-         * <li><p>false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
-         * </li>
+         * <li><strong>true</strong>: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</li>
+         * <li><strong>false</strong>: The specified actions are not managed, and users can perform the specified actions on the managed instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -582,9 +583,9 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         public java.util.List<ListForwardingRulesResponseBodyForwardingRulesRuleConditions> ruleConditions;
 
         /**
-         * <p>The service ID to which the managed instance belongs.</p>
+         * <p>The ID of the service that manages the instance.</p>
          * <blockquote>
-         * <p> Valid only when the ServiceManaged parameter is True.</p>
+         * <p> This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -594,10 +595,10 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>Is it a managed instance. Valid values:</p>
+         * <p>Indicates whether the GA instance is managed. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><strong>true</strong>: The GA instance is managed.</li>
+         * <li><strong>false</strong>: The GA instance is not managed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -607,7 +608,13 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>A list of action policies that users can execute on this managed instance.</p>
+         * <p>The actions that you can perform on the managed instance.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
+         * </blockquote>
+         * <ul>
+         * <li>You can perform only specific actions on the managed instance.</li>
+         * </ul>
          */
         @NameInMap("ServiceManagedInfos")
         public java.util.List<ListForwardingRulesResponseBodyForwardingRulesServiceManagedInfos> serviceManagedInfos;

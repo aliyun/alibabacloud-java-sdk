@@ -146,6 +146,7 @@ public class DescribeListenerResponseBody extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("ProxyProtocol")
+    @Deprecated
     public Boolean proxyProtocol;
 
     /**
@@ -399,6 +400,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         return this.protocol;
     }
 
+    @Deprecated
     public DescribeListenerResponseBody setProxyProtocol(Boolean proxyProtocol) {
         this.proxyProtocol = proxyProtocol;
         return this;

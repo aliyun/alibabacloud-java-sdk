@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateForwardingRulesResponseBody extends TeaModel {
     /**
-     * <p>Details about the forwarding rules.</p>
+     * <p>The forwarding rules.</p>
      */
     @NameInMap("ForwardingRules")
     public java.util.List<CreateForwardingRulesResponseBodyForwardingRules> forwardingRules;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>64ADAB1E-0B7F-4FD8-A404-3BECC0E9CCFF</p>

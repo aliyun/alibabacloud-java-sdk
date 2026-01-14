@@ -15,7 +15,7 @@ public class CreateAcceleratorResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the order.</p>
-     * <p>If you did not configure automatic payment, you must go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payments.</p>
+     * <p>This parameter is returned only when the InstanceChargeType parameter is set to PREPAY. If AutoPay is set to false, you must manually complete the payment in the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>208257****</p>

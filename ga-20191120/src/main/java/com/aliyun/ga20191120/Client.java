@@ -271,6 +271,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GA集成云产品</p>
+     * 
+     * @param request AssociateResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateResourcesResponse
+     */
+    public AssociateResourcesResponse associateResourcesWithOptions(AssociateResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceleratorId)) {
+            query.put("AcceleratorId", request.acceleratorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedMode)) {
+            query.put("AssociatedMode", request.associatedMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedResourceId)) {
+            query.put("AssociatedResourceId", request.associatedResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedResourceRegionId)) {
+            query.put("AssociatedResourceRegionId", request.associatedResourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedResourceType)) {
+            query.put("AssociatedResourceType", request.associatedResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssociateResources"),
+            new TeaPair("version", "2019-11-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GA集成云产品</p>
+     * 
+     * @param request AssociateResourcesRequest
+     * @return AssociateResourcesResponse
+     */
+    public AssociateResourcesResponse associateResources(AssociateResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.associateResourcesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>When you call this operation, take note of the following items:</p>
      * <ul>
@@ -296,12 +364,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceleratorId", request.acceleratorId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ddosConfigList)) {
+            query.put("DdosConfigList", request.ddosConfigList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ddosId)) {
             query.put("DdosId", request.ddosId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ddosRegionId)) {
             query.put("DdosRegionId", request.ddosRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -369,6 +445,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceleratorId)) {
             query.put("AcceleratorId", request.acceleratorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessLogRecordCustomizedHeaderList)) {
+            query.put("AccessLogRecordCustomizedHeaderList", request.accessLogRecordCustomizedHeaderList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessLogRecordCustomizedHeadersEnabled)) {
+            query.put("AccessLogRecordCustomizedHeadersEnabled", request.accessLogRecordCustomizedHeadersEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -736,7 +820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Global Accelerator (GA) instance.</p>
+     * <p>Creates a Global Accelerator (GA) instance. GA is a high-availability and high-performance network acceleration service for global users. By leveraging the high-quality BGP bandwidth and global network of Alibaba Cloud, GA allows service providers to deploy applications across regions and users to connect to the nearest access points for content delivery acceleration. This reduces network issues, such as network latency, network jitters, and packet loss.</p>
      * 
      * @param request CreateAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -759,6 +843,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
             query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
+            query.put("Bandwidth", request.bandwidth);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bandwidthBillingType)) {
@@ -840,7 +928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Global Accelerator (GA) instance.</p>
+     * <p>Creates a Global Accelerator (GA) instance. GA is a high-availability and high-performance network acceleration service for global users. By leveraging the high-quality BGP bandwidth and global network of Alibaba Cloud, GA allows service providers to deploy applications across regions and users to connect to the nearest access points for content delivery acceleration. This reduces network issues, such as network latency, network jitters, and packet loss.</p>
      * 
      * @param request CreateAcceleratorRequest
      * @return CreateAcceleratorResponse
@@ -2295,7 +2383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a domain name and associates it with Global Accelerator (GA) instances.</p>
+     * <p>Creates a domain name and associates the domain name with Global Accelerator (GA) instances.</p>
      * 
      * @param request CreateDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2310,6 +2398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
             query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2344,7 +2436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a domain name and associates it with Global Accelerator (GA) instances.</p>
+     * <p>Creates a domain name and associates the domain name with Global Accelerator (GA) instances.</p>
      * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
@@ -2388,6 +2480,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endpointConfigurations)) {
             query.put("EndpointConfigurations", request.endpointConfigurations);
         }
@@ -2400,6 +2496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndpointGroupType", request.endpointGroupType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointIpVersion)) {
+            query.put("EndpointIpVersion", request.endpointIpVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endpointProtocolVersion)) {
             query.put("EndpointProtocolVersion", request.endpointProtocolVersion);
         }
@@ -2410,6 +2510,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckEnabled)) {
             query.put("HealthCheckEnabled", request.healthCheckEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckHost)) {
+            query.put("HealthCheckHost", request.healthCheckHost);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckIntervalSeconds)) {
@@ -2498,15 +2602,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>CreateEndpointGroups</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/153261.html">ListEndpointGroups</a> operation to query the status of the task:
-     *     *   If the endpoint groups are in the <strong>init</strong> state, the endpoint groups are being created. In this case, you can perform only query operations.
-     *     *   If all endpoint groups are in the <strong>active</strong> state, the endpoint groups are created.</p>
+     * <p>  You can call this operation to create multiple endpoint groups at a time. However, you cannot create a default endpoint group and a virtual endpoint group at the same time.</p>
      * <ul>
+     * <li>You cannot create a virtual endpoint group for a Layer 4 listener. To create a virtual endpoint group for a Layer 4 listener, call the <a href="https://help.aliyun.com/document_detail/2302394.html">CreateEndpointGroup</a> operation.</li>
+     * <li><strong>CreateEndpointGroups</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/153261.html">ListEndpointGroups</a> operation to query the status of endpoint groups.<ul>
+     * <li>If the endpoint groups are in the <strong>init</strong> state, the endpoint groups are being created. In this case, you can perform only query operations.</li>
+     * <li>If all endpoint groups are in the <strong>active</strong> state, the endpoint groups are created.</li>
+     * </ul>
+     * </li>
      * <li>The <strong>CreateEndpointGroups</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates endpoint groups.</p>
+     * <p>Creates multiple endpoint groups at a time.</p>
      * 
      * @param request CreateEndpointGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2565,15 +2673,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>CreateEndpointGroups</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/153261.html">ListEndpointGroups</a> operation to query the status of the task:
-     *     *   If the endpoint groups are in the <strong>init</strong> state, the endpoint groups are being created. In this case, you can perform only query operations.
-     *     *   If all endpoint groups are in the <strong>active</strong> state, the endpoint groups are created.</p>
+     * <p>  You can call this operation to create multiple endpoint groups at a time. However, you cannot create a default endpoint group and a virtual endpoint group at the same time.</p>
      * <ul>
+     * <li>You cannot create a virtual endpoint group for a Layer 4 listener. To create a virtual endpoint group for a Layer 4 listener, call the <a href="https://help.aliyun.com/document_detail/2302394.html">CreateEndpointGroup</a> operation.</li>
+     * <li><strong>CreateEndpointGroups</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/153261.html">ListEndpointGroups</a> operation to query the status of endpoint groups.<ul>
+     * <li>If the endpoint groups are in the <strong>init</strong> state, the endpoint groups are being created. In this case, you can perform only query operations.</li>
+     * <li>If all endpoint groups are in the <strong>active</strong> state, the endpoint groups are created.</li>
+     * </ul>
+     * </li>
      * <li>The <strong>CreateEndpointGroups</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates endpoint groups.</p>
+     * <p>Creates multiple endpoint groups at a time.</p>
      * 
      * @param request CreateEndpointGroupsRequest
      * @return CreateEndpointGroupsResponse
@@ -2585,19 +2697,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>HTTP and HTTPS listeners of Global Accelerator (GA) support domain name-based and path-based forwarding rules. After an HTTP or HTTPS listener receives a request, the system matches the request against the forwarding conditions in a forwarding rule and then performs the corresponding forwarding action. For example, if you set <strong>Host</strong> to <code>www.example.com</code> as the forwarding condition and <strong>Forward</strong> to <code>epg-bp1enpdcrqhl78g6r****</code> as the forwarding action in a forwarding rule, requests to the <code>www.example.com</code> domain name match this forwarding rule and are forwarded to the <code>epg-bp1enpdcrqhl78g6r****</code> endpoint group. Before you call this API operation to create a forwarding rule, we recommend that you understand forwarding rules. For more information, see <a href="https://help.aliyun.com/document_detail/204224.html">Forwarding rules</a>.
+     * <p>Before you call this operation to create forwarding rules, we recommend that you learn how forwarding rules work and how requests are matched against forwarding rules. For more information, see <a href="https://help.aliyun.com/document_detail/204224.html">Configure forwarding rules</a>.
      * When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li><strong>CreateForwardingRules</strong> is an asynchronous operation. After you send a request, the system returns the ID of a forwarding rule, but the forwarding rule is still being created in the system background. You can call the <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> operation to query the state of the forwarding rule.<ul>
-     * <li>If the forwarding rule is in the <strong>configuring</strong> state, it indicates that the rule is being created. In this case, you can only perform query operations.</li>
-     * <li>If the forwarding rule is in the <strong>active</strong> state, it indicates that the rule is created.</li>
+     * <li><strong>CreateForwardingRules</strong> is an asynchronous operation. After you send a request, the system returns a forwarding rule ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> operation to query the status of a forwarding rule.<ul>
+     * <li>If the forwarding rule is in the <strong>configuring</strong> state, the rule is being created. In this case, you can only perform query operations.</li>
+     * <li>If the forwarding rule is in the <strong>active</strong> state, the rule is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateForwardingRules</strong> operation cannot be repeatedly called for the same GA instance within a specific period of time.</li>
+     * <li>The <strong>CreateForwardingRules</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates forwarding rules.</p>
+     * <p>If you want to distribute and process traffic based on request attributes, such as domain names and paths, or information in requests, such as HTTP headers and cookies, you can create custom forwarding rules for a listener. The listener forwards requests based on the forwarding rules. You can call the CreateForwardingRules operation to create forwarding rules.</p>
      * 
      * @param request CreateForwardingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2652,19 +2764,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>HTTP and HTTPS listeners of Global Accelerator (GA) support domain name-based and path-based forwarding rules. After an HTTP or HTTPS listener receives a request, the system matches the request against the forwarding conditions in a forwarding rule and then performs the corresponding forwarding action. For example, if you set <strong>Host</strong> to <code>www.example.com</code> as the forwarding condition and <strong>Forward</strong> to <code>epg-bp1enpdcrqhl78g6r****</code> as the forwarding action in a forwarding rule, requests to the <code>www.example.com</code> domain name match this forwarding rule and are forwarded to the <code>epg-bp1enpdcrqhl78g6r****</code> endpoint group. Before you call this API operation to create a forwarding rule, we recommend that you understand forwarding rules. For more information, see <a href="https://help.aliyun.com/document_detail/204224.html">Forwarding rules</a>.
+     * <p>Before you call this operation to create forwarding rules, we recommend that you learn how forwarding rules work and how requests are matched against forwarding rules. For more information, see <a href="https://help.aliyun.com/document_detail/204224.html">Configure forwarding rules</a>.
      * When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li><strong>CreateForwardingRules</strong> is an asynchronous operation. After you send a request, the system returns the ID of a forwarding rule, but the forwarding rule is still being created in the system background. You can call the <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> operation to query the state of the forwarding rule.<ul>
-     * <li>If the forwarding rule is in the <strong>configuring</strong> state, it indicates that the rule is being created. In this case, you can only perform query operations.</li>
-     * <li>If the forwarding rule is in the <strong>active</strong> state, it indicates that the rule is created.</li>
+     * <li><strong>CreateForwardingRules</strong> is an asynchronous operation. After you send a request, the system returns a forwarding rule ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> operation to query the status of a forwarding rule.<ul>
+     * <li>If the forwarding rule is in the <strong>configuring</strong> state, the rule is being created. In this case, you can only perform query operations.</li>
+     * <li>If the forwarding rule is in the <strong>active</strong> state, the rule is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateForwardingRules</strong> operation cannot be repeatedly called for the same GA instance within a specific period of time.</li>
+     * <li>The <strong>CreateForwardingRules</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates forwarding rules.</p>
+     * <p>If you want to distribute and process traffic based on request attributes, such as domain names and paths, or information in requests, such as HTTP headers and cookies, you can create custom forwarding rules for a listener. The listener forwards requests based on the forwarding rules. You can call the CreateForwardingRules operation to create forwarding rules.</p>
      * 
      * @param request CreateForwardingRulesRequest
      * @return CreateForwardingRulesResponse
@@ -2814,10 +2926,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
             query.put("Protocol", request.protocol);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyProtocol)) {
-            query.put("ProxyProtocol", request.proxyProtocol);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -5152,7 +5260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an endpoint group.</p>
+     * <p>Queries information about an endpoint group.</p>
      * 
      * @param request DescribeEndpointGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5188,7 +5296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an endpoint group.</p>
+     * <p>Queries information about an endpoint group.</p>
      * 
      * @param request DescribeEndpointGroupRequest
      * @return DescribeEndpointGroupResponse
@@ -5423,6 +5531,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceleratorId", request.acceleratorId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ddosConfigList)) {
+            query.put("DdosConfigList", request.ddosConfigList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5648,6 +5764,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableApplicationMonitorResponse disableApplicationMonitor(DisableApplicationMonitorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableApplicationMonitorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑GA集成云产品</p>
+     * 
+     * @param request DisassociateResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisassociateResourcesResponse
+     */
+    public DisassociateResourcesResponse disassociateResourcesWithOptions(DisassociateResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceleratorId)) {
+            query.put("AcceleratorId", request.acceleratorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedResourceId)) {
+            query.put("AssociatedResourceId", request.associatedResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedResourceRegionId)) {
+            query.put("AssociatedResourceRegionId", request.associatedResourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedResourceType)) {
+            query.put("AssociatedResourceType", request.associatedResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisassociateResources"),
+            new TeaPair("version", "2019-11-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisassociateResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑GA集成云产品</p>
+     * 
+     * @param request DisassociateResourcesRequest
+     * @return DisassociateResourcesResponse
+     */
+    public DisassociateResourcesResponse disassociateResources(DisassociateResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disassociateResourcesWithOptions(request, runtime);
     }
 
     /**
@@ -6284,6 +6464,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取GA实例关联的云产品</p>
+     * 
+     * @param request GetGlobalAcceleratorResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGlobalAcceleratorResourcesResponse
+     */
+    public GetGlobalAcceleratorResourcesResponse getGlobalAcceleratorResourcesWithOptions(GetGlobalAcceleratorResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceleratorId)) {
+            query.put("AcceleratorId", request.acceleratorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedResourceId)) {
+            query.put("AssociatedResourceId", request.associatedResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedResourceRegionId)) {
+            query.put("AssociatedResourceRegionId", request.associatedResourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedResourceType)) {
+            query.put("AssociatedResourceType", request.associatedResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGlobalAcceleratorResources"),
+            new TeaPair("version", "2019-11-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGlobalAcceleratorResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取GA实例关联的云产品</p>
+     * 
+     * @param request GetGlobalAcceleratorResourcesRequest
+     * @return GetGlobalAcceleratorResourcesResponse
+     */
+    public GetGlobalAcceleratorResourcesResponse getGlobalAcceleratorResources(GetGlobalAcceleratorResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getGlobalAcceleratorResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the health status of the endpoints and endpoint groups of a listener.</p>
      * 
      * @param request GetHealthStatusRequest
@@ -6811,6 +7051,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceleratorId)) {
             query.put("AcceleratorId", request.acceleratorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessMode)) {
+            query.put("AccessMode", request.accessMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -7404,7 +7648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.</p>
+     * <p>Queries endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.</p>
      * 
      * @param request ListCustomRoutingEndpointGroupDestinationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7468,7 +7712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.</p>
+     * <p>Queries endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.</p>
      * 
      * @param request ListCustomRoutingEndpointGroupDestinationsRequest
      * @return ListCustomRoutingEndpointGroupDestinationsResponse
@@ -7822,7 +8066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of an accelerated domain name of a GA instance.</p>
+     * <p>Queries accelerated domain names.</p>
      * 
      * @param request ListDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7874,7 +8118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of an accelerated domain name of a GA instance.</p>
+     * <p>Queries accelerated domain names.</p>
      * 
      * @param request ListDomainsRequest
      * @return ListDomainsResponse
@@ -8019,7 +8263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about existing forwarding rules.</p>
+     * <p>Queries forwarding rules.</p>
      * 
      * @param request ListForwardingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8080,7 +8324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about existing forwarding rules.</p>
+     * <p>Queries forwarding rules.</p>
      * 
      * @param request ListForwardingRulesRequest
      * @return ListForwardingRulesResponse
@@ -8286,6 +8530,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -8768,7 +9016,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Description</h3>
      * <p>You can add up to 20 tags to each GA resource. When you call this operation, Alibaba Cloud first checks the number of existing tags attached to the resource. If the quota is reached, an error message is returned.</p>
      * 
      * <b>summary</b> : 
@@ -8820,7 +9067,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Description</h3>
      * <p>You can add up to 20 tags to each GA resource. When you call this operation, Alibaba Cloud first checks the number of existing tags attached to the resource. If the quota is reached, an error message is returned.</p>
      * 
      * <b>summary</b> : 
@@ -8927,6 +9173,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
             query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
+            query.put("Bandwidth", request.bandwidth);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -9202,14 +9452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to enable or disable the cross-border data transmission feature for a GA instance. Before you enable the cross-border data transmission feature, make sure that the following requirements are met:</p>
-     * <ul>
-     * <li><strong>Basic GA instances</strong>:
-     * Cloud Data Transfer (CDT) is activated. When you call the CreateBasicAccelerator operation to create a basic GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
-     * If you want to enable the cross-border data transmission feature, make sure that the current account has completed enterprise real-name registration. For more information, see Real-name registration FAQs.</li>
-     * <li><strong>Standard GA instances</strong>:
-     * CDT is activated. When you call the CreateAccelerator operation to create a standard GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.</li>
-     * </ul>
+     * <p>You can call this operation to enable or disable cross-border data transmission for basic or standard GA instances that use Cloud Data Transfer (CDT) to bill data transfers.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables cross-border data transmission for a Global Accelerator (GA) instance.</p>
@@ -9256,14 +9499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to enable or disable the cross-border data transmission feature for a GA instance. Before you enable the cross-border data transmission feature, make sure that the following requirements are met:</p>
-     * <ul>
-     * <li><strong>Basic GA instances</strong>:
-     * Cloud Data Transfer (CDT) is activated. When you call the CreateBasicAccelerator operation to create a basic GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
-     * If you want to enable the cross-border data transmission feature, make sure that the current account has completed enterprise real-name registration. For more information, see Real-name registration FAQs.</li>
-     * <li><strong>Standard GA instances</strong>:
-     * CDT is activated. When you call the CreateAccelerator operation to create a standard GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.</li>
-     * </ul>
+     * <p>You can call this operation to enable or disable cross-border data transmission for basic or standard GA instances that use Cloud Data Transfer (CDT) to bill data transfers.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables cross-border data transmission for a Global Accelerator (GA) instance.</p>
@@ -10404,7 +10640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an endpoint group of a basic Global Accelerator (GA) instance.</p>
+     * <p>Modifies the configurations of an endpoint group.</p>
      * 
      * @param request UpdateEndpointGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10433,6 +10669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndpointGroupRegion", request.endpointGroupRegion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointIpVersion)) {
+            query.put("EndpointIpVersion", request.endpointIpVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endpointProtocolVersion)) {
             query.put("EndpointProtocolVersion", request.endpointProtocolVersion);
         }
@@ -10443,6 +10683,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckEnabled)) {
             query.put("HealthCheckEnabled", request.healthCheckEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckHost)) {
+            query.put("HealthCheckHost", request.healthCheckHost);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckIntervalSeconds)) {
@@ -10508,7 +10752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an endpoint group of a basic Global Accelerator (GA) instance.</p>
+     * <p>Modifies the configurations of an endpoint group.</p>
      * 
      * @param request UpdateEndpointGroupRequest
      * @return UpdateEndpointGroupResponse
@@ -10998,6 +11242,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateListenerResponse updateListener(UpdateListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateListenerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改SLS日志配置</p>
+     * 
+     * @param request UpdateLogStoreConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLogStoreConfigResponse
+     */
+    public UpdateLogStoreConfigResponse updateLogStoreConfigWithOptions(UpdateLogStoreConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceleratorId)) {
+            query.put("AcceleratorId", request.acceleratorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessLogRecordCustomizedHeaderList)) {
+            query.put("AccessLogRecordCustomizedHeaderList", request.accessLogRecordCustomizedHeaderList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessLogRecordCustomizedHeadersEnabled)) {
+            query.put("AccessLogRecordCustomizedHeadersEnabled", request.accessLogRecordCustomizedHeadersEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointGroupId)) {
+            query.put("EndpointGroupId", request.endpointGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listenerId)) {
+            query.put("ListenerId", request.listenerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slsLogStoreName)) {
+            query.put("SlsLogStoreName", request.slsLogStoreName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slsProjectName)) {
+            query.put("SlsProjectName", request.slsProjectName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateLogStoreConfig"),
+            new TeaPair("version", "2019-11-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLogStoreConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改SLS日志配置</p>
+     * 
+     * @param request UpdateLogStoreConfigRequest
+     * @return UpdateLogStoreConfigResponse
+     */
+    public UpdateLogStoreConfigResponse updateLogStoreConfig(UpdateLogStoreConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateLogStoreConfigWithOptions(request, runtime);
     }
 
     /**

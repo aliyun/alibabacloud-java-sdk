@@ -197,6 +197,36 @@ public class ListAcceleratorsResponseBody extends TeaModel {
 
     }
 
+    public static class ListAcceleratorsResponseBodyAcceleratorsDdosConfigList extends TeaModel {
+        @NameInMap("DdosId")
+        public String ddosId;
+
+        @NameInMap("DdosRegionId")
+        public String ddosRegionId;
+
+        public static ListAcceleratorsResponseBodyAcceleratorsDdosConfigList build(java.util.Map<String, ?> map) throws Exception {
+            ListAcceleratorsResponseBodyAcceleratorsDdosConfigList self = new ListAcceleratorsResponseBodyAcceleratorsDdosConfigList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAcceleratorsResponseBodyAcceleratorsDdosConfigList setDdosId(String ddosId) {
+            this.ddosId = ddosId;
+            return this;
+        }
+        public String getDdosId() {
+            return this.ddosId;
+        }
+
+        public ListAcceleratorsResponseBodyAcceleratorsDdosConfigList setDdosRegionId(String ddosRegionId) {
+            this.ddosRegionId = ddosRegionId;
+            return this;
+        }
+        public String getDdosRegionId() {
+            return this.ddosRegionId;
+        }
+
+    }
+
     public static class ListAcceleratorsResponseBodyAcceleratorsIpSetConfig extends TeaModel {
         /**
          * <p>The access mode of the acceleration area. Valid values:</p>
@@ -440,6 +470,9 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         @NameInMap("CrossDomainBandwidthPackage")
         public ListAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
+        @NameInMap("DdosConfigList")
+        public java.util.List<ListAcceleratorsResponseBodyAcceleratorsDdosConfigList> ddosConfigList;
+
         /**
          * <p>The ID of the Anti-DDoS Pro or Anti-DDOS Premium instance that is associated with the GA instance.</p>
          * 
@@ -447,6 +480,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
          * <p>ddoscoo-cn-zz11vq7j****</p>
          */
         @NameInMap("DdosId")
+        @Deprecated
         public String ddosId;
 
         /**
@@ -507,6 +541,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
          * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
+        @Deprecated
         public String regionId;
 
         /**
@@ -719,6 +754,15 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             return this.crossDomainBandwidthPackage;
         }
 
+        public ListAcceleratorsResponseBodyAccelerators setDdosConfigList(java.util.List<ListAcceleratorsResponseBodyAcceleratorsDdosConfigList> ddosConfigList) {
+            this.ddosConfigList = ddosConfigList;
+            return this;
+        }
+        public java.util.List<ListAcceleratorsResponseBodyAcceleratorsDdosConfigList> getDdosConfigList() {
+            return this.ddosConfigList;
+        }
+
+        @Deprecated
         public ListAcceleratorsResponseBodyAccelerators setDdosId(String ddosId) {
             this.ddosId = ddosId;
             return this;
@@ -775,6 +819,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             return this.name;
         }
 
+        @Deprecated
         public ListAcceleratorsResponseBodyAccelerators setRegionId(String regionId) {
             this.regionId = regionId;
             return this;

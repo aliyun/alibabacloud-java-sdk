@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class AddEntriesToAclRequest extends TeaModel {
     /**
      * <p>The entries (IP addresses or CIDR blocks) that you want to add to the ACL.</p>
-     * <p>You can delete a maximum of 50 entries at a time.</p>
+     * <p>You can add at most 50 entries at a time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclEntries")
@@ -105,7 +105,7 @@ public class AddEntriesToAclRequest extends TeaModel {
 
     public static class AddEntriesToAclRequestAclEntries extends TeaModel {
         /**
-         * <p>The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to add to the ACL. You can add a maximum of 50 entries at a time.</p>
+         * <p>The entry (IP address or CIDR block) that you want to add. You can add at most 50 entries at a time.</p>
          * <blockquote>
          * <p> This parameter is required.</p>
          * </blockquote>
@@ -117,8 +117,8 @@ public class AddEntriesToAclRequest extends TeaModel {
         public String entry;
 
         /**
-         * <p>The description of the entry.</p>
-         * <p>You can add the descriptions of up to 50 entries in each request.</p>
+         * <p>The description of the entry that you want to add to the ACL.</p>
+         * <p>You can add at most 50 descriptions in each request.</p>
          * <p>The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
          * 
          * <strong>example:</strong>

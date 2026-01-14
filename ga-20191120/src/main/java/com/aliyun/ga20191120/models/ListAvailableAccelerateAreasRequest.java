@@ -13,6 +13,9 @@ public class ListAvailableAccelerateAreasRequest extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    @NameInMap("AccessMode")
+    public String accessMode;
+
     /**
      * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
@@ -34,6 +37,14 @@ public class ListAvailableAccelerateAreasRequest extends TeaModel {
     }
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    public ListAvailableAccelerateAreasRequest setAccessMode(String accessMode) {
+        this.accessMode = accessMode;
+        return this;
+    }
+    public String getAccessMode() {
+        return this.accessMode;
     }
 
     public ListAvailableAccelerateAreasRequest setRegionId(String regionId) {

@@ -24,6 +24,19 @@ public class CreateDomainRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <ul>
+     * <li><strong>true:</strong> performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, a 2xx HTTP status code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +64,14 @@ public class CreateDomainRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public CreateDomainRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateDomainRequest setRegionId(String regionId) {

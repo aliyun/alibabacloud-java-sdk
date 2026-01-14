@@ -22,6 +22,7 @@ public class DescribeAcceleratorRequest extends TeaModel {
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
+    @Deprecated
     public String regionId;
 
     public static DescribeAcceleratorRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -37,6 +38,7 @@ public class DescribeAcceleratorRequest extends TeaModel {
         return this.acceleratorId;
     }
 
+    @Deprecated
     public DescribeAcceleratorRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;

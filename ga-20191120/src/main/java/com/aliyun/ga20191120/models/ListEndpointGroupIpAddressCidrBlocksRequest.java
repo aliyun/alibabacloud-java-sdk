@@ -4,6 +4,12 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListEndpointGroupIpAddressCidrBlocksRequest extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4q****</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 

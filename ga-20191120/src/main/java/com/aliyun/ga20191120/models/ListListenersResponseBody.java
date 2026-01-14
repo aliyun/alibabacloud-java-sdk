@@ -558,6 +558,7 @@ public class ListListenersResponseBody extends TeaModel {
          * <p>true</p>
          */
         @NameInMap("ProxyProtocol")
+        @Deprecated
         public Boolean proxyProtocol;
 
         /**
@@ -788,6 +789,7 @@ public class ListListenersResponseBody extends TeaModel {
             return this.protocol;
         }
 
+        @Deprecated
         public ListListenersResponseBodyListeners setProxyProtocol(Boolean proxyProtocol) {
             this.proxyProtocol = proxyProtocol;
             return this;

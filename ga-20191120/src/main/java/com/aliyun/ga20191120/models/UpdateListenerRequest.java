@@ -17,10 +17,10 @@ public class UpdateListenerRequest extends TeaModel {
     public java.util.List<UpdateListenerRequestCertificates> certificates;
 
     /**
-     * <p>Specifies whether to enable client affinity for the listener.</p>
+     * <p>Indicates whether client affinity is enabled for the listener. Valid values:</p>
      * <ul>
-     * <li>If this parameter is left empty, client affinity is disabled. After client affinity is disabled, requests from a specific client IP address may be forwarded to different endpoints.</li>
-     * <li>To enable client affinity, set this parameter to <strong>SOURCE_IP</strong>. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.</li>
+     * <li><strong>NONE</strong>: Client affinity is disabled. Requests from the same client may be forwarded to different endpoints.</li>
+     * <li><strong>SOURCE_IP</strong>: Client affinity is enabled. When a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -127,23 +127,24 @@ public class UpdateListenerRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>Specifies whether to reserve client IP addresses. Default value: false. Valid values:</p>
+     * <p>Specifies whether to preserve source IP addresses of clients.</p>
      * <ul>
-     * <li><strong>true</strong>: enables client IP preservation. After client IP addresses are reserved, you can view client IP addresses on the endpoints.</li>
-     * <li><strong>false</strong> (default): disables client IP preservation.</li>
+     * <li><strong>true</strong> This feature allows you to view client IP addresses on backend servers.</li>
+     * <li><strong>false</strong> (default)</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the <strong>ProxyProtocol</strong> parameter, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a> and <a href="https://help.aliyun.com/document_detail/153262.html">UpdateEndpointGroup</a>.</p>
+     * <p> This parameter will be discontinued in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the <strong>ProxyProtocol</strong> parameter, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a> and <a href="https://help.aliyun.com/document_detail/153262.html">UpdateEndpointGroup</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("ProxyProtocol")
+    @Deprecated
     public String proxyProtocol;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -307,6 +308,7 @@ public class UpdateListenerRequest extends TeaModel {
         return this.protocol;
     }
 
+    @Deprecated
     public UpdateListenerRequest setProxyProtocol(String proxyProtocol) {
         this.proxyProtocol = proxyProtocol;
         return this;

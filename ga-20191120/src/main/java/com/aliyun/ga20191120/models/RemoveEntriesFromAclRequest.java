@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveEntriesFromAclRequest extends TeaModel {
     /**
-     * <p>The entries (IP addresses or CIDR blocks) that you want to delete from the ACL. You can delete a maximum of 20 entries at a time.</p>
+     * <p>The entries that you want to delete. You can delete up to 50 entries at a time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclEntries")
@@ -104,7 +104,7 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
 
     public static class RemoveEntriesFromAclRequestAclEntries extends TeaModel {
         /**
-         * <p>The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to delete from the ACL. You can delete a maximum of 50 entries at a time.</p>
+         * <p>The entry (IP address or CIDR block) that you want to delete. You can delete up to 50 entries at a time.</p>
          * <blockquote>
          * <p> This parameter is required.</p>
          * </blockquote>

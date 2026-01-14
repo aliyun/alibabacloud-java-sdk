@@ -32,6 +32,9 @@ public class ListListenersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Protocol")
+    public String protocol;
+
     /**
      * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
@@ -69,6 +72,14 @@ public class ListListenersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListListenersRequest setProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    public String getProtocol() {
+        return this.protocol;
     }
 
     public ListListenersRequest setRegionId(String regionId) {

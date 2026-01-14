@@ -11,6 +11,7 @@ public class DetachDdosFromAcceleratorResponseBody extends TeaModel {
      * <p>ddoscoo-cn-zz11vq7j****</p>
      */
     @NameInMap("DdosId")
+    @Deprecated
     public String ddosId;
 
     /**
@@ -27,6 +28,7 @@ public class DetachDdosFromAcceleratorResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public DetachDdosFromAcceleratorResponseBody setDdosId(String ddosId) {
         this.ddosId = ddosId;
         return this;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateBasicAccelerateIpResponseBody extends TeaModel {
     /**
-     * <p>The accelerated IP address.</p>
+     * <p>The accelerated IP address of the basic GA instance.</p>
+     * <blockquote>
+     * <p> This parameter is unavailable.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>116.132.XX.XX</p>
@@ -50,10 +53,8 @@ public class CreateBasicAccelerateIpResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the accelerated IP address.</p>
-     * <blockquote>
-     * <p> This parameter returns an empty string because the parameter is not in use.</p>
-     * </blockquote>
+     * <p>The status of the accelerated IP address. Valid values:</p>
+     * <p><strong>init:</strong> The accelerated IP address is being initialized.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

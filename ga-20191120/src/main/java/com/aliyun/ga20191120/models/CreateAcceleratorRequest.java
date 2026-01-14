@@ -59,6 +59,9 @@ public class CreateAcceleratorRequest extends TeaModel {
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
     /**
      * <p>The bandwidth billing method.</p>
      * <ul>
@@ -75,9 +78,9 @@ public class CreateAcceleratorRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system sets <strong>ClientToken</strong> to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> of each API request may be different.</p>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,10 +90,10 @@ public class CreateAcceleratorRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the request. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true:</strong> performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,6 +108,9 @@ public class CreateAcceleratorRequest extends TeaModel {
      * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Month</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>9</strong>.</li>
      * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Year</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>3</strong>.</li>
      * </ul>
+     * <blockquote>
+     * <p> If the <strong>InstanceChargeType</strong> parameter is set to <strong>PREPAY</strong>, you must configure this parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,10 +119,10 @@ public class CreateAcceleratorRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The billing method of the GA. Default value is PREPAY (subscription).</p>
+     * <p>The billing method of the GA instance.</p>
      * <ul>
-     * <li>PREPAY : subscription.</li>
-     * <li>POSTPAY : pay-as-you-go</li>
+     * <li>PREPAY (default): subscription</li>
+     * <li>POSTPAY: pay-as-you-go</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,6 +153,9 @@ public class CreateAcceleratorRequest extends TeaModel {
      * <li><strong>Month:</strong> billed on a monthly basis.</li>
      * <li><strong>Year:</strong> billed on an annual basis.</li>
      * </ul>
+     * <blockquote>
+     * <p> If the <strong>InstanceChargeType</strong> parameter is set to <strong>PREPAY</strong>, you must configure this parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -156,8 +165,6 @@ public class CreateAcceleratorRequest extends TeaModel {
 
     /**
      * <p>The coupon code.</p>
-     * <blockquote>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>50003298014****</p>
@@ -173,6 +180,7 @@ public class CreateAcceleratorRequest extends TeaModel {
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
+    @Deprecated
     public String regionId;
 
     /**
@@ -185,29 +193,32 @@ public class CreateAcceleratorRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The type of GA instance. Valid values:</p>
+     * <p>The type of the GA instance. Valid values:</p>
      * <ul>
-     * <li><strong>1:</strong> Small Ⅰ</li>
-     * <li><strong>2:</strong> Small Ⅱ</li>
-     * <li><strong>3:</strong> Small Ⅲ</li>
-     * <li><strong>5:</strong> Medium Ⅰ</li>
-     * <li><strong>8:</strong> Medium Ⅱ</li>
-     * <li><strong>10:</strong> Medium Ⅲ</li>
-     * <li><strong>20:</strong> Large Ⅰ</li>
-     * <li><strong>30:</strong> Large Ⅱ</li>
-     * <li><strong>40:</strong> Large Ⅲ</li>
-     * <li><strong>50:</strong> Large Ⅳ</li>
-     * <li><strong>60:</strong> Large Ⅴ</li>
-     * <li><strong>70:</strong> Large Ⅵ</li>
-     * <li><strong>80:</strong> Large VⅡ</li>
-     * <li><strong>90:</strong> Large VⅢ</li>
-     * <li><strong>100:</strong> Super Large Ⅰ</li>
-     * <li><strong>200:</strong> Super Large Ⅱ</li>
+     * <li><strong>1</strong>: Small Ⅰ.</li>
+     * <li><strong>2</strong>: Small Ⅱ.</li>
+     * <li><strong>3</strong>: Small Ⅲ.</li>
+     * <li><strong>5</strong>: Medium Ⅰ.</li>
+     * <li><strong>8</strong>: Medium Ⅱ.</li>
+     * <li><strong>10</strong>: Medium Ⅲ.</li>
+     * <li><strong>20</strong>: Large Ⅰ.</li>
+     * <li><strong>30</strong>: Large Ⅱ.</li>
+     * <li><strong>40</strong>: Large Ⅲ.</li>
+     * <li><strong>50</strong>: Large IV.</li>
+     * <li><strong>60</strong>: Large V.</li>
+     * <li><strong>70</strong>: Large VI.</li>
+     * <li><strong>80</strong>: Large VII.</li>
+     * <li><strong>90</strong>: Large VIII.</li>
+     * <li><strong>100</strong>: Super Large Ⅰ.</li>
+     * <li><strong>200</strong>: Super Large Ⅱ.</li>
      * </ul>
      * <blockquote>
-     * <p> GA instances Large III and above are not available by default. To use these instances , contact your Alibaba Cloud account manager.</p>
+     * <ul>
+     * <li>GA instances Large III and above are not available by default. To use these instances, contact your Alibaba Cloud account manager.</li>
+     * <li>If the <strong>InstanceChargeType</strong> parameter is set to <strong>PREPAY</strong>, you must configure this parameter.</li>
+     * </ul>
      * </blockquote>
-     * <p>Each instance type provides different capabilities. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance specifications</a>.</p>
+     * <p>Different specifications provide different capabilities. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance type</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -256,6 +267,14 @@ public class CreateAcceleratorRequest extends TeaModel {
     }
     public String getAutoUseCoupon() {
         return this.autoUseCoupon;
+    }
+
+    public CreateAcceleratorRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
     public CreateAcceleratorRequest setBandwidthBillingType(String bandwidthBillingType) {
@@ -330,6 +349,7 @@ public class CreateAcceleratorRequest extends TeaModel {
         return this.promotionOptionNo;
     }
 
+    @Deprecated
     public CreateAcceleratorRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;

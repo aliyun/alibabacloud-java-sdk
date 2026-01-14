@@ -37,7 +37,7 @@ public class ListEndpointGroupsRequest extends TeaModel {
     public String endpointGroupId;
 
     /**
-     * <p>The type of the endpoint group. Valid values:</p>
+     * <p>The type of the endpoint group. Valid values: Valid values:</p>
      * <ul>
      * <li><strong>default</strong></li>
      * <li><strong>virtual</strong></li>

@@ -93,13 +93,15 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
 
     public static class ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinationsServiceManagedInfos extends TeaModel {
         /**
-         * <p>Managed policy action name, Valid values:</p>
-         * <p>Create
-         * Update
-         * Delete
-         * Associate
-         * UserUnmanaged
-         * CreateChild</p>
+         * <p>The name of the action that you can perform on the managed instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Create</strong>: Create an instance.</li>
+         * <li><strong>Update</strong>: Update the current instance.</li>
+         * <li><strong>Delete</strong>: Delete the current instance.</li>
+         * <li><strong>Associate</strong>: Reference the current instance.</li>
+         * <li><strong>UserUnmanaged</strong>: Unmanage the instance.</li>
+         * <li><strong>CreateChild</strong>: Create a child resource in the current instance.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Update</p>
@@ -257,11 +259,11 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         /**
          * <p>The actions that you can perform on the managed instance.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
-         * </blockquote>
          * <ul>
-         * <li>You can perform only specific actions on a managed instance.</li>
+         * <li>This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</li>
+         * <li>You can perform only specific actions on the managed instance.</li>
          * </ul>
+         * </blockquote>
          */
         @NameInMap("ServiceManagedInfos")
         public java.util.List<ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinationsServiceManagedInfos> serviceManagedInfos;

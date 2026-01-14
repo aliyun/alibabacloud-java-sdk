@@ -39,6 +39,7 @@ public class ListAcceleratorsRequest extends TeaModel {
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
+    @Deprecated
     public String regionId;
 
     /**
@@ -103,6 +104,7 @@ public class ListAcceleratorsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    @Deprecated
     public ListAcceleratorsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;

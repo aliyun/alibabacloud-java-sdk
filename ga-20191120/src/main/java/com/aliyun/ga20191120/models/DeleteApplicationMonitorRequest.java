@@ -18,7 +18,7 @@ public class DeleteApplicationMonitorRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

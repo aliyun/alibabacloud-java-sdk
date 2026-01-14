@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEndpointGroupsResponseBody extends TeaModel {
     /**
-     * <p>The configurations of the endpoint group.</p>
+     * <p>The configurations of the endpoint groups.</p>
      */
     @NameInMap("EndpointGroups")
     public java.util.List<ListEndpointGroupsResponseBodyEndpointGroups> endpointGroups;
@@ -106,6 +106,16 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Boolean enableClientIPPreservation;
 
         /**
+         * <p>Indicates whether the proxy protocol is used to preserve client IP addresses. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         */
+        @NameInMap("EnableProxyProtocol")
+        public Boolean enableProxyProtocol;
+
+        /**
          * <p>The IP address or domain name of the endpoint.</p>
          * 
          * <strong>example:</strong>
@@ -157,15 +167,16 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>Domain:</strong> a custom domain name.</li>
-         * <li><strong>Ip:</strong> a custom IP address.</li>
-         * <li><strong>PublicIp:</strong> a public IP address provided by Alibaba Cloud.</li>
-         * <li><strong>ECS:</strong> an Elastic Compute Service (ECS) instance.</li>
-         * <li><strong>SLB:</strong> a Classic Load Balancer (SLB) instance.</li>
-         * <li><strong>ALB:</strong> an Application Load Balancer (ALB) instance.</li>
-         * <li><strong>OSS:</strong> an Object Storage Service (OSS) bucket.</li>
-         * <li><strong>ENI:</strong> an elastic network interface (ENI).</li>
-         * <li><strong>NLB:</strong> a Network Load Balancer (NLB) instance.</li>
+         * <li><strong>Domain</strong>: a custom domain name.</li>
+         * <li><strong>Ip</strong>: a custom IP address.</li>
+         * <li><strong>IpTarget</strong>: a custom private IP address.</li>
+         * <li><strong>PublicIp</strong>: a public IP address provided by Alibaba Cloud.</li>
+         * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>SLB</strong>: a Server Load Balancer (SLB) instance.</li>
+         * <li><strong>ALB</strong>: an Application Load Balancer (ALB) instance.</li>
+         * <li><strong>OSS</strong>: an Object Storage Service (OSS) bucket.</li>
+         * <li><strong>ENI</strong>: an elastic network interface (ENI).</li>
+         * <li><strong>NLB</strong>: a Network Load Balancer (NLB) instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,6 +184,21 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
          */
         @NameInMap("Type")
         public String type;
+
+        /**
+         * <p>The IDs of vSwitches that are deployed in the VPC.</p>
+         */
+        @NameInMap("VSwitchIds")
+        public java.util.List<String> vSwitchIds;
+
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbhucmd5b2q2fpqqu****</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
 
         /**
          * <p>The weight of the endpoint.</p>
@@ -194,6 +220,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
         public Boolean getEnableClientIPPreservation() {
             return this.enableClientIPPreservation;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setEnableProxyProtocol(Boolean enableProxyProtocol) {
+            this.enableProxyProtocol = enableProxyProtocol;
+            return this;
+        }
+        public Boolean getEnableProxyProtocol() {
+            return this.enableProxyProtocol;
         }
 
         public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setEndpoint(String endpoint) {
@@ -244,12 +278,69 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             return this.type;
         }
 
+        public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setVSwitchIds(java.util.List<String> vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setWeight(Integer weight) {
             this.weight = weight;
             return this;
         }
         public Integer getWeight() {
             return this.weight;
+        }
+
+    }
+
+    public static class ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList extends TeaModel {
+        @NameInMap("CIDR")
+        public String CIDR;
+
+        @NameInMap("PrivateIp")
+        public String privateIp;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        public static ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList build(java.util.Map<String, ?> map) throws Exception {
+            ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList self = new ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList setCIDR(String CIDR) {
+            this.CIDR = CIDR;
+            return this;
+        }
+        public String getCIDR() {
+            return this.CIDR;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList setPrivateIp(String privateIp) {
+            this.privateIp = privateIp;
+            return this;
+        }
+        public String getPrivateIp() {
+            return this.privateIp;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
     }
@@ -441,7 +532,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The configurations of endpoints in the endpoint group.</p>
+         * <p>The configurations of the endpoints in the endpoint group.</p>
          */
         @NameInMap("EndpointConfigurations")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations> endpointConfigurations;
@@ -489,6 +580,19 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         @NameInMap("EndpointGroupUnconfirmedIpList")
         public java.util.List<String> endpointGroupUnconfirmedIpList;
 
+        @NameInMap("EndpointIpVersion")
+        public String endpointIpVersion;
+
+        @NameInMap("EndpointPrivateIpList")
+        public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList> endpointPrivateIpList;
+
+        /**
+         * <p>The protocol version that is used by the backend service. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP1.1</strong></li>
+         * <li><strong>HTTP2</strong></li>
+         * </ul>
+         */
         @NameInMap("EndpointProtocolVersion")
         public String endpointProtocolVersion;
 
@@ -523,6 +627,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
+
+        @NameInMap("HealthCheckHost")
+        public String healthCheckHost;
 
         /**
          * <p>The interval at which you want to perform health checks. Unit: seconds.</p>
@@ -617,13 +724,11 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The actions that users can perform on the managed instance.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter takes effect only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
-         * </li>
-         * <li><p>Users can perform only specific actions on a managed instance.</p>
-         * </li>
+         * <li>This parameter takes effect only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</li>
+         * <li>Users can perform only specific actions on a managed instance.</li>
          * </ul>
+         * </blockquote>
          */
         @NameInMap("ServiceManagedInfos")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> serviceManagedInfos;
@@ -736,6 +841,22 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             return this.endpointGroupUnconfirmedIpList;
         }
 
+        public ListEndpointGroupsResponseBodyEndpointGroups setEndpointIpVersion(String endpointIpVersion) {
+            this.endpointIpVersion = endpointIpVersion;
+            return this;
+        }
+        public String getEndpointIpVersion() {
+            return this.endpointIpVersion;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroups setEndpointPrivateIpList(java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList> endpointPrivateIpList) {
+            this.endpointPrivateIpList = endpointPrivateIpList;
+            return this;
+        }
+        public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList> getEndpointPrivateIpList() {
+            return this.endpointPrivateIpList;
+        }
+
         public ListEndpointGroupsResponseBodyEndpointGroups setEndpointProtocolVersion(String endpointProtocolVersion) {
             this.endpointProtocolVersion = endpointProtocolVersion;
             return this;
@@ -766,6 +887,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
         public Boolean getHealthCheckEnabled() {
             return this.healthCheckEnabled;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroups setHealthCheckHost(String healthCheckHost) {
+            this.healthCheckHost = healthCheckHost;
+            return this;
+        }
+        public String getHealthCheckHost() {
+            return this.healthCheckHost;
         }
 
         public ListEndpointGroupsResponseBodyEndpointGroups setHealthCheckIntervalSeconds(Integer healthCheckIntervalSeconds) {

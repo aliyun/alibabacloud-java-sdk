@@ -16,9 +16,9 @@ public class ListForwardingRulesRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The ClientToken value contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system sets <strong>ClientToken</strong> to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,8 +47,7 @@ public class ListForwardingRulesRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
-     * <p>This parameter is required.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

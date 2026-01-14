@@ -13,6 +13,9 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
     /**
      * <p>The bandwidth metering method. Valid values:</p>
      * <ul>
@@ -93,6 +96,9 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     @NameInMap("CrossPrivateState")
     public String crossPrivateState;
 
+    @NameInMap("DdosConfigList")
+    public java.util.List<DescribeAcceleratorResponseBodyDdosConfigList> ddosConfigList;
+
     /**
      * <p>The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.</p>
      * 
@@ -100,6 +106,7 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
      * <p>ddoscoo-cn-zz11vq7j****</p>
      */
     @NameInMap("DdosId")
+    @Deprecated
     public String ddosId;
 
     /**
@@ -160,6 +167,7 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
+    @Deprecated
     public String regionId;
 
     /**
@@ -215,13 +223,15 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The actions that you can perform on the managed instance.</p>
+     * <p>The actions that users can perform on the managed instance.</p>
      * <blockquote>
-     * <ul>
-     * <li>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</li>
-     * <li>You can perform only specific actions on a managed instance.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
+     * </li>
+     * <li><p>Users can perform only specific actions on a managed instance.</p>
+     * </li>
+     * </ul>
      */
     @NameInMap("ServiceManagedInfos")
     public java.util.List<DescribeAcceleratorResponseBodyServiceManagedInfos> serviceManagedInfos;
@@ -308,6 +318,14 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         return this.acceleratorId;
     }
 
+    public DescribeAcceleratorResponseBody setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
     public DescribeAcceleratorResponseBody setBandwidthBillingType(String bandwidthBillingType) {
         this.bandwidthBillingType = bandwidthBillingType;
         return this;
@@ -372,6 +390,15 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         return this.crossPrivateState;
     }
 
+    public DescribeAcceleratorResponseBody setDdosConfigList(java.util.List<DescribeAcceleratorResponseBodyDdosConfigList> ddosConfigList) {
+        this.ddosConfigList = ddosConfigList;
+        return this;
+    }
+    public java.util.List<DescribeAcceleratorResponseBodyDdosConfigList> getDdosConfigList() {
+        return this.ddosConfigList;
+    }
+
+    @Deprecated
     public DescribeAcceleratorResponseBody setDdosId(String ddosId) {
         this.ddosId = ddosId;
         return this;
@@ -428,6 +455,7 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         return this.name;
     }
 
+    @Deprecated
     public DescribeAcceleratorResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -618,6 +646,36 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeAcceleratorResponseBodyDdosConfigList extends TeaModel {
+        @NameInMap("DdosId")
+        public String ddosId;
+
+        @NameInMap("DdosRegionId")
+        public String ddosRegionId;
+
+        public static DescribeAcceleratorResponseBodyDdosConfigList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAcceleratorResponseBodyDdosConfigList self = new DescribeAcceleratorResponseBodyDdosConfigList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAcceleratorResponseBodyDdosConfigList setDdosId(String ddosId) {
+            this.ddosId = ddosId;
+            return this;
+        }
+        public String getDdosId() {
+            return this.ddosId;
+        }
+
+        public DescribeAcceleratorResponseBodyDdosConfigList setDdosRegionId(String ddosRegionId) {
+            this.ddosRegionId = ddosRegionId;
+            return this;
+        }
+        public String getDdosRegionId() {
+            return this.ddosRegionId;
         }
 
     }

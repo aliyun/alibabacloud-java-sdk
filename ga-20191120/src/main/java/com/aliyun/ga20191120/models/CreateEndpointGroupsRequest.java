@@ -16,7 +16,7 @@ public class CreateEndpointGroupsRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
      * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
@@ -30,7 +30,7 @@ public class CreateEndpointGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, a 2xx HTTP status code is returned.</li>
      * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * 
@@ -123,6 +123,12 @@ public class CreateEndpointGroupsRequest extends TeaModel {
     }
 
     public static class CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations extends TeaModel {
+        @NameInMap("EnableClientIPPreservation")
+        public Boolean enableClientIPPreservation;
+
+        @NameInMap("EnableProxyProtocol")
+        public Boolean enableProxyProtocol;
+
         @NameInMap("Endpoint")
         public String endpoint;
 
@@ -132,12 +138,34 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("VSwitchIds")
+        public java.util.List<String> vSwitchIds;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
         @NameInMap("Weight")
         public Long weight;
 
         public static CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations build(java.util.Map<String, ?> map) throws Exception {
             CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations self = new CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations();
             return TeaModel.build(map, self);
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations setEnableClientIPPreservation(Boolean enableClientIPPreservation) {
+            this.enableClientIPPreservation = enableClientIPPreservation;
+            return this;
+        }
+        public Boolean getEnableClientIPPreservation() {
+            return this.enableClientIPPreservation;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations setEnableProxyProtocol(Boolean enableProxyProtocol) {
+            this.enableProxyProtocol = enableProxyProtocol;
+            return this;
+        }
+        public Boolean getEnableProxyProtocol() {
+            return this.enableProxyProtocol;
         }
 
         public CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations setEndpoint(String endpoint) {
@@ -162,6 +190,22 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations setVSwitchIds(java.util.List<String> vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
         public CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations setWeight(Long weight) {
@@ -276,12 +320,6 @@ public class CreateEndpointGroupsRequest extends TeaModel {
     }
 
     public static class CreateEndpointGroupsRequestEndpointGroupConfigurations extends TeaModel {
-        @NameInMap("EnableClientIPPreservationProxyProtocol")
-        public Boolean enableClientIPPreservationProxyProtocol;
-
-        @NameInMap("EnableClientIPPreservationToa")
-        public Boolean enableClientIPPreservationToa;
-
         @NameInMap("EndpointConfigurations")
         public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> endpointConfigurations;
 
@@ -300,6 +338,9 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         @NameInMap("EndpointGroupType")
         public String endpointGroupType;
 
+        @NameInMap("EndpointIpVersion")
+        public String endpointIpVersion;
+
         @NameInMap("EndpointProtocolVersion")
         public String endpointProtocolVersion;
 
@@ -308,6 +349,9 @@ public class CreateEndpointGroupsRequest extends TeaModel {
 
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
+
+        @NameInMap("HealthCheckHost")
+        public String healthCheckHost;
 
         @NameInMap("HealthCheckIntervalSeconds")
         public Long healthCheckIntervalSeconds;
@@ -339,22 +383,6 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         public static CreateEndpointGroupsRequestEndpointGroupConfigurations build(java.util.Map<String, ?> map) throws Exception {
             CreateEndpointGroupsRequestEndpointGroupConfigurations self = new CreateEndpointGroupsRequestEndpointGroupConfigurations();
             return TeaModel.build(map, self);
-        }
-
-        public CreateEndpointGroupsRequestEndpointGroupConfigurations setEnableClientIPPreservationProxyProtocol(Boolean enableClientIPPreservationProxyProtocol) {
-            this.enableClientIPPreservationProxyProtocol = enableClientIPPreservationProxyProtocol;
-            return this;
-        }
-        public Boolean getEnableClientIPPreservationProxyProtocol() {
-            return this.enableClientIPPreservationProxyProtocol;
-        }
-
-        public CreateEndpointGroupsRequestEndpointGroupConfigurations setEnableClientIPPreservationToa(Boolean enableClientIPPreservationToa) {
-            this.enableClientIPPreservationToa = enableClientIPPreservationToa;
-            return this;
-        }
-        public Boolean getEnableClientIPPreservationToa() {
-            return this.enableClientIPPreservationToa;
         }
 
         public CreateEndpointGroupsRequestEndpointGroupConfigurations setEndpointConfigurations(java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> endpointConfigurations) {
@@ -397,6 +425,14 @@ public class CreateEndpointGroupsRequest extends TeaModel {
             return this.endpointGroupType;
         }
 
+        public CreateEndpointGroupsRequestEndpointGroupConfigurations setEndpointIpVersion(String endpointIpVersion) {
+            this.endpointIpVersion = endpointIpVersion;
+            return this;
+        }
+        public String getEndpointIpVersion() {
+            return this.endpointIpVersion;
+        }
+
         public CreateEndpointGroupsRequestEndpointGroupConfigurations setEndpointProtocolVersion(String endpointProtocolVersion) {
             this.endpointProtocolVersion = endpointProtocolVersion;
             return this;
@@ -419,6 +455,14 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         }
         public Boolean getHealthCheckEnabled() {
             return this.healthCheckEnabled;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurations setHealthCheckHost(String healthCheckHost) {
+            this.healthCheckHost = healthCheckHost;
+            return this;
+        }
+        public String getHealthCheckHost() {
+            return this.healthCheckHost;
         }
 
         public CreateEndpointGroupsRequestEndpointGroupConfigurations setHealthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {

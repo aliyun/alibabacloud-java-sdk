@@ -22,6 +22,7 @@ public class DeleteAcceleratorRequest extends TeaModel {
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
+    @Deprecated
     public String regionId;
 
     public static DeleteAcceleratorRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -37,6 +38,7 @@ public class DeleteAcceleratorRequest extends TeaModel {
         return this.acceleratorId;
     }
 
+    @Deprecated
     public DeleteAcceleratorRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;

@@ -13,6 +13,12 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    @NameInMap("AccessLogRecordCustomizedHeaderList")
+    public java.util.List<String> accessLogRecordCustomizedHeaderList;
+
+    @NameInMap("AccessLogRecordCustomizedHeadersEnabled")
+    public Boolean accessLogRecordCustomizedHeadersEnabled;
+
     /**
      * <p>The ID of the endpoint group.</p>
      * 
@@ -92,6 +98,22 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
     }
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    public DescribeLogStoreOfEndpointGroupResponseBody setAccessLogRecordCustomizedHeaderList(java.util.List<String> accessLogRecordCustomizedHeaderList) {
+        this.accessLogRecordCustomizedHeaderList = accessLogRecordCustomizedHeaderList;
+        return this;
+    }
+    public java.util.List<String> getAccessLogRecordCustomizedHeaderList() {
+        return this.accessLogRecordCustomizedHeaderList;
+    }
+
+    public DescribeLogStoreOfEndpointGroupResponseBody setAccessLogRecordCustomizedHeadersEnabled(Boolean accessLogRecordCustomizedHeadersEnabled) {
+        this.accessLogRecordCustomizedHeadersEnabled = accessLogRecordCustomizedHeadersEnabled;
+        return this;
+    }
+    public Boolean getAccessLogRecordCustomizedHeadersEnabled() {
+        return this.accessLogRecordCustomizedHeadersEnabled;
     }
 
     public DescribeLogStoreOfEndpointGroupResponseBody setEndpointGroupId(String endpointGroupId) {
