@@ -117,6 +117,9 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
         @NameInMap("score")
         public Integer score;
 
+        @NameInMap("usage")
+        public ModelUsage usage;
+
         public static GetEssayCorrectionTaskResponseBodyDataResults build(java.util.Map<String, ?> map) throws Exception {
             GetEssayCorrectionTaskResponseBodyDataResults self = new GetEssayCorrectionTaskResponseBodyDataResults();
             return TeaModel.build(map, self);
@@ -146,6 +149,14 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
             return this.score;
         }
 
+        public GetEssayCorrectionTaskResponseBodyDataResults setUsage(ModelUsage usage) {
+            this.usage = usage;
+            return this;
+        }
+        public ModelUsage getUsage() {
+            return this.usage;
+        }
+
     }
 
     public static class GetEssayCorrectionTaskResponseBodyData extends TeaModel {
@@ -161,6 +172,9 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public String status;
+
+        @NameInMap("totalUsage")
+        public ModelUsage totalUsage;
 
         public static GetEssayCorrectionTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetEssayCorrectionTaskResponseBodyData self = new GetEssayCorrectionTaskResponseBodyData();
@@ -189,6 +203,14 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetEssayCorrectionTaskResponseBodyData setTotalUsage(ModelUsage totalUsage) {
+            this.totalUsage = totalUsage;
+            return this;
+        }
+        public ModelUsage getTotalUsage() {
+            return this.totalUsage;
         }
 
     }
