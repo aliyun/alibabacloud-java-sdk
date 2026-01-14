@@ -138,6 +138,36 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCustomAgentResponseBodyDataKnowledgeConfigList extends TeaModel {
+        @NameInMap("AccessType")
+        public String accessType;
+
+        @NameInMap("McpServerId")
+        public String mcpServerId;
+
+        public static DescribeCustomAgentResponseBodyDataKnowledgeConfigList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCustomAgentResponseBodyDataKnowledgeConfigList self = new DescribeCustomAgentResponseBodyDataKnowledgeConfigList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomAgentResponseBodyDataKnowledgeConfigList setAccessType(String accessType) {
+            this.accessType = accessType;
+            return this;
+        }
+        public String getAccessType() {
+            return this.accessType;
+        }
+
+        public DescribeCustomAgentResponseBodyDataKnowledgeConfigList setMcpServerId(String mcpServerId) {
+            this.mcpServerId = mcpServerId;
+            return this;
+        }
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+    }
+
     public static class DescribeCustomAgentResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -202,6 +232,9 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
         @NameInMap("Knowledge")
         public String knowledge;
+
+        @NameInMap("KnowledgeConfigList")
+        public java.util.List<DescribeCustomAgentResponseBodyDataKnowledgeConfigList> knowledgeConfigList;
 
         /**
          * <strong>example:</strong>
@@ -360,6 +393,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
         public String getKnowledge() {
             return this.knowledge;
+        }
+
+        public DescribeCustomAgentResponseBodyData setKnowledgeConfigList(java.util.List<DescribeCustomAgentResponseBodyDataKnowledgeConfigList> knowledgeConfigList) {
+            this.knowledgeConfigList = knowledgeConfigList;
+            return this;
+        }
+        public java.util.List<DescribeCustomAgentResponseBodyDataKnowledgeConfigList> getKnowledgeConfigList() {
+            return this.knowledgeConfigList;
         }
 
         public DescribeCustomAgentResponseBodyData setModifier(String modifier) {
