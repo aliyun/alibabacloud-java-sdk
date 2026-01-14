@@ -16,6 +16,9 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
     @NameInMap("taskList")
     public java.util.List<ListAICoachTaskPageResponseBodyTaskList> taskList;
 
+    @NameInMap("total")
+    public Long total;
+
     public static ListAICoachTaskPageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAICoachTaskPageResponseBody self = new ListAICoachTaskPageResponseBody();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
     }
     public java.util.List<ListAICoachTaskPageResponseBodyTaskList> getTaskList() {
         return this.taskList;
+    }
+
+    public ListAICoachTaskPageResponseBody setTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+    public Long getTotal() {
+        return this.total;
     }
 
     public static class ListAICoachTaskPageResponseBodyTaskList extends TeaModel {
