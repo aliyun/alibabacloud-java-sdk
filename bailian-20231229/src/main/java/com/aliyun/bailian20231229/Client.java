@@ -27,8 +27,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot use API to create structured table. To create a table, go to <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> in the console. You can associate a knowledge base with ApsaraDB for RDS to automatically update structured knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
+     * <ul>
+     * <li>If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:AddCategory) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</li>
+     * <li>You can create up to 1,000 categories in each workspace.</li>
+     * <li>This interface is not idempotent.
+     * <strong>Throttling:</strong> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>添加类目</p>
+     * <p>Creates a category in the specified workspace to categorize and manage documents. You can create up to 1,000 categories in each workspace.</p>
      * 
      * @param request AddCategoryRequest
      * @param headers map
@@ -69,8 +78,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot use API to create structured table. To create a table, go to <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> in the console. You can associate a knowledge base with ApsaraDB for RDS to automatically update structured knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
+     * <ul>
+     * <li>If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:AddCategory) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</li>
+     * <li>You can create up to 1,000 categories in each workspace.</li>
+     * <li>This interface is not idempotent.
+     * <strong>Throttling:</strong> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>添加类目</p>
+     * <p>Creates a category in the specified workspace to categorize and manage documents. You can create up to 1,000 categories in each workspace.</p>
      * 
      * @param request AddCategoryRequest
      * @return AddCategoryResponse
@@ -337,8 +355,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>1\. This interface is intended for pro-code deployment only; other scenarios are currently not supported. 2. After obtaining the temporary file upload lease via this interface, upload the file manually.</p>
+     * 
      * <b>summary</b> : 
-     * <p>申请临时文件存储上传许可</p>
+     * <p>This interface is intended for pro-code deployment only; other scenarios are currently not supported. It is used to apply for a temporary file upload lease. After obtaining the lease, you must upload the file manually.</p>
      * 
      * @param request ApplyTempStorageLeaseRequest
      * @param headers map
@@ -375,8 +396,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>1\. This interface is intended for pro-code deployment only; other scenarios are currently not supported. 2. After obtaining the temporary file upload lease via this interface, upload the file manually.</p>
+     * 
      * <b>summary</b> : 
-     * <p>申请临时文件存储上传许可</p>
+     * <p>This interface is intended for pro-code deployment only; other scenarios are currently not supported. It is used to apply for a temporary file upload lease. After obtaining the lease, you must upload the file manually.</p>
      * 
      * @param request ApplyTempStorageLeaseRequest
      * @return ApplyTempStorageLeaseResponse
@@ -1591,6 +1615,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getIndexJobStatusWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取索引监控情况</p>
+     * 
+     * @param request GetIndexMonitorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIndexMonitorResponse
+     */
+    public GetIndexMonitorResponse getIndexMonitorWithOptions(String WorkspaceId, GetIndexMonitorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimestamp)) {
+            query.put("EndTimestamp", request.endTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexId)) {
+            query.put("IndexId", request.indexId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimestamp)) {
+            query.put("StartTimestamp", request.startTimestamp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIndexMonitor"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/rag/index/monitor"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIndexMonitorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取索引监控情况</p>
+     * 
+     * @param request GetIndexMonitorRequest
+     * @return GetIndexMonitorResponse
+     */
+    public GetIndexMonitorResponse getIndexMonitor(String WorkspaceId, GetIndexMonitorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getIndexMonitorWithOptions(WorkspaceId, request, headers, runtime);
     }
 
     /**

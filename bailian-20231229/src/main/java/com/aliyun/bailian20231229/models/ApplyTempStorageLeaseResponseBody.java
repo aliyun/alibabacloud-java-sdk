@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ApplyTempStorageLeaseResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataCenter.FileTooLarge</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data fields.</p>
+     */
     @NameInMap("Data")
     public ApplyTempStorageLeaseResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>User not authorized to operate on the specified resource</p>
      */
@@ -22,6 +29,8 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>778C0B3B-xxxx-5FC1-A947-36EDD13606AB</p>
      */
@@ -29,12 +38,17 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
 
     public static class ApplyTempStorageLeaseResponseBodyDataParam extends TeaModel {
         /**
+         * <p>K-V fields to be included in the Header; both Key and Value are strings.</p>
+         * 
          * <strong>example:</strong>
          * <p>Content-Type: application/json</p>
          */
@@ -100,6 +116,8 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
         public Object headers;
 
         /**
+         * <p>HTTP method for the call. Valid values: PUT POST</p>
+         * 
          * <strong>example:</strong>
          * <p>PUT</p>
          */
@@ -107,6 +125,8 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
         public String method;
 
         /**
+         * <p>Authorized URL for the file upload.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://bailian-datahub-data-origin-prod.oss-cn-hangzhou.aliyuncs.com/1005426495169178/10024405/68abd1dea7b6404d8f7d7b9f7fbd332d.1716698936847.pdf?Expires=1716699536&OSSAccessKeyId=TestID&Signature=HfwPUZo4pR6DatSDym0zFKVh9Wg%3D">https://bailian-datahub-data-origin-prod.oss-cn-hangzhou.aliyuncs.com/1005426495169178/10024405/68abd1dea7b6404d8f7d7b9f7fbd332d.1716698936847.pdf?Expires=1716699536&amp;OSSAccessKeyId=TestID&amp;Signature=HfwPUZo4pR6DatSDym0zFKVh9Wg%3D</a></p>
          */
@@ -145,10 +165,15 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
     }
 
     public static class ApplyTempStorageLeaseResponseBodyData extends TeaModel {
+        /**
+         * <p>HTTP parameters used for uploading the file.</p>
+         */
         @NameInMap("Param")
         public ApplyTempStorageLeaseResponseBodyDataParam param;
 
         /**
+         * <p>Unique lease ID. This parameter is required when retrieving the uploaded file within the application later.</p>
+         * 
          * <strong>example:</strong>
          * <p>1e6a159107384782be5e45ac4759b247.1719325231035</p>
          */

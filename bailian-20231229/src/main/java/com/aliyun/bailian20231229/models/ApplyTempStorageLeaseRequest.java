@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyTempStorageLeaseRequest extends TeaModel {
     /**
+     * <p>The file name, including the file extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ApplyTempStorageLeaseRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The size of the file, in bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
