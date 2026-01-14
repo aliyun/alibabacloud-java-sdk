@@ -4,6 +4,9 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class ChatStreamRequest extends TeaModel {
+    @NameInMap("documentIds")
+    public java.util.List<Long> documentIds;
+
     /**
      * <p>Q&amp;A content.</p>
      * <p>This parameter is required.</p>
@@ -31,6 +34,14 @@ public class ChatStreamRequest extends TeaModel {
     public static ChatStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatStreamRequest self = new ChatStreamRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChatStreamRequest setDocumentIds(java.util.List<Long> documentIds) {
+        this.documentIds = documentIds;
+        return this;
+    }
+    public java.util.List<Long> getDocumentIds() {
+        return this.documentIds;
     }
 
     public ChatStreamRequest setQuestion(String question) {
