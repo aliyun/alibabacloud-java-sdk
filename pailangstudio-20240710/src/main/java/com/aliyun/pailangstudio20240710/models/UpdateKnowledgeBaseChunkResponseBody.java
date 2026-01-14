@@ -3,7 +3,7 @@ package com.aliyun.pailangstudio20240710.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateKnowledgeBaseResponseBody extends TeaModel {
+public class UpdateKnowledgeBaseChunkResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</p>
@@ -11,12 +11,12 @@ public class UpdateKnowledgeBaseResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static UpdateKnowledgeBaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateKnowledgeBaseResponseBody self = new UpdateKnowledgeBaseResponseBody();
+    public static UpdateKnowledgeBaseChunkResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateKnowledgeBaseChunkResponseBody self = new UpdateKnowledgeBaseChunkResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateKnowledgeBaseResponseBody setRequestId(String requestId) {
+    public UpdateKnowledgeBaseChunkResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

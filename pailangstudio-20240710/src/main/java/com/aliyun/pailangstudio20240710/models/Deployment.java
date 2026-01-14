@@ -7,6 +7,9 @@ public class Deployment extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("AutoApproval")
+    public Boolean autoApproval;
+
     @NameInMap("ChatHistoryConfig")
     public DeploymentChatHistoryConfig chatHistoryConfig;
 
@@ -29,7 +32,7 @@ public class Deployment extends TeaModel {
     public String deploymentId;
 
     @NameInMap("DeploymentStages")
-    public String deploymentStages;
+    public java.util.List<DeploymentDeploymentStages> deploymentStages;
 
     @NameInMap("DeploymentStatus")
     public String deploymentStatus;
@@ -98,6 +101,14 @@ public class Deployment extends TeaModel {
         return this.accessibility;
     }
 
+    public Deployment setAutoApproval(Boolean autoApproval) {
+        this.autoApproval = autoApproval;
+        return this;
+    }
+    public Boolean getAutoApproval() {
+        return this.autoApproval;
+    }
+
     public Deployment setChatHistoryConfig(DeploymentChatHistoryConfig chatHistoryConfig) {
         this.chatHistoryConfig = chatHistoryConfig;
         return this;
@@ -154,11 +165,11 @@ public class Deployment extends TeaModel {
         return this.deploymentId;
     }
 
-    public Deployment setDeploymentStages(String deploymentStages) {
+    public Deployment setDeploymentStages(java.util.List<DeploymentDeploymentStages> deploymentStages) {
         this.deploymentStages = deploymentStages;
         return this;
     }
-    public String getDeploymentStages() {
+    public java.util.List<DeploymentDeploymentStages> getDeploymentStages() {
         return this.deploymentStages;
     }
 
@@ -588,6 +599,126 @@ public class Deployment extends TeaModel {
         }
         public String getUri() {
             return this.uri;
+        }
+
+    }
+
+    public static class DeploymentDeploymentStages extends TeaModel {
+        /**
+         * <p>描述</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>错误信息</p>
+         */
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        /**
+         * <p>结束时间</p>
+         */
+        @NameInMap("GmtEndTime")
+        public String gmtEndTime;
+
+        /**
+         * <p>开始时间</p>
+         */
+        @NameInMap("GmtStartTime")
+        public String gmtStartTime;
+
+        /**
+         * <p>阶段</p>
+         */
+        @NameInMap("Stage")
+        public Integer stage;
+
+        /**
+         * <p>阶段信息</p>
+         */
+        @NameInMap("StageInfo")
+        public String stageInfo;
+
+        /**
+         * <p>阶段名称</p>
+         */
+        @NameInMap("StageName")
+        public String stageName;
+
+        /**
+         * <p>阶段状态</p>
+         */
+        @NameInMap("StageStatus")
+        public String stageStatus;
+
+        public static DeploymentDeploymentStages build(java.util.Map<String, ?> map) throws Exception {
+            DeploymentDeploymentStages self = new DeploymentDeploymentStages();
+            return TeaModel.build(map, self);
+        }
+
+        public DeploymentDeploymentStages setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DeploymentDeploymentStages setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DeploymentDeploymentStages setGmtEndTime(String gmtEndTime) {
+            this.gmtEndTime = gmtEndTime;
+            return this;
+        }
+        public String getGmtEndTime() {
+            return this.gmtEndTime;
+        }
+
+        public DeploymentDeploymentStages setGmtStartTime(String gmtStartTime) {
+            this.gmtStartTime = gmtStartTime;
+            return this;
+        }
+        public String getGmtStartTime() {
+            return this.gmtStartTime;
+        }
+
+        public DeploymentDeploymentStages setStage(Integer stage) {
+            this.stage = stage;
+            return this;
+        }
+        public Integer getStage() {
+            return this.stage;
+        }
+
+        public DeploymentDeploymentStages setStageInfo(String stageInfo) {
+            this.stageInfo = stageInfo;
+            return this;
+        }
+        public String getStageInfo() {
+            return this.stageInfo;
+        }
+
+        public DeploymentDeploymentStages setStageName(String stageName) {
+            this.stageName = stageName;
+            return this;
+        }
+        public String getStageName() {
+            return this.stageName;
+        }
+
+        public DeploymentDeploymentStages setStageStatus(String stageStatus) {
+            this.stageStatus = stageStatus;
+            return this;
+        }
+        public String getStageStatus() {
+            return this.stageStatus;
         }
 
     }

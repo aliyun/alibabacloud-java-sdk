@@ -394,6 +394,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取知识库切片列表</p>
+     * 
+     * @param request ListKnowledgeBaseChunksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeBaseChunksResponse
+     */
+    public ListKnowledgeBaseChunksResponse listKnowledgeBaseChunksWithOptions(String KnowledgeBaseId, ListKnowledgeBaseChunksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkStatus)) {
+            query.put("ChunkStatus", request.chunkStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metaData)) {
+            query.put("MetaData", request.metaData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionName)) {
+            query.put("VersionName", request.versionName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeBaseChunks"),
+            new TeaPair("version", "2024-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/langstudio/knowledgebases/" + com.aliyun.openapiutil.Client.getEncodeParam(KnowledgeBaseId) + "/knowledgebasechunks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeBaseChunksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取知识库切片列表</p>
+     * 
+     * @param request ListKnowledgeBaseChunksRequest
+     * @return ListKnowledgeBaseChunksResponse
+     */
+    public ListKnowledgeBaseChunksResponse listKnowledgeBaseChunks(String KnowledgeBaseId, ListKnowledgeBaseChunksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listKnowledgeBaseChunksWithOptions(KnowledgeBaseId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取知识库任务列表</p>
      * 
      * @param request ListKnowledgeBaseJobsRequest
@@ -710,6 +773,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateKnowledgeBaseWithOptions(KnowledgeBaseId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新知识库切片</p>
+     * 
+     * @param request UpdateKnowledgeBaseChunkRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateKnowledgeBaseChunkResponse
+     */
+    public UpdateKnowledgeBaseChunkResponse updateKnowledgeBaseChunkWithOptions(String KnowledgeBaseId, String KnowledgeBaseChunkId, UpdateKnowledgeBaseChunkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkContent)) {
+            body.put("ChunkContent", request.chunkContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkStatus)) {
+            body.put("ChunkStatus", request.chunkStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKnowledgeBaseChunk"),
+            new TeaPair("version", "2024-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/langstudio/knowledgebases/" + com.aliyun.openapiutil.Client.getEncodeParam(KnowledgeBaseId) + "/knowledgebasechunks/" + com.aliyun.openapiutil.Client.getEncodeParam(KnowledgeBaseChunkId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKnowledgeBaseChunkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新知识库切片</p>
+     * 
+     * @param request UpdateKnowledgeBaseChunkRequest
+     * @return UpdateKnowledgeBaseChunkResponse
+     */
+    public UpdateKnowledgeBaseChunkResponse updateKnowledgeBaseChunk(String KnowledgeBaseId, String KnowledgeBaseChunkId, UpdateKnowledgeBaseChunkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateKnowledgeBaseChunkWithOptions(KnowledgeBaseId, KnowledgeBaseChunkId, request, headers, runtime);
     }
 
     /**

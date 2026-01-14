@@ -7,9 +7,17 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
     @NameInMap("KnowledgeBases")
     public java.util.List<KnowledgeBase> knowledgeBases;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -20,6 +28,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>25</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
