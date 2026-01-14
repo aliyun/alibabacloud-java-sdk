@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
      */
     @NameInMap("RequestId")
     public String requestId;
