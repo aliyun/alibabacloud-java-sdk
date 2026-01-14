@@ -2713,6 +2713,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("nextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("type", request.type);
         }

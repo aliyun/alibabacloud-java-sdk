@@ -32,6 +32,9 @@ public class ListRegistryModulesRequest extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
+    @NameInMap("status")
+    public String status;
+
     /**
      * <strong>example:</strong>
      * <p>system</p>
@@ -74,6 +77,14 @@ public class ListRegistryModulesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListRegistryModulesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListRegistryModulesRequest setType(String type) {
