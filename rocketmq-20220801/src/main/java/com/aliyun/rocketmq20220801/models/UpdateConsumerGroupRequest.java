@@ -18,12 +18,12 @@ public class UpdateConsumerGroupRequest extends TeaModel {
      * <li>Concurrently: concurrent delivery</li>
      * <li>Orderly: ordered delivery</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Concurrently</p>
      */
     @NameInMap("deliveryOrderType")
+    @Deprecated
     public String deliveryOrderType;
 
     /**
@@ -57,6 +57,7 @@ public class UpdateConsumerGroupRequest extends TeaModel {
         return this.consumeRetryPolicy;
     }
 
+    @Deprecated
     public UpdateConsumerGroupRequest setDeliveryOrderType(String deliveryOrderType) {
         this.deliveryOrderType = deliveryOrderType;
         return this;

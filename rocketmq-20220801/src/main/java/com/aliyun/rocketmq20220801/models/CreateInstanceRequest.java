@@ -656,6 +656,9 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("storageSecretKey")
         public String storageSecretKey;
 
+        @NameInMap("traceOn")
+        public Boolean traceOn;
+
         public static CreateInstanceRequestProductInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceRequestProductInfo self = new CreateInstanceRequestProductInfo();
             return TeaModel.build(map, self);
@@ -723,6 +726,14 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getStorageSecretKey() {
             return this.storageSecretKey;
+        }
+
+        public CreateInstanceRequestProductInfo setTraceOn(Boolean traceOn) {
+            this.traceOn = traceOn;
+            return this;
+        }
+        public Boolean getTraceOn() {
+            return this.traceOn;
         }
 
     }
