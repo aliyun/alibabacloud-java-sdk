@@ -483,6 +483,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("HealthCheck")
         public ListServerGroupsResponseBodyServerGroupsHealthCheck healthCheck;
 
+        @NameInMap("IpVersionAffinityMode")
+        public String ipVersionAffinityMode;
+
         /**
          * <p>Indicates whether client IP preservation is enabled. Valid values:</p>
          * <ul>
@@ -668,6 +671,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public ListServerGroupsResponseBodyServerGroupsHealthCheck getHealthCheck() {
             return this.healthCheck;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setIpVersionAffinityMode(String ipVersionAffinityMode) {
+            this.ipVersionAffinityMode = ipVersionAffinityMode;
+            return this;
+        }
+        public String getIpVersionAffinityMode() {
+            return this.ipVersionAffinityMode;
         }
 
         public ListServerGroupsResponseBodyServerGroups setPreserveClientIpEnabled(Boolean preserveClientIpEnabled) {

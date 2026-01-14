@@ -84,6 +84,9 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("HealthCheckConfig")
     public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
 
+    @NameInMap("IpVersionAffinityMode")
+    public String ipVersionAffinityMode;
+
     /**
      * <p>Specifies whether to enable client IP preservation. Valid values:</p>
      * <ul>
@@ -269,6 +272,14 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public CreateServerGroupRequestHealthCheckConfig getHealthCheckConfig() {
         return this.healthCheckConfig;
+    }
+
+    public CreateServerGroupRequest setIpVersionAffinityMode(String ipVersionAffinityMode) {
+        this.ipVersionAffinityMode = ipVersionAffinityMode;
+        return this;
+    }
+    public String getIpVersionAffinityMode() {
+        return this.ipVersionAffinityMode;
     }
 
     public CreateServerGroupRequest setPreserveClientIpEnabled(Boolean preserveClientIpEnabled) {

@@ -673,6 +673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("HealthCheckConfig", request.healthCheckConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersionAffinityMode)) {
+            body.put("IpVersionAffinityMode", request.ipVersionAffinityMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.preserveClientIpEnabled)) {
             body.put("PreserveClientIpEnabled", request.preserveClientIpEnabled);
         }
@@ -3390,6 +3394,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             bodyFlat.put("HealthCheckConfig", request.healthCheckConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersionAffinityMode)) {
+            body.put("IpVersionAffinityMode", request.ipVersionAffinityMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.preserveClientIpEnabled)) {
