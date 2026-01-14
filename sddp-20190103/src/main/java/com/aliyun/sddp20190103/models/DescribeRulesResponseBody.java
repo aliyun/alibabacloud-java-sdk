@@ -93,6 +93,13 @@ public class DescribeRulesResponseBody extends TeaModel {
 
     public static class DescribeRulesResponseBodyItems extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("AuditMode")
+        public Integer auditMode;
+
+        /**
          * <p>The content type of the sensitive data detection rule. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: keyword</li>
@@ -365,6 +372,13 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String templateRuleIds;
 
         /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("ThreatAnalysisStatus")
+        public Integer threatAnalysisStatus;
+
+        /**
          * <p>The ID of the account that is used to create the sensitive data detection rule.</p>
          * 
          * <strong>example:</strong>
@@ -390,6 +404,14 @@ public class DescribeRulesResponseBody extends TeaModel {
         public static DescribeRulesResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeRulesResponseBodyItems self = new DescribeRulesResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRulesResponseBodyItems setAuditMode(Integer auditMode) {
+            this.auditMode = auditMode;
+            return this;
+        }
+        public Integer getAuditMode() {
+            return this.auditMode;
         }
 
         public DescribeRulesResponseBodyItems setCategory(Integer category) {
@@ -598,6 +620,14 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
         public String getTemplateRuleIds() {
             return this.templateRuleIds;
+        }
+
+        public DescribeRulesResponseBodyItems setThreatAnalysisStatus(Integer threatAnalysisStatus) {
+            this.threatAnalysisStatus = threatAnalysisStatus;
+            return this;
+        }
+        public Integer getThreatAnalysisStatus() {
+            return this.threatAnalysisStatus;
         }
 
         public DescribeRulesResponseBodyItems setUserId(Long userId) {
