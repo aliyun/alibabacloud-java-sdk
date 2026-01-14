@@ -4,6 +4,9 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class ImportNumberResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <strong>example:</strong>
      * <p>0</p>
@@ -45,6 +48,14 @@ public class ImportNumberResponseBody extends TeaModel {
     public static ImportNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImportNumberResponseBody self = new ImportNumberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ImportNumberResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ImportNumberResponseBody setCode(Long code) {
