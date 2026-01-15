@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateAppInstanceRequest extends TeaModel {
     /**
+     * <p>Application type</p>
+     * 
      * <strong>example:</strong>
-     * <p>PC_WEBSITE</p>
+     * <p>PC_WebSite</p>
      */
     @NameInMap("ApplicationType")
     public String applicationType;
 
     /**
+     * <p>Whether to enable auto-renewal upon expiration</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +23,8 @@ public class CreateAppInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>Ensures idempotence of the request. Generate a unique value from your client to ensure that it is unique across different requests. ClientToken only supports ASCII characters and cannot exceed 64 characters</p>
+     * 
      * <strong>example:</strong>
      * <p>210713a117660695309606626a</p>
      */
@@ -26,6 +32,8 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Deployment area</p>
+     * 
      * <strong>example:</strong>
      * <p>ChineseMainland</p>
      */
@@ -33,13 +41,17 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String deployArea;
 
     /**
+     * <p>Required. The number of subscription periods</p>
+     * 
      * <strong>example:</strong>
-     * <p>3</p>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
+     * <p>Extended information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -47,6 +59,8 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String extend;
 
     /**
+     * <p>Payment type</p>
+     * 
      * <strong>example:</strong>
      * <p>AUTO_PAY</p>
      */
@@ -54,6 +68,8 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>Required. The unit of the subscription period, Year: Year, Month: Month, Day: Day, Hour: Hour</p>
+     * 
      * <strong>example:</strong>
      * <p>Year</p>
      */
@@ -61,6 +77,8 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>Required. The quantity of instances to be ordered.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,8 +86,10 @@ public class CreateAppInstanceRequest extends TeaModel {
     public Integer quantity;
 
     /**
+     * <p>Site version</p>
+     * 
      * <strong>example:</strong>
-     * <p>7</p>
+     * <p>Basic_Edition</p>
      */
     @NameInMap("SiteVersion")
     public String siteVersion;

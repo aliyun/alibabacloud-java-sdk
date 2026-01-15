@@ -84,7 +84,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建建站实例</p>
+     * <p>Create a website instance</p>
      * 
      * @param request CreateAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -152,7 +152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建建站实例</p>
+     * <p>Create a website instance</p>
      * 
      * @param request CreateAppInstanceRequest
      * @return CreateAppInstanceResponse
