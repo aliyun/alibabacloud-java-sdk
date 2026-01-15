@@ -4,6 +4,9 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceGroupInspectReportDetailRequest extends TeaModel {
+    @NameInMap("AgentId")
+    public String agentId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -16,6 +19,14 @@ public class GetInstanceGroupInspectReportDetailRequest extends TeaModel {
     public static GetInstanceGroupInspectReportDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceGroupInspectReportDetailRequest self = new GetInstanceGroupInspectReportDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceGroupInspectReportDetailRequest setAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    public String getAgentId() {
+        return this.agentId;
     }
 
     public GetInstanceGroupInspectReportDetailRequest setReportId(String reportId) {
