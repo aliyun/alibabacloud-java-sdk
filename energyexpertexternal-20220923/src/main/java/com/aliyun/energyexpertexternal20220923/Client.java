@@ -183,10 +183,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Users obtain real-time VL results by uploading a document URL.</p>
+     * <p>You need to upload a document URL to obtain the real-time parsing result of the Qwen VL model.</p>
      * 
      * <b>summary</b> : 
-     * <p>Get Document Results</p>
+     * <p>Obtains the real-time parsing result of the Qwen VL model.</p>
      * 
      * @param request AnalyzeVlRealtimeRequest
      * @param headers map
@@ -196,6 +196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AnalyzeVlRealtimeResponse analyzeVlRealtimeWithOptions(AnalyzeVlRealtimeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("fileName", request.fileName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
             query.put("fileUrl", request.fileUrl);
         }
@@ -228,10 +232,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Users obtain real-time VL results by uploading a document URL.</p>
+     * <p>You need to upload a document URL to obtain the real-time parsing result of the Qwen VL model.</p>
      * 
      * <b>summary</b> : 
-     * <p>Get Document Results</p>
+     * <p>Obtains the real-time parsing result of the Qwen VL model.</p>
      * 
      * @param request AnalyzeVlRealtimeRequest
      * @return AnalyzeVlRealtimeResponse

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AnalyzeVlRealtimeResponseBody extends TeaModel {
     /**
-     * <p>Return result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public AnalyzeVlRealtimeResponseBodyData data;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
@@ -42,7 +42,7 @@ public class AnalyzeVlRealtimeResponseBody extends TeaModel {
 
     public static class AnalyzeVlRealtimeResponseBodyDataKvListInfoContextConfidence extends TeaModel {
         /**
-         * <p>Key confidence</p>
+         * <p>The confidence level of the key.</p>
          * 
          * <strong>example:</strong>
          * <p>0.9994202852249146</p>
@@ -51,7 +51,7 @@ public class AnalyzeVlRealtimeResponseBody extends TeaModel {
         public Double keyConfidence;
 
         /**
-         * <p>Value confidence</p>
+         * <p>The confidence level of the value.</p>
          * 
          * <strong>example:</strong>
          * <p>0.9794202852249146</p>
@@ -84,19 +84,19 @@ public class AnalyzeVlRealtimeResponseBody extends TeaModel {
 
     public static class AnalyzeVlRealtimeResponseBodyDataKvListInfoContext extends TeaModel {
         /**
-         * <p>Confidence</p>
+         * <p>The confidence level.</p>
          */
         @NameInMap("confidence")
         public AnalyzeVlRealtimeResponseBodyDataKvListInfoContextConfidence confidence;
 
         /**
-         * <p>Key recall information details</p>
+         * <p>The details of the recalled key information.</p>
          */
         @NameInMap("key")
         public java.util.List<ContentItem> key;
 
         /**
-         * <p>Value recall information details</p>
+         * <p>The details of the recalled value information.</p>
          */
         @NameInMap("value")
         public java.util.List<ContentItem> value;
@@ -134,13 +134,13 @@ public class AnalyzeVlRealtimeResponseBody extends TeaModel {
 
     public static class AnalyzeVlRealtimeResponseBodyDataKvListInfo extends TeaModel {
         /**
-         * <p>Recall content</p>
+         * <p>The recalled content.</p>
          */
         @NameInMap("context")
         public AnalyzeVlRealtimeResponseBodyDataKvListInfoContext context;
 
         /**
-         * <p>Field Key name</p>
+         * <p>The name of the key.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -149,7 +149,7 @@ public class AnalyzeVlRealtimeResponseBody extends TeaModel {
         public String keyName;
 
         /**
-         * <p>Field key value</p>
+         * <p>The value of the key.</p>
          * 
          * <strong>example:</strong>
          * <p>bob</p>
@@ -190,7 +190,7 @@ public class AnalyzeVlRealtimeResponseBody extends TeaModel {
 
     public static class AnalyzeVlRealtimeResponseBodyData extends TeaModel {
         /**
-         * <p>Document parsing result details</p>
+         * <p>The details of the document extraction result.</p>
          */
         @NameInMap("kvListInfo")
         public java.util.List<AnalyzeVlRealtimeResponseBodyDataKvListInfo> kvListInfo;
