@@ -10,6 +10,9 @@ public class ResetAndroidInstancesInGroupRequest extends TeaModel {
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    @NameInMap("IgnoreParamValidation")
+    public Boolean ignoreParamValidation;
+
     @NameInMap("SaleMode")
     public String saleMode;
 
@@ -27,6 +30,14 @@ public class ResetAndroidInstancesInGroupRequest extends TeaModel {
     }
     public java.util.List<String> getAndroidInstanceIds() {
         return this.androidInstanceIds;
+    }
+
+    public ResetAndroidInstancesInGroupRequest setIgnoreParamValidation(Boolean ignoreParamValidation) {
+        this.ignoreParamValidation = ignoreParamValidation;
+        return this;
+    }
+    public Boolean getIgnoreParamValidation() {
+        return this.ignoreParamValidation;
     }
 
     public ResetAndroidInstancesInGroupRequest setSaleMode(String saleMode) {

@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceImageRequest extends TeaModel {
+    @NameInMap("IgnoreParamValidation")
+    public Boolean ignoreParamValidation;
+
     /**
      * <strong>example:</strong>
      * <p>imgc-075cllfeuazh0****</p>
@@ -20,6 +23,14 @@ public class UpdateInstanceImageRequest extends TeaModel {
     public static UpdateInstanceImageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceImageRequest self = new UpdateInstanceImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateInstanceImageRequest setIgnoreParamValidation(Boolean ignoreParamValidation) {
+        this.ignoreParamValidation = ignoreParamValidation;
+        return this;
+    }
+    public Boolean getIgnoreParamValidation() {
+        return this.ignoreParamValidation;
     }
 
     public UpdateInstanceImageRequest setImageId(String imageId) {

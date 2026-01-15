@@ -68,6 +68,9 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         @NameInMap("PersistentAppInstanceId")
         public String persistentAppInstanceId;
 
+        @NameInMap("Port")
+        public Integer port;
+
         /**
          * <p>The ID of the task.</p>
          * 
@@ -138,6 +141,14 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         }
         public String getPersistentAppInstanceId() {
             return this.persistentAppInstanceId;
+        }
+
+        public BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
         }
 
         public BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels setTaskId(String taskId) {

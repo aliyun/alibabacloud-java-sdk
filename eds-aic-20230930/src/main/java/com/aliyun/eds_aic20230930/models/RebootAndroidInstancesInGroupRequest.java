@@ -24,6 +24,9 @@ public class RebootAndroidInstancesInGroupRequest extends TeaModel {
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
+    @NameInMap("IgnoreParamValidation")
+    public Boolean ignoreParamValidation;
+
     @NameInMap("SaleMode")
     public String saleMode;
 
@@ -46,6 +49,14 @@ public class RebootAndroidInstancesInGroupRequest extends TeaModel {
     }
     public Boolean getForceStop() {
         return this.forceStop;
+    }
+
+    public RebootAndroidInstancesInGroupRequest setIgnoreParamValidation(Boolean ignoreParamValidation) {
+        this.ignoreParamValidation = ignoreParamValidation;
+        return this;
+    }
+    public Boolean getIgnoreParamValidation() {
+        return this.ignoreParamValidation;
     }
 
     public RebootAndroidInstancesInGroupRequest setSaleMode(String saleMode) {

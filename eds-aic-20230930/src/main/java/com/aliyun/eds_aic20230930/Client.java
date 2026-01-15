@@ -367,6 +367,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchGetAcpConnectionTicketResponse batchGetAcpConnectionTicketWithOptions(BatchGetAcpConnectionTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionMode)) {
+            query.put("ConnectionMode", request.connectionMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
             query.put("EndUserId", request.endUserId);
         }
@@ -4632,6 +4636,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ForceStop", request.forceStop);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreParamValidation)) {
+            query.put("IgnoreParamValidation", request.ignoreParamValidation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
             query.put("SaleMode", request.saleMode);
         }
@@ -5000,6 +5008,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
             query.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreParamValidation)) {
+            query.put("IgnoreParamValidation", request.ignoreParamValidation);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
@@ -5811,6 +5823,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateInstanceImageResponse updateInstanceImageWithOptions(UpdateInstanceImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreParamValidation)) {
+            query.put("IgnoreParamValidation", request.ignoreParamValidation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             query.put("ImageId", request.imageId);
         }

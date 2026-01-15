@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class BatchGetAcpConnectionTicketRequest extends TeaModel {
+    @NameInMap("ConnectionMode")
+    public String connectionMode;
+
     /**
      * <p>The ID of the user to whom the cloud phone instance is assigned.</p>
      * 
@@ -37,6 +40,14 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
     public static BatchGetAcpConnectionTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetAcpConnectionTicketRequest self = new BatchGetAcpConnectionTicketRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchGetAcpConnectionTicketRequest setConnectionMode(String connectionMode) {
+        this.connectionMode = connectionMode;
+        return this;
+    }
+    public String getConnectionMode() {
+        return this.connectionMode;
     }
 
     public BatchGetAcpConnectionTicketRequest setEndUserId(String endUserId) {
