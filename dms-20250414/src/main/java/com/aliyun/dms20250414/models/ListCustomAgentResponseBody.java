@@ -200,6 +200,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @NameInMap("DataJson")
         public String dataJson;
 
+        @NameInMap("DefaultAgent")
+        public Integer defaultAgent;
+
         @NameInMap("Description")
         public String description;
 
@@ -337,6 +340,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
         public String getDataJson() {
             return this.dataJson;
+        }
+
+        public ListCustomAgentResponseBodyDataContent setDefaultAgent(Integer defaultAgent) {
+            this.defaultAgent = defaultAgent;
+            return this;
+        }
+        public Integer getDefaultAgent() {
+            return this.defaultAgent;
         }
 
         public ListCustomAgentResponseBodyDataContent setDescription(String description) {
