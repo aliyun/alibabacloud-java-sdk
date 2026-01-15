@@ -14,6 +14,9 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("ControlPlaneClusterId")
+    public String controlPlaneClusterId;
+
     /**
      * <strong>example:</strong>
      * <p>470.199.02</p>
@@ -36,8 +39,8 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("EniCacheConfig")
     public EniCacheConfig eniCacheConfig;
 
-    @NameInMap("OversoldUsageInfo")
-    public OversoldUsageConfig oversoldUsageInfo;
+    @NameInMap("OversoldUsageConfig")
+    public OversoldUsageConfig oversoldUsageConfig;
 
     @NameInMap("ResourceSpecs")
     public java.util.List<WorkspaceSpecs> resourceSpecs;
@@ -88,6 +91,14 @@ public class QuotaConfig extends TeaModel {
         return this.clusterId;
     }
 
+    public QuotaConfig setControlPlaneClusterId(String controlPlaneClusterId) {
+        this.controlPlaneClusterId = controlPlaneClusterId;
+        return this;
+    }
+    public String getControlPlaneClusterId() {
+        return this.controlPlaneClusterId;
+    }
+
     public QuotaConfig setDefaultGPUDriver(String defaultGPUDriver) {
         this.defaultGPUDriver = defaultGPUDriver;
         return this;
@@ -136,12 +147,12 @@ public class QuotaConfig extends TeaModel {
         return this.eniCacheConfig;
     }
 
-    public QuotaConfig setOversoldUsageInfo(OversoldUsageConfig oversoldUsageInfo) {
-        this.oversoldUsageInfo = oversoldUsageInfo;
+    public QuotaConfig setOversoldUsageConfig(OversoldUsageConfig oversoldUsageConfig) {
+        this.oversoldUsageConfig = oversoldUsageConfig;
         return this;
     }
-    public OversoldUsageConfig getOversoldUsageInfo() {
-        return this.oversoldUsageInfo;
+    public OversoldUsageConfig getOversoldUsageConfig() {
+        return this.oversoldUsageConfig;
     }
 
     public QuotaConfig setResourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {
