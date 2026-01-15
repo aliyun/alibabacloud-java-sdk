@@ -31,6 +31,16 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
     @NameInMap("News")
     public java.util.List<SubmitCustomSourceTopicAnalysisRequestNews> news;
 
+    @NameInMap("Topics")
+    public java.util.List<SubmitCustomSourceTopicAnalysisRequestTopics> topics;
+
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com/xxx.jsonline">http://www.example.com/xxx.jsonline</a></p>
+     */
+    @NameInMap("TopicsFileUrl")
+    public String topicsFileUrl;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -83,6 +93,22 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
     }
     public java.util.List<SubmitCustomSourceTopicAnalysisRequestNews> getNews() {
         return this.news;
+    }
+
+    public SubmitCustomSourceTopicAnalysisRequest setTopics(java.util.List<SubmitCustomSourceTopicAnalysisRequestTopics> topics) {
+        this.topics = topics;
+        return this;
+    }
+    public java.util.List<SubmitCustomSourceTopicAnalysisRequestTopics> getTopics() {
+        return this.topics;
+    }
+
+    public SubmitCustomSourceTopicAnalysisRequest setTopicsFileUrl(String topicsFileUrl) {
+        this.topicsFileUrl = topicsFileUrl;
+        return this;
+    }
+    public String getTopicsFileUrl() {
+        return this.topicsFileUrl;
     }
 
     public SubmitCustomSourceTopicAnalysisRequest setWorkspaceId(String workspaceId) {
@@ -190,6 +216,40 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+    }
+
+    public static class SubmitCustomSourceTopicAnalysisRequestTopics extends TeaModel {
+        @NameInMap("News")
+        public java.util.List<HottopicNews> news;
+
+        /**
+         * <strong>example:</strong>
+         * <p>话题名称</p>
+         */
+        @NameInMap("Topic")
+        public String topic;
+
+        public static SubmitCustomSourceTopicAnalysisRequestTopics build(java.util.Map<String, ?> map) throws Exception {
+            SubmitCustomSourceTopicAnalysisRequestTopics self = new SubmitCustomSourceTopicAnalysisRequestTopics();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitCustomSourceTopicAnalysisRequestTopics setNews(java.util.List<HottopicNews> news) {
+            this.news = news;
+            return this;
+        }
+        public java.util.List<HottopicNews> getNews() {
+            return this.news;
+        }
+
+        public SubmitCustomSourceTopicAnalysisRequestTopics setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
         }
 
     }

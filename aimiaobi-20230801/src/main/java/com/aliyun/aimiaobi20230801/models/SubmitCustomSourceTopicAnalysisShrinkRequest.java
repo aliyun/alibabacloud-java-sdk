@@ -31,6 +31,16 @@ public class SubmitCustomSourceTopicAnalysisShrinkRequest extends TeaModel {
     @NameInMap("News")
     public String newsShrink;
 
+    @NameInMap("Topics")
+    public String topicsShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com/xxx.jsonline">http://www.example.com/xxx.jsonline</a></p>
+     */
+    @NameInMap("TopicsFileUrl")
+    public String topicsFileUrl;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -83,6 +93,22 @@ public class SubmitCustomSourceTopicAnalysisShrinkRequest extends TeaModel {
     }
     public String getNewsShrink() {
         return this.newsShrink;
+    }
+
+    public SubmitCustomSourceTopicAnalysisShrinkRequest setTopicsShrink(String topicsShrink) {
+        this.topicsShrink = topicsShrink;
+        return this;
+    }
+    public String getTopicsShrink() {
+        return this.topicsShrink;
+    }
+
+    public SubmitCustomSourceTopicAnalysisShrinkRequest setTopicsFileUrl(String topicsFileUrl) {
+        this.topicsFileUrl = topicsFileUrl;
+        return this;
+    }
+    public String getTopicsFileUrl() {
+        return this.topicsFileUrl;
     }
 
     public SubmitCustomSourceTopicAnalysisShrinkRequest setWorkspaceId(String workspaceId) {

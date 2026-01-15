@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ExportCustomSourceAnalysisTaskRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>jsonLine</p>
+     */
+    @NameInMap("ExportType")
+    public String exportType;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +32,14 @@ public class ExportCustomSourceAnalysisTaskRequest extends TeaModel {
     public static ExportCustomSourceAnalysisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportCustomSourceAnalysisTaskRequest self = new ExportCustomSourceAnalysisTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ExportCustomSourceAnalysisTaskRequest setExportType(String exportType) {
+        this.exportType = exportType;
+        return this;
+    }
+    public String getExportType() {
+        return this.exportType;
     }
 
     public ExportCustomSourceAnalysisTaskRequest setTaskId(String taskId) {

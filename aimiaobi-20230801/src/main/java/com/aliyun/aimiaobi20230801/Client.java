@@ -2273,6 +2273,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExportCustomSourceAnalysisTaskResponse exportCustomSourceAnalysisTaskWithOptions(ExportCustomSourceAnalysisTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.exportType)) {
+            body.put("ExportType", request.exportType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
         }
@@ -10990,6 +10994,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.newsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.news, "News", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.topics)) {
+            request.topicsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.topics, "Topics", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.analysisTypesShrink)) {
             body.put("AnalysisTypes", request.analysisTypesShrink);
@@ -11009,6 +11017,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.newsShrink)) {
             body.put("News", request.newsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicsShrink)) {
+            body.put("Topics", request.topicsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicsFileUrl)) {
+            body.put("TopicsFileUrl", request.topicsFileUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
