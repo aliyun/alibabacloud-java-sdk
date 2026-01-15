@@ -948,6 +948,9 @@ public class HttpApiDeployConfig extends TeaModel {
         @NameInMap("intentCode")
         public String intentCode;
 
+        @NameInMap("match")
+        public HttpApiBackendMatchConditions match;
+
         /**
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -987,6 +990,14 @@ public class HttpApiDeployConfig extends TeaModel {
         }
         public String getIntentCode() {
             return this.intentCode;
+        }
+
+        public HttpApiDeployConfigServiceConfigs setMatch(HttpApiBackendMatchConditions match) {
+            this.match = match;
+            return this;
+        }
+        public HttpApiBackendMatchConditions getMatch() {
+            return this.match;
         }
 
         public HttpApiDeployConfigServiceConfigs setModelName(String modelName) {
