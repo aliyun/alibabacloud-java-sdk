@@ -29,6 +29,13 @@ public class CreateMultimodalDatasetEmbeddingRequest extends TeaModel {
     @NameInMap("Model")
     public String model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>flash</p>
+     */
+    @NameInMap("ModelMode")
+    public String modelMode;
+
     public static CreateMultimodalDatasetEmbeddingRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMultimodalDatasetEmbeddingRequest self = new CreateMultimodalDatasetEmbeddingRequest();
         return TeaModel.build(map, self);
@@ -56,6 +63,14 @@ public class CreateMultimodalDatasetEmbeddingRequest extends TeaModel {
     }
     public String getModel() {
         return this.model;
+    }
+
+    public CreateMultimodalDatasetEmbeddingRequest setModelMode(String modelMode) {
+        this.modelMode = modelMode;
+        return this;
+    }
+    public String getModelMode() {
+        return this.modelMode;
     }
 
 }

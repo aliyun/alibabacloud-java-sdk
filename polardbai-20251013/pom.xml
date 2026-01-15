@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>polardbai20251013</artifactId>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <packaging>jar</packaging>
   <name>polardbai20251013</name>
   <description>Alibaba Cloud PolardbAI (20251013) SDK for Java
@@ -96,6 +96,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>

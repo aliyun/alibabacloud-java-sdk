@@ -29,6 +29,13 @@ public class CreateMultimodalSearchTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>flash</p>
+     */
+    @NameInMap("ModelMode")
+    public String modelMode;
+
+    /**
+     * <strong>example:</strong>
      * <p>指示牌</p>
      */
     @NameInMap("Query")
@@ -75,6 +82,14 @@ public class CreateMultimodalSearchTaskShrinkRequest extends TeaModel {
     }
     public String getEmbeddingModel() {
         return this.embeddingModel;
+    }
+
+    public CreateMultimodalSearchTaskShrinkRequest setModelMode(String modelMode) {
+        this.modelMode = modelMode;
+        return this;
+    }
+    public String getModelMode() {
+        return this.modelMode;
     }
 
     public CreateMultimodalSearchTaskShrinkRequest setQuery(String query) {
