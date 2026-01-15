@@ -158,6 +158,9 @@ public class DescribeFileResponseBody extends TeaModel {
         @NameInMap("FileType")
         public String fileType;
 
+        @NameInMap("ParseResultDownloadUrl")
+        public String parseResultDownloadUrl;
+
         /**
          * <p>The parser that is used to parse the document. Valid value:</p>
          * <ul>
@@ -243,6 +246,14 @@ public class DescribeFileResponseBody extends TeaModel {
         }
         public String getFileType() {
             return this.fileType;
+        }
+
+        public DescribeFileResponseBodyData setParseResultDownloadUrl(String parseResultDownloadUrl) {
+            this.parseResultDownloadUrl = parseResultDownloadUrl;
+            return this;
+        }
+        public String getParseResultDownloadUrl() {
+            return this.parseResultDownloadUrl;
         }
 
         public DescribeFileResponseBodyData setParser(String parser) {
