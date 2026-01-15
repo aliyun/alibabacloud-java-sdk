@@ -289,6 +289,47 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
     }
 
+    public static class TextModerationPlusResponseBodyDataResultRiskPositions extends TeaModel {
+        @NameInMap("EndPos")
+        public Integer endPos;
+
+        @NameInMap("RiskWord")
+        public String riskWord;
+
+        @NameInMap("StartPos")
+        public Integer startPos;
+
+        public static TextModerationPlusResponseBodyDataResultRiskPositions build(java.util.Map<String, ?> map) throws Exception {
+            TextModerationPlusResponseBodyDataResultRiskPositions self = new TextModerationPlusResponseBodyDataResultRiskPositions();
+            return TeaModel.build(map, self);
+        }
+
+        public TextModerationPlusResponseBodyDataResultRiskPositions setEndPos(Integer endPos) {
+            this.endPos = endPos;
+            return this;
+        }
+        public Integer getEndPos() {
+            return this.endPos;
+        }
+
+        public TextModerationPlusResponseBodyDataResultRiskPositions setRiskWord(String riskWord) {
+            this.riskWord = riskWord;
+            return this;
+        }
+        public String getRiskWord() {
+            return this.riskWord;
+        }
+
+        public TextModerationPlusResponseBodyDataResultRiskPositions setStartPos(Integer startPos) {
+            this.startPos = startPos;
+            return this;
+        }
+        public Integer getStartPos() {
+            return this.startPos;
+        }
+
+    }
+
     public static class TextModerationPlusResponseBodyDataResult extends TeaModel {
         /**
          * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
@@ -322,6 +363,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
          */
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("RiskPositions")
+        public java.util.List<TextModerationPlusResponseBodyDataResultRiskPositions> riskPositions;
 
         /**
          * <p>The term hit by the moderated content.</p>
@@ -367,6 +411,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public TextModerationPlusResponseBodyDataResult setRiskPositions(java.util.List<TextModerationPlusResponseBodyDataResultRiskPositions> riskPositions) {
+            this.riskPositions = riskPositions;
+            return this;
+        }
+        public java.util.List<TextModerationPlusResponseBodyDataResultRiskPositions> getRiskPositions() {
+            return this.riskPositions;
         }
 
         public TextModerationPlusResponseBodyDataResult setRiskWords(String riskWords) {
