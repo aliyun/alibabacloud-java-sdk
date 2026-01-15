@@ -38,6 +38,9 @@ public class ContainerConfiguration extends TeaModel {
     @NameInMap("imageRegistryType")
     public String imageRegistryType;
 
+    @NameInMap("port")
+    public Integer port;
+
     public static ContainerConfiguration build(java.util.Map<String, ?> map) throws Exception {
         ContainerConfiguration self = new ContainerConfiguration();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class ContainerConfiguration extends TeaModel {
     }
     public String getImageRegistryType() {
         return this.imageRegistryType;
+    }
+
+    public ContainerConfiguration setPort(Integer port) {
+        this.port = port;
+        return this;
+    }
+    public Integer getPort() {
+        return this.port;
     }
 
 }
