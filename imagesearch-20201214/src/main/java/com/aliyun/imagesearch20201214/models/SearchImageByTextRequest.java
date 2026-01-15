@@ -34,6 +34,9 @@ public class SearchImageByTextRequest extends TeaModel {
     @NameInMap("Num")
     public Integer num;
 
+    @NameInMap("ScoreThreshold")
+    public String scoreThreshold;
+
     /**
      * <strong>example:</strong>
      * <p>0</p>
@@ -85,6 +88,14 @@ public class SearchImageByTextRequest extends TeaModel {
     }
     public Integer getNum() {
         return this.num;
+    }
+
+    public SearchImageByTextRequest setScoreThreshold(String scoreThreshold) {
+        this.scoreThreshold = scoreThreshold;
+        return this;
+    }
+    public String getScoreThreshold() {
+        return this.scoreThreshold;
     }
 
     public SearchImageByTextRequest setStart(Integer start) {

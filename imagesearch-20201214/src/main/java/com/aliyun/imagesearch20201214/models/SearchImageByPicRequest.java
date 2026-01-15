@@ -100,6 +100,9 @@ public class SearchImageByPicRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("ScoreThreshold")
+    public String scoreThreshold;
+
     /**
      * <p>The number of the image to return. Valid values: 0 to 499. Default value: 0.</p>
      * 
@@ -176,6 +179,14 @@ public class SearchImageByPicRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public SearchImageByPicRequest setScoreThreshold(String scoreThreshold) {
+        this.scoreThreshold = scoreThreshold;
+        return this;
+    }
+    public String getScoreThreshold() {
+        return this.scoreThreshold;
     }
 
     public SearchImageByPicRequest setStart(Integer start) {

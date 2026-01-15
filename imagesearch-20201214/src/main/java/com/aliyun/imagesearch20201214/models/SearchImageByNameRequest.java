@@ -74,6 +74,9 @@ public class SearchImageByNameRequest extends TeaModel {
     @NameInMap("ProductId")
     public String productId;
 
+    @NameInMap("ScoreThreshold")
+    public String scoreThreshold;
+
     /**
      * <p>The number of the image to return. Valid values: 0 to 499. Default value: 0.</p>
      * 
@@ -142,6 +145,14 @@ public class SearchImageByNameRequest extends TeaModel {
     }
     public String getProductId() {
         return this.productId;
+    }
+
+    public SearchImageByNameRequest setScoreThreshold(String scoreThreshold) {
+        this.scoreThreshold = scoreThreshold;
+        return this;
+    }
+    public String getScoreThreshold() {
+        return this.scoreThreshold;
     }
 
     public SearchImageByNameRequest setStart(Integer start) {
