@@ -79,6 +79,12 @@ public class ListNatIpsResponseBody extends TeaModel {
     }
 
     public static class ListNatIpsResponseBodyNatIps extends TeaModel {
+        /**
+         * <p>The IP prefix address range to which the queried NAT IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/28</p>
+         */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
 

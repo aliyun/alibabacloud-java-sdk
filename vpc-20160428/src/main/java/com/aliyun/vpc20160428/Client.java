@@ -9726,6 +9726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tags", request.tags);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelBandwidth)) {
+            query.put("TunnelBandwidth", request.tunnelBandwidth);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.tunnelOptionsSpecification)) {
@@ -21327,6 +21331,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BusinessStatus", request.businessStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
+            query.put("GatewayType", request.gatewayType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.includeReservationData)) {
             query.put("IncludeReservationData", request.includeReservationData);
         }
@@ -22921,7 +22929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query information about a specified Internet NAT gateway or Virtual Private Cloud (VPC) NAT gateway. In this topic, &quot;NAT gateway&quot; refers to both gateway types.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询NAT详情信息</p>
+     * <p>Queries information about a NAT gateway.</p>
      * 
      * @param request GetNatGatewayAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22980,7 +22988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query information about a specified Internet NAT gateway or Virtual Private Cloud (VPC) NAT gateway. In this topic, &quot;NAT gateway&quot; refers to both gateway types.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询NAT详情信息</p>
+     * <p>Queries information about a NAT gateway.</p>
      * 
      * @param request GetNatGatewayAttributeRequest
      * @return GetNatGatewayAttributeResponse
@@ -22988,6 +22996,162 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNatGatewayAttributeResponse getNatGatewayAttribute(GetNatGatewayAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNatGatewayAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Call GetNatIpAttribute to query the VPC NAT network to obtain information on each NAT IP address.</p>
+     * 
+     * @param request GetNatIpAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNatIpAttributeResponse
+     */
+    public GetNatIpAttributeResponse getNatIpAttributeWithOptions(GetNatIpAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natIpId)) {
+            query.put("NatIpId", request.natIpId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNatIpAttribute"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNatIpAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Call GetNatIpAttribute to query the VPC NAT network to obtain information on each NAT IP address.</p>
+     * 
+     * @param request GetNatIpAttributeRequest
+     * @return GetNatIpAttributeResponse
+     */
+    public GetNatIpAttributeResponse getNatIpAttribute(GetNatIpAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNatIpAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Call GetNatIpCidrAttribute to query the VPC NAT network to obtain information on each NAT IP cidr address.</p>
+     * 
+     * @param request GetNatIpCidrAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNatIpCidrAttributeResponse
+     */
+    public GetNatIpCidrAttributeResponse getNatIpCidrAttributeWithOptions(GetNatIpCidrAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natIpCidr)) {
+            query.put("NatIpCidr", request.natIpCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNatIpCidrAttribute"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNatIpCidrAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Call GetNatIpCidrAttribute to query the VPC NAT network to obtain information on each NAT IP cidr address.</p>
+     * 
+     * @param request GetNatIpCidrAttributeRequest
+     * @return GetNatIpCidrAttributeResponse
+     */
+    public GetNatIpCidrAttributeResponse getNatIpCidrAttribute(GetNatIpCidrAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNatIpCidrAttributeWithOptions(request, runtime);
     }
 
     /**

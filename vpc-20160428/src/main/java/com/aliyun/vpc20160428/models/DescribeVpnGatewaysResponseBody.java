@@ -421,6 +421,9 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("EniInstanceIds")
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayEniInstanceIds eniInstanceIds;
 
+        @NameInMap("GatewayType")
+        public String gatewayType;
+
         /**
          * <ul>
          * <li><p>If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the value of this parameter is the IP address of the VPN gateway, which can be used to create IPsec-VPN or SSL-VPN connections.</p>
@@ -718,6 +721,14 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayEniInstanceIds getEniInstanceIds() {
             return this.eniInstanceIds;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setGatewayType(String gatewayType) {
+            this.gatewayType = gatewayType;
+            return this;
+        }
+        public String getGatewayType() {
+            return this.gatewayType;
         }
 
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setInternetIp(String internetIp) {

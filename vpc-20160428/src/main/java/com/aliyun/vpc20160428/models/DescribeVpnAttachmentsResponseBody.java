@@ -222,6 +222,9 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         @NameInMap("TransitRouterName")
         public String transitRouterName;
 
+        @NameInMap("TunnelBandwidth")
+        public String tunnelBandwidth;
+
         public static DescribeVpnAttachmentsResponseBodyVpnAttachments build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpnAttachmentsResponseBodyVpnAttachments self = new DescribeVpnAttachmentsResponseBodyVpnAttachments();
             return TeaModel.build(map, self);
@@ -297,6 +300,14 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         }
         public String getTransitRouterName() {
             return this.transitRouterName;
+        }
+
+        public DescribeVpnAttachmentsResponseBodyVpnAttachments setTunnelBandwidth(String tunnelBandwidth) {
+            this.tunnelBandwidth = tunnelBandwidth;
+            return this;
+        }
+        public String getTunnelBandwidth() {
+            return this.tunnelBandwidth;
         }
 
     }

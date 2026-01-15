@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetNatGatewayAttributeResponseBody extends TeaModel {
+    /**
+     * <p>Access mode for reverse access to VPC NAT gateway.</p>
+     */
     @NameInMap("AccessMode")
     public GetNatGatewayAttributeResponseBodyAccessMode accessMode;
 
@@ -63,6 +66,16 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("EcsMetricEnabled")
     public Boolean ecsMetricEnabled;
 
+    /**
+     * <p>Whether to enable session log, with values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Session logging is enabled. </li>
+     * <li><strong>false</strong>: Session logging is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableSessionLog")
     public Boolean enableSessionLog;
 
@@ -93,6 +106,9 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("IpList")
     public java.util.List<GetNatGatewayAttributeResponseBodyIpList> ipList;
 
+    /**
+     * <p>Session log configuration information.</p>
+     */
     @NameInMap("LogDelivery")
     public GetNatGatewayAttributeResponseBodyLogDelivery logDelivery;
 
@@ -440,9 +456,28 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayAttributeResponseBodyAccessMode extends TeaModel {
+        /**
+         * <p>Access mode values:</p>
+         * <ul>
+         * <li><strong>route</strong>: Route mode.</li>
+         * <li><strong>tunnel</strong>: Tunnel mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>route</p>
+         */
         @NameInMap("ModeValue")
         public String modeValue;
 
+        /**
+         * <p>Tunnel mode type:</p>
+         * <ul>
+         * <li><strong>geneve</strong>: Geneve type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>geneve</p>
+         */
         @NameInMap("TunnelType")
         public String tunnelType;
 
@@ -741,15 +776,43 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayAttributeResponseBodyLogDelivery extends TeaModel {
+        /**
+         * <p>Error message for session log write failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogStoreNotExist: logstore session_log_test does not exist</p>
+         */
         @NameInMap("DeliverLogsErrorMessage")
         public String deliverLogsErrorMessage;
 
+        /**
+         * <p>Session log write status. Values:</p>
+         * <ul>
+         * <li><strong>Success</strong>: Success. </li>
+         * <li><strong>Failure</strong>: Failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Failure</p>
+         */
         @NameInMap("DeliveryStatus")
         public String deliveryStatus;
 
+        /**
+         * <p>Session log delivery destination type. Value: <strong>sls</strong>, Alibaba Cloud Log Service SLS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls</p>
+         */
         @NameInMap("LogDeliveryType")
         public String logDeliveryType;
 
+        /**
+         * <p>Destination address for session log writing</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:log:cn-hangzhou:0000:project/nat_session_log_project/logstore/session_log_test</p>
+         */
         @NameInMap("LogDestination")
         public String logDestination;
 

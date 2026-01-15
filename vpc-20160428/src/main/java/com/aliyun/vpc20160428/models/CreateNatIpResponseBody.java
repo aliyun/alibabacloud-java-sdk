@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNatIpResponseBody extends TeaModel {
     /**
+     * <p>The IPv4Prefix returned by the previous API is obsolete.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -29,6 +31,9 @@ public class CreateNatIpResponseBody extends TeaModel {
     @NameInMap("NatIpId")
     public String natIpId;
 
+    /**
+     * <p>The NatIp parameter that is returned after you create a NatIp. If you use IPv4Prefix to create a NatIp, the information about all NatIp is returned. We recommend that you use this parameter to obtain the information about a NatIp when you create a NatIp.</p>
+     */
     @NameInMap("NatIps")
     public java.util.List<CreateNatIpResponseBodyNatIps> natIps;
 
@@ -88,6 +93,8 @@ public class CreateNatIpResponseBody extends TeaModel {
 
     public static class CreateNatIpResponseBodyNatIps extends TeaModel {
         /**
+         * <p>The Ipv4Prefix of the created NatIpList list is returned when Ipv4Preix is created.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.128/28</p>
          * 
@@ -98,6 +105,8 @@ public class CreateNatIpResponseBody extends TeaModel {
         public String ipv4Prefix;
 
         /**
+         * <p>Returns the NatIp address of the created NatIpList list when Ipv4Preix is created.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.2.128</p>
          */
@@ -105,6 +114,8 @@ public class CreateNatIpResponseBody extends TeaModel {
         public String natIp;
 
         /**
+         * <p>Returns the NatIpId of the created NatIpList list when Ipv4Preix is created.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpcnatip-xxxxxxxx</p>
          */

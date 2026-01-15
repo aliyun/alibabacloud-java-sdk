@@ -92,9 +92,28 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode extends TeaModel {
+        /**
+         * <p>Access mode, with values:</p>
+         * <ul>
+         * <li><strong>route</strong>: Route mode.</li>
+         * <li><strong>tunnel</strong>: Tunnel mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>route</p>
+         */
         @NameInMap("ModeValue")
         public String modeValue;
 
+        /**
+         * <p>Tunnel mode type:</p>
+         * <ul>
+         * <li><strong>geneve</strong>: Geneve type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>geneve</p>
+         */
         @NameInMap("TunnelType")
         public String tunnelType;
 
@@ -282,6 +301,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList extends TeaModel {
+        /**
+         * <p>NAT IP prefix address range</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/28</p>
+         */
         @NameInMap("IpPrefix")
         public String ipPrefix;
 
@@ -548,6 +573,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway extends TeaModel {
+        /**
+         * <p>Access mode for reverse access to VPC NAT gateway.</p>
+         */
         @NameInMap("AccessMode")
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode accessMode;
 
@@ -637,6 +665,16 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("EipBindMode")
         public String eipBindMode;
 
+        /**
+         * <p>Whether to enable session logging, with values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Session logging is enabled. </li>
+         * <li><strong>false</strong>: Session logging is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableSessionLog")
         public String enableSessionLog;
 
@@ -702,6 +740,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("IpLists")
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists ipLists;
 
+        /**
+         * <p>List of NAT IP prefix address segments.</p>
+         */
         @NameInMap("IpPrefixList")
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList ipPrefixList;
 

@@ -313,6 +313,9 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<CreateVpnAttachmentRequestTags> tags;
 
+    @NameInMap("TunnelBandwidth")
+    public String tunnelBandwidth;
+
     /**
      * <p>The tunnel configurations.</p>
      * <ul>
@@ -513,6 +516,14 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     }
     public java.util.List<CreateVpnAttachmentRequestTags> getTags() {
         return this.tags;
+    }
+
+    public CreateVpnAttachmentRequest setTunnelBandwidth(String tunnelBandwidth) {
+        this.tunnelBandwidth = tunnelBandwidth;
+        return this;
+    }
+    public String getTunnelBandwidth() {
+        return this.tunnelBandwidth;
     }
 
     public CreateVpnAttachmentRequest setTunnelOptionsSpecification(java.util.List<CreateVpnAttachmentRequestTunnelOptionsSpecification> tunnelOptionsSpecification) {

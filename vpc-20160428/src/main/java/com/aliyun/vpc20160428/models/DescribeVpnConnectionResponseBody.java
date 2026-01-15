@@ -273,6 +273,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("TransitRouterName")
     public String transitRouterName;
 
+    @NameInMap("TunnelBandwidth")
+    public String tunnelBandwidth;
+
     /**
      * <p>The tunnel configurations of the IPsec-VPN connection.</p>
      * <p>Parameters in <strong>TunnelOptionsSpecification</strong> are returned only if you query an IPsec-VPN connection in dual-tunnel mode.</p>
@@ -523,6 +526,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
     public String getTransitRouterName() {
         return this.transitRouterName;
+    }
+
+    public DescribeVpnConnectionResponseBody setTunnelBandwidth(String tunnelBandwidth) {
+        this.tunnelBandwidth = tunnelBandwidth;
+        return this;
+    }
+    public String getTunnelBandwidth() {
+        return this.tunnelBandwidth;
     }
 
     public DescribeVpnConnectionResponseBody setTunnelOptionsSpecification(DescribeVpnConnectionResponseBodyTunnelOptionsSpecification tunnelOptionsSpecification) {

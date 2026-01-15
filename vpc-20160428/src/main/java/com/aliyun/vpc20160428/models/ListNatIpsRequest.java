@@ -31,12 +31,20 @@ public class ListNatIpsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The enumeration of the fields used to describe the source of the NatIp. Prefix indicates the NatIp that belongs to the IPv4Prefix. The value cidr indicates isolated NatIp. The value control indicates all NatIp.</p>
+     * 
      * <strong>example:</strong>
      * <p>cidr</p>
      */
     @NameInMap("IpOrigin")
     public String ipOrigin;
 
+    /**
+     * <p>The IP prefix address range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/28</p>
+     */
     @NameInMap("Ipv4Prefix")
     public String ipv4Prefix;
 

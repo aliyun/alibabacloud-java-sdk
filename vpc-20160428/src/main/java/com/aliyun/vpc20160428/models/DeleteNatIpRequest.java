@@ -30,9 +30,21 @@ public class DeleteNatIpRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The IP prefix address to be deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/28</p>
+     */
     @NameInMap("Ipv4Prefix")
     public String ipv4Prefix;
 
+    /**
+     * <p>The ID of the NAT gateway instance to which the IP prefix to be deleted belongs. Required when deleting an IP prefix.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-gw8v16wgvtq26vh59****</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 

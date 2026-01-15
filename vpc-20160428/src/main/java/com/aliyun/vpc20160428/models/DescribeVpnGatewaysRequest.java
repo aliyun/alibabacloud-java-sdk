@@ -17,6 +17,9 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
+    @NameInMap("GatewayType")
+    public String gatewayType;
+
     /**
      * <p>Specifies whether to return information about pending orders. Valid values:</p>
      * <ul>
@@ -132,6 +135,14 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     }
     public String getBusinessStatus() {
         return this.businessStatus;
+    }
+
+    public DescribeVpnGatewaysRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public DescribeVpnGatewaysRequest setIncludeReservationData(Boolean includeReservationData) {

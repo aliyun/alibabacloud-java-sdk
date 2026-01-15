@@ -17,6 +17,16 @@ public class CreateForwardEntryRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Indicates whether to perform a dry run of the request. Values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Sends a check request without creating a DNAT entry. The checks include whether the AccessKey is valid, the RAM user\&quot;s authorization status, and if all required parameters are filled out. If any check fails, the corresponding error is returned. If all checks pass, an error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): Sends a normal request. After passing the checks, it returns a 2xx HTTP status code and creates a DNAT entry.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -127,14 +137,14 @@ public class CreateForwardEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to remove limits on the port range. Valid values:</p>
+     * <p>Whether to enable port breakthrough, with values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
-     * </ul>
-     * <blockquote>
-     * <p> If a DNAT entry and an SNAT entry have the same public IP address, ou must specify a port that is larger that 1024, and set <strong>PortBreak</strong> to <strong>true</strong>.</p>
+     * <li><strong>true</strong>: Enable port breakthrough. </li>
+     * <li><strong>false</strong> (default): Do not enable port breakthrough.<blockquote>
+     * <p>When both DNAT and SNAT entries use the same public IP address, if you need to configure a port number greater than 1024, you must set <strong>PortBreak</strong> to <strong>true</strong>.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>

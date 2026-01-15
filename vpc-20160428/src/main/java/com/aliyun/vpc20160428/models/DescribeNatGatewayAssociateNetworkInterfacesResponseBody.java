@@ -237,6 +237,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>VPC ID of the service resource</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1di7uewzmtvfuq8****</p>
+         */
         @NameInMap("ResourceVpcId")
         public String resourceVpcId;
 

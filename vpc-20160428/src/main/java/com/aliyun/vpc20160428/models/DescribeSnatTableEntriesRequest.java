@@ -16,6 +16,9 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The ID of the elastic network interface to be queried.</p>
+     */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
 

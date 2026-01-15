@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateNatGatewayShrinkRequest extends TeaModel {
     /**
      * <p>The access mode for reverse access to the VPC NAT gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MULTI_BINDED</p>
      */
     @NameInMap("AccessMode")
     public String accessModeShrink;
@@ -102,6 +105,12 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>Create an IP prefix address segment for batch creation of NAT IPs. Please use the reserved and unallocated network segments in the VSwitch where the NAT is located.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/28</p>
+     */
     @NameInMap("Ipv4Prefix")
     public String ipv4Prefix;
 
@@ -116,6 +125,12 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The private IP address occupied by the NAT gateway. Please use an unassigned IP from the subnet where the NAT is located. If left empty, an IP address will be randomly assigned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.x</p>
+     */
     @NameInMap("NatIp")
     public String natIp;
 
@@ -158,6 +173,9 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
 
     /**
      * <p>PrivateLink is not supported by default. If you set the value to true, PrivateLink is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("PrivateLinkEnabled")
     public Boolean privateLinkEnabled;
