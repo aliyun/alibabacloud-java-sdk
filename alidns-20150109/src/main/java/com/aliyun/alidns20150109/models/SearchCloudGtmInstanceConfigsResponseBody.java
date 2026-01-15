@@ -537,6 +537,13 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String configId;
 
         /**
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
+        @NameInMap("ConfigLoggingSwitchStatus")
+        public String configLoggingSwitchStatus;
+
+        /**
          * <p>Domain instance creation time.</p>
          * 
          * <strong>example:</strong>
@@ -749,6 +756,14 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         }
         public String getConfigId() {
             return this.configId;
+        }
+
+        public SearchCloudGtmInstanceConfigsResponseBodyInstanceConfigsInstanceConfig setConfigLoggingSwitchStatus(String configLoggingSwitchStatus) {
+            this.configLoggingSwitchStatus = configLoggingSwitchStatus;
+            return this;
+        }
+        public String getConfigLoggingSwitchStatus() {
+            return this.configLoggingSwitchStatus;
         }
 
         public SearchCloudGtmInstanceConfigsResponseBodyInstanceConfigsInstanceConfig setCreateTime(String createTime) {

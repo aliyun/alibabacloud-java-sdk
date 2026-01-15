@@ -154,6 +154,9 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         @NameInMap("DnsMsgId")
         public String dnsMsgId;
 
+        @NameInMap("Flags")
+        public String flags;
+
         /**
          * <p>Parse timestamp.</p>
          * 
@@ -179,6 +182,9 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
+        @NameInMap("QueryFlags")
+        public String queryFlags;
+
         /**
          * <p>The domain name for which you want to query Domain Name System (DNS) records.</p>
          * 
@@ -196,6 +202,9 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
          */
         @NameInMap("QueryType")
         public String queryType;
+
+        @NameInMap("ResponseTimestamp")
+        public String responseTimestamp;
 
         /**
          * <p>Parse response time.</p>
@@ -270,6 +279,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             return this.dnsMsgId;
         }
 
+        public DescribeInternetDnsLogsResponseBodyLogsLog setFlags(String flags) {
+            this.flags = flags;
+            return this;
+        }
+        public String getFlags() {
+            return this.flags;
+        }
+
         public DescribeInternetDnsLogsResponseBodyLogsLog setLogTime(Long logTime) {
             this.logTime = logTime;
             return this;
@@ -286,6 +303,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             return this.protocol;
         }
 
+        public DescribeInternetDnsLogsResponseBodyLogsLog setQueryFlags(String queryFlags) {
+            this.queryFlags = queryFlags;
+            return this;
+        }
+        public String getQueryFlags() {
+            return this.queryFlags;
+        }
+
         public DescribeInternetDnsLogsResponseBodyLogsLog setQueryName(String queryName) {
             this.queryName = queryName;
             return this;
@@ -300,6 +325,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
         public String getQueryType() {
             return this.queryType;
+        }
+
+        public DescribeInternetDnsLogsResponseBodyLogsLog setResponseTimestamp(String responseTimestamp) {
+            this.responseTimestamp = responseTimestamp;
+            return this;
+        }
+        public String getResponseTimestamp() {
+            return this.responseTimestamp;
         }
 
         public DescribeInternetDnsLogsResponseBodyLogsLog setRt(Integer rt) {

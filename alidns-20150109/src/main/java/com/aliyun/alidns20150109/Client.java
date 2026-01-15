@@ -3013,6 +3013,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询全局流量管理告警配置</p>
+     * 
      * @param request DescribeCloudGtmGlobalAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudGtmGlobalAlertResponse
@@ -3046,6 +3049,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询全局流量管理告警配置</p>
+     * 
      * @param request DescribeCloudGtmGlobalAlertRequest
      * @return DescribeCloudGtmGlobalAlertResponse
      */
@@ -11514,6 +11520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新全局流量管理告警设置</p>
+     * 
      * @param tmpReq UpdateCloudGtmGlobalAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCloudGtmGlobalAlertResponse
@@ -11565,6 +11574,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新全局流量管理告警设置</p>
+     * 
      * @param request UpdateCloudGtmGlobalAlertRequest
      * @return UpdateCloudGtmGlobalAlertResponse
      */

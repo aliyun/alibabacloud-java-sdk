@@ -131,6 +131,13 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         @NameInMap("SmsNotice")
         public Boolean smsNotice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Threshold")
+        public Integer threshold;
+
         public static UpdateCloudGtmGlobalAlertRequestAlertConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateCloudGtmGlobalAlertRequestAlertConfig self = new UpdateCloudGtmGlobalAlertRequestAlertConfig();
             return TeaModel.build(map, self);
@@ -166,6 +173,14 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         }
         public Boolean getSmsNotice() {
             return this.smsNotice;
+        }
+
+        public UpdateCloudGtmGlobalAlertRequestAlertConfig setThreshold(Integer threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Integer getThreshold() {
+            return this.threshold;
         }
 
     }

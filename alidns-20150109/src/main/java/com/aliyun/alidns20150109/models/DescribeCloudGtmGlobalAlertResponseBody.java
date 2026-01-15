@@ -110,6 +110,13 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
         @NameInMap("SmsNotice")
         public Boolean smsNotice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
+        @NameInMap("Threshold")
+        public Integer threshold;
+
         public static DescribeCloudGtmGlobalAlertResponseBodyAlertConfigAlertConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeCloudGtmGlobalAlertResponseBodyAlertConfigAlertConfig self = new DescribeCloudGtmGlobalAlertResponseBodyAlertConfigAlertConfig();
             return TeaModel.build(map, self);
@@ -145,6 +152,14 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
         }
         public Boolean getSmsNotice() {
             return this.smsNotice;
+        }
+
+        public DescribeCloudGtmGlobalAlertResponseBodyAlertConfigAlertConfig setThreshold(Integer threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Integer getThreshold() {
+            return this.threshold;
         }
 
     }

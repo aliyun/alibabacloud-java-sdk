@@ -535,6 +535,13 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         public String configId;
 
         /**
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
+        @NameInMap("ConfigLoggingSwitchStatus")
+        public String configLoggingSwitchStatus;
+
+        /**
          * <p>Instance configuration creation time.</p>
          * 
          * <strong>example:</strong>
@@ -747,6 +754,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         }
         public String getConfigId() {
             return this.configId;
+        }
+
+        public ListCloudGtmInstanceConfigsResponseBodyInstanceConfigsInstanceConfig setConfigLoggingSwitchStatus(String configLoggingSwitchStatus) {
+            this.configLoggingSwitchStatus = configLoggingSwitchStatus;
+            return this;
+        }
+        public String getConfigLoggingSwitchStatus() {
+            return this.configLoggingSwitchStatus;
         }
 
         public ListCloudGtmInstanceConfigsResponseBodyInstanceConfigsInstanceConfig setCreateTime(String createTime) {
