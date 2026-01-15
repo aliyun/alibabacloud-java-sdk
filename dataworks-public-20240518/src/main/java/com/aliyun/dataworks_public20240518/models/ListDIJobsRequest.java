@@ -76,6 +76,12 @@ public class ListDIJobsRequest extends TeaModel {
     @NameInMap("SourceDataSourceType")
     public String sourceDataSourceType;
 
+    /**
+     * <p>The task configuration specification type. Valid values: FILESPEC, CLASSIC, ALL. FILESPEC: New-style task based on structured filespec; CLASSIC: Task using traditional configuration mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FILESPEC</p>
+     */
     @NameInMap("SpecType")
     public String specType;
 
