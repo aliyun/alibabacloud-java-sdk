@@ -3,22 +3,20 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
+public class DeleteClusterNodePoolResponseBody extends TeaModel {
     /**
-     * <p>ID of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static InitializeENSECKServiceRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        InitializeENSECKServiceRoleResponseBody self = new InitializeENSECKServiceRoleResponseBody();
+    public static DeleteClusterNodePoolResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteClusterNodePoolResponseBody self = new DeleteClusterNodePoolResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public InitializeENSECKServiceRoleResponseBody setRequestId(String requestId) {
+    public DeleteClusterNodePoolResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
