@@ -344,6 +344,9 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetOssCheckTaskInfoResponseBodyConfig extends TeaModel {
+        @NameInMap("BucketPrefixFilterConfig")
+        public java.util.Map<String, ConfigBucketPrefixFilterConfigValue> bucketPrefixFilterConfig;
+
         /**
          * <strong>example:</strong>
          * <p>188</p>
@@ -501,6 +504,14 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public static GetOssCheckTaskInfoResponseBodyConfig build(java.util.Map<String, ?> map) throws Exception {
             GetOssCheckTaskInfoResponseBodyConfig self = new GetOssCheckTaskInfoResponseBodyConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetOssCheckTaskInfoResponseBodyConfig setBucketPrefixFilterConfig(java.util.Map<String, ConfigBucketPrefixFilterConfigValue> bucketPrefixFilterConfig) {
+            this.bucketPrefixFilterConfig = bucketPrefixFilterConfig;
+            return this;
+        }
+        public java.util.Map<String, ConfigBucketPrefixFilterConfigValue> getBucketPrefixFilterConfig() {
+            return this.bucketPrefixFilterConfig;
         }
 
         public GetOssCheckTaskInfoResponseBodyConfig setCallbackId(Long callbackId) {

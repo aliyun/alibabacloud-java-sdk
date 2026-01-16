@@ -4,6 +4,9 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class CreatePreCheckRequest extends TeaModel {
+    @NameInMap("BucketPrefixFilterConfig")
+    public String bucketPrefixFilterConfig;
+
     /**
      * <p>Buckets.</p>
      * 
@@ -133,6 +136,14 @@ public class CreatePreCheckRequest extends TeaModel {
     public static CreatePreCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePreCheckRequest self = new CreatePreCheckRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePreCheckRequest setBucketPrefixFilterConfig(String bucketPrefixFilterConfig) {
+        this.bucketPrefixFilterConfig = bucketPrefixFilterConfig;
+        return this;
+    }
+    public String getBucketPrefixFilterConfig() {
+        return this.bucketPrefixFilterConfig;
     }
 
     public CreatePreCheckRequest setBuckets(String buckets) {

@@ -4,6 +4,9 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class CreatStockOssCheckTaskRequest extends TeaModel {
+    @NameInMap("BucketPrefixFilterConfig")
+    public String bucketPrefixFilterConfig;
+
     /**
      * <p>OSS buckets</p>
      * 
@@ -259,6 +262,14 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public static CreatStockOssCheckTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatStockOssCheckTaskRequest self = new CreatStockOssCheckTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatStockOssCheckTaskRequest setBucketPrefixFilterConfig(String bucketPrefixFilterConfig) {
+        this.bucketPrefixFilterConfig = bucketPrefixFilterConfig;
+        return this;
+    }
+    public String getBucketPrefixFilterConfig() {
+        return this.bucketPrefixFilterConfig;
     }
 
     public CreatStockOssCheckTaskRequest setBuckets(String buckets) {

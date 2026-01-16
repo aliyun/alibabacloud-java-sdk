@@ -505,6 +505,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatStockOssCheckTaskResponse creatStockOssCheckTaskWithOptions(CreatStockOssCheckTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketPrefixFilterConfig)) {
+            query.put("BucketPrefixFilterConfig", request.bucketPrefixFilterConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.buckets)) {
             query.put("Buckets", request.buckets);
         }
@@ -842,6 +846,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketPrefixFilterConfig)) {
+            body.put("BucketPrefixFilterConfig", request.bucketPrefixFilterConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.buckets)) {
             body.put("Buckets", request.buckets);
         }
