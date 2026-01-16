@@ -11,6 +11,9 @@ public class LogConfig extends TeaModel {
     @NameInMap("enableInstanceMetrics")
     public Boolean enableInstanceMetrics;
 
+    @NameInMap("enableLlmMetrics")
+    public Boolean enableLlmMetrics;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,6 +53,14 @@ public class LogConfig extends TeaModel {
     }
     public Boolean getEnableInstanceMetrics() {
         return this.enableInstanceMetrics;
+    }
+
+    public LogConfig setEnableLlmMetrics(Boolean enableLlmMetrics) {
+        this.enableLlmMetrics = enableLlmMetrics;
+        return this;
+    }
+    public Boolean getEnableLlmMetrics() {
+        return this.enableLlmMetrics;
     }
 
     public LogConfig setEnableRequestMetrics(Boolean enableRequestMetrics) {

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>fc20230330</artifactId>
-  <version>4.6.6</version>
+  <version>4.6.7</version>
   <packaging>jar</packaging>
   <name>fc20230330</name>
   <description>Alibaba Cloud Function Compute (20230330) SDK for Java
@@ -96,6 +96,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>
