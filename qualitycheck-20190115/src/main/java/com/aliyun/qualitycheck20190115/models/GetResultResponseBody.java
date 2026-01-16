@@ -1589,11 +1589,32 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>turn</p>
+         */
+        @NameInMap("ArtificialRule")
+        public String artificialRule;
+
         @NameInMap("Conditions")
         public GetResultResponseBodyDataResultInfoHitResultHitResultConditions conditions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("FinalHitResult")
+        public String finalHitResult;
+
         @NameInMap("Hits")
         public GetResultResponseBodyDataResultInfoHitResultHitResultHits hits;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("MachineHitResult")
+        public String machineHitResult;
 
         @NameInMap("Name")
         public String name;
@@ -1637,6 +1658,14 @@ public class GetResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetResultResponseBodyDataResultInfoHitResultHitResult setArtificialRule(String artificialRule) {
+            this.artificialRule = artificialRule;
+            return this;
+        }
+        public String getArtificialRule() {
+            return this.artificialRule;
+        }
+
         public GetResultResponseBodyDataResultInfoHitResultHitResult setConditions(GetResultResponseBodyDataResultInfoHitResultHitResultConditions conditions) {
             this.conditions = conditions;
             return this;
@@ -1645,12 +1674,28 @@ public class GetResultResponseBody extends TeaModel {
             return this.conditions;
         }
 
+        public GetResultResponseBodyDataResultInfoHitResultHitResult setFinalHitResult(String finalHitResult) {
+            this.finalHitResult = finalHitResult;
+            return this;
+        }
+        public String getFinalHitResult() {
+            return this.finalHitResult;
+        }
+
         public GetResultResponseBodyDataResultInfoHitResultHitResult setHits(GetResultResponseBodyDataResultInfoHitResultHitResultHits hits) {
             this.hits = hits;
             return this;
         }
         public GetResultResponseBodyDataResultInfoHitResultHitResultHits getHits() {
             return this.hits;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResult setMachineHitResult(String machineHitResult) {
+            this.machineHitResult = machineHitResult;
+            return this;
+        }
+        public String getMachineHitResult() {
+            return this.machineHitResult;
         }
 
         public GetResultResponseBodyDataResultInfoHitResultHitResult setName(String name) {

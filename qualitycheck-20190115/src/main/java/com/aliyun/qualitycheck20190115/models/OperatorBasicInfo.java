@@ -86,6 +86,58 @@ public class OperatorBasicInfo extends TeaModel {
         return this.userGroup;
     }
 
+    public static class OperatorBasicInfoParamDimensions extends TeaModel {
+        @NameInMap("Desc")
+        public String desc;
+
+        @NameInMap("Dimension")
+        public String dimension;
+
+        @NameInMap("ExcludeCondition")
+        public String excludeCondition;
+
+        @NameInMap("IncludeCondition")
+        public String includeCondition;
+
+        public static OperatorBasicInfoParamDimensions build(java.util.Map<String, ?> map) throws Exception {
+            OperatorBasicInfoParamDimensions self = new OperatorBasicInfoParamDimensions();
+            return TeaModel.build(map, self);
+        }
+
+        public OperatorBasicInfoParamDimensions setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
+        public OperatorBasicInfoParamDimensions setDimension(String dimension) {
+            this.dimension = dimension;
+            return this;
+        }
+        public String getDimension() {
+            return this.dimension;
+        }
+
+        public OperatorBasicInfoParamDimensions setExcludeCondition(String excludeCondition) {
+            this.excludeCondition = excludeCondition;
+            return this;
+        }
+        public String getExcludeCondition() {
+            return this.excludeCondition;
+        }
+
+        public OperatorBasicInfoParamDimensions setIncludeCondition(String includeCondition) {
+            this.includeCondition = includeCondition;
+            return this;
+        }
+        public String getIncludeCondition() {
+            return this.includeCondition;
+        }
+
+    }
+
     public static class OperatorBasicInfoParam extends TeaModel {
         @NameInMap("AnswerThreshold")
         public String answerThreshold;
@@ -129,6 +181,9 @@ public class OperatorBasicInfo extends TeaModel {
         @NameInMap("Different_role")
         public Boolean differentRole;
 
+        @NameInMap("Dimensions")
+        public java.util.List<OperatorBasicInfoParamDimensions> dimensions;
+
         @NameInMap("EndType")
         public String endType;
 
@@ -140,6 +195,9 @@ public class OperatorBasicInfo extends TeaModel {
 
         @NameInMap("From_end")
         public Boolean fromEnd;
+
+        @NameInMap("HitCondition")
+        public String hitCondition;
 
         @NameInMap("Hit_time")
         public Integer hitTime;
@@ -177,8 +235,14 @@ public class OperatorBasicInfo extends TeaModel {
         @NameInMap("KnowledgeTargetType")
         public Integer knowledgeTargetType;
 
+        @NameInMap("Knowledges")
+        public String knowledges;
+
         @NameInMap("LgfSentences")
         public java.util.List<String> lgfSentences;
+
+        @NameInMap("LlmModelCode")
+        public String llmModelCode;
 
         @NameInMap("MaxEmotionChangeValue")
         public Integer maxEmotionChangeValue;
@@ -215,6 +279,9 @@ public class OperatorBasicInfo extends TeaModel {
 
         @NameInMap("RoleId")
         public Integer roleId;
+
+        @NameInMap("SceneName")
+        public String sceneName;
 
         @NameInMap("Score")
         public Integer score;
@@ -363,6 +430,14 @@ public class OperatorBasicInfo extends TeaModel {
             return this.differentRole;
         }
 
+        public OperatorBasicInfoParam setDimensions(java.util.List<OperatorBasicInfoParamDimensions> dimensions) {
+            this.dimensions = dimensions;
+            return this;
+        }
+        public java.util.List<OperatorBasicInfoParamDimensions> getDimensions() {
+            return this.dimensions;
+        }
+
         public OperatorBasicInfoParam setEndType(String endType) {
             this.endType = endType;
             return this;
@@ -393,6 +468,14 @@ public class OperatorBasicInfo extends TeaModel {
         }
         public Boolean getFromEnd() {
             return this.fromEnd;
+        }
+
+        public OperatorBasicInfoParam setHitCondition(String hitCondition) {
+            this.hitCondition = hitCondition;
+            return this;
+        }
+        public String getHitCondition() {
+            return this.hitCondition;
         }
 
         public OperatorBasicInfoParam setHitTime(Integer hitTime) {
@@ -491,12 +574,28 @@ public class OperatorBasicInfo extends TeaModel {
             return this.knowledgeTargetType;
         }
 
+        public OperatorBasicInfoParam setKnowledges(String knowledges) {
+            this.knowledges = knowledges;
+            return this;
+        }
+        public String getKnowledges() {
+            return this.knowledges;
+        }
+
         public OperatorBasicInfoParam setLgfSentences(java.util.List<String> lgfSentences) {
             this.lgfSentences = lgfSentences;
             return this;
         }
         public java.util.List<String> getLgfSentences() {
             return this.lgfSentences;
+        }
+
+        public OperatorBasicInfoParam setLlmModelCode(String llmModelCode) {
+            this.llmModelCode = llmModelCode;
+            return this;
+        }
+        public String getLlmModelCode() {
+            return this.llmModelCode;
         }
 
         public OperatorBasicInfoParam setMaxEmotionChangeValue(Integer maxEmotionChangeValue) {
@@ -593,6 +692,14 @@ public class OperatorBasicInfo extends TeaModel {
         }
         public Integer getRoleId() {
             return this.roleId;
+        }
+
+        public OperatorBasicInfoParam setSceneName(String sceneName) {
+            this.sceneName = sceneName;
+            return this;
+        }
+        public String getSceneName() {
+            return this.sceneName;
         }
 
         public OperatorBasicInfoParam setScore(Integer score) {

@@ -1861,6 +1861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取质检结果</p>
+     * 
      * @param request GetResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResultResponse
@@ -1894,6 +1897,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取质检结果</p>
+     * 
      * @param request GetResultRequest
      * @return GetResultResponse
      */
