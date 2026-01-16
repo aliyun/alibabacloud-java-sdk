@@ -26,6 +26,9 @@ public class CreateSlrRoleRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("ServiceName")
+    public String serviceName;
+
     /**
      * <p>This parameter is deprecated.</p>
      * 
@@ -54,6 +57,14 @@ public class CreateSlrRoleRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public CreateSlrRoleRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
     }
 
     public CreateSlrRoleRequest setSourceIp(String sourceIp) {

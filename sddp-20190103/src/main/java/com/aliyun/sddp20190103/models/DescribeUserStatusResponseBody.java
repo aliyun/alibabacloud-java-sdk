@@ -50,6 +50,9 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        @NameInMap("AssetRoleAuthed")
+        public Boolean assetRoleAuthed;
+
         /**
          * <p>Indicates whether the SQL Explorer feature can be disabled. Valid values:</p>
          * <ul>
@@ -268,6 +271,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         }
         public String getAccessKeyId() {
             return this.accessKeyId;
+        }
+
+        public DescribeUserStatusResponseBodyUserStatus setAssetRoleAuthed(Boolean assetRoleAuthed) {
+            this.assetRoleAuthed = assetRoleAuthed;
+            return this;
+        }
+        public Boolean getAssetRoleAuthed() {
+            return this.assetRoleAuthed;
         }
 
         public DescribeUserStatusResponseBodyUserStatus setAuditClosable(Boolean auditClosable) {
