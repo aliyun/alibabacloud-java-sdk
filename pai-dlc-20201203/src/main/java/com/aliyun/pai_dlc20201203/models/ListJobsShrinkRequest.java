@@ -47,6 +47,9 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("DisplayNameSearchMode")
     public String displayNameSearchMode;
 
+    @NameInMap("EnableAssignNode")
+    public String enableAssignNode;
+
     /**
      * <p>The end time of the query. Use the job creation time to filter data. The default value is the current time.</p>
      * 
@@ -64,6 +67,9 @@ public class ListJobsShrinkRequest extends TeaModel {
      */
     @NameInMap("FromAllWorkspaces")
     public Boolean fromAllWorkspaces;
+
+    @NameInMap("ImageSearch")
+    public String imageSearch;
 
     /**
      * <p>The job ID. Fuzzy query is supported. The name is case-insensitive. Wildcards are not supported. The default value null indicates any job ID.</p>
@@ -92,6 +98,15 @@ public class ListJobsShrinkRequest extends TeaModel {
      */
     @NameInMap("JobType")
     public String jobType;
+
+    @NameInMap("NumericRangeField")
+    public String numericRangeField;
+
+    @NameInMap("NumericRangeMax")
+    public Long numericRangeMax;
+
+    @NameInMap("NumericRangeMin")
+    public Long numericRangeMin;
 
     /**
      * <p>The sorting order. Valid values:</p>
@@ -161,6 +176,9 @@ public class ListJobsShrinkRequest extends TeaModel {
      */
     @NameInMap("PipelineId")
     public String pipelineId;
+
+    @NameInMap("ReasonSearch")
+    public String reasonSearch;
 
     /**
      * <p>The resource group ID. For information about how to obtain the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quota</a>.</p>
@@ -244,6 +262,12 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("Tags")
     public String tagsShrink;
 
+    @NameInMap("TimeRangeField")
+    public String timeRangeField;
+
+    @NameInMap("UserCommandSearch")
+    public String userCommandSearch;
+
     /**
      * <p>The user ID used to filter jobs.</p>
      * 
@@ -316,6 +340,14 @@ public class ListJobsShrinkRequest extends TeaModel {
         return this.displayNameSearchMode;
     }
 
+    public ListJobsShrinkRequest setEnableAssignNode(String enableAssignNode) {
+        this.enableAssignNode = enableAssignNode;
+        return this;
+    }
+    public String getEnableAssignNode() {
+        return this.enableAssignNode;
+    }
+
     public ListJobsShrinkRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -330,6 +362,14 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public Boolean getFromAllWorkspaces() {
         return this.fromAllWorkspaces;
+    }
+
+    public ListJobsShrinkRequest setImageSearch(String imageSearch) {
+        this.imageSearch = imageSearch;
+        return this;
+    }
+    public String getImageSearch() {
+        return this.imageSearch;
     }
 
     public ListJobsShrinkRequest setJobId(String jobId) {
@@ -354,6 +394,30 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getJobType() {
         return this.jobType;
+    }
+
+    public ListJobsShrinkRequest setNumericRangeField(String numericRangeField) {
+        this.numericRangeField = numericRangeField;
+        return this;
+    }
+    public String getNumericRangeField() {
+        return this.numericRangeField;
+    }
+
+    public ListJobsShrinkRequest setNumericRangeMax(Long numericRangeMax) {
+        this.numericRangeMax = numericRangeMax;
+        return this;
+    }
+    public Long getNumericRangeMax() {
+        return this.numericRangeMax;
+    }
+
+    public ListJobsShrinkRequest setNumericRangeMin(Long numericRangeMin) {
+        this.numericRangeMin = numericRangeMin;
+        return this;
+    }
+    public Long getNumericRangeMin() {
+        return this.numericRangeMin;
     }
 
     public ListJobsShrinkRequest setOrder(String order) {
@@ -402,6 +466,14 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getPipelineId() {
         return this.pipelineId;
+    }
+
+    public ListJobsShrinkRequest setReasonSearch(String reasonSearch) {
+        this.reasonSearch = reasonSearch;
+        return this;
+    }
+    public String getReasonSearch() {
+        return this.reasonSearch;
     }
 
     public ListJobsShrinkRequest setResourceId(String resourceId) {
@@ -458,6 +530,22 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getTagsShrink() {
         return this.tagsShrink;
+    }
+
+    public ListJobsShrinkRequest setTimeRangeField(String timeRangeField) {
+        this.timeRangeField = timeRangeField;
+        return this;
+    }
+    public String getTimeRangeField() {
+        return this.timeRangeField;
+    }
+
+    public ListJobsShrinkRequest setUserCommandSearch(String userCommandSearch) {
+        this.userCommandSearch = userCommandSearch;
+        return this;
+    }
+    public String getUserCommandSearch() {
+        return this.userCommandSearch;
     }
 
     public ListJobsShrinkRequest setUserIdForFilter(String userIdForFilter) {

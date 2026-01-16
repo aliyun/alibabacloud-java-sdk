@@ -1231,12 +1231,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DisplayNameSearchMode", request.displayNameSearchMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAssignNode)) {
+            query.put("EnableAssignNode", request.enableAssignNode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fromAllWorkspaces)) {
             query.put("FromAllWorkspaces", request.fromAllWorkspaces);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageSearch)) {
+            query.put("ImageSearch", request.imageSearch);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
@@ -1249,6 +1257,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
             query.put("JobType", request.jobType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.numericRangeField)) {
+            query.put("NumericRangeField", request.numericRangeField);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.numericRangeMax)) {
+            query.put("NumericRangeMax", request.numericRangeMax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.numericRangeMin)) {
+            query.put("NumericRangeMin", request.numericRangeMin);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
@@ -1273,6 +1293,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pipelineId)) {
             query.put("PipelineId", request.pipelineId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reasonSearch)) {
+            query.put("ReasonSearch", request.reasonSearch);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
@@ -1301,6 +1325,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
             query.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRangeField)) {
+            query.put("TimeRangeField", request.timeRangeField);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userCommandSearch)) {
+            query.put("UserCommandSearch", request.userCommandSearch);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userIdForFilter)) {

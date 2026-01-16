@@ -47,6 +47,9 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("DisplayNameSearchMode")
     public String displayNameSearchMode;
 
+    @NameInMap("EnableAssignNode")
+    public String enableAssignNode;
+
     /**
      * <p>The end time of the query. Use the job creation time to filter data. The default value is the current time.</p>
      * 
@@ -64,6 +67,9 @@ public class ListJobsRequest extends TeaModel {
      */
     @NameInMap("FromAllWorkspaces")
     public Boolean fromAllWorkspaces;
+
+    @NameInMap("ImageSearch")
+    public String imageSearch;
 
     /**
      * <p>The job ID. Fuzzy query is supported. The name is case-insensitive. Wildcards are not supported. The default value null indicates any job ID.</p>
@@ -92,6 +98,15 @@ public class ListJobsRequest extends TeaModel {
      */
     @NameInMap("JobType")
     public String jobType;
+
+    @NameInMap("NumericRangeField")
+    public String numericRangeField;
+
+    @NameInMap("NumericRangeMax")
+    public Long numericRangeMax;
+
+    @NameInMap("NumericRangeMin")
+    public Long numericRangeMin;
 
     /**
      * <p>The sorting order. Valid values:</p>
@@ -161,6 +176,9 @@ public class ListJobsRequest extends TeaModel {
      */
     @NameInMap("PipelineId")
     public String pipelineId;
+
+    @NameInMap("ReasonSearch")
+    public String reasonSearch;
 
     /**
      * <p>The resource group ID. For information about how to obtain the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quota</a>.</p>
@@ -244,6 +262,12 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
 
+    @NameInMap("TimeRangeField")
+    public String timeRangeField;
+
+    @NameInMap("UserCommandSearch")
+    public String userCommandSearch;
+
     /**
      * <p>The user ID used to filter jobs.</p>
      * 
@@ -316,6 +340,14 @@ public class ListJobsRequest extends TeaModel {
         return this.displayNameSearchMode;
     }
 
+    public ListJobsRequest setEnableAssignNode(String enableAssignNode) {
+        this.enableAssignNode = enableAssignNode;
+        return this;
+    }
+    public String getEnableAssignNode() {
+        return this.enableAssignNode;
+    }
+
     public ListJobsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -330,6 +362,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public Boolean getFromAllWorkspaces() {
         return this.fromAllWorkspaces;
+    }
+
+    public ListJobsRequest setImageSearch(String imageSearch) {
+        this.imageSearch = imageSearch;
+        return this;
+    }
+    public String getImageSearch() {
+        return this.imageSearch;
     }
 
     public ListJobsRequest setJobId(String jobId) {
@@ -354,6 +394,30 @@ public class ListJobsRequest extends TeaModel {
     }
     public String getJobType() {
         return this.jobType;
+    }
+
+    public ListJobsRequest setNumericRangeField(String numericRangeField) {
+        this.numericRangeField = numericRangeField;
+        return this;
+    }
+    public String getNumericRangeField() {
+        return this.numericRangeField;
+    }
+
+    public ListJobsRequest setNumericRangeMax(Long numericRangeMax) {
+        this.numericRangeMax = numericRangeMax;
+        return this;
+    }
+    public Long getNumericRangeMax() {
+        return this.numericRangeMax;
+    }
+
+    public ListJobsRequest setNumericRangeMin(Long numericRangeMin) {
+        this.numericRangeMin = numericRangeMin;
+        return this;
+    }
+    public Long getNumericRangeMin() {
+        return this.numericRangeMin;
     }
 
     public ListJobsRequest setOrder(String order) {
@@ -402,6 +466,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public String getPipelineId() {
         return this.pipelineId;
+    }
+
+    public ListJobsRequest setReasonSearch(String reasonSearch) {
+        this.reasonSearch = reasonSearch;
+        return this;
+    }
+    public String getReasonSearch() {
+        return this.reasonSearch;
     }
 
     public ListJobsRequest setResourceId(String resourceId) {
@@ -458,6 +530,22 @@ public class ListJobsRequest extends TeaModel {
     }
     public java.util.Map<String, String> getTags() {
         return this.tags;
+    }
+
+    public ListJobsRequest setTimeRangeField(String timeRangeField) {
+        this.timeRangeField = timeRangeField;
+        return this;
+    }
+    public String getTimeRangeField() {
+        return this.timeRangeField;
+    }
+
+    public ListJobsRequest setUserCommandSearch(String userCommandSearch) {
+        this.userCommandSearch = userCommandSearch;
+        return this;
+    }
+    public String getUserCommandSearch() {
+        return this.userCommandSearch;
     }
 
     public ListJobsRequest setUserIdForFilter(String userIdForFilter) {
