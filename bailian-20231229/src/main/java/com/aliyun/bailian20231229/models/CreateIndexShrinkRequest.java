@@ -234,6 +234,12 @@ public class CreateIndexShrinkRequest extends TeaModel {
     @NameInMap("chunkMode")
     public String chunkMode;
 
+    @NameInMap("database")
+    public String database;
+
+    @NameInMap("datasourceCode")
+    public String datasourceCode;
+
     /**
      * <p>Whether to treat the first row of all .xlsx and .xls files as headers and concatenate them into each text chunk. This prevents the models from mistakenly interpreting headers as regular data rows.</p>
      * <blockquote>
@@ -278,6 +284,9 @@ public class CreateIndexShrinkRequest extends TeaModel {
      */
     @NameInMap("pipelineRetrieveRateLimitStrategy")
     public String pipelineRetrieveRateLimitStrategy;
+
+    @NameInMap("table")
+    public String table;
 
     public static CreateIndexShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIndexShrinkRequest self = new CreateIndexShrinkRequest();
@@ -452,6 +461,22 @@ public class CreateIndexShrinkRequest extends TeaModel {
         return this.chunkMode;
     }
 
+    public CreateIndexShrinkRequest setDatabase(String database) {
+        this.database = database;
+        return this;
+    }
+    public String getDatabase() {
+        return this.database;
+    }
+
+    public CreateIndexShrinkRequest setDatasourceCode(String datasourceCode) {
+        this.datasourceCode = datasourceCode;
+        return this;
+    }
+    public String getDatasourceCode() {
+        return this.datasourceCode;
+    }
+
     public CreateIndexShrinkRequest setEnableHeaders(Boolean enableHeaders) {
         this.enableHeaders = enableHeaders;
         return this;
@@ -490,6 +515,14 @@ public class CreateIndexShrinkRequest extends TeaModel {
     }
     public String getPipelineRetrieveRateLimitStrategy() {
         return this.pipelineRetrieveRateLimitStrategy;
+    }
+
+    public CreateIndexShrinkRequest setTable(String table) {
+        this.table = table;
+        return this;
+    }
+    public String getTable() {
+        return this.table;
     }
 
 }

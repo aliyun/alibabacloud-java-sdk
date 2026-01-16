@@ -685,6 +685,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("chunkMode", request.chunkMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.database)) {
+            query.put("database", request.database);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasourceCode)) {
+            query.put("datasourceCode", request.datasourceCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableHeaders)) {
             query.put("enableHeaders", request.enableHeaders);
         }
@@ -703,6 +711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pipelineRetrieveRateLimitStrategy)) {
             query.put("pipelineRetrieveRateLimitStrategy", request.pipelineRetrieveRateLimitStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.table)) {
+            query.put("table", request.table);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
