@@ -19,6 +19,9 @@ public class ListClientCertificateResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     /**
      * <p>The total number of pages returned.</p>
      * 
@@ -74,6 +77,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListClientCertificateResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListClientCertificateResponseBody setPageCount(Integer pageCount) {
@@ -132,6 +143,9 @@ public class ListClientCertificateResponseBody extends TeaModel {
         @NameInMap("Algorithm")
         public String algorithm;
 
+        @NameInMap("AliasName")
+        public String aliasName;
+
         /**
          * <p>The issuance date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
@@ -184,6 +198,9 @@ public class ListClientCertificateResponseBody extends TeaModel {
          */
         @NameInMap("Days")
         public Integer days;
+
+        @NameInMap("Id")
+        public Long id;
 
         /**
          * <p>The unique identifier of the certificate.</p>
@@ -369,6 +386,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
             return this.algorithm;
         }
 
+        public ListClientCertificateResponseBodyCertificateList setAliasName(String aliasName) {
+            this.aliasName = aliasName;
+            return this;
+        }
+        public String getAliasName() {
+            return this.aliasName;
+        }
+
         public ListClientCertificateResponseBodyCertificateList setBeforeDate(Long beforeDate) {
             this.beforeDate = beforeDate;
             return this;
@@ -415,6 +440,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
         public Integer getDays() {
             return this.days;
+        }
+
+        public ListClientCertificateResponseBodyCertificateList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public ListClientCertificateResponseBodyCertificateList setIdentifier(String identifier) {

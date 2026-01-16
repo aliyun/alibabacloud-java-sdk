@@ -46,6 +46,9 @@ public class ListCertRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("ParentIdentifier")
+    public String parentIdentifier;
+
     /**
      * <strong>example:</strong>
      * <p>50</p>
@@ -118,6 +121,14 @@ public class ListCertRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListCertRequest setParentIdentifier(String parentIdentifier) {
+        this.parentIdentifier = parentIdentifier;
+        return this;
+    }
+    public String getParentIdentifier() {
+        return this.parentIdentifier;
     }
 
     public ListCertRequest setShowSize(Integer showSize) {

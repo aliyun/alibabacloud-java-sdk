@@ -193,7 +193,7 @@ public class ListCertResponseBody extends TeaModel {
          * <p>1806958</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <strong>example:</strong>
@@ -324,11 +324,11 @@ public class ListCertResponseBody extends TeaModel {
             return this.extra;
         }
 
-        public ListCertResponseBodyList setId(String id) {
+        public ListCertResponseBodyList setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 

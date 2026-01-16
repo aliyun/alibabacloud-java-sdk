@@ -94,6 +94,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @NameInMap("Algorithm")
         public String algorithm;
 
+        @NameInMap("AliasName")
+        public String aliasName;
+
         /**
          * <p>The issuance date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
@@ -149,6 +152,12 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
          */
         @NameInMap("Days")
         public Integer days;
+
+        @NameInMap("FullAlgorithm")
+        public String fullAlgorithm;
+
+        @NameInMap("Id")
+        public Long id;
 
         /**
          * <p>The unique identifier of the certificate.</p>
@@ -307,6 +316,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<DescribeClientCertificateResponseBodyCertificateTags> tags;
 
+        @NameInMap("UploadFlag")
+        public Integer uploadFlag;
+
         /**
          * <p>The content of the certificate.</p>
          * 
@@ -335,6 +347,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         }
         public String getAlgorithm() {
             return this.algorithm;
+        }
+
+        public DescribeClientCertificateResponseBodyCertificate setAliasName(String aliasName) {
+            this.aliasName = aliasName;
+            return this;
+        }
+        public String getAliasName() {
+            return this.aliasName;
         }
 
         public DescribeClientCertificateResponseBodyCertificate setBeforeDate(Long beforeDate) {
@@ -391,6 +411,22 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         }
         public Integer getDays() {
             return this.days;
+        }
+
+        public DescribeClientCertificateResponseBodyCertificate setFullAlgorithm(String fullAlgorithm) {
+            this.fullAlgorithm = fullAlgorithm;
+            return this;
+        }
+        public String getFullAlgorithm() {
+            return this.fullAlgorithm;
+        }
+
+        public DescribeClientCertificateResponseBodyCertificate setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public DescribeClientCertificateResponseBodyCertificate setIdentifier(String identifier) {
@@ -519,6 +555,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         }
         public java.util.List<DescribeClientCertificateResponseBodyCertificateTags> getTags() {
             return this.tags;
+        }
+
+        public DescribeClientCertificateResponseBodyCertificate setUploadFlag(Integer uploadFlag) {
+            this.uploadFlag = uploadFlag;
+            return this;
+        }
+        public Integer getUploadFlag() {
+            return this.uploadFlag;
         }
 
         public DescribeClientCertificateResponseBodyCertificate setX509Certificate(String x509Certificate) {

@@ -38,6 +38,9 @@ public class CreateClientCertificateRequest extends TeaModel {
     @NameInMap("Algorithm")
     public String algorithm;
 
+    @NameInMap("AliasName")
+    public String aliasName;
+
     /**
      * <p>The issuance time of the client certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.</p>
      * <blockquote>
@@ -49,6 +52,9 @@ public class CreateClientCertificateRequest extends TeaModel {
      */
     @NameInMap("BeforeTime")
     public Long beforeTime;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     /**
      * <p>The name of the client certificate user. In most cases, the user of a client certificate is an individual, a company, an organization, or an application. We recommend that you enter the common name of a user. Examples: Bob, Alibaba, Alibaba Cloud password platform, and Tmall Genie.</p>
@@ -234,12 +240,28 @@ public class CreateClientCertificateRequest extends TeaModel {
         return this.algorithm;
     }
 
+    public CreateClientCertificateRequest setAliasName(String aliasName) {
+        this.aliasName = aliasName;
+        return this;
+    }
+    public String getAliasName() {
+        return this.aliasName;
+    }
+
     public CreateClientCertificateRequest setBeforeTime(Long beforeTime) {
         this.beforeTime = beforeTime;
         return this;
     }
     public Long getBeforeTime() {
         return this.beforeTime;
+    }
+
+    public CreateClientCertificateRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateClientCertificateRequest setCommonName(String commonName) {
