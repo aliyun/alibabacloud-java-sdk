@@ -100,6 +100,21 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("RiskBizScenario")
+    public Integer riskBizScenario;
+
+    @NameInMap("RiskDevice")
+    public Integer riskDevice;
+
+    @NameInMap("RiskDeviceToken")
+    public Integer riskDeviceToken;
+
+    @NameInMap("RiskGeneric")
+    public Integer riskGeneric;
+
+    @NameInMap("RiskModelMining")
+    public Integer riskModelMining;
+
     /**
      * <p>Whether it is rooted (pass 1 if selected, otherwise do not pass; corresponds to identity label risk type).</p>
      * 
@@ -246,6 +261,46 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public DescribeVerifySearchPageListRequest setRiskBizScenario(Integer riskBizScenario) {
+        this.riskBizScenario = riskBizScenario;
+        return this;
+    }
+    public Integer getRiskBizScenario() {
+        return this.riskBizScenario;
+    }
+
+    public DescribeVerifySearchPageListRequest setRiskDevice(Integer riskDevice) {
+        this.riskDevice = riskDevice;
+        return this;
+    }
+    public Integer getRiskDevice() {
+        return this.riskDevice;
+    }
+
+    public DescribeVerifySearchPageListRequest setRiskDeviceToken(Integer riskDeviceToken) {
+        this.riskDeviceToken = riskDeviceToken;
+        return this;
+    }
+    public Integer getRiskDeviceToken() {
+        return this.riskDeviceToken;
+    }
+
+    public DescribeVerifySearchPageListRequest setRiskGeneric(Integer riskGeneric) {
+        this.riskGeneric = riskGeneric;
+        return this;
+    }
+    public Integer getRiskGeneric() {
+        return this.riskGeneric;
+    }
+
+    public DescribeVerifySearchPageListRequest setRiskModelMining(Integer riskModelMining) {
+        this.riskModelMining = riskModelMining;
+        return this;
+    }
+    public Integer getRiskModelMining() {
+        return this.riskModelMining;
     }
 
     public DescribeVerifySearchPageListRequest setRoot(Integer root) {

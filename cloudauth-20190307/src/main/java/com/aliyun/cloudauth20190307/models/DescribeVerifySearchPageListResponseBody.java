@@ -456,6 +456,21 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         @NameInMap("ProductCode")
         public String productCode;
 
+        @NameInMap("RiskBizScenario")
+        public Integer riskBizScenario;
+
+        @NameInMap("RiskDevice")
+        public Integer riskDevice;
+
+        @NameInMap("RiskDeviceToken")
+        public Integer riskDeviceToken;
+
+        @NameInMap("RiskGeneric")
+        public Integer riskGeneric;
+
+        @NameInMap("RiskModelMining")
+        public Integer riskModelMining;
+
         /**
          * <p>Whether it is root (pass 1 if selected, otherwise do not pass; corresponds to identity label risk type).</p>
          * 
@@ -577,6 +592,46 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+        public DescribeVerifySearchPageListResponseBodyItems setRiskBizScenario(Integer riskBizScenario) {
+            this.riskBizScenario = riskBizScenario;
+            return this;
+        }
+        public Integer getRiskBizScenario() {
+            return this.riskBizScenario;
+        }
+
+        public DescribeVerifySearchPageListResponseBodyItems setRiskDevice(Integer riskDevice) {
+            this.riskDevice = riskDevice;
+            return this;
+        }
+        public Integer getRiskDevice() {
+            return this.riskDevice;
+        }
+
+        public DescribeVerifySearchPageListResponseBodyItems setRiskDeviceToken(Integer riskDeviceToken) {
+            this.riskDeviceToken = riskDeviceToken;
+            return this;
+        }
+        public Integer getRiskDeviceToken() {
+            return this.riskDeviceToken;
+        }
+
+        public DescribeVerifySearchPageListResponseBodyItems setRiskGeneric(Integer riskGeneric) {
+            this.riskGeneric = riskGeneric;
+            return this;
+        }
+        public Integer getRiskGeneric() {
+            return this.riskGeneric;
+        }
+
+        public DescribeVerifySearchPageListResponseBodyItems setRiskModelMining(Integer riskModelMining) {
+            this.riskModelMining = riskModelMining;
+            return this;
+        }
+        public Integer getRiskModelMining() {
+            return this.riskModelMining;
         }
 
         public DescribeVerifySearchPageListResponseBodyItems setRoot(Integer root) {

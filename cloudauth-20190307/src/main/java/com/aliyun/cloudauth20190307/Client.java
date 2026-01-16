@@ -4105,6 +4105,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductCode", request.productCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.riskBizScenario)) {
+            query.put("RiskBizScenario", request.riskBizScenario);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskDevice)) {
+            query.put("RiskDevice", request.riskDevice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskDeviceToken)) {
+            query.put("RiskDeviceToken", request.riskDeviceToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskGeneric)) {
+            query.put("RiskGeneric", request.riskGeneric);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskModelMining)) {
+            query.put("RiskModelMining", request.riskModelMining);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.root)) {
             query.put("Root", request.root);
         }
