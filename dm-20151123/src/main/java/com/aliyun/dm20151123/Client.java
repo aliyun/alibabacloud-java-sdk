@@ -265,6 +265,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClickTrace", request.clickTrace);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.domainAuth)) {
+            query.put("DomainAuth", request.domainAuth);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.headers)) {
             query.put("Headers", request.headers);
         }
@@ -4424,8 +4428,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Attachments", request.attachments);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bccAddress)) {
+            body.put("BccAddress", request.bccAddress);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clickTrace)) {
             body.put("ClickTrace", request.clickTrace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainAuth)) {
+            body.put("DomainAuth", request.domainAuth);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fromAlias)) {

@@ -19,8 +19,21 @@ public class SingleSendMailAdvanceRequest extends TeaModel {
     @NameInMap("Attachments")
     public java.util.List<SingleSendMailAdvanceRequestAttachments> attachments;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:1@example.com">1@example.com</a>,<a href="mailto:2@example.com">2@example.com</a></p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("BccAddress")
+    public String bccAddress;
+
     @NameInMap("ClickTrace")
     public String clickTrace;
+
+    @NameInMap("DomainAuth")
+    public Boolean domainAuth;
 
     @NameInMap("FromAlias")
     public String fromAlias;
@@ -111,12 +124,28 @@ public class SingleSendMailAdvanceRequest extends TeaModel {
         return this.attachments;
     }
 
+    public SingleSendMailAdvanceRequest setBccAddress(String bccAddress) {
+        this.bccAddress = bccAddress;
+        return this;
+    }
+    public String getBccAddress() {
+        return this.bccAddress;
+    }
+
     public SingleSendMailAdvanceRequest setClickTrace(String clickTrace) {
         this.clickTrace = clickTrace;
         return this;
     }
     public String getClickTrace() {
         return this.clickTrace;
+    }
+
+    public SingleSendMailAdvanceRequest setDomainAuth(Boolean domainAuth) {
+        this.domainAuth = domainAuth;
+        return this;
+    }
+    public Boolean getDomainAuth() {
+        return this.domainAuth;
     }
 
     public SingleSendMailAdvanceRequest setFromAlias(String fromAlias) {
