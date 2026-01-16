@@ -2540,6 +2540,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public EnableKibanaPvlNetworkResponse enableKibanaPvlNetworkWithOptions(String InstanceId, EnableKibanaPvlNetworkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endpointName)) {
             body.put("endpointName", request.endpointName);
@@ -2559,6 +2564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -8622,6 +8628,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("nodeSpec", request.nodeSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.updateType)) {
+            body.put("updateType", request.updateType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.warmNodeConfiguration)) {
             body.put("warmNodeConfiguration", request.warmNodeConfiguration);
         }
@@ -8677,10 +8687,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("clientToken", request.clientToken);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentInfo)) {
+            body.put("paymentInfo", request.paymentInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
+            body.put("paymentType", request.paymentType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateInstanceChargeType"),
@@ -8737,10 +8756,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("updateStrategy", request.updateStrategy);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.esConfig)) {
+            body.put("esConfig", request.esConfig);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateInstanceSettings"),
@@ -8785,6 +8809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateKibanaPvlNetworkResponse updateKibanaPvlNetworkWithOptions(String InstanceId, UpdateKibanaPvlNetworkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pvlId)) {
             query.put("pvlId", request.pvlId);
         }

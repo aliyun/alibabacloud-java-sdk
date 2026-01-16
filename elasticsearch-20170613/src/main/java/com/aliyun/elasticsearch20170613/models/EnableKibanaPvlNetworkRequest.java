@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class EnableKibanaPvlNetworkRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>es-cn-27a3mul6l000xxx-kibana-endpoint</p>
      */
@@ -19,20 +17,22 @@ public class EnableKibanaPvlNetworkRequest extends TeaModel {
     @NameInMap("securityGroups")
     public java.util.List<String> securityGroups;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("vSwitchIdsZone")
     public java.util.List<EnableKibanaPvlNetworkRequestVSwitchIdsZone> vSwitchIdsZone;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>vpc-xxx</p>
      */
     @NameInMap("vpcId")
     public String vpcId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
+     */
+    @NameInMap("clientToken")
+    public String clientToken;
 
     public static EnableKibanaPvlNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableKibanaPvlNetworkRequest self = new EnableKibanaPvlNetworkRequest();
@@ -71,10 +71,16 @@ public class EnableKibanaPvlNetworkRequest extends TeaModel {
         return this.vpcId;
     }
 
+    public EnableKibanaPvlNetworkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public static class EnableKibanaPvlNetworkRequestVSwitchIdsZone extends TeaModel {
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>vsw-xxxx</p>
          */
@@ -82,8 +88,6 @@ public class EnableKibanaPvlNetworkRequest extends TeaModel {
         public String vswitchId;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */

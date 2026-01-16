@@ -15,8 +15,13 @@ public class UpdateKibanaPvlNetworkRequest extends TeaModel {
     public java.util.List<String> securityGroups;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
+    @NameInMap("clientToken")
+    public String clientToken;
+
+    /**
      * <strong>example:</strong>
      * <p>es-cn-27a3mul6l0***-kibana-internal</p>
      */
@@ -42,6 +47,14 @@ public class UpdateKibanaPvlNetworkRequest extends TeaModel {
     }
     public java.util.List<String> getSecurityGroups() {
         return this.securityGroups;
+    }
+
+    public UpdateKibanaPvlNetworkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateKibanaPvlNetworkRequest setPvlId(String pvlId) {

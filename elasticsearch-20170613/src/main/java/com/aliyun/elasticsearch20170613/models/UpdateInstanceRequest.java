@@ -33,6 +33,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("nodeSpec")
     public NodeSpec nodeSpec;
 
+    @NameInMap("updateType")
+    public String updateType;
+
     @NameInMap("warmNodeConfiguration")
     public WarmNodeConfiguration warmNodeConfiguration;
 
@@ -120,6 +123,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public NodeSpec getNodeSpec() {
         return this.nodeSpec;
+    }
+
+    public UpdateInstanceRequest setUpdateType(String updateType) {
+        this.updateType = updateType;
+        return this;
+    }
+    public String getUpdateType() {
+        return this.updateType;
     }
 
     public UpdateInstanceRequest setWarmNodeConfiguration(WarmNodeConfiguration warmNodeConfiguration) {
