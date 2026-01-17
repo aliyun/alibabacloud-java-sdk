@@ -64,8 +64,14 @@ public class AppInstanceAggregate extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PartnerDetail")
+    public AppInstanceAggregatePartnerDetail partnerDetail;
+
     @NameInMap("Profile")
     public AppInstanceProfile profile;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("SiteHost")
     public String siteHost;
@@ -87,6 +93,9 @@ public class AppInstanceAggregate extends TeaModel {
 
     @NameInMap("StatusText")
     public String statusText;
+
+    @NameInMap("Tags")
+    public java.util.List<AppInstanceAggregateTags> tags;
 
     @NameInMap("ThumbnailUrl")
     public String thumbnailUrl;
@@ -259,12 +268,28 @@ public class AppInstanceAggregate extends TeaModel {
         return this.name;
     }
 
+    public AppInstanceAggregate setPartnerDetail(AppInstanceAggregatePartnerDetail partnerDetail) {
+        this.partnerDetail = partnerDetail;
+        return this;
+    }
+    public AppInstanceAggregatePartnerDetail getPartnerDetail() {
+        return this.partnerDetail;
+    }
+
     public AppInstanceAggregate setProfile(AppInstanceProfile profile) {
         this.profile = profile;
         return this;
     }
     public AppInstanceProfile getProfile() {
         return this.profile;
+    }
+
+    public AppInstanceAggregate setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public AppInstanceAggregate setSiteHost(String siteHost) {
@@ -315,6 +340,14 @@ public class AppInstanceAggregate extends TeaModel {
         return this.statusText;
     }
 
+    public AppInstanceAggregate setTags(java.util.List<AppInstanceAggregateTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<AppInstanceAggregateTags> getTags() {
+        return this.tags;
+    }
+
     public AppInstanceAggregate setThumbnailUrl(String thumbnailUrl) {
         this.thumbnailUrl = thumbnailUrl;
         return this;
@@ -329,6 +362,173 @@ public class AppInstanceAggregate extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public static class AppInstanceAggregatePartnerDetailBindData extends TeaModel {
+        @NameInMap("BizId")
+        public String bizId;
+
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Mobile")
+        public String mobile;
+
+        @NameInMap("ParentPk")
+        public String parentPk;
+
+        @NameInMap("PartnerId")
+        public String partnerId;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        public static AppInstanceAggregatePartnerDetailBindData build(java.util.Map<String, ?> map) throws Exception {
+            AppInstanceAggregatePartnerDetailBindData self = new AppInstanceAggregatePartnerDetailBindData();
+            return TeaModel.build(map, self);
+        }
+
+        public AppInstanceAggregatePartnerDetailBindData setBizId(String bizId) {
+            this.bizId = bizId;
+            return this;
+        }
+        public String getBizId() {
+            return this.bizId;
+        }
+
+        public AppInstanceAggregatePartnerDetailBindData setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public AppInstanceAggregatePartnerDetailBindData setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public AppInstanceAggregatePartnerDetailBindData setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public AppInstanceAggregatePartnerDetailBindData setMobile(String mobile) {
+            this.mobile = mobile;
+            return this;
+        }
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        public AppInstanceAggregatePartnerDetailBindData setParentPk(String parentPk) {
+            this.parentPk = parentPk;
+            return this;
+        }
+        public String getParentPk() {
+            return this.parentPk;
+        }
+
+        public AppInstanceAggregatePartnerDetailBindData setPartnerId(String partnerId) {
+            this.partnerId = partnerId;
+            return this;
+        }
+        public String getPartnerId() {
+            return this.partnerId;
+        }
+
+        public AppInstanceAggregatePartnerDetailBindData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+    }
+
+    public static class AppInstanceAggregatePartnerDetail extends TeaModel {
+        @NameInMap("BindData")
+        public AppInstanceAggregatePartnerDetailBindData bindData;
+
+        @NameInMap("PartnerId")
+        public String partnerId;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static AppInstanceAggregatePartnerDetail build(java.util.Map<String, ?> map) throws Exception {
+            AppInstanceAggregatePartnerDetail self = new AppInstanceAggregatePartnerDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public AppInstanceAggregatePartnerDetail setBindData(AppInstanceAggregatePartnerDetailBindData bindData) {
+            this.bindData = bindData;
+            return this;
+        }
+        public AppInstanceAggregatePartnerDetailBindData getBindData() {
+            return this.bindData;
+        }
+
+        public AppInstanceAggregatePartnerDetail setPartnerId(String partnerId) {
+            this.partnerId = partnerId;
+            return this;
+        }
+        public String getPartnerId() {
+            return this.partnerId;
+        }
+
+        public AppInstanceAggregatePartnerDetail setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class AppInstanceAggregateTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static AppInstanceAggregateTags build(java.util.Map<String, ?> map) throws Exception {
+            AppInstanceAggregateTags self = new AppInstanceAggregateTags();
+            return TeaModel.build(map, self);
+        }
+
+        public AppInstanceAggregateTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public AppInstanceAggregateTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }

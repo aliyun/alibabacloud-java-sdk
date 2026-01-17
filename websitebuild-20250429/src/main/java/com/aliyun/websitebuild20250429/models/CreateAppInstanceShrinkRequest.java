@@ -3,7 +3,7 @@ package com.aliyun.websitebuild20250429.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAppInstanceRequest extends TeaModel {
+public class CreateAppInstanceShrinkRequest extends TeaModel {
     /**
      * <p>Application type</p>
      * 
@@ -98,14 +98,14 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String siteVersion;
 
     @NameInMap("Tags")
-    public java.util.List<CreateAppInstanceRequestTags> tags;
+    public String tagsShrink;
 
-    public static CreateAppInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateAppInstanceRequest self = new CreateAppInstanceRequest();
+    public static CreateAppInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateAppInstanceShrinkRequest self = new CreateAppInstanceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAppInstanceRequest setApplicationType(String applicationType) {
+    public CreateAppInstanceShrinkRequest setApplicationType(String applicationType) {
         this.applicationType = applicationType;
         return this;
     }
@@ -113,7 +113,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.applicationType;
     }
 
-    public CreateAppInstanceRequest setAutoRenew(Boolean autoRenew) {
+    public CreateAppInstanceShrinkRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
     }
@@ -121,7 +121,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.autoRenew;
     }
 
-    public CreateAppInstanceRequest setClientToken(String clientToken) {
+    public CreateAppInstanceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -129,7 +129,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateAppInstanceRequest setDeployArea(String deployArea) {
+    public CreateAppInstanceShrinkRequest setDeployArea(String deployArea) {
         this.deployArea = deployArea;
         return this;
     }
@@ -137,7 +137,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.deployArea;
     }
 
-    public CreateAppInstanceRequest setDuration(Integer duration) {
+    public CreateAppInstanceShrinkRequest setDuration(Integer duration) {
         this.duration = duration;
         return this;
     }
@@ -145,7 +145,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.duration;
     }
 
-    public CreateAppInstanceRequest setExtend(String extend) {
+    public CreateAppInstanceShrinkRequest setExtend(String extend) {
         this.extend = extend;
         return this;
     }
@@ -153,7 +153,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.extend;
     }
 
-    public CreateAppInstanceRequest setPaymentType(String paymentType) {
+    public CreateAppInstanceShrinkRequest setPaymentType(String paymentType) {
         this.paymentType = paymentType;
         return this;
     }
@@ -161,7 +161,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.paymentType;
     }
 
-    public CreateAppInstanceRequest setPricingCycle(String pricingCycle) {
+    public CreateAppInstanceShrinkRequest setPricingCycle(String pricingCycle) {
         this.pricingCycle = pricingCycle;
         return this;
     }
@@ -169,7 +169,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.pricingCycle;
     }
 
-    public CreateAppInstanceRequest setQuantity(Integer quantity) {
+    public CreateAppInstanceShrinkRequest setQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -177,7 +177,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.quantity;
     }
 
-    public CreateAppInstanceRequest setResourceGroupId(String resourceGroupId) {
+    public CreateAppInstanceShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -185,7 +185,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateAppInstanceRequest setSiteVersion(String siteVersion) {
+    public CreateAppInstanceShrinkRequest setSiteVersion(String siteVersion) {
         this.siteVersion = siteVersion;
         return this;
     }
@@ -193,42 +193,12 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.siteVersion;
     }
 
-    public CreateAppInstanceRequest setTags(java.util.List<CreateAppInstanceRequestTags> tags) {
-        this.tags = tags;
+    public CreateAppInstanceShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<CreateAppInstanceRequestTags> getTags() {
-        return this.tags;
-    }
-
-    public static class CreateAppInstanceRequestTags extends TeaModel {
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        public static CreateAppInstanceRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            CreateAppInstanceRequestTags self = new CreateAppInstanceRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateAppInstanceRequestTags setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public CreateAppInstanceRequestTags setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }
