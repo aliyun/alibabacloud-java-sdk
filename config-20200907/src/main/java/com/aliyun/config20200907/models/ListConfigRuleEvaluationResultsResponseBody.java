@@ -348,6 +348,13 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1768788515725</p>
+         */
+        @NameInMap("LastCompliantFixedTimestamp")
+        public Long lastCompliantFixedTimestamp;
+
+        /**
+         * <strong>example:</strong>
          * <p>1744696665000</p>
          */
         @NameInMap("LastNonCompliantRecordTimestamp")
@@ -440,6 +447,14 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         }
         public String getInvokingEventMessageType() {
             return this.invokingEventMessageType;
+        }
+
+        public ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setLastCompliantFixedTimestamp(Long lastCompliantFixedTimestamp) {
+            this.lastCompliantFixedTimestamp = lastCompliantFixedTimestamp;
+            return this;
+        }
+        public Long getLastCompliantFixedTimestamp() {
+            return this.lastCompliantFixedTimestamp;
         }
 
         public ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setLastNonCompliantRecordTimestamp(Long lastNonCompliantRecordTimestamp) {
