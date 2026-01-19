@@ -40,6 +40,9 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    @NameInMap("InstancePhase")
+    public String instancePhase;
+
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
@@ -175,6 +178,14 @@ public class ResourceInstance extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public ResourceInstance setInstancePhase(String instancePhase) {
+        this.instancePhase = instancePhase;
+        return this;
+    }
+    public String getInstancePhase() {
+        return this.instancePhase;
     }
 
     public ResourceInstance setInstanceStatus(String instanceStatus) {
