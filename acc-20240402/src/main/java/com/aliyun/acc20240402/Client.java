@@ -8,7 +8,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-northeast-2-pop", "acc.aliyuncs.com"),
+            new TeaPair("ap-south-1", "acc.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "acc.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "acc.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "acc.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "acc.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "acc.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "acc.aliyuncs.com"),
+            new TeaPair("cn-fujian", "acc.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "acc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "acc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "acc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "acc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "acc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "acc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "acc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "acc.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "acc.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "acc.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "acc.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "acc.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "acc.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "acc.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "acc.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "acc.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "acc.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "acc.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "acc.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "acc.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "acc.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "acc.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "acc.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "acc.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "acc.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "acc.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "acc.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("acc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
