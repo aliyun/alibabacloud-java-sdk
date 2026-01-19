@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetHttpDDoSAttackRuleActionRequest extends TeaModel {
     /**
+     * <p>Rule action, with values:</p>
+     * <ul>
+     * <li><p><strong>deny</strong>: Block.</p>
+     * </li>
+     * <li><p><strong>js</strong>: JS Verification.</p>
+     * </li>
+     * <li><p><strong>observe</strong>: Observe.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +23,10 @@ public class SetHttpDDoSAttackRuleActionRequest extends TeaModel {
     public String ruleAction;
 
     /**
+     * <p>List of rule IDs to be operated on, separated by English commas (,).</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeHttpDDoSAttackRules~~">DescribeHttpDDoSAttackRules</a> API to get this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +36,7 @@ public class SetHttpDDoSAttackRuleActionRequest extends TeaModel {
     public String ruleIds;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

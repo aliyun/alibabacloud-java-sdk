@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEdgeContainerAppImageSecretsRequest extends TeaModel {
     /**
+     * <p>Application ID, which can be obtained using the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKvDetailRequest extends TeaModel {
     /**
+     * <p>The key name for the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetKvDetailRequest extends TeaModel {
     public String key;
 
     /**
+     * <p>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

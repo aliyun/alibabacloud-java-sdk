@@ -3,22 +3,20 @@ package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteUserWafRulesetResponseBody extends TeaModel {
+public class SetDdosMaxBurstGbpsResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>xxxx-xxxx-xxxx-xxxx</p>
+     * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteUserWafRulesetResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteUserWafRulesetResponseBody self = new DeleteUserWafRulesetResponseBody();
+    public static SetDdosMaxBurstGbpsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SetDdosMaxBurstGbpsResponseBody self = new SetDdosMaxBurstGbpsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteUserWafRulesetResponseBody setRequestId(String requestId) {
+    public SetDdosMaxBurstGbpsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

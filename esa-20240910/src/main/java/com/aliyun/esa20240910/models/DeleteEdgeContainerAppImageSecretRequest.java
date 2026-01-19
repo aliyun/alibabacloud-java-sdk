@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEdgeContainerAppImageSecretRequest extends TeaModel {
     /**
+     * <p>Application ID, which can be obtained using the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteEdgeContainerAppImageSecretRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Name of the image secret.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

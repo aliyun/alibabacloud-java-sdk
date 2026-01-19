@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEdgeContainerAppImageSecretRequest extends TeaModel {
     /**
+     * <p>Application ID, which can be obtained using the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateEdgeContainerAppImageSecretRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Image repository password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateEdgeContainerAppImageSecretRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>Image repository address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class CreateEdgeContainerAppImageSecretRequest extends TeaModel {
     public String registry;
 
     /**
+     * <p>Image repository username.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

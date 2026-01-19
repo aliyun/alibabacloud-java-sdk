@@ -1812,7 +1812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建边缘容器应用的镜像秘钥</p>
+     * <p>Create an image secret for the edge container application</p>
      * 
      * @param request CreateEdgeContainerAppImageSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1856,7 +1856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建边缘容器应用的镜像秘钥</p>
+     * <p>Create an image secret for the edge container application</p>
      * 
      * @param request CreateEdgeContainerAppImageSecretRequest
      * @return CreateEdgeContainerAppImageSecretResponse
@@ -5418,7 +5418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除边缘容器应用的镜像秘钥</p>
+     * <p>Delete the image secret of an edge container application</p>
      * 
      * @param request DeleteEdgeContainerAppImageSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5454,7 +5454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除边缘容器应用的镜像秘钥</p>
+     * <p>Delete the image secret of an edge container application</p>
      * 
      * @param request DeleteEdgeContainerAppImageSecretRequest
      * @return DeleteEdgeContainerAppImageSecretResponse
@@ -5566,7 +5566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除深度学习和防护下发的规则</p>
+     * <p>Delete rules for deep learning and protection distribution</p>
      * 
      * @param request DeleteHttpDDoSIntelligentRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5606,7 +5606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除深度学习和防护下发的规则</p>
+     * <p>Delete rules for deep learning and protection distribution</p>
      * 
      * @param request DeleteHttpDDoSIntelligentRuleRequest
      * @return DeleteHttpDDoSIntelligentRuleResponse
@@ -7174,20 +7174,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
-     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
-     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
-     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
-     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
-     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
-     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
-     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * <li><code>InstanceId</code> and <code>Id</code> are required parameters, specifying the WAF instance ID to be operated on and the specific ruleset ID, respectively.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除实例级别的Web应用防火墙规则集。</p>
+     * <p>Used for deleting an instance-level Web Application Firewall (WAF) ruleset.</p>
      * 
      * @param request DeleteUserWafRulesetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7225,20 +7218,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
-     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
-     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
-     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
-     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
-     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
-     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
-     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * <li><code>InstanceId</code> and <code>Id</code> are required parameters, specifying the WAF instance ID to be operated on and the specific ruleset ID, respectively.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除实例级别的Web应用防火墙规则集。</p>
+     * <p>Used for deleting an instance-level Web Application Firewall (WAF) ruleset.</p>
      * 
      * @param request DeleteUserWafRulesetRequest
      * @return DeleteUserWafRulesetResponse
@@ -7766,6 +7752,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询当前实例设置的Ddos最大防护弹性值</p>
+     * 
+     * @param request DescribeDdosMaxBurstGbpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDdosMaxBurstGbpsResponse
+     */
+    public DescribeDdosMaxBurstGbpsResponse describeDdosMaxBurstGbpsWithOptions(DescribeDdosMaxBurstGbpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDdosMaxBurstGbps"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDdosMaxBurstGbpsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询当前实例设置的Ddos最大防护弹性值</p>
+     * 
+     * @param request DescribeDdosMaxBurstGbpsRequest
+     * @return DescribeDdosMaxBurstGbpsResponse
+     */
+    public DescribeDdosMaxBurstGbpsResponse describeDdosMaxBurstGbps(DescribeDdosMaxBurstGbpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDdosMaxBurstGbpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Provides monitoring data for metrics of ESA edge containers.</p>
      * 
      * @param request DescribeEdgeContainerAppStatsRequest
@@ -7890,6 +7916,170 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeHttpDDoSAttackProtectionResponse describeHttpDDoSAttackProtection(DescribeHttpDDoSAttackProtectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHttpDDoSAttackProtectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP DDoS攻击防护规则</p>
+     * 
+     * @param request DescribeHttpDDoSAttackRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHttpDDoSAttackRulesResponse
+     */
+    public DescribeHttpDDoSAttackRulesResponse describeHttpDDoSAttackRulesWithOptions(DescribeHttpDDoSAttackRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHttpDDoSAttackRules"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHttpDDoSAttackRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP DDoS攻击防护规则</p>
+     * 
+     * @param request DescribeHttpDDoSAttackRulesRequest
+     * @return DescribeHttpDDoSAttackRulesResponse
+     */
+    public DescribeHttpDDoSAttackRulesResponse describeHttpDDoSAttackRules(DescribeHttpDDoSAttackRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHttpDDoSAttackRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询深度学习和防护下发的精准访问控制规则</p>
+     * 
+     * @param request DescribeHttpDDoSIntelligentAclRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHttpDDoSIntelligentAclRulesResponse
+     */
+    public DescribeHttpDDoSIntelligentAclRulesResponse describeHttpDDoSIntelligentAclRulesWithOptions(DescribeHttpDDoSIntelligentAclRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleType)) {
+            query.put("RuleType", request.ruleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHttpDDoSIntelligentAclRules"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHttpDDoSIntelligentAclRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询深度学习和防护下发的精准访问控制规则</p>
+     * 
+     * @param request DescribeHttpDDoSIntelligentAclRulesRequest
+     * @return DescribeHttpDDoSIntelligentAclRulesResponse
+     */
+    public DescribeHttpDDoSIntelligentAclRulesResponse describeHttpDDoSIntelligentAclRules(DescribeHttpDDoSIntelligentAclRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHttpDDoSIntelligentAclRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询深度学习和防护下发的频率控制规则</p>
+     * 
+     * @param request DescribeHttpDDoSIntelligentRateLimitRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHttpDDoSIntelligentRateLimitRulesResponse
+     */
+    public DescribeHttpDDoSIntelligentRateLimitRulesResponse describeHttpDDoSIntelligentRateLimitRulesWithOptions(DescribeHttpDDoSIntelligentRateLimitRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleType)) {
+            query.put("RuleType", request.ruleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHttpDDoSIntelligentRateLimitRules"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHttpDDoSIntelligentRateLimitRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询深度学习和防护下发的频率控制规则</p>
+     * 
+     * @param request DescribeHttpDDoSIntelligentRateLimitRulesRequest
+     * @return DescribeHttpDDoSIntelligentRateLimitRulesResponse
+     */
+    public DescribeHttpDDoSIntelligentRateLimitRulesResponse describeHttpDDoSIntelligentRateLimitRules(DescribeHttpDDoSIntelligentRateLimitRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHttpDDoSIntelligentRateLimitRulesWithOptions(request, runtime);
     }
 
     /**
@@ -9986,7 +10176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Key-Value对的某个Key的详情</p>
+     * <p>Queries the value and time to live (TTL) of a key.</p>
      * 
      * @param request GetKvDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10022,7 +10212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Key-Value对的某个Key的详情</p>
+     * <p>Queries the value and time to live (TTL) of a key.</p>
      * 
      * @param request GetKvDetailRequest
      * @return GetKvDetailResponse
@@ -12444,7 +12634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取边缘容器应用的镜像秘钥列表</p>
+     * <p>Retrieve the list of image secrets for edge container applications</p>
      * 
      * @param request ListEdgeContainerAppImageSecretsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12476,7 +12666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取边缘容器应用的镜像秘钥列表</p>
+     * <p>Retrieve the list of image secrets for edge container applications</p>
      * 
      * @param request ListEdgeContainerAppImageSecretsRequest
      * @return ListEdgeContainerAppImageSecretsResponse
@@ -16334,6 +16524,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>设置Ddos实例的最大防护弹性值</p>
+     * 
+     * @param request SetDdosMaxBurstGbpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetDdosMaxBurstGbpsResponse
+     */
+    public SetDdosMaxBurstGbpsResponse setDdosMaxBurstGbpsWithOptions(SetDdosMaxBurstGbpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxBurstGbps)) {
+            query.put("MaxBurstGbps", request.maxBurstGbps);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetDdosMaxBurstGbps"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetDdosMaxBurstGbpsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置Ddos实例的最大防护弹性值</p>
+     * 
+     * @param request SetDdosMaxBurstGbpsRequest
+     * @return SetDdosMaxBurstGbpsResponse
+     */
+    public SetDdosMaxBurstGbpsResponse setDdosMaxBurstGbps(SetDdosMaxBurstGbpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setDdosMaxBurstGbpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Configures smart HTTP DDoS protection.</p>
      * 
      * @param request SetHttpDDoSAttackIntelligentProtectionRequest
@@ -16434,7 +16672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置HTTP DDoS攻击防护指定规则防护动作</p>
+     * <p>Set the Protection Action for Specified HTTP DDoS Attack Rules</p>
      * 
      * @param request SetHttpDDoSAttackRuleActionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16474,7 +16712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置HTTP DDoS攻击防护指定规则防护动作</p>
+     * <p>Set the Protection Action for Specified HTTP DDoS Attack Rules</p>
      * 
      * @param request SetHttpDDoSAttackRuleActionRequest
      * @return SetHttpDDoSAttackRuleActionResponse
@@ -16486,7 +16724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置HTTP DDoS攻击防护指定规则防护状态</p>
+     * <p>Set the Protection Status of Specified HTTP DDoS Attack Rules</p>
      * 
      * @param request SetHttpDDoSAttackRuleStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16526,7 +16764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置HTTP DDoS攻击防护指定规则防护状态</p>
+     * <p>Set the Protection Status of Specified HTTP DDoS Attack Rules</p>
      * 
      * @param request SetHttpDDoSAttackRuleStatusRequest
      * @return SetHttpDDoSAttackRuleStatusResponse

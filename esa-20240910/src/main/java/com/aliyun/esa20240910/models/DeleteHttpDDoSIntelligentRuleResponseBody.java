@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteHttpDDoSIntelligentRuleResponseBody extends TeaModel {
     /**
+     * <p>Record name.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
      */
@@ -12,7 +14,7 @@ public class DeleteHttpDDoSIntelligentRuleResponseBody extends TeaModel {
     public String recordName;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -21,6 +23,8 @@ public class DeleteHttpDDoSIntelligentRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20757864</p>
      */
@@ -28,6 +32,8 @@ public class DeleteHttpDDoSIntelligentRuleResponseBody extends TeaModel {
     public Long ruleId;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */

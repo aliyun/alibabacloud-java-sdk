@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetKvDetailResponseBody extends TeaModel {
     /**
+     * <p>The expiration time of the key. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -12,6 +14,8 @@ public class GetKvDetailResponseBody extends TeaModel {
     public String expirationTtl;
 
     /**
+     * <p>The expiration time of the key. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
      */
@@ -19,6 +23,8 @@ public class GetKvDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The value of the key. The value of the root node.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_value</p>
      */
