@@ -227,6 +227,9 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         @NameInMap("cert_state")
         public String certState;
 
+        @NameInMap("cloud_service_name")
+        public String cloudServiceName;
+
         @NameInMap("cloud_service_roles")
         public java.util.List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> cloudServiceRoles;
 
@@ -298,6 +301,14 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         }
         public String getCertState() {
             return this.certState;
+        }
+
+        public ListClusterKubeconfigStatesResponseBodyStates setCloudServiceName(String cloudServiceName) {
+            this.cloudServiceName = cloudServiceName;
+            return this;
+        }
+        public String getCloudServiceName() {
+            return this.cloudServiceName;
         }
 
         public ListClusterKubeconfigStatesResponseBodyStates setCloudServiceRoles(java.util.List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> cloudServiceRoles) {
