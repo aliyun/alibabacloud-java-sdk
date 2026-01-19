@@ -44,6 +44,12 @@ public class DescribeListPocRequest extends TeaModel {
     @NameInMap("RegId")
     public String regId;
 
+    @NameInMap("TaskName")
+    public String taskName;
+
+    @NameInMap("TaskStatus")
+    public String taskStatus;
+
     /**
      * <p>Type</p>
      * 
@@ -88,6 +94,22 @@ public class DescribeListPocRequest extends TeaModel {
     }
     public String getRegId() {
         return this.regId;
+    }
+
+    public DescribeListPocRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public DescribeListPocRequest setTaskStatus(String taskStatus) {
+        this.taskStatus = taskStatus;
+        return this;
+    }
+    public String getTaskStatus() {
+        return this.taskStatus;
     }
 
     public DescribeListPocRequest setType(String type) {
