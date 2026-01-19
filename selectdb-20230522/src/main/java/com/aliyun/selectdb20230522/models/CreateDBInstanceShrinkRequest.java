@@ -56,6 +56,9 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("ClusterNodeType")
     public String clusterNodeType;
 
+    @NameInMap("ConfigPatternType")
+    public String configPatternType;
+
     /**
      * <p>The instance endpoint.</p>
      * 
@@ -282,6 +285,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     }
     public String getClusterNodeType() {
         return this.clusterNodeType;
+    }
+
+    public CreateDBInstanceShrinkRequest setConfigPatternType(String configPatternType) {
+        this.configPatternType = configPatternType;
+        return this;
+    }
+    public String getConfigPatternType() {
+        return this.configPatternType;
     }
 
     public CreateDBInstanceShrinkRequest setConnectionString(String connectionString) {

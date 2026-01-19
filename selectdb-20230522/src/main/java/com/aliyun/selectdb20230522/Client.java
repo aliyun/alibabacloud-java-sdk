@@ -577,6 +577,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClusterNodeType", request.clusterNodeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.configPatternType)) {
+            query.put("ConfigPatternType", request.configPatternType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.connectionString)) {
             query.put("ConnectionString", request.connectionString);
         }

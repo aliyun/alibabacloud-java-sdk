@@ -23,6 +23,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("ConfigPatternType")
+    public String configPatternType;
+
     /**
      * <p>The time when the instance was created.</p>
      * 
@@ -298,6 +301,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public DescribeDBInstanceAttributeResponseBody setConfigPatternType(String configPatternType) {
+        this.configPatternType = configPatternType;
+        return this;
+    }
+    public String getConfigPatternType() {
+        return this.configPatternType;
     }
 
     public DescribeDBInstanceAttributeResponseBody setCreateTime(String createTime) {

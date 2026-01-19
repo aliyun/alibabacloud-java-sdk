@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>selectdb20230522</artifactId>
-  <version>4.0.1</version>
+  <version>4.0.2</version>
   <packaging>jar</packaging>
   <name>selectdb20230522</name>
   <description>Alibaba Cloud selectdb (20230522) SDK for Java
@@ -96,6 +96,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>
