@@ -4,9 +4,21 @@ package com.aliyun.cloudcallcenter20200701.models;
 import com.aliyun.tea.*;
 
 public class GetHistoricalCampaignReportRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("CampaignId")
     public String campaignId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

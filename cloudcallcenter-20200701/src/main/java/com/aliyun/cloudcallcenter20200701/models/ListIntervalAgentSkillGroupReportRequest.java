@@ -4,24 +4,57 @@ package com.aliyun.cloudcallcenter20200701.models;
 import com.aliyun.tea.*;
 
 public class ListIntervalAgentSkillGroupReportRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("AgentId")
     public String agentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532707199000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Daily</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
     @NameInMap("MediaType")
     public String mediaType;
 
+    @NameInMap("ShowDefaultIfEmpty")
+    public Boolean showDefaultIfEmpty;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skg-default@ccc-test</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532448000000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -68,6 +101,14 @@ public class ListIntervalAgentSkillGroupReportRequest extends TeaModel {
     }
     public String getMediaType() {
         return this.mediaType;
+    }
+
+    public ListIntervalAgentSkillGroupReportRequest setShowDefaultIfEmpty(Boolean showDefaultIfEmpty) {
+        this.showDefaultIfEmpty = showDefaultIfEmpty;
+        return this;
+    }
+    public Boolean getShowDefaultIfEmpty() {
+        return this.showDefaultIfEmpty;
     }
 
     public ListIntervalAgentSkillGroupReportRequest setSkillGroupId(String skillGroupId) {

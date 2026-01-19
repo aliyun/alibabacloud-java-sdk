@@ -4,15 +4,35 @@ package com.aliyun.cloudcallcenter20200701.models;
 import com.aliyun.tea.*;
 
 public class ListCampaignTrendingReportRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("CampaignId")
     public String campaignId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1111</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

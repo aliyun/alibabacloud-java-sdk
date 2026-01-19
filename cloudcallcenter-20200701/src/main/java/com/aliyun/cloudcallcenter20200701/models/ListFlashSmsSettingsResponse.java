@@ -3,7 +3,7 @@ package com.aliyun.cloudcallcenter20200701.models;
 
 import com.aliyun.tea.*;
 
-public class GetRealtimeCampaignStatsResponse extends TeaModel {
+public class ListFlashSmsSettingsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetRealtimeCampaignStatsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetRealtimeCampaignStatsResponseBody body;
+    public ListFlashSmsSettingsResponseBody body;
 
-    public static GetRealtimeCampaignStatsResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetRealtimeCampaignStatsResponse self = new GetRealtimeCampaignStatsResponse();
+    public static ListFlashSmsSettingsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListFlashSmsSettingsResponse self = new ListFlashSmsSettingsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetRealtimeCampaignStatsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListFlashSmsSettingsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetRealtimeCampaignStatsResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetRealtimeCampaignStatsResponse setStatusCode(Integer statusCode) {
+    public ListFlashSmsSettingsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetRealtimeCampaignStatsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetRealtimeCampaignStatsResponse setBody(GetRealtimeCampaignStatsResponseBody body) {
+    public ListFlashSmsSettingsResponse setBody(ListFlashSmsSettingsResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetRealtimeCampaignStatsResponseBody getBody() {
+    public ListFlashSmsSettingsResponseBody getBody() {
         return this.body;
     }
 

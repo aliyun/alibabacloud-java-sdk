@@ -4,42 +4,100 @@ package com.aliyun.cloudcallcenter20200701.models;
 import com.aliyun.tea.*;
 
 public class ListAttemptsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("AgentId")
     public String agentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("AttemptId")
     public String attemptId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("Callee")
     public String callee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("CampaignId")
     public String campaignId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1111</p>
+     */
     @NameInMap("CaseId")
     public String caseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1111</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("QueueId")
     public String queueId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

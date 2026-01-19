@@ -22,6 +22,12 @@ public class CreateCampaignShrinkRequest extends TeaModel {
     @NameInMap("ExecutingUntilTimeout")
     public Boolean executingUntilTimeout;
 
+    @NameInMap("FlashSmsParameters")
+    public String flashSmsParameters;
+
+    @NameInMap("InstGroupId")
+    public String instGroupId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -33,6 +39,9 @@ public class CreateCampaignShrinkRequest extends TeaModel {
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NumberList")
+    public String numberListShrink;
 
     @NameInMap("QueueId")
     public String queueId;
@@ -105,6 +114,22 @@ public class CreateCampaignShrinkRequest extends TeaModel {
         return this.executingUntilTimeout;
     }
 
+    public CreateCampaignShrinkRequest setFlashSmsParameters(String flashSmsParameters) {
+        this.flashSmsParameters = flashSmsParameters;
+        return this;
+    }
+    public String getFlashSmsParameters() {
+        return this.flashSmsParameters;
+    }
+
+    public CreateCampaignShrinkRequest setInstGroupId(String instGroupId) {
+        this.instGroupId = instGroupId;
+        return this;
+    }
+    public String getInstGroupId() {
+        return this.instGroupId;
+    }
+
     public CreateCampaignShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -135,6 +160,14 @@ public class CreateCampaignShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateCampaignShrinkRequest setNumberListShrink(String numberListShrink) {
+        this.numberListShrink = numberListShrink;
+        return this;
+    }
+    public String getNumberListShrink() {
+        return this.numberListShrink;
     }
 
     public CreateCampaignShrinkRequest setQueueId(String queueId) {

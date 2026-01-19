@@ -22,6 +22,12 @@ public class CreateCampaignRequest extends TeaModel {
     @NameInMap("ExecutingUntilTimeout")
     public Boolean executingUntilTimeout;
 
+    @NameInMap("FlashSmsParameters")
+    public String flashSmsParameters;
+
+    @NameInMap("InstGroupId")
+    public String instGroupId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -33,6 +39,9 @@ public class CreateCampaignRequest extends TeaModel {
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NumberList")
+    public java.util.List<String> numberList;
 
     @NameInMap("QueueId")
     public String queueId;
@@ -105,6 +114,22 @@ public class CreateCampaignRequest extends TeaModel {
         return this.executingUntilTimeout;
     }
 
+    public CreateCampaignRequest setFlashSmsParameters(String flashSmsParameters) {
+        this.flashSmsParameters = flashSmsParameters;
+        return this;
+    }
+    public String getFlashSmsParameters() {
+        return this.flashSmsParameters;
+    }
+
+    public CreateCampaignRequest setInstGroupId(String instGroupId) {
+        this.instGroupId = instGroupId;
+        return this;
+    }
+    public String getInstGroupId() {
+        return this.instGroupId;
+    }
+
     public CreateCampaignRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -135,6 +160,14 @@ public class CreateCampaignRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateCampaignRequest setNumberList(java.util.List<String> numberList) {
+        this.numberList = numberList;
+        return this;
+    }
+    public java.util.List<String> getNumberList() {
+        return this.numberList;
     }
 
     public CreateCampaignRequest setQueueId(String queueId) {

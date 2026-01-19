@@ -4,27 +4,61 @@ package com.aliyun.cloudcallcenter20200701.models;
 import com.aliyun.tea.*;
 
 public class ListHistoricalAgentSkillGroupReportRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;agent1@ccc-test&quot;, &quot;agent2@ccc-test&quot;]</p>
+     */
     @NameInMap("AgentIdList")
     public String agentIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1657728000000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;skg1@ccc-test&quot;, &quot;skg2@ccc-test&quot;]</p>
+     */
     @NameInMap("SkillGroupIdList")
     public String skillGroupIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1671242400000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

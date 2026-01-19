@@ -4,6 +4,9 @@ package com.aliyun.cloudcallcenter20200701.models;
 import com.aliyun.tea.*;
 
 public class CreateDemoInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutboundCallWhitelist")
     public String outboundCallWhitelist;
 
