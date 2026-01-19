@@ -1644,6 +1644,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取云角色（CloudAccountRole）的临时访问凭证</p>
+     * 
+     * @param request ObtainCloudAccountRoleAccessCredentialRequest
+     * @param headers ObtainCloudAccountRoleAccessCredentialHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ObtainCloudAccountRoleAccessCredentialResponse
+     */
+    public ObtainCloudAccountRoleAccessCredentialResponse obtainCloudAccountRoleAccessCredentialWithOptions(String instanceId, ObtainCloudAccountRoleAccessCredentialRequest request, ObtainCloudAccountRoleAccessCredentialHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountRoleExternalId)) {
+            query.put("cloudAccountRoleExternalId", request.cloudAccountRoleExternalId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ObtainCloudAccountRoleAccessCredential"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/cloudAccountRoles/_/actions/obtainAccessCredential"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new ObtainCloudAccountRoleAccessCredentialResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取云角色（CloudAccountRole）的临时访问凭证</p>
+     * 
+     * @param request ObtainCloudAccountRoleAccessCredentialRequest
+     * @return ObtainCloudAccountRoleAccessCredentialResponse
+     */
+    public ObtainCloudAccountRoleAccessCredentialResponse obtainCloudAccountRoleAccessCredential(String instanceId, ObtainCloudAccountRoleAccessCredentialRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ObtainCloudAccountRoleAccessCredentialHeaders headers = new ObtainCloudAccountRoleAccessCredentialHeaders();
+        return this.obtainCloudAccountRoleAccessCredentialWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies information about an Employee Identity and Access Management (EIAM) group.</p>
      * 
      * @param request PatchGroupRequest

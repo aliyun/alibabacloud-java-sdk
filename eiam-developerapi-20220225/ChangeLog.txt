@@ -1,3 +1,7 @@
+2026-01-19 Version: 1.2.0
+- Support API ObtainCloudAccountRoleAccessCredential.
+
+
 2025-12-03 Version: 1.1.1
 - Update SDK.
 
