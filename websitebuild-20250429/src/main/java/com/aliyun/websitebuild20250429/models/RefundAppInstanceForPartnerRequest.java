@@ -11,6 +11,9 @@ public class RefundAppInstanceForPartnerRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("RefundReason")
     public String refundReason;
 
@@ -32,6 +35,14 @@ public class RefundAppInstanceForPartnerRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public RefundAppInstanceForPartnerRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public RefundAppInstanceForPartnerRequest setRefundReason(String refundReason) {

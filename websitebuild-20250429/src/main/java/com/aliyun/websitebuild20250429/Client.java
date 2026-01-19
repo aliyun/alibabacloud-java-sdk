@@ -1239,6 +1239,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizId", request.bizId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.refundReason)) {
             query.put("RefundReason", request.refundReason);
         }
