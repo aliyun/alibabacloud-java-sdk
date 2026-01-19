@@ -908,6 +908,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("VpcType")
         public String vpcType;
 
+        @NameInMap("VplVersion")
+        public String vplVersion;
+
         public static DescribeOfficeSitesResponseBodyOfficeSites build(java.util.Map<String, ?> map) throws Exception {
             DescribeOfficeSitesResponseBodyOfficeSites self = new DescribeOfficeSitesResponseBodyOfficeSites();
             return TeaModel.build(map, self);
@@ -1431,6 +1434,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getVpcType() {
             return this.vpcType;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setVplVersion(String vplVersion) {
+            this.vplVersion = vplVersion;
+            return this;
+        }
+        public String getVplVersion() {
+            return this.vplVersion;
         }
 
     }
