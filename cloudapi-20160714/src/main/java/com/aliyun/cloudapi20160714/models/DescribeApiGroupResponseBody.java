@@ -666,6 +666,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @NameInMap("CertificateValidStart")
         public Long certificateValidStart;
 
+        @NameInMap("ClientCertSDnPassThrough")
+        public Boolean clientCertSDnPassThrough;
+
         /**
          * <p>The type of the custom domain name.</p>
          * 
@@ -750,6 +753,15 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @NameInMap("IsHttpRedirectToHttps")
         public Boolean isHttpRedirectToHttps;
 
+        @NameInMap("SslOcspCacheEnable")
+        public Boolean sslOcspCacheEnable;
+
+        @NameInMap("SslOcspEnable")
+        public Boolean sslOcspEnable;
+
+        @NameInMap("SslVerifyDepth")
+        public Integer sslVerifyDepth;
+
         /**
          * <p>The wildcard domain name mode.</p>
          * 
@@ -810,6 +822,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
         public Long getCertificateValidStart() {
             return this.certificateValidStart;
+        }
+
+        public DescribeApiGroupResponseBodyCustomDomainsDomainItem setClientCertSDnPassThrough(Boolean clientCertSDnPassThrough) {
+            this.clientCertSDnPassThrough = clientCertSDnPassThrough;
+            return this;
+        }
+        public Boolean getClientCertSDnPassThrough() {
+            return this.clientCertSDnPassThrough;
         }
 
         public DescribeApiGroupResponseBodyCustomDomainsDomainItem setCustomDomainType(String customDomainType) {
@@ -874,6 +894,30 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
         public Boolean getIsHttpRedirectToHttps() {
             return this.isHttpRedirectToHttps;
+        }
+
+        public DescribeApiGroupResponseBodyCustomDomainsDomainItem setSslOcspCacheEnable(Boolean sslOcspCacheEnable) {
+            this.sslOcspCacheEnable = sslOcspCacheEnable;
+            return this;
+        }
+        public Boolean getSslOcspCacheEnable() {
+            return this.sslOcspCacheEnable;
+        }
+
+        public DescribeApiGroupResponseBodyCustomDomainsDomainItem setSslOcspEnable(Boolean sslOcspEnable) {
+            this.sslOcspEnable = sslOcspEnable;
+            return this;
+        }
+        public Boolean getSslOcspEnable() {
+            return this.sslOcspEnable;
+        }
+
+        public DescribeApiGroupResponseBodyCustomDomainsDomainItem setSslVerifyDepth(Integer sslVerifyDepth) {
+            this.sslVerifyDepth = sslVerifyDepth;
+            return this;
+        }
+        public Integer getSslVerifyDepth() {
+            return this.sslVerifyDepth;
         }
 
         public DescribeApiGroupResponseBodyCustomDomainsDomainItem setWildcardDomainPatterns(String wildcardDomainPatterns) {
