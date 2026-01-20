@@ -119,6 +119,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("interceptPolicy")
         public java.util.Map<String, String> interceptPolicy;
 
+        @NameInMap("serviceName")
+        public String serviceName;
+
         public static QueryConfigResponseBodyDataNacosRunningEnvFencePolicy build(java.util.Map<String, ?> map) throws Exception {
             QueryConfigResponseBodyDataNacosRunningEnvFencePolicy self = new QueryConfigResponseBodyDataNacosRunningEnvFencePolicy();
             return TeaModel.build(map, self);
@@ -138,6 +141,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getInterceptPolicy() {
             return this.interceptPolicy;
+        }
+
+        public QueryConfigResponseBodyDataNacosRunningEnvFencePolicy setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
     }
