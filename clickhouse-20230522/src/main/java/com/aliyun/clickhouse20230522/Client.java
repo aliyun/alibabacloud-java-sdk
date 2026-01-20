@@ -1437,6 +1437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeEndpointsResponse describeEndpointsWithOptions(DescribeEndpointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computingGroupId)) {
+            query.put("ComputingGroupId", request.computingGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
         }

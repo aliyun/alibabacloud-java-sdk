@@ -110,6 +110,13 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String connectionString;
 
         /**
+         * <strong>example:</strong>
+         * <p>cc-*****-clickhouse</p>
+         */
+        @NameInMap("EndpointName")
+        public String endpointName;
+
+        /**
          * <p>The IP address.</p>
          * 
          * <strong>example:</strong>
@@ -192,6 +199,14 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         }
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        public DescribeEndpointsResponseBodyDataEndpoints setEndpointName(String endpointName) {
+            this.endpointName = endpointName;
+            return this;
+        }
+        public String getEndpointName() {
+            return this.endpointName;
         }
 
         public DescribeEndpointsResponseBodyDataEndpoints setIPAddress(String IPAddress) {

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeEndpointsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>cc-*****-clickhouse</p>
+     */
+    @NameInMap("ComputingGroupId")
+    public String computingGroupId;
+
+    /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -26,6 +33,14 @@ public class DescribeEndpointsRequest extends TeaModel {
     public static DescribeEndpointsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEndpointsRequest self = new DescribeEndpointsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEndpointsRequest setComputingGroupId(String computingGroupId) {
+        this.computingGroupId = computingGroupId;
+        return this;
+    }
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     public DescribeEndpointsRequest setDBInstanceId(String DBInstanceId) {
