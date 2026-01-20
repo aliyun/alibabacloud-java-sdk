@@ -13,6 +13,9 @@ public class AssociateResourceShareRequest extends TeaModel {
     @NameInMap("ResourceArns")
     public java.util.List<String> resourceArns;
 
+    @NameInMap("ResourceProperties")
+    public java.util.List<AssociateResourceShareRequestResourceProperties> resourceProperties;
+
     /**
      * <p>The ID of the resource share.</p>
      * <p>This parameter is required.</p>
@@ -68,6 +71,14 @@ public class AssociateResourceShareRequest extends TeaModel {
         return this.resourceArns;
     }
 
+    public AssociateResourceShareRequest setResourceProperties(java.util.List<AssociateResourceShareRequestResourceProperties> resourceProperties) {
+        this.resourceProperties = resourceProperties;
+        return this;
+    }
+    public java.util.List<AssociateResourceShareRequestResourceProperties> getResourceProperties() {
+        return this.resourceProperties;
+    }
+
     public AssociateResourceShareRequest setResourceShareId(String resourceShareId) {
         this.resourceShareId = resourceShareId;
         return this;
@@ -98,6 +109,44 @@ public class AssociateResourceShareRequest extends TeaModel {
     }
     public java.util.List<String> getTargets() {
         return this.targets;
+    }
+
+    public static class AssociateResourceShareRequestResourceProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;sharePrincipals&quot;:true,&quot;shareTagOptions&quot;:false}</p>
+         */
+        @NameInMap("Property")
+        public String property;
+
+        /**
+         * <strong>example:</strong>
+         * <p>acs:vpc:cn-shanghai:103755469187****:vswitch/vsw-uf62b11ue4m8oz2di****</p>
+         */
+        @NameInMap("ResourceArn")
+        public String resourceArn;
+
+        public static AssociateResourceShareRequestResourceProperties build(java.util.Map<String, ?> map) throws Exception {
+            AssociateResourceShareRequestResourceProperties self = new AssociateResourceShareRequestResourceProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public AssociateResourceShareRequestResourceProperties setProperty(String property) {
+            this.property = property;
+            return this;
+        }
+        public String getProperty() {
+            return this.property;
+        }
+
+        public AssociateResourceShareRequestResourceProperties setResourceArn(String resourceArn) {
+            this.resourceArn = resourceArn;
+            return this;
+        }
+        public String getResourceArn() {
+            return this.resourceArn;
+        }
+
     }
 
     public static class AssociateResourceShareRequestResources extends TeaModel {

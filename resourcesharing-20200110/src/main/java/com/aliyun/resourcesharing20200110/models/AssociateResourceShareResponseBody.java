@@ -125,6 +125,13 @@ public class AssociateResourceShareResponseBody extends TeaModel {
         public String resourceArn;
 
         /**
+         * <strong>example:</strong>
+         * <p>{&quot;sharePrincipals&quot;:true,&quot;shareTagOptions&quot;:false}</p>
+         */
+        @NameInMap("ResourceProperty")
+        public String resourceProperty;
+
+        /**
          * <p>The ID of the resource share.</p>
          * 
          * <strong>example:</strong>
@@ -233,6 +240,14 @@ public class AssociateResourceShareResponseBody extends TeaModel {
         }
         public String getResourceArn() {
             return this.resourceArn;
+        }
+
+        public AssociateResourceShareResponseBodyResourceShareAssociations setResourceProperty(String resourceProperty) {
+            this.resourceProperty = resourceProperty;
+            return this;
+        }
+        public String getResourceProperty() {
+            return this.resourceProperty;
         }
 
         public AssociateResourceShareResponseBodyResourceShareAssociations setResourceShareId(String resourceShareId) {
