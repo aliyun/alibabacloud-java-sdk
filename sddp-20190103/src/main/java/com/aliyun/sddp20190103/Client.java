@@ -738,6 +738,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RuleID", request.ruleID);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
             query.put("RuleName", request.ruleName);
         }

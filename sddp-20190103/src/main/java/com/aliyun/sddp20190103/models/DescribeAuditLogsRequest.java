@@ -168,6 +168,9 @@ public class DescribeAuditLogsRequest extends TeaModel {
     @NameInMap("RuleID")
     public String ruleID;
 
+    @NameInMap("RuleId")
+    public String ruleId;
+
     @NameInMap("RuleName")
     public String ruleName;
 
@@ -387,6 +390,14 @@ public class DescribeAuditLogsRequest extends TeaModel {
     }
     public String getRuleID() {
         return this.ruleID;
+    }
+
+    public DescribeAuditLogsRequest setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
     }
 
     public DescribeAuditLogsRequest setRuleName(String ruleName) {

@@ -1,3 +1,7 @@
+2026-01-20 Version: 1.6.4
+- Update API DescribeAuditLogs: add request parameters RuleId.
+
+
 2026-01-16 Version: 1.6.3
 - Update API CreateSlrRole: add request parameters ServiceName.
 - Update API DescribeUserStatus: add response parameters Body.UserStatus.AssetRoleAuthed.
