@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OversoldUsageConfig extends TeaModel {
     @NameInMap("Disabled")
-    public String disabled;
+    public Boolean disabled;
 
     @NameInMap("DisabledBy")
     public String disabledBy;
@@ -15,11 +15,11 @@ public class OversoldUsageConfig extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public OversoldUsageConfig setDisabled(String disabled) {
+    public OversoldUsageConfig setDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
     }
-    public String getDisabled() {
+    public Boolean getDisabled() {
         return this.disabled;
     }
 
