@@ -242,6 +242,9 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         @NameInMap("bailian")
         public java.util.List<GetDigitalEmployeeResponseBodyKnowledgesBailian> bailian;
 
+        @NameInMap("sop")
+        public java.util.List<java.util.Map<String, ?>> sop;
+
         public static GetDigitalEmployeeResponseBodyKnowledges build(java.util.Map<String, ?> map) throws Exception {
             GetDigitalEmployeeResponseBodyKnowledges self = new GetDigitalEmployeeResponseBodyKnowledges();
             return TeaModel.build(map, self);
@@ -253,6 +256,14 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
         public java.util.List<GetDigitalEmployeeResponseBodyKnowledgesBailian> getBailian() {
             return this.bailian;
+        }
+
+        public GetDigitalEmployeeResponseBodyKnowledges setSop(java.util.List<java.util.Map<String, ?>> sop) {
+            this.sop = sop;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getSop() {
+            return this.sop;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListDigitalEmployeesRequest extends TeaModel {
+    @NameInMap("displayName")
+    public String displayName;
+
     @NameInMap("employeeType")
     public String employeeType;
 
@@ -31,6 +34,14 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public static ListDigitalEmployeesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDigitalEmployeesRequest self = new ListDigitalEmployeesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDigitalEmployeesRequest setDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    public String getDisplayName() {
+        return this.displayName;
     }
 
     public ListDigitalEmployeesRequest setEmployeeType(String employeeType) {

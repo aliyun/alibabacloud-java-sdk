@@ -152,6 +152,9 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         @NameInMap("bailian")
         public java.util.List<UpdateDigitalEmployeeRequestKnowledgesBailian> bailian;
 
+        @NameInMap("sop")
+        public java.util.List<java.util.Map<String, ?>> sop;
+
         public static UpdateDigitalEmployeeRequestKnowledges build(java.util.Map<String, ?> map) throws Exception {
             UpdateDigitalEmployeeRequestKnowledges self = new UpdateDigitalEmployeeRequestKnowledges();
             return TeaModel.build(map, self);
@@ -163,6 +166,14 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         }
         public java.util.List<UpdateDigitalEmployeeRequestKnowledgesBailian> getBailian() {
             return this.bailian;
+        }
+
+        public UpdateDigitalEmployeeRequestKnowledges setSop(java.util.List<java.util.Map<String, ?>> sop) {
+            this.sop = sop;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getSop() {
+            return this.sop;
         }
 
     }

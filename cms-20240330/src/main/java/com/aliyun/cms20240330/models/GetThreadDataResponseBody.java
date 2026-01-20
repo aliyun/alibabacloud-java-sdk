@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetThreadDataResponseBody extends TeaModel {
+    @NameInMap("data")
+    public java.util.List<GetThreadDataResponseBodyData> data;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -17,9 +20,6 @@ public class GetThreadDataResponseBody extends TeaModel {
      */
     @NameInMap("maxResults")
     public Long maxResults;
-
-    @NameInMap("messages")
-    public java.util.List<GetThreadDataResponseBodyMessages> messages;
 
     /**
      * <strong>example:</strong>
@@ -49,6 +49,14 @@ public class GetThreadDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetThreadDataResponseBody setData(java.util.List<GetThreadDataResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetThreadDataResponseBodyData> getData() {
+        return this.data;
+    }
+
     public GetThreadDataResponseBody setDigitalEmployeeName(String digitalEmployeeName) {
         this.digitalEmployeeName = digitalEmployeeName;
         return this;
@@ -63,14 +71,6 @@ public class GetThreadDataResponseBody extends TeaModel {
     }
     public Long getMaxResults() {
         return this.maxResults;
-    }
-
-    public GetThreadDataResponseBody setMessages(java.util.List<GetThreadDataResponseBodyMessages> messages) {
-        this.messages = messages;
-        return this;
-    }
-    public java.util.List<GetThreadDataResponseBodyMessages> getMessages() {
-        return this.messages;
     }
 
     public GetThreadDataResponseBody setNextToken(String nextToken) {
@@ -97,152 +97,108 @@ public class GetThreadDataResponseBody extends TeaModel {
         return this.threadId;
     }
 
-    public static class GetThreadDataResponseBodyMessages extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>205190712643664705</p>
-         */
-        @NameInMap("callerUid")
-        public String callerUid;
+    public static class GetThreadDataResponseBodyDataMessages extends TeaModel {
+        @NameInMap("agents")
+        public java.util.List<java.util.Map<String, ?>> agents;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
-        @NameInMap("digitalEmployeeName")
-        public String digitalEmployeeName;
+        @NameInMap("artifacts")
+        public java.util.List<java.util.Map<String, ?>> artifacts;
 
-        @NameInMap("items")
-        public java.util.List<java.util.Map<String, ?>> items;
+        @NameInMap("callId")
+        public String callId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>7F0000012B1B668BC3D59A7EF8A00063</p>
-         */
-        @NameInMap("messageId")
-        public String messageId;
+        @NameInMap("contents")
+        public java.util.List<java.util.Map<String, ?>> contents;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1560138499250147</p>
-         */
-        @NameInMap("ownerUid")
-        public String ownerUid;
+        @NameInMap("detail")
+        public String detail;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxxx</p>
-         */
-        @NameInMap("parentMessageId")
-        public String parentMessageId;
+        @NameInMap("events")
+        public java.util.List<java.util.Map<String, ?>> events;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-qingdao</p>
-         */
-        @NameInMap("region")
-        public String region;
+        @NameInMap("parentCallId")
+        public String parentCallId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>user</p>
-         */
         @NameInMap("role")
         public String role;
 
-        /**
-         * <strong>example:</strong>
-         * <p>jr-c2b000da0e41b543</p>
-         */
-        @NameInMap("runId")
-        public String runId;
+        @NameInMap("seq")
+        public Integer seq;
 
-        /**
-         * <strong>example:</strong>
-         * <p>98958d65-6cdb-4f40-8f46-f5e49f13c860</p>
-         */
-        @NameInMap("threadId")
-        public String threadId;
-
-        /**
-         * <strong>example:</strong>
-         * <p>1765359068</p>
-         */
         @NameInMap("timestamp")
         public String timestamp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3b5287ba17572104610774286d0096</p>
-         */
-        @NameInMap("traceId")
-        public String traceId;
+        @NameInMap("tools")
+        public java.util.List<java.util.Map<String, ?>> tools;
 
-        @NameInMap("variables")
-        public java.util.Map<String, String> variables;
+        @NameInMap("type")
+        public String type;
 
-        public static GetThreadDataResponseBodyMessages build(java.util.Map<String, ?> map) throws Exception {
-            GetThreadDataResponseBodyMessages self = new GetThreadDataResponseBodyMessages();
+        @NameInMap("version")
+        public String version;
+
+        public static GetThreadDataResponseBodyDataMessages build(java.util.Map<String, ?> map) throws Exception {
+            GetThreadDataResponseBodyDataMessages self = new GetThreadDataResponseBodyDataMessages();
             return TeaModel.build(map, self);
         }
 
-        public GetThreadDataResponseBodyMessages setCallerUid(String callerUid) {
-            this.callerUid = callerUid;
+        public GetThreadDataResponseBodyDataMessages setAgents(java.util.List<java.util.Map<String, ?>> agents) {
+            this.agents = agents;
             return this;
         }
-        public String getCallerUid() {
-            return this.callerUid;
+        public java.util.List<java.util.Map<String, ?>> getAgents() {
+            return this.agents;
         }
 
-        public GetThreadDataResponseBodyMessages setDigitalEmployeeName(String digitalEmployeeName) {
-            this.digitalEmployeeName = digitalEmployeeName;
+        public GetThreadDataResponseBodyDataMessages setArtifacts(java.util.List<java.util.Map<String, ?>> artifacts) {
+            this.artifacts = artifacts;
             return this;
         }
-        public String getDigitalEmployeeName() {
-            return this.digitalEmployeeName;
+        public java.util.List<java.util.Map<String, ?>> getArtifacts() {
+            return this.artifacts;
         }
 
-        public GetThreadDataResponseBodyMessages setItems(java.util.List<java.util.Map<String, ?>> items) {
-            this.items = items;
+        public GetThreadDataResponseBodyDataMessages setCallId(String callId) {
+            this.callId = callId;
             return this;
         }
-        public java.util.List<java.util.Map<String, ?>> getItems() {
-            return this.items;
+        public String getCallId() {
+            return this.callId;
         }
 
-        public GetThreadDataResponseBodyMessages setMessageId(String messageId) {
-            this.messageId = messageId;
+        public GetThreadDataResponseBodyDataMessages setContents(java.util.List<java.util.Map<String, ?>> contents) {
+            this.contents = contents;
             return this;
         }
-        public String getMessageId() {
-            return this.messageId;
+        public java.util.List<java.util.Map<String, ?>> getContents() {
+            return this.contents;
         }
 
-        public GetThreadDataResponseBodyMessages setOwnerUid(String ownerUid) {
-            this.ownerUid = ownerUid;
+        public GetThreadDataResponseBodyDataMessages setDetail(String detail) {
+            this.detail = detail;
             return this;
         }
-        public String getOwnerUid() {
-            return this.ownerUid;
+        public String getDetail() {
+            return this.detail;
         }
 
-        public GetThreadDataResponseBodyMessages setParentMessageId(String parentMessageId) {
-            this.parentMessageId = parentMessageId;
+        public GetThreadDataResponseBodyDataMessages setEvents(java.util.List<java.util.Map<String, ?>> events) {
+            this.events = events;
             return this;
         }
-        public String getParentMessageId() {
-            return this.parentMessageId;
+        public java.util.List<java.util.Map<String, ?>> getEvents() {
+            return this.events;
         }
 
-        public GetThreadDataResponseBodyMessages setRegion(String region) {
-            this.region = region;
+        public GetThreadDataResponseBodyDataMessages setParentCallId(String parentCallId) {
+            this.parentCallId = parentCallId;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getParentCallId() {
+            return this.parentCallId;
         }
 
-        public GetThreadDataResponseBodyMessages setRole(String role) {
+        public GetThreadDataResponseBodyDataMessages setRole(String role) {
             this.role = role;
             return this;
         }
@@ -250,23 +206,15 @@ public class GetThreadDataResponseBody extends TeaModel {
             return this.role;
         }
 
-        public GetThreadDataResponseBodyMessages setRunId(String runId) {
-            this.runId = runId;
+        public GetThreadDataResponseBodyDataMessages setSeq(Integer seq) {
+            this.seq = seq;
             return this;
         }
-        public String getRunId() {
-            return this.runId;
+        public Integer getSeq() {
+            return this.seq;
         }
 
-        public GetThreadDataResponseBodyMessages setThreadId(String threadId) {
-            this.threadId = threadId;
-            return this;
-        }
-        public String getThreadId() {
-            return this.threadId;
-        }
-
-        public GetThreadDataResponseBodyMessages setTimestamp(String timestamp) {
+        public GetThreadDataResponseBodyDataMessages setTimestamp(String timestamp) {
             this.timestamp = timestamp;
             return this;
         }
@@ -274,20 +222,69 @@ public class GetThreadDataResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public GetThreadDataResponseBodyMessages setTraceId(String traceId) {
+        public GetThreadDataResponseBodyDataMessages setTools(java.util.List<java.util.Map<String, ?>> tools) {
+            this.tools = tools;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getTools() {
+            return this.tools;
+        }
+
+        public GetThreadDataResponseBodyDataMessages setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetThreadDataResponseBodyDataMessages setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
+    public static class GetThreadDataResponseBodyData extends TeaModel {
+        @NameInMap("messages")
+        public java.util.List<GetThreadDataResponseBodyDataMessages> messages;
+
+        @NameInMap("requestId")
+        public String requestId;
+
+        @NameInMap("traceId")
+        public String traceId;
+
+        public static GetThreadDataResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetThreadDataResponseBodyData self = new GetThreadDataResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetThreadDataResponseBodyData setMessages(java.util.List<GetThreadDataResponseBodyDataMessages> messages) {
+            this.messages = messages;
+            return this;
+        }
+        public java.util.List<GetThreadDataResponseBodyDataMessages> getMessages() {
+            return this.messages;
+        }
+
+        public GetThreadDataResponseBodyData setRequestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        public GetThreadDataResponseBodyData setTraceId(String traceId) {
             this.traceId = traceId;
             return this;
         }
         public String getTraceId() {
             return this.traceId;
-        }
-
-        public GetThreadDataResponseBodyMessages setVariables(java.util.Map<String, String> variables) {
-            this.variables = variables;
-            return this;
-        }
-        public java.util.Map<String, String> getVariables() {
-            return this.variables;
         }
 
     }

@@ -54,6 +54,9 @@ public class CreateChatResponseBody extends TeaModel {
         @NameInMap("agents")
         public java.util.List<java.util.Map<String, ?>> agents;
 
+        @NameInMap("artifacts")
+        public java.util.List<java.util.Map<String, ?>> artifacts;
+
         /**
          * <strong>example:</strong>
          * <p>call_search_001</p>
@@ -70,6 +73,9 @@ public class CreateChatResponseBody extends TeaModel {
          */
         @NameInMap("detail")
         public String detail;
+
+        @NameInMap("events")
+        public java.util.List<java.util.Map<String, ?>> events;
 
         /**
          * <strong>example:</strong>
@@ -97,7 +103,7 @@ public class CreateChatResponseBody extends TeaModel {
          * <p>1765000005</p>
          */
         @NameInMap("timestamp")
-        public Long timestamp;
+        public String timestamp;
 
         @NameInMap("tools")
         public java.util.List<java.util.Map<String, ?>> tools;
@@ -108,6 +114,9 @@ public class CreateChatResponseBody extends TeaModel {
          */
         @NameInMap("type")
         public String type;
+
+        @NameInMap("version")
+        public String version;
 
         public static CreateChatResponseBodyMessages build(java.util.Map<String, ?> map) throws Exception {
             CreateChatResponseBodyMessages self = new CreateChatResponseBodyMessages();
@@ -120,6 +129,14 @@ public class CreateChatResponseBody extends TeaModel {
         }
         public java.util.List<java.util.Map<String, ?>> getAgents() {
             return this.agents;
+        }
+
+        public CreateChatResponseBodyMessages setArtifacts(java.util.List<java.util.Map<String, ?>> artifacts) {
+            this.artifacts = artifacts;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getArtifacts() {
+            return this.artifacts;
         }
 
         public CreateChatResponseBodyMessages setCallId(String callId) {
@@ -146,6 +163,14 @@ public class CreateChatResponseBody extends TeaModel {
             return this.detail;
         }
 
+        public CreateChatResponseBodyMessages setEvents(java.util.List<java.util.Map<String, ?>> events) {
+            this.events = events;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getEvents() {
+            return this.events;
+        }
+
         public CreateChatResponseBodyMessages setParentCallId(String parentCallId) {
             this.parentCallId = parentCallId;
             return this;
@@ -170,11 +195,11 @@ public class CreateChatResponseBody extends TeaModel {
             return this.seq;
         }
 
-        public CreateChatResponseBodyMessages setTimestamp(Long timestamp) {
+        public CreateChatResponseBodyMessages setTimestamp(String timestamp) {
             this.timestamp = timestamp;
             return this;
         }
-        public Long getTimestamp() {
+        public String getTimestamp() {
             return this.timestamp;
         }
 
@@ -192,6 +217,14 @@ public class CreateChatResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public CreateChatResponseBodyMessages setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
