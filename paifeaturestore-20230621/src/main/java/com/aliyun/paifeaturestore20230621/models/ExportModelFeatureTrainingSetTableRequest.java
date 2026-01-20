@@ -10,9 +10,17 @@ public class ExportModelFeatureTrainingSetTableRequest extends TeaModel {
     @NameInMap("LabelInputConfig")
     public ExportModelFeatureTrainingSetTableRequestLabelInputConfig labelInputConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RealTimeIterateInterval")
     public Long realTimeIterateInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("RealTimePartitionCountValue")
     public Long realTimePartitionCountValue;
 

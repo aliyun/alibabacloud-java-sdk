@@ -3,10 +3,10 @@ package com.aliyun.paifeaturestore20230621.models;
 
 import com.aliyun.tea.*;
 
-public class FeatureViewConfigValuePartitionsValue extends TeaModel {
+public class FeatureViewConfigValueSnapshotPartitionsValue extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>20250101</p>
+     * <p>20260101</p>
      */
     @NameInMap("Value")
     public String value;
@@ -14,26 +14,18 @@ public class FeatureViewConfigValuePartitionsValue extends TeaModel {
     @NameInMap("Values")
     public java.util.List<String> values;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20250101</p>
-     */
     @NameInMap("StartValue")
     public String startValue;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20250201</p>
-     */
     @NameInMap("EndValue")
     public String endValue;
 
-    public static FeatureViewConfigValuePartitionsValue build(java.util.Map<String, ?> map) throws Exception {
-        FeatureViewConfigValuePartitionsValue self = new FeatureViewConfigValuePartitionsValue();
+    public static FeatureViewConfigValueSnapshotPartitionsValue build(java.util.Map<String, ?> map) throws Exception {
+        FeatureViewConfigValueSnapshotPartitionsValue self = new FeatureViewConfigValueSnapshotPartitionsValue();
         return TeaModel.build(map, self);
     }
 
-    public FeatureViewConfigValuePartitionsValue setValue(String value) {
+    public FeatureViewConfigValueSnapshotPartitionsValue setValue(String value) {
         this.value = value;
         return this;
     }
@@ -41,7 +33,7 @@ public class FeatureViewConfigValuePartitionsValue extends TeaModel {
         return this.value;
     }
 
-    public FeatureViewConfigValuePartitionsValue setValues(java.util.List<String> values) {
+    public FeatureViewConfigValueSnapshotPartitionsValue setValues(java.util.List<String> values) {
         this.values = values;
         return this;
     }
@@ -49,7 +41,7 @@ public class FeatureViewConfigValuePartitionsValue extends TeaModel {
         return this.values;
     }
 
-    public FeatureViewConfigValuePartitionsValue setStartValue(String startValue) {
+    public FeatureViewConfigValueSnapshotPartitionsValue setStartValue(String startValue) {
         this.startValue = startValue;
         return this;
     }
@@ -57,7 +49,7 @@ public class FeatureViewConfigValuePartitionsValue extends TeaModel {
         return this.startValue;
     }
 
-    public FeatureViewConfigValuePartitionsValue setEndValue(String endValue) {
+    public FeatureViewConfigValueSnapshotPartitionsValue setEndValue(String endValue) {
         this.endValue = endValue;
         return this;
     }

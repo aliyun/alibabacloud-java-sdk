@@ -383,9 +383,17 @@ public class GetFeatureViewResponseBody extends TeaModel {
     }
 
     public static class GetFeatureViewResponseBodyFieldsTransformInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>f1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -416,9 +424,17 @@ public class GetFeatureViewResponseBody extends TeaModel {
         @NameInMap("Input")
         public java.util.List<GetFeatureViewResponseBodyFieldsTransformInput> input;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LLMConfigId")
         public Integer LLMConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LLMEmbedding</p>
+         */
         @NameInMap("Type")
         public String type;
 

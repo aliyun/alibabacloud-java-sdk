@@ -11,6 +11,10 @@ public class ExportModelFeatureTrainingSetTableResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

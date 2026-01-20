@@ -203,9 +203,17 @@ public class CreateFeatureViewRequest extends TeaModel {
     }
 
     public static class CreateFeatureViewRequestFieldsTransformInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>f1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -236,9 +244,17 @@ public class CreateFeatureViewRequest extends TeaModel {
         @NameInMap("Input")
         public java.util.List<CreateFeatureViewRequestFieldsTransformInput> input;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LLMConfigId")
         public Integer LLMConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LLMEmbedding</p>
+         */
         @NameInMap("Type")
         public String type;
 

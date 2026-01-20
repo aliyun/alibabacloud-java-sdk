@@ -27,6 +27,10 @@ public class CreateLLMConfigRequest extends TeaModel {
     @NameInMap("BatchSize")
     public Integer batchSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8192</p>
+     */
     @NameInMap("MaxTokens")
     public Integer maxTokens;
 
