@@ -168,6 +168,47 @@ public class ListCustomAgentResponseBody extends TeaModel {
 
     }
 
+    public static class ListCustomAgentResponseBodyDataContentScheduleTaskConfig extends TeaModel {
+        @NameInMap("CronExpression")
+        public String cronExpression;
+
+        @NameInMap("Query")
+        public String query;
+
+        @NameInMap("RelatedSessionId")
+        public String relatedSessionId;
+
+        public static ListCustomAgentResponseBodyDataContentScheduleTaskConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomAgentResponseBodyDataContentScheduleTaskConfig self = new ListCustomAgentResponseBodyDataContentScheduleTaskConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomAgentResponseBodyDataContentScheduleTaskConfig setCronExpression(String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        public ListCustomAgentResponseBodyDataContentScheduleTaskConfig setQuery(String query) {
+            this.query = query;
+            return this;
+        }
+        public String getQuery() {
+            return this.query;
+        }
+
+        public ListCustomAgentResponseBodyDataContentScheduleTaskConfig setRelatedSessionId(String relatedSessionId) {
+            this.relatedSessionId = relatedSessionId;
+            return this;
+        }
+        public String getRelatedSessionId() {
+            return this.relatedSessionId;
+        }
+
+    }
+
     public static class ListCustomAgentResponseBodyDataContent extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -196,6 +237,13 @@ public class ListCustomAgentResponseBody extends TeaModel {
          */
         @NameInMap("CustomAgentId")
         public String customAgentId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("DMSUnit")
+        public String DMSUnit;
 
         @NameInMap("DataJson")
         public String dataJson;
@@ -233,6 +281,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @NameInMap("Instruction")
         public String instruction;
 
+        @NameInMap("IsScheduleTask")
+        public Boolean isScheduleTask;
+
         @NameInMap("Knowledge")
         public String knowledge;
 
@@ -256,6 +307,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("NextRuntime")
+        public Long nextRuntime;
+
         /**
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -276,6 +330,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
          */
         @NameInMap("ReleaseTime")
         public String releaseTime;
+
+        @NameInMap("ScheduleTaskConfig")
+        public ListCustomAgentResponseBodyDataContentScheduleTaskConfig scheduleTaskConfig;
 
         /**
          * <strong>example:</strong>
@@ -332,6 +389,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
         public String getCustomAgentId() {
             return this.customAgentId;
+        }
+
+        public ListCustomAgentResponseBodyDataContent setDMSUnit(String DMSUnit) {
+            this.DMSUnit = DMSUnit;
+            return this;
+        }
+        public String getDMSUnit() {
+            return this.DMSUnit;
         }
 
         public ListCustomAgentResponseBodyDataContent setDataJson(String dataJson) {
@@ -398,6 +463,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
             return this.instruction;
         }
 
+        public ListCustomAgentResponseBodyDataContent setIsScheduleTask(Boolean isScheduleTask) {
+            this.isScheduleTask = isScheduleTask;
+            return this;
+        }
+        public Boolean getIsScheduleTask() {
+            return this.isScheduleTask;
+        }
+
         public ListCustomAgentResponseBodyDataContent setKnowledge(String knowledge) {
             this.knowledge = knowledge;
             return this;
@@ -438,6 +511,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListCustomAgentResponseBodyDataContent setNextRuntime(Long nextRuntime) {
+            this.nextRuntime = nextRuntime;
+            return this;
+        }
+        public Long getNextRuntime() {
+            return this.nextRuntime;
+        }
+
         public ListCustomAgentResponseBodyDataContent setOfflineTime(String offlineTime) {
             this.offlineTime = offlineTime;
             return this;
@@ -460,6 +541,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
         public String getReleaseTime() {
             return this.releaseTime;
+        }
+
+        public ListCustomAgentResponseBodyDataContent setScheduleTaskConfig(ListCustomAgentResponseBodyDataContentScheduleTaskConfig scheduleTaskConfig) {
+            this.scheduleTaskConfig = scheduleTaskConfig;
+            return this;
+        }
+        public ListCustomAgentResponseBodyDataContentScheduleTaskConfig getScheduleTaskConfig() {
+            return this.scheduleTaskConfig;
         }
 
         public ListCustomAgentResponseBodyDataContent setStatus(String status) {
