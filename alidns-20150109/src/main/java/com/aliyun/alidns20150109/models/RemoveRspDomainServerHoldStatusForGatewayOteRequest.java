@@ -3,12 +3,12 @@ package com.aliyun.alidns20150109.models;
 
 import com.aliyun.tea.*;
 
-public class RemoveRspDomainServerHoldStatusForGatewayRequest extends TeaModel {
+public class RemoveRspDomainServerHoldStatusForGatewayOteRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>asdf</p>
+     * <p>qwoefasdf</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -25,12 +25,12 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends TeaModel {
     @NameInMap("StatusMsg")
     public String statusMsg;
 
-    public static RemoveRspDomainServerHoldStatusForGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
-        RemoveRspDomainServerHoldStatusForGatewayRequest self = new RemoveRspDomainServerHoldStatusForGatewayRequest();
+    public static RemoveRspDomainServerHoldStatusForGatewayOteRequest build(java.util.Map<String, ?> map) throws Exception {
+        RemoveRspDomainServerHoldStatusForGatewayOteRequest self = new RemoveRspDomainServerHoldStatusForGatewayOteRequest();
         return TeaModel.build(map, self);
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayRequest setClientToken(String clientToken) {
+    public RemoveRspDomainServerHoldStatusForGatewayOteRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -38,7 +38,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayRequest setDomainName(String domainName) {
+    public RemoveRspDomainServerHoldStatusForGatewayOteRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
@@ -46,7 +46,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends TeaModel {
         return this.domainName;
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayRequest setStatusMsg(String statusMsg) {
+    public RemoveRspDomainServerHoldStatusForGatewayOteRequest setStatusMsg(String statusMsg) {
         this.statusMsg = statusMsg;
         return this;
     }

@@ -3,12 +3,12 @@ package com.aliyun.alidns20150109.models;
 
 import com.aliyun.tea.*;
 
-public class RemoveRspDomainServerHoldStatusForGatewayRequest extends TeaModel {
+public class AddRspDomainServerHoldStatusForGatewayOteRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>asdf</p>
+     * <p>qwoefasdf</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -17,20 +17,23 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>example.com</p>
+     * <p>dns-example.top</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StatusMsg")
     public String statusMsg;
 
-    public static RemoveRspDomainServerHoldStatusForGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
-        RemoveRspDomainServerHoldStatusForGatewayRequest self = new RemoveRspDomainServerHoldStatusForGatewayRequest();
+    public static AddRspDomainServerHoldStatusForGatewayOteRequest build(java.util.Map<String, ?> map) throws Exception {
+        AddRspDomainServerHoldStatusForGatewayOteRequest self = new AddRspDomainServerHoldStatusForGatewayOteRequest();
         return TeaModel.build(map, self);
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayRequest setClientToken(String clientToken) {
+    public AddRspDomainServerHoldStatusForGatewayOteRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -38,7 +41,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayRequest setDomainName(String domainName) {
+    public AddRspDomainServerHoldStatusForGatewayOteRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
@@ -46,7 +49,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends TeaModel {
         return this.domainName;
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayRequest setStatusMsg(String statusMsg) {
+    public AddRspDomainServerHoldStatusForGatewayOteRequest setStatusMsg(String statusMsg) {
         this.statusMsg = statusMsg;
         return this;
     }

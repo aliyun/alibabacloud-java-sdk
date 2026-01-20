@@ -1098,11 +1098,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
-     * <li>本接口专为网关用户设计，允许他们添加指定域名的serverHold属性。</li>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * <p>用于添加特定域名的serverHold状态信息。</p>
      * 
      * @param request AddRspDomainServerHoldStatusForGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1144,11 +1148,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
-     * <li>本接口专为网关用户设计，允许他们添加指定域名的serverHold属性。</li>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * <p>用于添加特定域名的serverHold状态信息。</p>
      * 
      * @param request AddRspDomainServerHoldStatusForGatewayRequest
      * @return AddRspDomainServerHoldStatusForGatewayResponse
@@ -1156,6 +1164,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddRspDomainServerHoldStatusForGatewayResponse addRspDomainServerHoldStatusForGateway(AddRspDomainServerHoldStatusForGatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addRspDomainServerHoldStatusForGatewayWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * 
+     * @param request AddRspDomainServerHoldStatusForGatewayOteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddRspDomainServerHoldStatusForGatewayOteResponse
+     */
+    public AddRspDomainServerHoldStatusForGatewayOteResponse addRspDomainServerHoldStatusForGatewayOteWithOptions(AddRspDomainServerHoldStatusForGatewayOteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusMsg)) {
+            query.put("StatusMsg", request.statusMsg);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddRspDomainServerHoldStatusForGatewayOte"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddRspDomainServerHoldStatusForGatewayOteResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * 
+     * @param request AddRspDomainServerHoldStatusForGatewayOteRequest
+     * @return AddRspDomainServerHoldStatusForGatewayOteResponse
+     */
+    public AddRspDomainServerHoldStatusForGatewayOteResponse addRspDomainServerHoldStatusForGatewayOte(AddRspDomainServerHoldStatusForGatewayOteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addRspDomainServerHoldStatusForGatewayOteWithOptions(request, runtime);
     }
 
     /**
@@ -9386,6 +9466,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * 
+     * @param request RemoveRspDomainServerHoldStatusForGatewayOteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveRspDomainServerHoldStatusForGatewayOteResponse
+     */
+    public RemoveRspDomainServerHoldStatusForGatewayOteResponse removeRspDomainServerHoldStatusForGatewayOteWithOptions(RemoveRspDomainServerHoldStatusForGatewayOteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusMsg)) {
+            query.put("StatusMsg", request.statusMsg);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveRspDomainServerHoldStatusForGatewayOte"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveRspDomainServerHoldStatusForGatewayOteResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * 
+     * @param request RemoveRspDomainServerHoldStatusForGatewayOteRequest
+     * @return RemoveRspDomainServerHoldStatusForGatewayOteResponse
+     */
+    public RemoveRspDomainServerHoldStatusForGatewayOteResponse removeRspDomainServerHoldStatusForGatewayOte(RemoveRspDomainServerHoldStatusForGatewayOteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeRspDomainServerHoldStatusForGatewayOteWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Replaces the addresses referenced by an address pool.</p>
      * 
@@ -13885,6 +14037,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRspDomainServerProhibitStatusForGatewayResponse updateRspDomainServerProhibitStatusForGateway(UpdateRspDomainServerProhibitStatusForGatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRspDomainServerProhibitStatusForGatewayWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于更新特定域名的状态信息。</p>
+     * 
+     * @param request UpdateRspDomainServerProhibitStatusForGatewayOteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRspDomainServerProhibitStatusForGatewayOteResponse
+     */
+    public UpdateRspDomainServerProhibitStatusForGatewayOteResponse updateRspDomainServerProhibitStatusForGatewayOteWithOptions(UpdateRspDomainServerProhibitStatusForGatewayOteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addStatusList)) {
+            query.put("AddStatusList", request.addStatusList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteStatusList)) {
+            query.put("DeleteStatusList", request.deleteStatusList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRspDomainServerProhibitStatusForGatewayOte"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRspDomainServerProhibitStatusForGatewayOteResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于更新特定域名的状态信息。</p>
+     * 
+     * @param request UpdateRspDomainServerProhibitStatusForGatewayOteRequest
+     * @return UpdateRspDomainServerProhibitStatusForGatewayOteResponse
+     */
+    public UpdateRspDomainServerProhibitStatusForGatewayOteResponse updateRspDomainServerProhibitStatusForGatewayOte(UpdateRspDomainServerProhibitStatusForGatewayOteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRspDomainServerProhibitStatusForGatewayOteWithOptions(request, runtime);
     }
 
     /**

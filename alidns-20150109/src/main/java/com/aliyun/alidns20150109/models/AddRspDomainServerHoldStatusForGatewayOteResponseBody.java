@@ -3,12 +3,12 @@ package com.aliyun.alidns20150109.models;
 
 import com.aliyun.tea.*;
 
-public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel {
+public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
-    public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail accessDeniedDetail;
+    public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     @NameInMap("Data")
-    public RemoveRspDomainServerHoldStatusForGatewayResponseBodyData data;
+    public AddRspDomainServerHoldStatusForGatewayOteResponseBodyData data;
 
     /**
      * <strong>example:</strong>
@@ -31,28 +31,28 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
     @NameInMap("Success")
     public Boolean success;
 
-    public static RemoveRspDomainServerHoldStatusForGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RemoveRspDomainServerHoldStatusForGatewayResponseBody self = new RemoveRspDomainServerHoldStatusForGatewayResponseBody();
+    public static AddRspDomainServerHoldStatusForGatewayOteResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AddRspDomainServerHoldStatusForGatewayOteResponseBody self = new AddRspDomainServerHoldStatusForGatewayOteResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayResponseBody setAccessDeniedDetail(RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail accessDeniedDetail) {
+    public AddRspDomainServerHoldStatusForGatewayOteResponseBody setAccessDeniedDetail(AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail accessDeniedDetail) {
         this.accessDeniedDetail = accessDeniedDetail;
         return this;
     }
-    public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
+    public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
         return this.accessDeniedDetail;
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayResponseBody setData(RemoveRspDomainServerHoldStatusForGatewayResponseBodyData data) {
+    public AddRspDomainServerHoldStatusForGatewayOteResponseBody setData(AddRspDomainServerHoldStatusForGatewayOteResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public RemoveRspDomainServerHoldStatusForGatewayResponseBodyData getData() {
+    public AddRspDomainServerHoldStatusForGatewayOteResponseBodyData getData() {
         return this.data;
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayResponseBody setRecoverableError(Boolean recoverableError) {
+    public AddRspDomainServerHoldStatusForGatewayOteResponseBody setRecoverableError(Boolean recoverableError) {
         this.recoverableError = recoverableError;
         return this;
     }
@@ -60,7 +60,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         return this.recoverableError;
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayResponseBody setRequestId(String requestId) {
+    public AddRspDomainServerHoldStatusForGatewayOteResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -68,7 +68,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         return this.requestId;
     }
 
-    public RemoveRspDomainServerHoldStatusForGatewayResponseBody setSuccess(Boolean success) {
+    public AddRspDomainServerHoldStatusForGatewayOteResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -76,7 +76,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         return this.success;
     }
 
-    public static class RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail extends TeaModel {
+    public static class AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>CreateUser</p>
@@ -107,7 +107,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
 
         /**
          * <strong>example:</strong>
-         * <p>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</p>
+         * <p>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</p>
          */
         @NameInMap("EncodedDiagnosticMessage")
         public String encodedDiagnosticMessage;
@@ -126,12 +126,12 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         @NameInMap("PolicyType")
         public String policyType;
 
-        public static RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
-            RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail self = new RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail();
+        public static AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
+            AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail self = new AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail();
             return TeaModel.build(map, self);
         }
 
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
             this.authAction = authAction;
             return this;
         }
@@ -139,7 +139,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
             return this.authAction;
         }
 
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
             this.authPrincipalDisplayName = authPrincipalDisplayName;
             return this;
         }
@@ -147,7 +147,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
             return this.authPrincipalDisplayName;
         }
 
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
             this.authPrincipalOwnerId = authPrincipalOwnerId;
             return this;
         }
@@ -155,7 +155,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
             return this.authPrincipalOwnerId;
         }
 
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
             this.authPrincipalType = authPrincipalType;
             return this;
         }
@@ -163,7 +163,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
             return this.authPrincipalType;
         }
 
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
             this.encodedDiagnosticMessage = encodedDiagnosticMessage;
             return this;
         }
@@ -171,7 +171,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
             return this.encodedDiagnosticMessage;
         }
 
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
             this.noPermissionType = noPermissionType;
             return this;
         }
@@ -179,7 +179,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
             return this.noPermissionType;
         }
 
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
             this.policyType = policyType;
             return this;
         }
@@ -189,7 +189,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
 
     }
 
-    public static class RemoveRspDomainServerHoldStatusForGatewayResponseBodyData extends TeaModel {
+    public static class AddRspDomainServerHoldStatusForGatewayOteResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -197,28 +197,17 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         @NameInMap("DomainName")
         public String domainName;
 
-        @NameInMap("ServerHoldStatus")
-        public String serverHoldStatus;
-
-        public static RemoveRspDomainServerHoldStatusForGatewayResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            RemoveRspDomainServerHoldStatusForGatewayResponseBodyData self = new RemoveRspDomainServerHoldStatusForGatewayResponseBodyData();
+        public static AddRspDomainServerHoldStatusForGatewayOteResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            AddRspDomainServerHoldStatusForGatewayOteResponseBodyData self = new AddRspDomainServerHoldStatusForGatewayOteResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyData setDomainName(String domainName) {
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBodyData setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
         }
         public String getDomainName() {
             return this.domainName;
-        }
-
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyData setServerHoldStatus(String serverHoldStatus) {
-            this.serverHoldStatus = serverHoldStatus;
-            return this;
-        }
-        public String getServerHoldStatus() {
-            return this.serverHoldStatus;
         }
 
     }
