@@ -17,6 +17,9 @@ public class CreateEventResponseBody extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("encryptedId")
+    public String encryptedId;
+
     @NameInMap("end")
     public CreateEventResponseBodyEnd end;
 
@@ -104,6 +107,14 @@ public class CreateEventResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateEventResponseBody setEncryptedId(String encryptedId) {
+        this.encryptedId = encryptedId;
+        return this;
+    }
+    public String getEncryptedId() {
+        return this.encryptedId;
     }
 
     public CreateEventResponseBody setEnd(CreateEventResponseBodyEnd end) {

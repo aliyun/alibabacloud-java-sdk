@@ -70,6 +70,9 @@ public class GetDingtalkMeetingMemberEventResponseBody extends TeaModel {
     }
 
     public static class GetDingtalkMeetingMemberEventResponseBodyData extends TeaModel {
+        @NameInMap("confModule")
+        public String confModule;
+
         /**
          * <strong>example:</strong>
          * <p>event123</p>
@@ -101,6 +104,14 @@ public class GetDingtalkMeetingMemberEventResponseBody extends TeaModel {
         public static GetDingtalkMeetingMemberEventResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDingtalkMeetingMemberEventResponseBodyData self = new GetDingtalkMeetingMemberEventResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetDingtalkMeetingMemberEventResponseBodyData setConfModule(String confModule) {
+            this.confModule = confModule;
+            return this;
+        }
+        public String getConfModule() {
+            return this.confModule;
         }
 
         public GetDingtalkMeetingMemberEventResponseBodyData setEventId(String eventId) {
