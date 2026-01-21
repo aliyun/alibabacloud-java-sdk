@@ -32,6 +32,13 @@ public class ModifySlsDispatchStatusRequest extends TeaModel {
     @NameInMap("NewRegionId")
     public String newRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn</p>
+     */
+    @NameInMap("Site")
+    public String site;
+
     public static ModifySlsDispatchStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySlsDispatchStatusRequest self = new ModifySlsDispatchStatusRequest();
         return TeaModel.build(map, self);
@@ -67,6 +74,14 @@ public class ModifySlsDispatchStatusRequest extends TeaModel {
     }
     public String getNewRegionId() {
         return this.newRegionId;
+    }
+
+    public ModifySlsDispatchStatusRequest setSite(String site) {
+        this.site = site;
+        return this;
+    }
+    public String getSite() {
+        return this.site;
     }
 
 }

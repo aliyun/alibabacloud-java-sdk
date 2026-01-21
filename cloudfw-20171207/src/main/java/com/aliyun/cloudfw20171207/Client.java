@@ -710,8 +710,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return ClearLogStoreStorageResponse
      */
-    public ClearLogStoreStorageResponse clearLogStoreStorageWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public ClearLogStoreStorageResponse clearLogStoreStorageWithOptions(ClearLogStoreStorageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.site)) {
+            query.put("Site", request.site);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ClearLogStoreStorage"),
             new TeaPair("version", "2017-12-07"),
@@ -729,11 +737,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>清空防火墙日志</p>
+     * 
+     * @param request ClearLogStoreStorageRequest
      * @return ClearLogStoreStorageResponse
      */
-    public ClearLogStoreStorageResponse clearLogStoreStorage() throws Exception {
+    public ClearLogStoreStorageResponse clearLogStoreStorage(ClearLogStoreStorageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.clearLogStoreStorageWithOptions(runtime);
+        return this.clearLogStoreStorageWithOptions(request, runtime);
     }
 
     /**
@@ -9818,6 +9828,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询地域和资产类型引流设置</p>
+     * 
+     * @param request DescribeRegionResourceTypeAutoEnableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionResourceTypeAutoEnableResponse
+     */
+    public DescribeRegionResourceTypeAutoEnableResponse describeRegionResourceTypeAutoEnableWithOptions(DescribeRegionResourceTypeAutoEnableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRegionResourceTypeAutoEnable"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionResourceTypeAutoEnableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询地域和资产类型引流设置</p>
+     * 
+     * @param request DescribeRegionResourceTypeAutoEnableRequest
+     * @return DescribeRegionResourceTypeAutoEnableResponse
+     */
+    public DescribeRegionResourceTypeAutoEnableResponse describeRegionResourceTypeAutoEnable(DescribeRegionResourceTypeAutoEnableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRegionResourceTypeAutoEnableWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询资产类型默认引流</p>
      * 
      * @param request DescribeResourceTypeAutoEnableRequest
@@ -15381,6 +15435,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionNo)) {
+            query.put("RegionNo", request.regionNo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceTypeAutoEnable)) {
             query.put("ResourceTypeAutoEnable", request.resourceTypeAutoEnable);
         }
@@ -15491,6 +15549,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.newRegionId)) {
             query.put("NewRegionId", request.newRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.site)) {
+            query.put("Site", request.site);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -15849,6 +15911,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logVersion)) {
+            query.put("LogVersion", request.logVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slsRegionId)) {
+            query.put("SlsRegionId", request.slsRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageTime)) {
@@ -16648,12 +16718,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutDisableFwSwitchResponse putDisableFwSwitchWithOptions(PutDisableFwSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipaddrList)) {
             query.put("IpaddrList", request.ipaddrList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUid)) {
+            query.put("MemberUid", request.memberUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionList)) {
@@ -16780,12 +16858,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutEnableFwSwitchResponse putEnableFwSwitchWithOptions(PutEnableFwSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipaddrList)) {
             query.put("IpaddrList", request.ipaddrList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUid)) {
+            query.put("MemberUid", request.memberUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionList)) {
@@ -17082,6 +17168,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResetVpcFirewallRuleHitCountResponse resetVpcFirewallRuleHitCount(ResetVpcFirewallRuleHitCountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetVpcFirewallRuleHitCountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启自动保护新入资产</p>
+     * 
+     * @param request SetAutoProtectNewAssetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetAutoProtectNewAssetsResponse
+     */
+    public SetAutoProtectNewAssetsResponse setAutoProtectNewAssetsWithOptions(SetAutoProtectNewAssetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoProtect)) {
+            query.put("AutoProtect", request.autoProtect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetAutoProtectNewAssets"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetAutoProtectNewAssetsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启自动保护新入资产</p>
+     * 
+     * @param request SetAutoProtectNewAssetsRequest
+     * @return SetAutoProtectNewAssetsResponse
+     */
+    public SetAutoProtectNewAssetsResponse setAutoProtectNewAssets(SetAutoProtectNewAssetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setAutoProtectNewAssetsWithOptions(request, runtime);
     }
 
     /**

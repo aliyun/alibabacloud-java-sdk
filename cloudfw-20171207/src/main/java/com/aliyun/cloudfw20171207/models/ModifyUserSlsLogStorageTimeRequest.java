@@ -14,6 +14,20 @@ public class ModifyUserSlsLogStorageTimeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("LogVersion")
+    public Integer logVersion;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ap-southeast-1</p>
+     */
+    @NameInMap("SlsRegionId")
+    public String slsRegionId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +47,22 @@ public class ModifyUserSlsLogStorageTimeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyUserSlsLogStorageTimeRequest setLogVersion(Integer logVersion) {
+        this.logVersion = logVersion;
+        return this;
+    }
+    public Integer getLogVersion() {
+        return this.logVersion;
+    }
+
+    public ModifyUserSlsLogStorageTimeRequest setSlsRegionId(String slsRegionId) {
+        this.slsRegionId = slsRegionId;
+        return this;
+    }
+    public String getSlsRegionId() {
+        return this.slsRegionId;
     }
 
     public ModifyUserSlsLogStorageTimeRequest setStorageTime(Integer storageTime) {

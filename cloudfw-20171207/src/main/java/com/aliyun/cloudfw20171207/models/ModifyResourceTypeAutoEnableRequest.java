@@ -11,6 +11,9 @@ public class ModifyResourceTypeAutoEnableRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("RegionNo")
+    public String regionNo;
+
     /**
      * <strong>example:</strong>
      * <p>{&quot;SlbEIP&quot;:true,&quot;GaEIP&quot;:false,&quot;EcsIPv6&quot;:true,&quot;NatPublicIP&quot;:true,&quot;SlbIPv6&quot;:false,&quot;BastionHostIngressIP&quot;:false,&quot;EIP&quot;:true,&quot;NatEIP&quot;:true,&quot;SlbPublicIP&quot;:true,&quot;EcsEIP&quot;:true,&quot;EniEIP&quot;:true,&quot;HAVIP&quot;:true,&quot;NlbEIP&quot;:true,&quot;NlbIPv6&quot;:false,&quot;EniEIPv6&quot;:false,&quot;EcsPublicIP&quot;:true,&quot;AlbIPv6&quot;:true,&quot;BastionHostIP&quot;:false,&quot;BastionHostEgressIP&quot;:true,&quot;GaEIPV6&quot;:false,&quot;AlbEIP&quot;:false}</p>
@@ -29,6 +32,14 @@ public class ModifyResourceTypeAutoEnableRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ModifyResourceTypeAutoEnableRequest setRegionNo(String regionNo) {
+        this.regionNo = regionNo;
+        return this;
+    }
+    public String getRegionNo() {
+        return this.regionNo;
     }
 
     public ModifyResourceTypeAutoEnableRequest setResourceTypeAutoEnable(String resourceTypeAutoEnable) {

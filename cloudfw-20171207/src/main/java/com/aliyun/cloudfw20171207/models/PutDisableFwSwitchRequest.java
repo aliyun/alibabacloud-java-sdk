@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class PutDisableFwSwitchRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
+    /**
      * <p>The IP addresses.</p>
      * <blockquote>
      * <p> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
@@ -28,6 +35,13 @@ public class PutDisableFwSwitchRequest extends TeaModel {
      */
     @NameInMap("Lang")
     public String lang;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
+    @NameInMap("MemberUid")
+    public String memberUid;
 
     /**
      * <p>The regions.</p>
@@ -68,6 +82,14 @@ public class PutDisableFwSwitchRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PutDisableFwSwitchRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
+    }
+
     public PutDisableFwSwitchRequest setIpaddrList(java.util.List<String> ipaddrList) {
         this.ipaddrList = ipaddrList;
         return this;
@@ -82,6 +104,14 @@ public class PutDisableFwSwitchRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public PutDisableFwSwitchRequest setMemberUid(String memberUid) {
+        this.memberUid = memberUid;
+        return this;
+    }
+    public String getMemberUid() {
+        return this.memberUid;
     }
 
     public PutDisableFwSwitchRequest setRegionList(java.util.List<String> regionList) {
