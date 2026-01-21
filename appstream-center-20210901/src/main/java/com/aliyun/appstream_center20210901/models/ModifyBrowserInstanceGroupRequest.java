@@ -387,6 +387,9 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         @NameInMap("ClipboardScope")
         public String clipboardScope;
 
+        @NameInMap("ClipboardSizeUnit")
+        public String clipboardSizeUnit;
+
         /**
          * <p>The maximum number of characters allowed when copying to the clipboard.</p>
          * 
@@ -471,6 +474,14 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         }
         public String getClipboardScope() {
             return this.clipboardScope;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setClipboardSizeUnit(String clipboardSizeUnit) {
+            this.clipboardSizeUnit = clipboardSizeUnit;
+            return this;
+        }
+        public String getClipboardSizeUnit() {
+            return this.clipboardSizeUnit;
         }
 
         public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setClipboardWriteLimit(Integer clipboardWriteLimit) {
