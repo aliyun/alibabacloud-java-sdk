@@ -1095,6 +1095,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建导出配置的任务</p>
+     * 
      * @param request CreateExportConfigJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateExportConfigJobResponse
@@ -1128,6 +1131,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建导出配置的任务</p>
+     * 
      * @param request CreateExportConfigJobRequest
      * @return CreateExportConfigJobResponse
      */
@@ -1493,6 +1499,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建运维审批工单</p>
+     * 
      * @param request CreateOperationTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOperationTicketResponse
@@ -1554,6 +1563,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建运维审批工单</p>
+     * 
      * @param request CreateOperationTicketRequest
      * @return CreateOperationTicketResponse
      */
@@ -3587,6 +3599,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取导出配置任务进度</p>
+     * 
      * @param request GetExportConfigJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetExportConfigJobResponse
@@ -3624,6 +3639,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取导出配置任务进度</p>
+     * 
      * @param request GetExportConfigJobRequest
      * @return GetExportConfigJobResponse
      */
@@ -3949,6 +3967,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取堡垒机实例存储信息</p>
+     * 
      * @param request GetInstanceStoreInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceStoreInfoResponse
@@ -3982,6 +4003,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取堡垒机实例存储信息</p>
+     * 
      * @param request GetInstanceStoreInfoRequest
      * @return GetInstanceStoreInfoResponse
      */
@@ -4059,6 +4083,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNetworkDomainResponse getNetworkDomainWithOptions(GetNetworkDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkProxyState)) {
+            query.put("CheckProxyState", request.checkProxyState);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

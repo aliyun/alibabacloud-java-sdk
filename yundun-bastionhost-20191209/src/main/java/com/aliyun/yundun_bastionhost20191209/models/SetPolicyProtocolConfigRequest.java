@@ -136,6 +136,20 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String diskRedirection;
 
         /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
+        @NameInMap("DiskRedirectionDownload")
+        public String diskRedirectionDownload;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
+        @NameInMap("DiskRedirectionUpload")
+        public String diskRedirectionUpload;
+
+        /**
          * <p>Specifies whether to enable keyboard operation recording. Valid values:</p>
          * <ul>
          * <li>Enable</li>
@@ -180,6 +194,22 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
             return this.diskRedirection;
         }
 
+        public SetPolicyProtocolConfigRequestProtocolConfigRDP setDiskRedirectionDownload(String diskRedirectionDownload) {
+            this.diskRedirectionDownload = diskRedirectionDownload;
+            return this;
+        }
+        public String getDiskRedirectionDownload() {
+            return this.diskRedirectionDownload;
+        }
+
+        public SetPolicyProtocolConfigRequestProtocolConfigRDP setDiskRedirectionUpload(String diskRedirectionUpload) {
+            this.diskRedirectionUpload = diskRedirectionUpload;
+            return this;
+        }
+        public String getDiskRedirectionUpload() {
+            return this.diskRedirectionUpload;
+        }
+
         public SetPolicyProtocolConfigRequestProtocolConfigRDP setRecordKeyboard(String recordKeyboard) {
             this.recordKeyboard = recordKeyboard;
             return this;
@@ -191,6 +221,20 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
     }
 
     public static class SetPolicyProtocolConfigRequestProtocolConfigSSH extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
+        @NameInMap("AllowDirectTcp")
+        public String allowDirectTcp;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
+        @NameInMap("AllowTcpForwarding")
+        public String allowTcpForwarding;
+
         /**
          * <p>Specifies whether to enable remote command execution. Valid values:</p>
          * <ul>
@@ -368,6 +412,22 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public static SetPolicyProtocolConfigRequestProtocolConfigSSH build(java.util.Map<String, ?> map) throws Exception {
             SetPolicyProtocolConfigRequestProtocolConfigSSH self = new SetPolicyProtocolConfigRequestProtocolConfigSSH();
             return TeaModel.build(map, self);
+        }
+
+        public SetPolicyProtocolConfigRequestProtocolConfigSSH setAllowDirectTcp(String allowDirectTcp) {
+            this.allowDirectTcp = allowDirectTcp;
+            return this;
+        }
+        public String getAllowDirectTcp() {
+            return this.allowDirectTcp;
+        }
+
+        public SetPolicyProtocolConfigRequestProtocolConfigSSH setAllowTcpForwarding(String allowTcpForwarding) {
+            this.allowTcpForwarding = allowTcpForwarding;
+            return this;
+        }
+        public String getAllowTcpForwarding() {
+            return this.allowTcpForwarding;
         }
 
         public SetPolicyProtocolConfigRequestProtocolConfigSSH setExecCommand(String execCommand) {

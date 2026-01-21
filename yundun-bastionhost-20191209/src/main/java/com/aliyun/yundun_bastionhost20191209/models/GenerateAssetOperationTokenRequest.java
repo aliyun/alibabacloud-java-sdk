@@ -115,6 +115,9 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>SID</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("LoginAttribute")
     public String loginAttribute;

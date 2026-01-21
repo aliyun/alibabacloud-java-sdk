@@ -4,6 +4,9 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetNetworkDomainRequest extends TeaModel {
+    @NameInMap("CheckProxyState")
+    public String checkProxyState;
+
     /**
      * <p>The bastion host ID.</p>
      * <blockquote>
@@ -45,6 +48,14 @@ public class GetNetworkDomainRequest extends TeaModel {
     public static GetNetworkDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         GetNetworkDomainRequest self = new GetNetworkDomainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetNetworkDomainRequest setCheckProxyState(String checkProxyState) {
+        this.checkProxyState = checkProxyState;
+        return this;
+    }
+    public String getCheckProxyState() {
+        return this.checkProxyState;
     }
 
     public GetNetworkDomainRequest setInstanceId(String instanceId) {
