@@ -95,6 +95,47 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet extends TeaModel {
+        @NameInMap("RegionBusinessStatus")
+        public String regionBusinessStatus;
+
+        @NameInMap("RegionServiceStatus")
+        public String regionServiceStatus;
+
+        @NameInMap("ServiceRegionId")
+        public String serviceRegionId;
+
+        public static ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet build(java.util.Map<String, ?> map) throws Exception {
+            ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet self = new ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet setRegionBusinessStatus(String regionBusinessStatus) {
+            this.regionBusinessStatus = regionBusinessStatus;
+            return this;
+        }
+        public String getRegionBusinessStatus() {
+            return this.regionBusinessStatus;
+        }
+
+        public ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet setRegionServiceStatus(String regionServiceStatus) {
+            this.regionServiceStatus = regionServiceStatus;
+            return this;
+        }
+        public String getRegionServiceStatus() {
+            return this.regionServiceStatus;
+        }
+
+        public ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet setServiceRegionId(String serviceRegionId) {
+            this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+        public String getServiceRegionId() {
+            return this.serviceRegionId;
+        }
+
+    }
+
     public static class ListVpcEndpointServicesResponseBodyServicesTags extends TeaModel {
         /**
          * <p>The key of the tag added to the resource.</p>
@@ -335,6 +376,9 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         @NameInMap("ServiceType")
         public String serviceType;
 
+        @NameInMap("SupportedRegionSet")
+        public java.util.List<ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet> supportedRegionSet;
+
         /**
          * <p>The tags added to the resource.</p>
          */
@@ -502,6 +546,14 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         }
         public String getServiceType() {
             return this.serviceType;
+        }
+
+        public ListVpcEndpointServicesResponseBodyServices setSupportedRegionSet(java.util.List<ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet> supportedRegionSet) {
+            this.supportedRegionSet = supportedRegionSet;
+            return this;
+        }
+        public java.util.List<ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet> getSupportedRegionSet() {
+            return this.supportedRegionSet;
         }
 
         public ListVpcEndpointServicesResponseBodyServices setTags(java.util.List<ListVpcEndpointServicesResponseBodyServicesTags> tags) {

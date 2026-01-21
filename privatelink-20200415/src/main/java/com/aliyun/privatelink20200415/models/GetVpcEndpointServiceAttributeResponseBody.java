@@ -208,6 +208,9 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     @NameInMap("ServiceType")
     public String serviceType;
 
+    @NameInMap("SupportedRegionSet")
+    public java.util.List<GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet> supportedRegionSet;
+
     /**
      * <p>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</p>
      * <ul>
@@ -385,6 +388,14 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         return this.serviceType;
     }
 
+    public GetVpcEndpointServiceAttributeResponseBody setSupportedRegionSet(java.util.List<GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet> supportedRegionSet) {
+        this.supportedRegionSet = supportedRegionSet;
+        return this;
+    }
+    public java.util.List<GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet> getSupportedRegionSet() {
+        return this.supportedRegionSet;
+    }
+
     public GetVpcEndpointServiceAttributeResponseBody setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {
         this.zoneAffinityEnabled = zoneAffinityEnabled;
         return this;
@@ -399,6 +410,47 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     }
     public java.util.List<String> getZones() {
         return this.zones;
+    }
+
+    public static class GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet extends TeaModel {
+        @NameInMap("RegionBusinessStatus")
+        public String regionBusinessStatus;
+
+        @NameInMap("RegionServiceStatus")
+        public String regionServiceStatus;
+
+        @NameInMap("ServiceRegionId")
+        public String serviceRegionId;
+
+        public static GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet build(java.util.Map<String, ?> map) throws Exception {
+            GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet self = new GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet();
+            return TeaModel.build(map, self);
+        }
+
+        public GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet setRegionBusinessStatus(String regionBusinessStatus) {
+            this.regionBusinessStatus = regionBusinessStatus;
+            return this;
+        }
+        public String getRegionBusinessStatus() {
+            return this.regionBusinessStatus;
+        }
+
+        public GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet setRegionServiceStatus(String regionServiceStatus) {
+            this.regionServiceStatus = regionServiceStatus;
+            return this;
+        }
+        public String getRegionServiceStatus() {
+            return this.regionServiceStatus;
+        }
+
+        public GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet setServiceRegionId(String serviceRegionId) {
+            this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+        public String getServiceRegionId() {
+            return this.serviceRegionId;
+        }
+
     }
 
 }

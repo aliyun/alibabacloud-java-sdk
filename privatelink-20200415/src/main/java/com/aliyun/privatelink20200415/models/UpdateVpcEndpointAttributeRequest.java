@@ -30,6 +30,9 @@ public class UpdateVpcEndpointAttributeRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CrossRegionBandwidth")
+    public Integer crossRegionBandwidth;
+
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
@@ -135,6 +138,14 @@ public class UpdateVpcEndpointAttributeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateVpcEndpointAttributeRequest setCrossRegionBandwidth(Integer crossRegionBandwidth) {
+        this.crossRegionBandwidth = crossRegionBandwidth;
+        return this;
+    }
+    public Integer getCrossRegionBandwidth() {
+        return this.crossRegionBandwidth;
     }
 
     public UpdateVpcEndpointAttributeRequest setDryRun(Boolean dryRun) {

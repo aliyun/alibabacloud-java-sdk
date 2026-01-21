@@ -187,6 +187,9 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("CrossRegionBandwidth")
+        public Integer crossRegionBandwidth;
+
         /**
          * <p>The service state of the endpoint. Valid values:</p>
          * <ul>
@@ -322,6 +325,9 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("ServiceRegionId")
+        public String serviceRegionId;
+
         /**
          * <p>The tags added to the resource.</p>
          */
@@ -385,6 +391,14 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListVpcEndpointsResponseBodyEndpoints setCrossRegionBandwidth(Integer crossRegionBandwidth) {
+            this.crossRegionBandwidth = crossRegionBandwidth;
+            return this;
+        }
+        public Integer getCrossRegionBandwidth() {
+            return this.crossRegionBandwidth;
         }
 
         public ListVpcEndpointsResponseBodyEndpoints setEndpointBusinessStatus(String endpointBusinessStatus) {
@@ -489,6 +503,14 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public ListVpcEndpointsResponseBodyEndpoints setServiceRegionId(String serviceRegionId) {
+            this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+        public String getServiceRegionId() {
+            return this.serviceRegionId;
         }
 
         public ListVpcEndpointsResponseBodyEndpoints setTags(java.util.List<ListVpcEndpointsResponseBodyEndpointsTags> tags) {

@@ -30,6 +30,9 @@ public class CreateVpcEndpointRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CrossRegionBandwidth")
+    public Integer crossRegionBandwidth;
+
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
@@ -166,6 +169,9 @@ public class CreateVpcEndpointRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    @NameInMap("ServiceRegionId")
+    public String serviceRegionId;
+
     /**
      * <p>The tags to add to the resource.</p>
      */
@@ -219,6 +225,14 @@ public class CreateVpcEndpointRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateVpcEndpointRequest setCrossRegionBandwidth(Integer crossRegionBandwidth) {
+        this.crossRegionBandwidth = crossRegionBandwidth;
+        return this;
+    }
+    public Integer getCrossRegionBandwidth() {
+        return this.crossRegionBandwidth;
     }
 
     public CreateVpcEndpointRequest setDryRun(Boolean dryRun) {
@@ -307,6 +321,14 @@ public class CreateVpcEndpointRequest extends TeaModel {
     }
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    public CreateVpcEndpointRequest setServiceRegionId(String serviceRegionId) {
+        this.serviceRegionId = serviceRegionId;
+        return this;
+    }
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
     }
 
     public CreateVpcEndpointRequest setTag(java.util.List<CreateVpcEndpointRequestTag> tag) {

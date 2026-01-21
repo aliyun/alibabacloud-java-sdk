@@ -64,6 +64,9 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    @NameInMap("ServiceRegionId")
+    public String serviceRegionId;
+
     /**
      * <p>The type of the endpoint service.</p>
      * <p>Set the value to <strong>Interface</strong>. You can specify CLB and ALB instances as service resources for the endpoint service.</p>
@@ -131,6 +134,14 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     }
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    public ListVpcEndpointServicesByEndUserRequest setServiceRegionId(String serviceRegionId) {
+        this.serviceRegionId = serviceRegionId;
+        return this;
+    }
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
     }
 
     public ListVpcEndpointServicesByEndUserRequest setServiceType(String serviceType) {

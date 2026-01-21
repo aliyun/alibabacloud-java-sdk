@@ -52,6 +52,9 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("CrossRegionBandwidth")
+    public Integer crossRegionBandwidth;
+
     /**
      * <p>The service state of the endpoint. Valid values:</p>
      * <ul>
@@ -224,6 +227,9 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    @NameInMap("ServiceRegionId")
+    public String serviceRegionId;
+
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
      * 
@@ -290,6 +296,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public GetVpcEndpointAttributeResponseBody setCrossRegionBandwidth(Integer crossRegionBandwidth) {
+        this.crossRegionBandwidth = crossRegionBandwidth;
+        return this;
+    }
+    public Integer getCrossRegionBandwidth() {
+        return this.crossRegionBandwidth;
     }
 
     public GetVpcEndpointAttributeResponseBody setEndpointBusinessStatus(String endpointBusinessStatus) {
@@ -410,6 +424,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     }
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    public GetVpcEndpointAttributeResponseBody setServiceRegionId(String serviceRegionId) {
+        this.serviceRegionId = serviceRegionId;
+        return this;
+    }
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
     }
 
     public GetVpcEndpointAttributeResponseBody setVpcId(String vpcId) {

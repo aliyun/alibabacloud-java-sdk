@@ -296,6 +296,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @NameInMap("EndpointOwnerId")
         public Long endpointOwnerId;
 
+        @NameInMap("EndpointRegionId")
+        public String endpointRegionId;
+
         /**
          * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
          * 
@@ -345,6 +348,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @NameInMap("ServiceId")
         public String serviceId;
 
+        @NameInMap("ServiceRegionId")
+        public String serviceRegionId;
+
         @NameInMap("TrafficControlMode")
         public String trafficControlMode;
 
@@ -391,6 +397,14 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             return this.endpointOwnerId;
         }
 
+        public ListVpcEndpointConnectionsResponseBodyConnections setEndpointRegionId(String endpointRegionId) {
+            this.endpointRegionId = endpointRegionId;
+            return this;
+        }
+        public String getEndpointRegionId() {
+            return this.endpointRegionId;
+        }
+
         public ListVpcEndpointConnectionsResponseBodyConnections setEndpointVpcId(String endpointVpcId) {
             this.endpointVpcId = endpointVpcId;
             return this;
@@ -429,6 +443,14 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
         public String getServiceId() {
             return this.serviceId;
+        }
+
+        public ListVpcEndpointConnectionsResponseBodyConnections setServiceRegionId(String serviceRegionId) {
+            this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+        public String getServiceRegionId() {
+            return this.serviceRegionId;
         }
 
         public ListVpcEndpointConnectionsResponseBodyConnections setTrafficControlMode(String trafficControlMode) {

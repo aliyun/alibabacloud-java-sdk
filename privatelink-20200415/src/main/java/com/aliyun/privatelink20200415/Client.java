@@ -474,6 +474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.crossRegionBandwidth)) {
+            query.put("CrossRegionBandwidth", request.crossRegionBandwidth);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -520,6 +524,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
             query.put("ServiceName", request.serviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
+            query.put("ServiceRegionId", request.serviceRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
@@ -645,6 +653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceSupportIPv6)) {
             query.put("ServiceSupportIPv6", request.serviceSupportIPv6);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportedRegionList)) {
+            query.put("SupportedRegionList", request.supportedRegionList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
@@ -2075,6 +2087,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceName", request.serviceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
+            query.put("ServiceRegionId", request.serviceRegionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceType)) {
             query.put("ServiceType", request.serviceType);
         }
@@ -2229,6 +2245,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
             query.put("ServiceName", request.serviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
+            query.put("ServiceRegionId", request.serviceRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
@@ -2650,6 +2670,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.crossRegionBandwidth)) {
+            query.put("CrossRegionBandwidth", request.crossRegionBandwidth);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -2810,6 +2834,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateVpcEndpointServiceAttributeResponse updateVpcEndpointServiceAttributeWithOptions(UpdateVpcEndpointServiceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addSupportedRegionSet)) {
+            query.put("AddSupportedRegionSet", request.addSupportedRegionSet);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.addressIpVersion)) {
             query.put("AddressIpVersion", request.addressIpVersion);
         }
@@ -2824,6 +2852,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.connectBandwidth)) {
             query.put("ConnectBandwidth", request.connectBandwidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteSupportedRegionSet)) {
+            query.put("DeleteSupportedRegionSet", request.deleteSupportedRegionSet);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {

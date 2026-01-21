@@ -135,6 +135,9 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     @Deprecated
     public Boolean serviceSupportIPv6;
 
+    @NameInMap("SupportedRegionSet")
+    public java.util.List<CreateVpcEndpointServiceResponseBodySupportedRegionSet> supportedRegionSet;
+
     /**
      * <p>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</p>
      * <ul>
@@ -250,12 +253,61 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         return this.serviceSupportIPv6;
     }
 
+    public CreateVpcEndpointServiceResponseBody setSupportedRegionSet(java.util.List<CreateVpcEndpointServiceResponseBodySupportedRegionSet> supportedRegionSet) {
+        this.supportedRegionSet = supportedRegionSet;
+        return this;
+    }
+    public java.util.List<CreateVpcEndpointServiceResponseBodySupportedRegionSet> getSupportedRegionSet() {
+        return this.supportedRegionSet;
+    }
+
     public CreateVpcEndpointServiceResponseBody setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {
         this.zoneAffinityEnabled = zoneAffinityEnabled;
         return this;
     }
     public Boolean getZoneAffinityEnabled() {
         return this.zoneAffinityEnabled;
+    }
+
+    public static class CreateVpcEndpointServiceResponseBodySupportedRegionSet extends TeaModel {
+        @NameInMap("RegionBusinessStatus")
+        public String regionBusinessStatus;
+
+        @NameInMap("RegionServiceStatus")
+        public String regionServiceStatus;
+
+        @NameInMap("ServiceRegionId")
+        public String serviceRegionId;
+
+        public static CreateVpcEndpointServiceResponseBodySupportedRegionSet build(java.util.Map<String, ?> map) throws Exception {
+            CreateVpcEndpointServiceResponseBodySupportedRegionSet self = new CreateVpcEndpointServiceResponseBodySupportedRegionSet();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateVpcEndpointServiceResponseBodySupportedRegionSet setRegionBusinessStatus(String regionBusinessStatus) {
+            this.regionBusinessStatus = regionBusinessStatus;
+            return this;
+        }
+        public String getRegionBusinessStatus() {
+            return this.regionBusinessStatus;
+        }
+
+        public CreateVpcEndpointServiceResponseBodySupportedRegionSet setRegionServiceStatus(String regionServiceStatus) {
+            this.regionServiceStatus = regionServiceStatus;
+            return this;
+        }
+        public String getRegionServiceStatus() {
+            return this.regionServiceStatus;
+        }
+
+        public CreateVpcEndpointServiceResponseBodySupportedRegionSet setServiceRegionId(String serviceRegionId) {
+            this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+        public String getServiceRegionId() {
+            return this.serviceRegionId;
+        }
+
     }
 
 }

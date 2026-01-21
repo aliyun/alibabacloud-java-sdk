@@ -135,6 +135,9 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     @Deprecated
     public Boolean serviceSupportIPv6;
 
+    @NameInMap("SupportedRegionList")
+    public java.util.List<String> supportedRegionList;
+
     /**
      * <p>The tags to add to the resource.</p>
      */
@@ -246,6 +249,14 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     }
     public Boolean getServiceSupportIPv6() {
         return this.serviceSupportIPv6;
+    }
+
+    public CreateVpcEndpointServiceRequest setSupportedRegionList(java.util.List<String> supportedRegionList) {
+        this.supportedRegionList = supportedRegionList;
+        return this;
+    }
+    public java.util.List<String> getSupportedRegionList() {
+        return this.supportedRegionList;
     }
 
     public CreateVpcEndpointServiceRequest setTag(java.util.List<CreateVpcEndpointServiceRequestTag> tag) {

@@ -4,6 +4,9 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
+    @NameInMap("AddSupportedRegionSet")
+    public java.util.List<String> addSupportedRegionSet;
+
     /**
      * <p>The protocol. Valid values:</p>
      * <ul>
@@ -55,6 +58,9 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
      */
     @NameInMap("ConnectBandwidth")
     public Integer connectBandwidth;
+
+    @NameInMap("DeleteSupportedRegionSet")
+    public java.util.List<String> deleteSupportedRegionSet;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
@@ -131,6 +137,14 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateVpcEndpointServiceAttributeRequest setAddSupportedRegionSet(java.util.List<String> addSupportedRegionSet) {
+        this.addSupportedRegionSet = addSupportedRegionSet;
+        return this;
+    }
+    public java.util.List<String> getAddSupportedRegionSet() {
+        return this.addSupportedRegionSet;
+    }
+
     public UpdateVpcEndpointServiceAttributeRequest setAddressIpVersion(String addressIpVersion) {
         this.addressIpVersion = addressIpVersion;
         return this;
@@ -161,6 +175,14 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     }
     public Integer getConnectBandwidth() {
         return this.connectBandwidth;
+    }
+
+    public UpdateVpcEndpointServiceAttributeRequest setDeleteSupportedRegionSet(java.util.List<String> deleteSupportedRegionSet) {
+        this.deleteSupportedRegionSet = deleteSupportedRegionSet;
+        return this;
+    }
+    public java.util.List<String> getDeleteSupportedRegionSet() {
+        return this.deleteSupportedRegionSet;
     }
 
     public UpdateVpcEndpointServiceAttributeRequest setDryRun(Boolean dryRun) {
