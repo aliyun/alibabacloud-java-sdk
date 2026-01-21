@@ -1870,6 +1870,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <strong>example:</strong>
+         * <p>cert.pem</p>
+         */
+        @NameInMap("private_crt_file_name")
+        public String privateCrtFileName;
+
+        /**
          * <p>The protocol that is used to send the request.</p>
          * 
          * <strong>example:</strong>
@@ -2014,6 +2021,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         @NameInMap("traffic_hijack_element_whitelist")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist trafficHijackElementWhitelist;
+
+        @NameInMap("use_private_crt")
+        public Boolean usePrivateCrt;
 
         /**
          * <p>The username of the FTP, SMTP, or POP3 protocol.</p>
@@ -2342,6 +2352,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.port;
         }
 
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setPrivateCrtFileName(String privateCrtFileName) {
+            this.privateCrtFileName = privateCrtFileName;
+            return this;
+        }
+        public String getPrivateCrtFileName() {
+            return this.privateCrtFileName;
+        }
+
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
@@ -2492,6 +2510,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist getTrafficHijackElementWhitelist() {
             return this.trafficHijackElementWhitelist;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setUsePrivateCrt(Boolean usePrivateCrt) {
+            this.usePrivateCrt = usePrivateCrt;
+            return this;
+        }
+        public Boolean getUsePrivateCrt() {
+            return this.usePrivateCrt;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setUsername(String username) {

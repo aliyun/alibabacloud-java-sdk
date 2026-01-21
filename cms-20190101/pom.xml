@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cms20190101</artifactId>
-  <version>9.0.6</version>
+  <version>9.0.7</version>
   <packaging>jar</packaging>
   <name>cms20190101</name>
   <description>Alibaba Cloud Cloud Monitor (20190101) SDK for Java
@@ -96,6 +96,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>
