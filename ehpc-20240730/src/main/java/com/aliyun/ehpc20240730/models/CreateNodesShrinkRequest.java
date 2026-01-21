@@ -87,6 +87,13 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String keepAlive;
 
     /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("MinCount")
+    public Integer minCount;
+
+    /**
      * <p>The name of the queue for which you want to create compute nodes.</p>
      * 
      * <strong>example:</strong>
@@ -197,6 +204,14 @@ public class CreateNodesShrinkRequest extends TeaModel {
     }
     public String getKeepAlive() {
         return this.keepAlive;
+    }
+
+    public CreateNodesShrinkRequest setMinCount(Integer minCount) {
+        this.minCount = minCount;
+        return this;
+    }
+    public Integer getMinCount() {
+        return this.minCount;
     }
 
     public CreateNodesShrinkRequest setQueueName(String queueName) {

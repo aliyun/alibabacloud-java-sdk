@@ -470,6 +470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("KeepAlive", request.keepAlive);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.minCount)) {
+            query.put("MinCount", request.minCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.queueName)) {
             query.put("QueueName", request.queueName);
         }
