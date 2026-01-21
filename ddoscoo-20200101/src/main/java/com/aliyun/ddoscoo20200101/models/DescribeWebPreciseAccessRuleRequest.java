@@ -17,6 +17,9 @@ public class DescribeWebPreciseAccessRuleRequest extends TeaModel {
     @NameInMap("Domains")
     public java.util.List<String> domains;
 
+    @NameInMap("Owner")
+    public String owner;
+
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
      * 
@@ -37,6 +40,14 @@ public class DescribeWebPreciseAccessRuleRequest extends TeaModel {
     }
     public java.util.List<String> getDomains() {
         return this.domains;
+    }
+
+    public DescribeWebPreciseAccessRuleRequest setOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    public String getOwner() {
+        return this.owner;
     }
 
     public DescribeWebPreciseAccessRuleRequest setResourceGroupId(String resourceGroupId) {

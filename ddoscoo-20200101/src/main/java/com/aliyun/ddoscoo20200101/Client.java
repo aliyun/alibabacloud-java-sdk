@@ -7937,6 +7937,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Domains", request.domains);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("Owner", request.owner);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }

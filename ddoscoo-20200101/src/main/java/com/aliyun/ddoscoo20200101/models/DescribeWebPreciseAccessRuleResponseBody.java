@@ -151,6 +151,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         @NameInMap("ConditionList")
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> conditionList;
 
+        @NameInMap("ExpirePeriod")
+        public Long expirePeriod;
+
         /**
          * <p>The validity period of the rule. Unit: seconds. This parameter takes effect only when <strong>action</strong> of a rule is <strong>block</strong>. Access requests that match the rule are blocked within the specified validity period of the rule. The value <strong>0</strong> indicates that the whitelist takes effect all the time.</p>
          * 
@@ -201,6 +204,14 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         }
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> getConditionList() {
             return this.conditionList;
+        }
+
+        public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList setExpirePeriod(Long expirePeriod) {
+            this.expirePeriod = expirePeriod;
+            return this;
+        }
+        public Long getExpirePeriod() {
+            return this.expirePeriod;
         }
 
         public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList setExpires(Long expires) {
