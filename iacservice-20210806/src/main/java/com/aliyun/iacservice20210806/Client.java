@@ -3172,6 +3172,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>支持状态文件的资源导入和移除</p>
+     * 
+     * @param request ManageTerraformStateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ManageTerraformStateResponse
+     */
+    public ManageTerraformStateResponse manageTerraformStateWithOptions(ManageTerraformStateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
+            body.put("action", request.action);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identifier)) {
+            body.put("identifier", request.identifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.importResourceId)) {
+            body.put("importResourceId", request.importResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdentifier)) {
+            body.put("resourceIdentifier", request.resourceIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ManageTerraformState"),
+            new TeaPair("version", "2021-08-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/terraformState/manage"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ManageTerraformStateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>支持状态文件的资源导入和移除</p>
+     * 
+     * @param request ManageTerraformStateRequest
+     * @return ManageTerraformStateResponse
+     */
+    public ManageTerraformStateResponse manageTerraformState(ManageTerraformStateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.manageTerraformStateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>控制作业</p>
      * 
      * @param request OperateJobRequest
