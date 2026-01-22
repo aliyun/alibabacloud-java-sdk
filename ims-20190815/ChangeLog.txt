@@ -1,3 +1,14 @@
+2026-01-22 Version: 3.4.2
+- Update API CreateLoginProfile: add response parameters Body.LoginProfile.PasswordStatus.
+- Update API GetLoginProfile: add response parameters Body.LoginProfile.PasswordStatus.
+- Update API GetPasswordPolicy: add response parameters Body.PasswordPolicy.InitialPasswordAge.
+- Update API SetPasswordPolicy: add request parameters InitialPasswordAge.
+- Update API SetPasswordPolicy: add response parameters Body.PasswordPolicy.InitialPasswordAge.
+- Update API SetSecurityPreference: add request parameters MaxIdleDaysForAccessKeys.
+- Update API SetSecurityPreference: add request parameters MaxIdleDaysForUsers.
+- Update API UpdateLoginProfile: add response parameters Body.LoginProfile.PasswordStatus.
+
+
 2025-09-22 Version: 3.4.1
 - Update API CreateSAMLProvider: add request parameters AuthnSignAlgo.
 - Update API CreateSAMLProvider: add response parameters Body.SAMLProvider.AuthnSignAlgo.

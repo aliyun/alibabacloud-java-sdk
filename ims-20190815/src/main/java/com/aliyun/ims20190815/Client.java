@@ -3981,6 +3981,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("HardExpire", request.hardExpire);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.initialPasswordAge)) {
+            query.put("InitialPasswordAge", request.initialPasswordAge);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxLoginAttemps)) {
             query.put("MaxLoginAttemps", request.maxLoginAttemps);
         }
@@ -4105,6 +4109,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.MFAOperationForLogin)) {
             query.put("MFAOperationForLogin", request.MFAOperationForLogin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxIdleDaysForAccessKeys)) {
+            query.put("MaxIdleDaysForAccessKeys", request.maxIdleDaysForAccessKeys);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxIdleDaysForUsers)) {
+            query.put("MaxIdleDaysForUsers", request.maxIdleDaysForUsers);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.operationForRiskLogin)) {

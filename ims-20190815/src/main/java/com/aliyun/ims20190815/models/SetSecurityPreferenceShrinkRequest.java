@@ -122,6 +122,12 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     @NameInMap("MFAOperationForLogin")
     public String MFAOperationForLogin;
 
+    @NameInMap("MaxIdleDaysForAccessKeys")
+    public Integer maxIdleDaysForAccessKeys;
+
+    @NameInMap("MaxIdleDaysForUsers")
+    public Integer maxIdleDaysForUsers;
+
     /**
      * <p>Specifies whether to enable MFA for RAM users who initiated unusual logons. Valid values:</p>
      * <ul>
@@ -217,6 +223,22 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     }
     public String getMFAOperationForLogin() {
         return this.MFAOperationForLogin;
+    }
+
+    public SetSecurityPreferenceShrinkRequest setMaxIdleDaysForAccessKeys(Integer maxIdleDaysForAccessKeys) {
+        this.maxIdleDaysForAccessKeys = maxIdleDaysForAccessKeys;
+        return this;
+    }
+    public Integer getMaxIdleDaysForAccessKeys() {
+        return this.maxIdleDaysForAccessKeys;
+    }
+
+    public SetSecurityPreferenceShrinkRequest setMaxIdleDaysForUsers(Integer maxIdleDaysForUsers) {
+        this.maxIdleDaysForUsers = maxIdleDaysForUsers;
+        return this;
+    }
+    public Integer getMaxIdleDaysForUsers() {
+        return this.maxIdleDaysForUsers;
     }
 
     @Deprecated

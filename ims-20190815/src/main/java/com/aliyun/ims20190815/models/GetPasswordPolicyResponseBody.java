@@ -50,6 +50,9 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
         @NameInMap("HardExpire")
         public Boolean hardExpire;
 
+        @NameInMap("InitialPasswordAge")
+        public Integer initialPasswordAge;
+
         /**
          * <p>The maximum number of password retries.</p>
          * 
@@ -151,6 +154,14 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
         }
         public Boolean getHardExpire() {
             return this.hardExpire;
+        }
+
+        public GetPasswordPolicyResponseBodyPasswordPolicy setInitialPasswordAge(Integer initialPasswordAge) {
+            this.initialPasswordAge = initialPasswordAge;
+            return this;
+        }
+        public Integer getInitialPasswordAge() {
+            return this.initialPasswordAge;
         }
 
         public GetPasswordPolicyResponseBodyPasswordPolicy setMaxLoginAttemps(Integer maxLoginAttemps) {

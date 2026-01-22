@@ -17,6 +17,9 @@ public class SetPasswordPolicyRequest extends TeaModel {
     @NameInMap("HardExpire")
     public Boolean hardExpire;
 
+    @NameInMap("InitialPasswordAge")
+    public Integer initialPasswordAge;
+
     /**
      * <p>The maximum number of password retries. If you enter the wrong passwords for the specified consecutive times, the account is locked for one hour.</p>
      * <p>Valid values: 0 to 32.</p>
@@ -147,6 +150,14 @@ public class SetPasswordPolicyRequest extends TeaModel {
     }
     public Boolean getHardExpire() {
         return this.hardExpire;
+    }
+
+    public SetPasswordPolicyRequest setInitialPasswordAge(Integer initialPasswordAge) {
+        this.initialPasswordAge = initialPasswordAge;
+        return this;
+    }
+    public Integer getInitialPasswordAge() {
+        return this.initialPasswordAge;
     }
 
     public SetPasswordPolicyRequest setMaxLoginAttemps(Integer maxLoginAttemps) {

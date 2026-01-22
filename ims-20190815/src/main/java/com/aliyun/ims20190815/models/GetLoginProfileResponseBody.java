@@ -85,6 +85,9 @@ public class GetLoginProfileResponseBody extends TeaModel {
         @NameInMap("PasswordResetRequired")
         public Boolean passwordResetRequired;
 
+        @NameInMap("PasswordStatus")
+        public String passwordStatus;
+
         /**
          * <p>Indicates whether console logon is enabled. Valid values:</p>
          * <ul>
@@ -151,6 +154,14 @@ public class GetLoginProfileResponseBody extends TeaModel {
         }
         public Boolean getPasswordResetRequired() {
             return this.passwordResetRequired;
+        }
+
+        public GetLoginProfileResponseBodyLoginProfile setPasswordStatus(String passwordStatus) {
+            this.passwordStatus = passwordStatus;
+            return this;
+        }
+        public String getPasswordStatus() {
+            return this.passwordStatus;
         }
 
         public GetLoginProfileResponseBodyLoginProfile setStatus(String status) {
