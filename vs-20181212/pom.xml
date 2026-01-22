@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>vs20181212</artifactId>
-  <version>3.6.1</version>
+  <version>3.6.2</version>
   <packaging>jar</packaging>
   <name>vs20181212</name>
   <description>Alibaba Cloud video surveillance system (20181212) SDK for Java
@@ -96,6 +96,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>

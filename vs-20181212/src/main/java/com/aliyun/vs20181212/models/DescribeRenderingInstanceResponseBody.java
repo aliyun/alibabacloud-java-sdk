@@ -27,6 +27,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @NameInMap("Hostname")
     public String hostname;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
+
     @NameInMap("InternalIp")
     public String internalIp;
 
@@ -108,6 +115,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
     public String getHostname() {
         return this.hostname;
+    }
+
+    public DescribeRenderingInstanceResponseBody setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     public DescribeRenderingInstanceResponseBody setInternalIp(String internalIp) {

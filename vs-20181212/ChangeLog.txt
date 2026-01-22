@@ -1,3 +1,7 @@
+2026-01-22 Version: 3.6.2
+- Update API DescribeRenderingInstance: add response parameters Body.InstanceChargeType.
+
+
 2025-12-16 Version: 3.6.1
 - Update API ListCloudApps: add request parameters LatestVersionOnly.
 - Update API ListCloudApps: add request parameters PkgLabel.
