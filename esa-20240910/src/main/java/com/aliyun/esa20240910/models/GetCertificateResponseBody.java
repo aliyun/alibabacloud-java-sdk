@@ -289,6 +289,9 @@ public class GetCertificateResponseBody extends TeaModel {
         @NameInMap("IssuerCN")
         public String issuerCN;
 
+        @NameInMap("KeyServerId")
+        public String keyServerId;
+
         /**
          * <p>Certificate name.</p>
          * 
@@ -471,6 +474,14 @@ public class GetCertificateResponseBody extends TeaModel {
         }
         public String getIssuerCN() {
             return this.issuerCN;
+        }
+
+        public GetCertificateResponseBodyResult setKeyServerId(String keyServerId) {
+            this.keyServerId = keyServerId;
+            return this;
+        }
+        public String getKeyServerId() {
+            return this.keyServerId;
         }
 
         public GetCertificateResponseBodyResult setName(String name) {

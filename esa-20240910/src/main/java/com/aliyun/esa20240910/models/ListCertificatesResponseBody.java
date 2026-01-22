@@ -306,6 +306,9 @@ public class ListCertificatesResponseBody extends TeaModel {
         @NameInMap("IssuerCN")
         public String issuerCN;
 
+        @NameInMap("KeyServerId")
+        public String keyServerId;
+
         /**
          * <p>The certificate name.</p>
          * 
@@ -502,6 +505,14 @@ public class ListCertificatesResponseBody extends TeaModel {
         }
         public String getIssuerCN() {
             return this.issuerCN;
+        }
+
+        public ListCertificatesResponseBodyResult setKeyServerId(String keyServerId) {
+            this.keyServerId = keyServerId;
+            return this;
+        }
+        public String getKeyServerId() {
+            return this.keyServerId;
         }
 
         public ListCertificatesResponseBodyResult setName(String name) {

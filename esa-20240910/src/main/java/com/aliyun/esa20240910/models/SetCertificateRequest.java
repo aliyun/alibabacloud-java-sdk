@@ -31,6 +31,9 @@ public class SetCertificateRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    @NameInMap("KeyServerId")
+    public String keyServerId;
+
     /**
      * <p>The certificate name.</p>
      * 
@@ -115,6 +118,14 @@ public class SetCertificateRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public SetCertificateRequest setKeyServerId(String keyServerId) {
+        this.keyServerId = keyServerId;
+        return this;
+    }
+    public String getKeyServerId() {
+        return this.keyServerId;
     }
 
     public SetCertificateRequest setName(String name) {
