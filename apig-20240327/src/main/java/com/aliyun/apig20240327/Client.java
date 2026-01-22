@@ -985,6 +985,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("match", request.match);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerConfig)) {
+            body.put("mcpServerConfig", request.mcpServerConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mcpStatisticsEnable)) {
             body.put("mcpStatisticsEnable", request.mcpStatisticsEnable);
         }
@@ -5678,6 +5682,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.match)) {
             body.put("match", request.match);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerConfig)) {
+            body.put("mcpServerConfig", request.mcpServerConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mcpStatisticsEnable)) {

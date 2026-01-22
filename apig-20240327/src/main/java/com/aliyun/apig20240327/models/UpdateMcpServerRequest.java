@@ -52,6 +52,9 @@ public class UpdateMcpServerRequest extends TeaModel {
     @NameInMap("match")
     public HttpRouteMatch match;
 
+    @NameInMap("mcpServerConfig")
+    public UpdateMcpServerRequestMcpServerConfig mcpServerConfig;
+
     /**
      * <p>Specifies if MCP observability is enabled. Default value: false.</p>
      * 
@@ -148,6 +151,14 @@ public class UpdateMcpServerRequest extends TeaModel {
     }
     public HttpRouteMatch getMatch() {
         return this.match;
+    }
+
+    public UpdateMcpServerRequest setMcpServerConfig(UpdateMcpServerRequestMcpServerConfig mcpServerConfig) {
+        this.mcpServerConfig = mcpServerConfig;
+        return this;
+    }
+    public UpdateMcpServerRequestMcpServerConfig getMcpServerConfig() {
+        return this.mcpServerConfig;
     }
 
     public UpdateMcpServerRequest setMcpStatisticsEnable(Boolean mcpStatisticsEnable) {
@@ -497,6 +508,36 @@ public class UpdateMcpServerRequest extends TeaModel {
         }
         public String getRouteId() {
             return this.routeId;
+        }
+
+    }
+
+    public static class UpdateMcpServerRequestMcpServerConfig extends TeaModel {
+        @NameInMap("mcpServerSpec")
+        public String mcpServerSpec;
+
+        @NameInMap("swaggerConfig")
+        public String swaggerConfig;
+
+        public static UpdateMcpServerRequestMcpServerConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMcpServerRequestMcpServerConfig self = new UpdateMcpServerRequestMcpServerConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateMcpServerRequestMcpServerConfig setMcpServerSpec(String mcpServerSpec) {
+            this.mcpServerSpec = mcpServerSpec;
+            return this;
+        }
+        public String getMcpServerSpec() {
+            return this.mcpServerSpec;
+        }
+
+        public UpdateMcpServerRequestMcpServerConfig setSwaggerConfig(String swaggerConfig) {
+            this.swaggerConfig = swaggerConfig;
+            return this;
+        }
+        public String getSwaggerConfig() {
+            return this.swaggerConfig;
         }
 
     }
