@@ -450,6 +450,13 @@ public class CreateRecallManagementServiceVersionConfigRequest extends TeaModel 
 
         /**
          * <strong>example:</strong>
+         * <p>age&gt;20</p>
+         */
+        @NameInMap("ItemConditionExpression")
+        public String itemConditionExpression;
+
+        /**
+         * <strong>example:</strong>
          * <p>item_embedding</p>
          */
         @NameInMap("ItemVectorField")
@@ -534,6 +541,14 @@ public class CreateRecallManagementServiceVersionConfigRequest extends TeaModel 
         }
         public String getItemConditionArray() {
             return this.itemConditionArray;
+        }
+
+        public CreateRecallManagementServiceVersionConfigRequestRecallConfig setItemConditionExpression(String itemConditionExpression) {
+            this.itemConditionExpression = itemConditionExpression;
+            return this;
+        }
+        public String getItemConditionExpression() {
+            return this.itemConditionExpression;
         }
 
         public CreateRecallManagementServiceVersionConfigRequestRecallConfig setItemVectorField(String itemVectorField) {

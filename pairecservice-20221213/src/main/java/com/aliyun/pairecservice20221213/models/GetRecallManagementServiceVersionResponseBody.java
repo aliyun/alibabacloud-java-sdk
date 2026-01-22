@@ -28,6 +28,9 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     @NameInMap("IsDefault")
     public String isDefault;
 
+    @NameInMap("IsEffective")
+    public Boolean isEffective;
+
     /**
      * <strong>example:</strong>
      * <p>V1</p>
@@ -86,6 +89,14 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     }
     public String getIsDefault() {
         return this.isDefault;
+    }
+
+    public GetRecallManagementServiceVersionResponseBody setIsEffective(Boolean isEffective) {
+        this.isEffective = isEffective;
+        return this;
+    }
+    public Boolean getIsEffective() {
+        return this.isEffective;
     }
 
     public GetRecallManagementServiceVersionResponseBody setName(String name) {
@@ -501,6 +512,13 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>age&gt;20</p>
+         */
+        @NameInMap("ItemConditionExpression")
+        public String itemConditionExpression;
+
+        /**
+         * <strong>example:</strong>
          * <p>item_embedding</p>
          */
         @NameInMap("ItemVectorField")
@@ -592,6 +610,14 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         }
         public String getItemConditionArray() {
             return this.itemConditionArray;
+        }
+
+        public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigs setItemConditionExpression(String itemConditionExpression) {
+            this.itemConditionExpression = itemConditionExpression;
+            return this;
+        }
+        public String getItemConditionExpression() {
+            return this.itemConditionExpression;
         }
 
         public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigs setItemVectorField(String itemVectorField) {

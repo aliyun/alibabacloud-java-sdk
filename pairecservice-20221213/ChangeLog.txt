@@ -1,3 +1,13 @@
+2026-01-22 Version: 4.0.1
+- Update API CreateRecallManagementServiceVersion: add request parameters body.Configs.RecallConfigs.$.ItemConditionExpression.
+- Update API CreateRecallManagementServiceVersionConfig: add request parameters body.RecallConfig.ItemConditionExpression.
+- Update API GetRecallManagementServiceVersion: add response parameters Body.IsEffective.
+- Update API GetRecallManagementServiceVersion: add response parameters Body.Configs.RecallConfigs.$.ItemConditionExpression.
+- Update API GetRecallManagementServiceVersionConfig: add response parameters Body.RecallConfig.ItemConditionExpression.
+- Update API UpdateRecallManagementServiceVersionConfig: add request parameters body.RecallConfig.ItemConditionArray.
+- Update API UpdateRecallManagementServiceVersionConfig: add request parameters body.RecallConfig.ItemConditionExpression.
+
+
 2026-01-13 Version: 4.0.0
 - Support API ChangeRecallManagementServiceVersion.
 - Support API CreateRecallManagementConfig.

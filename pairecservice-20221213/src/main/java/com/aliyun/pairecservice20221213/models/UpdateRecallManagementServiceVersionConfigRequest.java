@@ -372,6 +372,20 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends TeaModel 
         @NameInMap("ExtendedConfig")
         public String extendedConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;type&quot;:&quot;equal&quot;]</p>
+         */
+        @NameInMap("ItemConditionArray")
+        public String itemConditionArray;
+
+        /**
+         * <strong>example:</strong>
+         * <p>age&gt;20</p>
+         */
+        @NameInMap("ItemConditionExpression")
+        public String itemConditionExpression;
+
         @NameInMap("ItemVectorField")
         public String itemVectorField;
 
@@ -418,6 +432,22 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends TeaModel 
         }
         public String getExtendedConfig() {
             return this.extendedConfig;
+        }
+
+        public UpdateRecallManagementServiceVersionConfigRequestRecallConfig setItemConditionArray(String itemConditionArray) {
+            this.itemConditionArray = itemConditionArray;
+            return this;
+        }
+        public String getItemConditionArray() {
+            return this.itemConditionArray;
+        }
+
+        public UpdateRecallManagementServiceVersionConfigRequestRecallConfig setItemConditionExpression(String itemConditionExpression) {
+            this.itemConditionExpression = itemConditionExpression;
+            return this;
+        }
+        public String getItemConditionExpression() {
+            return this.itemConditionExpression;
         }
 
         public UpdateRecallManagementServiceVersionConfigRequestRecallConfig setItemVectorField(String itemVectorField) {
