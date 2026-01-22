@@ -99,6 +99,9 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("AndroidHonorTargetUserType")
         public Integer androidHonorTargetUserType;
 
+        @NameInMap("AndroidHuaweiBusinessType")
+        public Integer androidHuaweiBusinessType;
+
         @NameInMap("AndroidHuaweiLiveNotificationPayload")
         public String androidHuaweiLiveNotificationPayload;
 
@@ -263,12 +266,15 @@ public class MassPushRequest extends TeaModel {
         public Integer androidOppoIntentEnv;
 
         @NameInMap("AndroidOppoPrivateContentParameters")
+        @Deprecated
         public java.util.Map<String, String> androidOppoPrivateContentParameters;
 
         @NameInMap("AndroidOppoPrivateMsgTemplateId")
+        @Deprecated
         public String androidOppoPrivateMsgTemplateId;
 
         @NameInMap("AndroidOppoPrivateTitleParameters")
+        @Deprecated
         public java.util.Map<String, String> androidOppoPrivateTitleParameters;
 
         /**
@@ -706,6 +712,14 @@ public class MassPushRequest extends TeaModel {
             return this.androidHonorTargetUserType;
         }
 
+        public MassPushRequestPushTask setAndroidHuaweiBusinessType(Integer androidHuaweiBusinessType) {
+            this.androidHuaweiBusinessType = androidHuaweiBusinessType;
+            return this;
+        }
+        public Integer getAndroidHuaweiBusinessType() {
+            return this.androidHuaweiBusinessType;
+        }
+
         public MassPushRequestPushTask setAndroidHuaweiLiveNotificationPayload(String androidHuaweiLiveNotificationPayload) {
             this.androidHuaweiLiveNotificationPayload = androidHuaweiLiveNotificationPayload;
             return this;
@@ -930,6 +944,7 @@ public class MassPushRequest extends TeaModel {
             return this.androidOppoIntentEnv;
         }
 
+        @Deprecated
         public MassPushRequestPushTask setAndroidOppoPrivateContentParameters(java.util.Map<String, String> androidOppoPrivateContentParameters) {
             this.androidOppoPrivateContentParameters = androidOppoPrivateContentParameters;
             return this;
@@ -938,6 +953,7 @@ public class MassPushRequest extends TeaModel {
             return this.androidOppoPrivateContentParameters;
         }
 
+        @Deprecated
         public MassPushRequestPushTask setAndroidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
             this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
             return this;
@@ -946,6 +962,7 @@ public class MassPushRequest extends TeaModel {
             return this.androidOppoPrivateMsgTemplateId;
         }
 
+        @Deprecated
         public MassPushRequestPushTask setAndroidOppoPrivateTitleParameters(java.util.Map<String, String> androidOppoPrivateTitleParameters) {
             this.androidOppoPrivateTitleParameters = androidOppoPrivateTitleParameters;
             return this;

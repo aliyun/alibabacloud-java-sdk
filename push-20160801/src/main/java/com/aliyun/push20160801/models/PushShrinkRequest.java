@@ -43,6 +43,9 @@ public class PushShrinkRequest extends TeaModel {
     @NameInMap("AndroidHonorTargetUserType")
     public Integer androidHonorTargetUserType;
 
+    @NameInMap("AndroidHuaweiBusinessType")
+    public Integer androidHuaweiBusinessType;
+
     @NameInMap("AndroidHuaweiLiveNotificationPayload")
     public String androidHuaweiLiveNotificationPayload;
 
@@ -687,6 +690,14 @@ public class PushShrinkRequest extends TeaModel {
     }
     public Integer getAndroidHonorTargetUserType() {
         return this.androidHonorTargetUserType;
+    }
+
+    public PushShrinkRequest setAndroidHuaweiBusinessType(Integer androidHuaweiBusinessType) {
+        this.androidHuaweiBusinessType = androidHuaweiBusinessType;
+        return this;
+    }
+    public Integer getAndroidHuaweiBusinessType() {
+        return this.androidHuaweiBusinessType;
     }
 
     public PushShrinkRequest setAndroidHuaweiLiveNotificationPayload(String androidHuaweiLiveNotificationPayload) {

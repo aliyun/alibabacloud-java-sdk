@@ -791,6 +791,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidHonorTargetUserType", request.androidHonorTargetUserType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.androidHuaweiBusinessType)) {
+            query.put("AndroidHuaweiBusinessType", request.androidHuaweiBusinessType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.androidHuaweiLiveNotificationPayload)) {
             query.put("AndroidHuaweiLiveNotificationPayload", request.androidHuaweiLiveNotificationPayload);
         }

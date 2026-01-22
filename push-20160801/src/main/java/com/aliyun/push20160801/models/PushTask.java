@@ -199,6 +199,9 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskNotificationAndroidOptionsHuawei extends TeaModel {
+        @NameInMap("BusinessType")
+        public Integer businessType;
+
         @NameInMap("Category")
         public String category;
 
@@ -217,6 +220,14 @@ public class PushTask extends TeaModel {
         public static PushTaskNotificationAndroidOptionsHuawei build(java.util.Map<String, ?> map) throws Exception {
             PushTaskNotificationAndroidOptionsHuawei self = new PushTaskNotificationAndroidOptionsHuawei();
             return TeaModel.build(map, self);
+        }
+
+        public PushTaskNotificationAndroidOptionsHuawei setBusinessType(Integer businessType) {
+            this.businessType = businessType;
+            return this;
+        }
+        public Integer getBusinessType() {
+            return this.businessType;
         }
 
         public PushTaskNotificationAndroidOptionsHuawei setCategory(String category) {
