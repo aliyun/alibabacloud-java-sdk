@@ -12223,6 +12223,146 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询指定会话明细</p>
+     * 
+     * @param request DescribePolarAgentChatRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarAgentChatRecordsResponse
+     */
+    public DescribePolarAgentChatRecordsResponse describePolarAgentChatRecordsWithOptions(DescribePolarAgentChatRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarAgentChatRecords"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarAgentChatRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定会话明细</p>
+     * 
+     * @param request DescribePolarAgentChatRecordsRequest
+     * @return DescribePolarAgentChatRecordsResponse
+     */
+    public DescribePolarAgentChatRecordsResponse describePolarAgentChatRecords(DescribePolarAgentChatRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarAgentChatRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询会话状态</p>
+     * 
+     * @param request DescribePolarAgentSessionStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarAgentSessionStatusResponse
+     */
+    public DescribePolarAgentSessionStatusResponse describePolarAgentSessionStatusWithOptions(DescribePolarAgentSessionStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarAgentSessionStatus"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarAgentSessionStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询会话状态</p>
+     * 
+     * @param request DescribePolarAgentSessionStatusRequest
+     * @return DescribePolarAgentSessionStatusResponse
+     */
+    public DescribePolarAgentSessionStatusResponse describePolarAgentSessionStatus(DescribePolarAgentSessionStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarAgentSessionStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看历史会话记录</p>
+     * 
+     * @param request DescribePolarAgentUserSessionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarAgentUserSessionsResponse
+     */
+    public DescribePolarAgentUserSessionsResponse describePolarAgentUserSessionsWithOptions(DescribePolarAgentUserSessionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarAgentUserSessions"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarAgentUserSessionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看历史会话记录</p>
+     * 
+     * @param request DescribePolarAgentUserSessionsRequest
+     * @return DescribePolarAgentUserSessionsResponse
+     */
+    public DescribePolarAgentUserSessionsResponse describePolarAgentUserSessions(DescribePolarAgentUserSessionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarAgentUserSessionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取PolarFS实例详情</p>
      * 
      * @param request DescribePolarFsAttributeRequest
@@ -14329,6 +14469,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateUpgradeReportForSyncCloneResponse generateUpgradeReportForSyncClone(GenerateUpgradeReportForSyncCloneRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateUpgradeReportForSyncCloneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建聊天记录</p>
+     * 
+     * @param request GetPolarAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPolarAgentResponse
+     */
+    public GetPolarAgentResponse getPolarAgentWithOptions(GetPolarAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            query.put("ExtraInfo", request.extraInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPolarAgent"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPolarAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建聊天记录</p>
+     * 
+     * @param request GetPolarAgentRequest
+     * @return GetPolarAgentResponse
+     */
+    public GetPolarAgentResponse getPolarAgent(GetPolarAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPolarAgentWithOptions(request, runtime);
     }
 
     /**
