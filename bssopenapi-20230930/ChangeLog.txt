@@ -1,3 +1,17 @@
+2026-01-22 Version: 1.6.1
+- Update API QueryCostCenterResource: add response parameters Body.CostCenterResourceDtoList.$.AddStrategy.
+- Update API QueryCostCenterResource: add response parameters Body.CostCenterResourceDtoList.$.AddStrategyName.
+- Update API QueryCostCenterResource: add response parameters Body.CostCenterResourceDtoList.$.ApplicablePeriodNum.
+- Update API QueryCostCenterResource: add response parameters Body.CostCenterResourceDtoList.$.FinanceUnitRuleVersion.
+- Update API QueryCostCenterResource: add response parameters Body.CostCenterResourceDtoList.$.MasterCommodityCode.
+- Update API QueryCostCenterResource: add response parameters Body.CostCenterResourceDtoList.$.MasterInstanceId.
+- Update API QueryCostCenterResource: add response parameters Body.CostCenterResourceDtoList.$.RecentBillingMonth.
+- Update API QueryCostCenterResource: add response parameters Body.CostCenterResourceDtoList.$.RegionName.
+- Update API QueryCostCenterResource: add response parameters Body.CostCenterResourceDtoList.$.RegionNo.
+- Update API QueryCostCenterResource: add response parameters Body.CostCenterResourceDtoList.$.StartBillingMonth.
+- Update API QueryCostCenterShareRule: add response parameters Body.Data.$.GmtModified.
+
+
 2025-09-09 Version: 1.6.0
 - Support API CheckAccountExist.
 - Support API PayOrder.

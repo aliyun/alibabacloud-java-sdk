@@ -394,6 +394,13 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
+         */
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        /**
+         * <strong>example:</strong>
          * <p>1529600453335198</p>
          */
         @NameInMap("OwnerAccountId")
@@ -434,6 +441,14 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         }
         public java.util.List<QueryCostCenterShareRuleResponseBodyDataFromCostCenterShareRuleDetails> getFromCostCenterShareRuleDetails() {
             return this.fromCostCenterShareRuleDetails;
+        }
+
+        public QueryCostCenterShareRuleResponseBodyData setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         public QueryCostCenterShareRuleResponseBodyData setOwnerAccountId(Long ownerAccountId) {

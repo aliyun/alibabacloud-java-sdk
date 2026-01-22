@@ -100,6 +100,27 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
     public static class QueryCostCenterResourceResponseBodyCostCenterResourceDtoList extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>AUTO_ALLOCATE</p>
+         */
+        @NameInMap("AddStrategy")
+        public String addStrategy;
+
+        /**
+         * <strong>example:</strong>
+         * <p>自动分配</p>
+         */
+        @NameInMap("AddStrategyName")
+        public String addStrategyName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("ApplicablePeriodNum")
+        public Long applicablePeriodNum;
+
+        /**
+         * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("ApportionItemCode")
@@ -157,8 +178,29 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         @NameInMap("CostCenterUpdateTime")
         public String costCenterUpdateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("FinanceUnitRuleVersion")
+        public Long financeUnitRuleVersion;
+
         @NameInMap("InstanceId")
         public String instanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ecs</p>
+         */
+        @NameInMap("MasterCommodityCode")
+        public String masterCommodityCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>i-xxxxx</p>
+         */
+        @NameInMap("MasterInstanceId")
+        public String masterInstanceId;
 
         /**
          * <strong>example:</strong>
@@ -167,6 +209,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         @NameInMap("OwnerAccountId")
         public Long ownerAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX公司</p>
+         */
         @NameInMap("OwnerAccountName")
         public String ownerAccountName;
 
@@ -186,6 +232,27 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
 
         @NameInMap("PipName")
         public String pipName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>202509</p>
+         */
+        @NameInMap("RecentBillingMonth")
+        public Long recentBillingMonth;
+
+        /**
+         * <strong>example:</strong>
+         * <p>上海</p>
+         */
+        @NameInMap("RegionName")
+        public String regionName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
+        @NameInMap("RegionNo")
+        public String regionNo;
 
         @NameInMap("ResourceGroup")
         public String resourceGroup;
@@ -253,9 +320,40 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         @NameInMap("RootCostCenterId")
         public Long rootCostCenterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>202509</p>
+         */
+        @NameInMap("StartBillingMonth")
+        public Long startBillingMonth;
+
         public static QueryCostCenterResourceResponseBodyCostCenterResourceDtoList build(java.util.Map<String, ?> map) throws Exception {
             QueryCostCenterResourceResponseBodyCostCenterResourceDtoList self = new QueryCostCenterResourceResponseBodyCostCenterResourceDtoList();
             return TeaModel.build(map, self);
+        }
+
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setAddStrategy(String addStrategy) {
+            this.addStrategy = addStrategy;
+            return this;
+        }
+        public String getAddStrategy() {
+            return this.addStrategy;
+        }
+
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setAddStrategyName(String addStrategyName) {
+            this.addStrategyName = addStrategyName;
+            return this;
+        }
+        public String getAddStrategyName() {
+            return this.addStrategyName;
+        }
+
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setApplicablePeriodNum(Long applicablePeriodNum) {
+            this.applicablePeriodNum = applicablePeriodNum;
+            return this;
+        }
+        public Long getApplicablePeriodNum() {
+            return this.applicablePeriodNum;
         }
 
         public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setApportionItemCode(String apportionItemCode) {
@@ -330,12 +428,36 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             return this.costCenterUpdateTime;
         }
 
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setFinanceUnitRuleVersion(Long financeUnitRuleVersion) {
+            this.financeUnitRuleVersion = financeUnitRuleVersion;
+            return this;
+        }
+        public Long getFinanceUnitRuleVersion() {
+            return this.financeUnitRuleVersion;
+        }
+
         public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setMasterCommodityCode(String masterCommodityCode) {
+            this.masterCommodityCode = masterCommodityCode;
+            return this;
+        }
+        public String getMasterCommodityCode() {
+            return this.masterCommodityCode;
+        }
+
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setMasterInstanceId(String masterInstanceId) {
+            this.masterInstanceId = masterInstanceId;
+            return this;
+        }
+        public String getMasterInstanceId() {
+            return this.masterInstanceId;
         }
 
         public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setOwnerAccountId(Long ownerAccountId) {
@@ -376,6 +498,30 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
         public String getPipName() {
             return this.pipName;
+        }
+
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setRecentBillingMonth(Long recentBillingMonth) {
+            this.recentBillingMonth = recentBillingMonth;
+            return this;
+        }
+        public Long getRecentBillingMonth() {
+            return this.recentBillingMonth;
+        }
+
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
+        }
+
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setRegionNo(String regionNo) {
+            this.regionNo = regionNo;
+            return this;
+        }
+        public String getRegionNo() {
+            return this.regionNo;
         }
 
         public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setResourceGroup(String resourceGroup) {
@@ -456,6 +602,14 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
         public Long getRootCostCenterId() {
             return this.rootCostCenterId;
+        }
+
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setStartBillingMonth(Long startBillingMonth) {
+            this.startBillingMonth = startBillingMonth;
+            return this;
+        }
+        public Long getStartBillingMonth() {
+            return this.startBillingMonth;
         }
 
     }
