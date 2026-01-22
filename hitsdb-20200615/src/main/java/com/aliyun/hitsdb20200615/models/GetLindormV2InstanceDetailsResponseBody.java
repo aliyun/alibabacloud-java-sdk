@@ -88,6 +88,12 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     @NameInMap("EnableCompute")
     public Boolean enableCompute;
 
+    @NameInMap("EnableFs")
+    public String enableFs;
+
+    @NameInMap("EnableStoreTDE")
+    public String enableStoreTDE;
+
     @NameInMap("EngineList")
     public java.util.List<GetLindormV2InstanceDetailsResponseBodyEngineList> engineList;
 
@@ -346,6 +352,22 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     }
     public Boolean getEnableCompute() {
         return this.enableCompute;
+    }
+
+    public GetLindormV2InstanceDetailsResponseBody setEnableFs(String enableFs) {
+        this.enableFs = enableFs;
+        return this;
+    }
+    public String getEnableFs() {
+        return this.enableFs;
+    }
+
+    public GetLindormV2InstanceDetailsResponseBody setEnableStoreTDE(String enableStoreTDE) {
+        this.enableStoreTDE = enableStoreTDE;
+        return this;
+    }
+    public String getEnableStoreTDE() {
+        return this.enableStoreTDE;
     }
 
     public GetLindormV2InstanceDetailsResponseBody setEngineList(java.util.List<GetLindormV2InstanceDetailsResponseBodyEngineList> engineList) {

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>hitsdb20200615</artifactId>
-  <version>5.9.1</version>
+  <version>5.9.2</version>
   <packaging>jar</packaging>
   <name>hitsdb20200615</name>
   <description>Alibaba Cloud Time  Series and Spatial-Temporal  Database (20200615) SDK for Java
@@ -96,6 +96,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>
