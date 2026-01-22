@@ -3164,6 +3164,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DbVersion", request.dbVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

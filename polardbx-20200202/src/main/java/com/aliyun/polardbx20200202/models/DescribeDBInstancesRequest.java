@@ -7,6 +7,9 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("DbVersion")
     public String dbVersion;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <strong>example:</strong>
      * <p>dinga93c84f4d***</p>
@@ -72,6 +75,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public String getDbVersion() {
         return this.dbVersion;
+    }
+
+    public DescribeDBInstancesRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeDBInstancesRequest setInstanceId(String instanceId) {
