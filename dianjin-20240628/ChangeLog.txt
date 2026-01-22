@@ -1,3 +1,7 @@
+2026-01-22 Version: 1.19.3
+- Update API RealTimeDialog: add request parameters body.conversationModel.$.intentionCode.
+
+
 2026-01-08 Version: 1.19.2
 - Update API GetVideoCreationTaskResult: add response parameters Body.data.statusReason.
 

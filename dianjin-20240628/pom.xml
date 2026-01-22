@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dianjin20240628</artifactId>
-  <version>1.19.2</version>
+  <version>1.19.3</version>
   <packaging>jar</packaging>
   <name>dianjin20240628</name>
   <description>Alibaba Cloud DianJin (20240628) SDK for Java
@@ -116,6 +116,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>

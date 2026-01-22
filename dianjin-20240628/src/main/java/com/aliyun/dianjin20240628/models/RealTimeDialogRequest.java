@@ -213,6 +213,13 @@ public class RealTimeDialogRequest extends TeaModel {
         public Integer end;
 
         /**
+         * <strong>example:</strong>
+         * <p>1983746378992743</p>
+         */
+        @NameInMap("intentionCode")
+        public String intentionCode;
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,6 +296,14 @@ public class RealTimeDialogRequest extends TeaModel {
         }
         public Integer getEnd() {
             return this.end;
+        }
+
+        public RealTimeDialogRequestConversationModel setIntentionCode(String intentionCode) {
+            this.intentionCode = intentionCode;
+            return this;
+        }
+        public String getIntentionCode() {
+            return this.intentionCode;
         }
 
         public RealTimeDialogRequestConversationModel setRole(Integer role) {
