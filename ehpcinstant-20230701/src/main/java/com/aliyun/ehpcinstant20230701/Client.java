@@ -674,6 +674,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询作业输出</p>
+     * 
+     * @param request DescribeJobResultsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeJobResultsResponse
+     */
+    public DescribeJobResultsResponse describeJobResultsWithOptions(DescribeJobResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arrayIndex)) {
+            query.put("ArrayIndex", request.arrayIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentEncoding)) {
+            query.put("ContentEncoding", request.contentEncoding);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitBytes)) {
+            query.put("LimitBytes", request.limitBytes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            query.put("TaskName", request.taskName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeJobResults"),
+            new TeaPair("version", "2023-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeJobResultsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询作业输出</p>
+     * 
+     * @param request DescribeJobResultsRequest
+     * @return DescribeJobResultsResponse
+     */
+    public DescribeJobResultsResponse describeJobResults(DescribeJobResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeJobResultsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Querying Execution Plan Details</p>
      * 
      * @param request GetActionPlanRequest
