@@ -155,6 +155,9 @@ public class CreateAgentRuntimeInput extends TeaModel {
     @NameInMap("protocolConfiguration")
     public ProtocolConfiguration protocolConfiguration;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>每个运行时实例允许的最大并发会话数</p>
      * 
@@ -305,6 +308,14 @@ public class CreateAgentRuntimeInput extends TeaModel {
     }
     public ProtocolConfiguration getProtocolConfiguration() {
         return this.protocolConfiguration;
+    }
+
+    public CreateAgentRuntimeInput setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateAgentRuntimeInput setSessionConcurrencyLimitPerInstance(Integer sessionConcurrencyLimitPerInstance) {

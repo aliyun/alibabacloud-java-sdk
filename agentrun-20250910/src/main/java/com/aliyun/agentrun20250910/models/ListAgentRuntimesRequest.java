@@ -31,6 +31,9 @@ public class ListAgentRuntimesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>查询模式，支持精确查询和模糊查询</p>
      * 
@@ -76,6 +79,14 @@ public class ListAgentRuntimesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAgentRuntimesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListAgentRuntimesRequest setSearchMode(String searchMode) {
