@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
+    /**
+     * <p>The dataset.</p>
+     */
     @NameInMap("Data")
     public java.util.List<CheckBatchTableAccessPermissionResponseBodyData> data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,7 +20,7 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B43AD641-49C2-5299-9E06-1B37EC1B****</p>
@@ -24,6 +29,12 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,6 +80,8 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
 
     public static class CheckBatchTableAccessPermissionResponseBodyData extends TeaModel {
         /**
+         * <p>The error message that is returned if the request failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>The productKey is empty.</p>
          */
@@ -76,6 +89,11 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <ul>
+         * <li><strong>true</strong>: Permission granted</li>
+         * <li><strong>false</strong>: Permissions denied</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -83,6 +101,8 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
         public String success;
 
         /**
+         * <p>The name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>tab_add_teacher_record</p>
          */

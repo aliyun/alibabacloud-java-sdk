@@ -249,6 +249,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("QueryTimeout", request.queryTimeout);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.roleArn)) {
+            query.put("RoleArn", request.roleArn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.safeRule)) {
             query.put("SafeRule", request.safeRule);
         }
@@ -1381,10 +1385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>带有DMS脱敏能力的聊天API接口</p>
+     * <p>Chat API with DMS Data Masking capabilities.</p>
      * 
      * <b>summary</b> : 
-     * <p>带有DMS脱敏能力的聊天API接口</p>
+     * <p>Chat API with DMS Data Masking capabilities.</p>
      * 
      * @param tmpReq ChatWithDesensitizeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1528,10 +1532,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>带有DMS脱敏能力的聊天API接口</p>
+     * <p>Chat API with DMS Data Masking capabilities.</p>
      * 
      * <b>summary</b> : 
-     * <p>带有DMS脱敏能力的聊天API接口</p>
+     * <p>Chat API with DMS Data Masking capabilities.</p>
      * 
      * @param request ChatWithDesensitizeRequest
      * @return ChatWithDesensitizeResponse
@@ -1543,10 +1547,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * <p>Chat SSE API with DMS Data Masking capability.</p>
      * 
      * <b>summary</b> : 
-     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * <p>Chat SSE API with DMS Data Masking capability.</p>
      * 
      * @param tmpReq ChatWithDesensitizeSSERequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1710,10 +1714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * <p>Chat SSE API with DMS Data Masking capability.</p>
      * 
      * <b>summary</b> : 
-     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * <p>Chat SSE API with DMS Data Masking capability.</p>
      * 
      * @param request ChatWithDesensitizeSSERequest
      * @return ChatWithDesensitizeSSEResponse
@@ -1724,8 +1728,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Verify the permissions on multiple tables at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量校验是否有表访问权限</p>
+     * <p>Batch verify table permissions.</p>
      * 
      * @param tmpReq CheckBatchTableAccessPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1778,8 +1785,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Verify the permissions on multiple tables at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量校验是否有表访问权限</p>
+     * <p>Batch verify table permissions.</p>
      * 
      * @param request CheckBatchTableAccessPermissionRequest
      * @return CheckBatchTableAccessPermissionResponse
@@ -2894,6 +2904,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.adbpgInstanceMode)) {
             query.put("AdbpgInstanceMode", request.adbpgInstanceMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.backupVSwitchId)) {

@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ChatWithDesensitizeResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ChatWithDesensitizeResponseBodyData data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,6 +20,8 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,7 +29,7 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
@@ -31,6 +38,12 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +97,8 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
 
     public static class ChatWithDesensitizeResponseBodyDataChoicesMessage extends TeaModel {
         /**
+         * <p>The content of the model\&quot;s response.</p>
+         * 
          * <strong>example:</strong>
          * <p>你好呀！</p>
          */
@@ -91,6 +106,8 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The internal reasoning content of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>嗯，用户发了个“你好”，看起来是想打招呼...</p>
          */
@@ -98,6 +115,8 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         public String reasoningContent;
 
         /**
+         * <p>Message role.</p>
+         * 
          * <strong>example:</strong>
          * <p>system</p>
          */
@@ -137,6 +156,8 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
 
     public static class ChatWithDesensitizeResponseBodyDataChoices extends TeaModel {
         /**
+         * <p>Finish reason: ● stop: The model reached a natural stop point or a specified stop sequence. ● length: Generation ended because the maximum number of tokens was reached. ● tool_calls: The model stopped because it needs to call a tool to proceed.</p>
+         * 
          * <strong>example:</strong>
          * <p>stop</p>
          */
@@ -144,12 +165,17 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         public String finishReason;
 
         /**
+         * <p>Token probability information of model output.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("Logprobs")
         public java.util.Map<String, ?> logprobs;
 
+        /**
+         * <p>The message body output by the model.</p>
+         */
         @NameInMap("Message")
         public ChatWithDesensitizeResponseBodyDataChoicesMessage message;
 
@@ -186,6 +212,8 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
 
     public static class ChatWithDesensitizeResponseBodyDataUsage extends TeaModel {
         /**
+         * <p>The number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -193,6 +221,8 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         public String completionTokens;
 
         /**
+         * <p>Fine-grained classification of output tokens when using the Qwen-VL model.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -200,6 +230,8 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         public java.util.Map<String, String> completionTokensDetails;
 
         /**
+         * <p>The number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -207,6 +239,8 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         public String promptTokens;
 
         /**
+         * <p>Fine-grained classification of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -214,6 +248,8 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         public java.util.Map<String, String> promptTokensDetails;
 
         /**
+         * <p>The total number of tokens consumed.</p>
+         * 
          * <strong>example:</strong>
          * <p>19</p>
          */
@@ -268,20 +304,33 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
     }
 
     public static class ChatWithDesensitizeResponseBodyData extends TeaModel {
+        /**
+         * <p>The candidate array for model-generated content.</p>
+         */
         @NameInMap("Choices")
         public java.util.List<ChatWithDesensitizeResponseBodyDataChoices> choices;
 
         /**
+         * <p>The Unix timestamp (in seconds) when the request was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1763710100</p>
          */
         @NameInMap("Created")
         public String created;
 
+        /**
+         * <p>Error message, provided when StatusCode is not 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>The model used for this request.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
@@ -289,15 +338,26 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>Error code, 200 for normal calls, others for exceptions.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
 
+        /**
+         * <p>Error type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>invalid_request_error</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The token consumption information of this request.</p>
+         */
         @NameInMap("Usage")
         public ChatWithDesensitizeResponseBodyDataUsage usage;
 

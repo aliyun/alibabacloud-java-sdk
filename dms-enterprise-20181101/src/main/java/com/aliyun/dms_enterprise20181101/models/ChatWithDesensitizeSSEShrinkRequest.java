@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     /**
+     * <p>Output audio voice and format; only applicable to the Qwen-Omni model, provided that the modalities parameter is set to [&quot;text&quot;, &quot;audio&quot;].</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String audioJson;
 
     /**
+     * <p>Masking category. Required when needDataMasking is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>UserInfo</p>
      */
@@ -19,6 +23,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String desensitizationRule;
 
     /**
+     * <p>The embedding dimensions.</p>
+     * 
      * <strong>example:</strong>
      * <p>256</p>
      */
@@ -26,6 +32,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Integer dimensions;
 
     /**
+     * <p>Specifies whether to enable the code interpreter feature. Takes effect only when model is qwen3-max-preview and enable_thinking is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,6 +41,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Boolean enableCodeInterpreter;
 
     /**
+     * <p>Whether to enable web search.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -40,6 +50,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Boolean enableSearch;
 
     /**
+     * <p>Specifies whether to enable thinking mode when using hybrid thinking models.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -47,6 +59,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Boolean enableThinking;
 
     /**
+     * <p>Specifies whether to include token usage information in the final chunk of the streaming response.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Boolean includeUsage;
 
     /**
+     * <p>The input to the embedding model.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -61,6 +77,7 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String input;
 
     /**
+     * <p>The ID of the instance, used to specify the corresponding data masking rules. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +87,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Long instanceId;
 
     /**
+     * <p>Specifies whether to return the log probabilities of the output tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -77,6 +96,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Boolean logprobs;
 
     /**
+     * <p>Limits the maximum number of tokens the model can generate. If the output exceeds this value, generation will be truncated. Suitable for scenarios where you need to control the output length.</p>
+     * 
      * <strong>example:</strong>
      * <p>256</p>
      */
@@ -84,6 +105,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Integer maxTokens;
 
     /**
+     * <p>The conversation context passed to the model, arranged in chronological order.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      *     {
@@ -96,6 +119,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String messagesShrink;
 
     /**
+     * <p>Output data modality; only applicable to the Qwen-Omni model.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;text&quot;,&quot;audio&quot;]</p>
      */
@@ -103,6 +128,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String modalitiesListShrink;
 
     /**
+     * <p>The model name. Supported models: Qwen series text-only Large Language Models (commercial and open-source). Multi-modal models are not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-plus</p>
      */
@@ -110,6 +137,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>Whether to enable data masking. Defaults to false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -117,6 +146,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Boolean needDesensitization;
 
     /**
+     * <p>Model configuration parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -124,6 +155,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String parameters;
 
     /**
+     * <p>Controls the degree of repetition in generated text. Valid values: [-2.0, 2.0]. Positive values decrease repetition, while negative values increase it.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0</p>
      */
@@ -131,6 +164,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String presencePenalty;
 
     /**
+     * <p>The format of the returned content. Valid values: text: Plain text response; json_object: Standardized JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -138,6 +173,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String responseFormat;
 
     /**
+     * <p>Web search strategy.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -145,16 +182,23 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String searchOptionsShrink;
 
     /**
+     * <p>Random seed. Used to ensure the reproducibility of results under the same input and parameters. Valid values: [0, 2^31−1].</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Seed")
     public Integer seed;
 
+    /**
+     * <p>Stop sequences.</p>
+     */
     @NameInMap("Stop")
     public String stopShrink;
 
     /**
+     * <p>Specifies whether to use streaming output.</p>
+     * 
      * <strong>example:</strong>
      * <p>1-68f11da7e2b826dcc63c5877-hd</p>
      */
@@ -162,6 +206,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Boolean stream;
 
     /**
+     * <p>The sampling temperature controls the diversity of the generated text. The higher the temperature, the more diverse the generated text, and conversely, the more deterministic the generated text. Valid values: [0, 2).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -169,6 +215,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String temperature;
 
     /**
+     * <p>The maximum number of tokens allowed for the model\&quot;s internal reasoning process.</p>
+     * 
      * <strong>example:</strong>
      * <p>256</p>
      */
@@ -176,6 +224,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Integer thinkingBudget;
 
     /**
+     * <p>Specifies the number of candidate tokens to consider during sampling. Higher values increase randomness, while lower values make the output more deterministic. Set to null or a value greater than 100 to disable.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -183,6 +233,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Integer topK;
 
     /**
+     * <p>Specifies the number of most likely candidate tokens to return at each generation step. Valid values: [0, 5].</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -190,6 +242,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Integer topLogprobs;
 
     /**
+     * <p>The probability threshold for nucleus sampling, used to control the diversity of the generated text. Higher Top-P values result in more diverse generated text. Valid values: (0,1.0].</p>
+     * 
      * <strong>example:</strong>
      * <p>0.5</p>
      */
@@ -197,6 +251,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public String topP;
 
     /**
+     * <p>Specifies whether to increase the maximum pixel limit of input images to the equivalent of 16,384 tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -204,6 +260,8 @@ public class ChatWithDesensitizeSSEShrinkRequest extends TeaModel {
     public Boolean vlHighResolutionImages;
 
     /**
+     * <p>Specifies whether to further identify non-compliant information in both input and output content, building upon the built-in content safety capabilities of the Tongyi Qianwen API.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

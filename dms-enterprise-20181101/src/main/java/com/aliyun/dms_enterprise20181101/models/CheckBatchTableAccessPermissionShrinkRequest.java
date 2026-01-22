@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckBatchTableAccessPermissionShrinkRequest extends TeaModel {
     /**
+     * <p>The database ID. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to query the ID of a physical database and the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> operation to query the ID of a logical database.</p>
+     * <blockquote>
+     * <p> The value of DatabaseId is that of DbId.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,12 @@ public class CheckBatchTableAccessPermissionShrinkRequest extends TeaModel {
     public Long dbId;
 
     /**
+     * <p>Specifies whether the database is a logical database. Valid values:</p>
+     * <ul>
+     * <li>true: Logical database.</li>
+     * <li>false: Physical database.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -21,6 +31,15 @@ public class CheckBatchTableAccessPermissionShrinkRequest extends TeaModel {
     public Boolean logic;
 
     /**
+     * <p>The type of the permission to be verified.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>QUERY</li>
+     * <li>EXPORT</li>
+     * <li>CORRECT</li>
+     * <li>LOGIN</li>
+     * <li>PERF</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,12 +49,18 @@ public class CheckBatchTableAccessPermissionShrinkRequest extends TeaModel {
     public String permissionType;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TableNameList")
     public String tableNameListShrink;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * <blockquote>
+     * <p> View Tenant ID by hovering over your profile icon in the DMS console. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */

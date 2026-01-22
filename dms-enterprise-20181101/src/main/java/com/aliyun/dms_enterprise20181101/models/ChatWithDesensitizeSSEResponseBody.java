@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChatWithDesensitizeSSEResponseBody extends TeaModel {
     /**
+     * <p>The data returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class ChatWithDesensitizeSSEResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class ChatWithDesensitizeSSEResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -26,6 +32,8 @@ public class ChatWithDesensitizeSSEResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>283C461F-11D8-48AA-B695-DF092DA32AF3</p>
      */
@@ -33,6 +41,12 @@ public class ChatWithDesensitizeSSEResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

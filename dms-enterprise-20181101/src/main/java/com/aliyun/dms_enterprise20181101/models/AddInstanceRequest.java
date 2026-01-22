@@ -254,6 +254,9 @@ public class AddInstanceRequest extends TeaModel {
     @NameInMap("QueryTimeout")
     public Integer queryTimeout;
 
+    @NameInMap("RoleArn")
+    public String roleArn;
+
     /**
      * <p>The name of the security rule set for the database instance. This parameter is required if Security Collaboration is enabled. You can call the<a href="https://help.aliyun.com/document_detail/465940.html">ListStandardGroups</a> or <a href="https://help.aliyun.com/document_detail/465826.html">GetInstance</a> operation to obtain the name of the security rule set from GroupName.</p>
      */
@@ -528,6 +531,14 @@ public class AddInstanceRequest extends TeaModel {
     }
     public Integer getQueryTimeout() {
         return this.queryTimeout;
+    }
+
+    public AddInstanceRequest setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    public String getRoleArn() {
+        return this.roleArn;
     }
 
     public AddInstanceRequest setSafeRule(String safeRule) {

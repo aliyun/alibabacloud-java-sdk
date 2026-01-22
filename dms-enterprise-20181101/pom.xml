@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dms_enterprise20181101</artifactId>
-  <version>2.1.4</version>
+  <version>2.1.5</version>
   <packaging>jar</packaging>
   <name>dms_enterprise20181101</name>
   <description>Alibaba Cloud dms-enterprise (20181101) SDK for Java
@@ -101,6 +101,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>

@@ -7,6 +7,9 @@ public class CreateDifyInstanceRequest extends TeaModel {
     @NameInMap("AdbpgInstanceMode")
     public String adbpgInstanceMode;
 
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     @NameInMap("BackupVSwitchId")
     public String backupVSwitchId;
 
@@ -218,6 +221,14 @@ public class CreateDifyInstanceRequest extends TeaModel {
     }
     public String getAdbpgInstanceMode() {
         return this.adbpgInstanceMode;
+    }
+
+    public CreateDifyInstanceRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public CreateDifyInstanceRequest setBackupVSwitchId(String backupVSwitchId) {
