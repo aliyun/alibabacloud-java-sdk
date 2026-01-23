@@ -1162,6 +1162,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("GpuAcceleration")
         public String gpuAcceleration;
 
+        @NameInMap("HoverConfigMsg")
+        public String hoverConfigMsg;
+
         /**
          * <p>Specifies whether to allow web client access.</p>
          * <p>Valid values:</p>
@@ -1355,6 +1358,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @NameInMap("ModelLibrary")
         public String modelLibrary;
+
+        @NameInMap("MultiScreen")
+        public String multiScreen;
 
         /**
          * <p>The name of the cloud computer policy.</p>
@@ -1674,6 +1680,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("ResetDesktop")
         public String resetDesktop;
+
+        @NameInMap("ResolutionDpi")
+        public Integer resolutionDpi;
 
         @NameInMap("ResolutionHeight")
         public Integer resolutionHeight;
@@ -2394,6 +2403,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.gpuAcceleration;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setHoverConfigMsg(String hoverConfigMsg) {
+            this.hoverConfigMsg = hoverConfigMsg;
+            return this;
+        }
+        public String getHoverConfigMsg() {
+            return this.hoverConfigMsg;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setHtml5Access(String html5Access) {
             this.html5Access = html5Access;
             return this;
@@ -2544,6 +2561,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getModelLibrary() {
             return this.modelLibrary;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMultiScreen(String multiScreen) {
+            this.multiScreen = multiScreen;
+            return this;
+        }
+        public String getMultiScreen() {
+            return this.multiScreen;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setName(String name) {
@@ -2776,6 +2801,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getResetDesktop() {
             return this.resetDesktop;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setResolutionDpi(Integer resolutionDpi) {
+            this.resolutionDpi = resolutionDpi;
+            return this;
+        }
+        public Integer getResolutionDpi() {
+            return this.resolutionDpi;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setResolutionHeight(Integer resolutionHeight) {

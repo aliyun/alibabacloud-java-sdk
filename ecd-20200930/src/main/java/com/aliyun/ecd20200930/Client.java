@@ -2689,6 +2689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GpuAcceleration", request.gpuAcceleration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hoverConfigMsg)) {
+            query.put("HoverConfigMsg", request.hoverConfigMsg);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.html5FileTransfer)) {
             query.put("Html5FileTransfer", request.html5FileTransfer);
         }
@@ -2759,6 +2763,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelLibrary)) {
             query.put("ModelLibrary", request.modelLibrary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiScreen)) {
+            query.put("MultiScreen", request.multiScreen);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -2863,6 +2871,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resetDesktop)) {
             query.put("ResetDesktop", request.resetDesktop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolutionDpi)) {
+            query.put("ResolutionDpi", request.resolutionDpi);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resolutionHeight)) {
@@ -15172,6 +15184,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GpuAcceleration", request.gpuAcceleration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hoverConfigMsg)) {
+            query.put("HoverConfigMsg", request.hoverConfigMsg);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.html5FileTransfer)) {
             query.put("Html5FileTransfer", request.html5FileTransfer);
         }
@@ -15242,6 +15258,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelLibrary)) {
             query.put("ModelLibrary", request.modelLibrary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiScreen)) {
+            query.put("MultiScreen", request.multiScreen);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -15350,6 +15370,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resetDesktop)) {
             query.put("ResetDesktop", request.resetDesktop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolutionDpi)) {
+            query.put("ResolutionDpi", request.resolutionDpi);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resolutionHeight)) {

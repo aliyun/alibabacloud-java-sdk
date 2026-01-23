@@ -883,6 +883,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @NameInMap("GpuAcceleration")
         public String gpuAcceleration;
 
+        @NameInMap("HoverConfigMsg")
+        public String hoverConfigMsg;
+
         /**
          * <p>The web client access policy.</p>
          * 
@@ -1230,6 +1233,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         @NameInMap("RemoteCoordinate")
         public String remoteCoordinate;
+
+        @NameInMap("ResolutionDpi")
+        public Integer resolutionDpi;
 
         /**
          * <p>The height of the resolution. Unit: pixel.</p>
@@ -1795,6 +1801,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             return this.gpuAcceleration;
         }
 
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setHoverConfigMsg(String hoverConfigMsg) {
+            this.hoverConfigMsg = hoverConfigMsg;
+            return this;
+        }
+        public String getHoverConfigMsg() {
+            return this.hoverConfigMsg;
+        }
+
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setHtml5Access(String html5Access) {
             this.html5Access = html5Access;
             return this;
@@ -2105,6 +2119,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
         public String getRemoteCoordinate() {
             return this.remoteCoordinate;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setResolutionDpi(Integer resolutionDpi) {
+            this.resolutionDpi = resolutionDpi;
+            return this;
+        }
+        public Integer getResolutionDpi() {
+            return this.resolutionDpi;
         }
 
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setResolutionHeight(Integer resolutionHeight) {

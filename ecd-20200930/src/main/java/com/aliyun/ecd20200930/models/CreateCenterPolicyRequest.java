@@ -370,6 +370,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("GpuAcceleration")
     public String gpuAcceleration;
 
+    @NameInMap("HoverConfigMsg")
+    public String hoverConfigMsg;
+
     /**
      * <p>The file transfer feature on the web client.</p>
      * <p>Valid values:</p>
@@ -545,6 +548,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
 
     @NameInMap("ModelLibrary")
     public String modelLibrary;
+
+    @NameInMap("MultiScreen")
+    public String multiScreen;
 
     /**
      * <p>The policy name.</p>
@@ -805,6 +811,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("ResetDesktop")
     public String resetDesktop;
+
+    @NameInMap("ResolutionDpi")
+    public Integer resolutionDpi;
 
     /**
      * <p>The resolution height. Unit: pixel. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</p>
@@ -1585,6 +1594,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.gpuAcceleration;
     }
 
+    public CreateCenterPolicyRequest setHoverConfigMsg(String hoverConfigMsg) {
+        this.hoverConfigMsg = hoverConfigMsg;
+        return this;
+    }
+    public String getHoverConfigMsg() {
+        return this.hoverConfigMsg;
+    }
+
     public CreateCenterPolicyRequest setHtml5FileTransfer(String html5FileTransfer) {
         this.html5FileTransfer = html5FileTransfer;
         return this;
@@ -1727,6 +1744,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public String getModelLibrary() {
         return this.modelLibrary;
+    }
+
+    public CreateCenterPolicyRequest setMultiScreen(String multiScreen) {
+        this.multiScreen = multiScreen;
+        return this;
+    }
+    public String getMultiScreen() {
+        return this.multiScreen;
     }
 
     public CreateCenterPolicyRequest setName(String name) {
@@ -1935,6 +1960,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public String getResetDesktop() {
         return this.resetDesktop;
+    }
+
+    public CreateCenterPolicyRequest setResolutionDpi(Integer resolutionDpi) {
+        this.resolutionDpi = resolutionDpi;
+        return this;
+    }
+    public Integer getResolutionDpi() {
+        return this.resolutionDpi;
     }
 
     public CreateCenterPolicyRequest setResolutionHeight(Integer resolutionHeight) {
@@ -2524,6 +2557,18 @@ public class CreateCenterPolicyRequest extends TeaModel {
         @NameInMap("GrainedType")
         public String grainedType;
 
+        @NameInMap("InClipboardSize")
+        public Integer inClipboardSize;
+
+        @NameInMap("InClipboardSizeUnit")
+        public String inClipboardSizeUnit;
+
+        @NameInMap("OutClipboardSize")
+        public Integer outClipboardSize;
+
+        @NameInMap("OutClipboardSizeUnit")
+        public String outClipboardSizeUnit;
+
         public static CreateCenterPolicyRequestClipboardGraineds build(java.util.Map<String, ?> map) throws Exception {
             CreateCenterPolicyRequestClipboardGraineds self = new CreateCenterPolicyRequestClipboardGraineds();
             return TeaModel.build(map, self);
@@ -2559,6 +2604,38 @@ public class CreateCenterPolicyRequest extends TeaModel {
         }
         public String getGrainedType() {
             return this.grainedType;
+        }
+
+        public CreateCenterPolicyRequestClipboardGraineds setInClipboardSize(Integer inClipboardSize) {
+            this.inClipboardSize = inClipboardSize;
+            return this;
+        }
+        public Integer getInClipboardSize() {
+            return this.inClipboardSize;
+        }
+
+        public CreateCenterPolicyRequestClipboardGraineds setInClipboardSizeUnit(String inClipboardSizeUnit) {
+            this.inClipboardSizeUnit = inClipboardSizeUnit;
+            return this;
+        }
+        public String getInClipboardSizeUnit() {
+            return this.inClipboardSizeUnit;
+        }
+
+        public CreateCenterPolicyRequestClipboardGraineds setOutClipboardSize(Integer outClipboardSize) {
+            this.outClipboardSize = outClipboardSize;
+            return this;
+        }
+        public Integer getOutClipboardSize() {
+            return this.outClipboardSize;
+        }
+
+        public CreateCenterPolicyRequestClipboardGraineds setOutClipboardSizeUnit(String outClipboardSizeUnit) {
+            this.outClipboardSizeUnit = outClipboardSizeUnit;
+            return this;
+        }
+        public String getOutClipboardSizeUnit() {
+            return this.outClipboardSizeUnit;
         }
 
     }
