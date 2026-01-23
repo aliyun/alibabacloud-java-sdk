@@ -89,7 +89,7 @@ public class RuleInfo extends TeaModel {
     public Integer operationMode;
 
     @NameInMap("PreqRule")
-    public java.util.List<RuleInfoPreqRule> preqRule;
+    public RuleInfoPreqRule preqRule;
 
     @NameInMap("QualityCheckType")
     public Integer qualityCheckType;
@@ -401,11 +401,11 @@ public class RuleInfo extends TeaModel {
         return this.operationMode;
     }
 
-    public RuleInfo setPreqRule(java.util.List<RuleInfoPreqRule> preqRule) {
+    public RuleInfo setPreqRule(RuleInfoPreqRule preqRule) {
         this.preqRule = preqRule;
         return this;
     }
-    public java.util.List<RuleInfoPreqRule> getPreqRule() {
+    public RuleInfoPreqRule getPreqRule() {
         return this.preqRule;
     }
 
