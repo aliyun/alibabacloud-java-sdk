@@ -12,6 +12,13 @@ public class IssueCouponForCustomerRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <strong>example:</strong>
+     * <p>为客户XXX审批优惠券，该客户是XXXX</p>
+     */
+    @NameInMap("ApplicationReason")
+    public String applicationReason;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class IssueCouponForCustomerRequest extends TeaModel {
     public Long couponTemplateId;
 
     @NameInMap("IsUseBenefit")
+    @Deprecated
     public Boolean isUseBenefit;
 
     /**
@@ -45,6 +53,14 @@ public class IssueCouponForCustomerRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
+    public IssueCouponForCustomerRequest setApplicationReason(String applicationReason) {
+        this.applicationReason = applicationReason;
+        return this;
+    }
+    public String getApplicationReason() {
+        return this.applicationReason;
+    }
+
     public IssueCouponForCustomerRequest setCouponTemplateId(Long couponTemplateId) {
         this.couponTemplateId = couponTemplateId;
         return this;
@@ -53,6 +69,7 @@ public class IssueCouponForCustomerRequest extends TeaModel {
         return this.couponTemplateId;
     }
 
+    @Deprecated
     public IssueCouponForCustomerRequest setIsUseBenefit(Boolean isUseBenefit) {
         this.isUseBenefit = isUseBenefit;
         return this;
