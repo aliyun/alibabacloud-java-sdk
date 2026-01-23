@@ -2213,6 +2213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NodeName", request.nodeName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeNameList)) {
+            query.put("NodeNameList", request.nodeNameList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serverType)) {
             query.put("ServerType", request.serverType);
         }
@@ -3544,6 +3548,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetInstancePropertiesResponse getInstanceProperties(GetInstancePropertiesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstancePropertiesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>网络黑名单列表查询</p>
+     * 
+     * @param request GetNetworkBlacklistRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNetworkBlacklistResponse
+     */
+    public GetNetworkBlacklistResponse getNetworkBlacklistWithOptions(GetNetworkBlacklistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNetworkBlacklist"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNetworkBlacklistResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>网络黑名单列表查询</p>
+     * 
+     * @param request GetNetworkBlacklistRequest
+     * @return GetNetworkBlacklistResponse
+     */
+    public GetNetworkBlacklistResponse getNetworkBlacklist(GetNetworkBlacklistRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNetworkBlacklistWithOptions(request, runtime);
     }
 
     /**
@@ -5294,6 +5342,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetAdbSecureResponse setAdbSecure(SetAdbSecureRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setAdbSecureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置网络黑名单</p>
+     * 
+     * @param request SetNetworkBlacklistRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetNetworkBlacklistResponse
+     */
+    public SetNetworkBlacklistResponse setNetworkBlacklistWithOptions(SetNetworkBlacklistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainBlacklist)) {
+            query.put("DomainBlacklist", request.domainBlacklist);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipBlacklist)) {
+            query.put("IpBlacklist", request.ipBlacklist);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetNetworkBlacklist"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetNetworkBlacklistResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置网络黑名单</p>
+     * 
+     * @param request SetNetworkBlacklistRequest
+     * @return SetNetworkBlacklistResponse
+     */
+    public SetNetworkBlacklistResponse setNetworkBlacklist(SetNetworkBlacklistRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setNetworkBlacklistWithOptions(request, runtime);
     }
 
     /**

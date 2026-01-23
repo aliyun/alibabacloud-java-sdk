@@ -58,6 +58,9 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     @NameInMap("NodeName")
     public String nodeName;
 
+    @NameInMap("NodeNameList")
+    public java.util.List<String> nodeNameList;
+
     /**
      * <p>The matrix specification.</p>
      * <p>Valid values:</p>
@@ -148,6 +151,14 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     }
     public String getNodeName() {
         return this.nodeName;
+    }
+
+    public DescribeCloudPhoneNodesRequest setNodeNameList(java.util.List<String> nodeNameList) {
+        this.nodeNameList = nodeNameList;
+        return this;
+    }
+    public java.util.List<String> getNodeNameList() {
+        return this.nodeNameList;
     }
 
     public DescribeCloudPhoneNodesRequest setServerType(String serverType) {
