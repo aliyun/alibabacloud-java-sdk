@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterParametersRequest extends TeaModel {
+    @NameInMap("ClearBinlog")
+    public Boolean clearBinlog;
+
     /**
      * <p>The ID of the cluster.</p>
      * <blockquote>
@@ -117,6 +120,14 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     public static ModifyDBClusterParametersRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterParametersRequest self = new ModifyDBClusterParametersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterParametersRequest setClearBinlog(Boolean clearBinlog) {
+        this.clearBinlog = clearBinlog;
+        return this;
+    }
+    public Boolean getClearBinlog() {
+        return this.clearBinlog;
     }
 
     public ModifyDBClusterParametersRequest setDBClusterId(String DBClusterId) {
