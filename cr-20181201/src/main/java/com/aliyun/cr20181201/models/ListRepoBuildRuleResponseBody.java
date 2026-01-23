@@ -142,6 +142,9 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         @NameInMap("BuildRuleId")
         public String buildRuleId;
 
+        @NameInMap("DestArtifactType")
+        public String destArtifactType;
+
         /**
          * <p>The directory of the Dockerfile.</p>
          * 
@@ -213,6 +216,14 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
         public String getBuildRuleId() {
             return this.buildRuleId;
+        }
+
+        public ListRepoBuildRuleResponseBodyBuildRules setDestArtifactType(String destArtifactType) {
+            this.destArtifactType = destArtifactType;
+            return this;
+        }
+        public String getDestArtifactType() {
+            return this.destArtifactType;
         }
 
         public ListRepoBuildRuleResponseBodyBuildRules setDockerfileLocation(String dockerfileLocation) {

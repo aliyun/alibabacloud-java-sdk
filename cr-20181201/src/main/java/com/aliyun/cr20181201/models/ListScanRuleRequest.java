@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScanRuleRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cri-upoulewerx*****</p>
      */
@@ -12,6 +14,8 @@ public class ListScanRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListScanRuleRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -26,6 +32,13 @@ public class ListScanRuleRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <ul>
+     * <li><code>VUL</code>: Products Cloud Security Scanner.</li>
+     * <li><code>SBOM</code>: Product Content Analysis.</li>
+     * </ul>
+     * <p>Default value: <code>VUL</code></p>
+     * 
      * <strong>example:</strong>
      * <p>SBOM</p>
      */

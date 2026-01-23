@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScanRuleResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class ListScanRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -19,6 +23,8 @@ public class ListScanRuleResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListScanRuleResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -41,10 +49,15 @@ public class ListScanRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of scan rules.</p>
+     */
     @NameInMap("ScanRules")
     public java.util.List<ListScanRuleResponseBodyScanRules> scanRules;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -114,19 +127,29 @@ public class ListScanRuleResponseBody extends TeaModel {
 
     public static class ListScanRuleResponseBodyScanRules extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1702361810000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The list of namespaces.</p>
+         */
         @NameInMap("Namespaces")
         public java.util.List<String> namespaces;
 
+        /**
+         * <p>The repository name.</p>
+         */
         @NameInMap("RepoNames")
         public java.util.List<String> repoNames;
 
         /**
+         * <p>The tag that triggers the scan matches the regular expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>.*</p>
          */
@@ -134,6 +157,8 @@ public class ListScanRuleResponseBody extends TeaModel {
         public String repoTagFilterPattern;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cicd-prod</p>
          */
@@ -141,6 +166,8 @@ public class ListScanRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The scan rule id.</p>
+         * 
          * <strong>example:</strong>
          * <p>crscnr-2sdveqjhpzd****</p>
          */
@@ -148,6 +175,8 @@ public class ListScanRuleResponseBody extends TeaModel {
         public String scanRuleId;
 
         /**
+         * <p>The scan scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>REPO</p>
          */
@@ -155,6 +184,12 @@ public class ListScanRuleResponseBody extends TeaModel {
         public String scanScope;
 
         /**
+         * <p>The scan type. Valid values:</p>
+         * <ul>
+         * <li><code>VUL</code>: Products Cloud Security Scanner</li>
+         * <li><code>SBOM</code>: Product Content Analysis</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SBOM</p>
          */
@@ -162,6 +197,8 @@ public class ListScanRuleResponseBody extends TeaModel {
         public String scanType;
 
         /**
+         * <p>The trigger type.</p>
+         * 
          * <strong>example:</strong>
          * <p>AUTO</p>
          */
@@ -169,6 +206,8 @@ public class ListScanRuleResponseBody extends TeaModel {
         public String triggerType;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1764122725000</p>
          */

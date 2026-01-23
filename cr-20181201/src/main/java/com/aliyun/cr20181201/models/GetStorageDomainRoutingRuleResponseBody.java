@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
     /**
+     * <p>The return value.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1571926439000</p>
      */
@@ -19,6 +23,8 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1571926439000</p>
      */
@@ -26,16 +32,23 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
     public Long modifyTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D4978DCC-ECBD-40B0-A714-EE695******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The routing list.</p>
+     */
     @NameInMap("Routes")
     public java.util.List<RouteItem> routes;
 
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>crsdr-luq6qiegzvx****</p>
      */
@@ -43,6 +56,8 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
     public String ruleId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

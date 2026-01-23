@@ -1615,8 +1615,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a scan or content analysis rule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建扫描规则</p>
+     * <p>Creates a scan or content analysis rule.</p>
      * 
      * @param tmpReq CreateScanRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1685,8 +1688,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a scan or content analysis rule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建扫描规则</p>
+     * <p>Creates a scan or content analysis rule.</p>
      * 
      * @param request CreateScanRuleRequest
      * @return CreateScanRuleResponse
@@ -1697,8 +1703,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建实例域名路由规则</p>
+     * <p>Creates an instance store domain name routing rule.</p>
      * 
      * @param tmpReq CreateStorageDomainRoutingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1739,8 +1748,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建实例域名路由规则</p>
+     * <p>Creates an instance store domain name routing rule.</p>
      * 
      * @param request CreateStorageDomainRoutingRuleRequest
      * @return CreateStorageDomainRoutingRuleResponse
@@ -2549,8 +2561,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a scan rule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除扫描规则</p>
+     * <p>Deletes a scan rule.</p>
      * 
      * @param request DeleteScanRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2585,8 +2600,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a scan rule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除扫描规则</p>
+     * <p>Deletes a scan rule.</p>
      * 
      * @param request DeleteScanRuleRequest
      * @return DeleteScanRuleResponse
@@ -2597,8 +2615,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除实例存储域名映射规则</p>
+     * <p>Deletes an instance store domain name routing rule.</p>
      * 
      * @param request DeleteStorageDomainRoutingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2633,8 +2654,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除实例存储域名映射规则</p>
+     * <p>Deletes an instance store domain name routing rule.</p>
      * 
      * @param request DeleteStorageDomainRoutingRuleRequest
      * @return DeleteStorageDomainRoutingRuleResponse
@@ -2880,10 +2904,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the Container Registry instance.</p>
+     * <p>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</p>
+     * <ul>
+     * <li>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</li>
+     * <li>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</li>
+     * <li>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a temporary username and a token that you can use to log on to a Container Registry instance.</p>
+     * <p>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</p>
      * 
      * @param request GetAuthorizationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2915,10 +2944,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the Container Registry instance.</p>
+     * <p>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</p>
+     * <ul>
+     * <li>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</li>
+     * <li>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</li>
+     * <li>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a temporary username and a token that you can use to log on to a Container Registry instance.</p>
+     * <p>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</p>
      * 
      * @param request GetAuthorizationTokenRequest
      * @return GetAuthorizationTokenResponse
@@ -3767,8 +3801,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get scan rule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询扫描规则</p>
+     * <p>Obtains a scan rule.</p>
      * 
      * @param request GetScanRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3803,8 +3840,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get scan rule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询扫描规则</p>
+     * <p>Obtains a scan rule.</p>
      * 
      * @param request GetScanRuleRequest
      * @return GetScanRuleResponse
@@ -3815,8 +3855,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询实例存储域名路由规则</p>
+     * <p>Queries instance storage domain routing rules</p>
      * 
      * @param request GetStorageDomainRoutingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3851,8 +3894,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询实例存储域名路由规则</p>
+     * <p>Queries instance storage domain routing rules</p>
      * 
      * @param request GetStorageDomainRoutingRuleRequest
      * @return GetStorageDomainRoutingRuleResponse
@@ -5275,8 +5321,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the scan rules.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询扫描规则</p>
+     * <p>Lists the scan rules.</p>
      * 
      * @param request ListScanRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5303,8 +5352,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the scan rules.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询扫描规则</p>
+     * <p>Lists the scan rules.</p>
      * 
      * @param request ListScanRuleRequest
      * @return ListScanRuleResponse
@@ -6395,8 +6447,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新扫描规则</p>
+     * <p>Updates a scan rule.</p>
      * 
      * @param tmpReq UpdateScanRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6465,8 +6520,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新扫描规则</p>
+     * <p>Updates a scan rule.</p>
      * 
      * @param request UpdateScanRuleRequest
      * @return UpdateScanRuleResponse
@@ -6477,8 +6535,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新实例域名路由规则</p>
+     * <p>Updates a routing rule for an instance store domain name.</p>
      * 
      * @param tmpReq UpdateStorageDomainRoutingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6523,8 +6584,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新实例域名路由规则</p>
+     * <p>Updates a routing rule for an instance store domain name.</p>
      * 
      * @param request UpdateStorageDomainRoutingRuleRequest
      * @return UpdateStorageDomainRoutingRuleResponse

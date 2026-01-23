@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuthorizationTokenResponseBody extends TeaModel {
     /**
-     * <p>The temporary password returned after you call this API operation is a Security Token Service (STS) token whose validity period is 1 hour. Take note of the following items when you log on to Container Registry instances by using an STS token:</p>
-     * <ul>
-     * <li>If the STS token belongs to an Alibaba Cloud account, you can use the STS token to log on to all Container Registry instances that belong to the Alibaba Cloud account.</li>
-     * <li>If the STS token belongs to a Resource Access Management (RAM) user, you can use the STS token to log on to all Container Registry instances that belong to the RAM user.</li>
-     * <li>You can use an STS token to access only Container Registry instances to which the STS token is scoped.</li>
-     * </ul>
+     * <p>The password that you use to log on to the registry.</p>
      * 
      * <strong>example:</strong>
      * <p>shaunadadakks:uuczxnjcyeyhdjadkkajsjdjadhyucb</p>
@@ -19,11 +14,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public String authorizationToken;
 
     /**
-     * <p>Indicates whether the API call is successful.</p>
-     * <ul>
-     * <li><code>true</code>: successful</li>
-     * <li><code>false</code>: failed</li>
-     * </ul>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +23,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return value.</p>
+     * <p>The timestamp when the temporary token expired. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1571242083000</p>
@@ -41,7 +32,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public Long expireTime;
 
     /**
-     * <p>The username that is used to log on to the Container Registry instance.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +41,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The timestamp when the temporary password expires. Unit: milliseconds.</p>
+     * <p>The request ID</p>
      * 
      * <strong>example:</strong>
      * <p>E069EB86-E6AD-4A98-ADDE-0E993390239A</p>
@@ -59,7 +50,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The password that is used to log on to the Container Registry instance.</p>
+     * <p>The username that you use to log on to the registry.</p>
      * 
      * <strong>example:</strong>
      * <p>temp_user_cr</p>

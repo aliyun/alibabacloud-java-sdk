@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateScanRuleResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -21,6 +23,8 @@ public class UpdateScanRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>crscnr-3qmkeiuggfpjkfrq</p>
      */

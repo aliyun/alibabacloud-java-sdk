@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStorageDomainRoutingRuleRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetStorageDomainRoutingRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>crasr-mdbpung4i1rm****</p>
      */

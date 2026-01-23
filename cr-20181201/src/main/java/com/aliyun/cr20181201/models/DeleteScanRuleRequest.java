@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteScanRuleRequest extends TeaModel {
     /**
+     * <p>The instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cri-kmsiwlxxdcva****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteScanRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The rule ID</p>
+     * 
      * <strong>example:</strong>
      * <p>crscnr-aemytkwad2h7fyhb</p>
      */

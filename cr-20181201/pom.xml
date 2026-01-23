@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cr20181201</artifactId>
-  <version>2.1.0</version>
+  <version>2.1.1</version>
   <packaging>jar</packaging>
   <name>cr20181201</name>
   <description>Alibaba Cloud cr (20181201) SDK for Java
@@ -96,6 +96,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>

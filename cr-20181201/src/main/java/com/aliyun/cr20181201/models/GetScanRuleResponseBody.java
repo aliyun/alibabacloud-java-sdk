@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetScanRuleResponseBody extends TeaModel {
     /**
+     * <p>Return value</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,14 @@ public class GetScanRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the API call was successful, valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The API call was successful</p>
+     * </li>
+     * <li><p><code>false</code>: The API call failed</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,12 +29,17 @@ public class GetScanRuleResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C87993B5-7D61-5CAC-8D64-1AC732DD69FF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The scan rule.</p>
+     */
     @NameInMap("ScanRule")
     public GetScanRuleResponseBodyScanRule scanRule;
 
@@ -67,6 +82,8 @@ public class GetScanRuleResponseBody extends TeaModel {
 
     public static class GetScanRuleResponseBodyScanRule extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-03-15T17:08Z</p>
          */
@@ -74,19 +91,29 @@ public class GetScanRuleResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cri-szw6f6bhrky0c8jk</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Names of namespaces where the event is effective.</p>
+         */
         @NameInMap("Namespaces")
         public java.util.List<String> namespaces;
 
+        /**
+         * <p>Names of repositories where the event is effective.</p>
+         */
         @NameInMap("RepoNames")
         public java.util.List<String> repoNames;
 
         /**
+         * <p>Tag filter pattern for event triggering.</p>
+         * 
          * <strong>example:</strong>
          * <p>.*</p>
          */
@@ -94,6 +121,8 @@ public class GetScanRuleResponseBody extends TeaModel {
         public String repoTagFilterPattern;
 
         /**
+         * <p>The event rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>protection</p>
          */
@@ -101,16 +130,32 @@ public class GetScanRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The scan rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>crscnr-aemytkwad2h7fyhb</p>
          */
         @NameInMap("ScanRuleId")
         public String scanRuleId;
 
+        /**
+         * <p>The scan scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REPO</p>
+         */
         @NameInMap("ScanScope")
         public String scanScope;
 
         /**
+         * <p>The vulnerability type: </p>
+         * <ul>
+         * <li><p><code>cve</code>: System vulnerability</p>
+         * </li>
+         * <li><p><code>sca</code>: Application vulnerability</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SBOM</p>
          */
@@ -118,6 +163,16 @@ public class GetScanRuleResponseBody extends TeaModel {
         public String scanType;
 
         /**
+         * <p>The trigger type, valid values:</p>
+         * <ul>
+         * <li><p><code>ALL</code>: All triggers</p>
+         * </li>
+         * <li><p><code>TAG_LISTTAG</code>: Trigger</p>
+         * </li>
+         * <li><p><code>TAG_REG_EXP</code>: Expression trigger</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AUTO</p>
          */
@@ -125,6 +180,8 @@ public class GetScanRuleResponseBody extends TeaModel {
         public String triggerType;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-28T20:07:33.164</p>
          */

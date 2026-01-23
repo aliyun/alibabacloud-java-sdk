@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateStorageDomainRoutingRuleResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class CreateStorageDomainRoutingRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>C8E90AB5-0A96-5D12-9E59-11EE463*****</p>
      */
@@ -19,6 +23,8 @@ public class CreateStorageDomainRoutingRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>crsdr-n6pbhgjx*****</p>
      */
@@ -26,6 +32,8 @@ public class CreateStorageDomainRoutingRuleResponseBody extends TeaModel {
     public String ruleId;
 
     /**
+     * <p>Identification of whether the request is successful or not</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

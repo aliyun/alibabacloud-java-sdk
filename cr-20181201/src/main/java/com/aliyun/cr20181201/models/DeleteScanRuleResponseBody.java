@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteScanRuleResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

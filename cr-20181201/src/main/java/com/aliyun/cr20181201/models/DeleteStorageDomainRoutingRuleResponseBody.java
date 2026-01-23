@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteStorageDomainRoutingRuleResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class DeleteStorageDomainRoutingRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>D4978DCC-ECBD-40B0-A714-EE6959B*****</p>
      */
@@ -19,6 +23,8 @@ public class DeleteStorageDomainRoutingRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Request status ID</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
