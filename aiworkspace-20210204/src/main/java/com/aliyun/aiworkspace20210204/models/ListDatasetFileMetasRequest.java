@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetFileMetasRequest extends TeaModel {
+    @NameInMap("DatasetFileMetaIds")
+    public java.util.List<String> datasetFileMetaIds;
+
     /**
      * <p>The dataset version.</p>
      * <p>This parameter is required.</p>
@@ -209,6 +212,14 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public static ListDatasetFileMetasRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDatasetFileMetasRequest self = new ListDatasetFileMetasRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDatasetFileMetasRequest setDatasetFileMetaIds(java.util.List<String> datasetFileMetaIds) {
+        this.datasetFileMetaIds = datasetFileMetaIds;
+        return this;
+    }
+    public java.util.List<String> getDatasetFileMetaIds() {
+        return this.datasetFileMetaIds;
     }
 
     public ListDatasetFileMetasRequest setDatasetVersion(String datasetVersion) {

@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetFileMetasShrinkRequest extends TeaModel {
+    @NameInMap("DatasetFileMetaIds")
+    public String datasetFileMetaIdsShrink;
+
     /**
      * <p>The dataset version.</p>
      * <p>This parameter is required.</p>
@@ -209,6 +212,14 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public static ListDatasetFileMetasShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDatasetFileMetasShrinkRequest self = new ListDatasetFileMetasShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDatasetFileMetasShrinkRequest setDatasetFileMetaIdsShrink(String datasetFileMetaIdsShrink) {
+        this.datasetFileMetaIdsShrink = datasetFileMetaIdsShrink;
+        return this;
+    }
+    public String getDatasetFileMetaIdsShrink() {
+        return this.datasetFileMetaIdsShrink;
     }
 
     public ListDatasetFileMetasShrinkRequest setDatasetVersion(String datasetVersion) {

@@ -3807,6 +3807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListDatasetFileMetasShrinkRequest request = new ListDatasetFileMetasShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasetFileMetaIds)) {
+            request.datasetFileMetaIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasetFileMetaIds, "DatasetFileMetaIds", "simple");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryContentTypeIncludeAny)) {
             request.queryContentTypeIncludeAnyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryContentTypeIncludeAny, "QueryContentTypeIncludeAny", "simple");
         }
@@ -3828,6 +3832,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetFileMetaIdsShrink)) {
+            query.put("DatasetFileMetaIds", request.datasetFileMetaIdsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.datasetVersion)) {
             query.put("DatasetVersion", request.datasetVersion);
         }
