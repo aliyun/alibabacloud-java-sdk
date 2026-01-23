@@ -172,6 +172,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>读取Topic数据</p>
+     * 
+     * @param request GetRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRecordsResponse
+     */
+    public GetRecordsResponse getRecordsWithOptions(GetRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shardId)) {
+            query.put("ShardId", request.shardId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicName)) {
+            query.put("TopicName", request.topicName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRecords"),
+            new TeaPair("version", "2024-06-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>读取Topic数据</p>
+     * 
+     * @param request GetRecordsRequest
+     * @return GetRecordsResponse
+     */
+    public GetRecordsResponse getRecords(GetRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询Schema信息</p>
      * 
      * @param request GetSchemaRequest
@@ -700,5 +756,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTopicsResponse listTopics(ListTopicsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTopicsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>写入数据</p>
+     * 
+     * @param tmpReq PutRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PutRecordsResponse
+     */
+    public PutRecordsResponse putRecordsWithOptions(PutRecordsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PutRecordsShrinkRequest request = new PutRecordsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.records)) {
+            request.recordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.records, "Records", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordsShrink)) {
+            query.put("Records", request.recordsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shardId)) {
+            query.put("ShardId", request.shardId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicName)) {
+            query.put("TopicName", request.topicName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutRecords"),
+            new TeaPair("version", "2024-06-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>写入数据</p>
+     * 
+     * @param request PutRecordsRequest
+     * @return PutRecordsResponse
+     */
+    public PutRecordsResponse putRecords(PutRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.putRecordsWithOptions(request, runtime);
     }
 }
