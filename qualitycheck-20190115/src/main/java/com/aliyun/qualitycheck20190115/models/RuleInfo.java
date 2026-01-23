@@ -88,6 +88,9 @@ public class RuleInfo extends TeaModel {
     @NameInMap("OperationMode")
     public Integer operationMode;
 
+    @NameInMap("PreqRule")
+    public java.util.List<RuleInfoPreqRule> preqRule;
+
     @NameInMap("QualityCheckType")
     public Integer qualityCheckType;
 
@@ -398,6 +401,14 @@ public class RuleInfo extends TeaModel {
         return this.operationMode;
     }
 
+    public RuleInfo setPreqRule(java.util.List<RuleInfoPreqRule> preqRule) {
+        this.preqRule = preqRule;
+        return this;
+    }
+    public java.util.List<RuleInfoPreqRule> getPreqRule() {
+        return this.preqRule;
+    }
+
     public RuleInfo setQualityCheckType(Integer qualityCheckType) {
         this.qualityCheckType = qualityCheckType;
         return this;
@@ -612,6 +623,25 @@ public class RuleInfo extends TeaModel {
     }
     public String getWeight() {
         return this.weight;
+    }
+
+    public static class RuleInfoPreqRule extends TeaModel {
+        @NameInMap("Rid")
+        public String rid;
+
+        public static RuleInfoPreqRule build(java.util.Map<String, ?> map) throws Exception {
+            RuleInfoPreqRule self = new RuleInfoPreqRule();
+            return TeaModel.build(map, self);
+        }
+
+        public RuleInfoPreqRule setRid(String rid) {
+            this.rid = rid;
+            return this;
+        }
+        public String getRid() {
+            return this.rid;
+        }
+
     }
 
 }
