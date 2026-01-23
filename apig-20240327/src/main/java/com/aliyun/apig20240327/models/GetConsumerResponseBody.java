@@ -79,7 +79,7 @@ public class GetConsumerResponseBody extends TeaModel {
          * <p>The AK/SK authentication configurations.</p>
          */
         @NameInMap("akSkIdentityConfigs")
-        public AkSkIdentityConfig akSkIdentityConfigs;
+        public java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
         /**
          * <p>The API key authentication configurations.</p>
@@ -161,11 +161,11 @@ public class GetConsumerResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetConsumerResponseBodyData setAkSkIdentityConfigs(AkSkIdentityConfig akSkIdentityConfigs) {
+        public GetConsumerResponseBodyData setAkSkIdentityConfigs(java.util.List<AkSkIdentityConfig> akSkIdentityConfigs) {
             this.akSkIdentityConfigs = akSkIdentityConfigs;
             return this;
         }
-        public AkSkIdentityConfig getAkSkIdentityConfigs() {
+        public java.util.List<AkSkIdentityConfig> getAkSkIdentityConfigs() {
             return this.akSkIdentityConfigs;
         }
 

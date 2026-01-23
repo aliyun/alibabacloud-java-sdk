@@ -1,3 +1,8 @@
+2026-01-23 Version: 7.0.0
+- Update API GetConsumer: update response parameters Body.data.akSkIdentityConfigs' type has changed.
+- Update API GetConsumer: update response parameters Body.data.akSkIdentityConfigs' ref has changed.
+
+
 2026-01-22 Version: 6.8.1
 - Update API CreateMcpServer: add request parameters body.mcpServerConfig.
 - Update API UpdateMcpServer: add request parameters body.mcpServerConfig.
