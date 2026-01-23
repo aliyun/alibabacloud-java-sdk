@@ -94,48 +94,6 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListPrometheusInstancesResponseBodyPrometheusInstancesTags extends TeaModel {
-        /**
-         * <p>Tag key</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testKey</p>
-         */
-        @NameInMap("key")
-        public String key;
-
-        /**
-         * <p>Tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testValue</p>
-         */
-        @NameInMap("value")
-        public String value;
-
-        public static ListPrometheusInstancesResponseBodyPrometheusInstancesTags build(java.util.Map<String, ?> map) throws Exception {
-            ListPrometheusInstancesResponseBodyPrometheusInstancesTags self = new ListPrometheusInstancesResponseBodyPrometheusInstancesTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListPrometheusInstancesResponseBodyPrometheusInstancesTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListPrometheusInstancesResponseBodyPrometheusInstancesTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class ListPrometheusInstancesResponseBodyPrometheusInstances extends TeaModel {
         /**
          * <p>Access type:
@@ -214,15 +172,6 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Resource group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-aek2bhocin5e2na</p>
-         */
-        @NameInMap("resourceGroupId")
-        public String resourceGroupId;
-
-        /**
          * <p>Resource type.</p>
          * 
          * <strong>example:</strong>
@@ -245,12 +194,6 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
          */
         @NameInMap("supportAuthTypes")
         public java.util.List<String> supportAuthTypes;
-
-        /**
-         * <p>Tags key.</p>
-         */
-        @NameInMap("tags")
-        public java.util.List<ListPrometheusInstancesResponseBodyPrometheusInstancesTags> tags;
 
         /**
          * <p>User ID.</p>
@@ -350,14 +293,6 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public ListPrometheusInstancesResponseBodyPrometheusInstances setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
         public ListPrometheusInstancesResponseBodyPrometheusInstances setResourceType(String resourceType) {
             this.resourceType = resourceType;
             return this;
@@ -380,14 +315,6 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         }
         public java.util.List<String> getSupportAuthTypes() {
             return this.supportAuthTypes;
-        }
-
-        public ListPrometheusInstancesResponseBodyPrometheusInstances setTags(java.util.List<ListPrometheusInstancesResponseBodyPrometheusInstancesTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<ListPrometheusInstancesResponseBodyPrometheusInstancesTags> getTags() {
-            return this.tags;
         }
 
         public ListPrometheusInstancesResponseBodyPrometheusInstances setUserId(String userId) {

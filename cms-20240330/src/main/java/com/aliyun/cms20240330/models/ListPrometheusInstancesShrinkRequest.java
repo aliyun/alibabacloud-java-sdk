@@ -103,6 +103,13 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     @NameInMap("version")
     public String version;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("workspace")
+    public String workspace;
+
     public static ListPrometheusInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPrometheusInstancesShrinkRequest self = new ListPrometheusInstancesShrinkRequest();
         return TeaModel.build(map, self);
@@ -178,6 +185,14 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     }
     public String getVersion() {
         return this.version;
+    }
+
+    public ListPrometheusInstancesShrinkRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

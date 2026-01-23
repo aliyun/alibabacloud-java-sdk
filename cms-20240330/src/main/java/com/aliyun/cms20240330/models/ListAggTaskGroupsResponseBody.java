@@ -91,48 +91,6 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListAggTaskGroupsResponseBodyAggTaskGroupsTags extends TeaModel {
-        /**
-         * <p>Key of the resource group tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>key1</p>
-         */
-        @NameInMap("key")
-        public String key;
-
-        /**
-         * <p>Value of the resource group tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value1</p>
-         */
-        @NameInMap("value")
-        public String value;
-
-        public static ListAggTaskGroupsResponseBodyAggTaskGroupsTags build(java.util.Map<String, ?> map) throws Exception {
-            ListAggTaskGroupsResponseBodyAggTaskGroupsTags self = new ListAggTaskGroupsResponseBodyAggTaskGroupsTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAggTaskGroupsResponseBodyAggTaskGroupsTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListAggTaskGroupsResponseBodyAggTaskGroupsTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class ListAggTaskGroupsResponseBodyAggTaskGroups extends TeaModel {
         /**
          * <p>Hash of the aggregation task group configuration.</p>
@@ -268,12 +226,6 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public String status;
-
-        /**
-         * <p>Resource group tags</p>
-         */
-        @NameInMap("tags")
-        public java.util.List<ListAggTaskGroupsResponseBodyAggTaskGroupsTags> tags;
 
         /**
          * <p>The target Prometheus instance ID of the aggregation task group.</p>
@@ -425,14 +377,6 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public ListAggTaskGroupsResponseBodyAggTaskGroups setTags(java.util.List<ListAggTaskGroupsResponseBodyAggTaskGroupsTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<ListAggTaskGroupsResponseBodyAggTaskGroupsTags> getTags() {
-            return this.tags;
         }
 
         public ListAggTaskGroupsResponseBodyAggTaskGroups setTargetPrometheusId(String targetPrometheusId) {

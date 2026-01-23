@@ -816,48 +816,6 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
     }
 
-    public static class ListIntegrationPoliciesResponseBodyPoliciesTags extends TeaModel {
-        /**
-         * <p>Tag key</p>
-         * 
-         * <strong>example:</strong>
-         * <p>key</p>
-         */
-        @NameInMap("key")
-        public String key;
-
-        /**
-         * <p>Match value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value</p>
-         */
-        @NameInMap("value")
-        public String value;
-
-        public static ListIntegrationPoliciesResponseBodyPoliciesTags build(java.util.Map<String, ?> map) throws Exception {
-            ListIntegrationPoliciesResponseBodyPoliciesTags self = new ListIntegrationPoliciesResponseBodyPoliciesTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListIntegrationPoliciesResponseBodyPoliciesTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListIntegrationPoliciesResponseBodyPoliciesTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class ListIntegrationPoliciesResponseBodyPolicies extends TeaModel {
         /**
          * <p>Bound resource information</p>
@@ -945,12 +903,6 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
          */
         @NameInMap("subAddonRelease")
         public ListIntegrationPoliciesResponseBodyPoliciesSubAddonRelease subAddonRelease;
-
-        /**
-         * <p>Resource tag key values.</p>
-         */
-        @NameInMap("tags")
-        public java.util.List<ListIntegrationPoliciesResponseBodyPoliciesTags> tags;
 
         /**
          * <p>User ID</p>
@@ -1061,14 +1013,6 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         }
         public ListIntegrationPoliciesResponseBodyPoliciesSubAddonRelease getSubAddonRelease() {
             return this.subAddonRelease;
-        }
-
-        public ListIntegrationPoliciesResponseBodyPolicies setTags(java.util.List<ListIntegrationPoliciesResponseBodyPoliciesTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<ListIntegrationPoliciesResponseBodyPoliciesTags> getTags() {
-            return this.tags;
         }
 
         public ListIntegrationPoliciesResponseBodyPolicies setUserId(String userId) {

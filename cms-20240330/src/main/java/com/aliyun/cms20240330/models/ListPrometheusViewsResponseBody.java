@@ -94,48 +94,6 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListPrometheusViewsResponseBodyPrometheusViewsTags extends TeaModel {
-        /**
-         * <p>Tag key</p>
-         * 
-         * <strong>example:</strong>
-         * <p>key1</p>
-         */
-        @NameInMap("key")
-        public String key;
-
-        /**
-         * <p>Match value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value1</p>
-         */
-        @NameInMap("value")
-        public String value;
-
-        public static ListPrometheusViewsResponseBodyPrometheusViewsTags build(java.util.Map<String, ?> map) throws Exception {
-            ListPrometheusViewsResponseBodyPrometheusViewsTags self = new ListPrometheusViewsResponseBodyPrometheusViewsTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListPrometheusViewsResponseBodyPrometheusViewsTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListPrometheusViewsResponseBodyPrometheusViewsTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class ListPrometheusViewsResponseBodyPrometheusViews extends TeaModel {
         /**
          * <p>Instance creation time, using UTC+0 time, formatted as yyyy-MM-ddTHH:mmZ</p>
@@ -212,15 +170,6 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Resource group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfm3gn5i6bigbi</p>
-         */
-        @NameInMap("resourceGroupId")
-        public String resourceGroupId;
-
-        /**
          * <p>Fixed value: PrometheusView.</p>
          * 
          * <strong>example:</strong>
@@ -237,12 +186,6 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public String status;
-
-        /**
-         * <p>Tag values.</p>
-         */
-        @NameInMap("tags")
-        public java.util.List<ListPrometheusViewsResponseBodyPrometheusViewsTags> tags;
 
         /**
          * <p>User ID.</p>
@@ -340,14 +283,6 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public ListPrometheusViewsResponseBodyPrometheusViews setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
         public ListPrometheusViewsResponseBodyPrometheusViews setResourceType(String resourceType) {
             this.resourceType = resourceType;
             return this;
@@ -362,14 +297,6 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public ListPrometheusViewsResponseBodyPrometheusViews setTags(java.util.List<ListPrometheusViewsResponseBodyPrometheusViewsTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<ListPrometheusViewsResponseBodyPrometheusViewsTags> getTags() {
-            return this.tags;
         }
 
         public ListPrometheusViewsResponseBodyPrometheusViews setUserId(String userId) {
