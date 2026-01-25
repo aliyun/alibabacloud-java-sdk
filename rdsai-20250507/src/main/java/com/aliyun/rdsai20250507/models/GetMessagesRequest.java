@@ -13,6 +13,9 @@ public class GetMessagesRequest extends TeaModel {
     @NameInMap("ConversationId")
     public String conversationId;
 
+    @NameInMap("EventMode")
+    public String eventMode;
+
     /**
      * <p>The ID of the conversation.</p>
      * 
@@ -42,6 +45,14 @@ public class GetMessagesRequest extends TeaModel {
     }
     public String getConversationId() {
         return this.conversationId;
+    }
+
+    public GetMessagesRequest setEventMode(String eventMode) {
+        this.eventMode = eventMode;
+        return this;
+    }
+    public String getEventMode() {
+        return this.eventMode;
     }
 
     public GetMessagesRequest setFirstId(String firstId) {

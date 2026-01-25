@@ -13,6 +13,9 @@ public class ChatMessagesRequest extends TeaModel {
     @NameInMap("ConversationId")
     public String conversationId;
 
+    @NameInMap("EventMode")
+    public String eventMode;
+
     /**
      * <p>The ID of the parent message.</p>
      */
@@ -46,6 +49,14 @@ public class ChatMessagesRequest extends TeaModel {
     }
     public String getConversationId() {
         return this.conversationId;
+    }
+
+    public ChatMessagesRequest setEventMode(String eventMode) {
+        this.eventMode = eventMode;
+        return this;
+    }
+    public String getEventMode() {
+        return this.eventMode;
     }
 
     public ChatMessagesRequest setInputs(ChatMessagesRequestInputs inputs) {

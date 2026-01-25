@@ -47,6 +47,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ConversationId", request.conversationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.eventMode)) {
+            query.put("EventMode", request.eventMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputsShrink)) {
             query.put("Inputs", request.inputsShrink);
         }
@@ -1103,6 +1107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ConversationId", request.conversationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.eventMode)) {
+            query.put("EventMode", request.eventMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.firstId)) {
             query.put("FirstId", request.firstId);
         }
@@ -1648,6 +1656,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyInstanceStorageConfigResponse modifyInstanceStorageConfig(ModifyInstanceStorageConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyInstanceStorageConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量修改实例的SSL配置</p>
+     * 
+     * @param tmpReq ModifyInstancesSSLRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstancesSSLResponse
+     */
+    public ModifyInstancesSSLResponse modifyInstancesSSLWithOptions(ModifyInstancesSSLRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyInstancesSSLShrinkRequest request = new ModifyInstancesSSLShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceNames)) {
+            request.instanceNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceNames, "InstanceNames", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.CAType)) {
+            query.put("CAType", request.CAType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceNamesShrink)) {
+            query.put("InstanceNames", request.instanceNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SSLEnabled)) {
+            query.put("SSLEnabled", request.SSLEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverCert)) {
+            query.put("ServerCert", request.serverCert);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverKey)) {
+            query.put("ServerKey", request.serverKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstancesSSL"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstancesSSLResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量修改实例的SSL配置</p>
+     * 
+     * @param request ModifyInstancesSSLRequest
+     * @return ModifyInstancesSSLResponse
+     */
+    public ModifyInstancesSSLResponse modifyInstancesSSL(ModifyInstancesSSLRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstancesSSLWithOptions(request, runtime);
     }
 
     /**

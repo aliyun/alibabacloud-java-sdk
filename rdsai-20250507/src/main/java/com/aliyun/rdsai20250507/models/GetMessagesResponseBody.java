@@ -74,6 +74,36 @@ public class GetMessagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetMessagesResponseBodyDataEvents extends TeaModel {
+        @NameInMap("answer")
+        public String answer;
+
+        @NameInMap("event")
+        public String event;
+
+        public static GetMessagesResponseBodyDataEvents build(java.util.Map<String, ?> map) throws Exception {
+            GetMessagesResponseBodyDataEvents self = new GetMessagesResponseBodyDataEvents();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMessagesResponseBodyDataEvents setAnswer(String answer) {
+            this.answer = answer;
+            return this;
+        }
+        public String getAnswer() {
+            return this.answer;
+        }
+
+        public GetMessagesResponseBodyDataEvents setEvent(String event) {
+            this.event = event;
+            return this;
+        }
+        public String getEvent() {
+            return this.event;
+        }
+
+    }
+
     public static class GetMessagesResponseBodyData extends TeaModel {
         /**
          * <p>The response to the query.</p>
@@ -98,6 +128,9 @@ public class GetMessagesResponseBody extends TeaModel {
          */
         @NameInMap("CreatedAt")
         public String createdAt;
+
+        @NameInMap("Events")
+        public java.util.List<GetMessagesResponseBodyDataEvents> events;
 
         /**
          * <p>The feedback.</p>
@@ -156,6 +189,14 @@ public class GetMessagesResponseBody extends TeaModel {
         }
         public String getCreatedAt() {
             return this.createdAt;
+        }
+
+        public GetMessagesResponseBodyData setEvents(java.util.List<GetMessagesResponseBodyDataEvents> events) {
+            this.events = events;
+            return this;
+        }
+        public java.util.List<GetMessagesResponseBodyDataEvents> getEvents() {
+            return this.events;
         }
 
         public GetMessagesResponseBodyData setFeedback(String feedback) {

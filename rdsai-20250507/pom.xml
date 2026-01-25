@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>rdsai20250507</artifactId>
-  <version>2.0.4</version>
+  <version>2.1.0</version>
   <packaging>jar</packaging>
   <name>rdsai20250507</name>
   <description>Alibaba Cloud RdsAi (20250507) SDK for Java
@@ -96,6 +96,7 @@
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>
