@@ -1759,6 +1759,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("agentRuntimeName", request.agentRuntimeName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.discoveryResourceGroupId)) {
+            query.put("discoveryResourceGroupId", request.discoveryResourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }

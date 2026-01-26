@@ -14,6 +14,15 @@ public class ListAgentRuntimesRequest extends TeaModel {
     public String agentRuntimeName;
 
     /**
+     * <p>用于服务发现的资源组标识符</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-123456</p>
+     */
+    @NameInMap("discoveryResourceGroupId")
+    public String discoveryResourceGroupId;
+
+    /**
      * <p>当前页码，从1开始计数</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +72,14 @@ public class ListAgentRuntimesRequest extends TeaModel {
     }
     public String getAgentRuntimeName() {
         return this.agentRuntimeName;
+    }
+
+    public ListAgentRuntimesRequest setDiscoveryResourceGroupId(String discoveryResourceGroupId) {
+        this.discoveryResourceGroupId = discoveryResourceGroupId;
+        return this;
+    }
+    public String getDiscoveryResourceGroupId() {
+        return this.discoveryResourceGroupId;
     }
 
     public ListAgentRuntimesRequest setPageNumber(Integer pageNumber) {

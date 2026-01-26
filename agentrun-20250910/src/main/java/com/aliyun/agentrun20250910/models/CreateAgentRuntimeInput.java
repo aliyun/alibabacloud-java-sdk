@@ -99,6 +99,15 @@ public class CreateAgentRuntimeInput extends TeaModel {
     public String executionRoleArn;
 
     /**
+     * <p>外部注册类型的智能体访问端点地址，用于连接已部署在外部的智能体服务</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://external-agent.example.com/api">https://external-agent.example.com/api</a></p>
+     */
+    @NameInMap("externalAgentEndpointUrl")
+    public String externalAgentEndpointUrl;
+
+    /**
      * <p>智能体运行时的健康检查配置，用于监控运行时实例的健康状态</p>
      * 
      * <strong>example:</strong>
@@ -127,6 +136,15 @@ public class CreateAgentRuntimeInput extends TeaModel {
     public Integer memory;
 
     /**
+     * <p>文件存储NAS的配置信息，用于挂载NAS文件系统到智能体运行时</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("nasConfig")
+    public NASConfig nasConfig;
+
+    /**
      * <p>智能体运行时的网络配置，包括VPC、安全组等网络访问设置</p>
      * <p>This parameter is required.</p>
      * 
@@ -135,6 +153,15 @@ public class CreateAgentRuntimeInput extends TeaModel {
      */
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
+    /**
+     * <p>对象存储OSS的挂载配置信息，用于挂载OSS存储桶到智能体运行时</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("ossMountConfig")
+    public OSSMountConfig ossMountConfig;
 
     /**
      * <p>智能体运行时监听的端口号，用于接收外部请求</p>
@@ -262,6 +289,14 @@ public class CreateAgentRuntimeInput extends TeaModel {
         return this.executionRoleArn;
     }
 
+    public CreateAgentRuntimeInput setExternalAgentEndpointUrl(String externalAgentEndpointUrl) {
+        this.externalAgentEndpointUrl = externalAgentEndpointUrl;
+        return this;
+    }
+    public String getExternalAgentEndpointUrl() {
+        return this.externalAgentEndpointUrl;
+    }
+
     public CreateAgentRuntimeInput setHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
         this.healthCheckConfiguration = healthCheckConfiguration;
         return this;
@@ -286,12 +321,28 @@ public class CreateAgentRuntimeInput extends TeaModel {
         return this.memory;
     }
 
+    public CreateAgentRuntimeInput setNasConfig(NASConfig nasConfig) {
+        this.nasConfig = nasConfig;
+        return this;
+    }
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
+    }
+
     public CreateAgentRuntimeInput setNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
     }
     public NetworkConfiguration getNetworkConfiguration() {
         return this.networkConfiguration;
+    }
+
+    public CreateAgentRuntimeInput setOssMountConfig(OSSMountConfig ossMountConfig) {
+        this.ossMountConfig = ossMountConfig;
+        return this;
+    }
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
     }
 
     public CreateAgentRuntimeInput setPort(Integer port) {
