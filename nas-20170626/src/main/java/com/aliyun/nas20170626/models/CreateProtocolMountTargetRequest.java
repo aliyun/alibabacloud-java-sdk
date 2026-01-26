@@ -113,7 +113,8 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public String protocolServiceId;
 
     /**
-     * <p>The vSwitch ID of the export directory for the protocol service.</p>
+     * <p>The vSwitch ID of the export directory.</p>
+     * <p>If the storage redundancy type of the file system is not zone-redundant (ZRS) and the VpcId is set, this field is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-123****</p>
@@ -125,6 +126,8 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The list of vSwitch IDs of the export directory.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -132,7 +135,7 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public java.util.List<String> vSwitchIds;
 
     /**
-     * <p>The VPC ID of the export directory for the protocol service.</p>
+     * <p>The VPC ID of the export directory.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-123****</p>

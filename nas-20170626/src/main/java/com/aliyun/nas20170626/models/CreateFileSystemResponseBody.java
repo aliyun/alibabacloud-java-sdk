@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFileSystemResponseBody extends TeaModel {
     /**
-     * <p>The ID of the file system that is created.</p>
+     * <p>The ID of the created file system.</p>
      * 
      * <strong>example:</strong>
      * <p>1ca404****</p>

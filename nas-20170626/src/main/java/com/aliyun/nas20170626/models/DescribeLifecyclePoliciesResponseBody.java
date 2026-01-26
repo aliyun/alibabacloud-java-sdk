@@ -93,6 +93,8 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
 
     public static class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules extends TeaModel {
         /**
+         * <p>Attribute of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>RetrieveType</p>
          */
@@ -100,6 +102,8 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String attribute;
 
         /**
+         * <p>Threshold for the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>All</p>
          */
@@ -131,6 +135,8 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
 
     public static class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules extends TeaModel {
         /**
+         * <p>Attribute of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>Atime</p>
          */
@@ -138,6 +144,8 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String attribute;
 
         /**
+         * <p>Threshold for the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -179,8 +187,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Description</p>
+         * 
          * <strong>example:</strong>
-         * <p>描述</p>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -195,6 +205,8 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
+         * <p>The ID of the lifecycle policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>lc-xxx</p>
          */
@@ -211,6 +223,8 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String lifecyclePolicyName;
 
         /**
+         * <p>The type of the lifecycle policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>Auto</p>
          */
@@ -221,10 +235,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
          * <p>The management rule that is associated with the lifecycle policy.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>DEFAULT_ATIME_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</li>
-         * <li>DEFAULT_ATIME_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</li>
-         * <li>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</li>
-         * <li>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_14: Files that are not accessed in the last 14 days.</li>
+         * <li>DEFAULT_ATIME_30: Files that are not accessed in the last 30 days.</li>
+         * <li>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days.</li>
+         * <li>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,17 +257,23 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The absolute paths to multiple directories associated with the lifecycle policy.</p>
+         * <p>The absolute paths of directories with which the lifecycle policy is associated.</p>
          */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
+        /**
+         * <p>File data retrieval rules.</p>
+         */
         @NameInMap("RetrieveRules")
         public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules> retrieveRules;
 
         /**
-         * <p>The storage type of the data that is dumped to the IA storage medium.</p>
-         * <p>Default value: InfrequentAccess (IA).</p>
+         * <p>The storage class.</p>
+         * <ul>
+         * <li>InfrequentAccess: the IA storage class.</li>
+         * <li>Archive: the Archive storage class.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>InfrequentAccess</p>
@@ -261,6 +281,9 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         @NameInMap("StorageType")
         public String storageType;
 
+        /**
+         * <p>Data transition rules.</p>
+         */
         @NameInMap("TransitRules")
         public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules> transitRules;
 

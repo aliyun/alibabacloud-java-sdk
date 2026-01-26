@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeAccessPointsRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <p>This parameter is required for a General-purpose File Storage NAS (NAS) file system.</p>
+     * <p>This parameter is required for a General-purpose NAS file system.</p>
      * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeAccessPointsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The token used to retrieve the next page of results. Do not specify this parameter for the first request. For subsequent requests, set this value to the NextToken returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</p>
@@ -43,6 +43,9 @@ public class DescribeAccessPointsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The tags of the access point.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeAccessPointsRequestTag> tag;
 
@@ -93,6 +96,15 @@ public class DescribeAccessPointsRequest extends TeaModel {
 
     public static class DescribeAccessPointsRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>Valid values of N: 1 to 20.</li>
+         * <li>Maximum length is 128 characters.</li>
+         * <li>Cannot start with aliyun or acs:.</li>
+         * <li>Cannot contain http:// or https://.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -100,6 +112,15 @@ public class DescribeAccessPointsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>Valid values of N: 1 to 20.</li>
+         * <li>Maximum length is 128 characters.</li>
+         * <li>Cannot start with aliyun or acs:.</li>
+         * <li>Cannot contain http:// or https://.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

@@ -157,6 +157,9 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>A list of IDs for the zone-redundant vSwitches.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 

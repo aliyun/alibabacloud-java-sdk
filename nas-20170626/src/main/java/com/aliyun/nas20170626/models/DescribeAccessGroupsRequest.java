@@ -22,9 +22,9 @@ public class DescribeAccessGroupsRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
-     * <li>extreme: Extreme NAS file system.</li>
-     * <li>cpfs: CPFS file system.</li>
+     * <li>standard: General-purpose NAS</li>
+     * <li>extreme: Extreme NAS</li>
+     * <li>cpfs: CPFS</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DescribeAccessGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether to display the creation time of the permission group in UTC.</p>
+     * <p>Specifies whether the time to return is displayed in UTC.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>true (default): The time is displayed in UTC.</li>

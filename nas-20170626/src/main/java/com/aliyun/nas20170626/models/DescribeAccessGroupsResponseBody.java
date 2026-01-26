@@ -132,9 +132,9 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
          * <p>The type of the file system.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
-         * <li>extreme: Extreme NAS file system.</li>
-         * <li>cpfs: CPFS file system.</li>
+         * <li>standard: General-purpose NAS</li>
+         * <li>extreme: Extreme NAS</li>
+         * <li>cpfs: CPFS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         public Integer mountTargetCount;
 
         /**
-         * <p>The region ID.</p>
+         * <p>Region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

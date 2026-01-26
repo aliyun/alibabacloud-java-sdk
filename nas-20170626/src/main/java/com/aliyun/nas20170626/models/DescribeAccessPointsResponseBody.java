@@ -11,7 +11,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     public java.util.List<DescribeAccessPointsResponseBodyAccessPoints> accessPoints;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</p>
@@ -20,7 +20,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -192,6 +192,8 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
 
     public static class DescribeAccessPointsResponseBodyAccessPointsTags extends TeaModel {
         /**
+         * <p>The key of the tag that is added to the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -199,6 +201,8 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag value</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */
@@ -251,7 +255,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
          * <p>The ID of the access point.</p>
          * 
          * <strong>example:</strong>
-         * <p>ap-ie15yd****</p>
+         * <p>ap-ie15y*****</p>
          */
         @NameInMap("AccessPointId")
         public String accessPointId;
@@ -365,11 +369,14 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags of the access point.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeAccessPointsResponseBodyAccessPointsTags> tags;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>Switch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2zevmwkwyztjuoffg****</p>

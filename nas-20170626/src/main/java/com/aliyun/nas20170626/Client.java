@@ -1876,7 +1876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</p>
+     * <p>  Before you call this operation, you must understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</p>
      * <ul>
      * <li>Before you create a file system, you must complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
      * <li>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</li>
@@ -1991,7 +1991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</p>
+     * <p>  Before you call this operation, you must understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</p>
      * <ul>
      * <li>Before you create a file system, you must complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
      * <li>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</li>
@@ -2190,9 +2190,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can create lifecycle policies only for General-purpose NAS file systems.</p>
+     * <p>  Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</p>
      * <ul>
-     * <li>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</li>
+     * <li>Up to 10 Auto and 100 OnDemand lifecycle policies can be created for each CPFS for Lingjun file system.</li>
+     * <li>For general-purpose NAS file systems, up to 20 lifecycle policies can be created in each region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2264,9 +2265,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can create lifecycle policies only for General-purpose NAS file systems.</p>
+     * <p>  Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</p>
      * <ul>
-     * <li>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</li>
+     * <li>Up to 10 Auto and 100 OnDemand lifecycle policies can be created for each CPFS for Lingjun file system.</li>
+     * <li>For general-purpose NAS file systems, up to 20 lifecycle policies can be created in each region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3380,7 +3382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a lifecycle policy.</p>
@@ -3423,7 +3425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a lifecycle policy.</p>
@@ -3844,10 +3846,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose Network File System (NFS) file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems that use the NFS protocol support this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an access point.</p>
+     * <p>Queries a list of access points.</p>
      * 
      * @param request DescribeAccessPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3895,10 +3897,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose Network File System (NFS) file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems that use the NFS protocol support this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an access point.</p>
+     * <p>Queries a list of access points.</p>
      * 
      * @param request DescribeAccessPointsRequest
      * @return DescribeAccessPointsResponse
@@ -4637,6 +4639,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询文件系统关联的 HpnZone 列表</p>
+     * 
+     * @param tmpReq DescribeFilesystemsAssociatedHpnZonesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFilesystemsAssociatedHpnZonesResponse
+     */
+    public DescribeFilesystemsAssociatedHpnZonesResponse describeFilesystemsAssociatedHpnZonesWithOptions(DescribeFilesystemsAssociatedHpnZonesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeFilesystemsAssociatedHpnZonesShrinkRequest request = new DescribeFilesystemsAssociatedHpnZonesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filesystems)) {
+            request.filesystemsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filesystems, "Filesystems", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filesystemsShrink)) {
+            query.put("Filesystems", request.filesystemsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFilesystemsAssociatedHpnZones"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFilesystemsAssociatedHpnZonesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询文件系统关联的 HpnZone 列表</p>
+     * 
+     * @param request DescribeFilesystemsAssociatedHpnZonesRequest
+     * @return DescribeFilesystemsAssociatedHpnZonesResponse
+     */
+    public DescribeFilesystemsAssociatedHpnZonesResponse describeFilesystemsAssociatedHpnZones(DescribeFilesystemsAssociatedHpnZonesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFilesystemsAssociatedHpnZonesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  Only CPFS for Lingjun supports this operation.</p>
      * <ul>
@@ -4702,7 +4758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries lifecycle policies.</p>
@@ -4733,7 +4789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries lifecycle policies.</p>
@@ -5817,8 +5873,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only CPFS V2.2.0 and CPFS for Lingjun V2.7.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询特定智能目录</p>
+     * <p>Queries the information about the created fileset.</p>
      * 
      * @param request GetFilesetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5853,8 +5912,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only CPFS V2.2.0 and CPFS for Lingjun V2.7.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询特定智能目录</p>
+     * <p>Queries the information about the created fileset.</p>
      * 
      * @param request GetFilesetRequest
      * @return GetFilesetResponse

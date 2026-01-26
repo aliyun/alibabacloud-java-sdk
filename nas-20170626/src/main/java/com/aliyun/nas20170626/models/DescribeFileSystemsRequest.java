@@ -10,6 +10,7 @@ public class DescribeFileSystemsRequest extends TeaModel {
      * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
      * <li>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
      * <li>The IDs of CPFS file systems must start with cpfs-. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of CPFS SE file systems must start with cpfsse-. Example: cpfsse-022c71b134\<em>\</em>\<em>\</em>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,9 +24,10 @@ public class DescribeFileSystemsRequest extends TeaModel {
      * <p>Valid values:</p>
      * <ul>
      * <li>all (default): All types.</li>
-     * <li>standard: General-purpose NAS file system.</li>
-     * <li>extreme: Extreme NAS file system.</li>
-     * <li>cpfs: CPFS file system.</li>
+     * <li>standard: General-purpose NAS</li>
+     * <li>extreme: Extreme NAS</li>
+     * <li>cpfs: CPFS (locally redundant storage)</li>
+     * <li>cpfsse: CPFS SE (zone-redundant storage)</li>
      * </ul>
      * <blockquote>
      * <p> Separate multiple data types with commas (,).</p>

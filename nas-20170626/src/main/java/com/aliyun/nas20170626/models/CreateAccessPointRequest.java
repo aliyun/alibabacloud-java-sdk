@@ -117,6 +117,9 @@ public class CreateAccessPointRequest extends TeaModel {
     @NameInMap("RootDirectory")
     public String rootDirectory;
 
+    /**
+     * <p>The tags of the access point.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateAccessPointRequestTag> tag;
 
@@ -259,6 +262,14 @@ public class CreateAccessPointRequest extends TeaModel {
 
     public static class CreateAccessPointRequestTag extends TeaModel {
         /**
+         * <p>The key of a tag. Limits:</p>
+         * <ul>
+         * <li>Cannot be null or an empty string.</li>
+         * <li>Can be up to 128 characters in length.</li>
+         * <li>Cannot start with aliyun or acs:.</li>
+         * <li>Cannot contain http:// or https://.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -266,6 +277,13 @@ public class CreateAccessPointRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of a tag. Limits:</p>
+         * <ul>
+         * <li>Cannot be null or an empty string.</li>
+         * <li>Can be up to 128 characters in length.</li>
+         * <li>Cannot contain http:// or https://.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

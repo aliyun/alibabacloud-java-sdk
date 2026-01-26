@@ -158,6 +158,8 @@ public class DescribeAccessPointResponseBody extends TeaModel {
 
     public static class DescribeAccessPointResponseBodyAccessPointTags extends TeaModel {
         /**
+         * <p>The key of a tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -165,6 +167,8 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of a tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */
@@ -337,6 +341,9 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags of the access point.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeAccessPointResponseBodyAccessPointTags> tags;
 

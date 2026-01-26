@@ -14,7 +14,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The information about protocol services.</p>
+     * <p>The information about protocol service list.</p>
      */
     @NameInMap("ProtocolServices")
     public java.util.List<DescribeProtocolServiceResponseBodyProtocolServices> protocolServices;
@@ -200,6 +200,8 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The VSW ID associated with the protocol service.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-123xxx</p>
          */
@@ -207,6 +209,8 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The VPC ID associated with the protocol service.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-123xxx</p>
          */

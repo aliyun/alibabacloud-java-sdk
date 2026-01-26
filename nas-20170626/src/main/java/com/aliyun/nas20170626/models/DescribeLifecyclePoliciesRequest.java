@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLifecyclePoliciesRequest extends TeaModel {
     /**
+     * <p>The description of the policy.</p>
+     * <blockquote>
+     * <p> Only CPFS for Lingjun supports this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>描述</p>
+     * <p>Description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -21,6 +26,8 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The ID of the lifecycle policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>lc-xxx</p>
      */
@@ -28,8 +35,11 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public String lifecyclePolicyId;
 
     /**
-     * <p>The name of the lifecycle policy. The name must meet the following conventions:</p>
+     * <p>The name of the lifecycle policy. The naming rules are as follows:</p>
      * <p>The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <blockquote>
+     * <p> Optional for General-purpose NAS file systems. If this parameter is provided, it takes precedence over LifecyclePolicyId. If left empty, LifecyclePolicyId is used.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>lifecyclepolicy_01</p>
@@ -38,6 +48,16 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public String lifecyclePolicyName;
 
     /**
+     * <p>The type of the lifecycle policy.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Auto: The job is automatically triggered.</li>
+     * <li>OnDemand: On-demand execution.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Only CPFS for Lingjun supports this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Auto</p>
      */
@@ -66,6 +86,11 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filter by path.</p>
+     * <blockquote>
+     * <p> Only CPFS for Lingjun supports this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>/abc/</p>
      */
@@ -79,7 +104,7 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
      * <li>Archive: the Archive storage class.</li>
      * </ul>
      * <blockquote>
-     * <p> If the StorageType parameter is not specified, data retrieval tasks of all types are returned.</p>
+     * <p> If StorageType is not specified, all lifecycle policies are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
