@@ -1808,6 +1808,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.videoRolesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoRoles, "videoRoles", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoUrls)) {
+            request.videoUrlsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoUrls, "videoUrls", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.addDocumentParamShrink)) {
             body.put("addDocumentParam", request.addDocumentParamShrink);
@@ -1899,6 +1903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
             body.put("videoUrl", request.videoUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoUrlsShrink)) {
+            body.put("videoUrls", request.videoUrlsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2349,6 +2357,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.videoRolesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoRoles, "videoRoles", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoUrls)) {
+            request.videoUrlsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoUrls, "videoUrls", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.addDocumentParamShrink)) {
             body.put("addDocumentParam", request.addDocumentParamShrink);
@@ -2436,6 +2448,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
             body.put("videoUrl", request.videoUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoUrlsShrink)) {
+            body.put("videoUrls", request.videoUrlsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

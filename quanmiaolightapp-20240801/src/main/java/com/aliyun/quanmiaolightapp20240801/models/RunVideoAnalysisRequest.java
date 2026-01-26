@@ -109,6 +109,9 @@ public class RunVideoAnalysisRequest extends TeaModel {
     @NameInMap("videoUrl")
     public String videoUrl;
 
+    @NameInMap("videoUrls")
+    public java.util.List<String> videoUrls;
+
     public static RunVideoAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         RunVideoAnalysisRequest self = new RunVideoAnalysisRequest();
         return TeaModel.build(map, self);
@@ -296,6 +299,14 @@ public class RunVideoAnalysisRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
+    }
+
+    public RunVideoAnalysisRequest setVideoUrls(java.util.List<String> videoUrls) {
+        this.videoUrls = videoUrls;
+        return this;
+    }
+    public java.util.List<String> getVideoUrls() {
+        return this.videoUrls;
     }
 
     public static class RunVideoAnalysisRequestAddDocumentParamDocument extends TeaModel {

@@ -109,6 +109,9 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
     @NameInMap("videoUrl")
     public String videoUrl;
 
+    @NameInMap("videoUrls")
+    public String videoUrlsShrink;
+
     public static RunVideoAnalysisShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RunVideoAnalysisShrinkRequest self = new RunVideoAnalysisShrinkRequest();
         return TeaModel.build(map, self);
@@ -296,6 +299,14 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
+    }
+
+    public RunVideoAnalysisShrinkRequest setVideoUrlsShrink(String videoUrlsShrink) {
+        this.videoUrlsShrink = videoUrlsShrink;
+        return this;
+    }
+    public String getVideoUrlsShrink() {
+        return this.videoUrlsShrink;
     }
 
 }

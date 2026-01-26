@@ -100,13 +100,14 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     public Integer videoShotFaceIdentityCount;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxx.mp4">http://xxxx.mp4</a></p>
      */
     @NameInMap("videoUrl")
     public String videoUrl;
+
+    @NameInMap("videoUrls")
+    public String videoUrlsShrink;
 
     public static SubmitVideoAnalysisTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoAnalysisTaskShrinkRequest self = new SubmitVideoAnalysisTaskShrinkRequest();
@@ -287,6 +288,14 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
+    }
+
+    public SubmitVideoAnalysisTaskShrinkRequest setVideoUrlsShrink(String videoUrlsShrink) {
+        this.videoUrlsShrink = videoUrlsShrink;
+        return this;
+    }
+    public String getVideoUrlsShrink() {
+        return this.videoUrlsShrink;
     }
 
 }

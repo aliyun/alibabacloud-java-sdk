@@ -100,13 +100,14 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     public Integer videoShotFaceIdentityCount;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxx.mp4">http://xxxx.mp4</a></p>
      */
     @NameInMap("videoUrl")
     public String videoUrl;
+
+    @NameInMap("videoUrls")
+    public java.util.List<String> videoUrls;
 
     public static SubmitVideoAnalysisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoAnalysisTaskRequest self = new SubmitVideoAnalysisTaskRequest();
@@ -287,6 +288,14 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
+    }
+
+    public SubmitVideoAnalysisTaskRequest setVideoUrls(java.util.List<String> videoUrls) {
+        this.videoUrls = videoUrls;
+        return this;
+    }
+    public java.util.List<String> getVideoUrls() {
+        return this.videoUrls;
     }
 
     public static class SubmitVideoAnalysisTaskRequestAddDocumentParamDocument extends TeaModel {
