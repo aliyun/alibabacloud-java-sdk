@@ -267,6 +267,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>为自定义主机名申请一个免费证书，适用于申请失败、证书即将过期、证书已过期场景</p>
+     * 
+     * @param request ApplyCustomHostnameCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ApplyCustomHostnameCertificateResponse
+     */
+    public ApplyCustomHostnameCertificateResponse applyCustomHostnameCertificateWithOptions(ApplyCustomHostnameCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostnameId)) {
+            query.put("HostnameId", request.hostnameId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyCustomHostnameCertificate"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyCustomHostnameCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为自定义主机名申请一个免费证书，适用于申请失败、证书即将过期、证书已过期场景</p>
+     * 
+     * @param request ApplyCustomHostnameCertificateRequest
+     * @return ApplyCustomHostnameCertificateResponse
+     */
+    public ApplyCustomHostnameCertificateResponse applyCustomHostnameCertificate(ApplyCustomHostnameCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.applyCustomHostnameCertificateWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation allows you to create or update multiple DNS records at a time. It is suitable for managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. The operation allows you to configure the priority, flag, tag, and weight for DNS records. In addition, for specific types of records, such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are also supported.
      * Successful and failed records along with error messages are listed in the response.</p>
@@ -1660,6 +1704,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCompressionRuleResponse createCompressionRule(CreateCompressionRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCompressionRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义主机名</p>
+     * 
+     * @param request CreateCustomHostnameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCustomHostnameResponse
+     */
+    public CreateCustomHostnameResponse createCustomHostnameWithOptions(CreateCustomHostnameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.casId)) {
+            query.put("CasId", request.casId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.casRegion)) {
+            query.put("CasRegion", request.casRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certType)) {
+            query.put("CertType", request.certType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certificate)) {
+            query.put("Certificate", request.certificate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostname)) {
+            query.put("Hostname", request.hostname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateKey)) {
+            query.put("PrivateKey", request.privateKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sslFlag)) {
+            query.put("SslFlag", request.sslFlag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCustomHostname"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomHostnameResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义主机名</p>
+     * 
+     * @param request CreateCustomHostnameRequest
+     * @return CreateCustomHostnameResponse
+     */
+    public CreateCustomHostnameResponse createCustomHostname(CreateCustomHostnameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCustomHostnameWithOptions(request, runtime);
     }
 
     /**
@@ -5338,6 +5458,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCompressionRuleResponse deleteCompressionRule(DeleteCompressionRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCompressionRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除自定义主机名</p>
+     * 
+     * @param request DeleteCustomHostnameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomHostnameResponse
+     */
+    public DeleteCustomHostnameResponse deleteCustomHostnameWithOptions(DeleteCustomHostnameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostnameId)) {
+            query.put("HostnameId", request.hostnameId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomHostname"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomHostnameResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除自定义主机名</p>
+     * 
+     * @param request DeleteCustomHostnameRequest
+     * @return DeleteCustomHostnameResponse
+     */
+    public DeleteCustomHostnameResponse deleteCustomHostname(DeleteCustomHostnameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCustomHostnameWithOptions(request, runtime);
     }
 
     /**
@@ -9254,6 +9418,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询单个自定义主机名的信息</p>
+     * 
+     * @param request GetCustomHostnameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomHostnameResponse
+     */
+    public GetCustomHostnameResponse getCustomHostnameWithOptions(GetCustomHostnameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostnameId)) {
+            query.put("HostnameId", request.hostnameId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomHostname"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomHostnameResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询单个自定义主机名的信息</p>
+     * 
+     * @param request GetCustomHostnameRequest
+     * @return GetCustomHostnameResponse
+     */
+    public GetCustomHostnameResponse getCustomHostname(GetCustomHostnameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCustomHostnameWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query Site Developer Mode Configuration</p>
      * 
      * @param request GetDevelopmentModeRequest
@@ -12640,6 +12848,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCompressionRulesResponse listCompressionRules(ListCompressionRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCompressionRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询站点下的自定义主机名列表</p>
+     * 
+     * @param request ListCustomHostnamesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomHostnamesResponse
+     */
+    public ListCustomHostnamesResponse listCustomHostnamesWithOptions(ListCustomHostnamesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostname)) {
+            query.put("Hostname", request.hostname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nameMatchType)) {
+            query.put("NameMatchType", request.nameMatchType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomHostnames"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomHostnamesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询站点下的自定义主机名列表</p>
+     * 
+     * @param request ListCustomHostnamesRequest
+     * @return ListCustomHostnamesResponse
+     */
+    public ListCustomHostnamesResponse listCustomHostnames(ListCustomHostnamesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCustomHostnamesWithOptions(request, runtime);
     }
 
     /**
@@ -17594,6 +17870,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新自定义主机名</p>
+     * 
+     * @param request UpdateCustomHostnameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCustomHostnameResponse
+     */
+    public UpdateCustomHostnameResponse updateCustomHostnameWithOptions(UpdateCustomHostnameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.casId)) {
+            query.put("CasId", request.casId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.casRegion)) {
+            query.put("CasRegion", request.casRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certType)) {
+            query.put("CertType", request.certType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certificate)) {
+            query.put("Certificate", request.certificate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostnameId)) {
+            query.put("HostnameId", request.hostnameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateKey)) {
+            query.put("PrivateKey", request.privateKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sslFlag)) {
+            query.put("SslFlag", request.sslFlag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCustomHostname"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomHostnameResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义主机名</p>
+     * 
+     * @param request UpdateCustomHostnameRequest
+     * @return UpdateCustomHostnameResponse
+     */
+    public UpdateCustomHostnameResponse updateCustomHostname(UpdateCustomHostnameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCustomHostnameWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the configurations of a custom scenario-specific policy.</p>
      * 
      * @param request UpdateCustomScenePolicyRequest
@@ -21440,6 +21788,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadSiteOriginClientCertificateResponse uploadSiteOriginClientCertificate(UploadSiteOriginClientCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadSiteOriginClientCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>验证自定义主机名</p>
+     * 
+     * @param request VerifyCustomHostnameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyCustomHostnameResponse
+     */
+    public VerifyCustomHostnameResponse verifyCustomHostnameWithOptions(VerifyCustomHostnameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostnameId)) {
+            query.put("HostnameId", request.hostnameId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyCustomHostname"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyCustomHostnameResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>验证自定义主机名</p>
+     * 
+     * @param request VerifyCustomHostnameRequest
+     * @return VerifyCustomHostnameResponse
+     */
+    public VerifyCustomHostnameResponse verifyCustomHostname(VerifyCustomHostnameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyCustomHostnameWithOptions(request, runtime);
     }
 
     /**
