@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvDropMetricsRuleRequest extends TeaModel {
     /**
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li>zh (default)</li>
+     * <li>en</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,7 @@ public class UpdateEnvDropMetricsRuleRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The metric to be discarded. Separate multiple metrics with line feeds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +30,7 @@ public class UpdateEnvDropMetricsRuleRequest extends TeaModel {
     public String dropMetrics;
 
     /**
+     * <p>The environment ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +40,7 @@ public class UpdateEnvDropMetricsRuleRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnvDropMetricsRuleRequest extends TeaModel {
     /**
+     * <p>The environment ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeEnvDropMetricsRuleRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

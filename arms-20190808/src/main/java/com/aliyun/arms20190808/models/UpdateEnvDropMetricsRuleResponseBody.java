@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvDropMetricsRuleResponseBody extends TeaModel {
     /**
+     * <p>The status code. 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateEnvDropMetricsRuleResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class UpdateEnvDropMetricsRuleResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The error message returned if the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,7 +32,7 @@ public class UpdateEnvDropMetricsRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6A9AEA84-7186-4D8D-B498-4585C6A2****</p>

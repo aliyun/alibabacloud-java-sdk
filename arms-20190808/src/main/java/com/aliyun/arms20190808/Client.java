@@ -2054,6 +2054,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Tags", request.tags);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            body.put("aliyunLang", request.aliyunLang);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -5725,7 +5729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定环境实例的废弃指标列表</p>
+     * <p>Queries the list of discarded metrics of a specified environment instance.</p>
      * 
      * @param request DescribeEnvDropMetricsRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5761,7 +5765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定环境实例的废弃指标列表</p>
+     * <p>Queries the list of discarded metrics of a specified environment instance.</p>
      * 
      * @param request DescribeEnvDropMetricsRuleRequest
      * @return DescribeEnvDropMetricsRuleResponse
@@ -13140,6 +13144,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>启动报警</p>
+     * 
      * @param request StartAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartAlertResponse
@@ -13173,6 +13180,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>启动报警</p>
+     * 
      * @param request StartAlertRequest
      * @return StartAlertResponse
      */
@@ -13983,7 +13993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新环境实例的废弃指标列表</p>
+     * <p>Updates a discarded metric rule in the environment.</p>
      * 
      * @param request UpdateEnvDropMetricsRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14029,7 +14039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新环境实例的废弃指标列表</p>
+     * <p>Updates a discarded metric rule in the environment.</p>
      * 
      * @param request UpdateEnvDropMetricsRuleRequest
      * @return UpdateEnvDropMetricsRuleResponse
@@ -14519,7 +14529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Prometheus告警规则</p>
+     * <p>Updates a Prometheus alert rule.</p>
      * 
      * @param request UpdatePrometheusAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14599,7 +14609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Prometheus告警规则</p>
+     * <p>Updates a Prometheus alert rule.</p>
      * 
      * @param request UpdatePrometheusAlertRuleRequest
      * @return UpdatePrometheusAlertRuleResponse

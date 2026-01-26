@@ -378,6 +378,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<CreateOrUpdateAlertRuleRequestTags> tags;
 
+    @NameInMap("aliyunLang")
+    public String aliyunLang;
+
     public static CreateOrUpdateAlertRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrUpdateAlertRuleRequest self = new CreateOrUpdateAlertRuleRequest();
         return TeaModel.build(map, self);
@@ -621,6 +624,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     }
     public java.util.List<CreateOrUpdateAlertRuleRequestTags> getTags() {
         return this.tags;
+    }
+
+    public CreateOrUpdateAlertRuleRequest setAliyunLang(String aliyunLang) {
+        this.aliyunLang = aliyunLang;
+        return this;
+    }
+    public String getAliyunLang() {
+        return this.aliyunLang;
     }
 
     public static class CreateOrUpdateAlertRuleRequestMarkTags extends TeaModel {

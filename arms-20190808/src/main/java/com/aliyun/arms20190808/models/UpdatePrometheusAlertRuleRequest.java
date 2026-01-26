@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     /**
+     * <p>The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     public Long alertId;
 
     /**
+     * <p>The name of the alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     public String alertName;
 
     /**
+     * <p>The annotations that are described in a JSON string. You must specify the name and value of each annotation.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;Value&quot;: &quot;xxx&quot;,&quot;Name&quot;: &quot;description&quot;}]</p>
      */
@@ -30,6 +34,7 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     public String annotations;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The ID of the notification policy. This parameter is required if the NotifyType parameter is set to <code>DISPATCH_RULE</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10282</p>
      */
@@ -46,6 +53,7 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     public Long dispatchRuleId;
 
     /**
+     * <p>The duration. The value ranges from 1 to 1440 minutes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +63,7 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     public String duration;
 
     /**
+     * <p>The expression of the alert rule. The expression must follow the PromQL syntax.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +73,8 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     public String expression;
 
     /**
+     * <p>The tags that are described in a JSON string. You must specify the name and value of each tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;Value&quot;: &quot;critical&quot;,&quot;Name&quot;: &quot;severity&quot;}]</p>
      */
@@ -71,12 +82,22 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     public String labels;
 
     /**
+     * <p>The alert message. Tags can be referenced in the {{$labels.xxx}} format.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The method that is used to send alert notifications. Valid values:</p>
+     * <ul>
+     * <li><code>ALERT_MANAGER</code>: Alert notifications are sent by Operation Center. This is the default value.</li>
+     * <li><code>DISPATCH_RULE</code>: Alert notifications are sent based on the specified notification policy.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ALERT_MANAGER</p>
      */
@@ -84,6 +105,7 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     public String notifyType;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,6 +120,12 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<UpdatePrometheusAlertRuleRequestTags> tags;
 
+    /**
+     * <p>The type of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Kubernetes component alert</p>
+     */
     @NameInMap("Type")
     public String type;
 
