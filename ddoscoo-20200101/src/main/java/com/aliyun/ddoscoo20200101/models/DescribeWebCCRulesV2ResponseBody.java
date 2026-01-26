@@ -91,7 +91,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
          * <p>[&quot;2&quot;,&quot;3&quot;,&quot;ad&quot;]</p>
          */
         @NameInMap("ContentList")
-        public String contentList;
+        public java.util.List<String> contentList;
 
         /**
          * <p>The match field.</p>
@@ -136,11 +136,11 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             return this.content;
         }
 
-        public DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailCondition setContentList(String contentList) {
+        public DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailCondition setContentList(java.util.List<String> contentList) {
             this.contentList = contentList;
             return this;
         }
-        public String getContentList() {
+        public java.util.List<String> getContentList() {
             return this.contentList;
         }
 
@@ -464,6 +464,9 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
         /**
          * <p>The parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>废弃</p>
          */
         @NameInMap("Count")
         public Integer count;
@@ -479,6 +482,9 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
         /**
          * <p>The parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>废弃</p>
          */
         @NameInMap("Mode")
         public String mode;
