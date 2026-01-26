@@ -1,3 +1,7 @@
+2026-01-26 Version: 4.0.2
+- Update API PublishRecallManagementTable: add request parameters body.Partitions.
+
+
 2026-01-22 Version: 4.0.1
 - Update API CreateRecallManagementServiceVersion: add request parameters body.Configs.RecallConfigs.$.ItemConditionExpression.
 - Update API CreateRecallManagementServiceVersionConfig: add request parameters body.RecallConfig.ItemConditionExpression.

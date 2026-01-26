@@ -7609,6 +7609,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Partition", request.partition);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.partitions)) {
+            body.put("Partitions", request.partitions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.skipThresholdCheck)) {
             body.put("SkipThresholdCheck", request.skipThresholdCheck);
         }

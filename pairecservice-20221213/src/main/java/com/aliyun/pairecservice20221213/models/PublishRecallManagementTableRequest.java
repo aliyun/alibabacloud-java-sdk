@@ -23,6 +23,9 @@ public class PublishRecallManagementTableRequest extends TeaModel {
     @NameInMap("Partition")
     public java.util.Map<String, String> partition;
 
+    @NameInMap("Partitions")
+    public java.util.Map<String, String> partitions;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -57,6 +60,14 @@ public class PublishRecallManagementTableRequest extends TeaModel {
     }
     public java.util.Map<String, String> getPartition() {
         return this.partition;
+    }
+
+    public PublishRecallManagementTableRequest setPartitions(java.util.Map<String, String> partitions) {
+        this.partitions = partitions;
+        return this;
+    }
+    public java.util.Map<String, String> getPartitions() {
+        return this.partitions;
     }
 
     public PublishRecallManagementTableRequest setSkipThresholdCheck(Boolean skipThresholdCheck) {
