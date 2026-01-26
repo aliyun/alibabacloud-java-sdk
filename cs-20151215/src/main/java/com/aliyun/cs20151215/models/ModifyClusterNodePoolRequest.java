@@ -492,6 +492,13 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public Boolean approvalRequired;
 
         /**
+         * <strong>example:</strong>
+         * <p>r-xxxxxxxxxx</p>
+         */
+        @NameInMap("auto_repair_policy_id")
+        public String autoRepairPolicyId;
+
+        /**
          * <p>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</p>
          * <ul>
          * <li><code>true</code>: yes.</li>
@@ -515,6 +522,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         }
         public Boolean getApprovalRequired() {
             return this.approvalRequired;
+        }
+
+        public ModifyClusterNodePoolRequestManagementAutoRepairPolicy setAutoRepairPolicyId(String autoRepairPolicyId) {
+            this.autoRepairPolicyId = autoRepairPolicyId;
+            return this;
+        }
+        public String getAutoRepairPolicyId() {
+            return this.autoRepairPolicyId;
         }
 
         public ModifyClusterNodePoolRequestManagementAutoRepairPolicy setRestartNode(Boolean restartNode) {
