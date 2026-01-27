@@ -3,84 +3,70 @@ package com.aliyun.dbs20210101.models;
 
 import com.aliyun.tea.*;
 
-public class ChangeResourceGroupResponseBody extends TeaModel {
+public class DescribeCostInfoByDbsInstanceResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Param.NotFound</p>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>Indicates whether the resource was successfully moved. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: The resource was successfully moved.</li>
-     * <li><strong>false</strong>: The resource failed to be moved.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>{
+     *       &quot;backupPlanComment&quot;: &quot;&quot;,
+     *       &quot;commodity&quot;: &quot;cbs_post&quot;,
+     *       &quot;product&quot;: &quot;cbs&quot;,
+     *       &quot;moduleCode&quot;: &quot;BackupStorageSize&quot;,
+     *       &quot;instanceName&quot;: &quot;d-2zefd6337d766294&quot;,
+     *       &quot;backupPlanId&quot;: &quot;dbs:d-2zefd6337d766294&quot;,
+     *       &quot;moduleName&quot;: &quot;mongodb&quot;
+     *     }</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Request.Forbidden</p>
+     * <p>Param.NotFound</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
-     * 
      * <strong>example:</strong>
-     * <p>RAM DENY</p>
+     * <p>The specified parameter %s value is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
-     * <p>The additional information.</p>
-     * 
      * <strong>example:</strong>
-     * <p>The resource group is forbidden to operate</p>
+     * <p>The specified parameter %s value is not valid.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
-     * <p>04EBD9F5-F06F-5302-8499-005C72*******</p>
+     * <p>9C397502-B4F2-4E22-AD97-C81F0049F3F3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
-    public static ChangeResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ChangeResourceGroupResponseBody self = new ChangeResourceGroupResponseBody();
+    public static DescribeCostInfoByDbsInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeCostInfoByDbsInstanceResponseBody self = new DescribeCostInfoByDbsInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ChangeResourceGroupResponseBody setCode(String code) {
+    public DescribeCostInfoByDbsInstanceResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -88,7 +74,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ChangeResourceGroupResponseBody setData(String data) {
+    public DescribeCostInfoByDbsInstanceResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -96,7 +82,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ChangeResourceGroupResponseBody setErrCode(String errCode) {
+    public DescribeCostInfoByDbsInstanceResponseBody setErrCode(String errCode) {
         this.errCode = errCode;
         return this;
     }
@@ -104,7 +90,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return this.errCode;
     }
 
-    public ChangeResourceGroupResponseBody setErrMessage(String errMessage) {
+    public DescribeCostInfoByDbsInstanceResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
@@ -112,7 +98,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return this.errMessage;
     }
 
-    public ChangeResourceGroupResponseBody setMessage(String message) {
+    public DescribeCostInfoByDbsInstanceResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -120,7 +106,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ChangeResourceGroupResponseBody setRequestId(String requestId) {
+    public DescribeCostInfoByDbsInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -128,7 +114,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ChangeResourceGroupResponseBody setSuccess(String success) {
+    public DescribeCostInfoByDbsInstanceResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }

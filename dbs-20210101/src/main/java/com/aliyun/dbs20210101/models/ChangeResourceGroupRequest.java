@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbs</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the resource group to which you want to move the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz4kee6******</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionCode")
     public String regionCode;
 
     /**
      * <p>The ID of the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbs1jyajqk******</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the resource. Set the value to backupplan.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>backupplan</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

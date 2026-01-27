@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDownloadResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBS.ParamIsInValid</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,33 +21,49 @@ public class CreateDownloadResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBS.ParamIsInValid</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>formatType can not be empty</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>formatType can not be empty</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A08F908D-2C35-583F-93C1-ED80753F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -113,91 +132,134 @@ public class CreateDownloadResponseBody extends TeaModel {
     public static class CreateDownloadResponseBodyData extends TeaModel {
         /**
          * <p>The point in time of the backup set if the task is used to download a backup set at a specific point in time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661373070000</p>
          */
         @NameInMap("BackupSetTime")
         public Long backupSetTime;
 
         /**
          * <p>The ID of the full backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>146005****</p>
          */
         @NameInMap("BakSetId")
         public String bakSetId;
 
         /**
          * <p>The database and table information that is returned if databases and tables are filtered by the download task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         @NameInMap("DbList")
         public String dbList;
 
         /**
          * <p>The state of the download task. Valid values:</p>
-         * <br>
-         * <p>*   initializing: The download task was being initialized.</p>
-         * <p>*   queuing: The download task was queuing.</p>
-         * <p>*   running: The download task was running.</p>
-         * <p>*   failed: The download task failed.</p>
-         * <p>*   finished: The download task was complete.</p>
-         * <p>*   expired: The download task expired.</p>
-         * <br>
-         * <p>> If the TargetType parameter is set to URL, the download task expires in three days after the task is complete.</p>
+         * <ul>
+         * <li>initializing: The download task was being initialized.</li>
+         * <li>queuing: The download task was queuing.</li>
+         * <li>running: The download task was running.</li>
+         * <li>failed: The download task failed.</li>
+         * <li>finished: The download task was complete.</li>
+         * <li>expired: The download task expired.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If the TargetType parameter is set to URL, the download task expires in three days after the task is complete.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>initializing</p>
          */
         @NameInMap("DownloadStatus")
         public String downloadStatus;
 
         /**
          * <p>The size of the downloaded data. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExportDataSize")
         public Long exportDataSize;
 
         /**
          * <p>The format to which the downloaded data is converted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSV</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>The time when the download task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661940917570</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The size of the processed data. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ImportDataSize")
         public Long importDataSize;
 
         /**
          * <p>The number of tables that have been downloaded and the total number of tables to be downloaded.</p>
-         * <br>
-         * <p>> If the task is in the preparation stage, 0/0 is returned.</p>
+         * <blockquote>
+         * <p>If the task is in the preparation stage, 0/0 is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0/0</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionCode")
         public String regionCode;
 
         /**
          * <p>The destination path to which the backup set is downloaded.</p>
-         * <br>
-         * <p>>  This parameter is returned if the value of **TargetType is OSS**.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the value of <strong>TargetType is OSS</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db/path</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;
 
         /**
          * <p>The type of the destination to which the backup set is downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The ID of the download task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt-qxnsfq5s****</p>
          */
         @NameInMap("TaskId")
         public String taskId;

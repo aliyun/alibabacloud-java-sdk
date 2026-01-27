@@ -3,7 +3,7 @@ package com.aliyun.dbs20210101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDownloadSupportRequest extends TeaModel {
+public class RetryDownloadTaskRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>dds-example</p>
@@ -12,31 +12,32 @@ public class DescribeDownloadSupportRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The ID of the instance.</p>
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
-     * <p>rm-bp1a48p922r4b****</p>
+     * <p>rm-example</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The ID of the region in which the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionCode")
     public String regionCode;
 
-    public static DescribeDownloadSupportRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDownloadSupportRequest self = new DescribeDownloadSupportRequest();
+    /**
+     * <strong>example:</strong>
+     * <p>dt-example</p>
+     */
+    @NameInMap("TaskId")
+    public String taskId;
+
+    public static RetryDownloadTaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        RetryDownloadTaskRequest self = new RetryDownloadTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDownloadSupportRequest setClusterName(String clusterName) {
+    public RetryDownloadTaskRequest setClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
     }
@@ -44,7 +45,7 @@ public class DescribeDownloadSupportRequest extends TeaModel {
         return this.clusterName;
     }
 
-    public DescribeDownloadSupportRequest setInstanceName(String instanceName) {
+    public RetryDownloadTaskRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -52,12 +53,20 @@ public class DescribeDownloadSupportRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public DescribeDownloadSupportRequest setRegionCode(String regionCode) {
+    public RetryDownloadTaskRequest setRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     public String getRegionCode() {
         return this.regionCode;
+    }
+
+    public RetryDownloadTaskRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

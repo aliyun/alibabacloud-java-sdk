@@ -4,6 +4,9 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBTablesRecoveryBackupSetRequest extends TeaModel {
+    @NameInMap("ClusterName")
+    public String clusterName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +16,14 @@ public class DescribeDBTablesRecoveryBackupSetRequest extends TeaModel {
     public static DescribeDBTablesRecoveryBackupSetRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBTablesRecoveryBackupSetRequest self = new DescribeDBTablesRecoveryBackupSetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBTablesRecoveryBackupSetRequest setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     public DescribeDBTablesRecoveryBackupSetRequest setInstanceId(String instanceId) {

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBS.ParamIsInValid</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,33 +21,49 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBS.ParamIsInValid</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Argument: regionCode Must not be empty</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Argument: regionCode Must not be empty</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>44B8C2F5-919D-5D29-BCD5-DEB03467****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -113,8 +132,12 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
     public static class DescribeDownloadBackupSetStorageInfoResponseBodyData extends TeaModel {
         /**
          * <p>The validity period of the URL.</p>
-         * <br>
-         * <p>> This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1661329050</p>
          */
         @NameInMap("ExpirationTime")
         public Long expirationTime;

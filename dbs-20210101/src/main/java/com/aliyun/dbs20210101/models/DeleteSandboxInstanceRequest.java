@@ -5,19 +5,24 @@ import com.aliyun.tea.*;
 
 public class DeleteSandboxInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the backup schedule. You can call the [DescribeBackupPlanList](https://help.aliyun.com/document_detail/437215.html) operation to query the ID of the backup schedule.</p>
-     * <br>
-     * <p>> If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](https://help.aliyun.com/document_detail/193091.html) to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
-     * <br>
+     * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/437215.html">DescribeBackupPlanList</a> operation to query the ID of the backup schedule.</p>
+     * <blockquote>
+     * <p>If your instance is an ApsaraDB RDS for MySQL instance, you can <a href="https://help.aliyun.com/document_detail/193091.html">configure automatic access to a data source</a> to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1hxxxx8xxxxxa</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
     /**
-     * <p>The ID of the sandbox instance. You can call the [DescribeSandboxInstances](https://help.aliyun.com/document_detail/437257.html) operation to query the ID of the sandbox instance.</p>
-     * <br>
+     * <p>The ID of the sandbox instance. You can call the <a href="https://help.aliyun.com/document_detail/437257.html">DescribeSandboxInstances</a> operation to query the ID of the sandbox instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1jxxxxnxxx1xc</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

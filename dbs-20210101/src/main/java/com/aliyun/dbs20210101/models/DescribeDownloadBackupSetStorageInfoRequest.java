@@ -6,43 +6,66 @@ import com.aliyun.tea.*;
 public class DescribeDownloadBackupSetStorageInfoRequest extends TeaModel {
     /**
      * <p>The ID of the backup set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30****</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
     /**
+     * <strong>example:</strong>
+     * <p>dds-example</p>
+     */
+    @NameInMap("ClusterName")
+    public String clusterName;
+
+    /**
      * <p>The validity period of the URL that is used as the download destination. Take note of the following items:</p>
-     * <br>
-     * <p>*   Default value: 7200. This means that the URL is valid for 2 hours by default.</p>
-     * <p>*   Valid values: 300 to 86400. Unit: seconds. This means that you can specify a validity period in the range of 5 minutes to 1 day.</p>
-     * <p>*   Before you specify this parameter, convert the validity period to seconds. For example, if you want to set the validity period of the URL to 5 minutes, enter 300.</p>
-     * <br>
+     * <ul>
+     * <li>Default value: 7200. This means that the URL is valid for 2 hours by default.</li>
+     * <li>Valid values: 300 to 86400. Unit: seconds. This means that you can specify a validity period in the range of 5 minutes to 1 day.</li>
+     * <li>Before you specify this parameter, convert the validity period to seconds. For example, if you want to set the validity period of the URL to 5 minutes, enter 300.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("Duration")
     public String duration;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> The **BackupSetId** parameter is required if you specify the **InstanceName** parameter.</p>
+     * <blockquote>
+     * <p>The <strong>BackupSetId</strong> parameter is required if you specify the <strong>InstanceName</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6qqf569n435****</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/26231.html) operation to query the region ID of the instance.</p>
-     * <br>
+     * <p>The ID of the region in which the instance resides.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionCode")
     public String regionCode;
 
     /**
      * <p>The download task ID.</p>
-     * <br>
-     * <p>*   The **BackupSetId** and **InstanceName** parameters are required if you do not specify the **TaskId** parameter.</p>
-     * <p>*   To view the download task ID, go to the instance details page in the console and click **Backup and Restoration** in the left-side navigation pane. On the **Backup Download** tab, view the task ID.</p>
+     * <ul>
+     * <li>The <strong>BackupSetId</strong> and <strong>InstanceName</strong> parameters are required if you do not specify the <strong>TaskId</strong> parameter.</li>
+     * <li>To view the download task ID, go to the instance details page in the console and click <strong>Backup and Restoration</strong> in the left-side navigation pane. On the <strong>Backup Download</strong> tab, view the task ID.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>dt-s0ugzak9****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
@@ -58,6 +81,14 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends TeaModel {
     }
     public String getBackupSetId() {
         return this.backupSetId;
+    }
+
+    public DescribeDownloadBackupSetStorageInfoRequest setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     public DescribeDownloadBackupSetStorageInfoRequest setDuration(String duration) {

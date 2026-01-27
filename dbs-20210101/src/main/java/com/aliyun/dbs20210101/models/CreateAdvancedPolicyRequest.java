@@ -4,9 +4,21 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class CreateAdvancedPolicyRequest extends TeaModel {
+    /**
+     * <p>The ID of the PolarDB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-2ze3nrr64c5****</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The region in which backup sets reside.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionCode")
     public String regionCode;
 

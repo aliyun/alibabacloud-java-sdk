@@ -3,37 +3,25 @@ package com.aliyun.dbs20210101.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteSandboxInstanceResponseBody extends TeaModel {
+public class RetryDownloadTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Param.NotFound</p>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The returned data.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>operation forbidden due to sandbox is creating.</p>
-     */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Param.NotFound</p>
+     * <p>Success</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
-     * 
      * <strong>example:</strong>
      * <p>The specified parameter %s value is not valid.</p>
      */
@@ -41,38 +29,32 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The error message returned if the request failed.</p>
-     * 
      * <strong>example:</strong>
-     * <p>The specified parameter %s value is not valid.</p>
+     * <p>instanceName can not be empty.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
-     * <p>4F1888AC-1138-4995-B9FE-D2734F61C058</p>
+     * <p>49FE4E8E-39B9-56DE-BC07-5AEBFAXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public String success;
 
-    public static DeleteSandboxInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteSandboxInstanceResponseBody self = new DeleteSandboxInstanceResponseBody();
+    public static RetryDownloadTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RetryDownloadTaskResponseBody self = new RetryDownloadTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSandboxInstanceResponseBody setCode(String code) {
+    public RetryDownloadTaskResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -80,7 +62,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteSandboxInstanceResponseBody setData(String data) {
+    public RetryDownloadTaskResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -88,7 +70,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteSandboxInstanceResponseBody setErrCode(String errCode) {
+    public RetryDownloadTaskResponseBody setErrCode(String errCode) {
         this.errCode = errCode;
         return this;
     }
@@ -96,7 +78,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.errCode;
     }
 
-    public DeleteSandboxInstanceResponseBody setErrMessage(String errMessage) {
+    public RetryDownloadTaskResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
@@ -104,7 +86,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.errMessage;
     }
 
-    public DeleteSandboxInstanceResponseBody setMessage(String message) {
+    public RetryDownloadTaskResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -112,7 +94,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteSandboxInstanceResponseBody setRequestId(String requestId) {
+    public RetryDownloadTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -120,7 +102,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteSandboxInstanceResponseBody setSuccess(String success) {
+    public RetryDownloadTaskResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }

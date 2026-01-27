@@ -4,24 +4,74 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class CreateAdvancedPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the advanced backup policy takes effect. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instanceName can not be empty.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1EFBAC73-4A72-5AD0-BE27-932491FCB848</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 

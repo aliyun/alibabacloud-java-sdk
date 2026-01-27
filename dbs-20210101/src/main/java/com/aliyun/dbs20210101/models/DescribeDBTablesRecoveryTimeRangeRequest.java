@@ -4,6 +4,9 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBTablesRecoveryTimeRangeRequest extends TeaModel {
+    @NameInMap("ClusterName")
+    public String clusterName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +16,14 @@ public class DescribeDBTablesRecoveryTimeRangeRequest extends TeaModel {
     public static DescribeDBTablesRecoveryTimeRangeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBTablesRecoveryTimeRangeRequest self = new DescribeDBTablesRecoveryTimeRangeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBTablesRecoveryTimeRangeRequest setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     public DescribeDBTablesRecoveryTimeRangeRequest setInstanceId(String instanceId) {

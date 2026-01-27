@@ -5,33 +5,46 @@ import com.aliyun.tea.*;
 
 public class DescribeSandboxInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the backup schedule. You can call the [DescribeBackupPlanList](https://help.aliyun.com/document_detail/437215.html) operation to obtain the ID of the backup schedule.</p>
-     * <br>
-     * <p>> If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](https://help.aliyun.com/document_detail/193091.html) to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
-     * <br>
+     * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/437215.html">DescribeBackupPlanList</a> operation to obtain the ID of the backup schedule.</p>
+     * <blockquote>
+     * <p>If your instance is an ApsaraDB RDS for MySQL instance, you can <a href="https://help.aliyun.com/document_detail/193091.html">configure automatic access to a data source</a> to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1hxxxx8xxxxxa</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
     /**
-     * <p>The ID of the sandbox instance. You can call the [CreateSandboxInstance](https://help.aliyun.com/document_detail/437252.html) operation to obtain the ID of the sandbox instance.</p>
+     * <p>The ID of the sandbox instance. You can call the <a href="https://help.aliyun.com/document_detail/437252.html">CreateSandboxInstance</a> operation to obtain the ID of the sandbox instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1jxxxxnxxx1xc</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values:</p>
-     * <br>
-     * <p>*   30\\. This is the default value.</p>
-     * <p>*   50</p>
-     * <p>*   100</p>
+     * <ul>
+     * <li>30\. This is the default value.</li>
+     * <li>50</li>
+     * <li>100</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

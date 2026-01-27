@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDownloadTaskResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBS.InternalError</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,33 +21,49 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBS.InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instanceName can not be empty</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instanceName can not be empty</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D285EB9-A443-592D-9F3D-A888FAC3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -113,92 +132,134 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
     public static class DescribeDownloadTaskResponseBodyDataContentList extends TeaModel {
         /**
          * <p>The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp of the LONG type. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663162216000</p>
          */
         @NameInMap("BackupSetTime")
         public String backupSetTime;
 
         /**
          * <p>The ID of the full backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>148261****</p>
          */
         @NameInMap("BakSetId")
         public String bakSetId;
 
         /**
          * <p>The details of the databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[dbtest]</p>
          */
         @NameInMap("DbList")
         public String dbList;
 
         /**
          * <p>The status of the download task. Valid values:</p>
-         * <br>
-         * <p>*   **Initializing**: The download task is being initialized.</p>
-         * <p>*   **queuing**: The download task is queuing.</p>
-         * <p>*   **running**: The download task is running.</p>
-         * <p>*   **failed**: The download task fails.</p>
-         * <p>*   **finished**: The download task is complete.</p>
-         * <p>*   **expired**: The download task expires.</p>
+         * <ul>
+         * <li><strong>Initializing</strong>: The download task is being initialized.</li>
+         * <li><strong>queuing</strong>: The download task is queuing.</li>
+         * <li><strong>running</strong>: The download task is running.</li>
+         * <li><strong>failed</strong>: The download task fails.</li>
+         * <li><strong>finished</strong>: The download task is complete.</li>
+         * <li><strong>expired</strong>: The download task expires.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>queueing</p>
          */
         @NameInMap("DownloadStatus")
         public String downloadStatus;
 
         /**
          * <p>The amount of output data. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExportDataSize")
         public String exportDataSize;
 
         /**
          * <p>The format to which the downloaded backup set is converted. Valid values:</p>
-         * <br>
-         * <p>*   **csv**</p>
-         * <p>*   **SQL**</p>
-         * <p>*   **Parquet**</p>
+         * <ul>
+         * <li><strong>csv</strong></li>
+         * <li><strong>SQL</strong></li>
+         * <li><strong>Parquet</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>csv</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>The time when the download task was created. The value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663321957000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The amount of data that is processed. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ImportDataSize")
         public String importDataSize;
 
         /**
          * <p>The number of tables that have been downloaded and the total number of tables to be downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/0</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionCode")
         public String regionCode;
 
         /**
-         * <p>The destination path to which the data is downloaded if the value of **TargetType is OSS**.</p>
+         * <p>The destination path to which the data is downloaded if the value of <strong>TargetType is OSS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db/path</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;
 
         /**
          * <p>The type of the method in which the backup set is downloaded. Valid values:</p>
-         * <br>
-         * <p>*   **OSS**</p>
-         * <p>*   **URL**</p>
+         * <ul>
+         * <li><strong>OSS</strong></li>
+         * <li><strong>URL</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The download task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt-qxntlvgu****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
@@ -342,30 +403,45 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
         /**
          * <p>The extra description of the download tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbtest</p>
          */
         @NameInMap("Extra")
         public String extra;
 
         /**
          * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of full backup tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalElements")
         public Long totalElements;
 
         /**
          * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalPages")
         public Long totalPages;

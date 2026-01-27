@@ -5,90 +5,136 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set generated when you create a download task. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID.</p>
+     * <p>The ID of the backup set generated when you create a download task. You can call the <a href="https://help.aliyun.com/document_detail/26273.html">DescribeBackups</a> operation to query the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>216****</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
     /**
+     * <strong>example:</strong>
+     * <p>dds-example</p>
+     */
+    @NameInMap("ClusterName")
+    public String clusterName;
+
+    /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
-     * <p>The ID of the Database Backup (DBS) data source. Specify the parameter in the format of *ds-${Instance ID}_${regionId}*.</p>
+     * <p>The ID of the Database Backup (DBS) data source. Specify the parameter in the format of <em>ds-${Instance ID}_${regionId}</em>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds-rm-2ze8g2am97624****_cn-hangzhou</p>
      */
     @NameInMap("DatasourceId")
     public String datasourceId;
 
     /**
      * <p>The end of the time range to query. Specify this parameter as a timestamp of the LONG type. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1661941556000</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> This parameter is required.</p>
+     * <blockquote>
+     * <p>This parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1imnmcjxdz7****</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The column based on which the entries are sorted. By default, the entries are sorted by the time when the download task was created. Set the value to **gmt_create**.</p>
+     * <p>The column based on which the entries are sorted. By default, the entries are sorted by the time when the download task was created. Set the value to <strong>gmt_create</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gmt_create</p>
      */
     @NameInMap("OrderColumn")
     public String orderColumn;
 
     /**
      * <p>The order in which you want to sort the entries. Valid values:</p>
-     * <br>
-     * <p>*   **asc**: the ascending order.</p>
-     * <p>*   **desc**: the descending order. This is the default value.</p>
+     * <ul>
+     * <li><strong>asc</strong>: the ascending order.</li>
+     * <li><strong>desc</strong>: the descending order. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("OrderDirect")
     public String orderDirect;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/26231.html) operation to query the region ID of the instance.</p>
-     * <br>
+     * <p>The ID of the region in which the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionCode")
     public String regionCode;
 
     /**
      * <p>The beginning of the time range to query. Specify this parameter as a timestamp of the LONG type. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1661941554000</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The state of the download task. Valid values:</p>
-     * <br>
-     * <p>*   **Initializing**: The download task is being initialized.</p>
-     * <p>*   **queueing**: The download task is queuing.</p>
-     * <p>*   **running**: The download task is running.</p>
-     * <p>*   **failed**: The download task fails.</p>
-     * <p>*   **finished**: The download task is complete.</p>
-     * <p>*   **expired**: The download task expires.</p>
+     * <ul>
+     * <li><strong>Initializing</strong>: The download task is being initialized.</li>
+     * <li><strong>queueing</strong>: The download task is queuing.</li>
+     * <li><strong>running</strong>: The download task is running.</li>
+     * <li><strong>failed</strong>: The download task fails.</li>
+     * <li><strong>finished</strong>: The download task is complete.</li>
+     * <li><strong>expired</strong>: The download task expires.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>queueing</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>The type of the download task. Valid values:</p>
-     * <br>
-     * <p>*   **full**: downloads a full backup set.</p>
-     * <p>*   **pitr**: downloads a backup set at a specific point in time.</p>
+     * <ul>
+     * <li><strong>full</strong>: downloads a full backup set.</li>
+     * <li><strong>pitr</strong>: downloads a backup set at a specific point in time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>full</p>
      */
     @NameInMap("TaskType")
     public String taskType;
@@ -104,6 +150,14 @@ public class DescribeDownloadTaskRequest extends TeaModel {
     }
     public String getBackupSetId() {
         return this.backupSetId;
+    }
+
+    public DescribeDownloadTaskRequest setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     public DescribeDownloadTaskRequest setCurrentPage(String currentPage) {

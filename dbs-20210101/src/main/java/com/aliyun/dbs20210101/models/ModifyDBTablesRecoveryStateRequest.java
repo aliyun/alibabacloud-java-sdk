@@ -7,6 +7,9 @@ public class ModifyDBTablesRecoveryStateRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    @NameInMap("ClusterName")
+    public String clusterName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -27,6 +30,14 @@ public class ModifyDBTablesRecoveryStateRequest extends TeaModel {
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public ModifyDBTablesRecoveryStateRequest setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     public ModifyDBTablesRecoveryStateRequest setInstanceId(String instanceId) {
