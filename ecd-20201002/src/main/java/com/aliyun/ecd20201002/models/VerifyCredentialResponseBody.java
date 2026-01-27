@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VerifyCredentialResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D5F0BDFB-A229-5F1D-B790-33709D43****</p>
      */

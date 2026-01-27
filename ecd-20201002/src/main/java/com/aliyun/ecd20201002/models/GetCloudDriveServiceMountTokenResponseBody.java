@@ -11,6 +11,9 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tokens.</p>
+     */
     @NameInMap("Token")
     public GetCloudDriveServiceMountTokenResponseBodyToken token;
 
@@ -58,6 +61,8 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The token.</p>
+         * 
          * <strong>example:</strong>
          * <p>7836fa6eced7dc8d54c775k34iu3h4i2kh534f****</p>
          */
@@ -65,6 +70,8 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         public String token;
 
         /**
+         * <p>The total capacity of the enterprise drive. Unit: GiB</p>
+         * 
          * <strong>example:</strong>
          * <p>6050416754750</p>
          */

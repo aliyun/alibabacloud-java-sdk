@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsRequest extends TeaModel {
     /**
+     * <p>The client ID. The system generates a unique ID for each client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The cloud computer ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
      */
@@ -21,6 +24,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String desktopId;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The number of entries per page. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -37,6 +43,8 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
      */
@@ -44,6 +52,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,8 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>a99b9aca-bac5-4da2-819e-400ce98f****</p>
      */
@@ -60,6 +71,8 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The snapshot ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>s-2ze81owrnv9pity4****</p>
      */

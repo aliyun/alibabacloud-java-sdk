@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
      */
@@ -12,12 +14,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The snapshots.</p>
+     */
     @NameInMap("Snapshots")
     public java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots;
 
@@ -52,6 +59,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
         /**
+         * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-20T14:52:28Z</p>
          */
@@ -59,6 +68,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The snapshot description.</p>
+         * 
          * <strong>example:</strong>
          * <p>testDescription</p>
          */
@@ -66,6 +77,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the cloud computer to which the snapshot belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-g03l3tlm8djoj****</p>
          */
@@ -73,6 +86,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
+         * <p>The progress of creating the cloud computer.</p>
+         * 
          * <strong>example:</strong>
          * <p>100%</p>
          */
@@ -80,19 +95,35 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String progress;
 
         /**
+         * <p>The remaining time required to complete snapshot creation. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
+        /**
+         * <p>The ID of the restore point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rp-btgmaa20wkcju****</p>
+         */
         @NameInMap("RestorePointId")
         public String restorePointId;
 
+        /**
+         * <p>The name of the restore point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data Disk Backup</p>
+         */
         @NameInMap("RestorePointName")
         public String restorePointName;
 
         /**
+         * <p>The snapshot ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>s-2zeipxmnhej803x7****</p>
          */
@@ -100,6 +131,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotId;
 
         /**
+         * <p>The snapshot name.</p>
+         * 
          * <strong>example:</strong>
          * <p>testSnapshotName</p>
          */
@@ -107,6 +140,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotName;
 
         /**
+         * <p>The snapshot type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AUTO: an automatic snapshot.</li>
+         * <li>USER: a manual snapshot.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>USER</p>
          */
@@ -114,6 +154,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotType;
 
         /**
+         * <p>The size of the source disk. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>150</p>
          */
@@ -121,6 +163,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String sourceDiskSize;
 
         /**
+         * <p>The type of the source disk.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: a system disk.</li>
+         * <li>DATA: a data disk.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
          */
@@ -128,6 +177,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String sourceDiskType;
 
         /**
+         * <p>The snapshot status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PROGRESSING: The snapshot is being created.</li>
+         * <li>FAILED: The snapshot failed to be created.</li>
+         * <li>ACCOMPLISHED: The snapshot is created.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ACCOMPLISHED</p>
          */

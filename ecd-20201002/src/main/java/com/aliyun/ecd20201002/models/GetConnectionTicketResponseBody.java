@@ -4,6 +4,9 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketResponseBody extends TeaModel {
+    @NameInMap("DesktopId")
+    public String desktopId;
+
     @NameInMap("P2PToken")
     public String p2PToken;
 
@@ -14,16 +17,26 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>
+     */
     @NameInMap("TaskCode")
     public String taskCode;
 
     /**
+     * <p>The ID of the task to connect to the cloud computer.</p>
+     * 
      * <strong>example:</strong>
      * <p>2afbad19-778a-4fc5-9674-1f19c63862da</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
+     */
     @NameInMap("TaskMessage")
     public String taskMessage;
 
@@ -35,6 +48,8 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String taskStatus;
 
     /**
+     * <p>The credentials for connecting to the cloud computer.</p>
+     * 
      * <strong>example:</strong>
      * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>
      */
@@ -44,6 +59,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public static GetConnectionTicketResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConnectionTicketResponseBody self = new GetConnectionTicketResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetConnectionTicketResponseBody setDesktopId(String desktopId) {
+        this.desktopId = desktopId;
+        return this;
+    }
+    public String getDesktopId() {
+        return this.desktopId;
     }
 
     public GetConnectionTicketResponseBody setP2PToken(String p2PToken) {

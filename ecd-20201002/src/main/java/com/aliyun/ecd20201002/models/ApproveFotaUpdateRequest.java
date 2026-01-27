@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApproveFotaUpdateRequest extends TeaModel {
     /**
+     * <p>The application version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     public String appVersion;
 
     /**
+     * <p>The client ID. The system generates a unique ID for each client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The cloud computer ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecd-138dsptkrt00u****</p>
      */
@@ -30,6 +34,7 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     public String desktopId;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,15 +54,35 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4771b873-c757-4893-973c-7f5beejh****</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The state of the cloud computer after the OTA update.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available. After the OTA update is complete, the state of the cloud computer changes to <code>RUNNING</code>.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Set the value to running.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("TargetStatus")
     public String targetStatus;
 
+    /**
+     * <p>The unique identifier of the client. To view the unique identifier of an Alibaba Cloud Workspace client, go to the client logon page and click on &quot;About.&quot;</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28c80e90-f71e-4c23-93d6-1225329c****</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

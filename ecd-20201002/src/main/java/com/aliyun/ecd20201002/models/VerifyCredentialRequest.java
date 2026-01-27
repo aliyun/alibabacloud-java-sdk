@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyCredentialRequest extends TeaModel {
     /**
+     * <p>The client ID. The system generates a unique ID for each client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class VerifyCredentialRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The credential.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,14 @@ public class VerifyCredentialRequest extends TeaModel {
     public String credential;
 
     /**
+     * <p>The type of the logon credential that you want to clear.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>MfaPasscode: the multi-factor verification code.</li>
+     * <li>FingerPrint: the fingerprint.</li>
+     * <li>Password: the password.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Password</p>
      */
@@ -30,6 +40,8 @@ public class VerifyCredentialRequest extends TeaModel {
     public String credentialType;
 
     /**
+     * <p>The ID of the key that you want to encrypt.</p>
+     * 
      * <strong>example:</strong>
      * <p>drjfs****</p>
      */
@@ -37,6 +49,7 @@ public class VerifyCredentialRequest extends TeaModel {
     public String encryptedKey;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +59,7 @@ public class VerifyCredentialRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The office network ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +69,7 @@ public class VerifyCredentialRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +79,8 @@ public class VerifyCredentialRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>eb17af2e-1dd6-4cc4-a3ee-3a14d0d7****</p>
      */

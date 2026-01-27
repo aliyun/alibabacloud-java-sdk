@@ -4,6 +4,9 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class DescribeOfficeSitesResponseBody extends TeaModel {
+    /**
+     * <p>The office networks.</p>
+     */
     @NameInMap("OfficeSites")
     public java.util.List<DescribeOfficeSitesResponseBodyOfficeSites> officeSites;
 
@@ -36,6 +39,24 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     }
 
     public static class DescribeOfficeSitesResponseBodyOfficeSites extends TeaModel {
+        /**
+         * <p>aliuid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125552</p>
+         */
+        @NameInMap("AliUid")
+        public Long aliUid;
+
+        /**
+         * <p>biztype</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
+         */
+        @NameInMap("BizType")
+        public Integer bizType;
+
         /**
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -81,6 +102,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public static DescribeOfficeSitesResponseBodyOfficeSites build(java.util.Map<String, ?> map) throws Exception {
             DescribeOfficeSitesResponseBodyOfficeSites self = new DescribeOfficeSitesResponseBodyOfficeSites();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setAliUid(Long aliUid) {
+            this.aliUid = aliUid;
+            return this;
+        }
+        public Long getAliUid() {
+            return this.aliUid;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setBizType(Integer bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public Integer getBizType() {
+            return this.bizType;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setDesktopAccessType(String desktopAccessType) {

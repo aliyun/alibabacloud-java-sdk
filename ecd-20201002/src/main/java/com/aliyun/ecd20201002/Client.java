@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>允许桌面FOTA升级</p>
+     * <p>Enables OTA updates for cloud computers.</p>
      * 
      * @param request ApproveFotaUpdateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -88,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>允许桌面FOTA升级</p>
+     * <p>Enables OTA updates for cloud computers.</p>
      * 
      * @param request ApproveFotaUpdateRequest
      * @return ApproveFotaUpdateResponse
@@ -337,6 +337,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</p>
+     * <ul>
+     * <li>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of cloud computers. Currently, only the region corresponding to the Chinese mainland can be queried (excluding: Nanjing-local region-shutting down).</p>
+     * 
      * @param request DescribeGlobalDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeGlobalDesktopsResponse
@@ -442,6 +451,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</p>
+     * <ul>
+     * <li>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of cloud computers. Currently, only the region corresponding to the Chinese mainland can be queried (excluding: Nanjing-local region-shutting down).</p>
+     * 
      * @param request DescribeGlobalDesktopsRequest
      * @return DescribeGlobalDesktopsResponse
      */
@@ -451,6 +469,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries office networks.</p>
+     * 
      * @param request DescribeOfficeSitesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeOfficeSitesResponse
@@ -468,6 +489,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -488,6 +513,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries office networks.</p>
+     * 
      * @param request DescribeOfficeSitesRequest
      * @return DescribeOfficeSitesResponse
      */
@@ -540,7 +568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举快照</p>
+     * <p>Queries the snapshots that are created based on a cloud computer and the details of the snapshots.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -600,7 +628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举快照</p>
+     * <p>Queries the snapshots that are created based on a cloud computer and the details of the snapshots.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @return DescribeSnapshotsResponse
@@ -611,8 +639,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户资源列表</p>
+     * <p>Queries user resources.</p>
      * 
      * @param request DescribeUserResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -751,8 +782,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户资源列表</p>
+     * <p>Queries user resources.</p>
      * 
      * @param request DescribeUserResourcesRequest
      * @return DescribeUserResourcesResponse
@@ -832,7 +866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取无影云盘的免密token</p>
+     * <p>Retrieves the logon tokens for enterprise drives.</p>
      * 
      * @param request GetCloudDriveServiceMountTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -880,7 +914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取无影云盘的免密token</p>
+     * <p>Retrieves the logon tokens for enterprise drives.</p>
      * 
      * @param request GetCloudDriveServiceMountTokenRequest
      * @return GetCloudDriveServiceMountTokenResponse
@@ -891,8 +925,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The first time you call this operation, the system returns a task ID in the <code>TaskID</code> parameter. Use the task ID indicated in the <code>TaskID</code> parameter to continue calling this operation until the value of the <code>TaskStatus</code> parameter becomes <code>FINISHED</code> or <code>FAILED</code>. When <code>TaskStatus</code> becomes <code>FINISHED</code>, the value of the <code>Ticket</code> parameter is the ticket that is used to connect the client to the cloud computer.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获得连接凭证</p>
+     * <p>Retrieves the credential that is used to connect to a cloud computer.</p>
      * 
      * @param request GetConnectionTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -961,6 +998,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ticketBlackList)) {
+            query.put("TicketBlackList", request.ticketBlackList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
             query.put("Uuid", request.uuid);
         }
@@ -983,8 +1024,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The first time you call this operation, the system returns a task ID in the <code>TaskID</code> parameter. Use the task ID indicated in the <code>TaskID</code> parameter to continue calling this operation until the value of the <code>TaskStatus</code> parameter becomes <code>FINISHED</code> or <code>FAILED</code>. When <code>TaskStatus</code> becomes <code>FINISHED</code>, the value of the <code>Ticket</code> parameter is the ticket that is used to connect the client to the cloud computer.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获得连接凭证</p>
+     * <p>Retrieves the credential that is used to connect to a cloud computer.</p>
      * 
      * @param request GetConnectionTicketRequest
      * @return GetConnectionTicketResponse
@@ -1122,7 +1166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>是否保持登录判断接口</p>
+     * <p>Verifies whether the client\&quot;s logon session is still active.</p>
      * 
      * @param request IsKeepAliveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1162,7 +1206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>是否保持登录判断接口</p>
+     * <p>Verifies whether the client\&quot;s logon session is still active.</p>
      * 
      * @param request IsKeepAliveRequest
      * @return IsKeepAliveResponse
@@ -2197,6 +2241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Validates credentials to lock on-premises sessions on clients.</p>
+     * 
      * @param request VerifyCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VerifyCredentialResponse
@@ -2254,6 +2301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Validates credentials to lock on-premises sessions on clients.</p>
+     * 
      * @param request VerifyCredentialRequest
      * @return VerifyCredentialResponse
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetFingerPrintTemplateDescriptionRequest extends TeaModel {
     /**
+     * <p>The client ID. The system generates a unique ID for each client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SetFingerPrintTemplateDescriptionRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The client token to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>40401e62-5caf-4508-8de7-bf98af12****</p>
      */
@@ -21,6 +24,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The description.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The index.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends TeaModel {
     public Integer index;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +64,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

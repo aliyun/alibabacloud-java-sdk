@@ -24,6 +24,17 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String clientOS;
 
     /**
+     * <p>The type of the client.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>html5: web client</li>
+     * <li>Linux: self-developed hardware terminal</li>
+     * <li>android: Android client</li>
+     * <li>windows: Windows client</li>
+     * <li>ios: iOS client</li>
+     * <li>macos: macOS client</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>windows</p>
      */
@@ -37,10 +48,30 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;startApplication&quot;: {
+     *             &quot;startApplicationList&quot;: [
+     *                   {
+     *                         &quot;sessionName&quot;: &quot;&quot;,
+     *                         &quot;appList&quot;: [
+     *                               {
+     *                                     &quot;appPath&quot;: &quot;C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe&quot;,
+     *                                     &quot;appParameter&quot;: &quot;<a href="http://www.example.com">www.example.com</a> <a href="http://www.example1.com">www.example1.com</a>&quot;
+     *                               }
+     *                         ]
+     *                   }
+     *             ]
+     *       }
+     * }</p>
+     */
     @NameInMap("CommandContent")
     public String commandContent;
 
     /**
+     * <p>The cloud compute ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
      */
@@ -60,6 +91,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,16 +113,29 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The tags. You can specify 1 to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<GetConnectionTicketRequestTag> tag;
 
     /**
+     * <p>The ID of the cloud computer connection task.\
+     * The first time you call the GetConnectionTicket operation, you do not need to configure this parameter. When you call the GetConnectionTicket operation later, set this parameter to the value of the <code>TaskId</code> parameter returned from the previous invocation.</p>
+     * 
      * <strong>example:</strong>
      * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("TicketBlackList")
+    public java.util.List<String> ticketBlackList;
+
+    /**
+     * <strong>example:</strong>
+     * <p>28c80e90-f71e-4c23-93d6-1225329cf949</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
@@ -219,6 +264,14 @@ public class GetConnectionTicketRequest extends TeaModel {
         return this.taskId;
     }
 
+    public GetConnectionTicketRequest setTicketBlackList(java.util.List<String> ticketBlackList) {
+        this.ticketBlackList = ticketBlackList;
+        return this;
+    }
+    public java.util.List<String> getTicketBlackList() {
+        return this.ticketBlackList;
+    }
+
     public GetConnectionTicketRequest setUuid(String uuid) {
         this.uuid = uuid;
         return this;
@@ -228,9 +281,21 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
 
     public static class GetConnectionTicketRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code> and contain only spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify an empty string as a tag value. A tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -25,6 +25,15 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>uuid</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASDASD</p>
+     */
+    @NameInMap("Uuid")
+    public String uuid;
+
     public static DescribeOfficeSitesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOfficeSitesRequest self = new DescribeOfficeSitesRequest();
         return TeaModel.build(map, self);
@@ -52,6 +61,14 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeOfficeSitesRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

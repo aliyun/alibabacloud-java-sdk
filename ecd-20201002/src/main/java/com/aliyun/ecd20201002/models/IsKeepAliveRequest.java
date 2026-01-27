@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class IsKeepAliveRequest extends TeaModel {
     /**
+     * <p>The client ID. The system generates a unique ID for each client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class IsKeepAliveRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The office network ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-885351****</p>
      */
@@ -21,6 +24,8 @@ public class IsKeepAliveRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

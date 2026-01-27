@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IsKeepAliveResponseBody extends TeaModel {
     /**
+     * <p>Identifies whether the user should remain logged on to the client.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class IsKeepAliveResponseBody extends TeaModel {
     public Boolean isKeepAlive;
 
     /**
+     * <p>The office network ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-885351****</p>
      */
@@ -19,6 +23,8 @@ public class IsKeepAliveResponseBody extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -26,6 +32,8 @@ public class IsKeepAliveResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The unique ID (UID) of the Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>141631846826****</p>
      */
