@@ -153,8 +153,36 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;col1&quot;]</p>
+         */
+        @NameInMap("AffectColumns")
+        public String affectColumns;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10.0.0.1xx</p>
+         */
+        @NameInMap("ClientIp")
+        public String clientIp;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
+        @NameInMap("ClientPort")
+        public Long clientPort;
+
         @NameInMap("Collection")
         public String collection;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ld-******</p>
+         */
+        @NameInMap("ConnectionId")
+        public String connectionId;
 
         /**
          * <p>The execution duration. Unit: millisecond.</p>
@@ -274,6 +302,13 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String parallelQueueTime;
 
         /**
+         * <strong>example:</strong>
+         * <p>[1, &quot;das&quot;]</p>
+         */
+        @NameInMap("Params")
+        public String params;
+
+        /**
          * <p>The number of physical asynchronous reads.</p>
          * 
          * <strong>example:</strong>
@@ -301,6 +336,13 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long physicSyncRead;
 
         /**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
+        @NameInMap("Protected")
+        public String _protected;
+
+        /**
          * <p>The number of rows returned.</p>
          * 
          * <strong>example:</strong>
@@ -308,6 +350,13 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
          */
         @NameInMap("ReturnRows")
         public Long returnRows;
+
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
+        @NameInMap("RowKey")
+        public String rowKey;
 
         /**
          * <p>The total number of rows updated or returned by the CNs of the PolarDB-X 2.0 instance.</p>
@@ -336,6 +385,10 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         @NameInMap("Scnt")
         public Long scnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sql</p>
+         */
         @NameInMap("SqlCommand")
         public Long sqlCommand;
 
@@ -383,6 +436,13 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
          */
         @NameInMap("State")
         public String state;
+
+        /**
+         * <strong>example:</strong>
+         * <p>das</p>
+         */
+        @NameInMap("TableName")
+        public String tableName;
 
         /**
          * <p>The thread ID.</p>
@@ -464,12 +524,44 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             return this.accountName;
         }
 
+        public DescribeSqlLogTaskResponseBodyDataQueries setAffectColumns(String affectColumns) {
+            this.affectColumns = affectColumns;
+            return this;
+        }
+        public String getAffectColumns() {
+            return this.affectColumns;
+        }
+
+        public DescribeSqlLogTaskResponseBodyDataQueries setClientIp(String clientIp) {
+            this.clientIp = clientIp;
+            return this;
+        }
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        public DescribeSqlLogTaskResponseBodyDataQueries setClientPort(Long clientPort) {
+            this.clientPort = clientPort;
+            return this;
+        }
+        public Long getClientPort() {
+            return this.clientPort;
+        }
+
         public DescribeSqlLogTaskResponseBodyDataQueries setCollection(String collection) {
             this.collection = collection;
             return this;
         }
         public String getCollection() {
             return this.collection;
+        }
+
+        public DescribeSqlLogTaskResponseBodyDataQueries setConnectionId(String connectionId) {
+            this.connectionId = connectionId;
+            return this;
+        }
+        public String getConnectionId() {
+            return this.connectionId;
         }
 
         public DescribeSqlLogTaskResponseBodyDataQueries setConsume(Long consume) {
@@ -576,6 +668,14 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             return this.parallelQueueTime;
         }
 
+        public DescribeSqlLogTaskResponseBodyDataQueries setParams(String params) {
+            this.params = params;
+            return this;
+        }
+        public String getParams() {
+            return this.params;
+        }
+
         public DescribeSqlLogTaskResponseBodyDataQueries setPhysicAsyncRead(Long physicAsyncRead) {
             this.physicAsyncRead = physicAsyncRead;
             return this;
@@ -600,12 +700,28 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             return this.physicSyncRead;
         }
 
+        public DescribeSqlLogTaskResponseBodyDataQueries set_protected(String _protected) {
+            this._protected = _protected;
+            return this;
+        }
+        public String get_protected() {
+            return this._protected;
+        }
+
         public DescribeSqlLogTaskResponseBodyDataQueries setReturnRows(Long returnRows) {
             this.returnRows = returnRows;
             return this;
         }
         public Long getReturnRows() {
             return this.returnRows;
+        }
+
+        public DescribeSqlLogTaskResponseBodyDataQueries setRowKey(String rowKey) {
+            this.rowKey = rowKey;
+            return this;
+        }
+        public String getRowKey() {
+            return this.rowKey;
         }
 
         public DescribeSqlLogTaskResponseBodyDataQueries setRows(Long rows) {
@@ -670,6 +786,14 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public DescribeSqlLogTaskResponseBodyDataQueries setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
         public DescribeSqlLogTaskResponseBodyDataQueries setThreadId(Long threadId) {
