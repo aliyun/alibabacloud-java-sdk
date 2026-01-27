@@ -122,6 +122,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("OfflineDuration")
+        public Long offlineDuration;
+
+        @NameInMap("OfflineUnchangedDuration")
+        public Long offlineUnchangedDuration;
+
         /**
          * <p>The time when the last data retrieval task was run.</p>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
@@ -232,6 +238,22 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetDirectoryOrFilePropertiesResponseBodyEntry setOfflineDuration(Long offlineDuration) {
+            this.offlineDuration = offlineDuration;
+            return this;
+        }
+        public Long getOfflineDuration() {
+            return this.offlineDuration;
+        }
+
+        public GetDirectoryOrFilePropertiesResponseBodyEntry setOfflineUnchangedDuration(Long offlineUnchangedDuration) {
+            this.offlineUnchangedDuration = offlineUnchangedDuration;
+            return this;
+        }
+        public Long getOfflineUnchangedDuration() {
+            return this.offlineUnchangedDuration;
         }
 
         public GetDirectoryOrFilePropertiesResponseBodyEntry setRetrieveTime(String retrieveTime) {

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>nas20170626</artifactId>
-  <version>3.3.0</version>
+  <version>3.3.1</version>
   <packaging>jar</packaging>
   <name>nas20170626</name>
   <description>Alibaba Cloud Apsara File Storage NAS (20170626) SDK for Java
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.3.1</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

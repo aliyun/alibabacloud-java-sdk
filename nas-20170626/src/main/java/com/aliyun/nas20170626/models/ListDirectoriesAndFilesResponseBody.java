@@ -148,6 +148,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("OfflineDuration")
+        public Long offlineDuration;
+
+        @NameInMap("OfflineUnchangedDuration")
+        public Long offlineUnchangedDuration;
+
         /**
          * <p>The ID of the portable account. This parameter is returned and valid only if the value of the ProtocolType parameter is SMB and RAM-based access control is enabled.</p>
          * 
@@ -275,6 +281,22 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListDirectoriesAndFilesResponseBodyEntries setOfflineDuration(Long offlineDuration) {
+            this.offlineDuration = offlineDuration;
+            return this;
+        }
+        public Long getOfflineDuration() {
+            return this.offlineDuration;
+        }
+
+        public ListDirectoriesAndFilesResponseBodyEntries setOfflineUnchangedDuration(Long offlineUnchangedDuration) {
+            this.offlineUnchangedDuration = offlineUnchangedDuration;
+            return this;
+        }
+        public Long getOfflineUnchangedDuration() {
+            return this.offlineUnchangedDuration;
         }
 
         public ListDirectoriesAndFilesResponseBodyEntries setOwner(String owner) {

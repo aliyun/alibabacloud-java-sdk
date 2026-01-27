@@ -70,6 +70,9 @@ public class ModifyFileSystemRequest extends TeaModel {
     }
 
     public static class ModifyFileSystemRequestOptions extends TeaModel {
+        @NameInMap("EnableABE")
+        public Boolean enableABE;
+
         /**
          * <p>Specifies whether to enable the oplock feature. Valid values:</p>
          * <ul>
@@ -89,6 +92,14 @@ public class ModifyFileSystemRequest extends TeaModel {
         public static ModifyFileSystemRequestOptions build(java.util.Map<String, ?> map) throws Exception {
             ModifyFileSystemRequestOptions self = new ModifyFileSystemRequestOptions();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyFileSystemRequestOptions setEnableABE(Boolean enableABE) {
+            this.enableABE = enableABE;
+            return this;
+        }
+        public Boolean getEnableABE() {
+            return this.enableABE;
         }
 
         public ModifyFileSystemRequestOptions setEnableOplock(Boolean enableOplock) {

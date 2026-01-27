@@ -477,6 +477,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     }
 
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions extends TeaModel {
+        @NameInMap("EnableABE")
+        public Boolean enableABE;
+
         /**
          * <p>Specifies whether to enable the oplock feature. Valid values:</p>
          * <ul>
@@ -496,6 +499,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public static DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions build(java.util.Map<String, ?> map) throws Exception {
             DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions setEnableABE(Boolean enableABE) {
+            this.enableABE = enableABE;
+            return this;
+        }
+        public Boolean getEnableABE() {
+            return this.enableABE;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions setEnableOplock(Boolean enableOplock) {
