@@ -14,15 +14,6 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The version of the cluster.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1.18.8</p>
-     */
-    @NameInMap("ClusterVersion")
-    public String clusterVersion;
-
-    /**
      * <strong>example:</strong>
      * <p>172.20.0.0/16</p>
      */
@@ -113,14 +104,6 @@ public class CreateClusterShrinkRequest extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
-    }
-
-    public CreateClusterShrinkRequest setClusterVersion(String clusterVersion) {
-        this.clusterVersion = clusterVersion;
-        return this;
-    }
-    public String getClusterVersion() {
-        return this.clusterVersion;
     }
 
     public CreateClusterShrinkRequest setContainerCidr(String containerCidr) {

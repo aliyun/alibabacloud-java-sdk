@@ -1435,10 +1435,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClusterType", request.clusterType);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterVersion)) {
-            query.put("ClusterVersion", request.clusterVersion);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.containerCidr)) {
             query.put("ContainerCidr", request.containerCidr);
         }
