@@ -743,6 +743,44 @@ public class ListInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstanceResponseBodyResultZoneInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
+        @NameInMap("status")
+        public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
+        @NameInMap("zoneId")
+        public String zoneId;
+
+        public static ListInstanceResponseBodyResultZoneInfos build(java.util.Map<String, ?> map) throws Exception {
+            ListInstanceResponseBodyResultZoneInfos self = new ListInstanceResponseBodyResultZoneInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstanceResponseBodyResultZoneInfos setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListInstanceResponseBodyResultZoneInfos setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
     public static class ListInstanceResponseBodyResult extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
@@ -960,6 +998,16 @@ public class ListInstanceResponseBody extends TeaModel {
          */
         @NameInMap("vpcInstanceId")
         public String vpcInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("zoneCount")
+        public Integer zoneCount;
+
+        @NameInMap("zoneInfos")
+        public java.util.List<ListInstanceResponseBodyResultZoneInfos> zoneInfos;
 
         public static ListInstanceResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResult self = new ListInstanceResponseBodyResult();
@@ -1220,6 +1268,22 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public String getVpcInstanceId() {
             return this.vpcInstanceId;
+        }
+
+        public ListInstanceResponseBodyResult setZoneCount(Integer zoneCount) {
+            this.zoneCount = zoneCount;
+            return this;
+        }
+        public Integer getZoneCount() {
+            return this.zoneCount;
+        }
+
+        public ListInstanceResponseBodyResult setZoneInfos(java.util.List<ListInstanceResponseBodyResultZoneInfos> zoneInfos) {
+            this.zoneInfos = zoneInfos;
+            return this;
+        }
+        public java.util.List<ListInstanceResponseBodyResultZoneInfos> getZoneInfos() {
+            return this.zoneInfos;
         }
 
     }
