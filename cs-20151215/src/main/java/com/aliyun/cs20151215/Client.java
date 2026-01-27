@@ -602,6 +602,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询自愈规则</p>
+     * 
+     * @param request CreateAutoRepairPolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAutoRepairPolicyResponse
+     */
+    public CreateAutoRepairPolicyResponse createAutoRepairPolicyWithOptions(String clusterId, CreateAutoRepairPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSubType)) {
+            body.put("resource_sub_type", request.resourceSubType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("resource_type", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rules)) {
+            body.put("rules", request.rules);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAutoRepairPolicy"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/auto_repair_policies"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAutoRepairPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自愈规则</p>
+     * 
+     * @param request CreateAutoRepairPolicyRequest
+     * @return CreateAutoRepairPolicyResponse
+     */
+    public CreateAutoRepairPolicyResponse createAutoRepairPolicy(String clusterId, CreateAutoRepairPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAutoRepairPolicyWithOptions(clusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.</p>
      * 
      * @param request CreateAutoscalingConfigRequest
@@ -1693,6 +1752,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询自愈规则</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAutoRepairPolicyResponse
+     */
+    public DeleteAutoRepairPolicyResponse deleteAutoRepairPolicyWithOptions(String clusterId, String policyId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAutoRepairPolicy"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/auto_repair_policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAutoRepairPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自愈规则</p>
+     * @return DeleteAutoRepairPolicyResponse
+     */
+    public DeleteAutoRepairPolicyResponse deleteAutoRepairPolicy(String clusterId, String policyId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAutoRepairPolicyWithOptions(clusterId, policyId, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Warning:</p>
      * <ul>
@@ -2301,6 +2397,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeAddonsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自愈规则</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAutoRepairPolicyResponse
+     */
+    public DescribeAutoRepairPolicyResponse describeAutoRepairPolicyWithOptions(String clusterId, String policyId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAutoRepairPolicy"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/auto_repair_policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAutoRepairPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自愈规则</p>
+     * @return DescribeAutoRepairPolicyResponse
+     */
+    public DescribeAutoRepairPolicyResponse describeAutoRepairPolicy(String clusterId, String policyId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeAutoRepairPolicyWithOptions(clusterId, policyId, headers, runtime);
     }
 
     /**
@@ -5071,6 +5204,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询自愈规则</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAutoRepairPoliciesResponse
+     */
+    public ListAutoRepairPoliciesResponse listAutoRepairPoliciesWithOptions(String clusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAutoRepairPolicies"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/auto_repair_policies"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAutoRepairPoliciesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自愈规则</p>
+     * @return ListAutoRepairPoliciesResponse
+     */
+    public ListAutoRepairPoliciesResponse listAutoRepairPolicies(String clusterId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAutoRepairPoliciesWithOptions(clusterId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取集群组件实例的资源列表</p>
      * 
      * @param headers map
@@ -5605,6 +5775,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.migrateClusterWithOptions(clusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自愈规则</p>
+     * 
+     * @param request ModifyAutoRepairPolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAutoRepairPolicyResponse
+     */
+    public ModifyAutoRepairPolicyResponse modifyAutoRepairPolicyWithOptions(String clusterId, String policyId, ModifyAutoRepairPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rules)) {
+            body.put("rules", request.rules);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAutoRepairPolicy"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/auto_repair_policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAutoRepairPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自愈规则</p>
+     * 
+     * @param request ModifyAutoRepairPolicyRequest
+     * @return ModifyAutoRepairPolicyResponse
+     */
+    public ModifyAutoRepairPolicyResponse modifyAutoRepairPolicy(String clusterId, String policyId, ModifyAutoRepairPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyAutoRepairPolicyWithOptions(clusterId, policyId, request, headers, runtime);
     }
 
     /**
