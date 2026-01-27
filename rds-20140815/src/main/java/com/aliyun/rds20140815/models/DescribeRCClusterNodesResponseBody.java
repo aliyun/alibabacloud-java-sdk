@@ -157,6 +157,13 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         public String nodeStatus;
 
         /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("PodCount")
+        public Long podCount;
+
+        /**
          * <p>The runtime of the ACK cluster.</p>
          * 
          * <strong>example:</strong>
@@ -264,6 +271,14 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         }
         public String getNodeStatus() {
             return this.nodeStatus;
+        }
+
+        public DescribeRCClusterNodesResponseBodyNodes setPodCount(Long podCount) {
+            this.podCount = podCount;
+            return this;
+        }
+        public Long getPodCount() {
+            return this.podCount;
         }
 
         public DescribeRCClusterNodesResponseBodyNodes setRuntimeVersion(String runtimeVersion) {

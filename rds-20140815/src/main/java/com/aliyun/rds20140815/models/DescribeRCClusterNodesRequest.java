@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeRCClusterNodesRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>c919424d85a644078ab1575c3a02c****</p>
+     */
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>rcnpf5e3ee4a65104cf0801f94850d37****</p>
+     */
+    @NameInMap("NodePoolId")
+    public String nodePoolId;
+
+    /**
      * <p>The page number.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +61,22 @@ public class DescribeRCClusterNodesRequest extends TeaModel {
     public static DescribeRCClusterNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRCClusterNodesRequest self = new DescribeRCClusterNodesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRCClusterNodesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    public DescribeRCClusterNodesRequest setNodePoolId(String nodePoolId) {
+        this.nodePoolId = nodePoolId;
+        return this;
+    }
+    public String getNodePoolId() {
+        return this.nodePoolId;
     }
 
     public DescribeRCClusterNodesRequest setPageNumber(Long pageNumber) {

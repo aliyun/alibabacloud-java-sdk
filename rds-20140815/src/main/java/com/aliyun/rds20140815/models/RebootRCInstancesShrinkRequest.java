@@ -33,6 +33,13 @@ public class RebootRCInstancesShrinkRequest extends TeaModel {
     public String instanceIdsShrink;
 
     /**
+     * <strong>example:</strong>
+     * <p>2018-01-01T12:05Z</p>
+     */
+    @NameInMap("RebootTime")
+    public String rebootTime;
+
+    /**
      * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +75,14 @@ public class RebootRCInstancesShrinkRequest extends TeaModel {
     }
     public String getInstanceIdsShrink() {
         return this.instanceIdsShrink;
+    }
+
+    public RebootRCInstancesShrinkRequest setRebootTime(String rebootTime) {
+        this.rebootTime = rebootTime;
+        return this;
+    }
+    public String getRebootTime() {
+        return this.rebootTime;
     }
 
     public RebootRCInstancesShrinkRequest setRegionId(String regionId) {

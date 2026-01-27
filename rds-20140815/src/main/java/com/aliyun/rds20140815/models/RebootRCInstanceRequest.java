@@ -42,6 +42,13 @@ public class RebootRCInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>2018-01-01T12:05Z</p>
+     */
+    @NameInMap("RebootTime")
+    public String rebootTime;
+
+    /**
      * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +84,14 @@ public class RebootRCInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public RebootRCInstanceRequest setRebootTime(String rebootTime) {
+        this.rebootTime = rebootTime;
+        return this;
+    }
+    public String getRebootTime() {
+        return this.rebootTime;
     }
 
     public RebootRCInstanceRequest setRegionId(String regionId) {

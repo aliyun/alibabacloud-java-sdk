@@ -118,7 +118,6 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
      * <li><strong>Prepaid</strong>: subscription.</li>
      * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Postpaid</p>

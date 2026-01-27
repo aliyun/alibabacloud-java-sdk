@@ -21,6 +21,13 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     public String gtidExecuted;
 
     /**
+     * <strong>example:</strong>
+     * <p>COMPLETED</p>
+     */
+    @NameInMap("ImportStatus")
+    public String importStatus;
+
+    /**
      * <p>The replication latency. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
@@ -99,6 +106,14 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     }
     public String getGtidExecuted() {
         return this.gtidExecuted;
+    }
+
+    public DescribeDBInstanceReplicationResponseBody setImportStatus(String importStatus) {
+        this.importStatus = importStatus;
+        return this;
+    }
+    public String getImportStatus() {
+        return this.importStatus;
     }
 
     public DescribeDBInstanceReplicationResponseBody setReplicationDelay(String replicationDelay) {
