@@ -5030,96 +5030,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engines</h3>
-     * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS SQL Server</li>
-     * </ul>
-     * <h3><a href="#"></a>References</h3>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
-     * </ul>
-     * <h3><a href="#"></a>Usage</h3>
-     * <ul>
-     * <li>Method 1: Create a custom image by using a snapshot generated from the <strong>system disk</strong>. In this case, specify the SnapshotId and ImageName parameters at the same time in the request.</li>
-     * <li>Method 2: Create a custom image by using an RDS Custom instance. In this case, specify the InstanceId and ImageName parameters at the same time in the request.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a custom image for an RDS Custom instance.</p>
-     * 
-     * @param request CreateRCImageRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateRCImageResponse
-     */
-    public CreateRCImageResponse createRCImageWithOptions(CreateRCImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
-            query.put("ImageName", request.imageName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
-            query.put("SnapshotId", request.snapshotId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateRCImage"),
-            new TeaPair("version", "2014-08-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRCImageResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engines</h3>
-     * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS SQL Server</li>
-     * </ul>
-     * <h3><a href="#"></a>References</h3>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
-     * </ul>
-     * <h3><a href="#"></a>Usage</h3>
-     * <ul>
-     * <li>Method 1: Create a custom image by using a snapshot generated from the <strong>system disk</strong>. In this case, specify the SnapshotId and ImageName parameters at the same time in the request.</li>
-     * <li>Method 2: Create a custom image by using an RDS Custom instance. In this case, specify the InstanceId and ImageName parameters at the same time in the request.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a custom image for an RDS Custom instance.</p>
-     * 
-     * @param request CreateRCImageRequest
-     * @return CreateRCImageResponse
-     */
-    public CreateRCImageResponse createRCImage(CreateRCImageRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createRCImageWithOptions(request, runtime);
-    }
-
-    /**
      * <b>summary</b> : 
      * <p>Creates an edge node pool in the Container Service for Kubernetes (ACK) Edge cluster to which the RDS Custom instance belongs.</p>
      * 
@@ -18492,10 +18402,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DiskId", request.diskId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -26124,54 +26030,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>修改实例向量支持状态</p>
-     * 
-     * @param request ModifyDBInstanceVectorSupportStatusRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ModifyDBInstanceVectorSupportStatusResponse
-     */
-    public ModifyDBInstanceVectorSupportStatusResponse modifyDBInstanceVectorSupportStatusWithOptions(ModifyDBInstanceVectorSupportStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
-            query.put("DBInstanceId", request.DBInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            query.put("Status", request.status);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModifyDBInstanceVectorSupportStatus"),
-            new TeaPair("version", "2014-08-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBInstanceVectorSupportStatusResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>修改实例向量支持状态</p>
-     * 
-     * @param request ModifyDBInstanceVectorSupportStatusRequest
-     * @return ModifyDBInstanceVectorSupportStatusResponse
-     */
-    public ModifyDBInstanceVectorSupportStatusResponse modifyDBInstanceVectorSupportStatus(ModifyDBInstanceVectorSupportStatusRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.modifyDBInstanceVectorSupportStatusWithOptions(request, runtime);
-    }
-
-    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <ul>
@@ -28117,70 +27975,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改块存储属性</p>
-     * 
-     * @param request ModifyRCDiskAttributeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ModifyRCDiskAttributeResponse
-     */
-    public ModifyRCDiskAttributeResponse modifyRCDiskAttributeWithOptions(ModifyRCDiskAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.burstingEnabled)) {
-            query.put("BurstingEnabled", request.burstingEnabled);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.deleteWithInstance)) {
-            query.put("DeleteWithInstance", request.deleteWithInstance);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            query.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
-            query.put("DiskId", request.diskId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.diskName)) {
-            query.put("DiskName", request.diskName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModifyRCDiskAttribute"),
-            new TeaPair("version", "2014-08-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRCDiskAttributeResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>修改块存储属性</p>
-     * 
-     * @param request ModifyRCDiskAttributeRequest
-     * @return ModifyRCDiskAttributeResponse
-     */
-    public ModifyRCDiskAttributeResponse modifyRCDiskAttribute(ModifyRCDiskAttributeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.modifyRCDiskAttributeWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>修改RDS用户磁盘付费类型</p>
      * 
      * @param request ModifyRCDiskChargeTypeRequest
@@ -28190,10 +27984,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyRCDiskChargeTypeResponse modifyRCDiskChargeTypeWithOptions(ModifyRCDiskChargeTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
-            query.put("AutoPay", request.autoPay);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
         }
@@ -28218,20 +28008,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PayType", request.payType);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
-            query.put("Period", request.period);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
             query.put("PromotionCode", request.promotionCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
-            query.put("UsedTime", request.usedTime);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -33252,10 +33034,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.stoppedMode)) {
-            query.put("StoppedMode", request.stoppedMode);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -33328,10 +33106,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.stoppedMode)) {
-            query.put("StoppedMode", request.stoppedMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

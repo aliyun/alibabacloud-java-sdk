@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyRCDiskChargeTypeRequest extends TeaModel {
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
-
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,18 +38,13 @@ public class ModifyRCDiskChargeTypeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>Postpaid</p>
      */
     @NameInMap("PayType")
     public String payType;
-
-    /**
-     * <strong>example:</strong>
-     * <p>Month</p>
-     */
-    @NameInMap("Period")
-    public String period;
 
     /**
      * <strong>example:</strong>
@@ -73,24 +65,9 @@ public class ModifyRCDiskChargeTypeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("UsedTime")
-    public Integer usedTime;
-
     public static ModifyRCDiskChargeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRCDiskChargeTypeRequest self = new ModifyRCDiskChargeTypeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyRCDiskChargeTypeRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
-        return this;
-    }
-    public Boolean getAutoPay() {
-        return this.autoPay;
     }
 
     public ModifyRCDiskChargeTypeRequest setAutoRenew(String autoRenew) {
@@ -141,14 +118,6 @@ public class ModifyRCDiskChargeTypeRequest extends TeaModel {
         return this.payType;
     }
 
-    public ModifyRCDiskChargeTypeRequest setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
     public ModifyRCDiskChargeTypeRequest setPromotionCode(String promotionCode) {
         this.promotionCode = promotionCode;
         return this;
@@ -163,14 +132,6 @@ public class ModifyRCDiskChargeTypeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ModifyRCDiskChargeTypeRequest setUsedTime(Integer usedTime) {
-        this.usedTime = usedTime;
-        return this;
-    }
-    public Integer getUsedTime() {
-        return this.usedTime;
     }
 
 }

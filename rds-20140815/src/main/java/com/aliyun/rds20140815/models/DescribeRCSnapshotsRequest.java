@@ -13,9 +13,6 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
     @NameInMap("DiskId")
     public String diskId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     /**
      * <p>The page number.</p>
      * 
@@ -36,6 +33,7 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -67,14 +65,6 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
     }
     public String getDiskId() {
         return this.diskId;
-    }
-
-    public DescribeRCSnapshotsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public DescribeRCSnapshotsRequest setPageNumber(Long pageNumber) {
