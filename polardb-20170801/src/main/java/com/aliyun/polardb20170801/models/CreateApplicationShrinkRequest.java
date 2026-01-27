@@ -62,6 +62,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("Endpoints")
     public String endpointsShrink;
 
+    @NameInMap("MemApplicationSpec")
+    public String memApplicationSpecShrink;
+
     /**
      * <strong>example:</strong>
      * <p>Postpaid</p>
@@ -103,6 +106,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
 
     /**
      * <strong>example:</strong>
@@ -213,6 +219,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
         return this.endpointsShrink;
     }
 
+    public CreateApplicationShrinkRequest setMemApplicationSpecShrink(String memApplicationSpecShrink) {
+        this.memApplicationSpecShrink = memApplicationSpecShrink;
+        return this;
+    }
+    public String getMemApplicationSpecShrink() {
+        return this.memApplicationSpecShrink;
+    }
+
     public CreateApplicationShrinkRequest setPayType(String payType) {
         this.payType = payType;
         return this;
@@ -259,6 +273,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateApplicationShrinkRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
     public CreateApplicationShrinkRequest setUsedTime(String usedTime) {

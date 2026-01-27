@@ -1753,6 +1753,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.endpointsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.endpoints, "Endpoints", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.memApplicationSpec)) {
+            request.memApplicationSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.memApplicationSpec, "MemApplicationSpec", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
             query.put("ApplicationType", request.applicationType);
@@ -1794,6 +1798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Endpoints", request.endpointsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.memApplicationSpecShrink)) {
+            query.put("MemApplicationSpec", request.memApplicationSpecShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
             query.put("PayType", request.payType);
         }
@@ -1816,6 +1824,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            query.put("SecurityGroupId", request.securityGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
@@ -6680,6 +6692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationIds)) {
             query.put("ApplicationIds", request.applicationIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationTypes)) {
+            query.put("ApplicationTypes", request.applicationTypes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {

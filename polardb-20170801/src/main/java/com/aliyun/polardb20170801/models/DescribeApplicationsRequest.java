@@ -11,6 +11,9 @@ public class DescribeApplicationsRequest extends TeaModel {
     @NameInMap("ApplicationIds")
     public String applicationIds;
 
+    @NameInMap("ApplicationTypes")
+    public String applicationTypes;
+
     /**
      * <strong>example:</strong>
      * <p>pc-**************</p>
@@ -52,6 +55,14 @@ public class DescribeApplicationsRequest extends TeaModel {
     }
     public String getApplicationIds() {
         return this.applicationIds;
+    }
+
+    public DescribeApplicationsRequest setApplicationTypes(String applicationTypes) {
+        this.applicationTypes = applicationTypes;
+        return this;
+    }
+    public String getApplicationTypes() {
+        return this.applicationTypes;
     }
 
     public DescribeApplicationsRequest setDBClusterId(String DBClusterId) {

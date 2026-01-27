@@ -62,6 +62,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Endpoints")
     public java.util.List<CreateApplicationRequestEndpoints> endpoints;
 
+    @NameInMap("MemApplicationSpec")
+    public CreateApplicationRequestMemApplicationSpec memApplicationSpec;
+
     /**
      * <strong>example:</strong>
      * <p>Postpaid</p>
@@ -103,6 +106,9 @@ public class CreateApplicationRequest extends TeaModel {
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
 
     /**
      * <strong>example:</strong>
@@ -213,6 +219,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.endpoints;
     }
 
+    public CreateApplicationRequest setMemApplicationSpec(CreateApplicationRequestMemApplicationSpec memApplicationSpec) {
+        this.memApplicationSpec = memApplicationSpec;
+        return this;
+    }
+    public CreateApplicationRequestMemApplicationSpec getMemApplicationSpec() {
+        return this.memApplicationSpec;
+    }
+
     public CreateApplicationRequest setPayType(String payType) {
         this.payType = payType;
         return this;
@@ -259,6 +273,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateApplicationRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
     public CreateApplicationRequest setUsedTime(String usedTime) {
@@ -477,6 +499,91 @@ public class CreateApplicationRequest extends TeaModel {
         }
         public String getEndpointType() {
             return this.endpointType;
+        }
+
+    }
+
+    public static class CreateApplicationRequestMemApplicationSpec extends TeaModel {
+        @NameInMap("DbName")
+        public String dbName;
+
+        @NameInMap("DbPassword")
+        public String dbPassword;
+
+        @NameInMap("DbUser")
+        public String dbUser;
+
+        @NameInMap("EmbedderModel")
+        public String embedderModel;
+
+        @NameInMap("LlmModel")
+        public String llmModel;
+
+        @NameInMap("ProjectName")
+        public String projectName;
+
+        @NameInMap("RerankerModel")
+        public String rerankerModel;
+
+        public static CreateApplicationRequestMemApplicationSpec build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationRequestMemApplicationSpec self = new CreateApplicationRequestMemApplicationSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setDbName(String dbName) {
+            this.dbName = dbName;
+            return this;
+        }
+        public String getDbName() {
+            return this.dbName;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setDbPassword(String dbPassword) {
+            this.dbPassword = dbPassword;
+            return this;
+        }
+        public String getDbPassword() {
+            return this.dbPassword;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setDbUser(String dbUser) {
+            this.dbUser = dbUser;
+            return this;
+        }
+        public String getDbUser() {
+            return this.dbUser;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setEmbedderModel(String embedderModel) {
+            this.embedderModel = embedderModel;
+            return this;
+        }
+        public String getEmbedderModel() {
+            return this.embedderModel;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setLlmModel(String llmModel) {
+            this.llmModel = llmModel;
+            return this;
+        }
+        public String getLlmModel() {
+            return this.llmModel;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setRerankerModel(String rerankerModel) {
+            this.rerankerModel = rerankerModel;
+            return this;
+        }
+        public String getRerankerModel() {
+            return this.rerankerModel;
         }
 
     }

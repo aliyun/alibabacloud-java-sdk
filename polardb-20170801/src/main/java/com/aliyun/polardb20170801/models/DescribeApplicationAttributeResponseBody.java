@@ -87,6 +87,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @NameInMap("MaintainStartTime")
     public String maintainStartTime;
 
+    @NameInMap("MemApplicationAttribute")
+    public DescribeApplicationAttributeResponseBodyMemApplicationAttribute memApplicationAttribute;
+
     /**
      * <strong>example:</strong>
      * <p>Postpaid</p>
@@ -277,6 +280,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
     public String getMaintainStartTime() {
         return this.maintainStartTime;
+    }
+
+    public DescribeApplicationAttributeResponseBody setMemApplicationAttribute(DescribeApplicationAttributeResponseBodyMemApplicationAttribute memApplicationAttribute) {
+        this.memApplicationAttribute = memApplicationAttribute;
+        return this;
+    }
+    public DescribeApplicationAttributeResponseBodyMemApplicationAttribute getMemApplicationAttribute() {
+        return this.memApplicationAttribute;
     }
 
     public DescribeApplicationAttributeResponseBody setPayType(String payType) {
@@ -830,6 +841,80 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
         public String getPortDescription() {
             return this.portDescription;
+        }
+
+    }
+
+    public static class DescribeApplicationAttributeResponseBodyMemApplicationAttribute extends TeaModel {
+        @NameInMap("DbName")
+        public String dbName;
+
+        @NameInMap("EmbedderModelName")
+        public String embedderModelName;
+
+        @NameInMap("LlmModelName")
+        public String llmModelName;
+
+        @NameInMap("ProjectName")
+        public String projectName;
+
+        @NameInMap("RerankerModelName")
+        public String rerankerModelName;
+
+        @NameInMap("UserName")
+        public String userName;
+
+        public static DescribeApplicationAttributeResponseBodyMemApplicationAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationAttributeResponseBodyMemApplicationAttribute self = new DescribeApplicationAttributeResponseBodyMemApplicationAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setDbName(String dbName) {
+            this.dbName = dbName;
+            return this;
+        }
+        public String getDbName() {
+            return this.dbName;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setEmbedderModelName(String embedderModelName) {
+            this.embedderModelName = embedderModelName;
+            return this;
+        }
+        public String getEmbedderModelName() {
+            return this.embedderModelName;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setLlmModelName(String llmModelName) {
+            this.llmModelName = llmModelName;
+            return this;
+        }
+        public String getLlmModelName() {
+            return this.llmModelName;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setRerankerModelName(String rerankerModelName) {
+            this.rerankerModelName = rerankerModelName;
+            return this;
+        }
+        public String getRerankerModelName() {
+            return this.rerankerModelName;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }
