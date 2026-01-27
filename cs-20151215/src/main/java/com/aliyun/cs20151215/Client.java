@@ -6152,6 +6152,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("kubelet_config", request.kubeletConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeNames)) {
+            body.put("node_names", request.nodeNames);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.osConfig)) {
             body.put("os_config", request.osConfig);
         }

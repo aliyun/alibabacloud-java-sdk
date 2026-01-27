@@ -16,6 +16,9 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     @NameInMap("kubelet_config")
     public KubeletConfig kubeletConfig;
 
+    @NameInMap("node_names")
+    public java.util.List<String> nodeNames;
+
     /**
      * <p>The OS configuration.</p>
      */
@@ -47,6 +50,14 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     }
     public KubeletConfig getKubeletConfig() {
         return this.kubeletConfig;
+    }
+
+    public ModifyNodePoolNodeConfigRequest setNodeNames(java.util.List<String> nodeNames) {
+        this.nodeNames = nodeNames;
+        return this;
+    }
+    public java.util.List<String> getNodeNames() {
+        return this.nodeNames;
     }
 
     public ModifyNodePoolNodeConfigRequest setOsConfig(ModifyNodePoolNodeConfigRequestOsConfig osConfig) {
