@@ -448,6 +448,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
+        @NameInMap("VirtualKubeletIp")
+        public String virtualKubeletIp;
+
         @NameInMap("VirtualNodePoolId")
         public String virtualNodePoolId;
 
@@ -648,6 +651,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public Integer getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setVirtualKubeletIp(String virtualKubeletIp) {
+            this.virtualKubeletIp = virtualKubeletIp;
+            return this;
+        }
+        public String getVirtualKubeletIp() {
+            return this.virtualKubeletIp;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setVirtualNodePoolId(String virtualNodePoolId) {
