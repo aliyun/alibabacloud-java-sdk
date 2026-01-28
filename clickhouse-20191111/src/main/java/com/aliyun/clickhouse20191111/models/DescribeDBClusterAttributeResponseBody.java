@@ -479,6 +479,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("IsExpired")
         public String isExpired;
 
+        @NameInMap("LbKind")
+        public String lbKind;
+
         /**
          * <p>The lock mode of the cluster. Valid values:</p>
          * <ul>
@@ -986,6 +989,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getIsExpired() {
             return this.isExpired;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setLbKind(String lbKind) {
+            this.lbKind = lbKind;
+            return this;
+        }
+        public String getLbKind() {
+            return this.lbKind;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setLockMode(String lockMode) {
