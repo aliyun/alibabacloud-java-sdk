@@ -115,6 +115,9 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         @NameInMap("Mode")
         public String mode;
 
+        @NameInMap("UserOssBucket")
+        public String userOssBucket;
+
         public static CreateDataAgentSessionRequestSessionConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateDataAgentSessionRequestSessionConfig self = new CreateDataAgentSessionRequestSessionConfig();
             return TeaModel.build(map, self);
@@ -166,6 +169,14 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         }
         public String getMode() {
             return this.mode;
+        }
+
+        public CreateDataAgentSessionRequestSessionConfig setUserOssBucket(String userOssBucket) {
+            this.userOssBucket = userOssBucket;
+            return this;
+        }
+        public String getUserOssBucket() {
+            return this.userOssBucket;
         }
 
     }

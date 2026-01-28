@@ -151,6 +151,9 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("Mode")
         public String mode;
 
+        @NameInMap("UserOssBucket")
+        public String userOssBucket;
+
         public static DescribeDataAgentSessionResponseBodyDataSessionConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataAgentSessionResponseBodyDataSessionConfig self = new DescribeDataAgentSessionResponseBodyDataSessionConfig();
             return TeaModel.build(map, self);
@@ -202,6 +205,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         }
         public String getMode() {
             return this.mode;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataSessionConfig setUserOssBucket(String userOssBucket) {
+            this.userOssBucket = userOssBucket;
+            return this;
+        }
+        public String getUserOssBucket() {
+            return this.userOssBucket;
         }
 
     }
