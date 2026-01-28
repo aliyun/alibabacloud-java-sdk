@@ -290,6 +290,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>执行组件动作</p>
+     * 
+     * @param request ExecuteComponentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteComponentResponse
+     */
+    public ExecuteComponentResponse executeComponentWithOptions(ExecuteComponentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.componentActionName)) {
+            body.put("ComponentActionName", request.componentActionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentAssetUuid)) {
+            body.put("ComponentAssetUuid", request.componentAssetUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentInput)) {
+            body.put("ComponentInput", request.componentInput);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentName)) {
+            body.put("ComponentName", request.componentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playBookNodeName)) {
+            body.put("PlayBookNodeName", request.playBookNodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playbookUuid)) {
+            body.put("PlaybookUuid", request.playbookUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteComponent"),
+            new TeaPair("version", "2025-09-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteComponentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>执行组件动作</p>
+     * 
+     * @param request ExecuteComponentRequest
+     * @return ExecuteComponentResponse
+     */
+    public ExecuteComponentResponse executeComponent(ExecuteComponentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.executeComponentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Get playbook details.</p>
      * 
      * @param request GetPlaybookRequest
