@@ -11,6 +11,10 @@ public class ModifyResourceTypeAutoEnableRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 

@@ -12,6 +12,8 @@ public class ModifyVpcFirewallAclEngineModeRequest extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
