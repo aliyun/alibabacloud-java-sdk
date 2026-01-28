@@ -501,6 +501,12 @@ public class UploadDataSyncResponseBody extends TeaModel {
         @NameInMap("Score")
         public Integer score;
 
+        @NameInMap("TyxmPlusCount")
+        public String tyxmPlusCount;
+
+        @NameInMap("TyxmTurboCount")
+        public String tyxmTurboCount;
+
         public static UploadDataSyncResponseBodyDataResultInfo build(java.util.Map<String, ?> map) throws Exception {
             UploadDataSyncResponseBodyDataResultInfo self = new UploadDataSyncResponseBodyDataResultInfo();
             return TeaModel.build(map, self);
@@ -528,6 +534,22 @@ public class UploadDataSyncResponseBody extends TeaModel {
         }
         public Integer getScore() {
             return this.score;
+        }
+
+        public UploadDataSyncResponseBodyDataResultInfo setTyxmPlusCount(String tyxmPlusCount) {
+            this.tyxmPlusCount = tyxmPlusCount;
+            return this;
+        }
+        public String getTyxmPlusCount() {
+            return this.tyxmPlusCount;
+        }
+
+        public UploadDataSyncResponseBodyDataResultInfo setTyxmTurboCount(String tyxmTurboCount) {
+            this.tyxmTurboCount = tyxmTurboCount;
+            return this;
+        }
+        public String getTyxmTurboCount() {
+            return this.tyxmTurboCount;
         }
 
     }

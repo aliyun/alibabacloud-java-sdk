@@ -415,6 +415,12 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         @NameInMap("Score")
         public Integer score;
 
+        @NameInMap("TyxmPlusCount")
+        public String tyxmPlusCount;
+
+        @NameInMap("TyxmTurboCount")
+        public String tyxmTurboCount;
+
         public static UploadDataSyncForLLMResponseBodyDataResultInfo build(java.util.Map<String, ?> map) throws Exception {
             UploadDataSyncForLLMResponseBodyDataResultInfo self = new UploadDataSyncForLLMResponseBodyDataResultInfo();
             return TeaModel.build(map, self);
@@ -434,6 +440,22 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         }
         public Integer getScore() {
             return this.score;
+        }
+
+        public UploadDataSyncForLLMResponseBodyDataResultInfo setTyxmPlusCount(String tyxmPlusCount) {
+            this.tyxmPlusCount = tyxmPlusCount;
+            return this;
+        }
+        public String getTyxmPlusCount() {
+            return this.tyxmPlusCount;
+        }
+
+        public UploadDataSyncForLLMResponseBodyDataResultInfo setTyxmTurboCount(String tyxmTurboCount) {
+            this.tyxmTurboCount = tyxmTurboCount;
+            return this;
+        }
+        public String getTyxmTurboCount() {
+            return this.tyxmTurboCount;
         }
 
     }
