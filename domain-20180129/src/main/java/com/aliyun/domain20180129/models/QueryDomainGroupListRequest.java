@@ -14,6 +14,12 @@ public class QueryDomainGroupListRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("OrderByType")
+    public String orderByType;
+
+    @NameInMap("OrderKeyType")
+    public String orderKeyType;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -47,6 +53,22 @@ public class QueryDomainGroupListRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public QueryDomainGroupListRequest setOrderByType(String orderByType) {
+        this.orderByType = orderByType;
+        return this;
+    }
+    public String getOrderByType() {
+        return this.orderByType;
+    }
+
+    public QueryDomainGroupListRequest setOrderKeyType(String orderKeyType) {
+        this.orderKeyType = orderKeyType;
+        return this;
+    }
+    public String getOrderKeyType() {
+        return this.orderKeyType;
     }
 
     public QueryDomainGroupListRequest setShowDeletingGroup(Boolean showDeletingGroup) {

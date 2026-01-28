@@ -1150,7 +1150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询国际一口价在售域名列表</p>
+     * <p>Queries the list of domain names for fixed-price orders at the international site (alibabacloud.com).</p>
      * 
      * @param request GetIntlFixPriceDomainListUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1182,7 +1182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询国际一口价在售域名列表</p>
+     * <p>Queries the list of domain names for fixed-price orders at the international site (alibabacloud.com).</p>
      * 
      * @param request GetIntlFixPriceDomainListUrlRequest
      * @return GetIntlFixPriceDomainListUrlResponse
@@ -2105,6 +2105,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询域名分组信息</p>
+     * 
      * @param request QueryDomainGroupListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDomainGroupListResponse
@@ -2118,6 +2121,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderByType)) {
+            query.put("OrderByType", request.orderByType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderKeyType)) {
+            query.put("OrderKeyType", request.orderKeyType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.showDeletingGroup)) {
@@ -2146,6 +2157,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询域名分组信息</p>
+     * 
      * @param request QueryDomainGroupListRequest
      * @return QueryDomainGroupListResponse
      */
@@ -2167,6 +2181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ccompany)) {
             query.put("Ccompany", request.ccompany);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dns)) {
+            query.put("Dns", request.dns);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainGroupId)) {

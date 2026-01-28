@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetIntlFixPriceDomainListUrlRequest extends TeaModel {
     /**
+     * <p>The date when the list is exported.</p>
+     * 
      * <strong>example:</strong>
      * <p>20240809</p>
      */

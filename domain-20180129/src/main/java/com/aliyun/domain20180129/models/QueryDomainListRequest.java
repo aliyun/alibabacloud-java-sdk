@@ -13,6 +13,9 @@ public class QueryDomainListRequest extends TeaModel {
     @NameInMap("Ccompany")
     public String ccompany;
 
+    @NameInMap("Dns")
+    public String dns;
+
     /**
      * <p>The ID of the domain name group.</p>
      * 
@@ -198,6 +201,14 @@ public class QueryDomainListRequest extends TeaModel {
     }
     public String getCcompany() {
         return this.ccompany;
+    }
+
+    public QueryDomainListRequest setDns(String dns) {
+        this.dns = dns;
+        return this;
+    }
+    public String getDns() {
+        return this.dns;
     }
 
     public QueryDomainListRequest setDomainGroupId(String domainGroupId) {

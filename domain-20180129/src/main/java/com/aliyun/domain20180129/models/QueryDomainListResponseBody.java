@@ -142,6 +142,25 @@ public class QueryDomainListResponseBody extends TeaModel {
         return this.totalPageNum;
     }
 
+    public static class QueryDomainListResponseBodyDataDomainDnsList extends TeaModel {
+        @NameInMap("DnsList")
+        public java.util.List<String> dnsList;
+
+        public static QueryDomainListResponseBodyDataDomainDnsList build(java.util.Map<String, ?> map) throws Exception {
+            QueryDomainListResponseBodyDataDomainDnsList self = new QueryDomainListResponseBodyDataDomainDnsList();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDomainListResponseBodyDataDomainDnsList setDnsList(java.util.List<String> dnsList) {
+            this.dnsList = dnsList;
+            return this;
+        }
+        public java.util.List<String> getDnsList() {
+            return this.dnsList;
+        }
+
+    }
+
     public static class QueryDomainListResponseBodyDataDomainTagTag extends TeaModel {
         /**
          * <p>The key of the tag added to the resource.</p>
@@ -226,6 +245,9 @@ public class QueryDomainListResponseBody extends TeaModel {
          */
         @NameInMap("ChgholderStatus")
         public String chgholderStatus;
+
+        @NameInMap("DnsList")
+        public QueryDomainListResponseBodyDataDomainDnsList dnsList;
 
         /**
          * <p>The state of real-name verification for the domain name. Valid values:</p>
@@ -441,6 +463,14 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
         public String getChgholderStatus() {
             return this.chgholderStatus;
+        }
+
+        public QueryDomainListResponseBodyDataDomain setDnsList(QueryDomainListResponseBodyDataDomainDnsList dnsList) {
+            this.dnsList = dnsList;
+            return this;
+        }
+        public QueryDomainListResponseBodyDataDomainDnsList getDnsList() {
+            return this.dnsList;
         }
 
         public QueryDomainListResponseBodyDataDomain setDomainAuditStatus(String domainAuditStatus) {
