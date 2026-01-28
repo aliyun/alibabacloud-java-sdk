@@ -6,21 +6,19 @@ import com.aliyun.tea.*;
 public class UpdateClusterRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxljob-c20f7ec9a78</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xx-test-1107</p>
-     */
     @NameInMap("ClusterName")
     public String clusterName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.1.0/24</p>
+     */
+    @NameInMap("IpWhitelist")
+    public String ipWhitelist;
 
     public static UpdateClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClusterRequest self = new UpdateClusterRequest();
@@ -41,6 +39,14 @@ public class UpdateClusterRequest extends TeaModel {
     }
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    public UpdateClusterRequest setIpWhitelist(String ipWhitelist) {
+        this.ipWhitelist = ipWhitelist;
+        return this;
+    }
+    public String getIpWhitelist() {
+        return this.ipWhitelist;
     }
 
 }

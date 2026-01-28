@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ExportWorkflowsRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */

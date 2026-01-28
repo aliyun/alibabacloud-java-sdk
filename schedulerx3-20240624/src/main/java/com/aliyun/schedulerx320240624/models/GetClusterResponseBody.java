@@ -192,6 +192,13 @@ public class GetClusterResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
+         */
+        @NameInMap("IpWhitelist")
+        public String ipWhitelist;
+
+        /**
+         * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("JobNum")
@@ -380,6 +387,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
         public String getIntranetDomain() {
             return this.intranetDomain;
+        }
+
+        public GetClusterResponseBodyData setIpWhitelist(String ipWhitelist) {
+            this.ipWhitelist = ipWhitelist;
+            return this;
+        }
+        public String getIpWhitelist() {
+            return this.ipWhitelist;
         }
 
         public GetClusterResponseBodyData setJobNum(Integer jobNum) {
