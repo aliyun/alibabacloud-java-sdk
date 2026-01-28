@@ -5,9 +5,53 @@ import com.aliyun.tea.*;
 
 public class ResizeDiskRequest extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>The new disk capacity. Unit: GiB. Valid values:</p>
+     * <ul>
+     * <li><p>For a system disk:</p>
+     * <ul>
+     * <li><p>Basic disk (cloud): 20 to 500.</p>
+     * </li>
+     * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.</p>
+     * <ul>
+     * <li>PL0 ESSD: 1 to 2048.</li>
+     * <li>PL1 ESSD: 20 to 2048.</li>
+     * <li>PL2 ESSD: 461 to 2048.</li>
+     * <li>PL3 ESSD: 1261 to 2048.</li>
+     * </ul>
+     * </li>
+     * <li><p>ESSD AutoPL disk: 1 to 2048.</p>
+     * </li>
+     * <li><p>Other disk categories: 20 to 2048.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p>For a data disk:</p>
+     * <ul>
+     * <li><p>Ultra disk (cloud_efficiency): 20 to 32768.</p>
+     * </li>
+     * <li><p>Standard SSD (cloud_ssd): 20 to 32768.</p>
+     * </li>
+     * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.`` To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <code>PerformanceLevel</code> value in the response.</p>
+     * <ul>
+     * <li>PL0 ESSD: 1 to 65536.</li>
+     * <li>PL1 ESSD: 20 to 65536.</li>
+     * <li>PL2 ESSD: 461 to 65536.</li>
+     * <li>PL3 ESSD: 1261 to 65536.</li>
+     * </ul>
+     * </li>
+     * <li><p>Basic disk (cloud): 5 to 2000.</p>
+     * </li>
+     * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 65536.</p>
+     * </li>
+     * <li><p>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</p>
+     * </li>
+     * <li><p>Premium elastic ephemeral disk (elastic_ephemeral_disk_premium): 64 to 8192.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * <blockquote>
-     * <p>This parameter is returned only when you resize subscription disks.</p>
+     * <p> The new disk capacity must be larger than the original disk capacity. Otherwise, an error is reported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

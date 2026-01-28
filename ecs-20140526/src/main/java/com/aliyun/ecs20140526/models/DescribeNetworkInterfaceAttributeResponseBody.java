@@ -28,9 +28,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The connection tracking configurations of the ENI.</p>
-     * <p>Before you use this parameter, learn about how to manage connection timeout periods. For more information, see <a href="https://help.aliyun.com/document_detail/2865958.html">Manage connection timeout periods</a>.</p>
+     * <p>Before you use the parameter, familiarize yourself with how to manage the timeout periods of connections. For more information, see <a href="https://help.aliyun.com/document_detail/2865958.html">Mange connection timeout periods</a>.</p>
      * <blockquote>
-     * <p> This parameter is returned only if <code>Attribute</code> is set to <code>connectionTrackingConfiguration</code>.</p>
+     * <p> This parameter is returned only when the value of the input parameter <code>Attribute</code> is: <code>connectionTrackingConfiguration</code>.</p>
      * </blockquote>
      */
     @NameInMap("ConnectionTrackingConfiguration")

@@ -27,8 +27,8 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The maximum number of entries per page.</p>
-     * <p>Maximum value: 100</p>
+     * <p>The maximum number of entries to return on each page.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -58,9 +58,6 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
      * <li>ElasticityAssurance: the general-purpose elasticity assurance. RecurrenceRules is not specified for a general-purpose elasticity assurance.</li>
      * <li>TimeDivisionElasticityAssurance: the time-segmented elasticity assurance. RecurrenceRules is specified for a time-segmented assurance.</li>
      * </ul>
-     * <blockquote>
-     * <p> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ElasticityAssurance</p>
