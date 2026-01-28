@@ -11,6 +11,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("AiNodeType")
     public String aiNodeType;
 
+    @NameInMap("ApiKey")
+    public String apiKey;
+
     /**
      * <strong>example:</strong>
      * <p>2020-08-14T05:58:42Z</p>
@@ -200,6 +203,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getAiNodeType() {
         return this.aiNodeType;
+    }
+
+    public DescribeAIDBClusterAttributeResponseBody setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     public DescribeAIDBClusterAttributeResponseBody setCreationTime(String creationTime) {
