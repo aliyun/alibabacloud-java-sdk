@@ -90,6 +90,9 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     }
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails extends TeaModel {
+        @NameInMap("AllocatedUnit")
+        public Integer allocatedUnit;
+
         /**
          * <strong>example:</strong>
          * <p>ADB.MLLarge.2</p>
@@ -107,6 +110,14 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         public static GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails build(java.util.Map<String, ?> map) throws Exception {
             GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails self = new GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails();
             return TeaModel.build(map, self);
+        }
+
+        public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails setAllocatedUnit(Integer allocatedUnit) {
+            this.allocatedUnit = allocatedUnit;
+            return this;
+        }
+        public Integer getAllocatedUnit() {
+            return this.allocatedUnit;
         }
 
         public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails setGpuModel(String gpuModel) {
