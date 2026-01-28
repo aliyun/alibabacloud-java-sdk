@@ -189,6 +189,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>批量删除对练任务</p>
+     * 
+     * @param tmpReq BatchDeletePracticeTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchDeletePracticeTaskResponse
+     */
+    public BatchDeletePracticeTaskResponse batchDeletePracticeTaskWithOptions(BatchDeletePracticeTaskRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchDeletePracticeTaskShrinkRequest request = new BatchDeletePracticeTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskIds)) {
+            request.taskIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskIds, "taskIds", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.idempotentId)) {
+            query.put("idempotentId", request.idempotentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIdsShrink)) {
+            query.put("taskIds", request.taskIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchDeletePracticeTask"),
+            new TeaPair("version", "2024-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/aicoach/batchDeletePracticeTask"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeletePracticeTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量删除对练任务</p>
+     * 
+     * @param request BatchDeletePracticeTaskRequest
+     * @return BatchDeletePracticeTaskResponse
+     */
+    public BatchDeletePracticeTaskResponse batchDeletePracticeTask(BatchDeletePracticeTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchDeletePracticeTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>批量查询项目信息</p>
      * 
      * @param tmpReq BatchGetProjectTaskRequest
