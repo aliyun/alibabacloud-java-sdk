@@ -84,6 +84,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>将应用添加到授权规则</p>
+     * 
+     * @param request AddApplicationToAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddApplicationToAuthorizationRuleResponse
+     */
+    public AddApplicationToAuthorizationRuleResponse addApplicationToAuthorizationRuleWithOptions(AddApplicationToAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityPeriod)) {
+            query.put("ValidityPeriod", request.validityPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityType)) {
+            query.put("ValidityType", request.validityType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddApplicationToAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddApplicationToAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将应用添加到授权规则</p>
+     * 
+     * @param request AddApplicationToAuthorizationRuleRequest
+     * @return AddApplicationToAuthorizationRuleResponse
+     */
+    public AddApplicationToAuthorizationRuleResponse addApplicationToAuthorizationRule(AddApplicationToAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addApplicationToAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>添加条款到品牌</p>
      * 
      * @param request AddCustomPrivacyPoliciesToBrandRequest
@@ -132,6 +198,138 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddCustomPrivacyPoliciesToBrandResponse addCustomPrivacyPoliciesToBrand(AddCustomPrivacyPoliciesToBrandRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addCustomPrivacyPoliciesToBrandWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将组添加到授权规则</p>
+     * 
+     * @param request AddGroupToAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddGroupToAuthorizationRuleResponse
+     */
+    public AddGroupToAuthorizationRuleResponse addGroupToAuthorizationRuleWithOptions(AddGroupToAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityPeriod)) {
+            query.put("ValidityPeriod", request.validityPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityType)) {
+            query.put("ValidityType", request.validityType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddGroupToAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddGroupToAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将组添加到授权规则</p>
+     * 
+     * @param request AddGroupToAuthorizationRuleRequest
+     * @return AddGroupToAuthorizationRuleResponse
+     */
+    public AddGroupToAuthorizationRuleResponse addGroupToAuthorizationRule(AddGroupToAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addGroupToAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将账户添加到授权规则</p>
+     * 
+     * @param request AddUserToAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddUserToAuthorizationRuleResponse
+     */
+    public AddUserToAuthorizationRuleResponse addUserToAuthorizationRuleWithOptions(AddUserToAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityPeriod)) {
+            query.put("ValidityPeriod", request.validityPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityType)) {
+            query.put("ValidityType", request.validityType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddUserToAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddUserToAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将账户添加到授权规则</p>
+     * 
+     * @param request AddUserToAuthorizationRuleRequest
+     * @return AddUserToAuthorizationRuleResponse
+     */
+    public AddUserToAuthorizationRuleResponse addUserToAuthorizationRule(AddUserToAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addUserToAuthorizationRuleWithOptions(request, runtime);
     }
 
     /**
@@ -1062,6 +1260,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateApplicationTokenResponse createApplicationToken(CreateApplicationTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createApplicationTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建授权资源</p>
+     * 
+     * @param request CreateAuthorizationResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAuthorizationResourceResponse
+     */
+    public CreateAuthorizationResourceResponse createAuthorizationResourceWithOptions(CreateAuthorizationResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationResourceEntityId)) {
+            query.put("AuthorizationResourceEntityId", request.authorizationResourceEntityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationResourceEntityType)) {
+            query.put("AuthorizationResourceEntityType", request.authorizationResourceEntityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAuthorizationResource"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAuthorizationResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建授权资源</p>
+     * 
+     * @param request CreateAuthorizationResourceRequest
+     * @return CreateAuthorizationResourceResponse
+     */
+    public CreateAuthorizationResourceResponse createAuthorizationResource(CreateAuthorizationResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAuthorizationResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建授权规则</p>
+     * 
+     * @param request CreateAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAuthorizationRuleResponse
+     */
+    public CreateAuthorizationRuleResponse createAuthorizationRuleWithOptions(CreateAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationResourceScope)) {
+            query.put("AuthorizationResourceScope", request.authorizationResourceScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleName)) {
+            query.put("AuthorizationRuleName", request.authorizationRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建授权规则</p>
+     * 
+     * @param request CreateAuthorizationRuleRequest
+     * @return CreateAuthorizationRuleResponse
+     */
+    public CreateAuthorizationRuleResponse createAuthorizationRule(CreateAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAuthorizationRuleWithOptions(request, runtime);
     }
 
     /**
@@ -2514,6 +2840,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除授权资源</p>
+     * 
+     * @param request DeleteAuthorizationResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAuthorizationResourceResponse
+     */
+    public DeleteAuthorizationResourceResponse deleteAuthorizationResourceWithOptions(DeleteAuthorizationResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationResourceId)) {
+            query.put("AuthorizationResourceId", request.authorizationResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAuthorizationResource"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAuthorizationResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除授权资源</p>
+     * 
+     * @param request DeleteAuthorizationResourceRequest
+     * @return DeleteAuthorizationResourceResponse
+     */
+    public DeleteAuthorizationResourceResponse deleteAuthorizationResource(DeleteAuthorizationResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAuthorizationResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除授权规则</p>
+     * 
+     * @param request DeleteAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAuthorizationRuleResponse
+     */
+    public DeleteAuthorizationRuleResponse deleteAuthorizationRuleWithOptions(DeleteAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除授权规则</p>
+     * 
+     * @param request DeleteAuthorizationRuleRequest
+     * @return DeleteAuthorizationRuleResponse
+     */
+    public DeleteAuthorizationRuleResponse deleteAuthorizationRule(DeleteAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除品牌</p>
      * 
      * @param request DeleteBrandRequest
@@ -3952,6 +4378,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>禁用授权规则</p>
+     * 
+     * @param request DisableAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableAuthorizationRuleResponse
+     */
+    public DisableAuthorizationRuleResponse disableAuthorizationRuleWithOptions(DisableAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用授权规则</p>
+     * 
+     * @param request DisableAuthorizationRuleRequest
+     * @return DisableAuthorizationRuleResponse
+     */
+    public DisableAuthorizationRuleResponse disableAuthorizationRule(DisableAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>禁用品牌</p>
      * 
      * @param request DisableBrandRequest
@@ -5086,6 +5566,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnableApplicationTokenResponse enableApplicationToken(EnableApplicationTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableApplicationTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用授权规则</p>
+     * 
+     * @param request EnableAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableAuthorizationRuleResponse
+     */
+    public EnableAuthorizationRuleResponse enableAuthorizationRuleWithOptions(EnableAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用授权规则</p>
+     * 
+     * @param request EnableAuthorizationRuleRequest
+     * @return EnableAuthorizationRuleResponse
+     */
+    public EnableAuthorizationRuleResponse enableAuthorizationRule(EnableAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableAuthorizationRuleWithOptions(request, runtime);
     }
 
     /**
@@ -6364,6 +6898,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetApplicationTemplateResponse getApplicationTemplate(GetApplicationTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getApplicationTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取授权资源信息</p>
+     * 
+     * @param request GetAuthorizationResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAuthorizationResourceResponse
+     */
+    public GetAuthorizationResourceResponse getAuthorizationResourceWithOptions(GetAuthorizationResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationResourceId)) {
+            query.put("AuthorizationResourceId", request.authorizationResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAuthorizationResource"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAuthorizationResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取授权资源信息</p>
+     * 
+     * @param request GetAuthorizationResourceRequest
+     * @return GetAuthorizationResourceResponse
+     */
+    public GetAuthorizationResourceResponse getAuthorizationResource(GetAuthorizationResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAuthorizationResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取授权规则信息</p>
+     * 
+     * @param request GetAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAuthorizationRuleResponse
+     */
+    public GetAuthorizationRuleResponse getAuthorizationRuleWithOptions(GetAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取授权规则信息</p>
+     * 
+     * @param request GetAuthorizationRuleRequest
+     * @return GetAuthorizationRuleResponse
+     */
+    public GetAuthorizationRuleResponse getAuthorizationRule(GetAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAuthorizationRuleWithOptions(request, runtime);
     }
 
     /**
@@ -8180,6 +8814,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询授权规则关联的应用列表</p>
+     * 
+     * @param request ListApplicationsForAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListApplicationsForAuthorizationRuleResponse
+     */
+    public ListApplicationsForAuthorizationRuleResponse listApplicationsForAuthorizationRuleWithOptions(ListApplicationsForAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApplicationsForAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListApplicationsForAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询授权规则关联的应用列表</p>
+     * 
+     * @param request ListApplicationsForAuthorizationRuleRequest
+     * @return ListApplicationsForAuthorizationRuleResponse
+     */
+    public ListApplicationsForAuthorizationRuleResponse listApplicationsForAuthorizationRule(ListApplicationsForAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listApplicationsForAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询一个EIAM组可访问的应用列表</p>
      * 
      * @param request ListApplicationsForGroupRequest
@@ -8482,6 +9176,290 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListApplicationsForUserResponse listApplicationsForUser(ListApplicationsForUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listApplicationsForUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询授权资源信息列表</p>
+     * 
+     * @param request ListAuthorizationResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthorizationResourcesResponse
+     */
+    public ListAuthorizationResourcesResponse listAuthorizationResourcesWithOptions(ListAuthorizationResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizationResources"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizationResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询授权资源信息列表</p>
+     * 
+     * @param request ListAuthorizationResourcesRequest
+     * @return ListAuthorizationResourcesResponse
+     */
+    public ListAuthorizationResourcesResponse listAuthorizationResources(ListAuthorizationResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorizationResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询授权规则信息列表</p>
+     * 
+     * @param request ListAuthorizationRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthorizationRulesResponse
+     */
+    public ListAuthorizationRulesResponse listAuthorizationRulesWithOptions(ListAuthorizationRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizationRules"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizationRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询授权规则信息列表</p>
+     * 
+     * @param request ListAuthorizationRulesRequest
+     * @return ListAuthorizationRulesResponse
+     */
+    public ListAuthorizationRulesResponse listAuthorizationRules(ListAuthorizationRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorizationRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询应用关联的授权规则信息列表</p>
+     * 
+     * @param request ListAuthorizationRulesForApplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthorizationRulesForApplicationResponse
+     */
+    public ListAuthorizationRulesForApplicationResponse listAuthorizationRulesForApplicationWithOptions(ListAuthorizationRulesForApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizationRulesForApplication"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizationRulesForApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询应用关联的授权规则信息列表</p>
+     * 
+     * @param request ListAuthorizationRulesForApplicationRequest
+     * @return ListAuthorizationRulesForApplicationResponse
+     */
+    public ListAuthorizationRulesForApplicationResponse listAuthorizationRulesForApplication(ListAuthorizationRulesForApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorizationRulesForApplicationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询组关联的授权规则信息列表</p>
+     * 
+     * @param request ListAuthorizationRulesForGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthorizationRulesForGroupResponse
+     */
+    public ListAuthorizationRulesForGroupResponse listAuthorizationRulesForGroupWithOptions(ListAuthorizationRulesForGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizationRulesForGroup"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizationRulesForGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询组关联的授权规则信息列表</p>
+     * 
+     * @param request ListAuthorizationRulesForGroupRequest
+     * @return ListAuthorizationRulesForGroupResponse
+     */
+    public ListAuthorizationRulesForGroupResponse listAuthorizationRulesForGroup(ListAuthorizationRulesForGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorizationRulesForGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户关联的授权规则信息列表</p>
+     * 
+     * @param request ListAuthorizationRulesForUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthorizationRulesForUserResponse
+     */
+    public ListAuthorizationRulesForUserResponse listAuthorizationRulesForUserWithOptions(ListAuthorizationRulesForUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizationRulesForUser"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizationRulesForUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户关联的授权规则信息列表</p>
+     * 
+     * @param request ListAuthorizationRulesForUserRequest
+     * @return ListAuthorizationRulesForUserResponse
+     */
+    public ListAuthorizationRulesForUserResponse listAuthorizationRulesForUser(ListAuthorizationRulesForUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorizationRulesForUserWithOptions(request, runtime);
     }
 
     /**
@@ -9416,6 +10394,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListGroupsForApplicationResponse listGroupsForApplication(ListGroupsForApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listGroupsForApplicationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询授权规则关联的组列表</p>
+     * 
+     * @param request ListGroupsForAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGroupsForAuthorizationRuleResponse
+     */
+    public ListGroupsForAuthorizationRuleResponse listGroupsForAuthorizationRuleWithOptions(ListGroupsForAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGroupsForAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGroupsForAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询授权规则关联的组列表</p>
+     * 
+     * @param request ListGroupsForAuthorizationRuleRequest
+     * @return ListGroupsForAuthorizationRuleResponse
+     */
+    public ListGroupsForAuthorizationRuleResponse listGroupsForAuthorizationRule(ListGroupsForAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listGroupsForAuthorizationRuleWithOptions(request, runtime);
     }
 
     /**
@@ -10608,6 +11646,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询授权规则关联的账户列表</p>
+     * 
+     * @param request ListUsersForAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUsersForAuthorizationRuleResponse
+     */
+    public ListUsersForAuthorizationRuleResponse listUsersForAuthorizationRuleWithOptions(ListUsersForAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUsersForAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUsersForAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询授权规则关联的账户列表</p>
+     * 
+     * @param request ListUsersForAuthorizationRuleRequest
+     * @return ListUsersForAuthorizationRuleResponse
+     */
+    public ListUsersForAuthorizationRuleResponse listUsersForAuthorizationRule(ListUsersForAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUsersForAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the information of accounts in an Employee Identity and Access Management (EIAM) group of Identity as a Service (IDaaS).</p>
      * 
      * @param request ListUsersForGroupRequest
@@ -10940,6 +12038,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>将应用从授权规则中解除</p>
+     * 
+     * @param request RemoveApplicationFromAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveApplicationFromAuthorizationRuleResponse
+     */
+    public RemoveApplicationFromAuthorizationRuleResponse removeApplicationFromAuthorizationRuleWithOptions(RemoveApplicationFromAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveApplicationFromAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveApplicationFromAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将应用从授权规则中解除</p>
+     * 
+     * @param request RemoveApplicationFromAuthorizationRuleRequest
+     * @return RemoveApplicationFromAuthorizationRuleResponse
+     */
+    public RemoveApplicationFromAuthorizationRuleResponse removeApplicationFromAuthorizationRule(RemoveApplicationFromAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeApplicationFromAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>移除品牌关联条款</p>
      * 
      * @param request RemoveCustomPrivacyPoliciesFromBrandRequest
@@ -10988,6 +12138,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveCustomPrivacyPoliciesFromBrandResponse removeCustomPrivacyPoliciesFromBrand(RemoveCustomPrivacyPoliciesFromBrandRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeCustomPrivacyPoliciesFromBrandWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将组从授权规则中解除</p>
+     * 
+     * @param request RemoveGroupFromAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveGroupFromAuthorizationRuleResponse
+     */
+    public RemoveGroupFromAuthorizationRuleResponse removeGroupFromAuthorizationRuleWithOptions(RemoveGroupFromAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveGroupFromAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveGroupFromAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将组从授权规则中解除</p>
+     * 
+     * @param request RemoveGroupFromAuthorizationRuleRequest
+     * @return RemoveGroupFromAuthorizationRuleResponse
+     */
+    public RemoveGroupFromAuthorizationRuleResponse removeGroupFromAuthorizationRule(RemoveGroupFromAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeGroupFromAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将账户从授权规则中解除</p>
+     * 
+     * @param request RemoveUserFromAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveUserFromAuthorizationRuleResponse
+     */
+    public RemoveUserFromAuthorizationRuleResponse removeUserFromAuthorizationRuleWithOptions(RemoveUserFromAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveUserFromAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveUserFromAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将账户从授权规则中解除</p>
+     * 
+     * @param request RemoveUserFromAuthorizationRuleRequest
+     * @return RemoveUserFromAuthorizationRuleResponse
+     */
+    public RemoveUserFromAuthorizationRuleResponse removeUserFromAuthorizationRule(RemoveUserFromAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeUserFromAuthorizationRuleWithOptions(request, runtime);
     }
 
     /**
@@ -13258,6 +14512,324 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateApplicationTokenExpirationTimeResponse updateApplicationTokenExpirationTime(UpdateApplicationTokenExpirationTimeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateApplicationTokenExpirationTimeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新授权规则信息</p>
+     * 
+     * @param request UpdateAuthorizationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAuthorizationRuleResponse
+     */
+    public UpdateAuthorizationRuleResponse updateAuthorizationRuleWithOptions(UpdateAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationResourceScope)) {
+            query.put("AuthorizationResourceScope", request.authorizationResourceScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleName)) {
+            query.put("AuthorizationRuleName", request.authorizationRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAuthorizationRule"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAuthorizationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新授权规则信息</p>
+     * 
+     * @param request UpdateAuthorizationRuleRequest
+     * @return UpdateAuthorizationRuleResponse
+     */
+    public UpdateAuthorizationRuleResponse updateAuthorizationRule(UpdateAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新授权规则应用关联关系属性</p>
+     * 
+     * @param request UpdateAuthorizationRuleApplicationAttachmentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAuthorizationRuleApplicationAttachmentResponse
+     */
+    public UpdateAuthorizationRuleApplicationAttachmentResponse updateAuthorizationRuleApplicationAttachmentWithOptions(UpdateAuthorizationRuleApplicationAttachmentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityPeriod)) {
+            query.put("ValidityPeriod", request.validityPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityType)) {
+            query.put("ValidityType", request.validityType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAuthorizationRuleApplicationAttachment"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAuthorizationRuleApplicationAttachmentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新授权规则应用关联关系属性</p>
+     * 
+     * @param request UpdateAuthorizationRuleApplicationAttachmentRequest
+     * @return UpdateAuthorizationRuleApplicationAttachmentResponse
+     */
+    public UpdateAuthorizationRuleApplicationAttachmentResponse updateAuthorizationRuleApplicationAttachment(UpdateAuthorizationRuleApplicationAttachmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAuthorizationRuleApplicationAttachmentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新授权规则描述信息</p>
+     * 
+     * @param request UpdateAuthorizationRuleDescriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAuthorizationRuleDescriptionResponse
+     */
+    public UpdateAuthorizationRuleDescriptionResponse updateAuthorizationRuleDescriptionWithOptions(UpdateAuthorizationRuleDescriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAuthorizationRuleDescription"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAuthorizationRuleDescriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新授权规则描述信息</p>
+     * 
+     * @param request UpdateAuthorizationRuleDescriptionRequest
+     * @return UpdateAuthorizationRuleDescriptionResponse
+     */
+    public UpdateAuthorizationRuleDescriptionResponse updateAuthorizationRuleDescription(UpdateAuthorizationRuleDescriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAuthorizationRuleDescriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新授权规则组关联关系属性</p>
+     * 
+     * @param request UpdateAuthorizationRuleGroupAttachmentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAuthorizationRuleGroupAttachmentResponse
+     */
+    public UpdateAuthorizationRuleGroupAttachmentResponse updateAuthorizationRuleGroupAttachmentWithOptions(UpdateAuthorizationRuleGroupAttachmentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityPeriod)) {
+            query.put("ValidityPeriod", request.validityPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityType)) {
+            query.put("ValidityType", request.validityType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAuthorizationRuleGroupAttachment"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAuthorizationRuleGroupAttachmentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新授权规则组关联关系属性</p>
+     * 
+     * @param request UpdateAuthorizationRuleGroupAttachmentRequest
+     * @return UpdateAuthorizationRuleGroupAttachmentResponse
+     */
+    public UpdateAuthorizationRuleGroupAttachmentResponse updateAuthorizationRuleGroupAttachment(UpdateAuthorizationRuleGroupAttachmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAuthorizationRuleGroupAttachmentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新授权规则账户关联关系属性</p>
+     * 
+     * @param request UpdateAuthorizationRuleUserAttachmentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAuthorizationRuleUserAttachmentResponse
+     */
+    public UpdateAuthorizationRuleUserAttachmentResponse updateAuthorizationRuleUserAttachmentWithOptions(UpdateAuthorizationRuleUserAttachmentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityPeriod)) {
+            query.put("ValidityPeriod", request.validityPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityType)) {
+            query.put("ValidityType", request.validityType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAuthorizationRuleUserAttachment"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAuthorizationRuleUserAttachmentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新授权规则账户关联关系属性</p>
+     * 
+     * @param request UpdateAuthorizationRuleUserAttachmentRequest
+     * @return UpdateAuthorizationRuleUserAttachmentResponse
+     */
+    public UpdateAuthorizationRuleUserAttachmentResponse updateAuthorizationRuleUserAttachment(UpdateAuthorizationRuleUserAttachmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAuthorizationRuleUserAttachmentWithOptions(request, runtime);
     }
 
     /**
