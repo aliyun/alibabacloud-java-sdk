@@ -121,6 +121,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>添加跨账号信息</p>
+     * 
+     * @param request AddCrossAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddCrossAccountResponse
+     */
+    public AddCrossAccountResponse addCrossAccountWithOptions(AddCrossAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alias)) {
+            query.put("Alias", request.alias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountRoleName)) {
+            query.put("CrossAccountRoleName", request.crossAccountRoleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountType)) {
+            query.put("CrossAccountType", request.crossAccountType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountUserId)) {
+            query.put("CrossAccountUserId", request.crossAccountUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddCrossAccount"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCrossAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加跨账号信息</p>
+     * 
+     * @param request AddCrossAccountRequest
+     * @return AddCrossAccountResponse
+     */
+    public AddCrossAccountResponse addCrossAccount(AddCrossAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addCrossAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Cancels a backup job.</p>
      * 
      * @param request CancelBackupJobRequest
@@ -1957,6 +2013,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteClientResponse deleteClient(DeleteClientRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteClientWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除跨账号信息</p>
+     * 
+     * @param request DeleteCrossAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCrossAccountResponse
+     */
+    public DeleteCrossAccountResponse deleteCrossAccountWithOptions(DeleteCrossAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountRoleName)) {
+            query.put("CrossAccountRoleName", request.crossAccountRoleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountType)) {
+            query.put("CrossAccountType", request.crossAccountType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountUserId)) {
+            query.put("CrossAccountUserId", request.crossAccountUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCrossAccount"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCrossAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除跨账号信息</p>
+     * 
+     * @param request DeleteCrossAccountRequest
+     * @return DeleteCrossAccountResponse
+     */
+    public DeleteCrossAccountResponse deleteCrossAccount(DeleteCrossAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCrossAccountWithOptions(request, runtime);
     }
 
     /**

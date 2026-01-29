@@ -1,3 +1,8 @@
+2026-01-29 Version: 2.4.0
+- Support API AddCrossAccount.
+- Support API DeleteCrossAccount.
+
+
 2026-01-06 Version: 2.3.1
 - Update API DescribeCrossAccounts: add response parameters Body.CrossAccounts.$.CrossAccountType.
 
