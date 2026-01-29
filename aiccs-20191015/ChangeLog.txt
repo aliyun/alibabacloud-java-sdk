@@ -1,3 +1,7 @@
+2026-01-29 Version: 3.5.0
+- Support API QueryConversationDetailInfoNew.
+
+
 2026-01-13 Version: 3.4.0
 - Support API QueryInboundCallId.
 
