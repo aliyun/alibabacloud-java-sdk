@@ -279,6 +279,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
 
+        @NameInMap("EnableIdle")
+        public String enableIdle;
+
         /**
          * <p>The number of instances.</p>
          * 
@@ -454,6 +457,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setEnableIdle(String enableIdle) {
+            this.enableIdle = enableIdle;
+            return this;
+        }
+        public String getEnableIdle() {
+            return this.enableIdle;
         }
 
         public ListApplicationsResponseBodyDataApplicationsChildren setInstances(Integer instances) {

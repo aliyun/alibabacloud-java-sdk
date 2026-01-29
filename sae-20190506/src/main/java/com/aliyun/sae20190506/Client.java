@@ -5152,6 +5152,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Executes a job.</p>
+     * 
      * @param request ExecJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5219,6 +5222,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Executes a job.</p>
+     * 
      * @param request ExecJobRequest
      * @return ExecJobResponse
      */
@@ -6025,6 +6031,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listAppVersionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询服务实例列表</p>
+     * 
+     * @param request ListApplicationCenterServiceInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListApplicationCenterServiceInstancesResponse
+     */
+    public ListApplicationCenterServiceInstancesResponse listApplicationCenterServiceInstancesWithOptions(ListApplicationCenterServiceInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApplicationCenterServiceInstances"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/cas/v5/app/listApplicationCenterServiceInstances"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListApplicationCenterServiceInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询服务实例列表</p>
+     * 
+     * @param request ListApplicationCenterServiceInstancesRequest
+     * @return ListApplicationCenterServiceInstancesResponse
+     */
+    public ListApplicationCenterServiceInstancesResponse listApplicationCenterServiceInstances(ListApplicationCenterServiceInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listApplicationCenterServiceInstancesWithOptions(request, headers, runtime);
     }
 
     /**
