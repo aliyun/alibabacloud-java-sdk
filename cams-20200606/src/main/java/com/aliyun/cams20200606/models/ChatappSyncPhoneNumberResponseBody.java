@@ -116,7 +116,289 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2026-01-01</p>
+         */
+        @NameInMap("Date")
+        public String date;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2359</p>
+         */
+        @NameInMap("EndTime")
+        public String endTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0000</p>
+         */
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule build(java.util.Map<String, ?> map) throws Exception {
+            ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule self = new ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule setDate(String date) {
+            this.date = date;
+            return this;
+        }
+        public String getDate() {
+            return this.date;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2359</p>
+         */
+        @NameInMap("CloseTime")
+        public String closeTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>MONDAY</p>
+         */
+        @NameInMap("DayOfWeek")
+        public String dayOfWeek;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0000</p>
+         */
+        @NameInMap("OpenTime")
+        public String openTime;
+
+        public static ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours build(java.util.Map<String, ?> map) throws Exception {
+            ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours self = new ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours setCloseTime(String closeTime) {
+            this.closeTime = closeTime;
+            return this;
+        }
+        public String getCloseTime() {
+            return this.closeTime;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours setDayOfWeek(String dayOfWeek) {
+            this.dayOfWeek = dayOfWeek;
+            return this;
+        }
+        public String getDayOfWeek() {
+            return this.dayOfWeek;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours setOpenTime(String openTime) {
+            this.openTime = openTime;
+            return this;
+        }
+        public String getOpenTime() {
+            return this.openTime;
+        }
+
+    }
+
+    public static class ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours extends TeaModel {
+        @NameInMap("HolidaySchedule")
+        public java.util.List<ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule> holidaySchedule;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
+        @NameInMap("TimezoneId")
+        public String timezoneId;
+
+        @NameInMap("WeeklyOperatingHours")
+        public java.util.List<ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours> weeklyOperatingHours;
+
+        public static ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours build(java.util.Map<String, ?> map) throws Exception {
+            ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours self = new ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours setHolidaySchedule(java.util.List<ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule> holidaySchedule) {
+            this.holidaySchedule = holidaySchedule;
+            return this;
+        }
+        public java.util.List<ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule> getHolidaySchedule() {
+            return this.holidaySchedule;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours setTimezoneId(String timezoneId) {
+            this.timezoneId = timezoneId;
+            return this;
+        }
+        public String getTimezoneId() {
+            return this.timezoneId;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours setWeeklyOperatingHours(java.util.List<ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours> weeklyOperatingHours) {
+            this.weeklyOperatingHours = weeklyOperatingHours;
+            return this;
+        }
+        public java.util.List<ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours> getWeeklyOperatingHours() {
+            return this.weeklyOperatingHours;
+        }
+
+    }
+
+    public static class ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling extends TeaModel {
+        @NameInMap("CallHours")
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours callHours;
+
+        /**
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
+         */
+        @NameInMap("CallIconVisibility")
+        public String callIconVisibility;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("CallbackPermissionStatus")
+        public String callbackPermissionStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling build(java.util.Map<String, ?> map) throws Exception {
+            ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling self = new ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling setCallHours(ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours callHours) {
+            this.callHours = callHours;
+            return this;
+        }
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours getCallHours() {
+            return this.callHours;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling setCallIconVisibility(String callIconVisibility) {
+            this.callIconVisibility = callIconVisibility;
+            return this;
+        }
+        public String getCallIconVisibility() {
+            return this.callIconVisibility;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling setCallbackPermissionStatus(String callbackPermissionStatus) {
+            this.callbackPermissionStatus = callbackPermissionStatus;
+            return this;
+        }
+        public String getCallbackPermissionStatus() {
+            return this.callbackPermissionStatus;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure extends TeaModel {
+        @NameInMap("Calling")
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling calling;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://aliyun.com">http://aliyun.com</a></p>
+         */
+        @NameInMap("CallingCallbackUrl")
+        public String callingCallbackUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("MaxTalkTime")
+        public Long maxTalkTime;
+
+        public static ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure build(java.util.Map<String, ?> map) throws Exception {
+            ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure self = new ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure setCalling(ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling calling) {
+            this.calling = calling;
+            return this;
+        }
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling getCalling() {
+            return this.calling;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure setCallingCallbackUrl(String callingCallbackUrl) {
+            this.callingCallbackUrl = callingCallbackUrl;
+            return this;
+        }
+        public String getCallingCallbackUrl() {
+            return this.callingCallbackUrl;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure setMaxTalkTime(Long maxTalkTime) {
+            this.maxTalkTime = maxTalkTime;
+            return this;
+        }
+        public Long getMaxTalkTime() {
+            return this.maxTalkTime;
+        }
+
+    }
+
     public static class ChatappSyncPhoneNumberResponseBodyPhoneNumbers extends TeaModel {
+        @NameInMap("CallingConfigure")
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure callingConfigure;
+
         /**
          * <p>The verification state of the phone number.</p>
          * <p>Valid values:</p>
@@ -264,6 +546,14 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public static ChatappSyncPhoneNumberResponseBodyPhoneNumbers build(java.util.Map<String, ?> map) throws Exception {
             ChatappSyncPhoneNumberResponseBodyPhoneNumbers self = new ChatappSyncPhoneNumberResponseBodyPhoneNumbers();
             return TeaModel.build(map, self);
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbers setCallingConfigure(ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure callingConfigure) {
+            this.callingConfigure = callingConfigure;
+            return this;
+        }
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure getCallingConfigure() {
+            return this.callingConfigure;
         }
 
         public ChatappSyncPhoneNumberResponseBodyPhoneNumbers setCodeVerificationStatus(String codeVerificationStatus) {

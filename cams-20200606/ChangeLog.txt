@@ -1,3 +1,10 @@
+2026-01-29 Version: 4.1.0
+- Support API WhatsappCall.
+- Update API ChatappSyncPhoneNumber: add response parameters Body.PhoneNumbers.$.CallingConfigure.
+- Update API QueryChatappPhoneNumbers: add response parameters Body.Data.
+- Update API QueryChatappPhoneNumbers: add response parameters Body.PhoneNumbers.$.CallingConfigure.
+
+
 2026-01-08 Version: 4.0.0
 - Support API AddAddressRecoverSuspend.
 - Support API AddAuditViberOpen.
