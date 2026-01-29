@@ -252,6 +252,15 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     @NameInMap("RelationshipTypes")
     public java.util.List<String> relationshipTypes;
 
+    @NameInMap("SparseRetrievalFields")
+    public String sparseRetrievalFields;
+
+    @NameInMap("SparseVectorIndexConfig")
+    public CreateDocumentCollectionRequestSparseVectorIndexConfig sparseVectorIndexConfig;
+
+    @NameInMap("SupportSparse")
+    public Boolean supportSparse;
+
     public static CreateDocumentCollectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDocumentCollectionRequest self = new CreateDocumentCollectionRequest();
         return TeaModel.build(map, self);
@@ -439,6 +448,60 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     }
     public java.util.List<String> getRelationshipTypes() {
         return this.relationshipTypes;
+    }
+
+    public CreateDocumentCollectionRequest setSparseRetrievalFields(String sparseRetrievalFields) {
+        this.sparseRetrievalFields = sparseRetrievalFields;
+        return this;
+    }
+    public String getSparseRetrievalFields() {
+        return this.sparseRetrievalFields;
+    }
+
+    public CreateDocumentCollectionRequest setSparseVectorIndexConfig(CreateDocumentCollectionRequestSparseVectorIndexConfig sparseVectorIndexConfig) {
+        this.sparseVectorIndexConfig = sparseVectorIndexConfig;
+        return this;
+    }
+    public CreateDocumentCollectionRequestSparseVectorIndexConfig getSparseVectorIndexConfig() {
+        return this.sparseVectorIndexConfig;
+    }
+
+    public CreateDocumentCollectionRequest setSupportSparse(Boolean supportSparse) {
+        this.supportSparse = supportSparse;
+        return this;
+    }
+    public Boolean getSupportSparse() {
+        return this.supportSparse;
+    }
+
+    public static class CreateDocumentCollectionRequestSparseVectorIndexConfig extends TeaModel {
+        @NameInMap("HnswEfConstruction")
+        public Integer hnswEfConstruction;
+
+        @NameInMap("HnswM")
+        public Integer hnswM;
+
+        public static CreateDocumentCollectionRequestSparseVectorIndexConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateDocumentCollectionRequestSparseVectorIndexConfig self = new CreateDocumentCollectionRequestSparseVectorIndexConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDocumentCollectionRequestSparseVectorIndexConfig setHnswEfConstruction(Integer hnswEfConstruction) {
+            this.hnswEfConstruction = hnswEfConstruction;
+            return this;
+        }
+        public Integer getHnswEfConstruction() {
+            return this.hnswEfConstruction;
+        }
+
+        public CreateDocumentCollectionRequestSparseVectorIndexConfig setHnswM(Integer hnswM) {
+            this.hnswM = hnswM;
+            return this;
+        }
+        public Integer getHnswM() {
+            return this.hnswM;
+        }
+
     }
 
 }

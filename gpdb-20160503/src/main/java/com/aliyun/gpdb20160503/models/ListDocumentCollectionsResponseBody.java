@@ -159,6 +159,12 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         @NameInMap("Parser")
         public String parser;
 
+        @NameInMap("SparseRetrievalFields")
+        public String sparseRetrievalFields;
+
+        @NameInMap("SupportSparse")
+        public Boolean supportSparse;
+
         public static ListDocumentCollectionsResponseBodyItemsCollectionList build(java.util.Map<String, ?> map) throws Exception {
             ListDocumentCollectionsResponseBodyItemsCollectionList self = new ListDocumentCollectionsResponseBodyItemsCollectionList();
             return TeaModel.build(map, self);
@@ -218,6 +224,22 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
         public String getParser() {
             return this.parser;
+        }
+
+        public ListDocumentCollectionsResponseBodyItemsCollectionList setSparseRetrievalFields(String sparseRetrievalFields) {
+            this.sparseRetrievalFields = sparseRetrievalFields;
+            return this;
+        }
+        public String getSparseRetrievalFields() {
+            return this.sparseRetrievalFields;
+        }
+
+        public ListDocumentCollectionsResponseBodyItemsCollectionList setSupportSparse(Boolean supportSparse) {
+            this.supportSparse = supportSparse;
+            return this;
+        }
+        public Boolean getSupportSparse() {
+            return this.supportSparse;
         }
 
     }

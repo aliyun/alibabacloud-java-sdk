@@ -252,6 +252,15 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     @NameInMap("RelationshipTypes")
     public String relationshipTypesShrink;
 
+    @NameInMap("SparseRetrievalFields")
+    public String sparseRetrievalFields;
+
+    @NameInMap("SparseVectorIndexConfig")
+    public String sparseVectorIndexConfigShrink;
+
+    @NameInMap("SupportSparse")
+    public Boolean supportSparse;
+
     public static CreateDocumentCollectionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDocumentCollectionShrinkRequest self = new CreateDocumentCollectionShrinkRequest();
         return TeaModel.build(map, self);
@@ -439,6 +448,30 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     }
     public String getRelationshipTypesShrink() {
         return this.relationshipTypesShrink;
+    }
+
+    public CreateDocumentCollectionShrinkRequest setSparseRetrievalFields(String sparseRetrievalFields) {
+        this.sparseRetrievalFields = sparseRetrievalFields;
+        return this;
+    }
+    public String getSparseRetrievalFields() {
+        return this.sparseRetrievalFields;
+    }
+
+    public CreateDocumentCollectionShrinkRequest setSparseVectorIndexConfigShrink(String sparseVectorIndexConfigShrink) {
+        this.sparseVectorIndexConfigShrink = sparseVectorIndexConfigShrink;
+        return this;
+    }
+    public String getSparseVectorIndexConfigShrink() {
+        return this.sparseVectorIndexConfigShrink;
+    }
+
+    public CreateDocumentCollectionShrinkRequest setSupportSparse(Boolean supportSparse) {
+        this.supportSparse = supportSparse;
+        return this;
+    }
+    public Boolean getSupportSparse() {
+        return this.supportSparse;
     }
 
 }

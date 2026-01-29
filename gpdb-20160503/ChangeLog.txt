@@ -1,3 +1,11 @@
+2026-01-29 Version: 4.0.1
+- Update API CreateDocumentCollection: add request parameters SparseRetrievalFields.
+- Update API CreateDocumentCollection: add request parameters SparseVectorIndexConfig.
+- Update API CreateDocumentCollection: add request parameters SupportSparse.
+- Update API ListDocumentCollections: add response parameters Body.Items.$.SparseRetrievalFields.
+- Update API ListDocumentCollections: add response parameters Body.Items.$.SupportSparse.
+
+
 2026-01-13 Version: 4.0.0
 - Update API ChatWithKnowledgeBase: delete response parameters Body.MultiCollectionRecallResult.Matches.$.Metadata.
 - Update API ChatWithKnowledgeBaseStream: delete response parameters Body.MultiCollectionRecallResult.Matches.$.Metadata.

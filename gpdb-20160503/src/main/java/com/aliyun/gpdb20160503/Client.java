@@ -1825,6 +1825,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.relationshipTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.relationshipTypes, "RelationshipTypes", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sparseVectorIndexConfig)) {
+            request.sparseVectorIndexConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sparseVectorIndexConfig, "SparseVectorIndexConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
             query.put("Collection", request.collection);
@@ -1916,6 +1920,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.relationshipTypesShrink)) {
             query.put("RelationshipTypes", request.relationshipTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sparseRetrievalFields)) {
+            query.put("SparseRetrievalFields", request.sparseRetrievalFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sparseVectorIndexConfigShrink)) {
+            query.put("SparseVectorIndexConfig", request.sparseVectorIndexConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportSparse)) {
+            query.put("SupportSparse", request.supportSparse);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
