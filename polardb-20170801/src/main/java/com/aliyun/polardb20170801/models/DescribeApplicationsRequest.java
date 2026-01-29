@@ -44,6 +44,9 @@ public class DescribeApplicationsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeApplicationsRequestTag> tag;
+
     public static DescribeApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationsRequest self = new DescribeApplicationsRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,52 @@ public class DescribeApplicationsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeApplicationsRequest setTag(java.util.List<DescribeApplicationsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeApplicationsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeApplicationsRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeApplicationsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationsRequestTag self = new DescribeApplicationsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeApplicationsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

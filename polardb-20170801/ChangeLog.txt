@@ -1,3 +1,8 @@
+2026-01-29 Version: 6.6.4
+- Update API DescribeApplications: add request parameters Tag.
+- Update API DescribeApplications: add response parameters Body.Items.$.Tags.
+
+
 2026-01-28 Version: 6.6.3
 - Update API DescribeAIDBClusterAttribute: add response parameters Body.ApiKey.
 

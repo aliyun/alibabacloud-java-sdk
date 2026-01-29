@@ -152,6 +152,63 @@ public class DescribeApplicationsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationsResponseBodyItemsApplicationsTagsTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeApplicationsResponseBodyItemsApplicationsTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationsResponseBodyItemsApplicationsTagsTag self = new DescribeApplicationsResponseBodyItemsApplicationsTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationsResponseBodyItemsApplicationsTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeApplicationsResponseBodyItemsApplicationsTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeApplicationsResponseBodyItemsApplicationsTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeApplicationsResponseBodyItemsApplicationsTagsTag> tag;
+
+        public static DescribeApplicationsResponseBodyItemsApplicationsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationsResponseBodyItemsApplicationsTags self = new DescribeApplicationsResponseBodyItemsApplicationsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationsResponseBodyItemsApplicationsTags setTag(java.util.List<DescribeApplicationsResponseBodyItemsApplicationsTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeApplicationsResponseBodyItemsApplicationsTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeApplicationsResponseBodyItemsApplications extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -239,6 +296,9 @@ public class DescribeApplicationsResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribeApplicationsResponseBodyItemsApplicationsTags tags;
 
         /**
          * <strong>example:</strong>
@@ -354,6 +414,14 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeApplicationsResponseBodyItemsApplications setTags(DescribeApplicationsResponseBodyItemsApplicationsTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeApplicationsResponseBodyItemsApplicationsTags getTags() {
+            return this.tags;
         }
 
         public DescribeApplicationsResponseBodyItemsApplications setZoneId(String zoneId) {
