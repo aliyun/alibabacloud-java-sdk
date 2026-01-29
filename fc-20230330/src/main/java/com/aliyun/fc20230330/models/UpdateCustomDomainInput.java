@@ -10,6 +10,9 @@ public class UpdateCustomDomainInput extends TeaModel {
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    @NameInMap("corsConfig")
+    public CORSConfig corsConfig;
+
     /**
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -45,6 +48,14 @@ public class UpdateCustomDomainInput extends TeaModel {
     }
     public CertConfig getCertConfig() {
         return this.certConfig;
+    }
+
+    public UpdateCustomDomainInput setCorsConfig(CORSConfig corsConfig) {
+        this.corsConfig = corsConfig;
+        return this;
+    }
+    public CORSConfig getCorsConfig() {
+        return this.corsConfig;
     }
 
     public UpdateCustomDomainInput setProtocol(String protocol) {

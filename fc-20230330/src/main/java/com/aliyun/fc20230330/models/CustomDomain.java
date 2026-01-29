@@ -20,6 +20,9 @@ public class CustomDomain extends TeaModel {
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    @NameInMap("corsConfig")
+    public CORSConfig corsConfig;
+
     /**
      * <strong>example:</strong>
      * <p>2023-03-30T08:02:19Z</p>
@@ -99,6 +102,14 @@ public class CustomDomain extends TeaModel {
     }
     public CertConfig getCertConfig() {
         return this.certConfig;
+    }
+
+    public CustomDomain setCorsConfig(CORSConfig corsConfig) {
+        this.corsConfig = corsConfig;
+        return this;
+    }
+    public CORSConfig getCorsConfig() {
+        return this.corsConfig;
     }
 
     public CustomDomain setCreatedTime(String createdTime) {

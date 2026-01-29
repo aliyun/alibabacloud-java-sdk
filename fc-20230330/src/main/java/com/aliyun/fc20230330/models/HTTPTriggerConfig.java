@@ -18,6 +18,9 @@ public class HTTPTriggerConfig extends TeaModel {
     @NameInMap("authType")
     public String authType;
 
+    @NameInMap("corsConfig")
+    public CORSConfig corsConfig;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -47,6 +50,14 @@ public class HTTPTriggerConfig extends TeaModel {
     }
     public String getAuthType() {
         return this.authType;
+    }
+
+    public HTTPTriggerConfig setCorsConfig(CORSConfig corsConfig) {
+        this.corsConfig = corsConfig;
+        return this;
+    }
+    public CORSConfig getCorsConfig() {
+        return this.corsConfig;
     }
 
     public HTTPTriggerConfig setDisableURLInternet(Boolean disableURLInternet) {

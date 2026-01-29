@@ -10,6 +10,9 @@ public class CreateCustomDomainInput extends TeaModel {
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    @NameInMap("corsConfig")
+    public CORSConfig corsConfig;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -54,6 +57,14 @@ public class CreateCustomDomainInput extends TeaModel {
     }
     public CertConfig getCertConfig() {
         return this.certConfig;
+    }
+
+    public CreateCustomDomainInput setCorsConfig(CORSConfig corsConfig) {
+        this.corsConfig = corsConfig;
+        return this;
+    }
+    public CORSConfig getCorsConfig() {
+        return this.corsConfig;
     }
 
     public CreateCustomDomainInput setDomainName(String domainName) {
