@@ -685,6 +685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("chunkMode", request.chunkMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.connectId)) {
+            query.put("connectId", request.connectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.database)) {
             query.put("database", request.database);
         }
@@ -695,6 +699,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableHeaders)) {
             query.put("enableHeaders", request.enableHeaders);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeScene)) {
+            query.put("knowledgeScene", request.knowledgeScene);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.metaExtractColumnsShrink)) {

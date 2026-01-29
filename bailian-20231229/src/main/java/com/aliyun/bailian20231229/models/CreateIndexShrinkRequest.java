@@ -234,6 +234,9 @@ public class CreateIndexShrinkRequest extends TeaModel {
     @NameInMap("chunkMode")
     public String chunkMode;
 
+    @NameInMap("connectId")
+    public String connectId;
+
     @NameInMap("database")
     public String database;
 
@@ -257,6 +260,9 @@ public class CreateIndexShrinkRequest extends TeaModel {
      */
     @NameInMap("enableHeaders")
     public Boolean enableHeaders;
+
+    @NameInMap("knowledgeScene")
+    public String knowledgeScene;
 
     /**
      * <p>The metadata extraction configurations. Metadata refers to a set of additional attributes associated with unstructured data, which are integrated into text chunks in key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
@@ -461,6 +467,14 @@ public class CreateIndexShrinkRequest extends TeaModel {
         return this.chunkMode;
     }
 
+    public CreateIndexShrinkRequest setConnectId(String connectId) {
+        this.connectId = connectId;
+        return this;
+    }
+    public String getConnectId() {
+        return this.connectId;
+    }
+
     public CreateIndexShrinkRequest setDatabase(String database) {
         this.database = database;
         return this;
@@ -483,6 +497,14 @@ public class CreateIndexShrinkRequest extends TeaModel {
     }
     public Boolean getEnableHeaders() {
         return this.enableHeaders;
+    }
+
+    public CreateIndexShrinkRequest setKnowledgeScene(String knowledgeScene) {
+        this.knowledgeScene = knowledgeScene;
+        return this;
+    }
+    public String getKnowledgeScene() {
+        return this.knowledgeScene;
     }
 
     public CreateIndexShrinkRequest setMetaExtractColumnsShrink(String metaExtractColumnsShrink) {
