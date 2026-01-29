@@ -1,3 +1,7 @@
+2026-01-29 Version: 5.0.2
+- Update API DescribeInstance: add response parameters Body.Result.inited.
+
+
 2026-01-27 Version: 5.0.1
 - Update API ListInstance: add response parameters Body.Result.$.zoneCount.
 - Update API ListInstance: add response parameters Body.Result.$.zoneInfos.

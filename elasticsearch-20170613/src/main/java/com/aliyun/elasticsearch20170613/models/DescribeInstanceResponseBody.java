@@ -1212,6 +1212,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("ikHotDicts")
         public java.util.List<DescribeInstanceResponseBodyResultIkHotDicts> ikHotDicts;
 
+        @NameInMap("inited")
+        public Boolean inited;
+
         /**
          * <strong>example:</strong>
          * <p>advanced</p>
@@ -1582,6 +1585,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public java.util.List<DescribeInstanceResponseBodyResultIkHotDicts> getIkHotDicts() {
             return this.ikHotDicts;
+        }
+
+        public DescribeInstanceResponseBodyResult setInited(Boolean inited) {
+            this.inited = inited;
+            return this;
+        }
+        public Boolean getInited() {
+            return this.inited;
         }
 
         public DescribeInstanceResponseBodyResult setInstanceCategory(String instanceCategory) {
