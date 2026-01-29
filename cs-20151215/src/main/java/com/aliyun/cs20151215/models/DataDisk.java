@@ -9,6 +9,7 @@ public class DataDisk extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("auto_format")
+    @Deprecated
     public Boolean autoFormat;
 
     /**
@@ -58,6 +59,7 @@ public class DataDisk extends TeaModel {
      * <p>ext4</p>
      */
     @NameInMap("file_system")
+    @Deprecated
     public String fileSystem;
 
     /**
@@ -72,6 +74,7 @@ public class DataDisk extends TeaModel {
      * <p>/mnt/path1</p>
      */
     @NameInMap("mount_target")
+    @Deprecated
     public String mountTarget;
 
     /**
@@ -107,6 +110,7 @@ public class DataDisk extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public DataDisk setAutoFormat(Boolean autoFormat) {
         this.autoFormat = autoFormat;
         return this;
@@ -163,6 +167,7 @@ public class DataDisk extends TeaModel {
         return this.encrypted;
     }
 
+    @Deprecated
     public DataDisk setFileSystem(String fileSystem) {
         this.fileSystem = fileSystem;
         return this;
@@ -179,6 +184,7 @@ public class DataDisk extends TeaModel {
         return this.kmsKeyId;
     }
 
+    @Deprecated
     public DataDisk setMountTarget(String mountTarget) {
         this.mountTarget = mountTarget;
         return this;

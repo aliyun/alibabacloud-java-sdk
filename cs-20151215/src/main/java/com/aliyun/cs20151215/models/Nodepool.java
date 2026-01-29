@@ -1086,6 +1086,9 @@ public class Nodepool extends TeaModel {
         @NameInMap("desired_size")
         public Long desiredSize;
 
+        @NameInMap("disk_init")
+        public java.util.List<DiskInit> diskInit;
+
         /**
          * <strong>example:</strong>
          * <p>aliyun_2_1903_x64_20G_alibase_20200904.vhd</p>
@@ -1364,6 +1367,14 @@ public class Nodepool extends TeaModel {
         }
         public Long getDesiredSize() {
             return this.desiredSize;
+        }
+
+        public NodepoolScalingGroup setDiskInit(java.util.List<DiskInit> diskInit) {
+            this.diskInit = diskInit;
+            return this;
+        }
+        public java.util.List<DiskInit> getDiskInit() {
+            return this.diskInit;
         }
 
         public NodepoolScalingGroup setImageId(String imageId) {

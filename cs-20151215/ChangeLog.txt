@@ -1,3 +1,10 @@
+2026-01-29 Version: 6.5.2
+- Update API CreateClusterNodePool: add request parameters body.scaling_group.disk_init.
+- Update API DescribeClusterNodePoolDetail: add response parameters Body.scaling_group.disk_init.
+- Update API DescribeClusterNodePools: add response parameters Body.nodepools.$.scaling_group.disk_init.
+- Update API ModifyClusterNodePool: add request parameters body.scaling_group.disk_init.
+
+
 2026-01-27 Version: 6.5.1
 - Update API ModifyNodePoolNodeConfig: add request parameters body.node_names.
 

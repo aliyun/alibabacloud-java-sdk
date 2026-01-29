@@ -1580,6 +1580,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("desired_size")
         public Long desiredSize;
 
+        @NameInMap("disk_init")
+        public java.util.List<DiskInit> diskInit;
+
         /**
          * <p>The custom image ID. By default, the image provided by Container Service for Kubernetes (ACK) is used.</p>
          * 
@@ -2096,6 +2099,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public Long getDesiredSize() {
             return this.desiredSize;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setDiskInit(java.util.List<DiskInit> diskInit) {
+            this.diskInit = diskInit;
+            return this;
+        }
+        public java.util.List<DiskInit> getDiskInit() {
+            return this.diskInit;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setImageId(String imageId) {

@@ -1330,6 +1330,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("desired_size")
         public Long desiredSize;
 
+        @NameInMap("disk_init")
+        public java.util.List<DiskInit> diskInit;
+
         /**
          * <p>The ID of the custom image. You can call the <code>DescribeKubernetesVersionMetadata</code> operation to query the images supported by ACK.</p>
          * 
@@ -1835,6 +1838,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public Long getDesiredSize() {
             return this.desiredSize;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setDiskInit(java.util.List<DiskInit> diskInit) {
+            this.diskInit = diskInit;
+            return this;
+        }
+        public java.util.List<DiskInit> getDiskInit() {
+            return this.diskInit;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setImageId(String imageId) {
