@@ -112,6 +112,24 @@ public class CallNumberDetailResponseBody extends TeaModel {
 
     public static class CallNumberDetailResponseBodyModel extends TeaModel {
         /**
+         * <p>ai计费时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AiBill")
+        public Long aiBill;
+
+        /**
+         * <p>接通转接类型 1-不转人工；2-接通转人工；3-智能转人工</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AnswerTransferType")
+        public Long answerTransferType;
+
+        /**
          * <p>导入号码时返回的批次号</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +148,15 @@ public class CallNumberDetailResponseBody extends TeaModel {
         public Long bill;
 
         /**
+         * <p>转接计费时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("BridgeBill")
+        public Long bridgeBill;
+
+        /**
          * <p>每次呼叫的唯一标识</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +173,42 @@ public class CallNumberDetailResponseBody extends TeaModel {
          */
         @NameInMap("CallType")
         public Long callType;
+
+        /**
+         * <p>客户详情url</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
+         */
+        @NameInMap("ClientUrl")
+        public String clientUrl;
+
+        /**
+         * <p>创建时间 格式 2026-01-01 00:00:00</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <p>通话轮次</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Duration")
+        public Long duration;
+
+        /**
+         * <p>线路id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("GatewayId")
+        public Long gatewayId;
 
         /**
          * <p>号码编号</p>
@@ -193,6 +256,15 @@ public class CallNumberDetailResponseBody extends TeaModel {
         public String numberMd5;
 
         /**
+         * <p>自定义参数 json</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;名字&quot;:&quot;a&quot;}</p>
+         */
+        @NameInMap("Params")
+        public String params;
+
+        /**
          * <p>个性标签</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +272,24 @@ public class CallNumberDetailResponseBody extends TeaModel {
          */
         @NameInMap("PersonalityTag")
         public String personalityTag;
+
+        /**
+         * <p>备注信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
+         */
+        @NameInMap("Remark")
+        public String remark;
+
+        /**
+         * <p>坐席id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Sid")
+        public Long sid;
 
         /**
          * <p>外呼状态编码</p>
@@ -251,6 +341,22 @@ public class CallNumberDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CallNumberDetailResponseBodyModel setAiBill(Long aiBill) {
+            this.aiBill = aiBill;
+            return this;
+        }
+        public Long getAiBill() {
+            return this.aiBill;
+        }
+
+        public CallNumberDetailResponseBodyModel setAnswerTransferType(Long answerTransferType) {
+            this.answerTransferType = answerTransferType;
+            return this;
+        }
+        public Long getAnswerTransferType() {
+            return this.answerTransferType;
+        }
+
         public CallNumberDetailResponseBodyModel setBatchId(String batchId) {
             this.batchId = batchId;
             return this;
@@ -267,6 +373,14 @@ public class CallNumberDetailResponseBody extends TeaModel {
             return this.bill;
         }
 
+        public CallNumberDetailResponseBodyModel setBridgeBill(Long bridgeBill) {
+            this.bridgeBill = bridgeBill;
+            return this;
+        }
+        public Long getBridgeBill() {
+            return this.bridgeBill;
+        }
+
         public CallNumberDetailResponseBodyModel setCallId(String callId) {
             this.callId = callId;
             return this;
@@ -281,6 +395,38 @@ public class CallNumberDetailResponseBody extends TeaModel {
         }
         public Long getCallType() {
             return this.callType;
+        }
+
+        public CallNumberDetailResponseBodyModel setClientUrl(String clientUrl) {
+            this.clientUrl = clientUrl;
+            return this;
+        }
+        public String getClientUrl() {
+            return this.clientUrl;
+        }
+
+        public CallNumberDetailResponseBodyModel setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public CallNumberDetailResponseBodyModel setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        public CallNumberDetailResponseBodyModel setGatewayId(Long gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+        public Long getGatewayId() {
+            return this.gatewayId;
         }
 
         public CallNumberDetailResponseBodyModel setId(Long id) {
@@ -323,12 +469,36 @@ public class CallNumberDetailResponseBody extends TeaModel {
             return this.numberMd5;
         }
 
+        public CallNumberDetailResponseBodyModel setParams(String params) {
+            this.params = params;
+            return this;
+        }
+        public String getParams() {
+            return this.params;
+        }
+
         public CallNumberDetailResponseBodyModel setPersonalityTag(String personalityTag) {
             this.personalityTag = personalityTag;
             return this;
         }
         public String getPersonalityTag() {
             return this.personalityTag;
+        }
+
+        public CallNumberDetailResponseBodyModel setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public CallNumberDetailResponseBodyModel setSid(Long sid) {
+            this.sid = sid;
+            return this;
+        }
+        public Long getSid() {
+            return this.sid;
         }
 
         public CallNumberDetailResponseBodyModel setStatusCode(Long statusCode) {
