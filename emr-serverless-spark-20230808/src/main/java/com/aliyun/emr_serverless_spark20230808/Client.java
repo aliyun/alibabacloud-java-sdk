@@ -626,6 +626,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建Ray集群</p>
+     * 
+     * @param request CreateRayClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRayClusterResponse
+     */
+    public CreateRayClusterResponse createRayClusterWithOptions(String workspaceId, CreateRayClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayReleaseVersion)) {
+            body.put("displayReleaseVersion", request.displayReleaseVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraParam)) {
+            body.put("extraParam", request.extraParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.headSpec)) {
+            body.put("headSpec", request.headSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkServiceName)) {
+            body.put("networkServiceName", request.networkServiceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerSpec)) {
+            body.put("workerSpec", request.workerSpec);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRayCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayCluster"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRayClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Ray集群</p>
+     * 
+     * @param request CreateRayClusterRequest
+     * @return CreateRayClusterResponse
+     */
+    public CreateRayClusterResponse createRayCluster(String workspaceId, CreateRayClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createRayClusterWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a session.</p>
      * 
      * @param request CreateSessionClusterRequest
@@ -1087,6 +1158,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除Ray集群</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRayClusterResponse
+     */
+    public DeleteRayClusterResponse deleteRayClusterWithOptions(String workspaceId, String clusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRayCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayCluster/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRayClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Ray集群</p>
+     * @return DeleteRayClusterResponse
+     */
+    public DeleteRayClusterResponse deleteRayCluster(String workspaceId, String clusterId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteRayClusterWithOptions(workspaceId, clusterId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the queue of a workspace.</p>
      * 
      * @param request EditWorkspaceQueueRequest
@@ -1534,6 +1642,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Ray集群</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRayClusterResponse
+     */
+    public GetRayClusterResponse getRayClusterWithOptions(String workspaceId, String clusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRayCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayCluster/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRayClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Ray集群</p>
+     * @return GetRayClusterResponse
+     */
+    public GetRayClusterResponse getRayCluster(String workspaceId, String clusterId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRayClusterWithOptions(workspaceId, clusterId, headers, runtime);
     }
 
     /**
@@ -2470,6 +2615,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列出Ray集群</p>
+     * 
+     * @param request ListRayClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRayClusterResponse
+     */
+    public ListRayClusterResponse listRayClusterWithOptions(String workspaceId, ListRayClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRayCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayCluster"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRayClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出Ray集群</p>
+     * 
+     * @param request ListRayClusterRequest
+     * @return ListRayClusterResponse
+     */
+    public ListRayClusterResponse listRayCluster(String workspaceId, ListRayClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRayClusterWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</p>
      * 
      * @param request ListReleaseVersionsRequest
@@ -3159,6 +3355,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>启动Ray集群</p>
+     * 
+     * @param request StartRayClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartRayClusterResponse
+     */
+    public StartRayClusterResponse startRayClusterWithOptions(String workspaceId, String clusterId, StartRayClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartRayCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayCluster/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/start"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartRayClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动Ray集群</p>
+     * 
+     * @param request StartRayClusterRequest
+     * @return StartRayClusterResponse
+     */
+    public StartRayClusterResponse startRayCluster(String workspaceId, String clusterId, StartRayClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startRayClusterWithOptions(workspaceId, clusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Starts a session.</p>
      * 
      * @param request StartSessionClusterRequest
@@ -3296,6 +3539,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.stopLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止Ray集群</p>
+     * 
+     * @param request StopRayClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopRayClusterResponse
+     */
+    public StopRayClusterResponse stopRayClusterWithOptions(String workspaceId, String clusterId, StopRayClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("instanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopRayCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayCluster/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/stop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopRayClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止Ray集群</p>
+     * 
+     * @param request StopRayClusterRequest
+     * @return StopRayClusterResponse
+     */
+    public StopRayClusterResponse stopRayCluster(String workspaceId, String clusterId, StopRayClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopRayClusterWithOptions(workspaceId, clusterId, request, headers, runtime);
     }
 
     /**
@@ -3794,5 +4084,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateProcessDefinitionWithScheduleWithOptions(bizId, code, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Ray集群</p>
+     * 
+     * @param request UpdateRayClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRayClusterResponse
+     */
+    public UpdateRayClusterResponse updateRayClusterWithOptions(String workspaceId, String clusterId, UpdateRayClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayReleaseVersion)) {
+            body.put("displayReleaseVersion", request.displayReleaseVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraParam)) {
+            body.put("extraParam", request.extraParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.headSpec)) {
+            body.put("headSpec", request.headSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkServiceName)) {
+            body.put("networkServiceName", request.networkServiceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerSpec)) {
+            body.put("workerSpec", request.workerSpec);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRayCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayCluster/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRayClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Ray集群</p>
+     * 
+     * @param request UpdateRayClusterRequest
+     * @return UpdateRayClusterResponse
+     */
+    public UpdateRayClusterResponse updateRayCluster(String workspaceId, String clusterId, UpdateRayClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateRayClusterWithOptions(workspaceId, clusterId, request, headers, runtime);
     }
 }
