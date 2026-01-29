@@ -2096,12 +2096,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the coverage details of savings plans.</p>
      * 
-     * @param request DescribeSavingsPlansCoverageDetailRequest
+     * @param tmpReq DescribeSavingsPlansCoverageDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSavingsPlansCoverageDetailResponse
      */
-    public DescribeSavingsPlansCoverageDetailResponse describeSavingsPlansCoverageDetailWithOptions(DescribeSavingsPlansCoverageDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DescribeSavingsPlansCoverageDetailResponse describeSavingsPlansCoverageDetailWithOptions(DescribeSavingsPlansCoverageDetailRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeSavingsPlansCoverageDetailShrinkRequest request = new DescribeSavingsPlansCoverageDetailShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterParam)) {
+            request.filterParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterParam, "FilterParam", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.billOwnerId)) {
             query.put("BillOwnerId", request.billOwnerId);
@@ -2109,6 +2115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endPeriod)) {
             query.put("EndPeriod", request.endPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterParamShrink)) {
+            query.put("FilterParam", request.filterParamShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -2160,12 +2170,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the coverage summary of savings plans.</p>
      * 
-     * @param request DescribeSavingsPlansCoverageTotalRequest
+     * @param tmpReq DescribeSavingsPlansCoverageTotalRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSavingsPlansCoverageTotalResponse
      */
-    public DescribeSavingsPlansCoverageTotalResponse describeSavingsPlansCoverageTotalWithOptions(DescribeSavingsPlansCoverageTotalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DescribeSavingsPlansCoverageTotalResponse describeSavingsPlansCoverageTotalWithOptions(DescribeSavingsPlansCoverageTotalRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeSavingsPlansCoverageTotalShrinkRequest request = new DescribeSavingsPlansCoverageTotalShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterParam)) {
+            request.filterParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterParam, "FilterParam", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.billOwnerId)) {
             query.put("BillOwnerId", request.billOwnerId);
@@ -2173,6 +2189,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endPeriod)) {
             query.put("EndPeriod", request.endPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterParamShrink)) {
+            query.put("FilterParam", request.filterParamShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodType)) {
@@ -2216,12 +2236,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the usage details of savings plans.</p>
      * 
-     * @param request DescribeSavingsPlansUsageDetailRequest
+     * @param tmpReq DescribeSavingsPlansUsageDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSavingsPlansUsageDetailResponse
      */
-    public DescribeSavingsPlansUsageDetailResponse describeSavingsPlansUsageDetailWithOptions(DescribeSavingsPlansUsageDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DescribeSavingsPlansUsageDetailResponse describeSavingsPlansUsageDetailWithOptions(DescribeSavingsPlansUsageDetailRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeSavingsPlansUsageDetailShrinkRequest request = new DescribeSavingsPlansUsageDetailShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterParam)) {
+            request.filterParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterParam, "FilterParam", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.billOwnerId)) {
             query.put("BillOwnerId", request.billOwnerId);
@@ -2229,6 +2255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endPeriod)) {
             query.put("EndPeriod", request.endPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterParamShrink)) {
+            query.put("FilterParam", request.filterParamShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -2280,12 +2310,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the usage summary of savings plans.</p>
      * 
-     * @param request DescribeSavingsPlansUsageTotalRequest
+     * @param tmpReq DescribeSavingsPlansUsageTotalRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSavingsPlansUsageTotalResponse
      */
-    public DescribeSavingsPlansUsageTotalResponse describeSavingsPlansUsageTotalWithOptions(DescribeSavingsPlansUsageTotalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DescribeSavingsPlansUsageTotalResponse describeSavingsPlansUsageTotalWithOptions(DescribeSavingsPlansUsageTotalRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeSavingsPlansUsageTotalShrinkRequest request = new DescribeSavingsPlansUsageTotalShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterParam)) {
+            request.filterParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterParam, "FilterParam", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.billOwnerId)) {
             query.put("BillOwnerId", request.billOwnerId);
@@ -2293,6 +2329,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endPeriod)) {
             query.put("EndPeriod", request.endPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterParamShrink)) {
+            query.put("FilterParam", request.filterParamShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodType)) {

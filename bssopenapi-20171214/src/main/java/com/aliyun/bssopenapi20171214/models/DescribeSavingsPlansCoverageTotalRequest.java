@@ -22,6 +22,9 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
     @NameInMap("EndPeriod")
     public String endPeriod;
 
+    @NameInMap("FilterParam")
+    public DescribeSavingsPlansCoverageTotalRequestFilterParam filterParam;
+
     /**
      * <p>The time granularity at which coverage summary are queried. Valid values: MONTH, DAY, and HOUR.</p>
      * <p>This parameter is required.</p>
@@ -63,6 +66,14 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
         return this.endPeriod;
     }
 
+    public DescribeSavingsPlansCoverageTotalRequest setFilterParam(DescribeSavingsPlansCoverageTotalRequestFilterParam filterParam) {
+        this.filterParam = filterParam;
+        return this;
+    }
+    public DescribeSavingsPlansCoverageTotalRequestFilterParam getFilterParam() {
+        return this.filterParam;
+    }
+
     public DescribeSavingsPlansCoverageTotalRequest setPeriodType(String periodType) {
         this.periodType = periodType;
         return this;
@@ -77,6 +88,118 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
     }
     public String getStartPeriod() {
         return this.startPeriod;
+    }
+
+    public static class DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("SelectType")
+        public String selectType;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions self = new DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions setSelectType(String selectType) {
+            this.selectType = selectType;
+            return this;
+        }
+        public String getSelectType() {
+            return this.selectType;
+        }
+
+        public DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class DescribeSavingsPlansCoverageTotalRequestFilterParamTags extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("SelectType")
+        public String selectType;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static DescribeSavingsPlansCoverageTotalRequestFilterParamTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSavingsPlansCoverageTotalRequestFilterParamTags self = new DescribeSavingsPlansCoverageTotalRequestFilterParamTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSavingsPlansCoverageTotalRequestFilterParamTags setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public DescribeSavingsPlansCoverageTotalRequestFilterParamTags setSelectType(String selectType) {
+            this.selectType = selectType;
+            return this;
+        }
+        public String getSelectType() {
+            return this.selectType;
+        }
+
+        public DescribeSavingsPlansCoverageTotalRequestFilterParamTags setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class DescribeSavingsPlansCoverageTotalRequestFilterParam extends TeaModel {
+        @NameInMap("Dimensions")
+        public java.util.List<DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions> dimensions;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeSavingsPlansCoverageTotalRequestFilterParamTags> tags;
+
+        public static DescribeSavingsPlansCoverageTotalRequestFilterParam build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSavingsPlansCoverageTotalRequestFilterParam self = new DescribeSavingsPlansCoverageTotalRequestFilterParam();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSavingsPlansCoverageTotalRequestFilterParam setDimensions(java.util.List<DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions> dimensions) {
+            this.dimensions = dimensions;
+            return this;
+        }
+        public java.util.List<DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions> getDimensions() {
+            return this.dimensions;
+        }
+
+        public DescribeSavingsPlansCoverageTotalRequestFilterParam setTags(java.util.List<DescribeSavingsPlansCoverageTotalRequestFilterParamTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeSavingsPlansCoverageTotalRequestFilterParamTags> getTags() {
+            return this.tags;
+        }
+
     }
 
 }
