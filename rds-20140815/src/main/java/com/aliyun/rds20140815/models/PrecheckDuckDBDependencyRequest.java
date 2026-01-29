@@ -23,6 +23,13 @@ public class PrecheckDuckDBDependencyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>readOnly</p>
+     */
+    @NameInMap("TargetMode")
+    public String targetMode;
+
     public static PrecheckDuckDBDependencyRequest build(java.util.Map<String, ?> map) throws Exception {
         PrecheckDuckDBDependencyRequest self = new PrecheckDuckDBDependencyRequest();
         return TeaModel.build(map, self);
@@ -58,6 +65,14 @@ public class PrecheckDuckDBDependencyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public PrecheckDuckDBDependencyRequest setTargetMode(String targetMode) {
+        this.targetMode = targetMode;
+        return this;
+    }
+    public String getTargetMode() {
+        return this.targetMode;
     }
 
 }
