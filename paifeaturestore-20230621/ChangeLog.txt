@@ -1,3 +1,10 @@
+2026-01-29 Version: 6.0.7
+- Update API CreateLLMConfig: add request parameters body.EmbeddingDimension.
+- Update API GetLLMConfig: add response parameters Body.EmbeddingDimension.
+- Update API ListLLMConfigs: add response parameters Body.LLMConfigs.$.EmbeddingDimension.
+- Update API UpdateLLMConfig: add request parameters body.EmbeddingDimension.
+
+
 2026-01-20 Version: 6.0.6
 - Update API ExportModelFeatureTrainingSetTable: add request parameters body.FeatureViewConfig.Snapshot.
 

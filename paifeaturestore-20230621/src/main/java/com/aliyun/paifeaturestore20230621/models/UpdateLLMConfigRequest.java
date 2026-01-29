@@ -30,6 +30,13 @@ public class UpdateLLMConfigRequest extends TeaModel {
     public Integer batchSize;
 
     /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
+    @NameInMap("EmbeddingDimension")
+    public Integer embeddingDimension;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,6 +99,14 @@ public class UpdateLLMConfigRequest extends TeaModel {
     }
     public Integer getBatchSize() {
         return this.batchSize;
+    }
+
+    public UpdateLLMConfigRequest setEmbeddingDimension(Integer embeddingDimension) {
+        this.embeddingDimension = embeddingDimension;
+        return this;
+    }
+    public Integer getEmbeddingDimension() {
+        return this.embeddingDimension;
     }
 
     public UpdateLLMConfigRequest setMaxTokens(Integer maxTokens) {

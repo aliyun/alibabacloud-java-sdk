@@ -27,6 +27,13 @@ public class GetLLMConfigResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1024</p>
+     */
+    @NameInMap("EmbeddingDimension")
+    public Integer embeddingDimension;
+
+    /**
+     * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
     @NameInMap("GmtCreateTime")
@@ -117,6 +124,14 @@ public class GetLLMConfigResponseBody extends TeaModel {
     }
     public Integer getBatchSize() {
         return this.batchSize;
+    }
+
+    public GetLLMConfigResponseBody setEmbeddingDimension(Integer embeddingDimension) {
+        this.embeddingDimension = embeddingDimension;
+        return this;
+    }
+    public Integer getEmbeddingDimension() {
+        return this.embeddingDimension;
     }
 
     public GetLLMConfigResponseBody setGmtCreateTime(String gmtCreateTime) {

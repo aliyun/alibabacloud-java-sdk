@@ -406,6 +406,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BatchSize", request.batchSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.embeddingDimension)) {
+            body.put("EmbeddingDimension", request.embeddingDimension);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxTokens)) {
             body.put("MaxTokens", request.maxTokens);
         }
@@ -2904,6 +2908,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.batchSize)) {
             body.put("BatchSize", request.batchSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.embeddingDimension)) {
+            body.put("EmbeddingDimension", request.embeddingDimension);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxTokens)) {
