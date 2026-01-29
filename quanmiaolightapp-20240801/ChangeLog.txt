@@ -1,3 +1,13 @@
+2026-01-29 Version: 2.12.6
+- Update API RunMarketingInformationWriting: add request parameters extParameters.
+- Update API RunMarketingInformationWriting: add request parameters generateCount.
+- Update API RunMarketingInformationWriting: add request parameters keywords.
+- Update API RunMarketingInformationWriting: add request parameters language.
+- Update API RunMarketingInformationWriting: add request parameters otherRequirements.
+- Update API RunMarketingInformationWriting: add request parameters prompt.
+- Update API RunMarketingInformationWriting: add request parameters wordCountRange.
+
+
 2026-01-26 Version: 2.12.5
 - Update API RunVideoAnalysis: add request parameters videoUrls.
 - Update API SubmitVideoAnalysisTask: add request parameters videoUrls.

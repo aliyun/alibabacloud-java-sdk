@@ -1178,13 +1178,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>营销文案写作服务</p>
      * 
-     * @param request RunMarketingInformationWritingRequest
+     * @param tmpReq RunMarketingInformationWritingRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return RunMarketingInformationWritingResponse
      */
-    public RunMarketingInformationWritingResponse runMarketingInformationWritingWithOptions(String workspaceId, RunMarketingInformationWritingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public RunMarketingInformationWritingResponse runMarketingInformationWritingWithOptions(String workspaceId, RunMarketingInformationWritingRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RunMarketingInformationWritingShrinkRequest request = new RunMarketingInformationWritingShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extParameters)) {
+            request.extParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extParameters, "extParameters", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
             body.put("apiKey", request.apiKey);
@@ -1198,20 +1204,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("customPrompt", request.customPrompt);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extParametersShrink)) {
+            body.put("extParameters", request.extParametersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generateCount)) {
+            body.put("generateCount", request.generateCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputExample)) {
             body.put("inputExample", request.inputExample);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keywords)) {
+            body.put("keywords", request.keywords);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("language", request.language);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
             body.put("modelId", request.modelId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.otherRequirements)) {
+            body.put("otherRequirements", request.otherRequirements);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outputExample)) {
             body.put("outputExample", request.outputExample);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("prompt", request.prompt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceMaterial)) {
             body.put("sourceMaterial", request.sourceMaterial);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wordCountRange)) {
+            body.put("wordCountRange", request.wordCountRange);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.writingType)) {

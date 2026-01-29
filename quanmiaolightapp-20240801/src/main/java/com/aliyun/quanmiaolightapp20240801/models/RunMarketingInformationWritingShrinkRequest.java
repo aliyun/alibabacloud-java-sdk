@@ -3,7 +3,7 @@ package com.aliyun.quanmiaolightapp20240801.models;
 
 import com.aliyun.tea.*;
 
-public class RunMarketingInformationWritingRequest extends TeaModel {
+public class RunMarketingInformationWritingShrinkRequest extends TeaModel {
     @NameInMap("apiKey")
     public String apiKey;
 
@@ -31,7 +31,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
      *             }</p>
      */
     @NameInMap("extParameters")
-    public java.util.Map<String, String> extParameters;
+    public String extParametersShrink;
 
     /**
      * <strong>example:</strong>
@@ -111,12 +111,12 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
     @NameInMap("writingType")
     public String writingType;
 
-    public static RunMarketingInformationWritingRequest build(java.util.Map<String, ?> map) throws Exception {
-        RunMarketingInformationWritingRequest self = new RunMarketingInformationWritingRequest();
+    public static RunMarketingInformationWritingShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        RunMarketingInformationWritingShrinkRequest self = new RunMarketingInformationWritingShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public RunMarketingInformationWritingRequest setApiKey(String apiKey) {
+    public RunMarketingInformationWritingShrinkRequest setApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
@@ -124,7 +124,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.apiKey;
     }
 
-    public RunMarketingInformationWritingRequest setCustomLimitation(String customLimitation) {
+    public RunMarketingInformationWritingShrinkRequest setCustomLimitation(String customLimitation) {
         this.customLimitation = customLimitation;
         return this;
     }
@@ -132,7 +132,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.customLimitation;
     }
 
-    public RunMarketingInformationWritingRequest setCustomPrompt(String customPrompt) {
+    public RunMarketingInformationWritingShrinkRequest setCustomPrompt(String customPrompt) {
         this.customPrompt = customPrompt;
         return this;
     }
@@ -140,15 +140,15 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.customPrompt;
     }
 
-    public RunMarketingInformationWritingRequest setExtParameters(java.util.Map<String, String> extParameters) {
-        this.extParameters = extParameters;
+    public RunMarketingInformationWritingShrinkRequest setExtParametersShrink(String extParametersShrink) {
+        this.extParametersShrink = extParametersShrink;
         return this;
     }
-    public java.util.Map<String, String> getExtParameters() {
-        return this.extParameters;
+    public String getExtParametersShrink() {
+        return this.extParametersShrink;
     }
 
-    public RunMarketingInformationWritingRequest setGenerateCount(String generateCount) {
+    public RunMarketingInformationWritingShrinkRequest setGenerateCount(String generateCount) {
         this.generateCount = generateCount;
         return this;
     }
@@ -156,7 +156,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.generateCount;
     }
 
-    public RunMarketingInformationWritingRequest setInputExample(String inputExample) {
+    public RunMarketingInformationWritingShrinkRequest setInputExample(String inputExample) {
         this.inputExample = inputExample;
         return this;
     }
@@ -164,7 +164,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.inputExample;
     }
 
-    public RunMarketingInformationWritingRequest setKeywords(String keywords) {
+    public RunMarketingInformationWritingShrinkRequest setKeywords(String keywords) {
         this.keywords = keywords;
         return this;
     }
@@ -172,7 +172,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.keywords;
     }
 
-    public RunMarketingInformationWritingRequest setLanguage(String language) {
+    public RunMarketingInformationWritingShrinkRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
@@ -180,7 +180,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.language;
     }
 
-    public RunMarketingInformationWritingRequest setModelId(String modelId) {
+    public RunMarketingInformationWritingShrinkRequest setModelId(String modelId) {
         this.modelId = modelId;
         return this;
     }
@@ -188,7 +188,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.modelId;
     }
 
-    public RunMarketingInformationWritingRequest setOtherRequirements(String otherRequirements) {
+    public RunMarketingInformationWritingShrinkRequest setOtherRequirements(String otherRequirements) {
         this.otherRequirements = otherRequirements;
         return this;
     }
@@ -196,7 +196,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.otherRequirements;
     }
 
-    public RunMarketingInformationWritingRequest setOutputExample(String outputExample) {
+    public RunMarketingInformationWritingShrinkRequest setOutputExample(String outputExample) {
         this.outputExample = outputExample;
         return this;
     }
@@ -204,7 +204,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.outputExample;
     }
 
-    public RunMarketingInformationWritingRequest setPrompt(String prompt) {
+    public RunMarketingInformationWritingShrinkRequest setPrompt(String prompt) {
         this.prompt = prompt;
         return this;
     }
@@ -212,7 +212,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.prompt;
     }
 
-    public RunMarketingInformationWritingRequest setSourceMaterial(String sourceMaterial) {
+    public RunMarketingInformationWritingShrinkRequest setSourceMaterial(String sourceMaterial) {
         this.sourceMaterial = sourceMaterial;
         return this;
     }
@@ -220,7 +220,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.sourceMaterial;
     }
 
-    public RunMarketingInformationWritingRequest setWordCountRange(String wordCountRange) {
+    public RunMarketingInformationWritingShrinkRequest setWordCountRange(String wordCountRange) {
         this.wordCountRange = wordCountRange;
         return this;
     }
@@ -228,7 +228,7 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
         return this.wordCountRange;
     }
 
-    public RunMarketingInformationWritingRequest setWritingType(String writingType) {
+    public RunMarketingInformationWritingShrinkRequest setWritingType(String writingType) {
         this.writingType = writingType;
         return this;
     }

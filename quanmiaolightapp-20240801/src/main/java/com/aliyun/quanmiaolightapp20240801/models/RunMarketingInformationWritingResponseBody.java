@@ -152,6 +152,10 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
     }
 
     public static class RunMarketingInformationWritingResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>推理内容</p>
+         */
         @NameInMap("reasonContent")
         public String reasonContent;
 
