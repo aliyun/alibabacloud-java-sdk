@@ -1,3 +1,8 @@
+2026-01-29 Version: 3.5.1
+- Update API GetJob: add response parameters Body.JobInfo.SecurityPolicy.
+- Update API GetJob: add response parameters Body.JobInfo.Tasks.$.TaskSpec.VolumeMount.
+
+
 2026-01-22 Version: 3.5.0
 - Support API DescribeJobResults.
 

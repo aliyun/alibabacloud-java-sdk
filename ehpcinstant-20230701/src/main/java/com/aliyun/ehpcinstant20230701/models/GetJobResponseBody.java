@@ -271,6 +271,44 @@ public class GetJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetJobResponseBodyJobInfoSecurityPolicySecurityGroup extends TeaModel {
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
+
+        public static GetJobResponseBodyJobInfoSecurityPolicySecurityGroup build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyJobInfoSecurityPolicySecurityGroup self = new GetJobResponseBodyJobInfoSecurityPolicySecurityGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfoSecurityPolicySecurityGroup setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+    }
+
+    public static class GetJobResponseBodyJobInfoSecurityPolicy extends TeaModel {
+        @NameInMap("SecurityGroup")
+        public GetJobResponseBodyJobInfoSecurityPolicySecurityGroup securityGroup;
+
+        public static GetJobResponseBodyJobInfoSecurityPolicy build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyJobInfoSecurityPolicy self = new GetJobResponseBodyJobInfoSecurityPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfoSecurityPolicy setSecurityGroup(GetJobResponseBodyJobInfoSecurityPolicySecurityGroup securityGroup) {
+            this.securityGroup = securityGroup;
+            return this;
+        }
+        public GetJobResponseBodyJobInfoSecurityPolicySecurityGroup getSecurityGroup() {
+            return this.securityGroup;
+        }
+
+    }
+
     public static class GetJobResponseBodyJobInfoTasksExecutorPolicyArraySpec extends TeaModel {
         /**
          * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
@@ -758,6 +796,47 @@ public class GetJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount extends TeaModel {
+        @NameInMap("MountOptions")
+        public String mountOptions;
+
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("VolumeDriver")
+        public String volumeDriver;
+
+        public static GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount self = new GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount setMountOptions(String mountOptions) {
+            this.mountOptions = mountOptions;
+            return this;
+        }
+        public String getMountOptions() {
+            return this.mountOptions;
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount setVolumeDriver(String volumeDriver) {
+            this.volumeDriver = volumeDriver;
+            return this;
+        }
+        public String getVolumeDriver() {
+            return this.volumeDriver;
+        }
+
+    }
+
     public static class GetJobResponseBodyJobInfoTasksTaskSpec extends TeaModel {
         /**
          * <p>The resource information.</p>
@@ -773,6 +852,9 @@ public class GetJobResponseBody extends TeaModel {
          */
         @NameInMap("TaskExecutor")
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutor> taskExecutor;
+
+        @NameInMap("VolumeMount")
+        public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount> volumeMount;
 
         public static GetJobResponseBodyJobInfoTasksTaskSpec build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyJobInfoTasksTaskSpec self = new GetJobResponseBodyJobInfoTasksTaskSpec();
@@ -801,6 +883,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutor> getTaskExecutor() {
             return this.taskExecutor;
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpec setVolumeMount(java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount> volumeMount) {
+            this.volumeMount = volumeMount;
+            return this;
+        }
+        public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount> getVolumeMount() {
+            return this.volumeMount;
         }
 
     }
@@ -962,6 +1052,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("JobScheduler")
         public String jobScheduler;
 
+        @NameInMap("SecurityPolicy")
+        public GetJobResponseBodyJobInfoSecurityPolicy securityPolicy;
+
         /**
          * <p>The time when the job started.</p>
          * 
@@ -1074,6 +1167,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getJobScheduler() {
             return this.jobScheduler;
+        }
+
+        public GetJobResponseBodyJobInfo setSecurityPolicy(GetJobResponseBodyJobInfoSecurityPolicy securityPolicy) {
+            this.securityPolicy = securityPolicy;
+            return this;
+        }
+        public GetJobResponseBodyJobInfoSecurityPolicy getSecurityPolicy() {
+            return this.securityPolicy;
         }
 
         public GetJobResponseBodyJobInfo setStartTime(String startTime) {
