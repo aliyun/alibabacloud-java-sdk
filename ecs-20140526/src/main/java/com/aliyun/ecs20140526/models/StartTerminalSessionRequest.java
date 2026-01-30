@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartTerminalSessionRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The command to run after the session is initiated. The command length cannot exceed 512 characters.</p>
      * <blockquote>
@@ -98,6 +101,14 @@ public class StartTerminalSessionRequest extends TeaModel {
     public static StartTerminalSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         StartTerminalSessionRequest self = new StartTerminalSessionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartTerminalSessionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public StartTerminalSessionRequest setCommandLine(String commandLine) {

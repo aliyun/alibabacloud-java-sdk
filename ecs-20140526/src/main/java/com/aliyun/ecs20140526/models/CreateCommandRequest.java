@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateCommandRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The Base64-encoded content of the command. Take note of the following items:</p>
      * <ul>
@@ -195,6 +198,14 @@ public class CreateCommandRequest extends TeaModel {
     public static CreateCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCommandRequest self = new CreateCommandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCommandRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateCommandRequest setCommandContent(String commandContent) {

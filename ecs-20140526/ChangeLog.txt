@@ -1,3 +1,16 @@
+2026-01-30 Version: 8.5.3
+- Update API CreateActivation: add request parameters ClientToken.
+- Update API CreateCommand: add request parameters ClientToken.
+- Update API DeregisterManagedInstance: add request parameters ClientToken.
+- Update API DescribeInvocationResults: add response parameters Body.Invocation.InvocationResults.$.OssOutputErrorCode.
+- Update API DescribeInvocationResults: add response parameters Body.Invocation.InvocationResults.$.OssOutputErrorInfo.
+- Update API DescribeInvocations: add response parameters Body.Invocations.$.InvokeInstances.$.OssOutputErrorCode.
+- Update API DescribeInvocations: add response parameters Body.Invocations.$.InvokeInstances.$.OssOutputErrorInfo.
+- Update API ModifyInvocationAttribute: add request parameters ClientToken.
+- Update API SendFile: add request parameters ClientToken.
+- Update API StartTerminalSession: add request parameters ClientToken.
+
+
 2026-01-28 Version: 8.5.2
 - Generated java 2014-05-26 for Ecs.
 

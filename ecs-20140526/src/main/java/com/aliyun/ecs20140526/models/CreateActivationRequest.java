@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateActivationRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The description of the activation code. The description must be 1 to 100 characters in length.</p>
      * 
@@ -93,6 +96,14 @@ public class CreateActivationRequest extends TeaModel {
     public static CreateActivationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateActivationRequest self = new CreateActivationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateActivationRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateActivationRequest setDescription(String description) {

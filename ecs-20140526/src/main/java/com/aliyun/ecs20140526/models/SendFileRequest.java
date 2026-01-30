@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class SendFileRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The content of the file. The file must not exceed 32 KB in size after it is encoded in Base64.</p>
      * <ul>
@@ -177,6 +180,14 @@ public class SendFileRequest extends TeaModel {
     public static SendFileRequest build(java.util.Map<String, ?> map) throws Exception {
         SendFileRequest self = new SendFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendFileRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public SendFileRequest setContent(String content) {

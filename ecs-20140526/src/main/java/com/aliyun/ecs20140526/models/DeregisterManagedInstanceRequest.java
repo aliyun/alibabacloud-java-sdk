@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeregisterManagedInstanceRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The managed instance ID.</p>
      * <p>This parameter is required.</p>
@@ -40,6 +43,14 @@ public class DeregisterManagedInstanceRequest extends TeaModel {
     public static DeregisterManagedInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeregisterManagedInstanceRequest self = new DeregisterManagedInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeregisterManagedInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeregisterManagedInstanceRequest setInstanceId(String instanceId) {

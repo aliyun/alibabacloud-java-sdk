@@ -244,6 +244,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        @NameInMap("OssOutputErrorCode")
+        public String ossOutputErrorCode;
+
+        @NameInMap("OssOutputErrorInfo")
+        public String ossOutputErrorInfo;
+
         /**
          * <p>The overall execution status of the command task. The value of this parameter depends on the execution status of the command task on all the involved instances. Valid values:</p>
          * <ul>
@@ -428,6 +434,22 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
         public String getInvocationStatus() {
             return this.invocationStatus;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setOssOutputErrorCode(String ossOutputErrorCode) {
+            this.ossOutputErrorCode = ossOutputErrorCode;
+            return this;
+        }
+        public String getOssOutputErrorCode() {
+            return this.ossOutputErrorCode;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setOssOutputErrorInfo(String ossOutputErrorInfo) {
+            this.ossOutputErrorInfo = ossOutputErrorInfo;
+            return this;
+        }
+        public String getOssOutputErrorInfo() {
+            return this.ossOutputErrorInfo;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setOssOutputStatus(String ossOutputStatus) {

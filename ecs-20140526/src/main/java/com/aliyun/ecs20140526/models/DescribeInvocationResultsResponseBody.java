@@ -338,6 +338,12 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @NameInMap("OssOutputDelivery")
         public String ossOutputDelivery;
 
+        @NameInMap("OssOutputErrorCode")
+        public String ossOutputErrorCode;
+
+        @NameInMap("OssOutputErrorInfo")
+        public String ossOutputErrorInfo;
+
         /**
          * <p>The execution results.</p>
          * 
@@ -561,6 +567,22 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
         public String getOssOutputDelivery() {
             return this.ossOutputDelivery;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOssOutputErrorCode(String ossOutputErrorCode) {
+            this.ossOutputErrorCode = ossOutputErrorCode;
+            return this;
+        }
+        public String getOssOutputErrorCode() {
+            return this.ossOutputErrorCode;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOssOutputErrorInfo(String ossOutputErrorInfo) {
+            this.ossOutputErrorInfo = ossOutputErrorInfo;
+            return this;
+        }
+        public String getOssOutputErrorInfo() {
+            return this.ossOutputErrorInfo;
         }
 
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOssOutputStatus(String ossOutputStatus) {

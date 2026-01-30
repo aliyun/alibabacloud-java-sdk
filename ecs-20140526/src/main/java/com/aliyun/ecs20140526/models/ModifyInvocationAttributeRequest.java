@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInvocationAttributeRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The content of the command after modification. The command content can be plaintext or Base64-encoded. Take note of the following items:</p>
      * <ul>
@@ -176,6 +179,14 @@ public class ModifyInvocationAttributeRequest extends TeaModel {
     public static ModifyInvocationAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInvocationAttributeRequest self = new ModifyInvocationAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInvocationAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyInvocationAttributeRequest setCommandContent(String commandContent) {
