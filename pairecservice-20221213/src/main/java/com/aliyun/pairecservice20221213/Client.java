@@ -6080,6 +6080,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取数据资源下的Schema列表。</p>
+     * 
+     * @param request ListInstanceResourceSchemasRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceResourceSchemasResponse
+     */
+    public ListInstanceResourceSchemasResponse listInstanceResourceSchemasWithOptions(String InstanceId, String ResourceId, ListInstanceResourceSchemasRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            query.put("SchemaName", request.schemaName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstanceResourceSchemas"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/resources/" + com.aliyun.openapiutil.Client.getEncodeParam(ResourceId) + "/schemas"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceResourceSchemasResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据资源下的Schema列表。</p>
+     * 
+     * @param request ListInstanceResourceSchemasRequest
+     * @return ListInstanceResourceSchemasResponse
+     */
+    public ListInstanceResourceSchemasResponse listInstanceResourceSchemas(String InstanceId, String ResourceId, ListInstanceResourceSchemasRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listInstanceResourceSchemasWithOptions(InstanceId, ResourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据源下数据表的列表。</p>
+     * 
+     * @param request ListInstanceResourceTablesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceResourceTablesResponse
+     */
+    public ListInstanceResourceTablesResponse listInstanceResourceTablesWithOptions(String InstanceId, String ResourceId, ListInstanceResourceTablesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxcomputeSchema)) {
+            query.put("MaxcomputeSchema", request.maxcomputeSchema);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstanceResourceTables"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/resources/" + com.aliyun.openapiutil.Client.getEncodeParam(ResourceId) + "/tables"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceResourceTablesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据源下数据表的列表。</p>
+     * 
+     * @param request ListInstanceResourceTablesRequest
+     * @return ListInstanceResourceTablesResponse
+     */
+    public ListInstanceResourceTablesResponse listInstanceResourceTables(String InstanceId, String ResourceId, ListInstanceResourceTablesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listInstanceResourceTablesWithOptions(InstanceId, ResourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取实例下配置的资源列表。</p>
      * 
      * @param request ListInstanceResourcesRequest
