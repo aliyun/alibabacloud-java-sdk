@@ -4,11 +4,11 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class ListClusterTypeResponseBody extends TeaModel {
-    @NameInMap("ClusterTypeDetailList")
-    public java.util.List<ListClusterTypeResponseBodyClusterTypeDetailList> clusterTypeDetailList;
+    @NameInMap("ClusterTypeInfos")
+    public java.util.List<ListClusterTypeResponseBodyClusterTypeInfos> clusterTypeInfos;
 
-    @NameInMap("ClusterTypeList")
-    public java.util.List<String> clusterTypeList;
+    @NameInMap("ClusterTypes")
+    public java.util.List<String> clusterTypes;
 
     /**
      * <strong>example:</strong>
@@ -22,20 +22,20 @@ public class ListClusterTypeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListClusterTypeResponseBody setClusterTypeDetailList(java.util.List<ListClusterTypeResponseBodyClusterTypeDetailList> clusterTypeDetailList) {
-        this.clusterTypeDetailList = clusterTypeDetailList;
+    public ListClusterTypeResponseBody setClusterTypeInfos(java.util.List<ListClusterTypeResponseBodyClusterTypeInfos> clusterTypeInfos) {
+        this.clusterTypeInfos = clusterTypeInfos;
         return this;
     }
-    public java.util.List<ListClusterTypeResponseBodyClusterTypeDetailList> getClusterTypeDetailList() {
-        return this.clusterTypeDetailList;
+    public java.util.List<ListClusterTypeResponseBodyClusterTypeInfos> getClusterTypeInfos() {
+        return this.clusterTypeInfos;
     }
 
-    public ListClusterTypeResponseBody setClusterTypeList(java.util.List<String> clusterTypeList) {
-        this.clusterTypeList = clusterTypeList;
+    public ListClusterTypeResponseBody setClusterTypes(java.util.List<String> clusterTypes) {
+        this.clusterTypes = clusterTypes;
         return this;
     }
-    public java.util.List<String> getClusterTypeList() {
-        return this.clusterTypeList;
+    public java.util.List<String> getClusterTypes() {
+        return this.clusterTypes;
     }
 
     public ListClusterTypeResponseBody setRequestId(String requestId) {
@@ -46,7 +46,7 @@ public class ListClusterTypeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListClusterTypeResponseBodyClusterTypeDetailList extends TeaModel {
+    public static class ListClusterTypeResponseBodyClusterTypeInfos extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>SSD</p>
@@ -54,19 +54,15 @@ public class ListClusterTypeResponseBody extends TeaModel {
         @NameInMap("ClusterType")
         public String clusterType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsMultiAZ")
         public Boolean isMultiAZ;
 
-        public static ListClusterTypeResponseBodyClusterTypeDetailList build(java.util.Map<String, ?> map) throws Exception {
-            ListClusterTypeResponseBodyClusterTypeDetailList self = new ListClusterTypeResponseBodyClusterTypeDetailList();
+        public static ListClusterTypeResponseBodyClusterTypeInfos build(java.util.Map<String, ?> map) throws Exception {
+            ListClusterTypeResponseBodyClusterTypeInfos self = new ListClusterTypeResponseBodyClusterTypeInfos();
             return TeaModel.build(map, self);
         }
 
-        public ListClusterTypeResponseBodyClusterTypeDetailList setClusterType(String clusterType) {
+        public ListClusterTypeResponseBodyClusterTypeInfos setClusterType(String clusterType) {
             this.clusterType = clusterType;
             return this;
         }
@@ -74,7 +70,7 @@ public class ListClusterTypeResponseBody extends TeaModel {
             return this.clusterType;
         }
 
-        public ListClusterTypeResponseBodyClusterTypeDetailList setIsMultiAZ(Boolean isMultiAZ) {
+        public ListClusterTypeResponseBodyClusterTypeInfos setIsMultiAZ(Boolean isMultiAZ) {
             this.isMultiAZ = isMultiAZ;
             return this;
         }
