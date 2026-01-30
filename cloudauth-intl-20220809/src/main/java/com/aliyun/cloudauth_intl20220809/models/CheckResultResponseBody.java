@@ -129,6 +129,9 @@ public class CheckResultResponseBody extends TeaModel {
         @NameInMap("ExtRiskInfo")
         public String extRiskInfo;
 
+        @NameInMap("ExtSourceInfo")
+        public String extSourceInfo;
+
         /**
          * <p>Whether the authentication is passed.</p>
          * <ul>
@@ -202,6 +205,14 @@ public class CheckResultResponseBody extends TeaModel {
         }
         public String getExtRiskInfo() {
             return this.extRiskInfo;
+        }
+
+        public CheckResultResponseBodyResult setExtSourceInfo(String extSourceInfo) {
+            this.extSourceInfo = extSourceInfo;
+            return this;
+        }
+        public String getExtSourceInfo() {
+            return this.extSourceInfo;
         }
 
         public CheckResultResponseBodyResult setPassed(String passed) {

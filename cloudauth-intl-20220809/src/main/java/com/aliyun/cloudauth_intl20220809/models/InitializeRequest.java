@@ -192,6 +192,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("EditOcrResult")
     public String editOcrResult;
 
+    @NameInMap("Email")
+    public String email;
+
     /**
      * <p>Experience code</p>
      * 
@@ -332,6 +335,9 @@ public class InitializeRequest extends TeaModel {
      */
     @NameInMap("MetaInfo")
     public String metaInfo;
+
+    @NameInMap("Mobile")
+    public String mobile;
 
     /**
      * <p>The type of liveness detection to be performed:</p>
@@ -719,6 +725,14 @@ public class InitializeRequest extends TeaModel {
         return this.editOcrResult;
     }
 
+    public InitializeRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+
     public InitializeRequest setExperienceCode(String experienceCode) {
         this.experienceCode = experienceCode;
         return this;
@@ -829,6 +843,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getMetaInfo() {
         return this.metaInfo;
+    }
+
+    public InitializeRequest setMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+    public String getMobile() {
+        return this.mobile;
     }
 
     public InitializeRequest setModel(String model) {

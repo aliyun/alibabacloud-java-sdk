@@ -2529,6 +2529,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EditOcrResult", request.editOcrResult);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.experienceCode)) {
             query.put("ExperienceCode", request.experienceCode);
         }
@@ -2579,6 +2583,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.metaInfo)) {
             query.put("MetaInfo", request.metaInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            query.put("Mobile", request.mobile);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.model)) {
