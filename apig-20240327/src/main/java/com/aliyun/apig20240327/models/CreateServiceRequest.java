@@ -54,6 +54,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("sourceType")
     public String sourceType;
 
+    @NameInMap("clientToken")
+    public String clientToken;
+
     public static CreateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceRequest self = new CreateServiceRequest();
         return TeaModel.build(map, self);
@@ -91,6 +94,33 @@ public class CreateServiceRequest extends TeaModel {
         return this.sourceType;
     }
 
+    public CreateServiceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public static class CreateServiceRequestServiceConfigsValidationOptions extends TeaModel {
+        @NameInMap("skipVerifyAIChatCompletion")
+        public Boolean skipVerifyAIChatCompletion;
+
+        public static CreateServiceRequestServiceConfigsValidationOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceRequestServiceConfigsValidationOptions self = new CreateServiceRequestServiceConfigsValidationOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceRequestServiceConfigsValidationOptions setSkipVerifyAIChatCompletion(Boolean skipVerifyAIChatCompletion) {
+            this.skipVerifyAIChatCompletion = skipVerifyAIChatCompletion;
+            return this;
+        }
+        public Boolean getSkipVerifyAIChatCompletion() {
+            return this.skipVerifyAIChatCompletion;
+        }
+
+    }
+
     public static class CreateServiceRequestServiceConfigs extends TeaModel {
         /**
          * <p>The list of domain names or fixed addresses.</p>
@@ -112,6 +142,9 @@ public class CreateServiceRequest extends TeaModel {
          */
         @NameInMap("dnsServers")
         public java.util.List<String> dnsServers;
+
+        @NameInMap("expressType")
+        public String expressType;
 
         /**
          * <p>The service group name. This parameter is required if sourceType is set to MSE_NACOS.</p>
@@ -156,6 +189,9 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("sourceId")
         public String sourceId;
 
+        @NameInMap("validationOptions")
+        public CreateServiceRequestServiceConfigsValidationOptions validationOptions;
+
         public static CreateServiceRequestServiceConfigs build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceRequestServiceConfigs self = new CreateServiceRequestServiceConfigs();
             return TeaModel.build(map, self);
@@ -191,6 +227,14 @@ public class CreateServiceRequest extends TeaModel {
         }
         public java.util.List<String> getDnsServers() {
             return this.dnsServers;
+        }
+
+        public CreateServiceRequestServiceConfigs setExpressType(String expressType) {
+            this.expressType = expressType;
+            return this;
+        }
+        public String getExpressType() {
+            return this.expressType;
         }
 
         public CreateServiceRequestServiceConfigs setGroupName(String groupName) {
@@ -231,6 +275,14 @@ public class CreateServiceRequest extends TeaModel {
         }
         public String getSourceId() {
             return this.sourceId;
+        }
+
+        public CreateServiceRequestServiceConfigs setValidationOptions(CreateServiceRequestServiceConfigsValidationOptions validationOptions) {
+            this.validationOptions = validationOptions;
+            return this;
+        }
+        public CreateServiceRequestServiceConfigsValidationOptions getValidationOptions() {
+            return this.validationOptions;
         }
 
     }

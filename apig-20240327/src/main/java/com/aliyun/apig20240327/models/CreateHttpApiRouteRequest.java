@@ -55,6 +55,9 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("policyConfigs")
+    public java.util.List<HttpApiPolicyConfigs> policyConfigs;
+
     public static CreateHttpApiRouteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHttpApiRouteRequest self = new CreateHttpApiRouteRequest();
         return TeaModel.build(map, self);
@@ -122,6 +125,14 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateHttpApiRouteRequest setPolicyConfigs(java.util.List<HttpApiPolicyConfigs> policyConfigs) {
+        this.policyConfigs = policyConfigs;
+        return this;
+    }
+    public java.util.List<HttpApiPolicyConfigs> getPolicyConfigs() {
+        return this.policyConfigs;
     }
 
     public static class CreateHttpApiRouteRequestBackendConfigServices extends TeaModel {

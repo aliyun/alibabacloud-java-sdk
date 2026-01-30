@@ -13,6 +13,9 @@ public class AgentServiceConfig extends TeaModel {
     @NameInMap("address")
     public String address;
 
+    @NameInMap("customConfig")
+    public AgentServiceConfigCustomConfig customConfig;
+
     @NameInMap("dashScopeConfig")
     public AgentServiceConfigDashScopeConfig dashScopeConfig;
 
@@ -21,6 +24,9 @@ public class AgentServiceConfig extends TeaModel {
 
     @NameInMap("enableHealthCheck")
     public Boolean enableHealthCheck;
+
+    @NameInMap("enableOutlierDetection")
+    public Boolean enableOutlierDetection;
 
     @NameInMap("protocols")
     public java.util.List<String> protocols;
@@ -42,6 +48,14 @@ public class AgentServiceConfig extends TeaModel {
     }
     public String getAddress() {
         return this.address;
+    }
+
+    public AgentServiceConfig setCustomConfig(AgentServiceConfigCustomConfig customConfig) {
+        this.customConfig = customConfig;
+        return this;
+    }
+    public AgentServiceConfigCustomConfig getCustomConfig() {
+        return this.customConfig;
     }
 
     public AgentServiceConfig setDashScopeConfig(AgentServiceConfigDashScopeConfig dashScopeConfig) {
@@ -68,6 +82,14 @@ public class AgentServiceConfig extends TeaModel {
         return this.enableHealthCheck;
     }
 
+    public AgentServiceConfig setEnableOutlierDetection(Boolean enableOutlierDetection) {
+        this.enableOutlierDetection = enableOutlierDetection;
+        return this;
+    }
+    public Boolean getEnableOutlierDetection() {
+        return this.enableOutlierDetection;
+    }
+
     public AgentServiceConfig setProtocols(java.util.List<String> protocols) {
         this.protocols = protocols;
         return this;
@@ -82,6 +104,36 @@ public class AgentServiceConfig extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
+    }
+
+    public static class AgentServiceConfigCustomConfig extends TeaModel {
+        @NameInMap("apiKey")
+        public String apiKey;
+
+        @NameInMap("apiKeyGenerateMode")
+        public String apiKeyGenerateMode;
+
+        public static AgentServiceConfigCustomConfig build(java.util.Map<String, ?> map) throws Exception {
+            AgentServiceConfigCustomConfig self = new AgentServiceConfigCustomConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AgentServiceConfigCustomConfig setApiKey(String apiKey) {
+            this.apiKey = apiKey;
+            return this;
+        }
+        public String getApiKey() {
+            return this.apiKey;
+        }
+
+        public AgentServiceConfigCustomConfig setApiKeyGenerateMode(String apiKeyGenerateMode) {
+            this.apiKeyGenerateMode = apiKeyGenerateMode;
+            return this;
+        }
+        public String getApiKeyGenerateMode() {
+            return this.apiKeyGenerateMode;
+        }
+
     }
 
     public static class AgentServiceConfigDashScopeConfigAppCredentials extends TeaModel {

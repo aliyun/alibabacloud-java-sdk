@@ -20,8 +20,17 @@ public class AiServiceConfig extends TeaModel {
     @NameInMap("bedrockServiceConfig")
     public AiServiceConfigBedrockServiceConfig bedrockServiceConfig;
 
+    @NameInMap("compatibleProtocols")
+    public java.util.List<String> compatibleProtocols;
+
+    @NameInMap("defaultModelName")
+    public String defaultModelName;
+
     @NameInMap("enableHealthCheck")
     public Boolean enableHealthCheck;
+
+    @NameInMap("enableOutlierDetection")
+    public Boolean enableOutlierDetection;
 
     @NameInMap("paiEASServiceConfig")
     public AiServiceConfigPaiEASServiceConfig paiEASServiceConfig;
@@ -35,6 +44,9 @@ public class AiServiceConfig extends TeaModel {
      */
     @NameInMap("provider")
     public String provider;
+
+    @NameInMap("vertexServiceConfig")
+    public AiServiceConfigVertexServiceConfig vertexServiceConfig;
 
     public static AiServiceConfig build(java.util.Map<String, ?> map) throws Exception {
         AiServiceConfig self = new AiServiceConfig();
@@ -73,12 +85,36 @@ public class AiServiceConfig extends TeaModel {
         return this.bedrockServiceConfig;
     }
 
+    public AiServiceConfig setCompatibleProtocols(java.util.List<String> compatibleProtocols) {
+        this.compatibleProtocols = compatibleProtocols;
+        return this;
+    }
+    public java.util.List<String> getCompatibleProtocols() {
+        return this.compatibleProtocols;
+    }
+
+    public AiServiceConfig setDefaultModelName(String defaultModelName) {
+        this.defaultModelName = defaultModelName;
+        return this;
+    }
+    public String getDefaultModelName() {
+        return this.defaultModelName;
+    }
+
     public AiServiceConfig setEnableHealthCheck(Boolean enableHealthCheck) {
         this.enableHealthCheck = enableHealthCheck;
         return this;
     }
     public Boolean getEnableHealthCheck() {
         return this.enableHealthCheck;
+    }
+
+    public AiServiceConfig setEnableOutlierDetection(Boolean enableOutlierDetection) {
+        this.enableOutlierDetection = enableOutlierDetection;
+        return this;
+    }
+    public Boolean getEnableOutlierDetection() {
+        return this.enableOutlierDetection;
     }
 
     public AiServiceConfig setPaiEASServiceConfig(AiServiceConfigPaiEASServiceConfig paiEASServiceConfig) {
@@ -103,6 +139,14 @@ public class AiServiceConfig extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
+    }
+
+    public AiServiceConfig setVertexServiceConfig(AiServiceConfigVertexServiceConfig vertexServiceConfig) {
+        this.vertexServiceConfig = vertexServiceConfig;
+        return this;
+    }
+    public AiServiceConfigVertexServiceConfig getVertexServiceConfig() {
+        return this.vertexServiceConfig;
     }
 
     public static class AiServiceConfigBedrockServiceConfig extends TeaModel {
@@ -194,6 +238,80 @@ public class AiServiceConfig extends TeaModel {
         }
         public String getWorkspaceId() {
             return this.workspaceId;
+        }
+
+    }
+
+    public static class AiServiceConfigVertexServiceConfig extends TeaModel {
+        @NameInMap("geminiSafetySetting")
+        public java.util.Map<String, String> geminiSafetySetting;
+
+        @NameInMap("vertexAuthKey")
+        public String vertexAuthKey;
+
+        @NameInMap("vertexAuthServiceName")
+        public String vertexAuthServiceName;
+
+        @NameInMap("vertexProjectId")
+        public String vertexProjectId;
+
+        @NameInMap("vertexRegion")
+        public String vertexRegion;
+
+        @NameInMap("vertexTokenRefreshAhead")
+        public Integer vertexTokenRefreshAhead;
+
+        public static AiServiceConfigVertexServiceConfig build(java.util.Map<String, ?> map) throws Exception {
+            AiServiceConfigVertexServiceConfig self = new AiServiceConfigVertexServiceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AiServiceConfigVertexServiceConfig setGeminiSafetySetting(java.util.Map<String, String> geminiSafetySetting) {
+            this.geminiSafetySetting = geminiSafetySetting;
+            return this;
+        }
+        public java.util.Map<String, String> getGeminiSafetySetting() {
+            return this.geminiSafetySetting;
+        }
+
+        public AiServiceConfigVertexServiceConfig setVertexAuthKey(String vertexAuthKey) {
+            this.vertexAuthKey = vertexAuthKey;
+            return this;
+        }
+        public String getVertexAuthKey() {
+            return this.vertexAuthKey;
+        }
+
+        public AiServiceConfigVertexServiceConfig setVertexAuthServiceName(String vertexAuthServiceName) {
+            this.vertexAuthServiceName = vertexAuthServiceName;
+            return this;
+        }
+        public String getVertexAuthServiceName() {
+            return this.vertexAuthServiceName;
+        }
+
+        public AiServiceConfigVertexServiceConfig setVertexProjectId(String vertexProjectId) {
+            this.vertexProjectId = vertexProjectId;
+            return this;
+        }
+        public String getVertexProjectId() {
+            return this.vertexProjectId;
+        }
+
+        public AiServiceConfigVertexServiceConfig setVertexRegion(String vertexRegion) {
+            this.vertexRegion = vertexRegion;
+            return this;
+        }
+        public String getVertexRegion() {
+            return this.vertexRegion;
+        }
+
+        public AiServiceConfigVertexServiceConfig setVertexTokenRefreshAhead(Integer vertexTokenRefreshAhead) {
+            this.vertexTokenRefreshAhead = vertexTokenRefreshAhead;
+            return this;
+        }
+        public Integer getVertexTokenRefreshAhead() {
+            return this.vertexTokenRefreshAhead;
         }
 
     }
