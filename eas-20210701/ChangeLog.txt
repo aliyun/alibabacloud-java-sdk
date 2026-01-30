@@ -1,3 +1,7 @@
+2026-01-30 Version: 7.4.3
+- Update API UpdateResourceInstance: add request parameters body.Reason.
+
+
 2026-01-19 Version: 7.4.2
 - Update API UpdateResourceInstance: add request parameters body.NewDiskSize.
 

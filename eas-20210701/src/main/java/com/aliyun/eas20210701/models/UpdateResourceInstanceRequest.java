@@ -22,6 +22,9 @@ public class UpdateResourceInstanceRequest extends TeaModel {
     @NameInMap("NewDiskSize")
     public String newDiskSize;
 
+    @NameInMap("Reason")
+    public String reason;
+
     public static UpdateResourceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceInstanceRequest self = new UpdateResourceInstanceRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class UpdateResourceInstanceRequest extends TeaModel {
     }
     public String getNewDiskSize() {
         return this.newDiskSize;
+    }
+
+    public UpdateResourceInstanceRequest setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
     }
 
 }

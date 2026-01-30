@@ -70,6 +70,12 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<ResourceInstanceLabels> labels;
 
+    @NameInMap("LastCordonOperator")
+    public String lastCordonOperator;
+
+    @NameInMap("LastCordonReason")
+    public String lastCordonReason;
+
     @NameInMap("Region")
     public String region;
 
@@ -258,6 +264,22 @@ public class ResourceInstance extends TeaModel {
     }
     public java.util.List<ResourceInstanceLabels> getLabels() {
         return this.labels;
+    }
+
+    public ResourceInstance setLastCordonOperator(String lastCordonOperator) {
+        this.lastCordonOperator = lastCordonOperator;
+        return this;
+    }
+    public String getLastCordonOperator() {
+        return this.lastCordonOperator;
+    }
+
+    public ResourceInstance setLastCordonReason(String lastCordonReason) {
+        this.lastCordonReason = lastCordonReason;
+        return this;
+    }
+    public String getLastCordonReason() {
+        return this.lastCordonReason;
     }
 
     public ResourceInstance setRegion(String region) {
