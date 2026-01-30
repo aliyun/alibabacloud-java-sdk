@@ -535,12 +535,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListObjectScanEventResponse listObjectScanEventWithOptions(ListObjectScanEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchType)) {
+            query.put("BatchType", request.batchType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bucketName)) {
             query.put("BucketName", request.bucketName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventName)) {
@@ -573,6 +581,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeEnd)) {

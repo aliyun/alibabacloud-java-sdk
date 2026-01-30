@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ListObjectScanEventRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>sha256</p>
+     */
+    @NameInMap("BatchType")
+    public String batchType;
+
+    /**
+     * <strong>example:</strong>
      * <p>testBucket******</p>
      */
     @NameInMap("BucketName")
@@ -20,6 +27,17 @@ public class ListObjectScanEventRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("EventId")
+    public Long eventId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>WebShell</p>
+     */
     @NameInMap("EventName")
     public String eventName;
 
@@ -76,6 +94,13 @@ public class ListObjectScanEventRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("Status")
+    public Integer status;
+
+    /**
+     * <strong>example:</strong>
      * <p>1683862286000</p>
      */
     @NameInMap("TimeEnd")
@@ -93,6 +118,14 @@ public class ListObjectScanEventRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListObjectScanEventRequest setBatchType(String batchType) {
+        this.batchType = batchType;
+        return this;
+    }
+    public String getBatchType() {
+        return this.batchType;
+    }
+
     public ListObjectScanEventRequest setBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -107,6 +140,14 @@ public class ListObjectScanEventRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListObjectScanEventRequest setEventId(Long eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public Long getEventId() {
+        return this.eventId;
     }
 
     public ListObjectScanEventRequest setEventName(String eventName) {
@@ -171,6 +212,14 @@ public class ListObjectScanEventRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public ListObjectScanEventRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
     public ListObjectScanEventRequest setTimeEnd(Long timeEnd) {

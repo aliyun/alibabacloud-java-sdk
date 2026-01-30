@@ -147,6 +147,9 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @NameInMap("DisplaySandboxResult")
         public String displaySandboxResult;
 
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -192,12 +195,18 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @NameInMap("Md5")
         public String md5;
 
+        @NameInMap("OperateResult")
+        public String operateResult;
+
         /**
          * <strong>example:</strong>
          * <p>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</p>
          */
         @NameInMap("OssKey")
         public String ossKey;
+
+        @NameInMap("Remark")
+        public String remark;
 
         /**
          * <strong>example:</strong>
@@ -227,6 +236,9 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @NameInMap("Source")
         public String source;
 
+        @NameInMap("Status")
+        public Integer status;
+
         public static ListObjectScanEventResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListObjectScanEventResponseBodyData self = new ListObjectScanEventResponseBodyData();
             return TeaModel.build(map, self);
@@ -254,6 +266,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         }
         public String getDisplaySandboxResult() {
             return this.displaySandboxResult;
+        }
+
+        public ListObjectScanEventResponseBodyData setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         public ListObjectScanEventResponseBodyData setEventId(Long eventId) {
@@ -312,12 +332,28 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             return this.md5;
         }
 
+        public ListObjectScanEventResponseBodyData setOperateResult(String operateResult) {
+            this.operateResult = operateResult;
+            return this;
+        }
+        public String getOperateResult() {
+            return this.operateResult;
+        }
+
         public ListObjectScanEventResponseBodyData setOssKey(String ossKey) {
             this.ossKey = ossKey;
             return this;
         }
         public String getOssKey() {
             return this.ossKey;
+        }
+
+        public ListObjectScanEventResponseBodyData setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public ListObjectScanEventResponseBodyData setRiskLevel(String riskLevel) {
@@ -350,6 +386,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         }
         public String getSource() {
             return this.source;
+        }
+
+        public ListObjectScanEventResponseBodyData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }
