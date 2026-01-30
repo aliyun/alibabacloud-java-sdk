@@ -578,6 +578,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建预设节点池</p>
+     * 
+     * @param request CreateReservedNodePoolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateReservedNodePoolResponse
+     */
+    public CreateReservedNodePoolResponse createReservedNodePoolWithOptions(CreateReservedNodePoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.count)) {
+            query.put("Count", request.count);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostPostfix)) {
+            query.put("HostPostfix", request.hostPostfix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostPrefix)) {
+            query.put("HostPrefix", request.hostPrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateReservedNodePool"),
+            new TeaPair("version", "2024-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReservedNodePoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建预设节点池</p>
+     * 
+     * @param request CreateReservedNodePoolRequest
+     * @return CreateReservedNodePoolResponse
+     */
+    public CreateReservedNodePoolResponse createReservedNodePool(CreateReservedNodePoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createReservedNodePoolWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param tmpReq CreateUsersRequest
@@ -810,6 +878,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteQueuesResponse deleteQueues(DeleteQueuesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteQueuesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除集群预设节点池</p>
+     * 
+     * @param request DeleteReservedNodePoolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteReservedNodePoolResponse
+     */
+    public DeleteReservedNodePoolResponse deleteReservedNodePoolWithOptions(DeleteReservedNodePoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteReservedNodePool"),
+            new TeaPair("version", "2024-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteReservedNodePoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除集群预设节点池</p>
+     * 
+     * @param request DeleteReservedNodePoolRequest
+     * @return DeleteReservedNodePoolResponse
+     */
+    public DeleteReservedNodePoolResponse deleteReservedNodePool(DeleteReservedNodePoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteReservedNodePoolWithOptions(request, runtime);
     }
 
     /**
