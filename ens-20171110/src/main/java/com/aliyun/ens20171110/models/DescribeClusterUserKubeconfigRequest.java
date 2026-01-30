@@ -13,6 +13,9 @@ public class DescribeClusterUserKubeconfigRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("PrivateIpAddress")
+    public Boolean privateIpAddress;
+
     public static DescribeClusterUserKubeconfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterUserKubeconfigRequest self = new DescribeClusterUserKubeconfigRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class DescribeClusterUserKubeconfigRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DescribeClusterUserKubeconfigRequest setPrivateIpAddress(Boolean privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public Boolean getPrivateIpAddress() {
+        return this.privateIpAddress;
     }
 
 }
