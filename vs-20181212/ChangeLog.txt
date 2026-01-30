@@ -1,3 +1,7 @@
+2026-01-30 Version: 3.7.0
+- Support API ModifyRenderingChargeType.
+
+
 2026-01-22 Version: 3.6.2
 - Update API DescribeRenderingInstance: add response parameters Body.InstanceChargeType.
 
