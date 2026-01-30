@@ -1372,6 +1372,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询T2优惠券审批详情</p>
+     * 
+     * @param request GetTier2CouponApprovalDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTier2CouponApprovalDetailResponse
+     */
+    public GetTier2CouponApprovalDetailResponse getTier2CouponApprovalDetailWithOptions(GetTier2CouponApprovalDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationSheetId)) {
+            query.put("ApplicationSheetId", request.applicationSheetId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTier2CouponApprovalDetail"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTier2CouponApprovalDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询T2优惠券审批详情</p>
+     * 
+     * @param request GetTier2CouponApprovalDetailRequest
+     * @return GetTier2CouponApprovalDetailResponse
+     */
+    public GetTier2CouponApprovalDetailResponse getTier2CouponApprovalDetail(GetTier2CouponApprovalDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTier2CouponApprovalDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query all the Unassociated Customer.</p>
      * 
      * @param request GetUnassociatedCustomerRequest
@@ -1686,6 +1730,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListExportTasksResponse listExportTasks(ListExportTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listExportTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>T1查询T2优惠券申请列表</p>
+     * 
+     * @param request ListTier2CouponApprovalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTier2CouponApprovalResponse
+     */
+    public ListTier2CouponApprovalResponse listTier2CouponApprovalWithOptions(ListTier2CouponApprovalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationSheetId)) {
+            query.put("ApplicationSheetId", request.applicationSheetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.approvalStatus)) {
+            query.put("ApprovalStatus", request.approvalStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.t2PartnerName)) {
+            query.put("T2PartnerName", request.t2PartnerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.t2PartnerUid)) {
+            query.put("T2PartnerUid", request.t2PartnerUid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTier2CouponApproval"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTier2CouponApprovalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>T1查询T2优惠券申请列表</p>
+     * 
+     * @param request ListTier2CouponApprovalRequest
+     * @return ListTier2CouponApprovalResponse
+     */
+    public ListTier2CouponApprovalResponse listTier2CouponApproval(ListTier2CouponApprovalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTier2CouponApprovalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>审批流审批通用接口</p>
+     * 
+     * @param request ProcessApprovalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ProcessApprovalResponse
+     */
+    public ProcessApprovalResponse processApprovalWithOptions(ProcessApprovalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationSheetId)) {
+            query.put("ApplicationSheetId", request.applicationSheetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.approvalAction)) {
+            query.put("ApprovalAction", request.approvalAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.approvalComments)) {
+            query.put("ApprovalComments", request.approvalComments);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ProcessApproval"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ProcessApprovalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>审批流审批通用接口</p>
+     * 
+     * @param request ProcessApprovalRequest
+     * @return ProcessApprovalResponse
+     */
+    public ProcessApprovalResponse processApproval(ProcessApprovalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.processApprovalWithOptions(request, runtime);
     }
 
     /**
