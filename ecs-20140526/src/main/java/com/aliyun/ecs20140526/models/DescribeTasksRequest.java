@@ -89,6 +89,13 @@ public class DescribeTasksRequest extends TeaModel {
     public String taskAction;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("TaskGroupId")
+    public String taskGroupId;
+
+    /**
      * <p>The task IDs. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
@@ -206,6 +213,14 @@ public class DescribeTasksRequest extends TeaModel {
     }
     public String getTaskAction() {
         return this.taskAction;
+    }
+
+    public DescribeTasksRequest setTaskGroupId(String taskGroupId) {
+        this.taskGroupId = taskGroupId;
+        return this;
+    }
+    public String getTaskGroupId() {
+        return this.taskGroupId;
     }
 
     public DescribeTasksRequest setTaskIds(String taskIds) {

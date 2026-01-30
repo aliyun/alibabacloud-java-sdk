@@ -21850,6 +21850,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskAction", request.taskAction);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taskGroupId)) {
+            query.put("TaskGroupId", request.taskGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
             query.put("TaskIds", request.taskIds);
         }
