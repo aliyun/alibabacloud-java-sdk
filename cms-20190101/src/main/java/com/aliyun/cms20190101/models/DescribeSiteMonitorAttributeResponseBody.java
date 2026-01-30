@@ -1810,6 +1810,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("match_rule")
         public Integer matchRule;
 
+        @NameInMap("max_tls_version")
+        public String maxTlsVersion;
+
         /**
          * <p>The minimum TLS version. By default, TLS 1.2 and later versions are supported. TLS 1.0 and 1.1 are disabled. If you still require TLS 1.0 or 1.1, you can change the configuration.</p>
          * 
@@ -1974,6 +1977,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("scroll_end")
         public Boolean scrollEnd;
 
+        @NameInMap("server_name")
+        public String serverName;
+
         @NameInMap("steps")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonSteps steps;
 
@@ -1985,6 +1991,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         @NameInMap("strict_mode")
         public Boolean strictMode;
+
+        @NameInMap("supported_cipher_suits")
+        public String supportedCipherSuits;
 
         /**
          * <p>The timeout period. Unit: milliseconds.</p>
@@ -2024,6 +2033,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
         @NameInMap("use_private_crt")
         public Boolean usePrivateCrt;
+
+        @NameInMap("use_ssl")
+        public Boolean useSsl;
 
         /**
          * <p>The username of the FTP, SMTP, or POP3 protocol.</p>
@@ -2304,6 +2316,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.matchRule;
         }
 
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setMaxTlsVersion(String maxTlsVersion) {
+            this.maxTlsVersion = maxTlsVersion;
+            return this;
+        }
+        public String getMaxTlsVersion() {
+            return this.maxTlsVersion;
+        }
+
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setMinTlsVersion(String minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
@@ -2448,6 +2468,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.scrollEnd;
         }
 
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setServerName(String serverName) {
+            this.serverName = serverName;
+            return this;
+        }
+        public String getServerName() {
+            return this.serverName;
+        }
+
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setSteps(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonSteps steps) {
             this.steps = steps;
             return this;
@@ -2462,6 +2490,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public Boolean getStrictMode() {
             return this.strictMode;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setSupportedCipherSuits(String supportedCipherSuits) {
+            this.supportedCipherSuits = supportedCipherSuits;
+            return this;
+        }
+        public String getSupportedCipherSuits() {
+            return this.supportedCipherSuits;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setTimeOut(Long timeOut) {
@@ -2518,6 +2554,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public Boolean getUsePrivateCrt() {
             return this.usePrivateCrt;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setUseSsl(Boolean useSsl) {
+            this.useSsl = useSsl;
+            return this;
+        }
+        public Boolean getUseSsl() {
+            return this.useSsl;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setUsername(String username) {
