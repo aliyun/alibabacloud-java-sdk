@@ -4,10 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>Metrics for instance creation and deletion.</p>
+     */
     @NameInMap("InstanceCreateAndDeleteStatistics")
     public DescribeInstanceCreateAndDeleteStatisticsResponseBodyInstanceCreateAndDeleteStatistics instanceCreateAndDeleteStatistics;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>086EFCD4-C76F-4DC6-9EE9-0D9B711E****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
 
     public static class DescribeInstanceCreateAndDeleteStatisticsResponseBodyInstanceCreateAndDeleteStatisticsStatistic extends TeaModel {
         /**
+         * <p>The number of new instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -44,6 +51,8 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
         public Integer createdVmCount;
 
         /**
+         * <p>The number of released instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>34</p>
          */
@@ -51,6 +60,8 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
         public Integer destroyedVmCount;
 
         /**
+         * <p>The number of instances that are started from economical mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -58,6 +69,8 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
         public Integer startedVmCount;
 
         /**
+         * <p>The number of instances that are stopped in economical mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -65,6 +78,8 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
         public Integer stoppedVmCount;
 
         /**
+         * <p>The time when the statistics are generated. The time is in UTC. Format: yyyyMMddHH.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025121623</p>
          */

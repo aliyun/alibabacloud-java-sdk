@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryPredictiveMetricRequest extends TeaModel {
     /**
+     * <p>The end time of the predicted monitoring data. The time follows the ISO8601 standard and uses UTC time.</p>
+     * <p>Format: yyyy-MM-ddTHH:mmZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,12 @@ public class QueryPredictiveMetricRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The name of the monitoring metric of the prediction rule. Valid values:</p>
+     * <ul>
+     * <li>CpuUtilization: the average CPU utilization.</li>
+     * <li>IntranetRx: the inbound traffic over an internal network.</li>
+     * <li>IntranetTx: the outbound traffic over an internal network.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,7 @@ public class QueryPredictiveMetricRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +50,7 @@ public class QueryPredictiveMetricRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +60,8 @@ public class QueryPredictiveMetricRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
+     * <p>The start time of the predicted monitoring data. The time follows the ISO8601 standard and uses UTC time.</p>
+     * <p>Format: yyyy-MM-ddTHH:mmZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

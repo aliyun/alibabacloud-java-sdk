@@ -230,7 +230,7 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     public java.util.List<ModifyScalingConfigurationShrinkRequestInstancePatternInfos> instancePatternInfos;
 
     /**
-     * <p>The instance types.</p>
+     * <p>Details of the instance types.</p>
      */
     @NameInMap("InstanceTypeOverrides")
     public java.util.List<ModifyScalingConfigurationShrinkRequestInstanceTypeOverrides> instanceTypeOverrides;
@@ -488,7 +488,7 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     public String spotInterruptionBehavior;
 
     /**
-     * <p>The preemptible instance types.</p>
+     * <p>The information about spot instance types.</p>
      */
     @NameInMap("SpotPriceLimits")
     public java.util.List<ModifyScalingConfigurationShrinkRequestSpotPriceLimits> spotPriceLimits;
@@ -2168,12 +2168,12 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
 
     public static class ModifyScalingConfigurationShrinkRequestInstanceTypeOverrides extends TeaModel {
         /**
-         * <p>The instance type. If you want to specify the capacity of instance types in the scaling configuration, specify InstanceType and WeightedCapacity at the same time.</p>
-         * <p>You can use InstanceType to specify multiple instance types and WeightedCapacity to specify the weights of the instance types.</p>
+         * <p>The instance type. If you want to specify the weight of the instance type in the scaling configuration, you must specify InstanceTypeOverride.WeightedCapacity after you specify this parameter.</p>
+         * <p>This parameter specifies instance types. You can use this parameter to specify multiple instance types and use InstanceTypeOverride.WeightedCapacity to specify weights for the instance types.</p>
          * <blockquote>
-         * <p>If you specify InstanceType, you cannot specify InstanceTypes.</p>
+         * <p> If you specify this parameter, you cannot specify instanceTypes.</p>
          * </blockquote>
-         * <p>You can use InstanceType to specify only instance types that are available for purchase.</p>
+         * <p>You can use this parameter to specify any instance types that are available for purchase.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c5.xlarge</p>
@@ -2182,18 +2182,18 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The weight of the instance type. The weight specifies the capacity of an instance of the specified instance type in the scaling group. If you want Auto Scaling to scale instances in the scaling group based on the weighted capacity of the instances, specify WeightedCapacity after you specify InstanceType.</p>
-         * <p>A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</p>
-         * <p>Performance metrics, such as the number of vCPUs and the memory size of each instance type, may vary. You can specify different weights for different instance types based on your business requirements.</p>
-         * <p>Example:</p>
+         * <p>The weight of the instance type. If you want to trigger scale-outs based on instance capacities, you can specify this parameter after you specify LaunchTemplateOverride.InstanceType.</p>
+         * <p>The weight specifies the capacity of an instance of the specified instance type in the scaling group. A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</p>
+         * <p>Performance metrics such as the number of vCPUs and the memory size of each instance type may vary. You can specify different weights for different instance types based on your business requirements.</p>
+         * <p>Sample capacity configurations:</p>
          * <ul>
-         * <li>Current capacity: 0</li>
-         * <li>Expected capacity: 6</li>
-         * <li>Capacity of ecs.c5.xlarge: 4</li>
+         * <li>Current capacity: 0.</li>
+         * <li>Expected capacity: 6.</li>
+         * <li>Capacity of ecs.c5.xlarge: 4.</li>
          * </ul>
-         * <p>To meet the expected capacity requirement, Auto Scaling must create and add two ecs.c5.xlarge instances.</p>
+         * <p>To reach the expected capacity, Auto Scaling must scale out two instances of ecs.c5.xlarge.</p>
          * <blockquote>
-         * <p>The capacity of the scaling group cannot exceed the sum of the maximum number of instances that is specified by MaxSize and the maximum weight of the instance types.</p>
+         * <p> The total capacity of the scaling group is constrained and cannot surpass the combined total of the maximum group size defined by MaxSize and the highest weight assigned to any instance type.</p>
          * </blockquote>
          * <p>Valid values of WeightedCapacity: 1 to 500.</p>
          * 
@@ -2269,6 +2269,9 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
 
+        @NameInMap("SecondaryPrivateIpAddressCount")
+        public Integer secondaryPrivateIpAddressCount;
+
         /**
          * <p>The IDs of the security groups to which you want to assign the ENI.</p>
          */
@@ -2302,6 +2305,14 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         }
         public String getNetworkInterfaceTrafficMode() {
             return this.networkInterfaceTrafficMode;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestNetworkInterfaces setSecondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
+            this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
+            return this;
+        }
+        public Integer getSecondaryPrivateIpAddressCount() {
+            return this.secondaryPrivateIpAddressCount;
         }
 
         public ModifyScalingConfigurationShrinkRequestNetworkInterfaces setSecurityGroupIds(java.util.List<String> securityGroupIds) {
@@ -2390,7 +2401,7 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
 
     public static class ModifyScalingConfigurationShrinkRequestSpotPriceLimits extends TeaModel {
         /**
-         * <p>The instance type of the preemptible instance. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</p>
+         * <p>The instance type of the spot instances. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6.large</p>
@@ -2399,7 +2410,7 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The price limit of the preemptible instance. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</p>
+         * <p>The price limit of the spot instances. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</p>
          * 
          * <strong>example:</strong>
          * <p>0.125</p>

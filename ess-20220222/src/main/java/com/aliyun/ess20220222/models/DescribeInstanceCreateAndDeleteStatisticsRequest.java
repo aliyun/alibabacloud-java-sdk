@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceCreateAndDeleteStatisticsRequest extends TeaModel {
     /**
+     * <p>The end time of the statistical interval. The time follows the ISO 8601 standard and uses UTC time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class DescribeInstanceCreateAndDeleteStatisticsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +34,8 @@ public class DescribeInstanceCreateAndDeleteStatisticsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the scaling group.</p>
+     * 
      * <strong>example:</strong>
      * <p>asg-2ze4057nqfbxxxxxxxx</p>
      */
@@ -39,6 +43,7 @@ public class DescribeInstanceCreateAndDeleteStatisticsRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
+     * <p>The start time of the statistical interval. The time follows the ISO 8601 standard and uses UTC time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryPredictiveTaskInfoRequest extends TeaModel {
     /**
+     * <p>The end time of the prediction task. The time follows the ISO8601 standard and uses UTC time.</p>
+     * <p>Format: yyyy-MM-ddTHH:mmZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +19,7 @@ public class QueryPredictiveTaskInfoRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class QueryPredictiveTaskInfoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the prediction scaling rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,8 @@ public class QueryPredictiveTaskInfoRequest extends TeaModel {
     public String scalingRuleId;
 
     /**
+     * <p>The start time of the prediction task. The time follows the ISO8601 standard and uses UTC time.</p>
+     * <p>Format: yyyy-MM-ddTHH:mmZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

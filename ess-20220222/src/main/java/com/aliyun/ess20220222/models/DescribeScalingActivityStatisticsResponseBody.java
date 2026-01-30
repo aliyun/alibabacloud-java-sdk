@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A8F44B4D-BAB4-5176-8705-5984xxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The error message statistics of the scaling activity.</p>
+     */
     @NameInMap("ScalingActivityErrorCodeStatistics")
     public DescribeScalingActivityStatisticsResponseBodyScalingActivityErrorCodeStatistics scalingActivityErrorCodeStatistics;
 
+    /**
+     * <p>The statistical metrics of the scaling activity status.</p>
+     */
     @NameInMap("ScalingActivityStatusStatistics")
     public DescribeScalingActivityStatisticsResponseBodyScalingActivityStatusStatistics scalingActivityStatusStatistics;
 
@@ -48,6 +56,8 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
 
     public static class DescribeScalingActivityStatisticsResponseBodyScalingActivityErrorCodeStatisticsErrorStatistic extends TeaModel {
         /**
+         * <p>The number of failed scaling activities.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -55,6 +65,8 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>Scaling Activity Error Codes</p>
+         * 
          * <strong>example:</strong>
          * <p>QuotaExceeded.PrivateIpAddress</p>
          */
@@ -62,6 +74,8 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The time when the statistics are generated. The time is in UTC. Format: yyyyMMddHH.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025121623</p>
          */
@@ -120,6 +134,8 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
 
     public static class DescribeScalingActivityStatisticsResponseBodyScalingActivityStatusStatisticsStatistic extends TeaModel {
         /**
+         * <p>The number of failed scaling activities.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -127,6 +143,8 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
         public Integer failedActivityCount;
 
         /**
+         * <p>The number of successful scaling activities.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -134,6 +152,8 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
         public Integer successActivityCount;
 
         /**
+         * <p>The time when the statistics are generated. The time is in UTC. Format: yyyyMMddHH.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025121623</p>
          */
@@ -141,6 +161,8 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
         public String time;
 
         /**
+         * <p>The number of partially executed scaling activities.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

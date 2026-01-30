@@ -47,7 +47,7 @@ public class ModifyAlarmRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Details of the dimensions.</p>
+     * <p>The metric dimensions.</p>
      */
     @NameInMap("Dimensions")
     public java.util.List<ModifyAlarmRequestDimensions> dimensions;
@@ -152,9 +152,9 @@ public class ModifyAlarmRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The metric type. Valid values:</p>
+     * <p>The metric type. Valid Values:</p>
      * <ul>
-     * <li>system: a system metric of CloudMonitor</li>
+     * <li>system: a system metric of CloudMonitor.</li>
      * <li>custom: a custom metric that is reported to CloudMonitor.</li>
      * </ul>
      * 
@@ -390,16 +390,17 @@ public class ModifyAlarmRequest extends TeaModel {
 
     public static class ModifyAlarmRequestDimensions extends TeaModel {
         /**
-         * <p>The key of the dimension. The valid values vary based on the metric type.</p>
+         * <p>The key of dimension N that you want to associate with the metric. The valid values of Dimension.N.DimensionKey vary based on the value of MetricType.</p>
          * <ul>
-         * <li><p>If you set the MetricType parameter to custom, you can specify this parameter based on your business requirements.</p>
+         * <li><p>If you set MetricType to custom, you can specify this parameter based on your business requirements.</p>
          * </li>
-         * <li><p>If you set the MetricType parameter to system, this parameter has the following valid values:</p>
+         * <li><p>If you set MetricType to system, this parameter has the following valid values:</p>
          * <ul>
-         * <li>user_id: the ID of your Alibaba Cloud account</li>
-         * <li>scaling_group: the scaling group that you want to monitor</li>
-         * <li>device: the type of the NIC</li>
-         * <li>state: the status of the TCP connection</li>
+         * <li>user_id: the ID of your Alibaba Cloud account.</li>
+         * <li>scaling_group: the scaling group that is monitored by the event-triggered task.</li>
+         * <li>device: the NIC type.</li>
+         * <li>state: the status of the TCP connection.</li>
+         * <li>rulePool: the specified server group for the ALB qps metric.</li>
          * </ul>
          * </li>
          * </ul>
@@ -411,26 +412,26 @@ public class ModifyAlarmRequest extends TeaModel {
         public String dimensionKey;
 
         /**
-         * <p>The value of the dimension. The valid values vary based on the value of the DimensionKey parameter.</p>
+         * <p>The dimension value of the metric. The valid values of this parameter vary based on the value of Dimensions.DimensionKey.</p>
          * <ul>
-         * <li><p>If you set the MetricType parameter to custom, you can specify this parameter based on your business requirements.</p>
+         * <li><p>If you set MetricType to custom, you can specify this parameter based on your business requirements.</p>
          * </li>
-         * <li><p>If you set the MetricType parameter to system, this parameter has the following valid values:</p>
+         * <li><p>If you set MetricType to system, Dimension.N.DimensionValue has the following valid values:</p>
          * <ul>
-         * <li><p>If you set the DimensionKey parameter to user_id, the system specifies the value</p>
+         * <li><p>user_id: The system specifies the value.</p>
          * </li>
-         * <li><p>scaling_group: The system specifies the value of the DimensionValue parameter.</p>
+         * <li><p>scaling_group: The system specifies the value.</p>
          * </li>
-         * <li><p>If you set the DimensionKey parameter to device, you can set the DimensionValue parameter to eth0 or eth1.</p>
+         * <li><p>device:</p>
          * <ul>
-         * <li>For instances that reside in the classic network type, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in a VPC.</li>
-         * <li>For instances that reside in the classic network, eth1 specifies the public NIC.</li>
+         * <li>eth0: For classic network instances, eth0 indicates the internal network network interface controller. Only one eth0 NIC exists on each instance that resides in VPCs.</li>
+         * <li>eth1: For classic network instances, eth1 represents the Internet network interface controller.</li>
          * </ul>
          * </li>
-         * <li><p>If you set the DimensionKey parameter to state, you can set the DimensionValue parameter to TCP_TOTAL or ESTABLISHED.</p>
+         * <li><p>state:</p>
          * <ul>
          * <li>TCP_TOTAL specifies the total number of TCP connections.</li>
-         * <li>ESTABLISHED specifies the number of established TCP connections.</li>
+         * <li>ESTABLISHED specifies the number of TCP connections that are established.</li>
          * </ul>
          * </li>
          * </ul>

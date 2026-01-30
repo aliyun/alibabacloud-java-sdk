@@ -880,6 +880,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
 
+        @NameInMap("SecondaryPrivateIpAddressCount")
+        public Integer secondaryPrivateIpAddressCount;
+
         /**
          * <p>The IDs of the security groups to which the ENIs belong.</p>
          */
@@ -913,6 +916,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getNetworkInterfaceTrafficMode() {
             return this.networkInterfaceTrafficMode;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces setSecondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
+            this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
+            return this;
+        }
+        public Integer getSecondaryPrivateIpAddressCount() {
+            return this.secondaryPrivateIpAddressCount;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces setSecurityGroupIds(java.util.List<String> securityGroupIds) {

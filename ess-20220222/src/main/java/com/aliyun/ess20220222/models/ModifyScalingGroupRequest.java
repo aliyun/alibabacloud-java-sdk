@@ -175,7 +175,7 @@ public class ModifyScalingGroupRequest extends TeaModel {
     public String launchTemplateId;
 
     /**
-     * <p>Details of the instance types that are specified in the extended configurations of the launch template.</p>
+     * <p>The information about the instance types that are extended in the launch template.</p>
      */
     @NameInMap("LaunchTemplateOverrides")
     public java.util.List<ModifyScalingGroupRequestLaunchTemplateOverrides> launchTemplateOverrides;
@@ -804,12 +804,12 @@ public class ModifyScalingGroupRequest extends TeaModel {
 
     public static class ModifyScalingGroupRequestLaunchTemplateOverrides extends TeaModel {
         /**
-         * <p>The instance type. The instance type that you specify by using the InstanceType parameter overwrites the instance type that is specified in the launch template.</p>
-         * <p>If you want Auto Scaling to scale instances in the scaling group based on the instance type weight, you must specify both the InstanceType and WeightedCapacity parameters.</p>
+         * <p>The instance type that you want to use to override the instance type that is specified in the launch template.</p>
+         * <p>The instance type specified by using this parameter overwrites the instance type of the launch template.</p>
          * <blockquote>
-         * <p>This parameter takes effect only after you specify the LaunchTemplateId parameter.</p>
+         * <p> This parameter takes effect only if you specify LaunchTemplateId.</p>
          * </blockquote>
-         * <p>You can use the InstanceType parameter to specify only instance types that are available for purchase.</p>
+         * <p>You can use this parameter to specify any instance types that are available for purchase.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c5.xlarge</p>
@@ -818,6 +818,11 @@ public class ModifyScalingGroupRequest extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The maximum bid price of instance type N that is specified by <code>LaunchTemplateOverride.N.InstanceType</code>. You can specify N instance types by using the Extend Launch Template feature. You can specify 1 to 10 memory sizes, indicated by N.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you use <code>LaunchTemplateId</code> to specify a launch template.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.025</p>
          */
@@ -825,20 +830,21 @@ public class ModifyScalingGroupRequest extends TeaModel {
         public Float spotPriceLimit;
 
         /**
-         * <p>The weight of the instance type. The weight specifies the capacity of a single instance of the specified instance type in the scaling group. If you want Auto Scaling to scale instances in the scaling group based on the weighted capacity of instances, you must specify the WeightedCapacity parameter after you specify the InstanceType parameter.</p>
-         * <p>A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity.</p>
-         * <p>Performance metrics, such as the number of vCPUs and the memory size of each instance type, may vary. You can specify different weights for different instance types based on your business requirements.</p>
-         * <p>Example:</p>
+         * <p>If you want to scale the scaling group based on the instance types, you must specify LaunchTemplateOverrides.InstanceType before you specify this parameter. The two parameters have a one-to-one correspondence.</p>
+         * <p>The weight specifies the capacity of an instance of the specified instance type in the scaling group.</p>
+         * <p>A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</p>
+         * <p>Performance metrics such as the number of vCPUs and the memory size of each instance type may vary. You can specify different weights for different instance types based on your business requirements.</p>
+         * <p>Sample capacity configurations:</p>
          * <ul>
-         * <li>Current capacity: 0</li>
+         * <li>Current capacity: 0.</li>
          * <li>Expected capacity: 6</li>
          * <li>Capacity of ecs.c5.xlarge: 4</li>
          * </ul>
-         * <p>To meet the expected capacity requirement, Auto Scaling must create and add two ecs.c5.xlarge instances.</p>
+         * <p>To reach the expected capacity, Auto Scaling must scale out two instances of ecs.c5.xlarge.</p>
          * <blockquote>
-         * <p>The capacity of the scaling group cannot exceed the sum of the maximum number of instances that is specified by the MaxSize parameter and the maximum weight of the instance type.</p>
+         * <p> The total capacity of the scaling group is constrained and cannot surpass the combined total of the maximum group size defined by MaxSize and the highest weight assigned to any instance type.</p>
          * </blockquote>
-         * <p>Valid values of the WeightedCapacity parameter: 1 to 500.</p>
+         * <p>Valid values of WeightedCapacity: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

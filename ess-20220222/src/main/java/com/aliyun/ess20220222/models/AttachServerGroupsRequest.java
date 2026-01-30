@@ -15,7 +15,7 @@ public class AttachServerGroupsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the server group. Valid values:</p>
+     * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances (ECI) in the scaling group to the server group. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -124,8 +124,11 @@ public class AttachServerGroupsRequest extends TeaModel {
 
     public static class AttachServerGroupsRequestServerGroups extends TeaModel {
         /**
-         * <p>The port used by ECS instances or elastic container instances after being added as backend servers to the server group.</p>
+         * <p>The port used by ECS or ECI instances after being added as backend servers to the server group.</p>
          * <p>Valid values: 1 to 65535.</p>
+         * <blockquote>
+         * <p>For ALB and NLB types, this parameter is required. GWLB type cannot set this parameter and the default value is 6081.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -144,10 +147,11 @@ public class AttachServerGroupsRequest extends TeaModel {
         public String serverGroupId;
 
         /**
-         * <p>The type of the server group. Valid values:</p>
+         * <p>The type of the server group. Valid Values:</p>
          * <ul>
          * <li>ALB</li>
          * <li>NLB</li>
+         * <li>GWLB</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -158,8 +162,11 @@ public class AttachServerGroupsRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The weight of an ECS instance or elastic container instance as a backend server of the server group. Valid values: 0 to 100.</p>
-         * <p>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.</p>
+         * <p>The weight of an ECS or ECI instance as a backend server of the server group. Valid values: 0 to 100</p>
+         * <p>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If the weight is 0, the ECS or ECI instance does not receive access requests.</p>
+         * <blockquote>
+         * <p>For ALB and NLB types, this parameter is required. GWLB type cannot be set.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>100</p>

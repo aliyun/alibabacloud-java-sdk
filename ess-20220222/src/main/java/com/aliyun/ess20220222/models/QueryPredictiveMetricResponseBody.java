@@ -4,10 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class QueryPredictiveMetricResponseBody extends TeaModel {
+    /**
+     * <p>Predicted monitoring metrics.</p>
+     */
     @NameInMap("PredictiveMetrics")
     public QueryPredictiveMetricResponseBodyPredictiveMetrics predictiveMetrics;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CC107349-57B7-4405-B1BF-9BF5AF7F****</p>
      */
@@ -37,6 +42,8 @@ public class QueryPredictiveMetricResponseBody extends TeaModel {
 
     public static class QueryPredictiveMetricResponseBodyPredictiveMetricsPredictiveMetric extends TeaModel {
         /**
+         * <p>Predicted monitoring value.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0</p>
          */
@@ -44,6 +51,8 @@ public class QueryPredictiveMetricResponseBody extends TeaModel {
         public String metricValue;
 
         /**
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time must be in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-17T16:00Z</p>
          */

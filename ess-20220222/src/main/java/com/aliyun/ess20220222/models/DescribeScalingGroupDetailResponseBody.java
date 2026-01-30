@@ -267,6 +267,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
          * <ul>
          * <li>ALB</li>
          * <li>NLB</li>
+         * <li>GWLB</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -933,7 +934,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * <p>The information about the server groups.</p>
          * <blockquote>
-         * <p> You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups attached to your scaling group.</p>
+         * <p> You can use this parameter to obtain the information about the ALB, NLB, and GWLB server groups associated with a scaling group.</p>
          * </blockquote>
          */
         @NameInMap("ServerGroups")
