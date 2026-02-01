@@ -65,6 +65,12 @@ public class GetAgentTaskResponseBody extends TeaModel {
         @NameInMap("error")
         public String error;
 
+        @NameInMap("errorCode")
+        public String errorCode;
+
+        @NameInMap("errorMessage")
+        public String errorMessage;
+
         @NameInMap("instance")
         public String instance;
 
@@ -95,6 +101,22 @@ public class GetAgentTaskResponseBody extends TeaModel {
         }
         public String getError() {
             return this.error;
+        }
+
+        public GetAgentTaskResponseBodyDataJobs setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public GetAgentTaskResponseBodyDataJobs setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public GetAgentTaskResponseBodyDataJobs setInstance(String instance) {
