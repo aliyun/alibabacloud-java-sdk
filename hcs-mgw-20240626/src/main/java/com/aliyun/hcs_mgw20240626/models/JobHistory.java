@@ -86,6 +86,20 @@ public class JobHistory extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1000</p>
+     */
+    @NameInMap("SkippedCount")
+    public Long skippedCount;
+
+    /**
+     * <strong>example:</strong>
+     * <p>100000</p>
+     */
+    @NameInMap("SkippedSize")
+    public Long skippedSize;
+
+    /**
+     * <strong>example:</strong>
      * <p>2025-07-04T07:09:26.000Z</p>
      */
     @NameInMap("StartTime")
@@ -211,6 +225,22 @@ public class JobHistory extends TeaModel {
     }
     public String getRuntimeState() {
         return this.runtimeState;
+    }
+
+    public JobHistory setSkippedCount(Long skippedCount) {
+        this.skippedCount = skippedCount;
+        return this;
+    }
+    public Long getSkippedCount() {
+        return this.skippedCount;
+    }
+
+    public JobHistory setSkippedSize(Long skippedSize) {
+        this.skippedSize = skippedSize;
+        return this;
+    }
+    public Long getSkippedSize() {
+        return this.skippedSize;
     }
 
     public JobHistory setStartTime(String startTime) {
