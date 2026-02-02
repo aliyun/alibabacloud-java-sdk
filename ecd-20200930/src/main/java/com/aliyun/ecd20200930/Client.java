@@ -4841,6 +4841,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>新建限速组</p>
+     * 
+     * @param request CreateQosRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateQosRuleResponse
+     */
+    public CreateQosRuleResponse createQosRuleWithOptions(CreateQosRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authAndroidId)) {
+            query.put("AuthAndroidId", request.authAndroidId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authDesktopId)) {
+            query.put("AuthDesktopId", request.authDesktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.download)) {
+            query.put("Download", request.download);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkPackageId)) {
+            query.put("NetworkPackageId", request.networkPackageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosRuleName)) {
+            query.put("QosRuleName", request.qosRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upload)) {
+            query.put("Upload", request.upload);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateQosRule"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQosRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新建限速组</p>
+     * 
+     * @param request CreateQosRuleRequest
+     * @return CreateQosRuleResponse
+     */
+    public CreateQosRuleResponse createQosRule(CreateQosRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createQosRuleWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you create a RAM directory, complete the following preparations:</p>
      * <ul>
@@ -6597,6 +6661,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePolicyGroupsResponse deletePolicyGroups(DeletePolicyGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePolicyGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DeleteQosRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteQosRulesResponse
+     */
+    public DeleteQosRulesResponse deleteQosRulesWithOptions(DeleteQosRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qosRuleId)) {
+            query.put("QosRuleId", request.qosRuleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteQosRules"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteQosRulesResponse());
+    }
+
+    /**
+     * @param request DeleteQosRulesRequest
+     * @return DeleteQosRulesResponse
+     */
+    public DeleteQosRulesResponse deleteQosRules(DeleteQosRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteQosRulesWithOptions(request, runtime);
     }
 
     /**
@@ -11079,6 +11181,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePriceForRenewDesktopOversoldGroupResponse describePriceForRenewDesktopOversoldGroup(DescribePriceForRenewDesktopOversoldGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePriceForRenewDesktopOversoldGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeQosRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeQosRulesResponse
+     */
+    public DescribeQosRulesResponse describeQosRulesWithOptions(DescribeQosRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.networkPackageId)) {
+            query.put("NetworkPackageId", request.networkPackageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosRuleName)) {
+            query.put("QosRuleName", request.qosRuleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeQosRules"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeQosRulesResponse());
+    }
+
+    /**
+     * @param request DescribeQosRulesRequest
+     * @return DescribeQosRulesResponse
+     */
+    public DescribeQosRulesResponse describeQosRules(DescribeQosRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeQosRulesWithOptions(request, runtime);
     }
 
     /**
@@ -17653,6 +17797,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyPolicyGroupResponse modifyPolicyGroup(ModifyPolicyGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPolicyGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改限速组资源绑定关系</p>
+     * 
+     * @param request ModifyQosEntriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyQosEntriesResponse
+     */
+    public ModifyQosEntriesResponse modifyQosEntriesWithOptions(ModifyQosEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authAndroidId)) {
+            query.put("AuthAndroidId", request.authAndroidId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authDesktopId)) {
+            query.put("AuthDesktopId", request.authDesktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosRuleId)) {
+            query.put("QosRuleId", request.qosRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revokeAndroidId)) {
+            query.put("RevokeAndroidId", request.revokeAndroidId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revokeDesktopId)) {
+            query.put("RevokeDesktopId", request.revokeDesktopId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyQosEntries"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyQosEntriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改限速组资源绑定关系</p>
+     * 
+     * @param request ModifyQosEntriesRequest
+     * @return ModifyQosEntriesResponse
+     */
+    public ModifyQosEntriesResponse modifyQosEntries(ModifyQosEntriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyQosEntriesWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ModifyQosRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyQosRuleResponse
+     */
+    public ModifyQosRuleResponse modifyQosRuleWithOptions(ModifyQosRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.download)) {
+            query.put("Download", request.download);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosRuleId)) {
+            query.put("QosRuleId", request.qosRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosRuleName)) {
+            query.put("QosRuleName", request.qosRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upload)) {
+            query.put("Upload", request.upload);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyQosRule"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyQosRuleResponse());
+    }
+
+    /**
+     * @param request ModifyQosRuleRequest
+     * @return ModifyQosRuleResponse
+     */
+    public ModifyQosRuleResponse modifyQosRule(ModifyQosRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyQosRuleWithOptions(request, runtime);
     }
 
     /**
