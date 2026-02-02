@@ -423,8 +423,14 @@ public class NotifyStrategyForModify extends TeaModel {
         @NameInMap("channels")
         public java.util.List<NotifyStrategyForModifyRoutesChannels> channels;
 
+        @NameInMap("digitalEmployeeName")
+        public String digitalEmployeeName;
+
         @NameInMap("effectTimeRange")
         public NotifyStrategyForModifyRoutesEffectTimeRange effectTimeRange;
+
+        @NameInMap("enableRca")
+        public Boolean enableRca;
 
         @NameInMap("filterSetting")
         public FilterSetting filterSetting;
@@ -445,12 +451,28 @@ public class NotifyStrategyForModify extends TeaModel {
             return this.channels;
         }
 
+        public NotifyStrategyForModifyRoutes setDigitalEmployeeName(String digitalEmployeeName) {
+            this.digitalEmployeeName = digitalEmployeeName;
+            return this;
+        }
+        public String getDigitalEmployeeName() {
+            return this.digitalEmployeeName;
+        }
+
         public NotifyStrategyForModifyRoutes setEffectTimeRange(NotifyStrategyForModifyRoutesEffectTimeRange effectTimeRange) {
             this.effectTimeRange = effectTimeRange;
             return this;
         }
         public NotifyStrategyForModifyRoutesEffectTimeRange getEffectTimeRange() {
             return this.effectTimeRange;
+        }
+
+        public NotifyStrategyForModifyRoutes setEnableRca(Boolean enableRca) {
+            this.enableRca = enableRca;
+            return this;
+        }
+        public Boolean getEnableRca() {
+            return this.enableRca;
         }
 
         public NotifyStrategyForModifyRoutes setFilterSetting(FilterSetting filterSetting) {

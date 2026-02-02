@@ -38,6 +38,13 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     public String name;
 
     /**
+     * <strong>example:</strong>
+     * <p>rg-ae******ey</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +52,9 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
      */
     @NameInMap("roleArn")
     public String roleArn;
+
+    @NameInMap("tags")
+    public java.util.List<Tag> tags;
 
     public static CreateDigitalEmployeeRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDigitalEmployeeRequest self = new CreateDigitalEmployeeRequest();
@@ -91,12 +101,28 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         return this.name;
     }
 
+    public CreateDigitalEmployeeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateDigitalEmployeeRequest setRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     public String getRoleArn() {
         return this.roleArn;
+    }
+
+    public CreateDigitalEmployeeRequest setTags(java.util.List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<Tag> getTags() {
+        return this.tags;
     }
 
     public static class CreateDigitalEmployeeRequestKnowledgesBailian extends TeaModel {

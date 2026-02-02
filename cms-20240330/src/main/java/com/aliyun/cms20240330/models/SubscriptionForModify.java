@@ -22,6 +22,9 @@ public class SubscriptionForModify extends TeaModel {
     @NameInMap("subscriptionName")
     public String subscriptionName;
 
+    @NameInMap("workspaceFilterSetting")
+    public WorkspaceFilterSetting workspaceFilterSetting;
+
     public static SubscriptionForModify build(java.util.Map<String, ?> map) throws Exception {
         SubscriptionForModify self = new SubscriptionForModify();
         return TeaModel.build(map, self);
@@ -65,6 +68,14 @@ public class SubscriptionForModify extends TeaModel {
     }
     public String getSubscriptionName() {
         return this.subscriptionName;
+    }
+
+    public SubscriptionForModify setWorkspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
+        this.workspaceFilterSetting = workspaceFilterSetting;
+        return this;
+    }
+    public WorkspaceFilterSetting getWorkspaceFilterSetting() {
+        return this.workspaceFilterSetting;
     }
 
     public static class SubscriptionForModifyPushingSetting extends TeaModel {

@@ -4,9 +4,17 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class Tag extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test-key</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-value</p>
+     */
     @NameInMap("value")
     public String value;
 

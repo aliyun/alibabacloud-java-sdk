@@ -43,6 +43,9 @@ public class SubscriptionForView extends TeaModel {
     @NameInMap("workspace")
     public String workspace;
 
+    @NameInMap("workspaceFilterSetting")
+    public WorkspaceFilterSetting workspaceFilterSetting;
+
     public static SubscriptionForView build(java.util.Map<String, ?> map) throws Exception {
         SubscriptionForView self = new SubscriptionForView();
         return TeaModel.build(map, self);
@@ -142,6 +145,14 @@ public class SubscriptionForView extends TeaModel {
     }
     public String getWorkspace() {
         return this.workspace;
+    }
+
+    public SubscriptionForView setWorkspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
+        this.workspaceFilterSetting = workspaceFilterSetting;
+        return this;
+    }
+    public WorkspaceFilterSetting getWorkspaceFilterSetting() {
+        return this.workspaceFilterSetting;
     }
 
     public static class SubscriptionForViewPushingSetting extends TeaModel {

@@ -3,7 +3,7 @@ package com.aliyun.cms20240330.models;
 
 import com.aliyun.tea.*;
 
-public class ListDigitalEmployeesRequest extends TeaModel {
+public class ListDigitalEmployeesShrinkRequest extends TeaModel {
     @NameInMap("displayName")
     public String displayName;
 
@@ -39,14 +39,14 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("tags")
-    public java.util.List<Tag> tags;
+    public String tagsShrink;
 
-    public static ListDigitalEmployeesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListDigitalEmployeesRequest self = new ListDigitalEmployeesRequest();
+    public static ListDigitalEmployeesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDigitalEmployeesShrinkRequest self = new ListDigitalEmployeesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDigitalEmployeesRequest setDisplayName(String displayName) {
+    public ListDigitalEmployeesShrinkRequest setDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
@@ -54,7 +54,7 @@ public class ListDigitalEmployeesRequest extends TeaModel {
         return this.displayName;
     }
 
-    public ListDigitalEmployeesRequest setEmployeeType(String employeeType) {
+    public ListDigitalEmployeesShrinkRequest setEmployeeType(String employeeType) {
         this.employeeType = employeeType;
         return this;
     }
@@ -62,7 +62,7 @@ public class ListDigitalEmployeesRequest extends TeaModel {
         return this.employeeType;
     }
 
-    public ListDigitalEmployeesRequest setMaxResults(Integer maxResults) {
+    public ListDigitalEmployeesShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -70,7 +70,7 @@ public class ListDigitalEmployeesRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListDigitalEmployeesRequest setName(String name) {
+    public ListDigitalEmployeesShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -78,7 +78,7 @@ public class ListDigitalEmployeesRequest extends TeaModel {
         return this.name;
     }
 
-    public ListDigitalEmployeesRequest setNextToken(String nextToken) {
+    public ListDigitalEmployeesShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -86,7 +86,7 @@ public class ListDigitalEmployeesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListDigitalEmployeesRequest setResourceGroupId(String resourceGroupId) {
+    public ListDigitalEmployeesShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -94,12 +94,12 @@ public class ListDigitalEmployeesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListDigitalEmployeesRequest setTags(java.util.List<Tag> tags) {
-        this.tags = tags;
+    public ListDigitalEmployeesShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<Tag> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }

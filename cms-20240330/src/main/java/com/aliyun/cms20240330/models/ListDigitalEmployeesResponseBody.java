@@ -224,10 +224,20 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>rg-ae******ey</p>
+         */
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <strong>example:</strong>
          * <p>acs:ram::12345678912:role/testrole</p>
          */
         @NameInMap("roleArn")
         public String roleArn;
+
+        @NameInMap("tags")
+        public java.util.List<Tag> tags;
 
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
@@ -299,12 +309,28 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListDigitalEmployeesResponseBodyDigitalEmployees setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListDigitalEmployeesResponseBodyDigitalEmployees setRoleArn(String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
         public String getRoleArn() {
             return this.roleArn;
+        }
+
+        public ListDigitalEmployeesResponseBodyDigitalEmployees setTags(java.util.List<Tag> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<Tag> getTags() {
+            return this.tags;
         }
 
         public ListDigitalEmployeesResponseBodyDigitalEmployees setUpdateTime(String updateTime) {
