@@ -9217,6 +9217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Domain", request.domain);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.embeddedHeaders)) {
+            query.put("EmbeddedHeaders", request.embeddedHeaders);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }

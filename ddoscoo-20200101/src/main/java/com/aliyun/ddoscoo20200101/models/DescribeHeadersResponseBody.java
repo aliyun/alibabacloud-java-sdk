@@ -11,6 +11,16 @@ public class DescribeHeadersResponseBody extends TeaModel {
     public DescribeHeadersResponseBodyCustomHeader customHeader;
 
     /**
+     * <strong>example:</strong>
+     * <p>{&quot;X-Client-IP&quot;:true,&quot;X-True-IP&quot;:true,&quot;Web-Server-Type&quot;:true,&quot;WL-Proxy-Client-IP&quot;:true,&quot;X-Forwarded-Proto&quot;:true}</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("EmbeddedHeaders")
+    public String embeddedHeaders;
+
+    /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,14 @@ public class DescribeHeadersResponseBody extends TeaModel {
     }
     public DescribeHeadersResponseBodyCustomHeader getCustomHeader() {
         return this.customHeader;
+    }
+
+    public DescribeHeadersResponseBody setEmbeddedHeaders(String embeddedHeaders) {
+        this.embeddedHeaders = embeddedHeaders;
+        return this;
+    }
+    public String getEmbeddedHeaders() {
+        return this.embeddedHeaders;
     }
 
     public DescribeHeadersResponseBody setRequestId(String requestId) {

@@ -43,6 +43,13 @@ public class ModifyHeadersRequest extends TeaModel {
     public String domain;
 
     /**
+     * <strong>example:</strong>
+     * <p>{&quot;X-Client-IP&quot;:true,&quot;X-True-IP&quot;:true,&quot;Web-Server-Type&quot;:true,&quot;WL-Proxy-Client-IP&quot;:true,&quot;X-Forwarded-Proto&quot;:true}</p>
+     */
+    @NameInMap("EmbeddedHeaders")
+    public String embeddedHeaders;
+
+    /**
      * <p>The ID of the resource group to which the instance belongs.</p>
      * <blockquote>
      * </blockquote>
@@ -78,6 +85,14 @@ public class ModifyHeadersRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public ModifyHeadersRequest setEmbeddedHeaders(String embeddedHeaders) {
+        this.embeddedHeaders = embeddedHeaders;
+        return this;
+    }
+    public String getEmbeddedHeaders() {
+        return this.embeddedHeaders;
     }
 
     public ModifyHeadersRequest setResourceGroupId(String resourceGroupId) {
