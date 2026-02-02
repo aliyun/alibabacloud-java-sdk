@@ -5,19 +5,35 @@ import com.aliyun.tea.*;
 
 public class EntVerifyRequest extends TeaModel {
     /**
+     * <p>Receiving account, to assist in improving the risk assessment effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>321324***38293</p>
      */
     @NameInMap("AccountNo")
     public String accountNo;
 
+    /**
+     * <p>Enterprise name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>***有限公司</p>
+     */
     @NameInMap("EntName")
     public String entName;
 
+    /**
+     * <p>Enterprise element verification type, currently not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("InfoVerifyType")
     public String infoVerifyType;
 
     /**
+     * <p>Legal person\&quot;s ID number.</p>
+     * 
      * <strong>example:</strong>
      * <p>370105*****3892</p>
      */
@@ -25,39 +41,77 @@ public class EntVerifyRequest extends TeaModel {
     public String legalPersonCertNo;
 
     /**
+     * <p>Legal person\&quot;s mobile phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1300***53</p>
      */
     @NameInMap("LegalPersonMobile")
     public String legalPersonMobile;
 
+    /**
+     * <p>Legal person\&quot;s name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张**</p>
+     */
     @NameInMap("LegalPersonName")
     public String legalPersonName;
 
     /**
+     * <p>Business license number.</p>
+     * 
      * <strong>example:</strong>
      * <p>32132***328932</p>
      */
     @NameInMap("LicenseNo")
     public String licenseNo;
 
+    /**
+     * <p>A unique business identifier defined by the merchant, used for subsequent problem localization and troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32198****193000</p>
+     */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
+    /**
+     * <p>Merchant-side user ID. It supports a combination of letters and numbers, with a maximum length of 32 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>432***421</p>
+     */
     @NameInMap("MerchantUserId")
     public String merchantUserId;
 
     /**
+     * <p>Enterprise risk verification model version, required when RiskVerifyType is not empty. Currently supported:</p>
+     * <ul>
+     * <li>BASIC: Basic version</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>BASIC</p>
      */
     @NameInMap("RiskModelVersion")
     public String riskModelVersion;
 
+    /**
+     * <p>Enterprise risk verification type, at least one of InfoVerifyType or this must be selected. Currently supported:</p>
+     * <ul>
+     * <li>BUSINESS_ANTIFRAUD</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BUSINESS_ANTIFRAUD</p>
+     */
     @NameInMap("RiskVerifyType")
     public String riskVerifyType;
 
     /**
+     * <p>Scene code.</p>
+     * 
      * <strong>example:</strong>
      * <p>withdraw</p>
      */
@@ -65,6 +119,14 @@ public class EntVerifyRequest extends TeaModel {
     public String sceneCode;
 
     /**
+     * <p>Whether the user authorization is obtained.</p>
+     * <ul>
+     * <li><p>1: Authorized</p>
+     * </li>
+     * <li><p>0: Not authorized</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

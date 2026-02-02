@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EntElementVerifyV2ResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -27,6 +31,9 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result</p>
+     */
     @NameInMap("Result")
     public EntElementVerifyV2ResponseBodyResult result;
 
@@ -69,6 +76,13 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
 
     public static class EntElementVerifyV2ResponseBodyResult extends TeaModel {
         /**
+         * <p>Verification result code.</p>
+         * <ul>
+         * <li>1: Verification consistent</li>
+         * <li>2: Verification inconsistent</li>
+         * <li>3: Not found</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -76,6 +90,12 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
         public String bizCode;
 
         /**
+         * <p>Business term: start and end time of operations.</p>
+         * <ul>
+         * <li>Format: yyyy-MM-dd/yyyy-MM-dd.</li>
+         * <li>Example: 2018-09-25/9999-09-09.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2018-09-25/9999-09-09</p>
          */
@@ -83,6 +103,14 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
         public String openTime;
 
         /**
+         * <p>Details of inconsistencies, multiple inconsistencies will be separated by commas.</p>
+         * <ul>
+         * <li>LegalPersonNameFlag: Legal person\&quot;s name does not match</li>
+         * <li>LegalPersonCertNoFlag: Legal person\&quot;s ID number does not match</li>
+         * <li>EntNameFlag: Enterprise name does not match</li>
+         * <li>LicenseNoFlag: Business license number does not match</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>LegalPersonNameFlag,LegalPersonCertNoFlag</p>
          */
@@ -90,6 +118,17 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
         public String reasonDetail;
 
         /**
+         * <p>Business operation status.</p>
+         * <ul>
+         * <li>1: In operation (open)</li>
+         * <li>2: Relocated</li>
+         * <li>3: Deregistered</li>
+         * <li>4: Revoked</li>
+         * <li>5: Canceled</li>
+         * <li>6: Suspended</li>
+         * <li>0: Other</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

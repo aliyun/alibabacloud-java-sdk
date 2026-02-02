@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EntRiskQueryResponseBody extends TeaModel {
     /**
+     * <p>Error code. For details about error codes, see <strong><a href="https://help.aliyun.com/document_detail/215420.html">Error Codes</a></strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class EntRiskQueryResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Response message for the request information.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class EntRiskQueryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>8FC3D6AC-9FED-4311-8DA7-C4BF47D9F260</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result</p>
+     */
     @NameInMap("Result")
     public EntRiskQueryResponseBodyResult result;
 
@@ -67,29 +76,54 @@ public class EntRiskQueryResponseBody extends TeaModel {
 
     public static class EntRiskQueryResponseBodyResultRiskList extends TeaModel {
         /**
+         * <p>Unified Social Credit Code</p>
+         * 
          * <strong>example:</strong>
          * <p>92500112MA5UHU****</p>
          */
         @NameInMap("CreditCode")
         public String creditCode;
 
+        /**
+         * <p>Company name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州****</p>
+         */
         @NameInMap("EntName")
         public String entName;
 
         /**
+         * <p>Date listed as abnormal
+         * Example: 2023-02-03</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-03</p>
          */
         @NameInMap("ListedDate")
         public String listedDate;
 
+        /**
+         * <p>Reason for being listed as abnormal</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未按照《个体工商户年度报告暂行办法》***</p>
+         */
         @NameInMap("ListedReason")
         public String listedReason;
 
+        /**
+         * <p>Authority that handled the inclusion</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong>市场监督</strong></em></p>
+         */
         @NameInMap("OperationOrg")
         public String operationOrg;
 
         /**
+         * <p>Business registration number</p>
+         * 
          * <strong>example:</strong>
          * <p>50011260996****</p>
          */
@@ -97,15 +131,30 @@ public class EntRiskQueryResponseBody extends TeaModel {
         public String regNo;
 
         /**
+         * <p>Date removed from the abnormal list
+         * Example: 2023-02-03</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-06</p>
          */
         @NameInMap("RemovedDate")
         public String removedDate;
 
+        /**
+         * <p>Authority that handled the removal</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong>市场监督</strong></em></p>
+         */
         @NameInMap("RemovedOrg")
         public String removedOrg;
 
+        /**
+         * <p>Reason for being removed from the abnormal list</p>
+         * 
+         * <strong>example:</strong>
+         * <p>根据《个体工商户年度报告暂行办法》第十三条的规定******</p>
+         */
         @NameInMap("RemovedReason")
         public String removedReason;
 
@@ -190,16 +239,35 @@ public class EntRiskQueryResponseBody extends TeaModel {
 
     public static class EntRiskQueryResponseBodyResult extends TeaModel {
         /**
+         * <p>Query result
+         * 0: Normal business operation
+         * 1: Abnormal business operation
+         * 2: Not found</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <p>List of abnormal information</p>
+         */
         @NameInMap("RiskList")
         public java.util.List<EntRiskQueryResponseBodyResultRiskList> riskList;
 
         /**
+         * <p>Business operation status.</p>
+         * <ul>
+         * <li>1: In operation (open)</li>
+         * <li>2: Relocated</li>
+         * <li>3: Deregistered</li>
+         * <li>4: Revoked</li>
+         * <li>5: Canceled</li>
+         * <li>6: Suspended</li>
+         * <li>0: Other</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EntElementVerifyResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class EntElementVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class EntElementVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7***B-A3DC0DE3C83E</p>
@@ -27,6 +31,9 @@ public class EntElementVerifyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result</p>
+     */
     @NameInMap("Result")
     public EntElementVerifyResponseBodyResult result;
 
@@ -69,22 +76,83 @@ public class EntElementVerifyResponseBody extends TeaModel {
 
     public static class EntElementVerifyResponseBodyResult extends TeaModel {
         /**
+         * <p>Verification result code.</p>
+         * <ul>
+         * <li>1: Verification consistent</li>
+         * <li>2: Verification inconsistent</li>
+         * <li>3: Not found</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <p>Operating period: start and end time of operations.</p>
+         * <ul>
+         * <li>Format: yyyy-MM-dd/yyyy-MM-dd.</li>
+         * <li>Example: 2018-09-25/9999-09-09.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-25/9999-09-09</p>
+         */
         @NameInMap("OpenTime")
         public String openTime;
 
+        /**
+         * <p>ReasonCode explanation:</p>
+         * <ul>
+         * <li><p>100: Verification consistent</p>
+         * </li>
+         * <li><p>201: Inconsistent between person and enterprise</p>
+         * </li>
+         * <li><p>202: Inconsistent in two elements of the enterprise</p>
+         * </li>
+         * <li><p>301: No enterprise found, unable to verify</p>
+         * </li>
+         * <li><p>302: Legal representative does not exist in the database</p>
+         * <blockquote>
+         * <p>Warning: This field will be discontinued on June 15, 2023. Existing customers are not affected.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <p>Details of inconsistencies, multiple inconsistencies will be separated by commas.</p>
+         * <ul>
+         * <li>LegalPersonNameFlag: Inconsistent legal representative name</li>
+         * <li>LegalPersonCertNoFlag: Inconsistent legal representative ID number</li>
+         * <li>EntNameFlag: Inconsistent enterprise name</li>
+         * <li>LicenseNoFlag: Inconsistent business license number</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LegalPersonNameFlag,LegalPersonCertNoFlag</p>
+         */
         @NameInMap("ReasonDetail")
         public String reasonDetail;
 
         /**
+         * <p>Enterprise operating status.</p>
+         * <ul>
+         * <li>1: In operation (open)</li>
+         * <li>2: Relocated</li>
+         * <li>3: Deregistered</li>
+         * <li>4: Revoked</li>
+         * <li>5: Canceled</li>
+         * <li>6: Suspended</li>
+         * <li>0: Other</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

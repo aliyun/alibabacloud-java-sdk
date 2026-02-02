@@ -5,17 +5,25 @@ import com.aliyun.tea.*;
 
 public class EntVerifyResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-A***B-A3DC0DE3C83E</p>
@@ -23,6 +31,9 @@ public class EntVerifyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result</p>
+     */
     @NameInMap("Result")
     public EntVerifyResponseBodyResult result;
 
@@ -65,12 +76,20 @@ public class EntVerifyResponseBody extends TeaModel {
 
     public static class EntVerifyResponseBodyResultRiskVerifyResultModelResults extends TeaModel {
         /**
+         * <p>Model name</p>
+         * 
          * <strong>example:</strong>
          * <p>model_1</p>
          */
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <p>Model result</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Result")
         public String result;
 
@@ -99,12 +118,17 @@ public class EntVerifyResponseBody extends TeaModel {
 
     public static class EntVerifyResponseBodyResultRiskVerifyResult extends TeaModel {
         /**
+         * <p>Whether found</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Found")
         public Boolean found;
 
+        /**
+         * <p>List of enterprise risk verification model results</p>
+         */
         @NameInMap("ModelResults")
         public java.util.List<EntVerifyResponseBodyResultRiskVerifyResultModelResults> modelResults;
 
@@ -132,6 +156,9 @@ public class EntVerifyResponseBody extends TeaModel {
     }
 
     public static class EntVerifyResponseBodyResult extends TeaModel {
+        /**
+         * <p>Enterprise risk verification result</p>
+         */
         @NameInMap("RiskVerifyResult")
         public EntVerifyResponseBodyResultRiskVerifyResult riskVerifyResult;
 

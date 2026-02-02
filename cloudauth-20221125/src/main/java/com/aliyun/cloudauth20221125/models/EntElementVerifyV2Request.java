@@ -5,12 +5,22 @@ import com.aliyun.tea.*;
 
 public class EntElementVerifyV2Request extends TeaModel {
     /**
+     * <p>Enterprise Name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>****有限公司</p>
      */
     @NameInMap("EntName")
     public String entName;
 
     /**
+     * <p>Type of enterprise element verification.</p>
+     * <ul>
+     * <li>ENT_2META: Two-element verification (enterprise name + unified social credit code)</li>
+     * <li>ENT_3META: Three-element verification (enterprise name + unified social credit code + legal person\&quot;s name or organization head)</li>
+     * <li>ENT_4META: Four-element verification (enterprise name + unified social credit code + legal person\&quot;s name or organization head + legal person\&quot;s ID number)</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,16 +30,25 @@ public class EntElementVerifyV2Request extends TeaModel {
     public String infoVerifyType;
 
     /**
+     * <p>Legal Person\&quot;s ID Number. Required for four-element scenarios.</p>
+     * 
      * <strong>example:</strong>
      * <p>1******************9</p>
      */
     @NameInMap("LegalPersonCertNo")
     public String legalPersonCertNo;
 
+    /**
+     * <p>Legal Person\&quot;s Name. Required for three-element and four-element scenarios.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张**</p>
+     */
     @NameInMap("LegalPersonName")
     public String legalPersonName;
 
     /**
+     * <p>Unified Social Credit Code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +58,7 @@ public class EntElementVerifyV2Request extends TeaModel {
     public String licenseNo;
 
     /**
+     * <p>A unique business identifier defined by the merchant side, used for subsequent problem localization and troubleshooting. Supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure uniqueness.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +68,7 @@ public class EntElementVerifyV2Request extends TeaModel {
     public String merchantBizId;
 
     /**
+     * <p>Merchant-side user ID. Supports a combination of letters and numbers, with a maximum length of 32 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +78,7 @@ public class EntElementVerifyV2Request extends TeaModel {
     public String merchantUserId;
 
     /**
+     * <p>Custom scene code, defined by the user to distinguish between different business scenarios. Supports a combination of letters, numbers, and underscores, with a maximum length of 32 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +88,11 @@ public class EntElementVerifyV2Request extends TeaModel {
     public String sceneCode;
 
     /**
+     * <p>Whether user authorization has been obtained.</p>
+     * <ul>
+     * <li>1: Authorization obtained</li>
+     * <li>0: No authorization obtained</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

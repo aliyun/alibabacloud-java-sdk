@@ -3,103 +3,68 @@ package com.aliyun.cloudauth20221125.models;
 
 import com.aliyun.tea.*;
 
-public class EntElementVerifyRequest extends TeaModel {
-    /**
-     * <p>Enterprise name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>***有限公司</p>
-     */
+public class EntElementVerifyPRORequest extends TeaModel {
     @NameInMap("EntName")
     public String entName;
 
     /**
-     * <p>Type of enterprise element verification.</p>
-     * <ul>
-     * <li>ENT_2META: Two elements</li>
-     * <li>ENT_3META: Three elements</li>
-     * <li>ENT_4META: Four elements</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
-     * <p>ENT_2META</p>
+     * <p>ENT_4META</p>
      */
     @NameInMap("InfoVerifyType")
     public String infoVerifyType;
 
     /**
-     * <p>Legal representative\&quot;s ID number. Required for the four-element scenario.</p>
-     * 
      * <strong>example:</strong>
      * <p>370105*****3892</p>
      */
     @NameInMap("LegalPersonCertNo")
     public String legalPersonCertNo;
 
-    /**
-     * <p>Legal representative\&quot;s name. Required for three-element and four-element scenarios.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>张**</p>
-     */
     @NameInMap("LegalPersonName")
     public String legalPersonName;
 
     /**
-     * <p>Business license number.</p>
-     * 
      * <strong>example:</strong>
-     * <p>32132***328932</p>
+     * <p>91330106673959****</p>
      */
     @NameInMap("LicenseNo")
     public String licenseNo;
 
     /**
-     * <p>A unique business identifier defined by the merchant for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure uniqueness.</p>
-     * 
      * <strong>example:</strong>
-     * <p>32198****193000</p>
+     * <p>e0c34a77f5ac40a5aa5e6ed20c35****</p>
      */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
     /**
-     * <p>Merchant-side user ID. Supports a combination of letters and numbers, with a maximum length of 32 characters.</p>
-     * 
      * <strong>example:</strong>
-     * <p>432***421</p>
+     * <p>mch7x9a2b4c8d3e5f6g1h2i3j4k5****</p>
      */
     @NameInMap("MerchantUserId")
     public String merchantUserId;
 
     /**
-     * <p>Scene code. Supports a combination of letters, numbers, and underscores, with a maximum length of 32 characters.</p>
-     * 
      * <strong>example:</strong>
-     * <p>withdraw</p>
+     * <p>1000000006</p>
      */
     @NameInMap("SceneCode")
     public String sceneCode;
 
     /**
-     * <p>Whether user authorization is obtained.</p>
-     * <ul>
-     * <li>1: Authorized</li>
-     * <li>0: Not authorized</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("UserAuthorization")
     public String userAuthorization;
 
-    public static EntElementVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
-        EntElementVerifyRequest self = new EntElementVerifyRequest();
+    public static EntElementVerifyPRORequest build(java.util.Map<String, ?> map) throws Exception {
+        EntElementVerifyPRORequest self = new EntElementVerifyPRORequest();
         return TeaModel.build(map, self);
     }
 
-    public EntElementVerifyRequest setEntName(String entName) {
+    public EntElementVerifyPRORequest setEntName(String entName) {
         this.entName = entName;
         return this;
     }
@@ -107,7 +72,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.entName;
     }
 
-    public EntElementVerifyRequest setInfoVerifyType(String infoVerifyType) {
+    public EntElementVerifyPRORequest setInfoVerifyType(String infoVerifyType) {
         this.infoVerifyType = infoVerifyType;
         return this;
     }
@@ -115,7 +80,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.infoVerifyType;
     }
 
-    public EntElementVerifyRequest setLegalPersonCertNo(String legalPersonCertNo) {
+    public EntElementVerifyPRORequest setLegalPersonCertNo(String legalPersonCertNo) {
         this.legalPersonCertNo = legalPersonCertNo;
         return this;
     }
@@ -123,7 +88,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.legalPersonCertNo;
     }
 
-    public EntElementVerifyRequest setLegalPersonName(String legalPersonName) {
+    public EntElementVerifyPRORequest setLegalPersonName(String legalPersonName) {
         this.legalPersonName = legalPersonName;
         return this;
     }
@@ -131,7 +96,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.legalPersonName;
     }
 
-    public EntElementVerifyRequest setLicenseNo(String licenseNo) {
+    public EntElementVerifyPRORequest setLicenseNo(String licenseNo) {
         this.licenseNo = licenseNo;
         return this;
     }
@@ -139,7 +104,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.licenseNo;
     }
 
-    public EntElementVerifyRequest setMerchantBizId(String merchantBizId) {
+    public EntElementVerifyPRORequest setMerchantBizId(String merchantBizId) {
         this.merchantBizId = merchantBizId;
         return this;
     }
@@ -147,7 +112,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.merchantBizId;
     }
 
-    public EntElementVerifyRequest setMerchantUserId(String merchantUserId) {
+    public EntElementVerifyPRORequest setMerchantUserId(String merchantUserId) {
         this.merchantUserId = merchantUserId;
         return this;
     }
@@ -155,7 +120,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.merchantUserId;
     }
 
-    public EntElementVerifyRequest setSceneCode(String sceneCode) {
+    public EntElementVerifyPRORequest setSceneCode(String sceneCode) {
         this.sceneCode = sceneCode;
         return this;
     }
@@ -163,7 +128,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.sceneCode;
     }
 
-    public EntElementVerifyRequest setUserAuthorization(String userAuthorization) {
+    public EntElementVerifyPRORequest setUserAuthorization(String userAuthorization) {
         this.userAuthorization = userAuthorization;
         return this;
     }

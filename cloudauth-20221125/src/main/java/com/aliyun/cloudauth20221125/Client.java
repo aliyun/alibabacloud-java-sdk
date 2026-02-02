@@ -27,8 +27,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supports only enterprises and individual businesses.</p>
+     * 
      * <b>summary</b> : 
-     * <p>企业要素核验</p>
+     * <p>Enterprise Element Verification</p>
      * 
      * @param request EntElementVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -87,17 +90,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new EntElementVerifyResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new EntElementVerifyResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EntElementVerifyResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supports only enterprises and individual businesses.</p>
+     * 
      * <b>summary</b> : 
-     * <p>企业要素核验</p>
+     * <p>Enterprise Element Verification</p>
      * 
      * @param request EntElementVerifyRequest
      * @return EntElementVerifyResponse
@@ -109,7 +110,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>企业要素验证V2</p>
+     * <p>企业要素核验PRO</p>
+     * 
+     * @param request EntElementVerifyPRORequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EntElementVerifyPROResponse
+     */
+    public EntElementVerifyPROResponse entElementVerifyPROWithOptions(EntElementVerifyPRORequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entName)) {
+            query.put("EntName", request.entName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.infoVerifyType)) {
+            query.put("InfoVerifyType", request.infoVerifyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.legalPersonCertNo)) {
+            query.put("LegalPersonCertNo", request.legalPersonCertNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.legalPersonName)) {
+            query.put("LegalPersonName", request.legalPersonName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.licenseNo)) {
+            query.put("LicenseNo", request.licenseNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantUserId)) {
+            query.put("MerchantUserId", request.merchantUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            query.put("SceneCode", request.sceneCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAuthorization)) {
+            query.put("UserAuthorization", request.userAuthorization);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EntElementVerifyPRO"),
+            new TeaPair("version", "2022-11-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EntElementVerifyPROResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>企业要素核验PRO</p>
+     * 
+     * @param request EntElementVerifyPRORequest
+     * @return EntElementVerifyPROResponse
+     */
+    public EntElementVerifyPROResponse entElementVerifyPRO(EntElementVerifyPRORequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.entElementVerifyPROWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The Enterprise Element Verification API provides a service for verifying the consistency of enterprise element information, used to identify the authenticity of enterprise information.
+     * It supports various institutions including enterprises, individual businesses, farmers\&quot; professional cooperatives, government agencies, public institutions, social organizations, legal profession institutions, and owners\&quot; meetings for 2-3 elements;
+     * For 4 elements, it supports enterprises, individual businesses, farmers\&quot; professional cooperatives, and legal professions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enterprise Element Verification V2</p>
      * 
      * @param request EntElementVerifyV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -168,17 +250,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new EntElementVerifyV2Response());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new EntElementVerifyV2Response());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EntElementVerifyV2Response());
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Enterprise Element Verification API provides a service for verifying the consistency of enterprise element information, used to identify the authenticity of enterprise information.
+     * It supports various institutions including enterprises, individual businesses, farmers\&quot; professional cooperatives, government agencies, public institutions, social organizations, legal profession institutions, and owners\&quot; meetings for 2-3 elements;
+     * For 4 elements, it supports enterprises, individual businesses, farmers\&quot; professional cooperatives, and legal professions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>企业要素验证V2</p>
+     * <p>Enterprise Element Verification V2</p>
      * 
      * @param request EntElementVerifyV2Request
      * @return EntElementVerifyV2Response
@@ -190,7 +272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>企业经营异常查询</p>
+     * <p>Abnormal Business Operation Query</p>
      * 
      * @param request EntRiskQueryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -237,17 +319,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new EntRiskQueryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new EntRiskQueryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EntRiskQueryResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>企业经营异常查询</p>
+     * <p>Abnormal Business Operation Query</p>
      * 
      * @param request EntRiskQueryRequest
      * @return EntRiskQueryResponse
@@ -259,7 +336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>企业认证</p>
+     * <p>Enterprise Authentication</p>
      * 
      * @param request EntVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -334,17 +411,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new EntVerifyResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new EntVerifyResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EntVerifyResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>企业认证</p>
+     * <p>Enterprise Authentication</p>
      * 
      * @param request EntVerifyRequest
      * @return EntVerifyResponse
