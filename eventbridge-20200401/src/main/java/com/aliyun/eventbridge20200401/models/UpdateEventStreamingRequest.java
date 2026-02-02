@@ -8576,6 +8576,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("SinkMNSParameters")
         public UpdateEventStreamingRequestSinkSinkMNSParameters sinkMNSParameters;
 
+        @NameInMap("SinkMQTTParameters")
+        public SinkMQTTParameters sinkMQTTParameters;
+
         @NameInMap("SinkOSSParameters")
         public SinkOSSParameters sinkOSSParameters;
 
@@ -8744,6 +8747,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public UpdateEventStreamingRequestSinkSinkMNSParameters getSinkMNSParameters() {
             return this.sinkMNSParameters;
+        }
+
+        public UpdateEventStreamingRequestSink setSinkMQTTParameters(SinkMQTTParameters sinkMQTTParameters) {
+            this.sinkMQTTParameters = sinkMQTTParameters;
+            return this;
+        }
+        public SinkMQTTParameters getSinkMQTTParameters() {
+            return this.sinkMQTTParameters;
         }
 
         public UpdateEventStreamingRequestSink setSinkOSSParameters(SinkOSSParameters sinkOSSParameters) {

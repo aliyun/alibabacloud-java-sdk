@@ -7242,6 +7242,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("SinkMNSParameters")
         public GetEventStreamingResponseBodyDataSinkSinkMNSParameters sinkMNSParameters;
 
+        @NameInMap("SinkMQTTParameters")
+        public SinkMQTTParameters sinkMQTTParameters;
+
         @NameInMap("SinkOSSParameters")
         public SinkOSSParameters sinkOSSParameters;
 
@@ -7404,6 +7407,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataSinkSinkMNSParameters getSinkMNSParameters() {
             return this.sinkMNSParameters;
+        }
+
+        public GetEventStreamingResponseBodyDataSink setSinkMQTTParameters(SinkMQTTParameters sinkMQTTParameters) {
+            this.sinkMQTTParameters = sinkMQTTParameters;
+            return this;
+        }
+        public SinkMQTTParameters getSinkMQTTParameters() {
+            return this.sinkMQTTParameters;
         }
 
         public GetEventStreamingResponseBodyDataSink setSinkOSSParameters(SinkOSSParameters sinkOSSParameters) {
