@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstancesSSLResponseBody extends TeaModel {
     /**
+     * <p>The RDS Supabase instances whose SSL settings are modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      *     &quot;ra-supabase-xxx&quot;,
@@ -15,6 +17,8 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
     public java.util.List<String> instanceNames;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32DEFB4A-xxxx-ADD5-918E4FD7AB8C</p>
      */

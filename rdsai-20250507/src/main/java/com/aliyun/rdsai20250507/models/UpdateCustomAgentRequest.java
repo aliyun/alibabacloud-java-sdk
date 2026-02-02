@@ -29,6 +29,9 @@ public class UpdateCustomAgentRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("SkillIds")
+    public java.util.List<String> skillIds;
+
     /**
      * <p>The name of the agent.</p>
      */
@@ -68,6 +71,14 @@ public class UpdateCustomAgentRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateCustomAgentRequest setSkillIds(java.util.List<String> skillIds) {
+        this.skillIds = skillIds;
+        return this;
+    }
+    public java.util.List<String> getSkillIds() {
+        return this.skillIds;
     }
 
     public UpdateCustomAgentRequest setSystemPrompt(String systemPrompt) {

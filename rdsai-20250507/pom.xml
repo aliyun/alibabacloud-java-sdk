@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>rdsai20250507</artifactId>
-  <version>2.1.0</version>
+  <version>2.1.1</version>
   <packaging>jar</packaging>
   <name>rdsai20250507</name>
   <description>Alibaba Cloud RdsAi (20250507) SDK for Java
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.3.1</version>
+      <version>1.4.1</version>
     </dependency>
   </dependencies>
   <build>

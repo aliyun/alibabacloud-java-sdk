@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyInstancesSSLShrinkRequest extends TeaModel {
     /**
+     * <p>The certificate type. Only <strong>custom</strong> is supported.</p>
+     * <blockquote>
+     * <p> This parameter is required if <strong>SSLEnabled</strong> is set to <strong>1</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
@@ -12,6 +17,7 @@ public class ModifyInstancesSSLShrinkRequest extends TeaModel {
     public String CAType;
 
     /**
+     * <p>The information about the RDS Supabase instances that you want to configure. You can specify up to 10 instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +30,8 @@ public class ModifyInstancesSSLShrinkRequest extends TeaModel {
     public String instanceNamesShrink;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -31,6 +39,11 @@ public class ModifyInstancesSSLShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Enables or disables SSL. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: enable</li>
+     * <li><strong>0</strong>: disable</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +53,11 @@ public class ModifyInstancesSSLShrinkRequest extends TeaModel {
     public Integer SSLEnabled;
 
     /**
+     * <p>The content of the custom certificate.</p>
+     * <blockquote>
+     * <p> This parameter is required if <strong>CAType</strong> is set to <strong>custom</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>
      */
@@ -47,6 +65,11 @@ public class ModifyInstancesSSLShrinkRequest extends TeaModel {
     public String serverCert;
 
     /**
+     * <p>The private key of the certificate.</p>
+     * <blockquote>
+     * <p> This parameter is required if <strong>CAType</strong> is set to <strong>custom</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----MIIE****ihfg==-----END PRIVATE KEY-----</p>
      */

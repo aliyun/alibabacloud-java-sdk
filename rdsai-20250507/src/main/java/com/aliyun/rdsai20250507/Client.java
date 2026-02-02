@@ -272,6 +272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateCustomAgentShrinkRequest request = new CreateCustomAgentShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.skillIds)) {
+            request.skillIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.skillIds, "SkillIds", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tools)) {
             request.toolsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tools, "Tools", "json");
         }
@@ -283,6 +287,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillIdsShrink)) {
+            query.put("SkillIds", request.skillIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.systemPrompt)) {
@@ -1659,8 +1667,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>批量修改实例的SSL配置</p>
+     * <p>Modifies the SSL settings of RDS Supabase instances in batches.</p>
      * 
      * @param tmpReq ModifyInstancesSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1717,8 +1731,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>批量修改实例的SSL配置</p>
+     * <p>Modifies the SSL settings of RDS Supabase instances in batches.</p>
      * 
      * @param request ModifyInstancesSSLRequest
      * @return ModifyInstancesSSLResponse
@@ -2046,6 +2066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateCustomAgentShrinkRequest request = new UpdateCustomAgentShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.skillIds)) {
+            request.skillIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.skillIds, "SkillIds", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tools)) {
             request.toolsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tools, "Tools", "json");
         }
@@ -2061,6 +2085,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillIdsShrink)) {
+            query.put("SkillIds", request.skillIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.systemPrompt)) {

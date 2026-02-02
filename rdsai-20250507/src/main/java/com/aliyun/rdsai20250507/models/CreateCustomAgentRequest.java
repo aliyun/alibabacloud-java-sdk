@@ -19,6 +19,9 @@ public class CreateCustomAgentRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("SkillIds")
+    public java.util.List<String> skillIds;
+
     /**
      * <p>The name of the dedicated agent.</p>
      * <p>This parameter is required.</p>
@@ -51,6 +54,14 @@ public class CreateCustomAgentRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateCustomAgentRequest setSkillIds(java.util.List<String> skillIds) {
+        this.skillIds = skillIds;
+        return this;
+    }
+    public java.util.List<String> getSkillIds() {
+        return this.skillIds;
     }
 
     public CreateCustomAgentRequest setSystemPrompt(String systemPrompt) {

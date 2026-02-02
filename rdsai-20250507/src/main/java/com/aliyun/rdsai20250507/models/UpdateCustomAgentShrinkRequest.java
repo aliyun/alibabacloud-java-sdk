@@ -29,6 +29,9 @@ public class UpdateCustomAgentShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("SkillIds")
+    public String skillIdsShrink;
+
     /**
      * <p>The name of the agent.</p>
      */
@@ -68,6 +71,14 @@ public class UpdateCustomAgentShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateCustomAgentShrinkRequest setSkillIdsShrink(String skillIdsShrink) {
+        this.skillIdsShrink = skillIdsShrink;
+        return this;
+    }
+    public String getSkillIdsShrink() {
+        return this.skillIdsShrink;
     }
 
     public UpdateCustomAgentShrinkRequest setSystemPrompt(String systemPrompt) {

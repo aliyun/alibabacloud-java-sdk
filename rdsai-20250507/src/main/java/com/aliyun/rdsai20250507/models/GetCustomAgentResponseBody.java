@@ -46,6 +46,9 @@ public class GetCustomAgentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Skills")
+    public java.util.List<GetCustomAgentResponseBodySkills> skills;
+
     /**
      * <p>The system prompts.</p>
      */
@@ -112,6 +115,14 @@ public class GetCustomAgentResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetCustomAgentResponseBody setSkills(java.util.List<GetCustomAgentResponseBodySkills> skills) {
+        this.skills = skills;
+        return this;
+    }
+    public java.util.List<GetCustomAgentResponseBodySkills> getSkills() {
+        return this.skills;
+    }
+
     public GetCustomAgentResponseBody setSystemPrompt(String systemPrompt) {
         this.systemPrompt = systemPrompt;
         return this;
@@ -134,6 +145,58 @@ public class GetCustomAgentResponseBody extends TeaModel {
     }
     public String getUpdatedAt() {
         return this.updatedAt;
+    }
+
+    public static class GetCustomAgentResponseBodySkills extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("SkillType")
+        public String skillType;
+
+        public static GetCustomAgentResponseBodySkills build(java.util.Map<String, ?> map) throws Exception {
+            GetCustomAgentResponseBodySkills self = new GetCustomAgentResponseBodySkills();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCustomAgentResponseBodySkills setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetCustomAgentResponseBodySkills setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public GetCustomAgentResponseBodySkills setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetCustomAgentResponseBodySkills setSkillType(String skillType) {
+            this.skillType = skillType;
+            return this;
+        }
+        public String getSkillType() {
+            return this.skillType;
+        }
+
     }
 
 }

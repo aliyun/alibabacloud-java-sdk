@@ -19,6 +19,9 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("SkillIds")
+    public String skillIdsShrink;
+
     /**
      * <p>The name of the dedicated agent.</p>
      * <p>This parameter is required.</p>
@@ -51,6 +54,14 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateCustomAgentShrinkRequest setSkillIdsShrink(String skillIdsShrink) {
+        this.skillIdsShrink = skillIdsShrink;
+        return this;
+    }
+    public String getSkillIdsShrink() {
+        return this.skillIdsShrink;
     }
 
     public CreateCustomAgentShrinkRequest setSystemPrompt(String systemPrompt) {
