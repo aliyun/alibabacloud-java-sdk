@@ -1543,6 +1543,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>为当前UID创建合规报告模版</p>
+     * 
+     * @param tmpReq CreateReportTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateReportTemplateResponse
+     */
+    public CreateReportTemplateResponse createReportTemplateWithOptions(CreateReportTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateReportTemplateShrinkRequest request = new CreateReportTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.reportScope)) {
+            request.reportScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.reportScope, "ReportScope", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reportFileFormats)) {
+            body.put("ReportFileFormats", request.reportFileFormats);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportGranularity)) {
+            body.put("ReportGranularity", request.reportGranularity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
+            body.put("ReportLanguage", request.reportLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportScopeShrink)) {
+            body.put("ReportScope", request.reportScopeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportTemplateDescription)) {
+            body.put("ReportTemplateDescription", request.reportTemplateDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportTemplateName)) {
+            body.put("ReportTemplateName", request.reportTemplateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionFrequency)) {
+            body.put("SubscriptionFrequency", request.subscriptionFrequency);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateReportTemplate"),
+            new TeaPair("version", "2020-09-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReportTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为当前UID创建合规报告模版</p>
+     * 
+     * @param request CreateReportTemplateRequest
+     * @return CreateReportTemplateResponse
+     */
+    public CreateReportTemplateResponse createReportTemplate(CreateReportTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createReportTemplateWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Prerequisites</h3>
      * <p>The status of the rule is <code>ACTIVE</code>.</p>
@@ -4957,6 +5031,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取合规报告模版详情</p>
+     * 
+     * @param request GetReportTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetReportTemplateResponse
+     */
+    public GetReportTemplateResponse getReportTemplateWithOptions(GetReportTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reportTemplateId)) {
+            query.put("ReportTemplateId", request.reportTemplateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetReportTemplate"),
+            new TeaPair("version", "2020-09-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetReportTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取合规报告模版详情</p>
+     * 
+     * @param request GetReportTemplateRequest
+     * @return GetReportTemplateResponse
+     */
+    public GetReportTemplateResponse getReportTemplate(GetReportTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getReportTemplateWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>In this topic, the <code>cr-d369626622af008e****</code> rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and <code>five</code> of them are evaluated as compliant.</p>
      * 
@@ -7479,6 +7597,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量获取合规报告模版详情</p>
+     * 
+     * @param request ListReportTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListReportTemplatesResponse
+     */
+    public ListReportTemplatesResponse listReportTemplatesWithOptions(ListReportTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListReportTemplates"),
+            new TeaPair("version", "2020-09-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListReportTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量获取合规报告模版详情</p>
+     * 
+     * @param request ListReportTemplatesRequest
+     * @return ListReportTemplatesResponse
+     */
+    public ListReportTemplatesResponse listReportTemplates(ListReportTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listReportTemplatesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>In this example, the compliance evaluation result of the <code>23642660635396****</code> resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as <code>NON_COMPLIANT</code> by using the <code>cr-7f7d626622af0041****</code> rule.</p>
      * 
@@ -9680,5 +9850,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRemediationResponse updateRemediation(UpdateRemediationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRemediationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新合规报告模版</p>
+     * 
+     * @param tmpReq UpdateReportTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateReportTemplateResponse
+     */
+    public UpdateReportTemplateResponse updateReportTemplateWithOptions(UpdateReportTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateReportTemplateShrinkRequest request = new UpdateReportTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.reportScope)) {
+            request.reportScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.reportScope, "ReportScope", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reportFileFormats)) {
+            body.put("ReportFileFormats", request.reportFileFormats);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportGranularity)) {
+            body.put("ReportGranularity", request.reportGranularity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
+            body.put("ReportLanguage", request.reportLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportScopeShrink)) {
+            body.put("ReportScope", request.reportScopeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportTemplateDescription)) {
+            body.put("ReportTemplateDescription", request.reportTemplateDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportTemplateId)) {
+            body.put("ReportTemplateId", request.reportTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportTemplateName)) {
+            body.put("ReportTemplateName", request.reportTemplateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionFrequency)) {
+            body.put("SubscriptionFrequency", request.subscriptionFrequency);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateReportTemplate"),
+            new TeaPair("version", "2020-09-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateReportTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新合规报告模版</p>
+     * 
+     * @param request UpdateReportTemplateRequest
+     * @return UpdateReportTemplateResponse
+     */
+    public UpdateReportTemplateResponse updateReportTemplate(UpdateReportTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateReportTemplateWithOptions(request, runtime);
     }
 }
