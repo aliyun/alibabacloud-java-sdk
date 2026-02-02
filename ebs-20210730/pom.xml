@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ebs20210730</artifactId>
-  <version>4.3.0</version>
+  <version>4.4.0</version>
   <packaging>jar</packaging>
   <name>ebs20210730</name>
   <description>Alibaba Cloud ebs (20210730) SDK for Java
