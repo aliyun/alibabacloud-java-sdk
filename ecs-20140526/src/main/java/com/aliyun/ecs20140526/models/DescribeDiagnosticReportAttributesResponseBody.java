@@ -278,6 +278,12 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         @NameInMap("OccurrenceTime")
         public String occurrenceTime;
 
+        @NameInMap("RepairStatus")
+        public String repairStatus;
+
+        @NameInMap("Repairable")
+        public Boolean repairable;
+
         /**
          * <p>The severity level of the diagnosed issue. Valid values:</p>
          * <ul>
@@ -319,6 +325,22 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
         public String getOccurrenceTime() {
             return this.occurrenceTime;
+        }
+
+        public DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssuesIssue setRepairStatus(String repairStatus) {
+            this.repairStatus = repairStatus;
+            return this;
+        }
+        public String getRepairStatus() {
+            return this.repairStatus;
+        }
+
+        public DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssuesIssue setRepairable(Boolean repairable) {
+            this.repairable = repairable;
+            return this;
+        }
+        public Boolean getRepairable() {
+            return this.repairable;
         }
 
         public DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssuesIssue setSeverity(String severity) {

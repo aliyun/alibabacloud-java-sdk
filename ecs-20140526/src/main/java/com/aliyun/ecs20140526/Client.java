@@ -207,7 +207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>AddBandwidthPackageIps</p>
      * 
-     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::AddBandwidthPackageIps instead.
+     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated
      * 
      * @param request AddBandwidthPackageIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -271,7 +271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>AddBandwidthPackageIps</p>
      * 
-     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::AddBandwidthPackageIps instead.
+     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated
      * 
      * @param request AddBandwidthPackageIpsRequest
      * @return AddBandwidthPackageIpsResponse
@@ -6633,6 +6633,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建运维窗口</p>
+     * 
+     * @param tmpReq CreatePlanMaintenanceWindowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePlanMaintenanceWindowResponse
+     */
+    public CreatePlanMaintenanceWindowResponse createPlanMaintenanceWindowWithOptions(CreatePlanMaintenanceWindowRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePlanMaintenanceWindowShrinkRequest request = new CreatePlanMaintenanceWindowShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.targetResource)) {
+            request.targetResourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.targetResource, "TargetResource", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timePeriod)) {
+            request.timePeriodShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timePeriod, "TimePeriod", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planWindowName)) {
+            query.put("PlanWindowName", request.planWindowName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportMaintenanceAction)) {
+            query.put("SupportMaintenanceAction", request.supportMaintenanceAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetResourceShrink)) {
+            query.put("TargetResource", request.targetResourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timePeriodShrink)) {
+            query.put("TimePeriod", request.timePeriodShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePlanMaintenanceWindow"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePlanMaintenanceWindowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建运维窗口</p>
+     * 
+     * @param request CreatePlanMaintenanceWindowRequest
+     * @return CreatePlanMaintenanceWindowResponse
+     */
+    public CreatePlanMaintenanceWindowResponse createPlanMaintenanceWindow(CreatePlanMaintenanceWindowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPlanMaintenanceWindowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a port list. You can associate a port list with resources, such as security groups.</p>
      * 
      * @param request CreatePortRangeListRequest
@@ -8355,14 +8429,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>DeleteBandwidthPackage</p>
      * 
-     * @deprecated OpenAPI DeleteBandwidthPackage is deprecated, please use Vpc::2016-04-28::DeleteBandwidthPackage instead.
-     * 
      * @param request DeleteBandwidthPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteBandwidthPackageResponse
      */
-    @Deprecated
-    // Deprecated
     public DeleteBandwidthPackageResponse deleteBandwidthPackageWithOptions(DeleteBandwidthPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8411,13 +8481,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>DeleteBandwidthPackage</p>
      * 
-     * @deprecated OpenAPI DeleteBandwidthPackage is deprecated, please use Vpc::2016-04-28::DeleteBandwidthPackage instead.
-     * 
      * @param request DeleteBandwidthPackageRequest
      * @return DeleteBandwidthPackageResponse
      */
-    @Deprecated
-    // Deprecated
     public DeleteBandwidthPackageResponse deleteBandwidthPackage(DeleteBandwidthPackageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteBandwidthPackageWithOptions(request, runtime);
@@ -10061,6 +10127,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePhysicalConnectionResponse deletePhysicalConnection(DeletePhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePhysicalConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除运维窗口</p>
+     * 
+     * @param request DeletePlanMaintenanceWindowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePlanMaintenanceWindowResponse
+     */
+    public DeletePlanMaintenanceWindowResponse deletePlanMaintenanceWindowWithOptions(DeletePlanMaintenanceWindowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.planWindowId)) {
+            query.put("PlanWindowId", request.planWindowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePlanMaintenanceWindow"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePlanMaintenanceWindowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除运维窗口</p>
+     * 
+     * @param request DeletePlanMaintenanceWindowRequest
+     * @return DeletePlanMaintenanceWindowResponse
+     */
+    public DeletePlanMaintenanceWindowResponse deletePlanMaintenanceWindow(DeletePlanMaintenanceWindowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePlanMaintenanceWindowWithOptions(request, runtime);
     }
 
     /**
@@ -18389,6 +18503,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询运维窗口</p>
+     * 
+     * @param tmpReq DescribePlanMaintenanceWindowsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePlanMaintenanceWindowsResponse
+     */
+    public DescribePlanMaintenanceWindowsResponse describePlanMaintenanceWindowsWithOptions(DescribePlanMaintenanceWindowsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribePlanMaintenanceWindowsShrinkRequest request = new DescribePlanMaintenanceWindowsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.targetResourceTags)) {
+            request.targetResourceTagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.targetResourceTags, "TargetResourceTags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planWindowId)) {
+            query.put("PlanWindowId", request.planWindowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planWindowName)) {
+            query.put("PlanWindowName", request.planWindowName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetResourceGroupId)) {
+            query.put("TargetResourceGroupId", request.targetResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetResourceTagsShrink)) {
+            query.put("TargetResourceTags", request.targetResourceTagsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePlanMaintenanceWindows"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePlanMaintenanceWindowsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询运维窗口</p>
+     * 
+     * @param request DescribePlanMaintenanceWindowsRequest
+     * @return DescribePlanMaintenanceWindowsResponse
+     */
+    public DescribePlanMaintenanceWindowsResponse describePlanMaintenanceWindows(DescribePlanMaintenanceWindowsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePlanMaintenanceWindowsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the resources that are associated with a port list, such as security groups.</p>
      * 
      * @param request DescribePortRangeListAssociationsRequest
@@ -25501,7 +25693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>ModifyBandwidthPackageSpec</p>
      * 
-     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated, please use Vpc::2016-04-28::ModifyBandwidthPackageSpec instead.
+     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated
      * 
      * @param request ModifyBandwidthPackageSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25561,7 +25753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>ModifyBandwidthPackageSpec</p>
      * 
-     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated, please use Vpc::2016-04-28::ModifyBandwidthPackageSpec instead.
+     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated
      * 
      * @param request ModifyBandwidthPackageSpecRequest
      * @return ModifyBandwidthPackageSpecResponse
@@ -29741,6 +29933,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新运维窗口</p>
+     * 
+     * @param tmpReq ModifyPlanMaintenanceWindowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyPlanMaintenanceWindowResponse
+     */
+    public ModifyPlanMaintenanceWindowResponse modifyPlanMaintenanceWindowWithOptions(ModifyPlanMaintenanceWindowRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyPlanMaintenanceWindowShrinkRequest request = new ModifyPlanMaintenanceWindowShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.targetResource)) {
+            request.targetResourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.targetResource, "TargetResource", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timePeriod)) {
+            request.timePeriodShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timePeriod, "TimePeriod", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planWindowId)) {
+            query.put("PlanWindowId", request.planWindowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planWindowName)) {
+            query.put("PlanWindowName", request.planWindowName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportMaintenanceAction)) {
+            query.put("SupportMaintenanceAction", request.supportMaintenanceAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetResourceShrink)) {
+            query.put("TargetResource", request.targetResourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timePeriodShrink)) {
+            query.put("TimePeriod", request.timePeriodShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyPlanMaintenanceWindow"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPlanMaintenanceWindowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新运维窗口</p>
+     * 
+     * @param request ModifyPlanMaintenanceWindowRequest
+     * @return ModifyPlanMaintenanceWindowResponse
+     */
+    public ModifyPlanMaintenanceWindowResponse modifyPlanMaintenanceWindow(ModifyPlanMaintenanceWindowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyPlanMaintenanceWindowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the name and entries of a port list. You can call this operation to add, modify, and remove entries for a port list.</p>
      * 
      * @param request ModifyPortRangeListRequest
@@ -33259,14 +33529,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>RemoveBandwidthPackageIps</p>
      * 
-     * @deprecated OpenAPI RemoveBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::RemoveBandwidthPackageIps instead.
-     * 
      * @param request RemoveBandwidthPackageIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveBandwidthPackageIpsResponse
      */
-    @Deprecated
-    // Deprecated
     public RemoveBandwidthPackageIpsResponse removeBandwidthPackageIpsWithOptions(RemoveBandwidthPackageIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -33323,13 +33589,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>RemoveBandwidthPackageIps</p>
      * 
-     * @deprecated OpenAPI RemoveBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::RemoveBandwidthPackageIps instead.
-     * 
      * @param request RemoveBandwidthPackageIpsRequest
      * @return RemoveBandwidthPackageIpsResponse
      */
-    @Deprecated
-    // Deprecated
     public RemoveBandwidthPackageIpsResponse removeBandwidthPackageIps(RemoveBandwidthPackageIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeBandwidthPackageIpsWithOptions(request, runtime);

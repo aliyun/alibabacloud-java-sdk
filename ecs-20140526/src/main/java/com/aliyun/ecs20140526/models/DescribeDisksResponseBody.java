@@ -791,6 +791,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <strong>example:</strong>
+         * <p>d-123*********</p>
+         */
+        @NameInMap("SourceDiskId")
+        public String sourceDiskId;
+
+        /**
          * <p>The ID of the snapshot that was used to create the cloud disk.</p>
          * <p>This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.</p>
          * 
@@ -1206,6 +1213,14 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
         public Integer getSize() {
             return this.size;
+        }
+
+        public DescribeDisksResponseBodyDisksDisk setSourceDiskId(String sourceDiskId) {
+            this.sourceDiskId = sourceDiskId;
+            return this;
+        }
+        public String getSourceDiskId() {
+            return this.sourceDiskId;
         }
 
         public DescribeDisksResponseBodyDisksDisk setSourceSnapshotId(String sourceSnapshotId) {
