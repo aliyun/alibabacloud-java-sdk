@@ -344,7 +344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数字人会话</p>
+     * <p>创建实时数字人会话。</p>
      * 
      * @param request CreateChatSessionRequest
      * @param headers map
@@ -386,7 +386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数字人会话</p>
+     * <p>创建实时数字人会话。</p>
      * 
      * @param request CreateChatSessionRequest
      * @return CreateChatSessionResponse
@@ -539,6 +539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateTrainPicAvatarResponse createTrainPicAvatarWithOptions(CreateTrainPicAvatarRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("bizType", request.bizType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gender)) {
             query.put("gender", request.gender);
         }

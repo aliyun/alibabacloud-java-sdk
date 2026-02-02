@@ -128,7 +128,7 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
     public static class ListPrivateTTSVoicesCustomResponseBodyDataData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p><a href="https://xxx-aliyuncs.com/material/INPUT_TRAIN_AUDIO/Mt.CQEG75L4FWIU2/TestTTSVoiceName.mp3?Expires=1764262805&OSSAccessKeyId=LTAI5tK3WcKwKtAyaTSeq7sx&Signature=D%2Fld6gp9Zh6TsGRU9cd6GD2pFY0%3D">https://xxx-aliyuncs.com/material/INPUT_TRAIN_AUDIO/Mt.CQEG75L4FWIU2/TestTTSVoiceName.mp3?Expires=1764262805&amp;OSSAccessKeyId=LTAI5tK3WcKwKtAyaTSeq7sx&amp;Signature=D%2Fld6gp9Zh6TsGRU9cd6GD2pFY0%3D</a></p>
+         * <p><a href="https://xxx-aliyuncs.com/material/INPUT_TRAIN_AUDIO/Mt.CQEG75L4FWIU2/TestTTSVoiceName.mp3?Expires=1764262805&OSSAccessKeyId=LTAI5tK3WcKwKtAyaT******&Signature=D%2Fld6gp9Zh6TsGRU9cd6GD2pFY0%3D">https://xxx-aliyuncs.com/material/INPUT_TRAIN_AUDIO/Mt.CQEG75L4FWIU2/TestTTSVoiceName.mp3?Expires=1764262805&amp;OSSAccessKeyId=LTAI5tK3WcKwKtAyaT******&amp;Signature=D%2Fld6gp9Zh6TsGRU9cd6GD2pFY0%3D</a></p>
          */
         @NameInMap("audioURL")
         public String audioURL;
@@ -161,6 +161,12 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>错误码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Audio.AudioShortError</p>
+         */
         @NameInMap("errorCode")
         public String errorCode;
 

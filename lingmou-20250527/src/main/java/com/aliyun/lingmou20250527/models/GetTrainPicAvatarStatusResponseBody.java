@@ -105,7 +105,7 @@ public class GetTrainPicAvatarStatusResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>//daily-avatar-property.oss-cn-beijing.aliyuncs.com/avatar-share-property/AVATAR_2D_PIC/Mt.CMTMRYX4TNIU2/retalking_output.mp4?Expires=1764327167&amp;OSSAccessKeyId=LTAI5tBRPnF5JkRCidYA8kw9&amp;Signature=%2BH%2BSBpNDPiMQtPyl8vraEHMv9X8%3D</p>
+         * <p>//daily-avatar-property.oss-cn-beijing.aliyuncs.com/avatar-share-property/AVATAR_2D_PIC/Mt.CMTMRYX4TNIU2/retalking_output.mp4?Expires=1764327167&amp;OSSAccessKeyId=LTAI5tBRPnF5JkRCid******&amp;Signature=%2BH%2BSBpNDPiMQtPyl8vraEHMv9X8%3D</p>
          */
         @NameInMap("previewURL")
         public String previewURL;

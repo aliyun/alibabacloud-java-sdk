@@ -4,6 +4,9 @@ package com.aliyun.lingmou20250527.models;
 import com.aliyun.tea.*;
 
 public class CreateTrainPicAvatarRequest extends TeaModel {
+    @NameInMap("bizType")
+    public String bizType;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -52,6 +55,14 @@ public class CreateTrainPicAvatarRequest extends TeaModel {
     public static CreateTrainPicAvatarRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTrainPicAvatarRequest self = new CreateTrainPicAvatarRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTrainPicAvatarRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
     }
 
     public CreateTrainPicAvatarRequest setGender(String gender) {
