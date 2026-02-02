@@ -80,6 +80,58 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo extends TeaModel {
+        @NameInMap("DataVersion")
+        public String dataVersion;
+
+        @NameInMap("RecallManagementTableVersionId")
+        public String recallManagementTableVersionId;
+
+        @NameInMap("SourceTableDataSize")
+        public String sourceTableDataSize;
+
+        @NameInMap("SourceTableRowCount")
+        public String sourceTableRowCount;
+
+        public static ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo self = new ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo setDataVersion(String dataVersion) {
+            this.dataVersion = dataVersion;
+            return this;
+        }
+        public String getDataVersion() {
+            return this.dataVersion;
+        }
+
+        public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo setRecallManagementTableVersionId(String recallManagementTableVersionId) {
+            this.recallManagementTableVersionId = recallManagementTableVersionId;
+            return this;
+        }
+        public String getRecallManagementTableVersionId() {
+            return this.recallManagementTableVersionId;
+        }
+
+        public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo setSourceTableDataSize(String sourceTableDataSize) {
+            this.sourceTableDataSize = sourceTableDataSize;
+            return this;
+        }
+        public String getSourceTableDataSize() {
+            return this.sourceTableDataSize;
+        }
+
+        public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo setSourceTableRowCount(String sourceTableRowCount) {
+            this.sourceTableRowCount = sourceTableRowCount;
+            return this;
+        }
+        public String getSourceTableRowCount() {
+            return this.sourceTableRowCount;
+        }
+
+    }
+
     public static class ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagerTableInfo extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -163,6 +215,9 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         @NameInMap("RecallManagementJobId")
         public String recallManagementJobId;
 
+        @NameInMap("RecallManagementTableInfo")
+        public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo recallManagementTableInfo;
+
         @NameInMap("RecallManagerTableInfo")
         public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagerTableInfo recallManagerTableInfo;
 
@@ -199,6 +254,14 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         }
         public String getRecallManagementJobId() {
             return this.recallManagementJobId;
+        }
+
+        public ListRecallManagementJobsResponseBodyRecallManagementJobs setRecallManagementTableInfo(ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo recallManagementTableInfo) {
+            this.recallManagementTableInfo = recallManagementTableInfo;
+            return this;
+        }
+        public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo getRecallManagementTableInfo() {
+            return this.recallManagementTableInfo;
         }
 
         public ListRecallManagementJobsResponseBodyRecallManagementJobs setRecallManagerTableInfo(ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagerTableInfo recallManagerTableInfo) {

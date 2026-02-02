@@ -13,6 +13,9 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     @NameInMap("RecallManagementJobId")
     public String recallManagementJobId;
 
+    @NameInMap("RecallManagementTableInfo")
+    public GetRecallManagementJobResponseBodyRecallManagementTableInfo recallManagementTableInfo;
+
     @NameInMap("RecallManagerTableInfo")
     public GetRecallManagementJobResponseBodyRecallManagerTableInfo recallManagerTableInfo;
 
@@ -54,6 +57,14 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         return this.recallManagementJobId;
     }
 
+    public GetRecallManagementJobResponseBody setRecallManagementTableInfo(GetRecallManagementJobResponseBodyRecallManagementTableInfo recallManagementTableInfo) {
+        this.recallManagementTableInfo = recallManagementTableInfo;
+        return this;
+    }
+    public GetRecallManagementJobResponseBodyRecallManagementTableInfo getRecallManagementTableInfo() {
+        return this.recallManagementTableInfo;
+    }
+
     public GetRecallManagementJobResponseBody setRecallManagerTableInfo(GetRecallManagementJobResponseBodyRecallManagerTableInfo recallManagerTableInfo) {
         this.recallManagerTableInfo = recallManagerTableInfo;
         return this;
@@ -84,6 +95,58 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public static class GetRecallManagementJobResponseBodyRecallManagementTableInfo extends TeaModel {
+        @NameInMap("DataVersion")
+        public String dataVersion;
+
+        @NameInMap("RecallManagementTableVersionId")
+        public String recallManagementTableVersionId;
+
+        @NameInMap("SourceTableDataSize")
+        public String sourceTableDataSize;
+
+        @NameInMap("SourceTableRowCount")
+        public String sourceTableRowCount;
+
+        public static GetRecallManagementJobResponseBodyRecallManagementTableInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetRecallManagementJobResponseBodyRecallManagementTableInfo self = new GetRecallManagementJobResponseBodyRecallManagementTableInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRecallManagementJobResponseBodyRecallManagementTableInfo setDataVersion(String dataVersion) {
+            this.dataVersion = dataVersion;
+            return this;
+        }
+        public String getDataVersion() {
+            return this.dataVersion;
+        }
+
+        public GetRecallManagementJobResponseBodyRecallManagementTableInfo setRecallManagementTableVersionId(String recallManagementTableVersionId) {
+            this.recallManagementTableVersionId = recallManagementTableVersionId;
+            return this;
+        }
+        public String getRecallManagementTableVersionId() {
+            return this.recallManagementTableVersionId;
+        }
+
+        public GetRecallManagementJobResponseBodyRecallManagementTableInfo setSourceTableDataSize(String sourceTableDataSize) {
+            this.sourceTableDataSize = sourceTableDataSize;
+            return this;
+        }
+        public String getSourceTableDataSize() {
+            return this.sourceTableDataSize;
+        }
+
+        public GetRecallManagementJobResponseBodyRecallManagementTableInfo setSourceTableRowCount(String sourceTableRowCount) {
+            this.sourceTableRowCount = sourceTableRowCount;
+            return this;
+        }
+        public String getSourceTableRowCount() {
+            return this.sourceTableRowCount;
+        }
+
     }
 
     public static class GetRecallManagementJobResponseBodyRecallManagerTableInfo extends TeaModel {
