@@ -176,6 +176,13 @@ public class GetDialogDetailResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>19387872364736xdhcb</p>
+         */
+        @NameInMap("recordId")
+        public String recordId;
+
+        /**
+         * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("role")
@@ -255,6 +262,14 @@ public class GetDialogDetailResponseBody extends TeaModel {
         }
         public String getIntentName() {
             return this.intentName;
+        }
+
+        public GetDialogDetailResponseBodyDataDialogueList setRecordId(String recordId) {
+            this.recordId = recordId;
+            return this;
+        }
+        public String getRecordId() {
+            return this.recordId;
         }
 
         public GetDialogDetailResponseBodyDataDialogueList setRole(String role) {
