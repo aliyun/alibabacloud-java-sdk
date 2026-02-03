@@ -3418,6 +3418,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Accessibility", request.accessibility);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.callerType)) {
+            query.put("CallerType", request.callerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callerUid)) {
+            query.put("CallerUid", request.callerUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.creator)) {
             query.put("Creator", request.creator);
         }
@@ -3432,6 +3440,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
             query.put("Resource", request.resource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6851,5 +6863,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateWorkspaceResourceWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>验证连接</p>
+     * 
+     * @param request ValidateConnectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ValidateConnectionResponse
+     */
+    public ValidateConnectionResponse validateConnectionWithOptions(ValidateConnectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configs)) {
+            body.put("Configs", request.configs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionId)) {
+            body.put("ConnectionId", request.connectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionType)) {
+            body.put("ConnectionType", request.connectionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secrets)) {
+            body.put("Secrets", request.secrets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validateType)) {
+            body.put("ValidateType", request.validateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ValidateConnection"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/connections/validate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateConnectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>验证连接</p>
+     * 
+     * @param request ValidateConnectionRequest
+     * @return ValidateConnectionResponse
+     */
+    public ValidateConnectionResponse validateConnection(ValidateConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.validateConnectionWithOptions(request, headers, runtime);
     }
 }

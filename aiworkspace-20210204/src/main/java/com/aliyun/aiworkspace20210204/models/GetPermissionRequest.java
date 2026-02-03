@@ -17,6 +17,12 @@ public class GetPermissionRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("CallerType")
+    public String callerType;
+
+    @NameInMap("CallerUid")
+    public String callerUid;
+
     /**
      * <p>The UID of the Alibaba Cloud account that is used to create the workspace.</p>
      * 
@@ -51,6 +57,9 @@ public class GetPermissionRequest extends TeaModel {
     @NameInMap("Resource")
     public String resource;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static GetPermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPermissionRequest self = new GetPermissionRequest();
         return TeaModel.build(map, self);
@@ -62,6 +71,22 @@ public class GetPermissionRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public GetPermissionRequest setCallerType(String callerType) {
+        this.callerType = callerType;
+        return this;
+    }
+    public String getCallerType() {
+        return this.callerType;
+    }
+
+    public GetPermissionRequest setCallerUid(String callerUid) {
+        this.callerUid = callerUid;
+        return this;
+    }
+    public String getCallerUid() {
+        return this.callerUid;
     }
 
     public GetPermissionRequest setCreator(String creator) {
@@ -94,6 +119,14 @@ public class GetPermissionRequest extends TeaModel {
     }
     public String getResource() {
         return this.resource;
+    }
+
+    public GetPermissionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
