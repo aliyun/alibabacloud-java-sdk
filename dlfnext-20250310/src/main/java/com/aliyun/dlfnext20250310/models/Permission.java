@@ -25,6 +25,9 @@ public class Permission extends TeaModel {
     @NameInMap("resourceType")
     public String resourceType;
 
+    @NameInMap("rowFilter")
+    public RowFilter rowFilter;
+
     @NameInMap("table")
     public String table;
 
@@ -90,6 +93,14 @@ public class Permission extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public Permission setRowFilter(RowFilter rowFilter) {
+        this.rowFilter = rowFilter;
+        return this;
+    }
+    public RowFilter getRowFilter() {
+        return this.rowFilter;
     }
 
     public Permission setTable(String table) {

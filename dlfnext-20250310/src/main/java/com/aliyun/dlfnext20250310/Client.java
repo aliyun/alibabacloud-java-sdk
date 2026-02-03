@@ -893,7 +893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据湖Catalog</p>
+     * <p>删除数据湖Catalog</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -919,7 +919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据湖Catalog</p>
+     * <p>删除数据湖Catalog</p>
      * @return DropCatalogResponse
      */
     public DropCatalogResponse dropCatalog(String catalog) throws Exception {

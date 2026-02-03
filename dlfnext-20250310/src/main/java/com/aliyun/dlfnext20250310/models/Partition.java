@@ -37,6 +37,9 @@ public class Partition extends TeaModel {
     @NameInMap("storageClass")
     public String storageClass;
 
+    @NameInMap("totalBuckets")
+    public Integer totalBuckets;
+
     @NameInMap("updatedAt")
     public Long updatedAt;
 
@@ -134,6 +137,14 @@ public class Partition extends TeaModel {
     }
     public String getStorageClass() {
         return this.storageClass;
+    }
+
+    public Partition setTotalBuckets(Integer totalBuckets) {
+        this.totalBuckets = totalBuckets;
+        return this;
+    }
+    public Integer getTotalBuckets() {
+        return this.totalBuckets;
     }
 
     public Partition setUpdatedAt(Long updatedAt) {

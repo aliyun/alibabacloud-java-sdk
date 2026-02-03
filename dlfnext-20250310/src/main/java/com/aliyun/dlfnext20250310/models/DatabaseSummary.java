@@ -58,6 +58,9 @@ public class DatabaseSummary extends TeaModel {
     @NameInMap("totalFileSizeInBytes")
     public Long totalFileSizeInBytes;
 
+    @NameInMap("totalMetaFileCount")
+    public Long totalMetaFileCount;
+
     @NameInMap("totalMetaSizeInBytes")
     public Long totalMetaSizeInBytes;
 
@@ -160,6 +163,14 @@ public class DatabaseSummary extends TeaModel {
     }
     public Long getTotalFileSizeInBytes() {
         return this.totalFileSizeInBytes;
+    }
+
+    public DatabaseSummary setTotalMetaFileCount(Long totalMetaFileCount) {
+        this.totalMetaFileCount = totalMetaFileCount;
+        return this;
+    }
+    public Long getTotalMetaFileCount() {
+        return this.totalMetaFileCount;
     }
 
     public DatabaseSummary setTotalMetaSizeInBytes(Long totalMetaSizeInBytes) {

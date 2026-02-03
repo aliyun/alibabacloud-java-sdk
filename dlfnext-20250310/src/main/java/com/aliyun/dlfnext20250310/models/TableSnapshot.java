@@ -19,6 +19,9 @@ public class TableSnapshot extends TeaModel {
     @NameInMap("snapshot")
     public Snapshot snapshot;
 
+    @NameInMap("totalBuckets")
+    public Integer totalBuckets;
+
     public static TableSnapshot build(java.util.Map<String, ?> map) throws Exception {
         TableSnapshot self = new TableSnapshot();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class TableSnapshot extends TeaModel {
     }
     public Snapshot getSnapshot() {
         return this.snapshot;
+    }
+
+    public TableSnapshot setTotalBuckets(Integer totalBuckets) {
+        this.totalBuckets = totalBuckets;
+        return this;
+    }
+    public Integer getTotalBuckets() {
+        return this.totalBuckets;
     }
 
 }

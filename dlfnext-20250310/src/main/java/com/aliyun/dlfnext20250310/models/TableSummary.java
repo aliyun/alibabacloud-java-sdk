@@ -67,8 +67,23 @@ public class TableSummary extends TeaModel {
     @NameInMap("totalFileSizeInBytes")
     public Long totalFileSizeInBytes;
 
+    @NameInMap("totalMetaFileCount")
+    public Long totalMetaFileCount;
+
     @NameInMap("totalMetaSizeInBytes")
     public Long totalMetaSizeInBytes;
+
+    /**
+     * <p>Creation timestamp in milliseconds</p>
+     */
+    @NameInMap("unaccessedStdIaPartitionCount180d")
+    public Long unaccessedStdIaPartitionCount180d;
+
+    /**
+     * <p>Creation timestamp in milliseconds</p>
+     */
+    @NameInMap("unaccessedStdPartitionCount30d")
+    public Long unaccessedStdPartitionCount30d;
 
     @NameInMap("updatedAt")
     public Long updatedAt;
@@ -206,12 +221,36 @@ public class TableSummary extends TeaModel {
         return this.totalFileSizeInBytes;
     }
 
+    public TableSummary setTotalMetaFileCount(Long totalMetaFileCount) {
+        this.totalMetaFileCount = totalMetaFileCount;
+        return this;
+    }
+    public Long getTotalMetaFileCount() {
+        return this.totalMetaFileCount;
+    }
+
     public TableSummary setTotalMetaSizeInBytes(Long totalMetaSizeInBytes) {
         this.totalMetaSizeInBytes = totalMetaSizeInBytes;
         return this;
     }
     public Long getTotalMetaSizeInBytes() {
         return this.totalMetaSizeInBytes;
+    }
+
+    public TableSummary setUnaccessedStdIaPartitionCount180d(Long unaccessedStdIaPartitionCount180d) {
+        this.unaccessedStdIaPartitionCount180d = unaccessedStdIaPartitionCount180d;
+        return this;
+    }
+    public Long getUnaccessedStdIaPartitionCount180d() {
+        return this.unaccessedStdIaPartitionCount180d;
+    }
+
+    public TableSummary setUnaccessedStdPartitionCount30d(Long unaccessedStdPartitionCount30d) {
+        this.unaccessedStdPartitionCount30d = unaccessedStdPartitionCount30d;
+        return this;
+    }
+    public Long getUnaccessedStdPartitionCount30d() {
+        return this.unaccessedStdPartitionCount30d;
     }
 
     public TableSummary setUpdatedAt(Long updatedAt) {

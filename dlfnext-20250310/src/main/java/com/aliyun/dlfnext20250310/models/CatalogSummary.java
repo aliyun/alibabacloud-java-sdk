@@ -46,6 +46,9 @@ public class CatalogSummary extends TeaModel {
     @NameInMap("totalFileSizeInBytes")
     public MoMValues totalFileSizeInBytes;
 
+    @NameInMap("totalMetaFileCount")
+    public MoMValues totalMetaFileCount;
+
     @NameInMap("totalMetaSizeInBytes")
     public MoMValues totalMetaSizeInBytes;
 
@@ -156,6 +159,14 @@ public class CatalogSummary extends TeaModel {
     }
     public MoMValues getTotalFileSizeInBytes() {
         return this.totalFileSizeInBytes;
+    }
+
+    public CatalogSummary setTotalMetaFileCount(MoMValues totalMetaFileCount) {
+        this.totalMetaFileCount = totalMetaFileCount;
+        return this;
+    }
+    public MoMValues getTotalMetaFileCount() {
+        return this.totalMetaFileCount;
     }
 
     public CatalogSummary setTotalMetaSizeInBytes(MoMValues totalMetaSizeInBytes) {
