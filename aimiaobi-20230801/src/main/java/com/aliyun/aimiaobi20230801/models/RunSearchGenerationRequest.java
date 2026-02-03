@@ -615,12 +615,36 @@ public class RunSearchGenerationRequest extends TeaModel {
     }
 
     public static class RunSearchGenerationRequestChatConfigSearchParam extends TeaModel {
+        @NameInMap("CategoryUuids")
+        public java.util.List<String> categoryUuids;
+
+        @NameInMap("CreateTimeEnd")
+        public Long createTimeEnd;
+
+        @NameInMap("CreateTimeStart")
+        public Long createTimeStart;
+
+        @NameInMap("DocIds")
+        public java.util.List<String> docIds;
+
+        @NameInMap("DocUuids")
+        public java.util.List<String> docUuids;
+
         /**
          * <strong>example:</strong>
          * <p>1725983999999</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
+
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
 
         @NameInMap("MultimodalSearchTypes")
         public java.util.List<String> multimodalSearchTypes;
@@ -663,9 +687,52 @@ public class RunSearchGenerationRequest extends TeaModel {
         @NameInMap("StartTime")
         public Long startTime;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         public static RunSearchGenerationRequestChatConfigSearchParam build(java.util.Map<String, ?> map) throws Exception {
             RunSearchGenerationRequestChatConfigSearchParam self = new RunSearchGenerationRequestChatConfigSearchParam();
             return TeaModel.build(map, self);
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setCategoryUuids(java.util.List<String> categoryUuids) {
+            this.categoryUuids = categoryUuids;
+            return this;
+        }
+        public java.util.List<String> getCategoryUuids() {
+            return this.categoryUuids;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setCreateTimeEnd(Long createTimeEnd) {
+            this.createTimeEnd = createTimeEnd;
+            return this;
+        }
+        public Long getCreateTimeEnd() {
+            return this.createTimeEnd;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setCreateTimeStart(Long createTimeStart) {
+            this.createTimeStart = createTimeStart;
+            return this;
+        }
+        public Long getCreateTimeStart() {
+            return this.createTimeStart;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setDocIds(java.util.List<String> docIds) {
+            this.docIds = docIds;
+            return this;
+        }
+        public java.util.List<String> getDocIds() {
+            return this.docIds;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setDocUuids(java.util.List<String> docUuids) {
+            this.docUuids = docUuids;
+            return this;
+        }
+        public java.util.List<String> getDocUuids() {
+            return this.docUuids;
         }
 
         public RunSearchGenerationRequestChatConfigSearchParam setEndTime(Long endTime) {
@@ -674,6 +741,30 @@ public class RunSearchGenerationRequest extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
         }
 
         public RunSearchGenerationRequestChatConfigSearchParam setMultimodalSearchTypes(java.util.List<String> multimodalSearchTypes) {
@@ -730,6 +821,14 @@ public class RunSearchGenerationRequest extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
     }

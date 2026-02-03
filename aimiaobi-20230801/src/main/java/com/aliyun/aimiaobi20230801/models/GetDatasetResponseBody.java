@@ -95,6 +95,58 @@ public class GetDatasetResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig extends TeaModel {
+        @NameInMap("MetadataKeyValueGenerateEnable")
+        public String metadataKeyValueGenerateEnable;
+
+        @NameInMap("MetadataKeyValueSearchEnable")
+        public String metadataKeyValueSearchEnable;
+
+        @NameInMap("TagGenerateEnable")
+        public String tagGenerateEnable;
+
+        @NameInMap("TagSearchEnable")
+        public String tagSearchEnable;
+
+        public static GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig self = new GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig setMetadataKeyValueGenerateEnable(String metadataKeyValueGenerateEnable) {
+            this.metadataKeyValueGenerateEnable = metadataKeyValueGenerateEnable;
+            return this;
+        }
+        public String getMetadataKeyValueGenerateEnable() {
+            return this.metadataKeyValueGenerateEnable;
+        }
+
+        public GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig setMetadataKeyValueSearchEnable(String metadataKeyValueSearchEnable) {
+            this.metadataKeyValueSearchEnable = metadataKeyValueSearchEnable;
+            return this;
+        }
+        public String getMetadataKeyValueSearchEnable() {
+            return this.metadataKeyValueSearchEnable;
+        }
+
+        public GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig setTagGenerateEnable(String tagGenerateEnable) {
+            this.tagGenerateEnable = tagGenerateEnable;
+            return this;
+        }
+        public String getTagGenerateEnable() {
+            return this.tagGenerateEnable;
+        }
+
+        public GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig setTagSearchEnable(String tagSearchEnable) {
+            this.tagSearchEnable = tagSearchEnable;
+            return this;
+        }
+        public String getTagSearchEnable() {
+            return this.tagSearchEnable;
+        }
+
+    }
+
     public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceRequestConfigHeaders extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -612,12 +664,23 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     public static class GetDatasetResponseBodyDataDatasetConfig extends TeaModel {
+        @NameInMap("SearchSourceConfig")
+        public GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig searchSourceConfig;
+
         @NameInMap("SearchSourceConfigs")
         public java.util.List<GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigs> searchSourceConfigs;
 
         public static GetDatasetResponseBodyDataDatasetConfig build(java.util.Map<String, ?> map) throws Exception {
             GetDatasetResponseBodyDataDatasetConfig self = new GetDatasetResponseBodyDataDatasetConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetDatasetResponseBodyDataDatasetConfig setSearchSourceConfig(GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig searchSourceConfig) {
+            this.searchSourceConfig = searchSourceConfig;
+            return this;
+        }
+        public GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig getSearchSourceConfig() {
+            return this.searchSourceConfig;
         }
 
         public GetDatasetResponseBodyDataDatasetConfig setSearchSourceConfigs(java.util.List<GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigs> searchSourceConfigs) {

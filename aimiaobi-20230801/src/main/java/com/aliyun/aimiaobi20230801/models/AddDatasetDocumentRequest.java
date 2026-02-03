@@ -111,6 +111,36 @@ public class AddDatasetDocumentRequest extends TeaModel {
 
     }
 
+    public static class AddDatasetDocumentRequestDocumentMetadataKeyValues extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static AddDatasetDocumentRequestDocumentMetadataKeyValues build(java.util.Map<String, ?> map) throws Exception {
+            AddDatasetDocumentRequestDocumentMetadataKeyValues self = new AddDatasetDocumentRequestDocumentMetadataKeyValues();
+            return TeaModel.build(map, self);
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadataKeyValues setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadataKeyValues setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class AddDatasetDocumentRequestDocumentMetadataVideoShots extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
@@ -156,6 +186,9 @@ public class AddDatasetDocumentRequest extends TeaModel {
         @NameInMap("AsrSentences")
         public java.util.List<AddDatasetDocumentRequestDocumentMetadataAsrSentences> asrSentences;
 
+        @NameInMap("KeyValues")
+        public java.util.List<AddDatasetDocumentRequestDocumentMetadataKeyValues> keyValues;
+
         @NameInMap("Text")
         public String text;
 
@@ -173,6 +206,14 @@ public class AddDatasetDocumentRequest extends TeaModel {
         }
         public java.util.List<AddDatasetDocumentRequestDocumentMetadataAsrSentences> getAsrSentences() {
             return this.asrSentences;
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadata setKeyValues(java.util.List<AddDatasetDocumentRequestDocumentMetadataKeyValues> keyValues) {
+            this.keyValues = keyValues;
+            return this;
+        }
+        public java.util.List<AddDatasetDocumentRequestDocumentMetadataKeyValues> getKeyValues() {
+            return this.keyValues;
         }
 
         public AddDatasetDocumentRequestDocumentMetadata setText(String text) {
@@ -247,6 +288,9 @@ public class AddDatasetDocumentRequest extends TeaModel {
     }
 
     public static class AddDatasetDocumentRequestDocument extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -337,6 +381,9 @@ public class AddDatasetDocumentRequest extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         /**
          * <strong>example:</strong>
          * <p><a href="mailto:xxxxx@xxxxx.com">xxxxx@xxxxx.com</a></p>
@@ -354,6 +401,14 @@ public class AddDatasetDocumentRequest extends TeaModel {
         public static AddDatasetDocumentRequestDocument build(java.util.Map<String, ?> map) throws Exception {
             AddDatasetDocumentRequestDocument self = new AddDatasetDocumentRequestDocument();
             return TeaModel.build(map, self);
+        }
+
+        public AddDatasetDocumentRequestDocument setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         public AddDatasetDocumentRequestDocument setContent(String content) {
@@ -466,6 +521,14 @@ public class AddDatasetDocumentRequest extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public AddDatasetDocumentRequestDocument setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public AddDatasetDocumentRequestDocument setTitle(String title) {

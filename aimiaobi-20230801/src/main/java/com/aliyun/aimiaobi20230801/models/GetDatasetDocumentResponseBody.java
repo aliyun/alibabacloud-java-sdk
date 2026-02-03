@@ -136,6 +136,36 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
 
     }
 
+    public static class GetDatasetDocumentResponseBodyDataMetadataKeyValues extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetDatasetDocumentResponseBodyDataMetadataKeyValues build(java.util.Map<String, ?> map) throws Exception {
+            GetDatasetDocumentResponseBodyDataMetadataKeyValues self = new GetDatasetDocumentResponseBodyDataMetadataKeyValues();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadataKeyValues setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadataKeyValues setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetDatasetDocumentResponseBodyDataMetadataVideoShots extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
@@ -181,6 +211,9 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         @NameInMap("AsrSentences")
         public java.util.List<GetDatasetDocumentResponseBodyDataMetadataAsrSentences> asrSentences;
 
+        @NameInMap("KeyValues")
+        public java.util.List<GetDatasetDocumentResponseBodyDataMetadataKeyValues> keyValues;
+
         @NameInMap("Text")
         public String text;
 
@@ -198,6 +231,14 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         }
         public java.util.List<GetDatasetDocumentResponseBodyDataMetadataAsrSentences> getAsrSentences() {
             return this.asrSentences;
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadata setKeyValues(java.util.List<GetDatasetDocumentResponseBodyDataMetadataKeyValues> keyValues) {
+            this.keyValues = keyValues;
+            return this;
+        }
+        public java.util.List<GetDatasetDocumentResponseBodyDataMetadataKeyValues> getKeyValues() {
+            return this.keyValues;
         }
 
         public GetDatasetDocumentResponseBodyDataMetadata setText(String text) {
@@ -219,6 +260,9 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
     }
 
     public static class GetDatasetDocumentResponseBodyData extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         @NameInMap("Content")
         public String content;
 
@@ -245,6 +289,15 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
          */
         @NameInMap("DocUuid")
         public String docUuid;
+
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
 
         @NameInMap("Metadata")
         public GetDatasetDocumentResponseBodyDataMetadata metadata;
@@ -273,6 +326,9 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         @NameInMap("Title")
         public String title;
 
@@ -286,6 +342,14 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         public static GetDatasetDocumentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDatasetDocumentResponseBodyData self = new GetDatasetDocumentResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetDatasetDocumentResponseBodyData setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         public GetDatasetDocumentResponseBodyData setContent(String content) {
@@ -328,6 +392,30 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
             return this.docUuid;
         }
 
+        public GetDatasetDocumentResponseBodyData setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public GetDatasetDocumentResponseBodyData setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public GetDatasetDocumentResponseBodyData setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
+        }
+
         public GetDatasetDocumentResponseBodyData setMetadata(GetDatasetDocumentResponseBodyDataMetadata metadata) {
             this.metadata = metadata;
             return this;
@@ -366,6 +454,14 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public GetDatasetDocumentResponseBodyData setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public GetDatasetDocumentResponseBodyData setTitle(String title) {

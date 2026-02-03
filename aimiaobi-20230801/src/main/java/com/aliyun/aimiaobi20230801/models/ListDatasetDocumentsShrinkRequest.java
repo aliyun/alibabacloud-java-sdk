@@ -4,6 +4,15 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetDocumentsShrinkRequest extends TeaModel {
+    @NameInMap("CategoryUuids")
+    public String categoryUuidsShrink;
+
+    @NameInMap("CreateTimeEnd")
+    public Long createTimeEnd;
+
+    @NameInMap("CreateTimeStart")
+    public Long createTimeStart;
+
     /**
      * <strong>example:</strong>
      * <p>xx</p>
@@ -25,6 +34,9 @@ public class ListDatasetDocumentsShrinkRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
+    @NameInMap("DocIds")
+    public String docIdsShrink;
+
     /**
      * <strong>example:</strong>
      * <p>text</p>
@@ -32,8 +44,23 @@ public class ListDatasetDocumentsShrinkRequest extends TeaModel {
     @NameInMap("DocType")
     public String docType;
 
+    @NameInMap("DocUuids")
+    public String docUuidsShrink;
+
+    @NameInMap("EndTime")
+    public Long endTime;
+
     @NameInMap("ExcludeFields")
     public String excludeFieldsShrink;
+
+    @NameInMap("Extend1")
+    public String extend1;
+
+    @NameInMap("Extend2")
+    public String extend2;
+
+    @NameInMap("Extend3")
+    public String extend3;
 
     @NameInMap("IncludeFields")
     public String includeFieldsShrink;
@@ -59,12 +86,21 @@ public class ListDatasetDocumentsShrinkRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
+    @NameInMap("StartTime")
+    public Long startTime;
+
     /**
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("Status")
     public Integer status;
+
+    @NameInMap("Tags")
+    public String tagsShrink;
+
+    @NameInMap("Title")
+    public String title;
 
     /**
      * <p>This parameter is required.</p>
@@ -78,6 +114,30 @@ public class ListDatasetDocumentsShrinkRequest extends TeaModel {
     public static ListDatasetDocumentsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDatasetDocumentsShrinkRequest self = new ListDatasetDocumentsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDatasetDocumentsShrinkRequest setCategoryUuidsShrink(String categoryUuidsShrink) {
+        this.categoryUuidsShrink = categoryUuidsShrink;
+        return this;
+    }
+    public String getCategoryUuidsShrink() {
+        return this.categoryUuidsShrink;
+    }
+
+    public ListDatasetDocumentsShrinkRequest setCreateTimeEnd(Long createTimeEnd) {
+        this.createTimeEnd = createTimeEnd;
+        return this;
+    }
+    public Long getCreateTimeEnd() {
+        return this.createTimeEnd;
+    }
+
+    public ListDatasetDocumentsShrinkRequest setCreateTimeStart(Long createTimeStart) {
+        this.createTimeStart = createTimeStart;
+        return this;
+    }
+    public Long getCreateTimeStart() {
+        return this.createTimeStart;
     }
 
     public ListDatasetDocumentsShrinkRequest setDatasetDescription(String datasetDescription) {
@@ -104,6 +164,14 @@ public class ListDatasetDocumentsShrinkRequest extends TeaModel {
         return this.datasetName;
     }
 
+    public ListDatasetDocumentsShrinkRequest setDocIdsShrink(String docIdsShrink) {
+        this.docIdsShrink = docIdsShrink;
+        return this;
+    }
+    public String getDocIdsShrink() {
+        return this.docIdsShrink;
+    }
+
     public ListDatasetDocumentsShrinkRequest setDocType(String docType) {
         this.docType = docType;
         return this;
@@ -112,12 +180,52 @@ public class ListDatasetDocumentsShrinkRequest extends TeaModel {
         return this.docType;
     }
 
+    public ListDatasetDocumentsShrinkRequest setDocUuidsShrink(String docUuidsShrink) {
+        this.docUuidsShrink = docUuidsShrink;
+        return this;
+    }
+    public String getDocUuidsShrink() {
+        return this.docUuidsShrink;
+    }
+
+    public ListDatasetDocumentsShrinkRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
     public ListDatasetDocumentsShrinkRequest setExcludeFieldsShrink(String excludeFieldsShrink) {
         this.excludeFieldsShrink = excludeFieldsShrink;
         return this;
     }
     public String getExcludeFieldsShrink() {
         return this.excludeFieldsShrink;
+    }
+
+    public ListDatasetDocumentsShrinkRequest setExtend1(String extend1) {
+        this.extend1 = extend1;
+        return this;
+    }
+    public String getExtend1() {
+        return this.extend1;
+    }
+
+    public ListDatasetDocumentsShrinkRequest setExtend2(String extend2) {
+        this.extend2 = extend2;
+        return this;
+    }
+    public String getExtend2() {
+        return this.extend2;
+    }
+
+    public ListDatasetDocumentsShrinkRequest setExtend3(String extend3) {
+        this.extend3 = extend3;
+        return this;
+    }
+    public String getExtend3() {
+        return this.extend3;
     }
 
     public ListDatasetDocumentsShrinkRequest setIncludeFieldsShrink(String includeFieldsShrink) {
@@ -152,12 +260,36 @@ public class ListDatasetDocumentsShrinkRequest extends TeaModel {
         return this.query;
     }
 
+    public ListDatasetDocumentsShrinkRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
     public ListDatasetDocumentsShrinkRequest setStatus(Integer status) {
         this.status = status;
         return this;
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public ListDatasetDocumentsShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
+    }
+
+    public ListDatasetDocumentsShrinkRequest setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public String getTitle() {
+        return this.title;
     }
 
     public ListDatasetDocumentsShrinkRequest setWorkspaceId(String workspaceId) {

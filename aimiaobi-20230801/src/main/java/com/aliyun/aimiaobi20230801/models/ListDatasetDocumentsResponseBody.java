@@ -215,6 +215,9 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("CreateUser")
+        public String createUser;
+
         /**
          * <strong>example:</strong>
          * <p>false</p>
@@ -295,6 +298,9 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -308,6 +314,9 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
          */
         @NameInMap("UpdateTime")
         public String updateTime;
+
+        @NameInMap("UpdateUser")
+        public String updateUser;
 
         /**
          * <p>url</p>
@@ -345,6 +354,14 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListDatasetDocumentsResponseBodyData setCreateUser(String createUser) {
+            this.createUser = createUser;
+            return this;
+        }
+        public String getCreateUser() {
+            return this.createUser;
         }
 
         public ListDatasetDocumentsResponseBodyData setDisableHandleMultimodalMedia(Boolean disableHandleMultimodalMedia) {
@@ -443,6 +460,14 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
             return this.summary;
         }
 
+        public ListDatasetDocumentsResponseBodyData setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
         public ListDatasetDocumentsResponseBodyData setTitle(String title) {
             this.title = title;
             return this;
@@ -457,6 +482,14 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public ListDatasetDocumentsResponseBodyData setUpdateUser(String updateUser) {
+            this.updateUser = updateUser;
+            return this;
+        }
+        public String getUpdateUser() {
+            return this.updateUser;
         }
 
         public ListDatasetDocumentsResponseBodyData setUrl(String url) {

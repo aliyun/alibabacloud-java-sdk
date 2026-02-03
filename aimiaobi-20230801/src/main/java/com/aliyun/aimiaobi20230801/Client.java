@@ -5728,12 +5728,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListDatasetDocumentsShrinkRequest request = new ListDatasetDocumentsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.categoryUuids)) {
+            request.categoryUuidsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.categoryUuids, "CategoryUuids", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.docIds)) {
+            request.docIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.docIds, "DocIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.docUuids)) {
+            request.docUuidsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.docUuids, "DocUuids", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.excludeFields)) {
             request.excludeFieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.excludeFields, "ExcludeFields", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.includeFields)) {
             request.includeFieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.includeFields, "IncludeFields", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryUuidsShrink)) {
+            query.put("CategoryUuids", request.categoryUuidsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeEnd)) {
+            query.put("CreateTimeEnd", request.createTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeStart)) {
+            query.put("CreateTimeStart", request.createTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docIdsShrink)) {
+            query.put("DocIds", request.docIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docUuidsShrink)) {
+            query.put("DocUuids", request.docUuidsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend1)) {
+            query.put("Extend1", request.extend1);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend2)) {
+            query.put("Extend2", request.extend2);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend3)) {
+            query.put("Extend3", request.extend3);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5782,6 +5847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -10594,12 +10660,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>搜索数据集文档</p>
      * 
-     * @param request SearchDatasetDocumentsRequest
+     * @param tmpReq SearchDatasetDocumentsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchDatasetDocumentsResponse
      */
-    public SearchDatasetDocumentsResponse searchDatasetDocumentsWithOptions(SearchDatasetDocumentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SearchDatasetDocumentsResponse searchDatasetDocumentsWithOptions(SearchDatasetDocumentsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SearchDatasetDocumentsShrinkRequest request = new SearchDatasetDocumentsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.categoryUuids)) {
+            request.categoryUuidsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.categoryUuids, "CategoryUuids", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.docIds)) {
+            request.docIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.docIds, "DocIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.docTypes)) {
+            request.docTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.docTypes, "DocTypes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.docUuids)) {
+            request.docUuidsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.docUuids, "DocUuids", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryUuidsShrink)) {
+            query.put("CategoryUuids", request.categoryUuidsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeEnd)) {
+            query.put("CreateTimeEnd", request.createTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeStart)) {
+            query.put("CreateTimeStart", request.createTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docIdsShrink)) {
+            query.put("DocIds", request.docIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docTypesShrink)) {
+            query.put("DocTypes", request.docTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docUuidsShrink)) {
+            query.put("DocUuids", request.docUuidsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend2)) {
+            query.put("Extend2", request.extend2);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend3)) {
+            query.put("Extend3", request.extend3);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchMode)) {
+            query.put("SearchMode", request.searchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
             body.put("DatasetId", request.datasetId);
@@ -10630,6 +10767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(

@@ -125,6 +125,58 @@ public class CreateDatasetRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class CreateDatasetRequestDatasetConfigSearchSourceConfig extends TeaModel {
+        @NameInMap("MetadataKeyValueGenerateEnable")
+        public Boolean metadataKeyValueGenerateEnable;
+
+        @NameInMap("MetadataKeyValueSearchEnable")
+        public Boolean metadataKeyValueSearchEnable;
+
+        @NameInMap("TagGenerateEnable")
+        public Boolean tagGenerateEnable;
+
+        @NameInMap("TagSearchEnable")
+        public Boolean tagSearchEnable;
+
+        public static CreateDatasetRequestDatasetConfigSearchSourceConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateDatasetRequestDatasetConfigSearchSourceConfig self = new CreateDatasetRequestDatasetConfigSearchSourceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDatasetRequestDatasetConfigSearchSourceConfig setMetadataKeyValueGenerateEnable(Boolean metadataKeyValueGenerateEnable) {
+            this.metadataKeyValueGenerateEnable = metadataKeyValueGenerateEnable;
+            return this;
+        }
+        public Boolean getMetadataKeyValueGenerateEnable() {
+            return this.metadataKeyValueGenerateEnable;
+        }
+
+        public CreateDatasetRequestDatasetConfigSearchSourceConfig setMetadataKeyValueSearchEnable(Boolean metadataKeyValueSearchEnable) {
+            this.metadataKeyValueSearchEnable = metadataKeyValueSearchEnable;
+            return this;
+        }
+        public Boolean getMetadataKeyValueSearchEnable() {
+            return this.metadataKeyValueSearchEnable;
+        }
+
+        public CreateDatasetRequestDatasetConfigSearchSourceConfig setTagGenerateEnable(Boolean tagGenerateEnable) {
+            this.tagGenerateEnable = tagGenerateEnable;
+            return this;
+        }
+        public Boolean getTagGenerateEnable() {
+            return this.tagGenerateEnable;
+        }
+
+        public CreateDatasetRequestDatasetConfigSearchSourceConfig setTagSearchEnable(Boolean tagSearchEnable) {
+            this.tagSearchEnable = tagSearchEnable;
+            return this;
+        }
+        public Boolean getTagSearchEnable() {
+            return this.tagSearchEnable;
+        }
+
+    }
+
     public static class CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfigHeaders extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -634,12 +686,23 @@ public class CreateDatasetRequest extends TeaModel {
     }
 
     public static class CreateDatasetRequestDatasetConfig extends TeaModel {
+        @NameInMap("SearchSourceConfig")
+        public CreateDatasetRequestDatasetConfigSearchSourceConfig searchSourceConfig;
+
         @NameInMap("SearchSourceConfigs")
         public java.util.List<CreateDatasetRequestDatasetConfigSearchSourceConfigs> searchSourceConfigs;
 
         public static CreateDatasetRequestDatasetConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateDatasetRequestDatasetConfig self = new CreateDatasetRequestDatasetConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDatasetRequestDatasetConfig setSearchSourceConfig(CreateDatasetRequestDatasetConfigSearchSourceConfig searchSourceConfig) {
+            this.searchSourceConfig = searchSourceConfig;
+            return this;
+        }
+        public CreateDatasetRequestDatasetConfigSearchSourceConfig getSearchSourceConfig() {
+            return this.searchSourceConfig;
         }
 
         public CreateDatasetRequestDatasetConfig setSearchSourceConfigs(java.util.List<CreateDatasetRequestDatasetConfigSearchSourceConfigs> searchSourceConfigs) {

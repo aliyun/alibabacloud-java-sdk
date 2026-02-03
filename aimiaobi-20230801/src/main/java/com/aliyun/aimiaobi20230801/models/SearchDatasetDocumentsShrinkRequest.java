@@ -3,9 +3,9 @@ package com.aliyun.aimiaobi20230801.models;
 
 import com.aliyun.tea.*;
 
-public class SearchDatasetDocumentsRequest extends TeaModel {
+public class SearchDatasetDocumentsShrinkRequest extends TeaModel {
     @NameInMap("CategoryUuids")
-    public java.util.List<String> categoryUuids;
+    public String categoryUuidsShrink;
 
     @NameInMap("CreateTimeEnd")
     public Long createTimeEnd;
@@ -28,13 +28,13 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
     public String datasetName;
 
     @NameInMap("DocIds")
-    public java.util.List<String> docIds;
+    public String docIdsShrink;
 
     @NameInMap("DocTypes")
-    public java.util.List<String> docTypes;
+    public String docTypesShrink;
 
     @NameInMap("DocUuids")
-    public java.util.List<String> docUuids;
+    public String docUuidsShrink;
 
     @NameInMap("EndTime")
     public Long endTime;
@@ -82,7 +82,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
     public Long startTime;
 
     @NameInMap("Tags")
-    public java.util.List<String> tags;
+    public String tagsShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -93,20 +93,20 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static SearchDatasetDocumentsRequest build(java.util.Map<String, ?> map) throws Exception {
-        SearchDatasetDocumentsRequest self = new SearchDatasetDocumentsRequest();
+    public static SearchDatasetDocumentsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SearchDatasetDocumentsShrinkRequest self = new SearchDatasetDocumentsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SearchDatasetDocumentsRequest setCategoryUuids(java.util.List<String> categoryUuids) {
-        this.categoryUuids = categoryUuids;
+    public SearchDatasetDocumentsShrinkRequest setCategoryUuidsShrink(String categoryUuidsShrink) {
+        this.categoryUuidsShrink = categoryUuidsShrink;
         return this;
     }
-    public java.util.List<String> getCategoryUuids() {
-        return this.categoryUuids;
+    public String getCategoryUuidsShrink() {
+        return this.categoryUuidsShrink;
     }
 
-    public SearchDatasetDocumentsRequest setCreateTimeEnd(Long createTimeEnd) {
+    public SearchDatasetDocumentsShrinkRequest setCreateTimeEnd(Long createTimeEnd) {
         this.createTimeEnd = createTimeEnd;
         return this;
     }
@@ -114,7 +114,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.createTimeEnd;
     }
 
-    public SearchDatasetDocumentsRequest setCreateTimeStart(Long createTimeStart) {
+    public SearchDatasetDocumentsShrinkRequest setCreateTimeStart(Long createTimeStart) {
         this.createTimeStart = createTimeStart;
         return this;
     }
@@ -122,7 +122,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.createTimeStart;
     }
 
-    public SearchDatasetDocumentsRequest setDatasetId(Long datasetId) {
+    public SearchDatasetDocumentsShrinkRequest setDatasetId(Long datasetId) {
         this.datasetId = datasetId;
         return this;
     }
@@ -130,7 +130,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.datasetId;
     }
 
-    public SearchDatasetDocumentsRequest setDatasetName(String datasetName) {
+    public SearchDatasetDocumentsShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -138,31 +138,31 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public SearchDatasetDocumentsRequest setDocIds(java.util.List<String> docIds) {
-        this.docIds = docIds;
+    public SearchDatasetDocumentsShrinkRequest setDocIdsShrink(String docIdsShrink) {
+        this.docIdsShrink = docIdsShrink;
         return this;
     }
-    public java.util.List<String> getDocIds() {
-        return this.docIds;
+    public String getDocIdsShrink() {
+        return this.docIdsShrink;
     }
 
-    public SearchDatasetDocumentsRequest setDocTypes(java.util.List<String> docTypes) {
-        this.docTypes = docTypes;
+    public SearchDatasetDocumentsShrinkRequest setDocTypesShrink(String docTypesShrink) {
+        this.docTypesShrink = docTypesShrink;
         return this;
     }
-    public java.util.List<String> getDocTypes() {
-        return this.docTypes;
+    public String getDocTypesShrink() {
+        return this.docTypesShrink;
     }
 
-    public SearchDatasetDocumentsRequest setDocUuids(java.util.List<String> docUuids) {
-        this.docUuids = docUuids;
+    public SearchDatasetDocumentsShrinkRequest setDocUuidsShrink(String docUuidsShrink) {
+        this.docUuidsShrink = docUuidsShrink;
         return this;
     }
-    public java.util.List<String> getDocUuids() {
-        return this.docUuids;
+    public String getDocUuidsShrink() {
+        return this.docUuidsShrink;
     }
 
-    public SearchDatasetDocumentsRequest setEndTime(Long endTime) {
+    public SearchDatasetDocumentsShrinkRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -170,7 +170,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.endTime;
     }
 
-    public SearchDatasetDocumentsRequest setExtend1(String extend1) {
+    public SearchDatasetDocumentsShrinkRequest setExtend1(String extend1) {
         this.extend1 = extend1;
         return this;
     }
@@ -178,7 +178,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.extend1;
     }
 
-    public SearchDatasetDocumentsRequest setExtend2(String extend2) {
+    public SearchDatasetDocumentsShrinkRequest setExtend2(String extend2) {
         this.extend2 = extend2;
         return this;
     }
@@ -186,7 +186,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.extend2;
     }
 
-    public SearchDatasetDocumentsRequest setExtend3(String extend3) {
+    public SearchDatasetDocumentsShrinkRequest setExtend3(String extend3) {
         this.extend3 = extend3;
         return this;
     }
@@ -194,7 +194,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.extend3;
     }
 
-    public SearchDatasetDocumentsRequest setIncludeContent(Boolean includeContent) {
+    public SearchDatasetDocumentsShrinkRequest setIncludeContent(Boolean includeContent) {
         this.includeContent = includeContent;
         return this;
     }
@@ -202,7 +202,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.includeContent;
     }
 
-    public SearchDatasetDocumentsRequest setPageSize(String pageSize) {
+    public SearchDatasetDocumentsShrinkRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -210,7 +210,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public SearchDatasetDocumentsRequest setQuery(String query) {
+    public SearchDatasetDocumentsShrinkRequest setQuery(String query) {
         this.query = query;
         return this;
     }
@@ -218,7 +218,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.query;
     }
 
-    public SearchDatasetDocumentsRequest setSearchMode(String searchMode) {
+    public SearchDatasetDocumentsShrinkRequest setSearchMode(String searchMode) {
         this.searchMode = searchMode;
         return this;
     }
@@ -226,7 +226,7 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.searchMode;
     }
 
-    public SearchDatasetDocumentsRequest setStartTime(Long startTime) {
+    public SearchDatasetDocumentsShrinkRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -234,15 +234,15 @@ public class SearchDatasetDocumentsRequest extends TeaModel {
         return this.startTime;
     }
 
-    public SearchDatasetDocumentsRequest setTags(java.util.List<String> tags) {
-        this.tags = tags;
+    public SearchDatasetDocumentsShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<String> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
-    public SearchDatasetDocumentsRequest setWorkspaceId(String workspaceId) {
+    public SearchDatasetDocumentsShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }

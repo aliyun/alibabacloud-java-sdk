@@ -130,8 +130,14 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
     }
 
     public static class RunSearchSimilarArticlesResponseBodyPayloadOutputArticles extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         @NameInMap("DocId")
         public String docId;
+
+        @NameInMap("DocType")
+        public String docType;
 
         /**
          * <strong>example:</strong>
@@ -140,6 +146,15 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         @NameInMap("DocUuid")
         public String docUuid;
 
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
+
         /**
          * <strong>example:</strong>
          * <p>2025-01-16 18:07:22</p>
@@ -147,8 +162,14 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         @NameInMap("PubTime")
         public String pubTime;
 
+        @NameInMap("SearchSource")
+        public String searchSource;
+
         @NameInMap("SearchSourceName")
         public String searchSourceName;
+
+        @NameInMap("SearchSourceType")
+        public String searchSourceType;
 
         /**
          * <strong>example:</strong>
@@ -163,6 +184,9 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
          */
         @NameInMap("Summary")
         public String summary;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
 
         @NameInMap("Title")
         public String title;
@@ -179,12 +203,28 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
         public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setDocId(String docId) {
             this.docId = docId;
             return this;
         }
         public String getDocId() {
             return this.docId;
+        }
+
+        public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setDocType(String docType) {
+            this.docType = docType;
+            return this;
+        }
+        public String getDocType() {
+            return this.docType;
         }
 
         public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setDocUuid(String docUuid) {
@@ -195,6 +235,30 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             return this.docUuid;
         }
 
+        public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
+        }
+
         public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setPubTime(String pubTime) {
             this.pubTime = pubTime;
             return this;
@@ -203,12 +267,28 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             return this.pubTime;
         }
 
+        public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setSearchSource(String searchSource) {
+            this.searchSource = searchSource;
+            return this;
+        }
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
         public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setSearchSourceName(String searchSourceName) {
             this.searchSourceName = searchSourceName;
             return this;
         }
         public String getSearchSourceName() {
             return this.searchSourceName;
+        }
+
+        public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setSearchSourceType(String searchSourceType) {
+            this.searchSourceType = searchSourceType;
+            return this;
+        }
+        public String getSearchSourceType() {
+            return this.searchSourceType;
         }
 
         public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setSource(String source) {
@@ -225,6 +305,14 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setTitle(String title) {

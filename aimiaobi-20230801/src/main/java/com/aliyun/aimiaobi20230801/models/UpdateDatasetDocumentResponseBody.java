@@ -96,6 +96,9 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
     }
 
     public static class UpdateDatasetDocumentResponseBodyData extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>用户指定的文档唯一ID</p>
@@ -110,12 +113,32 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
         @NameInMap("DocUuid")
         public String docUuid;
 
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         @NameInMap("Title")
         public String title;
 
         public static UpdateDatasetDocumentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateDatasetDocumentResponseBodyData self = new UpdateDatasetDocumentResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateDatasetDocumentResponseBodyData setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         public UpdateDatasetDocumentResponseBodyData setDocId(String docId) {
@@ -132,6 +155,38 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
         }
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        public UpdateDatasetDocumentResponseBodyData setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public UpdateDatasetDocumentResponseBodyData setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public UpdateDatasetDocumentResponseBodyData setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        public UpdateDatasetDocumentResponseBodyData setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public UpdateDatasetDocumentResponseBodyData setTitle(String title) {

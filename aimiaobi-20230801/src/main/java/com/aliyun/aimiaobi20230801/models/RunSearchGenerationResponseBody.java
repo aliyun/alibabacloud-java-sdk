@@ -190,6 +190,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -204,6 +207,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("DocUuid")
         public String docUuid;
 
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -217,6 +229,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         @NameInMap("Summary")
         public String summary;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
 
         /**
          * <strong>example:</strong>
@@ -237,6 +252,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle setDocId(String docId) {
             this.docId = docId;
             return this;
@@ -253,6 +276,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.docUuid;
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle setSearchSourceName(String searchSourceName) {
             this.searchSourceName = searchSourceName;
             return this;
@@ -267,6 +314,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle setTitle(String title) {
@@ -465,6 +520,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -479,6 +537,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("DocUuid")
         public String docUuid;
 
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
+
+        @NameInMap("SearchSource")
+        public String searchSource;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -486,12 +556,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        @NameInMap("SearchSourceType")
+        public String searchSourceType;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
 
         /**
          * <strong>example:</strong>
@@ -512,6 +588,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setDocId(String docId) {
             this.docId = docId;
             return this;
@@ -528,6 +612,38 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.docUuid;
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setSearchSource(String searchSource) {
+            this.searchSource = searchSource;
+            return this;
+        }
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setSearchSourceName(String searchSourceName) {
             this.searchSourceName = searchSourceName;
             return this;
@@ -536,12 +652,28 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.searchSourceName;
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setSearchSourceType(String searchSourceType) {
+            this.searchSourceType = searchSourceType;
+            return this;
+        }
+        public String getSearchSourceType() {
+            return this.searchSourceType;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setSummary(String summary) {
             this.summary = summary;
             return this;
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle setTitle(String title) {
@@ -770,6 +902,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -784,6 +919,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("DocUuid")
         public String docUuid;
 
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
+
+        @NameInMap("SearchSource")
+        public String searchSource;
+
         /**
          * <strong>example:</strong>
          * <p>互联网搜索</p>
@@ -791,12 +938,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        @NameInMap("SearchSourceType")
+        public String searchSourceType;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
 
         /**
          * <strong>example:</strong>
@@ -817,6 +970,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setDocId(String docId) {
             this.docId = docId;
             return this;
@@ -833,6 +994,38 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.docUuid;
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setSearchSource(String searchSource) {
+            this.searchSource = searchSource;
+            return this;
+        }
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setSearchSourceName(String searchSourceName) {
             this.searchSourceName = searchSourceName;
             return this;
@@ -841,12 +1034,28 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.searchSourceName;
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setSearchSourceType(String searchSourceType) {
+            this.searchSourceType = searchSourceType;
+            return this;
+        }
+        public String getSearchSourceType() {
+            return this.searchSourceType;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setSummary(String summary) {
             this.summary = summary;
             return this;
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle setTitle(String title) {
@@ -1034,6 +1243,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -1047,6 +1259,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         @NameInMap("DocUuid")
         public String docUuid;
+
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
 
         @NameInMap("MultimodalMedias")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResultMultimodalMedias> multimodalMedias;
@@ -1086,6 +1307,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -1105,6 +1329,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult setDocId(String docId) {
             this.docId = docId;
             return this;
@@ -1119,6 +1351,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult setMultimodalMedias(java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResultMultimodalMedias> multimodalMedias) {
@@ -1167,6 +1423,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult setTitle(String title) {
@@ -1252,6 +1516,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -1266,6 +1533,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("DocUuid")
         public String docUuid;
 
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
+
+        @NameInMap("SearchSource")
+        public String searchSource;
+
         /**
          * <strong>example:</strong>
          * <p>互联网搜索</p>
@@ -1273,12 +1552,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        @NameInMap("SearchSourceType")
+        public String searchSourceType;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
 
         /**
          * <strong>example:</strong>
@@ -1299,6 +1584,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setDocId(String docId) {
             this.docId = docId;
             return this;
@@ -1315,6 +1608,38 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.docUuid;
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setSearchSource(String searchSource) {
+            this.searchSource = searchSource;
+            return this;
+        }
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setSearchSourceName(String searchSourceName) {
             this.searchSourceName = searchSourceName;
             return this;
@@ -1323,12 +1648,28 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.searchSourceName;
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setSearchSourceType(String searchSourceType) {
+            this.searchSourceType = searchSourceType;
+            return this;
+        }
+        public String getSearchSourceType() {
+            return this.searchSourceType;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setSummary(String summary) {
             this.summary = summary;
             return this;
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle setTitle(String title) {
@@ -1937,6 +2278,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         @NameInMap("Chunks")
         public java.util.List<String> chunks;
 
@@ -1967,6 +2311,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         @NameInMap("Excerpt")
         public String excerpt;
+
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
 
         @NameInMap("MultimodalMedias")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultMultimodalMedias> multimodalMedias;
@@ -2020,6 +2373,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         @NameInMap("TextGenerateMultimodalMediaList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultTextGenerateMultimodalMediaList> textGenerateMultimodalMediaList;
 
@@ -2047,6 +2403,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult build(java.util.Map<String, ?> map) throws Exception {
             RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult self = new RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult();
             return TeaModel.build(map, self);
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult setChunks(java.util.List<String> chunks) {
@@ -2087,6 +2451,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getExcerpt() {
             return this.excerpt;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult setMultimodalMedias(java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultMultimodalMedias> multimodalMedias) {
@@ -2151,6 +2539,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult setTextGenerateMultimodalMediaList(java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultTextGenerateMultimodalMediaList> textGenerateMultimodalMediaList) {
@@ -2263,6 +2659,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -2277,6 +2676,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("DocUuid")
         public String docUuid;
 
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
+
         /**
          * <strong>example:</strong>
          * <p>互联网搜索</p>
@@ -2290,6 +2698,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         @NameInMap("Summary")
         public String summary;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
 
         /**
          * <strong>example:</strong>
@@ -2310,6 +2721,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle setDocId(String docId) {
             this.docId = docId;
             return this;
@@ -2326,6 +2745,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.docUuid;
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle setSearchSourceName(String searchSourceName) {
             this.searchSourceName = searchSourceName;
             return this;
@@ -2340,6 +2783,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle setTitle(String title) {
@@ -2444,6 +2895,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -2464,6 +2918,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         @NameInMap("DocUuid")
         public String docUuid;
+
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
 
         /**
          * <strong>example:</strong>
@@ -2514,6 +2977,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -2531,6 +2997,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle build(java.util.Map<String, ?> map) throws Exception {
             RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle self = new RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle();
             return TeaModel.build(map, self);
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle setContent(String content) {
@@ -2555,6 +3029,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle setPubTime(String pubTime) {
@@ -2611,6 +3109,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle setTitle(String title) {
@@ -3385,6 +3891,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         @NameInMap("Chunks")
         public java.util.List<String> chunks;
 
@@ -3408,6 +3917,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         @NameInMap("DocUuid")
         public String docUuid;
+
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
 
         /**
          * <strong>example:</strong>
@@ -3465,6 +3983,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -3489,6 +4010,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList build(java.util.Map<String, ?> map) throws Exception {
             RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList self = new RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList();
             return TeaModel.build(map, self);
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList setChunks(java.util.List<String> chunks) {
@@ -3521,6 +4050,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList setPubTime(String pubTime) {
@@ -3585,6 +4138,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList setTitle(String title) {
@@ -3933,6 +4494,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -3953,6 +4517,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         @NameInMap("DocUuid")
         public String docUuid;
+
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
 
         /**
          * <strong>example:</strong>
@@ -3989,6 +4562,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -4015,6 +4591,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setContent(String content) {
             this.content = content;
             return this;
@@ -4037,6 +4621,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setPubTime(String pubTime) {
@@ -4077,6 +4685,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setTitle(String title) {
@@ -4633,6 +5249,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         @NameInMap("Chunks")
         public java.util.List<String> chunks;
 
@@ -4656,6 +5275,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         @NameInMap("DocUuid")
         public String docUuid;
+
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
 
         /**
          * <strong>example:</strong>
@@ -4713,6 +5341,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -4737,6 +5368,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList build(java.util.Map<String, ?> map) throws Exception {
             RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList self = new RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList();
             return TeaModel.build(map, self);
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList setChunks(java.util.List<String> chunks) {
@@ -4769,6 +5408,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList setPubTime(String pubTime) {
@@ -4833,6 +5496,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList setTitle(String title) {
@@ -5166,6 +5837,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle extends TeaModel {
+        @NameInMap("CategoryUuid")
+        public String categoryUuid;
+
         /**
          * <strong>example:</strong>
          * <p>xx</p>
@@ -5180,6 +5854,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("DocUuid")
         public String docUuid;
 
+        @NameInMap("Extend1")
+        public String extend1;
+
+        @NameInMap("Extend2")
+        public String extend2;
+
+        @NameInMap("Extend3")
+        public String extend3;
+
         /**
          * <strong>example:</strong>
          * <p>互联网搜索</p>
@@ -5193,6 +5876,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         @NameInMap("Summary")
         public String summary;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
 
         /**
          * <strong>example:</strong>
@@ -5213,6 +5899,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle setDocId(String docId) {
             this.docId = docId;
             return this;
@@ -5229,6 +5923,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.docUuid;
         }
 
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
+        }
+
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle setSearchSourceName(String searchSourceName) {
             this.searchSourceName = searchSourceName;
             return this;
@@ -5243,6 +5961,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle setTitle(String title) {
