@@ -39,6 +39,9 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     @NameInMap("MessageType")
     public String messageType;
 
+    @NameInMap("ParentSessionId")
+    public String parentSessionId;
+
     @NameInMap("Question")
     public String question;
 
@@ -115,6 +118,14 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     }
     public String getMessageType() {
         return this.messageType;
+    }
+
+    public SendChatMessageShrinkRequest setParentSessionId(String parentSessionId) {
+        this.parentSessionId = parentSessionId;
+        return this;
+    }
+    public String getParentSessionId() {
+        return this.parentSessionId;
     }
 
     public SendChatMessageShrinkRequest setQuestion(String question) {

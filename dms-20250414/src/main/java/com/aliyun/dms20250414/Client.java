@@ -3211,6 +3211,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MessageType", request.messageType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parentSessionId)) {
+            query.put("ParentSessionId", request.parentSessionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.question)) {
             query.put("Question", request.question);
         }
