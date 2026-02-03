@@ -4,10 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the returned Tair (Redis OSS-compatible) KVCache instance.</p>
+     */
     @NameInMap("Instances")
     public DescribeTairKVCacheInferInstancesResponseBodyInstances instances;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CD225838-7069-5CE4-89E1-67B83AC149C8</p>
      */
@@ -29,6 +38,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of returned records.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -82,6 +93,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
 
     public static class DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTOTagsTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>thread</p>
          */
@@ -89,6 +102,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>900</p>
          */
@@ -139,6 +154,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
 
     public static class DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO extends TeaModel {
         /**
+         * <p>The ACK cluster ID corresponding to the virtual cluster instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>c809******************************</p>
          */
@@ -146,6 +163,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String ackId;
 
         /**
+         * <p>The capacity of the KVCache. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>256</p>
          */
@@ -153,6 +172,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public Long capacity;
 
         /**
+         * <p>The billing method of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
@@ -160,6 +181,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The number of compute units.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -167,6 +190,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public Integer computeUnitNum;
 
         /**
+         * <p>The creation time of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-07T04:46Z</p>
          */
@@ -174,6 +199,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the instance was deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-07T04:46Z</p>
          */
@@ -184,6 +211,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public Integer elasticVNodeCount;
 
         /**
+         * <p>The time when the subscription instance expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-04T02:09:26Z</p>
          */
@@ -194,6 +223,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public Integer fixedVNodeCount;
 
         /**
+         * <p>The instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>kvcache.cu.g4b.2</p>
          */
@@ -201,6 +232,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String instanceClass;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>tk-9dp7e37bab*****</p>
          */
@@ -208,6 +241,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>kvcache-7</p>
          */
@@ -215,6 +250,12 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The instance state. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The instance is normal.</li>
+         * <li><strong>Creating</strong>: The instance is being created.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -222,6 +263,13 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
+         * <p>The type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>TairInfer</strong>: the inference operator instance</li>
+         * <li><strong>TairKVCacheVnode</strong>: the virtual cluster instance.</li>
+         * <li><strong>TairKVCacheService</strong>: the cache service instance.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TairInfer</p>
          */
@@ -229,6 +277,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The built-in model of the inference operator instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>DeepSeek-OCR</p>
          */
@@ -236,6 +286,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The number of model services of the inference operator instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -243,6 +295,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public Integer modelServiceNum;
 
         /**
+         * <p>The network type of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
@@ -250,6 +304,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String networkType;
 
         /**
+         * <p>The private IP address of the instance. This parameter is deprecated.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.49.***</p>
          */
@@ -257,6 +313,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String privateIp;
 
         /**
+         * <p>The region ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -264,16 +322,23 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfm4bdru5z****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Details of the tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTOTags tags;
 
         /**
+         * <p>The number of vNodes in the virtual cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -281,6 +346,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public Integer VNodeCount;
 
         /**
+         * <p>The list of vNode instance names under the virtual cluster instance. This parameter is deprecated.</p>
+         * 
          * <strong>example:</strong>
          * <p>tv-xxxxx</p>
          */
@@ -288,6 +355,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String VNodeName;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-8vbf0ksk774ai6q1d****</p>
          */
@@ -295,6 +364,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The VPC ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2zef5w848p4j5g***</p>
          */
@@ -302,6 +373,8 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
          */

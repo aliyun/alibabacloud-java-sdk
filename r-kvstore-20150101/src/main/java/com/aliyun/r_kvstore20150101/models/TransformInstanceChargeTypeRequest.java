@@ -61,6 +61,9 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("CouponNo")
+    public String couponNo;
+
     /**
      * <p>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
@@ -133,6 +136,14 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public TransformInstanceChargeTypeRequest setCouponNo(String couponNo) {
+        this.couponNo = couponNo;
+        return this;
+    }
+    public String getCouponNo() {
+        return this.couponNo;
     }
 
     public TransformInstanceChargeTypeRequest setInstanceId(String instanceId) {

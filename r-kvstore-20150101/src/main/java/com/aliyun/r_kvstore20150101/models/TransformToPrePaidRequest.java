@@ -42,6 +42,9 @@ public class TransformToPrePaidRequest extends TeaModel {
     @NameInMap("AutoRenewPeriod")
     public Long autoRenewPeriod;
 
+    @NameInMap("CouponNo")
+    public String couponNo;
+
     /**
      * <p>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
@@ -104,6 +107,14 @@ public class TransformToPrePaidRequest extends TeaModel {
     }
     public Long getAutoRenewPeriod() {
         return this.autoRenewPeriod;
+    }
+
+    public TransformToPrePaidRequest setCouponNo(String couponNo) {
+        this.couponNo = couponNo;
+        return this;
+    }
+    public String getCouponNo() {
+        return this.couponNo;
     }
 
     public TransformToPrePaidRequest setInstanceId(String instanceId) {

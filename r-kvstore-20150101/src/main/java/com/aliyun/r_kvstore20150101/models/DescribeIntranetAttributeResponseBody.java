@@ -73,6 +73,9 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     @NameInMap("HasPrePaidBandWidthOrderRunning")
     public Boolean hasPrePaidBandWidthOrderRunning;
 
+    @NameInMap("IntranetBandWidthBurst")
+    public Integer intranetBandWidthBurst;
+
     /**
      * <p>The internal bandwidth of the instance. This parameter indicates the combined bandwidth of all shards in the instance. Unit: Mbit/s.</p>
      * 
@@ -134,6 +137,14 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     }
     public Boolean getHasPrePaidBandWidthOrderRunning() {
         return this.hasPrePaidBandWidthOrderRunning;
+    }
+
+    public DescribeIntranetAttributeResponseBody setIntranetBandWidthBurst(Integer intranetBandWidthBurst) {
+        this.intranetBandWidthBurst = intranetBandWidthBurst;
+        return this;
+    }
+    public Integer getIntranetBandWidthBurst() {
+        return this.intranetBandWidthBurst;
     }
 
     public DescribeIntranetAttributeResponseBody setIntranetBandwidth(Integer intranetBandwidth) {

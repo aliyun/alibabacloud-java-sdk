@@ -7278,8 +7278,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看TairInfer实例列表</p>
+     * <p>Queries the information of one or more Tair (Redis OSS-compatible) KVCache instances.</p>
      * 
      * @param request DescribeTairKVCacheInferInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7306,8 +7309,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看TairInfer实例列表</p>
+     * <p>Queries the information of one or more Tair (Redis OSS-compatible) KVCache instances.</p>
      * 
      * @param request DescribeTairKVCacheInferInstancesRequest
      * @return DescribeTairKVCacheInferInstancesResponse
@@ -12749,6 +12755,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ChargeType", request.chargeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.couponNo)) {
+            query.put("CouponNo", request.couponNo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -12936,6 +12946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenewPeriod)) {
             query.put("AutoRenewPeriod", request.autoRenewPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.couponNo)) {
+            query.put("CouponNo", request.couponNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
