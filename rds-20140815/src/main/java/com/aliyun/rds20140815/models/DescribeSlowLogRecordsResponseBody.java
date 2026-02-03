@@ -201,6 +201,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("LastRowsAffectedCount")
         public Long lastRowsAffectedCount;
 
+        @NameInMap("LockTimeMS")
+        public Long lockTimeMS;
+
         /**
          * <p>The lock duration of the query. Unit: seconds.</p>
          * 
@@ -383,6 +386,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
         public Long getLastRowsAffectedCount() {
             return this.lastRowsAffectedCount;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setLockTimeMS(Long lockTimeMS) {
+            this.lockTimeMS = lockTimeMS;
+            return this;
+        }
+        public Long getLockTimeMS() {
+            return this.lockTimeMS;
         }
 
         public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setLockTimes(Long lockTimes) {
