@@ -1,3 +1,8 @@
+2026-02-03 Version: 2.12.1
+- Update API DescribeConfigurationPrice: add request parameters GpuA10.
+- Update API DescribeConfigurationPrice: add request parameters GpuPpu810e.
+
+
 2026-01-29 Version: 2.12.0
 - Support API ListApplicationCenterServiceInstances.
 - Update API ListApplications: add response parameters Body.Data.Applications.$.Children.$.EnableIdle.

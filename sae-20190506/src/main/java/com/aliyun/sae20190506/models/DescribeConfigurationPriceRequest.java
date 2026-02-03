@@ -27,6 +27,12 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     @NameInMap("Cpu")
     public Integer cpu;
 
+    @NameInMap("GpuA10")
+    public String gpuA10;
+
+    @NameInMap("GpuPpu810e")
+    public String gpuPpu810e;
+
     /**
      * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
      * <ul>
@@ -87,6 +93,22 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     }
     public Integer getCpu() {
         return this.cpu;
+    }
+
+    public DescribeConfigurationPriceRequest setGpuA10(String gpuA10) {
+        this.gpuA10 = gpuA10;
+        return this;
+    }
+    public String getGpuA10() {
+        return this.gpuA10;
+    }
+
+    public DescribeConfigurationPriceRequest setGpuPpu810e(String gpuPpu810e) {
+        this.gpuPpu810e = gpuPpu810e;
+        return this;
+    }
+    public String getGpuPpu810e() {
+        return this.gpuPpu810e;
     }
 
     public DescribeConfigurationPriceRequest setMemory(Integer memory) {

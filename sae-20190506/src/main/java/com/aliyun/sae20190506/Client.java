@@ -3753,6 +3753,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Cpu", request.cpu);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuA10)) {
+            query.put("GpuA10", request.gpuA10);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuPpu810e)) {
+            query.put("GpuPpu810e", request.gpuPpu810e);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memory)) {
             query.put("Memory", request.memory);
         }
