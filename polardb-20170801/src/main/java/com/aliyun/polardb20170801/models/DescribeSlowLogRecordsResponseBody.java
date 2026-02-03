@@ -162,6 +162,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("HostAddress")
         public String hostAddress;
 
+        @NameInMap("LockTimeMS")
+        public Long lockTimeMS;
+
         /**
          * <p>SQL lock duration in seconds.</p>
          * 
@@ -257,6 +260,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
         public String getHostAddress() {
             return this.hostAddress;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setLockTimeMS(Long lockTimeMS) {
+            this.lockTimeMS = lockTimeMS;
+            return this;
+        }
+        public Long getLockTimeMS() {
+            return this.lockTimeMS;
         }
 
         public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setLockTimes(Long lockTimes) {
