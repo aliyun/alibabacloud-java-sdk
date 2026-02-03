@@ -7,6 +7,9 @@ public class ModelConfig extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("ModelTemplate")
+    public ModelTemplate modelTemplate;
+
     public static ModelConfig build(java.util.Map<String, ?> map) throws Exception {
         ModelConfig self = new ModelConfig();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ModelConfig extends TeaModel {
     }
     public String getModelName() {
         return this.modelName;
+    }
+
+    public ModelConfig setModelTemplate(ModelTemplate modelTemplate) {
+        this.modelTemplate = modelTemplate;
+        return this;
+    }
+    public ModelTemplate getModelTemplate() {
+        return this.modelTemplate;
     }
 
 }

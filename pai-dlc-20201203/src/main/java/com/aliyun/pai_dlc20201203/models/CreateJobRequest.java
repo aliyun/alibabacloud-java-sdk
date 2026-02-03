@@ -29,6 +29,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    @NameInMap("CustomEnvs")
+    public java.util.List<CreateJobRequestCustomEnvs> customEnvs;
+
     /**
      * <p>The data sources for job running.</p>
      */
@@ -239,6 +242,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public CredentialConfig getCredentialConfig() {
         return this.credentialConfig;
+    }
+
+    public CreateJobRequest setCustomEnvs(java.util.List<CreateJobRequestCustomEnvs> customEnvs) {
+        this.customEnvs = customEnvs;
+        return this;
+    }
+    public java.util.List<CreateJobRequestCustomEnvs> getCustomEnvs() {
+        return this.customEnvs;
     }
 
     public CreateJobRequest setDataSources(java.util.List<CreateJobRequestDataSources> dataSources) {
@@ -457,6 +468,47 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getMountPath() {
             return this.mountPath;
+        }
+
+    }
+
+    public static class CreateJobRequestCustomEnvs extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        @NameInMap("Visible")
+        public String visible;
+
+        public static CreateJobRequestCustomEnvs build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestCustomEnvs self = new CreateJobRequestCustomEnvs();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestCustomEnvs setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateJobRequestCustomEnvs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public CreateJobRequestCustomEnvs setVisible(String visible) {
+            this.visible = visible;
+            return this;
+        }
+        public String getVisible() {
+            return this.visible;
         }
 
     }

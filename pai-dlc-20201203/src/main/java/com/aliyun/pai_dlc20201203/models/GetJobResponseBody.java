@@ -38,6 +38,9 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    @NameInMap("CustomEnvs")
+    public java.util.List<GetJobResponseBodyCustomEnvs> customEnvs;
+
     /**
      * <p>The data sources.</p>
      */
@@ -400,6 +403,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public CredentialConfig getCredentialConfig() {
         return this.credentialConfig;
+    }
+
+    public GetJobResponseBody setCustomEnvs(java.util.List<GetJobResponseBodyCustomEnvs> customEnvs) {
+        this.customEnvs = customEnvs;
+        return this;
+    }
+    public java.util.List<GetJobResponseBodyCustomEnvs> getCustomEnvs() {
+        return this.customEnvs;
     }
 
     public GetJobResponseBody setDataSources(java.util.List<GetJobResponseBodyDataSources> dataSources) {
@@ -786,6 +797,47 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getMountPath() {
             return this.mountPath;
+        }
+
+    }
+
+    public static class GetJobResponseBodyCustomEnvs extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        @NameInMap("Visible")
+        public String visible;
+
+        public static GetJobResponseBodyCustomEnvs build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyCustomEnvs self = new GetJobResponseBodyCustomEnvs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyCustomEnvs setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetJobResponseBodyCustomEnvs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public GetJobResponseBodyCustomEnvs setVisible(String visible) {
+            this.visible = visible;
+            return this;
+        }
+        public String getVisible() {
+            return this.visible;
         }
 
     }
