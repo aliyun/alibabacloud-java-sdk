@@ -4,6 +4,9 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListTagOptionsResponseBody extends TeaModel {
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The page number of the returned page.</p>
      * 
@@ -50,6 +53,14 @@ public class ListTagOptionsResponseBody extends TeaModel {
     public static ListTagOptionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagOptionsResponseBody self = new ListTagOptionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagOptionsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListTagOptionsResponseBody setPageNumber(Integer pageNumber) {

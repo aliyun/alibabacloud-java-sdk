@@ -10,6 +10,12 @@ public class ListTagOptionsShrinkRequest extends TeaModel {
     @NameInMap("Filters")
     public String filtersShrink;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of the page to return.</p>
      * <p>Pages start from page 1. Default value: 1.</p>
@@ -64,6 +70,22 @@ public class ListTagOptionsShrinkRequest extends TeaModel {
     }
     public String getFiltersShrink() {
         return this.filtersShrink;
+    }
+
+    public ListTagOptionsShrinkRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListTagOptionsShrinkRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListTagOptionsShrinkRequest setPageNumber(Integer pageNumber) {

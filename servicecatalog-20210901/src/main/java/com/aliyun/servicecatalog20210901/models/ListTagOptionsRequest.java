@@ -10,6 +10,12 @@ public class ListTagOptionsRequest extends TeaModel {
     @NameInMap("Filters")
     public ListTagOptionsRequestFilters filters;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of the page to return.</p>
      * <p>Pages start from page 1. Default value: 1.</p>
@@ -64,6 +70,22 @@ public class ListTagOptionsRequest extends TeaModel {
     }
     public ListTagOptionsRequestFilters getFilters() {
         return this.filters;
+    }
+
+    public ListTagOptionsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListTagOptionsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListTagOptionsRequest setPageNumber(Integer pageNumber) {

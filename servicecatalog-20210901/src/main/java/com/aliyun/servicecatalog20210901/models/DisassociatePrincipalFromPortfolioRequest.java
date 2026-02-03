@@ -18,13 +18,19 @@ public class DisassociatePrincipalFromPortfolioRequest extends TeaModel {
      * <p>The ID of the RAM entity.</p>
      * <p>For more information about how to obtain the ID of a RAM user, see <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a>.</p>
      * <p>For more information about how to obtain the ID of a RAM role, see <a href="https://help.aliyun.com/document_detail/28711.html">GetRole</a>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>24477111603637****</p>
      */
     @NameInMap("PrincipalId")
     public String principalId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>user/userName</p>
+     */
+    @NameInMap("PrincipalPattern")
+    public String principalPattern;
 
     /**
      * <p>The type of the Resource Access Management (RAM) entity. Valid values:</p>
@@ -59,6 +65,14 @@ public class DisassociatePrincipalFromPortfolioRequest extends TeaModel {
     }
     public String getPrincipalId() {
         return this.principalId;
+    }
+
+    public DisassociatePrincipalFromPortfolioRequest setPrincipalPattern(String principalPattern) {
+        this.principalPattern = principalPattern;
+        return this;
+    }
+    public String getPrincipalPattern() {
+        return this.principalPattern;
     }
 
     public DisassociatePrincipalFromPortfolioRequest setPrincipalType(String principalType) {

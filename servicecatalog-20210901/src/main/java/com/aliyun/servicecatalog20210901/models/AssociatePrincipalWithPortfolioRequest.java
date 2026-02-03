@@ -14,13 +14,21 @@ public class AssociatePrincipalWithPortfolioRequest extends TeaModel {
     public String portfolioId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>24477111603637****</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("PrincipalId")
     public String principalId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>user/userName</p>
+     */
+    @NameInMap("PrincipalPattern")
+    public String principalPattern;
 
     /**
      * <p>This parameter is required.</p>
@@ -50,6 +58,14 @@ public class AssociatePrincipalWithPortfolioRequest extends TeaModel {
     }
     public String getPrincipalId() {
         return this.principalId;
+    }
+
+    public AssociatePrincipalWithPortfolioRequest setPrincipalPattern(String principalPattern) {
+        this.principalPattern = principalPattern;
+        return this;
+    }
+    public String getPrincipalPattern() {
+        return this.principalPattern;
     }
 
     public AssociatePrincipalWithPortfolioRequest setPrincipalType(String principalType) {

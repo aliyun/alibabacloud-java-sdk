@@ -50,6 +50,9 @@ public class ListPrincipalsResponseBody extends TeaModel {
         @NameInMap("PrincipalId")
         public String principalId;
 
+        @NameInMap("PrincipalPattern")
+        public String principalPattern;
+
         /**
          * <p>The type of the RAM entity. Valid values:</p>
          * <ul>
@@ -74,6 +77,14 @@ public class ListPrincipalsResponseBody extends TeaModel {
         }
         public String getPrincipalId() {
             return this.principalId;
+        }
+
+        public ListPrincipalsResponseBodyPrincipals setPrincipalPattern(String principalPattern) {
+            this.principalPattern = principalPattern;
+            return this;
+        }
+        public String getPrincipalPattern() {
+            return this.principalPattern;
         }
 
         public ListPrincipalsResponseBodyPrincipals setPrincipalType(String principalType) {

@@ -1,3 +1,12 @@
+2026-02-03 Version: 1.2.3
+- Update API AssociatePrincipalWithPortfolio: add request parameters PrincipalPattern.
+- Update API DisassociatePrincipalFromPortfolio: add request parameters PrincipalPattern.
+- Update API ListPrincipals: add response parameters Body.Principals.$.PrincipalPattern.
+- Update API ListTagOptions: add request parameters MaxResults.
+- Update API ListTagOptions: add request parameters NextToken.
+- Update API ListTagOptions: add response parameters Body.NextToken.
+
+
 2026-01-05 Version: 1.2.2
 - Update API CreateProduct: add request parameters TemplateType.
 - Update API GetProductAsAdmin: add response parameters Body.ProductDetail.TemplateType.

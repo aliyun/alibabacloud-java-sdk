@@ -97,6 +97,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PrincipalId", request.principalId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.principalPattern)) {
+            body.put("PrincipalPattern", request.principalPattern);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
             body.put("PrincipalType", request.principalType);
         }
@@ -1093,6 +1097,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
             body.put("PrincipalId", request.principalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalPattern)) {
+            body.put("PrincipalPattern", request.principalPattern);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
