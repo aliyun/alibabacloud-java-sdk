@@ -151,6 +151,9 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     @NameInMap("RouteMode")
     public String routeMode;
 
+    @NameInMap("TrAttachmentId")
+    public String trAttachmentId;
+
     /**
      * <p>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
      * 
@@ -311,6 +314,14 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     }
     public String getRouteMode() {
         return this.routeMode;
+    }
+
+    public DescribeTrFirewallsV2DetailResponseBody setTrAttachmentId(String trAttachmentId) {
+        this.trAttachmentId = trAttachmentId;
+        return this;
+    }
+    public String getTrAttachmentId() {
+        return this.trAttachmentId;
     }
 
     public DescribeTrFirewallsV2DetailResponseBody setTrAttachmentMasterCidr(String trAttachmentMasterCidr) {
