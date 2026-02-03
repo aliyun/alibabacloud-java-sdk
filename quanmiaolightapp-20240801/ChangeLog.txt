@@ -1,3 +1,18 @@
+2026-02-03 Version: 2.12.7
+- Update API RunVideoAnalysis: add request parameters addDocumentParam.document.categoryUuid.
+- Update API RunVideoAnalysis: add request parameters addDocumentParam.document.extend1.
+- Update API RunVideoAnalysis: add request parameters addDocumentParam.document.extend2.
+- Update API RunVideoAnalysis: add request parameters addDocumentParam.document.extend3.
+- Update API RunVideoAnalysis: add request parameters addDocumentParam.document.metadata.
+- Update API RunVideoAnalysis: add request parameters addDocumentParam.document.tags.
+- Update API SubmitVideoAnalysisTask: add request parameters addDocumentParam.document.categoryUuid.
+- Update API SubmitVideoAnalysisTask: add request parameters addDocumentParam.document.extend1.
+- Update API SubmitVideoAnalysisTask: add request parameters addDocumentParam.document.extend2.
+- Update API SubmitVideoAnalysisTask: add request parameters addDocumentParam.document.extend3.
+- Update API SubmitVideoAnalysisTask: add request parameters addDocumentParam.document.metadata.
+- Update API SubmitVideoAnalysisTask: add request parameters addDocumentParam.document.tags.
+
+
 2026-01-29 Version: 2.12.6
 - Update API RunMarketingInformationWriting: add request parameters extParameters.
 - Update API RunMarketingInformationWriting: add request parameters generateCount.

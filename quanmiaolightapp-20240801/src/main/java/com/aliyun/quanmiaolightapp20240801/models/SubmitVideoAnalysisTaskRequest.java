@@ -298,9 +298,76 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
         return this.videoUrls;
     }
 
+    public static class SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadataKeyValues extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadataKeyValues build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadataKeyValues self = new SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadataKeyValues();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadataKeyValues setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadataKeyValues setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadata extends TeaModel {
+        @NameInMap("keyValues")
+        public java.util.List<SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadataKeyValues> keyValues;
+
+        public static SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadata build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadata self = new SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadata setKeyValues(java.util.List<SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadataKeyValues> keyValues) {
+            this.keyValues = keyValues;
+            return this;
+        }
+        public java.util.List<SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadataKeyValues> getKeyValues() {
+            return this.keyValues;
+        }
+
+    }
+
     public static class SubmitVideoAnalysisTaskRequestAddDocumentParamDocument extends TeaModel {
+        @NameInMap("categoryUuid")
+        public String categoryUuid;
+
         @NameInMap("docId")
         public String docId;
+
+        @NameInMap("extend1")
+        public String extend1;
+
+        @NameInMap("extend2")
+        public String extend2;
+
+        @NameInMap("extend3")
+        public String extend3;
+
+        @NameInMap("metadata")
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadata metadata;
+
+        @NameInMap("tags")
+        public java.util.List<String> tags;
 
         @NameInMap("title")
         public String title;
@@ -310,12 +377,60 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument setCategoryUuid(String categoryUuid) {
+            this.categoryUuid = categoryUuid;
+            return this;
+        }
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
         public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument setDocId(String docId) {
             this.docId = docId;
             return this;
         }
         public String getDocId() {
             return this.docId;
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument setExtend1(String extend1) {
+            this.extend1 = extend1;
+            return this;
+        }
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument setExtend2(String extend2) {
+            this.extend2 = extend2;
+            return this;
+        }
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument setExtend3(String extend3) {
+            this.extend3 = extend3;
+            return this;
+        }
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument setMetadata(SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadata metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocumentMetadata getMetadata() {
+            return this.metadata;
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument setTitle(String title) {
