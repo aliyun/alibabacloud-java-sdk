@@ -381,6 +381,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        @NameInMap("VmncLearn")
+        public Boolean vmncLearn;
+
         public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet();
             return TeaModel.build(map, self);
@@ -512,6 +515,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setVmncLearn(Boolean vmncLearn) {
+            this.vmncLearn = vmncLearn;
+            return this;
+        }
+        public Boolean getVmncLearn() {
+            return this.vmncLearn;
         }
 
     }
