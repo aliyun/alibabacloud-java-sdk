@@ -1,3 +1,7 @@
+2026-02-04 Version: 4.3.1
+- Update API DescribeInternetDnsLogs: add request parameters PreciseSort.
+
+
 2026-01-20 Version: 4.3.0
 - Support API AddRspDomainServerHoldStatusForGatewayOte.
 - Support API RemoveRspDomainServerHoldStatusForGatewayOte.

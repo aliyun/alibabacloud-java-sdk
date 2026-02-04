@@ -76,6 +76,9 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PreciseSort")
+    public Boolean preciseSort;
+
     /**
      * <p>Query parameters </p>
      * <ul>
@@ -164,6 +167,14 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeInternetDnsLogsRequest setPreciseSort(Boolean preciseSort) {
+        this.preciseSort = preciseSort;
+        return this;
+    }
+    public Boolean getPreciseSort() {
+        return this.preciseSort;
     }
 
     public DescribeInternetDnsLogsRequest setQueryCondition(String queryCondition) {

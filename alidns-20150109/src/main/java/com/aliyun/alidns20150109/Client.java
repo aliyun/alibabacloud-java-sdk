@@ -6482,6 +6482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.preciseSort)) {
+            query.put("PreciseSort", request.preciseSort);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.queryCondition)) {
             query.put("QueryCondition", request.queryCondition);
         }
