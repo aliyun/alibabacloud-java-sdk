@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyFullNatEntryAttributeRequest extends TeaModel {
+    @NameInMap("AccessDomain")
+    public String accessDomain;
+
     /**
      * <p>The backend IP address to be modified in FULLNAT address translation.</p>
      * 
@@ -154,6 +157,14 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     public static ModifyFullNatEntryAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyFullNatEntryAttributeRequest self = new ModifyFullNatEntryAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyFullNatEntryAttributeRequest setAccessDomain(String accessDomain) {
+        this.accessDomain = accessDomain;
+        return this;
+    }
+    public String getAccessDomain() {
+        return this.accessDomain;
     }
 
     public ModifyFullNatEntryAttributeRequest setAccessIp(String accessIp) {

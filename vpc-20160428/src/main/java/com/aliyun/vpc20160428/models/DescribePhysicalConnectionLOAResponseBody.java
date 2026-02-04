@@ -189,6 +189,9 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         @NameInMap("ConstructionTime")
         public String constructionTime;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The ID of the Express Connect circuit.</p>
          * 
@@ -324,6 +327,14 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         }
         public String getConstructionTime() {
             return this.constructionTime;
+        }
+
+        public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOAType setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOAType setInstanceId(String instanceId) {

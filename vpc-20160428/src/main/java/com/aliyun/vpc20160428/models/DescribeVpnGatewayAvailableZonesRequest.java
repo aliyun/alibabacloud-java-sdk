@@ -17,6 +17,9 @@ public class DescribeVpnGatewayAvailableZonesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("GatewayType")
+    public String gatewayType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -75,6 +78,14 @@ public class DescribeVpnGatewayAvailableZonesRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public DescribeVpnGatewayAvailableZonesRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public DescribeVpnGatewayAvailableZonesRequest setOwnerAccount(String ownerAccount) {

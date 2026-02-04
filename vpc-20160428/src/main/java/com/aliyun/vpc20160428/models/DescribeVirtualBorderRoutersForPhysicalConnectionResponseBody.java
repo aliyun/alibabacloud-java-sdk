@@ -308,6 +308,9 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         @NameInMap("VbrId")
         public String vbrId;
 
+        @NameInMap("VbrName")
+        public String vbrName;
+
         /**
          * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
          * <p>If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is empty.</p>
@@ -498,6 +501,14 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
         public String getVbrId() {
             return this.vbrId;
+        }
+
+        public DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSetVirtualBorderRouterForPhysicalConnectionType setVbrName(String vbrName) {
+            this.vbrName = vbrName;
+            return this;
+        }
+        public String getVbrName() {
+            return this.vbrName;
         }
 
         public DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSetVirtualBorderRouterForPhysicalConnectionType setVbrOwnerUid(Long vbrOwnerUid) {

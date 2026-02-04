@@ -130,6 +130,9 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     }
 
     public static class ListFullNatEntriesResponseBodyFullNatEntries extends TeaModel {
+        @NameInMap("AccessDomain")
+        public String accessDomain;
+
         /**
          * <p>The backend IP address that is used for FULLNAT address translation in FULLNAT entries.</p>
          * 
@@ -156,6 +159,9 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
          */
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("DomainResolve")
+        public String domainResolve;
 
         /**
          * <p>The description of the FULLNAT entry.</p>
@@ -264,6 +270,14 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListFullNatEntriesResponseBodyFullNatEntries setAccessDomain(String accessDomain) {
+            this.accessDomain = accessDomain;
+            return this;
+        }
+        public String getAccessDomain() {
+            return this.accessDomain;
+        }
+
         public ListFullNatEntriesResponseBodyFullNatEntries setAccessIp(String accessIp) {
             this.accessIp = accessIp;
             return this;
@@ -286,6 +300,14 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public ListFullNatEntriesResponseBodyFullNatEntries setDomainResolve(String domainResolve) {
+            this.domainResolve = domainResolve;
+            return this;
+        }
+        public String getDomainResolve() {
+            return this.domainResolve;
         }
 
         public ListFullNatEntriesResponseBodyFullNatEntries setFullNatEntryDescription(String fullNatEntryDescription) {

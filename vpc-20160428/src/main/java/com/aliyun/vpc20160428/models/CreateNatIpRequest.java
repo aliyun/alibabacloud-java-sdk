@@ -46,7 +46,7 @@ public class CreateNatIpRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("Ipv4PrefixCount")
-    public Long ipv4PrefixCount;
+    public Integer ipv4PrefixCount;
 
     /**
      * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway for which you want to create the NAT IP address.</p>
@@ -150,11 +150,11 @@ public class CreateNatIpRequest extends TeaModel {
         return this.ipv4Prefix;
     }
 
-    public CreateNatIpRequest setIpv4PrefixCount(Long ipv4PrefixCount) {
+    public CreateNatIpRequest setIpv4PrefixCount(Integer ipv4PrefixCount) {
         this.ipv4PrefixCount = ipv4PrefixCount;
         return this;
     }
-    public Long getIpv4PrefixCount() {
+    public Integer getIpv4PrefixCount() {
         return this.ipv4PrefixCount;
     }
 

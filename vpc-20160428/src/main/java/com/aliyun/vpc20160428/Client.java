@@ -3402,98 +3402,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:</p>
-     * <ul>
-     * <li>You are not charged for the conversion.</li>
-     * <li>When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.</li>
-     * <li>After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Converts a NAT service plan to an Internet Shared Bandwidth instance.</p>
-     * 
-     * @deprecated OpenAPI ConvertBandwidthPackage is deprecated
-     * 
-     * @param request ConvertBandwidthPackageRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ConvertBandwidthPackageResponse
-     */
-    @Deprecated
-    // Deprecated
-    public ConvertBandwidthPackageResponse convertBandwidthPackageWithOptions(ConvertBandwidthPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthPackageId)) {
-            query.put("BandwidthPackageId", request.bandwidthPackageId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
-            query.put("ClientToken", request.clientToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ConvertBandwidthPackage"),
-            new TeaPair("version", "2016-04-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ConvertBandwidthPackageResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:</p>
-     * <ul>
-     * <li>You are not charged for the conversion.</li>
-     * <li>When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.</li>
-     * <li>After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Converts a NAT service plan to an Internet Shared Bandwidth instance.</p>
-     * 
-     * @deprecated OpenAPI ConvertBandwidthPackage is deprecated
-     * 
-     * @param request ConvertBandwidthPackageRequest
-     * @return ConvertBandwidthPackageResponse
-     */
-    @Deprecated
-    // Deprecated
-    public ConvertBandwidthPackageResponse convertBandwidthPackage(ConvertBandwidthPackageRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.convertBandwidthPackageWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
      * <h2><a href="#"></a>Description</h2>
      * <ul>
      * <li><strong>CopyNetworkAclEntries</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> operation to query the status of the task.<ul>
@@ -5103,6 +5011,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateFullNatEntryResponse createFullNatEntryWithOptions(CreateFullNatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessDomain)) {
+            query.put("AccessDomain", request.accessDomain);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.accessIp)) {
             query.put("AccessIp", request.accessIp);
         }
@@ -21966,70 +21878,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables traffic monitoring for an Elastic Compute Service (ECS) instance.</p>
-     * 
-     * @deprecated OpenAPI DisableNatGatewayEcsMetric is deprecated
-     * 
-     * @param request DisableNatGatewayEcsMetricRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DisableNatGatewayEcsMetricResponse
-     */
-    @Deprecated
-    // Deprecated
-    public DisableNatGatewayEcsMetricResponse disableNatGatewayEcsMetricWithOptions(DisableNatGatewayEcsMetricRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
-            query.put("DryRun", request.dryRun);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
-            query.put("NatGatewayId", request.natGatewayId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DisableNatGatewayEcsMetric"),
-            new TeaPair("version", "2016-04-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableNatGatewayEcsMetricResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Disables traffic monitoring for an Elastic Compute Service (ECS) instance.</p>
-     * 
-     * @deprecated OpenAPI DisableNatGatewayEcsMetric is deprecated
-     * 
-     * @param request DisableNatGatewayEcsMetricRequest
-     * @return DisableNatGatewayEcsMetricResponse
-     */
-    @Deprecated
-    // Deprecated
-    public DisableNatGatewayEcsMetricResponse disableNatGatewayEcsMetric(DisableNatGatewayEcsMetricRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.disableNatGatewayEcsMetricWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Disables ClassicLink for a virtual private cloud (VPC).</p>
      * 
      * @param request DisableVpcClassicLinkRequest
@@ -22398,70 +22246,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DownloadVpnConnectionConfigResponse downloadVpnConnectionConfig(DownloadVpnConnectionConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.downloadVpnConnectionConfigWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Enables Elastic Compute Service (ECS) traffic monitoring.</p>
-     * 
-     * @deprecated OpenAPI EnableNatGatewayEcsMetric is deprecated
-     * 
-     * @param request EnableNatGatewayEcsMetricRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return EnableNatGatewayEcsMetricResponse
-     */
-    @Deprecated
-    // Deprecated
-    public EnableNatGatewayEcsMetricResponse enableNatGatewayEcsMetricWithOptions(EnableNatGatewayEcsMetricRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
-            query.put("DryRun", request.dryRun);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
-            query.put("NatGatewayId", request.natGatewayId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "EnableNatGatewayEcsMetric"),
-            new TeaPair("version", "2016-04-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableNatGatewayEcsMetricResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Enables Elastic Compute Service (ECS) traffic monitoring.</p>
-     * 
-     * @deprecated OpenAPI EnableNatGatewayEcsMetric is deprecated
-     * 
-     * @param request EnableNatGatewayEcsMetricRequest
-     * @return EnableNatGatewayEcsMetricResponse
-     */
-    @Deprecated
-    // Deprecated
-    public EnableNatGatewayEcsMetricResponse enableNatGatewayEcsMetric(EnableNatGatewayEcsMetricRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.enableNatGatewayEcsMetricWithOptions(request, runtime);
     }
 
     /**
@@ -22996,162 +22780,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNatGatewayAttributeResponse getNatGatewayAttribute(GetNatGatewayAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNatGatewayAttributeWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Call GetNatIpAttribute to query the VPC NAT network to obtain information on each NAT IP address.</p>
-     * 
-     * @param request GetNatIpAttributeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetNatIpAttributeResponse
-     */
-    public GetNatIpAttributeResponse getNatIpAttributeWithOptions(GetNatIpAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
-            query.put("ClientToken", request.clientToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
-            query.put("DryRun", request.dryRun);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.natIpId)) {
-            query.put("NatIpId", request.natIpId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetNatIpAttribute"),
-            new TeaPair("version", "2016-04-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNatIpAttributeResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Call GetNatIpAttribute to query the VPC NAT network to obtain information on each NAT IP address.</p>
-     * 
-     * @param request GetNatIpAttributeRequest
-     * @return GetNatIpAttributeResponse
-     */
-    public GetNatIpAttributeResponse getNatIpAttribute(GetNatIpAttributeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getNatIpAttributeWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Call GetNatIpCidrAttribute to query the VPC NAT network to obtain information on each NAT IP cidr address.</p>
-     * 
-     * @param request GetNatIpCidrAttributeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetNatIpCidrAttributeResponse
-     */
-    public GetNatIpCidrAttributeResponse getNatIpCidrAttributeWithOptions(GetNatIpCidrAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
-            query.put("ClientToken", request.clientToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
-            query.put("DryRun", request.dryRun);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
-            query.put("NatGatewayId", request.natGatewayId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.natIpCidr)) {
-            query.put("NatIpCidr", request.natIpCidr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetNatIpCidrAttribute"),
-            new TeaPair("version", "2016-04-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNatIpCidrAttributeResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Call GetNatIpCidrAttribute to query the VPC NAT network to obtain information on each NAT IP cidr address.</p>
-     * 
-     * @param request GetNatIpCidrAttributeRequest
-     * @return GetNatIpCidrAttributeResponse
-     */
-    public GetNatIpCidrAttributeResponse getNatIpCidrAttribute(GetNatIpCidrAttributeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getNatIpCidrAttributeWithOptions(request, runtime);
     }
 
     /**
@@ -27598,6 +27226,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyFullNatEntryAttributeResponse modifyFullNatEntryAttributeWithOptions(ModifyFullNatEntryAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessDomain)) {
+            query.put("AccessDomain", request.accessDomain);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.accessIp)) {
             query.put("AccessIp", request.accessIp);
         }

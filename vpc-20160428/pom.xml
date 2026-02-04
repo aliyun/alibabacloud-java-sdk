@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>vpc20160428</artifactId>
-  <version>7.19.0</version>
+  <version>8.0.0</version>
   <packaging>jar</packaging>
   <name>vpc20160428</name>
   <description>Alibaba Cloud Virtual Private Cloud (20160428) SDK for Java
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.3.1</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
