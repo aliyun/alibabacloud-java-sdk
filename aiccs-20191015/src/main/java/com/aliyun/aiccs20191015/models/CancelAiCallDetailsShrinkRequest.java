@@ -14,6 +14,13 @@ public class CancelAiCallDetailsShrinkRequest extends TeaModel {
     @NameInMap("DetailIdList")
     public String detailIdListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>36</p>
+     */
+    @NameInMap("EncryptionType")
+    public Long encryptionType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -54,6 +61,14 @@ public class CancelAiCallDetailsShrinkRequest extends TeaModel {
     }
     public String getDetailIdListShrink() {
         return this.detailIdListShrink;
+    }
+
+    public CancelAiCallDetailsShrinkRequest setEncryptionType(Long encryptionType) {
+        this.encryptionType = encryptionType;
+        return this;
+    }
+    public Long getEncryptionType() {
+        return this.encryptionType;
     }
 
     public CancelAiCallDetailsShrinkRequest setOwnerId(Long ownerId) {

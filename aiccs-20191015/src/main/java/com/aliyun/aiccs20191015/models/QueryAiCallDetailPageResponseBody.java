@@ -105,6 +105,20 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>49</p>
+         */
+        @NameInMap("BranchId")
+        public Long branchId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
+        @NameInMap("BranchVersionId")
+        public Long branchVersionId;
+
+        /**
+         * <strong>example:</strong>
          * <p>示例值</p>
          */
         @NameInMap("CallResult")
@@ -151,6 +165,13 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
          */
         @NameInMap("DetailId")
         public String detailId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>21</p>
+         */
+        @NameInMap("EncryptionType")
+        public Long encryptionType;
 
         /**
          * <strong>example:</strong>
@@ -221,6 +242,22 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             return this.batchId;
         }
 
+        public QueryAiCallDetailPageResponseBodyDataList setBranchId(Long branchId) {
+            this.branchId = branchId;
+            return this;
+        }
+        public Long getBranchId() {
+            return this.branchId;
+        }
+
+        public QueryAiCallDetailPageResponseBodyDataList setBranchVersionId(Long branchVersionId) {
+            this.branchVersionId = branchVersionId;
+            return this;
+        }
+        public Long getBranchVersionId() {
+            return this.branchVersionId;
+        }
+
         public QueryAiCallDetailPageResponseBodyDataList setCallResult(String callResult) {
             this.callResult = callResult;
             return this;
@@ -275,6 +312,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
         public String getDetailId() {
             return this.detailId;
+        }
+
+        public QueryAiCallDetailPageResponseBodyDataList setEncryptionType(Long encryptionType) {
+            this.encryptionType = encryptionType;
+            return this;
+        }
+        public Long getEncryptionType() {
+            return this.encryptionType;
         }
 
         public QueryAiCallDetailPageResponseBodyDataList setFailedReason(String failedReason) {

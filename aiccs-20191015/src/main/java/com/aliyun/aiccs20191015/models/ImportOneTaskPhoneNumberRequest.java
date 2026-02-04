@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ImportOneTaskPhoneNumberRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>81</p>
+     */
+    @NameInMap("EncryptionType")
+    public Long encryptionType;
+
+    /**
+     * <strong>example:</strong>
      * <p>94ba739b-c01a-ef91-335d-4be006c34899</p>
      */
     @NameInMap("OutId")
@@ -44,6 +51,14 @@ public class ImportOneTaskPhoneNumberRequest extends TeaModel {
     public static ImportOneTaskPhoneNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportOneTaskPhoneNumberRequest self = new ImportOneTaskPhoneNumberRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImportOneTaskPhoneNumberRequest setEncryptionType(Long encryptionType) {
+        this.encryptionType = encryptionType;
+        return this;
+    }
+    public Long getEncryptionType() {
+        return this.encryptionType;
     }
 
     public ImportOneTaskPhoneNumberRequest setOutId(String outId) {

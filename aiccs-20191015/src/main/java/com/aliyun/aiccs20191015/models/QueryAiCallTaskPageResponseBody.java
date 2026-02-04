@@ -112,6 +112,20 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("ApplicationCode")
+        public String applicationCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
+        @NameInMap("ApplicationName")
+        public String applicationName;
+
+        /**
+         * <strong>example:</strong>
          * <p>72</p>
          */
         @NameInMap("CallingCount")
@@ -255,6 +269,22 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         }
         public String getAgentName() {
             return this.agentName;
+        }
+
+        public QueryAiCallTaskPageResponseBodyDataList setApplicationCode(String applicationCode) {
+            this.applicationCode = applicationCode;
+            return this;
+        }
+        public String getApplicationCode() {
+            return this.applicationCode;
+        }
+
+        public QueryAiCallTaskPageResponseBodyDataList setApplicationName(String applicationName) {
+            this.applicationName = applicationName;
+            return this;
+        }
+        public String getApplicationName() {
+            return this.applicationName;
         }
 
         public QueryAiCallTaskPageResponseBodyDataList setCallingCount(Long callingCount) {

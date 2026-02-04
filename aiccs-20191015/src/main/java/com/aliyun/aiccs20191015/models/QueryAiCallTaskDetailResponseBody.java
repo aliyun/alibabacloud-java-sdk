@@ -148,6 +148,20 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         @NameInMap("AgentName")
         public String agentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
+        @NameInMap("ApplicationCode")
+        public String applicationCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
+        @NameInMap("ApplicationName")
+        public String applicationName;
+
         @NameInMap("CallDays")
         public java.util.List<String> callDays;
 
@@ -167,6 +181,27 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
          */
         @NameInMap("ConcurrentCount")
         public Long concurrentCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("LineEncoding")
+        public String lineEncoding;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("LinePhoneNum")
+        public String linePhoneNum;
+
+        /**
+         * <strong>example:</strong>
+         * <p>17</p>
+         */
+        @NameInMap("PhoneType")
+        public Long phoneType;
 
         /**
          * <strong>example:</strong>
@@ -248,6 +283,22 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             return this.agentName;
         }
 
+        public QueryAiCallTaskDetailResponseBodyData setApplicationCode(String applicationCode) {
+            this.applicationCode = applicationCode;
+            return this;
+        }
+        public String getApplicationCode() {
+            return this.applicationCode;
+        }
+
+        public QueryAiCallTaskDetailResponseBodyData setApplicationName(String applicationName) {
+            this.applicationName = applicationName;
+            return this;
+        }
+        public String getApplicationName() {
+            return this.applicationName;
+        }
+
         public QueryAiCallTaskDetailResponseBodyData setCallDays(java.util.List<String> callDays) {
             this.callDays = callDays;
             return this;
@@ -278,6 +329,30 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         }
         public Long getConcurrentCount() {
             return this.concurrentCount;
+        }
+
+        public QueryAiCallTaskDetailResponseBodyData setLineEncoding(String lineEncoding) {
+            this.lineEncoding = lineEncoding;
+            return this;
+        }
+        public String getLineEncoding() {
+            return this.lineEncoding;
+        }
+
+        public QueryAiCallTaskDetailResponseBodyData setLinePhoneNum(String linePhoneNum) {
+            this.linePhoneNum = linePhoneNum;
+            return this;
+        }
+        public String getLinePhoneNum() {
+            return this.linePhoneNum;
+        }
+
+        public QueryAiCallTaskDetailResponseBodyData setPhoneType(Long phoneType) {
+            this.phoneType = phoneType;
+            return this;
+        }
+        public Long getPhoneType() {
+            return this.phoneType;
         }
 
         public QueryAiCallTaskDetailResponseBodyData setRealStartTime(Long realStartTime) {

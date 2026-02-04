@@ -11,6 +11,13 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     @NameInMap("AgentName")
     public String agentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
+    @NameInMap("ApplicationCode")
+    public String applicationCode;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -33,6 +40,13 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>68</p>
+     */
+    @NameInMap("Source")
+    public Long source;
 
     /**
      * <strong>example:</strong>
@@ -66,6 +80,14 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     }
     public String getAgentName() {
         return this.agentName;
+    }
+
+    public QueryAiCallTaskPageRequest setApplicationCode(String applicationCode) {
+        this.applicationCode = applicationCode;
+        return this;
+    }
+    public String getApplicationCode() {
+        return this.applicationCode;
     }
 
     public QueryAiCallTaskPageRequest setOwnerId(Long ownerId) {
@@ -106,6 +128,14 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public QueryAiCallTaskPageRequest setSource(Long source) {
+        this.source = source;
+        return this;
+    }
+    public Long getSource() {
+        return this.source;
     }
 
     public QueryAiCallTaskPageRequest setStatus(String status) {

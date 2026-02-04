@@ -35,6 +35,20 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
+    @NameInMap("LineEncoding")
+    public String lineEncoding;
+
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("LinePhoneNum")
+    public String linePhoneNum;
+
+    /**
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("MissCallRetry")
@@ -43,11 +57,25 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>53</p>
+     */
+    @NameInMap("PhoneType")
+    public Long phoneType;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>31</p>
+     */
+    @NameInMap("Source")
+    public Long source;
 
     /**
      * <p>This parameter is required.</p>
@@ -93,8 +121,6 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     public Long taskStartTime;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>0537022*****</p>
      */
@@ -146,6 +172,22 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
         return this.callTimeShrink;
     }
 
+    public UpdateAiCallTaskShrinkRequest setLineEncoding(String lineEncoding) {
+        this.lineEncoding = lineEncoding;
+        return this;
+    }
+    public String getLineEncoding() {
+        return this.lineEncoding;
+    }
+
+    public UpdateAiCallTaskShrinkRequest setLinePhoneNum(String linePhoneNum) {
+        this.linePhoneNum = linePhoneNum;
+        return this;
+    }
+    public String getLinePhoneNum() {
+        return this.linePhoneNum;
+    }
+
     public UpdateAiCallTaskShrinkRequest setMissCallRetry(Boolean missCallRetry) {
         this.missCallRetry = missCallRetry;
         return this;
@@ -162,6 +204,14 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public UpdateAiCallTaskShrinkRequest setPhoneType(Long phoneType) {
+        this.phoneType = phoneType;
+        return this;
+    }
+    public Long getPhoneType() {
+        return this.phoneType;
+    }
+
     public UpdateAiCallTaskShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -176,6 +226,14 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public UpdateAiCallTaskShrinkRequest setSource(Long source) {
+        this.source = source;
+        return this;
+    }
+    public Long getSource() {
+        return this.source;
     }
 
     public UpdateAiCallTaskShrinkRequest setStartType(String startType) {

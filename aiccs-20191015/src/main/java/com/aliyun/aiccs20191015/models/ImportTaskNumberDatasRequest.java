@@ -15,6 +15,13 @@ public class ImportTaskNumberDatasRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("EncryptionType")
+    public Long encryptionType;
+
+    /**
+     * <strong>example:</strong>
      * <p>123dsdfsdfsdf.xlsx</p>
      */
     @NameInMap("OssFileName")
@@ -52,6 +59,14 @@ public class ImportTaskNumberDatasRequest extends TeaModel {
     }
     public String getDataType() {
         return this.dataType;
+    }
+
+    public ImportTaskNumberDatasRequest setEncryptionType(Long encryptionType) {
+        this.encryptionType = encryptionType;
+        return this;
+    }
+    public Long getEncryptionType() {
+        return this.encryptionType;
     }
 
     public ImportTaskNumberDatasRequest setOssFileName(String ossFileName) {

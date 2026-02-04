@@ -30,6 +30,13 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>73</p>
+     */
+    @NameInMap("EncryptionType")
+    public Long encryptionType;
+
+    /**
+     * <strong>example:</strong>
      * <p>1748948749000</p>
      */
     @NameInMap("EndCallingTime")
@@ -160,6 +167,14 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     }
     public String getDetailIdsShrink() {
         return this.detailIdsShrink;
+    }
+
+    public QueryAiCallDetailPageShrinkRequest setEncryptionType(Long encryptionType) {
+        this.encryptionType = encryptionType;
+        return this;
+    }
+    public Long getEncryptionType() {
+        return this.encryptionType;
     }
 
     public QueryAiCallDetailPageShrinkRequest setEndCallingTime(Long endCallingTime) {

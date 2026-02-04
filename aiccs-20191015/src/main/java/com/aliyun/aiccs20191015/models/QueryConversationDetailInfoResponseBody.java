@@ -308,6 +308,13 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>示例值示例值示例值</p>
          */
+        @NameInMap("EncryptionType")
+        public String encryptionType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
         @NameInMap("FailedReason")
         public String failedReason;
 
@@ -431,6 +438,14 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
         public Long getDuration() {
             return this.duration;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setEncryptionType(String encryptionType) {
+            this.encryptionType = encryptionType;
+            return this;
+        }
+        public String getEncryptionType() {
+            return this.encryptionType;
         }
 
         public QueryConversationDetailInfoResponseBodyData setFailedReason(String failedReason) {

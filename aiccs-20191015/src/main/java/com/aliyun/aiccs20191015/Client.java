@@ -617,6 +617,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DetailIdList", request.detailIdListShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionType)) {
+            query.put("EncryptionType", request.encryptionType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -916,6 +920,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AgentId", request.agentId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationCode)) {
+            query.put("ApplicationCode", request.applicationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
+            query.put("ApplicationName", request.applicationName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.callDayShrink)) {
             query.put("CallDay", request.callDayShrink);
         }
@@ -936,6 +948,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CallTime", request.callTimeShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lineEncoding)) {
+            query.put("LineEncoding", request.lineEncoding);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.linePhoneNum)) {
+            query.put("LinePhoneNum", request.linePhoneNum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.missCallRetry)) {
             query.put("MissCallRetry", request.missCallRetry);
         }
@@ -944,12 +964,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneType)) {
+            query.put("PhoneType", request.phoneType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startType)) {
@@ -5415,6 +5443,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionType)) {
+            query.put("EncryptionType", request.encryptionType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
             query.put("OutId", request.outId);
         }
@@ -5491,6 +5523,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dataType)) {
             query.put("DataType", request.dataType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionType)) {
+            query.put("EncryptionType", request.encryptionType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossFileName)) {
@@ -6893,6 +6929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DetailIds", request.detailIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionType)) {
+            query.put("EncryptionType", request.encryptionType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endCallingTime)) {
             query.put("EndCallingTime", request.endCallingTime);
         }
@@ -7053,6 +7093,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AgentName", request.agentName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationCode)) {
+            query.put("ApplicationCode", request.applicationCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -7071,6 +7115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -9399,6 +9447,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CallTime", request.callTimeShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lineEncoding)) {
+            query.put("LineEncoding", request.lineEncoding);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.linePhoneNum)) {
+            query.put("LinePhoneNum", request.linePhoneNum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.missCallRetry)) {
             query.put("MissCallRetry", request.missCallRetry);
         }
@@ -9407,12 +9463,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneType)) {
+            query.put("PhoneType", request.phoneType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startType)) {

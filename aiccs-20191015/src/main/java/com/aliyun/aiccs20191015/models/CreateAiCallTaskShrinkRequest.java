@@ -5,13 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateAiCallTaskShrinkRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>121223123123****</p>
      */
     @NameInMap("AgentId")
     public String agentId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("ApplicationCode")
+    public String applicationCode;
+
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("ApplicationName")
+    public String applicationName;
 
     /**
      * <p>This parameter is required.</p>
@@ -44,6 +56,20 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("LineEncoding")
+    public String lineEncoding;
+
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("LinePhoneNum")
+    public String linePhoneNum;
+
+    /**
+     * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("MissCallRetry")
@@ -52,11 +78,25 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>54</p>
+     */
+    @NameInMap("PhoneType")
+    public Long phoneType;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>92</p>
+     */
+    @NameInMap("Source")
+    public Long source;
 
     /**
      * <p>This parameter is required.</p>
@@ -91,8 +131,6 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
     public Long taskStartTime;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>032712122*****</p>
      */
@@ -110,6 +148,22 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
     }
     public String getAgentId() {
         return this.agentId;
+    }
+
+    public CreateAiCallTaskShrinkRequest setApplicationCode(String applicationCode) {
+        this.applicationCode = applicationCode;
+        return this;
+    }
+    public String getApplicationCode() {
+        return this.applicationCode;
+    }
+
+    public CreateAiCallTaskShrinkRequest setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
+    public String getApplicationName() {
+        return this.applicationName;
     }
 
     public CreateAiCallTaskShrinkRequest setCallDayShrink(String callDayShrink) {
@@ -152,6 +206,22 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
         return this.callTimeShrink;
     }
 
+    public CreateAiCallTaskShrinkRequest setLineEncoding(String lineEncoding) {
+        this.lineEncoding = lineEncoding;
+        return this;
+    }
+    public String getLineEncoding() {
+        return this.lineEncoding;
+    }
+
+    public CreateAiCallTaskShrinkRequest setLinePhoneNum(String linePhoneNum) {
+        this.linePhoneNum = linePhoneNum;
+        return this;
+    }
+    public String getLinePhoneNum() {
+        return this.linePhoneNum;
+    }
+
     public CreateAiCallTaskShrinkRequest setMissCallRetry(Boolean missCallRetry) {
         this.missCallRetry = missCallRetry;
         return this;
@@ -168,6 +238,14 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public CreateAiCallTaskShrinkRequest setPhoneType(Long phoneType) {
+        this.phoneType = phoneType;
+        return this;
+    }
+    public Long getPhoneType() {
+        return this.phoneType;
+    }
+
     public CreateAiCallTaskShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -182,6 +260,14 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateAiCallTaskShrinkRequest setSource(Long source) {
+        this.source = source;
+        return this;
+    }
+    public Long getSource() {
+        return this.source;
     }
 
     public CreateAiCallTaskShrinkRequest setStartType(String startType) {

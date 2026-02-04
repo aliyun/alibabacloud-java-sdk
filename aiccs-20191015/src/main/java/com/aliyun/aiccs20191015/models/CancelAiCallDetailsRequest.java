@@ -14,6 +14,13 @@ public class CancelAiCallDetailsRequest extends TeaModel {
     @NameInMap("DetailIdList")
     public java.util.List<String> detailIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>36</p>
+     */
+    @NameInMap("EncryptionType")
+    public Long encryptionType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -54,6 +61,14 @@ public class CancelAiCallDetailsRequest extends TeaModel {
     }
     public java.util.List<String> getDetailIdList() {
         return this.detailIdList;
+    }
+
+    public CancelAiCallDetailsRequest setEncryptionType(Long encryptionType) {
+        this.encryptionType = encryptionType;
+        return this;
+    }
+    public Long getEncryptionType() {
+        return this.encryptionType;
     }
 
     public CancelAiCallDetailsRequest setOwnerId(Long ownerId) {
