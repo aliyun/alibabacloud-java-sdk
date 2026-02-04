@@ -4,6 +4,9 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    @NameInMap("aclInfo")
+    public CreateInstanceRequestAclInfo aclInfo;
+
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. This parameter takes effect only if you set paymentType to Subscription. Valid values:</p>
      * <ul>
@@ -205,6 +208,14 @@ public class CreateInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateInstanceRequest setAclInfo(CreateInstanceRequestAclInfo aclInfo) {
+        this.aclInfo = aclInfo;
+        return this;
+    }
+    public CreateInstanceRequestAclInfo getAclInfo() {
+        return this.aclInfo;
+    }
+
     public CreateInstanceRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -331,6 +342,25 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public static class CreateInstanceRequestAclInfo extends TeaModel {
+        @NameInMap("defaultVpcAuthFree")
+        public Boolean defaultVpcAuthFree;
+
+        public static CreateInstanceRequestAclInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestAclInfo self = new CreateInstanceRequestAclInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestAclInfo setDefaultVpcAuthFree(Boolean defaultVpcAuthFree) {
+            this.defaultVpcAuthFree = defaultVpcAuthFree;
+            return this;
+        }
+        public Boolean getDefaultVpcAuthFree() {
+            return this.defaultVpcAuthFree;
+        }
+
     }
 
     public static class CreateInstanceRequestNetworkInfoInternetInfo extends TeaModel {
