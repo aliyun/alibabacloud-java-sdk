@@ -7,12 +7,24 @@ public class CreateMaskingRulesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, String> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful create</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>792233B1-76B8-5A01-92B4-**********864</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 

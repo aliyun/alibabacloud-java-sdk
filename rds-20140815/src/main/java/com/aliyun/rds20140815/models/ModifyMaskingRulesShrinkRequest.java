@@ -6,25 +6,49 @@ import com.aliyun.tea.*;
 public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-t4n8t18o******6d5</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>myDB</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sm4-128-gcm</p>
+     */
     @NameInMap("DefaultAlgo")
     public String defaultAlgo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enabled")
     public String enabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;: &quot;sha256&quot;},
+     *         {&quot;name&quot;:&quot;sm4-128-gcm&quot;}]</p>
+     */
     @NameInMap("MaskingAlgo")
     public String maskingAlgo;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ap-southeast-1</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -39,6 +63,9 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rulename1</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

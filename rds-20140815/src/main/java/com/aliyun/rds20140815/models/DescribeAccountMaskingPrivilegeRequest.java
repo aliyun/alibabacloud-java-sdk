@@ -6,16 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeAccountMaskingPrivilegeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-t4n8t18o******6d5</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>myDB</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ap-southeast-1</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +36,10 @@ public class DescribeAccountMaskingPrivilegeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rds</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

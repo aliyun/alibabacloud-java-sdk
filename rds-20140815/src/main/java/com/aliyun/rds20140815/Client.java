@@ -11129,6 +11129,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询RDS实例的列加密（CLS）配置信息</p>
+     * 
+     * @param request DescribeDBInstanceCLSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBInstanceCLSResponse
+     */
+    public DescribeDBInstanceCLSResponse describeDBInstanceCLSWithOptions(DescribeDBInstanceCLSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBInstanceCLS"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBInstanceCLSResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询RDS实例的列加密（CLS）配置信息</p>
+     * 
+     * @param request DescribeDBInstanceCLSRequest
+     * @return DescribeDBInstanceCLSResponse
+     */
+    public DescribeDBInstanceCLSResponse describeDBInstanceCLS(DescribeDBInstanceCLSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBInstanceCLSWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取实例链路诊断信息</p>
      * 
      * @param request DescribeDBInstanceConnectivityRequest
@@ -24390,6 +24450,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置RDS实例开启/修改/关闭列加密状态</p>
+     * 
+     * @param request ModifyDBInstanceCLSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDBInstanceCLSResponse
+     */
+    public ModifyDBInstanceCLSResponse modifyDBInstanceCLSWithOptions(ModifyDBInstanceCLSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionAlgorithm)) {
+            query.put("EncryptionAlgorithm", request.encryptionAlgorithm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionKey)) {
+            query.put("EncryptionKey", request.encryptionKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionKeyMode)) {
+            query.put("EncryptionKeyMode", request.encryptionKeyMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionStatus)) {
+            query.put("EncryptionStatus", request.encryptionStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isRotate)) {
+            query.put("IsRotate", request.isRotate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleArn)) {
+            query.put("RoleArn", request.roleArn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteListMode)) {
+            query.put("WhiteListMode", request.whiteListMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDBInstanceCLS"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBInstanceCLSResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置RDS实例开启/修改/关闭列加密状态</p>
+     * 
+     * @param request ModifyDBInstanceCLSRequest
+     * @return ModifyDBInstanceCLSResponse
+     */
+    public ModifyDBInstanceCLSResponse modifyDBInstanceCLS(ModifyDBInstanceCLSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBInstanceCLSWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -28437,6 +28585,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyParameterGroupResponse modifyParameterGroup(ModifyParameterGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyParameterGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>RDS MySQL修改参数定时任务</p>
+     * 
+     * @param request ModifyParameterTimedScheduleTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyParameterTimedScheduleTaskResponse
+     */
+    public ModifyParameterTimedScheduleTaskResponse modifyParameterTimedScheduleTaskWithOptions(ModifyParameterTimedScheduleTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchTime)) {
+            query.put("SwitchTime", request.switchTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyParameterTimedScheduleTask"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyParameterTimedScheduleTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>RDS MySQL修改参数定时任务</p>
+     * 
+     * @param request ModifyParameterTimedScheduleTaskRequest
+     * @return ModifyParameterTimedScheduleTaskResponse
+     */
+    public ModifyParameterTimedScheduleTaskResponse modifyParameterTimedScheduleTask(ModifyParameterTimedScheduleTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyParameterTimedScheduleTaskWithOptions(request, runtime);
     }
 
     /**

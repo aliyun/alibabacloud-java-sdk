@@ -7,12 +7,24 @@ public class ModifyAccountMaskingPrivilegeResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, String> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2144F5CC-10C5-3B72-8C74-E52C********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 

@@ -7,6 +7,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeMaskingRulesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>69779000-57A4-38F6-BF85-**********A2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -73,18 +77,35 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeMaskingRulesResponseBodyDataRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>aes-128-gcm</p>
+         */
         @NameInMap("DefaultAlgo")
         public String defaultAlgo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public String enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},
+         *         {&quot;name&quot;:&quot;sm4-128-gcm&quot;}]</p>
+         */
         @NameInMap("MaskingAlgo")
         public String maskingAlgo;
 
         @NameInMap("RuleConfig")
         public DescribeMaskingRulesResponseBodyDataRulesRuleConfig ruleConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 

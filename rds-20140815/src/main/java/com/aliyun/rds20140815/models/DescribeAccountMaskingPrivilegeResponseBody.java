@@ -7,6 +7,10 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeAccountMaskingPrivilegeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D0073A98-52F1-3075-8256-394**********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountMaskingPrivilegeResponseBodyDataUserPrivilege extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2026-01-22T02:01:20Z</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>restrictedAccess</p>
+         */
         @NameInMap("Privilege")
         public String privilege;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

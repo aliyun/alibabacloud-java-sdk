@@ -7,12 +7,24 @@ public class DeleteMaskingRulesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, String> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5EEE1ED1-A459-38D2-840C-0C49********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
