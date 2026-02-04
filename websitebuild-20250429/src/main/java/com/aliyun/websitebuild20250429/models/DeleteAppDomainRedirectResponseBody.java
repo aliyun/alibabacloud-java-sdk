@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAppDomainRedirectResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Whether retry is allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name, to query this named application</p>
+     * 
      * <strong>example:</strong>
      * <p>watermark</p>
      */
@@ -26,6 +32,8 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,20 +41,28 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D</a></p>
+     * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public DeleteAppDomainRedirectResponseBodyModule module;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -55,16 +71,26 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Exception message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Whether it is processed synchronously</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +192,8 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
 
     public static class DeleteAppDomainRedirectResponseBodyModule extends TeaModel {
         /**
+         * <p>Whether the operation was successful</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */

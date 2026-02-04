@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefreshAppInstanceTicketRequest extends TeaModel {
     /**
+     * <p>Business ID of the application instance</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,8 @@ public class RefreshAppInstanceTicketRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Updated token information</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -19,6 +23,8 @@ public class RefreshAppInstanceTicketRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>The UUID of the server.</p>
+     * 
      * <strong>example:</strong>
      * <p>c5c354d7-5e68-443a-b7fc-767e6ede9deb</p>
      */

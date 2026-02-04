@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppInstanceTicketRequest extends TeaModel {
     /**
+     * <p>Customer business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
      */
@@ -12,6 +14,8 @@ public class CreateAppInstanceTicketRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Client ID of the device that needs to revoke the access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>d566aaf2-7c88-40a4-982f-6abef0be13c9</p>
      */

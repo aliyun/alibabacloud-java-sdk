@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppDomainRedirectRecordsRequest extends TeaModel {
     /**
+     * <p>Application instance business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,9 @@ public class ListAppDomainRedirectRecordsRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The number of results per query.</p>
+     * <p>Range: 10~100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +24,8 @@ public class ListAppDomainRedirectRecordsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next query. It is empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>yPkgBbQln0gmUnIZSGizGw==</p>
      */

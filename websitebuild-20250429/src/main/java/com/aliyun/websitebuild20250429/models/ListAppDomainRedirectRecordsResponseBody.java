@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Whether retry is allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Frontend application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,39 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message, currently unused, please ignore</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D</a></p>
+     * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Number of results per query.</p>
+     * <p>Range: 10~100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("Module")
     public ListAppDomainRedirectRecordsResponseBodyModule module;
 
     /**
+     * <p>下一个查询开始的Token。没有下一个查询时为空。</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
      */
@@ -60,7 +81,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -69,16 +90,26 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Exception message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Whether it is processed synchronously</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -196,6 +227,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
 
     public static class ListAppDomainRedirectRecordsResponseBodyModuleData extends TeaModel {
         /**
+         * <p>Redirect record ID</p>
+         * 
          * <strong>example:</strong>
          * <p>f0379419-433d-410e-98d9-bf5c72f47227</p>
          */
@@ -203,6 +236,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         public String recordId;
 
         /**
+         * <p>Source domain</p>
+         * 
          * <strong>example:</strong>
          * <p>abc.wanwang.xin</p>
          */
@@ -210,6 +245,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         public String sourceDomain;
 
         /**
+         * <p>目标域名</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyuncs.com</p>
          */
@@ -249,6 +286,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
 
     public static class ListAppDomainRedirectRecordsResponseBodyModuleNext extends TeaModel {
         /**
+         * <p>Redirect record ID</p>
+         * 
          * <strong>example:</strong>
          * <p>936956504373539840</p>
          */
@@ -256,6 +295,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         public String recordId;
 
         /**
+         * <p>Source domain</p>
+         * 
          * <strong>example:</strong>
          * <p>abc.wanwang.xin</p>
          */
@@ -263,6 +304,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         public String sourceDomain;
 
         /**
+         * <p>Target domain</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyuncs.com</p>
          */
@@ -302,35 +345,56 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
 
     public static class ListAppDomainRedirectRecordsResponseBodyModule extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
         @NameInMap("CurrentPageNum")
         public Integer currentPageNum;
 
+        /**
+         * <p>Member name.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListAppDomainRedirectRecordsResponseBodyModuleData> data;
 
+        /**
+         * <p>Next feature ID</p>
+         */
         @NameInMap("Next")
         public ListAppDomainRedirectRecordsResponseBodyModuleNext next;
 
+        /**
+         * <p>Whether there is a next page</p>
+         */
         @NameInMap("NextPage")
         public Boolean nextPage;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>Whether there is a previous page.</p>
+         */
         @NameInMap("PrePage")
         public Boolean prePage;
 
+        /**
+         * <p>Apart from pagination limits, the server processes up to the most recent 1000 records. If the result exceeds 1000, <strong>ResultLimit</strong> is <strong>true</strong>, please narrow down the time range and search again; otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -338,6 +402,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         public Integer totalItemNum;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

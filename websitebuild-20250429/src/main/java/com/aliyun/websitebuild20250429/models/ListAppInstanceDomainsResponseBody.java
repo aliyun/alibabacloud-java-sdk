@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppInstanceDomainsResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Whether retry is allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,6 +32,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,42 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message, used to replace <code>%s</code> in the error message of the returned parameter <strong>ErrMessage</strong>.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it means that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D</a></p>
+     * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Number of results per query.</p>
+     * <p>Range: 10~100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public ListAppInstanceDomainsResponseBodyModule module;
 
     /**
+     * <p>下一个查询开始的Token。没有下一个查询时为空。</p>
+     * 
      * <strong>example:</strong>
      * <p>dw+qdTi1EjVSWX/INJdYNw==</p>
      */
@@ -60,7 +84,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -69,16 +93,26 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Exception message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -196,6 +230,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleDataCertificate extends TeaModel {
         /**
+         * <p>Certificate name.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024</p>
          */
@@ -203,6 +239,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateName;
 
         /**
+         * <p>Certificate status</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
@@ -210,6 +248,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateStatus;
 
         /**
+         * <p>Certificate type</p>
+         * 
          * <strong>example:</strong>
          * <p>self-signed</p>
          */
@@ -217,6 +257,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateType;
 
         /**
+         * <p>Certificate expiration date</p>
+         * 
          * <strong>example:</strong>
          * <p>4885718400000</p>
          */
@@ -264,6 +306,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleDataOwnership extends TeaModel {
         /**
+         * <p>Account owner type: CURRENT OTHER</p>
+         * 
          * <strong>example:</strong>
          * <p>1813244684017878</p>
          */
@@ -271,6 +315,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String account;
 
         /**
+         * <p>Registrar type: ALIYUN OTHER</p>
+         * 
          * <strong>example:</strong>
          * <p>ROS</p>
          */
@@ -278,6 +324,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String provider;
 
         /**
+         * <p>The root domain name of the domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>tjouya.cn</p>
          */
@@ -317,6 +365,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleDataResolutionDnsRecord extends TeaModel {
         /**
+         * <p>Host record</p>
+         * 
          * <strong>example:</strong>
          * <p>portal-dev.bambulab.net</p>
          */
@@ -324,6 +374,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>Record type</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -331,6 +383,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String recordType;
 
         /**
+         * <p>Record value</p>
+         * 
          * <strong>example:</strong>
          * <p>Maintenance</p>
          */
@@ -369,10 +423,15 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceDomainsResponseBodyModuleDataResolution extends TeaModel {
+        /**
+         * <p>DNS record information</p>
+         */
         @NameInMap("DnsRecord")
         public ListAppInstanceDomainsResponseBodyModuleDataResolutionDnsRecord dnsRecord;
 
         /**
+         * <p>Error message</p>
+         * 
          * <strong>example:</strong>
          * <p>code: 400, invalid unionId request id: 09CC0F8B-49C2-7EFB-81E8-9AEF49068D02</p>
          */
@@ -380,6 +439,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>Domain resolution status</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESSFUL</p>
          */
@@ -419,6 +480,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleDataVerificationDnsRecord extends TeaModel {
         /**
+         * <p>Host record</p>
+         * 
          * <strong>example:</strong>
          * <p>${host}</p>
          */
@@ -426,6 +489,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>Record type</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -433,6 +498,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String recordType;
 
         /**
+         * <p>Record value</p>
+         * 
          * <strong>example:</strong>
          * <p>159.138.94.138</p>
          */
@@ -471,10 +538,15 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceDomainsResponseBodyModuleDataVerification extends TeaModel {
+        /**
+         * <p>DNS record guide that the user needs to configure.</p>
+         */
         @NameInMap("DnsRecord")
         public ListAppInstanceDomainsResponseBodyModuleDataVerificationDnsRecord dnsRecord;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>code: 400, invalid unionId request id: 2270AB0B-6FD0-7F72-9DC5-7A02B67CBB3B</p>
          */
@@ -482,6 +554,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>Ownership verification status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESSFUL</p>
          */
@@ -489,6 +563,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String verificationStatus;
 
         /**
+         * <p>Ownership verification status</p>
+         * 
          * <strong>example:</strong>
          * <p>NoAliyunServiceRoleForWebsiteBuildPublishAuth</p>
          */
@@ -535,10 +611,15 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceDomainsResponseBodyModuleData extends TeaModel {
+        /**
+         * <p>Domain SSL certificate information</p>
+         */
         @NameInMap("Certificate")
         public ListAppInstanceDomainsResponseBodyModuleDataCertificate certificate;
 
         /**
+         * <p>Instance creation time (required, format: yyyy-MM-dd HH:mm:ss)</p>
+         * 
          * <strong>example:</strong>
          * <p>1683256054000</p>
          */
@@ -546,6 +627,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Domain name</p>
+         * 
          * <strong>example:</strong>
          * <p>kaibaidu.com</p>
          */
@@ -553,18 +636,29 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>Binding overall status</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
         @NameInMap("OverallStatus")
         public String overallStatus;
 
+        /**
+         * <p>Domain ownership information</p>
+         */
         @NameInMap("Ownership")
         public ListAppInstanceDomainsResponseBodyModuleDataOwnership ownership;
 
+        /**
+         * <p>Domain resolution information</p>
+         */
         @NameInMap("Resolution")
         public ListAppInstanceDomainsResponseBodyModuleDataResolution resolution;
 
+        /**
+         * <p>Domain verification information</p>
+         */
         @NameInMap("Verification")
         public ListAppInstanceDomainsResponseBodyModuleDataVerification verification;
 
@@ -633,6 +727,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleNextCertificate extends TeaModel {
         /**
+         * <p>Certificate name.</p>
+         * 
          * <strong>example:</strong>
          * <p>jfztkg202502</p>
          */
@@ -640,6 +736,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateName;
 
         /**
+         * <p>Certificate status</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
@@ -647,6 +745,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateStatus;
 
         /**
+         * <p>Certificate type</p>
+         * 
          * <strong>example:</strong>
          * <p>Server</p>
          */
@@ -654,6 +754,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateType;
 
         /**
+         * <p>证书的到期日期</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-15T02:04:00Z</p>
          */
@@ -700,10 +802,18 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceDomainsResponseBodyModuleNextOwnership extends TeaModel {
+        /**
+         * <p>Account owner type: CURRENT OTHER</p>
+         * 
+         * <strong>example:</strong>
+         * <p>拾肆gavin</p>
+         */
         @NameInMap("Account")
         public String account;
 
         /**
+         * <p>Registrar type: ALIYUN OTHER</p>
+         * 
          * <strong>example:</strong>
          * <p>pai</p>
          */
@@ -735,6 +845,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleNextResolutionDnsRecord extends TeaModel {
         /**
+         * <p>Host record</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.6.1</p>
          */
@@ -742,6 +854,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>Record type</p>
+         * 
          * <strong>example:</strong>
          * <p>A</p>
          */
@@ -749,6 +863,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String recordType;
 
         /**
+         * <p>Record value</p>
+         * 
          * <strong>example:</strong>
          * <p>2025032000000054nuba0r0b0a79y70c1c983tsz09xw9hg3p04kqxmbt4g2p65h</p>
          */
@@ -787,10 +903,15 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceDomainsResponseBodyModuleNextResolution extends TeaModel {
+        /**
+         * <p>DNS record information</p>
+         */
         @NameInMap("DnsRecord")
         public ListAppInstanceDomainsResponseBodyModuleNextResolutionDnsRecord dnsRecord;
 
         /**
+         * <p>Error message</p>
+         * 
          * <strong>example:</strong>
          * <p>aliuid:1133664521498319 assumeOssRole not exist,serviceName:aliyunesarealtimelogpushossrole</p>
          */
@@ -798,6 +919,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>Domain resolution status</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESSFUL</p>
          */
@@ -837,6 +960,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleNextVerificationDnsRecord extends TeaModel {
         /**
+         * <p>Host record</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.abc.com">www.abc.com</a></p>
          */
@@ -844,6 +969,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>Record type</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -851,6 +978,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String recordType;
 
         /**
+         * <p>Record value</p>
+         * 
          * <strong>example:</strong>
          * <p>faHuBlyPcodSjBvBJYpm3-9W_cCSowLLQ4zAUyguEGM</p>
          */
@@ -889,10 +1018,15 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceDomainsResponseBodyModuleNextVerification extends TeaModel {
+        /**
+         * <p>Guide for DNS records that the user needs to configure.</p>
+         */
         @NameInMap("DnsRecord")
         public ListAppInstanceDomainsResponseBodyModuleNextVerificationDnsRecord dnsRecord;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliuid:1133664521498319 assumeOssRole not exist,serviceName:aliyunesarealtimelogpushossrole</p>
          */
@@ -900,6 +1034,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>Ownership verification status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESSFUL</p>
          */
@@ -938,10 +1074,15 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceDomainsResponseBodyModuleNext extends TeaModel {
+        /**
+         * <p>Domain SSL certificate information</p>
+         */
         @NameInMap("Certificate")
         public ListAppInstanceDomainsResponseBodyModuleNextCertificate certificate;
 
         /**
+         * <p>Instance creation time (required, format: yyyy-MM-dd HH:mm:ss)</p>
+         * 
          * <strong>example:</strong>
          * <p>1741572465000</p>
          */
@@ -949,6 +1090,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Domain name</p>
+         * 
          * <strong>example:</strong>
          * <p>usdcoin.xin</p>
          */
@@ -956,18 +1099,29 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>Binding overall status</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
         @NameInMap("OverallStatus")
         public String overallStatus;
 
+        /**
+         * <p>Domain ownership information</p>
+         */
         @NameInMap("Ownership")
         public ListAppInstanceDomainsResponseBodyModuleNextOwnership ownership;
 
+        /**
+         * <p>Domain resolution information</p>
+         */
         @NameInMap("Resolution")
         public ListAppInstanceDomainsResponseBodyModuleNextResolution resolution;
 
+        /**
+         * <p>Domain verification information</p>
+         */
         @NameInMap("Verification")
         public ListAppInstanceDomainsResponseBodyModuleNextVerification verification;
 
@@ -1036,35 +1190,56 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModule extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CurrentPageNum")
         public Integer currentPageNum;
 
+        /**
+         * <p>Query result.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListAppInstanceDomainsResponseBodyModuleData> data;
 
+        /**
+         * <p>Decision weight</p>
+         */
         @NameInMap("Next")
         public ListAppInstanceDomainsResponseBodyModuleNext next;
 
+        /**
+         * <p>Whether there is a next page.</p>
+         */
         @NameInMap("NextPage")
         public Boolean nextPage;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>Whether there is a previous page</p>
+         */
         @NameInMap("PrePage")
         public Boolean prePage;
 
+        /**
+         * <p>Apart from pagination limits, the server can process up to the most recent 1000 records. If the result exceeds 1000 records, <strong>ResultLimit</strong> will be <strong>true</strong>, please narrow down the time range and search again; otherwise, <strong>ResultLimit</strong> will be <strong>false</strong>.</p>
+         */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1072,6 +1247,8 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public Integer totalItemNum;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

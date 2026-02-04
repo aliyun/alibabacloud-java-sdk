@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnbindAppDomainRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250908140837000001</p>
      */
@@ -12,6 +14,8 @@ public class UnbindAppDomainRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Domain Name</p>
+     * 
      * <strong>example:</strong>
      * <p>conway.cn</p>
      */

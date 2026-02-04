@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindAppDomainResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class BindAppDomainResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Whether retry is allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class BindAppDomainResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +32,8 @@ public class BindAppDomainResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Error Code</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,20 +41,39 @@ public class BindAppDomainResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message, used to replace the <strong>%s</strong> in the error message of the returned parameter <strong>ErrMessage</strong>.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/vs1w2yd3p8264pz/vs1w2yd3p8264pz.diff.zip?Expires=1739592470&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=3DRuMtCeTinVYxo7XAOEIOEmZGE%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/vs1w2yd3p8264pz/vs1w2yd3p8264pz.diff.zip?Expires=1739592470&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=3DRuMtCeTinVYxo7XAOEIOEmZGE%3D</a></p>
+     * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Data table module.</p>
+     * <ul>
+     * <li><p>ABTest: Experiment data table</p>
+     * </li>
+     * <li><p>ExperimentTool: Experiment tool table</p>
+     * </li>
+     * <li><p>DataDiagnosis: Data diagnosis</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("Module")
     public BindAppDomainResponseBodyModule module;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -55,16 +82,26 @@ public class BindAppDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error Code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.EROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Exception Message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Whether to process synchronously</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +203,8 @@ public class BindAppDomainResponseBody extends TeaModel {
 
     public static class BindAppDomainResponseBodyModule extends TeaModel {
         /**
+         * <p>Indicator of whether the request was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

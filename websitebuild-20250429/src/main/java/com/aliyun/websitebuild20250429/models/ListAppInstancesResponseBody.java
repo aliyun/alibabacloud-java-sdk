@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppInstancesResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Whether retry is allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,16 +32,23 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
+    /**
+     * <p>Query result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<AppInstanceAggregate> data;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -43,16 +56,24 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message, not in use, please ignore</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D</a></p>
+     * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>返回错误参数</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>The number of results per query.</p>
+     * <p>Value range: 10~100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -60,6 +81,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Whether there is a next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -67,6 +90,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
+     * <p>The token for the next query. It is empty when there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>dw+qdTi1EjVSWX/INJdYNw==</p>
      */
@@ -74,6 +99,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -81,6 +108,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Whether there is a previous page</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -88,7 +117,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean prePage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -96,20 +125,33 @@ public class ListAppInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>For the current query, apart from pagination limits, the server processes up to the most recent 1000 records. If the result exceeds 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>, please narrow down the time range and search again; otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+     */
     @NameInMap("ResultLimit")
     public Boolean resultLimit;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -117,6 +159,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean synchro;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */

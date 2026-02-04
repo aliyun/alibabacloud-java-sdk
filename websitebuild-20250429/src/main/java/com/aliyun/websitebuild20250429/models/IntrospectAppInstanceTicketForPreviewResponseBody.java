@@ -3,10 +3,8 @@ package com.aliyun.websitebuild20250429.models;
 
 import com.aliyun.tea.*;
 
-public class RefreshAppInstanceTicketResponseBody extends TeaModel {
+public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
-     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -14,8 +12,6 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Whether to allow retry</p>
-     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -23,17 +19,13 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App name.</p>
-     * 
      * <strong>example:</strong>
-     * <p>mar</p>
+     * <p>or</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
-     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -41,31 +33,20 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message, used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
-     * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    /**
-     * <p>Returned error parameters</p>
-     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
-    /**
-     * <p>Application module</p>
-     */
     @NameInMap("Module")
-    public RefreshAppInstanceTicketResponseBodyModule module;
+    public IntrospectAppInstanceTicketForPreviewResponseBodyModule module;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -74,38 +55,28 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
-     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
-    /**
-     * <p>Exception message</p>
-     * 
-     * <strong>example:</strong>
-     * <p>系统异常</p>
-     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
-     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
     @NameInMap("Synchro")
     public Boolean synchro;
 
-    public static RefreshAppInstanceTicketResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RefreshAppInstanceTicketResponseBody self = new RefreshAppInstanceTicketResponseBody();
+    public static IntrospectAppInstanceTicketForPreviewResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        IntrospectAppInstanceTicketForPreviewResponseBody self = new IntrospectAppInstanceTicketForPreviewResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RefreshAppInstanceTicketResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
         this.accessDeniedDetail = accessDeniedDetail;
         return this;
     }
@@ -113,7 +84,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public RefreshAppInstanceTicketResponseBody setAllowRetry(Boolean allowRetry) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setAllowRetry(Boolean allowRetry) {
         this.allowRetry = allowRetry;
         return this;
     }
@@ -121,7 +92,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return this.allowRetry;
     }
 
-    public RefreshAppInstanceTicketResponseBody setAppName(String appName) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -129,7 +100,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return this.appName;
     }
 
-    public RefreshAppInstanceTicketResponseBody setDynamicCode(String dynamicCode) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setDynamicCode(String dynamicCode) {
         this.dynamicCode = dynamicCode;
         return this;
     }
@@ -137,7 +108,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return this.dynamicCode;
     }
 
-    public RefreshAppInstanceTicketResponseBody setDynamicMessage(String dynamicMessage) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setDynamicMessage(String dynamicMessage) {
         this.dynamicMessage = dynamicMessage;
         return this;
     }
@@ -145,7 +116,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return this.dynamicMessage;
     }
 
-    public RefreshAppInstanceTicketResponseBody setErrorArgs(java.util.List<?> errorArgs) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setErrorArgs(java.util.List<?> errorArgs) {
         this.errorArgs = errorArgs;
         return this;
     }
@@ -153,15 +124,15 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return this.errorArgs;
     }
 
-    public RefreshAppInstanceTicketResponseBody setModule(RefreshAppInstanceTicketResponseBodyModule module) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setModule(IntrospectAppInstanceTicketForPreviewResponseBodyModule module) {
         this.module = module;
         return this;
     }
-    public RefreshAppInstanceTicketResponseBodyModule getModule() {
+    public IntrospectAppInstanceTicketForPreviewResponseBodyModule getModule() {
         return this.module;
     }
 
-    public RefreshAppInstanceTicketResponseBody setRequestId(String requestId) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -169,7 +140,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RefreshAppInstanceTicketResponseBody setRootErrorCode(String rootErrorCode) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setRootErrorCode(String rootErrorCode) {
         this.rootErrorCode = rootErrorCode;
         return this;
     }
@@ -177,7 +148,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return this.rootErrorCode;
     }
 
-    public RefreshAppInstanceTicketResponseBody setRootErrorMsg(String rootErrorMsg) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setRootErrorMsg(String rootErrorMsg) {
         this.rootErrorMsg = rootErrorMsg;
         return this;
     }
@@ -185,7 +156,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return this.rootErrorMsg;
     }
 
-    public RefreshAppInstanceTicketResponseBody setSynchro(Boolean synchro) {
+    public IntrospectAppInstanceTicketForPreviewResponseBody setSynchro(Boolean synchro) {
         this.synchro = synchro;
         return this;
     }
@@ -193,10 +164,8 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return this.synchro;
     }
 
-    public static class RefreshAppInstanceTicketResponseBodyModule extends TeaModel {
+    public static class IntrospectAppInstanceTicketForPreviewResponseBodyModule extends TeaModel {
         /**
-         * <p>Access token expiration time</p>
-         * 
          * <strong>example:</strong>
          * <p>2025-12-18T22:30:00+08:00</p>
          */
@@ -204,8 +173,6 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenExpiresAt;
 
         /**
-         * <p>Access token issuance time</p>
-         * 
          * <strong>example:</strong>
          * <p>2025-12-18T22:30:00+08:00</p>
          */
@@ -213,8 +180,6 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenIssuedAt;
 
         /**
-         * <p>Access token value</p>
-         * 
          * <strong>example:</strong>
          * <p>2108341e17661121129745384e79f9</p>
          */
@@ -222,17 +187,15 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenValue;
 
         /**
-         * <p>User ID</p>
+         * <p>aliyunPk</p>
          * 
          * <strong>example:</strong>
-         * <p>1907880872137014</p>
+         * <p>12343131221311</p>
          */
         @NameInMap("AliyunPk")
         public String aliyunPk;
 
         /**
-         * <p>Extended attributes</p>
-         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -240,8 +203,6 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String attributes;
 
         /**
-         * <p>Authorization grant type</p>
-         * 
          * <strong>example:</strong>
          * <p>authorization_code</p>
          */
@@ -249,65 +210,55 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String authorizationGrantType;
 
         /**
-         * <p>business id for user</p>
+         * <p>bid</p>
          * 
          * <strong>example:</strong>
-         * <p>26842</p>
+         * <p>123131</p>
          */
         @NameInMap("Bid")
         public String bid;
 
         /**
-         * <p>User ID</p>
-         * 
          * <strong>example:</strong>
-         * <p>1907880872137014</p>
+         * <p>12343131221311</p>
          */
         @NameInMap("ParentPk")
         public String parentPk;
 
         /**
-         * <p>刷新token过期时间</p>
-         * 
          * <strong>example:</strong>
-         * <p>2025-12-18T22:30:00+08:00</p>
+         * <p>1768619049924</p>
          */
         @NameInMap("RefreshTokenExpiresAt")
         public String refreshTokenExpiresAt;
 
         /**
-         * <p>刷新token颁发时间</p>
-         * 
          * <strong>example:</strong>
-         * <p>2025-12-18T22:30:00+08:00</p>
+         * <p>1768619049924</p>
          */
         @NameInMap("RefreshTokenIssuedAt")
         public String refreshTokenIssuedAt;
 
         /**
-         * <p>刷新token值</p>
-         * 
          * <strong>example:</strong>
-         * <p>2108341e17661121129745384e79f9</p>
+         * <p>be9750d595b6cd7c93a80b46</p>
          */
         @NameInMap("RefreshTokenValue")
         public String refreshTokenValue;
 
         /**
-         * <p>Unique identifier externally</p>
-         * 
          * <strong>example:</strong>
-         * <p>357504C7F21FCAE502756332ECE8B533</p>
+         * <p>hdm_33be9750d595b6cd7c93a80b46734b22</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
-        public static RefreshAppInstanceTicketResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
-            RefreshAppInstanceTicketResponseBodyModule self = new RefreshAppInstanceTicketResponseBodyModule();
+        public static IntrospectAppInstanceTicketForPreviewResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
+            IntrospectAppInstanceTicketForPreviewResponseBodyModule self = new IntrospectAppInstanceTicketForPreviewResponseBodyModule();
             return TeaModel.build(map, self);
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setAccessTokenExpiresAt(String accessTokenExpiresAt) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setAccessTokenExpiresAt(String accessTokenExpiresAt) {
             this.accessTokenExpiresAt = accessTokenExpiresAt;
             return this;
         }
@@ -315,7 +266,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.accessTokenExpiresAt;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setAccessTokenIssuedAt(String accessTokenIssuedAt) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setAccessTokenIssuedAt(String accessTokenIssuedAt) {
             this.accessTokenIssuedAt = accessTokenIssuedAt;
             return this;
         }
@@ -323,7 +274,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.accessTokenIssuedAt;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setAccessTokenValue(String accessTokenValue) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setAccessTokenValue(String accessTokenValue) {
             this.accessTokenValue = accessTokenValue;
             return this;
         }
@@ -331,7 +282,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.accessTokenValue;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setAliyunPk(String aliyunPk) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setAliyunPk(String aliyunPk) {
             this.aliyunPk = aliyunPk;
             return this;
         }
@@ -339,7 +290,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.aliyunPk;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setAttributes(String attributes) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setAttributes(String attributes) {
             this.attributes = attributes;
             return this;
         }
@@ -347,7 +298,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.attributes;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setAuthorizationGrantType(String authorizationGrantType) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setAuthorizationGrantType(String authorizationGrantType) {
             this.authorizationGrantType = authorizationGrantType;
             return this;
         }
@@ -355,7 +306,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.authorizationGrantType;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setBid(String bid) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setBid(String bid) {
             this.bid = bid;
             return this;
         }
@@ -363,7 +314,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.bid;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setParentPk(String parentPk) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setParentPk(String parentPk) {
             this.parentPk = parentPk;
             return this;
         }
@@ -371,7 +322,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.parentPk;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setRefreshTokenExpiresAt(String refreshTokenExpiresAt) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setRefreshTokenExpiresAt(String refreshTokenExpiresAt) {
             this.refreshTokenExpiresAt = refreshTokenExpiresAt;
             return this;
         }
@@ -379,7 +330,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.refreshTokenExpiresAt;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setRefreshTokenIssuedAt(String refreshTokenIssuedAt) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setRefreshTokenIssuedAt(String refreshTokenIssuedAt) {
             this.refreshTokenIssuedAt = refreshTokenIssuedAt;
             return this;
         }
@@ -387,7 +338,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.refreshTokenIssuedAt;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setRefreshTokenValue(String refreshTokenValue) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setRefreshTokenValue(String refreshTokenValue) {
             this.refreshTokenValue = refreshTokenValue;
             return this;
         }
@@ -395,7 +346,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             return this.refreshTokenValue;
         }
 
-        public RefreshAppInstanceTicketResponseBodyModule setUuid(String uuid) {
+        public IntrospectAppInstanceTicketForPreviewResponseBodyModule setUuid(String uuid) {
             this.uuid = uuid;
             return this;
         }

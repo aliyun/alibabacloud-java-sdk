@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppInstanceTicketResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Whether to allow retry</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,20 +41,31 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message, used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it means that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D</a></p>
+     * <p>SYSTEM_ERRROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public CreateAppInstanceTicketResponseBodyModule module;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -55,16 +74,26 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Exception message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +195,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
 
     public static class CreateAppInstanceTicketResponseBodyModule extends TeaModel {
         /**
+         * <p>Access token expiration time</p>
+         * 
          * <strong>example:</strong>
          * <p>1768619049924</p>
          */
@@ -173,6 +204,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenExpiresAt;
 
         /**
+         * <p>Access token issuance time</p>
+         * 
          * <strong>example:</strong>
          * <p>1768619049924</p>
          */
@@ -180,6 +213,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenIssuedAt;
 
         /**
+         * <p>Access token value</p>
+         * 
          * <strong>example:</strong>
          * <p>be9750d595b6cd7c93a80b46</p>
          */
@@ -187,6 +222,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenValue;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>12343131221311</p>
          */
@@ -194,6 +231,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String aliyunPk;
 
         /**
+         * <p>Extended attributes</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;resourceGroupId\&quot;:\&quot;\&quot;,\&quot;page\&quot;:1,\&quot;size\&quot;:10,\&quot;selected\&quot;:\&quot;[\\\&quot;kvstore\\\&quot;]\&quot;}</p>
          */
@@ -201,6 +240,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String attributes;
 
         /**
+         * <p>Authorization grant type</p>
+         * 
          * <strong>example:</strong>
          * <p>authorization_code</p>
          */
@@ -217,6 +258,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String bid;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>12343131221311</p>
          */
@@ -224,6 +267,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String parentPk;
 
         /**
+         * <p>Refresh token expiration time</p>
+         * 
          * <strong>example:</strong>
          * <p>1768619049924</p>
          */
@@ -231,6 +276,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String refreshTokenExpiresAt;
 
         /**
+         * <p>Refresh token issuance time</p>
+         * 
          * <strong>example:</strong>
          * <p>1768619049924</p>
          */
@@ -238,6 +285,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String refreshTokenIssuedAt;
 
         /**
+         * <p>Refresh token value</p>
+         * 
          * <strong>example:</strong>
          * <p>be9750d595b6cd7c93a80b46</p>
          */
@@ -245,6 +294,8 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String refreshTokenValue;
 
         /**
+         * <p>Unique identifier externally</p>
+         * 
          * <strong>example:</strong>
          * <p>hdm_33be9750d595b6cd7c93a80b46734b22</p>
          */

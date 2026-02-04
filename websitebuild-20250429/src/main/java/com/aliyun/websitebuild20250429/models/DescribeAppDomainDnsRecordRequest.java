@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAppDomainDnsRecordRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250821114240000001</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAppDomainDnsRecordRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Domain name</p>
+     * 
      * <strong>example:</strong>
      * <p>rayihealth.cn</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAppDomainDnsRecordRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Purpose for querying DNS configuration</p>
+     * 
      * <strong>example:</strong>
      * <p>restore</p>
      */

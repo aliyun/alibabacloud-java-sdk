@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetAppDomainCertificateRequest extends TeaModel {
     /**
+     * <p>Business ID of the application instance</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250821161210000001</p>
      */
@@ -12,6 +14,8 @@ public class SetAppDomainCertificateRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>SSL certificate name</p>
+     * 
      * <strong>example:</strong>
      * <p>2024</p>
      */
@@ -19,6 +23,8 @@ public class SetAppDomainCertificateRequest extends TeaModel {
     public String certificateName;
 
     /**
+     * <p>Certificate type: Default free certificate or customer\&quot;s own certificate</p>
+     * 
      * <strong>example:</strong>
      * <p>Server</p>
      */
@@ -26,6 +32,8 @@ public class SetAppDomainCertificateRequest extends TeaModel {
     public String certificateType;
 
     /**
+     * <p>Domain name</p>
+     * 
      * <strong>example:</strong>
      * <p>kaibaidu.com</p>
      */
@@ -33,6 +41,8 @@ public class SetAppDomainCertificateRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Private key</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -40,6 +50,8 @@ public class SetAppDomainCertificateRequest extends TeaModel {
     public String privateKey;
 
     /**
+     * <p>Public key</p>
+     * 
      * <strong>example:</strong>
      * <p>c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUxGQnQxUUpyT3IxK2hTTGRkbERMZUx4WGRIZ3hBalBxWHJIbWNFNWxqSk8gbm93Y29kZXJAbm93Y29kZXJkZU1hY0Jvb2stUHJvLmxvY2Fs</p>
      */

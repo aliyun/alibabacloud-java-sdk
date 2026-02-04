@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenewAppInstanceRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250718165839000001</p>
      */
@@ -12,6 +14,8 @@ public class RenewAppInstanceRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Ensures idempotence of requests. Generate a unique value from your client to ensure it is unique across different requests. ClientToken only supports ASCII characters and cannot exceed 64 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>fdfjafdfadfenjeora</p>
      */
@@ -19,16 +23,26 @@ public class RenewAppInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Required. The number of subscription periods.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>Extended information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;deliveryNodeName\&quot;:\&quot;交付质检\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
+     */
     @NameInMap("Extend")
     public String extend;
 
     /**
+     * <p>Payment type</p>
+     * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
      */
@@ -36,6 +50,8 @@ public class RenewAppInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>Required. The unit of the subscription period, Year: Year, Month: Month, Day: Day, Hour: Hour.</p>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */

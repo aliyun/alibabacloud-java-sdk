@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppInstanceDomainsRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250718165839000001</p>
      */
@@ -12,6 +14,9 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Number of results per query.</p>
+     * <p>Range: 10~100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -19,6 +24,8 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next query. It will be empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
      */
@@ -26,6 +33,8 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Sorting field</p>
+     * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
      */
@@ -33,6 +42,8 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public String orderColumn;
 
     /**
+     * <p>Sorting type ASC|DESC</p>
+     * 
      * <strong>example:</strong>
      * <p>BUY</p>
      */
@@ -40,6 +51,8 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>Page number, default is 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +60,8 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size, default is 10</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

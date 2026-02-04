@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定应用域名</p>
+     * <p>Bind Application Domain</p>
      * 
      * @param request BindAppDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,7 +72,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定应用域名</p>
+     * <p>Bind Application Domain</p>
      * 
      * @param request BindAppDomainRequest
      * @return BindAppDomainResponse
@@ -180,7 +180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>免登ticket</p>
+     * <p>SSO ticket</p>
      * 
      * @param request CreateAppInstanceTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -216,7 +216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>免登ticket</p>
+     * <p>SSO ticket</p>
      * 
      * @param request CreateAppInstanceTicketRequest
      * @return CreateAppInstanceTicketResponse
@@ -284,7 +284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除域名的SSL证书</p>
+     * <p>Delete the SSL certificate of a domain</p>
      * 
      * @param request DeleteAppDomainCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -320,7 +320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除域名的SSL证书</p>
+     * <p>Delete the SSL certificate of a domain</p>
      * 
      * @param request DeleteAppDomainCertificateRequest
      * @return DeleteAppDomainCertificateResponse
@@ -332,7 +332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除域名的跳转规则</p>
+     * <p>Delete the domain redirection rules</p>
      * 
      * @param request DeleteAppDomainRedirectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -368,7 +368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除域名的跳转规则</p>
+     * <p>Delete the domain redirection rules</p>
      * 
      * @param request DeleteAppDomainRedirectRequest
      * @return DeleteAppDomainRedirectResponse
@@ -380,7 +380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名的DNS解析记录</p>
+     * <p>Query the DNS resolution records of a domain</p>
      * 
      * @param request DescribeAppDomainDnsRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -420,7 +420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名的DNS解析记录</p>
+     * <p>Query the DNS resolution records of a domain</p>
      * 
      * @param request DescribeAppDomainDnsRecordRequest
      * @return DescribeAppDomainDnsRecordResponse
@@ -492,7 +492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询应用实例详情</p>
+     * <p>Query Application Instance Details</p>
      * 
      * @param request GetAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -524,7 +524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询应用实例详情</p>
+     * <p>Query Application Instance Details</p>
      * 
      * @param request GetAppInstanceRequest
      * @return GetAppInstanceResponse
@@ -788,7 +788,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名的跳转规则列表</p>
+     * <p>检查AccessToken</p>
+     * 
+     * @param request IntrospectAppInstanceTicketForPreviewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return IntrospectAppInstanceTicketForPreviewResponse
+     */
+    public IntrospectAppInstanceTicketForPreviewResponse introspectAppInstanceTicketForPreviewWithOptions(IntrospectAppInstanceTicketForPreviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "IntrospectAppInstanceTicketForPreview"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new IntrospectAppInstanceTicketForPreviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查AccessToken</p>
+     * 
+     * @param request IntrospectAppInstanceTicketForPreviewRequest
+     * @return IntrospectAppInstanceTicketForPreviewResponse
+     */
+    public IntrospectAppInstanceTicketForPreviewResponse introspectAppInstanceTicketForPreview(IntrospectAppInstanceTicketForPreviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.introspectAppInstanceTicketForPreviewWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the list of domain redirection rules</p>
      * 
      * @param request ListAppDomainRedirectRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -828,7 +876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名的跳转规则列表</p>
+     * <p>Query the list of domain redirection rules</p>
      * 
      * @param request ListAppDomainRedirectRecordsRequest
      * @return ListAppDomainRedirectRecordsResponse
@@ -840,7 +888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询应用实例下的所有域名列表</p>
+     * <p>List all domain names under the application instance</p>
      * 
      * @param request ListAppInstanceDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -896,7 +944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询应用实例下的所有域名列表</p>
+     * <p>List all domain names under the application instance</p>
      * 
      * @param request ListAppInstanceDomainsRequest
      * @return ListAppInstanceDomainsResponse
@@ -908,7 +956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>建站实例列表查询</p>
+     * <p>Website Instance List Query</p>
      * 
      * @param tmpReq ListAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -990,7 +1038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>建站实例列表查询</p>
+     * <p>Website Instance List Query</p>
      * 
      * @param request ListAppInstancesRequest
      * @return ListAppInstancesResponse
@@ -1002,7 +1050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>建站实例变配</p>
+     * <p>Modify the configuration of a building instance</p>
      * 
      * @param request ModifyAppInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1058,7 +1106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>建站实例变配</p>
+     * <p>Modify the configuration of a building instance</p>
      * 
      * @param request ModifyAppInstanceSpecRequest
      * @return ModifyAppInstanceSpecResponse
@@ -1174,7 +1222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>刷新ticket</p>
+     * <p>Refresh ticket</p>
      * 
      * @param request RefreshAppInstanceTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1214,7 +1262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>刷新ticket</p>
+     * <p>Refresh ticket</p>
      * 
      * @param request RefreshAppInstanceTicketRequest
      * @return RefreshAppInstanceTicketResponse
@@ -1282,7 +1330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>建站实例续费</p>
+     * <p>Renewal of website building instance</p>
      * 
      * @param request RenewAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1334,7 +1382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>建站实例续费</p>
+     * <p>Renewal of website building instance</p>
      * 
      * @param request RenewAppInstanceRequest
      * @return RenewAppInstanceResponse
@@ -1452,7 +1500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置域名的SSL证书</p>
+     * <p>Set the SSL certificate for a domain</p>
      * 
      * @param request SetAppDomainCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1504,7 +1552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置域名的SSL证书</p>
+     * <p>Set the SSL certificate for a domain</p>
      * 
      * @param request SetAppDomainCertificateRequest
      * @return SetAppDomainCertificateResponse
@@ -1582,7 +1630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑应用域名</p>
+     * <p>Unbind Application Domain</p>
      * 
      * @param request UnbindAppDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1618,7 +1666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑应用域名</p>
+     * <p>Unbind Application Domain</p>
      * 
      * @param request UnbindAppDomainRequest
      * @return UnbindAppDomainResponse

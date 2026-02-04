@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnbindAppDomainResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class UnbindAppDomainResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Whether retry is allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class UnbindAppDomainResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class UnbindAppDomainResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,20 +41,28 @@ public class UnbindAppDomainResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message, used to replace %s in the ErrMessage of the response parameters.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/wlr10v1g25549kq/wlr10v1g25549kq.diff.zip?Expires=1730174953&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=F93JAFEuVN63YzNQyUy2xOaOtKs%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/wlr10v1g25549kq/wlr10v1g25549kq.diff.zip?Expires=1730174953&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=F93JAFEuVN63YzNQyUy2xOaOtKs%3D</a></p>
+     * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public UnbindAppDomainResponseBodyModule module;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -55,16 +71,26 @@ public class UnbindAppDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Exception message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Whether it is processed synchronously</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +192,8 @@ public class UnbindAppDomainResponseBody extends TeaModel {
 
     public static class UnbindAppDomainResponseBodyModule extends TeaModel {
         /**
+         * <p>Whether it was successful</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */

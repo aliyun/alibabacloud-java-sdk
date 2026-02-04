@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppInstancesRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250731233102000001</p>
      */
@@ -12,6 +14,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>End time start</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-18T14:30:00Z</p>
      */
@@ -19,6 +23,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public String endTimeBegin;
 
     /**
+     * <p>End time end</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-31T14:30:00Z</p>
      */
@@ -26,6 +32,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public String endTimeEnd;
 
     /**
+     * <p>Extended information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -33,6 +41,9 @@ public class ListAppInstancesRequest extends TeaModel {
     public String extend;
 
     /**
+     * <p>Number of results per query.</p>
+     * <p>Range: 10~100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +51,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next query. It will be empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
      */
@@ -47,6 +60,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Order column</p>
+     * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
      */
@@ -54,6 +69,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public String orderColumn;
 
     /**
+     * <p>Order type ASC|DESC</p>
+     * 
      * <strong>example:</strong>
      * <p>DOWNGRADE</p>
      */
@@ -61,6 +78,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>Page number, default is 1</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -68,6 +87,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size, default is 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -75,12 +96,17 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Query parameter</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;RequestId\&quot;:\&quot;\&quot;}</p>
      */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>Status range</p>
+     */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 
