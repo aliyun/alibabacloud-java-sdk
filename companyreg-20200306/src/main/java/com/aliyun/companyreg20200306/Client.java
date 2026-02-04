@@ -862,6 +862,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>玄坛发起智能外呼</p>
+     * 
+     * @param request LlmSmartCallRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LlmSmartCallResponse
+     */
+    public LlmSmartCallResponse llmSmartCallWithOptions(LlmSmartCallRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callerNumber)) {
+            query.put("CallerNumber", request.callerNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptParam)) {
+            query.put("PromptParam", request.promptParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scenesCode)) {
+            query.put("ScenesCode", request.scenesCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillType)) {
+            query.put("SkillType", request.skillType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startWordParam)) {
+            query.put("StartWordParam", request.startWordParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantCode)) {
+            query.put("TenantCode", request.tenantCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LlmSmartCall"),
+            new TeaPair("version", "2020-03-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LlmSmartCallResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>玄坛发起智能外呼</p>
+     * 
+     * @param request LlmSmartCallRequest
+     * @return LlmSmartCallResponse
+     */
+    public LlmSmartCallResponse llmSmartCall(LlmSmartCallRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.llmSmartCallWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>服务商玄坛呼叫中心操作</p>
      * 
      * @param request OperateCallCenterForPartnerRequest
