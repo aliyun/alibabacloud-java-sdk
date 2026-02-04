@@ -1974,6 +1974,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FeeType", request.feeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.insightModule)) {
+            query.put("InsightModule", request.insightModule);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceClass)) {
             query.put("InstanceClass", request.instanceClass);
         }

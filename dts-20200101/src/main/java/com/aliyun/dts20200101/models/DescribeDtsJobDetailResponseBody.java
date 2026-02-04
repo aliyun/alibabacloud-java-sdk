@@ -356,6 +356,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("InitCheckpoint")
     public String initCheckpoint;
 
+    @NameInMap("InsightModule")
+    public Boolean insightModule;
+
     /**
      * <p>The type of the DTS task. Valid values:</p>
      * <ul>
@@ -879,6 +882,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public String getInitCheckpoint() {
         return this.initCheckpoint;
+    }
+
+    public DescribeDtsJobDetailResponseBody setInsightModule(Boolean insightModule) {
+        this.insightModule = insightModule;
+        return this;
+    }
+    public Boolean getInsightModule() {
+        return this.insightModule;
     }
 
     public DescribeDtsJobDetailResponseBody setJobType(String jobType) {

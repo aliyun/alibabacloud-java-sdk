@@ -136,6 +136,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     @NameInMap("FeeType")
     public String feeType;
 
+    @NameInMap("InsightModule")
+    public Boolean insightModule;
+
     /**
      * <p>The instance class.</p>
      * <ul>
@@ -425,6 +428,14 @@ public class CreateDtsInstanceRequest extends TeaModel {
     }
     public String getFeeType() {
         return this.feeType;
+    }
+
+    public CreateDtsInstanceRequest setInsightModule(Boolean insightModule) {
+        this.insightModule = insightModule;
+        return this;
+    }
+    public Boolean getInsightModule() {
+        return this.insightModule;
     }
 
     public CreateDtsInstanceRequest setInstanceClass(String instanceClass) {
