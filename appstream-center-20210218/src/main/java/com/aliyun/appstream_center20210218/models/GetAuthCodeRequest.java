@@ -7,12 +7,30 @@ public class GetAuthCodeRequest extends TeaModel {
     @NameInMap("AutoCreateUser")
     public Boolean autoCreateUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
     @NameInMap("ExternalUserId")
     public String externalUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;Version&quot;: &quot;1&quot;,
+     *       &quot;Resource&quot;: {
+     *             &quot;Type&quot;: &quot;AppInstanceGroup&quot;,
+     *             &quot;Id&quot;: &quot;aig-9ciijz60n4xsv****&quot;
+     *       }
+     * }</p>
+     */
     @NameInMap("Policy")
     public String policy;
 

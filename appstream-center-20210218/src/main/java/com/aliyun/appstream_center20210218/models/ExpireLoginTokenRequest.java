@@ -4,15 +4,37 @@ package com.aliyun.appstream_center20210218.models;
 import com.aliyun.tea.*;
 
 public class ExpireLoginTokenRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testuser</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v185fdd7f6d39fa7861981639366085772e150a390a5bb7b43c4e62440d94fc392b945770e1596cebe90085ce0af4d****</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing+dir-172301****</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a863f4c3-2f1d-4971-8cf7-e2b92ae9****</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 

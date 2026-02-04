@@ -7,6 +7,10 @@ public class GetAuthCodeResponseBody extends TeaModel {
     @NameInMap("AuthModel")
     public GetAuthCodeResponseBodyAuthModel authModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class GetAuthCodeResponseBody extends TeaModel {
     }
 
     public static class GetAuthCodeResponseBodyAuthModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acv2ZEq2TNSqOlX+DvyetHGRT08iPhbWg/os1W4HojpBxkMQZkAnbKSfz/wNvS0E149IQZ5TogvBUE8ghCSVV+QBnv48Y+sn4z9fY5ywZA1peI5s4TplQI0TADBhPZXEIzMOdmbNsDGGlGcKOAq8ixd1Epzdu9XfvRzdLOO6o3zQwTZxXsjOgGBW8JTcgCP9W9iYiIjHIdZ2VCAnmMzuyVkyED8gymEevH10QoclyH/O3s8Yq6VF34gMXihDQeiI8PyiAZrW0JWXSWpdy3n4yGtAqMAgv46FzTA+XJ6C********</p>
+         */
         @NameInMap("AuthCode")
         public String authCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 

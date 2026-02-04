@@ -3,7 +3,7 @@ package com.aliyun.appstream_center20210218.models;
 
 import com.aliyun.tea.*;
 
-public class ExpireLoginTokenResponse extends TeaModel {
+public class GetStsTokenResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ExpireLoginTokenResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ExpireLoginTokenResponseBody body;
+    public GetStsTokenResponseBody body;
 
-    public static ExpireLoginTokenResponse build(java.util.Map<String, ?> map) throws Exception {
-        ExpireLoginTokenResponse self = new ExpireLoginTokenResponse();
+    public static GetStsTokenResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetStsTokenResponse self = new GetStsTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public ExpireLoginTokenResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetStsTokenResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ExpireLoginTokenResponse extends TeaModel {
         return this.headers;
     }
 
-    public ExpireLoginTokenResponse setStatusCode(Integer statusCode) {
+    public GetStsTokenResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ExpireLoginTokenResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ExpireLoginTokenResponse setBody(ExpireLoginTokenResponseBody body) {
+    public GetStsTokenResponse setBody(GetStsTokenResponseBody body) {
         this.body = body;
         return this;
     }
-    public ExpireLoginTokenResponseBody getBody() {
+    public GetStsTokenResponseBody getBody() {
         return this.body;
     }
 
