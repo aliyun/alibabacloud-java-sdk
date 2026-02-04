@@ -69,6 +69,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    @NameInMap("BackupInstance")
+    public String backupInstance;
+
     /**
      * <p>The Capacity storage size of the instance.</p>
      * 
@@ -695,6 +698,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public GetLindormInstanceResponseBody setBackupInstance(String backupInstance) {
+        this.backupInstance = backupInstance;
+        return this;
+    }
+    public String getBackupInstance() {
+        return this.backupInstance;
     }
 
     public GetLindormInstanceResponseBody setColdStorage(Integer coldStorage) {
