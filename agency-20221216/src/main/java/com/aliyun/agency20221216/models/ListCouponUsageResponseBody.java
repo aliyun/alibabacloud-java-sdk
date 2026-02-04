@@ -125,6 +125,9 @@ public class ListCouponUsageResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("T2PartnerUid")
+        public String t2PartnerUid;
+
         /**
          * <strong>example:</strong>
          * <p>1647668856741998</p>
@@ -199,6 +202,14 @@ public class ListCouponUsageResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListCouponUsageResponseBodyData setT2PartnerUid(String t2PartnerUid) {
+            this.t2PartnerUid = t2PartnerUid;
+            return this;
+        }
+        public String getT2PartnerUid() {
+            return this.t2PartnerUid;
         }
 
         public ListCouponUsageResponseBodyData setUid(Long uid) {
