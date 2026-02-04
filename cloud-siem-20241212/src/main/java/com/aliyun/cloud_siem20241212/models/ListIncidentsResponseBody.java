@@ -118,6 +118,9 @@ public class ListIncidentsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("DetectionRuleId")
+        public String detectionRuleId;
+
         /**
          * <strong>example:</strong>
          * <p>ECS unusual log in</p>
@@ -152,6 +155,13 @@ public class ListIncidentsResponseBody extends TeaModel {
          */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1234567890xxxxxx</p>
+         */
+        @NameInMap("Owner")
+        public String owner;
 
         /**
          * <strong>example:</strong>
@@ -194,6 +204,14 @@ public class ListIncidentsResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListIncidentsResponseBodyIncidents setDetectionRuleId(String detectionRuleId) {
+            this.detectionRuleId = detectionRuleId;
+            return this;
+        }
+        public String getDetectionRuleId() {
+            return this.detectionRuleId;
+        }
+
         public ListIncidentsResponseBodyIncidents setIncidentName(String incidentName) {
             this.incidentName = incidentName;
             return this;
@@ -232,6 +250,14 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
         public String getIncidentUuid() {
             return this.incidentUuid;
+        }
+
+        public ListIncidentsResponseBodyIncidents setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
         }
 
         public ListIncidentsResponseBodyIncidents setRelateAlertCount(Integer relateAlertCount) {

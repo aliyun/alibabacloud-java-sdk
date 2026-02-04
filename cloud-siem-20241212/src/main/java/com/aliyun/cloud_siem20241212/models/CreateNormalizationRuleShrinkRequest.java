@@ -9,6 +9,13 @@ public class CreateNormalizationRuleShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>flat</p>
+     */
+    @NameInMap("ExtendFieldStoreMode")
+    public String extendFieldStoreMode;
+
+    /**
+     * <strong>example:</strong>
      * <p>zh。</p>
      */
     @NameInMap("Lang")
@@ -116,6 +123,14 @@ public class CreateNormalizationRuleShrinkRequest extends TeaModel {
     }
     public String getExtendContentPacked() {
         return this.extendContentPacked;
+    }
+
+    public CreateNormalizationRuleShrinkRequest setExtendFieldStoreMode(String extendFieldStoreMode) {
+        this.extendFieldStoreMode = extendFieldStoreMode;
+        return this;
+    }
+    public String getExtendFieldStoreMode() {
+        return this.extendFieldStoreMode;
     }
 
     public CreateNormalizationRuleShrinkRequest setLang(String lang) {

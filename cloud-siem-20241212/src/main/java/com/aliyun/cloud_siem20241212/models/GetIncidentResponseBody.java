@@ -116,6 +116,13 @@ public class GetIncidentResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1234567890xxxxxx</p>
+         */
+        @NameInMap("Owner")
+        public String owner;
+
+        /**
+         * <strong>example:</strong>
          * <p>23</p>
          */
         @NameInMap("RelateAlertCount")
@@ -246,6 +253,14 @@ public class GetIncidentResponseBody extends TeaModel {
         }
         public String getIncidentUuid() {
             return this.incidentUuid;
+        }
+
+        public GetIncidentResponseBodyIncident setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
         }
 
         public GetIncidentResponseBodyIncident setRelateAlertCount(Integer relateAlertCount) {

@@ -80,7 +80,160 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1736386610000</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>告警等级</p>
+         */
+        @NameInMap("NormalizationFieldDescription")
+        public String normalizationFieldDescription;
+
+        /**
+         * <strong>example:</strong>
+         * <p>枚举值：1、2、3、4、5</p>
+         */
+        @NameInMap("NormalizationFieldExample")
+        public String normalizationFieldExample;
+
+        /**
+         * <strong>example:</strong>
+         * <p>preset</p>
+         */
+        @NameInMap("NormalizationFieldFrom")
+        public String normalizationFieldFrom;
+
+        /**
+         * <strong>example:</strong>
+         * <p>alert_name</p>
+         */
+        @NameInMap("NormalizationFieldName")
+        public String normalizationFieldName;
+
+        @NameInMap("NormalizationFieldRequired")
+        public Boolean normalizationFieldRequired;
+
+        @NameInMap("NormalizationFieldReserved")
+        public Boolean normalizationFieldReserved;
+
+        @NameInMap("NormalizationFieldTokenize")
+        public Boolean normalizationFieldTokenize;
+
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
+        @NameInMap("NormalizationFieldType")
+        public String normalizationFieldType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1736386610000</p>
+         */
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        public static ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys build(java.util.Map<String, ?> map) throws Exception {
+            ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys self = new ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys setNormalizationFieldDescription(String normalizationFieldDescription) {
+            this.normalizationFieldDescription = normalizationFieldDescription;
+            return this;
+        }
+        public String getNormalizationFieldDescription() {
+            return this.normalizationFieldDescription;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys setNormalizationFieldExample(String normalizationFieldExample) {
+            this.normalizationFieldExample = normalizationFieldExample;
+            return this;
+        }
+        public String getNormalizationFieldExample() {
+            return this.normalizationFieldExample;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys setNormalizationFieldFrom(String normalizationFieldFrom) {
+            this.normalizationFieldFrom = normalizationFieldFrom;
+            return this;
+        }
+        public String getNormalizationFieldFrom() {
+            return this.normalizationFieldFrom;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys setNormalizationFieldName(String normalizationFieldName) {
+            this.normalizationFieldName = normalizationFieldName;
+            return this;
+        }
+        public String getNormalizationFieldName() {
+            return this.normalizationFieldName;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys setNormalizationFieldRequired(Boolean normalizationFieldRequired) {
+            this.normalizationFieldRequired = normalizationFieldRequired;
+            return this;
+        }
+        public Boolean getNormalizationFieldRequired() {
+            return this.normalizationFieldRequired;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys setNormalizationFieldReserved(Boolean normalizationFieldReserved) {
+            this.normalizationFieldReserved = normalizationFieldReserved;
+            return this;
+        }
+        public Boolean getNormalizationFieldReserved() {
+            return this.normalizationFieldReserved;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys setNormalizationFieldTokenize(Boolean normalizationFieldTokenize) {
+            this.normalizationFieldTokenize = normalizationFieldTokenize;
+            return this;
+        }
+        public Boolean getNormalizationFieldTokenize() {
+            return this.normalizationFieldTokenize;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys setNormalizationFieldType(String normalizationFieldType) {
+            this.normalizationFieldType = normalizationFieldType;
+            return this;
+        }
+        public String getNormalizationFieldType() {
+            return this.normalizationFieldType;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+    }
+
     public static class ListNormalizationFieldsResponseBodyNormalizationFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1736386610000</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
         /**
          * <strong>example:</strong>
          * <p>NETWORK_CATEGORY。</p>
@@ -104,10 +257,26 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>preset</p>
+         */
+        @NameInMap("NormalizationFieldFrom")
+        public String normalizationFieldFrom;
+
+        @NameInMap("NormalizationFieldJsonIndexAll")
+        public Boolean normalizationFieldJsonIndexAll;
+
+        @NameInMap("NormalizationFieldJsonKeys")
+        public java.util.List<ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys> normalizationFieldJsonKeys;
+
+        /**
+         * <strong>example:</strong>
          * <p>cloud_user。</p>
          */
         @NameInMap("NormalizationFieldName")
         public String normalizationFieldName;
+
+        @NameInMap("NormalizationFieldRequired")
+        public Boolean normalizationFieldRequired;
 
         /**
          * <strong>example:</strong>
@@ -123,6 +292,9 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         @NameInMap("NormalizationFieldReserved")
         public Boolean normalizationFieldReserved;
 
+        @NameInMap("NormalizationFieldTokenize")
+        public Boolean normalizationFieldTokenize;
+
         /**
          * <strong>example:</strong>
          * <p>varchar。</p>
@@ -137,9 +309,24 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         @NameInMap("NormalizationSchemaId")
         public String normalizationSchemaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1736386610000</p>
+         */
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
         public static ListNormalizationFieldsResponseBodyNormalizationFields build(java.util.Map<String, ?> map) throws Exception {
             ListNormalizationFieldsResponseBodyNormalizationFields self = new ListNormalizationFieldsResponseBodyNormalizationFields();
             return TeaModel.build(map, self);
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFields setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public ListNormalizationFieldsResponseBodyNormalizationFields setNormalizationCategoryId(String normalizationCategoryId) {
@@ -166,12 +353,44 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             return this.normalizationFieldExample;
         }
 
+        public ListNormalizationFieldsResponseBodyNormalizationFields setNormalizationFieldFrom(String normalizationFieldFrom) {
+            this.normalizationFieldFrom = normalizationFieldFrom;
+            return this;
+        }
+        public String getNormalizationFieldFrom() {
+            return this.normalizationFieldFrom;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFields setNormalizationFieldJsonIndexAll(Boolean normalizationFieldJsonIndexAll) {
+            this.normalizationFieldJsonIndexAll = normalizationFieldJsonIndexAll;
+            return this;
+        }
+        public Boolean getNormalizationFieldJsonIndexAll() {
+            return this.normalizationFieldJsonIndexAll;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFields setNormalizationFieldJsonKeys(java.util.List<ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys> normalizationFieldJsonKeys) {
+            this.normalizationFieldJsonKeys = normalizationFieldJsonKeys;
+            return this;
+        }
+        public java.util.List<ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys> getNormalizationFieldJsonKeys() {
+            return this.normalizationFieldJsonKeys;
+        }
+
         public ListNormalizationFieldsResponseBodyNormalizationFields setNormalizationFieldName(String normalizationFieldName) {
             this.normalizationFieldName = normalizationFieldName;
             return this;
         }
         public String getNormalizationFieldName() {
             return this.normalizationFieldName;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFields setNormalizationFieldRequired(Boolean normalizationFieldRequired) {
+            this.normalizationFieldRequired = normalizationFieldRequired;
+            return this;
+        }
+        public Boolean getNormalizationFieldRequired() {
+            return this.normalizationFieldRequired;
         }
 
         public ListNormalizationFieldsResponseBodyNormalizationFields setNormalizationFieldRequirement(Boolean normalizationFieldRequirement) {
@@ -190,6 +409,14 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             return this.normalizationFieldReserved;
         }
 
+        public ListNormalizationFieldsResponseBodyNormalizationFields setNormalizationFieldTokenize(Boolean normalizationFieldTokenize) {
+            this.normalizationFieldTokenize = normalizationFieldTokenize;
+            return this;
+        }
+        public Boolean getNormalizationFieldTokenize() {
+            return this.normalizationFieldTokenize;
+        }
+
         public ListNormalizationFieldsResponseBodyNormalizationFields setNormalizationFieldType(String normalizationFieldType) {
             this.normalizationFieldType = normalizationFieldType;
             return this;
@@ -204,6 +431,14 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         }
         public String getNormalizationSchemaId() {
             return this.normalizationSchemaId;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFields setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

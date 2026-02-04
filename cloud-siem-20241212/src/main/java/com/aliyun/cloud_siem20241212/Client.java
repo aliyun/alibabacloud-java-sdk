@@ -357,10 +357,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RoleFor", request.roleFor);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.updateTime)) {
-            body.put("UpdateTime", request.updateTime);
-        }
-
         body = TeaConverter.merge(Object.class,
             body,
             com.aliyun.openapiutil.Client.query(bodyFlat)
@@ -409,8 +405,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AlertAttCk", request.alertAttCk);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.alertDescription)) {
+            body.put("AlertDescription", request.alertDescription);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.alertLevel)) {
             body.put("AlertLevel", request.alertLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertName)) {
+            body.put("AlertName", request.alertName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.alertSchemaId)) {
@@ -711,6 +715,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ExtendContentPacked", request.extendContentPacked);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extendFieldStoreMode)) {
+            body.put("ExtendFieldStoreMode", request.extendFieldStoreMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             body.put("Lang", request.lang);
         }
@@ -802,6 +810,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateNormalizationRuleResponse createNormalizationRule(CreateNormalizationRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNormalizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建标准化结构</p>
+     * 
+     * @param request CreateNormalizationSchemaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNormalizationSchemaResponse
+     */
+    public CreateNormalizationSchemaResponse createNormalizationSchemaWithOptions(CreateNormalizationSchemaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationCategoryId)) {
+            body.put("NormalizationCategoryId", request.normalizationCategoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationFields)) {
+            body.put("NormalizationFields", request.normalizationFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaDescription)) {
+            body.put("NormalizationSchemaDescription", request.normalizationSchemaDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaId)) {
+            body.put("NormalizationSchemaId", request.normalizationSchemaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaName)) {
+            body.put("NormalizationSchemaName", request.normalizationSchemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaType)) {
+            body.put("NormalizationSchemaType", request.normalizationSchemaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLogStore)) {
+            body.put("TargetLogStore", request.targetLogStore);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNormalizationSchema"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNormalizationSchemaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建标准化结构</p>
+     * 
+     * @param request CreateNormalizationSchemaRequest
+     * @return CreateNormalizationSchemaResponse
+     */
+    public CreateNormalizationSchemaResponse createNormalizationSchema(CreateNormalizationSchemaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createNormalizationSchemaWithOptions(request, runtime);
     }
 
     /**
@@ -3036,6 +3124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("OrderFieldName", request.orderFieldName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.owners)) {
+            body.put("Owners", request.owners);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             body.put("PageNumber", request.pageNumber);
         }
@@ -4038,6 +4130,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>刷新数据源</p>
+     * 
+     * @param request RefreshDataSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RefreshDataSourceResponse
+     */
+    public RefreshDataSourceResponse refreshDataSourceWithOptions(RefreshDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            body.put("DataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RefreshDataSource"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshDataSourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>刷新数据源</p>
+     * 
+     * @param request RefreshDataSourceRequest
+     * @return RefreshDataSourceResponse
+     */
+    public RefreshDataSourceResponse refreshDataSource(RefreshDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.refreshDataSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>数据存储的清空操作，该动作会删除已有的数据，重新初始化物理存储。</p>
      * 
      * @param request ResetDataStorageRequest
@@ -4903,8 +5051,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AlertAttCk", request.alertAttCk);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.alertDescription)) {
+            body.put("AlertDescription", request.alertDescription);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.alertLevel)) {
             body.put("AlertLevel", request.alertLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertName)) {
+            body.put("AlertName", request.alertName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.alertSchemaId)) {
@@ -5069,8 +5225,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ExtendContentPacked", request.extendContentPacked);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extendFieldStoreMode)) {
+            body.put("ExtendFieldStoreMode", request.extendFieldStoreMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationCategoryId)) {
+            body.put("NormalizationCategoryId", request.normalizationCategoryId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.normalizationRuleDescription)) {
@@ -5156,6 +5320,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateNormalizationRuleResponse updateNormalizationRule(UpdateNormalizationRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateNormalizationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新标准化结构</p>
+     * 
+     * @param request UpdateNormalizationSchemaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNormalizationSchemaResponse
+     */
+    public UpdateNormalizationSchemaResponse updateNormalizationSchemaWithOptions(UpdateNormalizationSchemaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationFields)) {
+            body.put("NormalizationFields", request.normalizationFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaDescription)) {
+            body.put("NormalizationSchemaDescription", request.normalizationSchemaDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaId)) {
+            body.put("NormalizationSchemaId", request.normalizationSchemaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaName)) {
+            body.put("NormalizationSchemaName", request.normalizationSchemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaType)) {
+            body.put("NormalizationSchemaType", request.normalizationSchemaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNormalizationSchema"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNormalizationSchemaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新标准化结构</p>
+     * 
+     * @param request UpdateNormalizationSchemaRequest
+     * @return UpdateNormalizationSchemaResponse
+     */
+    public UpdateNormalizationSchemaResponse updateNormalizationSchema(UpdateNormalizationSchemaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateNormalizationSchemaWithOptions(request, runtime);
     }
 
     /**
@@ -5365,16 +5601,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Data", request.data);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extendFieldStoreMode)) {
+            body.put("ExtendFieldStoreMode", request.extendFieldStoreMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logSample)) {
+            body.put("LogSample", request.logSample);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.normalizationCategoryId)) {
             body.put("NormalizationCategoryId", request.normalizationCategoryId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationRuleExpression)) {
+            body.put("NormalizationRuleExpression", request.normalizationRuleExpression);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationRuleMode)) {
+            body.put("NormalizationRuleMode", request.normalizationRuleMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaId)) {
             body.put("NormalizationSchemaId", request.normalizationSchemaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
+            body.put("ProductId", request.productId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -5383,6 +5639,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
             body.put("RoleFor", request.roleFor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vendorId)) {
+            body.put("VendorId", request.vendorId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

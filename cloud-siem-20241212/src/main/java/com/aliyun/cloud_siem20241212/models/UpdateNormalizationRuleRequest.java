@@ -9,10 +9,24 @@ public class UpdateNormalizationRuleRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>flat</p>
+     */
+    @NameInMap("ExtendFieldStoreMode")
+    public String extendFieldStoreMode;
+
+    /**
+     * <strong>example:</strong>
      * <p>zh。</p>
      */
     @NameInMap("Lang")
     public String lang;
+
+    /**
+     * <strong>example:</strong>
+     * <p>NETWORK_CATEGORY。</p>
+     */
+    @NameInMap("NormalizationCategoryId")
+    public String normalizationCategoryId;
 
     /**
      * <strong>example:</strong>
@@ -115,12 +129,28 @@ public class UpdateNormalizationRuleRequest extends TeaModel {
         return this.extendContentPacked;
     }
 
+    public UpdateNormalizationRuleRequest setExtendFieldStoreMode(String extendFieldStoreMode) {
+        this.extendFieldStoreMode = extendFieldStoreMode;
+        return this;
+    }
+    public String getExtendFieldStoreMode() {
+        return this.extendFieldStoreMode;
+    }
+
     public UpdateNormalizationRuleRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public UpdateNormalizationRuleRequest setNormalizationCategoryId(String normalizationCategoryId) {
+        this.normalizationCategoryId = normalizationCategoryId;
+        return this;
+    }
+    public String getNormalizationCategoryId() {
+        return this.normalizationCategoryId;
     }
 
     public UpdateNormalizationRuleRequest setNormalizationRuleDescription(String normalizationRuleDescription) {

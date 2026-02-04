@@ -48,6 +48,13 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>flat</p>
+         */
+        @NameInMap("ExtendFieldStoreMode")
+        public String extendFieldStoreMode;
+
+        /**
+         * <strong>example:</strong>
          * <p>NETWORK_CATEGORY。</p>
          */
         @NameInMap("NormalizationCategoryId")
@@ -171,6 +178,14 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         }
         public String getExtendContentPacked() {
             return this.extendContentPacked;
+        }
+
+        public GetNormalizationRuleResponseBodyNormalizationRule setExtendFieldStoreMode(String extendFieldStoreMode) {
+            this.extendFieldStoreMode = extendFieldStoreMode;
+            return this;
+        }
+        public String getExtendFieldStoreMode() {
+            return this.extendFieldStoreMode;
         }
 
         public GetNormalizationRuleResponseBodyNormalizationRule setNormalizationCategoryId(String normalizationCategoryId) {

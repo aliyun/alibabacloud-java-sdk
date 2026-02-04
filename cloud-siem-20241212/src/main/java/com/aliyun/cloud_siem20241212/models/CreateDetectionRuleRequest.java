@@ -11,6 +11,9 @@ public class CreateDetectionRuleRequest extends TeaModel {
     @NameInMap("AlertAttCk")
     public String alertAttCk;
 
+    @NameInMap("AlertDescription")
+    public String alertDescription;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -19,6 +22,9 @@ public class CreateDetectionRuleRequest extends TeaModel {
      */
     @NameInMap("AlertLevel")
     public String alertLevel;
+
+    @NameInMap("AlertName")
+    public String alertName;
 
     /**
      * <p>This parameter is required.</p>
@@ -270,12 +276,28 @@ public class CreateDetectionRuleRequest extends TeaModel {
         return this.alertAttCk;
     }
 
+    public CreateDetectionRuleRequest setAlertDescription(String alertDescription) {
+        this.alertDescription = alertDescription;
+        return this;
+    }
+    public String getAlertDescription() {
+        return this.alertDescription;
+    }
+
     public CreateDetectionRuleRequest setAlertLevel(String alertLevel) {
         this.alertLevel = alertLevel;
         return this;
     }
     public String getAlertLevel() {
         return this.alertLevel;
+    }
+
+    public CreateDetectionRuleRequest setAlertName(String alertName) {
+        this.alertName = alertName;
+        return this;
+    }
+    public String getAlertName() {
+        return this.alertName;
     }
 
     public CreateDetectionRuleRequest setAlertSchemaId(String alertSchemaId) {

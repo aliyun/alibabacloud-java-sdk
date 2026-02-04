@@ -272,12 +272,18 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         @NameInMap("AlertAttCk")
         public String alertAttCk;
 
+        @NameInMap("AlertDescription")
+        public String alertDescription;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("AlertLevel")
         public String alertLevel;
+
+        @NameInMap("AlertName")
+        public String alertName;
 
         /**
          * <strong>example:</strong>
@@ -504,12 +510,28 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             return this.alertAttCk;
         }
 
+        public ListDetectionRulesResponseBodyDetectionRules setAlertDescription(String alertDescription) {
+            this.alertDescription = alertDescription;
+            return this;
+        }
+        public String getAlertDescription() {
+            return this.alertDescription;
+        }
+
         public ListDetectionRulesResponseBodyDetectionRules setAlertLevel(String alertLevel) {
             this.alertLevel = alertLevel;
             return this;
         }
         public String getAlertLevel() {
             return this.alertLevel;
+        }
+
+        public ListDetectionRulesResponseBodyDetectionRules setAlertName(String alertName) {
+            this.alertName = alertName;
+            return this;
+        }
+        public String getAlertName() {
+            return this.alertName;
         }
 
         public ListDetectionRulesResponseBodyDetectionRules setAlertSchemaId(String alertSchemaId) {

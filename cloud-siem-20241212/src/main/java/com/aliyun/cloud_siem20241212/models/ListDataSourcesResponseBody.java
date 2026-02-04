@@ -182,6 +182,13 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>LogStoreNotExist</p>
+         */
+        @NameInMap("DataSourceStoreStatusCode")
+        public String dataSourceStoreStatusCode;
+
+        /**
+         * <strong>example:</strong>
          * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou。</p>
          */
         @NameInMap("LogProjectName")
@@ -251,6 +258,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
         public String getDataSourceStoreStatus() {
             return this.dataSourceStoreStatus;
+        }
+
+        public ListDataSourcesResponseBodyDataSourcesDataSourceStores setDataSourceStoreStatusCode(String dataSourceStoreStatusCode) {
+            this.dataSourceStoreStatusCode = dataSourceStoreStatusCode;
+            return this;
+        }
+        public String getDataSourceStoreStatusCode() {
+            return this.dataSourceStoreStatusCode;
         }
 
         public ListDataSourcesResponseBodyDataSourcesDataSourceStores setLogProjectName(String logProjectName) {

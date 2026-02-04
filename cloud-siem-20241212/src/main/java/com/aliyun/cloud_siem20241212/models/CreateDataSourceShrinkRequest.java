@@ -95,9 +95,6 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
     @NameInMap("RoleFor")
     public Long roleFor;
 
-    @NameInMap("UpdateTime")
-    public Long updateTime;
-
     public static CreateDataSourceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataSourceShrinkRequest self = new CreateDataSourceShrinkRequest();
         return TeaModel.build(map, self);
@@ -239,18 +236,7 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
         return this.roleFor;
     }
 
-    public CreateDataSourceShrinkRequest setUpdateTime(Long updateTime) {
-        this.updateTime = updateTime;
-        return this;
-    }
-    public Long getUpdateTime() {
-        return this.updateTime;
-    }
-
     public static class CreateDataSourceShrinkRequestDataSourceStores extends TeaModel {
-        @NameInMap("CreateTime")
-        public Long createTime;
-
         @NameInMap("DataSourceStoreFrom")
         public String dataSourceStoreFrom;
 
@@ -281,20 +267,9 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
         @NameInMap("LogStoreName")
         public String logStoreName;
 
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
         public static CreateDataSourceShrinkRequestDataSourceStores build(java.util.Map<String, ?> map) throws Exception {
             CreateDataSourceShrinkRequestDataSourceStores self = new CreateDataSourceShrinkRequestDataSourceStores();
             return TeaModel.build(map, self);
-        }
-
-        public CreateDataSourceShrinkRequestDataSourceStores setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
         }
 
         public CreateDataSourceShrinkRequestDataSourceStores setDataSourceStoreFrom(String dataSourceStoreFrom) {
@@ -343,14 +318,6 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
         }
         public String getLogStoreName() {
             return this.logStoreName;
-        }
-
-        public CreateDataSourceShrinkRequestDataSourceStores setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
         }
 
     }

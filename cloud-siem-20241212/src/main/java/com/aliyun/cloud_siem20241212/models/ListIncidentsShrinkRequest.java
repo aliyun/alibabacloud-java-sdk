@@ -77,6 +77,9 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     @NameInMap("OrderFieldName")
     public String orderFieldName;
 
+    @NameInMap("Owners")
+    public java.util.List<String> owners;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -227,6 +230,14 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     }
     public String getOrderFieldName() {
         return this.orderFieldName;
+    }
+
+    public ListIncidentsShrinkRequest setOwners(java.util.List<String> owners) {
+        this.owners = owners;
+        return this;
+    }
+    public java.util.List<String> getOwners() {
+        return this.owners;
     }
 
     public ListIncidentsShrinkRequest setPageNumber(Integer pageNumber) {

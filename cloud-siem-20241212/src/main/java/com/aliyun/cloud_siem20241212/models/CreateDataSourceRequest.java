@@ -95,9 +95,6 @@ public class CreateDataSourceRequest extends TeaModel {
     @NameInMap("RoleFor")
     public Long roleFor;
 
-    @NameInMap("UpdateTime")
-    public Long updateTime;
-
     public static CreateDataSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataSourceRequest self = new CreateDataSourceRequest();
         return TeaModel.build(map, self);
@@ -239,18 +236,7 @@ public class CreateDataSourceRequest extends TeaModel {
         return this.roleFor;
     }
 
-    public CreateDataSourceRequest setUpdateTime(Long updateTime) {
-        this.updateTime = updateTime;
-        return this;
-    }
-    public Long getUpdateTime() {
-        return this.updateTime;
-    }
-
     public static class CreateDataSourceRequestDataSourceStores extends TeaModel {
-        @NameInMap("CreateTime")
-        public Long createTime;
-
         @NameInMap("DataSourceStoreFrom")
         public String dataSourceStoreFrom;
 
@@ -281,20 +267,9 @@ public class CreateDataSourceRequest extends TeaModel {
         @NameInMap("LogStoreName")
         public String logStoreName;
 
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
         public static CreateDataSourceRequestDataSourceStores build(java.util.Map<String, ?> map) throws Exception {
             CreateDataSourceRequestDataSourceStores self = new CreateDataSourceRequestDataSourceStores();
             return TeaModel.build(map, self);
-        }
-
-        public CreateDataSourceRequestDataSourceStores setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
         }
 
         public CreateDataSourceRequestDataSourceStores setDataSourceStoreFrom(String dataSourceStoreFrom) {
@@ -343,14 +318,6 @@ public class CreateDataSourceRequest extends TeaModel {
         }
         public String getLogStoreName() {
             return this.logStoreName;
-        }
-
-        public CreateDataSourceRequestDataSourceStores setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
         }
 
     }

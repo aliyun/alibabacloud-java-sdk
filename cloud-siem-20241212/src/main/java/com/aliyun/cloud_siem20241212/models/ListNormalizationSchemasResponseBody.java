@@ -83,10 +83,31 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
     public static class ListNormalizationSchemasResponseBodyNormalizationSchemas extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>1736386610000</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
+         * <strong>example:</strong>
          * <p>NETWORK_CATEGORY。</p>
          */
         @NameInMap("NormalizationCategoryId")
         public String normalizationCategoryId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>网络五元组日志</p>
+         */
+        @NameInMap("NormalizationSchemaDescription")
+        public String normalizationSchemaDescription;
+
+        /**
+         * <strong>example:</strong>
+         * <p>preset</p>
+         */
+        @NameInMap("NormalizationSchemaFrom")
+        public String normalizationSchemaFrom;
 
         /**
          * <strong>example:</strong>
@@ -109,9 +130,38 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         @NameInMap("NormalizationSchemaTargetLogStore")
         public String normalizationSchemaTargetLogStore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>network-activity</p>
+         */
+        @NameInMap("TargetLogStore")
+        public String targetLogStore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>network-activity</p>
+         */
+        @NameInMap("TargetStoreView")
+        public String targetStoreView;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1736386610000</p>
+         */
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
         public static ListNormalizationSchemasResponseBodyNormalizationSchemas build(java.util.Map<String, ?> map) throws Exception {
             ListNormalizationSchemasResponseBodyNormalizationSchemas self = new ListNormalizationSchemasResponseBodyNormalizationSchemas();
             return TeaModel.build(map, self);
+        }
+
+        public ListNormalizationSchemasResponseBodyNormalizationSchemas setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public ListNormalizationSchemasResponseBodyNormalizationSchemas setNormalizationCategoryId(String normalizationCategoryId) {
@@ -120,6 +170,22 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         }
         public String getNormalizationCategoryId() {
             return this.normalizationCategoryId;
+        }
+
+        public ListNormalizationSchemasResponseBodyNormalizationSchemas setNormalizationSchemaDescription(String normalizationSchemaDescription) {
+            this.normalizationSchemaDescription = normalizationSchemaDescription;
+            return this;
+        }
+        public String getNormalizationSchemaDescription() {
+            return this.normalizationSchemaDescription;
+        }
+
+        public ListNormalizationSchemasResponseBodyNormalizationSchemas setNormalizationSchemaFrom(String normalizationSchemaFrom) {
+            this.normalizationSchemaFrom = normalizationSchemaFrom;
+            return this;
+        }
+        public String getNormalizationSchemaFrom() {
+            return this.normalizationSchemaFrom;
         }
 
         public ListNormalizationSchemasResponseBodyNormalizationSchemas setNormalizationSchemaId(String normalizationSchemaId) {
@@ -144,6 +210,30 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         }
         public String getNormalizationSchemaTargetLogStore() {
             return this.normalizationSchemaTargetLogStore;
+        }
+
+        public ListNormalizationSchemasResponseBodyNormalizationSchemas setTargetLogStore(String targetLogStore) {
+            this.targetLogStore = targetLogStore;
+            return this;
+        }
+        public String getTargetLogStore() {
+            return this.targetLogStore;
+        }
+
+        public ListNormalizationSchemasResponseBodyNormalizationSchemas setTargetStoreView(String targetStoreView) {
+            this.targetStoreView = targetStoreView;
+            return this;
+        }
+        public String getTargetStoreView() {
+            return this.targetStoreView;
+        }
+
+        public ListNormalizationSchemasResponseBodyNormalizationSchemas setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }
