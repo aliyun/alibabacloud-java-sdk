@@ -14,6 +14,20 @@ public class ListDelegatedServicesForAccountRequest extends TeaModel {
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
     public static ListDelegatedServicesForAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDelegatedServicesForAccountRequest self = new ListDelegatedServicesForAccountRequest();
         return TeaModel.build(map, self);
@@ -25,6 +39,22 @@ public class ListDelegatedServicesForAccountRequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public ListDelegatedServicesForAccountRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListDelegatedServicesForAccountRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

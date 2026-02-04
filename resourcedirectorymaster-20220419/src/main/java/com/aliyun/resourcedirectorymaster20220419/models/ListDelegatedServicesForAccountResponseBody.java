@@ -14,6 +14,20 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     public ListDelegatedServicesForAccountResponseBodyDelegatedServices delegatedServices;
 
     /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +47,22 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     }
     public ListDelegatedServicesForAccountResponseBodyDelegatedServices getDelegatedServices() {
         return this.delegatedServices;
+    }
+
+    public ListDelegatedServicesForAccountResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListDelegatedServicesForAccountResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListDelegatedServicesForAccountResponseBody setRequestId(String requestId) {
