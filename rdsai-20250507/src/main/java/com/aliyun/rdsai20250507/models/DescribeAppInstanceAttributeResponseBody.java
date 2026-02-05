@@ -31,6 +31,9 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("EipId")
+    public String eipId;
+
     @NameInMap("EipStatus")
     public String eipStatus;
 
@@ -60,6 +63,12 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
      */
     @NameInMap("InstanceName")
     public String instanceName;
+
+    @NameInMap("NatCreatedBy")
+    public String natCreatedBy;
+
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
 
     @NameInMap("NatStatus")
     public String natStatus;
@@ -156,6 +165,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         return this.DBInstanceName;
     }
 
+    public DescribeAppInstanceAttributeResponseBody setEipId(String eipId) {
+        this.eipId = eipId;
+        return this;
+    }
+    public String getEipId() {
+        return this.eipId;
+    }
+
     public DescribeAppInstanceAttributeResponseBody setEipStatus(String eipStatus) {
         this.eipStatus = eipStatus;
         return this;
@@ -186,6 +203,22 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public DescribeAppInstanceAttributeResponseBody setNatCreatedBy(String natCreatedBy) {
+        this.natCreatedBy = natCreatedBy;
+        return this;
+    }
+    public String getNatCreatedBy() {
+        return this.natCreatedBy;
+    }
+
+    public DescribeAppInstanceAttributeResponseBody setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     public DescribeAppInstanceAttributeResponseBody setNatStatus(String natStatus) {
