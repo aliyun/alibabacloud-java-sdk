@@ -1186,6 +1186,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ClearAIAgentVoiceprintResponse clearAIAgentVoiceprintWithOptions(ClearAIAgentVoiceprintRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.registrationMode)) {
+            query.put("RegistrationMode", request.registrationMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.voiceprintId)) {
             query.put("VoiceprintId", request.voiceprintId);
         }
@@ -10593,6 +10597,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registrationMode)) {
+            query.put("RegistrationMode", request.registrationMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.voiceprintId)) {

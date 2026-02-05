@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ClearAIAgentVoiceprintRequest extends TeaModel {
+    @NameInMap("RegistrationMode")
+    public String registrationMode;
+
     /**
      * <p>The unique identifier for the voiceprint.</p>
      * 
@@ -16,6 +19,14 @@ public class ClearAIAgentVoiceprintRequest extends TeaModel {
     public static ClearAIAgentVoiceprintRequest build(java.util.Map<String, ?> map) throws Exception {
         ClearAIAgentVoiceprintRequest self = new ClearAIAgentVoiceprintRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ClearAIAgentVoiceprintRequest setRegistrationMode(String registrationMode) {
+        this.registrationMode = registrationMode;
+        return this;
+    }
+    public String getRegistrationMode() {
+        return this.registrationMode;
     }
 
     public ClearAIAgentVoiceprintRequest setVoiceprintId(String voiceprintId) {

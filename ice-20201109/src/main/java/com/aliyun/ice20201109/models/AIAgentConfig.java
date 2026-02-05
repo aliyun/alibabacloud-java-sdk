@@ -23,7 +23,11 @@ public class AIAgentConfig extends TeaModel {
     public String avatarUrlType;
 
     @NameInMap("BackChannelingConfig")
+    @Deprecated
     public java.util.List<AIAgentConfigBackChannelingConfig> backChannelingConfig;
+
+    @NameInMap("BackChannelingConfigs")
+    public java.util.List<AIAgentConfigBackChannelingConfigs> backChannelingConfigs;
 
     @NameInMap("EnableIntelligentSegment")
     public Boolean enableIntelligentSegment;
@@ -129,12 +133,21 @@ public class AIAgentConfig extends TeaModel {
         return this.avatarUrlType;
     }
 
+    @Deprecated
     public AIAgentConfig setBackChannelingConfig(java.util.List<AIAgentConfigBackChannelingConfig> backChannelingConfig) {
         this.backChannelingConfig = backChannelingConfig;
         return this;
     }
     public java.util.List<AIAgentConfigBackChannelingConfig> getBackChannelingConfig() {
         return this.backChannelingConfig;
+    }
+
+    public AIAgentConfig setBackChannelingConfigs(java.util.List<AIAgentConfigBackChannelingConfigs> backChannelingConfigs) {
+        this.backChannelingConfigs = backChannelingConfigs;
+        return this;
+    }
+    public java.util.List<AIAgentConfigBackChannelingConfigs> getBackChannelingConfigs() {
+        return this.backChannelingConfigs;
     }
 
     public AIAgentConfig setEnableIntelligentSegment(Boolean enableIntelligentSegment) {
@@ -634,6 +647,88 @@ public class AIAgentConfig extends TeaModel {
             return this;
         }
         public java.util.List<AIAgentConfigBackChannelingConfigWords> getWords() {
+            return this.words;
+        }
+
+    }
+
+    public static class AIAgentConfigBackChannelingConfigsWords extends TeaModel {
+        @NameInMap("Probability")
+        public Double probability;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static AIAgentConfigBackChannelingConfigsWords build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigBackChannelingConfigsWords self = new AIAgentConfigBackChannelingConfigsWords();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigBackChannelingConfigsWords setProbability(Double probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        public AIAgentConfigBackChannelingConfigsWords setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class AIAgentConfigBackChannelingConfigs extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Probability")
+        public Double probability;
+
+        @NameInMap("TriggerStage")
+        public String triggerStage;
+
+        @NameInMap("Words")
+        public java.util.List<AIAgentConfigBackChannelingConfigsWords> words;
+
+        public static AIAgentConfigBackChannelingConfigs build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigBackChannelingConfigs self = new AIAgentConfigBackChannelingConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigBackChannelingConfigs setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public AIAgentConfigBackChannelingConfigs setProbability(Double probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        public AIAgentConfigBackChannelingConfigs setTriggerStage(String triggerStage) {
+            this.triggerStage = triggerStage;
+            return this;
+        }
+        public String getTriggerStage() {
+            return this.triggerStage;
+        }
+
+        public AIAgentConfigBackChannelingConfigs setWords(java.util.List<AIAgentConfigBackChannelingConfigsWords> words) {
+            this.words = words;
+            return this;
+        }
+        public java.util.List<AIAgentConfigBackChannelingConfigsWords> getWords() {
             return this.words;
         }
 
@@ -1247,6 +1342,9 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigVoiceprintConfig extends TeaModel {
+        @NameInMap("RegistrationMode")
+        public String registrationMode;
+
         @NameInMap("UseVoiceprint")
         public Boolean useVoiceprint;
 
@@ -1256,6 +1354,14 @@ public class AIAgentConfig extends TeaModel {
         public static AIAgentConfigVoiceprintConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentConfigVoiceprintConfig self = new AIAgentConfigVoiceprintConfig();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigVoiceprintConfig setRegistrationMode(String registrationMode) {
+            this.registrationMode = registrationMode;
+            return this;
+        }
+        public String getRegistrationMode() {
+            return this.registrationMode;
         }
 
         public AIAgentConfigVoiceprintConfig setUseVoiceprint(Boolean useVoiceprint) {

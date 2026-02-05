@@ -22,6 +22,9 @@ public class ListAIAgentVoiceprintsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegistrationMode")
+    public String registrationMode;
+
     /**
      * <p>A unique identifier for the voiceprint. This parameter is optional. If provided, only the information for that ID is returned. If not specified, all voiceprints under the account are returned.</p>
      * 
@@ -50,6 +53,14 @@ public class ListAIAgentVoiceprintsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAIAgentVoiceprintsRequest setRegistrationMode(String registrationMode) {
+        this.registrationMode = registrationMode;
+        return this;
+    }
+    public String getRegistrationMode() {
+        return this.registrationMode;
     }
 
     public ListAIAgentVoiceprintsRequest setVoiceprintId(String voiceprintId) {

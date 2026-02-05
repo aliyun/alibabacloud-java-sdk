@@ -249,6 +249,9 @@ public class MediaQualityAnalysisJobVqaResult extends TeaModel {
         @NameInMap("Noise")
         public MediaQualityAnalysisJobVqaResultScoreResultNoise noise;
 
+        @NameInMap("Score")
+        public Double score;
+
         @NameInMap("Sharp")
         public MediaQualityAnalysisJobVqaResultScoreResultSharp sharp;
 
@@ -287,6 +290,14 @@ public class MediaQualityAnalysisJobVqaResult extends TeaModel {
         }
         public MediaQualityAnalysisJobVqaResultScoreResultNoise getNoise() {
             return this.noise;
+        }
+
+        public MediaQualityAnalysisJobVqaResultScoreResult setScore(Double score) {
+            this.score = score;
+            return this;
+        }
+        public Double getScore() {
+            return this.score;
         }
 
         public MediaQualityAnalysisJobVqaResultScoreResult setSharp(MediaQualityAnalysisJobVqaResultScoreResultSharp sharp) {

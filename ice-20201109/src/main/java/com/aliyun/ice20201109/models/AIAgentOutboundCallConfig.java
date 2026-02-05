@@ -14,7 +14,11 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     public AIAgentOutboundCallConfigAutoSpeechConfig autoSpeechConfig;
 
     @NameInMap("BackChannelingConfig")
+    @Deprecated
     public AIAgentOutboundCallConfigBackChannelingConfig backChannelingConfig;
+
+    @NameInMap("BackChannelingConfigs")
+    public java.util.List<AIAgentOutboundCallConfigBackChannelingConfigs> backChannelingConfigs;
 
     @NameInMap("EnableIntelligentSegment")
     public Boolean enableIntelligentSegment;
@@ -72,12 +76,21 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         return this.autoSpeechConfig;
     }
 
+    @Deprecated
     public AIAgentOutboundCallConfig setBackChannelingConfig(AIAgentOutboundCallConfigBackChannelingConfig backChannelingConfig) {
         this.backChannelingConfig = backChannelingConfig;
         return this;
     }
     public AIAgentOutboundCallConfigBackChannelingConfig getBackChannelingConfig() {
         return this.backChannelingConfig;
+    }
+
+    public AIAgentOutboundCallConfig setBackChannelingConfigs(java.util.List<AIAgentOutboundCallConfigBackChannelingConfigs> backChannelingConfigs) {
+        this.backChannelingConfigs = backChannelingConfigs;
+        return this;
+    }
+    public java.util.List<AIAgentOutboundCallConfigBackChannelingConfigs> getBackChannelingConfigs() {
+        return this.backChannelingConfigs;
     }
 
     public AIAgentOutboundCallConfig setEnableIntelligentSegment(Boolean enableIntelligentSegment) {
@@ -494,6 +507,88 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             return this;
         }
         public AIAgentOutboundCallConfigBackChannelingConfigWords getWords() {
+            return this.words;
+        }
+
+    }
+
+    public static class AIAgentOutboundCallConfigBackChannelingConfigsWords extends TeaModel {
+        @NameInMap("Probability")
+        public Double probability;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static AIAgentOutboundCallConfigBackChannelingConfigsWords build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentOutboundCallConfigBackChannelingConfigsWords self = new AIAgentOutboundCallConfigBackChannelingConfigsWords();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfigsWords setProbability(Double probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfigsWords setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class AIAgentOutboundCallConfigBackChannelingConfigs extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Probability")
+        public Double probability;
+
+        @NameInMap("TriggerStage")
+        public String triggerStage;
+
+        @NameInMap("Words")
+        public java.util.List<AIAgentOutboundCallConfigBackChannelingConfigsWords> words;
+
+        public static AIAgentOutboundCallConfigBackChannelingConfigs build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentOutboundCallConfigBackChannelingConfigs self = new AIAgentOutboundCallConfigBackChannelingConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfigs setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfigs setProbability(Double probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfigs setTriggerStage(String triggerStage) {
+            this.triggerStage = triggerStage;
+            return this;
+        }
+        public String getTriggerStage() {
+            return this.triggerStage;
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfigs setWords(java.util.List<AIAgentOutboundCallConfigBackChannelingConfigsWords> words) {
+            this.words = words;
+            return this;
+        }
+        public java.util.List<AIAgentOutboundCallConfigBackChannelingConfigsWords> getWords() {
             return this.words;
         }
 
