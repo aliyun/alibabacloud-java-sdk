@@ -4,12 +4,24 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetRecallManagementJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15T23:24:33.132</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;success&quot;</p>
+     */
     @NameInMap("Log")
     public String log;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RecallManagementJobId")
     public String recallManagementJobId;
 
@@ -19,12 +31,24 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     @NameInMap("RecallManagerTableInfo")
     public GetRecallManagementJobResponseBodyRecallManagerTableInfo recallManagerTableInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15T22:24:33.132</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -98,15 +122,31 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     }
 
     public static class GetRecallManagementJobResponseBodyRecallManagementTableInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ds=20250701</p>
+         */
         @NameInMap("DataVersion")
         public String dataVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20250101000</p>
+         */
         @NameInMap("RecallManagementTableVersionId")
         public String recallManagementTableVersionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("SourceTableDataSize")
         public String sourceTableDataSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SourceTableRowCount")
         public String sourceTableRowCount;
 
@@ -150,15 +190,31 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     }
 
     public static class GetRecallManagementJobResponseBodyRecallManagerTableInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ds=20250701</p>
+         */
         @NameInMap("DataVersion")
         public String dataVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20250101000</p>
+         */
         @NameInMap("RecallManagerTableVersionId")
         public String recallManagerTableVersionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("SourceTableDataSize")
         public String sourceTableDataSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SourceTableRowCount")
         public String sourceTableRowCount;
 

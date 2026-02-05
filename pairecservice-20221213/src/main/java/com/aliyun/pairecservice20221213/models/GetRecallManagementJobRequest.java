@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetRecallManagementJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-1324***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

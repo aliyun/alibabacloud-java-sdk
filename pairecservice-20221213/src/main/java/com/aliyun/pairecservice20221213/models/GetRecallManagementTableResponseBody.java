@@ -47,7 +47,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public Boolean enableRowCountFluctuationThreshold;
 
     @NameInMap("Fields")
-    public GetRecallManagementTableResponseBodyFields fields;
+    public java.util.List<GetRecallManagementTableResponseBodyFields> fields;
 
     /**
      * <strong>example:</strong>
@@ -223,11 +223,11 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         return this.enableRowCountFluctuationThreshold;
     }
 
-    public GetRecallManagementTableResponseBody setFields(GetRecallManagementTableResponseBodyFields fields) {
+    public GetRecallManagementTableResponseBody setFields(java.util.List<GetRecallManagementTableResponseBodyFields> fields) {
         this.fields = fields;
         return this;
     }
-    public GetRecallManagementTableResponseBodyFields getFields() {
+    public java.util.List<GetRecallManagementTableResponseBodyFields> getFields() {
         return this.fields;
     }
 
