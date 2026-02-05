@@ -374,6 +374,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("SccMode")
         public String sccMode;
 
+        @NameInMap("ServiceName")
+        public String serviceName;
+
         public static DescribeDBClusterEndpointsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterEndpointsResponseBodyItems self = new DescribeDBClusterEndpointsResponseBodyItems();
             return TeaModel.build(map, self);
@@ -481,6 +484,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
         public String getSccMode() {
             return this.sccMode;
+        }
+
+        public DescribeDBClusterEndpointsResponseBodyItems setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
     }
