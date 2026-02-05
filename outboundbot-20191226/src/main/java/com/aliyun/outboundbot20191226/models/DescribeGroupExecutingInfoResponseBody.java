@@ -258,6 +258,9 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupExecutingInfoResponseBodyExecutingInfo extends TeaModel {
+        @NameInMap("AvgTalkTime")
+        public Integer avgTalkTime;
+
         /**
          * <strong>example:</strong>
          * <p>5</p>
@@ -278,6 +281,9 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
          */
         @NameInMap("CreatorName")
         public String creatorName;
+
+        @NameInMap("DurationDistribution")
+        public String durationDistribution;
 
         /**
          * <strong>example:</strong>
@@ -317,6 +323,9 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public Long startTime;
 
+        @NameInMap("TalkTurnsDistribution")
+        public String talkTurnsDistribution;
+
         /**
          * <strong>example:</strong>
          * <p>5</p>
@@ -334,6 +343,14 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public static DescribeGroupExecutingInfoResponseBodyExecutingInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeGroupExecutingInfoResponseBodyExecutingInfo self = new DescribeGroupExecutingInfoResponseBodyExecutingInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeGroupExecutingInfoResponseBodyExecutingInfo setAvgTalkTime(Integer avgTalkTime) {
+            this.avgTalkTime = avgTalkTime;
+            return this;
+        }
+        public Integer getAvgTalkTime() {
+            return this.avgTalkTime;
         }
 
         public DescribeGroupExecutingInfoResponseBodyExecutingInfo setCallFailedNum(Integer callFailedNum) {
@@ -358,6 +375,14 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
         public String getCreatorName() {
             return this.creatorName;
+        }
+
+        public DescribeGroupExecutingInfoResponseBodyExecutingInfo setDurationDistribution(String durationDistribution) {
+            this.durationDistribution = durationDistribution;
+            return this;
+        }
+        public String getDurationDistribution() {
+            return this.durationDistribution;
         }
 
         public DescribeGroupExecutingInfoResponseBodyExecutingInfo setEndTime(Long endTime) {
@@ -406,6 +431,14 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public DescribeGroupExecutingInfoResponseBodyExecutingInfo setTalkTurnsDistribution(String talkTurnsDistribution) {
+            this.talkTurnsDistribution = talkTurnsDistribution;
+            return this;
+        }
+        public String getTalkTurnsDistribution() {
+            return this.talkTurnsDistribution;
         }
 
         public DescribeGroupExecutingInfoResponseBodyExecutingInfo setTransferByIntentNum(Integer transferByIntentNum) {

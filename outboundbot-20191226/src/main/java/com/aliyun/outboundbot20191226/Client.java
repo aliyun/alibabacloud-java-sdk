@@ -2509,6 +2509,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>任务组数据统计</p>
+     * 
      * @param request DescribeGroupExecutingInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeGroupExecutingInfoResponse
@@ -2542,6 +2545,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>任务组数据统计</p>
+     * 
      * @param request DescribeGroupExecutingInfoRequest
      * @return DescribeGroupExecutingInfoResponse
      */

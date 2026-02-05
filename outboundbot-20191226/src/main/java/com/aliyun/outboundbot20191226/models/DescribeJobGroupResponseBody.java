@@ -952,6 +952,9 @@ public class DescribeJobGroupResponseBody extends TeaModel {
         @NameInMap("ScriptName")
         public String scriptName;
 
+        @NameInMap("ScriptNluEngine")
+        public String scriptNluEngine;
+
         /**
          * <strong>example:</strong>
          * <p>49f00b0d-78ac-4d51-91de-a9e8e92b8470</p>
@@ -1132,6 +1135,14 @@ public class DescribeJobGroupResponseBody extends TeaModel {
         }
         public String getScriptName() {
             return this.scriptName;
+        }
+
+        public DescribeJobGroupResponseBodyJobGroup setScriptNluEngine(String scriptNluEngine) {
+            this.scriptNluEngine = scriptNluEngine;
+            return this;
+        }
+        public String getScriptNluEngine() {
+            return this.scriptNluEngine;
         }
 
         public DescribeJobGroupResponseBodyJobGroup setScriptVersion(String scriptVersion) {
