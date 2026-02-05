@@ -13,10 +13,14 @@ public class CreateSandboxInput extends TeaModel {
     @NameInMap("sandboxId")
     public String sandboxId;
 
+    @NameInMap("sandboxIdleTimeoutInSeconds")
+    public Integer sandboxIdleTimeoutInSeconds;
+
     /**
      * <p>沙箱空闲超时时间（秒）</p>
      */
     @NameInMap("sandboxIdleTimeoutSeconds")
+    @Deprecated
     public Integer sandboxIdleTimeoutSeconds;
 
     /**
@@ -55,6 +59,15 @@ public class CreateSandboxInput extends TeaModel {
         return this.sandboxId;
     }
 
+    public CreateSandboxInput setSandboxIdleTimeoutInSeconds(Integer sandboxIdleTimeoutInSeconds) {
+        this.sandboxIdleTimeoutInSeconds = sandboxIdleTimeoutInSeconds;
+        return this;
+    }
+    public Integer getSandboxIdleTimeoutInSeconds() {
+        return this.sandboxIdleTimeoutInSeconds;
+    }
+
+    @Deprecated
     public CreateSandboxInput setSandboxIdleTimeoutSeconds(Integer sandboxIdleTimeoutSeconds) {
         this.sandboxIdleTimeoutSeconds = sandboxIdleTimeoutSeconds;
         return this;
