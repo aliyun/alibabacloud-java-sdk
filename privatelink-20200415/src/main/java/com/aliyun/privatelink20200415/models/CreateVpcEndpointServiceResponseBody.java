@@ -277,7 +277,11 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         public String regionServiceStatus;
 
         @NameInMap("ServiceRegionId")
+        @Deprecated
         public String serviceRegionId;
+
+        @NameInMap("SupportedRegionId")
+        public String supportedRegionId;
 
         public static CreateVpcEndpointServiceResponseBodySupportedRegionSet build(java.util.Map<String, ?> map) throws Exception {
             CreateVpcEndpointServiceResponseBodySupportedRegionSet self = new CreateVpcEndpointServiceResponseBodySupportedRegionSet();
@@ -300,12 +304,21 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
             return this.regionServiceStatus;
         }
 
+        @Deprecated
         public CreateVpcEndpointServiceResponseBodySupportedRegionSet setServiceRegionId(String serviceRegionId) {
             this.serviceRegionId = serviceRegionId;
             return this;
         }
         public String getServiceRegionId() {
             return this.serviceRegionId;
+        }
+
+        public CreateVpcEndpointServiceResponseBodySupportedRegionSet setSupportedRegionId(String supportedRegionId) {
+            this.supportedRegionId = supportedRegionId;
+            return this;
+        }
+        public String getSupportedRegionId() {
+            return this.supportedRegionId;
         }
 
     }

@@ -420,7 +420,11 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         public String regionServiceStatus;
 
         @NameInMap("ServiceRegionId")
+        @Deprecated
         public String serviceRegionId;
+
+        @NameInMap("SupportedRegionId")
+        public String supportedRegionId;
 
         public static GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet build(java.util.Map<String, ?> map) throws Exception {
             GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet self = new GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet();
@@ -443,12 +447,21 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
             return this.regionServiceStatus;
         }
 
+        @Deprecated
         public GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet setServiceRegionId(String serviceRegionId) {
             this.serviceRegionId = serviceRegionId;
             return this;
         }
         public String getServiceRegionId() {
             return this.serviceRegionId;
+        }
+
+        public GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet setSupportedRegionId(String supportedRegionId) {
+            this.supportedRegionId = supportedRegionId;
+            return this;
+        }
+        public String getSupportedRegionId() {
+            return this.supportedRegionId;
         }
 
     }
