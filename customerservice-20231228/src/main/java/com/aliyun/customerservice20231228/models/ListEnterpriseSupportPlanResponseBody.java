@@ -75,9 +75,125 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListEnterpriseSupportPlanResponseBodyDataDocs extends TeaModel {
+    public static class ListEnterpriseSupportPlanResponseBodyDataDocsAttachments extends TeaModel {
         @NameInMap("docId")
         public Long docId;
+
+        @NameInMap("evaluated")
+        public Boolean evaluated;
+
+        @NameInMap("evaluationUrl")
+        public String evaluationUrl;
+
+        @NameInMap("fileName")
+        public String fileName;
+
+        @NameInMap("freeOrderApplyCode")
+        public String freeOrderApplyCode;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("orderId")
+        public String orderId;
+
+        @NameInMap("uploadTime")
+        public String uploadTime;
+
+        @NameInMap("url")
+        public String url;
+
+        public static ListEnterpriseSupportPlanResponseBodyDataDocsAttachments build(java.util.Map<String, ?> map) throws Exception {
+            ListEnterpriseSupportPlanResponseBodyDataDocsAttachments self = new ListEnterpriseSupportPlanResponseBodyDataDocsAttachments();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocsAttachments setDocId(Long docId) {
+            this.docId = docId;
+            return this;
+        }
+        public Long getDocId() {
+            return this.docId;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocsAttachments setEvaluated(Boolean evaluated) {
+            this.evaluated = evaluated;
+            return this;
+        }
+        public Boolean getEvaluated() {
+            return this.evaluated;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocsAttachments setEvaluationUrl(String evaluationUrl) {
+            this.evaluationUrl = evaluationUrl;
+            return this;
+        }
+        public String getEvaluationUrl() {
+            return this.evaluationUrl;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocsAttachments setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocsAttachments setFreeOrderApplyCode(String freeOrderApplyCode) {
+            this.freeOrderApplyCode = freeOrderApplyCode;
+            return this;
+        }
+        public String getFreeOrderApplyCode() {
+            return this.freeOrderApplyCode;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocsAttachments setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocsAttachments setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocsAttachments setUploadTime(String uploadTime) {
+            this.uploadTime = uploadTime;
+            return this;
+        }
+        public String getUploadTime() {
+            return this.uploadTime;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocsAttachments setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class ListEnterpriseSupportPlanResponseBodyDataDocs extends TeaModel {
+        @NameInMap("attachments")
+        public java.util.List<ListEnterpriseSupportPlanResponseBodyDataDocsAttachments> attachments;
+
+        @NameInMap("docId")
+        public Long docId;
+
+        @NameInMap("evaluated")
+        public Boolean evaluated;
+
+        @NameInMap("evaluationUrl")
+        public String evaluationUrl;
 
         @NameInMap("fileName")
         public String fileName;
@@ -102,12 +218,36 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListEnterpriseSupportPlanResponseBodyDataDocs setAttachments(java.util.List<ListEnterpriseSupportPlanResponseBodyDataDocsAttachments> attachments) {
+            this.attachments = attachments;
+            return this;
+        }
+        public java.util.List<ListEnterpriseSupportPlanResponseBodyDataDocsAttachments> getAttachments() {
+            return this.attachments;
+        }
+
         public ListEnterpriseSupportPlanResponseBodyDataDocs setDocId(Long docId) {
             this.docId = docId;
             return this;
         }
         public Long getDocId() {
             return this.docId;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocs setEvaluated(Boolean evaluated) {
+            this.evaluated = evaluated;
+            return this;
+        }
+        public Boolean getEvaluated() {
+            return this.evaluated;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataDocs setEvaluationUrl(String evaluationUrl) {
+            this.evaluationUrl = evaluationUrl;
+            return this;
+        }
+        public String getEvaluationUrl() {
+            return this.evaluationUrl;
         }
 
         public ListEnterpriseSupportPlanResponseBodyDataDocs setFileName(String fileName) {
@@ -161,6 +301,9 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
     }
 
     public static class ListEnterpriseSupportPlanResponseBodyDataNodesDocNode extends TeaModel {
+        @NameInMap("attachments")
+        public java.util.List<?> attachments;
+
         @NameInMap("docId")
         public Long docId;
 
@@ -182,6 +325,14 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         public static ListEnterpriseSupportPlanResponseBodyDataNodesDocNode build(java.util.Map<String, ?> map) throws Exception {
             ListEnterpriseSupportPlanResponseBodyDataNodesDocNode self = new ListEnterpriseSupportPlanResponseBodyDataNodesDocNode();
             return TeaModel.build(map, self);
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataNodesDocNode setAttachments(java.util.List<?> attachments) {
+            this.attachments = attachments;
+            return this;
+        }
+        public java.util.List<?> getAttachments() {
+            return this.attachments;
         }
 
         public ListEnterpriseSupportPlanResponseBodyDataNodesDocNode setDocId(Long docId) {
@@ -299,7 +450,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         public String applyTime;
 
         @NameInMap("uid")
-        public Long uid;
+        public String uid;
 
         public static ListEnterpriseSupportPlanResponseBodyDataNodesFreeOrderNode build(java.util.Map<String, ?> map) throws Exception {
             ListEnterpriseSupportPlanResponseBodyDataNodesFreeOrderNode self = new ListEnterpriseSupportPlanResponseBodyDataNodesFreeOrderNode();
@@ -314,11 +465,11 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             return this.applyTime;
         }
 
-        public ListEnterpriseSupportPlanResponseBodyDataNodesFreeOrderNode setUid(Long uid) {
+        public ListEnterpriseSupportPlanResponseBodyDataNodesFreeOrderNode setUid(String uid) {
             this.uid = uid;
             return this;
         }
-        public Long getUid() {
+        public String getUid() {
             return this.uid;
         }
 
@@ -329,7 +480,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         public String payTime;
 
         @NameInMap("uid")
-        public Long uid;
+        public String uid;
 
         public static ListEnterpriseSupportPlanResponseBodyDataNodesOrderNode build(java.util.Map<String, ?> map) throws Exception {
             ListEnterpriseSupportPlanResponseBodyDataNodesOrderNode self = new ListEnterpriseSupportPlanResponseBodyDataNodesOrderNode();
@@ -344,11 +495,11 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             return this.payTime;
         }
 
-        public ListEnterpriseSupportPlanResponseBodyDataNodesOrderNode setUid(Long uid) {
+        public ListEnterpriseSupportPlanResponseBodyDataNodesOrderNode setUid(String uid) {
             this.uid = uid;
             return this;
         }
-        public Long getUid() {
+        public String getUid() {
             return this.uid;
         }
 
@@ -532,12 +683,64 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
 
     }
 
+    public static class ListEnterpriseSupportPlanResponseBodyDataTags extends TeaModel {
+        @NameInMap("extendInfos")
+        public java.util.List<String> extendInfos;
+
+        @NameInMap("show")
+        public Boolean show;
+
+        @NameInMap("tagCode")
+        public String tagCode;
+
+        @NameInMap("tagName")
+        public String tagName;
+
+        public static ListEnterpriseSupportPlanResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            ListEnterpriseSupportPlanResponseBodyDataTags self = new ListEnterpriseSupportPlanResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataTags setExtendInfos(java.util.List<String> extendInfos) {
+            this.extendInfos = extendInfos;
+            return this;
+        }
+        public java.util.List<String> getExtendInfos() {
+            return this.extendInfos;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataTags setShow(Boolean show) {
+            this.show = show;
+            return this;
+        }
+        public Boolean getShow() {
+            return this.show;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataTags setTagCode(String tagCode) {
+            this.tagCode = tagCode;
+            return this;
+        }
+        public String getTagCode() {
+            return this.tagCode;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyDataTags setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+    }
+
     public static class ListEnterpriseSupportPlanResponseBodyData extends TeaModel {
         @NameInMap("canApplyFreeOrder")
         public Boolean canApplyFreeOrder;
 
         @NameInMap("customerId")
-        public Long customerId;
+        public String customerId;
 
         @NameInMap("docs")
         public java.util.List<ListEnterpriseSupportPlanResponseBodyDataDocs> docs;
@@ -562,6 +765,9 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
 
         @NameInMap("freeOrderExpectStartTime")
         public String freeOrderExpectStartTime;
+
+        @NameInMap("gtspProjectId")
+        public Long gtspProjectId;
 
         @NameInMap("instanceId")
         public String instanceId;
@@ -593,6 +799,9 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         @NameInMap("startTime")
         public String startTime;
 
+        @NameInMap("tags")
+        public java.util.List<ListEnterpriseSupportPlanResponseBodyDataTags> tags;
+
         @NameInMap("taskNum")
         public Long taskNum;
 
@@ -609,11 +818,11 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             return this.canApplyFreeOrder;
         }
 
-        public ListEnterpriseSupportPlanResponseBodyData setCustomerId(Long customerId) {
+        public ListEnterpriseSupportPlanResponseBodyData setCustomerId(String customerId) {
             this.customerId = customerId;
             return this;
         }
-        public Long getCustomerId() {
+        public String getCustomerId() {
             return this.customerId;
         }
 
@@ -679,6 +888,14 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         }
         public String getFreeOrderExpectStartTime() {
             return this.freeOrderExpectStartTime;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyData setGtspProjectId(Long gtspProjectId) {
+            this.gtspProjectId = gtspProjectId;
+            return this;
+        }
+        public Long getGtspProjectId() {
+            return this.gtspProjectId;
         }
 
         public ListEnterpriseSupportPlanResponseBodyData setInstanceId(String instanceId) {
@@ -759,6 +976,14 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public ListEnterpriseSupportPlanResponseBodyData setTags(java.util.List<ListEnterpriseSupportPlanResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListEnterpriseSupportPlanResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public ListEnterpriseSupportPlanResponseBodyData setTaskNum(Long taskNum) {

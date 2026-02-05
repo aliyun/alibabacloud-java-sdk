@@ -3964,6 +3964,9 @@ public class ListServiceApplyResponseBody extends TeaModel {
         @NameInMap("id")
         public Long id;
 
+        @NameInMap("isOneToOneExpertServiceByTime")
+        public Boolean isOneToOneExpertServiceByTime;
+
         @NameInMap("mergeSolutionAndReporterOneStep")
         public Boolean mergeSolutionAndReporterOneStep;
 
@@ -4020,6 +4023,9 @@ public class ListServiceApplyResponseBody extends TeaModel {
 
         @NameInMap("usePack")
         public Long usePack;
+
+        @NameInMap("userRights")
+        public String userRights;
 
         public static ListServiceApplyResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListServiceApplyResponseBodyDataList self = new ListServiceApplyResponseBodyDataList();
@@ -4136,6 +4142,14 @@ public class ListServiceApplyResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListServiceApplyResponseBodyDataList setIsOneToOneExpertServiceByTime(Boolean isOneToOneExpertServiceByTime) {
+            this.isOneToOneExpertServiceByTime = isOneToOneExpertServiceByTime;
+            return this;
+        }
+        public Boolean getIsOneToOneExpertServiceByTime() {
+            return this.isOneToOneExpertServiceByTime;
         }
 
         public ListServiceApplyResponseBodyDataList setMergeSolutionAndReporterOneStep(Boolean mergeSolutionAndReporterOneStep) {
@@ -4288,6 +4302,14 @@ public class ListServiceApplyResponseBody extends TeaModel {
         }
         public Long getUsePack() {
             return this.usePack;
+        }
+
+        public ListServiceApplyResponseBodyDataList setUserRights(String userRights) {
+            this.userRights = userRights;
+            return this;
+        }
+        public String getUserRights() {
+            return this.userRights;
         }
 
     }

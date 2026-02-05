@@ -299,7 +299,7 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         public String applyTime;
 
         @NameInMap("uid")
-        public Long uid;
+        public String uid;
 
         public static ListEnterpriseSupportPlanSimpleResponseBodyDataNodesFreeOrderNode build(java.util.Map<String, ?> map) throws Exception {
             ListEnterpriseSupportPlanSimpleResponseBodyDataNodesFreeOrderNode self = new ListEnterpriseSupportPlanSimpleResponseBodyDataNodesFreeOrderNode();
@@ -314,11 +314,11 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             return this.applyTime;
         }
 
-        public ListEnterpriseSupportPlanSimpleResponseBodyDataNodesFreeOrderNode setUid(Long uid) {
+        public ListEnterpriseSupportPlanSimpleResponseBodyDataNodesFreeOrderNode setUid(String uid) {
             this.uid = uid;
             return this;
         }
-        public Long getUid() {
+        public String getUid() {
             return this.uid;
         }
 
@@ -329,7 +329,7 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         public String payTime;
 
         @NameInMap("uid")
-        public Long uid;
+        public String uid;
 
         public static ListEnterpriseSupportPlanSimpleResponseBodyDataNodesOrderNode build(java.util.Map<String, ?> map) throws Exception {
             ListEnterpriseSupportPlanSimpleResponseBodyDataNodesOrderNode self = new ListEnterpriseSupportPlanSimpleResponseBodyDataNodesOrderNode();
@@ -344,11 +344,11 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             return this.payTime;
         }
 
-        public ListEnterpriseSupportPlanSimpleResponseBodyDataNodesOrderNode setUid(Long uid) {
+        public ListEnterpriseSupportPlanSimpleResponseBodyDataNodesOrderNode setUid(String uid) {
             this.uid = uid;
             return this;
         }
-        public Long getUid() {
+        public String getUid() {
             return this.uid;
         }
 
@@ -491,12 +491,53 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
 
     }
 
+    public static class ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos extends TeaModel {
+        @NameInMap("canClick")
+        public Boolean canClick;
+
+        @NameInMap("text")
+        public String text;
+
+        @NameInMap("url")
+        public String url;
+
+        public static ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos build(java.util.Map<String, ?> map) throws Exception {
+            ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos self = new ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos setCanClick(Boolean canClick) {
+            this.canClick = canClick;
+            return this;
+        }
+        public Boolean getCanClick() {
+            return this.canClick;
+        }
+
+        public ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class ListEnterpriseSupportPlanSimpleResponseBodyData extends TeaModel {
         @NameInMap("canApplyFreeOrder")
         public Boolean canApplyFreeOrder;
 
         @NameInMap("customerId")
-        public Long customerId;
+        public String customerId;
 
         @NameInMap("docs")
         public java.util.List<ListEnterpriseSupportPlanSimpleResponseBodyDataDocs> docs;
@@ -527,6 +568,9 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
 
         @NameInMap("nodes")
         public java.util.List<ListEnterpriseSupportPlanSimpleResponseBodyDataNodes> nodes;
+
+        @NameInMap("operateInfos")
+        public java.util.List<ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos> operateInfos;
 
         @NameInMap("orderIds")
         public java.util.List<Long> orderIds;
@@ -565,11 +609,11 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             return this.canApplyFreeOrder;
         }
 
-        public ListEnterpriseSupportPlanSimpleResponseBodyData setCustomerId(Long customerId) {
+        public ListEnterpriseSupportPlanSimpleResponseBodyData setCustomerId(String customerId) {
             this.customerId = customerId;
             return this;
         }
-        public Long getCustomerId() {
+        public String getCustomerId() {
             return this.customerId;
         }
 
@@ -651,6 +695,14 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         }
         public java.util.List<ListEnterpriseSupportPlanSimpleResponseBodyDataNodes> getNodes() {
             return this.nodes;
+        }
+
+        public ListEnterpriseSupportPlanSimpleResponseBodyData setOperateInfos(java.util.List<ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos> operateInfos) {
+            this.operateInfos = operateInfos;
+            return this;
+        }
+        public java.util.List<ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos> getOperateInfos() {
+            return this.operateInfos;
         }
 
         public ListEnterpriseSupportPlanSimpleResponseBodyData setOrderIds(java.util.List<Long> orderIds) {
