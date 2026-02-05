@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI搜索流式接口</p>
+     * <p>AI搜索流式接口(废弃)</p>
      * 
      * @param request AiSearchRequest
      * @param headers map
@@ -78,7 +78,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI搜索流式接口</p>
+     * <p>AI搜索流式接口(废弃)</p>
      * 
      * @param request AiSearchRequest
      * @return AiSearchResponse
@@ -353,6 +353,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.globalSearchWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>多模态搜索</p>
+     * 
+     * @param request MultimodalSearchRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MultimodalSearchResponse
+     */
+    public MultimodalSearchResponse multimodalSearchWithOptions(MultimodalSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MultimodalSearch"),
+            new TeaPair("version", "2024-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-entry/v1/iqs/multimodal/unified"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MultimodalSearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>多模态搜索</p>
+     * 
+     * @param request MultimodalSearchRequest
+     * @return MultimodalSearchResponse
+     */
+    public MultimodalSearchResponse multimodalSearch(MultimodalSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.multimodalSearchWithOptions(request, headers, runtime);
     }
 
     /**
