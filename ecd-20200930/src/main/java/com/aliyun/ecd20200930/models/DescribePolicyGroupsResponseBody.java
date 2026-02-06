@@ -903,6 +903,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("ClientCreateSnapshot")
         public String clientCreateSnapshot;
 
+        @NameInMap("ClientHibernate")
+        public String clientHibernate;
+
+        @NameInMap("ClientRestart")
+        public String clientRestart;
+
+        @NameInMap("ClientShutdown")
+        public String clientShutdown;
+
         /**
          * <p>The logon method control rules to limit the type of the Alibaba Cloud Workspace client used by end users to connect to cloud computers.</p>
          */
@@ -1164,6 +1173,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @NameInMap("HoverConfigMsg")
         public String hoverConfigMsg;
+
+        @NameInMap("HoverHibernate")
+        public String hoverHibernate;
+
+        @NameInMap("HoverRestart")
+        public String hoverRestart;
+
+        @NameInMap("HoverShutdown")
+        public String hoverShutdown;
 
         /**
          * <p>Specifies whether to allow web client access.</p>
@@ -2155,6 +2173,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.clientCreateSnapshot;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setClientHibernate(String clientHibernate) {
+            this.clientHibernate = clientHibernate;
+            return this;
+        }
+        public String getClientHibernate() {
+            return this.clientHibernate;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setClientRestart(String clientRestart) {
+            this.clientRestart = clientRestart;
+            return this;
+        }
+        public String getClientRestart() {
+            return this.clientRestart;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setClientShutdown(String clientShutdown) {
+            this.clientShutdown = clientShutdown;
+            return this;
+        }
+        public String getClientShutdown() {
+            return this.clientShutdown;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setClientTypes(java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsClientTypes> clientTypes) {
             this.clientTypes = clientTypes;
             return this;
@@ -2409,6 +2451,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getHoverConfigMsg() {
             return this.hoverConfigMsg;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setHoverHibernate(String hoverHibernate) {
+            this.hoverHibernate = hoverHibernate;
+            return this;
+        }
+        public String getHoverHibernate() {
+            return this.hoverHibernate;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setHoverRestart(String hoverRestart) {
+            this.hoverRestart = hoverRestart;
+            return this;
+        }
+        public String getHoverRestart() {
+            return this.hoverRestart;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setHoverShutdown(String hoverShutdown) {
+            this.hoverShutdown = hoverShutdown;
+            return this;
+        }
+        public String getHoverShutdown() {
+            return this.hoverShutdown;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setHtml5Access(String html5Access) {
