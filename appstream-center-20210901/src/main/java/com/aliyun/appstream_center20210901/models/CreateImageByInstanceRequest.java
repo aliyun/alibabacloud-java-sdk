@@ -100,6 +100,9 @@ public class CreateImageByInstanceRequest extends TeaModel {
     @NameInMap("SubInstanceId")
     public String subInstanceId;
 
+    @NameInMap("TagList")
+    public java.util.List<CreateImageByInstanceRequestTagList> tagList;
+
     public static CreateImageByInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageByInstanceRequest self = new CreateImageByInstanceRequest();
         return TeaModel.build(map, self);
@@ -175,6 +178,44 @@ public class CreateImageByInstanceRequest extends TeaModel {
     }
     public String getSubInstanceId() {
         return this.subInstanceId;
+    }
+
+    public CreateImageByInstanceRequest setTagList(java.util.List<CreateImageByInstanceRequestTagList> tagList) {
+        this.tagList = tagList;
+        return this;
+    }
+    public java.util.List<CreateImageByInstanceRequestTagList> getTagList() {
+        return this.tagList;
+    }
+
+    public static class CreateImageByInstanceRequestTagList extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateImageByInstanceRequestTagList build(java.util.Map<String, ?> map) throws Exception {
+            CreateImageByInstanceRequestTagList self = new CreateImageByInstanceRequestTagList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImageByInstanceRequestTagList setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateImageByInstanceRequestTagList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
