@@ -552,6 +552,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>添加云产品接入的扩展证书</p>
+     * 
+     * @param request CreateCloudResourceExtensionCertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudResourceExtensionCertResponse
+     */
+    public CreateCloudResourceExtensionCertResponse createCloudResourceExtensionCertWithOptions(CreateCloudResourceExtensionCertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certId)) {
+            query.put("CertId", request.certId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudResourceId)) {
+            query.put("CloudResourceId", request.cloudResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudResourceExtensionCert"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudResourceExtensionCertResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加云产品接入的扩展证书</p>
+     * 
+     * @param request CreateCloudResourceExtensionCertRequest
+     * @return CreateCloudResourceExtensionCertResponse
+     */
+    public CreateCloudResourceExtensionCertResponse createCloudResourceExtensionCert(CreateCloudResourceExtensionCertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudResourceExtensionCertWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建防护对象</p>
      * 
      * @param tmpReq CreateDefenseResourceRequest
@@ -1832,6 +1892,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCloudResourceResponse deleteCloudResource(DeleteCloudResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCloudResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除云产品接入的扩展证书</p>
+     * 
+     * @param request DeleteCloudResourceExtensionCertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCloudResourceExtensionCertResponse
+     */
+    public DeleteCloudResourceExtensionCertResponse deleteCloudResourceExtensionCertWithOptions(DeleteCloudResourceExtensionCertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certId)) {
+            query.put("CertId", request.certId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudResourceId)) {
+            query.put("CloudResourceId", request.cloudResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCloudResourceExtensionCert"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCloudResourceExtensionCertResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除云产品接入的扩展证书</p>
+     * 
+     * @param request DeleteCloudResourceExtensionCertRequest
+     * @return DeleteCloudResourceExtensionCertResponse
+     */
+    public DeleteCloudResourceExtensionCertResponse deleteCloudResourceExtensionCert(DeleteCloudResourceExtensionCertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCloudResourceExtensionCertWithOptions(request, runtime);
     }
 
     /**
@@ -12990,6 +13110,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyCloudResourceCertResponse modifyCloudResourceCert(ModifyCloudResourceCertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyCloudResourceCertWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改云产品接入的默认证书</p>
+     * 
+     * @param request ModifyCloudResourceDefaultCertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCloudResourceDefaultCertResponse
+     */
+    public ModifyCloudResourceDefaultCertResponse modifyCloudResourceDefaultCertWithOptions(ModifyCloudResourceDefaultCertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certId)) {
+            query.put("CertId", request.certId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudResourceId)) {
+            query.put("CloudResourceId", request.cloudResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCloudResourceDefaultCert"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCloudResourceDefaultCertResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改云产品接入的默认证书</p>
+     * 
+     * @param request ModifyCloudResourceDefaultCertRequest
+     * @return ModifyCloudResourceDefaultCertResponse
+     */
+    public ModifyCloudResourceDefaultCertResponse modifyCloudResourceDefaultCert(ModifyCloudResourceDefaultCertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCloudResourceDefaultCertWithOptions(request, runtime);
     }
 
     /**
