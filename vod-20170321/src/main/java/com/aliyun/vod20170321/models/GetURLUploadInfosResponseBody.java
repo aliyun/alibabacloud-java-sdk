@@ -119,6 +119,13 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <strong>example:</strong>
+         * <p>93ab850b4f654b6e91d24d81d44****</p>
+         */
+        @NameInMap("RegisteredMediaId")
+        public String registeredMediaId;
+
+        /**
          * <p>The status of the URL-based upload job. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a video&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +214,14 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         }
         public String getMediaId() {
             return this.mediaId;
+        }
+
+        public GetURLUploadInfosResponseBodyURLUploadInfoList setRegisteredMediaId(String registeredMediaId) {
+            this.registeredMediaId = registeredMediaId;
+            return this;
+        }
+        public String getRegisteredMediaId() {
+            return this.registeredMediaId;
         }
 
         public GetURLUploadInfosResponseBodyURLUploadInfoList setStatus(String status) {

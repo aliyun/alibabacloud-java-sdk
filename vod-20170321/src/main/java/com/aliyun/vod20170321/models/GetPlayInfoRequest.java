@@ -44,6 +44,13 @@ public class GetPlayInfoRequest extends TeaModel {
     public Long authTimeout;
 
     /**
+     * <strong>example:</strong>
+     * <p>H264</p>
+     */
+    @NameInMap("CodecName")
+    public String codecName;
+
+    /**
      * <p>The quality of the video stream. Separate multiple qualities with commas (,). Valid values:</p>
      * <ul>
      * <li><strong>FD</strong>: low definition</li>
@@ -222,6 +229,14 @@ public class GetPlayInfoRequest extends TeaModel {
     }
     public Long getAuthTimeout() {
         return this.authTimeout;
+    }
+
+    public GetPlayInfoRequest setCodecName(String codecName) {
+        this.codecName = codecName;
+        return this;
+    }
+    public String getCodecName() {
+        return this.codecName;
     }
 
     public GetPlayInfoRequest setDefinition(String definition) {

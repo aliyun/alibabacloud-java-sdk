@@ -8452,6 +8452,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AuthTimeout", request.authTimeout);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.codecName)) {
+            query.put("CodecName", request.codecName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.definition)) {
             query.put("Definition", request.definition);
         }
