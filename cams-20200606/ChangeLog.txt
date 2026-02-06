@@ -1,3 +1,10 @@
+2026-02-06 Version: 4.1.1
+- Update API CreateFlow: add request parameters EndpointUri.
+- Update API GetFlow: add response parameters Body.Data.EndpointUri.
+- Update API ModifyFlow: add request parameters EndpointUri.
+- Update API ModifyFlow: add response parameters Body.Data.EndpointUri.
+
+
 2026-01-29 Version: 4.1.0
 - Support API WhatsappCall.
 - Update API ChatappSyncPhoneNumber: add response parameters Body.PhoneNumbers.$.CallingConfigure.

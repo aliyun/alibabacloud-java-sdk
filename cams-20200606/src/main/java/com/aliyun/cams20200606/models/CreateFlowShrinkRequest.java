@@ -18,6 +18,13 @@ public class CreateFlowShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.***.com">http://www.***.com</a></p>
+     */
+    @NameInMap("EndpointUri")
+    public String endpointUri;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +61,14 @@ public class CreateFlowShrinkRequest extends TeaModel {
     }
     public String getCustSpaceId() {
         return this.custSpaceId;
+    }
+
+    public CreateFlowShrinkRequest setEndpointUri(String endpointUri) {
+        this.endpointUri = endpointUri;
+        return this;
+    }
+    public String getEndpointUri() {
+        return this.endpointUri;
     }
 
     public CreateFlowShrinkRequest setFlowName(String flowName) {

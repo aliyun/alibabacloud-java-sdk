@@ -102,6 +102,13 @@ public class GetFlowResponseBody extends TeaModel {
         public String dataApiVersion;
 
         /**
+         * <strong>example:</strong>
+         * <p><a href="http://abc.com">http://abc.com</a></p>
+         */
+        @NameInMap("EndpointUri")
+        public String endpointUri;
+
+        /**
          * <p>The Flow ID.</p>
          * 
          * <strong>example:</strong>
@@ -197,6 +204,14 @@ public class GetFlowResponseBody extends TeaModel {
         }
         public String getDataApiVersion() {
             return this.dataApiVersion;
+        }
+
+        public GetFlowResponseBodyData setEndpointUri(String endpointUri) {
+            this.endpointUri = endpointUri;
+            return this;
+        }
+        public String getEndpointUri() {
+            return this.endpointUri;
         }
 
         public GetFlowResponseBodyData setFlowId(String flowId) {

@@ -19,6 +19,13 @@ public class ModifyFlowRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p><a href="http://www.***.com">http://www.***.com</a></p>
+     */
+    @NameInMap("EndpointUri")
+    public String endpointUri;
+
+    /**
+     * <strong>example:</strong>
      * <p>示例值</p>
      */
     @NameInMap("FlowId")
@@ -61,6 +68,14 @@ public class ModifyFlowRequest extends TeaModel {
     }
     public String getCustSpaceId() {
         return this.custSpaceId;
+    }
+
+    public ModifyFlowRequest setEndpointUri(String endpointUri) {
+        this.endpointUri = endpointUri;
+        return this;
+    }
+    public String getEndpointUri() {
+        return this.endpointUri;
     }
 
     public ModifyFlowRequest setFlowId(String flowId) {

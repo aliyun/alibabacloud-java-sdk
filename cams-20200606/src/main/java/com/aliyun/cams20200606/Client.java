@@ -2050,6 +2050,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CustSpaceId", request.custSpaceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointUri)) {
+            query.put("EndpointUri", request.endpointUri);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.flowName)) {
             query.put("FlowName", request.flowName);
         }
@@ -8582,6 +8586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
             query.put("CustSpaceId", request.custSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointUri)) {
+            query.put("EndpointUri", request.endpointUri);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {

@@ -93,6 +93,13 @@ public class ModifyFlowResponseBody extends TeaModel {
         public java.util.List<String> categories;
 
         /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.abc.com">http://www.abc.com</a></p>
+         */
+        @NameInMap("EndpointUri")
+        public String endpointUri;
+
+        /**
          * <p>The Flow ID.</p>
          * 
          * <strong>example:</strong>
@@ -121,6 +128,14 @@ public class ModifyFlowResponseBody extends TeaModel {
         }
         public java.util.List<String> getCategories() {
             return this.categories;
+        }
+
+        public ModifyFlowResponseBodyData setEndpointUri(String endpointUri) {
+            this.endpointUri = endpointUri;
+            return this;
+        }
+        public String getEndpointUri() {
+            return this.endpointUri;
         }
 
         public ModifyFlowResponseBodyData setFlowId(String flowId) {
