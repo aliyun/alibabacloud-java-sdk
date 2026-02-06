@@ -32,6 +32,9 @@ public class ListDatabasesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SearchKey")
+    public String searchKey;
+
     /**
      * <p>The ID of the tenant.</p>
      * <blockquote>
@@ -71,6 +74,14 @@ public class ListDatabasesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDatabasesRequest setSearchKey(String searchKey) {
+        this.searchKey = searchKey;
+        return this;
+    }
+    public String getSearchKey() {
+        return this.searchKey;
     }
 
     public ListDatabasesRequest setTid(Long tid) {
