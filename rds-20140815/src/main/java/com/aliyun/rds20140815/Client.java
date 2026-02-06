@@ -7390,6 +7390,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>RDS MySQL删除修改参数运行任务</p>
+     * 
+     * @param request DeleteParameterTimedScheduleTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteParameterTimedScheduleTaskResponse
+     */
+    public DeleteParameterTimedScheduleTaskResponse deleteParameterTimedScheduleTaskWithOptions(DeleteParameterTimedScheduleTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteParameterTimedScheduleTask"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteParameterTimedScheduleTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>RDS MySQL删除修改参数运行任务</p>
+     * 
+     * @param request DeleteParameterTimedScheduleTaskRequest
+     * @return DeleteParameterTimedScheduleTaskResponse
+     */
+    public DeleteParameterTimedScheduleTaskResponse deleteParameterTimedScheduleTask(DeleteParameterTimedScheduleTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteParameterTimedScheduleTaskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <p>RDS PostgreSQL</p>
@@ -16919,6 +16967,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeParameterTemplatesResponse describeParameterTemplates(DescribeParameterTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeParameterTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>RDS MySQL查询修改参数运行时间列表</p>
+     * 
+     * @param request DescribeParameterTimedScheduleTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeParameterTimedScheduleTaskResponse
+     */
+    public DescribeParameterTimedScheduleTaskResponse describeParameterTimedScheduleTaskWithOptions(DescribeParameterTimedScheduleTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeParameterTimedScheduleTask"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeParameterTimedScheduleTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>RDS MySQL查询修改参数运行时间列表</p>
+     * 
+     * @param request DescribeParameterTimedScheduleTaskRequest
+     * @return DescribeParameterTimedScheduleTaskResponse
+     */
+    public DescribeParameterTimedScheduleTaskResponse describeParameterTimedScheduleTask(DescribeParameterTimedScheduleTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeParameterTimedScheduleTaskWithOptions(request, runtime);
     }
 
     /**

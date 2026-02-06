@@ -1,3 +1,8 @@
+2026-02-06 Version: 14.4.0
+- Support API DeleteParameterTimedScheduleTask.
+- Support API DescribeParameterTimedScheduleTask.
+
+
 2026-02-05 Version: 14.3.0
 - Support API DescribeActiveOperationMaintainConf.
 - Support API DescribeSQLServerUpgradeVersions.
