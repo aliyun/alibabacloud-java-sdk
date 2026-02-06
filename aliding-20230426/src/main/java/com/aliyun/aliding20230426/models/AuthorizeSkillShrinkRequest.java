@@ -7,6 +7,9 @@ public class AuthorizeSkillShrinkRequest extends TeaModel {
     @NameInMap("PermissionCodes")
     public String permissionCodesShrink;
 
+    @NameInMap("SourceIdOfAssistantId")
+    public String sourceIdOfAssistantId;
+
     public static AuthorizeSkillShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AuthorizeSkillShrinkRequest self = new AuthorizeSkillShrinkRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class AuthorizeSkillShrinkRequest extends TeaModel {
     }
     public String getPermissionCodesShrink() {
         return this.permissionCodesShrink;
+    }
+
+    public AuthorizeSkillShrinkRequest setSourceIdOfAssistantId(String sourceIdOfAssistantId) {
+        this.sourceIdOfAssistantId = sourceIdOfAssistantId;
+        return this;
+    }
+    public String getSourceIdOfAssistantId() {
+        return this.sourceIdOfAssistantId;
     }
 
 }

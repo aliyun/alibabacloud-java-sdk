@@ -1124,6 +1124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PermissionCodes", request.permissionCodesShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfAssistantId)) {
+            body.put("SourceIdOfAssistantId", request.sourceIdOfAssistantId);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -12058,6 +12062,156 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetSheetContentJobIdHeaders headers = new GetSheetContentJobIdHeaders();
         return this.getSheetContentJobIdWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取技能详情</p>
+     * 
+     * @param request GetSkillDetailRequest
+     * @param tmpHeader GetSkillDetailHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSkillDetailResponse
+     */
+    public GetSkillDetailResponse getSkillDetailWithOptions(GetSkillDetailRequest request, GetSkillDetailHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        GetSkillDetailShrinkHeaders headers = new GetSkillDetailShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            body.put("SkillId", request.skillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfAssistantId)) {
+            body.put("SourceIdOfAssistantId", request.sourceIdOfAssistantId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSkillDetail"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ai/v1/skill/getSkillDetail"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取技能详情</p>
+     * 
+     * @param request GetSkillDetailRequest
+     * @return GetSkillDetailResponse
+     */
+    public GetSkillDetailResponse getSkillDetail(GetSkillDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetSkillDetailHeaders headers = new GetSkillDetailHeaders();
+        return this.getSkillDetailWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取技能列表</p>
+     * 
+     * @param tmpReq GetSkillsRequest
+     * @param tmpHeader GetSkillsHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSkillsResponse
+     */
+    public GetSkillsResponse getSkillsWithOptions(GetSkillsRequest tmpReq, GetSkillsHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetSkillsShrinkRequest request = new GetSkillsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetSkillsShrinkHeaders headers = new GetSkillsShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.groupIds)) {
+            request.groupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.groupIds, "GroupIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.skillIds)) {
+            request.skillIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.skillIds, "SkillIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupIdsShrink)) {
+            body.put("GroupIds", request.groupIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillIdsShrink)) {
+            body.put("SkillIds", request.skillIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfAssistantId)) {
+            body.put("SourceIdOfAssistantId", request.sourceIdOfAssistantId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSkills"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ai/v1/skill/getSkills"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取技能列表</p>
+     * 
+     * @param request GetSkillsRequest
+     * @return GetSkillsResponse
+     */
+    public GetSkillsResponse getSkills(GetSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetSkillsHeaders headers = new GetSkillsHeaders();
+        return this.getSkillsWithOptions(request, headers, runtime);
     }
 
     /**
