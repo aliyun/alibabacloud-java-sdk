@@ -1784,6 +1784,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Add configurations for modifying the response code.</p>
+     * 
+     * @param request CreateCustomResponseCodeRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCustomResponseCodeRuleResponse
+     */
+    public CreateCustomResponseCodeRuleResponse createCustomResponseCodeRuleWithOptions(CreateCustomResponseCodeRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageId)) {
+            query.put("PageId", request.pageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnCode)) {
+            query.put("ReturnCode", request.returnCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
+            query.put("Rule", request.rule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleEnable)) {
+            query.put("RuleEnable", request.ruleEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequence)) {
+            query.put("Sequence", request.sequence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
+            query.put("SiteVersion", request.siteVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCustomResponseCodeRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomResponseCodeRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Add configurations for modifying the response code.</p>
+     * 
+     * @param request CreateCustomResponseCodeRuleRequest
+     * @return CreateCustomResponseCodeRuleResponse
+     */
+    public CreateCustomResponseCodeRuleResponse createCustomResponseCodeRule(CreateCustomResponseCodeRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCustomResponseCodeRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates an account-level custom scenario policy. You can execute a policy after you associate the policy with a website.</p>
      * 
      * @param request CreateCustomScenePolicyRequest
@@ -5502,6 +5574,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCustomHostnameResponse deleteCustomHostname(DeleteCustomHostnameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCustomHostnameWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the configuration of response code modification for a website.</p>
+     * 
+     * @param request DeleteCustomResponseCodeRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomResponseCodeRuleResponse
+     */
+    public DeleteCustomResponseCodeRuleResponse deleteCustomResponseCodeRuleWithOptions(DeleteCustomResponseCodeRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomResponseCodeRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomResponseCodeRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the configuration of response code modification for a website.</p>
+     * 
+     * @param request DeleteCustomResponseCodeRuleRequest
+     * @return DeleteCustomResponseCodeRuleResponse
+     */
+    public DeleteCustomResponseCodeRuleResponse deleteCustomResponseCodeRule(DeleteCustomResponseCodeRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCustomResponseCodeRuleWithOptions(request, runtime);
     }
 
     /**
@@ -9462,6 +9582,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询修改响应码规则详情</p>
+     * 
+     * @param request GetCustomResponseCodeRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomResponseCodeRuleResponse
+     */
+    public GetCustomResponseCodeRuleResponse getCustomResponseCodeRuleWithOptions(GetCustomResponseCodeRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomResponseCodeRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomResponseCodeRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询修改响应码规则详情</p>
+     * 
+     * @param request GetCustomResponseCodeRuleRequest
+     * @return GetCustomResponseCodeRuleResponse
+     */
+    public GetCustomResponseCodeRuleResponse getCustomResponseCodeRule(GetCustomResponseCodeRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCustomResponseCodeRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query Site Developer Mode Configuration</p>
      * 
      * @param request GetDevelopmentModeRequest
@@ -12916,6 +13084,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCustomHostnamesResponse listCustomHostnames(ListCustomHostnamesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCustomHostnamesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configuration list of an HTTP response header modification rule for a website.</p>
+     * 
+     * @param request ListCustomResponseCodeRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomResponseCodeRulesResponse
+     */
+    public ListCustomResponseCodeRulesResponse listCustomResponseCodeRulesWithOptions(ListCustomResponseCodeRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
+            query.put("ConfigType", request.configType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
+            query.put("SiteVersion", request.siteVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomResponseCodeRules"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomResponseCodeRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configuration list of an HTTP response header modification rule for a website.</p>
+     * 
+     * @param request ListCustomResponseCodeRulesRequest
+     * @return ListCustomResponseCodeRulesResponse
+     */
+    public ListCustomResponseCodeRulesResponse listCustomResponseCodeRules(ListCustomResponseCodeRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCustomResponseCodeRulesWithOptions(request, runtime);
     }
 
     /**
@@ -17938,6 +18174,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCustomHostnameResponse updateCustomHostname(UpdateCustomHostnameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCustomHostnameWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modify the response code configurations for a website.</p>
+     * 
+     * @param request UpdateCustomResponseCodeRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCustomResponseCodeRuleResponse
+     */
+    public UpdateCustomResponseCodeRuleResponse updateCustomResponseCodeRuleWithOptions(UpdateCustomResponseCodeRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageId)) {
+            query.put("PageId", request.pageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnCode)) {
+            query.put("ReturnCode", request.returnCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
+            query.put("Rule", request.rule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleEnable)) {
+            query.put("RuleEnable", request.ruleEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequence)) {
+            query.put("Sequence", request.sequence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCustomResponseCodeRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomResponseCodeRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modify the response code configurations for a website.</p>
+     * 
+     * @param request UpdateCustomResponseCodeRuleRequest
+     * @return UpdateCustomResponseCodeRuleResponse
+     */
+    public UpdateCustomResponseCodeRuleResponse updateCustomResponseCodeRule(UpdateCustomResponseCodeRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCustomResponseCodeRuleWithOptions(request, runtime);
     }
 
     /**
