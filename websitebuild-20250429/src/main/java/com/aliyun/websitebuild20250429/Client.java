@@ -284,6 +284,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建素材中心文件夹</p>
+     * 
+     * @param request CreateMaterialDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMaterialDirectoryResponse
+     */
+    public CreateMaterialDirectoryResponse createMaterialDirectoryWithOptions(CreateMaterialDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentDirectoryId)) {
+            query.put("ParentDirectoryId", request.parentDirectoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMaterialDirectory"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMaterialDirectoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建素材中心文件夹</p>
+     * 
+     * @param request CreateMaterialDirectoryRequest
+     * @return CreateMaterialDirectoryResponse
+     */
+    public CreateMaterialDirectoryResponse createMaterialDirectory(CreateMaterialDirectoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMaterialDirectoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Delete the SSL certificate of a domain</p>
      * 
      * @param request DeleteAppDomainCertificateRequest
@@ -376,6 +428,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAppDomainRedirectResponse deleteAppDomainRedirect(DeleteAppDomainRedirectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAppDomainRedirectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除素材中心文件夹</p>
+     * 
+     * @param request DeleteMaterialDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMaterialDirectoryResponse
+     */
+    public DeleteMaterialDirectoryResponse deleteMaterialDirectoryWithOptions(DeleteMaterialDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMaterialDirectory"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMaterialDirectoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除素材中心文件夹</p>
+     * 
+     * @param request DeleteMaterialDirectoryRequest
+     * @return DeleteMaterialDirectoryResponse
+     */
+    public DeleteMaterialDirectoryResponse deleteMaterialDirectory(DeleteMaterialDirectoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMaterialDirectoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除素材生产任务</p>
+     * 
+     * @param tmpReq DeleteMaterialTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMaterialTaskResponse
+     */
+    public DeleteMaterialTaskResponse deleteMaterialTaskWithOptions(DeleteMaterialTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteMaterialTaskShrinkRequest request = new DeleteMaterialTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskIds)) {
+            request.taskIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskIds, "TaskIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIdsShrink)) {
+            query.put("TaskIds", request.taskIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMaterialTask"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMaterialTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除素材生产任务</p>
+     * 
+     * @param request DeleteMaterialTaskRequest
+     * @return DeleteMaterialTaskResponse
+     */
+    public DeleteMaterialTaskResponse deleteMaterialTask(DeleteMaterialTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMaterialTaskWithOptions(request, runtime);
     }
 
     /**
@@ -488,6 +638,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DispatchConsoleAPIForPartnerResponse dispatchConsoleAPIForPartner(DispatchConsoleAPIForPartnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dispatchConsoleAPIForPartnerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出素材文件</p>
+     * 
+     * @param tmpReq ExportMaterialFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportMaterialFileResponse
+     */
+    public ExportMaterialFileResponse exportMaterialFileWithOptions(ExportMaterialFileRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ExportMaterialFileShrinkRequest request = new ExportMaterialFileShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.fileIds)) {
+            request.fileIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fileIds, "FileIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileIdsShrink)) {
+            query.put("FileIds", request.fileIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportMaterialFile"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportMaterialFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出素材文件</p>
+     * 
+     * @param request ExportMaterialFileRequest
+     * @return ExportMaterialFileResponse
+     */
+    public ExportMaterialFileResponse exportMaterialFile(ExportMaterialFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportMaterialFileWithOptions(request, runtime);
     }
 
     /**
@@ -1118,6 +1322,282 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改素材中心文件夹</p>
+     * 
+     * @param request ModifyMaterialDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyMaterialDirectoryResponse
+     */
+    public ModifyMaterialDirectoryResponse modifyMaterialDirectoryWithOptions(ModifyMaterialDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyMaterialDirectory"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyMaterialDirectoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改素材中心文件夹</p>
+     * 
+     * @param request ModifyMaterialDirectoryRequest
+     * @return ModifyMaterialDirectoryResponse
+     */
+    public ModifyMaterialDirectoryResponse modifyMaterialDirectory(ModifyMaterialDirectoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyMaterialDirectoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改素材文件</p>
+     * 
+     * @param request ModifyMaterialFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyMaterialFileResponse
+     */
+    public ModifyMaterialFileResponse modifyMaterialFileWithOptions(ModifyMaterialFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyMaterialFile"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyMaterialFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改素材文件</p>
+     * 
+     * @param request ModifyMaterialFileRequest
+     * @return ModifyMaterialFileResponse
+     */
+    public ModifyMaterialFileResponse modifyMaterialFile(ModifyMaterialFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyMaterialFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改素材文件状态</p>
+     * 
+     * @param tmpReq ModifyMaterialFileStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyMaterialFileStatusResponse
+     */
+    public ModifyMaterialFileStatusResponse modifyMaterialFileStatusWithOptions(ModifyMaterialFileStatusRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyMaterialFileStatusShrinkRequest request = new ModifyMaterialFileStatusShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.fileIds)) {
+            request.fileIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fileIds, "FileIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileIdsShrink)) {
+            query.put("FileIds", request.fileIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyMaterialFileStatus"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyMaterialFileStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改素材文件状态</p>
+     * 
+     * @param request ModifyMaterialFileStatusRequest
+     * @return ModifyMaterialFileStatusResponse
+     */
+    public ModifyMaterialFileStatusResponse modifyMaterialFileStatus(ModifyMaterialFileStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyMaterialFileStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>移动素材中心文件夹</p>
+     * 
+     * @param request MoveMaterialDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MoveMaterialDirectoryResponse
+     */
+    public MoveMaterialDirectoryResponse moveMaterialDirectoryWithOptions(MoveMaterialDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentDirectoryId)) {
+            query.put("ParentDirectoryId", request.parentDirectoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortNum)) {
+            query.put("SortNum", request.sortNum);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MoveMaterialDirectory"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MoveMaterialDirectoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>移动素材中心文件夹</p>
+     * 
+     * @param request MoveMaterialDirectoryRequest
+     * @return MoveMaterialDirectoryResponse
+     */
+    public MoveMaterialDirectoryResponse moveMaterialDirectory(MoveMaterialDirectoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.moveMaterialDirectoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>移动素材文件</p>
+     * 
+     * @param tmpReq MoveMaterialFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MoveMaterialFileResponse
+     */
+    public MoveMaterialFileResponse moveMaterialFileWithOptions(MoveMaterialFileRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        MoveMaterialFileShrinkRequest request = new MoveMaterialFileShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.fileIds)) {
+            request.fileIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fileIds, "FileIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileIdsShrink)) {
+            query.put("FileIds", request.fileIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MoveMaterialFile"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MoveMaterialFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>移动素材文件</p>
+     * 
+     * @param request MoveMaterialFileRequest
+     * @return MoveMaterialFileResponse
+     */
+    public MoveMaterialFileResponse moveMaterialFile(MoveMaterialFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.moveMaterialFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>合作伙伴操作应用</p>
      * 
      * @param request OperateAppInstanceForPartnerRequest
@@ -1218,6 +1698,428 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OperateAppServiceForPartnerResponse operateAppServiceForPartner(OperateAppServiceForPartnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.operateAppServiceForPartnerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材中心文件夹树结构</p>
+     * 
+     * @param request QueryMaterialDirectoryTreeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMaterialDirectoryTreeResponse
+     */
+    public QueryMaterialDirectoryTreeResponse queryMaterialDirectoryTreeWithOptions(QueryMaterialDirectoryTreeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenPublic)) {
+            query.put("HiddenPublic", request.hiddenPublic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.root)) {
+            query.put("Root", request.root);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMaterialDirectoryTree"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMaterialDirectoryTreeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材中心文件夹树结构</p>
+     * 
+     * @param request QueryMaterialDirectoryTreeRequest
+     * @return QueryMaterialDirectoryTreeResponse
+     */
+    public QueryMaterialDirectoryTreeResponse queryMaterialDirectoryTree(QueryMaterialDirectoryTreeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMaterialDirectoryTreeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材文件详情</p>
+     * 
+     * @param request QueryMaterialFileDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMaterialFileDetailResponse
+     */
+    public QueryMaterialFileDetailResponse queryMaterialFileDetailWithOptions(QueryMaterialFileDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            query.put("FileId", request.fileId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMaterialFileDetail"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMaterialFileDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材文件详情</p>
+     * 
+     * @param request QueryMaterialFileDetailRequest
+     * @return QueryMaterialFileDetailResponse
+     */
+    public QueryMaterialFileDetailResponse queryMaterialFileDetail(QueryMaterialFileDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMaterialFileDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材文件列表</p>
+     * 
+     * @param tmpReq QueryMaterialFileListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMaterialFileListResponse
+     */
+    public QueryMaterialFileListResponse queryMaterialFileListWithOptions(QueryMaterialFileListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryMaterialFileListShrinkRequest request = new QueryMaterialFileListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statusList)) {
+            request.statusListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statusList, "StatusList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.suffixList)) {
+            request.suffixListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.suffixList, "SuffixList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.typeList)) {
+            request.typeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.typeList, "TypeList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxFileSize)) {
+            query.put("MaxFileSize", request.maxFileSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minFileSize)) {
+            query.put("MinFileSize", request.minFileSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {
+            query.put("OrderColumn", request.orderColumn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusListShrink)) {
+            query.put("StatusList", request.statusListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.suffixListShrink)) {
+            query.put("SuffixList", request.suffixListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.typeListShrink)) {
+            query.put("TypeList", request.typeListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMaterialFileList"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMaterialFileListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材文件列表</p>
+     * 
+     * @param request QueryMaterialFileListRequest
+     * @return QueryMaterialFileListResponse
+     */
+    public QueryMaterialFileListResponse queryMaterialFileList(QueryMaterialFileListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMaterialFileListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材中心文件概要信息</p>
+     * 
+     * @param tmpReq QueryMaterialFileSummaryInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMaterialFileSummaryInfoResponse
+     */
+    public QueryMaterialFileSummaryInfoResponse queryMaterialFileSummaryInfoWithOptions(QueryMaterialFileSummaryInfoRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryMaterialFileSummaryInfoShrinkRequest request = new QueryMaterialFileSummaryInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statusList)) {
+            request.statusListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statusList, "StatusList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.typeList)) {
+            request.typeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.typeList, "TypeList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {
+            query.put("OrderColumn", request.orderColumn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusListShrink)) {
+            query.put("StatusList", request.statusListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.typeListShrink)) {
+            query.put("TypeList", request.typeListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMaterialFileSummaryInfo"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMaterialFileSummaryInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材中心文件概要信息</p>
+     * 
+     * @param request QueryMaterialFileSummaryInfoRequest
+     * @return QueryMaterialFileSummaryInfoResponse
+     */
+    public QueryMaterialFileSummaryInfoResponse queryMaterialFileSummaryInfo(QueryMaterialFileSummaryInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMaterialFileSummaryInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材生产任务详情</p>
+     * 
+     * @param request QueryMaterialTaskDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMaterialTaskDetailResponse
+     */
+    public QueryMaterialTaskDetailResponse queryMaterialTaskDetailWithOptions(QueryMaterialTaskDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMaterialTaskDetail"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMaterialTaskDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材生产任务详情</p>
+     * 
+     * @param request QueryMaterialTaskDetailRequest
+     * @return QueryMaterialTaskDetailResponse
+     */
+    public QueryMaterialTaskDetailResponse queryMaterialTaskDetail(QueryMaterialTaskDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMaterialTaskDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材生产任务列表</p>
+     * 
+     * @param tmpReq QueryMaterialTaskListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMaterialTaskListResponse
+     */
+    public QueryMaterialTaskListResponse queryMaterialTaskListWithOptions(QueryMaterialTaskListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryMaterialTaskListShrinkRequest request = new QueryMaterialTaskListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statusList)) {
+            request.statusListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statusList, "StatusList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskTypeList)) {
+            request.taskTypeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskTypeList, "TaskTypeList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {
+            query.put("OrderColumn", request.orderColumn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusListShrink)) {
+            query.put("StatusList", request.statusListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskTypeListShrink)) {
+            query.put("TaskTypeList", request.taskTypeListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMaterialTaskList"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMaterialTaskListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询素材生产任务列表</p>
+     * 
+     * @param request QueryMaterialTaskListRequest
+     * @return QueryMaterialTaskListResponse
+     */
+    public QueryMaterialTaskListResponse queryMaterialTaskList(QueryMaterialTaskListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMaterialTaskListWithOptions(request, runtime);
     }
 
     /**
@@ -1564,6 +2466,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>提交素材生产任务</p>
+     * 
+     * @param request SubmitMaterialTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitMaterialTaskResponse
+     */
+    public SubmitMaterialTaskResponse submitMaterialTaskWithOptions(SubmitMaterialTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskParam)) {
+            query.put("TaskParam", request.taskParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            query.put("TaskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitMaterialTask"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitMaterialTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交素材生产任务</p>
+     * 
+     * @param request SubmitMaterialTaskRequest
+     * @return SubmitMaterialTaskResponse
+     */
+    public SubmitMaterialTaskResponse submitMaterialTask(SubmitMaterialTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitMaterialTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>合作伙伴同步应用实例</p>
      * 
      * @param tmpReq SyncAppInstanceForPartnerRequest
@@ -1674,5 +2624,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnbindAppDomainResponse unbindAppDomain(UnbindAppDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unbindAppDomainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传素材文件</p>
+     * 
+     * @param request UploadMaterialFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadMaterialFileResponse
+     */
+    public UploadMaterialFileResponse uploadMaterialFileWithOptions(UploadMaterialFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            query.put("FileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadMaterialFile"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadMaterialFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传素材文件</p>
+     * 
+     * @param request UploadMaterialFileRequest
+     * @return UploadMaterialFileResponse
+     */
+    public UploadMaterialFileResponse uploadMaterialFile(UploadMaterialFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.uploadMaterialFileWithOptions(request, runtime);
     }
 }
