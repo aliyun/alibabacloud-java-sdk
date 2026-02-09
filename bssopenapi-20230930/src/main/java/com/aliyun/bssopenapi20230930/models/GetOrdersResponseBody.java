@@ -81,122 +81,54 @@ public class GetOrdersResponseBody extends TeaModel {
     }
 
     public static class GetOrdersResponseBodyDataOrderListOrder extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>66</p>
-         */
         @NameInMap("AfterTaxAmount")
         public String afterTaxAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2017-06-08T09:41:30Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <strong>example:</strong>
-         * <p>237258627070169</p>
-         */
         @NameInMap("OrderId")
         public String orderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>New</p>
-         */
         @NameInMap("OrderType")
         public String orderType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Paid</p>
-         */
         @NameInMap("PaymentStatus")
         public String paymentStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2017-06-08T09:41:30Z</p>
-         */
         @NameInMap("PaymentTime")
         public String paymentTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxAmount")
         public String pretaxAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxAmountLocal")
         public String pretaxAmountLocal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxGrossAmount")
         public String pretaxGrossAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>234535345345342</p>
-         */
         @NameInMap("RelatedOrderId")
         public String relatedOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Subscription</p>
-         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Tax")
         public String tax;
 

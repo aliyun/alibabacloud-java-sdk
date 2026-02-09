@@ -81,24 +81,12 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>cloud_ssd</p>
-         */
         @NameInMap("AttrApiCode")
         public String attrApiCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cloud_ssd</p>
-         */
         @NameInMap("ModuleApiCode")
         public String moduleApiCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cloud_ssd</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -153,22 +141,12 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig extends TeaModel {
-        /**
-         * <p>apiCode</p>
-         * 
-         * <strong>example:</strong>
-         * <p>datadisk</p>
-         */
         @NameInMap("ApiCode")
         public String apiCode;
 
         @NameInMap("BillModuleProperties")
         public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties billModuleProperties;
 
-        /**
-         * <strong>example:</strong>
-         * <p>datadisk</p>
-         */
         @NameInMap("Code")
         public String code;
 
@@ -234,20 +212,12 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>cloud_efficiency</p>
-         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cloud_efficiency</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -302,10 +272,6 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>systemdisk</p>
-         */
         @NameInMap("Code")
         public String code;
 
@@ -366,201 +332,93 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrder extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AfterTaxAmount")
         public String afterTaxAmount;
 
         @NameInMap("BillModuleConfig")
         public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig billModuleConfig;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DBInstanceClass:[DBInstanceClass:rds.mysql.s1.small;EngineVersion:8.0;Region:cn-qingdao;]DBFlowType:[Region:cn-qingdao;]</p>
-         */
         @NameInMap("Config")
         public String config;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2017-06-08T09:41:30Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
         @NameInMap("ExtendInfos")
         public java.util.Map<String, String> extendInfos;
 
-        /**
-         * <strong>example:</strong>
-         * <p>[&quot;rm-bp1a2vsr018313t6o&quot;]</p>
-         */
         @NameInMap("InstanceIds")
         public String instanceIds;
 
-        /**
-         * <strong>example:</strong>
-         * <p>322315</p>
-         */
         @NameInMap("Operator")
         public String operator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>241559391310333</p>
-         */
         @NameInMap("OrderId")
         public String orderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>productsuborder</p>
-         */
         @NameInMap("OrderSubType")
         public String orderSubType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>new</p>
-         */
         @NameInMap("OrderType")
         public String orderType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DBInstanceClass:[DBInstanceClass:rds.mysql.s1.small;EngineVersion:8.0;Region:cn-qingdao;]DBFlowType:[Region:cn-qingdao;]</p>
-         */
         @NameInMap("OriginalConfig")
         public String originalConfig;
 
         @NameInMap("OriginalModuleConfig")
         public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig originalModuleConfig;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
-        /**
-         * <strong>example:</strong>
-         * <p>paid</p>
-         */
         @NameInMap("PaymentStatus")
         public String paymentStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2017-06-08T09:41:30Z</p>
-         */
         @NameInMap("PaymentTime")
         public String paymentTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxAmount")
         public String pretaxAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxAmountLocal")
         public String pretaxAmountLocal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxGrossAmount")
         public String pretaxGrossAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Quantity")
         public String quantity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <strong>example:</strong>
-         * <p>241559391310332</p>
-         */
         @NameInMap("RelatedOrderId")
         public String relatedOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>234343</p>
-         */
         @NameInMap("SubOrderId")
         public String subOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Subscription</p>
-         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Tax")
         public String tax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2117-06-08T16:00:00Z</p>
-         */
         @NameInMap("UsageEndTime")
         public String usageEndTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2017-06-08T16:00:00Z</p>
-         */
         @NameInMap("UsageStartTime")
         public String usageStartTime;
 
