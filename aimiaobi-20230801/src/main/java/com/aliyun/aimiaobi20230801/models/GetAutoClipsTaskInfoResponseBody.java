@@ -85,6 +85,203 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime extends TeaModel {
+        @NameInMap("Hour")
+        public Integer hour;
+
+        @NameInMap("MillSecond")
+        public Integer millSecond;
+
+        @NameInMap("Minute")
+        public Integer minute;
+
+        @NameInMap("Second")
+        public Integer second;
+
+        public static GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime build(java.util.Map<String, ?> map) throws Exception {
+            GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime self = new GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime setHour(Integer hour) {
+            this.hour = hour;
+            return this;
+        }
+        public Integer getHour() {
+            return this.hour;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime setMillSecond(Integer millSecond) {
+            this.millSecond = millSecond;
+            return this;
+        }
+        public Integer getMillSecond() {
+            return this.millSecond;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime setMinute(Integer minute) {
+            this.minute = minute;
+            return this;
+        }
+        public Integer getMinute() {
+            return this.minute;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime setSecond(Integer second) {
+            this.second = second;
+            return this;
+        }
+        public Integer getSecond() {
+            return this.second;
+        }
+
+    }
+
+    public static class GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime extends TeaModel {
+        @NameInMap("Hour")
+        public Integer hour;
+
+        @NameInMap("MillSecond")
+        public Integer millSecond;
+
+        @NameInMap("Minute")
+        public Integer minute;
+
+        @NameInMap("Second")
+        public Integer second;
+
+        public static GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime build(java.util.Map<String, ?> map) throws Exception {
+            GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime self = new GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime setHour(Integer hour) {
+            this.hour = hour;
+            return this;
+        }
+        public Integer getHour() {
+            return this.hour;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime setMillSecond(Integer millSecond) {
+            this.millSecond = millSecond;
+            return this;
+        }
+        public Integer getMillSecond() {
+            return this.millSecond;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime setMinute(Integer minute) {
+            this.minute = minute;
+            return this;
+        }
+        public Integer getMinute() {
+            return this.minute;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime setSecond(Integer second) {
+            this.second = second;
+            return this;
+        }
+        public Integer getSecond() {
+            return this.second;
+        }
+
+    }
+
+    public static class GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos extends TeaModel {
+        @NameInMap("AnalysisContent")
+        public String analysisContent;
+
+        @NameInMap("EndTime")
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime endTime;
+
+        @NameInMap("StartTime")
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime startTime;
+
+        public static GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos build(java.util.Map<String, ?> map) throws Exception {
+            GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos self = new GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos setAnalysisContent(String analysisContent) {
+            this.analysisContent = analysisContent;
+            return this;
+        }
+        public String getAnalysisContent() {
+            return this.analysisContent;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos setEndTime(GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime getEndTime() {
+            return this.endTime;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos setStartTime(GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class GetAutoClipsTaskInfoResponseBodyDataAnalysisResults extends TeaModel {
+        @NameInMap("LensInfos")
+        public java.util.List<GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos> lensInfos;
+
+        @NameInMap("MediaId")
+        public String mediaId;
+
+        @NameInMap("MediaName")
+        public String mediaName;
+
+        @NameInMap("MediaUrl")
+        public String mediaUrl;
+
+        public static GetAutoClipsTaskInfoResponseBodyDataAnalysisResults build(java.util.Map<String, ?> map) throws Exception {
+            GetAutoClipsTaskInfoResponseBodyDataAnalysisResults self = new GetAutoClipsTaskInfoResponseBodyDataAnalysisResults();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResults setLensInfos(java.util.List<GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos> lensInfos) {
+            this.lensInfos = lensInfos;
+            return this;
+        }
+        public java.util.List<GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos> getLensInfos() {
+            return this.lensInfos;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResults setMediaId(String mediaId) {
+            this.mediaId = mediaId;
+            return this;
+        }
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResults setMediaName(String mediaName) {
+            this.mediaName = mediaName;
+            return this;
+        }
+        public String getMediaName() {
+            return this.mediaName;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataAnalysisResults setMediaUrl(String mediaUrl) {
+            this.mediaUrl = mediaUrl;
+            return this;
+        }
+        public String getMediaUrl() {
+            return this.mediaUrl;
+        }
+
+    }
+
     public static class GetAutoClipsTaskInfoResponseBodyDataColorWords extends TeaModel {
         @NameInMap("Content")
         public String content;
@@ -190,6 +387,88 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
         public Float getY() {
             return this.y;
+        }
+
+    }
+
+    public static class GetAutoClipsTaskInfoResponseBodyDataReferenceVideo extends TeaModel {
+        @NameInMap("VideoId")
+        public String videoId;
+
+        @NameInMap("VideoName")
+        public String videoName;
+
+        @NameInMap("VideoUrl")
+        public String videoUrl;
+
+        public static GetAutoClipsTaskInfoResponseBodyDataReferenceVideo build(java.util.Map<String, ?> map) throws Exception {
+            GetAutoClipsTaskInfoResponseBodyDataReferenceVideo self = new GetAutoClipsTaskInfoResponseBodyDataReferenceVideo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataReferenceVideo setVideoId(String videoId) {
+            this.videoId = videoId;
+            return this;
+        }
+        public String getVideoId() {
+            return this.videoId;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataReferenceVideo setVideoName(String videoName) {
+            this.videoName = videoName;
+            return this;
+        }
+        public String getVideoName() {
+            return this.videoName;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataReferenceVideo setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+    }
+
+    public static class GetAutoClipsTaskInfoResponseBodyDataSourceVideos extends TeaModel {
+        @NameInMap("VideoId")
+        public String videoId;
+
+        @NameInMap("VideoName")
+        public String videoName;
+
+        @NameInMap("VideoUrl")
+        public String videoUrl;
+
+        public static GetAutoClipsTaskInfoResponseBodyDataSourceVideos build(java.util.Map<String, ?> map) throws Exception {
+            GetAutoClipsTaskInfoResponseBodyDataSourceVideos self = new GetAutoClipsTaskInfoResponseBodyDataSourceVideos();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataSourceVideos setVideoId(String videoId) {
+            this.videoId = videoId;
+            return this;
+        }
+        public String getVideoId() {
+            return this.videoId;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataSourceVideos setVideoName(String videoName) {
+            this.videoName = videoName;
+            return this;
+        }
+        public String getVideoName() {
+            return this.videoName;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataSourceVideos setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
         }
 
     }
@@ -484,6 +763,9 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyData extends TeaModel {
+        @NameInMap("AnalysisResults")
+        public java.util.List<GetAutoClipsTaskInfoResponseBodyDataAnalysisResults> analysisResults;
+
         @NameInMap("CloseMusic")
         public Boolean closeMusic;
 
@@ -493,11 +775,17 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         @NameInMap("CloseVoice")
         public Boolean closeVoice;
 
+        @NameInMap("ClosingCreditsUrl")
+        public String closingCreditsUrl;
+
         @NameInMap("ColorWords")
         public java.util.List<GetAutoClipsTaskInfoResponseBodyDataColorWords> colorWords;
 
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("CustomVoiceStyle")
+        public String customVoiceStyle;
 
         /**
          * <strong>example:</strong>
@@ -536,12 +824,24 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         @NameInMap("MusicVolume")
         public Integer musicVolume;
 
+        @NameInMap("OpeningCreditsUrl")
+        public String openingCreditsUrl;
+
+        @NameInMap("OutputVideoFileKey")
+        public String outputVideoFileKey;
+
         /**
          * <strong>example:</strong>
          * <p><a href="http://output.mp4">http://output.mp4</a></p>
          */
         @NameInMap("OutputVideoUrl")
         public String outputVideoUrl;
+
+        @NameInMap("ReferenceVideo")
+        public GetAutoClipsTaskInfoResponseBodyDataReferenceVideo referenceVideo;
+
+        @NameInMap("SourceVideos")
+        public java.util.List<GetAutoClipsTaskInfoResponseBodyDataSourceVideos> sourceVideos;
 
         @NameInMap("Status")
         public Integer status;
@@ -588,6 +888,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetAutoClipsTaskInfoResponseBodyData setAnalysisResults(java.util.List<GetAutoClipsTaskInfoResponseBodyDataAnalysisResults> analysisResults) {
+            this.analysisResults = analysisResults;
+            return this;
+        }
+        public java.util.List<GetAutoClipsTaskInfoResponseBodyDataAnalysisResults> getAnalysisResults() {
+            return this.analysisResults;
+        }
+
         public GetAutoClipsTaskInfoResponseBodyData setCloseMusic(Boolean closeMusic) {
             this.closeMusic = closeMusic;
             return this;
@@ -612,6 +920,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             return this.closeVoice;
         }
 
+        public GetAutoClipsTaskInfoResponseBodyData setClosingCreditsUrl(String closingCreditsUrl) {
+            this.closingCreditsUrl = closingCreditsUrl;
+            return this;
+        }
+        public String getClosingCreditsUrl() {
+            return this.closingCreditsUrl;
+        }
+
         public GetAutoClipsTaskInfoResponseBodyData setColorWords(java.util.List<GetAutoClipsTaskInfoResponseBodyDataColorWords> colorWords) {
             this.colorWords = colorWords;
             return this;
@@ -626,6 +942,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyData setCustomVoiceStyle(String customVoiceStyle) {
+            this.customVoiceStyle = customVoiceStyle;
+            return this;
+        }
+        public String getCustomVoiceStyle() {
+            return this.customVoiceStyle;
         }
 
         public GetAutoClipsTaskInfoResponseBodyData setCustomVoiceUrl(String customVoiceUrl) {
@@ -684,12 +1008,44 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             return this.musicVolume;
         }
 
+        public GetAutoClipsTaskInfoResponseBodyData setOpeningCreditsUrl(String openingCreditsUrl) {
+            this.openingCreditsUrl = openingCreditsUrl;
+            return this;
+        }
+        public String getOpeningCreditsUrl() {
+            return this.openingCreditsUrl;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyData setOutputVideoFileKey(String outputVideoFileKey) {
+            this.outputVideoFileKey = outputVideoFileKey;
+            return this;
+        }
+        public String getOutputVideoFileKey() {
+            return this.outputVideoFileKey;
+        }
+
         public GetAutoClipsTaskInfoResponseBodyData setOutputVideoUrl(String outputVideoUrl) {
             this.outputVideoUrl = outputVideoUrl;
             return this;
         }
         public String getOutputVideoUrl() {
             return this.outputVideoUrl;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyData setReferenceVideo(GetAutoClipsTaskInfoResponseBodyDataReferenceVideo referenceVideo) {
+            this.referenceVideo = referenceVideo;
+            return this;
+        }
+        public GetAutoClipsTaskInfoResponseBodyDataReferenceVideo getReferenceVideo() {
+            return this.referenceVideo;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyData setSourceVideos(java.util.List<GetAutoClipsTaskInfoResponseBodyDataSourceVideos> sourceVideos) {
+            this.sourceVideos = sourceVideos;
+            return this;
+        }
+        public java.util.List<GetAutoClipsTaskInfoResponseBodyDataSourceVideos> getSourceVideos() {
+            return this.sourceVideos;
         }
 
         public GetAutoClipsTaskInfoResponseBodyData setStatus(Integer status) {

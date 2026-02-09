@@ -10,6 +10,10 @@ public class OutlineSearchResult extends TeaModel {
     @NameInMap("Outline")
     public String outline;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("OutlineId")
     public String outlineId;
 

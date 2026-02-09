@@ -14,9 +14,17 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
     @NameInMap("Data")
     public AsyncUploadVideoResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -29,6 +37,10 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -86,6 +98,10 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
     }
 
     public static class AsyncUploadVideoResponseBodyDataVideoInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>视频中有一个房子</p>
+         */
         @NameInMap("VideoExtraInfo")
         public String videoExtraInfo;
 

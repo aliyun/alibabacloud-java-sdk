@@ -4,6 +4,17 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class AsyncUploadVideoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
+    @NameInMap("AdaptiveThreshold")
+    public Float adaptiveThreshold;
+
+    /**
+     * <strong>example:</strong>
+     * <p>重点理解视频中的风景信息</p>
+     */
     @NameInMap("AnlysisPrompt")
     public String anlysisPrompt;
 
@@ -26,8 +37,26 @@ public class AsyncUploadVideoRequest extends TeaModel {
     @NameInMap("SourceVideos")
     public java.util.List<AsyncUploadVideoRequestSourceVideos> sourceVideos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>默认1</p>
+     */
     @NameInMap("SplitInterval")
     public Integer splitInterval;
+
+    /**
+     * <strong>example:</strong>
+     * <p>task001</p>
+     */
+    @NameInMap("TaskName")
+    public String taskName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>type001</p>
+     */
+    @NameInMap("TaskType")
+    public String taskType;
 
     @NameInMap("VideoRoles")
     public java.util.List<AsyncUploadVideoRequestVideoRoles> videoRoles;
@@ -51,6 +80,14 @@ public class AsyncUploadVideoRequest extends TeaModel {
     public static AsyncUploadVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         AsyncUploadVideoRequest self = new AsyncUploadVideoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AsyncUploadVideoRequest setAdaptiveThreshold(Float adaptiveThreshold) {
+        this.adaptiveThreshold = adaptiveThreshold;
+        return this;
+    }
+    public Float getAdaptiveThreshold() {
+        return this.adaptiveThreshold;
     }
 
     public AsyncUploadVideoRequest setAnlysisPrompt(String anlysisPrompt) {
@@ -101,6 +138,22 @@ public class AsyncUploadVideoRequest extends TeaModel {
         return this.splitInterval;
     }
 
+    public AsyncUploadVideoRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public AsyncUploadVideoRequest setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
+    }
+
     public AsyncUploadVideoRequest setVideoRoles(java.util.List<AsyncUploadVideoRequestVideoRoles> videoRoles) {
         this.videoRoles = videoRoles;
         return this;
@@ -126,12 +179,24 @@ public class AsyncUploadVideoRequest extends TeaModel {
     }
 
     public static class AsyncUploadVideoRequestReferenceVideo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>手机cpu采用3纳米技术</p>
+         */
         @NameInMap("VideoExtraInfo")
         public String videoExtraInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>refvideo.mp4</p>
+         */
         @NameInMap("VideoName")
         public String videoName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/d71e_208334498220521996_51298e0a909d457693166eb883768c7a">http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/d71e_208334498220521996_51298e0a909d457693166eb883768c7a</a></p>
+         */
         @NameInMap("VideoUrl")
         public String videoUrl;
 
@@ -167,6 +232,10 @@ public class AsyncUploadVideoRequest extends TeaModel {
     }
 
     public static class AsyncUploadVideoRequestSourceVideos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>视频中有一个房子</p>
+         */
         @NameInMap("VideoExtraInfo")
         public String videoExtraInfo;
 
@@ -181,6 +250,10 @@ public class AsyncUploadVideoRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://123.mp4">http://123.mp4</a>
+         * 目前该接口只进行视频理解额和分析，并没有对文件进行转存。请保证视频地址在任务执行期间有效。</p>
          */
         @NameInMap("VideoUrl")
         public String videoUrl;

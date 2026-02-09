@@ -856,14 +856,14 @@ public class RunSearchGenerationRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <h1>角色 你是一个专业的文章检索和问答机器人，擅长文章检索和回答用户问题。  # 任务目标 请你根据检索到的相关文章，回答或表述用户问题“{query}”。  # 任务限制 - 如果用户问题中提到具体日期，请考虑知识日期做筛选。 - 生成内容结构条理。 - 生成内容尽量精简。 - 控制在30字以内 - 不要使用其他数据，不要杜撰。 - 如果不能回答用户问题，请输出对应语言的拒识文案:   - 中文：&quot;根据已知信息无法回答。&quot;   - 英文：&quot;Unable to answer based on the known information.&quot;  # 输入数据 ## 检索到的相关文章 {content}</h1>
+         * <h1>角色 你是一个专业的文章检索和问答机器人，擅长文章检索和回答用户问题。  # 任务目标 请你根据检索到的相关文章，回答或表述用户问题“{query}”。  # 任务限制 - 如果用户问题中提到具体日期，请考虑知识日期做筛选。 - 生成内容结构条理。 - 生成内容尽量精简。 - 控制在30字以内 - 不要使用其他数据，不要杜撰。 - 如果不能回答用户问题，请输出对应语言的拒识文案:   - 中文：\&quot;根据已知信息无法回答。\&quot;   - 英文：\&quot;Unable to answer based on the known information.\&quot;  # 输入数据 ## 检索到的相关文章 {content}</h1>
          */
         @NameInMap("ModelCustomPromptTemplate")
         public String modelCustomPromptTemplate;
 
         /**
          * <strong>example:</strong>
-         * <h1>角色 你是一个专业的文章检索和问答机器人，擅长文章检索和回答用户问题。   # 任务目标 请你根据检索到的相关文章和图片，回答或表述用户问题“{query}”。  # 任务限制  - 如果用户问题中提到具体日期，请考虑知识日期做筛选。  - 生成内容结构条理。  - 生成内容尽量精简。  - 控制在30字以内。 - 如果图片内容可以回答，可以忽略文章内容。 - 不要使用其他数据，不要杜撰。  - 如果不能回答用户问题，请输出对应语言的拒识文案:    	- 中文：&quot;根据已知信息无法回答。&quot;    	- 英文：&quot;Unable to answer based on the known information.&quot;    # 输入数据  ## 检索到的相关文章  {content}</h1>
+         * <h1>角色 你是一个专业的文章检索和问答机器人，擅长文章检索和回答用户问题。   # 任务目标 请你根据检索到的相关文章和图片，回答或表述用户问题“{query}”。  # 任务限制  - 如果用户问题中提到具体日期，请考虑知识日期做筛选。  - 生成内容结构条理。  - 生成内容尽量精简。  - 控制在30字以内。 - 如果图片内容可以回答，可以忽略文章内容。 - 不要使用其他数据，不要杜撰。  - 如果不能回答用户问题，请输出对应语言的拒识文案:    	- 中文：\&quot;根据已知信息无法回答。\&quot;    	- 英文：\&quot;Unable to answer based on the known information.\&quot;    # 输入数据  ## 检索到的相关文章  {content}</h1>
          */
         @NameInMap("ModelCustomVlPromptTemplate")
         public String modelCustomVlPromptTemplate;

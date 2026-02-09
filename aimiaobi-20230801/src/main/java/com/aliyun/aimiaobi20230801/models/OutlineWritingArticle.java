@@ -13,6 +13,10 @@ public class OutlineWritingArticle extends TeaModel {
     @NameInMap("PrimaryOutline")
     public String primaryOutline;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-11 06:14:07</p>
+     */
     @NameInMap("PubTime")
     public String pubTime;
 
@@ -25,6 +29,10 @@ public class OutlineWritingArticle extends TeaModel {
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com/xxxx.html">http://www.example.com/xxxx.html</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

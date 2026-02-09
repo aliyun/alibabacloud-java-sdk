@@ -196,7 +196,7 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
     public static class GetSmartClipTaskResponseBodyDataSubJobs extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>x&quot;x&quot;x&quot;x</p>
+         * <p>x\&quot;x\&quot;x\&quot;x</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;

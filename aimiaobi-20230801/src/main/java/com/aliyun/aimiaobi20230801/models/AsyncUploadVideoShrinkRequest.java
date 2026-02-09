@@ -4,6 +4,17 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class AsyncUploadVideoShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
+    @NameInMap("AdaptiveThreshold")
+    public Float adaptiveThreshold;
+
+    /**
+     * <strong>example:</strong>
+     * <p>重点理解视频中的风景信息</p>
+     */
     @NameInMap("AnlysisPrompt")
     public String anlysisPrompt;
 
@@ -26,8 +37,26 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
     @NameInMap("SourceVideos")
     public String sourceVideosShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>默认1</p>
+     */
     @NameInMap("SplitInterval")
     public Integer splitInterval;
+
+    /**
+     * <strong>example:</strong>
+     * <p>task001</p>
+     */
+    @NameInMap("TaskName")
+    public String taskName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>type001</p>
+     */
+    @NameInMap("TaskType")
+    public String taskType;
 
     @NameInMap("VideoRoles")
     public String videoRolesShrink;
@@ -51,6 +80,14 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
     public static AsyncUploadVideoShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AsyncUploadVideoShrinkRequest self = new AsyncUploadVideoShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AsyncUploadVideoShrinkRequest setAdaptiveThreshold(Float adaptiveThreshold) {
+        this.adaptiveThreshold = adaptiveThreshold;
+        return this;
+    }
+    public Float getAdaptiveThreshold() {
+        return this.adaptiveThreshold;
     }
 
     public AsyncUploadVideoShrinkRequest setAnlysisPrompt(String anlysisPrompt) {
@@ -99,6 +136,22 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
     }
     public Integer getSplitInterval() {
         return this.splitInterval;
+    }
+
+    public AsyncUploadVideoShrinkRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public AsyncUploadVideoShrinkRequest setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
     }
 
     public AsyncUploadVideoShrinkRequest setVideoRolesShrink(String videoRolesShrink) {

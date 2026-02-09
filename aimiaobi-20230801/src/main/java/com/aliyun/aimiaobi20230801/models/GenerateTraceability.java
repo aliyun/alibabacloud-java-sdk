@@ -21,9 +21,17 @@ public class GenerateTraceability extends TeaModel {
     }
 
     public static class GenerateTraceabilityNews extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-22 10:29:00</p>
+         */
         @NameInMap("PubTime")
         public String pubTime;
 
@@ -36,6 +44,12 @@ public class GenerateTraceability extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com/xxx.html">http://www.example.com/xxx.html</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

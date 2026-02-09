@@ -4,6 +4,10 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class WritingStyleTemplateField extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("BuildIn")
     public Boolean buildIn;
 
@@ -16,33 +20,69 @@ public class WritingStyleTemplateField extends TeaModel {
     @NameInMap("InitialValue")
     public String initialValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>topic</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000</p>
+     */
     @NameInMap("Max")
     public Double max;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxItem")
     public Integer maxItem;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4000</p>
+     */
     @NameInMap("MaxItemLength")
     public Integer maxItemLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000</p>
+     */
     @NameInMap("MaxLength")
     public Integer maxLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Min")
     public Double min;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("MinItemLength")
     public Integer minItemLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MinLength")
     public Integer minLength;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Required")
     public Boolean required;
 
@@ -219,6 +259,10 @@ public class WritingStyleTemplateField extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yyyy-mm-dd</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -231,6 +275,10 @@ public class WritingStyleTemplateField extends TeaModel {
         @NameInMap("Suffix")
         public String suffix;
 
+        /**
+         * <strong>example:</strong>
+         * <p>media</p>
+         */
         @NameInMap("Type")
         public String type;
 

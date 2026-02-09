@@ -13,8 +13,20 @@ public class AsyncCreateClipsTaskRequest extends TeaModel {
     @NameInMap("CloseVoice")
     public Boolean closeVoice;
 
+    @NameInMap("ClosingCreditsUrl")
+    public String closingCreditsUrl;
+
     @NameInMap("ColorWords")
     public java.util.List<AsyncCreateClipsTaskRequestColorWords> colorWords;
+
+    @NameInMap("CosyVoiceAppKey")
+    public String cosyVoiceAppKey;
+
+    @NameInMap("CosyVoiceToken")
+    public String cosyVoiceToken;
+
+    @NameInMap("CustomVoiceStyle")
+    public String customVoiceStyle;
 
     /**
      * <strong>example:</strong>
@@ -37,6 +49,12 @@ public class AsyncCreateClipsTaskRequest extends TeaModel {
     @NameInMap("Height")
     public Integer height;
 
+    @NameInMap("HighDefSourceVideos")
+    public java.util.List<AsyncCreateClipsTaskRequestHighDefSourceVideos> highDefSourceVideos;
+
+    @NameInMap("MusicStyle")
+    public String musicStyle;
+
     /**
      * <strong>example:</strong>
      * <p><a href="http://music.mp4">http://music.mp4</a></p>
@@ -46,6 +64,9 @@ public class AsyncCreateClipsTaskRequest extends TeaModel {
 
     @NameInMap("MusicVolume")
     public Integer musicVolume;
+
+    @NameInMap("OpeningCreditsUrl")
+    public String openingCreditsUrl;
 
     @NameInMap("Stickers")
     public java.util.List<AsyncCreateClipsTaskRequestStickers> stickers;
@@ -113,12 +134,44 @@ public class AsyncCreateClipsTaskRequest extends TeaModel {
         return this.closeVoice;
     }
 
+    public AsyncCreateClipsTaskRequest setClosingCreditsUrl(String closingCreditsUrl) {
+        this.closingCreditsUrl = closingCreditsUrl;
+        return this;
+    }
+    public String getClosingCreditsUrl() {
+        return this.closingCreditsUrl;
+    }
+
     public AsyncCreateClipsTaskRequest setColorWords(java.util.List<AsyncCreateClipsTaskRequestColorWords> colorWords) {
         this.colorWords = colorWords;
         return this;
     }
     public java.util.List<AsyncCreateClipsTaskRequestColorWords> getColorWords() {
         return this.colorWords;
+    }
+
+    public AsyncCreateClipsTaskRequest setCosyVoiceAppKey(String cosyVoiceAppKey) {
+        this.cosyVoiceAppKey = cosyVoiceAppKey;
+        return this;
+    }
+    public String getCosyVoiceAppKey() {
+        return this.cosyVoiceAppKey;
+    }
+
+    public AsyncCreateClipsTaskRequest setCosyVoiceToken(String cosyVoiceToken) {
+        this.cosyVoiceToken = cosyVoiceToken;
+        return this;
+    }
+    public String getCosyVoiceToken() {
+        return this.cosyVoiceToken;
+    }
+
+    public AsyncCreateClipsTaskRequest setCustomVoiceStyle(String customVoiceStyle) {
+        this.customVoiceStyle = customVoiceStyle;
+        return this;
+    }
+    public String getCustomVoiceStyle() {
+        return this.customVoiceStyle;
     }
 
     public AsyncCreateClipsTaskRequest setCustomVoiceUrl(String customVoiceUrl) {
@@ -145,6 +198,22 @@ public class AsyncCreateClipsTaskRequest extends TeaModel {
         return this.height;
     }
 
+    public AsyncCreateClipsTaskRequest setHighDefSourceVideos(java.util.List<AsyncCreateClipsTaskRequestHighDefSourceVideos> highDefSourceVideos) {
+        this.highDefSourceVideos = highDefSourceVideos;
+        return this;
+    }
+    public java.util.List<AsyncCreateClipsTaskRequestHighDefSourceVideos> getHighDefSourceVideos() {
+        return this.highDefSourceVideos;
+    }
+
+    public AsyncCreateClipsTaskRequest setMusicStyle(String musicStyle) {
+        this.musicStyle = musicStyle;
+        return this;
+    }
+    public String getMusicStyle() {
+        return this.musicStyle;
+    }
+
     public AsyncCreateClipsTaskRequest setMusicUrl(String musicUrl) {
         this.musicUrl = musicUrl;
         return this;
@@ -159,6 +228,14 @@ public class AsyncCreateClipsTaskRequest extends TeaModel {
     }
     public Integer getMusicVolume() {
         return this.musicVolume;
+    }
+
+    public AsyncCreateClipsTaskRequest setOpeningCreditsUrl(String openingCreditsUrl) {
+        this.openingCreditsUrl = openingCreditsUrl;
+        return this;
+    }
+    public String getOpeningCreditsUrl() {
+        return this.openingCreditsUrl;
     }
 
     public AsyncCreateClipsTaskRequest setStickers(java.util.List<AsyncCreateClipsTaskRequestStickers> stickers) {
@@ -314,6 +391,47 @@ public class AsyncCreateClipsTaskRequest extends TeaModel {
         }
         public Float getY() {
             return this.y;
+        }
+
+    }
+
+    public static class AsyncCreateClipsTaskRequestHighDefSourceVideos extends TeaModel {
+        @NameInMap("VideoId")
+        public String videoId;
+
+        @NameInMap("VideoName")
+        public String videoName;
+
+        @NameInMap("VideoUrl")
+        public String videoUrl;
+
+        public static AsyncCreateClipsTaskRequestHighDefSourceVideos build(java.util.Map<String, ?> map) throws Exception {
+            AsyncCreateClipsTaskRequestHighDefSourceVideos self = new AsyncCreateClipsTaskRequestHighDefSourceVideos();
+            return TeaModel.build(map, self);
+        }
+
+        public AsyncCreateClipsTaskRequestHighDefSourceVideos setVideoId(String videoId) {
+            this.videoId = videoId;
+            return this;
+        }
+        public String getVideoId() {
+            return this.videoId;
+        }
+
+        public AsyncCreateClipsTaskRequestHighDefSourceVideos setVideoName(String videoName) {
+            this.videoName = videoName;
+            return this;
+        }
+        public String getVideoName() {
+            return this.videoName;
+        }
+
+        public AsyncCreateClipsTaskRequestHighDefSourceVideos setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
         }
 
     }

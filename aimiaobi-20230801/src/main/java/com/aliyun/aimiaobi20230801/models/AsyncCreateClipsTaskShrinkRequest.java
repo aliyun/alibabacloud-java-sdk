@@ -13,8 +13,20 @@ public class AsyncCreateClipsTaskShrinkRequest extends TeaModel {
     @NameInMap("CloseVoice")
     public Boolean closeVoice;
 
+    @NameInMap("ClosingCreditsUrl")
+    public String closingCreditsUrl;
+
     @NameInMap("ColorWords")
     public String colorWordsShrink;
+
+    @NameInMap("CosyVoiceAppKey")
+    public String cosyVoiceAppKey;
+
+    @NameInMap("CosyVoiceToken")
+    public String cosyVoiceToken;
+
+    @NameInMap("CustomVoiceStyle")
+    public String customVoiceStyle;
 
     /**
      * <strong>example:</strong>
@@ -37,6 +49,12 @@ public class AsyncCreateClipsTaskShrinkRequest extends TeaModel {
     @NameInMap("Height")
     public Integer height;
 
+    @NameInMap("HighDefSourceVideos")
+    public String highDefSourceVideosShrink;
+
+    @NameInMap("MusicStyle")
+    public String musicStyle;
+
     /**
      * <strong>example:</strong>
      * <p><a href="http://music.mp4">http://music.mp4</a></p>
@@ -46,6 +64,9 @@ public class AsyncCreateClipsTaskShrinkRequest extends TeaModel {
 
     @NameInMap("MusicVolume")
     public Integer musicVolume;
+
+    @NameInMap("OpeningCreditsUrl")
+    public String openingCreditsUrl;
 
     @NameInMap("Stickers")
     public String stickersShrink;
@@ -113,12 +134,44 @@ public class AsyncCreateClipsTaskShrinkRequest extends TeaModel {
         return this.closeVoice;
     }
 
+    public AsyncCreateClipsTaskShrinkRequest setClosingCreditsUrl(String closingCreditsUrl) {
+        this.closingCreditsUrl = closingCreditsUrl;
+        return this;
+    }
+    public String getClosingCreditsUrl() {
+        return this.closingCreditsUrl;
+    }
+
     public AsyncCreateClipsTaskShrinkRequest setColorWordsShrink(String colorWordsShrink) {
         this.colorWordsShrink = colorWordsShrink;
         return this;
     }
     public String getColorWordsShrink() {
         return this.colorWordsShrink;
+    }
+
+    public AsyncCreateClipsTaskShrinkRequest setCosyVoiceAppKey(String cosyVoiceAppKey) {
+        this.cosyVoiceAppKey = cosyVoiceAppKey;
+        return this;
+    }
+    public String getCosyVoiceAppKey() {
+        return this.cosyVoiceAppKey;
+    }
+
+    public AsyncCreateClipsTaskShrinkRequest setCosyVoiceToken(String cosyVoiceToken) {
+        this.cosyVoiceToken = cosyVoiceToken;
+        return this;
+    }
+    public String getCosyVoiceToken() {
+        return this.cosyVoiceToken;
+    }
+
+    public AsyncCreateClipsTaskShrinkRequest setCustomVoiceStyle(String customVoiceStyle) {
+        this.customVoiceStyle = customVoiceStyle;
+        return this;
+    }
+    public String getCustomVoiceStyle() {
+        return this.customVoiceStyle;
     }
 
     public AsyncCreateClipsTaskShrinkRequest setCustomVoiceUrl(String customVoiceUrl) {
@@ -145,6 +198,22 @@ public class AsyncCreateClipsTaskShrinkRequest extends TeaModel {
         return this.height;
     }
 
+    public AsyncCreateClipsTaskShrinkRequest setHighDefSourceVideosShrink(String highDefSourceVideosShrink) {
+        this.highDefSourceVideosShrink = highDefSourceVideosShrink;
+        return this;
+    }
+    public String getHighDefSourceVideosShrink() {
+        return this.highDefSourceVideosShrink;
+    }
+
+    public AsyncCreateClipsTaskShrinkRequest setMusicStyle(String musicStyle) {
+        this.musicStyle = musicStyle;
+        return this;
+    }
+    public String getMusicStyle() {
+        return this.musicStyle;
+    }
+
     public AsyncCreateClipsTaskShrinkRequest setMusicUrl(String musicUrl) {
         this.musicUrl = musicUrl;
         return this;
@@ -159,6 +228,14 @@ public class AsyncCreateClipsTaskShrinkRequest extends TeaModel {
     }
     public Integer getMusicVolume() {
         return this.musicVolume;
+    }
+
+    public AsyncCreateClipsTaskShrinkRequest setOpeningCreditsUrl(String openingCreditsUrl) {
+        this.openingCreditsUrl = openingCreditsUrl;
+        return this;
+    }
+    public String getOpeningCreditsUrl() {
+        return this.openingCreditsUrl;
     }
 
     public AsyncCreateClipsTaskShrinkRequest setStickersShrink(String stickersShrink) {

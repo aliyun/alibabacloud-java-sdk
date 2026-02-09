@@ -13,6 +13,10 @@ public class HottopicNews extends TeaModel {
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com/xxx.html">http://www.example.com/xxx.html</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

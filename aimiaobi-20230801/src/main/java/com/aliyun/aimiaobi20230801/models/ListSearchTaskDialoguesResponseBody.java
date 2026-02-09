@@ -143,7 +143,7 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
     public static class ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>x&quot;x</p>
+         * <p>x\&quot;x</p>
          */
         @NameInMap("Code")
         public String code;

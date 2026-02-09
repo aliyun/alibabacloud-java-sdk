@@ -13,6 +13,10 @@ public class WritingOutline extends TeaModel {
     @NameInMap("Outline")
     public String outline;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("OutlineId")
     public String outlineId;
 

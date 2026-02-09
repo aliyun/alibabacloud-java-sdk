@@ -174,6 +174,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.colorWordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.colorWords, "ColorWords", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.highDefSourceVideos)) {
+            request.highDefSourceVideosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.highDefSourceVideos, "HighDefSourceVideos", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.stickers)) {
             request.stickersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stickers, "Stickers", "json");
         }
@@ -191,8 +195,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CloseVoice", request.closeVoice);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.closingCreditsUrl)) {
+            body.put("ClosingCreditsUrl", request.closingCreditsUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.colorWordsShrink)) {
             body.put("ColorWords", request.colorWordsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cosyVoiceAppKey)) {
+            body.put("CosyVoiceAppKey", request.cosyVoiceAppKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cosyVoiceToken)) {
+            body.put("CosyVoiceToken", request.cosyVoiceToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customVoiceStyle)) {
+            body.put("CustomVoiceStyle", request.customVoiceStyle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.customVoiceUrl)) {
@@ -207,12 +227,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Height", request.height);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.highDefSourceVideosShrink)) {
+            body.put("HighDefSourceVideos", request.highDefSourceVideosShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.musicStyle)) {
+            body.put("MusicStyle", request.musicStyle);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.musicUrl)) {
             body.put("MusicUrl", request.musicUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.musicVolume)) {
             body.put("MusicVolume", request.musicVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.openingCreditsUrl)) {
+            body.put("OpeningCreditsUrl", request.openingCreditsUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.stickersShrink)) {
@@ -475,6 +507,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adaptiveThreshold)) {
+            body.put("AdaptiveThreshold", request.adaptiveThreshold);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.anlysisPrompt)) {
             body.put("AnlysisPrompt", request.anlysisPrompt);
         }
@@ -497,6 +533,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.splitInterval)) {
             body.put("SplitInterval", request.splitInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            body.put("TaskName", request.taskName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            body.put("TaskType", request.taskType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoRolesShrink)) {
@@ -1818,6 +1862,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMaterialByIdResponse deleteMaterialById(DeleteMaterialByIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteMaterialByIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除PPT作品</p>
+     * 
+     * @param request DeletePptArtifactRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePptArtifactResponse
+     */
+    public DeletePptArtifactResponse deletePptArtifactWithOptions(DeletePptArtifactRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pptArtifactId)) {
+            body.put("PptArtifactId", request.pptArtifactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePptArtifact"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePptArtifactResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除PPT作品</p>
+     * 
+     * @param request DeletePptArtifactRequest
+     * @return DeletePptArtifactResponse
+     */
+    public DeletePptArtifactResponse deletePptArtifact(DeletePptArtifactRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePptArtifactWithOptions(request, runtime);
     }
 
     /**
@@ -3163,6 +3255,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAutoClipsTaskInfoResponse getAutoClipsTaskInfoWithOptions(GetAutoClipsTaskInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.showAnalysisResults)) {
+            body.put("ShowAnalysisResults", request.showAnalysisResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showResourceInfo)) {
+            body.put("ShowResourceInfo", request.showResourceInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
         }
@@ -3390,6 +3490,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCategoriesByTaskIdResponse getCategoriesByTaskId(GetCategoriesByTaskIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCategoriesByTaskIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获得智能混剪内置资源</p>
+     * 
+     * @param request GetClipsBuildInResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetClipsBuildInResourceResponse
+     */
+    public GetClipsBuildInResourceResponse getClipsBuildInResourceWithOptions(GetClipsBuildInResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetClipsBuildInResource"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetClipsBuildInResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获得智能混剪内置资源</p>
+     * 
+     * @param request GetClipsBuildInResourceRequest
+     * @return GetClipsBuildInResourceResponse
+     */
+    public GetClipsBuildInResourceResponse getClipsBuildInResource(GetClipsBuildInResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getClipsBuildInResourceWithOptions(request, runtime);
     }
 
     /**
@@ -4554,6 +4702,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询PPT作品信息</p>
+     * 
+     * @param request GetPptArtifactRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPptArtifactResponse
+     */
+    public GetPptArtifactResponse getPptArtifactWithOptions(GetPptArtifactRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pptArtifactId)) {
+            body.put("PptArtifactId", request.pptArtifactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPptArtifact"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPptArtifactResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PPT作品信息</p>
+     * 
+     * @param request GetPptArtifactRequest
+     * @return GetPptArtifactResponse
+     */
+    public GetPptArtifactResponse getPptArtifact(GetPptArtifactRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPptArtifactWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取PPT组件的配置</p>
      * 
      * @param request GetPptConfigRequest
@@ -5442,6 +5638,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAuditTermsResponse listAuditTerms(ListAuditTermsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAuditTermsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出智能混剪任务列表</p>
+     * 
+     * @param request ListAutoClipsTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAutoClipsTaskResponse
+     */
+    public ListAutoClipsTaskResponse listAutoClipsTaskWithOptions(ListAutoClipsTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeEnd)) {
+            body.put("CreateTimeEnd", request.createTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeStart)) {
+            body.put("CreateTimeStart", request.createTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.current)) {
+            body.put("Current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            body.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            body.put("Skip", request.skip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            body.put("TaskName", request.taskName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskStatus)) {
+            body.put("TaskStatus", request.taskStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            body.put("TaskType", request.taskType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAutoClipsTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAutoClipsTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出智能混剪任务列表</p>
+     * 
+     * @param request ListAutoClipsTaskRequest
+     * @return ListAutoClipsTaskResponse
+     */
+    public ListAutoClipsTaskResponse listAutoClipsTask(ListAutoClipsTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAutoClipsTaskWithOptions(request, runtime);
     }
 
     /**
@@ -7102,6 +7382,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPlanningProposalResponse listPlanningProposal(ListPlanningProposalRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPlanningProposalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PPT作品-列表</p>
+     * 
+     * @param request ListPptArtifactsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPptArtifactsResponse
+     */
+    public ListPptArtifactsResponse listPptArtifactsWithOptions(ListPptArtifactsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPptArtifacts"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPptArtifactsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PPT作品-列表</p>
+     * 
+     * @param request ListPptArtifactsRequest
+     * @return ListPptArtifactsResponse
+     */
+    public ListPptArtifactsResponse listPptArtifacts(ListPptArtifactsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPptArtifactsWithOptions(request, runtime);
     }
 
     /**
