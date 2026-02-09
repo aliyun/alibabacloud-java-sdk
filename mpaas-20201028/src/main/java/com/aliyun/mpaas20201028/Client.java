@@ -687,6 +687,234 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建热修复资源</p>
+     * 
+     * @param request CreateMcubeHotpatchResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMcubeHotpatchResourceResponse
+     */
+    public CreateMcubeHotpatchResourceResponse createMcubeHotpatchResourceWithOptions(CreateMcubeHotpatchResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            body.put("FileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fixDesc)) {
+            body.put("FixDesc", request.fixDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onexFlag)) {
+            body.put("OnexFlag", request.onexFlag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            body.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productVersion)) {
+            body.put("ProductVersion", request.productVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMcubeHotpatchResource"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMcubeHotpatchResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建热修复资源</p>
+     * 
+     * @param request CreateMcubeHotpatchResourceRequest
+     * @return CreateMcubeHotpatchResourceResponse
+     */
+    public CreateMcubeHotpatchResourceResponse createMcubeHotpatchResource(CreateMcubeHotpatchResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMcubeHotpatchResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建热修复回滚任务</p>
+     * 
+     * @param request CreateMcubeHotpatchRollbackTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMcubeHotpatchRollbackTaskResponse
+     */
+    public CreateMcubeHotpatchRollbackTaskResponse createMcubeHotpatchRollbackTaskWithOptions(CreateMcubeHotpatchRollbackTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
+            body.put("ProductId", request.productId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productVersion)) {
+            body.put("ProductVersion", request.productVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMcubeHotpatchRollbackTask"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMcubeHotpatchRollbackTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建热修复回滚任务</p>
+     * 
+     * @param request CreateMcubeHotpatchRollbackTaskRequest
+     * @return CreateMcubeHotpatchRollbackTaskResponse
+     */
+    public CreateMcubeHotpatchRollbackTaskResponse createMcubeHotpatchRollbackTask(CreateMcubeHotpatchRollbackTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMcubeHotpatchRollbackTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建热修复发布任务</p>
+     * 
+     * @param request CreateMcubeHotpatchTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMcubeHotpatchTaskResponse
+     */
+    public CreateMcubeHotpatchTaskResponse createMcubeHotpatchTaskWithOptions(CreateMcubeHotpatchTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.greyConfigInfo)) {
+            body.put("GreyConfigInfo", request.greyConfigInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.greyEndtimeData)) {
+            body.put("GreyEndtimeData", request.greyEndtimeData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.greyNum)) {
+            body.put("GreyNum", request.greyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memo)) {
+            body.put("Memo", request.memo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageId)) {
+            body.put("PackageId", request.packageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            body.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishMode)) {
+            body.put("PublishMode", request.publishMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishType)) {
+            body.put("PublishType", request.publishType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncMode)) {
+            body.put("SyncMode", request.syncMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelistIds)) {
+            body.put("WhitelistIds", request.whitelistIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMcubeHotpatchTask"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMcubeHotpatchTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建热修复发布任务</p>
+     * 
+     * @param request CreateMcubeHotpatchTaskRequest
+     * @return CreateMcubeHotpatchTaskResponse
+     */
+    public CreateMcubeHotpatchTaskResponse createMcubeHotpatchTask(CreateMcubeHotpatchTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMcubeHotpatchTaskWithOptions(request, runtime);
+    }
+
+    /**
      * @param request CreateMcubeMiniAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMcubeMiniAppResponse
@@ -2343,6 +2571,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除热修复资源包</p>
+     * 
+     * @param request DeleteMcubeHotpatchResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMcubeHotpatchResourceResponse
+     */
+    public DeleteMcubeHotpatchResourceResponse deleteMcubeHotpatchResourceWithOptions(DeleteMcubeHotpatchResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appCode)) {
+            body.put("AppCode", request.appCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMcubeHotpatchResource"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMcubeHotpatchResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除热修复资源包</p>
+     * 
+     * @param request DeleteMcubeHotpatchResourceRequest
+     * @return DeleteMcubeHotpatchResourceResponse
+     */
+    public DeleteMcubeHotpatchResourceResponse deleteMcubeHotpatchResource(DeleteMcubeHotpatchResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMcubeHotpatchResourceWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DeleteMcubeMiniAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMcubeMiniAppResponse
@@ -2866,6 +3154,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetFileTokenForUploadToMsaResponse getFileTokenForUploadToMsa(GetFileTokenForUploadToMsaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getFileTokenForUploadToMsaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看全部审核记录</p>
+     * 
+     * @param request GetGameReviewByStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGameReviewByStatusResponse
+     */
+    public GetGameReviewByStatusResponse getGameReviewByStatusWithOptions(GetGameReviewByStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            body.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewStatus)) {
+            body.put("ReviewStatus", request.reviewStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortMode)) {
+            body.put("SortMode", request.sortMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGameReviewByStatus"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGameReviewByStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看全部审核记录</p>
+     * 
+     * @param request GetGameReviewByStatusRequest
+     * @return GetGameReviewByStatusResponse
+     */
+    public GetGameReviewByStatusResponse getGameReviewByStatus(GetGameReviewByStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getGameReviewByStatusWithOptions(request, runtime);
     }
 
     /**
@@ -3667,6 +4027,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListMcdpAimResponse listMcdpAim(ListMcdpAimRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listMcdpAimWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询热修复资源包列表</p>
+     * 
+     * @param request ListMcubeHotpatchResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMcubeHotpatchResourcesResponse
+     */
+    public ListMcubeHotpatchResourcesResponse listMcubeHotpatchResourcesWithOptions(ListMcubeHotpatchResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            body.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMcubeHotpatchResources"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMcubeHotpatchResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询热修复资源包列表</p>
+     * 
+     * @param request ListMcubeHotpatchResourcesRequest
+     * @return ListMcubeHotpatchResourcesResponse
+     */
+    public ListMcubeHotpatchResourcesResponse listMcubeHotpatchResources(ListMcubeHotpatchResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMcubeHotpatchResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询热修复发布任务列表</p>
+     * 
+     * @param request ListMcubeHotpatchTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMcubeHotpatchTasksResponse
+     */
+    public ListMcubeHotpatchTasksResponse listMcubeHotpatchTasksWithOptions(ListMcubeHotpatchTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMcubeHotpatchTasks"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMcubeHotpatchTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询热修复发布任务列表</p>
+     * 
+     * @param request ListMcubeHotpatchTasksRequest
+     * @return ListMcubeHotpatchTasksResponse
+     */
+    public ListMcubeHotpatchTasksResponse listMcubeHotpatchTasks(ListMcubeHotpatchTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMcubeHotpatchTasksWithOptions(request, runtime);
     }
 
     /**
@@ -5796,6 +6272,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询热修复发布任务详情</p>
+     * 
+     * @param request QueryMcubeHotpatchTaskDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMcubeHotpatchTaskDetailResponse
+     */
+    public QueryMcubeHotpatchTaskDetailResponse queryMcubeHotpatchTaskDetailWithOptions(QueryMcubeHotpatchTaskDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMcubeHotpatchTaskDetail"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMcubeHotpatchTaskDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询热修复发布任务详情</p>
+     * 
+     * @param request QueryMcubeHotpatchTaskDetailRequest
+     * @return QueryMcubeHotpatchTaskDetailResponse
+     */
+    public QueryMcubeHotpatchTaskDetailResponse queryMcubeHotpatchTaskDetail(QueryMcubeHotpatchTaskDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMcubeHotpatchTaskDetailWithOptions(request, runtime);
+    }
+
+    /**
      * @param request QueryMcubeMiniPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryMcubeMiniPackageResponse
@@ -6269,6 +6801,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryMpsSchedulerListResponse queryMpsSchedulerList(QueryMpsSchedulerListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryMpsSchedulerListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询风险信息</p>
+     * 
+     * @param request QueryMscpRiskInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMscpRiskInfoResponse
+     */
+    public QueryMscpRiskInfoResponse queryMscpRiskInfoWithOptions(QueryMscpRiskInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apdidToken)) {
+            body.put("ApdidToken", request.apdidToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terminalType)) {
+            body.put("TerminalType", request.terminalType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMscpRiskInfo"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMscpRiskInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询风险信息</p>
+     * 
+     * @param request QueryMscpRiskInfoRequest
+     * @return QueryMscpRiskInfoResponse
+     */
+    public QueryMscpRiskInfoResponse queryMscpRiskInfo(QueryMscpRiskInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMscpRiskInfoWithOptions(request, runtime);
     }
 
     /**
@@ -6921,6 +7513,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateLinkResponse updateLink(UpdateLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLinkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新热修复发布任务状态</p>
+     * 
+     * @param request UpdateMcubeHotpatchTaskStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMcubeHotpatchTaskStatusResponse
+     */
+    public UpdateMcubeHotpatchTaskStatusResponse updateMcubeHotpatchTaskStatusWithOptions(UpdateMcubeHotpatchTaskStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageId)) {
+            body.put("PackageId", request.packageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskStatus)) {
+            body.put("TaskStatus", request.taskStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMcubeHotpatchTaskStatus"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMcubeHotpatchTaskStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新热修复发布任务状态</p>
+     * 
+     * @param request UpdateMcubeHotpatchTaskStatusRequest
+     * @return UpdateMcubeHotpatchTaskStatusResponse
+     */
+    public UpdateMcubeHotpatchTaskStatusResponse updateMcubeHotpatchTaskStatus(UpdateMcubeHotpatchTaskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMcubeHotpatchTaskStatusWithOptions(request, runtime);
     }
 
     /**
