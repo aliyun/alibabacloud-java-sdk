@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HttpApiDeployConfig extends TeaModel {
     /**
+     * <p>Specifies whether to enable automatic deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,19 +14,29 @@ public class HttpApiDeployConfig extends TeaModel {
     public Boolean autoDeploy;
 
     /**
+     * <p>The publishing scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>SingleService</p>
      */
     @NameInMap("backendScene")
     public String backendScene;
 
+    /**
+     * <p>The IDs of the custom domain names.</p>
+     */
     @NameInMap("customDomainIds")
     public java.util.List<String> customDomainIds;
 
+    /**
+     * <p>The information about the custom domain names.</p>
+     */
     @NameInMap("customDomainInfos")
     public java.util.List<HttpApiDeployConfigCustomDomainInfos> customDomainInfos;
 
     /**
+     * <p>The environment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>env-xxx</p>
      */
@@ -32,34 +44,56 @@ public class HttpApiDeployConfig extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-xx</p>
      */
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The instance information.</p>
+     */
     @NameInMap("gatewayInfo")
     public GatewayInfo gatewayInfo;
 
     /**
+     * <p>网关类型</p>
+     * 
      * <strong>example:</strong>
      * <p>API</p>
      */
     @NameInMap("gatewayType")
     public String gatewayType;
 
+    /**
+     * <p>The Mock settings.</p>
+     */
     @NameInMap("mock")
     public HttpApiMockContract mock;
 
+    /**
+     * <p>The policy configurations.</p>
+     */
     @NameInMap("policyConfigs")
     public java.util.List<HttpApiDeployConfigPolicyConfigs> policyConfigs;
 
+    /**
+     * <p>routeBackend</p>
+     */
     @NameInMap("routeBackend")
     public Backend routeBackend;
 
+    /**
+     * <p>The service configurations.</p>
+     */
     @NameInMap("serviceConfigs")
     public java.util.List<HttpApiDeployConfigServiceConfigs> serviceConfigs;
 
+    /**
+     * <p>The information about the sub-domain names.</p>
+     */
     @NameInMap("subDomains")
     public java.util.List<HttpApiDeployConfigSubDomains> subDomains;
 
@@ -173,12 +207,30 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigCustomDomainInfos extends TeaModel {
+        /**
+         * <p>The domain name ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cshee6dlhtgkf4muio3g</p>
+         */
         @NameInMap("domainId")
         public String domainId;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello-server.com</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
@@ -214,9 +266,21 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs extends TeaModel {
+        /**
+         * <p>Service ID for fallback</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-******</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
+        /**
+         * <p>targetModelName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gpt-4/llama3-70b</p>
+         */
         @NameInMap("targetModelName")
         public String targetModelName;
 
@@ -244,6 +308,9 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiFallbackConfig extends TeaModel {
+        /**
+         * <p>List of fallback service configurations</p>
+         */
         @NameInMap("serviceConfigs")
         public java.util.List<HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs> serviceConfigs;
 
@@ -263,18 +330,48 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService extends TeaModel {
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exact/prefix</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Modality type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text/image</p>
+         */
         @NameInMap("modalityType")
         public String modalityType;
 
+        /**
+         * <p>Consumer name for matching</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Request check service name</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://checker.example.com/validate">https://checker.example.com/validate</a></p>
+         */
         @NameInMap("requestCheckService")
         public String requestCheckService;
 
+        /**
+         * <p>requestImageCheckService</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://image-check.example.com/scan">https://image-check.example.com/scan</a></p>
+         */
         @NameInMap("requestImageCheckService")
         public String requestImageCheckService;
 
@@ -326,18 +423,48 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService extends TeaModel {
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>term</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Modality type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text/image</p>
+         */
         @NameInMap("modalityType")
         public String modalityType;
 
+        /**
+         * <p>Consumer name for matching</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI_API</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Response check service name</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://checker.example.com/validate-response">https://checker.example.com/validate-response</a></p>
+         */
         @NameInMap("responseCheckService")
         public String responseCheckService;
 
+        /**
+         * <p>responseImageCheckService</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://image-check.example.com/scan-response">https://image-check.example.com/scan-response</a></p>
+         */
         @NameInMap("responseImageCheckService")
         public String responseImageCheckService;
 
@@ -389,15 +516,39 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel extends TeaModel {
+        /**
+         * <p>Risk alert level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Critical</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>term</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Consumer name for matching</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APIG-UI</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Risk type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K8S</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -441,9 +592,21 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules extends TeaModel {
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>term</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Pattern for matching</p>
+         * 
+         * <strong>example:</strong>
+         * <p>first</p>
+         */
         @NameInMap("pattern")
         public String pattern;
 
@@ -471,12 +634,27 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig extends TeaModel {
+        /**
+         * <p>Consumer-specific rules</p>
+         */
         @NameInMap("consumerRules")
         public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules consumerRules;
 
+        /**
+         * <p>Risk alert level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Critical</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <p>Risk type identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K8S</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -512,48 +690,126 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig extends TeaModel {
+        /**
+         * <p>bufferLimit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("bufferLimit")
         public Integer bufferLimit;
 
+        /**
+         * <p>Whether to check request content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("checkRequest")
         public Boolean checkRequest;
 
+        /**
+         * <p>Whether to check request content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("checkRequestImage")
         public Boolean checkRequestImage;
 
+        /**
+         * <p>Whether to check response content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("checkResponse")
         public Boolean checkResponse;
 
+        /**
+         * <p>Whether to check response content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("checkResponseImage")
         public Boolean checkResponseImage;
 
+        /**
+         * <p>Consumer-specific request check configs</p>
+         */
         @NameInMap("consumerRequestCheckService")
         public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService> consumerRequestCheckService;
 
+        /**
+         * <p>Consumer-specific Response check configs</p>
+         */
         @NameInMap("consumerResponseCheckService")
         public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService> consumerResponseCheckService;
 
+        /**
+         * <p>Consumer-specific risk level configs</p>
+         */
         @NameInMap("consumerRiskLevel")
         public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel> consumerRiskLevel;
 
+        /**
+         * <p>Request check service name</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://checker.example.com/validate-request">https://checker.example.com/validate-request</a></p>
+         */
         @NameInMap("requestCheckService")
         public String requestCheckService;
 
+        /**
+         * <p>Request check service name</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://image-checker.example.com/scan">https://image-checker.example.com/scan</a></p>
+         */
         @NameInMap("requestImageCheckService")
         public String requestImageCheckService;
 
+        /**
+         * <p>Response check service name</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://checker.example.com/validate-response">https://checker.example.com/validate-response</a></p>
+         */
         @NameInMap("responseCheckService")
         public String responseCheckService;
 
+        /**
+         * <p>Response check service name</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://image-checker.example.com/scan-response">https://image-checker.example.com/scan-response</a></p>
+         */
         @NameInMap("responseImageCheckService")
         public String responseImageCheckService;
 
+        /**
+         * <p>Risk alert level for content moderation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low/medium/high</p>
+         */
         @NameInMap("riskAlertLevel")
         public String riskAlertLevel;
 
+        /**
+         * <p>riskConfig</p>
+         */
         @NameInMap("riskConfig")
         public java.util.List<HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfigRiskConfig> riskConfig;
 
+        /**
+         * <p>Security guard service address</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://api.example.com/v1">https://api.example.com/v1</a></p>
+         */
         @NameInMap("serviceAddress")
         public String serviceAddress;
 
@@ -685,21 +941,57 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules extends TeaModel {
+        /**
+         * <p>Limit mode for global rules</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
+         */
         @NameInMap("limitMode")
         public String limitMode;
 
+        /**
+         * <p>Limit type for global rules</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request</p>
+         */
         @NameInMap("limitType")
         public String limitType;
 
+        /**
+         * <p>Limit value for global rules</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("limitValue")
         public Integer limitValue;
 
+        /**
+         * <p>Match key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_id</p>
+         */
         @NameInMap("matchKey")
         public String matchKey;
 
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>term</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Match value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user123</p>
+         */
         @NameInMap("matchValue")
         public String matchValue;
 
@@ -759,21 +1051,57 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules extends TeaModel {
+        /**
+         * <p>Limit mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
+         */
         @NameInMap("limitMode")
         public String limitMode;
 
+        /**
+         * <p>Limit type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request/token</p>
+         */
         @NameInMap("limitType")
         public String limitType;
 
+        /**
+         * <p>Limit value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("limitValue")
         public Integer limitValue;
 
+        /**
+         * <p>Match key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_id/api_path</p>
+         */
         @NameInMap("matchKey")
         public String matchKey;
 
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>term</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Match value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user123</p>
+         */
         @NameInMap("matchValue")
         public String matchValue;
 
@@ -833,12 +1161,24 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig extends TeaModel {
+        /**
+         * <p>Whether to enable global rate limit rules</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableGlobalRules")
         public Boolean enableGlobalRules;
 
+        /**
+         * <p>List of global rate limit rules</p>
+         */
         @NameInMap("globalRules")
         public java.util.List<HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules> globalRules;
 
+        /**
+         * <p>List of rate limit rules</p>
+         */
         @NameInMap("rules")
         public java.util.List<HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigRules> rules;
 
@@ -874,16 +1214,27 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigPolicyConfigs extends TeaModel {
+        /**
+         * <p>The fallback configurations</p>
+         */
         @NameInMap("aiFallbackConfig")
         public HttpApiDeployConfigPolicyConfigsAiFallbackConfig aiFallbackConfig;
 
+        /**
+         * <p>AI Security Guard configuration</p>
+         */
         @NameInMap("aiSecurityGuardConfig")
         public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig aiSecurityGuardConfig;
 
+        /**
+         * <p>AI Token Rate Limit configuration</p>
+         */
         @NameInMap("aiTokenRateLimitConfig")
         public HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig aiTokenRateLimitConfig;
 
         /**
+         * <p>Specifies whether to enable the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -891,6 +1242,8 @@ public class HttpApiDeployConfig extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The type of the policy. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>AiFallback</p>
          */
@@ -945,13 +1298,24 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigServiceConfigs extends TeaModel {
+        /**
+         * <p>Intent classification code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INQUIRY</p>
+         */
         @NameInMap("intentCode")
         public String intentCode;
 
+        /**
+         * <p>Match conditions</p>
+         */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
          */
@@ -959,6 +1323,8 @@ public class HttpApiDeployConfig extends TeaModel {
         public String modelName;
 
         /**
+         * <p>The model name matching rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-*</p>
          */
@@ -966,6 +1332,8 @@ public class HttpApiDeployConfig extends TeaModel {
         public String modelNamePattern;
 
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>svc-xxx</p>
          */
@@ -973,6 +1341,8 @@ public class HttpApiDeployConfig extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The service weight.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -1035,15 +1405,39 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigSubDomains extends TeaModel {
+        /**
+         * <p>The domain name ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-csmn42um1hksudfk9eng</p>
+         */
         @NameInMap("domainId")
         public String domainId;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Intranet</p>
+         */
         @NameInMap("networkType")
         public String networkType;
 
+        /**
+         * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 

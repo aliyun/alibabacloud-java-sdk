@@ -4,15 +4,36 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class GatewayInfo extends TeaModel {
+    /**
+     * <p>The instance engine version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0.7</p>
+     */
     @NameInMap("engineVersion")
     public String engineVersion;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-cq7og15lhtgi6qasrj60</p>
+     */
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apitest-gw</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The virtual private cloud (VPC) information.</p>
+     */
     @NameInMap("vpcInfo")
     public GatewayInfoVpcInfo vpcInfo;
 
@@ -54,9 +75,21 @@ public class GatewayInfo extends TeaModel {
     }
 
     public static class GatewayInfoVpcInfo extends TeaModel {
+        /**
+         * <p>The VPC name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-vpc</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf664nyle5kh***</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 

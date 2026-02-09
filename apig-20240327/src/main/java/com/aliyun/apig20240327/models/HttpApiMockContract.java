@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HttpApiMockContract extends TeaModel {
     /**
+     * <p>Specifies whether to enable the Mock feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,12 +14,20 @@ public class HttpApiMockContract extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("responseCode")
     public Integer responseCode;
 
+    /**
+     * <p>The response content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Mock content.</p>
+     */
     @NameInMap("responseContent")
     public String responseContent;
 

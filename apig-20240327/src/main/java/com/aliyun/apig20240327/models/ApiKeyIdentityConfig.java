@@ -4,12 +4,24 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ApiKeyIdentityConfig extends TeaModel {
+    /**
+     * <p>The source configuration of the API key.</p>
+     */
     @NameInMap("apikeySource")
     public ApiKeyIdentityConfigApikeySource apikeySource;
 
+    /**
+     * <p>The list of certificates.</p>
+     */
     @NameInMap("credentials")
     public java.util.List<ApiKeyIdentityConfigCredentials> credentials;
 
+    /**
+     * <p>The type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Apikey</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -43,9 +55,27 @@ public class ApiKeyIdentityConfig extends TeaModel {
     }
 
     public static class ApiKeyIdentityConfigApikeySource extends TeaModel {
+        /**
+         * <p>The source of the API key.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Header</li>
+         * <li>QueryString</li>
+         * <li>Default</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The value of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -73,9 +103,21 @@ public class ApiKeyIdentityConfig extends TeaModel {
     }
 
     public static class ApiKeyIdentityConfigCredentials extends TeaModel {
+        /**
+         * <p>The API key configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
         @NameInMap("apikey")
         public String apikey;
 
+        /**
+         * <p>The production mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
+         */
         @NameInMap("generateMode")
         public String generateMode;
 

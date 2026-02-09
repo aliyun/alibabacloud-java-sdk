@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGatewayResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The environment alias.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class GetGatewayResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The security group of the instance.</p>
      */
     @NameInMap("data")
     public GetGatewayResponseBodyData data;
 
     /**
-     * <p>The response message returned.</p>
+     * <p>Default environment</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetGatewayResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The environment name.</p>
      * 
      * <strong>example:</strong>
      * <p>0F138FFC-6E2B-56C1-9BAB-A67462E339D1</p>
@@ -76,16 +76,24 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataEnvironments extends TeaModel {
         /**
-         * <p>The environment alias.</p>
+         * <p>The port information.</p>
          * 
          * <strong>example:</strong>
-         * <p>Default environment</p>
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li>TCP</li>
+         * <li>UDP</li>
+         * </ul>
          */
         @NameInMap("alias")
         public String alias;
 
         /**
-         * <p>The environment ID.</p>
+         * <p>The load balancer type. Valid values:</p>
+         * <ul>
+         * <li>NLB: Network Load Balancer</li>
+         * <li>CLB: Classic Load Balancer</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>env-cp9uhudlht***</p>
@@ -94,7 +102,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The environment name.</p>
+         * <p>The list of listened ports.</p>
          * 
          * <strong>example:</strong>
          * <p>default-gw-cp9ugg5***</p>
@@ -135,7 +143,7 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataLoadBalancersPorts extends TeaModel {
         /**
-         * <p>The port number.</p>
+         * <p>The listening port number</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -144,11 +152,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The protocol. Valid values:</p>
-         * <ul>
-         * <li>TCP</li>
-         * <li>UDP</li>
-         * </ul>
+         * <p>The protocol of the port</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -181,7 +185,7 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataLoadBalancers extends TeaModel {
         /**
-         * <p>The load balancer IP address.</p>
+         * <p>The IP address of the load balancer</p>
          * 
          * <strong>example:</strong>
          * <p>nlb-xoh3pghr***.cn-hangzhou.nlb.aliyuncs.com</p>
@@ -190,11 +194,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The IP version of the address. Valid values:</p>
-         * <ul>
-         * <li>ipv4</li>
-         * <li>ipv6</li>
-         * </ul>
+         * <p>The IP version of the load balancer address</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -203,11 +203,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String addressIpVersion;
 
         /**
-         * <p>The load balancer address type. Valid values:</p>
-         * <ul>
-         * <li>Internet</li>
-         * <li>Intranet</li>
-         * </ul>
+         * <p>The address type of the load balancer</p>
          * 
          * <strong>example:</strong>
          * <p>Internet</p>
@@ -216,7 +212,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String addressType;
 
         /**
-         * <p>Indicates whether the address is the default ingress address of the instance.</p>
+         * <p>Whether this is the default gateway ingress</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -224,14 +220,20 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("gatewayDefault")
         public Boolean gatewayDefault;
 
+        /**
+         * <p>List of IPv4 addresses</p>
+         */
         @NameInMap("ipv4Addresses")
         public java.util.List<String> ipv4Addresses;
 
+        /**
+         * <p>List of IPv6 addresses</p>
+         */
         @NameInMap("ipv6Addresses")
         public java.util.List<String> ipv6Addresses;
 
         /**
-         * <p>The load balancer ID.</p>
+         * <p>The unique identifier of the load balancer</p>
          * 
          * <strong>example:</strong>
          * <p>nlb-xoh3pghru7c***</p>
@@ -240,10 +242,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>The mode in which the load balancer is provided. Valid values:</p>
-         * <ul>
-         * <li>Managed: Cloud-native API Gateway manages and provides the load balancer.</li>
-         * </ul>
+         * <p>The mode of the load balancer</p>
          * 
          * <strong>example:</strong>
          * <p>Managed</p>
@@ -252,17 +251,13 @@ public class GetGatewayResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>The list of listened ports.</p>
+         * <p>List of port configurations for the load balancer</p>
          */
         @NameInMap("ports")
         public java.util.List<GetGatewayResponseBodyDataLoadBalancersPorts> ports;
 
         /**
-         * <p>The load balancer status. Valid values:</p>
-         * <ul>
-         * <li>Ready: The load balancer is available.</li>
-         * <li>NotCreate: The load balancer is not associated with the instance.</li>
-         * </ul>
+         * <p>The current status of the load balancer</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -271,11 +266,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The load balancer type. Valid values:</p>
-         * <ul>
-         * <li>NLB: Network Load Balancer</li>
-         * <li>CLB: Classic Load Balancer</li>
-         * </ul>
+         * <p>The type of load balancer</p>
          * 
          * <strong>example:</strong>
          * <p>NLB</p>
@@ -380,6 +371,8 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataMaintenancePeriod extends TeaModel {
         /**
+         * <p>The maintenance end time</p>
+         * 
          * <strong>example:</strong>
          * <p>06:00</p>
          */
@@ -387,6 +380,8 @@ public class GetGatewayResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The maintenance start time</p>
+         * 
          * <strong>example:</strong>
          * <p>02:00</p>
          */
@@ -418,7 +413,7 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataSecurityGroup extends TeaModel {
         /**
-         * <p>The security group name.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>APIG-sg-gw-cq7ke5ll***</p>
@@ -427,7 +422,11 @@ public class GetGatewayResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The load balancer status. Valid values:</p>
+         * <ul>
+         * <li>Ready: The load balancer is available.</li>
+         * <li>NotCreate: The load balancer is not associated with the instance.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>sg-bp16tafq9***</p>
@@ -460,7 +459,7 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key</p>
          * 
          * <strong>example:</strong>
          * <p>owner</p>
@@ -469,7 +468,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
@@ -502,16 +501,16 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataVSwitch extends TeaModel {
         /**
-         * <p>The vSwitch name.</p>
+         * <p>The resource tags.</p>
          * 
          * <strong>example:</strong>
-         * <p>HangzhouVPCvSwitch</p>
+         * <p>The resource tag.</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1c7ggkj***</p>
@@ -544,16 +543,16 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataVpc extends TeaModel {
         /**
-         * <p>The VPC name.</p>
+         * <p>=</p>
          * 
          * <strong>example:</strong>
-         * <p>HangzhouVPC</p>
+         * <p>$.errorCode</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>Query Gateway Details</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1llj52lvj6xc***</p>
@@ -586,16 +585,16 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataZonesVSwitch extends TeaModel {
         /**
-         * <p>The vSwitch name.</p>
+         * <p>The VSwitch name</p>
          * 
          * <strong>example:</strong>
-         * <p>HangzhouVPCvSwitch</p>
+         * <p>vswitch-name</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The VSwitch ID</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1c7ggkj***</p>
@@ -628,22 +627,22 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataZones extends TeaModel {
         /**
-         * <p>The zone name.</p>
+         * <p>The zone name</p>
          * 
          * <strong>example:</strong>
-         * <p>HangzhouZoneE</p>
+         * <p>Hangzhou Zone I</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The vSwitch information.</p>
+         * <p>The VSwitch information in the zone</p>
          */
         @NameInMap("vSwitch")
         public GetGatewayResponseBodyDataZonesVSwitch vSwitch;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The zone ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-e</p>
@@ -684,11 +683,7 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyData extends TeaModel {
         /**
-         * <p>The billing method. Valid values:</p>
-         * <ul>
-         * <li>POSTPAY: pay-as-you-go</li>
-         * <li>PREPAY: subscription</li>
-         * </ul>
+         * <p>The vSwitch associated with the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -697,9 +692,9 @@ public class GetGatewayResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The creation source of the instance. Valid values:</p>
+         * <p>The mode in which the load balancer is provided. Valid values:</p>
          * <ul>
-         * <li>Console</li>
+         * <li>Managed: Cloud-native API Gateway manages and provides the load balancer.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -709,7 +704,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String createFrom;
 
         /**
-         * <p>The creation timestamp. Unit: milliseconds.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -718,13 +713,17 @@ public class GetGatewayResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The list of environments associated with the instance.</p>
+         * <p>The IP version of the address. Valid values:</p>
+         * <ul>
+         * <li>ipv4</li>
+         * <li>ipv6</li>
+         * </ul>
          */
         @NameInMap("environments")
         public java.util.List<GetGatewayResponseBodyDataEnvironments> environments;
 
         /**
-         * <p>The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The ingress information.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -733,6 +732,8 @@ public class GetGatewayResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
+         * <p>gatewayEdition</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless</p>
          */
@@ -740,7 +741,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String gatewayEdition;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2vundlhtg***</p>
@@ -749,11 +750,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>the gateway type, which is categorized into the following two types:</p>
-         * <ul>
-         * <li>API: indicates an API gateway</li>
-         * <li>AI: Indicates an AI gateway</li>
-         * </ul>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -761,20 +758,29 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("gatewayType")
         public String gatewayType;
 
+        /**
+         * <p>The ISP type for traffic routing</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
+         */
         @NameInMap("isp")
         public String isp;
 
         /**
-         * <p>The ingress addresses of the instance.</p>
+         * <p>loadBalancers</p>
          */
         @NameInMap("loadBalancers")
         public java.util.List<GetGatewayResponseBodyDataLoadBalancers> loadBalancers;
 
+        /**
+         * <p>The maintenance period configuration</p>
+         */
         @NameInMap("maintenancePeriod")
         public GetGatewayResponseBodyDataMaintenancePeriod maintenancePeriod;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The security group name.</p>
          * 
          * <strong>example:</strong>
          * <p>itemcenter-gateway</p>
@@ -783,7 +789,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The node quantity of the instance.</p>
+         * <p>HangzhouZoneE</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -792,25 +798,22 @@ public class GetGatewayResponseBody extends TeaModel {
         public String replicas;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The resource group ID</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aek2s3cvc4jzfxi</p>
+         * <p>rg-acfm2ij6pwxsvua</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The security group of the instance.</p>
+         * <p>The port number.</p>
          */
         @NameInMap("securityGroup")
         public GetGatewayResponseBodyDataSecurityGroup securityGroup;
 
         /**
-         * <p>The instance specification. Valid values:</p>
-         * <ul>
-         * <li>apigw.small.x1</li>
-         * </ul>
+         * <p>The zone name.</p>
          * 
          * <strong>example:</strong>
          * <p>apigw.small.x1</p>
@@ -819,18 +822,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String spec;
 
         /**
-         * <p>The instance state. Valid values:</p>
-         * <ul>
-         * <li>Running: The instance is running.</li>
-         * <li>Creating: The instance is being created.</li>
-         * <li>CreateFailed: The instance failed to be created.</li>
-         * <li>Upgrading: The instance is being upgraded.</li>
-         * <li>UpgradeFailed: The instance failed to be upgraded.</li>
-         * <li>Restarting: The instance is being restarted.</li>
-         * <li>RestartFailed: The instance failed to be restarted.</li>
-         * <li>Deleting: The instance is being released.</li>
-         * <li>DeleteFailed: The instance failed to be released.</li>
-         * </ul>
+         * <p>The VPC associated with the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -839,13 +831,17 @@ public class GetGatewayResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The resource tags.</p>
+         * <p>List of tags associated with the gateway</p>
          */
         @NameInMap("tags")
         public java.util.List<GetGatewayResponseBodyDataTags> tags;
 
         /**
-         * <p>The destination version of the instance. If the value is inconsistent with the version value, you can upgrade the instance.</p>
+         * <p>The load balancer address type. Valid values:</p>
+         * <ul>
+         * <li>Internet</li>
+         * <li>Intranet</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2.0.2</p>
@@ -854,7 +850,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String targetVersion;
 
         /**
-         * <p>The last update timestamp. Unit: milliseconds.</p>
+         * <p>The ingress addresses of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -863,13 +859,13 @@ public class GetGatewayResponseBody extends TeaModel {
         public Long updateTimestamp;
 
         /**
-         * <p>The vSwitch associated with the instance.</p>
+         * <p>rg-aek2s3cvc4jzfxi</p>
          */
         @NameInMap("vSwitch")
         public GetGatewayResponseBodyDataVSwitch vSwitch;
 
         /**
-         * <p>The instance version.</p>
+         * <p>The load balancer IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.2</p>
@@ -878,13 +874,13 @@ public class GetGatewayResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The VPC associated with the instance.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("vpc")
         public GetGatewayResponseBodyDataVpc vpc;
 
         /**
-         * <p>The list of zones associated with the instance.</p>
+         * <p>List of zone information</p>
          */
         @NameInMap("zones")
         public java.util.List<GetGatewayResponseBodyDataZones> zones;

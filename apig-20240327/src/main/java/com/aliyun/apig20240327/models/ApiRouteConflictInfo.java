@@ -4,9 +4,15 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ApiRouteConflictInfo extends TeaModel {
+    /**
+     * <p>The conflicts.</p>
+     */
     @NameInMap("conflicts")
     public java.util.List<ApiRouteConflictInfoConflicts> conflicts;
 
+    /**
+     * <p>The conflicting routes.</p>
+     */
     @NameInMap("domainInfo")
     public ApiRouteConflictInfoDomainInfo domainInfo;
 
@@ -32,9 +38,21 @@ public class ApiRouteConflictInfo extends TeaModel {
     }
 
     public static class ApiRouteConflictInfoConflictsDetailsConflictingMatchOperationInfo extends TeaModel {
+        /**
+         * <p>The operation name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GetItem</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-cq35jadlhtgrv07***</p>
+         */
         @NameInMap("operationId")
         public String operationId;
 
@@ -62,9 +80,15 @@ public class ApiRouteConflictInfo extends TeaModel {
     }
 
     public static class ApiRouteConflictInfoConflictsDetailsConflictingMatch extends TeaModel {
+        /**
+         * <p>The matching rule.</p>
+         */
         @NameInMap("match")
         public HttpRouteMatch match;
 
+        /**
+         * <p>The corresponding operation information if the conflicting target is an API.</p>
+         */
         @NameInMap("operationInfo")
         public ApiRouteConflictInfoConflictsDetailsConflictingMatchOperationInfo operationInfo;
 
@@ -92,9 +116,21 @@ public class ApiRouteConflictInfo extends TeaModel {
     }
 
     public static class ApiRouteConflictInfoConflictsDetailsDetectedMatchOperationInfo extends TeaModel {
+        /**
+         * <p>The operation name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GetItemV2</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-cqf17dllhtgng1m**</p>
+         */
         @NameInMap("operationId")
         public String operationId;
 
@@ -122,9 +158,15 @@ public class ApiRouteConflictInfo extends TeaModel {
     }
 
     public static class ApiRouteConflictInfoConflictsDetailsDetectedMatch extends TeaModel {
+        /**
+         * <p>The matching rule information of the object being detected.</p>
+         */
         @NameInMap("match")
         public HttpRouteMatch match;
 
+        /**
+         * <p>If the object is an API, the conflicting operation information needs to be returned.</p>
+         */
         @NameInMap("operationInfo")
         public ApiRouteConflictInfoConflictsDetailsDetectedMatchOperationInfo operationInfo;
 
@@ -152,12 +194,24 @@ public class ApiRouteConflictInfo extends TeaModel {
     }
 
     public static class ApiRouteConflictInfoConflictsDetails extends TeaModel {
+        /**
+         * <p>The matching rule information of the conflicting target.</p>
+         */
         @NameInMap("conflictingMatch")
         public ApiRouteConflictInfoConflictsDetailsConflictingMatch conflictingMatch;
 
+        /**
+         * <p>The matching rule information of the object being detected.</p>
+         */
         @NameInMap("detectedMatch")
         public ApiRouteConflictInfoConflictsDetailsDetectedMatch detectedMatch;
 
+        /**
+         * <p>The conflict level. Valid values: Critical, Warning, and Informational.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Critical</p>
+         */
         @NameInMap("level")
         public String level;
 
@@ -193,9 +247,21 @@ public class ApiRouteConflictInfo extends TeaModel {
     }
 
     public static class ApiRouteConflictInfoConflictsEnvironmentInfo extends TeaModel {
+        /**
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cquqsollhtgidd***</p>
+         */
         @NameInMap("environmentId")
         public String environmentId;
 
+        /**
+         * <p>The environment name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>itemcenter-dev</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -223,9 +289,21 @@ public class ApiRouteConflictInfo extends TeaModel {
     }
 
     public static class ApiRouteConflictInfoConflictsRouteInfo extends TeaModel {
+        /**
+         * <p>The route name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>itemcenter-route</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr-cr82undlhtgrlej***</p>
+         */
         @NameInMap("routeId")
         public String routeId;
 
@@ -253,21 +331,53 @@ public class ApiRouteConflictInfo extends TeaModel {
     }
 
     public static class ApiRouteConflictInfoConflicts extends TeaModel {
+        /**
+         * <p>The details about the conflicts.</p>
+         */
         @NameInMap("details")
         public java.util.List<ApiRouteConflictInfoConflictsDetails> details;
 
+        /**
+         * <p>For APIs, conflicts exist in the specific environment. If the conflict object is a route, ignore.</p>
+         */
         @NameInMap("environmentInfo")
         public ApiRouteConflictInfoConflictsEnvironmentInfo environmentInfo;
 
+        /**
+         * <p>The conflicting resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-crdclqllhtggm***</p>
+         */
         @NameInMap("resourceId")
         public String resourceId;
 
+        /**
+         * <p>The conflicting resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item-stock</p>
+         */
         @NameInMap("resourceName")
         public String resourceName;
 
+        /**
+         * <p>The type of the conflicting resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RestApi</li>
+         * <li>HttpApiRoute</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HttpApiRoute</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
+        /**
+         * <p>The route information.</p>
+         */
         @NameInMap("routeInfo")
         public ApiRouteConflictInfoConflictsRouteInfo routeInfo;
 
@@ -327,9 +437,21 @@ public class ApiRouteConflictInfo extends TeaModel {
     }
 
     public static class ApiRouteConflictInfoDomainInfo extends TeaModel {
+        /**
+         * <p>The domain name ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cqookcllhtgvof7e***</p>
+         */
         @NameInMap("domainId")
         public String domainId;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>httpbin</p>
+         */
         @NameInMap("name")
         public String name;
 

@@ -50,6 +50,12 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     @NameInMap("environmentId")
     public String environmentId;
 
+    /**
+     * <p>Whether to filter for deployment scenario</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("forDeploy")
     public Boolean forDeploy;
 

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayNameRequest extends TeaModel {
     /**
-     * <p>Gateway name.</p>
-     * 
      * <strong>example:</strong>
      * <p>dev-itemcenter-router</p>
      */

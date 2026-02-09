@@ -4,23 +4,50 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpApiOperation extends TeaModel {
+    /**
+     * <p>The authentication configurations.</p>
+     */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
+    /**
+     * <p>The deployment configurations.</p>
+     */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
+     * <p>The operation description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>获取用户信息</p>
+     * <p>This is a operation description.</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Specifies whether to enable authentication.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableAuth")
     public Boolean enableAuth;
 
     /**
+     * <p>The HTTP method.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>TRACE</li>
+     * <li>HEAD</li>
+     * <li>DELETE</li>
+     * <li>POST</li>
+     * <li>GET</li>
+     * <li>CONNECT</li>
+     * <li>OPTIONS</li>
+     * <li>PUT</li>
+     * <li>PATCH</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,10 +56,14 @@ public class HttpApiOperation extends TeaModel {
     @NameInMap("method")
     public String method;
 
+    /**
+     * <p>The mocking configuration of the operation. This field takes effect only when the API publishing scenario is Mock.</p>
+     */
     @NameInMap("mock")
     public HttpApiMockContract mock;
 
     /**
+     * <p>The operation name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +73,7 @@ public class HttpApiOperation extends TeaModel {
     public String name;
 
     /**
+     * <p>The operation path.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,9 +82,15 @@ public class HttpApiOperation extends TeaModel {
     @NameInMap("path")
     public String path;
 
+    /**
+     * <p>The request parameters of the operation.</p>
+     */
     @NameInMap("request")
     public HttpApiRequestContract request;
 
+    /**
+     * <p>The response parameters of the operation.</p>
+     */
     @NameInMap("response")
     public HttpApiResponseContract response;
 

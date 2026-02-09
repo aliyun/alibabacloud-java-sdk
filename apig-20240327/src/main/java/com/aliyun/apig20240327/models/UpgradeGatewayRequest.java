@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeGatewayRequest extends TeaModel {
     /**
-     * <p>Gateway version.</p>
+     * <p>The destination instance version.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0.2</p>

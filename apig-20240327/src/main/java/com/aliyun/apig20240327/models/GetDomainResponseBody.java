@@ -14,7 +14,7 @@ public class GetDomainResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetDomainResponseBodyData data;

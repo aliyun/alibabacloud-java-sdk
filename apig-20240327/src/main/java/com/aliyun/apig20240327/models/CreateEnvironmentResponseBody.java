@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEnvironmentResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class CreateEnvironmentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>Schema of Response</p>
      */
     @NameInMap("data")
     public CreateEnvironmentResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>rg-acfmycs5expl7oq</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class CreateEnvironmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, used for tracing the API call chain.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3C3B9A12-3868-5EB9-8BEA-F99E03DD125C</p>
@@ -76,7 +76,7 @@ public class CreateEnvironmentResponseBody extends TeaModel {
 
     public static class CreateEnvironmentResponseBodyData extends TeaModel {
         /**
-         * <p>Environment ID.</p>
+         * <p>The request ID, which is used to trace the call link.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cq7l5s5lhtgi6qasrdc0</p>

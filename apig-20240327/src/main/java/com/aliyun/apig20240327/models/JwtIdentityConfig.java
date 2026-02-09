@@ -4,18 +4,47 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class JwtIdentityConfig extends TeaModel {
+    /**
+     * <p>The JWKS configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("jwks")
     public String jwks;
 
+    /**
+     * <p>The JWT payload configuration.</p>
+     */
     @NameInMap("jwtPayloadConfig")
     public JwtIdentityConfigJwtPayloadConfig jwtPayloadConfig;
 
+    /**
+     * <p>The JWT token configuration.</p>
+     */
     @NameInMap("jwtTokenConfig")
     public JwtIdentityConfigJwtTokenConfig jwtTokenConfig;
 
+    /**
+     * <p>The type of the secret used.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Asymmetry: asymmetric encryption.</li>
+     * <li>Symmetry: symmetric encryption.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Symmetry</p>
+     */
     @NameInMap("secretType")
     public String secretType;
 
+    /**
+     * <p>The authentication configuration type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Jwt</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -65,9 +94,21 @@ public class JwtIdentityConfig extends TeaModel {
     }
 
     public static class JwtIdentityConfigJwtPayloadConfig extends TeaModel {
+        /**
+         * <p>The key in the JWT payload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uid</p>
+         */
         @NameInMap("payloadKeyName")
         public String payloadKeyName;
 
+        /**
+         * <p>The value for the JWT payload key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2222</p>
+         */
         @NameInMap("payloadKeyValue")
         public String payloadKeyValue;
 
@@ -95,15 +136,39 @@ public class JwtIdentityConfig extends TeaModel {
     }
 
     public static class JwtIdentityConfigJwtTokenConfig extends TeaModel {
+        /**
+         * <p>The key used for the JWT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authorization</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>Indicates whether acceptance is granted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("pass")
         public Boolean pass;
 
+        /**
+         * <p>The location where the JWT is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HEADER</p>
+         */
         @NameInMap("position")
         public String position;
 
+        /**
+         * <p>The token prefix configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("prefix")
         public String prefix;
 

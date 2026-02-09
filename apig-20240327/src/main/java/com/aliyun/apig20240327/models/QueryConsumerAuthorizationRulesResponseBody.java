@@ -14,7 +14,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The response payload.</p>
      */
     @NameInMap("data")
     public QueryConsumerAuthorizationRulesResponseBodyData data;

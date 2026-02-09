@@ -18,12 +18,18 @@ public class UpdateMcpServerRequest extends TeaModel {
 
     /**
      * <p>Specifies the type of source for MCP server creation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ApiGatewayMcpHosting</p>
      */
     @NameInMap("createFromType")
     public String createFromType;
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Updated MCP server description</p>
      */
     @NameInMap("description")
     public String description;
@@ -43,6 +49,9 @@ public class UpdateMcpServerRequest extends TeaModel {
     @NameInMap("exposedUriPath")
     public String exposedUriPath;
 
+    /**
+     * <p>The gray MCP server configurations</p>
+     */
     @NameInMap("grayMcpServerConfigs")
     public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs;
 
@@ -52,6 +61,9 @@ public class UpdateMcpServerRequest extends TeaModel {
     @NameInMap("match")
     public HttpRouteMatch match;
 
+    /**
+     * <p>The MCP server configuration</p>
+     */
     @NameInMap("mcpServerConfig")
     public UpdateMcpServerRequestMcpServerConfig mcpServerConfig;
 
@@ -379,18 +391,48 @@ public class UpdateMcpServerRequest extends TeaModel {
     }
 
     public static class UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices extends TeaModel {
+        /**
+         * <p>The service port</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <p>The service protocol</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
+        /**
+         * <p>The service ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray-svc-123</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
+        /**
+         * <p>The service version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("version")
         public String version;
 
+        /**
+         * <p>The service weight</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("weight")
         public Integer weight;
 
@@ -442,9 +484,18 @@ public class UpdateMcpServerRequest extends TeaModel {
     }
 
     public static class UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig extends TeaModel {
+        /**
+         * <p>The backend scene</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SingleService</p>
+         */
         @NameInMap("scene")
         public String scene;
 
+        /**
+         * <p>The list of backend services</p>
+         */
         @NameInMap("services")
         public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices> services;
 
@@ -472,12 +523,24 @@ public class UpdateMcpServerRequest extends TeaModel {
     }
 
     public static class UpdateMcpServerRequestGrayMcpServerConfigs extends TeaModel {
+        /**
+         * <p>The backend configuration</p>
+         */
         @NameInMap("backendConfig")
         public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig backendConfig;
 
+        /**
+         * <p>The route match rules</p>
+         */
         @NameInMap("match")
         public HttpRouteMatch match;
 
+        /**
+         * <p>The route ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>route-123</p>
+         */
         @NameInMap("routeId")
         public String routeId;
 
@@ -513,9 +576,21 @@ public class UpdateMcpServerRequest extends TeaModel {
     }
 
     public static class UpdateMcpServerRequestMcpServerConfig extends TeaModel {
+        /**
+         * <p>The converted mcp server spec yaml</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp-server-spec-yaml</p>
+         */
         @NameInMap("mcpServerSpec")
         public String mcpServerSpec;
 
+        /**
+         * <p>The raw swagger/openapi document</p>
+         * 
+         * <strong>example:</strong>
+         * <p>swagger-content</p>
+         */
         @NameInMap("swaggerConfig")
         public String swaggerConfig;
 

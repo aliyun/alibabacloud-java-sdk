@@ -33,6 +33,12 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         @NameInMap("environmentId")
         public String environmentId;
 
+        /**
+         * <p>Parent resource ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-******</p>
+         */
         @NameInMap("parentResourceId")
         public String parentResourceId;
 
@@ -45,6 +51,9 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         @NameInMap("resourceId")
         public String resourceId;
 
+        /**
+         * <p>List of resources</p>
+         */
         @NameInMap("resources")
         public java.util.List<String> resources;
 

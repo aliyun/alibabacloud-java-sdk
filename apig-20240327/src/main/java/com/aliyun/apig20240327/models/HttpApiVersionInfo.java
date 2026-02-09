@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HttpApiVersionInfo extends TeaModel {
     /**
+     * <p>Specifies whether to enable versioning.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class HttpApiVersionInfo extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The key in the specified header when the header versioning solution is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-version</p>
      */
@@ -19,6 +23,8 @@ public class HttpApiVersionInfo extends TeaModel {
     public String headerName;
 
     /**
+     * <p>The key in the specified query parameter when the query versioning solution is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>myVersion</p>
      */
@@ -26,6 +32,8 @@ public class HttpApiVersionInfo extends TeaModel {
     public String queryName;
 
     /**
+     * <p>The versioning solution.</p>
+     * 
      * <strong>example:</strong>
      * <p>Query</p>
      */
@@ -33,6 +41,8 @@ public class HttpApiVersionInfo extends TeaModel {
     public String scheme;
 
     /**
+     * <p>The version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */

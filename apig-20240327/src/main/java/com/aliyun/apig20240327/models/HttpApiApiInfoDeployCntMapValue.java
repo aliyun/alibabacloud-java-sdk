@@ -4,9 +4,21 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpApiApiInfoDeployCntMapValue extends TeaModel {
+    /**
+     * <p>deployedCnt</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("deployedCnt")
     public Long deployedCnt;
 
+    /**
+     * <p>Cnt</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("Cnt")
     public Long cnt;
 

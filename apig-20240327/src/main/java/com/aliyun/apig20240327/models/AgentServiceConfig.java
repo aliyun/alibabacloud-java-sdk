@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AgentServiceConfig extends TeaModel {
     /**
+     * <p>The address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,26 +14,54 @@ public class AgentServiceConfig extends TeaModel {
     @NameInMap("address")
     public String address;
 
+    /**
+     * <p>User-defined configuration</p>
+     */
     @NameInMap("customConfig")
     public AgentServiceConfigCustomConfig customConfig;
 
+    /**
+     * <p>The Model Studio service configuration.</p>
+     */
     @NameInMap("dashScopeConfig")
     public AgentServiceConfigDashScopeConfig dashScopeConfig;
 
+    /**
+     * <p>The Dify service configuration.</p>
+     */
     @NameInMap("difyConfig")
     public AgentServiceConfigDifyConfig difyConfig;
 
+    /**
+     * <p>Specifies whether to enable health check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableHealthCheck")
     public Boolean enableHealthCheck;
 
+    /**
+     * <p>Whether to enable outlier detection</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableOutlierDetection")
     public Boolean enableOutlierDetection;
 
+    /**
+     * <p>The protocol.</p>
+     */
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
     /**
+     * <p>The service provider.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun</p>
      */
     @NameInMap("provider")
     public String provider;
@@ -107,9 +136,21 @@ public class AgentServiceConfig extends TeaModel {
     }
 
     public static class AgentServiceConfigCustomConfig extends TeaModel {
+        /**
+         * <p>apiKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxx</p>
+         */
         @NameInMap("apiKey")
         public String apiKey;
 
+        /**
+         * <p>API key generation mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reference</p>
+         */
         @NameInMap("apiKeyGenerateMode")
         public String apiKeyGenerateMode;
 
@@ -137,9 +178,21 @@ public class AgentServiceConfig extends TeaModel {
     }
 
     public static class AgentServiceConfigDashScopeConfigAppCredentials extends TeaModel {
+        /**
+         * <p>apiKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxx</p>
+         */
         @NameInMap("apiKey")
         public String apiKey;
 
+        /**
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-xxx</p>
+         */
         @NameInMap("appId")
         public String appId;
 
@@ -167,6 +220,9 @@ public class AgentServiceConfig extends TeaModel {
     }
 
     public static class AgentServiceConfigDashScopeConfig extends TeaModel {
+        /**
+         * <p>The application configuration.</p>
+         */
         @NameInMap("appCredentials")
         public java.util.List<AgentServiceConfigDashScopeConfigAppCredentials> appCredentials;
 
@@ -186,9 +242,21 @@ public class AgentServiceConfig extends TeaModel {
     }
 
     public static class AgentServiceConfigDifyConfig extends TeaModel {
+        /**
+         * <p>API Key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxx</p>
+         */
         @NameInMap("apiKey")
         public String apiKey;
 
+        /**
+         * <p>The interaction type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot</p>
+         */
         @NameInMap("botType")
         public String botType;
 

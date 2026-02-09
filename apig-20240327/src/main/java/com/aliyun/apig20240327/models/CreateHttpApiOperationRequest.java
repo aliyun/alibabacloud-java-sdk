@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiOperationRequest extends TeaModel {
     /**
-     * <p>List of operation definitions.</p>
+     * <p>The operation definitions.</p>
      */
     @NameInMap("operations")
     public java.util.List<HttpApiOperation> operations;

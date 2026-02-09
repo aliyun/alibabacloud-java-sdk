@@ -14,7 +14,7 @@ public class CreateDomainRequest extends TeaModel {
     public String caCertIdentifier;
 
     /**
-     * <p>The certificate ID.</p>
+     * <p>The certificate identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -23,7 +23,7 @@ public class CreateDomainRequest extends TeaModel {
     public String certIdentifier;
 
     /**
-     * <p>The client CA certificate.</p>
+     * <p>The client CA certificate content.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----
@@ -36,7 +36,7 @@ public class CreateDomainRequest extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>Specifies whether to enable forcible HTTPS redirection.</p>
+     * <p>Specifies whether to enable forced HTTP to HTTPS redirection.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -44,11 +44,22 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("forceHttps")
     public Boolean forceHttps;
 
+    /**
+     * <p>The gateway type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>AI</li>
+     * <li>API</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>API</p>
+     */
     @NameInMap("gatewayType")
     public String gatewayType;
 
     /**
-     * <p>The HTTP/2 configuration.</p>
+     * <p>HTTP/2 configuration options.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>GlobalConfig</li>
@@ -63,7 +74,7 @@ public class CreateDomainRequest extends TeaModel {
     public String http2Option;
 
     /**
-     * <p>Specifies whether to enable mutual authentication.</p>
+     * <p>Specifies whether to enable mutual Transport Layer Security (mTLS) authentication.</p>
      */
     @NameInMap("mTLSEnabled")
     public Boolean mTLSEnabled;
@@ -81,8 +92,8 @@ public class CreateDomainRequest extends TeaModel {
     /**
      * <p>The protocol type supported by the domain name.</p>
      * <ul>
-     * <li>HTTP: Only HTTP is supported.</li>
-     * <li>HTTPS: Only HTTPS is supported.</li>
+     * <li>HTTP: HTTP only</li>
+     * <li>HTTPS: HTTPS only</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -108,7 +119,7 @@ public class CreateDomainRequest extends TeaModel {
     public TlsCipherSuitesConfig tlsCipherSuitesConfig;
 
     /**
-     * <p>The maximum version of the TLS protocol. Up to TLS 1.3 is supported.</p>
+     * <p>The maximum TLS protocol version (up to TLS 1.3).</p>
      * 
      * <strong>example:</strong>
      * <p>TLS1.3</p>
@@ -117,7 +128,7 @@ public class CreateDomainRequest extends TeaModel {
     public String tlsMax;
 
     /**
-     * <p>The minimum version of the TLS protocol. Down to TLS 1.0 is supported.</p>
+     * <p>The minimum TLS protocol version (minimum TLS 1.0).</p>
      * 
      * <strong>example:</strong>
      * <p>TLS1.0</p>

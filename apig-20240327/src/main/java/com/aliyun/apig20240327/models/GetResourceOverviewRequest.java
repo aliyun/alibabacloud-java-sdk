@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourceOverviewRequest extends TeaModel {
     /**
+     * <p>The gateway type.</p>
+     * 
      * <strong>example:</strong>
      * <p>AI</p>
      */

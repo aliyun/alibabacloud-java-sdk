@@ -4,37 +4,87 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class EnvironmentInfo extends TeaModel {
+    /**
+     * <p>The environment alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-env</p>
+     */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <p>The creation timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1721116090326</p>
+     */
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>Specifies whether the environment is the default environment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("default")
     public Boolean _default;
 
+    /**
+     * <p>The environment descriptiont.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a test environment.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The environment ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-cq7l5s5lhtgi6qasrdc0</p>
+     */
     @NameInMap("environmentId")
     public String environmentId;
 
+    /**
+     * <p>The instance information.</p>
+     */
     @NameInMap("gatewayInfo")
     public GatewayInfo gatewayInfo;
 
+    /**
+     * <p>The environment name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxxx</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The subdomains.</p>
+     */
     @NameInMap("subDomainInfos")
     public java.util.List<SubDomainInfo> subDomainInfos;
 
+    /**
+     * <p>The update timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1721116090326</p>
+     */
     @NameInMap("updateTimestamp")
     public Long updateTimestamp;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewaysRequest extends TeaModel {
     /**
-     * <p>The instance ID. If you specify an ID, an exact search is performed.</p>
+     * <p>Retrieve the list of created cloud-native gateways</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cpv4sqdl****</p>
@@ -13,11 +13,17 @@ public class ListGatewaysRequest extends TeaModel {
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The search keyword. A full match is performed. The search is case-insensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>API</p>
+     */
     @NameInMap("gatewayType")
     public String gatewayType;
 
     /**
-     * <p>The search keyword. A full match is performed. The search is case-insensitive.</p>
+     * <p>The instance name. If you specify a name, an exact search is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>dev</p>
@@ -26,7 +32,7 @@ public class ListGatewaysRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The instance name. If you specify a name, an exact search is performed.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>itemcenter-gateway</p>
@@ -35,7 +41,7 @@ public class ListGatewaysRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The instance ID. If you specify an ID, an exact search is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +50,7 @@ public class ListGatewaysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -53,10 +59,10 @@ public class ListGatewaysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>rg-aekz3wes3hnre5a</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aekz3wes3hnre5a</p>
+     * <p>rg-aekzq6bzz5uyg2q</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;

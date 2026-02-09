@@ -14,7 +14,7 @@ public class ListServicesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The response payload.</p>
      */
     @NameInMap("data")
     public ListServicesResponseBodyData data;
@@ -76,7 +76,7 @@ public class ListServicesResponseBody extends TeaModel {
 
     public static class ListServicesResponseBodyData extends TeaModel {
         /**
-         * <p>The services.</p>
+         * <p>The list of services.</p>
          */
         @NameInMap("items")
         public java.util.List<Service> items;

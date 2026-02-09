@@ -4,64 +4,117 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpApiApiInfo extends TeaModel {
+    /**
+     * <p>Agent protocol list</p>
+     */
     @NameInMap("agentProtocols")
     public java.util.List<String> agentProtocols;
 
+    /**
+     * <p>The AI protocols.</p>
+     */
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
 
+    /**
+     * <p>The authentication configurations.</p>
+     */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
+     * <p>The base path of the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>/v1</p>
      */
     @NameInMap("basePath")
     public String basePath;
 
+    /**
+     * <p>The API publishing status.</p>
+     */
     @NameInMap("deployCntMap")
     public java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap;
 
+    /**
+     * <p>The API deployment configurations.</p>
+     */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
+    /**
+     * <p>The API description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>for test only</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Specifies whether to enable authentication.</p>
+     */
     @NameInMap("enabelAuth")
     public Boolean enabelAuth;
 
+    /**
+     * <p>The API environment information.</p>
+     */
     @NameInMap("environments")
     public java.util.List<HttpApiApiInfoEnvironments> environments;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-cpv4sqdl****</p>
+     */
     @NameInMap("gatewayId")
     public String gatewayId;
 
     /**
+     * <p>The HTTP API ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>api-xxx</p>
      */
     @NameInMap("httpApiId")
     public String httpApiId;
 
+    /**
+     * <p>The information about the HTTP Ingress API.</p>
+     */
     @NameInMap("ingressInfo")
     public HttpApiApiInfoIngressInfo ingressInfo;
 
+    /**
+     * <p>Model category</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Text</p>
+     */
     @NameInMap("modelCategory")
     public String modelCategory;
 
     /**
+     * <p>The API name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The protocols.</p>
+     */
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxx</p>
      */
@@ -69,12 +122,25 @@ public class HttpApiApiInfo extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The API type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>HttpIngress</li>
+     * <li>Rest</li>
+     * <li>Websocket</li>
+     * <li>AI</li>
+     * <li>Http</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Rest</p>
      */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The API versioning information.</p>
+     */
     @NameInMap("versionInfo")
     public HttpApiVersionInfo versionInfo;
 
@@ -229,6 +295,8 @@ public class HttpApiApiInfo extends TeaModel {
 
     public static class HttpApiApiInfoEnvironmentsGatewayInfo extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
          */
@@ -236,6 +304,8 @@ public class HttpApiApiInfo extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -267,16 +337,23 @@ public class HttpApiApiInfo extends TeaModel {
 
     public static class HttpApiApiInfoEnvironmentsServiceConfigs extends TeaModel {
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gs-xxx</p>
          */
         @NameInMap("gatewayServiceId")
         public String gatewayServiceId;
 
+        /**
+         * <p>The matching conditions.</p>
+         */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
+         * <p>The service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo-service</p>
          */
@@ -284,6 +361,8 @@ public class HttpApiApiInfo extends TeaModel {
         public String name;
 
         /**
+         * <p>The service port.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -291,6 +370,8 @@ public class HttpApiApiInfo extends TeaModel {
         public String port;
 
         /**
+         * <p>The protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -298,6 +379,8 @@ public class HttpApiApiInfo extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>svc-xxx</p>
          */
@@ -305,6 +388,8 @@ public class HttpApiApiInfo extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The version of the microservice.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -312,6 +397,8 @@ public class HttpApiApiInfo extends TeaModel {
         public String version;
 
         /**
+         * <p>The service weight.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -391,6 +478,8 @@ public class HttpApiApiInfo extends TeaModel {
 
     public static class HttpApiApiInfoEnvironmentsSubDomains extends TeaModel {
         /**
+         * <p>The domain name ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-xxx</p>
          */
@@ -398,6 +487,8 @@ public class HttpApiApiInfo extends TeaModel {
         public String domainId;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
          */
@@ -405,6 +496,8 @@ public class HttpApiApiInfo extends TeaModel {
         public String name;
 
         /**
+         * <p>The network type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Internet</p>
          */
@@ -412,6 +505,8 @@ public class HttpApiApiInfo extends TeaModel {
         public String networkType;
 
         /**
+         * <p>The communication protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -459,6 +554,8 @@ public class HttpApiApiInfo extends TeaModel {
 
     public static class HttpApiApiInfoEnvironments extends TeaModel {
         /**
+         * <p>The environment alias.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -466,6 +563,16 @@ public class HttpApiApiInfo extends TeaModel {
         public String alias;
 
         /**
+         * <p>The publishing scenario.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SingleService</li>
+         * <li>MultiServiceByRatio</li>
+         * <li>MultiServiceByContent</li>
+         * <li>MultiServiceByTag</li>
+         * <li>Mock</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SingleService</p>
          */
@@ -473,16 +580,30 @@ public class HttpApiApiInfo extends TeaModel {
         public String backendScene;
 
         /**
+         * <p>The type of the backend service.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DNS: a DNS domain name</li>
+         * <li>Service: an existing service</li>
+         * <li>VIP: a fixed IP address</li>
+         * <li>CloudProduct: a cloud service</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Service</p>
          */
         @NameInMap("backendType")
         public String backendType;
 
+        /**
+         * <p>The custom domain names.</p>
+         */
         @NameInMap("customDomains")
         public java.util.List<HttpApiDomainInfo> customDomains;
 
         /**
+         * <p>The publishing status of the API in the current environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>Deployed</p>
          */
@@ -490,25 +611,38 @@ public class HttpApiApiInfo extends TeaModel {
         public String deployStatus;
 
         /**
+         * <p>The environment ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>env-xxx</p>
          */
         @NameInMap("environmentId")
         public String environmentId;
 
+        /**
+         * <p>The information about the gateway instance to which the environment belongs.</p>
+         */
         @NameInMap("gatewayInfo")
         public HttpApiApiInfoEnvironmentsGatewayInfo gatewayInfo;
 
         /**
+         * <p>The environment name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The configurations of an existing service.</p>
+         */
         @NameInMap("serviceConfigs")
         public java.util.List<HttpApiApiInfoEnvironmentsServiceConfigs> serviceConfigs;
 
+        /**
+         * <p>The default domain names of the environment.</p>
+         */
         @NameInMap("subDomains")
         public java.util.List<HttpApiApiInfoEnvironmentsSubDomains> subDomains;
 
@@ -600,6 +734,12 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     public static class HttpApiApiInfoIngressInfoEnvironmentInfo extends TeaModel {
+        /**
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
+         */
         @NameInMap("environmentId")
         public String environmentId;
 
@@ -619,6 +759,12 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     public static class HttpApiApiInfoIngressInfoK8sClusterInfo extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca435c77cba1547cca9311957bcxxxxxx</p>
+         */
         @NameInMap("clusterId")
         public String clusterId;
 
@@ -638,21 +784,51 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     public static class HttpApiApiInfoIngressInfo extends TeaModel {
+        /**
+         * <p>The environment information.</p>
+         */
         @NameInMap("environmentInfo")
         public HttpApiApiInfoIngressInfoEnvironmentInfo environmentInfo;
 
+        /**
+         * <p>The Ingress Class for listening.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse</p>
+         */
         @NameInMap("ingressClass")
         public String ingressClass;
 
+        /**
+         * <p>The information about the Kubernetes cluster.</p>
+         */
         @NameInMap("k8sClusterInfo")
         public HttpApiApiInfoIngressInfoK8sClusterInfo k8sClusterInfo;
 
+        /**
+         * <p>Specifies whether to update the address in Ingress Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("overrideIngressIp")
         public Boolean overrideIngressIp;
 
+        /**
+         * <p>The source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src-xxx</p>
+         */
         @NameInMap("sourceId")
         public String sourceId;
 
+        /**
+         * <p>The namespace for listening.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("watchNamespace")
         public String watchNamespace;
 

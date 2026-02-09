@@ -94,6 +94,12 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <p>The resource types.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>K8S</p>
+     */
     @NameInMap("resourceTypes")
     public String resourceTypes;
 

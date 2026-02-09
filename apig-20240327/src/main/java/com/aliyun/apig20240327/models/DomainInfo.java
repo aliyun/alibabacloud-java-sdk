@@ -4,43 +4,129 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class DomainInfo extends TeaModel {
+    /**
+     * <p>The certificate identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>235556-cn-hangzhou</p>
+     */
     @NameInMap("certIdentifier")
     public String certIdentifier;
 
+    /**
+     * <p>The client CA certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIIFBTCCAu2gAwIBAgIUORLpYPGSFD1YOP6PMbE7Wd/mpTQwDQYJKoZIhvcNAQEL
+     * BQAwE************************************************2VwVOJ2gqX3
+     * YuGaxvIbDy0iQJ1GMerPRyzJTeVEtdIKT29u0PdFRr4KZWom35qX7G4=
+     * -----END CERTIFICATE-----</p>
+     */
     @NameInMap("clientCACert")
     public String clientCACert;
 
+    /**
+     * <p>The creation source of the domain name.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Console</li>
+     * <li>Ingress</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Console</p>
+     */
     @NameInMap("createFrom")
     public String createFrom;
 
+    /**
+     * <p>The creation timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1719386834548</p>
+     */
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The domain name ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-cq1lthllhtgja4dk54eg</p>
+     */
     @NameInMap("domainId")
     public String domainId;
 
+    /**
+     * <p>Specifies whether to enable forcible HTTPS redirection when HTTPS is used as the protocol.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("forceHttps")
     public Boolean forceHttps;
 
+    /**
+     * <p>Specifies whether to enable mutual authentication.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("mTLSEnabled")
     public Boolean mTLSEnabled;
 
+    /**
+     * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc.com</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The supported protocol. Valid values:</p>
+     * <ul>
+     * <li>HTTP</li>
+     * <li>HTTPS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxxx</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The domain name status.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>UnPublished</li>
+     * <li>Published</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Published</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The update timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1719386834548</p>
+     */
     @NameInMap("updateTimestamp")
     public Long updateTimestamp;
 

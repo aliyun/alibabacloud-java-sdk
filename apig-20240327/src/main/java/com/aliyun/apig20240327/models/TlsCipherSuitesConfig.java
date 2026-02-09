@@ -4,9 +4,18 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class TlsCipherSuitesConfig extends TeaModel {
+    /**
+     * <p>The configuration type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
+     */
     @NameInMap("configType")
     public String configType;
 
+    /**
+     * <p>tlsCipherSuite</p>
+     */
     @NameInMap("tlsCipherSuite")
     public java.util.List<TlsCipherSuitesConfigTlsCipherSuite> tlsCipherSuite;
 
@@ -32,9 +41,18 @@ public class TlsCipherSuitesConfig extends TeaModel {
     }
 
     public static class TlsCipherSuitesConfigTlsCipherSuite extends TeaModel {
+        /**
+         * <p>The suite name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECDHE-ECDSA-AES256-GCM-SHA384</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The supported versions.</p>
+         */
         @NameInMap("supportVersions")
         public java.util.List<String> supportVersions;
 

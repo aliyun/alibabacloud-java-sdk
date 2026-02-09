@@ -13,6 +13,12 @@ public class ListDomainsRequest extends TeaModel {
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The gateway type to filter. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>API</p>
+     */
     @NameInMap("gatewayType")
     public String gatewayType;
 

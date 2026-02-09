@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class Backend extends TeaModel {
     /**
+     * <p>The backend service scenario. Valid values: Single, MultiServiceByRatio, MultiServiceByTag, Mock, and Redirect.</p>
+     * 
      * <strong>example:</strong>
      * <p>Single</p>
      */
     @NameInMap("scene")
     public String scene;
 
+    /**
+     * <p>The backend services.</p>
+     */
     @NameInMap("services")
     public java.util.List<BackendServices> services;
 
@@ -37,6 +42,8 @@ public class Backend extends TeaModel {
 
     public static class BackendServices extends TeaModel {
         /**
+         * <p>The service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>item-service</p>
          */
@@ -44,6 +51,8 @@ public class Backend extends TeaModel {
         public String name;
 
         /**
+         * <p>The service port. If you want to use a dynamic port, do not pass this parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>port</p>
          */
@@ -51,6 +60,8 @@ public class Backend extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The service protocol. Valid values: HTTP, TCP, and DUBBO.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -58,6 +69,8 @@ public class Backend extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>service-cq2bmmdlhtgj***</p>
          */
@@ -65,6 +78,8 @@ public class Backend extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The service version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -72,6 +87,8 @@ public class Backend extends TeaModel {
         public String version;
 
         /**
+         * <p>The percentage value of traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>49</p>
          */

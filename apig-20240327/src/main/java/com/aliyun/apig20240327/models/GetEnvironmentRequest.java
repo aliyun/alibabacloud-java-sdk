@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEnvironmentRequest extends TeaModel {
     /**
-     * <p>Indicates whether to return online resource info.</p>
+     * <p>The request ID, which is used to trace the API call link.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class GetEnvironmentRequest extends TeaModel {
     public Boolean withStatistics;
 
     /**
-     * <p>Option for vpc info.</p>
+     * <p>Schema of Response</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

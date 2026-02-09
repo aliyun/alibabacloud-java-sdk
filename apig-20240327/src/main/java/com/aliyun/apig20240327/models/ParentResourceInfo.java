@@ -4,9 +4,18 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ParentResourceInfo extends TeaModel {
+    /**
+     * <p>The API information.</p>
+     */
     @NameInMap("apiInfo")
     public HttpApiApiInfo apiInfo;
 
+    /**
+     * <p>The resource type. Valid values: HttpApi/Operation/GatewayRoute/Gateway/GatewayDomain</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Gateway</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 

@@ -4,10 +4,15 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpApiBackendMatchConditions extends TeaModel {
+    /**
+     * <p>The configurations of the matching conditions.</p>
+     */
     @NameInMap("conditions")
     public java.util.List<HttpApiBackendMatchCondition> conditions;
 
     /**
+     * <p>Specifies whether the matching condition is the default one.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

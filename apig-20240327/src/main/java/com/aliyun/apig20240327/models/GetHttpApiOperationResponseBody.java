@@ -14,7 +14,7 @@ public class GetHttpApiOperationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Operation information.</p>
+     * <p>The operation information.</p>
      */
     @NameInMap("data")
     public HttpApiOperationInfo data;

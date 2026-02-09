@@ -4,26 +4,26 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreateHttpApiRequest extends TeaModel {
+    /**
+     * <p>Agent protocols</p>
+     */
     @NameInMap("agentProtocols")
     public java.util.List<String> agentProtocols;
 
     /**
-     * <p>The AI API protocols. Valid value:</p>
-     * <ul>
-     * <li>OpenAI/v1</li>
-     * </ul>
+     * <p>$.parameters[0].schema.properties.authConfig.enumValueTitles</p>
      */
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
 
     /**
-     * <p>The authentication configurations.</p>
+     * <p>The request parameters for API creation.</p>
      */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>The API base path, which must start with a forward slash (/).</p>
+     * <p>$.parameters[0].schema.properties.deployConfigs.items.example</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -32,40 +32,55 @@ public class CreateHttpApiRequest extends TeaModel {
     public String basePath;
 
     /**
-     * <p>The API deployment configurations. Currently, only AI APIs support deployment configurations, and only a single deployment configuration can be passed.</p>
+     * <p>$.parameters[0].schema.example</p>
      */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The API description.</p>
+     * <p>$.parameters[0].schema.properties.aiProtocols.items.description</p>
      * 
      * <strong>example:</strong>
-     * <p>API for testing</p>
+     * <p>$.parameters[0].schema.properties.aiProtocols.items.example</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether to enable authentication.</p>
+     * <p>Create an API of HTTP type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enableAuth")
     public Boolean enableAuth;
 
+    /**
+     * <p>First byte timeout</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("firstByteTimeout")
     public Integer firstByteTimeout;
 
     /**
-     * <p>The HTTP Ingress configurations.</p>
+     * <p>$.parameters[0].schema.properties.deployConfigs.example</p>
      */
     @NameInMap("ingressConfig")
     public CreateHttpApiRequestIngressConfig ingressConfig;
 
+    /**
+     * <p>Model category</p>
+     * 
+     * <strong>example:</strong>
+     * <p>llm/text-to-image</p>
+     */
     @NameInMap("modelCategory")
     public String modelCategory;
 
     /**
-     * <p>The API name.</p>
+     * <p>$.parameters[0].schema.example</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,31 +90,31 @@ public class CreateHttpApiRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The protocols that are used to call the API.</p>
+     * <p>$.parameters[0].schema.properties.aiProtocols.description</p>
      */
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
+    /**
+     * <p>Whether to remove base path when forwarding</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("removeBasePathOnForward")
     public Boolean removeBasePathOnForward;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>$.parameters[0].schema.properties.authConfig.example</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aekzgvmlotionbi</p>
+     * <p>rg-xxx</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The API type. Valid values:</p>
-     * <ul>
-     * <li>Http</li>
-     * <li>Rest</li>
-     * <li>WebSocket</li>
-     * <li>HttpIngress</li>
-     * </ul>
+     * <p>$.parameters[0].schema.properties.deployConfigs.description</p>
      * 
      * <strong>example:</strong>
      * <p>Http</p>
@@ -108,7 +123,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The versioning configuration of the API.</p>
+     * <p>$.parameters[0].schema.properties.deployConfigs.items.enumValueTitles</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
@@ -247,11 +262,17 @@ public class CreateHttpApiRequest extends TeaModel {
     }
 
     public static class CreateHttpApiRequestIngressConfig extends TeaModel {
+        /**
+         * <p>Cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k7v5eobfzttudni2pw***</p>
+         */
         @NameInMap("clusterId")
         public String clusterId;
 
         /**
-         * <p>The environment ID.</p>
+         * <p>$.parameters[0].schema.properties.deployConfigs.enumValueTitles</p>
          * 
          * <strong>example:</strong>
          * <p>env-cq146allhtgk***</p>
@@ -260,7 +281,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The Ingress Class for listening.</p>
+         * <p>$.parameters[0].schema.properties.enableAuth.example</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -269,7 +290,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>Specifies whether to update the address in Ingress Status.</p>
+         * <p>$.parameters[0].schema.properties.authConfig.description</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -278,7 +299,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public Boolean overrideIngressIp;
 
         /**
-         * <p>The source ID.</p>
+         * <p>$.parameters[0].schema.properties.enableAuth.description</p>
          * 
          * <strong>example:</strong>
          * <p>src-crdddallhtgtr***</p>
@@ -288,7 +309,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The namespace for listening.</p>
+         * <p>$.parameters[0].schema.properties.enableAuth.enumValueTitles</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

@@ -4,19 +4,36 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class Service extends TeaModel {
+    /**
+     * <p>The address details, which can be IP addresses or domain names.</p>
+     */
     @NameInMap("addresses")
     public java.util.List<String> addresses;
 
+    /**
+     * <p>The agent service configuration</p>
+     */
     @NameInMap("agentServiceConfig")
     public AgentServiceConfig agentServiceConfig;
 
+    /**
+     * <p>The AI service configurations.</p>
+     */
     @NameInMap("aiServiceConfig")
     public AiServiceConfig aiServiceConfig;
 
+    /**
+     * <p>The creation time (unix timestamp).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1725617840096</p>
+     */
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
     /**
+     * <p>The express type</p>
+     * 
      * <strong>example:</strong>
      * <p>StartExecution</p>
      */
@@ -24,6 +41,8 @@ public class Service extends TeaModel {
     public String expressType;
 
     /**
+     * <p>The gateway instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-xxxx</p>
      */
@@ -31,34 +50,73 @@ public class Service extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The service group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>publich</p>
      */
     @NameInMap("groupName")
     public String groupName;
 
+    /**
+     * <p>The health check configurations.</p>
+     */
     @NameInMap("healthCheck")
     public ServiceHealthCheck healthCheck;
 
+    /**
+     * <p>The health check status.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Unhealthy</li>
+     * <li>Healthy</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Healthy</p>
+     */
     @NameInMap("healthStatus")
     public String healthStatus;
 
+    /**
+     * <p>The label details for service version configuration</p>
+     */
     @NameInMap("labelDetails")
     public java.util.List<LabelDetail> labelDetails;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-service</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The namespace of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The outlier endpoints list</p>
+     */
     @NameInMap("outlierEndpoints")
     public java.util.List<String> outlierEndpoints;
 
+    /**
+     * <p>The list of objects containing port details.</p>
+     */
     @NameInMap("ports")
     public java.util.List<ServicePorts> ports;
 
     /**
+     * <p>The service protocol type.</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
@@ -66,6 +124,8 @@ public class Service extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The function qualifier name.</p>
+     * 
      * <strong>example:</strong>
      * <p>LATEST</p>
      */
@@ -73,21 +133,44 @@ public class Service extends TeaModel {
     public String qualifier;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxx</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The service unique ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>svc-cr6pk4tlhtgm***</p>
+     */
     @NameInMap("serviceId")
     public String serviceId;
 
+    /**
+     * <p>The source type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MSE_NACOS</p>
+     */
     @NameInMap("sourceType")
     public String sourceType;
 
+    /**
+     * <p>The list of unhealthy endpoints.</p>
+     */
     @NameInMap("unhealthyEndpoints")
     public java.util.List<String> unhealthyEndpoints;
 
+    /**
+     * <p>The last modified time (unix timestamp).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1725868548440</p>
+     */
     @NameInMap("updateTimestamp")
     public Long updateTimestamp;
 
@@ -265,12 +348,30 @@ public class Service extends TeaModel {
     }
 
     public static class ServicePorts extends TeaModel {
+        /**
+         * <p>The port name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-service</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <p>The protocol. Valid values: TCP and UDP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 

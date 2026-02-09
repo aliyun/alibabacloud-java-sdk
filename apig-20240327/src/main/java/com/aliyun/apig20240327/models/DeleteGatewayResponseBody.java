@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayResponseBody extends TeaModel {
     /**
-     * <p>Response status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class DeleteGatewayResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DeleteGatewayResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DE97DFDB-7DF0-5AB9-941C-10D27D769E4B</p>

@@ -4,17 +4,35 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ListSecretsResponseBody extends TeaModel {
+    /**
+     * <p>Code of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Data</p>
+     */
     @NameInMap("data")
     public ListSecretsResponseBodyData data;
 
+    /**
+     * <p>message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F270C0B-7D6A-5DA7-93E2-******</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -57,30 +75,81 @@ public class ListSecretsResponseBody extends TeaModel {
     }
 
     public static class ListSecretsResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>Unix timestamp when the secret was created</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
+         */
         @NameInMap("createTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>Gateway type associated with the secret</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
+         */
         @NameInMap("gatewayType")
         public String gatewayType;
 
+        /**
+         * <p>KMS configuration object</p>
+         */
         @NameInMap("kmsConfig")
         public KMSConfig kmsConfig;
 
+        /**
+         * <p>Name of the secret</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-secret</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Number of resources referencing this secret</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("referenceCount")
         public Integer referenceCount;
 
+        /**
+         * <p>Source of the ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("secretId")
         public String secretId;
 
+        /**
+         * <p>Source of the secret</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KMS</p>
+         */
         @NameInMap("secretSource")
         public String secretSource;
 
+        /**
+         * <p>Current status of the secret</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Unix timestamp when the secret was last updated</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
+         */
         @NameInMap("updateTimestamp")
         public Long updateTimestamp;
 
@@ -164,15 +233,36 @@ public class ListSecretsResponseBody extends TeaModel {
     }
 
     public static class ListSecretsResponseBodyData extends TeaModel {
+        /**
+         * <p>Array of secret details</p>
+         */
         @NameInMap("items")
         public java.util.List<ListSecretsResponseBodyDataItems> items;
 
+        /**
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("pageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>Number of items per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("pageSize")
         public Integer pageSize;
 
+        /**
+         * <p>Total number of records matching the query</p>
+         * 
+         * <strong>example:</strong>
+         * <p>104</p>
+         */
         @NameInMap("totalSize")
         public Integer totalSize;
 

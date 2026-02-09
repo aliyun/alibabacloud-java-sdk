@@ -73,6 +73,12 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("sourceType")
     public String sourceType;
 
+    /**
+     * <p>List of service source types</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;K8S&quot;, &quot;FC3&quot;]</p>
+     */
     @NameInMap("sourceTypes")
     public String sourceTypes;
 

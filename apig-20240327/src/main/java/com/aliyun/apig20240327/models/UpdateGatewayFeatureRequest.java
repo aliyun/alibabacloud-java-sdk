@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayFeatureRequest extends TeaModel {
     /**
-     * <p>Parameter value.</p>
+     * <p>The parameter value.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;true&quot;</p>

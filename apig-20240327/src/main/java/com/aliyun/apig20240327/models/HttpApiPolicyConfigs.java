@@ -4,33 +4,69 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpApiPolicyConfigs extends TeaModel {
+    /**
+     * <p>AiCacheConfig</p>
+     */
     @NameInMap("aiCacheConfig")
     public HttpApiPolicyConfigsAiCacheConfig aiCacheConfig;
 
+    /**
+     * <p>AiFallbackConfig</p>
+     */
     @NameInMap("aiFallbackConfig")
     public HttpApiPolicyConfigsAiFallbackConfig aiFallbackConfig;
 
+    /**
+     * <p>AiNetworkSearchConfig</p>
+     */
     @NameInMap("aiNetworkSearchConfig")
     public HttpApiPolicyConfigsAiNetworkSearchConfig aiNetworkSearchConfig;
 
+    /**
+     * <p>AiSecurityGuardConfig</p>
+     */
     @NameInMap("aiSecurityGuardConfig")
     public HttpApiPolicyConfigsAiSecurityGuardConfig aiSecurityGuardConfig;
 
+    /**
+     * <p>AiStatisticsConfig</p>
+     */
     @NameInMap("aiStatisticsConfig")
     public HttpApiPolicyConfigsAiStatisticsConfig aiStatisticsConfig;
 
+    /**
+     * <p>AiTokenRateLimitConfig</p>
+     */
     @NameInMap("aiTokenRateLimitConfig")
     public HttpApiPolicyConfigsAiTokenRateLimitConfig aiTokenRateLimitConfig;
 
+    /**
+     * <p>AiToolSelectionConfig</p>
+     */
     @NameInMap("aiToolSelectionConfig")
     public HttpApiPolicyConfigsAiToolSelectionConfig aiToolSelectionConfig;
 
+    /**
+     * <p>Policy Enable</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>SemanticRouterConfig</p>
+     */
     @NameInMap("semanticRouterConfig")
     public HttpApiPolicyConfigsSemanticRouterConfig semanticRouterConfig;
 
+    /**
+     * <p>Policy Type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AiCache</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -120,15 +156,39 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiCacheConfigEmbeddingConfig extends TeaModel {
+        /**
+         * <p>Embedding model name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-1</p>
+         */
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <p>Embedding service ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-1</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
+        /**
+         * <p>Embedding service request timeout in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("timeout")
         public Integer timeout;
 
+        /**
+         * <p>Embedding service provider type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dashscope</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -172,12 +232,27 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiCacheConfigPluginStatus extends TeaModel {
+        /**
+         * <p>errorLogs</p>
+         */
         @NameInMap("errorLogs")
         public java.util.Map<String, String> errorLogs;
 
+        /**
+         * <p>pluginId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-123456</p>
+         */
         @NameInMap("pluginId")
         public String pluginId;
 
+        /**
+         * <p>serviceHealthy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("serviceHealthy")
         public Boolean serviceHealthy;
 
@@ -213,21 +288,57 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiCacheConfigRedisConfig extends TeaModel {
+        /**
+         * <p>Redis database number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("databaseNumber")
         public Integer databaseNumber;
 
+        /**
+         * <p>Redis host</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis.example.com</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <p>Redis password</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("password")
         public String password;
 
+        /**
+         * <p>Redis port</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <p>Redis timeout</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("timeout")
         public Integer timeout;
 
+        /**
+         * <p>Redis username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -287,21 +398,57 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiCacheConfigVectorConfig extends TeaModel {
+        /**
+         * <p>Vector database API key for authentication</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vec-api-key-123</p>
+         */
         @NameInMap("apiKey")
         public String apiKey;
 
+        /**
+         * <p>Vector database collection ID for storing vector embeddings</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col-1</p>
+         */
         @NameInMap("collectionId")
         public String collectionId;
 
+        /**
+         * <p>Vector database service host address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vec.example.com</p>
+         */
         @NameInMap("serviceHost")
         public String serviceHost;
 
+        /**
+         * <p>Similarity threshold for semantic matching</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8</p>
+         */
         @NameInMap("threshold")
         public Float threshold;
 
+        /**
+         * <p>Vector database request timeout in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("timeout")
         public Integer timeout;
 
+        /**
+         * <p>Vector database service type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dashvector</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -361,24 +508,54 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiCacheConfig extends TeaModel {
+        /**
+         * <p>Strategy for generating cache keys</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("cacheKeyStrategy")
         public String cacheKeyStrategy;
 
+        /**
+         * <p>Cache mode type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
+         */
         @NameInMap("cacheMode")
         public String cacheMode;
 
+        /**
+         * <p>Cache time-to-live in seconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
         @NameInMap("cacheTTL")
         public Integer cacheTTL;
 
+        /**
+         * <p>Embedding Config</p>
+         */
         @NameInMap("embeddingConfig")
         public HttpApiPolicyConfigsAiCacheConfigEmbeddingConfig embeddingConfig;
 
+        /**
+         * <p>pluginStatus</p>
+         */
         @NameInMap("pluginStatus")
         public HttpApiPolicyConfigsAiCacheConfigPluginStatus pluginStatus;
 
+        /**
+         * <p>Redis configuration for cache storage</p>
+         */
         @NameInMap("redisConfig")
         public HttpApiPolicyConfigsAiCacheConfigRedisConfig redisConfig;
 
+        /**
+         * <p>vectorConfig</p>
+         */
         @NameInMap("vectorConfig")
         public HttpApiPolicyConfigsAiCacheConfigVectorConfig vectorConfig;
 
@@ -446,15 +623,39 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiFallbackConfigServiceConfigs extends TeaModel {
+        /**
+         * <p>Service name for frontend display</p>
+         * 
+         * <strong>example:</strong>
+         * <p>azure.ai</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Whether to pass through the original model name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("passThroughModelName")
         public Boolean passThroughModelName;
 
+        /**
+         * <p>Fallback service ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-123456</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
+        /**
+         * <p>Target model name for fallback</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kimi-fallback-test</p>
+         */
         @NameInMap("targetModelName")
         public String targetModelName;
 
@@ -498,12 +699,27 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiFallbackConfig extends TeaModel {
+        /**
+         * <p>Only trigger fallback when backend returns 4xx/5xx status codes</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("onlyRedirectUpstreamCode")
         public Boolean onlyRedirectUpstreamCode;
 
+        /**
+         * <p>Whether the policy is generated from route embedded configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("routeEmbedded")
         public Boolean routeEmbedded;
 
+        /**
+         * <p>List of fallback service configurations</p>
+         */
         @NameInMap("serviceConfigs")
         public java.util.List<HttpApiPolicyConfigsAiFallbackConfigServiceConfigs> serviceConfigs;
 
@@ -539,12 +755,27 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiNetworkSearchConfigPluginStatus extends TeaModel {
+        /**
+         * <p>errorLogs</p>
+         */
         @NameInMap("errorLogs")
         public java.util.Map<String, String> errorLogs;
 
+        /**
+         * <p>pluginId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-123456</p>
+         */
         @NameInMap("pluginId")
         public String pluginId;
 
+        /**
+         * <p>serviceHealthy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("serviceHealthy")
         public Boolean serviceHealthy;
 
@@ -580,33 +811,90 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiNetworkSearchConfigSearchEngineConfig extends TeaModel {
+        /**
+         * <p>Search engine API key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("apiKey")
         public String apiKey;
 
+        /**
+         * <p>Content mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>summary</p>
+         */
         @NameInMap("contentMode")
         public String contentMode;
 
+        /**
+         * <p>Result count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("count")
         public Integer count;
 
+        /**
+         * <p>Search engine endpoint</p>
+         * 
+         * <strong>example:</strong>
+         * <p>******-hangzhou.aliyuncs.com</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>Industry</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tech</p>
+         */
         @NameInMap("industry")
         public String industry;
 
+        /**
+         * <p>Additional parameters</p>
+         */
         @NameInMap("optionArgs")
         public java.util.Map<String, String> optionArgs;
 
+        /**
+         * <p>Result offset</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("start")
         public Integer start;
 
+        /**
+         * <p>Time range</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7d</p>
+         */
         @NameInMap("timeRange")
         public String timeRange;
 
+        /**
+         * <p>API call timeout in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("timeoutMillisecond")
         public Integer timeoutMillisecond;
 
+        /**
+         * <p>Search engine type: Bing/aliyunQuark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bing</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -698,33 +986,90 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiNetworkSearchConfigSearchFrom extends TeaModel {
+        /**
+         * <p>Search engine API key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("apiKey")
         public String apiKey;
 
+        /**
+         * <p>Content mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>summary</p>
+         */
         @NameInMap("contentMode")
         public String contentMode;
 
+        /**
+         * <p>Result count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("count")
         public Integer count;
 
+        /**
+         * <p>Search engine endpoint</p>
+         * 
+         * <strong>example:</strong>
+         * <p>******-hangzhou.aliyuncs.com</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>Industry</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tech</p>
+         */
         @NameInMap("industry")
         public String industry;
 
+        /**
+         * <p>Additional parameters</p>
+         */
         @NameInMap("optionArgs")
         public java.util.Map<String, String> optionArgs;
 
+        /**
+         * <p>Result offset</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("start")
         public Integer start;
 
+        /**
+         * <p>Time range</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7d</p>
+         */
         @NameInMap("timeRange")
         public String timeRange;
 
+        /**
+         * <p>API call timeout in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("timeoutMillisecond")
         public Integer timeoutMillisecond;
 
+        /**
+         * <p>Search engine type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bing</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -816,18 +1161,48 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiNetworkSearchConfigSearchRewrite extends TeaModel {
+        /**
+         * <p>Enable search rewrite</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>Max rewrite count (1-5)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("maxCount")
         public Integer maxCount;
 
+        /**
+         * <p>Model name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-turbo</p>
+         */
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <p>Service ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-123456</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
+        /**
+         * <p>Timeout in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("timeoutMillisecond")
         public Integer timeoutMillisecond;
 
@@ -879,30 +1254,72 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiNetworkSearchConfig extends TeaModel {
+        /**
+         * <p>Default enable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("defaultEnable")
         public Boolean defaultEnable;
 
+        /**
+         * <p>Default search language code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
+         */
         @NameInMap("defaultLang")
         public String defaultLang;
 
+        /**
+         * <p>Add reference sources in answer</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("needReference")
         public Boolean needReference;
 
+        /**
+         * <p>pluginStatus</p>
+         */
         @NameInMap("pluginStatus")
         public HttpApiPolicyConfigsAiNetworkSearchConfigPluginStatus pluginStatus;
 
+        /**
+         * <p>Reference format</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reference: %s</p>
+         */
         @NameInMap("referenceFormat")
         public String referenceFormat;
 
+        /**
+         * <p>Reference location</p>
+         * 
+         * <strong>example:</strong>
+         * <p>head</p>
+         */
         @NameInMap("referenceLocation")
         public String referenceLocation;
 
+        /**
+         * <p>Search engine configuration</p>
+         */
         @NameInMap("searchEngineConfig")
         public HttpApiPolicyConfigsAiNetworkSearchConfigSearchEngineConfig searchEngineConfig;
 
+        /**
+         * <p>Search engine list</p>
+         */
         @NameInMap("searchFrom")
         public java.util.List<HttpApiPolicyConfigsAiNetworkSearchConfigSearchFrom> searchFrom;
 
+        /**
+         * <p>Search rewrite configuration</p>
+         */
         @NameInMap("searchRewrite")
         public HttpApiPolicyConfigsAiNetworkSearchConfigSearchRewrite searchRewrite;
 
@@ -986,18 +1403,48 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService extends TeaModel {
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exact</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Modality type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Text</p>
+         */
         @NameInMap("modalityType")
         public String modalityType;
 
+        /**
+         * <p>Consumer name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-1</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>requestCheckService</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query_security_check</p>
+         */
         @NameInMap("requestCheckService")
         public String requestCheckService;
 
+        /**
+         * <p>requestImageCheckService</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nsfw-image-detector</p>
+         */
         @NameInMap("requestImageCheckService")
         public String requestImageCheckService;
 
@@ -1049,18 +1496,48 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService extends TeaModel {
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exact</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Modality type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Text</p>
+         */
         @NameInMap("modalityType")
         public String modalityType;
 
+        /**
+         * <p>Consumer name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-1</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>responseCheckService</p>
+         * 
+         * <strong>example:</strong>
+         * <p>response_security_check</p>
+         */
         @NameInMap("responseCheckService")
         public String responseCheckService;
 
+        /**
+         * <p>responseImageCheckService</p>
+         * 
+         * <strong>example:</strong>
+         * <p>watermark-detector</p>
+         */
         @NameInMap("responseImageCheckService")
         public String responseImageCheckService;
 
@@ -1112,15 +1589,39 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel extends TeaModel {
+        /**
+         * <p>Risk level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exact</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Consumer name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-1</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Risk type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ContentModeration</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -1164,12 +1665,27 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiSecurityGuardConfigPluginStatus extends TeaModel {
+        /**
+         * <p>errorLogs</p>
+         */
         @NameInMap("errorLogs")
         public java.util.Map<String, String> errorLogs;
 
+        /**
+         * <p>pluginId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-123456</p>
+         */
         @NameInMap("pluginId")
         public String pluginId;
 
+        /**
+         * <p>serviceHealthy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("serviceHealthy")
         public Boolean serviceHealthy;
 
@@ -1205,9 +1721,21 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules extends TeaModel {
+        /**
+         * <p>matchType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exact</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>pattern</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/v1/chat/*</p>
+         */
         @NameInMap("pattern")
         public String pattern;
 
@@ -1235,12 +1763,27 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiSecurityGuardConfigRiskConfig extends TeaModel {
+        /**
+         * <p>consumerRules</p>
+         */
         @NameInMap("consumerRules")
         public HttpApiPolicyConfigsAiSecurityGuardConfigRiskConfigConsumerRules consumerRules;
 
+        /**
+         * <p>Risk level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <p>Risk type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ContentModeration</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -1276,51 +1819,132 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiSecurityGuardConfig extends TeaModel {
+        /**
+         * <p>Buffer limit for content checking</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("bufferLimit")
         public Integer bufferLimit;
 
+        /**
+         * <p>Enable request content checking</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("checkRequest")
         public Boolean checkRequest;
 
+        /**
+         * <p>Enable request image checking</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("checkRequestImage")
         public Boolean checkRequestImage;
 
+        /**
+         * <p>Enable response content checking</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("checkResponse")
         public Boolean checkResponse;
 
+        /**
+         * <p>Enable response image checking</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("checkResponseImage")
         public Boolean checkResponseImage;
 
+        /**
+         * <p>consumerRequestCheckService</p>
+         */
         @NameInMap("consumerRequestCheckService")
         public java.util.List<HttpApiPolicyConfigsAiSecurityGuardConfigConsumerRequestCheckService> consumerRequestCheckService;
 
+        /**
+         * <p>consumerResponseCheckService</p>
+         */
         @NameInMap("consumerResponseCheckService")
         public java.util.List<HttpApiPolicyConfigsAiSecurityGuardConfigConsumerResponseCheckService> consumerResponseCheckService;
 
+        /**
+         * <p>consumerRiskLevel</p>
+         */
         @NameInMap("consumerRiskLevel")
         public java.util.List<HttpApiPolicyConfigsAiSecurityGuardConfigConsumerRiskLevel> consumerRiskLevel;
 
+        /**
+         * <p>pluginStatus</p>
+         */
         @NameInMap("pluginStatus")
         public HttpApiPolicyConfigsAiSecurityGuardConfigPluginStatus pluginStatus;
 
+        /**
+         * <p>Request text check service type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content-moderation-service</p>
+         */
         @NameInMap("requestCheckService")
         public String requestCheckService;
 
+        /**
+         * <p>Request image check service type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-moderation-service</p>
+         */
         @NameInMap("requestImageCheckService")
         public String requestImageCheckService;
 
+        /**
+         * <p>Response text check service type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>output-moderation-service</p>
+         */
         @NameInMap("responseCheckService")
         public String responseCheckService;
 
+        /**
+         * <p>Response image check service type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>generated-image-scanner</p>
+         */
         @NameInMap("responseImageCheckService")
         public String responseImageCheckService;
 
+        /**
+         * <p>Global risk alert level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("riskAlertLevel")
         public String riskAlertLevel;
 
+        /**
+         * <p>RiskConfig</p>
+         */
         @NameInMap("riskConfig")
         public java.util.List<HttpApiPolicyConfigsAiSecurityGuardConfigRiskConfig> riskConfig;
 
+        /**
+         * <p>Security guard service endpoint URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://api.example.com/v1">https://api.example.com/v1</a></p>
+         */
         @NameInMap("serviceAddress")
         public String serviceAddress;
 
@@ -1460,9 +2084,21 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiStatisticsConfig extends TeaModel {
+        /**
+         * <p>Log request content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("logRequestContent")
         public Boolean logRequestContent;
 
+        /**
+         * <p>Log response content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("logResponseContent")
         public Boolean logResponseContent;
 
@@ -1490,21 +2126,57 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiTokenRateLimitConfigGlobalRules extends TeaModel {
+        /**
+         * <p>Limit mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TokenPerSecond</p>
+         */
         @NameInMap("limitMode")
         public String limitMode;
 
+        /**
+         * <p>Limit type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Global</p>
+         */
         @NameInMap("limitType")
         public String limitType;
 
+        /**
+         * <p>Limit value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("limitValue")
         public String limitValue;
 
+        /**
+         * <p>Match key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_id</p>
+         */
         @NameInMap("matchKey")
         public String matchKey;
 
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exact</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Match value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("matchValue")
         public String matchValue;
 
@@ -1564,12 +2236,27 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiTokenRateLimitConfigPluginStatus extends TeaModel {
+        /**
+         * <p>Array of plugin execution error logs</p>
+         */
         @NameInMap("errorLogs")
         public java.util.Map<String, String> errorLogs;
 
+        /**
+         * <p>Plugin instance unique identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-123456</p>
+         */
         @NameInMap("pluginId")
         public String pluginId;
 
+        /**
+         * <p>Health status of the cache service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("serviceHealthy")
         public Boolean serviceHealthy;
 
@@ -1605,21 +2292,57 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiTokenRateLimitConfigRedisConfig extends TeaModel {
+        /**
+         * <p>Redis database number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("databaseNumber")
         public Integer databaseNumber;
 
+        /**
+         * <p>Redis host</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis.example.com</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <p>Redis password</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("password")
         public String password;
 
+        /**
+         * <p>Redis port</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <p>Redis timeout</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("timeout")
         public Integer timeout;
 
+        /**
+         * <p>Redis username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -1679,21 +2402,57 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiTokenRateLimitConfigRules extends TeaModel {
+        /**
+         * <p>Limit mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TokenPerSecond</p>
+         */
         @NameInMap("limitMode")
         public String limitMode;
 
+        /**
+         * <p>Limit type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Header</p>
+         */
         @NameInMap("limitType")
         public String limitType;
 
+        /**
+         * <p>Limit value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("limitValue")
         public String limitValue;
 
+        /**
+         * <p>Match key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x-api-key</p>
+         */
         @NameInMap("matchKey")
         public String matchKey;
 
+        /**
+         * <p>Match type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exact</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <p>Match value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-value</p>
+         */
         @NameInMap("matchValue")
         public String matchValue;
 
@@ -1753,18 +2512,36 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiTokenRateLimitConfig extends TeaModel {
+        /**
+         * <p>Enable global rate limit rules</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableGlobalRules")
         public Boolean enableGlobalRules;
 
+        /**
+         * <p>List of global rate limit rules</p>
+         */
         @NameInMap("globalRules")
         public java.util.List<HttpApiPolicyConfigsAiTokenRateLimitConfigGlobalRules> globalRules;
 
+        /**
+         * <p>pluginStatus</p>
+         */
         @NameInMap("pluginStatus")
         public HttpApiPolicyConfigsAiTokenRateLimitConfigPluginStatus pluginStatus;
 
+        /**
+         * <p>Redis Config</p>
+         */
         @NameInMap("redisConfig")
         public HttpApiPolicyConfigsAiTokenRateLimitConfigRedisConfig redisConfig;
 
+        /**
+         * <p>List of rate limit rules</p>
+         */
         @NameInMap("rules")
         public java.util.List<HttpApiPolicyConfigsAiTokenRateLimitConfigRules> rules;
 
@@ -1816,6 +2593,12 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiToolSelectionConfigEnableConditions extends TeaModel {
+        /**
+         * <p>Tool count threshold</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("toolCountThreshold")
         public Integer toolCountThreshold;
 
@@ -1835,12 +2618,27 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiToolSelectionConfigPluginStatus extends TeaModel {
+        /**
+         * <p>errorLogs</p>
+         */
         @NameInMap("errorLogs")
         public java.util.Map<String, String> errorLogs;
 
+        /**
+         * <p>pluginId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-123456</p>
+         */
         @NameInMap("pluginId")
         public String pluginId;
 
+        /**
+         * <p>serviceHealthy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("serviceHealthy")
         public Boolean serviceHealthy;
 
@@ -1876,9 +2674,21 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiToolSelectionConfigQueryRewritingContextSelection extends TeaModel {
+        /**
+         * <p>Context type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recentMessages</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("value")
         public Integer value;
 
@@ -1906,12 +2716,30 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiToolSelectionConfigQueryRewritingModelService extends TeaModel {
+        /**
+         * <p>Model name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-turbo</p>
+         */
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <p>Service ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-123456</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
+        /**
+         * <p>Timeout in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("timeoutMillisecond")
         public Integer timeoutMillisecond;
 
@@ -1947,9 +2775,21 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiToolSelectionConfigQueryRewritingPromptConfig extends TeaModel {
+        /**
+         * <p>Custom prompt (required when type=custom)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom prompt</p>
+         */
         @NameInMap("customPrompt")
         public String customPrompt;
 
+        /**
+         * <p>Prompt type: builtIn/custom</p>
+         * 
+         * <strong>example:</strong>
+         * <p>builtIn</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -1977,6 +2817,12 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiToolSelectionConfigQueryRewritingTriggerConditions extends TeaModel {
+        /**
+         * <p>Message count threshold (≥0)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("messageCountThreshold")
         public Integer messageCountThreshold;
 
@@ -1996,24 +2842,54 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiToolSelectionConfigQueryRewriting extends TeaModel {
+        /**
+         * <p>Context selection</p>
+         */
         @NameInMap("contextSelection")
         public HttpApiPolicyConfigsAiToolSelectionConfigQueryRewritingContextSelection contextSelection;
 
+        /**
+         * <p>Enable query rewriting</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <p>Fallback strategy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skip</p>
+         */
         @NameInMap("fallbackStrategy")
         public String fallbackStrategy;
 
+        /**
+         * <p>Max output tokens</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("maxOutputTokens")
         public Integer maxOutputTokens;
 
+        /**
+         * <p>Model service configuration</p>
+         */
         @NameInMap("modelService")
         public HttpApiPolicyConfigsAiToolSelectionConfigQueryRewritingModelService modelService;
 
+        /**
+         * <p>Prompt configuration</p>
+         */
         @NameInMap("promptConfig")
         public HttpApiPolicyConfigsAiToolSelectionConfigQueryRewritingPromptConfig promptConfig;
 
+        /**
+         * <p>Trigger conditions</p>
+         */
         @NameInMap("triggerConditions")
         public HttpApiPolicyConfigsAiToolSelectionConfigQueryRewritingTriggerConditions triggerConditions;
 
@@ -2081,12 +2957,30 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiToolSelectionConfigToolRerankingModelService extends TeaModel {
+        /**
+         * <p>Model name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gte-rerank-v2</p>
+         */
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <p>Service ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-123456</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
+        /**
+         * <p>Timeout in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("timeoutMillisecond")
         public Integer timeoutMillisecond;
 
@@ -2122,21 +3016,54 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiToolSelectionConfigToolReranking extends TeaModel {
+        /**
+         * <p>Fallback strategy: skip/error</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skip</p>
+         */
         @NameInMap("fallbackStrategy")
         public String fallbackStrategy;
 
+        /**
+         * <p>Filtering method: topK/topN/combined</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topK</p>
+         */
         @NameInMap("filteringMethod")
         public String filteringMethod;
 
+        /**
+         * <p>Model service configuration</p>
+         */
         @NameInMap("modelService")
         public HttpApiPolicyConfigsAiToolSelectionConfigToolRerankingModelService modelService;
 
+        /**
+         * <p>Score threshold (0.0-1.0, 0 means disabled)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("scoreThreshold")
         public Float scoreThreshold;
 
+        /**
+         * <p>TopK percentage (1-100)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("topKPercent")
         public Integer topKPercent;
 
+        /**
+         * <p>TopN count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("topNCount")
         public Integer topNCount;
 
@@ -2196,15 +3123,27 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsAiToolSelectionConfig extends TeaModel {
+        /**
+         * <p>Enable conditions configuration</p>
+         */
         @NameInMap("enableConditions")
         public HttpApiPolicyConfigsAiToolSelectionConfigEnableConditions enableConditions;
 
+        /**
+         * <p>Plugin status</p>
+         */
         @NameInMap("pluginStatus")
         public HttpApiPolicyConfigsAiToolSelectionConfigPluginStatus pluginStatus;
 
+        /**
+         * <p>Query rewriting configuration</p>
+         */
         @NameInMap("queryRewriting")
         public HttpApiPolicyConfigsAiToolSelectionConfigQueryRewriting queryRewriting;
 
+        /**
+         * <p>Tool reranking configuration</p>
+         */
         @NameInMap("toolReranking")
         public HttpApiPolicyConfigsAiToolSelectionConfigToolReranking toolReranking;
 
@@ -2248,6 +3187,12 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static class HttpApiPolicyConfigsSemanticRouterConfig extends TeaModel {
+        /**
+         * <p>Timeout in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("timeoutMillisecond")
         public Integer timeoutMillisecond;
 

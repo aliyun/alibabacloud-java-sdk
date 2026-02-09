@@ -4,9 +4,21 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class AuthConfig extends TeaModel {
+    /**
+     * <p>The authentication mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NoAuth</p>
+     */
     @NameInMap("authMode")
     public String authMode;
 
+    /**
+     * <p>The authentication type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Jwt</p>
+     */
     @NameInMap("authType")
     public String authType;
 

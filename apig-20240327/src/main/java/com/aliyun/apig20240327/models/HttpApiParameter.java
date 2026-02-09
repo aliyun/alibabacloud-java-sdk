@@ -4,33 +4,65 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpApiParameter extends TeaModel {
+    /**
+     * <p>The default value of the parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("defaultValue")
     public String defaultValue;
 
+    /**
+     * <p>The parameter description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The example description.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The sample value of the parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("exampleValue")
     public String exampleValue;
 
     /**
+     * <p>The parameter name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userId</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>Specifies whether the parameter is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("required")
     public Boolean required;
 
     /**
+     * <p>The parameter type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Integer</li>
+     * <li>Number</li>
+     * <li>String</li>
+     * <li>Boolean</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>string</p>
+     * <p>String</p>
      */
     @NameInMap("type")
     public String type;

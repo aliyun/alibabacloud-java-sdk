@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvironmentResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
-     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -14,8 +12,6 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response message.</p>
-     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -23,8 +19,6 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, used for tracing the API call chain.</p>
-     * 
      * <strong>example:</strong>
      * <p>52FB803B-3CD8-5FF8-AAE9-C2B841F6A483</p>
      */

@@ -4,60 +4,174 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class SslCertMetaInfo extends TeaModel {
+    /**
+     * <p>The algorithm.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RSA2048</p>
+     */
     @NameInMap("algorithm")
     public String algorithm;
 
+    /**
+     * <p>The certificate ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890</p>
+     */
     @NameInMap("certId")
     public Long certId;
 
+    /**
+     * <p>The certificate ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cert-123</p>
+     */
     @NameInMap("certIdentifier")
     public String certIdentifier;
 
+    /**
+     * <p>The certificate name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("certName")
     public String certName;
 
+    /**
+     * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("commonName")
     public String commonName;
 
+    /**
+     * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api.example.com</p>
+     */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <p>The certificate matching the domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("domainMatchCert")
     public Boolean domainMatchCert;
 
+    /**
+     * <p>The certificate fingerprint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1:B2:C3:D4:E5:F6:78:90:AB:CD:EF:12:34:56:78:90</p>
+     */
     @NameInMap("fingerprint")
     public String fingerprint;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1234567890</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>isChainCompleted</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isChainCompleted")
     public Boolean isChainCompleted;
 
+    /**
+     * <p>The certificate issuer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DigiCert Inc</p>
+     */
     @NameInMap("issuer")
     public String issuer;
 
+    /**
+     * <p>The key size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("keySize")
     public String keySize;
 
+    /**
+     * <p>The md5 value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1B2C3D4E5F67890ABCDEF1234567890</p>
+     */
     @NameInMap("md5")
     public String md5;
 
+    /**
+     * <p>The time when the certificate expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890000</p>
+     */
     @NameInMap("notAfterTimestamp")
     public Long notAfterTimestamp;
 
+    /**
+     * <p>The time when the certificate starts to take effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890000</p>
+     */
     @NameInMap("notBeforeTimestamp")
     public Long notBeforeTimestamp;
 
+    /**
+     * <p>sans</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*.example.com,api.example.com,<a href="http://www.example.com">www.example.com</a></p>
+     */
     @NameInMap("sans")
     public String sans;
 
+    /**
+     * <p>The serial number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03:A1:B2:C3:D4:E5:F6:78:90:AB:CD:EF:12:34:56:78:90</p>
+     */
     @NameInMap("serialNo")
     public String serialNo;
 
+    /**
+     * <p>The sha2 value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1B2C3D4E5F67890ABCDEF1234567890ABCDEF1234567890ABCDEF1234567890</p>
+     */
     @NameInMap("sha2")
     public String sha2;
 
+    /**
+     * <p>The signature algorithm.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha256WithRSAEncryption</p>
+     */
     @NameInMap("signAlgorithm")
     public String signAlgorithm;
 

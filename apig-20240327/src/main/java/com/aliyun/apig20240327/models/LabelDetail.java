@@ -4,9 +4,18 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class LabelDetail extends TeaModel {
+    /**
+     * <p>The label key</p>
+     * 
+     * <strong>example:</strong>
+     * <p>version</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>The list of available values for this label</p>
+     */
     @NameInMap("values")
     public java.util.List<String> values;
 

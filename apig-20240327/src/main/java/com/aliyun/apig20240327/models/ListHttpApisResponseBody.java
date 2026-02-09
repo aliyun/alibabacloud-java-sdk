@@ -8,19 +8,19 @@ public class ListHttpApisResponseBody extends TeaModel {
      * <p>The status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>Ok</p>
+     * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
-     * <p>The APIs.</p>
+     * <p>Response data.</p>
      */
     @NameInMap("data")
     public ListHttpApisResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListHttpApisResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Get HTTP API List</p>
      * 
      * <strong>example:</strong>
      * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
@@ -76,13 +76,13 @@ public class ListHttpApisResponseBody extends TeaModel {
 
     public static class ListHttpApisResponseBodyData extends TeaModel {
         /**
-         * <p>The API information.</p>
+         * <p>object</p>
          */
         @NameInMap("items")
         public java.util.List<HttpApiInfoByName> items;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>Page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -91,7 +91,7 @@ public class ListHttpApisResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>Page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -100,7 +100,7 @@ public class ListHttpApisResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>Total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

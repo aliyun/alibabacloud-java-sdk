@@ -42,7 +42,7 @@ public class GetDashboardRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The plug-in ID.</p>
+     * <p>The plug-in type ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pls-dn82a9djd8z****</p>
@@ -50,9 +50,21 @@ public class GetDashboardRequest extends TeaModel {
     @NameInMap("pluginClassId")
     public String pluginClassId;
 
+    /**
+     * <p>The plug-in ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inner-ai-search-cvd3mcum1hks660icn10</p>
+     */
     @NameInMap("pluginId")
     public String pluginId;
 
+    /**
+     * <p>The route ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>route-xxx</p>
+     */
     @NameInMap("routeId")
     public String routeId;
 
@@ -68,6 +80,12 @@ public class GetDashboardRequest extends TeaModel {
     @NameInMap("source")
     public String source;
 
+    /**
+     * <p>The AI service identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>outbound|443||ds.ai</p>
+     */
     @NameInMap("upstreamCluster")
     public String upstreamCluster;
 

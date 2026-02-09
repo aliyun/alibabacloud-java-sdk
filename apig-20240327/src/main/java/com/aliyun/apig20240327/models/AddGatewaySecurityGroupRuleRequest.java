@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class AddGatewaySecurityGroupRuleRequest extends TeaModel {
     /**
-     * <p>Description of the security group rule.</p>
+     * <p>The description of security group rule N.</p>
      * 
      * <strong>example:</strong>
-     * <p>商品中心访问安全组</p>
+     * <p>ProductCenterSG</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Port ranges.</p>
+     * <p>The port ranges.</p>
      */
     @NameInMap("portRanges")
     public java.util.List<String> portRanges;
 
     /**
-     * <p>Security group ID.</p>
+     * <p>The security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-wz929kxhcdp****</p>

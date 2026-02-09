@@ -12,6 +12,8 @@ public class HttpApiInfoByName extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The API name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-api</p>
      */
@@ -19,6 +21,8 @@ public class HttpApiInfoByName extends TeaModel {
     public String name;
 
     /**
+     * <p>The API type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Http</p>
      */
@@ -26,12 +30,17 @@ public class HttpApiInfoByName extends TeaModel {
     public String type;
 
     /**
+     * <p>Specifies whether to enable versioning.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("versionEnabled")
     public Boolean versionEnabled;
 
+    /**
+     * <p>The information about the versioned API.</p>
+     */
     @NameInMap("versionedHttpApis")
     public java.util.List<HttpApiApiInfo> versionedHttpApis;
 

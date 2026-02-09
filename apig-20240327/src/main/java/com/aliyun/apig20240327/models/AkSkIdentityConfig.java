@@ -4,15 +4,31 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class AkSkIdentityConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("ak")
     public String ak;
 
+    /**
+     * <strong>example:</strong>
+     * <p>System</p>
+     */
     @NameInMap("generateMode")
     public String generateMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("sk")
     public String sk;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Jwt</p>
+     */
     @NameInMap("type")
     public String type;
 

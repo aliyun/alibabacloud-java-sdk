@@ -29,16 +29,16 @@ public class CreateServiceRequest extends TeaModel {
     public java.util.List<CreateServiceRequestServiceConfigs> serviceConfigs;
 
     /**
-     * <p>The service source. Valid values:</p>
+     * <p>The service source type. Valid values:</p>
      * <ul>
-     * <li>MSE_NACOS: a service in an MSE Nacos instance</li>
-     * <li>K8S: a service in a Kubernetes (K8s) cluster in Container Service for Kubernetes (ACK)</li>
-     * <li>VIP: a fixed IP address</li>
-     * <li>DNS: a Domain Name System (DNS) domain name</li>
-     * <li>FC3: a service in Function Compute</li>
-     * <li>SAE_K8S_SERVICE: a service in a K8s cluster in Serverless App Engine (SAE)</li>
+     * <li>MSE_NACOS: MSE Nacos instance services</li>
+     * <li>K8S: Container Service for Kubernetes (ACK) cluster services</li>
+     * <li>VIP: fixed IP addresses</li>
+     * <li>DNS: Domain Name System (DNS) domains</li>
+     * <li>FC3: Function Compute services</li>
+     * <li>SAE_K8S_SERVICE: Serverless App Engine (SAE) Kubernetes services</li>
      * </ul>
-     * <p>Enumerated values:</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li>SAE_K8S_SERVICE</li>
      * <li>K8S</li>
@@ -54,6 +54,12 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("sourceType")
     public String sourceType;
 
+    /**
+     * <p>clientToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -103,6 +109,9 @@ public class CreateServiceRequest extends TeaModel {
     }
 
     public static class CreateServiceRequestServiceConfigsValidationOptions extends TeaModel {
+        /**
+         * <p>Skip AI chat completion verification</p>
+         */
         @NameInMap("skipVerifyAIChatCompletion")
         public Boolean skipVerifyAIChatCompletion;
 
@@ -123,11 +132,14 @@ public class CreateServiceRequest extends TeaModel {
 
     public static class CreateServiceRequestServiceConfigs extends TeaModel {
         /**
-         * <p>The list of domain names or fixed addresses.</p>
+         * <p>The list of domain names or fixed IP addresses.</p>
          */
         @NameInMap("addresses")
         public java.util.List<String> addresses;
 
+        /**
+         * <p>Agent service configuration</p>
+         */
         @NameInMap("agentServiceConfig")
         public AgentServiceConfig agentServiceConfig;
 
@@ -143,6 +155,12 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("dnsServers")
         public java.util.List<String> dnsServers;
 
+        /**
+         * <p>Express type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("expressType")
         public String expressType;
 
@@ -170,6 +188,7 @@ public class CreateServiceRequest extends TeaModel {
          * <li>If sourceType is set to K8S, this parameter specifies the namespace where the K8s service resides.</li>
          * <li>If sourceType is set to MSE_NACOS, this parameter specifies a namespace in Nacos.</li>
          * </ul>
+         * <p>This parameter is required if sourceType is set to K8S or MSE_NACOS.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
@@ -178,7 +197,7 @@ public class CreateServiceRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The function version or alias.</p>
+         * <p>The function version/alias.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>
@@ -186,9 +205,18 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("qualifier")
         public String qualifier;
 
+        /**
+         * <p>Service source ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacos-instance-001</p>
+         */
         @NameInMap("sourceId")
         public String sourceId;
 
+        /**
+         * <p>Validation options</p>
+         */
         @NameInMap("validationOptions")
         public CreateServiceRequestServiceConfigsValidationOptions validationOptions;
 

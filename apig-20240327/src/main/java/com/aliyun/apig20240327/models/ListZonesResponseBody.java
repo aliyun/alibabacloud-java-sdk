@@ -14,7 +14,7 @@ public class ListZonesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("data")
     public ListZonesResponseBodyData data;
@@ -75,11 +75,17 @@ public class ListZonesResponseBody extends TeaModel {
     }
 
     public static class ListZonesResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>Whether QAT (Quality Assurance Testing) is supported in this zone</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("supportQat")
         public String supportQat;
 
         /**
-         * <p>可用区ID。</p>
+         * <p>The zone identifier</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-c</p>
@@ -112,7 +118,7 @@ public class ListZonesResponseBody extends TeaModel {
 
     public static class ListZonesResponseBodyData extends TeaModel {
         /**
-         * <p>List of availability zones.</p>
+         * <p>The list of queried zones.</p>
          */
         @NameInMap("items")
         public java.util.List<ListZonesResponseBodyDataItems> items;

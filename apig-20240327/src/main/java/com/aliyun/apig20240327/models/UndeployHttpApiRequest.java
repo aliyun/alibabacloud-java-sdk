@@ -13,9 +13,21 @@ public class UndeployHttpApiRequest extends TeaModel {
     @NameInMap("environmentId")
     public String environmentId;
 
+    /**
+     * <p>Gateway ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-cq7l5s5lhtg***</p>
+     */
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The operation ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>op-d4favr6m1hk***</p>
+     */
     @NameInMap("operationId")
     public String operationId;
 

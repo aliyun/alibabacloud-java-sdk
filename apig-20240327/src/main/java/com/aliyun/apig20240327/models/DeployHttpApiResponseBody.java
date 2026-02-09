@@ -14,7 +14,7 @@ public class DeployHttpApiResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>响应消息。</p>
+     * <p>Response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

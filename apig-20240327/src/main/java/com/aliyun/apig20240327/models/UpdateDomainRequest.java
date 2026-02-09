@@ -36,7 +36,7 @@ public class UpdateDomainRequest extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>Specifies whether to enable HTTPS redirection. If protocol is set to HTTPS, forceHttps is required.</p>
+     * <p>Specifies whether to enable forcible HTTPS redirection. If protocol is set to HTTPS, forceHttps is required.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

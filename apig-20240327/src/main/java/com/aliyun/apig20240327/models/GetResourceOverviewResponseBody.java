@@ -14,7 +14,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Resource information.</p>
+     * <p>The resource information.</p>
      */
     @NameInMap("data")
     public GetResourceOverviewResponseBodyData data;
@@ -160,6 +160,8 @@ public class GetResourceOverviewResponseBody extends TeaModel {
 
     public static class GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails extends TeaModel {
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxxxxx</p>
          */
@@ -167,6 +169,8 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The gateway name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-gateway</p>
          */
@@ -174,16 +178,23 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         public String gatewayName;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>LOW</p>
          */
         @NameInMap("riskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The risk name list.</p>
+         */
         @NameInMap("riskNames")
         public java.util.List<String> riskNames;
 
         /**
+         * <p>The risk score.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -239,16 +250,23 @@ public class GetResourceOverviewResponseBody extends TeaModel {
 
     public static class GetResourceOverviewResponseBodyDataRiskOverview extends TeaModel {
         /**
+         * <p>The number of instances at a risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("count")
         public String count;
 
+        /**
+         * <p>The risk details list.</p>
+         */
         @NameInMap("riskDetails")
         public java.util.List<GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails> riskDetails;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>LOW</p>
          */
@@ -299,6 +317,9 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         @NameInMap("gateway")
         public GetResourceOverviewResponseBodyDataGateway gateway;
 
+        /**
+         * <p>The risk overview.</p>
+         */
         @NameInMap("riskOverview")
         public java.util.List<GetResourceOverviewResponseBodyDataRiskOverview> riskOverview;
 

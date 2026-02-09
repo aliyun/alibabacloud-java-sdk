@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpApiResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>Response status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>Ok</p>
+     * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class UpdateHttpApiResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>

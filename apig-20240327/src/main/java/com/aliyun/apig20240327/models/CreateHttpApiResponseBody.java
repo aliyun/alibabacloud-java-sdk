@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>API for testing</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class CreateHttpApiResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The API information.</p>
+     * <p>A protocol.</p>
      */
     @NameInMap("data")
     public CreateHttpApiResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The protocol list for API access.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The API description.</p>
      * 
      * <strong>example:</strong>
      * <p>A1994B10-C6A8-58FA-8347-6A08B0D4EFDE</p>
@@ -76,7 +76,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
 
     public static class CreateHttpApiResponseBodyData extends TeaModel {
         /**
-         * <p>The HTTP API ID.</p>
+         * <p>HTTP API ID。</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
@@ -85,7 +85,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
         public String httpApiId;
 
         /**
-         * <p>The API name.</p>
+         * <p>The API base path, which must start with a forward slash (/).</p>
          * 
          * <strong>example:</strong>
          * <p>test-api</p>

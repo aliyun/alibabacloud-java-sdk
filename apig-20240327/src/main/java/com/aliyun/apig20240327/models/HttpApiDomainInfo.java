@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HttpApiDomainInfo extends TeaModel {
     /**
+     * <p>The domain name ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d-xxx</p>
      */
@@ -12,6 +14,8 @@ public class HttpApiDomainInfo extends TeaModel {
     public String domainId;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
      */
@@ -19,6 +23,13 @@ public class HttpApiDomainInfo extends TeaModel {
     public String name;
 
     /**
+     * <p>The protocol.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>HTTPS</li>
+     * <li>HTTP</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */

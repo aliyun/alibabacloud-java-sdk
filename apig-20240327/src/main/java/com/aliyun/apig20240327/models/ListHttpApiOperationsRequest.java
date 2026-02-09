@@ -13,12 +13,30 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     @NameInMap("consumerAuthorizationRuleId")
     public String consumerAuthorizationRuleId;
 
+    /**
+     * <p>Filter operations by authentication status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableAuth")
     public Boolean enableAuth;
 
+    /**
+     * <p>Whether to filter for deployment scenario</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("forDeploy")
     public Boolean forDeploy;
 
+    /**
+     * <p>The gateway ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-001</p>
+     */
     @NameInMap("gatewayId")
     public String gatewayId;
 

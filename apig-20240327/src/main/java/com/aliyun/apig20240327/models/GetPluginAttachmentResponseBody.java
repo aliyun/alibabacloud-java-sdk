@@ -29,7 +29,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>C61E30D3-579A-5B43-994E-31E02EDC9129</p>
@@ -136,7 +136,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>The resource details.</p>
+         * <p>The resource information.</p>
          */
         @NameInMap("resourceInfos")
         public java.util.List<ResourceInfo> resourceInfos;

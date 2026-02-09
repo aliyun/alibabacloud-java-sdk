@@ -4,17 +4,21 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class DeployHttpApiRequest extends TeaModel {
+    /**
+     * <p>httpApiConfig</p>
+     */
     @NameInMap("httpApiConfig")
+    @Deprecated
     public DeployHttpApiRequestHttpApiConfig httpApiConfig;
 
     /**
-     * <p>Rest API deployment configuration. Required when deploying an HTTP API as a Rest API.</p>
+     * <p>The REST API deployment configuration. This parameter is required when you publish a REST API.</p>
      */
     @NameInMap("restApiConfig")
     public DeployHttpApiRequestRestApiConfig restApiConfig;
 
     /**
-     * <p>Route ID. This must be provided when publishing the route of an HTTP API.</p>
+     * <p>The route ID. You must specify this parameter when you publish an HTTP API.</p>
      * 
      * <strong>example:</strong>
      * <p>hr-cr82undlhtgrl***</p>
@@ -27,6 +31,7 @@ public class DeployHttpApiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public DeployHttpApiRequest setHttpApiConfig(DeployHttpApiRequestHttpApiConfig httpApiConfig) {
         this.httpApiConfig = httpApiConfig;
         return this;
@@ -52,9 +57,18 @@ public class DeployHttpApiRequest extends TeaModel {
     }
 
     public static class DeployHttpApiRequestHttpApiConfig extends TeaModel {
+        /**
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-csrhgfmm1hknf0hu6o3g</p>
+         */
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        /**
+         * <p>routeIds</p>
+         */
         @NameInMap("routeIds")
         public java.util.List<String> routeIds;
 
@@ -83,13 +97,16 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs extends TeaModel {
         /**
-         * <p>Configuration of matching conditions related to API deployment.</p>
+         * <p>The matching condition configurations related to API publishing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</p>
          */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
-         * <p>Service port, do not provide for dynamic ports.</p>
+         * <p>The service port. If you want to use a dynamic port, do not pass this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -98,10 +115,10 @@ public class DeployHttpApiRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>Service protocol:</p>
+         * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP.</li>
-         * <li>HTTPS.</li>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,7 +128,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>Service ID.</p>
+         * <p>The service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>svc-cr6pk4tlhtgm58e***</p>
@@ -120,7 +137,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>Service version.</p>
+         * <p>The version of the microservice.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -129,7 +146,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>Weight, range [1,100], valid only in the by-ratio scenario.</p>
+         * <p>The weight. Valid values: [1,100]. This parameter is valid only in proportional routing.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -194,33 +211,43 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironment extends TeaModel {
         /**
-         * <p>API publication scenario.</p>
+         * <p>The publishing scenario.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SingleService</li>
+         * <li>MultiServiceByRatio</li>
+         * <li>MultiServiceByContent</li>
+         * <li>Mock</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
          */
         @NameInMap("backendScene")
+        @Deprecated
         public String backendScene;
 
         /**
-         * <p>List of user domains.</p>
+         * <p>The custom domain names.</p>
          */
         @NameInMap("customDomainIds")
         public java.util.List<String> customDomainIds;
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cpqnr6tlhtgubc***</p>
          */
         @NameInMap("environmentId")
+        @Deprecated
         public String environmentId;
 
         /**
-         * <p>Existing service configurations. Only one entry is allowed in a single-service scenario, while multiple entries are allowed in scenarios such as by ratio or by content.</p>
+         * <p>The configurations of existing services. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</p>
          */
         @NameInMap("serviceConfigs")
+        @Deprecated
         public java.util.List<DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs> serviceConfigs;
 
         public static DeployHttpApiRequestRestApiConfigEnvironment build(java.util.Map<String, ?> map) throws Exception {
@@ -228,6 +255,7 @@ public class DeployHttpApiRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public DeployHttpApiRequestRestApiConfigEnvironment setBackendScene(String backendScene) {
             this.backendScene = backendScene;
             return this;
@@ -244,6 +272,7 @@ public class DeployHttpApiRequest extends TeaModel {
             return this.customDomainIds;
         }
 
+        @Deprecated
         public DeployHttpApiRequestRestApiConfigEnvironment setEnvironmentId(String environmentId) {
             this.environmentId = environmentId;
             return this;
@@ -252,6 +281,7 @@ public class DeployHttpApiRequest extends TeaModel {
             return this.environmentId;
         }
 
+        @Deprecated
         public DeployHttpApiRequestRestApiConfigEnvironment setServiceConfigs(java.util.List<DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs> serviceConfigs) {
             this.serviceConfigs = serviceConfigs;
             return this;
@@ -262,30 +292,81 @@ public class DeployHttpApiRequest extends TeaModel {
 
     }
 
+    public static class DeployHttpApiRequestRestApiConfigOperationDeployments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Publish</p>
+         */
+        @NameInMap("action")
+        public String action;
+
+        /**
+         * <strong>example:</strong>
+         * <p>op-d5s57hmm1hks653u9dkg</p>
+         */
+        @NameInMap("operationId")
+        public String operationId;
+
+        public static DeployHttpApiRequestRestApiConfigOperationDeployments build(java.util.Map<String, ?> map) throws Exception {
+            DeployHttpApiRequestRestApiConfigOperationDeployments self = new DeployHttpApiRequestRestApiConfigOperationDeployments();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployHttpApiRequestRestApiConfigOperationDeployments setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public DeployHttpApiRequestRestApiConfigOperationDeployments setOperationId(String operationId) {
+            this.operationId = operationId;
+            return this;
+        }
+        public String getOperationId() {
+            return this.operationId;
+        }
+
+    }
+
     public static class DeployHttpApiRequestRestApiConfig extends TeaModel {
         /**
-         * <p>Publication description.</p>
+         * <p>The publish description.</p>
          * 
          * <strong>example:</strong>
-         * <p>用户服务API发布。</p>
+         * <p>The user service API</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>Publication environment configuration.</p>
+         * <p>The environment configurations.</p>
          */
         @NameInMap("environment")
         public DeployHttpApiRequestRestApiConfigEnvironment environment;
 
+        /**
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cvn2u46m1hkun04oll8g</p>
+         */
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        @NameInMap("operationDeployments")
+        public java.util.List<DeployHttpApiRequestRestApiConfigOperationDeployments> operationDeployments;
+
+        /**
+         * <p>operationIds</p>
+         */
         @NameInMap("operationIds")
+        @Deprecated
         public java.util.List<String> operationIds;
 
         /**
-         * <p>Historical version number. If this field is specified, the publication information will be based on the historical version information.</p>
+         * <p>The historical version of the API. If you specify this parameter, the corresponding version of the API is published.</p>
          * 
          * <strong>example:</strong>
          * <p>apr-xxx</p>
@@ -322,6 +403,15 @@ public class DeployHttpApiRequest extends TeaModel {
             return this.gatewayId;
         }
 
+        public DeployHttpApiRequestRestApiConfig setOperationDeployments(java.util.List<DeployHttpApiRequestRestApiConfigOperationDeployments> operationDeployments) {
+            this.operationDeployments = operationDeployments;
+            return this;
+        }
+        public java.util.List<DeployHttpApiRequestRestApiConfigOperationDeployments> getOperationDeployments() {
+            return this.operationDeployments;
+        }
+
+        @Deprecated
         public DeployHttpApiRequestRestApiConfig setOperationIds(java.util.List<String> operationIds) {
             this.operationIds = operationIds;
             return this;

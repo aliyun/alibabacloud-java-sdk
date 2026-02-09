@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class HttpApiPublishRevisionInfo extends TeaModel {
     /**
+     * <p>The publishing scenario.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>SingleService</li>
+     * <li>MultiServiceByRatio</li>
+     * <li>MultiServiceByContent</li>
+     * <li>MultiServiceByTag</li>
+     * <li>Mock</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SingleService</p>
      */
@@ -12,29 +22,51 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     public String backendScene;
 
     /**
+     * <p>The type of the backend service.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>DNS: a DNS domain name</li>
+     * <li>Service: an existing service</li>
+     * <li>VIP: a fixed IP address</li>
+     * <li>CloudProduct: a cloud service</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Service</p>
      */
     @NameInMap("backendType")
     public String backendType;
 
+    /**
+     * <p>The cloud service configurations.</p>
+     */
     @NameInMap("cloudProductConfig")
     public HttpApiPublishRevisionInfoCloudProductConfig cloudProductConfig;
 
     /**
+     * <p>The publishing timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1718807057927</p>
      */
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The custom domain names.</p>
+     */
     @NameInMap("customDomains")
     public java.util.List<HttpApiDomainInfo> customDomains;
 
+    /**
+     * <p>The configurations of DNS domain names. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</p>
+     */
     @NameInMap("dnsConfigs")
     public java.util.List<HttpApiPublishRevisionInfoDnsConfigs> dnsConfigs;
 
     /**
+     * <p>The environment information.</p>
+     * 
      * <strong>example:</strong>
      * <p>env-xxx</p>
      */
@@ -42,32 +74,47 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     public HttpApiPublishRevisionInfoEnvironmentInfo environmentInfo;
 
     /**
+     * <p>Specifies whether the current version is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("isCurrentVersion")
     public Boolean isCurrentVersion;
 
+    /**
+     * <p>The operations.</p>
+     */
     @NameInMap("operations")
     public java.util.List<HttpApiOperationInfo> operations;
 
     /**
+     * <p>The published version.</p>
+     * 
      * <strong>example:</strong>
      * <p>apr-xxx</p>
      */
     @NameInMap("revisionId")
     public String revisionId;
 
+    /**
+     * <p>The configurations of existing services. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</p>
+     */
     @NameInMap("serviceConfigs")
     public java.util.List<HttpApiPublishRevisionInfoServiceConfigs> serviceConfigs;
 
     /**
+     * <p>The default domain names of the environment.</p>
+     * 
      * <strong>example:</strong>
      * <p>env-xxx.com</p>
      */
     @NameInMap("subDomains")
     public java.util.List<HttpApiDomainInfo> subDomains;
 
+    /**
+     * <p>The configurations of fixed IP addresses. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</p>
+     */
     @NameInMap("vipConfigs")
     public java.util.List<HttpApiPublishRevisionInfoVipConfigs> vipConfigs;
 
@@ -182,16 +229,23 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoCloudProductConfigContainerServiceConfigs extends TeaModel {
         /**
+         * <p>The associated service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gs-xxx</p>
          */
         @NameInMap("gatewayServiceId")
         public String gatewayServiceId;
 
+        /**
+         * <p>The matching conditions.</p>
+         */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
+         * <p>The K8s service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo-service</p>
          */
@@ -199,6 +253,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String name;
 
         /**
+         * <p>The K8s namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -206,6 +262,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The service port.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -213,6 +271,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The service protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -220,6 +280,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The service weight.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -291,16 +353,23 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoCloudProductConfigFunctionConfigs extends TeaModel {
         /**
+         * <p>The associated service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gs-xxx</p>
          */
         @NameInMap("gatewayServiceId")
         public String gatewayServiceId;
 
+        /**
+         * <p>The matching conditions.</p>
+         */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
+         * <p>The function name.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo-function</p>
          */
@@ -308,6 +377,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String name;
 
         /**
+         * <p>The function version or alias.</p>
+         * 
          * <strong>example:</strong>
          * <p>LATEST</p>
          */
@@ -315,6 +386,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String qualifier;
 
         /**
+         * <p>The service weight.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -370,6 +443,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoCloudProductConfigMseNacosConfigs extends TeaModel {
         /**
+         * <p>The associated service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gs-xxx</p>
          */
@@ -377,16 +452,23 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String gatewayServiceId;
 
         /**
+         * <p>The service group.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
          */
         @NameInMap("groupName")
         public String groupName;
 
+        /**
+         * <p>The matching conditions.</p>
+         */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
+         * <p>The Nacos service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>spring-demo</p>
          */
@@ -394,6 +476,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String name;
 
         /**
+         * <p>The Nacos namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>public</p>
          */
@@ -401,6 +485,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The service weight.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -464,18 +550,29 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoCloudProductConfig extends TeaModel {
         /**
+         * <p>The type of the cloud service.</p>
+         * 
          * <strong>example:</strong>
          * <p>FC</p>
          */
         @NameInMap("cloudProductType")
         public String cloudProductType;
 
+        /**
+         * <p>The ACK configurations.</p>
+         */
         @NameInMap("containerServiceConfigs")
         public java.util.List<HttpApiPublishRevisionInfoCloudProductConfigContainerServiceConfigs> containerServiceConfigs;
 
+        /**
+         * <p>The Function Compute configurations.</p>
+         */
         @NameInMap("functionConfigs")
         public java.util.List<HttpApiPublishRevisionInfoCloudProductConfigFunctionConfigs> functionConfigs;
 
+        /**
+         * <p>The MSE Nacos configurations.</p>
+         */
         @NameInMap("mseNacosConfigs")
         public java.util.List<HttpApiPublishRevisionInfoCloudProductConfigMseNacosConfigs> mseNacosConfigs;
 
@@ -519,13 +616,21 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     }
 
     public static class HttpApiPublishRevisionInfoDnsConfigs extends TeaModel {
+        /**
+         * <p>The DNS domain names.</p>
+         */
         @NameInMap("dnsList")
         public java.util.List<String> dnsList;
 
+        /**
+         * <p>The matching condition. This condition is valid only in content-based routing.</p>
+         */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
+         * <p>The weight. Valid values: [1,100]. This parameter is valid only in proportional routing.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -565,6 +670,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoEnvironmentInfoGatewayInfo extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
          */
@@ -572,8 +679,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>实例1</p>
+         * <p>Instance 1</p>
          */
         @NameInMap("name")
         public String name;
@@ -603,23 +712,32 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoEnvironmentInfo extends TeaModel {
         /**
+         * <p>The environment alias.</p>
+         * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("alias")
         public String alias;
 
         /**
+         * <p>The environment ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>env-xxx</p>
          */
         @NameInMap("environmentId")
         public String environmentId;
 
+        /**
+         * <p>The instance information.</p>
+         */
         @NameInMap("gatewayInfo")
         public HttpApiPublishRevisionInfoEnvironmentInfoGatewayInfo gatewayInfo;
 
         /**
+         * <p>The environment name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -667,16 +785,23 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoServiceConfigs extends TeaModel {
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gs-xxx</p>
          */
         @NameInMap("gatewayServiceId")
         public String gatewayServiceId;
 
+        /**
+         * <p>The matching conditions.</p>
+         */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
+         * <p>The service port.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -684,6 +809,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The service protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -691,6 +818,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The service version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -698,6 +827,8 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public String version;
 
         /**
+         * <p>The service weight.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -760,13 +891,21 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     }
 
     public static class HttpApiPublishRevisionInfoVipConfigs extends TeaModel {
+        /**
+         * <p>The IP addresses.</p>
+         */
         @NameInMap("endpoints")
         public java.util.List<String> endpoints;
 
+        /**
+         * <p>The matching condition. This condition is valid only in content-based routing.</p>
+         */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
+         * <p>The weight. Valid values: [1,100]. This parameter is valid only in proportional routing.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

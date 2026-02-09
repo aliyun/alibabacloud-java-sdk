@@ -4,15 +4,49 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class SubDomainInfo extends TeaModel {
+    /**
+     * <p>The domain name ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-cpudb0llhtgl2djvq2sg</p>
+     */
     @NameInMap("domainId")
     public String domainId;
 
+    /**
+     * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc.com</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The network type. Valid values:</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Intranet</li>
+     * <li>Internet</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Intranet</p>
+     */
     @NameInMap("networkType")
     public String networkType;
 
+    /**
+     * <p>The protocol.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>HTTPS</li>
+     * <li>HTTP</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 

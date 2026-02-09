@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiRouteRequest extends TeaModel {
     /**
-     * <p>The backend service configurations of the route.</p>
+     * <p>The backend service configurations for the route.</p>
      */
     @NameInMap("backendConfig")
     public CreateHttpApiRouteRequestBackendConfig backendConfig;
 
+    /**
+     * <p>deployConfigs</p>
+     */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
@@ -23,7 +26,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The domain name IDs.</p>
+     * <p>The list of domain IDs.</p>
      */
     @NameInMap("domainIds")
     public java.util.List<String> domainIds;
@@ -38,11 +41,14 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The rule for matching the route.</p>
+     * <p>The route match rule.</p>
      */
     @NameInMap("match")
     public HttpRouteMatch match;
 
+    /**
+     * <p>The MCP route configuration</p>
+     */
     @NameInMap("mcpRouteConfig")
     public CreateHttpApiRouteRequestMcpRouteConfig mcpRouteConfig;
 
@@ -55,6 +61,9 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The route-level policy configurations</p>
+     */
     @NameInMap("policyConfigs")
     public java.util.List<HttpApiPolicyConfigs> policyConfigs;
 
@@ -137,7 +146,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
 
     public static class CreateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
-         * <p>The service port. If you want to use a dynamic port, do not pass this parameter.</p>
+         * <p>The service port (omit for dynamic ports).</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -146,7 +155,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The service protocol. Valid values:</p>
          * <ul>
          * <li>HTTP</li>
          * <li>HTTPS</li>
@@ -168,7 +177,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The service version. Pass this parameter for tag-based routing.</p>
+         * <p>The service version (valid only in tag-based scenarios).</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -177,7 +186,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>The percentage value of traffic.</p>
+         * <p>The traffic weight percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -234,7 +243,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
 
     public static class CreateHttpApiRouteRequestBackendConfig extends TeaModel {
         /**
-         * <p>The scenario of the backend service.</p>
+         * <p>The backend service scenario. Valid values:</p>
          * <ul>
          * <li>SingleService</li>
          * <li>MultiServiceByRatio</li>
@@ -249,7 +258,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String scene;
 
         /**
-         * <p>The backend services.</p>
+         * <p>The list of backend services.</p>
          */
         @NameInMap("services")
         public java.util.List<CreateHttpApiRouteRequestBackendConfigServices> services;
@@ -278,12 +287,30 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     }
 
     public static class CreateHttpApiRouteRequestMcpRouteConfig extends TeaModel {
+        /**
+         * <p>The exposed URI path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/v1/chat/completions</p>
+         */
         @NameInMap("exposedUriPath")
         public String exposedUriPath;
 
+        /**
+         * <p>mcpStatisticsEnable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("mcpStatisticsEnable")
         public Boolean mcpStatisticsEnable;
 
+        /**
+         * <p>The MCP protocol</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP,HTTPS</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 

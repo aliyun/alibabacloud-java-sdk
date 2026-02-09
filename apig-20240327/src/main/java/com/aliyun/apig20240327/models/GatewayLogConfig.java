@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class GatewayLogConfig extends TeaModel {
+    /**
+     * <p>The Simple Log Service configurations.</p>
+     */
     @NameInMap("slsConfig")
     public GatewayLogConfigSlsConfig slsConfig;
 
@@ -21,6 +24,12 @@ public class GatewayLogConfig extends TeaModel {
     }
 
     public static class GatewayLogConfigSlsConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to activate Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 

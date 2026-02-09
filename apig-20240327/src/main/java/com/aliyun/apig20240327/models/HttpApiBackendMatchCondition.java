@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HttpApiBackendMatchCondition extends TeaModel {
     /**
+     * <p>The key of the matching condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>color</p>
      */
@@ -12,6 +14,14 @@ public class HttpApiBackendMatchCondition extends TeaModel {
     public String key;
 
     /**
+     * <p>The operator. Exact match, prefix match, and regular expressions are supported.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>equal</li>
+     * <li>regex</li>
+     * <li>prefix</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>equal</p>
      */
@@ -19,6 +29,8 @@ public class HttpApiBackendMatchCondition extends TeaModel {
     public String operator;
 
     /**
+     * <p>The match type. Query and Header parameters can be matched.</p>
+     * 
      * <strong>example:</strong>
      * <p>Query</p>
      */
@@ -26,6 +38,8 @@ public class HttpApiBackendMatchCondition extends TeaModel {
     public String type;
 
     /**
+     * <p>The value of the matching condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>gray</p>
      */

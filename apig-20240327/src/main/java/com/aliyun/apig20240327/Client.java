@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorize the security group for gateway to access services</p>
+     * <p>Adds a security group that authorizes an instance to access services.</p>
      * 
      * @param request AddGatewaySecurityGroupRuleRequest
      * @param headers map
@@ -70,7 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorize the security group for gateway to access services</p>
+     * <p>Adds a security group that authorizes an instance to access services.</p>
      * 
      * @param request AddGatewaySecurityGroupRuleRequest
      * @return AddGatewaySecurityGroupRuleResponse
@@ -130,7 +130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resource Group Transfer</p>
+     * <p>Moves a resource from one resource group to another.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -176,7 +176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resource Group Transfer</p>
+     * <p>Moves a resource from one resource group to another.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -545,11 +545,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Create environment.</p>
-     * 
      * <b>summary</b> : 
-     * <p>CreateEnvironment</p>
+     * <p>Creates an environment.</p>
      * 
      * @deprecated OpenAPI CreateEnvironment is deprecated
      * 
@@ -602,11 +599,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Create environment.</p>
-     * 
      * <b>summary</b> : 
-     * <p>CreateEnvironment</p>
+     * <p>Creates an environment.</p>
      * 
      * @deprecated OpenAPI CreateEnvironment is deprecated
      * 
@@ -1113,7 +1107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Policy</p>
+     * <p>Creates a policy.</p>
      * 
      * @param request CreatePolicyRequest
      * @param headers map
@@ -1159,7 +1153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Policy</p>
+     * <p>Creates a policy.</p>
      * 
      * @param request CreatePolicyRequest
      * @return CreatePolicyResponse
@@ -1172,7 +1166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create policy resource mount</p>
+     * <p>Creates a policy attachment.</p>
      * 
      * @param request CreatePolicyAttachmentRequest
      * @param headers map
@@ -1222,7 +1216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create policy resource mount</p>
+     * <p>Creates a policy attachment.</p>
      * 
      * @param request CreatePolicyAttachmentRequest
      * @return CreatePolicyAttachmentResponse
@@ -1424,7 +1418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建服务来源</p>
+     * <p>Creates a service source.</p>
      * 
      * @param request CreateSourceRequest
      * @param headers map
@@ -1474,7 +1468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建服务来源</p>
+     * <p>Creates a service source.</p>
      * 
      * @param request CreateSourceRequest
      * @return CreateSourceResponse
@@ -1561,7 +1555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeleteDomain</p>
+     * <p>Deletes a domain name.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1587,7 +1581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeleteDomain</p>
+     * <p>Deletes a domain name.</p>
      * @return DeleteDomainResponse
      */
     public DeleteDomainResponse deleteDomain(String domainId) throws Exception {
@@ -1598,7 +1592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeleteEnvironment</p>
+     * <p>Deletes an environment.</p>
      * 
      * @deprecated OpenAPI DeleteEnvironment is deprecated
      * 
@@ -1628,7 +1622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeleteEnvironment</p>
+     * <p>Deletes an environment.</p>
      * 
      * @deprecated OpenAPI DeleteEnvironment is deprecated
      * @return DeleteEnvironmentResponse
@@ -1643,7 +1637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Gateway</p>
+     * <p>Deletes a Cloud-native API Gateway instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1669,7 +1663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Gateway</p>
+     * <p>Deletes a Cloud-native API Gateway instance.</p>
      * @return DeleteGatewayResponse
      */
     public DeleteGatewayResponse deleteGateway(String gatewayId) throws Exception {
@@ -1680,7 +1674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the security group rule of a gateway</p>
+     * <p>Deletes a security group rule from a Cloud-native API Gateway instance.</p>
      * 
      * @param request DeleteGatewaySecurityGroupRuleRequest
      * @param headers map
@@ -1714,7 +1708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the security group rule of a gateway</p>
+     * <p>Deletes a security group rule from a Cloud-native API Gateway instance.</p>
      * 
      * @param request DeleteGatewaySecurityGroupRuleRequest
      * @return DeleteGatewaySecurityGroupRuleResponse
@@ -1764,7 +1758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Operation</p>
+     * <p>Deletes an operation from an HTTP API.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1790,7 +1784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Operation</p>
+     * <p>Deletes an operation from an HTTP API.</p>
      * @return DeleteHttpApiOperationResponse
      */
     public DeleteHttpApiOperationResponse deleteHttpApiOperation(String httpApiId, String operationId) throws Exception {
@@ -1801,7 +1795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the route of an HttpApi</p>
+     * <p>Deletes a route in an HTTP API.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1827,7 +1821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the route of an HttpApi</p>
+     * <p>Deletes a route in an HTTP API.</p>
      * @return DeleteHttpApiRouteResponse
      */
     public DeleteHttpApiRouteResponse deleteHttpApiRoute(String httpApiId, String routeId) throws Exception {
@@ -1838,7 +1832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除MCP server</p>
+     * <p>Deletes an MCP server.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1864,7 +1858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除MCP server</p>
+     * <p>Deletes an MCP server.</p>
      * @return DeleteMcpServerResponse
      */
     public DeleteMcpServerResponse deleteMcpServer(String mcpServerId) throws Exception {
@@ -1912,7 +1906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Policy</p>
+     * <p>Deletes a policy.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1938,7 +1932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Policy</p>
+     * <p>Deletes a policy.</p>
      * @return DeletePolicyResponse
      */
     public DeletePolicyResponse deletePolicy(String policyId) throws Exception {
@@ -1949,7 +1943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete policy resource attachment</p>
+     * <p>Deletes a policy attachment.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1975,7 +1969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete policy resource attachment</p>
+     * <p>Deletes a policy attachment.</p>
      * @return DeletePolicyAttachmentResponse
      */
     public DeletePolicyAttachmentResponse deletePolicyAttachment(String policyAttachmentId) throws Exception {
@@ -2097,7 +2091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除服务来源</p>
+     * <p>Deletes a service source.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2123,7 +2117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除服务来源</p>
+     * <p>Deletes a service source.</p>
      * @return DeleteSourceResponse
      */
     public DeleteSourceResponse deleteSource(String sourceId) throws Exception {
@@ -2226,7 +2220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export HTTP API</p>
+     * <p>Exports an HTTP API.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2252,7 +2246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export HTTP API</p>
+     * <p>Exports an HTTP API.</p>
      * @return ExportHttpApiResponse
      */
     public ExportHttpApiResponse exportHttpApi(String httpApiId) throws Exception {
@@ -2469,7 +2463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetEnvironment</p>
+     * <p>Queries an environment.</p>
      * 
      * @deprecated OpenAPI GetEnvironment is deprecated
      * 
@@ -2511,7 +2505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetEnvironment</p>
+     * <p>Queries an environment.</p>
      * 
      * @deprecated OpenAPI GetEnvironment is deprecated
      * 
@@ -2793,7 +2787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Policy Resource Attachment</p>
+     * <p>Queries a policy attachment.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2819,7 +2813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Policy Resource Attachment</p>
+     * <p>Queries a policy attachment.</p>
      * @return GetPolicyAttachmentResponse
      */
     public GetPolicyAttachmentResponse getPolicyAttachment(String policyAttachmentId) throws Exception {
@@ -2951,7 +2945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a service.</p>
+     * <p>Queries a service.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2977,7 +2971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a service.</p>
+     * <p>Queries a service.</p>
      * @return GetServiceResponse
      */
     public GetServiceResponse getService(String serviceId) throws Exception {
@@ -3025,7 +3019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve Tracing Configuration</p>
+     * <p>Queries the tracing configurations of a Cloud-native API Gateway instance.</p>
      * 
      * @param request GetTraceConfigRequest
      * @param headers map
@@ -3059,7 +3053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve Tracing Configuration</p>
+     * <p>Queries the tracing configurations of a Cloud-native API Gateway instance.</p>
      * 
      * @param request GetTraceConfigRequest
      * @return GetTraceConfigResponse
@@ -4298,7 +4292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListPolicyClasses</p>
+     * <p>Queries policy templates.</p>
      * 
      * @param request ListPolicyClassesRequest
      * @param headers map
@@ -4356,7 +4350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListPolicyClasses</p>
+     * <p>Queries policy templates.</p>
      * 
      * @param request ListPolicyClassesRequest
      * @return ListPolicyClassesResponse
@@ -4550,7 +4544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListSslCerts</p>
+     * <p>Queries SSL certificates.</p>
      * 
      * @param request ListSslCertsRequest
      * @param headers map
@@ -4596,7 +4590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListSslCerts</p>
+     * <p>Queries SSL certificates.</p>
      * 
      * @param request ListSslCertsRequest
      * @return ListSslCertsResponse
@@ -4770,7 +4764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gateway Restart</p>
+     * <p>Restarts an instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4796,7 +4790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gateway Restart</p>
+     * <p>Restarts an instance.</p>
      * @return RestartGatewayResponse
      */
     public RestartGatewayResponse restartGateway(String gatewayId) throws Exception {
@@ -5191,6 +5185,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can update the listening Ingress only for sources whose types are <strong>ACK</strong>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates a domain name.</p>
      * 
@@ -5261,6 +5258,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can update the listening Ingress only for sources whose types are <strong>ACK</strong>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates a domain name.</p>
      * 
@@ -5275,7 +5275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpdateEnvironment</p>
+     * <p>Modifies an environment.</p>
      * 
      * @deprecated OpenAPI UpdateEnvironment is deprecated
      * 
@@ -5317,7 +5317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpdateEnvironment</p>
+     * <p>Modifies an environment.</p>
      * 
      * @deprecated OpenAPI UpdateEnvironment is deprecated
      * 
@@ -5334,7 +5334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the feature configuration of the gateway</p>
+     * <p>Updates the configuration of an instance feature parameter.</p>
      * 
      * @param request UpdateGatewayFeatureRequest
      * @param headers map
@@ -5368,7 +5368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the feature configuration of the gateway</p>
+     * <p>Updates the configuration of an instance feature parameter.</p>
      * 
      * @param request UpdateGatewayFeatureRequest
      * @return UpdateGatewayFeatureResponse
@@ -5381,7 +5381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Change the name of a gateway instance</p>
+     * <p>Changes the name of a Cloud-native API Gateway instance.</p>
      * 
      * @param request UpdateGatewayNameRequest
      * @param headers map
@@ -5415,7 +5415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Change the name of a gateway instance</p>
+     * <p>Changes the name of a Cloud-native API Gateway instance.</p>
      * 
      * @param request UpdateGatewayNameRequest
      * @return UpdateGatewayNameResponse
@@ -5523,7 +5523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Operation</p>
+     * <p>Updates an operation of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiOperationRequest
      * @param headers map
@@ -5557,7 +5557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Operation</p>
+     * <p>Updates an operation of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiOperationRequest
      * @return UpdateHttpApiOperationResponse
@@ -5801,7 +5801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Policy</p>
+     * <p>Updates a policy.</p>
      * 
      * @param request UpdatePolicyRequest
      * @param headers map
@@ -5843,7 +5843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Policy</p>
+     * <p>Updates a policy.</p>
      * 
      * @param request UpdatePolicyRequest
      * @return UpdatePolicyResponse
@@ -5903,7 +5903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新服务</p>
+     * <p>Updates a service. You can call this operation to update the health check, DNS domain name, and fixed address configurations of a service.</p>
      * 
      * @param request UpdateServiceRequest
      * @param headers map
@@ -5969,7 +5969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新服务</p>
+     * <p>Updates a service. You can call this operation to update the health check, DNS domain name, and fixed address configurations of a service.</p>
      * 
      * @param request UpdateServiceRequest
      * @return UpdateServiceResponse
@@ -6029,7 +6029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrade the gateway version</p>
+     * <p>Updates the version of a Cloud-native API Gateway instance.</p>
      * 
      * @param request UpgradeGatewayRequest
      * @param headers map
@@ -6063,7 +6063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrade the gateway version</p>
+     * <p>Updates the version of a Cloud-native API Gateway instance.</p>
      * 
      * @param request UpgradeGatewayRequest
      * @return UpgradeGatewayResponse

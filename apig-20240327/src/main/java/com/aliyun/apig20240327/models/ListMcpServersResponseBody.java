@@ -142,6 +142,9 @@ public class ListMcpServersResponseBody extends TeaModel {
 
         /**
          * <p>The synchronized MCP server ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacos-mcp-001</p>
          */
         @NameInMap("importMcpServerId")
         public String importMcpServerId;
@@ -189,6 +192,9 @@ public class ListMcpServersResponseBody extends TeaModel {
     public static class ListMcpServersResponseBodyDataItems extends TeaModel {
         /**
          * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxx</p>
          */
         @NameInMap("apiId")
         public String apiId;
@@ -230,6 +236,9 @@ public class ListMcpServersResponseBody extends TeaModel {
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My MCP Server</p>
          */
         @NameInMap("description")
         public String description;
@@ -281,6 +290,9 @@ public class ListMcpServersResponseBody extends TeaModel {
 
         /**
          * <p>The HTTP-to-MCP configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp spec content</p>
          */
         @NameInMap("mcpServerConfig")
         public String mcpServerConfig;

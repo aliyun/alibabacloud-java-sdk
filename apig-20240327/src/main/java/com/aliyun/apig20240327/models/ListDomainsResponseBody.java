@@ -14,7 +14,7 @@ public class ListDomainsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>Response parameters.</p>
      */
     @NameInMap("data")
     public ListDomainsResponseBodyData data;
@@ -76,7 +76,7 @@ public class ListDomainsResponseBody extends TeaModel {
 
     public static class ListDomainsResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the domain names.</p>
+         * <p>The list of domain information.</p>
          */
         @NameInMap("items")
         public java.util.List<DomainInfo> items;

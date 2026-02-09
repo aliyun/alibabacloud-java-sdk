@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHttpApiRouteResponseBody extends TeaModel {
     /**
-     * <p>Response status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class DeleteHttpApiRouteResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DeleteHttpApiRouteResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0F138FFC-6E2B-56C1-9BAB-A67462E339D1</p>

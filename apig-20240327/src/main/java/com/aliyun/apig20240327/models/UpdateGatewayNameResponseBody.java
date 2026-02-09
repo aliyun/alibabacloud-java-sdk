@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayNameResponseBody extends TeaModel {
     /**
-     * <p>Response status code.</p>
-     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -14,8 +12,6 @@ public class UpdateGatewayNameResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response message.</p>
-     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -23,8 +19,6 @@ public class UpdateGatewayNameResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
      */

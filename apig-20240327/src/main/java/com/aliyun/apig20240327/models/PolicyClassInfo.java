@@ -4,42 +4,117 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class PolicyClassInfo extends TeaModel {
+    /**
+     * <p>The template alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Rate Limit</p>
+     */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <p>The list of resource types that can be mounted.</p>
+     */
     @NameInMap("attachableResourceTypes")
     public java.util.List<String> attachableResourceTypes;
 
+    /**
+     * <p>The template identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-cpqm0s94ckt1displ8ng</p>
+     */
     @NameInMap("classId")
     public String classId;
 
+    /**
+     * <p>A configuration example.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("configExample")
     public String configExample;
 
+    /**
+     * <p>Specifies whether the policy has been deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("deprecated")
     public Boolean deprecated;
 
+    /**
+     * <p>The template description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Limits the number of requests per unit of time</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The direction of traffic on which the policy takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InBound</p>
+     */
     @NameInMap("direction")
     public String direction;
 
+    /**
+     * <p>Specifies whether to enable logging.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableLog")
     public Boolean enableLog;
 
+    /**
+     * <p>The execution priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("executePriority")
     public String executePriority;
 
+    /**
+     * <p>The execution phase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POST</p>
+     */
     @NameInMap("executeStage")
     public String executeStage;
 
+    /**
+     * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ConcurrencyLimit</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The policy type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FlowControl</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The template version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("version")
     public String version;
 

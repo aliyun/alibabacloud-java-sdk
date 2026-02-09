@@ -4,9 +4,21 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class KMSConfig extends TeaModel {
+    /**
+     * <p>The KMS instance ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kst-xxxxxxxx</p>
+     */
     @NameInMap("kmsInstanceId")
     public String kmsInstanceId;
 
+    /**
+     * <p>The KMS key ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-xxxxxxxx</p>
+     */
     @NameInMap("kmsKeyId")
     public String kmsKeyId;
 

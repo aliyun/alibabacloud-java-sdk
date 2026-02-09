@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEnvironmentResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class DeleteEnvironmentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DeleteEnvironmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, used for tracing the request chain.</p>
+     * <p>The request ID. You can use the ID to trace the request link.</p>
      * 
      * <strong>example:</strong>
      * <p>C61E30D3-579A-5B43-994E-31E02EDC9129</p>

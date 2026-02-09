@@ -4,9 +4,26 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ResourceStatistic extends TeaModel {
+    /**
+     * <p>The number of online resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("resourceCount")
     public Integer resourceCount;
 
+    /**
+     * <p>The resource type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>HttpApi</li>
+     * <li>GatewayRoute</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HttpApi</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 

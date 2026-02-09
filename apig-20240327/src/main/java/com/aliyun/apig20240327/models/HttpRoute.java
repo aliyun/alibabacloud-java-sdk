@@ -4,42 +4,102 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpRoute extends TeaModel {
+    /**
+     * <p>The backend configuration</p>
+     */
     @NameInMap("backend")
     public Backend backend;
 
+    /**
+     * <p>builtin</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("builtin")
     public String builtin;
 
+    /**
+     * <p>The creation timestamp in milliseconds</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1726649310593</p>
+     */
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The deployment status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Deployed</p>
+     */
     @NameInMap("deployStatus")
     public String deployStatus;
 
+    /**
+     * <p>The description of the route</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Route for user management API</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>List of domain information</p>
+     */
     @NameInMap("domainInfos")
     public java.util.List<HttpRouteDomainInfos> domainInfos;
 
+    /**
+     * <p>The environment information</p>
+     */
     @NameInMap("environmentInfo")
     public HttpRouteEnvironmentInfo environmentInfo;
 
+    /**
+     * <p>gatewayStatus</p>
+     */
     @NameInMap("gatewayStatus")
     public java.util.Map<String, String> gatewayStatus;
 
+    /**
+     * <p>The route matching rules</p>
+     */
     @NameInMap("match")
     public HttpRouteMatch match;
 
+    /**
+     * <p>The MCP server information</p>
+     */
     @NameInMap("mcpServerInfo")
     public HttpRouteMcpServerInfo mcpServerInfo;
 
+    /**
+     * <p>The name of the route</p>
+     * 
+     * <strong>example:</strong>
+     * <p>itemcenter-pre-route</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The unique identifier of the route</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hr-crf5l7tlhtgp91t***</p>
+     */
     @NameInMap("routeId")
     public String routeId;
 
+    /**
+     * <p>The last update timestamp in milliseconds</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1726819895636</p>
+     */
     @NameInMap("updateTimestamp")
     public Long updateTimestamp;
 
@@ -153,12 +213,30 @@ public class HttpRoute extends TeaModel {
     }
 
     public static class HttpRouteDomainInfos extends TeaModel {
+        /**
+         * <p>The domain ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cr3v7dllhtgi9s***</p>
+         */
         @NameInMap("domainId")
         public String domainId;
 
+        /**
+         * <p>The domain name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>itemcenter.dev</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The domain protocol</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
@@ -194,9 +272,21 @@ public class HttpRoute extends TeaModel {
     }
 
     public static class HttpRouteEnvironmentInfoGatewayInfo extends TeaModel {
+        /**
+         * <p>The gateway ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cqoohqtlh***</p>
+         */
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        /**
+         * <p>The gateway name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>itemcenter-gateway</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -224,19 +314,39 @@ public class HttpRoute extends TeaModel {
     }
 
     public static class HttpRouteEnvironmentInfoSubDomains extends TeaModel {
+        /**
+         * <p>The subdomain ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cqu19hdlhtgjuv4***</p>
+         */
         @NameInMap("domainId")
         public String domainId;
 
+        /**
+         * <p>The subdomain name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-crmic3llht***-cn-hangzhou-vpc.alicloudapi.com</p>
+         */
         @NameInMap("name")
         public String name;
 
         /**
+         * <p>networkType</p>
+         * 
          * <strong>example:</strong>
          * <p>Internet</p>
          */
         @NameInMap("networkType")
         public String networkType;
 
+        /**
+         * <p>The subdomain protocol</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
@@ -280,18 +390,42 @@ public class HttpRoute extends TeaModel {
     }
 
     public static class HttpRouteEnvironmentInfo extends TeaModel {
+        /**
+         * <p>The environment alias</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
         @NameInMap("alias")
         public String alias;
 
+        /**
+         * <p>The environment ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-crhq1u5lhtgju***</p>
+         */
         @NameInMap("environmentId")
         public String environmentId;
 
+        /**
+         * <p>The gateway information</p>
+         */
         @NameInMap("gatewayInfo")
         public HttpRouteEnvironmentInfoGatewayInfo gatewayInfo;
 
+        /**
+         * <p>The environment name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>itemcenter-pre</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>List of subdomain information</p>
+         */
         @NameInMap("subDomains")
         public java.util.List<HttpRouteEnvironmentInfoSubDomains> subDomains;
 
@@ -343,9 +477,21 @@ public class HttpRoute extends TeaModel {
     }
 
     public static class HttpRouteMcpServerInfoMcpRouteConfig extends TeaModel {
+        /**
+         * <p>mcp route path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mcp</p>
+         */
         @NameInMap("exposedUriPath")
         public String exposedUriPath;
 
+        /**
+         * <p>The MCP protocol</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSE</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
@@ -373,21 +519,54 @@ public class HttpRoute extends TeaModel {
     }
 
     public static class HttpRouteMcpServerInfo extends TeaModel {
+        /**
+         * <p>The creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nacos</p>
+         */
         @NameInMap("createFromType")
         public String createFromType;
 
+        /**
+         * <p>The imported instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>import-001</p>
+         */
         @NameInMap("importInstanceId")
         public String importInstanceId;
 
+        /**
+         * <p>The imported Nacos MCP server ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp-002</p>
+         */
         @NameInMap("importMcpServerId")
         public String importMcpServerId;
 
+        /**
+         * <p>The imported namespace</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("importNamespace")
         public String importNamespace;
 
+        /**
+         * <p>The MCP route configuration</p>
+         */
         @NameInMap("mcpRouteConfig")
         public HttpRouteMcpServerInfoMcpRouteConfig mcpRouteConfig;
 
+        /**
+         * <p>The MCP server configuration content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;config\&quot;:{}}</p>
+         */
         @NameInMap("mcpServerConfig")
         public String mcpServerConfig;
 
