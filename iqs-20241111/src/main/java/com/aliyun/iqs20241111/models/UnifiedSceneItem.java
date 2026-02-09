@@ -7,6 +7,10 @@ public class UnifiedSceneItem extends TeaModel {
     @NameInMap("detail")
     public String detail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>time</p>
+     */
     @NameInMap("type")
     public String type;
 

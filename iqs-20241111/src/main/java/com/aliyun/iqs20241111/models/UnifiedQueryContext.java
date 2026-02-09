@@ -4,6 +4,10 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class UnifiedQueryContext extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Generic</p>
+     */
     @NameInMap("engineType")
     public String engineType;
 

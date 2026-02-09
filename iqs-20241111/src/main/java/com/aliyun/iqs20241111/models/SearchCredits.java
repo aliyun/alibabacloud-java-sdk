@@ -4,6 +4,10 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class SearchCredits extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("genericTextSearch")
     public Integer genericTextSearch;
 

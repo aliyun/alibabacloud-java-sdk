@@ -10,6 +10,10 @@ public class MultimodalSearchOutput extends TeaModel {
     @NameInMap("queryContext")
     public MultimodalQueryContext queryContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sdfsd234-2vxcg345-345vc</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

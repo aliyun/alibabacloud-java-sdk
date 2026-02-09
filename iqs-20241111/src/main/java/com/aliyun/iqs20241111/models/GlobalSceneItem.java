@@ -7,6 +7,10 @@ public class GlobalSceneItem extends TeaModel {
     @NameInMap("detail")
     public String detail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>answerBox</p>
+     */
     @NameInMap("type")
     public String type;
 

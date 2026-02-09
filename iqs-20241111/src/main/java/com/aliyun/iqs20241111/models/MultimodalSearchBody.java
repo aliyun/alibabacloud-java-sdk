@@ -4,6 +4,12 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class MultimodalSearchBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;excludeSites&quot;: &quot;<a href="http://www.360doc.com,weibo.com">www.360doc.com,weibo.com</a>&quot;
+     *   }</p>
+     */
     @NameInMap("advancedParams")
     public java.util.Map<String, ?> advancedParams;
 

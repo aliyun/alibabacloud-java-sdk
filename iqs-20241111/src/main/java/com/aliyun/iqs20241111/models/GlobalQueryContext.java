@@ -21,12 +21,20 @@ public class GlobalQueryContext extends TeaModel {
     }
 
     public static class GlobalQueryContextOriginalQuery extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("page")
         public String page;
 
         @NameInMap("query")
         public String query;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NoLimit</p>
+         */
         @NameInMap("timeRange")
         public String timeRange;
 

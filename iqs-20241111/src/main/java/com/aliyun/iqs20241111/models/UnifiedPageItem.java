@@ -10,6 +10,10 @@ public class UnifiedPageItem extends TeaModel {
     @NameInMap("hostAuthorityScore")
     public Double hostAuthorityScore;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://www.china.com/zh_cn/img1905/2023/logo.png">https://www.china.com/zh_cn/img1905/2023/logo.png</a></p>
+     */
     @NameInMap("hostLogo")
     public String hostLogo;
 
@@ -19,6 +23,10 @@ public class UnifiedPageItem extends TeaModel {
     @NameInMap("images")
     public java.util.List<String> images;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://hea.china.com/articles/20250427/202504271666343.html">https://hea.china.com/articles/20250427/202504271666343.html</a></p>
+     */
     @NameInMap("link")
     public String link;
 
@@ -30,11 +38,15 @@ public class UnifiedPageItem extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2025-04-07T10:15:30.123+08:00</p>
+     * <p>2025-04-27T20:36:04+08:00</p>
      */
     @NameInMap("publishedTime")
     public String publishedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.7786493301391602</p>
+     */
     @NameInMap("rerankScore")
     public Double rerankScore;
 

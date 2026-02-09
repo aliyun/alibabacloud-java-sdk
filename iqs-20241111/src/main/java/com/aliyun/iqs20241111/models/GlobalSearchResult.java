@@ -11,6 +11,8 @@ public class GlobalSearchResult extends TeaModel {
     public GlobalQueryContext queryContext;
 
     /**
+     * <p>requestId</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */

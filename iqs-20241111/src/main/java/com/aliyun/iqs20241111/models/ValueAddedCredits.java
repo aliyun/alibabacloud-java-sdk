@@ -4,9 +4,17 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class ValueAddedCredits extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("advanced")
     public Integer advanced;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("summary")
     public Integer summary;
 

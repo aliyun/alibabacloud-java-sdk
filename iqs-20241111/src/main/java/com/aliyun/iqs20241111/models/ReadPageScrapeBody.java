@@ -7,23 +7,42 @@ public class ReadPageScrapeBody extends TeaModel {
     @NameInMap("formats")
     public java.util.List<String> formats;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1296000</p>
+     */
     @NameInMap("maxAge")
     public Integer maxAge;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15000</p>
+     */
     @NameInMap("pageTimeout")
     public Integer pageTimeout;
 
     @NameInMap("readability")
     public ReadPageScrapeBodyReadability readability;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60000</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.example.com">https://www.example.com</a></p>
      */
     @NameInMap("url")
     public String url;
@@ -90,15 +109,27 @@ public class ReadPageScrapeBody extends TeaModel {
     }
 
     public static class ReadPageScrapeBodyReadability extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("excludeAllImages")
         public Boolean excludeAllImages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("excludeAllLinks")
         public Boolean excludeAllLinks;
 
         @NameInMap("excludedTags")
         public java.util.List<String> excludedTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("readabilityMode")
         public String readabilityMode;
 

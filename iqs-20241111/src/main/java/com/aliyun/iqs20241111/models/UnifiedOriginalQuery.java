@@ -7,6 +7,10 @@ public class UnifiedOriginalQuery extends TeaModel {
     @NameInMap("query")
     public String query;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NoLimit</p>
+     */
     @NameInMap("timeRange")
     public String timeRange;
 

@@ -10,20 +10,35 @@ public class ReadPageBody extends TeaModel {
     @NameInMap("location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1296000</p>
+     */
     @NameInMap("maxAge")
     public Integer maxAge;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("pageTimeout")
     public Integer pageTimeout;
 
     @NameInMap("readability")
     public ReadPageBodyReadability readability;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60000</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://help.aliyun.com/document_detail/2837301.html?spm=a2c4g.11186623.help-menu-2837261.d_0_0_0.59ed3e95CppOt2&scm=20140722.H_2837301._.OR_help-T_cn~zh-V_1">https://help.aliyun.com/document_detail/2837301.html?spm=a2c4g.11186623.help-menu-2837261.d_0_0_0.59ed3e95CppOt2&amp;scm=20140722.H_2837301._.OR_help-T_cn~zh-V_1</a></p>
      */
     @NameInMap("url")
     public String url;
@@ -90,15 +105,27 @@ public class ReadPageBody extends TeaModel {
     }
 
     public static class ReadPageBodyReadability extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("excludeAllImages")
         public Boolean excludeAllImages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("excludeAllLinks")
         public Boolean excludeAllLinks;
 
         @NameInMap("excludedTags")
         public java.util.List<String> excludedTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("readabilityMode")
         public String readabilityMode;
 
