@@ -13,6 +13,13 @@ public class ListAivppResourcesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>DATA</p>
+     */
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    /**
+     * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("MaxResults")
@@ -29,6 +36,14 @@ public class ListAivppResourcesRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListAivppResourcesRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public ListAivppResourcesRequest setMaxResults(Integer maxResults) {

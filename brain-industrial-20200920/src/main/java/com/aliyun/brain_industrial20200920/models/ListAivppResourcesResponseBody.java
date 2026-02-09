@@ -128,6 +128,13 @@ public class ListAivppResourcesResponseBody extends TeaModel {
     }
 
     public static class ListAivppResourcesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("ConnectNum")
+        public Integer connectNum;
+
         @NameInMap("Detail")
         public String detail;
 
@@ -158,6 +165,13 @@ public class ListAivppResourcesResponseBody extends TeaModel {
          */
         @NameInMap("LeftQuantity")
         public String leftQuantity;
+
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        @NameInMap("MessageTps")
+        public Integer messageTps;
 
         /**
          * <strong>example:</strong>
@@ -206,6 +220,14 @@ public class ListAivppResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListAivppResourcesResponseBodyData setConnectNum(Integer connectNum) {
+            this.connectNum = connectNum;
+            return this;
+        }
+        public Integer getConnectNum() {
+            return this.connectNum;
+        }
+
         public ListAivppResourcesResponseBodyData setDetail(String detail) {
             this.detail = detail;
             return this;
@@ -244,6 +266,14 @@ public class ListAivppResourcesResponseBody extends TeaModel {
         }
         public String getLeftQuantity() {
             return this.leftQuantity;
+        }
+
+        public ListAivppResourcesResponseBodyData setMessageTps(Integer messageTps) {
+            this.messageTps = messageTps;
+            return this;
+        }
+        public Integer getMessageTps() {
+            return this.messageTps;
         }
 
         public ListAivppResourcesResponseBodyData setOrderId(String orderId) {
