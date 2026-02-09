@@ -4,24 +4,56 @@ package com.aliyun.workorder20200326.models;
 import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("Data")
     public ListProductsResponseBodyData data;
 
-    @NameInMap("Code")
-    public Integer code;
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA6204AC-6AA9-4CFA-9310-7DFD20C19EBC</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     public static ListProductsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListProductsResponseBody self = new ListProductsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListProductsResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListProductsResponseBody setData(ListProductsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListProductsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListProductsResponseBody setMessage(String message) {
@@ -40,69 +72,12 @@ public class ListProductsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListProductsResponseBody setData(ListProductsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListProductsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListProductsResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public ListProductsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class ListProductsResponseBodyDataHotConsultation extends TeaModel {
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("ProductCode")
-        public String productCode;
-
-        public static ListProductsResponseBodyDataHotConsultation build(java.util.Map<String, ?> map) throws Exception {
-            ListProductsResponseBodyDataHotConsultation self = new ListProductsResponseBodyDataHotConsultation();
-            return TeaModel.build(map, self);
-        }
-
-        public ListProductsResponseBodyDataHotConsultation setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListProductsResponseBodyDataHotConsultation setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListProductsResponseBodyDataHotConsultation setProductCode(String productCode) {
-            this.productCode = productCode;
-            return this;
-        }
-        public String getProductCode() {
-            return this.productCode;
-        }
-
     }
 
     public static class ListProductsResponseBodyDataConsultationMore extends TeaModel {
@@ -112,6 +87,10 @@ public class ListProductsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>account</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
@@ -146,6 +125,51 @@ public class ListProductsResponseBody extends TeaModel {
 
     }
 
+    public static class ListProductsResponseBodyDataHotConsultation extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        public static ListProductsResponseBodyDataHotConsultation build(java.util.Map<String, ?> map) throws Exception {
+            ListProductsResponseBodyDataHotConsultation self = new ListProductsResponseBodyDataHotConsultation();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProductsResponseBodyDataHotConsultation setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListProductsResponseBodyDataHotConsultation setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListProductsResponseBodyDataHotConsultation setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+    }
+
     public static class ListProductsResponseBodyDataHotTech extends TeaModel {
         @NameInMap("Description")
         public String description;
@@ -153,6 +177,10 @@ public class ListProductsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
@@ -194,6 +222,10 @@ public class ListProductsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
@@ -259,11 +291,11 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyData extends TeaModel {
-        @NameInMap("HotConsultation")
-        public java.util.List<ListProductsResponseBodyDataHotConsultation> hotConsultation;
-
         @NameInMap("ConsultationMore")
         public java.util.List<ListProductsResponseBodyDataConsultationMore> consultationMore;
+
+        @NameInMap("HotConsultation")
+        public java.util.List<ListProductsResponseBodyDataHotConsultation> hotConsultation;
 
         @NameInMap("HotTech")
         public java.util.List<ListProductsResponseBodyDataHotTech> hotTech;
@@ -276,20 +308,20 @@ public class ListProductsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListProductsResponseBodyData setHotConsultation(java.util.List<ListProductsResponseBodyDataHotConsultation> hotConsultation) {
-            this.hotConsultation = hotConsultation;
-            return this;
-        }
-        public java.util.List<ListProductsResponseBodyDataHotConsultation> getHotConsultation() {
-            return this.hotConsultation;
-        }
-
         public ListProductsResponseBodyData setConsultationMore(java.util.List<ListProductsResponseBodyDataConsultationMore> consultationMore) {
             this.consultationMore = consultationMore;
             return this;
         }
         public java.util.List<ListProductsResponseBodyDataConsultationMore> getConsultationMore() {
             return this.consultationMore;
+        }
+
+        public ListProductsResponseBodyData setHotConsultation(java.util.List<ListProductsResponseBodyDataHotConsultation> hotConsultation) {
+            this.hotConsultation = hotConsultation;
+            return this;
+        }
+        public java.util.List<ListProductsResponseBodyDataHotConsultation> getHotConsultation() {
+            return this.hotConsultation;
         }
 
         public ListProductsResponseBodyData setHotTech(java.util.List<ListProductsResponseBodyDataHotTech> hotTech) {

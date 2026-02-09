@@ -4,9 +4,19 @@ package com.aliyun.workorder20200326.models;
 import com.aliyun.tea.*;
 
 public class ListCategoriesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 

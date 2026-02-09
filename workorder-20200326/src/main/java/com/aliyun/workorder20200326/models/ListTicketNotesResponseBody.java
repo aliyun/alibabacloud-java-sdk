@@ -4,24 +4,67 @@ package com.aliyun.workorder20200326.models;
 import com.aliyun.tea.*;
 
 public class ListTicketNotesResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("Data")
     public ListTicketNotesResponseBodyData data;
 
-    @NameInMap("Code")
-    public Integer code;
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA6204AC-6AA9-4CFA-9310-7DFD20C19EBC</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     public static ListTicketNotesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTicketNotesResponseBody self = new ListTicketNotesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTicketNotesResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    public ListTicketNotesResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListTicketNotesResponseBody setData(ListTicketNotesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListTicketNotesResponseBodyData getData() {
+        return this.data;
     }
 
     public ListTicketNotesResponseBody setMessage(String message) {
@@ -40,22 +83,6 @@ public class ListTicketNotesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTicketNotesResponseBody setData(ListTicketNotesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListTicketNotesResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListTicketNotesResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public ListTicketNotesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,21 +92,49 @@ public class ListTicketNotesResponseBody extends TeaModel {
     }
 
     public static class ListTicketNotesResponseBodyDataList extends TeaModel {
-        @NameInMap("GmtCreated")
-        public Integer gmtCreated;
+        @NameInMap("Content")
+        public String content;
 
-        @NameInMap("NoteId")
-        public String noteId;
-
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("FromOfficial")
         public Boolean fromOfficial;
 
-        @NameInMap("Content")
-        public String content;
+        /**
+         * <strong>example:</strong>
+         * <p>1586920240</p>
+         */
+        @NameInMap("GmtCreated")
+        public Integer gmtCreated;
+
+        /**
+         * <strong>example:</strong>
+         * <p>CT24GHXT</p>
+         */
+        @NameInMap("NoteId")
+        public String noteId;
 
         public static ListTicketNotesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListTicketNotesResponseBodyDataList self = new ListTicketNotesResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListTicketNotesResponseBodyDataList setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public ListTicketNotesResponseBodyDataList setFromOfficial(Boolean fromOfficial) {
+            this.fromOfficial = fromOfficial;
+            return this;
+        }
+        public Boolean getFromOfficial() {
+            return this.fromOfficial;
         }
 
         public ListTicketNotesResponseBodyDataList setGmtCreated(Integer gmtCreated) {
@@ -96,22 +151,6 @@ public class ListTicketNotesResponseBody extends TeaModel {
         }
         public String getNoteId() {
             return this.noteId;
-        }
-
-        public ListTicketNotesResponseBodyDataList setFromOfficial(Boolean fromOfficial) {
-            this.fromOfficial = fromOfficial;
-            return this;
-        }
-        public Boolean getFromOfficial() {
-            return this.fromOfficial;
-        }
-
-        public ListTicketNotesResponseBodyDataList setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
         }
 
     }

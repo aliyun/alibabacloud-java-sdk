@@ -3,15 +3,10 @@ package com.aliyun.workorder20200326;
 
 import com.aliyun.tea.*;
 import com.aliyun.workorder20200326.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "central";
         this._endpointMap = TeaConverter.buildMap(
@@ -35,94 +30,355 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public CloseTicketResponse closeTicketWithOptions(CloseTicketRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * @deprecated OpenAPI CloseTicket is deprecated, please use Workorder::2021-06-10::CloseTicket instead.
+     * 
+     * @param request CloseTicketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloseTicketResponse
+     */
+    @Deprecated
+    // Deprecated
+    public CloseTicketResponse closeTicketWithOptions(CloseTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ticketId)) {
+            query.put("TicketId", request.ticketId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CloseTicket", "2020-03-26", "HTTPS", "POST", "AK", "json", req, runtime), new CloseTicketResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloseTicket"),
+            new TeaPair("version", "2020-03-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloseTicketResponse());
     }
 
+    /**
+     * @deprecated OpenAPI CloseTicket is deprecated, please use Workorder::2021-06-10::CloseTicket instead.
+     * 
+     * @param request CloseTicketRequest
+     * @return CloseTicketResponse
+     */
+    @Deprecated
+    // Deprecated
     public CloseTicketResponse closeTicket(CloseTicketRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.closeTicketWithOptions(request, runtime);
     }
 
-    public CreateTicketResponse createTicketWithOptions(CreateTicketRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * @deprecated OpenAPI CreateTicket is deprecated, please use Workorder::2021-06-10::CreateTicket instead.
+     * 
+     * @param request CreateTicketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTicketResponse
+     */
+    @Deprecated
+    // Deprecated
+    public CreateTicketResponse createTicketWithOptions(CreateTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyTimeRange)) {
+            query.put("NotifyTimeRange", request.notifyTimeRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secretContent)) {
+            query.put("SecretContent", request.secretContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateTicket", "2020-03-26", "HTTPS", "POST", "AK", "json", req, runtime), new CreateTicketResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTicket"),
+            new TeaPair("version", "2020-03-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTicketResponse());
     }
 
+    /**
+     * @deprecated OpenAPI CreateTicket is deprecated, please use Workorder::2021-06-10::CreateTicket instead.
+     * 
+     * @param request CreateTicketRequest
+     * @return CreateTicketResponse
+     */
+    @Deprecated
+    // Deprecated
     public CreateTicketResponse createTicket(CreateTicketRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTicketWithOptions(request, runtime);
     }
 
-    public ListCategoriesResponse listCategoriesWithOptions(ListCategoriesRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * @deprecated OpenAPI ListCategories is deprecated, please use Workorder::2021-06-10::ListCategories instead.
+     * 
+     * @param request ListCategoriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCategoriesResponse
+     */
+    @Deprecated
+    // Deprecated
+    public ListCategoriesResponse listCategoriesWithOptions(ListCategoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListCategories", "2020-03-26", "HTTPS", "POST", "AK", "json", req, runtime), new ListCategoriesResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCategories"),
+            new TeaPair("version", "2020-03-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCategoriesResponse());
     }
 
+    /**
+     * @deprecated OpenAPI ListCategories is deprecated, please use Workorder::2021-06-10::ListCategories instead.
+     * 
+     * @param request ListCategoriesRequest
+     * @return ListCategoriesResponse
+     */
+    @Deprecated
+    // Deprecated
     public ListCategoriesResponse listCategories(ListCategoriesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCategoriesWithOptions(request, runtime);
     }
 
-    public ListProductsResponse listProductsWithOptions(ListProductsRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * @deprecated OpenAPI ListProducts is deprecated, please use Workorder::2021-06-10::ListProducts instead.
+     * 
+     * @param request ListProductsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProductsResponse
+     */
+    @Deprecated
+    // Deprecated
+    public ListProductsResponse listProductsWithOptions(ListProductsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListProducts", "2020-03-26", "HTTPS", "POST", "AK", "json", req, runtime), new ListProductsResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProducts"),
+            new TeaPair("version", "2020-03-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductsResponse());
     }
 
+    /**
+     * @deprecated OpenAPI ListProducts is deprecated, please use Workorder::2021-06-10::ListProducts instead.
+     * 
+     * @param request ListProductsRequest
+     * @return ListProductsResponse
+     */
+    @Deprecated
+    // Deprecated
     public ListProductsResponse listProducts(ListProductsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listProductsWithOptions(request, runtime);
     }
 
-    public ListTicketNotesResponse listTicketNotesWithOptions(ListTicketNotesRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * @deprecated OpenAPI ListTicketNotes is deprecated, please use Workorder::2021-06-10::ListTicketNotes instead.
+     * 
+     * @param request ListTicketNotesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTicketNotesResponse
+     */
+    @Deprecated
+    // Deprecated
+    public ListTicketNotesResponse listTicketNotesWithOptions(ListTicketNotesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ticketId)) {
+            query.put("TicketId", request.ticketId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListTicketNotes", "2020-03-26", "HTTPS", "POST", "AK", "json", req, runtime), new ListTicketNotesResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTicketNotes"),
+            new TeaPair("version", "2020-03-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTicketNotesResponse());
     }
 
+    /**
+     * @deprecated OpenAPI ListTicketNotes is deprecated, please use Workorder::2021-06-10::ListTicketNotes instead.
+     * 
+     * @param request ListTicketNotesRequest
+     * @return ListTicketNotesResponse
+     */
+    @Deprecated
+    // Deprecated
     public ListTicketNotesResponse listTicketNotes(ListTicketNotesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTicketNotesWithOptions(request, runtime);
     }
 
-    public ListTicketsResponse listTicketsWithOptions(ListTicketsRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * @deprecated OpenAPI ListTickets is deprecated, please use Workorder::2021-06-10::ListTickets instead.
+     * 
+     * @param request ListTicketsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTicketsResponse
+     */
+    @Deprecated
+    // Deprecated
+    public ListTicketsResponse listTicketsWithOptions(ListTicketsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createdAfterTime)) {
+            query.put("CreatedAfterTime", request.createdAfterTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createdBeforeTime)) {
+            query.put("CreatedBeforeTime", request.createdBeforeTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ids)) {
+            query.put("Ids", request.ids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageStart)) {
+            query.put("PageStart", request.pageStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subUserId)) {
+            query.put("SubUserId", request.subUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ticketStatus)) {
+            query.put("TicketStatus", request.ticketStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListTickets", "2020-03-26", "HTTPS", "POST", "AK", "json", req, runtime), new ListTicketsResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTickets"),
+            new TeaPair("version", "2020-03-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTicketsResponse());
     }
 
+    /**
+     * @deprecated OpenAPI ListTickets is deprecated, please use Workorder::2021-06-10::ListTickets instead.
+     * 
+     * @param request ListTicketsRequest
+     * @return ListTicketsResponse
+     */
+    @Deprecated
+    // Deprecated
     public ListTicketsResponse listTickets(ListTicketsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTicketsWithOptions(request, runtime);
-    }
-
-    public ReplyTicketResponse replyTicketWithOptions(ReplyTicketRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ReplyTicket", "2020-03-26", "HTTPS", "POST", "AK", "json", req, runtime), new ReplyTicketResponse());
-    }
-
-    public ReplyTicketResponse replyTicket(ReplyTicketRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.replyTicketWithOptions(request, runtime);
     }
 }

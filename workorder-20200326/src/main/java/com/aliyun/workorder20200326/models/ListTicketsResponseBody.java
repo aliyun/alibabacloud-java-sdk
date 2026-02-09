@@ -4,24 +4,67 @@ package com.aliyun.workorder20200326.models;
 import com.aliyun.tea.*;
 
 public class ListTicketsResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("Data")
     public ListTicketsResponseBodyData data;
 
-    @NameInMap("Code")
-    public Integer code;
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA6204AC-6AA9-4CFA-9310-7DFD20C19EBC</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     public static ListTicketsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTicketsResponseBody self = new ListTicketsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTicketsResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    public ListTicketsResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListTicketsResponseBody setData(ListTicketsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListTicketsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListTicketsResponseBody setMessage(String message) {
@@ -40,22 +83,6 @@ public class ListTicketsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTicketsResponseBody setData(ListTicketsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListTicketsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListTicketsResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public ListTicketsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,24 +92,64 @@ public class ListTicketsResponseBody extends TeaModel {
     }
 
     public static class ListTicketsResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1585818240</p>
+         */
+        @NameInMap("AddTime")
+        public Integer addTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>252448085032933023</p>
+         */
+        @NameInMap("CreatorId")
+        public String creatorId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>CAB327A</p>
+         */
+        @NameInMap("Id")
+        public String id;
+
+        /**
+         * <strong>example:</strong>
+         * <p>assigned</p>
+         */
         @NameInMap("TicketStatus")
         public String ticketStatus;
 
         @NameInMap("Title")
         public String title;
 
-        @NameInMap("CreatorId")
-        public String creatorId;
-
-        @NameInMap("AddTime")
-        public Integer addTime;
-
-        @NameInMap("Id")
-        public String id;
-
         public static ListTicketsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListTicketsResponseBodyDataList self = new ListTicketsResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListTicketsResponseBodyDataList setAddTime(Integer addTime) {
+            this.addTime = addTime;
+            return this;
+        }
+        public Integer getAddTime() {
+            return this.addTime;
+        }
+
+        public ListTicketsResponseBodyDataList setCreatorId(String creatorId) {
+            this.creatorId = creatorId;
+            return this;
+        }
+        public String getCreatorId() {
+            return this.creatorId;
+        }
+
+        public ListTicketsResponseBodyDataList setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public ListTicketsResponseBodyDataList setTicketStatus(String ticketStatus) {
@@ -101,42 +168,30 @@ public class ListTicketsResponseBody extends TeaModel {
             return this.title;
         }
 
-        public ListTicketsResponseBodyDataList setCreatorId(String creatorId) {
-            this.creatorId = creatorId;
-            return this;
-        }
-        public String getCreatorId() {
-            return this.creatorId;
-        }
-
-        public ListTicketsResponseBodyDataList setAddTime(Integer addTime) {
-            this.addTime = addTime;
-            return this;
-        }
-        public Integer getAddTime() {
-            return this.addTime;
-        }
-
-        public ListTicketsResponseBodyDataList setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
     }
 
     public static class ListTicketsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("List")
         public java.util.List<ListTicketsResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

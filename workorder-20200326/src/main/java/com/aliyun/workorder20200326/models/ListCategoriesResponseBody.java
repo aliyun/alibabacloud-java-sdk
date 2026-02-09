@@ -4,24 +4,56 @@ package com.aliyun.workorder20200326.models;
 import com.aliyun.tea.*;
 
 public class ListCategoriesResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("Data")
     public ListCategoriesResponseBodyData data;
 
-    @NameInMap("Code")
-    public Integer code;
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA6204AC-6AA9-4CFA-9310-7DFD20C19EBC</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     public static ListCategoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCategoriesResponseBody self = new ListCategoriesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListCategoriesResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListCategoriesResponseBody setData(ListCategoriesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListCategoriesResponseBodyData getData() {
+        return this.data;
     }
 
     public ListCategoriesResponseBody setMessage(String message) {
@@ -40,22 +72,6 @@ public class ListCategoriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListCategoriesResponseBody setData(ListCategoriesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListCategoriesResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListCategoriesResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public ListCategoriesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,23 +81,19 @@ public class ListCategoriesResponseBody extends TeaModel {
     }
 
     public static class ListCategoriesResponseBodyDataList extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
+        /**
+         * <strong>example:</strong>
+         * <p>793</p>
+         */
         @NameInMap("Id")
         public Integer id;
+
+        @NameInMap("Name")
+        public String name;
 
         public static ListCategoriesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListCategoriesResponseBodyDataList self = new ListCategoriesResponseBodyDataList();
             return TeaModel.build(map, self);
-        }
-
-        public ListCategoriesResponseBodyDataList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public ListCategoriesResponseBodyDataList setId(Integer id) {
@@ -90,6 +102,14 @@ public class ListCategoriesResponseBody extends TeaModel {
         }
         public Integer getId() {
             return this.id;
+        }
+
+        public ListCategoriesResponseBodyDataList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
