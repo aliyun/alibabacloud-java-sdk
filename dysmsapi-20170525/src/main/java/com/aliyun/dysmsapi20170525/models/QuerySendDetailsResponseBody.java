@@ -35,9 +35,6 @@ public class QuerySendDetailsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details of the message.</p>
-     */
     @NameInMap("SmsSendDetailDTOs")
     public QuerySendDetailsResponseBodySmsSendDetailDTOs smsSendDetailDTOs;
 
@@ -96,84 +93,27 @@ public class QuerySendDetailsResponseBody extends TeaModel {
     }
 
     public static class QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO extends TeaModel {
-        /**
-         * <p>The content of the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>【Aliyun】This is a test message.</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The status code returned by the carrier.</p>
-         * <ul>
-         * <li>If the message is delivered, &quot;DELIVERED&quot; is returned.</li>
-         * <li>For information about the error codes that may be returned if the message is not delivered, see <a href="https://help.aliyun.com/document_detail/101347.html">error codes</a>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>DELIVERED</p>
-         */
         @NameInMap("ErrCode")
         public String errCode;
 
-        /**
-         * <p>The extended field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("OutId")
         public String outId;
 
-        /**
-         * <p>The mobile numbers of the recipients.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1390000****</p>
-         */
         @NameInMap("PhoneNum")
         public String phoneNum;
 
-        /**
-         * <p>The date and time when the message was received.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-01-08 16:44:13</p>
-         */
         @NameInMap("ReceiveDate")
         public String receiveDate;
 
-        /**
-         * <p>The date and time when the message was sent.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-01-08 16:44:10</p>
-         */
         @NameInMap("SendDate")
         public String sendDate;
 
-        /**
-         * <p>The delivery status of the message. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: The message has not received a delivery receipt yet.</li>
-         * <li><strong>2</strong>: The message failed to be delivered.</li>
-         * <li><strong>3</strong>: The message was delivered.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("SendStatus")
         public Long sendStatus;
 
-        /**
-         * <p>The ID of the message template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SMS_12231****</p>
-         */
         @NameInMap("TemplateCode")
         public String templateCode;
 

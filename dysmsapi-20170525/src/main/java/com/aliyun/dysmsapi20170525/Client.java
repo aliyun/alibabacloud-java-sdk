@@ -454,7 +454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 2,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether a mobile phone number can receive card messages.</p>
+     * <p>Queries whether some mobile phone numbers support card messages.</p>
      * 
      * @param request CheckMobilesCardSupportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -494,7 +494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 2,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether a mobile phone number can receive card messages.</p>
+     * <p>Queries whether some mobile phone numbers support card messages.</p>
      * 
      * @param request CheckMobilesCardSupportRequest
      * @return CheckMobilesCardSupportResponse
@@ -646,7 +646,173 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建短链</p>
+     * <p>数字短信签名操作订单</p>
+     * 
+     * @param tmpReq CreateDigitalSignOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDigitalSignOrderResponse
+     */
+    public CreateDigitalSignOrderResponse createDigitalSignOrderWithOptions(CreateDigitalSignOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDigitalSignOrderShrinkRequest request = new CreateDigitalSignOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.orderContext)) {
+            request.orderContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.orderContext, "OrderContext", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extendMessage)) {
+            query.put("ExtendMessage", request.extendMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderContextShrink)) {
+            query.put("OrderContext", request.orderContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualificationId)) {
+            query.put("QualificationId", request.qualificationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualificationVersion)) {
+            query.put("QualificationVersion", request.qualificationVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signId)) {
+            query.put("SignId", request.signId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signIndustry)) {
+            query.put("SignIndustry", request.signIndustry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signSource)) {
+            query.put("SignSource", request.signSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.submitter)) {
+            query.put("Submitter", request.submitter);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDigitalSignOrder"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDigitalSignOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>数字短信签名操作订单</p>
+     * 
+     * @param request CreateDigitalSignOrderRequest
+     * @return CreateDigitalSignOrderResponse
+     */
+    public CreateDigitalSignOrderResponse createDigitalSignOrder(CreateDigitalSignOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDigitalSignOrderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数字短信模板</p>
+     * 
+     * @param request CreateDigitalSmsTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDigitalSmsTemplateResponse
+     */
+    public CreateDigitalSmsTemplateResponse createDigitalSmsTemplateWithOptions(CreateDigitalSmsTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateContents)) {
+            query.put("TemplateContents", request.templateContents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDigitalSmsTemplate"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDigitalSmsTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数字短信模板</p>
+     * 
+     * @param request CreateDigitalSmsTemplateRequest
+     * @return CreateDigitalSmsTemplateResponse
+     */
+    public CreateDigitalSmsTemplateResponse createDigitalSmsTemplate(CreateDigitalSmsTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDigitalSmsTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates personalized short URLs. You can specify multiple mobile numbers and source URLs in the request. The operation returns the short URLs corresponding to the specified mobile numbers. You can obtain the click information of end users based on different short URLs. The click information helps you realize secondary marketing. QPS limit You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request CreateSmartShortUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -698,7 +864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建短链</p>
+     * <p>Creates personalized short URLs. You can specify multiple mobile numbers and source URLs in the request. The operation returns the short URLs corresponding to the specified mobile numbers. You can obtain the click information of end users based on different short URLs. The click information helps you realize secondary marketing. QPS limit You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request CreateSmartShortUrlRequest
      * @return CreateSmartShortUrlResponse
@@ -2598,6 +2764,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取数字短信签名通过签名name</p>
+     * 
+     * @param request QueryDigitalSignByNameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryDigitalSignByNameResponse
+     */
+    public QueryDigitalSignByNameResponse queryDigitalSignByNameWithOptions(QueryDigitalSignByNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryDigitalSignByName"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDigitalSignByNameResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数字短信签名通过签名name</p>
+     * 
+     * @param request QueryDigitalSignByNameRequest
+     * @return QueryDigitalSignByNameResponse
+     */
+    public QueryDigitalSignByNameResponse queryDigitalSignByName(QueryDigitalSignByNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryDigitalSignByNameWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询验证码签名</p>
      * 
      * @param request QueryExtCodeSignRequest
@@ -2666,7 +2888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether a mobile phone number can receive card messages.</p>
+     * <p>Queries whether some mobile phone numbers support card messages.</p>
      * 
      * @param tmpReq QueryMobilesCardSupportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2712,7 +2934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether a mobile phone number can receive card messages.</p>
+     * <p>Queries whether some mobile phone numbers support card messages.</p>
      * 
      * @param request QueryMobilesCardSupportRequest
      * @return QueryMobilesCardSupportResponse
@@ -2724,7 +2946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>点击明细查询</p>
+     * <p>Queries the information about clicks within a specific time range or related to a mobile number. QPS limit You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request QueryPageSmartShortUrlLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2788,7 +3010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>点击明细查询</p>
+     * <p>Queries the information about clicks within a specific time range or related to a mobile number. QPS limit You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request QueryPageSmartShortUrlLogRequest
      * @return QueryPageSmartShortUrlLogResponse

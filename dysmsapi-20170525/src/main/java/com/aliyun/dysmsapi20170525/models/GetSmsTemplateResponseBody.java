@@ -41,9 +41,6 @@ public class GetSmsTemplateResponseBody extends TeaModel {
     @NameInMap("CreateDate")
     public String createDate;
 
-    /**
-     * <p>File information, compatible with signatures created by the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-addsmstemplate?spm">AddSmsSign</a> API.</p>
-     */
     @NameInMap("FileUrlList")
     public GetSmsTemplateResponseBodyFileUrlList fileUrlList;
 
@@ -70,9 +67,6 @@ public class GetSmsTemplateResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Additional documentation information, supplementing uploaded business proof files or operational screenshots file list.</p>
-     */
     @NameInMap("MoreDataFileUrlList")
     public GetSmsTemplateResponseBodyMoreDataFileUrlList moreDataFileUrlList;
 
