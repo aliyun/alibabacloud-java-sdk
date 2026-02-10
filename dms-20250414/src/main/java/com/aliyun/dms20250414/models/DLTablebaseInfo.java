@@ -4,57 +4,121 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DLTablebaseInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>hive</p>
+     */
     @NameInMap("CatalogName")
     public String catalogName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1608707407</p>
+     */
     @NameInMap("CreateTime")
     public Integer createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>141****</p>
+     */
     @NameInMap("CreatorId")
     public Long creatorId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("DbId")
     public Long dbId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;table&quot;</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1731586286</p>
+     */
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://xxx</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1731585286</p>
+     */
     @NameInMap("ModifierId")
     public Long modifierId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100g_customer</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
     @NameInMap("OwnerType")
     public String ownerType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;EXTERNAL&quot;: &quot;TRUE&quot;</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
     @NameInMap("PartitionKeys")
     public java.util.List<DLColumn> partitionKeys;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30000</p>
+     */
     @NameInMap("Retention")
     public Integer retention;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EXTERNAL_TABLE</p>
+     */
     @NameInMap("TableType")
     public String tableType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ViewExpandedText")
     public String viewExpandedText;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ViewOriginalText")
     public String viewOriginalText;
 

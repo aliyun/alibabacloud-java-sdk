@@ -104,6 +104,12 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("EnableSearch")
         public Boolean enableSearch;
 
+        @NameInMap("EncryptKey")
+        public String encryptKey;
+
+        @NameInMap("EncryptType")
+        public String encryptType;
+
         /**
          * <strong>example:</strong>
          * <p>CHINESE</p>
@@ -120,6 +126,12 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
          */
         @NameInMap("Mode")
         public String mode;
+
+        @NameInMap("ReportPageWidth")
+        public Long reportPageWidth;
+
+        @NameInMap("ReportWaterMark")
+        public String reportWaterMark;
 
         @NameInMap("UserOssBucket")
         public String userOssBucket;
@@ -153,6 +165,22 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             return this.enableSearch;
         }
 
+        public CreateDataAgentSessionResponseBodyDataSessionConfig setEncryptKey(String encryptKey) {
+            this.encryptKey = encryptKey;
+            return this;
+        }
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
+        public CreateDataAgentSessionResponseBodyDataSessionConfig setEncryptType(String encryptType) {
+            this.encryptType = encryptType;
+            return this;
+        }
+        public String getEncryptType() {
+            return this.encryptType;
+        }
+
         public CreateDataAgentSessionResponseBodyDataSessionConfig setLanguage(String language) {
             this.language = language;
             return this;
@@ -175,6 +203,22 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         }
         public String getMode() {
             return this.mode;
+        }
+
+        public CreateDataAgentSessionResponseBodyDataSessionConfig setReportPageWidth(Long reportPageWidth) {
+            this.reportPageWidth = reportPageWidth;
+            return this;
+        }
+        public Long getReportPageWidth() {
+            return this.reportPageWidth;
+        }
+
+        public CreateDataAgentSessionResponseBodyDataSessionConfig setReportWaterMark(String reportWaterMark) {
+            this.reportWaterMark = reportWaterMark;
+            return this;
+        }
+        public String getReportWaterMark() {
+            return this.reportWaterMark;
         }
 
         public CreateDataAgentSessionResponseBodyDataSessionConfig setUserOssBucket(String userOssBucket) {

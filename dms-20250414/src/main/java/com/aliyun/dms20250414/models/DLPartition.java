@@ -4,15 +4,31 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DLPartition extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>hive</p>
+     */
     @NameInMap("CatalogName")
     public String catalogName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1735109884</p>
+     */
     @NameInMap("CreateTime")
     public Integer createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1608707407</p>
+     */
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 
@@ -22,6 +38,10 @@ public class DLPartition extends TeaModel {
     @NameInMap("Sd")
     public DLStorageDescriptor sd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table_name</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

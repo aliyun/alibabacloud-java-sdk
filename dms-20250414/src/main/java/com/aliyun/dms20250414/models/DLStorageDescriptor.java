@@ -10,24 +10,48 @@ public class DLStorageDescriptor extends TeaModel {
     @NameInMap("Columns")
     public java.util.List<DLColumn> columns;
 
+    /**
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.mapred.SequenceFileInputFormat</p>
+     */
     @NameInMap("InputFormat")
     public String inputFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsCompressed")
     public Boolean isCompressed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://xxx</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("NumBuckets")
     public Integer numBuckets;
 
     @NameInMap("OriginalColumns")
     public java.util.List<DLColumn> originalColumns;
 
+    /**
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat</p>
+     */
     @NameInMap("OutputFormat")
     public String outputFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key/value</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 

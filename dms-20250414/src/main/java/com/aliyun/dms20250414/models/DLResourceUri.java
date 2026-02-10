@@ -4,9 +4,17 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DLResourceUri extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>JAR</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hdfs://name****.example.com:8020/user/hive/udfs/my_***.jar</p>
+     */
     @NameInMap("Uri")
     public String uri;
 

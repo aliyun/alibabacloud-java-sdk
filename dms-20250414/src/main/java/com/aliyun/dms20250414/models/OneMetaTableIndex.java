@@ -16,6 +16,15 @@ public class OneMetaTableIndex extends TeaModel {
     @NameInMap("IndexType")
     public String indexType;
 
+    @NameInMap("Primary")
+    public Boolean primary;
+
+    @NameInMap("RealColumnNames")
+    public java.util.List<String> realColumnNames;
+
+    @NameInMap("Unique")
+    public Boolean unique;
+
     public static OneMetaTableIndex build(java.util.Map<String, ?> map) throws Exception {
         OneMetaTableIndex self = new OneMetaTableIndex();
         return TeaModel.build(map, self);
@@ -51,6 +60,30 @@ public class OneMetaTableIndex extends TeaModel {
     }
     public String getIndexType() {
         return this.indexType;
+    }
+
+    public OneMetaTableIndex setPrimary(Boolean primary) {
+        this.primary = primary;
+        return this;
+    }
+    public Boolean getPrimary() {
+        return this.primary;
+    }
+
+    public OneMetaTableIndex setRealColumnNames(java.util.List<String> realColumnNames) {
+        this.realColumnNames = realColumnNames;
+        return this;
+    }
+    public java.util.List<String> getRealColumnNames() {
+        return this.realColumnNames;
+    }
+
+    public OneMetaTableIndex setUnique(Boolean unique) {
+        this.unique = unique;
+        return this;
+    }
+    public Boolean getUnique() {
+        return this.unique;
     }
 
 }

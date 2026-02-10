@@ -4,12 +4,24 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DLColumn extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>from deserializer</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>col</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>string</p>
+     */
     @NameInMap("Type")
     public String type;
 

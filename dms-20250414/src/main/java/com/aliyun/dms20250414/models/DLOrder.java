@@ -4,9 +4,17 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DLOrder extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>col1</p>
+     */
     @NameInMap("Col")
     public String col;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Order")
     public Integer order;
 

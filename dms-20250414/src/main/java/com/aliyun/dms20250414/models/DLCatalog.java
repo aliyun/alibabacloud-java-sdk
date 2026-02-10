@@ -4,12 +4,24 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DLCatalog extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>init default catalog</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://xxxx</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hive</p>
+     */
     @NameInMap("Name")
     public String name;
 

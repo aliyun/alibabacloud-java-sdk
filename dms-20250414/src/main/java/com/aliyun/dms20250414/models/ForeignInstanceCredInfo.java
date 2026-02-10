@@ -4,9 +4,18 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ForeignInstanceCredInfo extends TeaModel {
+    /**
+     * <p>The information about the credential.</p>
+     */
     @NameInMap("CredInfo")
     public java.util.Map<String, String> credInfo;
 
+    /**
+     * <p>The type of the credential. Set the value to DEFAULT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT</p>
+     */
     @NameInMap("CredType")
     public String credType;
 

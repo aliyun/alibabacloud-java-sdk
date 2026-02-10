@@ -98,6 +98,12 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         @NameInMap("EnableSearch")
         public Boolean enableSearch;
 
+        @NameInMap("EncryptKey")
+        public String encryptKey;
+
+        @NameInMap("EncryptType")
+        public String encryptType;
+
         /**
          * <strong>example:</strong>
          * <p>CHINESE</p>
@@ -114,6 +120,12 @@ public class CreateDataAgentSessionRequest extends TeaModel {
          */
         @NameInMap("Mode")
         public String mode;
+
+        @NameInMap("ReportPageWidth")
+        public Long reportPageWidth;
+
+        @NameInMap("ReportWaterMark")
+        public String reportWaterMark;
 
         @NameInMap("UserOssBucket")
         public String userOssBucket;
@@ -147,6 +159,22 @@ public class CreateDataAgentSessionRequest extends TeaModel {
             return this.enableSearch;
         }
 
+        public CreateDataAgentSessionRequestSessionConfig setEncryptKey(String encryptKey) {
+            this.encryptKey = encryptKey;
+            return this;
+        }
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
+        public CreateDataAgentSessionRequestSessionConfig setEncryptType(String encryptType) {
+            this.encryptType = encryptType;
+            return this;
+        }
+        public String getEncryptType() {
+            return this.encryptType;
+        }
+
         public CreateDataAgentSessionRequestSessionConfig setLanguage(String language) {
             this.language = language;
             return this;
@@ -169,6 +197,22 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         }
         public String getMode() {
             return this.mode;
+        }
+
+        public CreateDataAgentSessionRequestSessionConfig setReportPageWidth(Long reportPageWidth) {
+            this.reportPageWidth = reportPageWidth;
+            return this;
+        }
+        public Long getReportPageWidth() {
+            return this.reportPageWidth;
+        }
+
+        public CreateDataAgentSessionRequestSessionConfig setReportWaterMark(String reportWaterMark) {
+            this.reportWaterMark = reportWaterMark;
+            return this;
+        }
+        public String getReportWaterMark() {
+            return this.reportWaterMark;
         }
 
         public CreateDataAgentSessionRequestSessionConfig setUserOssBucket(String userOssBucket) {

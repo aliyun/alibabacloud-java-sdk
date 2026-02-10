@@ -4,30 +4,66 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DLTableInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1731586286</p>
+     */
     @NameInMap("CreateTime")
     public Integer createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8****</p>
+     */
     @NameInMap("CreatorId")
     public Long creatorId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1608707407</p>
+     */
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://xxx</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1410769</p>
+     */
     @NameInMap("ModifierId")
     public Long modifierId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100g_customer</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zhangsan</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USER</p>
+     */
     @NameInMap("OwnerType")
     public String ownerType;
 
@@ -37,18 +73,34 @@ public class DLTableInput extends TeaModel {
     @NameInMap("PartitionKeys")
     public java.util.List<DLColumn> partitionKeys;
 
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("Retention")
     public Integer retention;
 
     @NameInMap("StorageDescriptor")
     public DLStorageDescriptor storageDescriptor;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EXTERNAL_TABLE</p>
+     */
     @NameInMap("TableType")
     public String tableType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ViewExpandedText")
     public String viewExpandedText;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ViewOriginalText")
     public String viewOriginalText;
 

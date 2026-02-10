@@ -4,24 +4,54 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DLSerdeInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;serialize&quot;</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.hive.serde2.OpenCSVSerde</p>
+     */
     @NameInMap("DeserializerClass")
     public String deserializerClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;serialization.format&quot;: &quot;1&quot;
+     * }</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SerdeType")
     public Integer serdeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</p>
+     */
     @NameInMap("SerializationLib")
     public String serializationLib;
 
+    /**
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</p>
+     */
     @NameInMap("SerializerClass")
     public String serializerClass;
 

@@ -4,9 +4,17 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DLPartitionInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1735109884</p>
+     */
     @NameInMap("CreateTime")
     public Integer createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1735109884</p>
+     */
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 

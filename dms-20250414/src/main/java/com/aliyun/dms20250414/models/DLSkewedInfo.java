@@ -7,6 +7,10 @@ public class DLSkewedInfo extends TeaModel {
     @NameInMap("SkewedColNames")
     public java.util.List<String> skewedColNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{“col1”:&quot;val1&quot;}</p>
+     */
     @NameInMap("SkewedColValueLocationMaps")
     public java.util.Map<String, ?> skewedColValueLocationMaps;
 
