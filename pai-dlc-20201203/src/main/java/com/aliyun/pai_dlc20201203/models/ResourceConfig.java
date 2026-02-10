@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResourceConfig extends TeaModel {
     /**
+     * <p>The number of vCPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ResourceConfig extends TeaModel {
     public String CPU;
 
     /**
+     * <p>The number of GPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -19,6 +23,8 @@ public class ResourceConfig extends TeaModel {
     public String GPU;
 
     /**
+     * <p>The GPU type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Tesla-V100-16G</p>
      */
@@ -26,6 +32,8 @@ public class ResourceConfig extends TeaModel {
     public String GPUType;
 
     /**
+     * <p>The memory size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10Gi</p>
      */
@@ -33,6 +41,8 @@ public class ResourceConfig extends TeaModel {
     public String memory;
 
     /**
+     * <p>The shared memory capacity.</p>
+     * 
      * <strong>example:</strong>
      * <p>5Gi</p>
      */

@@ -4,12 +4,20 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DataJuicerConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>config</p>
+     */
     @NameInMap("CommandType")
     public String commandType;
 
     @NameInMap("EnableResourceEstimation")
     public Boolean enableResourceEstimation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>standalone</p>
+     */
     @NameInMap("ExecutionMode")
     public String executionMode;
 

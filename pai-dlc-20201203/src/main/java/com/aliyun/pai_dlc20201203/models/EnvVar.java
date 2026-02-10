@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnvVar extends TeaModel {
     /**
+     * <p>The name of the environment variable.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENABLE_DEBUG</p>
      */
@@ -12,6 +14,8 @@ public class EnvVar extends TeaModel {
     public String name;
 
     /**
+     * <p>The value of the environment variable.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

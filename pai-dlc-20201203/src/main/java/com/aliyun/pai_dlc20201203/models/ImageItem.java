@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ImageItem extends TeaModel {
     /**
+     * <p>The type of the image accelerator. Valid values:</p>
+     * <ul>
+     * <li>cpu</li>
+     * <li>gpu</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>gpu</p>
      */
@@ -12,6 +18,8 @@ public class ImageItem extends TeaModel {
     public String acceleratorType;
 
     /**
+     * <p>The creator of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>ken</p>
      */
@@ -19,6 +27,12 @@ public class ImageItem extends TeaModel {
     public String authorId;
 
     /**
+     * <p>The computing framework that is encapsulated by the image. Valid values:</p>
+     * <ul>
+     * <li>TFJob</li>
+     * <li>PyTorchJob</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PyTorchJob</p>
      */
@@ -26,6 +40,12 @@ public class ImageItem extends TeaModel {
     public String framework;
 
     /**
+     * <p>The image type. Valid values:</p>
+     * <ul>
+     * <li>Community</li>
+     * <li>PAI</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Community</p>
      */
@@ -33,6 +53,8 @@ public class ImageItem extends TeaModel {
     public String imageProviderType;
 
     /**
+     * <p>The tag of the docker image.</p>
+     * 
      * <strong>example:</strong>
      * <p>tensorflow-training:2.3-cpu-py36-ubuntu18.04</p>
      */
@@ -40,6 +62,8 @@ public class ImageItem extends TeaModel {
     public String imageTag;
 
     /**
+     * <p>The image URL address.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry.cn-beijing.aliyuncs.com/pai-dlc/tensorflow-training:2.3-cpu-py36-ubuntu18.04</p>
      */
@@ -47,6 +71,8 @@ public class ImageItem extends TeaModel {
     public String imageUrl;
 
     /**
+     * <p>The VPC endpoint of the image URL. This address provides faster access speed.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry-vpc.cn-beijing.aliyuncs.com/pai-dlc/tensorflow-training:2.3-cpu-py36-ubuntu18.04</p>
      */

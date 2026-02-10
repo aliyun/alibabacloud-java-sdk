@@ -4,23 +4,41 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ExtraPodSpec extends TeaModel {
+    /**
+     * <p>The containers to be initialized.</p>
+     */
     @NameInMap("InitContainers")
     public java.util.List<ContainerSpec> initContainers;
 
+    /**
+     * <p>The lifecycle object.</p>
+     */
     @NameInMap("Lifecycle")
     public Lifecycle lifecycle;
 
+    /**
+     * <p>The pod annotations.</p>
+     */
     @NameInMap("PodAnnotations")
     @Deprecated
     public java.util.Map<String, String> podAnnotations;
 
+    /**
+     * <p>The pod labels.</p>
+     */
     @NameInMap("PodLabels")
     @Deprecated
     public java.util.Map<String, String> podLabels;
 
+    /**
+     * <p>The local paths shared between containers.</p>
+     */
     @NameInMap("SharedVolumeMountPaths")
     public java.util.List<String> sharedVolumeMountPaths;
 
+    /**
+     * <p>The sidecar containers.</p>
+     */
     @NameInMap("SideCarContainers")
     public java.util.List<ContainerSpec> sideCarContainers;
 

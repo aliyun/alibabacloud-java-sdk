@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DataSourceItem extends TeaModel {
     /**
+     * <p>The data source ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>data-20210114104214-vf9lowjt3pso</p>
+     * <p>data-20210114104214-xxxxxxx</p>
      */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
     /**
+     * <p>The data source type. Only File Storage NAS (NAS) file systems are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>nas</p>
      */
@@ -19,6 +23,8 @@ public class DataSourceItem extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>The data source description.</p>
+     * 
      * <strong>example:</strong>
      * <p>data source of dlc examples</p>
      */
@@ -26,6 +32,8 @@ public class DataSourceItem extends TeaModel {
     public String description;
 
     /**
+     * <p>The data source name.</p>
+     * 
      * <strong>example:</strong>
      * <p>nas-data</p>
      */
@@ -33,6 +41,8 @@ public class DataSourceItem extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The endpoint of the Alibaba Cloud OSS file system.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-cn-beijing-internal.aliyuncs.com</p>
      */
@@ -40,6 +50,8 @@ public class DataSourceItem extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>The ID of the NAS file system. For more information, see <a href="https://help.aliyun.com/document_detail/185212.html">Alibaba Cloud documentation</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ca404****</p>
      */
@@ -47,6 +59,8 @@ public class DataSourceItem extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The time when the data source was created. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:00Z</p>
      */
@@ -54,6 +68,8 @@ public class DataSourceItem extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the data source was last modified. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:00Z</p>
      */
@@ -61,6 +77,8 @@ public class DataSourceItem extends TeaModel {
     public String gmtModifyTime;
 
     /**
+     * <p>The local path of the container that is attached to the runtime of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/data/</p>
      */
@@ -68,6 +86,8 @@ public class DataSourceItem extends TeaModel {
     public String mountPath;
 
     /**
+     * <p>The configuration options of the Alibaba Cloud OSS file system.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;: &quot;value&quot;}</p>
      */
@@ -75,6 +95,8 @@ public class DataSourceItem extends TeaModel {
     public String options;
 
     /**
+     * <p>The path of the Alibaba Cloud Object Storage Service (OSS) file system.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://mybucket/path/to/dir</p>
      */
@@ -82,6 +104,8 @@ public class DataSourceItem extends TeaModel {
     public String path;
 
     /**
+     * <p>The ID of the Alibaba Cloud account that creates the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */

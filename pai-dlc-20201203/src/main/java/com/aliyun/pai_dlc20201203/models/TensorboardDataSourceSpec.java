@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TensorboardDataSourceSpec extends TeaModel {
     /**
+     * <p>The file type that corresponds to the URI in the dataset configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */
@@ -12,6 +14,8 @@ public class TensorboardDataSourceSpec extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>The directory prefix of the dataset in the TensorBoard task.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlcJobName</p>
      */
@@ -19,6 +23,8 @@ public class TensorboardDataSourceSpec extends TeaModel {
     public String directoryName;
 
     /**
+     * <p>The full summary path.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://xxxxx/tensorboard/run1</p>
      */
@@ -26,6 +32,8 @@ public class TensorboardDataSourceSpec extends TeaModel {
     public String fullSummaryPath;
 
     /**
+     * <p>The ID of the dataset configurations. In most cases, the ID of the dataset configurations is the ID of a dataset or task.</p>
+     * 
      * <strong>example:</strong>
      * <p>d-vf2fdhxxxxxx</p>
      */
@@ -33,6 +41,8 @@ public class TensorboardDataSourceSpec extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the dataset configurations. In most cases, the name of the dataset configurations is the name of a dataset or task.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlcJobName</p>
      */
@@ -40,6 +50,12 @@ public class TensorboardDataSourceSpec extends TeaModel {
     public String name;
 
     /**
+     * <p>The dataset type.</p>
+     * <ul>
+     * <li>datasource: configure a dataset based on the dataset type.</li>
+     * <li>dlcjob: configure a dataset based on the task type.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>datasource</p>
      */
@@ -47,6 +63,8 @@ public class TensorboardDataSourceSpec extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>The summary path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/tensorboard/run1</p>
      */
@@ -54,6 +72,8 @@ public class TensorboardDataSourceSpec extends TeaModel {
     public String summaryPath;
 
     /**
+     * <p>The file system URI in the dataset configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://.oss-cn-shanghai-finance-1.aliyuncs.com/</p>
      */

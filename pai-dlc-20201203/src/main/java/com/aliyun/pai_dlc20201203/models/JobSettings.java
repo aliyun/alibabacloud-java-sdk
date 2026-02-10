@@ -4,20 +4,33 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobSettings extends TeaModel {
+    /**
+     * <p>The additional advanced parameter configurations.</p>
+     */
     @NameInMap("AdvancedSettings")
     public java.util.Map<String, ?> advancedSettings;
 
+    /**
+     * <p>Whether to mount all RDMA network interface controllers</p>
+     */
     @NameInMap("AllocateAllRDMADevices")
     public Boolean allocateAllRDMADevices;
 
+    @NameInMap("AllowUnschedulableNodes")
+    public Boolean allowUnschedulableNodes;
+
     /**
+     * <p>The ID of the user associated with the job.</p>
+     * 
      * <strong>example:</strong>
-     * <p>166924</p>
+     * <p>16****</p>
      */
     @NameInMap("BusinessUserId")
     public String businessUserId;
 
     /**
+     * <p>The caller.</p>
+     * 
      * <strong>example:</strong>
      * <p>SilkFlow</p>
      */
@@ -28,6 +41,12 @@ public class JobSettings extends TeaModel {
     public DataJuicerConfig dataJuicerConfig;
 
     /**
+     * <p>Whether inventory check is skipped. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -35,6 +54,8 @@ public class JobSettings extends TeaModel {
     public Boolean disableEcsStockCheck;
 
     /**
+     * <p>The NVIDIA driver configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>535.54.03</p>
      */
@@ -42,6 +63,8 @@ public class JobSettings extends TeaModel {
     public String driver;
 
     /**
+     * <p>Whether the CPU affinity is enabled. This parameter takes effect only when you use subscription general computing resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +75,12 @@ public class JobSettings extends TeaModel {
     public Boolean enableDSWDev;
 
     /**
+     * <p>Whether fault tolerance monitoring is enabled for the job. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -59,6 +88,12 @@ public class JobSettings extends TeaModel {
     public Boolean enableErrorMonitoringInAIMaster;
 
     /**
+     * <p>Whether data is written to Object Storage Service (OSS) in append mode. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -66,6 +101,12 @@ public class JobSettings extends TeaModel {
     public Boolean enableOssAppend;
 
     /**
+     * <p>Whether RDMA is enabled for the job. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -73,6 +114,12 @@ public class JobSettings extends TeaModel {
     public Boolean enableRDMA;
 
     /**
+     * <p>Whether sanity check is enabled for the job. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -80,6 +127,12 @@ public class JobSettings extends TeaModel {
     public Boolean enableSanityCheck;
 
     /**
+     * <p>Whether tidal resources are allowed for the job. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +140,8 @@ public class JobSettings extends TeaModel {
     public Boolean enableTideResource;
 
     /**
+     * <p>The configuration parameters after you enable fault tolerance monitoring. For example, you can specify whether to enable log hang-based detection.</p>
+     * 
      * <strong>example:</strong>
      * <p>--enable-log-hang-detection true</p>
      */
@@ -94,6 +149,8 @@ public class JobSettings extends TeaModel {
     public String errorMonitoringArgs;
 
     /**
+     * <p>The retention period after the job ends. Unit: minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -101,6 +158,8 @@ public class JobSettings extends TeaModel {
     public Integer jobReservedMinutes;
 
     /**
+     * <p>The retention policy after the job ends.</p>
+     * 
      * <strong>example:</strong>
      * <p>Always</p>
      */
@@ -111,6 +170,8 @@ public class JobSettings extends TeaModel {
     public ModelConfig modelConfig;
 
     /**
+     * <p>Whether the job accepts oversold resources. Valid values: ForbiddenQuotaOverSold, AcceptQuotaOverSold, and ForceQuotaOverSold.</p>
+     * 
      * <strong>example:</strong>
      * <p>AcceptQuotaOverSold</p>
      */
@@ -118,6 +179,8 @@ public class JobSettings extends TeaModel {
     public String oversoldType;
 
     /**
+     * <p>The pipeline ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pid-123456</p>
      */
@@ -125,12 +188,17 @@ public class JobSettings extends TeaModel {
     public String pipelineId;
 
     /**
+     * <p>The configuration parameters for sanity check.</p>
+     * 
      * <strong>example:</strong>
-     * <p>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFai</p>
+     * <p>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFail</p>
      */
     @NameInMap("SanityCheckArgs")
     public String sanityCheckArgs;
 
+    /**
+     * <p>The custom tag.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
 
@@ -153,6 +221,14 @@ public class JobSettings extends TeaModel {
     }
     public Boolean getAllocateAllRDMADevices() {
         return this.allocateAllRDMADevices;
+    }
+
+    public JobSettings setAllowUnschedulableNodes(Boolean allowUnschedulableNodes) {
+        this.allowUnschedulableNodes = allowUnschedulableNodes;
+        return this;
+    }
+    public Boolean getAllowUnschedulableNodes() {
+        return this.allowUnschedulableNodes;
     }
 
     public JobSettings setBusinessUserId(String businessUserId) {

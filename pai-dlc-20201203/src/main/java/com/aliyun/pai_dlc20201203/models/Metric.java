@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Metric extends TeaModel {
     /**
+     * <p>The timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1616987726587</p>
      */
@@ -12,6 +14,8 @@ public class Metric extends TeaModel {
     public Long time;
 
     /**
+     * <p>The value of the monitoring data.</p>
+     * 
      * <strong>example:</strong>
      * <p>23.45</p>
      */

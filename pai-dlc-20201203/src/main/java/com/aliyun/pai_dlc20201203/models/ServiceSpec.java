@@ -4,12 +4,20 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ServiceSpec extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
     @NameInMap("DefaultPort")
     public Integer defaultPort;
 
     @NameInMap("ExtraPorts")
     public java.util.List<Integer> extraPorts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PerRole</p>
+     */
     @NameInMap("ServiceMode")
     public String serviceMode;
 

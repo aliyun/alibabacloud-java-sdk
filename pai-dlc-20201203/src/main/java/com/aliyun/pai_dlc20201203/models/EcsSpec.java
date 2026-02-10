@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class EcsSpec extends TeaModel {
     /**
+     * <p>The accelerator type. Valid values:</p>
+     * <ul>
+     * <li>CPU</li>
+     * <li>GPU</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GPU</p>
      */
@@ -12,6 +18,8 @@ public class EcsSpec extends TeaModel {
     public String acceleratorType;
 
     /**
+     * <p>The number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -19,6 +27,8 @@ public class EcsSpec extends TeaModel {
     public Integer cpu;
 
     /**
+     * <p>The default GPU driver version.</p>
+     * 
      * <strong>example:</strong>
      * <p>470.199.02</p>
      */
@@ -26,6 +36,8 @@ public class EcsSpec extends TeaModel {
     public String defaultGPUDriver;
 
     /**
+     * <p>The number of GPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +45,8 @@ public class EcsSpec extends TeaModel {
     public Integer gpu;
 
     /**
+     * <p>The GPU memory size.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -40,6 +54,8 @@ public class EcsSpec extends TeaModel {
     public Integer gpuMemory;
 
     /**
+     * <p>The GPU type.</p>
+     * 
      * <strong>example:</strong>
      * <p>NVIDIA v100</p>
      */
@@ -47,6 +63,8 @@ public class EcsSpec extends TeaModel {
     public String gpuType;
 
     /**
+     * <p>The instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.gn6e-c12g1.3xlarge</p>
      */
@@ -54,6 +72,12 @@ public class EcsSpec extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>Indicates whether the instance type is available. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -61,6 +85,8 @@ public class EcsSpec extends TeaModel {
     public Boolean isAvailable;
 
     /**
+     * <p>The memory size. Unit: MiB or GiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>92</p>
      */
@@ -68,16 +94,27 @@ public class EcsSpec extends TeaModel {
     public Integer memory;
 
     /**
+     * <p>The discount on the current price of the preemptible instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.1</p>
      */
     @NameInMap("NonProtectSpotDiscount")
     public Float nonProtectSpotDiscount;
 
+    /**
+     * <p>The billing methods.</p>
+     */
     @NameInMap("PaymentTypes")
     public java.util.List<String> paymentTypes;
 
     /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li>ECS</li>
+     * <li>Lingjun</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
@@ -85,12 +122,17 @@ public class EcsSpec extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The inventory status of preemptible instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>WithStock</p>
      */
     @NameInMap("SpotStockStatus")
     public String spotStockStatus;
 
+    /**
+     * <p>The GPU driver versions.</p>
+     */
     @NameInMap("SupportedGPUDrivers")
     public java.util.List<String> supportedGPUDrivers;
 

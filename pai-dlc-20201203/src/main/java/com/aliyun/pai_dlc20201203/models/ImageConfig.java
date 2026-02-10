@@ -4,19 +4,36 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ImageConfig extends TeaModel {
+    /**
+     * <p>The authentication information of the image repository.</p>
+     */
     @NameInMap("Auth")
     public String auth;
 
     /**
+     * <p>The address of the image repository.</p>
+     * 
      * <strong>example:</strong>
-     * <p>registry.cn-hangzhou.aliyuncs.com</p>
+     * <p>docker****registry.com</p>
      */
     @NameInMap("DockerRegistry")
     public String dockerRegistry;
 
+    /**
+     * <p>The password that is used to log on to the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>password</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The username that is used to log on to the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username</p>
+     */
     @NameInMap("Username")
     public String username;
 

@@ -4,12 +4,17 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class PodMetric extends TeaModel {
+    /**
+     * <p>The metrics list.</p>
+     */
     @NameInMap("Metrics")
     public java.util.List<Metric> metrics;
 
     /**
+     * <p>The node ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>dlc-20210329110128-746bf7cl47pr8-worker-0</p>
+     * <p>dlc-20210329110128-******-worker-0</p>
      */
     @NameInMap("PodId")
     public String podId;

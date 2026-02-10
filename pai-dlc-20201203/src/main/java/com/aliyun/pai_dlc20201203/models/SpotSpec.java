@@ -4,12 +4,33 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class SpotSpec extends TeaModel {
+    /**
+     * <p>The maximum discount. Specify only one of SpotDiscountLimit and SpotPriceLimit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.8</p>
+     */
     @NameInMap("SpotDiscountLimit")
     public Float spotDiscountLimit;
 
+    /**
+     * <p>The maximum price. Unit: CNY/minute. Specify only one of SpotDiscountLimit and SpotPriceLimit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.4744</p>
+     */
     @NameInMap("SpotPriceLimit")
     public Float spotPriceLimit;
 
+    /**
+     * <p>The spot policy. Valid values:</p>
+     * <ul>
+     * <li>SpotWithPriceLimit</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SpotWithPriceLimit</p>
+     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 

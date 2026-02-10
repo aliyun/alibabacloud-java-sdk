@@ -4,12 +4,30 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ResourceLimit extends TeaModel {
+    /**
+     * <p>The number of GPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CPU")
     public String CPU;
 
+    /**
+     * <p>The number of GPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("GPU")
     public String GPU;
 
+    /**
+     * <p>The memory capacity limit, in Gi.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10Gi</p>
+     */
     @NameInMap("Memory")
     public String memory;
 

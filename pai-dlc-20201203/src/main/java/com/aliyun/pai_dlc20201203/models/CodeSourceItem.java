@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CodeSourceItem extends TeaModel {
     /**
+     * <p>The branch of the code repository. If you configure this parameter when you call the CreateJob API operation, the branch is overwritten.</p>
+     * 
      * <strong>example:</strong>
      * <p>master</p>
      */
@@ -12,23 +14,35 @@ public class CodeSourceItem extends TeaModel {
     public String codeBranch;
 
     /**
+     * <p>The commit ID. If you configure this parameter when you call the CreateJob API operation, the commit is overwritten.</p>
+     * 
      * <strong>example:</strong>
-     * <p>44da1*******</p>
+     * <p>44da109b59f8596152987eaa8f3b2487bb72ea63</p>
      */
     @NameInMap("CodeCommit")
     public String codeCommit;
 
     /**
+     * <p>The URL of the code repository.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://code.aliyun.com/pai-dlc/examples.git">https://code.aliyun.com/pai-dlc/examples.git</a></p>
      */
     @NameInMap("CodeRepo")
     public String codeRepo;
 
+    /**
+     * <p>The access token used to access the code repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("CodeRepoAccessToken")
     public String codeRepoAccessToken;
 
     /**
+     * <p>The username used to access the private code repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>user</p>
      */
@@ -36,13 +50,17 @@ public class CodeSourceItem extends TeaModel {
     public String codeRepoUserName;
 
     /**
+     * <p>The ID of the code source.</p>
+     * 
      * <strong>example:</strong>
-     * <p>code-20210111103721-85qz*****</p>
+     * <p>code-20210111103721-********</p>
      */
     @NameInMap("CodeSourceId")
     public String codeSourceId;
 
     /**
+     * <p>The description of the code source.</p>
+     * 
      * <strong>example:</strong>
      * <p>code source of dlc examples</p>
      */
@@ -50,6 +68,8 @@ public class CodeSourceItem extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the code source.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyCodeSourceName1</p>
      */
@@ -57,6 +77,8 @@ public class CodeSourceItem extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The time when the code source was created. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-18T12:52:15Z</p>
      */
@@ -64,6 +86,8 @@ public class CodeSourceItem extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the code source was modified. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-18T12:52:15Z</p>
      */
@@ -71,8 +95,10 @@ public class CodeSourceItem extends TeaModel {
     public String gmtModifyTime;
 
     /**
+     * <p>The UID of the Alibaba Cloud user who creates the code source.</p>
+     * 
      * <strong>example:</strong>
-     * <p>115**********</p>
+     * <p>115729017166****</p>
      */
     @NameInMap("UserId")
     public String userId;

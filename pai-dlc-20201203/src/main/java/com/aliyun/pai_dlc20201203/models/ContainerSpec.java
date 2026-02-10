@@ -4,16 +4,27 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ContainerSpec extends TeaModel {
+    /**
+     * <p>The command parameters.</p>
+     */
     @NameInMap("Args")
     public java.util.List<String> args;
 
+    /**
+     * <p>The user command.</p>
+     */
     @NameInMap("Command")
     public java.util.List<String> command;
 
+    /**
+     * <p>The environment variables.</p>
+     */
     @NameInMap("Env")
     public java.util.List<EnvVar> env;
 
     /**
+     * <p>The endpoint of the container image.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry.cn-hangzhou.aliyuncs.com/pai-dlc/curl:v1.0.0</p>
      */
@@ -21,16 +32,23 @@ public class ContainerSpec extends TeaModel {
     public String image;
 
     /**
+     * <p>The name of the container.</p>
+     * 
      * <strong>example:</strong>
      * <p>data-init</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The container resources.</p>
+     */
     @NameInMap("Resources")
     public ResourceRequirements resources;
 
     /**
+     * <p>The working directory in the container.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root</p>
      */

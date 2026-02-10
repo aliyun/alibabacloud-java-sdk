@@ -5,25 +5,44 @@ import com.aliyun.tea.*;
 
 public class JobItem extends TeaModel {
     /**
+     * <p>The visibility of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>1316721349</strong></strong></p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The code source used by the job.</p>
+     */
     @NameInMap("CodeSource")
     public JobItemCodeSource codeSource;
 
+    /**
+     * <p>The credential configurations associated with the job.</p>
+     */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    /**
+     * <p>A list of all data sources used by the job.</p>
+     */
     @NameInMap("DataSources")
     public java.util.List<JobItemDataSources> dataSources;
 
     /**
+     * <p>The job name.</p>
+     * 
      * <strong>example:</strong>
      * <p>tf-mnist-test</p>
      */
@@ -31,16 +50,23 @@ public class JobItem extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The duration of the job. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3602</p>
      */
     @NameInMap("Duration")
     public Long duration;
 
+    /**
+     * <p>The elastic parameters of the job.</p>
+     */
     @NameInMap("ElasticSpec")
     public JobElasticSpec elasticSpec;
 
     /**
+     * <p>Indicates whether PreemptibleJob is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -48,16 +74,23 @@ public class JobItem extends TeaModel {
     public Boolean enablePreemptibleJob;
 
     /**
+     * <p>Indicates whether DeBugger is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("EnabledDebugger")
     public Boolean enabledDebugger;
 
+    /**
+     * <p>The environment variables that are injected into the job run time.</p>
+     */
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
     /**
+     * <p>The time when the job was created (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
      */
@@ -65,6 +98,8 @@ public class JobItem extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the job failed (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
      */
@@ -72,6 +107,8 @@ public class JobItem extends TeaModel {
     public String gmtFailedTime;
 
     /**
+     * <p>The time when the job ended (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T15:36:08Z</p>
      */
@@ -79,6 +116,8 @@ public class JobItem extends TeaModel {
     public String gmtFinishTime;
 
     /**
+     * <p>The time when the job was modified (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T15:36:08Z</p>
      */
@@ -86,6 +125,8 @@ public class JobItem extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The time when the job started (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
      */
@@ -93,6 +134,8 @@ public class JobItem extends TeaModel {
     public String gmtRunningTime;
 
     /**
+     * <p>The time when the job stopped (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
      */
@@ -100,6 +143,8 @@ public class JobItem extends TeaModel {
     public String gmtStoppedTime;
 
     /**
+     * <p>The time when the job was submitted (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
      */
@@ -107,6 +152,8 @@ public class JobItem extends TeaModel {
     public String gmtSubmittedTime;
 
     /**
+     * <p>The time when the job succeeded (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
      */
@@ -114,6 +161,8 @@ public class JobItem extends TeaModel {
     public String gmtSuccessedTime;
 
     /**
+     * <p>Indicates whether the job is deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -121,13 +170,17 @@ public class JobItem extends TeaModel {
     public Boolean isDeleted;
 
     /**
+     * <p>The ID of the job.</p>
+     * 
      * <strong>example:</strong>
-     * <p>dlc-20210126170216-mtl37ge7gkvdz</p>
+     * <p>dlc-20210126170216-********</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
+     * <p>The maximum running duration of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -137,10 +190,25 @@ public class JobItem extends TeaModel {
     @NameInMap("JobReplicaStatuses")
     public java.util.List<JobReplicaStatus> jobReplicaStatuses;
 
+    /**
+     * <p>The node configurations of the job run time.</p>
+     */
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
     /**
+     * <p>The job type. Valid values:</p>
+     * <ul>
+     * <li>TFJob</li>
+     * <li>PyTorchJob</li>
+     * <li>MPIJob</li>
+     * <li>XGBoostJob</li>
+     * <li>OneFlowJob</li>
+     * <li>ElasticBatchJob</li>
+     * <li>RayJob</li>
+     * <li>SlurmJob</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>TFJob</p>
      */
@@ -148,19 +216,29 @@ public class JobItem extends TeaModel {
     public String jobType;
 
     /**
+     * <p>The number of nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("NodeCount")
     public String nodeCount;
 
+    /**
+     * <p>The node names.</p>
+     */
     @NameInMap("NodeNames")
     public java.util.List<String> nodeNames;
 
+    /**
+     * <p>The pods.</p>
+     */
     @NameInMap("Pods")
     public java.util.List<PodItem> pods;
 
     /**
+     * <p>The priority of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -168,6 +246,13 @@ public class JobItem extends TeaModel {
     public Integer priority;
 
     /**
+     * <p>The reason code for the job to enter the current status. Valid values:</p>
+     * <ul>
+     * <li>InvalidParameter</li>
+     * <li>JobSucceeded</li>
+     * <li>JobStoppedByUser</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>JobStoppedByUser</p>
      */
@@ -175,6 +260,8 @@ public class JobItem extends TeaModel {
     public String reasonCode;
 
     /**
+     * <p>The detailed reason for the job to enter the current status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Job is stopped by user.</p>
      */
@@ -182,6 +269,8 @@ public class JobItem extends TeaModel {
     public String reasonMessage;
 
     /**
+     * <p>The requested CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -189,6 +278,8 @@ public class JobItem extends TeaModel {
     public Long requestCPU;
 
     /**
+     * <p>The requested GPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -196,6 +287,8 @@ public class JobItem extends TeaModel {
     public String requestGPU;
 
     /**
+     * <p>The requested memory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1Gi</p>
      */
@@ -203,6 +296,8 @@ public class JobItem extends TeaModel {
     public String requestMemory;
 
     /**
+     * <p>The ID of the resource group to which the resource belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-quota</p>
      */
@@ -210,6 +305,8 @@ public class JobItem extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource level of the job run time.</p>
+     * 
      * <strong>example:</strong>
      * <p>L0</p>
      */
@@ -217,6 +314,8 @@ public class JobItem extends TeaModel {
     public String resourceLevel;
 
     /**
+     * <p>The name of the resource on which the job runs.</p>
+     * 
      * <strong>example:</strong>
      * <p>my_resource_group</p>
      */
@@ -224,6 +323,8 @@ public class JobItem extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The name of the resource quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -231,6 +332,8 @@ public class JobItem extends TeaModel {
     public String resourceQuotaName;
 
     /**
+     * <p>The resource type. Valid values: ECS, Lingjun, and ACS.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
@@ -238,49 +341,81 @@ public class JobItem extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The number of job restarts.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("RestartTimes")
     public String restartTimes;
 
+    /**
+     * <p>The extra parameters of the job.</p>
+     */
     @NameInMap("Settings")
     public JobSettings settings;
 
     /**
+     * <p>The job status. Valid values:</p>
+     * <ul>
+     * <li>Succeeded</li>
+     * <li>Failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Stopped</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The status history of the job.</p>
+     */
     @NameInMap("StatusHistory")
     public java.util.List<StatusTransitionItem> statusHistory;
 
     /**
+     * <p>The sub-status of the job, such as the preemption and retry status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Restarting</p>
      */
     @NameInMap("SubStatus")
     public String subStatus;
 
+    /**
+     * <p>The system environment variables configured.</p>
+     */
     @NameInMap("SystemEnvs")
     public java.util.Map<String, String> systemEnvs;
 
+    /**
+     * <p>The tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>93955616</strong></strong></p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
+     * <p>The name of the folder in which the requirements.txt file resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/code/</p>
      */
     @NameInMap("ThirdpartyLibDir")
     public String thirdpartyLibDir;
 
+    /**
+     * <p>The third-party Python libraries required for the job.</p>
+     */
     @NameInMap("ThirdpartyLibs")
     public java.util.List<String> thirdpartyLibs;
 
     /**
+     * <p>Indicates whether the job uses idle resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -288,6 +423,8 @@ public class JobItem extends TeaModel {
     public Boolean useOversoldResource;
 
     /**
+     * <p>The start command for each node of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>python /root/code/mnist.py</p>
      */
@@ -295,6 +432,8 @@ public class JobItem extends TeaModel {
     public String userCommand;
 
     /**
+     * <p>The UID of the user to which the job belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -302,6 +441,8 @@ public class JobItem extends TeaModel {
     public String userId;
 
     /**
+     * <p>The user script.</p>
+     * 
      * <strong>example:</strong>
      * <p>ls</p>
      */
@@ -309,6 +450,8 @@ public class JobItem extends TeaModel {
     public String userScript;
 
     /**
+     * <p>The user VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-1</p>
      */
@@ -316,6 +459,8 @@ public class JobItem extends TeaModel {
     public JobItemUserVpc userVpc;
 
     /**
+     * <p>The username that is used to submit the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>pai-dlc-role</p>
      */
@@ -323,6 +468,8 @@ public class JobItem extends TeaModel {
     public String username;
 
     /**
+     * <p>The working path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/mnt/data</p>
      */
@@ -330,6 +477,8 @@ public class JobItem extends TeaModel {
     public String workingDir;
 
     /**
+     * <p>The ID of the workspace to which the job belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>268</p>
      */
@@ -337,6 +486,8 @@ public class JobItem extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The name of the workspace to which the job belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-workspace</p>
      */
@@ -806,6 +957,8 @@ public class JobItem extends TeaModel {
 
     public static class JobItemCodeSource extends TeaModel {
         /**
+         * <p>The code repository branch.</p>
+         * 
          * <strong>example:</strong>
          * <p>master</p>
          */
@@ -813,20 +966,26 @@ public class JobItem extends TeaModel {
         public String branch;
 
         /**
+         * <p>The code source ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>code-20210111103721-85qz78ia96lu</p>
+         * <p>code-20210111103721-********</p>
          */
         @NameInMap("CodeSourceId")
         public String codeSourceId;
 
         /**
+         * <p>The CommitID of the code repository used by the job.</p>
+         * 
          * <strong>example:</strong>
-         * <p>44da109b59f8596152987eaa8f3b2487bb72ea63</p>
+         * <p>44da109b59f8596152987eaa8f3b2487bb******</p>
          */
         @NameInMap("Commit")
         public String commit;
 
         /**
+         * <p>The local mount path of the code.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/data</p>
          */
@@ -874,13 +1033,17 @@ public class JobItem extends TeaModel {
 
     public static class JobItemDataSources extends TeaModel {
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>data-20210114104214-vf9lowjt3pso</p>
+         * <p>data-20210114104214-********</p>
          */
         @NameInMap("DataSourceId")
         public String dataSourceId;
 
         /**
+         * <p>The local mount path of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/data</p>
          */
@@ -911,18 +1074,49 @@ public class JobItem extends TeaModel {
     }
 
     public static class JobItemUserVpc extends TeaModel {
+        /**
+         * <p>The default route. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>eth0: The default network interface is used to access the Internet through the public gateway.</li>
+         * <li>eth1: The user\&quot;s Elastic Network Interface is used to access the Internet through the private gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eth0</p>
+         */
         @NameInMap("DefaultRoute")
         public String defaultRoute;
 
+        /**
+         * <p>The extended CIDR blocks that need to be connected.</p>
+         */
         @NameInMap("ExtendedCidrs")
         public java.util.List<String> extendedCidrs;
 
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2zeef***</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2ze6***</p>
+         */
         @NameInMap("SwitchId")
         public String switchId;
 
+        /**
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zed***</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

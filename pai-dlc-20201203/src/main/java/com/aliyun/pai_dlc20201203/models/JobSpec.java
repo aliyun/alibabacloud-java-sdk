@@ -4,58 +4,103 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobSpec extends TeaModel {
+    /**
+     * <p>The scheduling node configurations.</p>
+     */
     @NameInMap("AssignNodeSpec")
     public AssignNodeSpec assignNodeSpec;
 
+    /**
+     * <p>The auto scaling configurations.</p>
+     */
     @NameInMap("AutoScalingSpec")
     public AutoScalingSpec autoScalingSpec;
 
     /**
+     * <p>The hardware specifications of the worker. For more information, see <a href="https://help.aliyun.com/document_detail/171758.html">Billing of DLC</a> of PAI.</p>
+     * <blockquote>
+     * <p> The price varies based on instance types.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
      */
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
+    /**
+     * <p>The additional pod configurations.</p>
+     */
     @NameInMap("ExtraPodSpec")
     public ExtraPodSpec extraPodSpec;
 
     /**
+     * <p>The address of the image that is run by the worker node. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image provided by PAI. You can also specify a third-party public image.</p>
+     * 
      * <strong>example:</strong>
-     * <p>registry.cn-hangzhou.aliyuncs.com/pai-dlc/tensorflow-training:1.12.2PAI-cpu-py27-ubuntu16.04</p>
+     * <p>registry-vpc.cn-hangzhou.aliyuncs.com/cloud-dsw/tensorflow:1.12PAI-gpu-py36-cu101-ubuntu18.04</p>
      */
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <p>The configuration of the private image.</p>
+     */
     @NameInMap("ImageConfig")
     public ImageConfig imageConfig;
 
+    /**
+     * <p>Deprecated.</p>
+     */
     @NameInMap("IsCheif")
     @Deprecated
     public Boolean isCheif;
 
+    /**
+     * <p>Whether the role is a Chief role. Chief role must be unique.</p>
+     */
     @NameInMap("IsChief")
     public Boolean isChief;
 
+    /**
+     * <p>The list of local mount configurations.</p>
+     */
     @NameInMap("LocalMountSpecs")
     public java.util.List<LocalMountSpec> localMountSpecs;
 
     /**
+     * <p>The number of replicas.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("PodCount")
     public Long podCount;
 
+    /**
+     * <p>The resource configurations.</p>
+     */
     @NameInMap("ResourceConfig")
     public ResourceConfig resourceConfig;
 
+    /**
+     * <p>The restart policy. Valid values: Always, Never, OnFailure, and ExitCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExitCode</p>
+     */
     @NameInMap("RestartPolicy")
     public String restartPolicy;
 
+    /**
+     * <p>The service configurations.</p>
+     */
     @NameInMap("ServiceSpec")
     public ServiceSpec serviceSpec;
 
+    /**
+     * <p>The configurations of the preemptible instance.</p>
+     */
     @NameInMap("SpotSpec")
     public SpotSpec spotSpec;
 
@@ -66,6 +111,16 @@ public class JobSpec extends TeaModel {
     public SystemDisk systemDisk;
 
     /**
+     * <p>The worker type, which is related to JobType. The valid values of this parameter vary based on the value of JobType.</p>
+     * <ul>
+     * <li>Valid values when JobType is set to <strong>TFJob</strong>: Chief, PS, Worker, Evaluator, and GraphLearn.</li>
+     * <li>Valid values when JobType is set to <strong>PyTorchJob</strong>: Worker and Master.</li>
+     * <li>Valid values when JobType is set to <strong>XGBoostJob</strong>: Worker and Master.</li>
+     * <li>Valid values when JobType is set to <strong>OneFlowJob</strong>: Worker and Master.</li>
+     * <li>Valid values when JobType is set to <strong>ElasticBatch</strong>: Worker and Master.</li>
+     * </ul>
+     * <p>The Master node in jobs of the PyTorchJob, XGBoostJob, OneFlowJob, or ElasticBatch type is optional. If you do not specify the Master node, the system automatically uses the first Worker node as the Master node.</p>
+     * 
      * <strong>example:</strong>
      * <p>Worker</p>
      */
@@ -73,6 +128,8 @@ public class JobSpec extends TeaModel {
     public String type;
 
     /**
+     * <p>Whether to use preemptible instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
