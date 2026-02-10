@@ -3,7 +3,7 @@ package com.aliyun.polardbai20251013.models;
 
 import com.aliyun.tea.*;
 
-public class ListMultimodalSearchTaskRequest extends TeaModel {
+public class ListMultimodalSearchTaskShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -14,7 +14,7 @@ public class ListMultimodalSearchTaskRequest extends TeaModel {
     public String DBClusterId;
 
     @NameInMap("DatasetIds")
-    public java.util.List<String> datasetIds;
+    public String datasetIdsShrink;
 
     /**
      * <strong>example:</strong>
@@ -44,12 +44,12 @@ public class ListMultimodalSearchTaskRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    public static ListMultimodalSearchTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListMultimodalSearchTaskRequest self = new ListMultimodalSearchTaskRequest();
+    public static ListMultimodalSearchTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListMultimodalSearchTaskShrinkRequest self = new ListMultimodalSearchTaskShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListMultimodalSearchTaskRequest setDBClusterId(String DBClusterId) {
+    public ListMultimodalSearchTaskShrinkRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -57,15 +57,15 @@ public class ListMultimodalSearchTaskRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public ListMultimodalSearchTaskRequest setDatasetIds(java.util.List<String> datasetIds) {
-        this.datasetIds = datasetIds;
+    public ListMultimodalSearchTaskShrinkRequest setDatasetIdsShrink(String datasetIdsShrink) {
+        this.datasetIdsShrink = datasetIdsShrink;
         return this;
     }
-    public java.util.List<String> getDatasetIds() {
-        return this.datasetIds;
+    public String getDatasetIdsShrink() {
+        return this.datasetIdsShrink;
     }
 
-    public ListMultimodalSearchTaskRequest setInputField(String inputField) {
+    public ListMultimodalSearchTaskShrinkRequest setInputField(String inputField) {
         this.inputField = inputField;
         return this;
     }
@@ -73,7 +73,7 @@ public class ListMultimodalSearchTaskRequest extends TeaModel {
         return this.inputField;
     }
 
-    public ListMultimodalSearchTaskRequest setModelMode(String modelMode) {
+    public ListMultimodalSearchTaskShrinkRequest setModelMode(String modelMode) {
         this.modelMode = modelMode;
         return this;
     }
@@ -81,7 +81,7 @@ public class ListMultimodalSearchTaskRequest extends TeaModel {
         return this.modelMode;
     }
 
-    public ListMultimodalSearchTaskRequest setPageNumber(Integer pageNumber) {
+    public ListMultimodalSearchTaskShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -89,7 +89,7 @@ public class ListMultimodalSearchTaskRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListMultimodalSearchTaskRequest setPageSize(Integer pageSize) {
+    public ListMultimodalSearchTaskShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }

@@ -28,6 +28,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>导入OSS数据集</p>
+     * 
+     * @param request AddOSSMultimodalFineTuneDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddOSSMultimodalFineTuneDatasetResponse
+     */
+    public AddOSSMultimodalFineTuneDatasetResponse addOSSMultimodalFineTuneDatasetWithOptions(AddOSSMultimodalFineTuneDatasetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
+            query.put("DatasetId", request.datasetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossUrl)) {
+            query.put("OssUrl", request.ossUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddOSSMultimodalFineTuneDataset"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddOSSMultimodalFineTuneDatasetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导入OSS数据集</p>
+     * 
+     * @param request AddOSSMultimodalFineTuneDatasetRequest
+     * @return AddOSSMultimodalFineTuneDatasetResponse
+     */
+    public AddOSSMultimodalFineTuneDatasetResponse addOSSMultimodalFineTuneDataset(AddOSSMultimodalFineTuneDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addOSSMultimodalFineTuneDatasetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建chatbi配置表</p>
      * 
      * @param request ChatBIConfigCreateRequest
@@ -1658,6 +1710,120 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建多模态微调数据集</p>
+     * 
+     * @param request CreateMultimodalFineTuneDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMultimodalFineTuneDatasetResponse
+     */
+    public CreateMultimodalFineTuneDatasetResponse createMultimodalFineTuneDatasetWithOptions(CreateMultimodalFineTuneDatasetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetDescription)) {
+            query.put("DatasetDescription", request.datasetDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
+            query.put("DatasetName", request.datasetName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMultimodalFineTuneDataset"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMultimodalFineTuneDatasetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建多模态微调数据集</p>
+     * 
+     * @param request CreateMultimodalFineTuneDatasetRequest
+     * @return CreateMultimodalFineTuneDatasetResponse
+     */
+    public CreateMultimodalFineTuneDatasetResponse createMultimodalFineTuneDataset(CreateMultimodalFineTuneDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMultimodalFineTuneDatasetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>部署打标服务</p>
+     * 
+     * @param tmpReq CreateMultimodalLabelStudioServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMultimodalLabelStudioServiceResponse
+     */
+    public CreateMultimodalLabelStudioServiceResponse createMultimodalLabelStudioServiceWithOptions(CreateMultimodalLabelStudioServiceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateMultimodalLabelStudioServiceShrinkRequest request = new CreateMultimodalLabelStudioServiceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasetIds)) {
+            request.datasetIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasetIds, "DatasetIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetIdsShrink)) {
+            query.put("DatasetIds", request.datasetIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMultimodalLabelStudioService"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMultimodalLabelStudioServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>部署打标服务</p>
+     * 
+     * @param request CreateMultimodalLabelStudioServiceRequest
+     * @return CreateMultimodalLabelStudioServiceResponse
+     */
+    public CreateMultimodalLabelStudioServiceResponse createMultimodalLabelStudioService(CreateMultimodalLabelStudioServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMultimodalLabelStudioServiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建SearchTask</p>
      * 
      * @param tmpReq CreateMultimodalSearchTaskRequest
@@ -1728,6 +1894,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateMultimodalSearchTaskResponse createMultimodalSearchTask(CreateMultimodalSearchTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createMultimodalSearchTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>从检索结果中创建微调数据集</p>
+     * 
+     * @param tmpReq CreateMultimodalSearchTaskResultFineTuneDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMultimodalSearchTaskResultFineTuneDatasetResponse
+     */
+    public CreateMultimodalSearchTaskResultFineTuneDatasetResponse createMultimodalSearchTaskResultFineTuneDatasetWithOptions(CreateMultimodalSearchTaskResultFineTuneDatasetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateMultimodalSearchTaskResultFineTuneDatasetShrinkRequest request = new CreateMultimodalSearchTaskResultFineTuneDatasetShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resultIndex)) {
+            request.resultIndexShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resultIndex, "ResultIndex", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetDescription)) {
+            query.put("DatasetDescription", request.datasetDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
+            query.put("DatasetName", request.datasetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resultIndexShrink)) {
+            query.put("ResultIndex", request.resultIndexShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resultMode)) {
+            query.put("ResultMode", request.resultMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topN)) {
+            query.put("TopN", request.topN);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMultimodalSearchTaskResultFineTuneDataset"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMultimodalSearchTaskResultFineTuneDatasetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>从检索结果中创建微调数据集</p>
+     * 
+     * @param request CreateMultimodalSearchTaskResultFineTuneDatasetRequest
+     * @return CreateMultimodalSearchTaskResultFineTuneDatasetResponse
+     */
+    public CreateMultimodalSearchTaskResultFineTuneDatasetResponse createMultimodalSearchTaskResultFineTuneDataset(CreateMultimodalSearchTaskResultFineTuneDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMultimodalSearchTaskResultFineTuneDatasetWithOptions(request, runtime);
     }
 
     /**
@@ -1824,6 +2064,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMultimodalEmbeddingResponse deleteMultimodalEmbedding(DeleteMultimodalEmbeddingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteMultimodalEmbeddingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除多模态微调数据集</p>
+     * 
+     * @param request DeleteMultimodalFineTuneDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMultimodalFineTuneDatasetResponse
+     */
+    public DeleteMultimodalFineTuneDatasetResponse deleteMultimodalFineTuneDatasetWithOptions(DeleteMultimodalFineTuneDatasetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
+            query.put("DatasetId", request.datasetId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMultimodalFineTuneDataset"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMultimodalFineTuneDatasetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除多模态微调数据集</p>
+     * 
+     * @param request DeleteMultimodalFineTuneDatasetRequest
+     * @return DeleteMultimodalFineTuneDatasetResponse
+     */
+    public DeleteMultimodalFineTuneDatasetResponse deleteMultimodalFineTuneDataset(DeleteMultimodalFineTuneDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMultimodalFineTuneDatasetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询模型mode可选列表</p>
+     * 
+     * @param request DeleteMultimodalLabelStudioServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMultimodalLabelStudioServiceResponse
+     */
+    public DeleteMultimodalLabelStudioServiceResponse deleteMultimodalLabelStudioServiceWithOptions(DeleteMultimodalLabelStudioServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMultimodalLabelStudioService"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMultimodalLabelStudioServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询模型mode可选列表</p>
+     * 
+     * @param request DeleteMultimodalLabelStudioServiceRequest
+     * @return DeleteMultimodalLabelStudioServiceResponse
+     */
+    public DeleteMultimodalLabelStudioServiceResponse deleteMultimodalLabelStudioService(DeleteMultimodalLabelStudioServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMultimodalLabelStudioServiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>微调数据集删除导入的OSS路径</p>
+     * 
+     * @param request DeleteOSSMultimodalFineTuneDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOSSMultimodalFineTuneDatasetResponse
+     */
+    public DeleteOSSMultimodalFineTuneDatasetResponse deleteOSSMultimodalFineTuneDatasetWithOptions(DeleteOSSMultimodalFineTuneDatasetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
+            query.put("DatasetId", request.datasetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossUrl)) {
+            query.put("OssUrl", request.ossUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOSSMultimodalFineTuneDataset"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOSSMultimodalFineTuneDatasetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>微调数据集删除导入的OSS路径</p>
+     * 
+     * @param request DeleteOSSMultimodalFineTuneDatasetRequest
+     * @return DeleteOSSMultimodalFineTuneDatasetResponse
+     */
+    public DeleteOSSMultimodalFineTuneDatasetResponse deleteOSSMultimodalFineTuneDataset(DeleteOSSMultimodalFineTuneDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOSSMultimodalFineTuneDatasetWithOptions(request, runtime);
     }
 
     /**
@@ -2080,6 +2464,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询多模态数据集列表</p>
+     * 
+     * @param request ListMultimodalFineTuneDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMultimodalFineTuneDatasetResponse
+     */
+    public ListMultimodalFineTuneDatasetResponse listMultimodalFineTuneDatasetWithOptions(ListMultimodalFineTuneDatasetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputField)) {
+            query.put("InputField", request.inputField);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMultimodalFineTuneDataset"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultimodalFineTuneDatasetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询多模态数据集列表</p>
+     * 
+     * @param request ListMultimodalFineTuneDatasetRequest
+     * @return ListMultimodalFineTuneDatasetResponse
+     */
+    public ListMultimodalFineTuneDatasetResponse listMultimodalFineTuneDataset(ListMultimodalFineTuneDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMultimodalFineTuneDatasetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询打标服务信息</p>
+     * 
+     * @param request ListMultimodalLabelStudioServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMultimodalLabelStudioServiceResponse
+     */
+    public ListMultimodalLabelStudioServiceResponse listMultimodalLabelStudioServiceWithOptions(ListMultimodalLabelStudioServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMultimodalLabelStudioService"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultimodalLabelStudioServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询打标服务信息</p>
+     * 
+     * @param request ListMultimodalLabelStudioServiceRequest
+     * @return ListMultimodalLabelStudioServiceResponse
+     */
+    public ListMultimodalLabelStudioServiceResponse listMultimodalLabelStudioService(ListMultimodalLabelStudioServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMultimodalLabelStudioServiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询search模型列表</p>
      * 
      * @param request ListMultimodalSearchModelRequest
@@ -2134,15 +2618,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查询search task列表</p>
      * 
-     * @param request ListMultimodalSearchTaskRequest
+     * @param tmpReq ListMultimodalSearchTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListMultimodalSearchTaskResponse
      */
-    public ListMultimodalSearchTaskResponse listMultimodalSearchTaskWithOptions(ListMultimodalSearchTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListMultimodalSearchTaskResponse listMultimodalSearchTaskWithOptions(ListMultimodalSearchTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListMultimodalSearchTaskShrinkRequest request = new ListMultimodalSearchTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasetIds)) {
+            request.datasetIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasetIds, "DatasetIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetIdsShrink)) {
+            query.put("DatasetIds", request.datasetIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputField)) {
+            query.put("InputField", request.inputField);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelMode)) {
+            query.put("ModelMode", request.modelMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -2292,6 +2794,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateMultimodalDatasetResponse updateMultimodalDataset(UpdateMultimodalDatasetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateMultimodalDatasetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新微调数据集信息</p>
+     * 
+     * @param request UpdateMultimodalFineTuneDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMultimodalFineTuneDatasetResponse
+     */
+    public UpdateMultimodalFineTuneDatasetResponse updateMultimodalFineTuneDatasetWithOptions(UpdateMultimodalFineTuneDatasetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetDescription)) {
+            query.put("DatasetDescription", request.datasetDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
+            query.put("DatasetId", request.datasetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
+            query.put("DatasetName", request.datasetName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMultimodalFineTuneDataset"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMultimodalFineTuneDatasetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新微调数据集信息</p>
+     * 
+     * @param request UpdateMultimodalFineTuneDatasetRequest
+     * @return UpdateMultimodalFineTuneDatasetResponse
+     */
+    public UpdateMultimodalFineTuneDatasetResponse updateMultimodalFineTuneDataset(UpdateMultimodalFineTuneDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMultimodalFineTuneDatasetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为打标服务覆盖配置白名单</p>
+     * 
+     * @param tmpReq UpdateMultimodalLabelStudioServiceWhiteListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMultimodalLabelStudioServiceWhiteListResponse
+     */
+    public UpdateMultimodalLabelStudioServiceWhiteListResponse updateMultimodalLabelStudioServiceWhiteListWithOptions(UpdateMultimodalLabelStudioServiceWhiteListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMultimodalLabelStudioServiceWhiteListShrinkRequest request = new UpdateMultimodalLabelStudioServiceWhiteListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.whiteList)) {
+            request.whiteListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.whiteList, "WhiteList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteListShrink)) {
+            query.put("WhiteList", request.whiteListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMultimodalLabelStudioServiceWhiteList"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMultimodalLabelStudioServiceWhiteListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为打标服务覆盖配置白名单</p>
+     * 
+     * @param request UpdateMultimodalLabelStudioServiceWhiteListRequest
+     * @return UpdateMultimodalLabelStudioServiceWhiteListResponse
+     */
+    public UpdateMultimodalLabelStudioServiceWhiteListResponse updateMultimodalLabelStudioServiceWhiteList(UpdateMultimodalLabelStudioServiceWhiteListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMultimodalLabelStudioServiceWhiteListWithOptions(request, runtime);
     }
 
     /**

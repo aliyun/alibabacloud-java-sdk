@@ -79,7 +79,7 @@ public class ChatBIConfigUpdateEntryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>若sql_function={&quot;replace&quot;:{&quot;status = &quot;请假&quot;&quot;:&quot;status = 0&quot;,&quot;status = &quot;出勤&quot;&quot;:&quot;status = 1&quot;}}，则表示：在sql_condition匹配的情况下，将SQL中的status = &quot;请假&quot;替换为status = 0，status = &quot;出勤&quot;替换为status = 1。</p>
+     * <p>若sql_function={&quot;replace&quot;:{&quot;status = \&quot;请假\&quot;&quot;:&quot;status = 0&quot;,&quot;status = \&quot;出勤\&quot;&quot;:&quot;status = 1&quot;}}，则表示：在sql_condition匹配的情况下，将SQL中的status = \&quot;请假\&quot;替换为status = 0，status = \&quot;出勤\&quot;替换为status = 1。</p>
      */
     @NameInMap("SqlFunction")
     public String sqlFunction;

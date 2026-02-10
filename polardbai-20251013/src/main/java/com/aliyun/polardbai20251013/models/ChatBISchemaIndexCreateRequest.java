@@ -12,7 +12,7 @@ public class ChatBISchemaIndexCreateRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>空字符串, &quot;graph_info.time,text_info.ext&quot;</p>
+     * <p>空字符串, \&quot;graph_info.time,text_info.ext\&quot;</p>
      */
     @NameInMap("ColumnsExcluded")
     public String columnsExcluded;
@@ -44,7 +44,7 @@ public class ChatBISchemaIndexCreateRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>空字符串, &quot;graph_info,image_info,text_info&quot;</p>
+     * <p>空字符串, \&quot;graph_info,image_info,text_info\&quot;</p>
      */
     @NameInMap("TablesIncluded")
     public String tablesIncluded;
