@@ -3961,6 +3961,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TrafficStatisticType", request.trafficStatisticType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficType)) {
+            body.put("TrafficType", request.trafficType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));

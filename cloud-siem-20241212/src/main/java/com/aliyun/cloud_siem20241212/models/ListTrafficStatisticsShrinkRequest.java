@@ -63,6 +63,13 @@ public class ListTrafficStatisticsShrinkRequest extends TeaModel {
     @NameInMap("TrafficStatisticType")
     public String trafficStatisticType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agentAnalysisLogTraffic</p>
+     */
+    @NameInMap("TrafficType")
+    public String trafficType;
+
     public static ListTrafficStatisticsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTrafficStatisticsShrinkRequest self = new ListTrafficStatisticsShrinkRequest();
         return TeaModel.build(map, self);
@@ -138,6 +145,14 @@ public class ListTrafficStatisticsShrinkRequest extends TeaModel {
     }
     public String getTrafficStatisticType() {
         return this.trafficStatisticType;
+    }
+
+    public ListTrafficStatisticsShrinkRequest setTrafficType(String trafficType) {
+        this.trafficType = trafficType;
+        return this;
+    }
+    public String getTrafficType() {
+        return this.trafficType;
     }
 
 }
