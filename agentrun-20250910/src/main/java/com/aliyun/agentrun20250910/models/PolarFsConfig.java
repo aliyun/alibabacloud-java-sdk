@@ -4,12 +4,20 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class PolarFsConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("groupId")
     public Integer groupId;
 
     @NameInMap("mountPoints")
     public java.util.List<PolarFsMountConfig> mountPoints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("userId")
     public Integer userId;
 

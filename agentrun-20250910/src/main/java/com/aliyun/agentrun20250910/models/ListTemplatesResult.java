@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTemplatesResult extends TeaModel {
     /**
      * <p>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,6 +21,9 @@ public class ListTemplatesResult extends TeaModel {
 
     /**
      * <p>唯一的请求标识符，用于问题追踪</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C0595DB0-D1EE-55C3-8DDD-790872C7EC2F</p>
      */
     @NameInMap("requestId")
     public String requestId;

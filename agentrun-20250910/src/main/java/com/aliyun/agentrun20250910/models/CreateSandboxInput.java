@@ -10,6 +10,10 @@ public class CreateSandboxInput extends TeaModel {
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01KE8DAJ35JC8SKP9CNFRZ8CW7</p>
+     */
     @NameInMap("sandboxId")
     public String sandboxId;
 
@@ -18,6 +22,9 @@ public class CreateSandboxInput extends TeaModel {
 
     /**
      * <p>沙箱空闲超时时间（秒）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1800</p>
      */
     @NameInMap("sandboxIdleTimeoutSeconds")
     @Deprecated
@@ -26,6 +33,9 @@ public class CreateSandboxInput extends TeaModel {
     /**
      * <p>模板名称（系统内部通过 templateName 查询 template_id）</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>templateName</p>
      */
     @NameInMap("templateName")
     public String templateName;

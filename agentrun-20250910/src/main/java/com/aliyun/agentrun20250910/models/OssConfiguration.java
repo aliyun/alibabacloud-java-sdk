@@ -6,21 +6,34 @@ import com.aliyun.tea.*;
 public class OssConfiguration extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a-test-oss</p>
      */
     @NameInMap("bucketName")
     public String bucketName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/mnt/oss1</p>
      */
     @NameInMap("mountPoint")
     public String mountPoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>READ_WRITE</p>
+     */
     @NameInMap("permission")
     public String permission;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
      */
     @NameInMap("prefix")
     public String prefix;

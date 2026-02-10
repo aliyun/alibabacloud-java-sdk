@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动模板的MCP服务器</p>
+     * <p>Enable the TemplateMCP service.</p>
      * 
      * @param request ActivateTemplateMCPRequest
      * @param headers map
@@ -66,7 +66,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动模板的MCP服务器</p>
+     * <p>Enable the TemplateMCP service.</p>
      * 
      * @param request ActivateTemplateMCPRequest
      * @return ActivateTemplateMCPResponse
@@ -82,7 +82,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>创建一个新的智能体运行时实例，用于执行AI代理任务。智能体运行时是AgentRun服务的核心组件，提供代码执行、浏览器操作、内存管理等能力。</p>
      * 
      * <b>summary</b> : 
-     * <p>Create an agent runtime</p>
+     * <p>CreateAgentRuntime</p>
      * 
      * @param request CreateAgentRuntimeRequest
      * @param headers map
@@ -114,7 +114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>创建一个新的智能体运行时实例，用于执行AI代理任务。智能体运行时是AgentRun服务的核心组件，提供代码执行、浏览器操作、内存管理等能力。</p>
      * 
      * <b>summary</b> : 
-     * <p>Create an agent runtime</p>
+     * <p>CreateAgentRuntime</p>
      * 
      * @param request CreateAgentRuntimeRequest
      * @return CreateAgentRuntimeResponse
@@ -574,7 +574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>创建一个新的模板，用于后续创建沙箱。模板定义了沙箱的运行时环境、资源配置等。</p>
      * 
      * <b>summary</b> : 
-     * <p>创建模板</p>
+     * <p>Create a template.</p>
      * 
      * @param request CreateTemplateRequest
      * @param headers map
@@ -606,7 +606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>创建一个新的模板，用于后续创建沙箱。模板定义了沙箱的运行时环境、资源配置等。</p>
      * 
      * <b>summary</b> : 
-     * <p>创建模板</p>
+     * <p>Create a template.</p>
      * 
      * @param request CreateTemplateRequest
      * @return CreateTemplateResponse
@@ -1629,7 +1629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>获取指定智能体运行时的所有端点列表，支持按名称过滤和分页查询。端点用于外部系统访问智能体运行时服务。</p>
      * 
      * <b>summary</b> : 
-     * <p>列出智能体运行时端点</p>
+     * <p>Retrieve the list of access endpoints for an agent runtime</p>
      * 
      * @param request ListAgentRuntimeEndpointsRequest
      * @param headers map
@@ -1678,7 +1678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>获取指定智能体运行时的所有端点列表，支持按名称过滤和分页查询。端点用于外部系统访问智能体运行时服务。</p>
      * 
      * <b>summary</b> : 
-     * <p>列出智能体运行时端点</p>
+     * <p>Retrieve the list of access endpoints for an agent runtime</p>
      * 
      * @param request ListAgentRuntimeEndpointsRequest
      * @return ListAgentRuntimeEndpointsResponse
@@ -2611,7 +2611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止模板的MCP服务器</p>
+     * <p>Stop the TemplateMCP service.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2637,7 +2637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止模板的MCP服务器</p>
+     * <p>Stop the TemplateMCP service.</p>
      * @return StopTemplateMCPResponse
      */
     public StopTemplateMCPResponse stopTemplateMCP(String templateName) throws Exception {

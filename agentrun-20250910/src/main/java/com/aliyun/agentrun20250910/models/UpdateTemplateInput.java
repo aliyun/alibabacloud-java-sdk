@@ -32,6 +32,9 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("enableAgent")
+    public Boolean enableAgent;
+
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
@@ -46,6 +49,9 @@ public class UpdateTemplateInput extends TeaModel {
      */
     @NameInMap("memory")
     public Integer memory;
+
+    @NameInMap("nasConfig")
+    public NASConfig nasConfig;
 
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
@@ -125,6 +131,14 @@ public class UpdateTemplateInput extends TeaModel {
         return this.description;
     }
 
+    public UpdateTemplateInput setEnableAgent(Boolean enableAgent) {
+        this.enableAgent = enableAgent;
+        return this;
+    }
+    public Boolean getEnableAgent() {
+        return this.enableAgent;
+    }
+
     public UpdateTemplateInput setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -155,6 +169,14 @@ public class UpdateTemplateInput extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public UpdateTemplateInput setNasConfig(NASConfig nasConfig) {
+        this.nasConfig = nasConfig;
+        return this;
+    }
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
     }
 
     public UpdateTemplateInput setNetworkConfiguration(NetworkConfiguration networkConfiguration) {

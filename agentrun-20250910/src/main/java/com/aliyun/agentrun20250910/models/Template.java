@@ -28,6 +28,9 @@ public class Template extends TeaModel {
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    @NameInMap("enableAgent")
+    public Boolean enableAgent;
+
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
@@ -51,6 +54,9 @@ public class Template extends TeaModel {
      */
     @NameInMap("memory")
     public Integer memory;
+
+    @NameInMap("nasConfig")
+    public NASConfig nasConfig;
 
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
@@ -159,6 +165,14 @@ public class Template extends TeaModel {
         return this.diskSize;
     }
 
+    public Template setEnableAgent(Boolean enableAgent) {
+        this.enableAgent = enableAgent;
+        return this;
+    }
+    public Boolean getEnableAgent() {
+        return this.enableAgent;
+    }
+
     public Template setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -213,6 +227,14 @@ public class Template extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public Template setNasConfig(NASConfig nasConfig) {
+        this.nasConfig = nasConfig;
+        return this;
+    }
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
     }
 
     public Template setNetworkConfiguration(NetworkConfiguration networkConfiguration) {

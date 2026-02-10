@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CredentialConfiguration extends TeaModel {
     /**
      * <p>凭证的唯一标识符</p>
+     * 
+     * <strong>example:</strong>
+     * <p>deepagent-key</p>
      */
     @NameInMap("credentialName")
     public String credentialName;

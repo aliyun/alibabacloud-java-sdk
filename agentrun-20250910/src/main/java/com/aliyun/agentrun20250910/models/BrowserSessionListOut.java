@@ -27,7 +27,7 @@ public class BrowserSessionListOut extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>2</p>
      */
     @NameInMap("total")
     public Long total;

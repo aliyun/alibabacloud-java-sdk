@@ -7,27 +7,48 @@ public class Sandbox extends TeaModel {
     /**
      * <p>沙箱创建时间</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-11-26T10:54:17.770719+08:00</p>
      */
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-11-26T10:54:17.770719+08:00</p>
+     */
     @NameInMap("endedAt")
     public String endedAt;
 
     /**
      * <p>最后更新时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-11-26T10:54:17.770719+08:00</p>
      */
     @NameInMap("lastUpdatedAt")
     public String lastUpdatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("metadata")
     public java.util.Map<String, ?> metadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::1760720386195983:role/aliyunfcdefaultrole</p>
+     */
     @NameInMap("sandboxArn")
     public String sandboxArn;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01KAWBP6JQD0J3Z34BP4WMX1KG</p>
      */
     @NameInMap("sandboxId")
     public String sandboxId;
@@ -37,22 +58,35 @@ public class Sandbox extends TeaModel {
 
     /**
      * <p>沙箱空闲超时时间（秒）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1800</p>
      */
     @NameInMap("sandboxIdleTimeoutSeconds")
     public Integer sandboxIdleTimeoutSeconds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>READY</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8d409d30-cac1-445a-95d5-476c47780336.schema</p>
      */
     @NameInMap("templateId")
     public String templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-template</p>
+     */
     @NameInMap("templateName")
     public String templateName;
 

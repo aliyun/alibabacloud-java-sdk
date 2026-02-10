@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateInput extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -23,6 +26,9 @@ public class CreateTemplateInput extends TeaModel {
     /**
      * <p>CPU资源配置（单位：核心）</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("cpu")
     public Float cpu;
@@ -33,12 +39,23 @@ public class CreateTemplateInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("diskSize")
     public Integer diskSize;
+
+    @NameInMap("enableAgent")
+    public Boolean enableAgent;
 
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::123456789:role/aliyunfcdefaultrole</p>
+     */
     @NameInMap("executionRoleArn")
     public String executionRoleArn;
 
@@ -48,9 +65,15 @@ public class CreateTemplateInput extends TeaModel {
     /**
      * <p>内存资源配置（单位：MB）</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
      */
     @NameInMap("memory")
     public Integer memory;
+
+    @NameInMap("nasConfig")
+    public NASConfig nasConfig;
 
     /**
      * <p>This parameter is required.</p>
@@ -63,12 +86,18 @@ public class CreateTemplateInput extends TeaModel {
 
     /**
      * <p>沙箱空闲超时时间（秒）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1800</p>
      */
     @NameInMap("sandboxIdleTimeoutInSeconds")
     public Integer sandboxIdleTimeoutInSeconds;
 
     /**
      * <p>沙箱存活时间（秒）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>26000</p>
      */
     @NameInMap("sandboxTTLInSeconds")
     @Deprecated
@@ -83,12 +112,18 @@ public class CreateTemplateInput extends TeaModel {
     /**
      * <p>模板名称（要求账号唯一的）</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>browser-1766687911567</p>
      */
     @NameInMap("templateName")
     public String templateName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Browser</p>
      */
     @NameInMap("templateType")
     public String templateType;
@@ -154,6 +189,14 @@ public class CreateTemplateInput extends TeaModel {
         return this.diskSize;
     }
 
+    public CreateTemplateInput setEnableAgent(Boolean enableAgent) {
+        this.enableAgent = enableAgent;
+        return this;
+    }
+    public Boolean getEnableAgent() {
+        return this.enableAgent;
+    }
+
     public CreateTemplateInput setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -184,6 +227,14 @@ public class CreateTemplateInput extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public CreateTemplateInput setNasConfig(NASConfig nasConfig) {
+        this.nasConfig = nasConfig;
+        return this;
+    }
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
     }
 
     public CreateTemplateInput setNetworkConfiguration(NetworkConfiguration networkConfiguration) {

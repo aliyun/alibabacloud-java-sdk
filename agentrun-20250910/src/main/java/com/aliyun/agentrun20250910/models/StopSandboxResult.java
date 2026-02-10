@@ -4,12 +4,20 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class StopSandboxResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public Sandbox data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
