@@ -14716,6 +14716,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BeginTs", request.beginTs);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTs)) {
             query.put("EndTs", request.endTs);
         }

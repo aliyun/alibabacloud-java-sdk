@@ -24,6 +24,9 @@ public class DescribeLiveInteractionMetricDataRequest extends TeaModel {
     @NameInMap("BeginTs")
     public Long beginTs;
 
+    @NameInMap("ChannelId")
+    public String channelId;
+
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
@@ -87,6 +90,14 @@ public class DescribeLiveInteractionMetricDataRequest extends TeaModel {
     }
     public Long getBeginTs() {
         return this.beginTs;
+    }
+
+    public DescribeLiveInteractionMetricDataRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
     }
 
     public DescribeLiveInteractionMetricDataRequest setEndTs(Long endTs) {
