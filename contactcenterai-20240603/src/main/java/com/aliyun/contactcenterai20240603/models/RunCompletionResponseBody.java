@@ -23,8 +23,14 @@ public class RunCompletionResponseBody extends TeaModel {
     @NameInMap("outputTokens")
     public String outputTokens;
 
+    @NameInMap("ragStatus")
+    public String ragStatus;
+
     @NameInMap("totalTokens")
     public String totalTokens;
+
+    @NameInMap("usage")
+    public RunCompletionResponseBodyUsage usage;
 
     public static RunCompletionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunCompletionResponseBody self = new RunCompletionResponseBody();
@@ -71,12 +77,159 @@ public class RunCompletionResponseBody extends TeaModel {
         return this.outputTokens;
     }
 
+    public RunCompletionResponseBody setRagStatus(String ragStatus) {
+        this.ragStatus = ragStatus;
+        return this;
+    }
+    public String getRagStatus() {
+        return this.ragStatus;
+    }
+
     public RunCompletionResponseBody setTotalTokens(String totalTokens) {
         this.totalTokens = totalTokens;
         return this;
     }
     public String getTotalTokens() {
         return this.totalTokens;
+    }
+
+    public RunCompletionResponseBody setUsage(RunCompletionResponseBodyUsage usage) {
+        this.usage = usage;
+        return this;
+    }
+    public RunCompletionResponseBodyUsage getUsage() {
+        return this.usage;
+    }
+
+    public static class RunCompletionResponseBodyUsageRagAdaptive extends TeaModel {
+        @NameInMap("inputTokens")
+        public Integer inputTokens;
+
+        @NameInMap("invokeCount")
+        public Integer invokeCount;
+
+        @NameInMap("outputTokens")
+        public Integer outputTokens;
+
+        public static RunCompletionResponseBodyUsageRagAdaptive build(java.util.Map<String, ?> map) throws Exception {
+            RunCompletionResponseBodyUsageRagAdaptive self = new RunCompletionResponseBodyUsageRagAdaptive();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCompletionResponseBodyUsageRagAdaptive setInputTokens(Integer inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+        public Integer getInputTokens() {
+            return this.inputTokens;
+        }
+
+        public RunCompletionResponseBodyUsageRagAdaptive setInvokeCount(Integer invokeCount) {
+            this.invokeCount = invokeCount;
+            return this;
+        }
+        public Integer getInvokeCount() {
+            return this.invokeCount;
+        }
+
+        public RunCompletionResponseBodyUsageRagAdaptive setOutputTokens(Integer outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+        public Integer getOutputTokens() {
+            return this.outputTokens;
+        }
+
+    }
+
+    public static class RunCompletionResponseBodyUsageRagDialogSummary extends TeaModel {
+        @NameInMap("inputTokens")
+        public Integer inputTokens;
+
+        @NameInMap("invokeCount")
+        public Integer invokeCount;
+
+        @NameInMap("outputTokens")
+        public Integer outputTokens;
+
+        public static RunCompletionResponseBodyUsageRagDialogSummary build(java.util.Map<String, ?> map) throws Exception {
+            RunCompletionResponseBodyUsageRagDialogSummary self = new RunCompletionResponseBodyUsageRagDialogSummary();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCompletionResponseBodyUsageRagDialogSummary setInputTokens(Integer inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+        public Integer getInputTokens() {
+            return this.inputTokens;
+        }
+
+        public RunCompletionResponseBodyUsageRagDialogSummary setInvokeCount(Integer invokeCount) {
+            this.invokeCount = invokeCount;
+            return this;
+        }
+        public Integer getInvokeCount() {
+            return this.invokeCount;
+        }
+
+        public RunCompletionResponseBodyUsageRagDialogSummary setOutputTokens(Integer outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+        public Integer getOutputTokens() {
+            return this.outputTokens;
+        }
+
+    }
+
+    public static class RunCompletionResponseBodyUsageRag extends TeaModel {
+        @NameInMap("adaptive")
+        public RunCompletionResponseBodyUsageRagAdaptive adaptive;
+
+        @NameInMap("dialogSummary")
+        public RunCompletionResponseBodyUsageRagDialogSummary dialogSummary;
+
+        public static RunCompletionResponseBodyUsageRag build(java.util.Map<String, ?> map) throws Exception {
+            RunCompletionResponseBodyUsageRag self = new RunCompletionResponseBodyUsageRag();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCompletionResponseBodyUsageRag setAdaptive(RunCompletionResponseBodyUsageRagAdaptive adaptive) {
+            this.adaptive = adaptive;
+            return this;
+        }
+        public RunCompletionResponseBodyUsageRagAdaptive getAdaptive() {
+            return this.adaptive;
+        }
+
+        public RunCompletionResponseBodyUsageRag setDialogSummary(RunCompletionResponseBodyUsageRagDialogSummary dialogSummary) {
+            this.dialogSummary = dialogSummary;
+            return this;
+        }
+        public RunCompletionResponseBodyUsageRagDialogSummary getDialogSummary() {
+            return this.dialogSummary;
+        }
+
+    }
+
+    public static class RunCompletionResponseBodyUsage extends TeaModel {
+        @NameInMap("rag")
+        public RunCompletionResponseBodyUsageRag rag;
+
+        public static RunCompletionResponseBodyUsage build(java.util.Map<String, ?> map) throws Exception {
+            RunCompletionResponseBodyUsage self = new RunCompletionResponseBodyUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCompletionResponseBodyUsage setRag(RunCompletionResponseBodyUsageRag rag) {
+            this.rag = rag;
+            return this;
+        }
+        public RunCompletionResponseBodyUsageRag getRag() {
+            return this.rag;
+        }
+
     }
 
 }

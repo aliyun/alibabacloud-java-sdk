@@ -135,12 +135,152 @@ public class GetTaskResultResponseBody extends TeaModel {
 
     }
 
+    public static class GetTaskResultResponseBodyDataUsageRagAdaptive extends TeaModel {
+        @NameInMap("inputTokens")
+        public Integer inputTokens;
+
+        @NameInMap("invokeCount")
+        public Integer invokeCount;
+
+        @NameInMap("outputTokens")
+        public Integer outputTokens;
+
+        public static GetTaskResultResponseBodyDataUsageRagAdaptive build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResultResponseBodyDataUsageRagAdaptive self = new GetTaskResultResponseBodyDataUsageRagAdaptive();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResultResponseBodyDataUsageRagAdaptive setInputTokens(Integer inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+        public Integer getInputTokens() {
+            return this.inputTokens;
+        }
+
+        public GetTaskResultResponseBodyDataUsageRagAdaptive setInvokeCount(Integer invokeCount) {
+            this.invokeCount = invokeCount;
+            return this;
+        }
+        public Integer getInvokeCount() {
+            return this.invokeCount;
+        }
+
+        public GetTaskResultResponseBodyDataUsageRagAdaptive setOutputTokens(Integer outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+        public Integer getOutputTokens() {
+            return this.outputTokens;
+        }
+
+    }
+
+    public static class GetTaskResultResponseBodyDataUsageRagDialogSummary extends TeaModel {
+        @NameInMap("inputTokens")
+        public Integer inputTokens;
+
+        @NameInMap("invokeCount")
+        public Integer invokeCount;
+
+        @NameInMap("outputTokens")
+        public Integer outputTokens;
+
+        public static GetTaskResultResponseBodyDataUsageRagDialogSummary build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResultResponseBodyDataUsageRagDialogSummary self = new GetTaskResultResponseBodyDataUsageRagDialogSummary();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResultResponseBodyDataUsageRagDialogSummary setInputTokens(Integer inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+        public Integer getInputTokens() {
+            return this.inputTokens;
+        }
+
+        public GetTaskResultResponseBodyDataUsageRagDialogSummary setInvokeCount(Integer invokeCount) {
+            this.invokeCount = invokeCount;
+            return this;
+        }
+        public Integer getInvokeCount() {
+            return this.invokeCount;
+        }
+
+        public GetTaskResultResponseBodyDataUsageRagDialogSummary setOutputTokens(Integer outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+        public Integer getOutputTokens() {
+            return this.outputTokens;
+        }
+
+    }
+
+    public static class GetTaskResultResponseBodyDataUsageRag extends TeaModel {
+        @NameInMap("adaptive")
+        public GetTaskResultResponseBodyDataUsageRagAdaptive adaptive;
+
+        @NameInMap("dialogSummary")
+        public GetTaskResultResponseBodyDataUsageRagDialogSummary dialogSummary;
+
+        public static GetTaskResultResponseBodyDataUsageRag build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResultResponseBodyDataUsageRag self = new GetTaskResultResponseBodyDataUsageRag();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResultResponseBodyDataUsageRag setAdaptive(GetTaskResultResponseBodyDataUsageRagAdaptive adaptive) {
+            this.adaptive = adaptive;
+            return this;
+        }
+        public GetTaskResultResponseBodyDataUsageRagAdaptive getAdaptive() {
+            return this.adaptive;
+        }
+
+        public GetTaskResultResponseBodyDataUsageRag setDialogSummary(GetTaskResultResponseBodyDataUsageRagDialogSummary dialogSummary) {
+            this.dialogSummary = dialogSummary;
+            return this;
+        }
+        public GetTaskResultResponseBodyDataUsageRagDialogSummary getDialogSummary() {
+            return this.dialogSummary;
+        }
+
+    }
+
+    public static class GetTaskResultResponseBodyDataUsage extends TeaModel {
+        @NameInMap("rag")
+        public GetTaskResultResponseBodyDataUsageRag rag;
+
+        public static GetTaskResultResponseBodyDataUsage build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResultResponseBodyDataUsage self = new GetTaskResultResponseBodyDataUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResultResponseBodyDataUsage setRag(GetTaskResultResponseBodyDataUsageRag rag) {
+            this.rag = rag;
+            return this;
+        }
+        public GetTaskResultResponseBodyDataUsageRag getRag() {
+            return this.rag;
+        }
+
+    }
+
     public static class GetTaskResultResponseBodyData extends TeaModel {
         @NameInMap("asrResult")
         public java.util.List<GetTaskResultResponseBodyDataAsrResult> asrResult;
 
         @NameInMap("extra")
         public String extra;
+
+        @NameInMap("ragErrorMessage")
+        public String ragErrorMessage;
+
+        @NameInMap("ragResult")
+        public String ragResult;
+
+        @NameInMap("ragStatus")
+        public String ragStatus;
 
         @NameInMap("taskErrorMessage")
         public String taskErrorMessage;
@@ -162,6 +302,9 @@ public class GetTaskResultResponseBody extends TeaModel {
         @NameInMap("text")
         public String text;
 
+        @NameInMap("usage")
+        public GetTaskResultResponseBodyDataUsage usage;
+
         public static GetTaskResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTaskResultResponseBodyData self = new GetTaskResultResponseBodyData();
             return TeaModel.build(map, self);
@@ -181,6 +324,30 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
         public String getExtra() {
             return this.extra;
+        }
+
+        public GetTaskResultResponseBodyData setRagErrorMessage(String ragErrorMessage) {
+            this.ragErrorMessage = ragErrorMessage;
+            return this;
+        }
+        public String getRagErrorMessage() {
+            return this.ragErrorMessage;
+        }
+
+        public GetTaskResultResponseBodyData setRagResult(String ragResult) {
+            this.ragResult = ragResult;
+            return this;
+        }
+        public String getRagResult() {
+            return this.ragResult;
+        }
+
+        public GetTaskResultResponseBodyData setRagStatus(String ragStatus) {
+            this.ragStatus = ragStatus;
+            return this;
+        }
+        public String getRagStatus() {
+            return this.ragStatus;
         }
 
         public GetTaskResultResponseBodyData setTaskErrorMessage(String taskErrorMessage) {
@@ -213,6 +380,14 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
         public String getText() {
             return this.text;
+        }
+
+        public GetTaskResultResponseBodyData setUsage(GetTaskResultResponseBodyDataUsage usage) {
+            this.usage = usage;
+            return this;
+        }
+        public GetTaskResultResponseBodyDataUsage getUsage() {
+            return this.usage;
         }
 
     }
