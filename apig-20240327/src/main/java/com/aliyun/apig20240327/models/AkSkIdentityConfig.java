@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AkSkIdentityConfig extends TeaModel {
     /**
+     * <p>Access Key</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -12,6 +14,8 @@ public class AkSkIdentityConfig extends TeaModel {
     public String ak;
 
     /**
+     * <p>Generation mode</p>
+     * 
      * <strong>example:</strong>
      * <p>System</p>
      */
@@ -19,6 +23,8 @@ public class AkSkIdentityConfig extends TeaModel {
     public String generateMode;
 
     /**
+     * <p>Secret Key</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -26,6 +32,8 @@ public class AkSkIdentityConfig extends TeaModel {
     public String sk;
 
     /**
+     * <p>Identity authentication type</p>
+     * 
      * <strong>example:</strong>
      * <p>Jwt</p>
      */
