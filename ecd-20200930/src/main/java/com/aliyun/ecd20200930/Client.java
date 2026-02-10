@@ -588,7 +588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
+     * <p>(Administrator) initiates a remote assistance request to the end user. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
      * 
      * @param request ApplyCoordinationForMonitoringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -640,7 +640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
+     * <p>(Administrator) initiates a remote assistance request to the end user. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
      * 
      * @param request ApplyCoordinationForMonitoringRequest
      * @return ApplyCoordinationForMonitoringResponse
@@ -1256,7 +1256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels monitoring on stream collaboration.</p>
+     * <p>Cancels a remote assistance request to the end user.</p>
      * 
      * @param request CancelCoordinationForMonitoringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1300,7 +1300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels monitoring on stream collaboration.</p>
+     * <p>Cancels a remote assistance request to the end user.</p>
      * 
      * @param request CancelCoordinationForMonitoringRequest
      * @return CancelCoordinationForMonitoringResponse
@@ -1646,7 +1646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies a file or a directory.</p>
+     * <p>Makes a copy of a file or folder on a drive.</p>
      * 
      * @param request CopyCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1710,7 +1710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies a file or a directory.</p>
+     * <p>Makes a copy of a file or folder on a drive.</p>
      * 
      * @param request CopyCdsFileRequest
      * @return CopyCdsFileResponse
@@ -2038,7 +2038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a File Storage NAS (NAS) file system and mount the file system to the workspace in which a desktop group resides.</p>
+     * <p>Creates a NAS file system and associate it with the office network of the shared cloud computer.</p>
      * 
      * @param request CreateAndBindNasFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2098,7 +2098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a File Storage NAS (NAS) file system and mount the file system to the workspace in which a desktop group resides.</p>
+     * <p>Creates a NAS file system and associate it with the office network of the shared cloud computer.</p>
      * 
      * @param request CreateAndBindNasFileSystemRequest
      * @return CreateAndBindNasFileSystemResponse
@@ -4000,7 +4000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the disk encryption feature and adds the service-linked role that is encrypted by Cloud Drive Service to a Resource Access Management (RAM) user.</p>
+     * <p>Enables disk encryption and creates the required service-linked role in your Resource Access Management (RAM) user account for the Enterprise Drive.</p>
      * 
      * @param request CreateDiskEncryptionServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4032,7 +4032,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the disk encryption feature and adds the service-linked role that is encrypted by Cloud Drive Service to a Resource Access Management (RAM) user.</p>
+     * <p>Enables disk encryption and creates the required service-linked role in your Resource Access Management (RAM) user account for the Enterprise Drive.</p>
      * 
      * @param request CreateDiskEncryptionServiceRequest
      * @return CreateDiskEncryptionServiceResponse
@@ -4842,7 +4842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建限速组</p>
+     * <p>Creates a Quality of Service (QoS) rule.</p>
      * 
      * @param request CreateQosRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4894,7 +4894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建限速组</p>
+     * <p>Creates a Quality of Service (QoS) rule.</p>
      * 
      * @param request CreateQosRuleRequest
      * @return CreateQosRuleResponse
@@ -5729,7 +5729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a center policy</p>
+     * <p>Deletes a global policy.</p>
      * 
      * @param request DeleteCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5773,7 +5773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a center policy</p>
+     * <p>Deletes a global policy.</p>
      * 
      * @param request DeleteCenterPolicyRequest
      * @return DeleteCenterPolicyResponse
@@ -5837,7 +5837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除无影网盘中的终端用户</p>
+     * <p>Deletes users from a cloud disk in Cloud Drive Service.</p>
      * 
      * @param request DeleteCloudDriveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5877,7 +5877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除无影网盘中的终端用户</p>
+     * <p>Deletes users from a cloud disk in Cloud Drive Service.</p>
      * 
      * @param request DeleteCloudDriveUsersRequest
      * @return DeleteCloudDriveUsersResponse
@@ -6664,6 +6664,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a traffic throttling rule from a QoS policy.</p>
+     * 
      * @param request DeleteQosRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteQosRulesResponse
@@ -6693,6 +6696,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a traffic throttling rule from a QoS policy.</p>
+     * 
      * @param request DeleteQosRulesRequest
      * @return DeleteQosRulesResponse
      */
@@ -7022,7 +7028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete virtual multi-factor authentication (MFA) devices.</p>
+     * <p>Removes a virtual multi-factor authentication (MFA) device that is associated with an Active Directory (AD) account.</p>
      * 
      * @param request DeleteVirtualMFADeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7061,7 +7067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete virtual multi-factor authentication (MFA) devices.</p>
+     * <p>Removes a virtual multi-factor authentication (MFA) device that is associated with an Active Directory (AD) account.</p>
      * 
      * @param request DeleteVirtualMFADeviceRequest
      * @return DeleteVirtualMFADeviceResponse
@@ -7633,7 +7639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云盘团队空间列表</p>
+     * <p>Queries team spaces in a cloud disk.</p>
      * 
      * @param request DescribeCloudDiskGroupDrivesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7681,7 +7687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云盘团队空间列表</p>
+     * <p>Queries team spaces in a cloud disk.</p>
      * 
      * @param request DescribeCloudDiskGroupDrivesRequest
      * @return DescribeCloudDiskGroupDrivesResponse
@@ -7693,7 +7699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云盘团队列表</p>
+     * <p>Queries team spaces from the drive.</p>
      * 
      * @param request DescribeCloudDiskGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7741,7 +7747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云盘团队列表</p>
+     * <p>Queries team spaces from the drive.</p>
      * 
      * @param request DescribeCloudDiskGroupsRequest
      * @return DescribeCloudDiskGroupsResponse
@@ -7753,7 +7759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of authorized team spaces.</p>
+     * <p>Queries the list and basic information of all team shared disks in an enterprise drive.</p>
      * 
      * @param request DescribeCloudDriveGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7829,7 +7835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of authorized team spaces.</p>
+     * <p>Queries the list and basic information of all team shared disks in an enterprise drive.</p>
      * 
      * @param request DescribeCloudDriveGroupsRequest
      * @return DescribeCloudDriveGroupsResponse
@@ -7841,7 +7847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询pds用户权限</p>
+     * <p>Queries the permission settings on the enterprise drive.</p>
      * 
      * @param request DescribeCloudDrivePermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7877,7 +7883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询pds用户权限</p>
+     * <p>Queries the permission settings on the enterprise drive.</p>
      * 
      * @param request DescribeCloudDrivePermissionsRequest
      * @return DescribeCloudDrivePermissionsResponse
@@ -7889,7 +7895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有无影网盘终端用户的信息</p>
+     * <p>Queries users of cloud disks in Cloud Drive Service.</p>
      * 
      * @param request DescribeCloudDriveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7937,7 +7943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有无影网盘终端用户的信息</p>
+     * <p>Queries users of cloud disks in Cloud Drive Service.</p>
      * 
      * @param request DescribeCloudDriveUsersRequest
      * @return DescribeCloudDriveUsersResponse
@@ -8024,6 +8030,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the header information of the cloud computer list.</p>
+     * 
      * @param request DescribeCustomizedListHeadersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCustomizedListHeadersResponse
@@ -8061,6 +8070,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the header information of the cloud computer list.</p>
+     * 
      * @param request DescribeCustomizedListHeadersRequest
      * @return DescribeCustomizedListHeadersResponse
      */
@@ -8331,7 +8343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云电脑基础元数据</p>
+     * <p>Queries the list and metadata of cloud computers in a specific region.</p>
      * 
      * @param request DescribeDesktopMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8411,7 +8423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云电脑基础元数据</p>
+     * <p>Queries the list and metadata of cloud computers in a specific region.</p>
      * 
      * @param request DescribeDesktopMetadataRequest
      * @return DescribeDesktopMetadataResponse
@@ -9367,7 +9379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询EIP监控</p>
+     * <p>Queries the monitoring data of the desktop inbound bandwidth and the desktop outbound bandwidth, or the monitoring data of the workspace bandwidth originated from or destined for the Internet.</p>
      * 
      * @param request DescribeFlowMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9423,7 +9435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询EIP监控</p>
+     * <p>Queries the monitoring data of the desktop inbound bandwidth and the desktop outbound bandwidth, or the monitoring data of the workspace bandwidth originated from or destined for the Internet.</p>
      * 
      * @param request DescribeFlowMetricRequest
      * @return DescribeFlowMetricResponse
@@ -9833,7 +9845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询全局定时任务Batch记录</p>
+     * <p>Queries the batch information in the execution history of scheduled tasks and returns the summary task execution results.</p>
      * 
      * @param request DescribeGlobalTimerBatchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9885,7 +9897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询全局定时任务Batch记录</p>
+     * <p>Queries the batch information in the execution history of scheduled tasks and returns the summary task execution results.</p>
      * 
      * @param request DescribeGlobalTimerBatchesRequest
      * @return DescribeGlobalTimerBatchesResponse
@@ -11184,6 +11196,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries Quality of Service (QoS) rules.</p>
+     * 
      * @param request DescribeQosRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeQosRulesResponse
@@ -11217,6 +11232,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries Quality of Service (QoS) rules.</p>
+     * 
      * @param request DescribeQosRulesRequest
      * @return DescribeQosRulesResponse
      */
@@ -11227,7 +11245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询录屏文件列表</p>
+     * <p>Queries the screen recording files in all regions.</p>
      * 
      * @param request DescribeRecordFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11303,7 +11321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询录屏文件列表</p>
+     * <p>Queries the screen recording files in all regions.</p>
      * 
      * @param request DescribeRecordFileRequest
      * @return DescribeRecordFileResponse
@@ -11574,6 +11592,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries cloud resources that are associated with a global policy.</p>
+     * 
      * @param request DescribeResourceByCenterPolicyIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResourceByCenterPolicyIdResponse
@@ -11619,6 +11640,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries cloud resources that are associated with a global policy.</p>
+     * 
      * @param request DescribeResourceByCenterPolicyIdRequest
      * @return DescribeResourceByCenterPolicyIdResponse
      */
@@ -12521,7 +12545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the passwords of authorized users of a cloud computer.</p>
+     * <p>Queries the passwords for the accounts within a cloud computer image. For example, when the Chrome browser on the cloud computer queries the cached password, it requires the end user to enter the password for identity verification.</p>
      * 
      * @param request DescribeUsersPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12557,7 +12581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the passwords of authorized users of a cloud computer.</p>
+     * <p>Queries the passwords for the accounts within a cloud computer image. For example, when the Chrome browser on the cloud computer queries the cached password, it requires the end user to enter the password for identity verification.</p>
      * 
      * @param request DescribeUsersPasswordRequest
      * @return DescribeUsersPasswordResponse
@@ -12569,7 +12593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries multi-factor authentication (MFA) devices that are bound to an Active Directory (AD) account.</p>
+     * <p>Queries the virtual multi-factor authentication (MFA) devices that are associated with Active Directory (AD) accounts.</p>
      * 
      * @param request DescribeVirtualMFADevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12621,7 +12645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries multi-factor authentication (MFA) devices that are bound to an Active Directory (AD) account.</p>
+     * <p>Queries the virtual multi-factor authentication (MFA) devices that are associated with Active Directory (AD) accounts.</p>
      * 
      * @param request DescribeVirtualMFADevicesRequest
      * @return DescribeVirtualMFADevicesResponse
@@ -12845,7 +12869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disconnects from desktop sessions.</p>
+     * <p>Disconnects cloud computer sessions.</p>
      * 
      * @param request DisconnectDesktopSessionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12885,7 +12909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disconnects from desktop sessions.</p>
+     * <p>Disconnects cloud computer sessions.</p>
      * 
      * @param request DisconnectDesktopSessionsRequest
      * @return DisconnectDesktopSessionsResponse
@@ -13369,7 +13393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information about an asynchronous task based on the value of the AsyncTaskId parameter that you obtain by calling the CopyCdsFile operation.</p>
+     * <p>When you call the CopyCdsFile operation to copy a folder, the operation returns AsyncTaskId. Call this operation specifying the obtained AsyncTaskId, and you can query the information about the asynchronous task.</p>
      * 
      * @param request GetAsyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13405,7 +13429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information about an asynchronous task based on the value of the AsyncTaskId parameter that you obtain by calling the CopyCdsFile operation.</p>
+     * <p>When you call the CopyCdsFile operation to copy a folder, the operation returns AsyncTaskId. Call this operation specifying the obtained AsyncTaskId, and you can query the information about the asynchronous task.</p>
      * 
      * @param request GetAsyncTaskRequest
      * @return GetAsyncTaskResponse
@@ -13503,7 +13527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the credentials of the stream collaboration</p>
+     * <p>Get the stream collaboration credentials for remote assistance or shared collaboration.</p>
      * 
      * @param request GetCoordinateTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13551,7 +13575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the credentials of the stream collaboration</p>
+     * <p>Get the stream collaboration credentials for remote assistance or shared collaboration.</p>
      * 
      * @param request GetCoordinateTicketRequest
      * @return GetCoordinateTicketResponse
@@ -13611,7 +13635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether single sign-on (SSO) is enabled for a workspace.</p>
+     * <p>Queries whether single sign-on (SSO) is enabled for an office network.</p>
      * 
      * @param request GetOfficeSiteSsoStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13647,7 +13671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether single sign-on (SSO) is enabled for a workspace.</p>
+     * <p>Queries whether single sign-on (SSO) is enabled for an office network.</p>
      * 
      * @param request GetOfficeSiteSsoStatusRequest
      * @return GetOfficeSiteSsoStatusResponse
@@ -14261,7 +14285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文件列表</p>
+     * <p>Gets the download URL of the transferred file.</p>
      * 
      * @param request ListTransferFileDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14297,7 +14321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文件列表</p>
+     * <p>Gets the download URL of the transferred file.</p>
      * 
      * @param request ListTransferFileDownloadUrlRequest
      * @return ListTransferFileDownloadUrlResponse
@@ -15039,7 +15063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the link for file sharing.</p>
+     * <p>Modify the file sharing settings.</p>
      * 
      * @param request ModifyCdsFileShareLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15139,7 +15163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the link for file sharing.</p>
+     * <p>Modify the file sharing settings.</p>
      * 
      * @param request ModifyCdsFileShareLinkRequest
      * @return ModifyCdsFileShareLinkResponse
@@ -15839,7 +15863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改无影网盘终端用户的属性</p>
+     * <p>Modifies users of a cloud disk in Cloud Drive Service.</p>
      * 
      * @param request ModifyCloudDriveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15887,7 +15911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改无影网盘终端用户的属性</p>
+     * <p>Modifies users of a cloud disk in Cloud Drive Service.</p>
      * 
      * @param request ModifyCloudDriveUsersRequest
      * @return ModifyCloudDriveUsersResponse
@@ -17801,7 +17825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改限速组资源绑定关系</p>
+     * <p>Modifies the resources that a Quality of Service (QoS) rule applies to.</p>
      * 
      * @param request ModifyQosEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17849,7 +17873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改限速组资源绑定关系</p>
+     * <p>Modifies the resources that a Quality of Service (QoS) rule applies to.</p>
      * 
      * @param request ModifyQosEntriesRequest
      * @return ModifyQosEntriesResponse
@@ -17860,6 +17884,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a Quality of Service (QoS) rule.</p>
+     * 
      * @param request ModifyQosRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyQosRuleResponse
@@ -17901,6 +17928,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a Quality of Service (QoS) rule.</p>
+     * 
      * @param request ModifyQosRuleRequest
      * @return ModifyQosRuleResponse
      */
@@ -17910,6 +17940,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a global policy that is associated with a cloud resource.</p>
+     * 
      * @param request ModifyResourceCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyResourceCenterPolicyResponse
@@ -17959,6 +17992,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a global policy that is associated with a cloud resource.</p>
+     * 
      * @param request ModifyResourceCenterPolicyRequest
      * @return ModifyResourceCenterPolicyResponse
      */
@@ -18408,7 +18444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Move files or folders.</p>
+     * <p>Moves a file or folder on the drive to a new location.</p>
      * 
      * @param request MoveCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18464,7 +18500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Move files or folders.</p>
+     * <p>Moves a file or folder on the drive to a new location.</p>
      * 
      * @param request MoveCdsFileRequest
      * @return MoveCdsFileResponse
@@ -19403,7 +19439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can use the RunCommand operation to run scripts only on Windows cloud desktops.</p>
      * 
      * <b>summary</b> : 
-     * <p>Runs a PowerShell or batch (.bat) script on Windows cloud desktops.</p>
+     * <p>Runs a PowerShell or batch (.bat) command on one or more Windows cloud computers.</p>
      * 
      * @param request RunCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19466,7 +19502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can use the RunCommand operation to run scripts only on Windows cloud desktops.</p>
      * 
      * <b>summary</b> : 
-     * <p>Runs a PowerShell or batch (.bat) script on Windows cloud desktops.</p>
+     * <p>Runs a PowerShell or batch (.bat) command on one or more Windows cloud computers.</p>
      * 
      * @param request RunCommandRequest
      * @return RunCommandResponse
@@ -19769,7 +19805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is supported only for AD directories, not for RAM directories.</p>
      * 
      * <b>summary</b> : 
-     * <p>Configures the single sign-on (SSO) status of an Active Directory (AD) directory.</p>
+     * <p>Enables or disables the single sign-on (SSO) feature for an Active Directory (AD) account-based office network.</p>
      * 
      * @param request SetDirectorySsoStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19812,7 +19848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is supported only for AD directories, not for RAM directories.</p>
      * 
      * <b>summary</b> : 
-     * <p>Configures the single sign-on (SSO) status of an Active Directory (AD) directory.</p>
+     * <p>Enables or disables the single sign-on (SSO) feature for an Active Directory (AD) account-based office network.</p>
      * 
      * @param request SetDirectorySsoStatusRequest
      * @return SetDirectorySsoStatusResponse
@@ -19886,7 +19922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables single sign-on (SSO) for a workspace.</p>
+     * <p>Enables or disables single sign-on (SSO) for an office network.</p>
      * 
      * @param request SetOfficeSiteSsoStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19926,7 +19962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables single sign-on (SSO) for a workspace.</p>
+     * <p>Enables or disables single sign-on (SSO) for an office network.</p>
      * 
      * @param request SetOfficeSiteSsoStatusRequest
      * @return SetOfficeSiteSsoStatusResponse
@@ -20119,7 +20155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a Cloud Assistant command that is running on one or more cloud desktops.</p>
+     * <p>Stop a process that executes the Cloud Assistant script in one or more cloud computers.</p>
      * 
      * @param request StopInvocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20162,7 +20198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a Cloud Assistant command that is running on one or more cloud desktops.</p>
+     * <p>Stop a process that executes the Cloud Assistant script in one or more cloud computers.</p>
      * 
      * @param request StopInvocationRequest
      * @return StopInvocationResponse
