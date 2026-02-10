@@ -13,9 +13,6 @@ public class DescribeLiveDomainSnapshotDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The daily statistics on the number of snapshots.</p>
-     */
     @NameInMap("SnapshotDataInfos")
     public DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfos snapshotDataInfos;
 
@@ -41,21 +38,9 @@ public class DescribeLiveDomainSnapshotDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfosSnapshotDataInfo extends TeaModel {
-        /**
-         * <p>The date.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20180209</p>
-         */
         @NameInMap("Date")
         public String date;
 
-        /**
-         * <p>The total number of snapshots that were captured on the day.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>110</p>
-         */
         @NameInMap("Total")
         public Integer total;
 

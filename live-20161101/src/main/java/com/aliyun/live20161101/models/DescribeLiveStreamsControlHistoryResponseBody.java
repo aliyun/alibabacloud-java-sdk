@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
-    /**
-     * <p>The operation records.</p>
-     */
     @NameInMap("ControlInfo")
     public DescribeLiveStreamsControlHistoryResponseBodyControlInfo controlInfo;
 
@@ -41,39 +38,15 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamsControlHistoryResponseBodyControlInfoLiveStreamControlInfo extends TeaModel {
-        /**
-         * <p>The name of the operation performed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DescribeLiveStreamsControlHistory</p>
-         */
         @NameInMap("Action")
         public String action;
 
-        /**
-         * <p>The IP address that is used by the client for live streaming.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.207.XX.XX</p>
-         */
         @NameInMap("ClientIP")
         public String clientIP;
 
-        /**
-         * <p>The name of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveStream****</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The time when the operation was performed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-01T16:36:18Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -59,9 +59,6 @@ public class DescribeLiveStreamPushMetricDetailDataResponseBody extends TeaModel
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The data array returned.</p>
-     */
     @NameInMap("StreamDetailData")
     public DescribeLiveStreamPushMetricDetailDataResponseBodyStreamDetailData streamDetailData;
 
@@ -127,48 +124,18 @@ public class DescribeLiveStreamPushMetricDetailDataResponseBody extends TeaModel
     }
 
     public static class DescribeLiveStreamPushMetricDetailDataResponseBodyStreamDetailDataStreamData extends TeaModel {
-        /**
-         * <p>The name of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The total bandwidth consumed by the stream per minute. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>423304182</p>
-         */
         @NameInMap("ReqBps")
         public Float reqBps;
 
-        /**
-         * <p>The total amount of traffic consumed by the stream per minute. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>423304182.66</p>
-         */
         @NameInMap("ReqTraffic")
         public Long reqTraffic;
 
-        /**
-         * <p>The name of the stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test.flv</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-09-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

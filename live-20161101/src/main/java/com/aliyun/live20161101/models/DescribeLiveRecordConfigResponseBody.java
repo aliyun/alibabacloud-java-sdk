@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveRecordConfigResponseBody extends TeaModel {
-    /**
-     * <p>The list of recording configurations.</p>
-     */
     @NameInMap("LiveAppRecordList")
     public DescribeLiveRecordConfigResponseBodyLiveAppRecordList liveAppRecordList;
 
@@ -126,48 +123,18 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat extends TeaModel {
-        /**
-         * <p>The duration of a recording file. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3600</p>
-         */
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
-        /**
-         * <p>The format of recording files.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>M3U8</p>
-         */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <p>The naming format of a recording file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>record/{liveApp****}/{liveStream****}</p>
-         */
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
-        /**
-         * <p>The duration of a segment file. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("SliceDuration")
         public Integer sliceDuration;
 
-        /**
-         * <p>The naming format of a segment file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>record/{liveApp****}/{liveStream****}/{UnixTimestamp}</p>
-         */
         @NameInMap("SliceOssObjectPrefix")
         public String sliceOssObjectPrefix;
 
@@ -238,48 +205,18 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat extends TeaModel {
-        /**
-         * <p>The duration of a recording file. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3600</p>
-         */
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
-        /**
-         * <p>The format of recording files.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>M3U8</p>
-         */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <p>The naming format of a recording file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>record/{liveApp****}/{liveStream****}</p>
-         */
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
-        /**
-         * <p>The duration of a segment file. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("SliceDuration")
         public Integer sliceDuration;
 
-        /**
-         * <p>The naming format of a segment file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>record/{liveApp****}/{liveStream****}/{UnixTimestamp}</p>
-         */
         @NameInMap("SliceOssObjectPrefix")
         public String sliceOssObjectPrefix;
 
@@ -369,120 +306,42 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord extends TeaModel {
-        /**
-         * <p>The name of the application to which the live stream belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The time when the recording configuration was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-05-20T09:33:38Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The maximum interruption duration of the live stream. If the actual interruption duration exceeds the threshold, a new recording is generated. Valid values: 15 to 21600. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>180</p>
-         */
         @NameInMap("DelayTime")
         public Integer delayTime;
 
-        /**
-         * <p>The name of the main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The end time of the recording. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-11-08T03:49:18Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The configuration of on-demand recording. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: disables on-demand recording.</li>
-         * <li><strong>1</strong>: enables on-demand recording that is triggered by HTTP callbacks.</li>
-         * <li><strong>2</strong>: enables on-demand recording that is triggered by stream ingest parameters.</li>
-         * <li><strong>7</strong>: enables on-demand recording by calling the <a href="https://help.aliyun.com/document_detail/85907.html">RealTimeRecordCommand</a> operation to manually start or stop recording.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you set OnDemand to <strong>1</strong>, you must call the <a href="https://help.aliyun.com/document_detail/51831.html">AddLiveRecordNotifyConfig</a> operation to configure OnDemandUrl. Otherwise, the configuration of on-demand recording is invalid.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("OnDemond")
         public Integer onDemond;
 
-        /**
-         * <p>The name of the Object Storage Service (OSS) bucket in which the recordings are stored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveBucket****</p>
-         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
-        /**
-         * <p>The endpoint of the OSS bucket.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-oss-****.aliyuncs.com</p>
-         */
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
-        /**
-         * <p>The recording formats of original streams.</p>
-         */
         @NameInMap("RecordFormatList")
         public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatList recordFormatList;
 
-        /**
-         * <p>The start time of the recording. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-11-08T02:49:18Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The name of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveStream****</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The recording formats of transcoded streams.</p>
-         */
         @NameInMap("TranscodeRecordFormatList")
         public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatList transcodeRecordFormatList;
 
-        /**
-         * <p>The transcoding templates.</p>
-         */
         @NameInMap("TranscodeTemplates")
         public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeTemplates transcodeTemplates;
 

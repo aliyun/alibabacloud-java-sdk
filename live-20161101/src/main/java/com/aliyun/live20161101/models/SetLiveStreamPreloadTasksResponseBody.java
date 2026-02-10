@@ -13,9 +13,6 @@ public class SetLiveStreamPreloadTasksResponseBody extends TeaModel {
     @NameInMap("FailedURL")
     public Integer failedURL;
 
-    /**
-     * <p>The details of the prefetch task.</p>
-     */
     @NameInMap("PreloadTasksMessages")
     public SetLiveStreamPreloadTasksResponseBodyPreloadTasksMessages preloadTasksMessages;
 
@@ -116,31 +113,12 @@ public class SetLiveStreamPreloadTasksResponseBody extends TeaModel {
     }
 
     public static class SetLiveStreamPreloadTasksResponseBodyPreloadTasksMessagesPreloadTasksMessage extends TeaModel {
-        /**
-         * <p>Indicates whether the prefetch task is successful. Valid values:</p>
-         * <ul>
-         * <li>Successfully</li>
-         * <li>InternalError</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Successfully</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The streaming URL.</p>
-         */
         @NameInMap("PlayUrl")
         public String playUrl;
 
-        /**
-         * <p>The ID of the prefetch task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>yourTaskId</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 

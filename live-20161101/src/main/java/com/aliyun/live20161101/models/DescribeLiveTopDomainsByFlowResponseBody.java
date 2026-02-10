@@ -49,9 +49,6 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The top domain names ranked by traffic.</p>
-     */
     @NameInMap("TopDomains")
     public DescribeLiveTopDomainsByFlowResponseBodyTopDomains topDomains;
 
@@ -109,66 +106,24 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The peak bandwidth of the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>22139626</p>
-         */
         @NameInMap("MaxBps")
         public Long maxBps;
 
-        /**
-         * <p>The time when the bandwidth reached the peak value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1457111400</p>
-         */
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
-        /**
-         * <p>The ranking of the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Rank")
         public Long rank;
 
-        /**
-         * <p>The number of visits to the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>107784230</p>
-         */
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
-        /**
-         * <p>The total traffic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2043859876683.9001</p>
-         */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
-        /**
-         * <p>The traffic share of the domain name relative to the total traffic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30.64191989360235</p>
-         */
         @NameInMap("TrafficPercent")
         public String trafficPercent;
 

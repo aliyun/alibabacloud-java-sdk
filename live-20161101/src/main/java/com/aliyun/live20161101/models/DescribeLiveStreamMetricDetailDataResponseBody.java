@@ -58,9 +58,6 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The data array returned.</p>
-     */
     @NameInMap("StreamDetailData")
     public DescribeLiveStreamMetricDetailDataResponseBodyStreamDetailData streamDetailData;
 
@@ -126,246 +123,69 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamMetricDetailDataResponseBodyStreamDetailDataStreamData extends TeaModel {
-        /**
-         * <p>The name of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The total bandwidth consumed by the stream per minute. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>423304182.66</p>
-         */
         @NameInMap("Bps")
         public Float bps;
 
-        /**
-         * <p>The total number of online viewers for the stream per minute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>423304182</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The bandwidth over the Flash Video (FLV) protocol. Unit: bit/s.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>454</p>
-         */
         @NameInMap("FlvBps")
         public Float flvBps;
 
-        /**
-         * <p>The number of online viewers over the FLV protocol.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>32</p>
-         */
         @NameInMap("FlvCount")
         public Long flvCount;
 
-        /**
-         * <p>The amount of traffic over the FLV protocol. Unit: bytes.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1254</p>
-         */
         @NameInMap("FlvTraffic")
         public Long flvTraffic;
 
-        /**
-         * <p>The bandwidth over the HTTP Live Streaming (HLS) protocol. Unit: bit/s.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>4456</p>
-         */
         @NameInMap("HlsBps")
         public Float hlsBps;
 
-        /**
-         * <p>The number of online viewers over the HLS protocol.</p>
-         * <blockquote>
-         * <p> Currently, this parameter is not supported.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>56</p>
-         */
         @NameInMap("HlsCount")
         public Long hlsCount;
 
-        /**
-         * <p>The amount of traffic over the HLS protocol. Unit: bytes.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>568</p>
-         */
         @NameInMap("HlsTraffic")
         public Long hlsTraffic;
 
-        /**
-         * <p>Number of new connections established per minute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>450</p>
-         */
         @NameInMap("NewConns")
         public String newConns;
 
-        /**
-         * <p>The bandwidth over the P2P protocol. Unit: bit/s.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>6845</p>
-         */
         @NameInMap("P2pBps")
         public Float p2pBps;
 
-        /**
-         * <p>The number of online viewers over the P2P protocol.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>78</p>
-         */
         @NameInMap("P2pCount")
         public Long p2pCount;
 
-        /**
-         * <p>The amount of traffic over the peer-to-peer (P2P) protocol. Unit: bytes.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>4102</p>
-         */
         @NameInMap("P2pTraffic")
         public Long p2pTraffic;
 
-        /**
-         * <p>The bandwidth over the Real-Time Messaging Protocol (RTMP) protocol. Unit: bit/s.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>3323</p>
-         */
         @NameInMap("RtmpBps")
         public Float rtmpBps;
 
-        /**
-         * <p>The number of online viewers over the RTMP protocol.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>63</p>
-         */
         @NameInMap("RtmpCount")
         public Long rtmpCount;
 
-        /**
-         * <p>The amount of traffic over the RTMP protocol. Unit: bytes.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>5568</p>
-         */
         @NameInMap("RtmpTraffic")
         public Long rtmpTraffic;
 
-        /**
-         * <p>The bandwidth over the RTS protocol. Unit: bit/s.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>2361</p>
-         */
         @NameInMap("RtsBps")
         public Float rtsBps;
 
-        /**
-         * <p>The number of online viewers over the Real-Time Streaming (RTS) protocol.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>89</p>
-         */
         @NameInMap("RtsCount")
         public Long rtsCount;
 
-        /**
-         * <p>The amount of traffic over the RTS protocol. Unit: bytes.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>2322</p>
-         */
         @NameInMap("RtsTraffic")
         public Long rtsTraffic;
 
-        /**
-         * <p>The name of the stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test.flv</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total amount of traffic consumed by the stream per minute. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>423304182</p>
-         */
         @NameInMap("Traffic")
         public Long traffic;
 

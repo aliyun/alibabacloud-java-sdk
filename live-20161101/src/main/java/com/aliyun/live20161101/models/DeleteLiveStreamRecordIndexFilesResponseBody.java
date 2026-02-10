@@ -22,9 +22,6 @@ public class DeleteLiveStreamRecordIndexFilesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The deletion information.</p>
-     */
     @NameInMap("RecordDeleteInfoList")
     public DeleteLiveStreamRecordIndexFilesResponseBodyRecordDeleteInfoList recordDeleteInfoList;
 
@@ -75,26 +72,9 @@ public class DeleteLiveStreamRecordIndexFilesResponseBody extends TeaModel {
     }
 
     public static class DeleteLiveStreamRecordIndexFilesResponseBodyRecordDeleteInfoListRecordDeleteInfo extends TeaModel {
-        /**
-         * <p>The processing result of each file indicated by the file ID. Valid values:</p>
-         * <ul>
-         * <li><strong>OK</strong>: The file has been deleted.</li>
-         * <li><strong>AccessDenied</strong>: Access to the file has been denied.</li>
-         * <li><strong>FileNotFound</strong>: The file fails to be found.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The ID of the index file that is used to locate the live stream recording files to be deleted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c4d7f0a4-b506-43f9-8de3-07732c3f**</p>
-         */
         @NameInMap("RecordId")
         public String recordId;
 

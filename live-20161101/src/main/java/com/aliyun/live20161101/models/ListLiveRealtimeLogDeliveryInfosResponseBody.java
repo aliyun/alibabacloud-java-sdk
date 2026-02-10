@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRealtimeLogDeliveryInfosResponseBody extends TeaModel {
-    /**
-     * <p>Details about the configuration of real-time log delivery.</p>
-     */
     @NameInMap("Content")
     public ListLiveRealtimeLogDeliveryInfosResponseBodyContent content;
 
@@ -41,30 +38,12 @@ public class ListLiveRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     }
 
     public static class ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos extends TeaModel {
-        /**
-         * <p>The name of the Logstore to which log entries are delivered.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>logstore_example</p>
-         */
         @NameInMap("Logstore")
         public String logstore;
 
-        /**
-         * <p>The name of the Log Service project that is used for real-time log delivery.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>project_example</p>
-         */
         @NameInMap("Project")
         public String project;
 
-        /**
-         * <p>The ID of the region where the Log Service project is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 

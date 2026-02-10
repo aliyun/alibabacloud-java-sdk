@@ -3537,7 +3537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limit on an API operation in ApsaraVideo Live</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据一个或多个用户uid查询用户是否在线</p>
+     * <p>Queries whether users are online by UID.</p>
      * 
      * @param request BatchGetOnlineUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3583,7 +3583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limit on an API operation in ApsaraVideo Live</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据一个或多个用户uid查询用户是否在线</p>
+     * <p>Queries whether users are online by UID.</p>
      * 
      * @param request BatchGetOnlineUsersRequest
      * @return BatchGetOnlineUsersResponse
@@ -5701,7 +5701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limits</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</p>
+     * <p>Generates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</p>
      * 
      * @param request CreateRoomRealTimeStreamAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5747,7 +5747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limits</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</p>
+     * <p>Generates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</p>
      * 
      * @param request CreateRoomRealTimeStreamAddressRequest
      * @return CreateRoomRealTimeStreamAddressResponse
@@ -8011,6 +8011,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2><a href="#qps-"></a>QPS limit</h2>
      * <p>You can call this operation up to 300 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
+     * <b>summary</b> : 
+     * <p>删除直播封装配置</p>
+     * 
      * @param request DeleteLivePackageConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLivePackageConfigResponse
@@ -8060,6 +8063,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to delete a live stream encapsulation configuration. The deletion takes effect after you re-ingest the stream.</p>
      * <h2><a href="#qps-"></a>QPS limit</h2>
      * <p>You can call this operation up to 300 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除直播封装配置</p>
      * 
      * @param request DeleteLivePackageConfigRequest
      * @return DeleteLivePackageConfigResponse
@@ -15075,6 +15081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2><a href="#qps-"></a>QPS limit</h2>
      * <p>You can call this operation up to 300 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
+     * <b>summary</b> : 
+     * <p>查询直播封装配置</p>
+     * 
      * @param request DescribeLivePackageConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLivePackageConfigResponse
@@ -15136,6 +15145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Obtain the main streaming domain, and then call this operation to query live stream encapsulation configurations.</p>
      * <h2><a href="#qps-"></a>QPS limit</h2>
      * <p>You can call this operation up to 300 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询直播封装配置</p>
      * 
      * @param request DescribeLivePackageConfigRequest
      * @return DescribeLivePackageConfigResponse
@@ -16250,7 +16262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>A single user can perform a maximum of 10 queries per second (QPS). Throttling is triggered when the number of calls per second exceeds the QPS limit. The throttling may affect your business. Thus, we recommend that you observe the QPS limit on this operation. For more information about what a single user means and the QPS details, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-live/latest/qps-limit-on-an-api-operation-in-apsaravideo-live#topic-2136805">QPS limit on an API operation in ApsaraVideo Live</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the time shifting configurations under a domain name.</p>
+     * <p>Queries the time shifting configurations of a domain name.</p>
      * 
      * @param request DescribeLiveShiftConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16295,7 +16307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>A single user can perform a maximum of 10 queries per second (QPS). Throttling is triggered when the number of calls per second exceeds the QPS limit. The throttling may affect your business. Thus, we recommend that you observe the QPS limit on this operation. For more information about what a single user means and the QPS details, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-live/latest/qps-limit-on-an-api-operation-in-apsaravideo-live#topic-2136805">QPS limit on an API operation in ApsaraVideo Live</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the time shifting configurations under a domain name.</p>
+     * <p>Queries the time shifting configurations of a domain name.</p>
      * 
      * @param request DescribeLiveShiftConfigsRequest
      * @return DescribeLiveShiftConfigsResponse
@@ -18174,7 +18186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>A single user can perform a maximum of 50 queries per second (QPS). Throttling is triggered when the number of calls per second exceeds the QPS limit. The throttling may affect your business. Thus, we recommend that you observe the QPS limit on this operation. For more information about what a single user means and the QPS details, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-live/latest/qps-limit-on-an-api-operation-in-apsaravideo-live#topic-2136805">QPS limit on an API operation in ApsaraVideo Live</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the blacklist of live stream URLs under a main streaming domain.</p>
+     * <p>Queries the live streams that are blacklisted under a domain name.</p>
      * 
      * @param request DescribeLiveStreamsBlockListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18227,7 +18239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>A single user can perform a maximum of 50 queries per second (QPS). Throttling is triggered when the number of calls per second exceeds the QPS limit. The throttling may affect your business. Thus, we recommend that you observe the QPS limit on this operation. For more information about what a single user means and the QPS details, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-live/latest/qps-limit-on-an-api-operation-in-apsaravideo-live#topic-2136805">QPS limit on an API operation in ApsaraVideo Live</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the blacklist of live stream URLs under a main streaming domain.</p>
+     * <p>Queries the live streams that are blacklisted under a domain name.</p>
      * 
      * @param request DescribeLiveStreamsBlockListRequest
      * @return DescribeLiveStreamsBlockListResponse
@@ -19973,7 +19985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询rtc云端录制文件与任务信息</p>
+     * <p>Queries the information about a real-time communication (RTC) cloud-based recording task.</p>
      * 
      * @param request DescribeRtcCloudRecordingFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20005,7 +20017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询rtc云端录制文件与任务信息</p>
+     * <p>Queries the information about a real-time communication (RTC) cloud-based recording task.</p>
      * 
      * @param request DescribeRtcCloudRecordingFilesRequest
      * @return DescribeRtcCloudRecordingFilesResponse
@@ -20013,6 +20025,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRtcCloudRecordingFilesResponse describeRtcCloudRecordingFiles(DescribeRtcCloudRecordingFilesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRtcCloudRecordingFilesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云端转码任务</p>
+     * 
+     * @param request DescribeRtcCloudTranscodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRtcCloudTranscodeResponse
+     */
+    public DescribeRtcCloudTranscodeResponse describeRtcCloudTranscodeWithOptions(DescribeRtcCloudTranscodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRtcCloudTranscode"),
+            new TeaPair("version", "2016-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRtcCloudTranscodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云端转码任务</p>
+     * 
+     * @param request DescribeRtcCloudTranscodeRequest
+     * @return DescribeRtcCloudTranscodeResponse
+     */
+    public DescribeRtcCloudTranscodeResponse describeRtcCloudTranscode(DescribeRtcCloudTranscodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRtcCloudTranscodeWithOptions(request, runtime);
     }
 
     /**
@@ -25061,7 +25121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about a user.</p>
+     * <p>Modifies the information about one or more users.</p>
      * 
      * @param request ModifyLiveMessageUserInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25105,7 +25165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about a user.</p>
+     * <p>Modifies the information about one or more users.</p>
      * 
      * @param request ModifyLiveMessageUserInfoRequest
      * @return ModifyLiveMessageUserInfoResponse
@@ -26241,7 +26301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limits</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a specified episode from an episode list.</p>
+     * <p>Removes an episode from an episode list.</p>
      * 
      * @param request RemoveShowFromShowListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26299,7 +26359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limits</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a specified episode from an episode list.</p>
+     * <p>Removes an episode from an episode list.</p>
      * 
      * @param request RemoveShowFromShowListRequest
      * @return RemoveShowFromShowListResponse
@@ -29152,6 +29212,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建云端转码任务</p>
+     * 
+     * @param tmpReq StartRtcCloudTranscodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartRtcCloudTranscodeResponse
+     */
+    public StartRtcCloudTranscodeResponse startRtcCloudTranscodeWithOptions(StartRtcCloudTranscodeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartRtcCloudTranscodeShrinkRequest request = new StartRtcCloudTranscodeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.inputParam)) {
+            request.inputParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.inputParam, "InputParam", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outputParams)) {
+            request.outputParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outputParams, "OutputParams", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputParamShrink)) {
+            query.put("InputParam", request.inputParamShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxIdleTime)) {
+            query.put("MaxIdleTime", request.maxIdleTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputParamsShrink)) {
+            query.put("OutputParams", request.outputParamsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartRtcCloudTranscode"),
+            new TeaPair("version", "2016-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartRtcCloudTranscodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建云端转码任务</p>
+     * 
+     * @param request StartRtcCloudTranscodeRequest
+     * @return StartRtcCloudTranscodeResponse
+     */
+    public StartRtcCloudTranscodeResponse startRtcCloudTranscode(StartRtcCloudTranscodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startRtcCloudTranscodeWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation to create a production studio and call this operation to stop the production studio. When a production studio is stopped, its PVW and PGM scenes are stopped.</p>
      * <h2><a href="#qps-"></a>QPS limit</h2>
@@ -29219,7 +29349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is only applicable to the PVW scenes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a specified preview scene.</p>
+     * <p>Stops a specified preview (PVW) scene.</p>
      * 
      * @param request StopCasterSceneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29267,7 +29397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is only applicable to the PVW scenes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a specified preview scene.</p>
+     * <p>Stops a specified preview (PVW) scene.</p>
      * 
      * @param request StopCasterSceneRequest
      * @return StopCasterSceneResponse
@@ -29715,7 +29845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止rtc云端录制任务</p>
+     * <p>Stops a real-time communication (RTC) cloud-based recording task.</p>
      * 
      * @param request StopRtcCloudRecordingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29747,7 +29877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止rtc云端录制任务</p>
+     * <p>Stops a real-time communication (RTC) cloud-based recording task.</p>
      * 
      * @param request StopRtcCloudRecordingRequest
      * @return StopRtcCloudRecordingResponse
@@ -29758,11 +29888,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>停止云端转码任务</p>
+     * 
+     * @param request StopRtcCloudTranscodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopRtcCloudTranscodeResponse
+     */
+    public StopRtcCloudTranscodeResponse stopRtcCloudTranscodeWithOptions(StopRtcCloudTranscodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopRtcCloudTranscode"),
+            new TeaPair("version", "2016-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopRtcCloudTranscodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止云端转码任务</p>
+     * 
+     * @param request StopRtcCloudTranscodeRequest
+     * @return StopRtcCloudTranscodeResponse
+     */
+    public StopRtcCloudTranscodeResponse stopRtcCloudTranscode(StopRtcCloudTranscodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopRtcCloudTranscodeWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>The key of the tag. Valid values of N: <strong>1 to 20</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>The N tags that you want to add for the resource.</p>
+     * <p>Adds tags for domain names.</p>
      * 
      * @param request TagLiveResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29813,7 +29991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The key of the tag. Valid values of N: <strong>1 to 20</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>The N tags that you want to add for the resource.</p>
+     * <p>Adds tags for domain names.</p>
      * 
      * @param request TagLiveResourcesRequest
      * @return TagLiveResourcesResponse
@@ -29825,7 +30003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑标签</p>
+     * <p>Deletes tags of domain names.</p>
      * 
      * @param request UnTagLiveResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29877,7 +30055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑标签</p>
+     * <p>Deletes tags of domain names.</p>
      * 
      * @param request UnTagLiveResourcesRequest
      * @return UnTagLiveResourcesResponse

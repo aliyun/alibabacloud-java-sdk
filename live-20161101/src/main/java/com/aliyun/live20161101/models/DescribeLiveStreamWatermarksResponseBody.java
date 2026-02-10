@@ -22,9 +22,6 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
-    /**
-     * <p>Details of the watermark templates.</p>
-     */
     @NameInMap("WatermarkList")
     public DescribeLiveStreamWatermarksResponseBodyWatermarkList watermarkList;
 
@@ -58,136 +55,42 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamWatermarksResponseBodyWatermarkListWatermark extends TeaModel {
-        /**
-         * <p>The description of the watermark.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>my watermark</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The height of the watermark. Unit: pixels.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Height")
         public Integer height;
 
-        /**
-         * <p>The name of the watermark.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>livewatermark****</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The position of the watermark.</p>
-         * <ul>
-         * <li>TopLeft: the upper-left corner.</li>
-         * <li>TopRight: the upper-right corner.</li>
-         * <li>BottomLeft: the lower-left corner.</li>
-         * <li>BottomRight: the lower-right corner.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>TopRight</p>
-         */
         @NameInMap("OffsetCorner")
         public String offsetCorner;
 
-        /**
-         * <p>The URL of the watermark image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://example.com">http://example.com</a></p>
-         */
         @NameInMap("PictureUrl")
         public String pictureUrl;
 
-        /**
-         * <p>The height of the background video. Unit: pixels.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1080</p>
-         */
         @NameInMap("RefHeight")
         public Integer refHeight;
 
-        /**
-         * <p>The width of the background video. Unit: pixels.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1920</p>
-         */
         @NameInMap("RefWidth")
         public Integer refWidth;
 
-        /**
-         * <p>The number of watermark rules configured for the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 
-        /**
-         * <p>The ID of the watermark template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>445409ec-7eaa-4 61d-8f29-4bec2eb9 ****</p>
-         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        /**
-         * <p>The transparency of the watermark. A smaller value indicates a more transparent watermark. Valid values: 0 to 255.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>255</p>
-         */
         @NameInMap("Transparency")
         public Integer transparency;
 
-        /**
-         * <p>The watermark type.</p>
-         * <ul>
-         * <li>0: image. Only image watermarks are supported.</li>
-         * <li>1: text.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Type")
         public Integer type;
 
-        /**
-         * <p>The offset of the watermark along the x-axis. Unit: pixels.</p>
-         * <blockquote>
-         * <p> The value of the RefWidth parameter is used as the reference. If the OffsetCorner parameter is set to TopLeft, the value of the XOffset parameter indicates the x-axis offset of the upper-left corner of the watermark relative to that of the background video. The directions from the coordinate axes to the center of the background video are positive. In other words, the x-axis is positive toward the right.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>50.0</p>
-         */
         @NameInMap("XOffset")
         public Float XOffset;
 
-        /**
-         * <p>The offset of the watermark along the y-axis. Unit: pixels.</p>
-         * <blockquote>
-         * <p> The value of the RefHeight parameter is used as the reference. If the OffsetCorner parameter is set to TopLeft, the value of the YOffset parameter indicates the y-axis offset of the upper-left corner of the watermark relative to that of the background video. The directions from the coordinate axes to the center of the background video are positive. In other words, the y-axis is positive downward.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("YOffset")
         public Float YOffset;
 

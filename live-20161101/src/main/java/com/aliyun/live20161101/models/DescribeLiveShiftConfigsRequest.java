@@ -17,6 +17,12 @@ public class DescribeLiveShiftConfigsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the streaming domain resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

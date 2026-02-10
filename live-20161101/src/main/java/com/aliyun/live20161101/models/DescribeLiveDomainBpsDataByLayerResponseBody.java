@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainBpsDataByLayerResponseBody extends TeaModel {
-    /**
-     * <p>The data returned at each time interval.</p>
-     */
     @NameInMap("BpsDataInterval")
     public DescribeLiveDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval;
 
@@ -58,30 +55,12 @@ public class DescribeLiveDomainBpsDataByLayerResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-03-15T16:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total traffic. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>331</p>
-         */
         @NameInMap("TrafficValue")
         public String trafficValue;
 
-        /**
-         * <p>The peak bandwidth. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.56</p>
-         */
         @NameInMap("Value")
         public String value;
 

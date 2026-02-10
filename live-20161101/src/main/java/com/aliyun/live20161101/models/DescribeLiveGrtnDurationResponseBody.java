@@ -13,9 +13,6 @@ public class DescribeLiveGrtnDurationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details of the co-streaming usage data.</p>
-     */
     @NameInMap("StreamDetailData")
     public DescribeLiveGrtnDurationResponseBodyStreamDetailData streamDetailData;
 
@@ -41,58 +38,18 @@ public class DescribeLiveGrtnDurationResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveGrtnDurationResponseBodyStreamDetailDataStreamData extends TeaModel {
-        /**
-         * <p>The ID of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4346289a-a790-4869-9e23-22766d5e****</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <p>The co-streaming duration. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("Duration")
         public Long duration;
 
-        /**
-         * <p>The media specification. Valid values:</p>
-         * <ul>
-         * <li>0: audio-only. This is a basic specification.</li>
-         * <li>480P: standard definition (SD). The video resolution is 640 × 480 or lower.</li>
-         * <li>720P: high definition (HD). The video resolution is 1280 × 720 or lower.</li>
-         * <li>1080P: full HD. The video resolution is 1920 × 1080 or lower.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>480P</p>
-         */
         @NameInMap("MediaProfile")
         public String mediaProfile;
 
-        /**
-         * <p>The media type. Valid values:</p>
-         * <ul>
-         * <li>audio</li>
-         * <li>video</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>audio</p>
-         */
         @NameInMap("MediaType")
         public String mediaType;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

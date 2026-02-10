@@ -13,9 +13,6 @@ public class DescribeLiveStreamsTotalCountResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The statistics about the live streams.</p>
-     */
     @NameInMap("StreamCountList")
     public DescribeLiveStreamsTotalCountResponseBodyStreamCountList streamCountList;
 
@@ -41,21 +38,9 @@ public class DescribeLiveStreamsTotalCountResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamsTotalCountResponseBodyStreamCountListStreamCountInfos extends TeaModel {
-        /**
-         * <p>The total number of live streams.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>934</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-07-24T16:00:00Z</p>
-         */
         @NameInMap("Timestamp")
         public String timestamp;
 

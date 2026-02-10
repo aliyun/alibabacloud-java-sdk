@@ -22,9 +22,6 @@ public class DescribeCasterVideoResourcesResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
-    /**
-     * <p>The input sources.</p>
-     */
     @NameInMap("VideoResources")
     public DescribeCasterVideoResourcesResponseBodyVideoResources videoResources;
 
@@ -58,130 +55,42 @@ public class DescribeCasterVideoResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource extends TeaModel {
-        /**
-         * <p>The offset of the position where the system starts to read the video resource. This parameter takes effect only if the input source is a video file. Unit: milliseconds.</p>
-         * <p>A value <strong>greater than 0</strong> indicates an offset from the first frame.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("BeginOffset")
         public Integer beginOffset;
 
-        /**
-         * <p>The offset of the position where the system stops reading the video file. This parameter takes effect only if the input source is a video file. Unit: milliseconds.</p>
-         * <ul>
-         * <li>A value greater than <strong>0</strong> indicates an offset from the first frame.</li>
-         * <li>A value smaller than <strong>0</strong> indicates an offset from the last frame.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>10000</p>
-         */
         @NameInMap("EndOffset")
         public Integer endOffset;
 
-        /**
-         * <p>The source URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://guide.aliyundoc.com/example.org">http://guide.aliyundoc.com/example.org</a></p>
-         */
         @NameInMap("FlvUrl")
         public String flvUrl;
 
-        /**
-         * <p>The image ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a089175eb5f4427684fc0715159a****</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
-        /**
-         * <p>The image URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://learn.aliyundoc.com/AppName/image.jpg">http://learn.aliyundoc.com/AppName/image.jpg</a></p>
-         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
-        /**
-         * <p>The URL of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtmp://abcLive/appName/b5447c21fcfe444c9e9b6f7ba208****</p>
-         */
         @NameInMap("LiveStreamUrl")
         public String liveStreamUrl;
 
-        /**
-         * <p>The position of the video resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RV01</p>
-         */
         @NameInMap("LocationId")
         public String locationId;
 
-        /**
-         * <p>The material ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d2c429cd907742ee8f6e76465ad3****</p>
-         */
         @NameInMap("MaterialId")
         public String materialId;
 
-        /**
-         * <p>The interval between presentation timestamp (PTS) callbacks. If you set the value to 0, the PTS callback is disabled. This parameter is returned only when the video resource is a video-on-demand (VOD) file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PtsCallbackInterval")
         public Integer ptsCallbackInterval;
 
-        /**
-         * <p>The number of playback times after the first playback is complete. This parameter takes effect only when the input source is a video file. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong> (default): The video file is played only once.</li>
-         * <li><strong>-1</strong>: The video file is played in loop mode.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RepeatNum")
         public Integer repeatNum;
 
-        /**
-         * <p>The resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>b5f8c837-ceeb-424f-b30b-68e94e86****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The resource name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>resource-Name1</p>
-         */
         @NameInMap("ResourceName")
         public String resourceName;
 
-        /**
-         * <p>The URL of the VOD file.</p>
-         * <p>This parameter is returned only when the video resource is an MP4, FLV, or TS file that is not from the media library.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://developer.aliyundoc.com/caster1.flv">http://developer.aliyundoc.com/caster1.flv</a></p>
-         */
         @NameInMap("VodUrl")
         public String vodUrl;
 

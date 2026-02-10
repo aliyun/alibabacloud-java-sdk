@@ -13,9 +13,6 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The recording data that was collected for each interval.</p>
-     */
     @NameInMap("RecordUsageData")
     public DescribeLiveDomainRecordUsageDataResponseBodyRecordUsageData recordUsageData;
 
@@ -75,57 +72,21 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainRecordUsageDataResponseBodyRecordUsageDataDataModule extends TeaModel {
-        /**
-         * <p>The number of peak channels.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The main streaming domain. This parameter is returned if the value of the request parameter SplitBy contains <code>domain</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The recording length. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3560</p>
-         */
         @NameInMap("Duration")
         public Long duration;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The time when recording started.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-05-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The recording file type. This parameter is returned if the value of the request parameter SplitBy contains <code>record_fmt</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MP4</p>
-         */
         @NameInMap("Type")
         public String type;
 

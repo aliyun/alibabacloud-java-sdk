@@ -13,9 +13,6 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The scenes.</p>
-     */
     @NameInMap("SceneList")
     public DescribeCasterScenesResponseBodySceneList sceneList;
 
@@ -77,41 +74,12 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo extends TeaModel {
-        /**
-         * <p>The streaming URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://live/caster/example.net">http://live/caster/example.net</a></p>
-         */
         @NameInMap("OutputStreamUrl")
         public String outputStreamUrl;
 
-        /**
-         * <p>The transcoding configuration. Valid values:</p>
-         * <ul>
-         * <li><strong>sd</strong>: standard definition</li>
-         * <li><strong>lld</strong>: low definition</li>
-         * <li><strong>lud</strong>: ultra-high definition</li>
-         * <li><strong>lhd</strong>: high definition</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>lld</p>
-         */
         @NameInMap("TranscodeConfig")
         public String transcodeConfig;
 
-        /**
-         * <p>The format. Valid values:</p>
-         * <ul>
-         * <li><strong>flv</strong></li>
-         * <li><strong>mp4</strong></li>
-         * <li><strong>m3u8</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>flv</p>
-         */
         @NameInMap("VideoFormat")
         public String videoFormat;
 
@@ -166,77 +134,27 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterScenesResponseBodySceneListScene extends TeaModel {
-        /**
-         * <p>The components.</p>
-         */
         @NameInMap("ComponentIds")
         public DescribeCasterScenesResponseBodySceneListSceneComponentIds componentIds;
 
-        /**
-         * <p>The ID of the layout.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>37cb2f8b-f152-4338-b928-6704f71d****</p>
-         */
         @NameInMap("LayoutId")
         public String layoutId;
 
-        /**
-         * <p>Indicates whether the output video is in PVW mode or PGM mode. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: in PVW mode.</li>
-         * <li><strong>1</strong>: in PGM mode.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("OutputType")
         public String outputType;
 
-        /**
-         * <p>The ID of the scene. You can use the ID as a request parameter in the API operation that is used to modify the audio configurations of the scene, query the audio configurations of the scene, start the scene, or stop the scene.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>b5f8c837-ceeb-424f-b30b-68e94e86****</p>
-         */
         @NameInMap("SceneId")
         public String sceneId;
 
-        /**
-         * <p>The name of the scene.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>scene1</p>
-         */
         @NameInMap("SceneName")
         public String sceneName;
 
-        /**
-         * <p>The status of the scene. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: disabled</li>
-         * <li><strong>1</strong>: enabled</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The information about the stream.</p>
-         */
         @NameInMap("StreamInfos")
         public DescribeCasterScenesResponseBodySceneListSceneStreamInfos streamInfos;
 
-        /**
-         * <p>The URL of the output stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtmp://developer.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</p>
-         */
         @NameInMap("StreamUrl")
         public String streamUrl;
 

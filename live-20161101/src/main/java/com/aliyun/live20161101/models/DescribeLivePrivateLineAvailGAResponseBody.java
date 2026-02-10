@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLivePrivateLineAvailGAResponseBody extends TeaModel {
-    /**
-     * <p>The GA instance configuration details.</p>
-     */
     @NameInMap("LivePrivateLineAvailGAs")
     public DescribeLivePrivateLineAvailGAResponseBodyLivePrivateLineAvailGAs livePrivateLineAvailGAs;
 
@@ -41,114 +38,36 @@ public class DescribeLivePrivateLineAvailGAResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePrivateLineAvailGAResponseBodyLivePrivateLineAvailGAsLivePrivateLineAvailGA extends TeaModel {
-        /**
-         * <p>The acceleration channel.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ap-southeast-1</p>
-         */
         @NameInMap("AccelerationArea")
         public String accelerationArea;
 
-        /**
-         * <p>The acceleration type. Valid values:</p>
-         * <ul>
-         * <li>play: streaming acceleration</li>
-         * <li>publish: stream ingest acceleration</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>play</p>
-         */
         @NameInMap("AccelerationType")
         public String accelerationType;
 
-        /**
-         * <p>The name of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>live</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>Indicates whether the GA instance is bound to an acceleration circuit. Valid values:</p>
-         * <ul>
-         * <li>yes</li>
-         * <li>no</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>yes</p>
-         */
         @NameInMap("BindingStatus")
         public String bindingStatus;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demo.aliyundoc.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The accelerated IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127.0.0.1</p>
-         */
         @NameInMap("IP")
         public String IP;
 
-        /**
-         * <p>The ID of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ga-bp1iovsdpf01ym9su****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The status of the GA instance. Valid values:</p>
-         * <ul>
-         * <li>active: The GA instance is available.</li>
-         * <li>inactive: The GA instance is unavailable.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The name of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testStream</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The user ID (UID).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1833220971116****</p>
-         */
         @NameInMap("Uid")
         public String uid;
 
-        /**
-         * <p>The live center.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("VideoCenter")
         public String videoCenter;
 

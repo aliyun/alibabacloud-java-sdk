@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
-    /**
-     * <p>The stream ingest callback records.</p>
-     */
     @NameInMap("NotifyRecordsInfo")
     public DescribeLiveStreamsNotifyRecordsResponseBodyNotifyRecordsInfo notifyRecordsInfo;
 
@@ -109,39 +106,15 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamsNotifyRecordsResponseBodyNotifyRecordsInfoLiveStreamNotifyRecordsInfo extends TeaModel {
-        /**
-         * <p>The name of the application to which the live stream belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The result of the request. If success is returned, the request is successful. If an error message is returned, the request failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ingest domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>push.example1.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The callback content.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;action\&quot;:\&quot;publish_done\&quot;,\&quot;app\&quot;:\&quot;push.example1.com\&quot;}</p>
-         */
         @NameInMap("NotifyContent")
         public String notifyContent;
 
@@ -151,56 +124,18 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         @NameInMap("NotifyResponse")
         public String notifyResponse;
 
-        /**
-         * <p>The callback result. Valid values:</p>
-         * <ul>
-         * <li>success</li>
-         * <li>failed</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("NotifyResult")
         public String notifyResult;
 
-        /**
-         * <p>The time when the callback was invoked. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-10-19T19:09:28Z</p>
-         */
         @NameInMap("NotifyTime")
         public String notifyTime;
 
-        /**
-         * <p>The event. Valid values:</p>
-         * <ul>
-         * <li>publish: The stream ingest starts.</li>
-         * <li>publish_done: The stream ingest is interrupted.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>publish_done</p>
-         */
         @NameInMap("NotifyType")
         public String notifyType;
 
-        /**
-         * <p>The callback URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://xx.xx.xx.xx/callbacks">http://xx.xx.xx.xx/callbacks</a></p>
-         */
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 
-        /**
-         * <p>The name of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>stream</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 

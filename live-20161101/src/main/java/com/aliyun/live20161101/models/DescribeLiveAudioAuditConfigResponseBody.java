@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
-    /**
-     * <p>The list of audio moderation configurations.</p>
-     */
     @NameInMap("LiveAudioAuditConfigList")
     public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigList liveAudioAuditConfigList;
 
@@ -60,45 +57,18 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig extends TeaModel {
-        /**
-         * <p>The name of the application to which the live stream belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The business type. You can specify a model. The default value is the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.edu</p>
-         */
         @NameInMap("BizType")
         public String bizType;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The moderation scenarios.</p>
-         */
         @NameInMap("Scenes")
         public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfigScenes scenes;
 
-        /**
-         * <p>The name of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveStream****</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 

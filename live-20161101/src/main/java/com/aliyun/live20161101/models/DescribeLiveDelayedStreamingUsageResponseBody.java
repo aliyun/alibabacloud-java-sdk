@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDelayedStreamingUsageResponseBody extends TeaModel {
-    /**
-     * <p>The details about the stream delay usage data.</p>
-     */
     @NameInMap("DelayData")
     public DescribeLiveDelayedStreamingUsageResponseBodyDelayData delayData;
 
@@ -75,48 +72,18 @@ public class DescribeLiveDelayedStreamingUsageResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDelayedStreamingUsageResponseBodyDelayDataDelayDataItem extends TeaModel {
-        /**
-         * <p>The domain name. If SplitBy is set to domain, the data returned is grouped by domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The duration of stream delay.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>84</p>
-         */
         @NameInMap("Duration")
         public Long duration;
 
-        /**
-         * <p>The ID of the region. If SplitBy is set to region, the data returned is grouped by region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The name of the stream. If SplitBy is set to stream, the data returned is grouped by stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveStream****</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-10-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

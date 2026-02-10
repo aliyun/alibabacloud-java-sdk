@@ -58,39 +58,15 @@ public class StartPlaylistResponseBody extends TeaModel {
     }
 
     public static class StartPlaylistResponseBodyStreamInfoStreamsStream extends TeaModel {
-        /**
-         * <p>The streaming URL in the Flash Video (FLV) format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://aliyundoc.com/caster/liveStream****.flv?auth_key=1612772224-0-0-3632be7cd9907169e8b09e91099c">http://aliyundoc.com/caster/liveStream****.flv?auth_key=1612772224-0-0-3632be7cd9907169e8b09e91099c</a>****</p>
-         */
         @NameInMap("PullFlvUrl")
         public String pullFlvUrl;
 
-        /**
-         * <p>The streaming URL in the Real-Time Messaging Protocol (RTMP) format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtmp:///aliyundoc.com/caster/liveStream****?auth_key=1612772224-0-0-4404ca59c0246226d49d01f734b1****</p>
-         */
         @NameInMap("PullM3U8Url")
         public String pullM3U8Url;
 
-        /**
-         * <p>The streaming URL in the M3U8 format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://aliyundoc.com/caster/liveStream****.m3u8?auth_key=1612772224-0-0-919a023a127156fe82e3562c3b3b">http://aliyundoc.com/caster/liveStream****.m3u8?auth_key=1612772224-0-0-919a023a127156fe82e3562c3b3b</a>****</p>
-         */
         @NameInMap("PullRtmpUrl")
         public String pullRtmpUrl;
 
-        /**
-         * <p>The video quality of the live stream. Valid values: <strong>original</strong>: original quality</p>
-         * 
-         * <strong>example:</strong>
-         * <p>original</p>
-         */
         @NameInMap("Quality")
         public String quality;
 
@@ -180,9 +156,6 @@ public class StartPlaylistResponseBody extends TeaModel {
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The streaming URLs.</p>
-         */
         @NameInMap("Streams")
         public StartPlaylistResponseBodyStreamInfoStreams streams;
 

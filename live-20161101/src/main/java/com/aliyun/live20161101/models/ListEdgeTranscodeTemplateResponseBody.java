@@ -13,9 +13,6 @@ public class ListEdgeTranscodeTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details of the edge transcoding templates.</p>
-     */
     @NameInMap("TemplateList")
     public ListEdgeTranscodeTemplateResponseBodyTemplateList templateList;
 
@@ -58,91 +55,30 @@ public class ListEdgeTranscodeTemplateResponseBody extends TeaModel {
     }
 
     public static class ListEdgeTranscodeTemplateResponseBodyTemplateListTemplate extends TeaModel {
-        /**
-         * <p>The bitrate. If a numeric value is returned, a fixed bitrate is configured for the output stream. If ws is returned, the output stream maintains the same bitrate as the input stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3000</p>
-         */
         @NameInMap("Bitrate")
         public String bitrate;
 
-        /**
-         * <p>The video encoding format. Valid values:</p>
-         * <ul>
-         * <li>H.264</li>
-         * <li>H.265</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>H.264</p>
-         */
         @NameInMap("Codec")
         public String codec;
 
-        /**
-         * <p>The time when the image template was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-07-25T02:48:58Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The frame rate. If a numeric value is returned, a fixed frame rate is configured for the output stream. If ws is returned, the output stream maintains the same frame rate as the input stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("Fps")
         public String fps;
 
-        /**
-         * <p>The group of pictures (GOP) size. The GOP size can be defined by the number of frames or the time interval between I-frames. If ws is returned, the output stream maintains the same GOP size as the input stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2s</p>
-         */
         @NameInMap("Gop")
         public String gop;
 
-        /**
-         * <p>The template name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>my_template</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The resolution. If width and height values are returned, a fixed resolution is configured for the output stream. If ws is returned, the output stream maintains the same resolution as the input stream.</p>
-         * <blockquote>
-         * <p> If the width value is -1, the width of the output video is adapted to a fixed height. If the height value is -2, the height of the output video is adapted to a fixed width.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1920*1080</p>
-         */
         @NameInMap("Resolution")
         public String resolution;
 
-        /**
-         * <p>The ID of the edge transcoding template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9b1571b513cb44f7a1ba6ae561ff46f7</p>
-         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        /**
-         * <p>The type of edge transcoding.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>common</p>
-         */
         @NameInMap("Type")
         public String type;
 

@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListEdgeTranscodeJobResponseBody extends TeaModel {
-    /**
-     * <p>The edge transcoding tasks.</p>
-     */
     @NameInMap("JobList")
     public ListEdgeTranscodeJobResponseBodyJobList jobList;
 
@@ -58,111 +55,36 @@ public class ListEdgeTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class ListEdgeTranscodeJobResponseBodyJobListJob extends TeaModel {
-        /**
-         * <p>The time when the task was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-07-24T16:44:55Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The ID of the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
-         */
         @NameInMap("JobId")
         public String jobId;
 
-        /**
-         * <p>The time when the task was last started.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-07-25T02:48:58Z</p>
-         */
         @NameInMap("LastStartAt")
         public String lastStartAt;
 
-        /**
-         * <p>The time when the task was last stopped.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-07-25T05:48:58Z</p>
-         */
         @NameInMap("LastStopAt")
         public String lastStopAt;
 
-        /**
-         * <p>The name of the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>my_job</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The status of the task. Valid values:</p>
-         * <ul>
-         * <li>0: not started</li>
-         * <li>1: in progress</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The URL of the input stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtmp://mydomain/app/stream1</p>
-         */
         @NameInMap("StreamInput")
         public String streamInput;
 
-        /**
-         * <p>The URL of the output stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtmp://testdomain/app/stream2</p>
-         */
         @NameInMap("StreamOutput")
         public String streamOutput;
 
-        /**
-         * <p>The ID of the edge transcoding template used by the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9b1571b513cb44f7a1ba6ae561ff****</p>
-         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        /**
-         * <p>The name of the edge transcoding template used by the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>my_template</p>
-         */
         @NameInMap("TemplateName")
         public String templateName;
 
-        /**
-         * <p>The type of edge transcoding. Valid values:</p>
-         * <ul>
-         * <li>common: standard transcoding and Narrowband HD™ 1.0 transcoding.</li>
-         * <li>nbhd-2: Narrowband HD™ 2.0 transcoding</li>
-         * <li>ultra-hd: ultra-high definition transcoding</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>common</p>
-         */
         @NameInMap("Type")
         public String type;
 

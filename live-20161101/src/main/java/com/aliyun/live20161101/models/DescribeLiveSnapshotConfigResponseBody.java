@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
-    /**
-     * <p>The snapshot configurations.</p>
-     */
     @NameInMap("LiveStreamSnapshotConfigList")
     public DescribeLiveSnapshotConfigResponseBodyLiveStreamSnapshotConfigList liveStreamSnapshotConfigList;
 
@@ -126,84 +123,30 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveSnapshotConfigResponseBodyLiveStreamSnapshotConfigListLiveStreamSnapshotConfig extends TeaModel {
-        /**
-         * <p>The name of the application to which the live stream belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The callback URL that is used to receive notifications about snapshot capture.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://learn.aliyundoc.com">https://learn.aliyundoc.com</a></p>
-         */
         @NameInMap("Callback")
         public String callback;
 
-        /**
-         * <p>The time when the configuration was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-05-20T01:33:38Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The name of the Object Storage Service (OSS) bucket.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveBucket****</p>
-         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
-        /**
-         * <p>The endpoint of the OSS bucket.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-oss-****.aliyuncs.com</p>
-         */
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
-        /**
-         * <p>The naming format of snapshots that are stored in the overwrite mode, which means that a new snapshot overwrites the previous snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{liveApp****}/{liveStream****}.jpg</p>
-         */
         @NameInMap("OverwriteOssObject")
         public String overwriteOssObject;
 
-        /**
-         * <p>The naming format of snapshots that are stored in sequence, which means that a new snapshot does not overwrite the previous snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>snapshot/{liveApp****}/{liveStream****}/{UnixTimestamp}.jpg</p>
-         */
         @NameInMap("SequenceOssObject")
         public String sequenceOssObject;
 
-        /**
-         * <p>The interval at which snapshots are captured. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("TimeInterval")
         public Integer timeInterval;
 

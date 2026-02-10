@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
-    /**
-     * <p>The configuration of callbacks for audio moderation results.</p>
-     */
     @NameInMap("LiveAudioAuditNotifyConfigList")
     public DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigList liveAudioAuditNotifyConfigList;
 
@@ -41,37 +38,12 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigListLiveAudioAuditNotifyConfig extends TeaModel {
-        /**
-         * <p>The callback URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://guide.aliyundoc.com/callback">http://guide.aliyundoc.com/callback</a></p>
-         */
         @NameInMap("Callback")
         public String callback;
 
-        /**
-         * <p>The callback template. The following fields are configured:</p>
-         * <ul>
-         * <li><strong>{DomainName}</strong>: the streaming domain.</li>
-         * <li><strong>{AppName}</strong>: the name of the application to which the live stream belongs.</li>
-         * <li><strong>{StreamName}</strong>: the name of the live stream.</li>
-         * <li><strong>{Timestamp}</strong>: the time when the callback is returned. The value of this field is a UNIX timestamp. Unit: seconds.</li>
-         * <li><strong>{Result}</strong>: the moderation results.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;domain\&quot;:{DomainName},\&quot;app\&quot;:{AppName},\&quot;stream\&quot;:{StreamName},\&quot;timestamp\&quot;:{Timestamp},\&quot;result\&quot;:{Result}}</p>
-         */
         @NameInMap("CallbackTemplate")
         public String callbackTemplate;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 

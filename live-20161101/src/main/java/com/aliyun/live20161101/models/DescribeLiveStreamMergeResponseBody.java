@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamMergeResponseBody extends TeaModel {
-    /**
-     * <p>Live stream information list.</p>
-     */
     @NameInMap("LiveStreamMergeList")
     public DescribeLiveStreamMergeResponseBodyLiveStreamMergeList liveStreamMergeList;
 
@@ -41,84 +38,30 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamMergeResponseBodyLiveStreamMergeListLiveStreamMerge extends TeaModel {
-        /**
-         * <p>The name of the application that generates the output stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The application that is being used.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app1</p>
-         */
         @NameInMap("AppUsing")
         public String appUsing;
 
-        /**
-         * <p>The streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The end time of the stream mixing.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-05-29T01:00:00Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The names of the applications that generate the input additional streams other than the primary stream and secondary stream, and the names of these additional streams.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app3/stream3,app4/stream4,app5/stream5,…,appN/streamN</p>
-         */
         @NameInMap("ExtraInAppStreams")
         public String extraInAppStreams;
 
-        /**
-         * <p>The name of the application that generates the input primary stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app1</p>
-         */
         @NameInMap("InAppName1")
         public String inAppName1;
 
-        /**
-         * <p>The name of the application that generates the input secondary stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app2</p>
-         */
         @NameInMap("InAppName2")
         public String inAppName2;
 
-        /**
-         * <p>The name of the input primary stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InStream1</p>
-         */
         @NameInMap("InStreamName1")
         public String inStreamName1;
 
-        /**
-         * <p>The name of the input secondary stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>stream2</p>
-         */
         @NameInMap("InStreamName2")
         public String inStreamName2;
 
@@ -128,39 +71,15 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
         @NameInMap("MergeParameters")
         public String mergeParameters;
 
-        /**
-         * <p>The streaming protocol.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtmp</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
-        /**
-         * <p>The start time of the stream mixing.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-05-29T00:00:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The name of the output stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>StreamName</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The stream that is being used.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InStream1</p>
-         */
         @NameInMap("StreamUsing")
         public String streamUsing;
 

@@ -59,36 +59,15 @@ public class DescribeShowListResponseBody extends TeaModel {
     }
 
     public static class DescribeShowListResponseBodyShowListInfoShowListShowResourceInfo extends TeaModel {
-        /**
-         * <p>The custom type label.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("LiveInputType")
         public Integer liveInputType;
 
-        /**
-         * <p>The ID of the video-on-demand (VOD) file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vod</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The URL of the resource.</p>
-         */
         @NameInMap("ResourceUrl")
         public String resourceUrl;
 
@@ -132,46 +111,18 @@ public class DescribeShowListResponseBody extends TeaModel {
     }
 
     public static class DescribeShowListResponseBodyShowListInfoShowListShow extends TeaModel {
-        /**
-         * <p>The duration of the episode. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Duration")
         public Long duration;
 
-        /**
-         * <p>The number of times the episode repeats after the first playback is complete.</p>
-         * <p>For example, if you set the value to 0, the episode is to be played once. If you set the value to 1, the episode is to be played twice.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("RepeatTimes")
         public Integer repeatTimes;
 
-        /**
-         * <p>The resource information.</p>
-         */
         @NameInMap("ResourceInfo")
         public DescribeShowListResponseBodyShowListInfoShowListShowResourceInfo resourceInfo;
 
-        /**
-         * <p>The ID of the episode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
-         */
         @NameInMap("ShowId")
         public String showId;
 
-        /**
-         * <p>The name of the episode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveShow****</p>
-         */
         @NameInMap("ShowName")
         public String showName;
 
@@ -284,9 +235,6 @@ public class DescribeShowListResponseBody extends TeaModel {
         @NameInMap("HighPriorityShowStartTime")
         public String highPriorityShowStartTime;
 
-        /**
-         * <p>The episodes in the episode list.</p>
-         */
         @NameInMap("ShowList")
         public DescribeShowListResponseBodyShowListInfoShowList showList;
 

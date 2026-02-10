@@ -13,9 +13,6 @@ public class DescribeLiveAISubtitleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the subtitle templates.</p>
-     */
     @NameInMap("SubtitleConfigs")
     public DescribeLiveAISubtitleResponseBodySubtitleConfigs subtitleConfigs;
 
@@ -79,159 +76,57 @@ public class DescribeLiveAISubtitleResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveAISubtitleResponseBodySubtitleConfigsSubtitleConfig extends TeaModel {
-        /**
-         * <p>The background color of the subtitles.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0xFF0000</p>
-         */
         @NameInMap("BgColor")
         public String bgColor;
 
-        /**
-         * <p>The size of the background image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.09</p>
-         */
         @NameInMap("BgWidthNormalized")
         public Float bgWidthNormalized;
 
-        /**
-         * <p>The font weight.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.05</p>
-         */
         @NameInMap("BorderWidthNormalized")
         public Float borderWidthNormalized;
 
-        /**
-         * <p>The description of the template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>live AI subtitle template</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The language to which the subtitles are translated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zh-CN</p>
-         */
         @NameInMap("DstLanguage")
         public String dstLanguage;
 
-        /**
-         * <p>The font color.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0xFFFFFF</p>
-         */
         @NameInMap("FontColor")
         public String fontColor;
 
-        /**
-         * <p>The font.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AlibabaPuHuiTi-Regular</p>
-         */
         @NameInMap("FontName")
         public String fontName;
 
-        /**
-         * <p>The font size.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.037</p>
-         */
         @NameInMap("FontSizeNormalized")
         public String fontSizeNormalized;
 
-        /**
-         * <p>The height of the preview image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>720</p>
-         */
         @NameInMap("Height")
         public String height;
 
-        /**
-         * <p>The number of displayed lines.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("MaxLines")
         public Integer maxLines;
 
-        /**
-         * <p>The position of the subtitles.</p>
-         */
         @NameInMap("PositionNormalized")
         public DescribeLiveAISubtitleResponseBodySubtitleConfigsSubtitleConfigPositionNormalized positionNormalized;
 
-        /**
-         * <p>The ID of the subtitle rule.</p>
-         */
         @NameInMap("RulesRefer")
         public DescribeLiveAISubtitleResponseBodySubtitleConfigsSubtitleConfigRulesRefer rulesRefer;
 
-        /**
-         * <p>Indicates whether the source language of the subtitle is displayed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ShowSourceLan")
         public Integer showSourceLan;
 
-        /**
-         * <p>The source language of the subtitles.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zh-CN</p>
-         */
         @NameInMap("SrcLanguage")
         public String srcLanguage;
 
-        /**
-         * <p>The ID of the subtitle template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>597991f3-6ef9-4100-9238-82951de1****</p>
-         */
         @NameInMap("SubtitleId")
         public String subtitleId;
 
-        /**
-         * <p>The name of the subtitle template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sub1</p>
-         */
         @NameInMap("SubtitleName")
         public String subtitleName;
 
-        /**
-         * <p>The width of the preview image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1280</p>
-         */
         @NameInMap("Width")
         public String width;
 
-        /**
-         * <p>The number of words per line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("WordPerline")
         public Integer wordPerline;
 

@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLivePackageConfigResponseBody extends TeaModel {
-    /**
-     * <p>The live stream encapsulation configurations.</p>
-     */
     @NameInMap("LivePackageConfigList")
     public DescribeLivePackageConfigResponseBodyLivePackageConfigList livePackageConfigList;
 
@@ -130,79 +127,27 @@ public class DescribeLivePackageConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePackageConfigResponseBodyLivePackageConfigListLivePackageConfig extends TeaModel {
-        /**
-         * <p>The application name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AppName</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>Indicates whether the transcoded stream is ignored. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong> (default)</li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IgnoreTranscode")
         public Boolean ignoreTranscode;
 
-        /**
-         * <p>The part length. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PartDuration")
         public Integer partDuration;
 
-        /**
-         * <p>The streaming protocol and encapsulation format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HLS_CMAF</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
-        /**
-         * <p>The segment length. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("SegmentDuration")
         public Integer segmentDuration;
 
-        /**
-         * <p>The number of segments.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("SegmentNum")
         public Integer segmentNum;
 
-        /**
-         * <p>The stream name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>StreamName</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 

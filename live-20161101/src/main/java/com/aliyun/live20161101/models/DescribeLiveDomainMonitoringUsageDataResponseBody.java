@@ -31,9 +31,6 @@ public class DescribeLiveDomainMonitoringUsageDataResponseBody extends TeaModel 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The live monitoring data.</p>
-     */
     @NameInMap("MonitoringData")
     public DescribeLiveDomainMonitoringUsageDataResponseBodyMonitoringData monitoringData;
 
@@ -126,57 +123,21 @@ public class DescribeLiveDomainMonitoringUsageDataResponseBody extends TeaModel 
     }
 
     public static class DescribeLiveDomainMonitoringUsageDataResponseBodyMonitoringDataMonitoringDataItem extends TeaModel {
-        /**
-         * <p>The domain name. This field is valid only when you specify domain for the <strong>SplitBy</strong> parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The duration. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("Duration")
         public Integer duration;
 
-        /**
-         * <p>The ID of the monitoring session. This field is valid only when you specify instance for the <strong>SplitBy</strong> parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>e62af24d-a354-3b0c-9f1f-da592c4b****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The region of the live center. This field is valid only when you specify Region for the <strong>SplitBy</strong> parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The resolution. This field is valid only when you specify resolution for the <strong>SplitBy</strong> parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>720P</p>
-         */
         @NameInMap("Resolution")
         public String resolution;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

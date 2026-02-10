@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeGroupContentResponseBody extends TeaModel {
-    /**
-     * <p>The IDs of the episodes.</p>
-     */
     @NameInMap("ItemIds")
     public AddCasterEpisodeGroupContentResponseBodyItemIds itemIds;
 

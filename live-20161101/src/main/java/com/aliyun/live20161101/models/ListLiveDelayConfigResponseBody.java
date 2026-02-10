@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListLiveDelayConfigResponseBody extends TeaModel {
-    /**
-     * <p>The stream delay configurations.</p>
-     */
     @NameInMap("DelayConfigList")
     public ListLiveDelayConfigResponseBodyDelayConfigList delayConfigList;
 
@@ -58,53 +55,18 @@ public class ListLiveDelayConfigResponseBody extends TeaModel {
     }
 
     public static class ListLiveDelayConfigResponseBodyDelayConfigListDelayConfig extends TeaModel {
-        /**
-         * <p>The name of the application to which the live stream belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("App")
         public String app;
 
-        /**
-         * <p>The duration for which the playback of the live stream is delayed. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("DelayTime")
         public String delayTime;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The name of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveStream****</p>
-         */
         @NameInMap("Stream")
         public String stream;
 
-        /**
-         * <p>The trigger mode. Valid values:</p>
-         * <ul>
-         * <li><strong>PUBLISH_ONLY</strong>: Stream delay can be triggered only by specifying the stream delay parameter in the ingest URL.</li>
-         * <li><strong>CONFIG_ONLY</strong>: Stream delay can be triggered only by the stream delay configuration.</li>
-         * <li><strong>PUBLISH_CONFIG</strong>: Stream delay can be triggered by the stream delay parameter in the ingest URL or the stream delay configuration. The stream delay parameter takes precedence over the stream delay configuration.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PUBLISH_ONLY</p>
-         */
         @NameInMap("TaskTriggerMode")
         public String taskTriggerMode;
 

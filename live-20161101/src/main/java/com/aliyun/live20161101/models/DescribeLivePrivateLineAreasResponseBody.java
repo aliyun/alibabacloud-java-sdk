@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLivePrivateLineAreasResponseBody extends TeaModel {
-    /**
-     * <p>Details about the regions.</p>
-     */
     @NameInMap("LiveAreasList")
     public DescribeLivePrivateLineAreasResponseBodyLiveAreasList liveAreasList;
 
@@ -41,21 +38,9 @@ public class DescribeLivePrivateLineAreasResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePrivateLineAreasResponseBodyLiveAreasListLiveAreaRegionsRegion extends TeaModel {
-        /**
-         * <p>The region name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -102,22 +87,9 @@ public class DescribeLivePrivateLineAreasResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePrivateLineAreasResponseBodyLiveAreasListLiveArea extends TeaModel {
-        /**
-         * <p>The region type. Valid values:</p>
-         * <ul>
-         * <li>domestic: in the Chinese mainland</li>
-         * <li>overseas: outside the Chinese mainland</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>domestic</p>
-         */
         @NameInMap("RegionType")
         public String regionType;
 
-        /**
-         * <p>The regions.</p>
-         */
         @NameInMap("Regions")
         public DescribeLivePrivateLineAreasResponseBodyLiveAreasListLiveAreaRegions regions;
 

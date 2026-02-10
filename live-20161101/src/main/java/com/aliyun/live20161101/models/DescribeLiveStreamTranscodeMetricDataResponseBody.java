@@ -59,9 +59,6 @@ public class DescribeLiveStreamTranscodeMetricDataResponseBody extends TeaModel 
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The data array returned.</p>
-     */
     @NameInMap("StreamDetailData")
     public DescribeLiveStreamTranscodeMetricDataResponseBodyStreamDetailData streamDetailData;
 
@@ -127,112 +124,27 @@ public class DescribeLiveStreamTranscodeMetricDataResponseBody extends TeaModel 
     }
 
     public static class DescribeLiveStreamTranscodeMetricDataResponseBodyStreamDetailDataStreamData extends TeaModel {
-        /**
-         * <p>The name of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The duration. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>300</p>
-         */
         @NameInMap("Duration")
         public Long duration;
 
-        /**
-         * <p>The frame rate.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>normal</p>
-         * <!-- -->
-         * </li>
-         * <li><!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>high</p>
-         * <!-- -->
-         * </li>
-         * <li><!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>def</p>
-         * <!-- --></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>high</p>
-         */
         @NameInMap("Fps")
         public String fps;
 
-        /**
-         * <p>The region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The resolution. Valid values:</p>
-         * <ul>
-         * <li>2K: 2K resolution</li>
-         * <li>4K: 4K resolution</li>
-         * <li>LD: low definition</li>
-         * <li>SD: standard definition</li>
-         * <li>HD: high definition</li>
-         * <li>def: audio</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>4K</p>
-         */
         @NameInMap("Resolution")
         public String resolution;
 
-        /**
-         * <p>The name of the stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>stream</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-06-11T02:45:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The transcoding type. Valid values:</p>
-         * <ul>
-         * <li>H264STD: standard transcoding based on H.264</li>
-         * <li>H264NBHD: Narrowband HD™ transcoding based on H.264</li>
-         * <li>H265STD: standard transcoding based on H.265</li>
-         * <li>AUDIO: audio transcoding</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>H264STD</p>
-         */
         @NameInMap("TranscodeType")
         public String transcodeType;
 

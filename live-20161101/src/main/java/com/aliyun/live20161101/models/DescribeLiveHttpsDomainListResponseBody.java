@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveHttpsDomainListResponseBody extends TeaModel {
-    /**
-     * <p>The information about the certificates.</p>
-     */
     @NameInMap("CertInfos")
     public DescribeLiveHttpsDomainListResponseBodyCertInfos certInfos;
 
@@ -58,85 +55,27 @@ public class DescribeLiveHttpsDomainListResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveHttpsDomainListResponseBodyCertInfosCertInfo extends TeaModel {
-        /**
-         * <p>The primary domain name of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.org</p>
-         */
         @NameInMap("CertCommonName")
         public String certCommonName;
 
-        /**
-         * <p>The time when the certificate expires.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-12-26 14:45:09</p>
-         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        /**
-         * <p>The name of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("CertName")
         public String certName;
 
-        /**
-         * <p>The time when the certificate became effective.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-11-26 14:45:09</p>
-         */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
-        /**
-         * <p>The status of the certificate. Valid values:</p>
-         * <ul>
-         * <li><strong>ok</strong>: The certificate is working as expected.</li>
-         * <li><strong>mismatch</strong>: The certificate does not match the specified domain name.</li>
-         * <li><strong>expired</strong>: The certificate has expired.</li>
-         * <li><strong>expire_soon</strong>: The certificate will expire soon.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>mismatch</p>
-         */
         @NameInMap("CertStatus")
         public String certStatus;
 
-        /**
-         * <p>The type of the certificate. Valid values:</p>
-         * <ul>
-         * <li><strong>cas</strong>: a certificate that you purchased from Certificate Management Service</li>
-         * <li><strong>upload</strong>: a custom certificate that you uploaded</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cas</p>
-         */
         @NameInMap("CertType")
         public String certType;
 
-        /**
-         * <p>The time when the certificate was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-01-08 18:33:16</p>
-         */
         @NameInMap("CertUpdateTime")
         public String certUpdateTime;
 
-        /**
-         * <p>The accelerated domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 

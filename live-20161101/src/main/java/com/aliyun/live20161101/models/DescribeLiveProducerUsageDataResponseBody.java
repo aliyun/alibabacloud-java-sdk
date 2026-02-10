@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
-    /**
-     * <p>The production studio usage data.</p>
-     */
     @NameInMap("BillProducerData")
     public DescribeLiveProducerUsageDataResponseBodyBillProducerData billProducerData;
 
@@ -75,102 +72,36 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveProducerUsageDataResponseBodyBillProducerDataBillProducerDataItem extends TeaModel {
-        /**
-         * <p>The domain name. If domain is specified by the SplitBy parameter, the usage data is returned based on different domain names.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The production studio instance. If instance is specified by the SplitBy parameter, the usage data is returned based on different production studio instances.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a17d0184-462d-4630-b2a6-8c26dde2****</p>
-         */
         @NameInMap("Instance")
         public String instance;
 
-        /**
-         * <p>The duration of high definition streaming. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6000</p>
-         */
         @NameInMap("OutputHdDuration")
         public Long outputHdDuration;
 
-        /**
-         * <p>The duration of low definition streaming. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1001</p>
-         */
         @NameInMap("OutputLdDuration")
         public Long outputLdDuration;
 
-        /**
-         * <p>The duration of standard definition streaming. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("OutputSdDuration")
         public Long outputSdDuration;
 
-        /**
-         * <p>The region. If region is specified by the SplitBy parameter, the usage data is returned based on different regions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-09-30T00:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The duration of high definition transcoding. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6777</p>
-         */
         @NameInMap("TranHdDuration")
         public Long tranHdDuration;
 
-        /**
-         * <p>The duration of low definition transcoding. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>111</p>
-         */
         @NameInMap("TranLdDuration")
         public Long tranLdDuration;
 
-        /**
-         * <p>The duration of standard definition transcoding. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>666</p>
-         */
         @NameInMap("TranSdDuration")
         public Long tranSdDuration;
 
-        /**
-         * <p>The type of the production studio. If type is specified by the SplitBy parameter, the usage data is returned based on different types of production studios.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>slidelive</p>
-         */
         @NameInMap("Type")
         public String type;
 

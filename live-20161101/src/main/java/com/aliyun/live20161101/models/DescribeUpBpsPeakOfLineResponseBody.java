@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUpBpsPeakOfLineResponseBody extends TeaModel {
-    /**
-     * <p>The information about peak inbound bandwidth of the leased line on each day.</p>
-     */
     @NameInMap("DescribeUpBpsPeakOfLines")
     public DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLines describeUpBpsPeakOfLines;
 
@@ -41,39 +38,15 @@ public class DescribeUpBpsPeakOfLineResponseBody extends TeaModel {
     }
 
     public static class DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine extends TeaModel {
-        /**
-         * <p>The daily peak inbound bandwidth of the leased line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>777.2727083333333</p>
-         */
         @NameInMap("BandWidth")
         public Float bandWidth;
 
-        /**
-         * <p>The time when the daily peak bandwidth of the leased line is reached.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1522180000000</p>
-         */
         @NameInMap("PeakTime")
         public String peakTime;
 
-        /**
-         * <p>The time queried on the day.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1522080000000</p>
-         */
         @NameInMap("QueryTime")
         public String queryTime;
 
-        /**
-         * <p>The category of the statistical data. If the DomainSwitch parameter is set to on, the value of this parameter is the domain name. If the DomainSwitch parameter is set to off or not specified, the value of this parameter is the user ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>push-live.aliyuncs.com</p>
-         */
         @NameInMap("StatName")
         public String statName;
 

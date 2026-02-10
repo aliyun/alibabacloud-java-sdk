@@ -13,9 +13,6 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("UpItems")
     public DescribeLiveUpVideoAudioInfoResponseBodyUpItems upItems;
 
@@ -41,21 +38,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAacHeadersAacHeaders extends TeaModel {
-        /**
-         * <p>The number of AAC headers in the audio.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -102,21 +87,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAudioBitRateAudioBitRate extends TeaModel {
-        /**
-         * <p>The bitrate of the audio. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>24552</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -163,21 +136,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAudioFramesAudioFrames extends TeaModel {
-        /**
-         * <p>The frame rate of the audio. Unit: frames.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>23</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -224,21 +185,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAudioIntervalAudioInterval extends TeaModel {
-        /**
-         * <p>The maximum audio frame interval. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>254</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -285,21 +234,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAudioStampsAudioStamps extends TeaModel {
-        /**
-         * <p>The audio timestamp. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>725053422</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -346,21 +283,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAvcHeadersAvcHeaders extends TeaModel {
-        /**
-         * <p>The number of AVC headers in the audio.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -407,21 +332,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemErrorFlagsErrorFlags extends TeaModel {
-        /**
-         * <p>The number of times the error code that indicates interrupted stream ingest was returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -468,21 +381,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemVideoAndAudioStampVAStamp extends TeaModel {
-        /**
-         * <p>The difference between the audio and video timestamps. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>359</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -529,21 +430,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemVideoBitRateVideoBitRate extends TeaModel {
-        /**
-         * <p>The bitrate of the video. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3970160</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -590,21 +479,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemVideoFramesVideoFrames extends TeaModel {
-        /**
-         * <p>The frame rate of the video. Unit: frames.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>29</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -651,21 +528,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemVideoIntervalVideoInterval extends TeaModel {
-        /**
-         * <p>The maximum video frame interval. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>278</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -712,21 +577,9 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemVideoStampsVideoStamps extends TeaModel {
-        /**
-         * <p>The video timestamp. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1538134750408</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The query time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>725053781</p>
-         */
         @NameInMap("Value")
         public Integer value;
 
@@ -773,167 +626,69 @@ public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItem extends TeaModel {
-        /**
-         * <p>The details about the audio and video data of the stream ingest occurrences.</p>
-         */
         @NameInMap("AacHeaders")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAacHeaders aacHeaders;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AppName</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The name of the application to which the ingested stream belongs.</p>
-         */
         @NameInMap("AudioBitRate")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAudioBitRate audioBitRate;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         */
         @NameInMap("AudioFrames")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAudioFrames audioFrames;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         */
         @NameInMap("AudioInterval")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAudioInterval audioInterval;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         */
         @NameInMap("AudioStamps")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAudioStamps audioStamps;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         */
         @NameInMap("AvcHeaders")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemAvcHeaders avcHeaders;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>H264/AAC</p>
-         */
         @NameInMap("CodecInfo")
         public String codecInfo;
 
-        /**
-         * <p>The audio and video encoding information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The ingest domain.</p>
-         */
         @NameInMap("ErrorFlags")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemErrorFlags errorFlags;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         * 
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("PublishInterval")
         public String publishInterval;
 
-        /**
-         * <p>The stream ingest duration. Unit: seconds. A hyphen (-) indicates that the stream is being ingested and the duration cannot be returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn397</p>
-         */
         @NameInMap("PublishIp")
         public String publishIp;
 
-        /**
-         * <p>The IP address of the stream ingest client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PublishStatus")
         public String publishStatus;
 
-        /**
-         * <p>The stream ingest status. A value of 1 indicates that the stream is being ingested. A value of 0 indicates that the stream was ingested.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T15:00:00Z</p>
-         */
         @NameInMap("PublishTime")
         public String publishTime;
 
-        /**
-         * <p>The start time of stream ingest. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T15:10:00Z</p>
-         */
         @NameInMap("StopTime")
         public String stopTime;
 
-        /**
-         * <p>The end time of stream ingest. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>StreamName</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The name of the stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2.-395_37261_9848098_1538080899396</p>
-         */
         @NameInMap("UniqueId")
         public String uniqueId;
 
-        /**
-         * <p>The unique ID of each stream ingest occurrence.</p>
-         */
         @NameInMap("VideoAndAudioStamp")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemVideoAndAudioStamp videoAndAudioStamp;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         */
         @NameInMap("VideoBitRate")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemVideoBitRate videoBitRate;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         */
         @NameInMap("VideoFrames")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemVideoFrames videoFrames;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         */
         @NameInMap("VideoInterval")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemVideoInterval videoInterval;
 
-        /**
-         * <p>The metric value at a granularity of seconds at the query time.</p>
-         */
         @NameInMap("VideoStamps")
         public DescribeLiveUpVideoAudioInfoResponseBodyUpItemsPublishItemVideoStamps videoStamps;
 

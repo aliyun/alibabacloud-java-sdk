@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
-    /**
-     * <p>The time shifting configurations.</p>
-     */
     @NameInMap("Content")
     public DescribeLiveShiftConfigsResponseBodyContent content;
 
@@ -41,53 +38,18 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveShiftConfigsResponseBodyContentConfig extends TeaModel {
-        /**
-         * <p>The application for which you configure time shifting.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The domain name for which you configure time shifting.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>Whether to ignore time shift generation for the transcode stream.</p>
-         * <ul>
-         * <li>true: Ignore time shifting generation.</li>
-         * <li>false: Generate time shifting.</li>
-         * </ul>
-         * <p>The default value is true.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IgnoreTranscode")
         public Boolean ignoreTranscode;
 
-        /**
-         * <p>The name of the live stream for which you configure time shifting.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveStream****</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The number of days for which the time shifting configurations are retained.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7</p>
-         */
         @NameInMap("Vision")
         public Integer vision;
 

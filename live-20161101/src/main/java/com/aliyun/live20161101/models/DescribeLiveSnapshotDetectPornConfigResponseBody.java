@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
-    /**
-     * <p>The list of video moderation configurations.</p>
-     */
     @NameInMap("LiveSnapshotDetectPornConfigList")
     public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigList liveSnapshotDetectPornConfigList;
 
@@ -145,63 +142,24 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig extends TeaModel {
-        /**
-         * <p>The application name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The interval at which snapshots are captured from the live stream. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Interval")
         public Integer interval;
 
-        /**
-         * <p>The name of the OSS bucket.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveBucket****</p>
-         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
-        /**
-         * <p>The endpoint of the OSS bucket.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-oss-****.aliyuncs.com</p>
-         */
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
-        /**
-         * <p>The name of the storage file in Object Storage Service (OSS).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{liveApp****}/{liveStream****}/{Date}/{Hour}/{Minute}_{Second}.jpg</p>
-         */
         @NameInMap("OssObject")
         public String ossObject;
 
-        /**
-         * <p>The moderation scenario array.</p>
-         */
         @NameInMap("Scenes")
         public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfigScenes scenes;
 

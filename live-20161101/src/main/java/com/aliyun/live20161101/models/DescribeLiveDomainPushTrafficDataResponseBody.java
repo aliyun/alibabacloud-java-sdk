@@ -49,9 +49,6 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The traffic data that was collected at each interval.</p>
-     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -109,21 +106,9 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-10T20:05:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The traffic. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1288111</p>
-         */
         @NameInMap("TrafficValue")
         public String trafficValue;
 

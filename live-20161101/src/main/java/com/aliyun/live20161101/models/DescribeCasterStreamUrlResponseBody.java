@@ -13,9 +13,6 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
     @NameInMap("CasterId")
     public String casterId;
 
-    /**
-     * <p>The information about the streams of the production studio.</p>
-     */
     @NameInMap("CasterStreams")
     public DescribeCasterStreamUrlResponseBodyCasterStreams casterStreams;
 
@@ -75,41 +72,12 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfosStreamInfo extends TeaModel {
-        /**
-         * <p>The streaming URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://out/caster/example.net">http://out/caster/example.net</a></p>
-         */
         @NameInMap("OutputStreamUrl")
         public String outputStreamUrl;
 
-        /**
-         * <p>The resolution to which the scene transcodes the stream for playback. Valid values:</p>
-         * <ul>
-         * <li><strong>lsd</strong>: standard definition.</li>
-         * <li><strong>lld</strong>: low definition.</li>
-         * <li><strong>lud</strong>: ultra high definition.</li>
-         * <li><strong>lhd</strong>: high definition.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>lld</p>
-         */
         @NameInMap("TranscodeConfig")
         public String transcodeConfig;
 
-        /**
-         * <p>The format to which the scene transcodes the stream for playback. Valid values:</p>
-         * <ul>
-         * <li><strong>flv</strong>.</li>
-         * <li><strong>rtmp</strong>.</li>
-         * <li><strong>m3u8</strong>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>flv</p>
-         */
         @NameInMap("VideoFormat")
         public String videoFormat;
 
@@ -164,49 +132,18 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream extends TeaModel {
-        /**
-         * <p>Indicates whether the output stream is in preview mode or program mode.</p>
-         * <ul>
-         * <li><strong>0</strong>: indicates that the output videos of the scene are in preview mode.</li>
-         * <li><strong>1</strong>: indicates that the output videos of the scene are in program mode.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("OutputType")
         public Integer outputType;
 
-        /**
-         * <p>The Real Time Messaging Protocol (RTMP) URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtmp://live/caster/example.edu</p>
-         */
         @NameInMap("RtmpUrl")
         public String rtmpUrl;
 
-        /**
-         * <p>The ID of the scene.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>23ca74e0-aca3-4e7a-8561-9d96f525****</p>
-         */
         @NameInMap("SceneId")
         public String sceneId;
 
-        /**
-         * <p>The information about the stream.</p>
-         */
         @NameInMap("StreamInfos")
         public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfos streamInfos;
 
-        /**
-         * <p>The streaming URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://live/caster/example.org">http://live/caster/example.org</a></p>
-         */
         @NameInMap("StreamUrl")
         public String streamUrl;
 

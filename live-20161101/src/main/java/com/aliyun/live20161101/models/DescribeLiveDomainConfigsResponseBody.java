@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
-    /**
-     * <p>The configurations of the domain name.</p>
-     */
     @NameInMap("DomainConfigs")
     public DescribeLiveDomainConfigsResponseBodyDomainConfigs domainConfigs;
 
@@ -41,21 +38,9 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
-        /**
-         * <p>The name of the attribute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>domain_name</p>
-         */
         @NameInMap("ArgName")
         public String argName;
 
-        /**
-         * <p>The attribute value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>developer.aliyundoc.com</p>
-         */
         @NameInMap("ArgValue")
         public String argValue;
 
@@ -102,42 +87,15 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig extends TeaModel {
-        /**
-         * <p>The configuration ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5003576</p>
-         */
         @NameInMap("ConfigId")
         public String configId;
 
-        /**
-         * <p>The attributes of the feature.</p>
-         */
         @NameInMap("FunctionArgs")
         public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs;
 
-        /**
-         * <p>The name of the feature.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>set_req_host_header</p>
-         */
         @NameInMap("FunctionName")
         public String functionName;
 
-        /**
-         * <p>The configuration status. Valid values:</p>
-         * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>testing</strong></li>
-         * <li><strong>failed</strong></li>
-         * <li><strong>configuring</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Status")
         public String status;
 

@@ -67,9 +67,6 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    /**
-     * <p>The resource usage data that was collected for each time interval.</p>
-     */
     @NameInMap("UsageDataPerInterval")
     public DescribeDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
 
@@ -143,26 +140,9 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The amount of resource usage.</p>
-         * <ul>
-         * <li>If the value of the Field parameter is traf or req_traf, the returned data is measured in bytes.</li>
-         * <li>If the value of the Field parameter is bps or req_bps, the returned data is measured in bit/s.</li>
-         * <li>If the value of the Field parameter is acc, the returned data is measured by count.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>423304182</p>
-         */
         @NameInMap("Value")
         public String value;
 

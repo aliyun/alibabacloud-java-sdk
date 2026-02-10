@@ -31,9 +31,6 @@ public class DescribeLiveDomainRealTimeBpsDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The bandwidth data that was collected every minute.</p>
-     */
     @NameInMap("RealTimeBpsDataPerInterval")
     public DescribeLiveDomainRealTimeBpsDataResponseBodyRealTimeBpsDataPerInterval realTimeBpsDataPerInterval;
 
@@ -109,21 +106,9 @@ public class DescribeLiveDomainRealTimeBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainRealTimeBpsDataResponseBodyRealTimeBpsDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-11-30T05:39:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The bandwidth. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>59392614.8</p>
-         */
         @NameInMap("Value")
         public String value;
 

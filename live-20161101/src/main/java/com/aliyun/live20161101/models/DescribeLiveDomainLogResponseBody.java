@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainLogResponseBody extends TeaModel {
-    /**
-     * <p>The log information.</p>
-     */
     @NameInMap("DomainLogDetails")
     public DescribeLiveDomainLogResponseBodyDomainLogDetails domainLogDetails;
 
@@ -58,48 +55,18 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
-        /**
-         * <p>The end of the time range for which the logs were queried.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-10-20T05:00:00Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The name of the log file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>developer.aliyundoc.com_2016_10_20_040000_050000.gz</p>
-         */
         @NameInMap("LogName")
         public String logName;
 
-        /**
-         * <p>The path of the log file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>learn.aliyundoc.com/developer.aliyundoc.com/2016_10_20/example.aliyundoc.com_2016_10_20_040000_050000.gz?Expires=1522659931&amp;OSSAccessKeyId=LTAI******eo4ZEuA&amp;Signature=C01p%2BtA%******KP9Sru2Oxwy7Do0%3D</p>
-         */
         @NameInMap("LogPath")
         public String logPath;
 
-        /**
-         * <p>The size of the log file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("LogSize")
         public Long logSize;
 
-        /**
-         * <p>The beginning of the time range for which the logs were queried.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-10-20T04:00:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -170,30 +137,12 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
-        /**
-         * <p>The page number of the returned page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("PageSize")
         public Long pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Total")
         public Long total;
 
@@ -229,24 +178,12 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainLogResponseBodyDomainLogDetailsDomainLogDetail extends TeaModel {
-        /**
-         * <p>The total number of entries returned on the current page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("LogCount")
         public Long logCount;
 
-        /**
-         * <p>Details about the logs.</p>
-         */
         @NameInMap("LogInfos")
         public DescribeLiveDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos logInfos;
 
-        /**
-         * <p>The page information.</p>
-         */
         @NameInMap("PageInfos")
         public DescribeLiveDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;
 

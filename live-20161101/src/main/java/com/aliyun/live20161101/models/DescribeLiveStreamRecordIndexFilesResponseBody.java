@@ -31,9 +31,6 @@ public class DescribeLiveStreamRecordIndexFilesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The index files.</p>
-     */
     @NameInMap("RecordIndexInfoList")
     public DescribeLiveStreamRecordIndexFilesResponseBodyRecordIndexInfoList recordIndexInfoList;
 
@@ -126,135 +123,48 @@ public class DescribeLiveStreamRecordIndexFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamRecordIndexFilesResponseBodyRecordIndexInfoListRecordIndexInfo extends TeaModel {
-        /**
-         * <p>The name of the application to which the live stream belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The time when the index file was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-05-27T09:40:56Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The recording length. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>588.849</p>
-         */
         @NameInMap("Duration")
         public Float duration;
 
-        /**
-         * <p>The end time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-01T07:46:00Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The video format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HLS</p>
-         */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <p>The video height.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>480</p>
-         */
         @NameInMap("Height")
         public Integer height;
 
-        /**
-         * <p>The name of the Object Storage Service (OSS) bucket.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveBucket****</p>
-         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
-        /**
-         * <p>The endpoint of the OSS bucket.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-oss-****.aliyuncs.com</p>
-         */
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
-        /**
-         * <p>The name of the storage file in OSS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveObject****</p>
-         */
         @NameInMap("OssObject")
         public String ossObject;
 
-        /**
-         * <p>The ID of the index file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c4d7f0a4-b506-43f9-8de3-07732c3f****</p>
-         */
         @NameInMap("RecordId")
         public String recordId;
 
-        /**
-         * <p>The URL of the index file.</p>
-         */
         @NameInMap("RecordUrl")
         public String recordUrl;
 
-        /**
-         * <p>The start time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-01T07:36:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The name of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveStream****</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The video width.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>640</p>
-         */
         @NameInMap("Width")
         public Integer width;
 

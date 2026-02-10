@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
-    /**
-     * <p>The transcoding configurations.</p>
-     */
     @NameInMap("DomainTranscodeList")
     public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeList domainTranscodeList;
 
@@ -41,196 +38,60 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters extends TeaModel {
-        /**
-         * <p>The bitrate of the output audio. Unit: Kbit/s. Valid values: <strong>1 to 1000</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>64</p>
-         */
         @NameInMap("AudioBitrate")
         public Integer audioBitrate;
 
-        /**
-         * <p>The number of sound channels. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: mono</li>
-         * <li><strong>2</strong>: binaural</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("AudioChannelNum")
         public Integer audioChannelNum;
 
-        /**
-         * <p>The audio encoding format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ACC</p>
-         */
         @NameInMap("AudioCodec")
         public String audioCodec;
 
-        /**
-         * <p>The audio encoding profile. Valid values:</p>
-         * <ul>
-         * <li><strong>aac_low</strong></li>
-         * <li><strong>aac_he</strong></li>
-         * <li><strong>aac_he_v2</strong></li>
-         * <li><strong>aac_ld</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>aac_low</p>
-         */
         @NameInMap("AudioProfile")
         public String audioProfile;
 
-        /**
-         * <p>The audio sampling rate. Valid values: <strong>22050 to 96000</strong>.</p>
-         * <blockquote>
-         * <p> If the value of AudioProfile is <strong>aac_ld</strong>, the audio sampling rate cannot exceed 44100.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>44100</p>
-         */
         @NameInMap("AudioRate")
         public Integer audioRate;
 
-        /**
-         * <p>Indicates whether B-frame removal is enabled. Fixed value: <strong>0</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Bframes")
         public String bframes;
 
-        /**
-         * <p>The source-based bitrate settings.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;UpLimit\&quot;:2500,\&quot;LowerLimit\&quot;:800,\&quot;Factor\&quot;:1}</p>
-         */
         @NameInMap("BitrateWithSource")
         public java.util.Map<String, ?> bitrateWithSource;
 
         @NameInMap("DeInterlaced")
         public Boolean deInterlaced;
 
-        /**
-         * <p>Other source-based settings.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;KeyFrameOpen\&quot;:\&quot;yes\&quot;,\&quot;Copyts\&quot;:\&quot;yes\&quot;,\&quot;SeiMode\&quot;:1}</p>
-         */
         @NameInMap("ExtWithSource")
         public java.util.Map<String, ?> extWithSource;
 
-        /**
-         * <p>The frame rate of the output video. Unit: frames per second (FPS).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15</p>
-         */
         @NameInMap("FPS")
         public Integer FPS;
 
-        /**
-         * <p>The source-based frame rate settings.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;UpLimit\&quot;:60,\&quot;LowerLimit\&quot;:1}</p>
-         */
         @NameInMap("FpsWithSource")
         public java.util.Map<String, ?> fpsWithSource;
 
-        /**
-         * <p>The group of pictures (GOP) size of the output video. Unit: frames. Valid values: <strong>1 to 3000</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Gop")
         public String gop;
 
-        /**
-         * <p>The height of the output video.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1200</p>
-         */
         @NameInMap("Height")
         public Integer height;
 
-        /**
-         * <p>The source-based resolution settings.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;Type\&quot;:\&quot;short\&quot;,\&quot;Value\&quot;:\&quot;1080\&quot;}</p>
-         */
         @NameInMap("ResWithSource")
         public java.util.Map<String, ?> resWithSource;
 
-        /**
-         * <p>The Real-Time Transcoding (RTS) flag. Fixed value: <strong>true</strong>.</p>
-         * <blockquote>
-         * <p> This parameter is returned only if RTS is used for transcoding.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("RtsFlag")
         public String rtsFlag;
 
-        /**
-         * <p>The type of the custom transcoding template. Valid values:</p>
-         * <ul>
-         * <li><strong>h264</strong>: custom H.264 standard transcoding</li>
-         * <li><strong>h264-nbhd</strong>: custom H.264 Narrowband HD™ transcoding</li>
-         * <li><strong>h265</strong>: custom H.265 standard transcoding</li>
-         * <li><strong>h265-nbhd</strong>: custom H.265 Narrowband HD™ transcoding</li>
-         * <li><strong>audio</strong>: audio-only transcoding</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>h264</p>
-         */
         @NameInMap("TemplateType")
         public String templateType;
 
-        /**
-         * <p>The bitrate of the output video. Unit: Kbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3000</p>
-         */
         @NameInMap("VideoBitrate")
         public Integer videoBitrate;
 
-        /**
-         * <p>The video encoding profile. Valid values:</p>
-         * <ul>
-         * <li><strong>baseline</strong>: suitable for mobile devices.</li>
-         * <li><strong>main</strong>: suitable for standard-definition devices.</li>
-         * <li><strong>high</strong>: suitable for high-definition devices.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>high</p>
-         */
         @NameInMap("VideoProfile")
         public String videoProfile;
 
-        /**
-         * <p>The width of the output video.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("Width")
         public Integer width;
 
@@ -394,30 +255,12 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters extends TeaModel {
-        /**
-         * <p>The type of encryption. Fixed value: <strong>aliyun</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aliyun</p>
-         */
         @NameInMap("EncryptType")
         public String encryptType;
 
-        /**
-         * <p>The rotation period of the CMK. Valid values: <strong>60 to 3600</strong>. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3600</p>
-         */
         @NameInMap("KmsKeyExpireInterval")
         public String kmsKeyExpireInterval;
 
-        /**
-         * <p>The ID of the customer master key (CMK) in Key Management Service (KMS).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>afce5722-81d2-43c3-9930-7601da11****</p>
-         */
         @NameInMap("KmsKeyID")
         public String kmsKeyID;
 
@@ -453,73 +296,21 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo extends TeaModel {
-        /**
-         * <p>The custom transcoding configuration.</p>
-         */
         @NameInMap("CustomTranscodeParameters")
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters customTranscodeParameters;
 
-        /**
-         * <p>The encryption settings.</p>
-         */
         @NameInMap("EncryptParameters")
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters encryptParameters;
 
-        /**
-         * <p>Indicates whether forcible transcoding is used. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: Delayed transcoding is used.</li>
-         * <li><strong>false</strong>: Forcible transcoding is used.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsLazy")
         public Boolean isLazy;
 
-        /**
-         * <p>The application name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("TranscodeApp")
         public String transcodeApp;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("TranscodeName")
         public String transcodeName;
 
-        /**
-         * <p>The transcoding template ID. Valid values:</p>
-         * <ul>
-         * <li><p><strong>Standard transcoding</strong>:</p>
-         * <ul>
-         * <li><strong>lld</strong>: low definition</li>
-         * <li><strong>lsd</strong>: standard definition</li>
-         * <li><strong>lhd</strong>: high definition</li>
-         * <li><strong>lud</strong>: ultra-high definition</li>
-         * </ul>
-         * </li>
-         * <li><p><strong>Narrowband HD™ transcoding</strong>:</p>
-         * <ul>
-         * <li><strong>ld</strong>: low definition</li>
-         * <li><strong>sd</strong>: standard definition</li>
-         * <li><strong>hd</strong>: high definition</li>
-         * <li><strong>ud</strong>: ultra-high definition</li>
-         * </ul>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>lld</p>
-         */
         @NameInMap("TranscodeTemplate")
         public String transcodeTemplate;
 

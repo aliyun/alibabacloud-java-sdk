@@ -13,9 +13,6 @@ public class DescribeLivePushProxyUsageDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The usage data of live center stream relay.</p>
-     */
     @NameInMap("PushProxyData")
     public DescribeLivePushProxyUsageDataResponseBodyPushProxyData pushProxyData;
 
@@ -75,39 +72,15 @@ public class DescribeLivePushProxyUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePushProxyUsageDataResponseBodyPushProxyDataPushProxyDataItem extends TeaModel {
-        /**
-         * <p>The domain name. If the value of SplitBy includes domain, the returned data is grouped by domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The ID of the region. If the value of SplitBy includes region, the returned data is grouped by region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The peak number of live center stream relay channels.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("StreamCount")
         public Long streamCount;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-10-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
-    /**
-     * <p>Details about the stream pulling configurations.</p>
-     */
     @NameInMap("LiveAppRecordList")
     public DescribeLivePullStreamConfigResponseBodyLiveAppRecordList liveAppRecordList;
 
@@ -41,66 +38,24 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord extends TeaModel {
-        /**
-         * <p>The name of the application to which the live stream belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The end of the time range for which the configurations were queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-05-20T01:33:00Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The origin server of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>guide.aliyundoc.com</p>
-         */
         @NameInMap("SourceUrl")
         public String sourceUrl;
 
-        /**
-         * <p>The live stream origin server that you are using.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>guide.aliyundoc.com</p>
-         */
         @NameInMap("SourceUsing")
         public String sourceUsing;
 
-        /**
-         * <p>The beginning of the time range for which the configurations were queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-05-15T01:30:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The name of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveStream****</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 

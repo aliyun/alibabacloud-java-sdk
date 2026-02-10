@@ -40,9 +40,6 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The complete URL of each live stream.</p>
-     */
     @NameInMap("StreamUrls")
     public DescribeLiveStreamsBlockListResponseBodyStreamUrls streamUrls;
 

@@ -49,9 +49,6 @@ public class DescribeLiveDomainTrafficDataResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The network traffic data that was collected at each interval.</p>
-     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeLiveDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -109,39 +106,15 @@ public class DescribeLiveDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The traffic over HTTP. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("HttpTrafficValue")
         public String httpTrafficValue;
 
-        /**
-         * <p>The traffic over HTTPS. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>454680793</p>
-         */
         @NameInMap("HttpsTrafficValue")
         public String httpsTrafficValue;
 
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-10T15:00:05Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total traffic. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>454680793</p>
-         */
         @NameInMap("TrafficValue")
         public String trafficValue;
 

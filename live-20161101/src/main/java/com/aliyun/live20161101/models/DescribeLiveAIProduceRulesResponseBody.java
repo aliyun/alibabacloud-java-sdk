@@ -13,9 +13,6 @@ public class DescribeLiveAIProduceRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The subtitle rules.</p>
-     */
     @NameInMap("RuleInfoList")
     public DescribeLiveAIProduceRulesResponseBodyRuleInfoList ruleInfoList;
 
@@ -41,93 +38,33 @@ public class DescribeLiveAIProduceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveAIProduceRulesResponseBodyRuleInfoListRuleInfo extends TeaModel {
-        /**
-         * <p>The name of the application to which the live stream belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>App Name</p>
-         */
         @NameInMap("App")
         public String app;
 
-        /**
-         * <p>The description of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>live AI subtitle template</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demo.aliyundoc.com</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The last time when the rule was modified. The value is a timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1715594344000</p>
-         */
         @NameInMap("GmtModifyTime")
         public String gmtModifyTime;
 
-        /**
-         * <p>Indicates whether the rule takes effect when stream pulling starts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsLazy")
         public Boolean isLazy;
 
-        /**
-         * <p>The specification of the exported subtitles.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>lp_ld</p>
-         */
         @NameInMap("LiveTemplate")
         public String liveTemplate;
 
-        /**
-         * <p>The ID of the subtitle rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>72fba656-2cc2-40fd-923c-2a10c3b9****</p>
-         */
         @NameInMap("RulesId")
         public String rulesId;
 
-        /**
-         * <p>The name of the virtual background template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test0708</p>
-         */
         @NameInMap("StudioName")
         public String studioName;
 
-        /**
-         * <p>The name of the subtitle template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sub1</p>
-         */
         @NameInMap("SubtitleName")
         public String subtitleName;
 
-        /**
-         * <p>The suffix of the subtitle rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test0506</p>
-         */
         @NameInMap("SuffixName")
         public String suffixName;
 

@@ -13,9 +13,6 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
     @NameInMap("CasterId")
     public String casterId;
 
-    /**
-     * <p>The list of the episodes.</p>
-     */
     @NameInMap("Episodes")
     public DescribeCasterProgramResponseBodyEpisodes episodes;
 
@@ -132,89 +129,30 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterProgramResponseBodyEpisodesEpisode extends TeaModel {
-        /**
-         * <p>The components.</p>
-         */
         @NameInMap("ComponentIds")
         public DescribeCasterProgramResponseBodyEpisodesEpisodeComponentIds componentIds;
 
-        /**
-         * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-06-29T10:02:00Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The ID of the episode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1872639A-F203-4EC5-8E43-CB92E68F****</p>
-         */
         @NameInMap("EpisodeId")
         public String episodeId;
 
-        /**
-         * <p>The name of the episode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>program_name_1</p>
-         */
         @NameInMap("EpisodeName")
         public String episodeName;
 
-        /**
-         * <p>The type of the episode. Valid values:</p>
-         * <ul>
-         * <li><strong>Resource</strong>: a video resource</li>
-         * <li><strong>Component</strong>: a component</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Resource</p>
-         */
         @NameInMap("EpisodeType")
         public String episodeType;
 
-        /**
-         * <p>The ID of the video resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1872639A-F203-4EC5-8E43-CB92E837****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-06-29T09:00:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The status of the episode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The policy for switching episodes. Valid values:</p>
-         * <ul>
-         * <li><strong>TimeFirst</strong>: The episode starts when the previous episode ends and ends when the next episode starts. If no next episode exists, the episode keeps repeating until a new episode is added or the production studio stops. This value is required for live video resources.</li>
-         * <li><strong>ContentFirst</strong>: The episode starts and ends as scheduled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>TimeFirst</p>
-         */
         @NameInMap("SwitchType")
         public String switchType;
 

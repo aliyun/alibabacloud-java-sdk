@@ -31,9 +31,6 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The data of PVs and UVs.</p>
-     */
     @NameInMap("PvUvDataInfos")
     public DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfos pvUvDataInfos;
 
@@ -109,30 +106,12 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo extends TeaModel {
-        /**
-         * <p>The number of PVs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3036</p>
-         */
         @NameInMap("PV")
         public String PV;
 
-        /**
-         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-03-19T16:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The number of UVs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("UV")
         public String UV;
 

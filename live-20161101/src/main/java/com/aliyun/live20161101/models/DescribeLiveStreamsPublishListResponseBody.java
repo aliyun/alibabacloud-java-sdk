@@ -22,9 +22,6 @@ public class DescribeLiveStreamsPublishListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The information about the stream ingest records.</p>
-     */
     @NameInMap("PublishInfo")
     public DescribeLiveStreamsPublishListResponseBodyPublishInfo publishInfo;
 
@@ -109,130 +106,45 @@ public class DescribeLiveStreamsPublishListResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo extends TeaModel {
-        /**
-         * <p>Internal error</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3000001</p>
-         */
         @NameInMap("AliInnerErrorFlags")
         public String aliInnerErrorFlags;
 
-        /**
-         * <p>The name of the application to which the live stream belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The IP address of the client that ingested the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.175.XX.XX</p>
-         */
         @NameInMap("ClientAddr")
         public String clientAddr;
 
-        /**
-         * <p>The ingest domain or main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The IP address of the CDN point of presence (POP) to which the stream was ingested.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.175.XX.XX</p>
-         */
         @NameInMap("EdgeNodeAddr")
         public String edgeNodeAddr;
 
-        /**
-         * <p>The ingest domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demo.aliyundoc.com</p>
-         */
         @NameInMap("PublishDomain")
         public String publishDomain;
 
-        /**
-         * <p>The time when the stream ingest was started. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-02T03:05:53Z</p>
-         */
         @NameInMap("PublishTime")
         public String publishTime;
 
-        /**
-         * <p>The type of the stream ingest. Valid values:</p>
-         * <ul>
-         * <li><strong>edge</strong>: edge ingest</li>
-         * <li><strong>center</strong>: live center ingest</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>edge</p>
-         */
         @NameInMap("PublishType")
         public String publishType;
 
-        /**
-         * <p>The complete ingest URL.</p>
-         */
         @NameInMap("PublishUrl")
         public String publishUrl;
 
-        /**
-         * <p>The time when the stream ingest was stopped. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-02T03:11:19Z</p>
-         */
         @NameInMap("StopTime")
         public String stopTime;
 
-        /**
-         * <p>The name of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveStream****</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The streaming URL.</p>
-         */
         @NameInMap("StreamUrl")
         public String streamUrl;
 
-        /**
-         * <p>The ID of the transcoding template.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if the value of the Transcoded parameter is no.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>ld</p>
-         */
         @NameInMap("TranscodeId")
         public String transcodeId;
 
-        /**
-         * <p>Indicates whether the stream was a transcoded stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>yes</p>
-         */
         @NameInMap("Transcoded")
         public String transcoded;
 

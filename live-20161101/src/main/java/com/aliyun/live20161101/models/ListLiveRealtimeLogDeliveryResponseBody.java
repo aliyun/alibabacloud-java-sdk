@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
-    /**
-     * <p>The configurations of real-time log delivery.</p>
-     */
     @NameInMap("Content")
     public ListLiveRealtimeLogDeliveryResponseBodyContent content;
 
@@ -41,61 +38,21 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
     }
 
     public static class ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo extends TeaModel {
-        /**
-         * <p>The ID of the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1001010</p>
-         */
         @NameInMap("DmId")
         public Integer dmId;
 
-        /**
-         * <p>The streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The name of the Logstore to which log entries are delivered.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>logstore_example</p>
-         */
         @NameInMap("Logstore")
         public String logstore;
 
-        /**
-         * <p>The name of the Log Service project that is used for real-time log delivery.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>project_example</p>
-         */
         @NameInMap("Project")
         public String project;
 
-        /**
-         * <p>The ID of the region where the Log Service project is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The status of real-time log delivery. Valid values:</p>
-         * <ul>
-         * <li><strong>online</strong>: enabled</li>
-         * <li><strong>offline</strong>: disabled</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>online</p>
-         */
         @NameInMap("Status")
         public String status;
 

@@ -4,15 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StartCasterResponseBody extends TeaModel {
-    /**
-     * <p>The PGM scenes.</p>
-     */
     @NameInMap("PgmSceneInfos")
     public StartCasterResponseBodyPgmSceneInfos pgmSceneInfos;
 
-    /**
-     * <p>The PVW scenes.</p>
-     */
     @NameInMap("PvwSceneInfos")
     public StartCasterResponseBodyPvwSceneInfos pvwSceneInfos;
 
@@ -55,41 +49,12 @@ public class StartCasterResponseBody extends TeaModel {
     }
 
     public static class StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo extends TeaModel {
-        /**
-         * <p>The URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtmp://abclive/caster/example.net</p>
-         */
         @NameInMap("OutputStreamUrl")
         public String outputStreamUrl;
 
-        /**
-         * <p>The transcoding configuration. Valid values:</p>
-         * <ul>
-         * <li><strong>lsd</strong>: standard definition</li>
-         * <li><strong>lld</strong>: low definition</li>
-         * <li><strong>lud</strong>: ultra-high definition</li>
-         * <li><strong>lhd</strong>: high definition</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>lld</p>
-         */
         @NameInMap("TranscodeConfig")
         public String transcodeConfig;
 
-        /**
-         * <p>The format. Valid values:</p>
-         * <ul>
-         * <li><strong>flv</strong></li>
-         * <li><strong>rtmp</strong></li>
-         * <li><strong>m3u8</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>flv</p>
-         */
         @NameInMap("VideoFormat")
         public String videoFormat;
 
@@ -144,27 +109,12 @@ public class StartCasterResponseBody extends TeaModel {
     }
 
     public static class StartCasterResponseBodyPgmSceneInfosSceneInfo extends TeaModel {
-        /**
-         * <p>The ID of the scene.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>b5f8c837-ceeb-424f-b30b-68e94e86****</p>
-         */
         @NameInMap("SceneId")
         public String sceneId;
 
-        /**
-         * <p>The stream relay URLs.</p>
-         */
         @NameInMap("StreamInfos")
         public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos streamInfos;
 
-        /**
-         * <p>The streaming URL of the PGM scene in the production studio. The value is not a stream relay URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtmp://abclive/caster/example.edu</p>
-         */
         @NameInMap("StreamUrl")
         public String streamUrl;
 
@@ -219,21 +169,9 @@ public class StartCasterResponseBody extends TeaModel {
     }
 
     public static class StartCasterResponseBodyPvwSceneInfosSceneInfo extends TeaModel {
-        /**
-         * <p>The ID of the scene.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>b5f8c837-ceeb-424f-b30b-68e94e86****</p>
-         */
         @NameInMap("SceneId")
         public String sceneId;
 
-        /**
-         * <p>The streaming URL of the PVW scene in the production studio. The value is not a stream relay URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtmp://abclive/caster/example.net</p>
-         */
         @NameInMap("StreamUrl")
         public String streamUrl;
 

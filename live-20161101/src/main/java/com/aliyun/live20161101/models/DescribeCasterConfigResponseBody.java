@@ -143,9 +143,6 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     @NameInMap("SideOutputUrlList")
     public String sideOutputUrlList;
 
-    /**
-     * <p>The storage configuration.</p>
-     */
     @NameInMap("SyncGroupsConfig")
     public DescribeCasterConfigResponseBodySyncGroupsConfig syncGroupsConfig;
 
@@ -357,39 +354,15 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterConfigResponseBodyRecordConfigRecordFormatRecordFormat extends TeaModel {
-        /**
-         * <p>The length of the recording.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3600</p>
-         */
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
-        /**
-         * <p>The format of the recording.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>M3U8</p>
-         */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <p>The name of the recording.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>record/{liveApp****}/{liveStream****}</p>
-         */
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
-        /**
-         * <p>The name of the segment.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>record/{liveApp****}/{liveStream****}/{UnixTimestamp****}</p>
-         */
         @NameInMap("SliceOssObjectPrefix")
         public String sliceOssObjectPrefix;
 
@@ -485,9 +458,6 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
-        /**
-         * <p>The recording configuration.</p>
-         */
         @NameInMap("RecordFormat")
         public DescribeCasterConfigResponseBodyRecordConfigRecordFormat recordFormat;
 
@@ -550,32 +520,12 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterConfigResponseBodySyncGroupsConfigSyncGroup extends TeaModel {
-        /**
-         * <p>The ID of the resource in the production studio.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>28768383240243****</p>
-         */
         @NameInMap("HostResourceId")
         public String hostResourceId;
 
-        /**
-         * <p>The cache mode of the Static Page Caching policy. Valid values:</p>
-         * <ul>
-         * <li>0: standard mode</li>
-         * <li>1: force mode</li>
-         * <li>2: no cache</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Mode")
         public Integer mode;
 
-        /**
-         * <p>The IDs of the resources for which you want to modify the resource group. The number of resource IDs is 1 to 50.</p>
-         */
         @NameInMap("ResourceIds")
         public DescribeCasterConfigResponseBodySyncGroupsConfigSyncGroupResourceIds resourceIds;
 
@@ -772,9 +722,6 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         @NameInMap("CustomParams")
         public DescribeCasterConfigResponseBodyTranscodeConfigCustomParams customParams;
 
-        /**
-         * <p>The transcoding setting for live streams.</p>
-         */
         @NameInMap("LiveTemplateIds")
         public DescribeCasterConfigResponseBodyTranscodeConfigLiveTemplateIds liveTemplateIds;
 

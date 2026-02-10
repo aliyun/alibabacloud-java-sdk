@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainCertificateInfoResponseBody extends TeaModel {
-    /**
-     * <p>The certificate information.</p>
-     */
     @NameInMap("CertInfos")
     public DescribeLiveDomainCertificateInfoResponseBodyCertInfos certInfos;
 
@@ -41,118 +38,33 @@ public class DescribeLiveDomainCertificateInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
-        /**
-         * <p>The streaming domain or ingest domain that matches the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("CertDomainName")
         public String certDomainName;
 
-        /**
-         * <p>The expiration time of the certificate. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-06-03T22:03:39Z</p>
-         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        /**
-         * <p>The validity period of the certificate.</p>
-         * <ul>
-         * <li>If the validity period is greater than 12 months, XX years XX months is displayed. For example, 2 years 3 months indicates that the validity period is 2 years and 3 months.</li>
-         * <li>If the validity period is less than 12 months, XX months is displayed. For example, 3 months indicates that the validity period is 3 months.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>3 months</p>
-         */
         @NameInMap("CertLife")
         public String certLife;
 
-        /**
-         * <p>The name of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Cert-****</p>
-         */
         @NameInMap("CertName")
         public String certName;
 
-        /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Let\&quot;s Encrypt</p>
-         */
         @NameInMap("CertOrg")
         public String certOrg;
 
-        /**
-         * <p>The type of the certificate. Valid values:</p>
-         * <ul>
-         * <li><strong>free</strong>: a free certificate (for testing)</li>
-         * <li><strong>cas</strong>: a certificate that is purchased from Certificate Management Service</li>
-         * <li><strong>upload</strong>: a custom certificate that you uploaded</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cas</p>
-         */
         @NameInMap("CertType")
         public String certType;
 
-        /**
-         * <p>The streaming domain or ingest domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The status of HTTPS. Valid values:</p>
-         * <ul>
-         * <li><strong>on</strong>: HTTPS is enabled.</li>
-         * <li><strong>off</strong>: HTTPS is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>on</p>
-         */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
-        /**
-         * <p>The public key of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>yourSSLPub</p>
-         */
         @NameInMap("SSLPub")
         public String SSLPub;
 
-        /**
-         * <p>The status of the free certificate that is used for testing. Valid values:</p>
-         * <ul>
-         * <li><strong>success</strong>: The certificate is effective.</li>
-         * <li><strong>checking</strong>: The system is checking whether the domain name is mapped to the CNAME that is assigned by ApsaraVideo Live.</li>
-         * <li><strong>cname_error</strong>: The domain name is not mapped to the CNAME that is assigned by ApsaraVideo Live.</li>
-         * <li><strong>domain_invalid</strong>: The domain name contains invalid characters.</li>
-         * <li><strong>unsupport_wildcard</strong>: The domain name is a wildcard domain name, which is not supported.</li>
-         * <li><strong>applying</strong>: The certificate is in the application progress.</li>
-         * <li><strong>failed</strong>: The application for the certificate failed.</li>
-         * </ul>
-         * <blockquote>
-         * <p> The <strong>Status</strong> parameter is valid only if the certificate is a free certificate for testing. If the certificate is not a free certificate for testing, an empty value is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Status")
         public String status;
 

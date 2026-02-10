@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterProgramResponseBody extends TeaModel {
-    /**
-     * <p>The IDs of the episodes. The episode IDs are listed in the same order as specified by the variable N.</p>
-     */
     @NameInMap("EpisodeIds")
     public AddCasterProgramResponseBodyEpisodeIds episodeIds;
 
@@ -41,12 +38,6 @@ public class AddCasterProgramResponseBody extends TeaModel {
     }
 
     public static class AddCasterProgramResponseBodyEpisodeIdsEpisodeId extends TeaModel {
-        /**
-         * <p>The ID of the episode. You can use the ID as a request parameter in the API operation that is used to modify the episode list, query the information about the episode list, delete the episode, or modify the configurations of the episode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
-         */
         @NameInMap("EpisodeId")
         public String episodeId;
 

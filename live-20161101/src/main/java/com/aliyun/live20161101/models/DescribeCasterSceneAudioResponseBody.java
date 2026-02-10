@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterSceneAudioResponseBody extends TeaModel {
-    /**
-     * <p>The configurations of the audio layers.</p>
-     */
     @NameInMap("AudioLayers")
     public DescribeCasterSceneAudioResponseBodyAudioLayers audioLayers;
 
@@ -90,35 +87,12 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer extends TeaModel {
-        /**
-         * <p>The fixed delay of the audio layer. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("FixedDelayDuration")
         public Integer fixedDelayDuration;
 
-        /**
-         * <p>The sound channel type of the audio layer. Valid values:</p>
-         * <ul>
-         * <li><strong>left</strong>: the left channel</li>
-         * <li><strong>right</strong>: the right channel</li>
-         * <li><strong>all</strong> (default): both the left and right channels</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>all</p>
-         */
         @NameInMap("ValidChannel")
         public String validChannel;
 
-        /**
-         * <p>The volume of the audio layer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("VolumeRate")
         public Float volumeRate;
 

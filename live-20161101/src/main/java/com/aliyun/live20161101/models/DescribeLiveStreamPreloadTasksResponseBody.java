@@ -22,9 +22,6 @@ public class DescribeLiveStreamPreloadTasksResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The details of the prefetch task.</p>
-     */
     @NameInMap("PreloadTasks")
     public DescribeLiveStreamPreloadTasksResponseBodyPreloadTasks preloadTasks;
 
@@ -109,109 +106,33 @@ public class DescribeLiveStreamPreloadTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamPreloadTasksResponseBodyPreloadTasksPreloadTask extends TeaModel {
-        /**
-         * <p>The acceleration region where the live content is prefetched. Valid values:</p>
-         * <ul>
-         * <li>domestic: regions in the Chinese mainland.</li>
-         * <li>overseas: regions outside the Chinese mainland.</li>
-         * <li>global: regions in and outside the Chinese mainland.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If this parameter is left empty, the acceleration region configured for the domain name is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>domestic</p>
-         */
         @NameInMap("Area")
         public String area;
 
-        /**
-         * <p>The time when the prefetch task was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-06-29T19:00:00Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Indicates whether the prefetch task is successful. Valid values:</p>
-         * <ul>
-         * <li>Successfully</li>
-         * <li>InternalError</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Successfully</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The streaming domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The streaming URL.</p>
-         */
         @NameInMap("PlayUrl")
         public String playUrl;
 
-        /**
-         * <p>The time when the prefetch task ended.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-06-30T19:00:00Z</p>
-         */
         @NameInMap("PreloadedEndTime")
         public String preloadedEndTime;
 
-        /**
-         * <p>The time when the prefetch task started.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-06-29T19:00:00Z</p>
-         */
         @NameInMap("PreloadedStartTime")
         public String preloadedStartTime;
 
-        /**
-         * <p>The progress of the prefetch task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100%</p>
-         */
         @NameInMap("Process")
         public String process;
 
-        /**
-         * <p>The status of the prefetch task. Valid values:</p>
-         * <ul>
-         * <li>Success</li>
-         * <li>Failed</li>
-         * </ul>
-         * <blockquote>
-         * <p> Success is returned only if the prefetch task is configured for all streaming URLs.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the prefetch task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>yourTaskId</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 

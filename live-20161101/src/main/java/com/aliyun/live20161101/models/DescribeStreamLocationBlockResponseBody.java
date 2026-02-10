@@ -40,9 +40,6 @@ public class DescribeStreamLocationBlockResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The configurations.</p>
-     */
     @NameInMap("StreamBlockList")
     public DescribeStreamLocationBlockResponseBodyStreamBlockList streamBlockList;
 
@@ -109,79 +106,27 @@ public class DescribeStreamLocationBlockResponseBody extends TeaModel {
     }
 
     public static class DescribeStreamLocationBlockResponseBodyStreamBlockListStreamBlock extends TeaModel {
-        /**
-         * <p>The name of the application in which the blocking applies.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The blocking type. Valid values:</p>
-         * <ul>
-         * <li>blacklist</li>
-         * <li>whitelist</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>blacklist</p>
-         */
         @NameInMap("BlockType")
         public String blockType;
 
-        /**
-         * <p>The accelerated domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The blocked region. If multiple regions are specified, such as CN and AS, they are separated by commas (,).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
         @NameInMap("LocationList")
         public String locationList;
 
-        /**
-         * <p>The time when the blocking ends. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-08-13T09:27Z</p>
-         */
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
-        /**
-         * <p>The blocking status. Valid values: 0 (not started), 1 (blocking), 2 (successful), 3 (failed), 4 (expired), and 5 (deleting).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The name of the stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>stream</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The time when the configuration was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-08-14T09:27Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

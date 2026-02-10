@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLivePushProxyLogResponseBody extends TeaModel {
-    /**
-     * <p>The log information.</p>
-     */
     @NameInMap("DomainLogDetails")
     public DescribeLivePushProxyLogResponseBodyDomainLogDetails domainLogDetails;
 
@@ -58,48 +55,18 @@ public class DescribeLivePushProxyLogResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePushProxyLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
-        /**
-         * <p>The end of the time range during which data was queried.</p>
-         * <p>The value is a UNIX timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1695189600</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The name of the log file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com
-         * _2023_09_20_160000_170000.****.gz</p>
-         */
         @NameInMap("LogName")
         public String logName;
 
-        /**
-         * <p>The path of the log file.</p>
-         */
         @NameInMap("LogPath")
         public String logPath;
 
-        /**
-         * <p>The size of the log file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>512</p>
-         */
         @NameInMap("LogSize")
         public Long logSize;
 
-        /**
-         * <p>The beginning of the time range during which data was queried.</p>
-         * <p>The value is a UNIX timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1695193200</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -170,30 +137,12 @@ public class DescribeLivePushProxyLogResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePushProxyLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
-        /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
-        /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("PageSize")
         public Long pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Total")
         public Long total;
 
@@ -229,24 +178,12 @@ public class DescribeLivePushProxyLogResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePushProxyLogResponseBodyDomainLogDetailsDomainLogDetail extends TeaModel {
-        /**
-         * <p>The total number of entries returned on the current page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("LogCount")
         public Long logCount;
 
-        /**
-         * <p>Details about the logs.</p>
-         */
         @NameInMap("LogInfos")
         public DescribeLivePushProxyLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos logInfos;
 
-        /**
-         * <p>The page information.</p>
-         */
         @NameInMap("PageInfos")
         public DescribeLivePushProxyLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;
 

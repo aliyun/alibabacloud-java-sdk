@@ -13,9 +13,6 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The statistics of the live streams.</p>
-     */
     @NameInMap("StreamCountInfos")
     public DescribeLiveStreamCountResponseBodyStreamCountInfos streamCountInfos;
 
@@ -41,34 +38,12 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail extends TeaModel {
-        /**
-         * <p>The number of online streams.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The video codec. Valid values:</p>
-         * <ul>
-         * <li><strong>h264</strong></li>
-         * <li><strong>h265</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>h264</p>
-         */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <p>The video bitrate. This parameter is returned only for transcoded streams.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>390</p>
-         */
         @NameInMap("VideoDataRate")
         public Long videoDataRate;
 
@@ -123,40 +98,15 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo extends TeaModel {
-        /**
-         * <p>The number of online streams.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The maximum allowed number of concurrently ingested streams. This parameter is available only to users in the whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Limit")
         public Long limit;
 
-        /**
-         * <p>The information about the live streams.</p>
-         */
         @NameInMap("StreamCountDetails")
         public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetails streamCountDetails;
 
-        /**
-         * <p>The type of the live stream. Valid values:</p>
-         * <ul>
-         * <li><strong>raw</strong>: source streams</li>
-         * <li><strong>trans</strong>: transcoded streams</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>raw</p>
-         */
         @NameInMap("Type")
         public String type;
 

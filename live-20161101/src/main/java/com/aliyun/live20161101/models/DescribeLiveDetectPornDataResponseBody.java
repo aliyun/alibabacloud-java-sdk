@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
-    /**
-     * <p>The bandwidth data returned at each interval.</p>
-     */
     @NameInMap("DetectPornData")
     public DescribeLiveDetectPornDataResponseBodyDetectPornData detectPornData;
 
@@ -41,86 +38,27 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule extends TeaModel {
-        /**
-         * <p>The name of the application to which the live stream belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveApp****</p>
-         */
         @NameInMap("App")
         public String app;
 
-        /**
-         * <p>The number of reviewed images.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The main streaming domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>Indicates whether a quota of free image scanning is available. Valid values:</p>
-         * <ul>
-         * <li><strong>free</strong></li>
-         * <li><strong>charge</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>free</p>
-         */
         @NameInMap("Fee")
         public String fee;
 
-        /**
-         * <p>The region in which the domain name resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The moderation scenario. Valid values:</p>
-         * <ul>
-         * <li><strong>porn</strong> (default): pornography</li>
-         * <li><strong>terrorism</strong>: terrorism or politically sensitive content</li>
-         * <li><strong>ad</strong>: ad violation</li>
-         * <li><strong>live</strong>: undesirable scene</li>
-         * <li><strong>logo</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>porn</p>
-         */
         @NameInMap("Scene")
         public String scene;
 
-        /**
-         * <p>The name of the live stream.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>liveStream****</p>
-         */
         @NameInMap("Stream")
         public String stream;
 
-        /**
-         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-10T15:00:05Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveUserBillPredictionResponseBody extends TeaModel {
-    /**
-     * <p>The estimated bill data.</p>
-     */
     @NameInMap("BillPredictionData")
     public DescribeLiveUserBillPredictionResponseBodyBillPredictionData billPredictionData;
 
@@ -103,42 +100,12 @@ public class DescribeLiveUserBillPredictionResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem extends TeaModel {
-        /**
-         * <p>The billable region. Valid values:</p>
-         * <ul>
-         * <li>CN: Chinese mainland</li>
-         * <li>OverSeas: countries and regions outside the Chinese mainland</li>
-         * <li>AP1: Asia Pacific 1, including Hong Kong (China), Macao (China), Taiwan (China), Japan, and other Southeast Asia countries and regions except Vietnam and Indonesia</li>
-         * <li>AP2: Asia Pacific 2, including Indonesia, South Korea, and Vietnam</li>
-         * <li>AP3: Asia Pacific 3, including Australia and New Zealand</li>
-         * <li>NA: North America, including US and Canada</li>
-         * <li>SA: South America, specifically meaning Brazil</li>
-         * <li>EU: Europe, including Ukraine, UK, France, Netherlands, Spain, Italy, Sweden, and Germany</li>
-         * <li>MEAA: Middle East and Africa, including South Africa, Oman, UAE, and Kuwait</li>
-         * </ul>
-         * <p>By default, data of all regions is aggregated and returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
         @NameInMap("Area")
         public String area;
 
-        /**
-         * <p>The time at which the estimated value occurs. This parameter is returned only if the metering method is pay by 95th percentile bandwidth, pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00, or pay by 4th peak bandwidth per month.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-10-15T16:00:00Z</p>
-         */
         @NameInMap("TimeStp")
         public String timeStp;
 
-        /**
-         * <p>The estimated value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10000</p>
-         */
         @NameInMap("Value")
         public Float value;
 
