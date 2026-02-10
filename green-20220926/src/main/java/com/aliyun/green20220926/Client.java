@@ -776,7 +776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在线测试</p>
+     * <p>Online Test</p>
      * 
      * @param request CreateOnlineTestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -820,7 +820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在线测试</p>
+     * <p>Online Test</p>
      * 
      * @param request CreateOnlineTestRequest
      * @return CreateOnlineTestResponse
@@ -1310,7 +1310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除在线测试接口</p>
+     * <p>Delete online test</p>
      * 
      * @param request DeleteOnlineTestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1346,7 +1346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除在线测试接口</p>
+     * <p>Delete online test</p>
      * 
      * @param request DeleteOnlineTestRequest
      * @return DeleteOnlineTestResponse
@@ -2114,7 +2114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询调用量</p>
+     * <p>Query Call Volume</p>
      * 
      * @param request GetCipStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2123,6 +2123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCipStatsResponse getCipStatsWithOptions(GetCipStatsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -2180,7 +2184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询调用量</p>
+     * <p>Query Call Volume</p>
      * 
      * @param request GetCipStatsRequest
      * @return GetCipStatsResponse
@@ -4120,7 +4124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存特性配置</p>
+     * <p>Save Feature Configuration</p>
      * 
      * @param request ModifyFeatureConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4178,7 +4182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存特性配置</p>
+     * <p>Save Feature Configuration</p>
      * 
      * @param request ModifyFeatureConfigRequest
      * @return ModifyFeatureConfigResponse
@@ -4252,7 +4256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>oss扫描结果查询</p>
+     * <p>OSS scan result query</p>
      * 
      * @param tmpReq OssCheckResultListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4322,7 +4326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>oss扫描结果查询</p>
+     * <p>OSS scan result query</p>
      * 
      * @param request OssCheckResultListRequest
      * @return OssCheckResultListResponse

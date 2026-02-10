@@ -25,6 +25,9 @@ public class GetCipStatsRequest extends TeaModel {
     @NameInMap("Label")
     public String label;
 
+    @NameInMap("Query")
+    public String query;
+
     /**
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -86,6 +89,14 @@ public class GetCipStatsRequest extends TeaModel {
     }
     public String getLabel() {
         return this.label;
+    }
+
+    public GetCipStatsRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
     }
 
     public GetCipStatsRequest setRegionId(String regionId) {
