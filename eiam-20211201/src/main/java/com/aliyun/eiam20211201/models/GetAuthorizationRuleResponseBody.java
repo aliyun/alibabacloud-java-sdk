@@ -73,6 +73,24 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         public String authorizationRuleName;
 
         /**
+         * <p>授权规则主体ID，主体类型对应的主体ID。</p>
+         */
+        @NameInMap("AuthorizationRuleSubjectId")
+        public String authorizationRuleSubjectId;
+
+        /**
+         * <p>授权规则主体范围，枚举类型：shared（共享型，即支持所有主体，包括账户、应用），exclusive（专属类型）</p>
+         */
+        @NameInMap("AuthorizationRuleSubjectScope")
+        public String authorizationRuleSubjectScope;
+
+        /**
+         * <p>授权规则主体类型，枚举类型：application（应用)，user（账户)。</p>
+         */
+        @NameInMap("AuthorizationRuleSubjectType")
+        public String authorizationRuleSubjectType;
+
+        /**
          * <p>创建时间，Unix时间戳格式，单位为毫秒。</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +179,30 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         }
         public String getAuthorizationRuleName() {
             return this.authorizationRuleName;
+        }
+
+        public GetAuthorizationRuleResponseBodyAuthorizationRule setAuthorizationRuleSubjectId(String authorizationRuleSubjectId) {
+            this.authorizationRuleSubjectId = authorizationRuleSubjectId;
+            return this;
+        }
+        public String getAuthorizationRuleSubjectId() {
+            return this.authorizationRuleSubjectId;
+        }
+
+        public GetAuthorizationRuleResponseBodyAuthorizationRule setAuthorizationRuleSubjectScope(String authorizationRuleSubjectScope) {
+            this.authorizationRuleSubjectScope = authorizationRuleSubjectScope;
+            return this;
+        }
+        public String getAuthorizationRuleSubjectScope() {
+            return this.authorizationRuleSubjectScope;
+        }
+
+        public GetAuthorizationRuleResponseBodyAuthorizationRule setAuthorizationRuleSubjectType(String authorizationRuleSubjectType) {
+            this.authorizationRuleSubjectType = authorizationRuleSubjectType;
+            return this;
+        }
+        public String getAuthorizationRuleSubjectType() {
+            return this.authorizationRuleSubjectType;
         }
 
         public GetAuthorizationRuleResponseBodyAuthorizationRule setCreateTime(Long createTime) {

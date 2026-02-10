@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在当前应用下给指定员工添加一个应用账号</p>
+     * <p>在当前应用下给指定员工添加一个应用账号。</p>
      * 
      * @param request AddApplicationAccountToUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,7 +72,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在当前应用下给指定员工添加一个应用账号</p>
+     * <p>在当前应用下给指定员工添加一个应用账号。</p>
      * 
      * @param request AddApplicationAccountToUserRequest
      * @return AddApplicationAccountToUserResponse
@@ -1002,7 +1002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例删除检查</p>
+     * <p>实例删除检查。</p>
      * 
      * @param request CheckInstanceForDeleteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1034,7 +1034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例删除检查</p>
+     * <p>实例删除检查。</p>
      * 
      * @param request CheckInstanceForDeleteRequest
      * @return CheckInstanceForDeleteResponse
@@ -1114,6 +1114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateApplicationResponse createApplicationWithOptions(CreateApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationIdentityType)) {
+            query.put("ApplicationIdentityType", request.applicationIdentityType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
             query.put("ApplicationName", request.applicationName);
         }
@@ -3825,7 +3829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Make sure that the instance to be deleted is no longer used. If the instance is deleted, all data related to the instance will be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Enterprise Identity and Access Management (EIAM) instance of Identity as a Service (IDaaS) that you do not need.</p>
+     * <p>Deletes an Employee Identity and Access Management (EIAM) instance of Identity as a Service (IDaaS) that you do not need.</p>
      * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3860,7 +3864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Make sure that the instance to be deleted is no longer used. If the instance is deleted, all data related to the instance will be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Enterprise Identity and Access Management (EIAM) instance of Identity as a Service (IDaaS) that you do not need.</p>
+     * <p>Deletes an Employee Identity and Access Management (EIAM) instance of Identity as a Service (IDaaS) that you do not need.</p>
      * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -4016,7 +4020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete organizational unit information, forcibly deleting all accounts and sub-organizations beneath it</p>
+     * <p>Deletes information about an organization and forcefully deletes all accounts and sub-organizations in the organization.</p>
      * 
      * @param request DeleteOrganizationalUnitChildrenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4052,7 +4056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete organizational unit information, forcibly deleting all accounts and sub-organizations beneath it</p>
+     * <p>Deletes information about an organization and forcefully deletes all accounts and sub-organizations in the organization.</p>
      * 
      * @param request DeleteOrganizationalUnitChildrenRequest
      * @return DeleteOrganizationalUnitChildrenResponse
@@ -4518,7 +4522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Disables the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
      * 
      * @param request DisableApplicationProvisioningRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4554,7 +4558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Disables the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
      * 
      * @param request DisableApplicationProvisioningRequest
      * @return DisableApplicationProvisioningResponse
@@ -5606,7 +5610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the client key of an application in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Enables the client key of an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
      * 
      * @param request EnableApplicationClientSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5646,7 +5650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the client key of an application in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Enables the client key of an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
      * 
      * @param request EnableApplicationClientSecretRequest
      * @return EnableApplicationClientSecretResponse
@@ -5758,7 +5762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Enables the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
      * 
      * @param request EnableApplicationProvisioningRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5794,7 +5798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Enables the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
      * 
      * @param request EnableApplicationProvisioningRequest
      * @return EnableApplicationProvisioningResponse
@@ -9166,7 +9170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the root organizational unit in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Queries the information about the root organizational unit in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
      * 
      * @param request GetRootOrganizationalUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9198,7 +9202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the root organizational unit in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Queries the information about the root organizational unit in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
      * 
      * @param request GetRootOrganizationalUnitRequest
      * @return GetRootOrganizationalUnitResponse
@@ -9746,7 +9750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用支持账户同步类型列表</p>
+     * <p>Queries the synchronization protocol types that are supported by an application.</p>
      * 
      * @param request ListApplicationSupportedProvisionProtocolTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9782,7 +9786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用支持账户同步类型列表</p>
+     * <p>Queries the synchronization protocol types that are supported by an application.</p>
      * 
      * @param request ListApplicationSupportedProvisionProtocolTypesRequest
      * @return ListApplicationSupportedProvisionProtocolTypesResponse
@@ -9857,6 +9861,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationCreationType)) {
             query.put("ApplicationCreationType", request.applicationCreationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationIdentityType)) {
+            query.put("ApplicationIdentityType", request.applicationIdentityType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.applicationIds)) {
@@ -11498,7 +11506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of account groups to which the permissions to access an application are granted. The returned results contain the group IDs. You can call the GetGroup operation to query the information about an account group based on the group ID.</p>
+     * <p>Queries the account groups that are granted permissions to access an application and displays the results by page. The IDs of the account groups are returned. To query the detailed information about the account groups, call the GetGroup operation.</p>
      * 
      * @param request ListGroupsForApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11550,7 +11558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of account groups to which the permissions to access an application are granted. The returned results contain the group IDs. You can call the GetGroup operation to query the information about an account group based on the group ID.</p>
+     * <p>Queries the account groups that are granted permissions to access an application and displays the results by page. The IDs of the account groups are returned. To query the detailed information about the account groups, call the GetGroup operation.</p>
      * 
      * @param request ListGroupsForApplicationRequest
      * @return ListGroupsForApplicationResponse
@@ -11649,6 +11657,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceServerScopeId)) {
+            query.put("ResourceServerScopeId", request.resourceServerScopeId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -11850,7 +11862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of one or more Enterprise Identity and Access Management (EIAM) instances of Identity as a Service (IDaaS).</p>
+     * <p>Queries the information about one or more Enterprise Identity and Access Management (EIAM) instances of Identity as a Service (IDaaS).</p>
      * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11894,7 +11906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of one or more Enterprise Identity and Access Management (EIAM) instances of Identity as a Service (IDaaS).</p>
+     * <p>Queries the information about one or more Enterprise Identity and Access Management (EIAM) instances of Identity as a Service (IDaaS).</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -11940,7 +11952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取支持NAE的可用区列表</p>
+     * <p>Queries the zones that support dedicated network endpoints in the specified region of Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
      * 
      * @param request ListNetworkAccessEndpointAvailableZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11972,7 +11984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取支持NAE的可用区列表</p>
+     * <p>Queries the zones that support dedicated network endpoints in the specified region of Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
      * 
      * @param request ListNetworkAccessEndpointAvailableZonesRequest
      * @return ListNetworkAccessEndpointAvailableZonesResponse
@@ -11984,7 +11996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询专属网络端点。</p>
+     * <p>List query dedicated network endpoint</p>
      * 
      * @param request ListNetworkAccessEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12040,7 +12052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询专属网络端点。</p>
+     * <p>List query dedicated network endpoint</p>
      * 
      * @param request ListNetworkAccessEndpointsRequest
      * @return ListNetworkAccessEndpointsResponse
@@ -12369,6 +12381,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceServerScopeId)) {
+            query.put("ResourceServerScopeId", request.resourceServerScopeId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -12400,7 +12416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the supported Alibaba Cloud regions.</p>
+     * <p>Queries a list of supported Alibaba Cloud regions.</p>
      * 
      * @param request ListRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12424,7 +12440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the supported Alibaba Cloud regions.</p>
+     * <p>Queries a list of supported Alibaba Cloud regions.</p>
      * @return ListRegionsResponse
      */
     public ListRegionsResponse listRegions() throws Exception {
@@ -12494,7 +12510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询同步任务</p>
+     * <p>Queries a list of synchronization jobs.</p>
      * 
      * @param request ListSynchronizationJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12570,7 +12586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询同步任务</p>
+     * <p>Queries a list of synchronization jobs.</p>
      * 
      * @param request ListSynchronizationJobsRequest
      * @return ListSynchronizationJobsResponse
@@ -12957,6 +12973,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceServerScopeId)) {
+            query.put("ResourceServerScopeId", request.resourceServerScopeId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

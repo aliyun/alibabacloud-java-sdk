@@ -12,6 +12,13 @@ public class ListApplicationsRequest extends TeaModel {
     public String applicationCreationType;
 
     /**
+     * <strong>example:</strong>
+     * <p>application</p>
+     */
+    @NameInMap("ApplicationIdentityType")
+    public String applicationIdentityType;
+
+    /**
      * <p>The IDs of the applications.</p>
      * 
      * <strong>example:</strong>
@@ -134,6 +141,14 @@ public class ListApplicationsRequest extends TeaModel {
     }
     public String getApplicationCreationType() {
         return this.applicationCreationType;
+    }
+
+    public ListApplicationsRequest setApplicationIdentityType(String applicationIdentityType) {
+        this.applicationIdentityType = applicationIdentityType;
+        return this;
+    }
+    public String getApplicationIdentityType() {
+        return this.applicationIdentityType;
     }
 
     public ListApplicationsRequest setApplicationIds(java.util.List<String> applicationIds) {

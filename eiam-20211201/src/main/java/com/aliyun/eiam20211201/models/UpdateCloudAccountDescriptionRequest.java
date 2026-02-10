@@ -24,8 +24,6 @@ public class UpdateCloudAccountDescriptionRequest extends TeaModel {
     public String cloudAccountId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>cloud_account_description</p>
      */

@@ -42,6 +42,15 @@ public class ListGroupsForResourceServerRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>权限唯一标识。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
+     */
+    @NameInMap("ResourceServerScopeId")
+    public String resourceServerScopeId;
+
     public static ListGroupsForResourceServerRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsForResourceServerRequest self = new ListGroupsForResourceServerRequest();
         return TeaModel.build(map, self);
@@ -85,6 +94,14 @@ public class ListGroupsForResourceServerRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListGroupsForResourceServerRequest setResourceServerScopeId(String resourceServerScopeId) {
+        this.resourceServerScopeId = resourceServerScopeId;
+        return this;
+    }
+    public String getResourceServerScopeId() {
+        return this.resourceServerScopeId;
     }
 
     public static class ListGroupsForResourceServerRequestFilter extends TeaModel {

@@ -34,7 +34,6 @@ public class UpdateCloudAccountRoleDescriptionRequest extends TeaModel {
 
     /**
      * <p>描述</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_account_role_description</p>

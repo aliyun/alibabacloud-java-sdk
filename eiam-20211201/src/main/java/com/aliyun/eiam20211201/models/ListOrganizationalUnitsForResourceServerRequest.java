@@ -43,6 +43,15 @@ public class ListOrganizationalUnitsForResourceServerRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>权限唯一标识。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
+     */
+    @NameInMap("ResourceServerScopeId")
+    public String resourceServerScopeId;
+
     public static ListOrganizationalUnitsForResourceServerRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOrganizationalUnitsForResourceServerRequest self = new ListOrganizationalUnitsForResourceServerRequest();
         return TeaModel.build(map, self);
@@ -86,6 +95,14 @@ public class ListOrganizationalUnitsForResourceServerRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListOrganizationalUnitsForResourceServerRequest setResourceServerScopeId(String resourceServerScopeId) {
+        this.resourceServerScopeId = resourceServerScopeId;
+        return this;
+    }
+    public String getResourceServerScopeId() {
+        return this.resourceServerScopeId;
     }
 
     public static class ListOrganizationalUnitsForResourceServerRequestFilter extends TeaModel {

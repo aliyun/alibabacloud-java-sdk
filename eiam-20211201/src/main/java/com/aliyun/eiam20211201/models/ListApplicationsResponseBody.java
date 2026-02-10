@@ -74,6 +74,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        @NameInMap("ApplicationIdentityType")
+        public String applicationIdentityType;
+
         /**
          * <p>The name of the application.</p>
          * 
@@ -263,6 +266,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public String getApplicationId() {
             return this.applicationId;
+        }
+
+        public ListApplicationsResponseBodyApplications setApplicationIdentityType(String applicationIdentityType) {
+            this.applicationIdentityType = applicationIdentityType;
+            return this;
+        }
+        public String getApplicationIdentityType() {
+            return this.applicationIdentityType;
         }
 
         public ListApplicationsResponseBodyApplications setApplicationName(String applicationName) {

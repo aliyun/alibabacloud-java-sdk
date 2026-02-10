@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>application</p>
+     */
+    @NameInMap("ApplicationIdentityType")
+    public String applicationIdentityType;
+
+    /**
      * <p>The name of the application.</p>
      * <p>This parameter is required.</p>
      * 
@@ -82,6 +89,14 @@ public class CreateApplicationRequest extends TeaModel {
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateApplicationRequest setApplicationIdentityType(String applicationIdentityType) {
+        this.applicationIdentityType = applicationIdentityType;
+        return this;
+    }
+    public String getApplicationIdentityType() {
+        return this.applicationIdentityType;
     }
 
     public CreateApplicationRequest setApplicationName(String applicationName) {
