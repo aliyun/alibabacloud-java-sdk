@@ -16,15 +16,9 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
     @NameInMap("EmbeddingTokens")
     public String embeddingTokens;
 
-    /**
-     * <p>The details of the entity.</p>
-     */
     @NameInMap("Entities")
     public QueryKnowledgeBasesContentResponseBodyEntities entities;
 
-    /**
-     * <p>A single data record.</p>
-     */
     @NameInMap("Matches")
     public QueryKnowledgeBasesContentResponseBodyMatches matches;
 
@@ -37,9 +31,6 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The details of the relationship edge.</p>
-     */
     @NameInMap("Relations")
     public QueryKnowledgeBasesContentResponseBodyRelations relations;
 
@@ -141,45 +132,18 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
     }
 
     public static class QueryKnowledgeBasesContentResponseBodyEntitiesEntities extends TeaModel {
-        /**
-         * <p>The entity description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>A former advisor at DeepMind.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the entity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Dr. Wang</p>
-         */
         @NameInMap("Entity")
         public String entity;
 
-        /**
-         * <p>The name of the file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>my_doc.txt</p>
-         */
         @NameInMap("FileName")
         public String fileName;
 
-        /**
-         * <p>The entity ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The entity type.</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -250,79 +214,30 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
     }
 
     public static class QueryKnowledgeBasesContentResponseBodyMatchesMatchList extends TeaModel {
-        /**
-         * <p>The content of the text.</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The name of the file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>my_doc.txt</p>
-         */
         @NameInMap("FileName")
         public String fileName;
 
-        /**
-         * <p>The public network URL of the image result. By default, the URL is valid for 2 hours.</p>
-         * <p>You can use the UrlExpiration parameter to specify a validity period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://xxx-cn-beijing.aliyuncs.com/image/test.png">https://xxx-cn-beijing.aliyuncs.com/image/test.png</a></p>
-         */
         @NameInMap("FileURL")
         public String fileURL;
 
-        /**
-         * <p>The unique ID of the vector data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>doca-1234</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>Document loader metadata.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;page_pos&quot;: 1}</p>
-         */
         @NameInMap("LoaderMetadata")
         public String loaderMetadata;
 
-        /**
-         * <p>The metadata map.</p>
-         */
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
 
-        /**
-         * <p>The rerank score.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6.2345</p>
-         */
         @NameInMap("RerankScore")
         public Double rerankScore;
 
-        /**
-         * <p>The source of the retrieval results. 1 indicates vector retrieval, 2 indicates full-text retrieval, and 3 indicates dual-path retrieval.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RetrievalSource")
         public Integer retrievalSource;
 
-        /**
-         * <p>The similarity score of the data. It is related to the algorithm (l2, ip, or cosine) that is specified when you create an index.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.12345</p>
-         */
         @NameInMap("Score")
         public Double score;
 
@@ -425,45 +340,18 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
     }
 
     public static class QueryKnowledgeBasesContentResponseBodyRelationsRelations extends TeaModel {
-        /**
-         * <p>The description of the relationship edge.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Dr. Wang previously served as an advisor at DeepMind.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>my_doc.txt</p>
-         */
         @NameInMap("FileName")
         public String fileName;
 
-        /**
-         * <p>The ID of the link.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The source entity.</p>
-         */
         @NameInMap("SourceEntity")
         public String sourceEntity;
 
-        /**
-         * <p>The destination entity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Dr. Wang</p>
-         */
         @NameInMap("TargetEntity")
         public String targetEntity;
 

@@ -4,9 +4,6 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class QueryCollectionDataResponseBody extends TeaModel {
-    /**
-     * <p>Data list.</p>
-     */
     @NameInMap("Matches")
     public QueryCollectionDataResponseBodyMatches matches;
 
@@ -183,39 +180,21 @@ public class QueryCollectionDataResponseBody extends TeaModel {
     }
 
     public static class QueryCollectionDataResponseBodyMatchesMatch extends TeaModel {
-        /**
-         * <p>The unique ID of the vector data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>doca-1234</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>Metadata.</p>
-         */
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
 
         @NameInMap("MetadataV2")
         public java.util.Map<String, ?> metadataV2;
 
-        /**
-         * <p>The similarity score of this data, which is related to the algorithm <code>(l2/ip/cosine)</code> specified when creating the index.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.12345</p>
-         */
         @NameInMap("Score")
         public Double score;
 
         @NameInMap("SparseValues")
         public QueryCollectionDataResponseBodyMatchesMatchSparseValues sparseValues;
 
-        /**
-         * <p>List of vector data.</p>
-         */
         @NameInMap("Values")
         public QueryCollectionDataResponseBodyMatchesMatchValues values;
 

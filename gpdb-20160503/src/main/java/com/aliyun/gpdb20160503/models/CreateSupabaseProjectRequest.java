@@ -41,6 +41,12 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     @NameInMap("DiskPerformanceLevel")
     public String diskPerformanceLevel;
 
+    @NameInMap("PayType")
+    public String payType;
+
+    @NameInMap("Period")
+    public String period;
+
     /**
      * <p>The name of the Supabase project. The name must meet the following requirements:</p>
      * <ul>
@@ -94,6 +100,9 @@ public class CreateSupabaseProjectRequest extends TeaModel {
      */
     @NameInMap("StorageSize")
     public Long storageSize;
+
+    @NameInMap("UsedTime")
+    public String usedTime;
 
     /**
      * <p>The vSwitch ID.</p>
@@ -173,6 +182,22 @@ public class CreateSupabaseProjectRequest extends TeaModel {
         return this.diskPerformanceLevel;
     }
 
+    public CreateSupabaseProjectRequest setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
+    }
+
+    public CreateSupabaseProjectRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
     public CreateSupabaseProjectRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -211,6 +236,14 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     }
     public Long getStorageSize() {
         return this.storageSize;
+    }
+
+    public CreateSupabaseProjectRequest setUsedTime(String usedTime) {
+        this.usedTime = usedTime;
+        return this;
+    }
+    public String getUsedTime() {
+        return this.usedTime;
     }
 
     public CreateSupabaseProjectRequest setVSwitchId(String vSwitchId) {

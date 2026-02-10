@@ -31,9 +31,6 @@ public class ListSchemasResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The queried schemas.</p>
-     */
     @NameInMap("Schemas")
     public ListSchemasResponseBodySchemas schemas;
 

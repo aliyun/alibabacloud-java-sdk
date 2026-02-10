@@ -839,7 +839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check Hadoop Cluster Network Connectivity</p>
+     * <p>Checks the network connectivity of a Hadoop external data source.</p>
      * 
      * @param request CheckHadoopNetConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -883,7 +883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check Hadoop Cluster Network Connectivity</p>
+     * <p>Checks the network connectivity of a Hadoop external data source.</p>
      * 
      * @param request CheckHadoopNetConnectionRequest
      * @return CheckHadoopNetConnectionResponse
@@ -951,7 +951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether a service-linked role is created.</p>
+     * <p>Checks whether a service-linked role is created.</p>
      * 
      * @param request CheckServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -983,7 +983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether a service-linked role is created.</p>
+     * <p>Checks whether a service-linked role is created.</p>
      * 
      * @param request CheckServiceLinkedRoleRequest
      * @return CheckServiceLinkedRoleResponse
@@ -1965,7 +1965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Install extensions.</p>
+     * <p>Installs extensions.</p>
      * 
      * @param request CreateExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2009,7 +2009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Install extensions.</p>
+     * <p>Installs extensions.</p>
      * 
      * @param request CreateExtensionsRequest
      * @return CreateExtensionsResponse
@@ -2825,7 +2825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create External Data Source Configuration</p>
+     * <p>Creates a real-time data source.</p>
      * 
      * @param request CreateStreamingDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2881,7 +2881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create External Data Source Configuration</p>
+     * <p>Creates a real-time data source.</p>
      * 
      * @param request CreateStreamingDataSourceRequest
      * @return CreateStreamingDataSourceResponse
@@ -3063,6 +3063,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DiskPerformanceLevel", request.diskPerformanceLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             query.put("ProjectName", request.projectName);
         }
@@ -3081,6 +3089,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
             query.put("StorageSize", request.storageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
+            query.put("UsedTime", request.usedTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
@@ -3293,7 +3305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据库账号</p>
+     * <p>Deletes a database account.</p>
      * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3329,7 +3341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据库账号</p>
+     * <p>Deletes a database account.</p>
      * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -3947,7 +3959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uninstall an extension.</p>
+     * <p>Uninstalls extensions.</p>
      * 
      * @param request DeleteExtensionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3991,7 +4003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uninstall an extension.</p>
+     * <p>Uninstalls extensions.</p>
      * 
      * @param request DeleteExtensionRequest
      * @return DeleteExtensionResponse
@@ -4055,7 +4067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除hadoop数据源</p>
+     * <p>Deletes a Hadoop external data source.</p>
      * 
      * @param request DeleteHadoopDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4095,7 +4107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除hadoop数据源</p>
+     * <p>Deletes a Hadoop external data source.</p>
      * 
      * @param request DeleteHadoopDataSourceRequest
      * @return DeleteHadoopDataSourceResponse
@@ -4513,7 +4525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a real-time data service.</p>
+     * <p>Deletes the configurations of an external data source.</p>
      * 
      * @param request DeleteStreamingDataServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4553,7 +4565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a real-time data service.</p>
+     * <p>Deletes the configurations of an external data source.</p>
      * 
      * @param request DeleteStreamingDataServiceRequest
      * @return DeleteStreamingDataServiceResponse
@@ -4617,7 +4629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a real-time data service job.</p>
+     * <p>Deletes a real-time data synchronization job.</p>
      * 
      * @param request DeleteStreamingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4657,7 +4669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a real-time data service job.</p>
+     * <p>Deletes a real-time data synchronization job.</p>
      * 
      * @param request DeleteStreamingJobRequest
      * @return DeleteStreamingJobResponse
@@ -6624,7 +6636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Data sharing is supported only for instances in Serverless mode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the state of data sharing for AnalyticDB for PostgreSQL instances.</p>
+     * <p>Queries the status of data sharing for AnalyticDB for PostgreSQL instances.</p>
      * 
      * @param request DescribeDataShareInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6679,7 +6691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Data sharing is supported only for instances in Serverless mode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the state of data sharing for AnalyticDB for PostgreSQL instances.</p>
+     * <p>Queries the status of data sharing for AnalyticDB for PostgreSQL instances.</p>
      * 
      * @param request DescribeDataShareInstancesRequest
      * @return DescribeDataShareInstancesResponse
@@ -6814,7 +6826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Queries all databases and database accounts of an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request DescribeDiagnosisDimensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6851,7 +6863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Queries all databases and database accounts of an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request DescribeDiagnosisDimensionsRequest
      * @return DescribeDiagnosisDimensionsResponse
@@ -7211,7 +7223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get download records</p>
+     * <p>Queries the last five download records of slow query logs for an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request DescribeDownloadSQLLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7243,7 +7255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get download records</p>
+     * <p>Queries the last five download records of slow query logs for an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request DescribeDownloadSQLLogsRequest
      * @return DescribeDownloadSQLLogsResponse
@@ -7359,7 +7371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries E-MapReduce (EMR) Hadoop clusters in a specific virtual private cloud (VPC).</p>
+     * <p>Queries a list of E-MapReduce (EMR) clusters in a virtual private cloud (VPC).</p>
      * 
      * @param request DescribeHadoopClustersInSameNetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7395,7 +7407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries E-MapReduce (EMR) Hadoop clusters in a specific virtual private cloud (VPC).</p>
+     * <p>Queries a list of E-MapReduce (EMR) clusters in a virtual private cloud (VPC).</p>
      * 
      * @param request DescribeHadoopClustersInSameNetRequest
      * @return DescribeHadoopClustersInSameNetResponse
@@ -8251,7 +8263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>描述一个实例是否处于平衡状态</p>
+     * <p>Queries the rebalance status of an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request DescribeRebalanceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8283,7 +8295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>描述一个实例是否处于平衡状态</p>
+     * <p>Queries the rebalance status of an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request DescribeRebalanceStatusRequest
      * @return DescribeRebalanceStatusResponse
@@ -8881,7 +8893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete External Data Source Configuration</p>
+     * <p>Queries a real-time data synchronization job.</p>
      * 
      * @param request DescribeStreamingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8921,7 +8933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete External Data Source Configuration</p>
+     * <p>Queries a real-time data synchronization job.</p>
      * 
      * @param request DescribeStreamingJobRequest
      * @return DescribeStreamingJobResponse
@@ -9967,7 +9979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特定的账号信息</p>
+     * <p>Queries the information about a database account.</p>
      * 
      * @param request GetAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10003,7 +10015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特定的账号信息</p>
+     * <p>Queries the information about a database account.</p>
      * 
      * @param request GetAccountRequest
      * @return GetAccountResponse
@@ -11209,7 +11221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例外表配置列表</p>
+     * <p>Queries a list of data sources.</p>
      * 
      * @param request ListExternalDataSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11253,7 +11265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例外表配置列表</p>
+     * <p>Queries a list of data sources.</p>
      * 
      * @param request ListExternalDataSourcesRequest
      * @return ListExternalDataSourcesResponse
@@ -11581,7 +11593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Homogeneous Data Source</p>
+     * <p>Queries remote AnalyticDB data sources.</p>
      * 
      * @param request ListRemoteADBDataSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11621,7 +11633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Homogeneous Data Source</p>
+     * <p>Queries remote AnalyticDB data sources.</p>
      * 
      * @param request ListRemoteADBDataSourcesRequest
      * @return ListRemoteADBDataSourcesResponse
@@ -11905,7 +11917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries real-time service data sources.</p>
+     * <p>Queries a list of real-time service data sources.</p>
      * 
      * @param request ListStreamingDataSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11949,7 +11961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries real-time service data sources.</p>
+     * <p>Queries a list of real-time service data sources.</p>
      * 
      * @param request ListStreamingDataSourcesRequest
      * @return ListStreamingDataSourcesResponse
@@ -12209,7 +12221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of tags that are added to AnalyticDB for PostgreSQL instances.</p>
+     * <p>Queries a list of AnalyticDB for PostgreSQL instances that have specific tags added.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12273,7 +12285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of tags that are added to AnalyticDB for PostgreSQL instances.</p>
+     * <p>Queries a list of AnalyticDB for PostgreSQL instances that have specific tags added.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -12853,7 +12865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>包年包月/按量付费转换改造</p>
+     * <p>Switches between billing methods for an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request ModifyDBInstancePayTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12897,7 +12909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>包年包月/按量付费转换改造</p>
+     * <p>Switches between billing methods for an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request ModifyDBInstancePayTypeRequest
      * @return ModifyDBInstancePayTypeResponse
@@ -13447,7 +13459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Homogeneous Data Source</p>
+     * <p>Modifies a remote AnalyticDB data source.</p>
      * 
      * @param request ModifyRemoteADBDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13499,7 +13511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Homogeneous Data Source</p>
+     * <p>Modifies a remote AnalyticDB data source.</p>
      * 
      * @param request ModifyRemoteADBDataSourceRequest
      * @return ModifyRemoteADBDataSourceResponse
@@ -13645,7 +13657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a real-time data service.</p>
+     * <p>Modifies the configurations of an external data source.</p>
      * 
      * @param request ModifyStreamingDataServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13693,7 +13705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a real-time data service.</p>
+     * <p>Modifies the configurations of an external data source.</p>
      * 
      * @param request ModifyStreamingDataServiceRequest
      * @return ModifyStreamingDataServiceResponse
@@ -13961,7 +13973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the vector engine optimization configuration of an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Modifies the vector search engine optimization configuration of an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request ModifyVectorConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14001,7 +14013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the vector engine optimization configuration of an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Modifies the vector search engine optimization configuration of an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request ModifyVectorConfigurationRequest
      * @return ModifyVectorConfigurationResponse
@@ -14271,7 +14283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query</p>
+     * <p>Retrieves vector data and metadata from a document collection by using natural statements.</p>
      * 
      * @param tmpReq QueryContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14415,7 +14427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query</p>
+     * <p>Retrieves vector data and metadata from a document collection by using natural statements.</p>
      * 
      * @param request QueryContentRequest
      * @return QueryContentResponse
@@ -14701,7 +14713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Score and re-order documents using a model</p>
+     * <p>The Rerank operation can resolve the issue of inaccurate ranking of vector and full-text search results. It re-scores and reranks the retrieved data through semantic understanding to significantly improve the relevance and accuracy of the results. AnalyticDB for PostgreSQL allows you to rerank search results by using Rerank models, but does not provide models.</p>
      * 
      * @param tmpReq RerankRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14773,7 +14785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Score and re-order documents using a model</p>
+     * <p>The Rerank operation can resolve the issue of inaccurate ranking of vector and full-text search results. It re-scores and reranks the retrieved data through semantic understanding to significantly improve the relevance and accuracy of the results. AnalyticDB for PostgreSQL allows you to rerank search results by using Rerank models, but does not provide models.</p>
      * 
      * @param request RerankRequest
      * @return RerankResponse
@@ -15522,7 +15534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases a sample dataset from an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Releases the sample dataset from an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request UnloadSampleDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15563,7 +15575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases a sample dataset from an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Releases the sample dataset from an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request UnloadSampleDataRequest
      * @return UnloadSampleDataResponse
@@ -15575,7 +15587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove resource tags</p>
+     * <p>Removes tags from AnalyticDB for PostgreSQL instances. If the tags that you remove are not added to other instances, the tags are automatically deleted.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15639,7 +15651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove resource tags</p>
+     * <p>Removes tags from AnalyticDB for PostgreSQL instances. If the tags that you remove are not added to other instances, the tags are automatically deleted.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse

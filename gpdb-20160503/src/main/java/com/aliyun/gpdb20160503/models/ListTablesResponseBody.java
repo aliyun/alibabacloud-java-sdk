@@ -44,9 +44,6 @@ public class ListTablesResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>The queried tables.</p>
-     */
     @NameInMap("Tables")
     public ListTablesResponseBodyTables tables;
 

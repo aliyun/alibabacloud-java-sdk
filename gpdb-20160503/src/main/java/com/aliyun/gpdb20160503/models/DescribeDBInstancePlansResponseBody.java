@@ -14,9 +14,6 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The queried plans.</p>
-     */
     @NameInMap("Items")
     public DescribeDBInstancePlansResponseBodyItems items;
 
@@ -128,123 +125,33 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePlansResponseBodyItemsPlanList extends TeaModel {
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gp-bp12ga6v69h86****</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>The execution information of the plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;pause&quot;:{&quot;planCronTime&quot;:&quot;0 22 * * 5&quot;},&quot;resume&quot;:{&quot;planCronTime&quot;:&quot;0 23 * * 5&quot;}}</p>
-         */
         @NameInMap("PlanConfig")
         public String planConfig;
 
-        /**
-         * <p>The description of the plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>this is a test plan</p>
-         */
         @NameInMap("PlanDesc")
         public String planDesc;
 
-        /**
-         * <p>The end time of the plan. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li><p>This parameter is returned only for the plans that are periodically executed.</p>
-         * </li>
-         * <li><p>If you did not specify the end time when you created the plan, this parameter is not returned.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-04-17T23:00Z</p>
-         */
         @NameInMap("PlanEndDate")
         public String planEndDate;
 
-        /**
-         * <p>The plan ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234</p>
-         */
         @NameInMap("PlanId")
         public String planId;
 
-        /**
-         * <p>The name of the plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-plan</p>
-         */
         @NameInMap("PlanName")
         public String planName;
 
-        /**
-         * <p>The execution mode of the plan. Valid values:</p>
-         * <ul>
-         * <li><strong>Postpone</strong>: The plan is executed later.</li>
-         * <li><strong>Regular</strong>: The plan is executed periodically.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Regular</p>
-         */
         @NameInMap("PlanScheduleType")
         public String planScheduleType;
 
-        /**
-         * <p>The start time of the plan. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li><p>This parameter is returned only for the plans that are periodically executed.</p>
-         * </li>
-         * <li><p>If you did not specify the start time when you created the plan, the current time is returned.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-04-17T23:00Z</p>
-         */
         @NameInMap("PlanStartDate")
         public String planStartDate;
 
-        /**
-         * <p>The status of the plan. Valid values:</p>
-         * <ul>
-         * <li><strong>active</strong></li>
-         * <li><strong>cancel</strong></li>
-         * <li><strong>deleted</strong></li>
-         * <li><strong>finished</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>active</p>
-         */
         @NameInMap("PlanStatus")
         public String planStatus;
 
-        /**
-         * <p>The type of the plan. Valid values:</p>
-         * <ul>
-         * <li><strong>PauseResume</strong>: pauses and resumes an instance.</li>
-         * <li><strong>Resize</strong>: scales an instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PauseResume</p>
-         */
         @NameInMap("PlanType")
         public String planType;
 

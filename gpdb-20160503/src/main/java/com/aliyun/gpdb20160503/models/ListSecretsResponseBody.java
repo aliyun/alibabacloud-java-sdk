@@ -31,9 +31,6 @@ public class ListSecretsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The queried access credentials.</p>
-     */
     @NameInMap("Secrets")
     public ListSecretsResponseBodySecrets secrets;
 
@@ -96,66 +93,24 @@ public class ListSecretsResponseBody extends TeaModel {
     }
 
     public static class ListSecretsResponseBodySecretsSecrets extends TeaModel {
-        /**
-         * <p>The ID of the Alibaba Cloud account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1033***</p>
-         */
         @NameInMap("AccountId")
         public String accountId;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gp-bp14****</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>The description of the access credential.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The region ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: <code>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
-         */
         @NameInMap("SecretArn")
         public String secretArn;
 
-        /**
-         * <p>The name of the access credential.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testsecret</p>
-         */
         @NameInMap("SecretName")
         public String secretName;
 
-        /**
-         * <p>The name of the database account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testacc</p>
-         */
         @NameInMap("Username")
         public String username;
 

@@ -13,9 +13,6 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The queried performance metric.</p>
-     */
     @NameInMap("Performances")
     public DescribeDBInstanceSupportMaxPerformanceResponseBodyPerformances performances;
 
@@ -58,39 +55,15 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
     }
 
     public static class DescribeDBInstanceSupportMaxPerformanceResponseBodyPerformancesPerformance extends TeaModel {
-        /**
-         * <p>The performance bottleneck type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs or disk</p>
-         */
         @NameInMap("Bottleneck")
         public String bottleneck;
 
-        /**
-         * <p>The name of the performance metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>adbpg_status,adbpg_disk_status,adbpg_connection_status,adbgp_segment_disk_usage_percent_max,adbpg_master_disk_usage_percent_max,adbpg_disk_usage_percent</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The unit of the performance metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>%</p>
-         */
         @NameInMap("Unit")
         public String unit;
 
-        /**
-         * <p>The value of the performance metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90</p>
-         */
         @NameInMap("Value")
         public String value;
 

@@ -22,9 +22,6 @@ public class TextEmbeddingResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The embedding results.</p>
-     */
     @NameInMap("Results")
     public TextEmbeddingResponseBodyResults results;
 
@@ -115,18 +112,9 @@ public class TextEmbeddingResponseBody extends TeaModel {
     }
 
     public static class TextEmbeddingResponseBodyResultsResults extends TeaModel {
-        /**
-         * <p>The embedding values.</p>
-         */
         @NameInMap("Embedding")
         public TextEmbeddingResponseBodyResultsResultsEmbedding embedding;
 
-        /**
-         * <p>The number of the embedding in the Input request parameter, which starts from 0.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Index")
         public Integer index;
 

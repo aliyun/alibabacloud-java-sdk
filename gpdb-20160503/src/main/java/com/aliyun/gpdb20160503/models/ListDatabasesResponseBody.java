@@ -4,9 +4,6 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListDatabasesResponseBody extends TeaModel {
-    /**
-     * <p>The queried databases.</p>
-     */
     @NameInMap("Databases")
     public ListDatabasesResponseBodyDatabases databases;
 

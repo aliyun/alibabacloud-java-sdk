@@ -4,9 +4,6 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListIndicesResponseBody extends TeaModel {
-    /**
-     * <p>The queried indexes.</p>
-     */
     @NameInMap("Indices")
     public ListIndicesResponseBodyIndices indices;
 
@@ -79,39 +76,15 @@ public class ListIndicesResponseBody extends TeaModel {
     }
 
     public static class ListIndicesResponseBodyIndicesIndices extends TeaModel {
-        /**
-         * <p>The name of the collection.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testcollection</p>
-         */
         @NameInMap("Collection")
         public String collection;
 
-        /**
-         * <p>The definition of the index.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CREATE INDEX testindex ON mynamespace. testcollection</p>
-         */
         @NameInMap("IndexDef")
         public String indexDef;
 
-        /**
-         * <p>The name of the index.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testindex</p>
-         */
         @NameInMap("IndexName")
         public String indexName;
 
-        /**
-         * <p>The namespace to which the pod belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mynamespace</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 

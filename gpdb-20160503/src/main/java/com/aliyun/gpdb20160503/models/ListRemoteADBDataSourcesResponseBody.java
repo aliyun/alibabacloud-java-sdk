@@ -4,9 +4,6 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
-    /**
-     * <p>Returns the successfully added data sharing service data.</p>
-     */
     @NameInMap("DataSourceItems")
     public ListRemoteADBDataSourcesResponseBodyDataSourceItems dataSourceItems;
 
@@ -58,105 +55,36 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListRemoteADBDataSourcesResponseBodyDataSourceItemsRemoteDataSources extends TeaModel {
-        /**
-         * <p>Data source name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>db1_gptest1_to_db2_gp-test2</p>
-         */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
-        /**
-         * <p>Description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>Local database name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>db1</p>
-         */
         @NameInMap("LocalDatabase")
         public String localDatabase;
 
-        /**
-         * <p>Local instance name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gp-test1</p>
-         */
         @NameInMap("LocalInstanceName")
         public String localInstanceName;
 
-        /**
-         * <p>Manager user name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>admin</p>
-         */
         @NameInMap("ManagerUserName")
         public String managerUserName;
 
-        /**
-         * <p>Region ID.</p>
-         * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to view available region IDs.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>Remote database name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>db2</p>
-         */
         @NameInMap("RemoteDatabase")
         public String remoteDatabase;
 
-        /**
-         * <p>Remote instance name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gp-test2</p>
-         */
         @NameInMap("RemoteInstanceName")
         public String remoteInstanceName;
 
-        /**
-         * <p>Data source status</p>
-         * 
-         * <strong>example:</strong>
-         * <p>creating</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>User name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>user1</p>
-         */
         @NameInMap("UserName")
         public String userName;
 

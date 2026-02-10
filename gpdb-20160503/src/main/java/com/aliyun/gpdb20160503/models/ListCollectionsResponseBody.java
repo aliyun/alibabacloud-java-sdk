@@ -4,9 +4,6 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListCollectionsResponseBody extends TeaModel {
-    /**
-     * <p>The queried vector collections.</p>
-     */
     @NameInMap("Collections")
     public ListCollectionsResponseBodyCollections collections;
 

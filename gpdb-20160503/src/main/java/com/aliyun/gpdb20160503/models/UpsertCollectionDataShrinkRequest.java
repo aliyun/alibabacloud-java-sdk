@@ -64,6 +64,9 @@ public class UpsertCollectionDataShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The vector data that you want to upload.</p>
+     */
     @NameInMap("Rows")
     public String rowsShrink;
 

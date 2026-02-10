@@ -13,9 +13,6 @@ public class ListDocumentsResponseBody extends TeaModel {
     @NameInMap("Count")
     public Integer count;
 
-    /**
-     * <p>The queried documents.</p>
-     */
     @NameInMap("Items")
     public ListDocumentsResponseBodyItems items;
 
@@ -113,21 +110,9 @@ public class ListDocumentsResponseBody extends TeaModel {
     }
 
     public static class ListDocumentsResponseBodyItemsDocumentList extends TeaModel {
-        /**
-         * <p>The name of the document.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>music.txt</p>
-         */
         @NameInMap("FileName")
         public String fileName;
 
-        /**
-         * <p>The source of the document.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://oss.xxx/music.txt">http://oss.xxx/music.txt</a></p>
-         */
         @NameInMap("Source")
         public String source;
 

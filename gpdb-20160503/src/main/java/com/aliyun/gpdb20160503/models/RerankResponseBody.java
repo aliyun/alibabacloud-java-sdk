@@ -22,9 +22,6 @@ public class RerankResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Rerank results.</p>
-     */
     @NameInMap("Results")
     public RerankResponseBodyResults results;
 
@@ -96,30 +93,12 @@ public class RerankResponseBody extends TeaModel {
     }
 
     public static class RerankResponseBodyResultsResults extends TeaModel {
-        /**
-         * <p>Re-ordered document information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ADBPG is the OLAP database of Alibaba Cloud.</p>
-         */
         @NameInMap("Document")
         public String document;
 
-        /**
-         * <p>Index of this document in the request parameter Documents, starting from 0.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Index")
         public Integer index;
 
-        /**
-         * <p>Rerank similarity score.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2.31412</p>
-         */
         @NameInMap("RelevanceScore")
         public Float relevanceScore;
 

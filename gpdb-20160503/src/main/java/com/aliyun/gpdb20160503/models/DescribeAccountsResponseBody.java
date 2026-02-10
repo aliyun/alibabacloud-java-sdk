@@ -4,9 +4,6 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
-    /**
-     * <p>The queried database accounts.</p>
-     */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
@@ -41,53 +38,18 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsDBInstanceAccount extends TeaModel {
-        /**
-         * <p>The description of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testuser</p>
-         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
-        /**
-         * <p>The name of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testuser</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The state of the account.</p>
-         * <ul>
-         * <li><strong>0</strong>: The account is being created.</li>
-         * <li><strong>1</strong>: The account is in use.</li>
-         * <li><strong>3</strong>: The account is being deleted.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
-        /**
-         * <p>The type of the database account. Valid values: Super and Normal. Super indicates a privileged account and Normal indicates a standard account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Super</p>
-         */
         @NameInMap("AccountType")
         public String accountType;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gp-bp***************</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 

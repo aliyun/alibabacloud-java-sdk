@@ -4,9 +4,6 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The queried instance.</p>
-     */
     @NameInMap("Items")
     public DescribeDBInstanceAttributeResponseBodyItems items;
 
@@ -41,21 +38,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag extends TeaModel {
-        /**
-         * <p>Tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-key</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>Tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-value</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -102,741 +87,213 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute extends TeaModel {
-        /**
-         * <p>Queries the current instance availability status, in percentage (%).</p>
-         * <blockquote>
-         * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>100.0%</p>
-         */
         @NameInMap("AvailabilityValue")
         public String availabilityValue;
 
         @NameInMap("CacheStorageSize")
         public String cacheStorageSize;
 
-        /**
-         * <p>Access mode, with the following values:</p>
-         * <ul>
-         * <li><strong>Performance</strong>: Standard access mode.</li>
-         * <li><strong>Safty</strong>: High-security access mode.</li>
-         * <li><strong>LVS</strong>: LVS link mode.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>LVS</p>
-         */
         @NameInMap("ConnectionMode")
         public String connectionMode;
 
-        /**
-         * <p>Instance connection address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gp-bp13ue79qk8y1****-master.gpdb.rds.aliyuncs.com</p>
-         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
-        /**
-         * <p>Minor version number of the kernel.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mm.v6.3.10.1-202207141918</p>
-         */
         @NameInMap("CoreVersion")
         public String coreVersion;
 
-        /**
-         * <p>Number of CPU cores for the compute node, unit: Core.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("CpuCores")
         public Integer cpuCores;
 
-        /**
-         * <p>Number of CPU cores per node.</p>
-         * <blockquote>
-         * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("CpuCoresPerNode")
         public Integer cpuCoresPerNode;
 
-        /**
-         * <p>Instance creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-08-11T09:16:26Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>Instance series, with the following values:</p>
-         * <ul>
-         * <li><strong>Basic</strong>: Basic Edition.</li>
-         * <li><strong>HighAvailability</strong>: High Availability Edition.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>HighAvailability</p>
-         */
         @NameInMap("DBInstanceCategory")
         public String DBInstanceCategory;
 
-        /**
-         * <p>Instance specification.</p>
-         * <blockquote>
-         * <p>This parameter is only applicable to reserved storage mode instances.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>gpdb.group.segsdx1</p>
-         */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
-        /**
-         * <p>Instance family, with the following values:</p>
-         * <ul>
-         * <li><strong>s</strong>: Shared type.</li>
-         * <li><strong>x</strong>: General type.</li>
-         * <li><strong>d</strong>: Dedicated package.</li>
-         * <li><strong>h</strong>: Dedicated physical machine.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>x</p>
-         */
         @NameInMap("DBInstanceClassType")
         public String DBInstanceClassType;
 
-        /**
-         * <p>Number of CPU cores.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("DBInstanceCpuCores")
         public Integer DBInstanceCpuCores;
 
-        /**
-         * <p>Instance description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gp-bp13ue79qk8y1****</p>
-         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
-        /**
-         * <p>Maximum BPS (disk throughput) of the compute group, in Mbps.</p>
-         * <blockquote>
-         * <p>This parameter is only applicable to reserved storage mode instances.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DBInstanceDiskMBPS")
         public Long DBInstanceDiskMBPS;
 
-        /**
-         * <p>Number of compute groups.</p>
-         * <blockquote>
-         * <p>This parameter is only applicable to reserved storage mode instances.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DBInstanceGroupCount")
         public String DBInstanceGroupCount;
 
-        /**
-         * <p>Instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gp-bp13ue79qk8y1****</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>Memory of the compute node.</p>
-         * <blockquote>
-         * <p>The unit for storage-reserved mode is MB; for Serverless and storage-elastic modes, it is GB.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>16</p>
-         */
         @NameInMap("DBInstanceMemory")
         public Long DBInstanceMemory;
 
-        /**
-         * <p>Instance resource type, with the following values:</p>
-         * <ul>
-         * <li><strong>Serverless</strong>: Serverless mode.</li>
-         * <li><strong>StorageElastic</strong>: Storage elastic mode.</li>
-         * <li><strong>Classic</strong>: Storage reserved mode.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>StorageElastic</p>
-         */
         @NameInMap("DBInstanceMode")
         public String DBInstanceMode;
 
-        /**
-         * <p>This parameter is deprecated and will not return any value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
-        /**
-         * <p>Instance status. For more details, see the supplementary explanation of the DBInstanceStatus parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
-        /**
-         * <p>Maximum storage space of a single replica, in GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("DBInstanceStorage")
         public Long DBInstanceStorage;
 
-        /**
-         * <p>The deployment mode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>single</p>
-         */
         @NameInMap("DeployMode")
         public String deployMode;
 
-        /**
-         * <p>Encryption key.</p>
-         * <blockquote>
-         * <p>This parameter is returned only for instances with disk encryption enabled.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0d2470df-da7b-4786-b981-************</p>
-         */
         @NameInMap("EncryptionKey")
         public String encryptionKey;
 
-        /**
-         * <p>Encryption type, with the following value:</p>
-         * <ul>
-         * <li><strong>CloudDisk</strong>: Cloud disk encryption.</li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter is returned only for instances with cloud disk encryption.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>CloudDisk</p>
-         */
         @NameInMap("EncryptionType")
         public String encryptionType;
 
-        /**
-         * <p>Database engine.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gpdb</p>
-         */
         @NameInMap("Engine")
         public String engine;
 
-        /**
-         * <p>Database version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6.0</p>
-         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
-        /**
-         * <p>Instance expiration time (in UTC).</p>
-         * <blockquote>
-         * <p>The expiration time for pay-as-you-go instances is <code>2999-09-08T16:00:00Z</code>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>2999-09-08T16:00:00Z</p>
-         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         @NameInMap("GraphEngineStatus")
         public String graphEngineStatus;
 
-        /**
-         * <p>Compute group machine type, with the following values:</p>
-         * <ul>
-         * <li><strong>0</strong>: SSD</li>
-         * <li><strong>1</strong>: HDD</li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter applies only to storage-reserved mode instances.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("HostType")
         public String hostType;
 
-        /**
-         * <p>Idle release waiting time. Unit: seconds.</p>
-         * <blockquote>
-         * <p>This parameter is returned only for instances in the Serverless automatic scheduling mode.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>600</p>
-         */
         @NameInMap("IdleTime")
         public Integer idleTime;
 
-        /**
-         * <p>Instance network type, with the following values:</p>
-         * <ul>
-         * <li><strong>Classic</strong>: Classic network.</li>
-         * <li><strong>VPC</strong>: VPC network.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
-        /**
-         * <p>Lock mode, with the following values:</p>
-         * <ul>
-         * <li><strong>Unlock</strong>: Normal.</li>
-         * <li><strong>ManualLock</strong>: Manually triggered lock.</li>
-         * <li><strong>LockByExpiration</strong>: Automatically locked when the instance expires.</li>
-         * <li><strong>LockByRestoration</strong>: Automatically locked before the instance rolls back.</li>
-         * <li><strong>LockByDiskQuota</strong>: Automatically locked when the instance space is full.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Unlock</p>
-         */
         @NameInMap("LockMode")
         public String lockMode;
 
-        /**
-         * <p>This parameter is deprecated and will not return any value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("LockReason")
         public String lockReason;
 
-        /**
-         * <p>Maintenance end time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>22:00Z</p>
-         */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
-        /**
-         * <p>Maintenance start time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18:00Z</p>
-         */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
-        /**
-         * <p>The specifications of AI coordinator node resources of the instance. If the coordinator nodes of the instance are not AI nodes, null is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ADB.AIMedium.2</p>
-         */
         @NameInMap("MasterAISpec")
         public String masterAISpec;
 
-        /**
-         * <p>Master resources.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("MasterCU")
         public Integer masterCU;
 
-        /**
-         * <p>Number of Master nodes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("MasterNodeNum")
         public Integer masterNodeNum;
 
-        /**
-         * <p>Maximum number of concurrent connections for the instance.</p>
-         * <blockquote>
-         * <p>This parameter is only applicable to reserved storage mode instances.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
-        /**
-         * <p>Memory size per replica, see the <strong>MemoryUnit</strong> parameter for the unit.</p>
-         * <blockquote>
-         * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MemoryPerNode")
         public Integer memoryPerNode;
 
-        /**
-         * <p>Memory size of the compute node.</p>
-         * <blockquote>
-         * <p>The unit is MB for the storage reserved mode; GB for Serverless and storage elastic modes.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>16</p>
-         */
         @NameInMap("MemorySize")
         public Long memorySize;
 
-        /**
-         * <p>Memory unit.</p>
-         * <blockquote>
-         * <p>This parameter is only applicable to reserved storage mode instances.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>GB</p>
-         */
         @NameInMap("MemoryUnit")
         public String memoryUnit;
 
-        /**
-         * <p>Minor version of the kernel.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6.3.10.1-202207141918</p>
-         */
         @NameInMap("MinorVersion")
         public String minorVersion;
 
-        /**
-         * <p>Billing type, with the following values:</p>
-         * <ul>
-         * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: Subscription.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Postpaid</p>
-         */
         @NameInMap("PayType")
         public String payType;
 
-        /**
-         * <p>Instance port number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5432</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The service type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>standard</p>
-         */
         @NameInMap("ProdType")
         public String prodType;
 
-        /**
-         * <p>This parameter has been deprecated and will not return a value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("ReadDelayTime")
         public String readDelayTime;
 
-        /**
-         * <p>Region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>ID of the resource group where the instance is located.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>Instance running time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4 days 22:58:55</p>
-         */
         @NameInMap("RunningTime")
         public String runningTime;
 
-        /**
-         * <p>This parameter is deprecated and will not return any value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
-        /**
-         * <p>Performance Level (PL), currently only <strong>PL1</strong> is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PL1</p>
-         */
         @NameInMap("SegDiskPerformanceLevel")
         public String segDiskPerformanceLevel;
 
-        /**
-         * <p>Number of Segment nodes.</p>
-         * <blockquote>
-         * <p>This parameter applies only to instances in the storage elastic mode and Serverless manual scheduling mode.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("SegNodeNum")
         public Integer segNodeNum;
 
-        /**
-         * <p>The specifications of AI compute node resources of the instance. If the compute nodes of the instance are not AI nodes, null is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ADB.AIMedium.2</p>
-         */
         @NameInMap("SegmentAISpec")
         public String segmentAISpec;
 
-        /**
-         * <p>Number of compute groups.</p>
-         * <blockquote>
-         * <p>This parameter applies only to storage-reserved mode instances.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("SegmentCounts")
         public Integer segmentCounts;
 
-        /**
-         * <p>The mode of the Serverless instance, with the following values:</p>
-         * <ul>
-         * <li><strong>Manual</strong>: Manual scheduling.</li>
-         * <li><strong>Auto</strong>: Automatic scheduling.</li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter is returned only for Serverless mode instances.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Auto</p>
-         */
         @NameInMap("ServerlessMode")
         public String serverlessMode;
 
-        /**
-         * <p>Compute resource threshold. Unit: ACU.</p>
-         * <blockquote>
-         * <p>This parameter is returned only for instances in the Serverless automatic scheduling mode.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>32</p>
-         */
         @NameInMap("ServerlessResource")
         public Integer serverlessResource;
 
-        /**
-         * <p>The secondary zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-i</p>
-         */
         @NameInMap("StandbyZoneId")
         public String standbyZoneId;
 
-        /**
-         * <p>The time when the instance started running.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-08-11T09:26:43Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>Storage size per replica, see the <strong>StorageUnit</strong> parameter for units.</p>
-         * <blockquote>
-         * <p>This parameter applies only to storage-reserved mode instances.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("StoragePerNode")
         public Integer storagePerNode;
 
-        /**
-         * <p>Storage space size, unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("StorageSize")
         public Long storageSize;
 
-        /**
-         * <p>Storage type, with the following values:</p>
-         * <ul>
-         * <li><strong>cloud_essd</strong>: ESSD cloud disk.</li>
-         * <li><strong>cloud_efficiency</strong>: Efficient cloud disk.</li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter is only applicable to instances in the storage elastic mode.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_essd</p>
-         */
         @NameInMap("StorageType")
         public String storageType;
 
-        /**
-         * <p>Storage unit, with the following values:</p>
-         * <ul>
-         * <li><strong>GB SSD</strong></li>
-         * <li><strong>TB SSD</strong></li>
-         * <li><strong>GB HDD</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>GB SSD</p>
-         */
         @NameInMap("StorageUnit")
         public String storageUnit;
 
-        /**
-         * <p>Indicates whether backup recovery is supported, with the following values:</p>
-         * <ul>
-         * <li><strong>true</strong>: Backup recovery is supported.</li>
-         * <li><strong>false</strong>: Backup recovery is not supported.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("SupportRestore")
         public Boolean supportRestore;
 
-        /**
-         * <p>Tag key-value pairs.</p>
-         */
         @NameInMap("Tags")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags tags;
 
-        /**
-         * <p>vSwitch ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bp1cpq8mr64paltkb****</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>Indicates whether vector engine optimization is enabled. The values are as follows:</p>
-         * <ul>
-         * <li><strong>enabled</strong>: Indicates that vector engine optimization is enabled.</li>
-         * <li><strong>disabled</strong>: Indicates that vector engine optimization is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>enabled</p>
-         */
         @NameInMap("VectorConfigurationStatus")
         public String vectorConfigurationStatus;
 
-        /**
-         * <p>VPC ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp19ame5m1r3oejns****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>Zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-j</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

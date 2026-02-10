@@ -136,15 +136,9 @@ public class GetStatementResultResponseBody extends TeaModel {
     }
 
     public static class GetStatementResultResponseBodyData extends TeaModel {
-        /**
-         * <p>List of column metadata.</p>
-         */
         @NameInMap("ColumnMetadata")
         public GetStatementResultResponseBodyDataColumnMetadata columnMetadata;
 
-        /**
-         * <p>Multiple rows of data.</p>
-         */
         @NameInMap("Records")
         public GetStatementResultResponseBodyDataRecords records;
 

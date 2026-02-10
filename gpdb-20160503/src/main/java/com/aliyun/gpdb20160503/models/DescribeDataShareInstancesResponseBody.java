@@ -4,15 +4,6 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataShareInstancesResponseBody extends TeaModel {
-    /**
-     * <p>The state of data sharing. Valid values:</p>
-     * <ul>
-     * <li><strong>opening</strong></li>
-     * <li><strong>opened</strong></li>
-     * <li><strong>closing</strong></li>
-     * <li><strong>closed</strong></li>
-     * </ul>
-     */
     @NameInMap("Items")
     public DescribeDataShareInstancesResponseBodyItems items;
 
@@ -98,68 +89,21 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDataShareInstancesResponseBodyItemsDBInstance extends TeaModel {
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gp-bp***************</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>The resource type of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>Serverless</strong>: Serverless mode</li>
-         * <li><strong>StorageElasic</strong>: elastic storage mode</li>
-         * <li><strong>Classic</strong>: reserved storage mode</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Serverless</p>
-         */
         @NameInMap("DBInstanceMode")
         public String DBInstanceMode;
 
-        /**
-         * <p>The state of data sharing. Valid values:</p>
-         * <ul>
-         * <li><strong>opening</strong>: Data sharing is being enabled.</li>
-         * <li><strong>opened</strong>: Data sharing is enabled.</li>
-         * <li><strong>closing</strong>: Data sharing is being disabled.</li>
-         * <li><strong>closed</strong>: Data sharing is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>opened</p>
-         */
         @NameInMap("DataShareStatus")
         public String dataShareStatus;
 
-        /**
-         * <p>The description of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gp-bp***************</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The region ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The zone ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-j</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

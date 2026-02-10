@@ -221,15 +221,9 @@ public class ExecuteStatementResponseBody extends TeaModel {
     }
 
     public static class ExecuteStatementResponseBodyData extends TeaModel {
-        /**
-         * <p>The metadata of the columns.</p>
-         */
         @NameInMap("ColumnMetadata")
         public ExecuteStatementResponseBodyDataColumnMetadata columnMetadata;
 
-        /**
-         * <p>The rows of data.</p>
-         */
         @NameInMap("Records")
         public ExecuteStatementResponseBodyDataRecords records;
 

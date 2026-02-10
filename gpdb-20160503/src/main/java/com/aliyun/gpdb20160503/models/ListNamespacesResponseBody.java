@@ -31,9 +31,6 @@ public class ListNamespacesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The queried namespaces.</p>
-     */
     @NameInMap("Namespaces")
     public ListNamespacesResponseBodyNamespaces namespaces;
 

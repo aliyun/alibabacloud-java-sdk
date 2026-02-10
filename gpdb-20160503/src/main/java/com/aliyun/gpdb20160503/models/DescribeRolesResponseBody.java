@@ -13,9 +13,6 @@ public class DescribeRolesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The roles.</p>
-     */
     @NameInMap("RoleList")
     public DescribeRolesResponseBodyRoleList roleList;
 

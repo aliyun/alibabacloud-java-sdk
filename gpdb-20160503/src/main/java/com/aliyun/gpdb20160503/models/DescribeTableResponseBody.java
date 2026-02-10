@@ -4,9 +4,6 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableResponseBody extends TeaModel {
-    /**
-     * <p>The columns of the table.</p>
-     */
     @NameInMap("ColumnList")
     public DescribeTableResponseBodyColumnList columnList;
 
