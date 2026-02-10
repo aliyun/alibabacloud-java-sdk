@@ -122,6 +122,18 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
+    /**
      * <p>The type of the baseline.</p>
      * 
      * <strong>example:</strong>
@@ -252,6 +264,14 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListCheckItemWarningSummaryRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ListCheckItemWarningSummaryRequest setRiskType(String riskType) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSecureSuggestionRequest extends TeaModel {
     /**
+     * <p>Choose to query the new or old version of the security score rules. When the value is <strong>home_security_score</strong>, it queries the new version of the security score rules; otherwise, it defaults to querying the old version of the security score rules.</p>
+     * 
      * <strong>example:</strong>
      * <p>home_security_score</p>
      */
@@ -12,6 +14,12 @@ public class DescribeSecureSuggestionRequest extends TeaModel {
     public String calType;
 
     /**
+     * <p>The language type for request and response messages, default is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,9 +27,9 @@ public class DescribeSecureSuggestionRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>Resource directory member account ID (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * <p>You can obtain this parameter by calling the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> API.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,6 +39,14 @@ public class DescribeSecureSuggestionRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
+     * <p>Source of the security score. If left empty, it defaults to Cloud Security Center. Enumerated values:</p>
+     * <ul>
+     * <li><p>0: Cloud Security Center.</p>
+     * </li>
+     * <li><p>1: Yaochi Console.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -38,6 +54,8 @@ public class DescribeSecureSuggestionRequest extends TeaModel {
     public Integer source;
 
     /**
+     * <p>The IP address of the access source.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
      */

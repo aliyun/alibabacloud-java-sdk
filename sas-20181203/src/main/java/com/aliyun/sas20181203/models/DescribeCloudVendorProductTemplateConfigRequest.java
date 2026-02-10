@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudVendorProductTemplateConfigRequest extends TeaModel {
     /**
+     * <p>Set the language type for request and response messages, default is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,13 @@ public class DescribeCloudVendorProductTemplateConfigRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Cloud asset vendor. Values:</p>
+     * <ul>
+     * <li><strong>CHAITIN</strong>: Chaitin Technology</li>
+     * <li><strong>FORTINET</strong>: Fortinet</li>
+     * <li><strong>THREATBOOK</strong>: ThreatBook</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CHAITIN</p>
      */

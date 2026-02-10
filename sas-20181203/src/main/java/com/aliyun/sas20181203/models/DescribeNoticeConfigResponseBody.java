@@ -50,6 +50,22 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <p>Business categories under cloud monitoring notification configuration. Values:</p>
+         * <ul>
+         * <li><strong>Incident</strong>: Security incidents. </li>
+         * <li><strong>Suspicious</strong>: Security alerts. </li>
+         * <li><strong>Hc</strong>: Baseline checks. </li>
+         * <li><strong>Cspm</strong>: Cloud Security Posture Management. </li>
+         * <li><strong>Agentless</strong>: Agentless detection. </li>
+         * <li><strong>Filedetect</strong>: Malicious file SDK. </li>
+         * <li><strong>Vul</strong>: Vulnerabilities. </li>
+         * <li><strong>Rasp</strong>: Application protection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Cspm</p>
+         */
         @NameInMap("Category")
         public String category;
 

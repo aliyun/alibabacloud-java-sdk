@@ -4,9 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateFileProtectRemarkRequest extends TeaModel {
+    /**
+     * <p>Alert notification level list.</p>
+     */
     @NameInMap("AlertLevels")
     public java.util.List<Integer> alertLevels;
 
+    /**
+     * <p>End time timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1649040221</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -19,21 +28,61 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>Event ID list.</p>
+     */
     @NameInMap("IdList")
     public java.util.List<Long> idList;
 
+    /**
+     * <p>Asset instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1g6wxdwps7s9dz****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Asset instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>Public IP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101.132.XX.XX</p>
+     */
     @NameInMap("InternetIp")
     public String internetIp;
 
+    /**
+     * <p>Private IP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.26.XX.XX</p>
+     */
     @NameInMap("IntranetIp")
     public String intranetIp;
 
+    /**
+     * <p>File operation type. Values:</p>
+     * <ul>
+     * <li><strong>DELETE</strong>: File deletion operation.</li>
+     * <li><strong>WRITE</strong>: File write operation.</li>
+     * <li><strong>READ</strong>: File read operation.</li>
+     * <li><strong>RENAME</strong>: File rename operation.</li>
+     * <li><strong>CHOWN</strong>: Set file owner and associated group operation.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>READ</p>
+     */
     @NameInMap("Operation")
     public String operation;
 
@@ -43,15 +92,43 @@ public class UpdateFileProtectRemarkRequest extends TeaModel {
     @NameInMap("Remark")
     public java.util.List<String> remark;
 
+    /**
+     * <p>Rule name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-rule-1</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>Cross-page select all indicator. Values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes</li>
+     * <li><strong>false</strong>: No</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SelectAllAcrossPages")
     public Boolean selectAllAcrossPages;
 
+    /**
+     * <p>Start time timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1651290987000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>Server UUID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

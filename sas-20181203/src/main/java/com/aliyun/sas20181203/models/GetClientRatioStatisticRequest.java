@@ -24,7 +24,6 @@ public class GetClientRatioStatisticRequest extends TeaModel {
 
     /**
      * <p>The timestamp that specifies the end of the time range to collect statistics. Unit: milliseconds.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1686412799999</p>
@@ -34,7 +33,6 @@ public class GetClientRatioStatisticRequest extends TeaModel {
 
     /**
      * <p>The timestamp that specifies the beginning of the time range to collect statistics. Unit: milliseconds.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1671382800000</p>

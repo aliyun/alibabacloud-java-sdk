@@ -17,12 +17,6 @@ public class DescribeUserBaselineAuthorizationRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>资产所有者ID。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1519712934213764</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

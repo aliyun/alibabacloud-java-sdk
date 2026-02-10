@@ -19,6 +19,9 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the regions.</p>
+     */
     @NameInMap("VendorRegionList")
     public java.util.List<ListAgentlessRegionResponseBodyVendorRegionList> vendorRegionList;
 
@@ -52,9 +55,28 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessRegionResponseBodyVendorRegionList extends TeaModel {
+        /**
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The type of the server. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Alibaba Cloud</li>
+         * <li><strong>3</strong>: Tencent Cloud</li>
+         * <li><strong>4</strong>: Huawei Cloud</li>
+         * <li><strong>5</strong>: Azure</li>
+         * <li><strong>7</strong>: AWS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Vendor")
         public Integer vendor;
 

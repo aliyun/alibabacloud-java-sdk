@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetAssetsPropertyDetailRequest extends TeaModel {
     /**
-     * <p>The type of the asset fingerprint that you want to query. Default value: <strong>sca</strong>. Valid values:</p>
+     * <p>The type of asset fingerprint to be queried, with a default value of <strong>sca</strong>. Values:</p>
      * <ul>
-     * <li><strong>lkm</strong>: kernel module</li>
-     * <li><strong>autorun</strong>: startup item</li>
-     * <li><strong>web_server</strong>: website</li>
+     * <li><strong>lkm</strong>: Kernel module</li>
+     * <li><strong>autorun</strong>: Startup item</li>
+     * <li><strong>web_server</strong>: Web site</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
     public String biz;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>Set the page number from which to start displaying the query results. The default value is <strong>1</strong>, indicating that the display starts from the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,9 +29,9 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the aggregation item for the asset fingerprint that you want to query.</p>
+     * <p>The aggregated item name of the asset fingerprint to be queried.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~GetAssetsPropertyItem~~">GetAssetsPropertyItem</a> operation to query the names of aggregation items.</p>
+     * <p>Call the <a href="~~GetAssetsPropertyItem~~">GetAssetsPropertyItem</a> API to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
     public String itemName;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language type for the request and response. Values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -53,13 +53,22 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Used to mark the current read position. Leave it empty to start from the beginning.</p>
+     * <blockquote>
+     * <p>Do not fill in for the first call; the response will include the NextToken for the second call. Each subsequent call\&quot;s response will contain the NextToken for the next call.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>71640f04f6e7b49764c8d08ae170xxxx</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>Specify the maximum number of data entries per page in a paginated query. The default number of data entries per page is 20. If the PageSize parameter is empty, 20 data entries will be returned by default.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>It is recommended that the PageSize value is not empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,7 +78,7 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name or IP address of the server.</p>
+     * <p>Server name or IP.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>
@@ -78,18 +87,28 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The conditions that are used to query the details about the asset fingerprint.</p>
+     * <p>A set of conditions for querying asset fingerprint details.</p>
      */
     @NameInMap("SearchCriteriaList")
     public java.util.List<GetAssetsPropertyDetailRequestSearchCriteriaList> searchCriteriaList;
 
+    /**
+     * <p>Whether to use the NextToken method to fetch the list of vulnerabilities. If this parameter is used, TotalCount will not be returned. Values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Use the NextToken method.</li>
+     * <li><strong>false</strong>: Do not use the NextToken method.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseNextToken")
     public Boolean useNextToken;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the asset to be queried.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> API to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -185,15 +204,24 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
 
     public static class GetAssetsPropertyDetailRequestSearchCriteriaList extends TeaModel {
         /**
-         * <p>The name of the condition. Valid values:</p>
+         * <p>The name of the condition to be queried. Values are as follows:</p>
          * <ul>
-         * <li><strong>remarkItemName</strong>: the aggregation item of the asset fingerprints. Fuzzy match is supported.</li>
+         * <li><strong>remarkItemName</strong>: The aggregated item name of the asset fingerprint, supporting fuzzy matching</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If <strong>Biz</strong> is set to <strong>web_server</strong>, <strong>remarkItemName</strong> specifies a domain name. </li>
-         * <li>If <strong>Biz</strong> is set to <strong>lkm</strong>, <strong>remarkItemName</strong> specifies a module name.</li>
-         * <li>If <strong>Biz</strong> is set to <strong>autorun</strong>, <strong>remarkItemName</strong> specifies the path to a startup item.</li>
+         * <li><ul>
+         * <li>When <strong>Biz</strong> is <strong>web_server</strong>, <strong>remarkItemName</strong> represents the domain name as the search condition.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>When <strong>Biz</strong> is <strong>lkm</strong>, <strong>remarkItemName</strong> represents the module name as the search condition.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>When <strong>Biz</strong> is <strong>autorun</strong>, <strong>remarkItemName</strong> represents the startup item path as the search condition.</li>
+         * </ul>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -204,7 +232,7 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The value of the condition.</p>
+         * <p>The value of the condition to be queried.</p>
          * 
          * <strong>example:</strong>
          * <p>virtio</p>

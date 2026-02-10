@@ -66,6 +66,9 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     @NameInMap("SubAccountName")
     public String subAccountName;
 
+    @NameInMap("Vendor")
+    public String vendor;
+
     /**
      * <p>The name of the AccessKey pair.</p>
      * 
@@ -126,6 +129,14 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     }
     public String getSubAccountName() {
         return this.subAccountName;
+    }
+
+    public DescribeCloudVendorAccountAKListRequest setVendor(String vendor) {
+        this.vendor = vendor;
+        return this;
+    }
+    public String getVendor() {
+        return this.vendor;
     }
 
     public DescribeCloudVendorAccountAKListRequest setVendorAuthAlias(String vendorAuthAlias) {

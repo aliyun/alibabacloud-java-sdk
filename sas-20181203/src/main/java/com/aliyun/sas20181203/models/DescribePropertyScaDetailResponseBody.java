@@ -73,6 +73,12 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The value of NextToken that is returned when the NextToken method is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B60***</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

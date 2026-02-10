@@ -5,6 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeImageListByBuildRiskRequest extends TeaModel {
     /**
+     * <p>The attribute value of the condition parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
+     */
+    @NameInMap("Criteria")
+    public String criteria;
+
+    /**
+     * <p>The property name of the condition parameters. Values:</p>
+     * <ul>
+     * <li><strong>RepoNamespace</strong>: Namespace.</li>
+     * <li><strong>RepoName</strong>: Repository name.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RepoNamespace</p>
+     */
+    @NameInMap("CriteriaType")
+    public String criteriaType;
+
+    /**
      * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -78,6 +100,22 @@ public class DescribeImageListByBuildRiskRequest extends TeaModel {
     public static DescribeImageListByBuildRiskRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageListByBuildRiskRequest self = new DescribeImageListByBuildRiskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeImageListByBuildRiskRequest setCriteria(String criteria) {
+        this.criteria = criteria;
+        return this;
+    }
+    public String getCriteria() {
+        return this.criteria;
+    }
+
+    public DescribeImageListByBuildRiskRequest setCriteriaType(String criteriaType) {
+        this.criteriaType = criteriaType;
+        return this;
+    }
+    public String getCriteriaType() {
+        return this.criteriaType;
     }
 
     public DescribeImageListByBuildRiskRequest setCurrentPage(Integer currentPage) {

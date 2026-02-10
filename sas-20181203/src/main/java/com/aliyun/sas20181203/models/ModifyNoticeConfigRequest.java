@@ -4,6 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyNoticeConfigRequest extends TeaModel {
+    /**
+     * <p>Notification configuration type, default is SMS/email/in-site message. Value:</p>
+     * <ul>
+     * <li><strong>cms</strong>: Cloud Monitor push</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cms</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 

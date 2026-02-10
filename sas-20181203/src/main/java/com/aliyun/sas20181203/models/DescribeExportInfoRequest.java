@@ -17,6 +17,15 @@ public class DescribeExportInfoRequest extends TeaModel {
     @NameInMap("ExportId")
     public Long exportId;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16670360956*****</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

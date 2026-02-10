@@ -88,6 +88,18 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1232428423234****</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
+    /**
      * <p>The type of the check item.</p>
      * 
      * <strong>example:</strong>
@@ -199,6 +211,14 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public ListCheckItemWarningMachineRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ListCheckItemWarningMachineRequest setRiskType(String riskType) {

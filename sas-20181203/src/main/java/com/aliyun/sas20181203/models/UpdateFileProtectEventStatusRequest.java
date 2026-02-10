@@ -4,9 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateFileProtectEventStatusRequest extends TeaModel {
+    /**
+     * <p>The severities of alerts.</p>
+     */
     @NameInMap("AlertLevels")
     public java.util.List<Integer> alertLevels;
 
+    /**
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1649040221</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -16,27 +25,86 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
     @NameInMap("Id")
     public java.util.List<Long> id;
 
+    /**
+     * <p>The instance ID of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1g6wxdwps7s9dz****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The public IP address of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120.27.XX.XX</p>
+     */
     @NameInMap("InternetIp")
     public String internetIp;
 
+    /**
+     * <p>The private IP address of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.26.XX.XX</p>
+     */
     @NameInMap("IntranetIp")
     public String intranetIp;
 
+    /**
+     * <p>Type of operation on a file. eg:</p>
+     * <ul>
+     * <li><strong>DELETE</strong>: delete the file.</li>
+     * <li><strong>WRITE</strong>: write the file.</li>
+     * <li><strong>READ</strong>: read the file.</li>
+     * <li><strong>RENAME</strong>: rename the file.</li>
+     * <li><strong>CHOWN</strong>: set the file owner and file association group operations.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>READ</p>
+     */
     @NameInMap("Operation")
     public String operation;
 
+    /**
+     * <p>The name of the defense rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tetsRule</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>Whether to choose all fields across industries.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SelectAllAcrossPages")
     public Boolean selectAllAcrossPages;
 
+    /**
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1680919232000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -54,6 +122,15 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The UUID of the server.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>eb2c782e-64f2-4590-a86c-d90164df****</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

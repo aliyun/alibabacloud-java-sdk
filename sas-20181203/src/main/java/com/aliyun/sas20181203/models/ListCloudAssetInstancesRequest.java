@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCloudAssetInstancesRequest extends TeaModel {
+    /**
+     * <p>Query data list based on keywords.</p>
+     */
     @NameInMap("CloudAssetQueryData")
     public java.util.List<ListCloudAssetInstancesRequestCloudAssetQueryData> cloudAssetQueryData;
 
@@ -139,9 +142,21 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
     }
 
     public static class ListCloudAssetInstancesRequestCloudAssetQueryData extends TeaModel {
+        /**
+         * <p>Query content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>163.8.8.9</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <p>Query operator, currently only supports: INCLUDE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INCLUDE</p>
+         */
         @NameInMap("Operator")
         public String operator;
 

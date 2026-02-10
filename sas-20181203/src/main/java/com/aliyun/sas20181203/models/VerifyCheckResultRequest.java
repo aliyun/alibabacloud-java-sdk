@@ -10,6 +10,9 @@ public class VerifyCheckResultRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    /**
+     * <p>List of instance IDs for the check item assets.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 

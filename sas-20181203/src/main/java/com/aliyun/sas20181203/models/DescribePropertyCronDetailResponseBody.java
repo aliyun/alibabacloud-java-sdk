@@ -73,6 +73,12 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The value of NextToken that is returned when the NextToken method is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B604532DEF982B875E8360A6EFA3B***</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

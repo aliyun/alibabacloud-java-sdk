@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryIncidentTracingSubNodesCountRequest extends TeaModel {
+    /**
+     * <p>The key-value pairs that consist of node IDs and node types. A key-value pair is an array.</p>
+     */
     @NameInMap("VertexIdAndTypeList")
     public java.util.List<java.util.List<String>> vertexIdAndTypeList;
 

@@ -197,6 +197,19 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Boolean bind;
 
         /**
+         * <p>Whether to bind tamper-proof authorization. Values:</p>
+         * <ul>
+         * <li><strong>block</strong>: Yes</li>
+         * <li><strong>none</strong>: No</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
+        @NameInMap("BindFileProtectType")
+        public String bindFileProtectType;
+
+        /**
          * <p>The status of the Security Center agent installed on the asset. Valid values:</p>
          * <ul>
          * <li><strong>online</strong>: The Security Center agent is <strong>enabled</strong>.</li>
@@ -849,6 +862,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public Boolean getBind() {
             return this.bind;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setBindFileProtectType(String bindFileProtectType) {
+            this.bindFileProtectType = bindFileProtectType;
+            return this;
+        }
+        public String getBindFileProtectType() {
+            return this.bindFileProtectType;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setClientStatus(String clientStatus) {

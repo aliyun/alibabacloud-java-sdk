@@ -2157,7 +2157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether one or more alert events are generated on a specified server based on the IDs of the alert events.</p>
+     * <p>Checks whether one or more alerts are generated on a specified server based on alert IDs.</p>
      * 
      * @param request CheckSecurityEventIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2193,7 +2193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether one or more alert events are generated on a specified server based on the IDs of the alert events.</p>
+     * <p>Checks whether one or more alerts are generated on a specified server based on alert IDs.</p>
      * 
      * @param request CheckSecurityEventIdRequest
      * @return CheckSecurityEventIdResponse
@@ -6247,7 +6247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a specified anti-ransomware policy that is applied to specified servers and uninstalls the anti-ransomware agent from the servers. If the backup vaults of the servers contain only backup data of the servers, the backup vaults are deleted.</p>
+     * <p>Deletes a server from a specified anti-ransomware policy.</p>
      * 
      * @param request DeleteBackupPolicyMachineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6291,7 +6291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a specified anti-ransomware policy that is applied to specified servers and uninstalls the anti-ransomware agent from the servers. If the backup vaults of the servers contain only backup data of the servers, the backup vaults are deleted.</p>
+     * <p>Deletes a server from a specified anti-ransomware policy.</p>
      * 
      * @param request DeleteBackupPolicyMachineRequest
      * @return DeleteBackupPolicyMachineResponse
@@ -9061,7 +9061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an alert event. An alert event consists of alerts and exceptions. Each alert event is associated with multiple exceptions.</p>
+     * <p>Queries the details about an alert event. An alert event consists of an alert and exceptions. Each alert event is associated with multiple exceptions.</p>
      * 
      * @param request DescribeAlarmEventDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9105,7 +9105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an alert event. An alert event consists of alerts and exceptions. Each alert event is associated with multiple exceptions.</p>
+     * <p>Queries the details about an alert event. An alert event consists of an alert and exceptions. Each alert event is associated with multiple exceptions.</p>
      * 
      * @param request DescribeAlarmEventDetailRequest
      * @return DescribeAlarmEventDetailResponse
@@ -9189,7 +9189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all server assets, including the asset group IDs and asset names.</p>
+     * <p>Queries the information about all assets. The information includes asset group IDs and asset names.</p>
      * 
      * @param request DescribeAllEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9213,7 +9213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all server assets, including the asset group IDs and asset names.</p>
+     * <p>Queries the information about all assets. The information includes asset group IDs and asset names.</p>
      * @return DescribeAllEntityResponse
      */
     public DescribeAllEntityResponse describeAllEntity() throws Exception {
@@ -9223,7 +9223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all server groups.</p>
+     * <p>Queries the information about server groups.</p>
      * 
      * @param request DescribeAllGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9255,7 +9255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all server groups.</p>
+     * <p>Queries the information about server groups.</p>
      * 
      * @param request DescribeAllGroupsRequest
      * @return DescribeAllGroupsResponse
@@ -10385,7 +10385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The source IP address of the request.</p>
+     * <p>Queries the statistics of IP address blocking policies that are used to defend against brute-force attacks and trigger alerts.</p>
      * 
      * @param request DescribeBruteForceSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10421,7 +10421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The source IP address of the request.</p>
+     * <p>Queries the statistics of IP address blocking policies that are used to defend against brute-force attacks and trigger alerts.</p>
      * 
      * @param request DescribeBruteForceSummaryRequest
      * @return DescribeBruteForceSummaryResponse
@@ -11521,7 +11521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics of cloud services.</p>
+     * <p>Queries the statistics of cloud services whose instances are protected by Security Center.</p>
      * 
      * @deprecated OpenAPI DescribeCloudProductFieldStatistics is deprecated, please use Sas::2018-12-03::GetCloudAssetSummary instead.
      * 
@@ -11549,7 +11549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics of cloud services.</p>
+     * <p>Queries the statistics of cloud services whose instances are protected by Security Center.</p>
      * 
      * @deprecated OpenAPI DescribeCloudProductFieldStatistics is deprecated, please use Sas::2018-12-03::GetCloudAssetSummary instead.
      * @return DescribeCloudProductFieldStatisticsResponse
@@ -11596,6 +11596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubAccountName", request.subAccountName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vendor)) {
+            query.put("Vendor", request.vendor);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vendorAuthAlias)) {
             query.put("VendorAuthAlias", request.vendorAuthAlias);
         }
@@ -11631,7 +11635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取厂商云产品接入模板</p>
+     * <p>Get the cloud product access template for vendors</p>
      * 
      * @param request DescribeCloudVendorProductTemplateConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11667,7 +11671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取厂商云产品接入模板</p>
+     * <p>Get the cloud product access template for vendors</p>
      * 
      * @param request DescribeCloudVendorProductTemplateConfigRequest
      * @return DescribeCloudVendorProductTemplateConfigResponse
@@ -12784,7 +12788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only users who created a Container Registry Enterprise Edition instance can call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the alert statistics on container assets.</p>
+     * <p>Queries the alert statistics of container assets.</p>
      * 
      * @param request DescribeContainerStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12819,7 +12823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only users who created a Container Registry Enterprise Edition instance can call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the alert statistics on container assets.</p>
+     * <p>Queries the alert statistics of container assets.</p>
      * 
      * @param request DescribeContainerStatisticsRequest
      * @return DescribeContainerStatisticsResponse
@@ -15571,7 +15575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistics on the quota of honeypots.</p>
+     * <p>Queries the statistics about the quota on honeypots.</p>
      * 
      * @param request DescribeHoneyPotAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15603,7 +15607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistics on the quota of honeypots.</p>
+     * <p>Queries the statistics about the quota on honeypots.</p>
      * 
      * @param request DescribeHoneyPotAuthRequest
      * @return DescribeHoneyPotAuthResponse
@@ -15615,7 +15619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the top five virtual private clouds (VPCs) or assets for which alerts are most frequently generated.</p>
+     * <p>Queries the information about top 5 virtual private clouds (VPCs) or assets for which alerts are most frequently generated.</p>
      * 
      * @param request DescribeHoneyPotSuspStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15659,7 +15663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the top five virtual private clouds (VPCs) or assets for which alerts are most frequently generated.</p>
+     * <p>Queries the information about top 5 virtual private clouds (VPCs) or assets for which alerts are most frequently generated.</p>
      * 
      * @param request DescribeHoneyPotSuspStatisticsRequest
      * @return DescribeHoneyPotSuspStatisticsResponse
@@ -17110,6 +17114,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeImageListByBuildRiskResponse describeImageListByBuildRiskWithOptions(DescribeImageListByBuildRiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.criteria)) {
+            query.put("Criteria", request.criteria);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.criteriaType)) {
+            query.put("CriteriaType", request.criteriaType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -17845,7 +17857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the risk statistics on container images.</p>
+     * <p>Queries the risk statistics of container images.</p>
      * 
      * @param request DescribeImageStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17875,7 +17887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the risk statistics on container images.</p>
+     * <p>Queries the risk statistics of container images.</p>
      * @return DescribeImageStatisticsResponse
      */
     public DescribeImageStatisticsResponse describeImageStatistics() throws Exception {
@@ -18107,7 +18119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the verification codes that are used to manually install the Security Center agent.</p>
+     * <p>Queries the verification code for you to manually install the Security Center agent.</p>
      * 
      * @param request DescribeInstallCaptchaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18147,7 +18159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the verification codes that are used to manually install the Security Center agent.</p>
+     * <p>Queries the verification code for you to manually install the Security Center agent.</p>
      * 
      * @param request DescribeInstallCaptchaRequest
      * @return DescribeInstallCaptchaResponse
@@ -18297,7 +18309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the instance that you restart.</p>
+     * <p>Queries the status of the servers that you restart.</p>
      * 
      * @param request DescribeInstanceRebootStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18329,7 +18341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the instance that you restart.</p>
+     * <p>Queries the status of the servers that you restart.</p>
      * 
      * @param request DescribeInstanceRebootStatusRequest
      * @return DescribeInstanceRebootStatusResponse
@@ -19369,7 +19381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of scheduled tasks on the Host page.</p>
+     * <p>Query Asset Fingerprint Scheduled Task Details</p>
      * 
      * @param request DescribePropertyCronDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19433,7 +19445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of scheduled tasks on the Host page.</p>
+     * <p>Query Asset Fingerprint Scheduled Task Details</p>
      * 
      * @param request DescribePropertyCronDetailRequest
      * @return DescribePropertyCronDetailResponse
@@ -19501,7 +19513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fingerprints of ports on a specified server.</p>
+     * <p>Query Details of Asset Fingerprint Port Collection</p>
      * 
      * @param request DescribePropertyPortDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19573,7 +19585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fingerprints of ports on a specified server.</p>
+     * <p>Query Details of Asset Fingerprint Port Collection</p>
      * 
      * @param request DescribePropertyPortDetailRequest
      * @return DescribePropertyPortDetailResponse
@@ -19641,7 +19653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fingerprints of processes on a specified server.</p>
+     * <p>Query Details of Asset Fingerprint Collection Process</p>
      * 
      * @param request DescribePropertyProcDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19721,7 +19733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fingerprints of processes on a specified server.</p>
+     * <p>Query Details of Asset Fingerprint Collection Process</p>
      * 
      * @param request DescribePropertyProcDetailRequest
      * @return DescribePropertyProcDetailResponse
@@ -19789,7 +19801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries middleware fingerprints.</p>
+     * <p>Query Asset Fingerprint Collection Middleware Details</p>
      * 
      * @param request DescribePropertyScaDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19905,7 +19917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries middleware fingerprints.</p>
+     * <p>Query Asset Fingerprint Collection Middleware Details</p>
      * 
      * @param request DescribePropertyScaDetailRequest
      * @return DescribePropertyScaDetailResponse
@@ -20097,7 +20109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a software asset.</p>
+     * <p>Query details of asset fingerprint software collection</p>
      * 
      * @param request DescribePropertySoftwareDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20173,7 +20185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a software asset.</p>
+     * <p>Query details of asset fingerprint software collection</p>
      * 
      * @param request DescribePropertySoftwareDetailRequest
      * @return DescribePropertySoftwareDetailResponse
@@ -20343,7 +20355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the asset fingerprints for an account to which a server belongs.</p>
+     * <p>Query asset fingerprint user details</p>
      * 
      * @param request DescribePropertyUserDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20415,7 +20427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the asset fingerprints for an account to which a server belongs.</p>
+     * <p>Query asset fingerprint user details</p>
      * 
      * @param request DescribePropertyUserDetailRequest
      * @return DescribePropertyUserDetailResponse
@@ -20938,7 +20950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is phased out. You can use the GetCheckSummary operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the summary information about the check results of cloud service configurations. The information includes the number of risk items, the risk rate, the number of affected assets, the check time, and the statistics for each type of check item.</p>
+     * <p>Queries the summary information about the check results of cloud service configurations. The information includes the number of risk items, the risk rate, the number of affected assets, the check time, and the statistics about each type of check items.</p>
      * 
      * @deprecated OpenAPI DescribeRiskCheckSummary is deprecated
      * 
@@ -20989,7 +21001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is phased out. You can use the GetCheckSummary operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the summary information about the check results of cloud service configurations. The information includes the number of risk items, the risk rate, the number of affected assets, the check time, and the statistics for each type of check item.</p>
+     * <p>Queries the summary information about the check results of cloud service configurations. The information includes the number of risk items, the risk rate, the number of affected assets, the check time, and the statistics about each type of check items.</p>
      * 
      * @deprecated OpenAPI DescribeRiskCheckSummary is deprecated
      * 
@@ -21261,7 +21273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the servers on which you want to install Cloud Assistant or the CloudMonitor agent.</p>
+     * <p>Queries the servers on which you want to install the CloudMonitor agent.</p>
      * 
      * @param request DescribeSasPmAgentListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21297,7 +21309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the servers on which you want to install Cloud Assistant or the CloudMonitor agent.</p>
+     * <p>Queries the servers on which you want to install the CloudMonitor agent.</p>
      * 
      * @param request DescribeSasPmAgentListRequest
      * @return DescribeSasPmAgentListResponse
@@ -21501,7 +21513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries suggestions on how to handle the risks that affect the security score.</p>
+     * <p>Query Security Risk Handling Suggestions Details</p>
      * 
      * @param request DescribeSecureSuggestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21549,7 +21561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries suggestions on how to handle the risks that affect the security score.</p>
+     * <p>Query Security Risk Handling Suggestions Details</p>
      * 
      * @param request DescribeSecureSuggestionRequest
      * @return DescribeSecureSuggestionResponse
@@ -24117,7 +24129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The source IP address of the request.</p>
+     * <p>Queries whether Security Center is authorized to run configuration checks on cloud services.</p>
      * 
      * @param request DescribeUserBaselineAuthorizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24157,7 +24169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The source IP address of the request.</p>
+     * <p>Queries whether Security Center is authorized to run configuration checks on cloud services.</p>
      * 
      * @param request DescribeUserBaselineAuthorizationRequest
      * @return DescribeUserBaselineAuthorizationResponse
@@ -24490,7 +24502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries virtual private clouds (VPCs) on which honeypots are deployed.</p>
+     * <p>Queries honeypots.</p>
      * 
      * @param request DescribeVpcHoneyPotListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24545,7 +24557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries virtual private clouds (VPCs) on which honeypots are deployed.</p>
+     * <p>Queries honeypots.</p>
      * 
      * @param request DescribeVpcHoneyPotListRequest
      * @return DescribeVpcHoneyPotListResponse
@@ -25707,7 +25719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The number of attempts.</p>
+     * <p>Queries the summary information about the types of files for which web tamper proofing is enabled.</p>
      * 
      * @param request DescribeWebLockFileTypeSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25731,7 +25743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The number of attempts.</p>
+     * <p>Queries the summary information about the types of files for which web tamper proofing is enabled.</p>
      * @return DescribeWebLockFileTypeSummaryResponse
      */
     public DescribeWebLockFileTypeSummaryResponse describeWebLockFileTypeSummary() throws Exception {
@@ -27397,7 +27409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>容器网络连接</p>
+     * <p>Container Network Connection</p>
      * 
      * @param tmpReq FindContainerNetworkConnectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27463,7 +27475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>容器网络连接</p>
+     * <p>Container Network Connection</p>
      * 
      * @param request FindContainerNetworkConnectRequest
      * @return FindContainerNetworkConnectResponse
@@ -28257,7 +28269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about the asset fingerprints of the startup item, kernel module, or website type.</p>
+     * <p>Query detailed information of asset fingerprints</p>
      * 
      * @param request GetAssetsPropertyDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28325,7 +28337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about the asset fingerprints of the startup item, kernel module, or website type.</p>
+     * <p>Query detailed information of asset fingerprints</p>
      * 
      * @param request GetAssetsPropertyDetailRequest
      * @return GetAssetsPropertyDetailResponse
@@ -30567,7 +30579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取蜜罐攻击统计数据</p>
+     * <p>获取蜜罐攻击事件的统计数据。</p>
      * 
      * @param request GetHoneypotAttackStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30627,7 +30639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取蜜罐攻击统计数据</p>
+     * <p>获取蜜罐攻击事件的统计数据。</p>
      * 
      * @param request GetHoneypotAttackStatisticsRequest
      * @return GetHoneypotAttackStatisticsResponse
@@ -32825,7 +32837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics on alerts in one or more asset groups.</p>
+     * <p>Queries the statistics of alerts in one or more asset groups.</p>
      * 
      * @param request GetSuspiciousStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32861,7 +32873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics on alerts in one or more asset groups.</p>
+     * <p>Queries the statistics of alerts in one or more asset groups.</p>
      * 
      * @param request GetSuspiciousStatisticsRequest
      * @return GetSuspiciousStatisticsResponse
@@ -33553,7 +33565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Ignores multiple baseline risk items at a time or cancels the ignore action that is performed on multiple baseline risk items at a time.</p>
+     * <p>Ignores or cancels ignoring multiple baseline risk items at a time.</p>
      * 
      * @deprecated OpenAPI IgnoreHcCheckWarnings is deprecated, please use Sas::2018-12-03::IgnoreCheckItems instead.
      * 
@@ -33613,7 +33625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Ignores multiple baseline risk items at a time or cancels the ignore action that is performed on multiple baseline risk items at a time.</p>
+     * <p>Ignores or cancels ignoring multiple baseline risk items at a time.</p>
      * 
      * @deprecated OpenAPI IgnoreHcCheckWarnings is deprecated, please use Sas::2018-12-03::IgnoreCheckItems instead.
      * 
@@ -35466,6 +35478,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Remark", request.remark);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.riskType)) {
             query.put("RiskType", request.riskType);
         }
@@ -35564,6 +35580,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.riskType)) {
@@ -37749,7 +37769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The region ID of the image.</p>
+     * <p>Queries the regions in which you can add self-managed image repositories to Security Center.</p>
      * 
      * @param request ListImageRegistryRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37781,7 +37801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The region ID of the image.</p>
+     * <p>Queries the regions in which you can add self-managed image repositories to Security Center.</p>
      * 
      * @param request ListImageRegistryRegionRequest
      * @return ListImageRegistryRegionResponse
@@ -40764,7 +40784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the server group to which specified servers belong.</p>
+     * <p>Changes the server group to which one or more servers belong.</p>
      * 
      * @param request ModifyAssetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -40809,7 +40829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the server group to which specified servers belong.</p>
+     * <p>Changes the server group to which one or more servers belong.</p>
      * 
      * @param request ModifyAssetGroupRequest
      * @return ModifyAssetGroupResponse
@@ -43007,7 +43027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the logon security settings for an asset.</p>
+     * <p>Enables or disables the logon security settings for a specific asset.</p>
      * 
      * @param request ModifyLoginSwitchConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43043,7 +43063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the logon security settings for an asset.</p>
+     * <p>Enables or disables the logon security settings for a specific asset.</p>
      * 
      * @param request ModifyLoginSwitchConfigRequest
      * @return ModifyLoginSwitchConfigResponse
@@ -43229,21 +43249,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the switch settings of pay-as-you-go modules.</p>
+     * <p>Operate the Postpaid Module Switch</p>
      * 
-     * @param request ModifyPostPayModuleSwitchRequest
+     * @param tmpReq ModifyPostPayModuleSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyPostPayModuleSwitchResponse
      */
-    public ModifyPostPayModuleSwitchResponse modifyPostPayModuleSwitchWithOptions(ModifyPostPayModuleSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyPostPayModuleSwitchResponse modifyPostPayModuleSwitchWithOptions(ModifyPostPayModuleSwitchRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyPostPayModuleSwitchShrinkRequest request = new ModifyPostPayModuleSwitchShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.postPayModuleSwitchObj)) {
+            request.postPayModuleSwitchObjShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.postPayModuleSwitchObj, "PostPayModuleSwitchObj", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.postPaidHostAutoBind)) {
+            query.put("PostPaidHostAutoBind", request.postPaidHostAutoBind);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postPaidHostAutoBindVersion)) {
+            query.put("PostPaidHostAutoBindVersion", request.postPaidHostAutoBindVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.postPayInstanceId)) {
             query.put("PostPayInstanceId", request.postPayInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.postPayModuleSwitch)) {
             query.put("PostPayModuleSwitch", request.postPayModuleSwitch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postPayModuleSwitchObjShrink)) {
+            query.put("PostPayModuleSwitchObj", request.postPayModuleSwitchObjShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -43265,7 +43303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the switch settings of pay-as-you-go modules.</p>
+     * <p>Operate the Postpaid Module Switch</p>
      * 
      * @param request ModifyPostPayModuleSwitchRequest
      * @return ModifyPostPayModuleSwitchResponse
@@ -43598,7 +43636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is phased out. You can use the ChangeCheckConfig operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Specifies the time when an automatic configuration check is performed on cloud services.</p>
+     * <p>Specifies the time when an automatic configuration check on cloud services runs.</p>
      * 
      * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated, please use Sas::2018-12-03::ChangeCheckConfig instead.
      * 
@@ -43657,7 +43695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is phased out. You can use the ChangeCheckConfig operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Specifies the time when an automatic configuration check is performed on cloud services.</p>
+     * <p>Specifies the time when an automatic configuration check on cloud services runs.</p>
      * 
      * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated, please use Sas::2018-12-03::ChangeCheckConfig instead.
      * 
@@ -44375,7 +44413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures vulnerability scan for a server.</p>
+     * <p>Configures vulnerability detection for a server.</p>
      * 
      * @param request ModifyVulTargetConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -44419,7 +44457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures vulnerability scan for a server.</p>
+     * <p>Configures vulnerability detection for a server.</p>
      * 
      * @param request ModifyVulTargetConfigRequest
      * @return ModifyVulTargetConfigResponse
@@ -44747,7 +44785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables web tamper proofing for a specified server.</p>
+     * <p>Configures and enables web tamper proofing for a specified server.</p>
      * 
      * @param request ModifyWebLockStartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -44811,7 +44849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables web tamper proofing for a specified server.</p>
+     * <p>Configures and enables web tamper proofing for a specified server.</p>
      * 
      * @param request ModifyWebLockStartRequest
      * @return ModifyWebLockStartResponse
@@ -44923,7 +44961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the protection policy for a specified server.</p>
+     * <p>Modifies protection policy for a specified server.</p>
      * 
      * @param request ModifyWebLockUpdateConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -45003,7 +45041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the protection policy for a specified server.</p>
+     * <p>Modifies protection policy for a specified server.</p>
      * 
      * @param request ModifyWebLockUpdateConfigRequest
      * @return ModifyWebLockUpdateConfigResponse
@@ -48291,7 +48329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks cloud service configurations. You can check all items or a single item and verify whether an item is checked.</p>
+     * <p>Checks cloud service configurations. You can check all items or a specific item and verify whether an item is checked.</p>
      * 
      * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated, please use Sas::2018-12-03::SubmitCheck instead.
      * 
@@ -48343,7 +48381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks cloud service configurations. You can check all items or a single item and verify whether an item is checked.</p>
+     * <p>Checks cloud service configurations. You can check all items or a specific item and verify whether an item is checked.</p>
      * 
      * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated, please use Sas::2018-12-03::SubmitCheck instead.
      * 
@@ -49695,7 +49733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds remarks to core file monitoring events reported by the Security Center agent.</p>
+     * <p>Modify Alert Remarks</p>
      * 
      * @param request UpdateFileProtectRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -49779,7 +49817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds remarks to core file monitoring events reported by the Security Center agent.</p>
+     * <p>Modify Alert Remarks</p>
      * 
      * @param request UpdateFileProtectRemarkRequest
      * @return UpdateFileProtectRemarkResponse

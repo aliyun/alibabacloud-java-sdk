@@ -14,7 +14,7 @@ public class DescribeVersionConfigRequest extends TeaModel {
      * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
-    public String resourceDirectoryAccountId;
+    public Long resourceDirectoryAccountId;
 
     /**
      * <p>The source IP address of the request.</p>
@@ -30,11 +30,11 @@ public class DescribeVersionConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVersionConfigRequest setResourceDirectoryAccountId(String resourceDirectoryAccountId) {
+    public DescribeVersionConfigRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
         this.resourceDirectoryAccountId = resourceDirectoryAccountId;
         return this;
     }
-    public String getResourceDirectoryAccountId() {
+    public Long getResourceDirectoryAccountId() {
         return this.resourceDirectoryAccountId;
     }
 

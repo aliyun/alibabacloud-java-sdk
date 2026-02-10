@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePropertySoftwareDetailRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>Set which page of the returned results to start displaying the query results. The default value is <strong>1</strong>, indicating that the display starts from the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether fuzzy search by software name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+     * <p>Whether the software name supports fuzzy search. To enable fuzzy search, set the value of this parameter to 1; other values or an empty value indicate that fuzzy search is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>The timestamp generated when the software update ends. Unit: milliseconds.</p>
+     * <p>The timestamp when the software update ended. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1650012695000</p>
@@ -32,7 +32,7 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     public Long installTimeEnd;
 
     /**
-     * <p>The timestamp generated when the software update starts. Unit: milliseconds.</p>
+     * <p>The timestamp when the software update started. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1649321495000</p>
@@ -41,7 +41,7 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     public Long installTimeStart;
 
     /**
-     * <p>The name of the software.</p>
+     * <p>The name of the software to be queried.</p>
      * 
      * <strong>example:</strong>
      * <p>kernel</p>
@@ -49,11 +49,20 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Used to mark the starting position for reading. Leave it blank to start from the beginning.</p>
+     * <blockquote>
+     * <p>For the first call, you do not need to fill this in; the response will include the NextToken for the second call, and each subsequent call\&quot;s response will contain the NextToken for the next call.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>E17B501887A2D3AA5E8360A6EFA3B***</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>Set the number of software asset fingerprint information items displayed per page during pagination. The default value is <strong>10</strong>, indicating that 10 items of software asset fingerprint information are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -71,7 +80,7 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The name or IP address of the server.</p>
+     * <p>The name or IP address of the server to be queried.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -80,7 +89,7 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The version of the software.</p>
+     * <p>The version information of the software.</p>
      * 
      * <strong>example:</strong>
      * <p>3.10.0</p>
@@ -88,6 +97,16 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     @NameInMap("SoftwareVersion")
     public String softwareVersion;
 
+    /**
+     * <p>Whether to use the NextToken method to pull asset list data. If this parameter is used, TotalCount will no longer be returned. Values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Use the NextToken method.</li>
+     * <li><strong>false</strong>: Do not use the NextToken method.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseNextToken")
     public Boolean useNextToken;
 

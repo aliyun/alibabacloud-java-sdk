@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyUserDetailRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>Set which page of the returned results to start displaying the query results. The default value is <strong>1</strong>, indicating that the display starts from the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether the fuzzy search by account name is supported. If you want to use fuzzy search, set the parameter to <strong>1</strong>. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+     * <p>Whether the account name supports fuzzy search. To enable fuzzy search, set this parameter\&quot;s value to <strong>1</strong>; other values or an empty value indicate that fuzzy search is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,10 +23,10 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>Specifies whether the account has root permissions. Valid values:</p>
+     * <p>Whether the queried account has ROOT privileges. Possible values include:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: No</li>
+     * <li><strong>1</strong>: Yes</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,16 +36,16 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public String isRoot;
 
     /**
-     * <p>The timestamp of the last logoff from the account. Unit: milliseconds.</p>
+     * <p>The end timestamp for the last login retrieval. The unit is milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>164922523600</p>
+     * <p>1651298836000</p>
      */
     @NameInMap("LastLoginTimeEnd")
     public Long lastLoginTimeEnd;
 
     /**
-     * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+     * <p>The start timestamp for the last login retrieval. The unit is milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>164922523600</p>
@@ -53,11 +53,20 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     @NameInMap("LastLoginTimeStart")
     public Long lastLoginTimeStart;
 
+    /**
+     * <p>Used to mark the starting position for reading. Leave it empty to start from the beginning.</p>
+     * <blockquote>
+     * <p>For the first call, you do not need to fill in this field. The response will include the NextToken for the second call, and each subsequent call will include the NextToken for the next call.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>E17B501887A2D3AA5E8360A6EFA3B***</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>Set the number of account asset fingerprint information items to display per page during pagination. The default value is <strong>10</strong>, indicating that 10 items of account asset fingerprint information are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -66,7 +75,7 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name or IP address of the server.</p>
+     * <p>The name or IP address of the server to be queried.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -74,11 +83,21 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>Whether to use the NextToken method to fetch vulnerability list data. If this parameter is used, TotalCount will no longer be returned. Possible values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Use the NextToken method.</li>
+     * <li><strong>false</strong>: Do not use the NextToken method.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseNextToken")
     public Boolean useNextToken;
 
     /**
-     * <p>The name of the account to which the server belongs.</p>
+     * <p>The account name of the server to be queried.</p>
      * 
      * <strong>example:</strong>
      * <p>bin</p>
@@ -87,7 +106,7 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public String user;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the server to be queried.</p>
      * 
      * <strong>example:</strong>
      * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>
