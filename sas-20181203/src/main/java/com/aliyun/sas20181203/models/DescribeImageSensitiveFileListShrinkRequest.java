@@ -209,6 +209,9 @@ public class DescribeImageSensitiveFileListShrinkRequest extends TeaModel {
     @NameInMap("ScanRange")
     public String scanRangeShrink;
 
+    @NameInMap("SensitiveKeyList")
+    public java.util.List<String> sensitiveKeyList;
+
     public static DescribeImageSensitiveFileListShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageSensitiveFileListShrinkRequest self = new DescribeImageSensitiveFileListShrinkRequest();
         return TeaModel.build(map, self);
@@ -276,6 +279,14 @@ public class DescribeImageSensitiveFileListShrinkRequest extends TeaModel {
     }
     public String getScanRangeShrink() {
         return this.scanRangeShrink;
+    }
+
+    public DescribeImageSensitiveFileListShrinkRequest setSensitiveKeyList(java.util.List<String> sensitiveKeyList) {
+        this.sensitiveKeyList = sensitiveKeyList;
+        return this;
+    }
+    public java.util.List<String> getSensitiveKeyList() {
+        return this.sensitiveKeyList;
     }
 
 }

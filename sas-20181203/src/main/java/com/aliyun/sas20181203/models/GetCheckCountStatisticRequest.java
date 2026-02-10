@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetCheckCountStatisticRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
      * <p>The type of the statistics. Valid values:</p>
      * <ul>
      * <li><strong>user</strong>: the top five users that are granted excessive permissions.</li>
@@ -34,6 +41,14 @@ public class GetCheckCountStatisticRequest extends TeaModel {
     public static GetCheckCountStatisticRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCheckCountStatisticRequest self = new GetCheckCountStatisticRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetCheckCountStatisticRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public GetCheckCountStatisticRequest setStatisticType(String statisticType) {

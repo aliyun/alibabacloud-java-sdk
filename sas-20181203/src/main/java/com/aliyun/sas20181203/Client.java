@@ -17820,6 +17820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScanRange", request.scanRangeShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sensitiveKeyList)) {
+            query.put("SensitiveKeyList", request.sensitiveKeyList);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -19868,6 +19872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scaVersion)) {
             query.put("ScaVersion", request.scaVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchCriteriaList)) {
+            query.put("SearchCriteriaList", request.searchCriteriaList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.searchInfo)) {
@@ -27260,6 +27268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VpcInstanceIds", request.vpcInstanceIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vulEntityList)) {
+            query.put("VulEntityList", request.vulEntityList);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -28900,6 +28912,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCheckCountStatisticResponse getCheckCountStatisticWithOptions(GetCheckCountStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.statisticType)) {
             query.put("StatisticType", request.statisticType);
         }

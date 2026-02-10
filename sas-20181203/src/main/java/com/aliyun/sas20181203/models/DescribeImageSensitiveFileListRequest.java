@@ -209,6 +209,9 @@ public class DescribeImageSensitiveFileListRequest extends TeaModel {
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
+    @NameInMap("SensitiveKeyList")
+    public java.util.List<String> sensitiveKeyList;
+
     public static DescribeImageSensitiveFileListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageSensitiveFileListRequest self = new DescribeImageSensitiveFileListRequest();
         return TeaModel.build(map, self);
@@ -276,6 +279,14 @@ public class DescribeImageSensitiveFileListRequest extends TeaModel {
     }
     public java.util.List<String> getScanRange() {
         return this.scanRange;
+    }
+
+    public DescribeImageSensitiveFileListRequest setSensitiveKeyList(java.util.List<String> sensitiveKeyList) {
+        this.sensitiveKeyList = sensitiveKeyList;
+        return this;
+    }
+    public java.util.List<String> getSensitiveKeyList() {
+        return this.sensitiveKeyList;
     }
 
 }

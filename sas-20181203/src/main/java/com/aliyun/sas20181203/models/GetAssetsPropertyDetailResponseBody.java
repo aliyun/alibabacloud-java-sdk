@@ -215,6 +215,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         public String filepath;
 
         /**
+         * <strong>example:</strong>
+         * <p>ImageDigest</p>
+         */
+        @NameInMap("ImageDigest")
+        public String imageDigest;
+
+        /**
          * <p>Image name.</p>
          * 
          * <strong>example:</strong>
@@ -402,6 +409,20 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <strong>example:</strong>
+         * <p>ACR-Example</p>
+         */
+        @NameInMap("RepoName")
+        public String repoName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Default</p>
+         */
+        @NameInMap("RepoNamespace")
+        public String repoNamespace;
+
+        /**
          * <p>Web site type.</p>
          * <blockquote>
          * <p>Returned only when <strong>Biz</strong> is <strong>web_server</strong>.</p>
@@ -427,6 +448,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
 
         @NameInMap("SkillsName")
         public String skillsName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>AI</p>
+         */
+        @NameInMap("Tag")
+        public String tag;
 
         @NameInMap("TransportName")
         public String transportName;
@@ -543,6 +571,14 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
         public String getFilepath() {
             return this.filepath;
+        }
+
+        public GetAssetsPropertyDetailResponseBodyPropertys setImageDigest(String imageDigest) {
+            this.imageDigest = imageDigest;
+            return this;
+        }
+        public String getImageDigest() {
+            return this.imageDigest;
         }
 
         public GetAssetsPropertyDetailResponseBodyPropertys setImageName(String imageName) {
@@ -697,6 +733,22 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public GetAssetsPropertyDetailResponseBodyPropertys setRepoName(String repoName) {
+            this.repoName = repoName;
+            return this;
+        }
+        public String getRepoName() {
+            return this.repoName;
+        }
+
+        public GetAssetsPropertyDetailResponseBodyPropertys setRepoNamespace(String repoNamespace) {
+            this.repoNamespace = repoNamespace;
+            return this;
+        }
+        public String getRepoNamespace() {
+            return this.repoNamespace;
+        }
+
         public GetAssetsPropertyDetailResponseBodyPropertys setServerType(String serverType) {
             this.serverType = serverType;
             return this;
@@ -719,6 +771,14 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
         public String getSkillsName() {
             return this.skillsName;
+        }
+
+        public GetAssetsPropertyDetailResponseBodyPropertys setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
         public GetAssetsPropertyDetailResponseBodyPropertys setTransportName(String transportName) {

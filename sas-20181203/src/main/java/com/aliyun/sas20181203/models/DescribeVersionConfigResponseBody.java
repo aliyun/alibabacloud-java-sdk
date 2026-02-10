@@ -164,6 +164,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("IntelligentAnalysisFlow")
+    public Integer intelligentAnalysisFlow;
+
+    /**
      * <p>Indicates whether Security Center runs the latest version of the Ultimate edition.</p>
      * <ul>
      * <li><strong>true</strong>: yes</li>
@@ -288,6 +295,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     @NameInMap("NewThreatAnalysis")
     public Integer newThreatAnalysis;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("OnboardedAssets")
+    public Integer onboardedAssets;
 
     /**
      * <p>The timestamp when Security Center is purchased. Unit: milliseconds.</p>
@@ -633,6 +647,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         return this.instanceId;
     }
 
+    public DescribeVersionConfigResponseBody setIntelligentAnalysisFlow(Integer intelligentAnalysisFlow) {
+        this.intelligentAnalysisFlow = intelligentAnalysisFlow;
+        return this;
+    }
+    public Integer getIntelligentAnalysisFlow() {
+        return this.intelligentAnalysisFlow;
+    }
+
     public DescribeVersionConfigResponseBody setIsNewContainerVersion(Boolean isNewContainerVersion) {
         this.isNewContainerVersion = isNewContainerVersion;
         return this;
@@ -719,6 +741,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Integer getNewThreatAnalysis() {
         return this.newThreatAnalysis;
+    }
+
+    public DescribeVersionConfigResponseBody setOnboardedAssets(Integer onboardedAssets) {
+        this.onboardedAssets = onboardedAssets;
+        return this;
+    }
+    public Integer getOnboardedAssets() {
+        return this.onboardedAssets;
     }
 
     public DescribeVersionConfigResponseBody setOpenTime(Long openTime) {

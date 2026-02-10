@@ -169,6 +169,9 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     @NameInMap("ScaVersion")
     public String scaVersion;
 
+    @NameInMap("SearchCriteriaList")
+    public java.util.List<DescribePropertyScaDetailRequestSearchCriteriaList> searchCriteriaList;
+
     /**
      * <p>The search keyword. You must specify this parameter based on the value of the <strong>SearchItem</strong> parameter.</p>
      * <ul>
@@ -401,6 +404,14 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
         return this.scaVersion;
     }
 
+    public DescribePropertyScaDetailRequest setSearchCriteriaList(java.util.List<DescribePropertyScaDetailRequestSearchCriteriaList> searchCriteriaList) {
+        this.searchCriteriaList = searchCriteriaList;
+        return this;
+    }
+    public java.util.List<DescribePropertyScaDetailRequestSearchCriteriaList> getSearchCriteriaList() {
+        return this.searchCriteriaList;
+    }
+
     public DescribePropertyScaDetailRequest setSearchInfo(String searchInfo) {
         this.searchInfo = searchInfo;
         return this;
@@ -455,6 +466,44 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     }
     public String getUuid() {
         return this.uuid;
+    }
+
+    public static class DescribePropertyScaDetailRequestSearchCriteriaList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Name</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribePropertyScaDetailRequestSearchCriteriaList build(java.util.Map<String, ?> map) throws Exception {
+            DescribePropertyScaDetailRequestSearchCriteriaList self = new DescribePropertyScaDetailRequestSearchCriteriaList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePropertyScaDetailRequestSearchCriteriaList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribePropertyScaDetailRequestSearchCriteriaList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

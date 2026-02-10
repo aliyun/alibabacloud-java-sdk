@@ -143,6 +143,13 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
         public Integer agentless;
 
         /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AiDigital")
+        public Integer aiDigital;
+
+        /**
          * <p>Anti-Ransomware Module. Values:</p>
          * <ul>
          * <li><strong>0</strong>: Off</li>
@@ -299,6 +306,14 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
         }
         public Integer getAgentless() {
             return this.agentless;
+        }
+
+        public ModifyPostPayModuleSwitchRequestPostPayModuleSwitchObj setAiDigital(Integer aiDigital) {
+            this.aiDigital = aiDigital;
+            return this;
+        }
+        public Integer getAiDigital() {
+            return this.aiDigital;
         }
 
         public ModifyPostPayModuleSwitchRequestPostPayModuleSwitchObj setAntiRansomware(Integer antiRansomware) {

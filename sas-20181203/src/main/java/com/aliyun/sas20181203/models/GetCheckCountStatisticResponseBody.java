@@ -42,6 +42,13 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
 
     public static class GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>开启公网访问</p>
+         */
+        @NameInMap("CheckShowName")
+        public String checkShowName;
+
+        /**
          * <p>The number of the CPU cores used by the host instance.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +248,13 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         public Integer vendor;
 
         /**
+         * <strong>example:</strong>
+         * <p>阿里云</p>
+         */
+        @NameInMap("VendorShowName")
+        public String vendorShowName;
+
+        /**
          * <p>The ID of the VPC to which the host instance belongs.</p>
          * 
          * <strong>example:</strong>
@@ -252,6 +266,14 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         public static GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems build(java.util.Map<String, ?> map) throws Exception {
             GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems self = new GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems();
             return TeaModel.build(map, self);
+        }
+
+        public GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems setCheckShowName(String checkShowName) {
+            this.checkShowName = checkShowName;
+            return this;
+        }
+        public String getCheckShowName() {
+            return this.checkShowName;
         }
 
         public GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems setCores(Integer cores) {
@@ -364,6 +386,14 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         }
         public Integer getVendor() {
             return this.vendor;
+        }
+
+        public GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems setVendorShowName(String vendorShowName) {
+            this.vendorShowName = vendorShowName;
+            return this;
+        }
+        public String getVendorShowName() {
+            return this.vendorShowName;
         }
 
         public GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems setVpcInstanceId(String vpcInstanceId) {

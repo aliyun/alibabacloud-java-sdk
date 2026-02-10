@@ -207,6 +207,9 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("VpcInstanceIds")
     public String vpcInstanceIds;
 
+    @NameInMap("VulEntityList")
+    public java.util.List<ExportVulRequestVulEntityList> vulEntityList;
+
     public static ExportVulRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportVulRequest self = new ExportVulRequest();
         return TeaModel.build(map, self);
@@ -346,6 +349,52 @@ public class ExportVulRequest extends TeaModel {
     }
     public String getVpcInstanceIds() {
         return this.vpcInstanceIds;
+    }
+
+    public ExportVulRequest setVulEntityList(java.util.List<ExportVulRequestVulEntityList> vulEntityList) {
+        this.vulEntityList = vulEntityList;
+        return this;
+    }
+    public java.util.List<ExportVulRequestVulEntityList> getVulEntityList() {
+        return this.vulEntityList;
+    }
+
+    public static class ExportVulRequestVulEntityList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Ollama</p>
+         */
+        @NameInMap("EntityName")
+        public String entityName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("EntityVersion")
+        public String entityVersion;
+
+        public static ExportVulRequestVulEntityList build(java.util.Map<String, ?> map) throws Exception {
+            ExportVulRequestVulEntityList self = new ExportVulRequestVulEntityList();
+            return TeaModel.build(map, self);
+        }
+
+        public ExportVulRequestVulEntityList setEntityName(String entityName) {
+            this.entityName = entityName;
+            return this;
+        }
+        public String getEntityName() {
+            return this.entityName;
+        }
+
+        public ExportVulRequestVulEntityList setEntityVersion(String entityVersion) {
+            this.entityVersion = entityVersion;
+            return this;
+        }
+        public String getEntityVersion() {
+            return this.entityVersion;
+        }
+
     }
 
 }
