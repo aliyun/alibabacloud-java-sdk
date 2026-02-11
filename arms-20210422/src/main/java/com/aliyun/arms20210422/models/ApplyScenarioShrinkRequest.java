@@ -4,12 +4,21 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class ApplyScenarioShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Config")
     public String configShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -34,6 +43,9 @@ public class ApplyScenarioShrinkRequest extends TeaModel {
     @NameInMap("SnTransfer")
     public Boolean snTransfer;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UpdateOption")
     public Boolean updateOption;
 

@@ -4,12 +4,18 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class ConfigAppRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppIds")
     public String appIds;
 
     @NameInMap("Enable")
     public String enable;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

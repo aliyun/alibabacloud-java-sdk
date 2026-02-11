@@ -4,6 +4,9 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class OpenVClusterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
@@ -16,6 +19,9 @@ public class OpenVClusterRequest extends TeaModel {
     @NameInMap("RecreateSwitch")
     public Boolean recreateSwitch;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -7,6 +7,9 @@ public class DeleteScenarioRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScenarioId")
     public Long scenarioId;
 

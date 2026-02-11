@@ -10,15 +10,24 @@ public class GetStackRequest extends TeaModel {
     @NameInMap("Pid")
     public String pid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RpcID")
     public String rpcID;
 
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TraceID")
     public String traceID;
 

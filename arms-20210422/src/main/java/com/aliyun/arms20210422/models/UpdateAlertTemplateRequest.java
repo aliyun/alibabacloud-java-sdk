@@ -7,6 +7,9 @@ public class UpdateAlertTemplateRequest extends TeaModel {
     @NameInMap("Annotations")
     public String annotations;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
@@ -16,21 +19,39 @@ public class UpdateAlertTemplateRequest extends TeaModel {
     @NameInMap("MatchExpressions")
     public String matchExpressions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Rule")
     public String rule;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Status")
     public Boolean status;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

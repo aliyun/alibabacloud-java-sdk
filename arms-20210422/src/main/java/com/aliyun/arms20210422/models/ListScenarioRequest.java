@@ -4,9 +4,15 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class ListScenarioRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

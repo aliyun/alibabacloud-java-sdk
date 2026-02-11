@@ -13,24 +13,39 @@ public class CreateAlertTemplateRequest extends TeaModel {
     @NameInMap("MatchExpressions")
     public String matchExpressions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("ParentId")
     public String parentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Rule")
     public String rule;
 
     @NameInMap("TemplateProvider")
     public String templateProvider;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

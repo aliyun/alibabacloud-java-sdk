@@ -13,6 +13,9 @@ public class QueryMetricByPageRequest extends TeaModel {
     @NameInMap("Dimensions")
     public java.util.List<String> dimensions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -22,9 +25,15 @@ public class QueryMetricByPageRequest extends TeaModel {
     @NameInMap("IntervalInSec")
     public Integer intervalInSec;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Measures")
     public java.util.List<String> measures;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Metric")
     public String metric;
 
@@ -37,6 +46,9 @@ public class QueryMetricByPageRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

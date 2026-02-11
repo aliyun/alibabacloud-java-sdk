@@ -4,18 +4,27 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class GetConsistencySnapshotRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
     @NameInMap("CurrentTimestamp")
     public Long currentTimestamp;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pid")
     public String pid;
 
     @NameInMap("ProxyUserId")
     public String proxyUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

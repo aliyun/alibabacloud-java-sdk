@@ -4,12 +4,21 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class CreateRetcodeAppRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RetcodeAppName")
     public String retcodeAppName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RetcodeAppType")
     public String retcodeAppType;
 

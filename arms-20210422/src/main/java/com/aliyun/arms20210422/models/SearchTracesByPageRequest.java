@@ -4,6 +4,9 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesByPageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -22,6 +25,9 @@ public class SearchTracesByPageRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,6 +40,9 @@ public class SearchTracesByPageRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

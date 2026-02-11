@@ -10,6 +10,9 @@ public class ImportCustomAlertRulesRequest extends TeaModel {
     @NameInMap("IsAutoStart")
     public Boolean isAutoStart;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

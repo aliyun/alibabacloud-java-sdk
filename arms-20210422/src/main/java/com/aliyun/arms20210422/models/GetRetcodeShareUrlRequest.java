@@ -4,6 +4,9 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class GetRetcodeShareUrlRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pid")
     public String pid;
 

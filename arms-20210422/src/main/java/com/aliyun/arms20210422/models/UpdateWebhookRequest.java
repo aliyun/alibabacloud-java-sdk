@@ -7,6 +7,9 @@ public class UpdateWebhookRequest extends TeaModel {
     @NameInMap("Body")
     public String body;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactId")
     public Long contactId;
 
@@ -22,6 +25,9 @@ public class UpdateWebhookRequest extends TeaModel {
     @NameInMap("Method")
     public String method;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

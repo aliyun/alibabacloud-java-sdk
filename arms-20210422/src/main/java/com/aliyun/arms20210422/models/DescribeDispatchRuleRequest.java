@@ -7,6 +7,9 @@ public class DescribeDispatchRuleRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

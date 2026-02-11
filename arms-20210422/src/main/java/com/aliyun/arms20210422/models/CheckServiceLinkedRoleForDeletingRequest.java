@@ -4,18 +4,30 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleForDeletingRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeletionTaskId")
     public String deletionTaskId;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SPIRegionId")
     public String SPIRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

@@ -4,15 +4,24 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertContactGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactGroupId")
     public Long contactGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
     @NameInMap("ContactIds")
     public String contactIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

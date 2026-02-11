@@ -4,9 +4,15 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class UpdateDispatchRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DispatchRule")
     public String dispatchRule;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

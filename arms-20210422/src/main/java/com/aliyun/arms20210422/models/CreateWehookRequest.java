@@ -7,6 +7,9 @@ public class CreateWehookRequest extends TeaModel {
     @NameInMap("Body")
     public String body;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactName")
     public String contactName;
 
@@ -19,9 +22,15 @@ public class CreateWehookRequest extends TeaModel {
     @NameInMap("Method")
     public String method;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Url")
     public String url;
 

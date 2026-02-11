@@ -4,9 +4,15 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class GetTraceAppRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pid")
     public String pid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

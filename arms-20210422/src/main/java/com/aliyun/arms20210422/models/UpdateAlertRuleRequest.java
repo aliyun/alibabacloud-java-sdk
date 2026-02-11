@@ -4,6 +4,9 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlertId")
     public Long alertId;
 
@@ -13,9 +16,15 @@ public class UpdateAlertRuleRequest extends TeaModel {
     @NameInMap("IsAutoStart")
     public Boolean isAutoStart;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplageAlertConfig")
     public String templageAlertConfig;
 

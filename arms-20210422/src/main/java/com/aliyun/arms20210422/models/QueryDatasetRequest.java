@@ -4,6 +4,9 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class QueryDatasetRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetId")
     public Long datasetId;
 
@@ -16,6 +19,9 @@ public class QueryDatasetRequest extends TeaModel {
     @NameInMap("HungryMode")
     public Boolean hungryMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IntervalInSec")
     public Integer intervalInSec;
 
@@ -25,12 +31,18 @@ public class QueryDatasetRequest extends TeaModel {
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaxTime")
     public Long maxTime;
 
     @NameInMap("Measures")
     public java.util.List<String> measures;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MinTime")
     public Long minTime;
 

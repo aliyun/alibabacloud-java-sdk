@@ -4,12 +4,21 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class SendCustomIncidentsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Incidents")
     public String incidents;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

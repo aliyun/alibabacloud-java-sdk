@@ -13,6 +13,9 @@ public class QueryMetricRequest extends TeaModel {
     @NameInMap("Dimensions")
     public java.util.List<String> dimensions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -25,9 +28,15 @@ public class QueryMetricRequest extends TeaModel {
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Measures")
     public java.util.List<String> measures;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Metric")
     public String metric;
 
@@ -40,6 +49,9 @@ public class QueryMetricRequest extends TeaModel {
     @NameInMap("ProxyUserId")
     public String proxyUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

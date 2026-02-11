@@ -4,9 +4,15 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class EnableAlertTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

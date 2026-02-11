@@ -16,6 +16,9 @@ public class CreateAlertContactRequest extends TeaModel {
     @NameInMap("PhoneNum")
     public String phoneNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

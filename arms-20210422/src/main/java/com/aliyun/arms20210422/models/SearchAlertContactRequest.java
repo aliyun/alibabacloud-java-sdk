@@ -22,6 +22,9 @@ public class SearchAlertContactRequest extends TeaModel {
     @NameInMap("Phone")
     public String phone;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

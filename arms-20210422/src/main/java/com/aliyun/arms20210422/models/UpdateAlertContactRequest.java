@@ -4,6 +4,9 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertContactRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactId")
     public Long contactId;
 
@@ -19,6 +22,9 @@ public class UpdateAlertContactRequest extends TeaModel {
     @NameInMap("PhoneNum")
     public String phoneNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

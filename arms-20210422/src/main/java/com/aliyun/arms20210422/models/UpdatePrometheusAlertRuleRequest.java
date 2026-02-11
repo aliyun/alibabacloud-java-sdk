@@ -4,36 +4,57 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrometheusAlertRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlertId")
     public Long alertId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlertName")
     public String alertName;
 
     @NameInMap("Annotations")
     public String annotations;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("DispatchRuleId")
     public Long dispatchRuleId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Expression")
     public String expression;
 
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("NotifyType")
     public String notifyType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -13,12 +13,18 @@ public class GetAppApiByPageRequest extends TeaModel {
     @NameInMap("IntervalMills")
     public Integer intervalMills;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PId")
     public String PId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

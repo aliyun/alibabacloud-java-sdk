@@ -4,12 +4,18 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class SetRetcodeShareStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pid")
     public String pid;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Status")
     public Boolean status;
 
