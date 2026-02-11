@@ -17,9 +17,6 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>List of Invitation Information</p>
-     */
     @NameInMap("InviteInfoList")
     public GetUnassociatedCustomerResponseBodyInviteInfoList inviteInfoList;
 
@@ -110,54 +107,18 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
     }
 
     public static class GetUnassociatedCustomerResponseBodyInviteInfoListInviteInfo extends TeaModel {
-        /**
-         * <p>The name of Customer who are to be invited.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>My Client</p>
-         */
         @NameInMap("AccountNickname")
         public String accountNickname;
 
-        /**
-         * <p>The Email of Customer who are to be invited.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:12345@qq.com">12345@qq.com</a></p>
-         */
         @NameInMap("Email")
         public String email;
 
-        /**
-         * <p>The time of email been sent out.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-05-10</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <p>Invitation ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>190</p>
-         */
         @NameInMap("InviteId")
         public Long inviteId;
 
-        /**
-         * <p>Invitation Status:</p>
-         * <ul>
-         * <li>0 No visit on registration URL</li>
-         * <li>1 Successful Registration</li>
-         * <li>2 Unsuccessful Registration</li>
-         * <li>3 Registration URL have been visited, but no submitted sheet/ticket.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 

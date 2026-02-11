@@ -711,7 +711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Caller must be a Partner from International Site, either Distribution or Reseller will do.</p>
      * 
      * <b>summary</b> : 
-     * <p>Export quota amount adjustment history as a Distribution Customer from International Site. Only available on International Site.</p>
+     * <p>The ExportCustomerQuotaRecord interface corresponds to the export function of &quot;Quota Adjust Details&quot; on ACPN.</p>
      * 
      * @param request ExportCustomerQuotaRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -762,7 +762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Caller must be a Partner from International Site, either Distribution or Reseller will do.</p>
      * 
      * <b>summary</b> : 
-     * <p>Export quota amount adjustment history as a Distribution Customer from International Site. Only available on International Site.</p>
+     * <p>The ExportCustomerQuotaRecord interface corresponds to the export function of &quot;Quota Adjust Details&quot; on ACPN.</p>
      * 
      * @param request ExportCustomerQuotaRecordRequest
      * @return ExportCustomerQuotaRecordResponse
@@ -774,7 +774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>额度冲减明细列表导出接口</p>
+     * <p>The ExportReversedDeductionHistory interface corresponds to the export function of &quot;Quota Offsetting Details&quot; on ACPN.</p>
      * 
      * @param request ExportReversedDeductionHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -818,7 +818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>额度冲减明细列表导出接口</p>
+     * <p>The ExportReversedDeductionHistory interface corresponds to the export function of &quot;Quota Offsetting Details&quot; on ACPN.</p>
      * 
      * @param request ExportReversedDeductionHistoryRequest
      * @return ExportReversedDeductionHistoryResponse
@@ -1605,6 +1605,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>确保当前调用账号身份为分销伙伴 
+     * <notice>仅国际提供</p>
+     * 
      * <b>summary</b> : 
      * <p>优惠券使用量列表查询</p>
      * 
@@ -1661,6 +1665,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>确保当前调用账号身份为分销伙伴 
+     * <notice>仅国际提供</p>
+     * 
      * <b>summary</b> : 
      * <p>优惠券使用量列表查询</p>
      * 
@@ -1674,7 +1682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用查询导出任务列表</p>
+     * <p>Query the list of exported files.</p>
      * 
      * @param request ListExportTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1722,7 +1730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用查询导出任务列表</p>
+     * <p>Query the list of exported files.</p>
      * 
      * @param request ListExportTasksRequest
      * @return ListExportTasksResponse

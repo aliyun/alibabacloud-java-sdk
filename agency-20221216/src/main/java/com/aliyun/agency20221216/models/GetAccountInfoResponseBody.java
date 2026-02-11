@@ -4,9 +4,6 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class GetAccountInfoResponseBody extends TeaModel {
-    /**
-     * <p>List of Account Information</p>
-     */
     @NameInMap("AccountInfoList")
     public GetAccountInfoResponseBodyAccountInfoList accountInfoList;
 
@@ -113,168 +110,51 @@ public class GetAccountInfoResponseBody extends TeaModel {
     }
 
     public static class GetAccountInfoResponseBodyAccountInfoListAccountInfo extends TeaModel {
-        /**
-         * <p>The name of Sub Account.</p>
-         * <ul>
-         * <li>Enterprise Customer: Name of Company</li>
-         * <li>T2 Reseller: Name of Partner</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>XXX Technology LTD.</p>
-         */
         @NameInMap("AccountNickname")
         public String accountNickname;
 
-        /**
-         * <p>Alibaba Cloud Login name of Distribution Customer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:1234@qq.com">1234@qq.com</a></p>
-         */
         @NameInMap("AliyunId")
         public String aliyunId;
 
-        /**
-         * <p>The time that Distribution Customer successfully associated with Distributor.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-01-01</p>
-         */
         @NameInMap("AssociationSuccessTime")
         public String associationSuccessTime;
 
-        /**
-         * <p>Account CID of Distribution Customer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>61479572</p>
-         */
         @NameInMap("Cid")
         public Long cid;
 
-        /**
-         * <p>Type of customer\&quot;s account, 0 Individual, 1 Enterprise</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CustomerAccountType")
         public Integer customerAccountType;
 
-        /**
-         * <p>Customer\&quot;s Sales Manager</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Tommy</p>
-         */
         @NameInMap("CustomerBd")
         public String customerBd;
 
-        /**
-         * <p>Whether the customer has completed Enterprise Real-name Authentication, 0 No, 1 Yes</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CustomerEnterpriseCertified")
         public Integer customerEnterpriseCertified;
 
-        /**
-         * <p>When Shutdown Policy is delayStop, this number refer to Shutdown-delay Credit (overdraft limit).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>600</p>
-         */
         @NameInMap("DelayAmount")
         public String delayAmount;
 
-        /**
-         * <p>There are a value for Shutdown Policy Management towards Sub Account.</p>
-         * <ul>
-         * <li>1 immediatelyStop,  immediately shutdown the instance once customer\&quot;s quota is ran out.</li>
-         * <li>2 delayStop, delay shutdown the instance until customer\&quot;s Shutdown-delay Credit is ran out. Please refer to DelayAmount.</li>
-         * <li>3 noStop, customer\&quot;s instance status is rely on manual control instead of auto setting.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>immediatelyStop</p>
-         */
         @NameInMap("DelayStatus")
         public String delayStatus;
 
-        /**
-         * <p>The E-mail of Distribution Customer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:1234@qq.com">1234@qq.com</a></p>
-         */
         @NameInMap("Email")
         public String email;
 
-        /**
-         * <p>The contact number of Distribution Customer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>13641588680</p>
-         */
         @NameInMap("Mobile")
         public String mobile;
 
-        /**
-         * <p>Purchase Control, Value Range:</p>
-         * <ul>
-         * <li>Purchase Forbidden</li>
-         * <li>Normal (Purchase is allowed)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("NewBuyStatus")
         public String newBuyStatus;
 
-        /**
-         * <p>The Country Code where the customer\&quot;s account is registered.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
         @NameInMap("RegisterCountryCode")
         public String registerCountryCode;
 
-        /**
-         * <p>Description of Distribution Customer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Sub Account</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>Account Type:</p>
-         * <ul>
-         * <li>1 Agency\&quot;s End User</li>
-         * <li>2 Reseller\&quot;s End User</li>
-         * <li>3 Enterprise</li>
-         * <li>4 T2 Agency Partner</li>
-         * <li>5 T2 Reseller Partner</li>
-         * <li>6 T2 Agency+Reseller Partner</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("SubAccountType")
         public Integer subAccountType;
 
-        /**
-         * <p>Account UID of Distribution Customer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1415740779475837</p>
-         */
         @NameInMap("Uid")
         public Long uid;
 

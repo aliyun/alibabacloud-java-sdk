@@ -155,6 +155,9 @@ public class GetCreditInfoResponseBody extends TeaModel {
         @NameInMap("OutstandingBalance")
         public String outstandingBalance;
 
+        @NameInMap("PAYGFreezeStatus")
+        public String PAYGFreezeStatus;
+
         /**
          * <p>The systematic controlling policy for resource management, specifically when the available Credit of Sub Account falls to 0 or less.</br></p>
          * <ul>
@@ -233,6 +236,14 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
         public String getOutstandingBalance() {
             return this.outstandingBalance;
+        }
+
+        public GetCreditInfoResponseBodyData setPAYGFreezeStatus(String PAYGFreezeStatus) {
+            this.PAYGFreezeStatus = PAYGFreezeStatus;
+            return this;
+        }
+        public String getPAYGFreezeStatus() {
+            return this.PAYGFreezeStatus;
         }
 
         public GetCreditInfoResponseBodyData setZeroCreditShutdownPolicy(String zeroCreditShutdownPolicy) {
