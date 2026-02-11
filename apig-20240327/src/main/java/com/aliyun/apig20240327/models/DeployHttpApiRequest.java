@@ -294,6 +294,8 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigOperationDeployments extends TeaModel {
         /**
+         * <p>Operation type</p>
+         * 
          * <strong>example:</strong>
          * <p>Publish</p>
          */
@@ -301,8 +303,10 @@ public class DeployHttpApiRequest extends TeaModel {
         public String action;
 
         /**
+         * <p>Unique identifier of the operation</p>
+         * 
          * <strong>example:</strong>
-         * <p>op-d5s57hmm1hks653u9dkg</p>
+         * <p>op-xxx</p>
          */
         @NameInMap("operationId")
         public String operationId;
@@ -355,6 +359,9 @@ public class DeployHttpApiRequest extends TeaModel {
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        /**
+         * <p>Operation-level deployment control list</p>
+         */
         @NameInMap("operationDeployments")
         public java.util.List<DeployHttpApiRequestRestApiConfigOperationDeployments> operationDeployments;
 

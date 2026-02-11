@@ -31,6 +31,9 @@ public class CreateHttpApiRequest extends TeaModel {
     @NameInMap("basePath")
     public String basePath;
 
+    @NameInMap("belongGatewayId")
+    public String belongGatewayId;
+
     /**
      * <p>$.parameters[0].schema.example</p>
      */
@@ -45,6 +48,9 @@ public class CreateHttpApiRequest extends TeaModel {
      */
     @NameInMap("description")
     public String description;
+
+    @NameInMap("dryRun")
+    public Boolean dryRun;
 
     /**
      * <p>Create an API of HTTP type</p>
@@ -113,6 +119,9 @@ public class CreateHttpApiRequest extends TeaModel {
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("strategy")
+    public String strategy;
+
     /**
      * <p>$.parameters[0].schema.properties.deployConfigs.description</p>
      * 
@@ -165,6 +174,14 @@ public class CreateHttpApiRequest extends TeaModel {
         return this.basePath;
     }
 
+    public CreateHttpApiRequest setBelongGatewayId(String belongGatewayId) {
+        this.belongGatewayId = belongGatewayId;
+        return this;
+    }
+    public String getBelongGatewayId() {
+        return this.belongGatewayId;
+    }
+
     public CreateHttpApiRequest setDeployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
         this.deployConfigs = deployConfigs;
         return this;
@@ -179,6 +196,14 @@ public class CreateHttpApiRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateHttpApiRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateHttpApiRequest setEnableAuth(Boolean enableAuth) {
@@ -243,6 +268,14 @@ public class CreateHttpApiRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateHttpApiRequest setStrategy(String strategy) {
+        this.strategy = strategy;
+        return this;
+    }
+    public String getStrategy() {
+        return this.strategy;
     }
 
     public CreateHttpApiRequest setType(String type) {

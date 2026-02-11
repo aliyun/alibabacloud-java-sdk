@@ -1297,7 +1297,75 @@ public class HttpApiDeployConfig extends TeaModel {
 
     }
 
+    public static class HttpApiDeployConfigServiceConfigsObservabilityRouteConfig extends TeaModel {
+        /**
+         * <p>Routing mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LeastBusy</p>
+         */
+        @NameInMap("mode")
+        public String mode;
+
+        /**
+         * <p>Queue size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("queueSize")
+        public Integer queueSize;
+
+        /**
+         * <p>Max traffic ratio per single service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8</p>
+         */
+        @NameInMap("rateLimit")
+        public Float rateLimit;
+
+        public static HttpApiDeployConfigServiceConfigsObservabilityRouteConfig build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigServiceConfigsObservabilityRouteConfig self = new HttpApiDeployConfigServiceConfigsObservabilityRouteConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigServiceConfigsObservabilityRouteConfig setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public HttpApiDeployConfigServiceConfigsObservabilityRouteConfig setQueueSize(Integer queueSize) {
+            this.queueSize = queueSize;
+            return this;
+        }
+        public Integer getQueueSize() {
+            return this.queueSize;
+        }
+
+        public HttpApiDeployConfigServiceConfigsObservabilityRouteConfig setRateLimit(Float rateLimit) {
+            this.rateLimit = rateLimit;
+            return this;
+        }
+        public Float getRateLimit() {
+            return this.rateLimit;
+        }
+
+    }
+
     public static class HttpApiDeployConfigServiceConfigs extends TeaModel {
+        /**
+         * <p>Legacy gateway service ID for backward compatibility</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-svc-abc123</p>
+         */
+        @NameInMap("gatewayServiceId")
+        public String gatewayServiceId;
+
         /**
          * <p>Intent classification code</p>
          * 
@@ -1332,6 +1400,48 @@ public class HttpApiDeployConfig extends TeaModel {
         public String modelNamePattern;
 
         /**
+         * <p>Multi-service routing strategy type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ByWeight</p>
+         */
+        @NameInMap("multiServiceRouteStrategy")
+        public String multiServiceRouteStrategy;
+
+        /**
+         * <p>Service display name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen-Max-Service</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>Observability metrics-based routing config</p>
+         */
+        @NameInMap("observabilityRouteConfig")
+        public HttpApiDeployConfigServiceConfigsObservabilityRouteConfig observabilityRouteConfig;
+
+        /**
+         * <p>Service port number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
+        @NameInMap("port")
+        public Integer port;
+
+        /**
+         * <p>Service protocol</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
+        @NameInMap("protocol")
+        public String protocol;
+
+        /**
          * <p>The service ID.</p>
          * 
          * <strong>example:</strong>
@@ -1339,6 +1449,15 @@ public class HttpApiDeployConfig extends TeaModel {
          */
         @NameInMap("serviceId")
         public String serviceId;
+
+        /**
+         * <p>Service version tag for tag-based routing scenarios</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
+        @NameInMap("version")
+        public String version;
 
         /**
          * <p>The service weight.</p>
@@ -1352,6 +1471,14 @@ public class HttpApiDeployConfig extends TeaModel {
         public static HttpApiDeployConfigServiceConfigs build(java.util.Map<String, ?> map) throws Exception {
             HttpApiDeployConfigServiceConfigs self = new HttpApiDeployConfigServiceConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigServiceConfigs setGatewayServiceId(String gatewayServiceId) {
+            this.gatewayServiceId = gatewayServiceId;
+            return this;
+        }
+        public String getGatewayServiceId() {
+            return this.gatewayServiceId;
         }
 
         public HttpApiDeployConfigServiceConfigs setIntentCode(String intentCode) {
@@ -1386,12 +1513,60 @@ public class HttpApiDeployConfig extends TeaModel {
             return this.modelNamePattern;
         }
 
+        public HttpApiDeployConfigServiceConfigs setMultiServiceRouteStrategy(String multiServiceRouteStrategy) {
+            this.multiServiceRouteStrategy = multiServiceRouteStrategy;
+            return this;
+        }
+        public String getMultiServiceRouteStrategy() {
+            return this.multiServiceRouteStrategy;
+        }
+
+        public HttpApiDeployConfigServiceConfigs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public HttpApiDeployConfigServiceConfigs setObservabilityRouteConfig(HttpApiDeployConfigServiceConfigsObservabilityRouteConfig observabilityRouteConfig) {
+            this.observabilityRouteConfig = observabilityRouteConfig;
+            return this;
+        }
+        public HttpApiDeployConfigServiceConfigsObservabilityRouteConfig getObservabilityRouteConfig() {
+            return this.observabilityRouteConfig;
+        }
+
+        public HttpApiDeployConfigServiceConfigs setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public HttpApiDeployConfigServiceConfigs setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
         public HttpApiDeployConfigServiceConfigs setServiceId(String serviceId) {
             this.serviceId = serviceId;
             return this;
         }
         public String getServiceId() {
             return this.serviceId;
+        }
+
+        public HttpApiDeployConfigServiceConfigs setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
         public HttpApiDeployConfigServiceConfigs setWeight(Long weight) {
