@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFeatureOptionRequest extends TeaModel {
     /**
+     * <p>Feature template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

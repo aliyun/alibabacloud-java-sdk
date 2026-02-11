@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TestModelResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class TestModelResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,27 @@ public class TestModelResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("ResultObject")
     public TestModelResponseBodyResultObject resultObject;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Call succeeded.</li>
+     * <li><strong>false</strong>: Call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class TestModelResponseBody extends TeaModel {
 
     public static class TestModelResponseBodyResultObjectTestResult extends TeaModel {
         /**
+         * <p>Actual output.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.00</p>
          */
@@ -89,6 +106,8 @@ public class TestModelResponseBody extends TeaModel {
         public String actualResult;
 
         /**
+         * <p>Whether it is consistent.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -96,6 +115,8 @@ public class TestModelResponseBody extends TeaModel {
         public Boolean consistency;
 
         /**
+         * <p>Test output.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.00</p>
          */
@@ -103,6 +124,8 @@ public class TestModelResponseBody extends TeaModel {
         public String testResult;
 
         /**
+         * <p>Training output.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.00</p>
          */
@@ -150,6 +173,8 @@ public class TestModelResponseBody extends TeaModel {
 
     public static class TestModelResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Number of consistencies.</p>
+         * 
          * <strong>example:</strong>
          * <p>49.0</p>
          */
@@ -157,16 +182,23 @@ public class TestModelResponseBody extends TeaModel {
         public Long consistencyCount;
 
         /**
+         * <p>Consistency rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>98.0</p>
          */
         @NameInMap("ConsistencyRate")
         public Double consistencyRate;
 
+        /**
+         * <p>Test results.</p>
+         */
         @NameInMap("TestResult")
         public java.util.List<TestModelResponseBodyResultObjectTestResult> testResult;
 
         /**
+         * <p>Total number.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */

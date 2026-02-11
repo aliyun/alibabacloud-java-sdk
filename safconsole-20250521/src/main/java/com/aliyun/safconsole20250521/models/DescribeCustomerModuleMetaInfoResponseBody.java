@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomerModuleMetaInfoResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCustomerModuleMetaInfoResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,27 @@ public class DescribeCustomerModuleMetaInfoResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>055f1546-f465-4c92-a2da-bfb86abe6f56</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("ResultObject")
     public DescribeCustomerModuleMetaInfoResponseBodyResultObject resultObject;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Call succeeded.</li>
+     * <li><strong>false</strong>: Call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class DescribeCustomerModuleMetaInfoResponseBody extends TeaModel {
 
     public static class DescribeCustomerModuleMetaInfoResponseBodyResultObjectFeatureList extends TeaModel {
         /**
+         * <p>Default value of the feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -89,6 +106,8 @@ public class DescribeCustomerModuleMetaInfoResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>Feature mapping name.</p>
+         * 
          * <strong>example:</strong>
          * <p>f1</p>
          */
@@ -96,6 +115,8 @@ public class DescribeCustomerModuleMetaInfoResponseBody extends TeaModel {
         public String featureName;
 
         /**
+         * <p>Feature type.</p>
+         * 
          * <strong>example:</strong>
          * <p>double</p>
          */
@@ -103,6 +124,8 @@ public class DescribeCustomerModuleMetaInfoResponseBody extends TeaModel {
         public String featureType;
 
         /**
+         * <p>Feature name.</p>
+         * 
          * <strong>example:</strong>
          * <p>f1</p>
          */
@@ -149,10 +172,15 @@ public class DescribeCustomerModuleMetaInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomerModuleMetaInfoResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Feature list.</p>
+         */
         @NameInMap("FeatureList")
         public java.util.List<DescribeCustomerModuleMetaInfoResponseBodyResultObjectFeatureList> featureList;
 
         /**
+         * <p>Feature template.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINANCE_60</p>
          */

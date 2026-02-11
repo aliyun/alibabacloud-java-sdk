@@ -27,6 +27,200 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li>This interface is used for customers to create a modeling project for the first time.</li>
+     * <li><code>projectName</code> is a required field, with a maximum length of 50 characters.</li>
+     * <li><code>remark</code> and <code>instanceSpec</code> are optional, where <code>remark</code> has a maximum length of 200 characters.</li>
+     * <li>The available values for <code>instanceSpec</code> include <code>SECURE_ENV_LITE</code> and <code>SECURE_ENV_PRO</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Apply for Bastion Host Account</p>
+     * 
+     * @param request ApplyBastionAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ApplyBastionAccountResponse
+     */
+    public ApplyBastionAccountResponse applyBastionAccountWithOptions(ApplyBastionAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyBastionAccount"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyBastionAccountResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li>This interface is used for customers to create a modeling project for the first time.</li>
+     * <li><code>projectName</code> is a required field, with a maximum length of 50 characters.</li>
+     * <li><code>remark</code> and <code>instanceSpec</code> are optional, where <code>remark</code> has a maximum length of 200 characters.</li>
+     * <li>The available values for <code>instanceSpec</code> include <code>SECURE_ENV_LITE</code> and <code>SECURE_ENV_PRO</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Apply for Bastion Host Account</p>
+     * 
+     * @param request ApplyBastionAccountRequest
+     * @return ApplyBastionAccountResponse
+     */
+    public ApplyBastionAccountResponse applyBastionAccount(ApplyBastionAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.applyBastionAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associate Retrospective Task</p>
+     * 
+     * @param request AssociatePocTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociatePocTaskResponse
+     */
+    public AssociatePocTaskResponse associatePocTaskWithOptions(AssociatePocTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssociatePocTask"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociatePocTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associate Retrospective Task</p>
+     * 
+     * @param request AssociatePocTaskRequest
+     * @return AssociatePocTaskResponse
+     */
+    public AssociatePocTaskResponse associatePocTask(AssociatePocTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.associatePocTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Complete project and release resources.</p>
+     * 
+     * @param request CompleteModelingProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CompleteModelingProjectResponse
+     */
+    public CompleteModelingProjectResponse completeModelingProjectWithOptions(CompleteModelingProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CompleteModelingProject"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CompleteModelingProjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Complete project and release resources.</p>
+     * 
+     * @param request CompleteModelingProjectRequest
+     * @return CompleteModelingProjectResponse
+     */
+    public CompleteModelingProjectResponse completeModelingProject(CompleteModelingProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.completeModelingProjectWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Create basic model information</p>
      * 
@@ -209,6 +403,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request Description</h2>
+     * <ul>
+     * <li>This interface is used for customers to create a modeling project for the first time.</li>
+     * <li><code>projectName</code> is a required field, with a maximum length of 50 characters.</li>
+     * <li><code>remark</code> and <code>instanceSpec</code> are optional, where <code>remark</code> has a maximum length of 200 characters.</li>
+     * <li>The available values for <code>instanceSpec</code> include <code>SECURE_ENV_LITE</code> and <code>SECURE_ENV_PRO</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Initialize a modeling project.</p>
+     * 
+     * @param request CreateModelingProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateModelingProjectResponse
+     */
+    public CreateModelingProjectResponse createModelingProjectWithOptions(CreateModelingProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceSpec)) {
+            query.put("InstanceSpec", request.instanceSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateModelingProject"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateModelingProjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li>This interface is used for customers to create a modeling project for the first time.</li>
+     * <li><code>projectName</code> is a required field, with a maximum length of 50 characters.</li>
+     * <li><code>remark</code> and <code>instanceSpec</code> are optional, where <code>remark</code> has a maximum length of 200 characters.</li>
+     * <li>The available values for <code>instanceSpec</code> include <code>SECURE_ENV_LITE</code> and <code>SECURE_ENV_PRO</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Initialize a modeling project.</p>
+     * 
+     * @param request CreateModelingProjectRequest
+     * @return CreateModelingProjectResponse
+     */
+    public CreateModelingProjectResponse createModelingProject(CreateModelingProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createModelingProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
      * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
      * <ul>
      * <li><strong>Note</strong>: Deletion is irreversible, please use with caution.</li>
@@ -262,6 +526,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteModelResponse deleteModel(DeleteModelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteModelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deploy Model File</p>
+     * 
+     * @param request DeployModelFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeployModelFileResponse
+     */
+    public DeployModelFileResponse deployModelFileWithOptions(DeployModelFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeployModelFile"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeployModelFileResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deploy Model File</p>
+     * 
+     * @param request DeployModelFileRequest
+     * @return DeployModelFileResponse
+     */
+    public DeployModelFileResponse deployModelFile(DeployModelFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deployModelFileWithOptions(request, runtime);
     }
 
     /**
@@ -322,11 +652,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过提供<code>customerModuleId</code>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</p>
+     * <h2>Request Description</h2>
+     * <p>By providing the <code>customerModuleId</code> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据客户模型ID查询模型特征信息</p>
+     * <p>Query model feature information based on the customer model ID</p>
      * 
      * @param request DescribeCustomerModuleMetaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -358,11 +688,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过提供<code>customerModuleId</code>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</p>
+     * <h2>Request Description</h2>
+     * <p>By providing the <code>customerModuleId</code> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据客户模型ID查询模型特征信息</p>
+     * <p>Query model feature information based on the customer model ID</p>
      * 
      * @param request DescribeCustomerModuleMetaInfoRequest
      * @return DescribeCustomerModuleMetaInfoResponse
@@ -374,11 +704,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过提供<code>customerModuleId</code>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</p>
+     * <h2>Request Description</h2>
+     * <p>By providing the <code>customerModuleId</code> parameter, you can query the current status of a specified customer model. The status values may include but are not limited to &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据客户模型ID查询模型出参信息</p>
+     * <p>Query model output information based on the customer model ID</p>
      * 
      * @param request DescribeCustomerModuleOutputInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -414,11 +744,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过提供<code>customerModuleId</code>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</p>
+     * <h2>Request Description</h2>
+     * <p>By providing the <code>customerModuleId</code> parameter, you can query the current status of a specified customer model. The status values may include but are not limited to &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据客户模型ID查询模型出参信息</p>
+     * <p>Query model output information based on the customer model ID</p>
      * 
      * @param request DescribeCustomerModuleOutputInfoRequest
      * @return DescribeCustomerModuleOutputInfoResponse
@@ -430,15 +760,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>根据特征模板返回特征模板具体特征选项</p>
+     * <p>Return specific feature options based on the feature template</p>
      * 
      * @param request DescribeFeatureOptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -470,15 +800,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>根据特征模板返回特征模板具体特征选项</p>
+     * <p>Return specific feature options based on the feature template</p>
      * 
      * @param request DescribeFeatureOptionRequest
      * @return DescribeFeatureOptionResponse
@@ -490,15 +820,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which consists of a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>获取可用的特征模板列表，用于模型配置。</p>
+     * <p>Get the list of available feature templates for model configuration.</p>
      * 
      * @param request DescribeFeatureTemplateListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -522,15 +852,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which consists of a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>获取可用的特征模板列表，用于模型配置。</p>
+     * <p>Get the list of available feature templates for model configuration.</p>
      * @return DescribeFeatureTemplateListResponse
      */
     public DescribeFeatureTemplateListResponse describeFeatureTemplateList() throws Exception {
@@ -542,13 +872,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>渲染模型的特征配置</p>
+     * <p>Get File Download Link</p>
+     * 
+     * @param request DescribeFileDownloadUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFileDownloadUrlResponse
+     */
+    public DescribeFileDownloadUrlResponse describeFileDownloadUrlWithOptions(DescribeFileDownloadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFileDownloadUrl"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFileDownloadUrlResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Get File Download Link</p>
+     * 
+     * @param request DescribeFileDownloadUrlRequest
+     * @return DescribeFileDownloadUrlResponse
+     */
+    public DescribeFileDownloadUrlResponse describeFileDownloadUrl(DescribeFileDownloadUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFileDownloadUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each including a label (label) and value (value).</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Render the feature configuration of the model</p>
      * 
      * @param request DescribeModelFeatureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -584,15 +980,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each including a label (label) and value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>渲染模型的特征配置</p>
+     * <p>Render the feature configuration of the model</p>
      * 
      * @param request DescribeModelFeatureRequest
      * @return DescribeModelFeatureResponse
@@ -604,7 +1000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取上传oss鉴权数据</p>
+     * <p>Obtain OSS Authentication Data for Upload</p>
      * 
      * @param request DescribeModelOssTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -628,7 +1024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取上传oss鉴权数据</p>
+     * <p>Obtain OSS Authentication Data for Upload</p>
      * @return DescribeModelOssTokenResponse
      */
     public DescribeModelOssTokenResponse describeModelOssToken() throws Exception {
@@ -639,15 +1035,147 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>请求说明</h2>
-     * <p>该接口用于通过提供的<code>customerModuleId</code>来检查特定的模型服务是否已经存在。如果存在，则返回<code>true</code>；反之则返回<code>false</code>。</p>
-     * <h3>注意事项</h3>
      * <ul>
-     * <li><code>customerModuleId</code>是必须提供的参数，且为字符串类型。</li>
-     * <li>此API主要用于前端页面展示或逻辑判断时使用，以确认用户所选模型是否有对应的服务被创建。</li>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>根据客户模型ID查询指定模型对应服务是否存在</p>
+     * <p>Get detailed project data</p>
+     * 
+     * @param request DescribeModelingProjectDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeModelingProjectDetailResponse
+     */
+    public DescribeModelingProjectDetailResponse describeModelingProjectDetailWithOptions(DescribeModelingProjectDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeModelingProjectDetail"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeModelingProjectDetailResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Get detailed project data</p>
+     * 
+     * @param request DescribeModelingProjectDetailRequest
+     * @return DescribeModelingProjectDetailResponse
+     */
+    public DescribeModelingProjectDetailResponse describeModelingProjectDetail(DescribeModelingProjectDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeModelingProjectDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于获取指定租户下的所有建模项目的概览信息。</li>
+     * <li>支持通过<code>pageSize</code>和<code>currentPage</code>参数进行分页查询，默认每页显示10条记录。</li>
+     * <li>可选地，使用<code>status</code>参数来过滤特定状态（如<code>active</code>, <code>released</code>等）的项目。</li>
+     * <li>返回结果中包含每个项目的ID、名称、环境状态、建模状态、开始时间及结束时间（如果有的话），以及创建该项目的登录账号。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Paginated query for the list of modeling projects under the current user.</p>
+     * 
+     * @param request DescribeModelingProjectListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeModelingProjectListResponse
+     */
+    public DescribeModelingProjectListResponse describeModelingProjectListWithOptions(DescribeModelingProjectListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeModelingProjectList"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeModelingProjectListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于获取指定租户下的所有建模项目的概览信息。</li>
+     * <li>支持通过<code>pageSize</code>和<code>currentPage</code>参数进行分页查询，默认每页显示10条记录。</li>
+     * <li>可选地，使用<code>status</code>参数来过滤特定状态（如<code>active</code>, <code>released</code>等）的项目。</li>
+     * <li>返回结果中包含每个项目的ID、名称、环境状态、建模状态、开始时间及结束时间（如果有的话），以及创建该项目的登录账号。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Paginated query for the list of modeling projects under the current user.</p>
+     * 
+     * @param request DescribeModelingProjectListRequest
+     * @return DescribeModelingProjectListResponse
+     */
+    public DescribeModelingProjectListResponse describeModelingProjectList(DescribeModelingProjectListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeModelingProjectListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <p>This interface is used to check whether a specific model service exists by providing the <code>customerModuleId</code>. If it exists, it returns <code>true</code>; otherwise, it returns <code>false</code>.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li><code>customerModuleId</code> is a required parameter and must be of string type.</li>
+     * <li>This API is mainly used for front-end page display or logical judgment to confirm whether the service corresponding to the user\&quot;s selected model has been created.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Whether the Service Corresponding to a Specific Model Exists Based on Customer Model ID</p>
      * 
      * @param request DescribeModuleServiceExistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -679,16 +1207,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该接口用于通过提供的<code>customerModuleId</code>来检查特定的模型服务是否已经存在。如果存在，则返回<code>true</code>；反之则返回<code>false</code>。</p>
-     * <h3>注意事项</h3>
+     * <h2>Request Description</h2>
+     * <p>This interface is used to check whether a specific model service exists by providing the <code>customerModuleId</code>. If it exists, it returns <code>true</code>; otherwise, it returns <code>false</code>.</p>
+     * <h3>Notes</h3>
      * <ul>
-     * <li><code>customerModuleId</code>是必须提供的参数，且为字符串类型。</li>
-     * <li>此API主要用于前端页面展示或逻辑判断时使用，以确认用户所选模型是否有对应的服务被创建。</li>
+     * <li><code>customerModuleId</code> is a required parameter and must be of string type.</li>
+     * <li>This API is mainly used for front-end page display or logical judgment to confirm whether the service corresponding to the user\&quot;s selected model has been created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>根据客户模型ID查询指定模型对应服务是否存在</p>
+     * <p>Query Whether the Service Corresponding to a Specific Model Exists Based on Customer Model ID</p>
      * 
      * @param request DescribeModuleServiceExistRequest
      * @return DescribeModuleServiceExistResponse
@@ -700,11 +1228,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过提供<code>customerModuleId</code>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</p>
+     * <h2>Request Description</h2>
+     * <p>By providing the <code>customerModuleId</code> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据客户模型ID查询模型当前状态</p>
+     * <p>Query the current status of a model based on the customer model ID</p>
      * 
      * @param request DescribeModuleStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -736,11 +1264,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过提供<code>customerModuleId</code>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</p>
+     * <h2>Request Description</h2>
+     * <p>By providing the <code>customerModuleId</code> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据客户模型ID查询模型当前状态</p>
+     * <p>Query the current status of a model based on the customer model ID</p>
      * 
      * @param request DescribeModuleStatusRequest
      * @return DescribeModuleStatusResponse
@@ -752,7 +1280,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询模型托管订单</p>
+     * <p>Query POC task list.</p>
+     * 
+     * @param request DescribePocTaskListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePocTaskListResponse
+     */
+    public DescribePocTaskListResponse describePocTaskListWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePocTaskList"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePocTaskListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query POC task list.</p>
+     * @return DescribePocTaskListResponse
+     */
+    public DescribePocTaskListResponse describePocTaskList() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePocTaskListWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Model Hosting Orders</p>
      * 
      * @param request DescribeSafRmmpOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -776,7 +1338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询模型托管订单</p>
+     * <p>Query Model Hosting Orders</p>
      * @return DescribeSafRmmpOrderResponse
      */
     public DescribeSafRmmpOrderResponse describeSafRmmpOrder() throws Exception {
@@ -786,7 +1348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询场景和服务</p>
+     * <p>Query Scene and Service</p>
      * 
      * @param request DescribeServiceAndSceneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -822,7 +1384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询场景和服务</p>
+     * <p>Query Scene and Service</p>
      * 
      * @param request DescribeServiceAndSceneRequest
      * @return DescribeServiceAndSceneResponse
@@ -834,17 +1396,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该 API 用于查询特定用户下的所有模型信息，并支持通过分页参数进行分页查询。可以通过 <code>name</code> 参数进行模糊搜索。</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to query all model information under a specific user and supports pagination through page parameters. Fuzzy search can be performed using the <code>name</code> parameter.</p>
      * <ul>
-     * <li><code>regId</code>: 地域标识，必填。</li>
-     * <li><code>pageSize</code>: 每页显示的条目数，必填。</li>
-     * <li><code>currentPage</code>: 当前页码，从1开始计数，必填。</li>
-     * <li><code>userId</code>: 用户ID，必填。</li>
+     * <li><code>regId</code>: Region identifier, required.</li>
+     * <li><code>pageSize</code>: Number of items per page, required.</li>
+     * <li><code>currentPage</code>: Current page number, starting from 1, required.</li>
+     * <li><code>userId</code>: User ID, required.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>获取指定用户下的所有模型信息，支持分页查询</p>
+     * <p>Get all model information for a specified user, supporting pagination</p>
      * 
      * @param request DescribeUserModelListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -888,17 +1450,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该 API 用于查询特定用户下的所有模型信息，并支持通过分页参数进行分页查询。可以通过 <code>name</code> 参数进行模糊搜索。</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to query all model information under a specific user and supports pagination through page parameters. Fuzzy search can be performed using the <code>name</code> parameter.</p>
      * <ul>
-     * <li><code>regId</code>: 地域标识，必填。</li>
-     * <li><code>pageSize</code>: 每页显示的条目数，必填。</li>
-     * <li><code>currentPage</code>: 当前页码，从1开始计数，必填。</li>
-     * <li><code>userId</code>: 用户ID，必填。</li>
+     * <li><code>regId</code>: Region identifier, required.</li>
+     * <li><code>pageSize</code>: Number of items per page, required.</li>
+     * <li><code>currentPage</code>: Current page number, starting from 1, required.</li>
+     * <li><code>userId</code>: User ID, required.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>获取指定用户下的所有模型信息，支持分页查询</p>
+     * <p>Get all model information for a specified user, supporting pagination</p>
      * 
      * @param request DescribeUserModelListRequest
      * @return DescribeUserModelListResponse
@@ -910,14 +1472,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API用于从系统中删除指定的客户模型。调用时必须提供<code>customerModuleId</code>参数，该参数标识了要删除的具体模型。</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
      * <ul>
-     * <li><strong>注意</strong>：删除操作不可逆，请谨慎使用。</li>
+     * <li><strong>Note</strong>: The deletion operation is irreversible, please use with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>迭代模型</p>
+     * <p>Iterate Model</p>
      * 
      * @param request DuplicateModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -949,14 +1511,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API用于从系统中删除指定的客户模型。调用时必须提供<code>customerModuleId</code>参数，该参数标识了要删除的具体模型。</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
      * <ul>
-     * <li><strong>注意</strong>：删除操作不可逆，请谨慎使用。</li>
+     * <li><strong>Note</strong>: The deletion operation is irreversible, please use with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>迭代模型</p>
+     * <p>Iterate Model</p>
      * 
      * @param request DuplicateModelRequest
      * @return DuplicateModelResponse
@@ -968,7 +1530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑模型</p>
+     * <p>Edit Model</p>
      * 
      * @param request EditModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1000,7 +1562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑模型</p>
+     * <p>Edit Model</p>
      * 
      * @param request EditModelRequest
      * @return EditModelResponse
@@ -1013,13 +1575,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>请求说明</h2>
-     * <p>本API用于从系统中删除指定的客户模型。调用时必须提供<code>customerModuleId</code>参数，该参数标识了要删除的具体模型。</p>
      * <ul>
-     * <li><strong>注意</strong>：删除操作不可逆，请谨慎使用。</li>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>迭代模型</p>
+     * <p>View Bastion Host Initial Password</p>
+     * 
+     * @param request GetBastionHostCertificationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBastionHostCertificationResponse
+     */
+    public GetBastionHostCertificationResponse getBastionHostCertificationWithOptions(GetBastionHostCertificationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBastionHostCertification"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBastionHostCertificationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>View Bastion Host Initial Password</p>
+     * 
+     * @param request GetBastionHostCertificationRequest
+     * @return GetBastionHostCertificationResponse
+     */
+    public GetBastionHostCertificationResponse getBastionHostCertification(GetBastionHostCertificationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getBastionHostCertificationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
+     * <ul>
+     * <li><strong>Note</strong>: The deletion operation is irreversible, please use with caution.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Iterate Model</p>
      * 
      * @param request IterateModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1051,14 +1675,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API用于从系统中删除指定的客户模型。调用时必须提供<code>customerModuleId</code>参数，该参数标识了要删除的具体模型。</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
      * <ul>
-     * <li><strong>注意</strong>：删除操作不可逆，请谨慎使用。</li>
+     * <li><strong>Note</strong>: The deletion operation is irreversible, please use with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>迭代模型</p>
+     * <p>Iterate Model</p>
      * 
      * @param request IterateModelRequest
      * @return IterateModelResponse
@@ -1070,7 +1694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线模型</p>
+     * <p>Offline Model</p>
      * 
      * @param request OfflineModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1102,7 +1726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线模型</p>
+     * <p>Offline Model</p>
      * 
      * @param request OfflineModelRequest
      * @return OfflineModelResponse
@@ -1114,14 +1738,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API用于从系统中删除指定的客户模型。调用时必须提供<code>customerModuleId</code>参数，该参数标识了要删除的具体模型。</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
      * <ul>
-     * <li><strong>注意</strong>：删除操作不可逆，请谨慎使用。</li>
+     * <li><strong>Note</strong>: Deletion is irreversible, please use with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>上线模型</p>
+     * <p>Online Model</p>
      * 
      * @param request OnlineModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1153,14 +1777,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API用于从系统中删除指定的客户模型。调用时必须提供<code>customerModuleId</code>参数，该参数标识了要删除的具体模型。</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
      * <ul>
-     * <li><strong>注意</strong>：删除操作不可逆，请谨慎使用。</li>
+     * <li><strong>Note</strong>: Deletion is irreversible, please use with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>上线模型</p>
+     * <p>Online Model</p>
      * 
      * @param request OnlineModelRequest
      * @return OnlineModelResponse
@@ -1172,15 +1796,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>解析表达式参数</p>
+     * <p>Parse Expression Parameters</p>
      * 
      * @param request ParseExpressionParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1212,15 +1836,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>解析表达式参数</p>
+     * <p>Parse Expression Parameters</p>
      * 
      * @param request ParseExpressionParametersRequest
      * @return ParseExpressionParametersResponse
@@ -1232,7 +1856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预发布模型</p>
+     * <p>Pre-release Model</p>
      * 
      * @param request PrepublishModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1264,7 +1888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预发布模型</p>
+     * <p>Pre-release Model</p>
      * 
      * @param request PrepublishModelRequest
      * @return PrepublishModelResponse
@@ -1272,6 +1896,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PrepublishModelResponse prepublishModel(PrepublishModelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.prepublishModelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Request to Sync Model Files</p>
+     * 
+     * @param request RequestModelFileSyncRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RequestModelFileSyncResponse
+     */
+    public RequestModelFileSyncResponse requestModelFileSyncWithOptions(RequestModelFileSyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RequestModelFileSync"),
+            new TeaPair("version", "2025-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RequestModelFileSyncResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Request to Sync Model Files</p>
+     * 
+     * @param request RequestModelFileSyncRequest
+     * @return RequestModelFileSyncResponse
+     */
+    public RequestModelFileSyncResponse requestModelFileSync(RequestModelFileSyncRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.requestModelFileSyncWithOptions(request, runtime);
     }
 
     /**
@@ -1334,15 +2020,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>预发布测试模型</p>
+     * <p>Pre-release Model Testing</p>
      * 
      * @param request TestModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1374,15 +2060,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>预发布测试模型</p>
+     * <p>Pre-release Model Testing</p>
      * 
      * @param request TestModelRequest
      * @return TestModelResponse
@@ -1394,15 +2080,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>预发布测试模型</p>
+     * <p>Pre-release Test Model</p>
      * 
      * @param request TestPreModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1434,15 +2120,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>预发布测试模型</p>
+     * <p>Pre-release Test Model</p>
      * 
      * @param request TestPreModelRequest
      * @return TestPreModelResponse
@@ -1454,15 +2140,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>测试表达式</p>
+     * <p>Test Expression</p>
      * 
      * @param request TestProcessExpressionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1498,15 +2184,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>测试表达式</p>
+     * <p>Test Expression</p>
      * 
      * @param request TestProcessExpressionRequest
      * @return TestProcessExpressionResponse

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DuplicateModelRequest extends TeaModel {
     /**
+     * <p>Customer model ID</p>
+     * 
      * <strong>example:</strong>
      * <p>456</p>
      */

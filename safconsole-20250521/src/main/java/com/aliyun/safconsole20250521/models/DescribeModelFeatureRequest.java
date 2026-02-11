@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeModelFeatureRequest extends TeaModel {
     /**
+     * <p>Customer model ID</p>
+     * 
      * <strong>example:</strong>
      * <p>456</p>
      */
@@ -12,6 +14,8 @@ public class DescribeModelFeatureRequest extends TeaModel {
     public Integer customerModuleId;
 
     /**
+     * <p>Feature template.</p>
+     * 
      * <strong>example:</strong>
      * <p>FINANCE_51</p>
      */

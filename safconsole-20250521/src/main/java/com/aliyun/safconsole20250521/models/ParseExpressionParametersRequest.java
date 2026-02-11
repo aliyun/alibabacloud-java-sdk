@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ParseExpressionParametersRequest extends TeaModel {
     /**
+     * <p>Expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>score</p>
      */

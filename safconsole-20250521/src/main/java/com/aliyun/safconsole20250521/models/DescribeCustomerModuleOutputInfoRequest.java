@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomerModuleOutputInfoRequest extends TeaModel {
     /**
+     * <p>Authorization type.</p>
+     * 
      * <strong>example:</strong>
      * <p>READ</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCustomerModuleOutputInfoRequest extends TeaModel {
     public String authType;
 
     /**
+     * <p>Customer model ID</p>
+     * 
      * <strong>example:</strong>
      * <p>456</p>
      */

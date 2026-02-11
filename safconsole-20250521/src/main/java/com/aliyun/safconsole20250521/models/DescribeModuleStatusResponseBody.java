@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeModuleStatusResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeModuleStatusResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeModuleStatusResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
      */
@@ -26,6 +32,8 @@ public class DescribeModuleStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class DescribeModuleStatusResponseBody extends TeaModel {
     public String resultObject;
 
     /**
+     * <p>Whether the operation was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

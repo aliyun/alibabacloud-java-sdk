@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PrepublishModelResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class PrepublishModelResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class PrepublishModelResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
      */
@@ -26,6 +32,8 @@ public class PrepublishModelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Return result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,12 @@ public class PrepublishModelResponseBody extends TeaModel {
     public Boolean resultObject;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Call succeeded.</li>
+     * <li><strong>false</strong>: Call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeModelOssTokenResponseBody extends TeaModel {
     /**
+     * <p>AccessKeyId for uploading files to OSS.</p>
+     * 
      * <strong>example:</strong>
      * <p>Lxxxxxxxxxxxxxxxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
     public String accessId;
 
     /**
+     * <p>Status code. A return value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>OSS domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://safxxxxxxxxx.aliyuncs.com">https://safxxxxxxxxx.aliyuncs.com</a></p>
      */
@@ -26,6 +32,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
     public String host;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Key required for file upload.</p>
+     * 
      * <strong>example:</strong>
      * <p>saf/xxxxxx/xxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
     public String key;
 
     /**
+     * <p>Authorization policy for security group control rules.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJleHBpcmF0aW9uIjoiMxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
      */
@@ -47,16 +59,23 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
     public String policy;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result.</p>
+     */
     @NameInMap("ResultObject")
     public DescribeModelOssTokenResponseBodyResultObject resultObject;
 
     /**
+     * <p>OSS signature.</p>
+     * 
      * <strong>example:</strong>
      * <p>lUxxxxxxxxxxxxxxxxxxxx</p>
      */
@@ -64,6 +83,12 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
     public String signature;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -71,6 +96,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Temporary authorization token for OSS.</p>
+     * 
      * <strong>example:</strong>
      * <p>smxxxxxxxxxxx</p>
      */
@@ -172,6 +199,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
 
     public static class DescribeModelOssTokenResponseBodyResultObject extends TeaModel {
         /**
+         * <p>AccessKeyId for uploading files to OSS.</p>
+         * 
          * <strong>example:</strong>
          * <p>Lxxxxxxxxxxxxxxxxxxxxx</p>
          */
@@ -179,6 +208,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         public String accessId;
 
         /**
+         * <p>OSS domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://safxxxxxxxxx.aliyuncs.com">https://safxxxxxxxxx.aliyuncs.com</a></p>
          */
@@ -186,6 +217,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>Key required for file upload.</p>
+         * 
          * <strong>example:</strong>
          * <p>saf/xxxxxx/xxxxxx</p>
          */
@@ -193,6 +226,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Authorization policy for security group control rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJleHBpcmF0aW9uIjoiMxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
          */
@@ -200,6 +235,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         public String policy;
 
         /**
+         * <p>OSS signature.</p>
+         * 
          * <strong>example:</strong>
          * <p>lUxxxxxxxxxxxxxxxxxxxx</p>
          */
@@ -207,6 +244,8 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         public String signature;
 
         /**
+         * <p>Temporary authorization token for OSS.</p>
+         * 
          * <strong>example:</strong>
          * <p>smxxxxxxxxxxx</p>
          */

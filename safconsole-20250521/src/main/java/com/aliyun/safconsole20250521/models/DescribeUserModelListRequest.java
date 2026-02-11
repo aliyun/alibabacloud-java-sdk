@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUserModelListRequest extends TeaModel {
     /**
+     * <p>Authorization type.</p>
+     * 
      * <strong>example:</strong>
      * <p>READ</p>
      */
@@ -12,6 +14,8 @@ public class DescribeUserModelListRequest extends TeaModel {
     public String authType;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeUserModelListRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>Model name.</p>
+     * 
      * <strong>example:</strong>
      * <p>StudyX</p>
      */
@@ -26,6 +32,8 @@ public class DescribeUserModelListRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Pagination parameter: number of items per page, default value 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

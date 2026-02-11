@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFeatureOptionResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeFeatureOptionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,27 @@ public class DescribeFeatureOptionResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result.</p>
+     */
     @NameInMap("ResultObject")
     public java.util.List<DescribeFeatureOptionResponseBodyResultObject> resultObject;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Call succeeded.</li>
+     * <li><strong>false</strong>: Call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class DescribeFeatureOptionResponseBody extends TeaModel {
 
     public static class DescribeFeatureOptionResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Feature name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

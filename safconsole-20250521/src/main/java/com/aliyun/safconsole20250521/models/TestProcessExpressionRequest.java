@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TestProcessExpressionRequest extends TeaModel {
     /**
+     * <p>Expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>score</p>
      */
@@ -12,6 +14,8 @@ public class TestProcessExpressionRequest extends TeaModel {
     public String expression;
 
     /**
+     * <p>Parameter list.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;score&quot;: &quot;1&quot;}</p>
      */

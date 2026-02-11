@@ -14,6 +14,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +23,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -28,6 +32,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Pagination parameter: number of items per page, default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,16 +41,27 @@ public class DescribeUserModelListResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("ResultObject")
     public java.util.List<DescribeUserModelListResponseBodyResultObject> resultObject;
 
     /**
+     * <p>Indicates whether the request was successful, with values as follows:</p>
+     * <ul>
+     * <li>true, request succeeded</li>
+     * <li>false, request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +69,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -59,6 +78,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
     public Long totalItem;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -144,6 +165,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
 
     public static class DescribeUserModelListResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Authorization type.</p>
+         * 
          * <strong>example:</strong>
          * <p>READ</p>
          */
@@ -151,16 +174,26 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         public String authType;
 
         /**
+         * <p>Model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Model_A</p>
          */
         @NameInMap("CustomerModuleName")
         public String customerModuleName;
 
+        /**
+         * <p>Remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备注。</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Associated features.</p>
+         * 
          * <strong>example:</strong>
          * <p>template_a</p>
          */
@@ -168,6 +201,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         public String featureTemplate;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1673578656000</p>
          */
@@ -175,6 +210,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>Primary key ID of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -182,6 +219,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Publication status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
          */
@@ -189,6 +228,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         public String innerDefineStatus;
 
         /**
+         * <p>Model identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>inner_model_a</p>
          */
@@ -196,6 +237,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         public String innerModuleName;
 
         /**
+         * <p>Whether iteration is allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -203,6 +246,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         public Boolean isAllowIterate;
 
         /**
+         * <p>Whether rollback is allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -210,6 +255,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         public Boolean isAllowRollback;
 
         /**
+         * <p>Iteration version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -217,6 +264,8 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         public Long iterationVersion;
 
         /**
+         * <p>Root model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

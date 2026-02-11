@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeModelFeatureResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,27 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("ResultObject")
     public java.util.List<DescribeModelFeatureResponseBodyResultObject> resultObject;
 
     /**
+     * <p>Whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Call succeeded.</li>
+     * <li><strong>false</strong>: Call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
 
     public static class DescribeModelFeatureResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Default value of the feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -89,6 +106,8 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>Feature mapping name.</p>
+         * 
          * <strong>example:</strong>
          * <p>f1</p>
          */
@@ -96,6 +115,8 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
         public String featureName;
 
         /**
+         * <p>Feature type.</p>
+         * 
          * <strong>example:</strong>
          * <p>double</p>
          */
@@ -103,6 +124,8 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
         public String featureType;
 
         /**
+         * <p>Feature name.</p>
+         * 
          * <strong>example:</strong>
          * <p>f1</p>
          */

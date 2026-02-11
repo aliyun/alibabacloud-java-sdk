@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,16 +32,27 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>055f1546-f465-4c92-a2da-bfb86abe6f56</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result.</p>
+     */
     @NameInMap("ResultObject")
     public DescribeCustomerModuleOutputInfoResponseBodyResultObject resultObject;
 
     /**
+     * <p>Indicates whether the request was successful, with possible values as follows:</p>
+     * <ul>
+     * <li>true, indicating the request was successful</li>
+     * <li>false, indicating the request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
 
     public static class DescribeCustomerModuleOutputInfoResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Number of decimal places for the output.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -104,6 +123,8 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
         public String finalScoreFormat;
 
         /**
+         * <p>Score processing logic.</p>
+         * 
          * <strong>example:</strong>
          * <p>score</p>
          */
@@ -111,6 +132,8 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
         public String processExpression;
 
         /**
+         * <p>Test file.</p>
+         * 
          * <strong>example:</strong>
          * <p>customer/xxxxxxxxx/xxxxxxxx.pmml</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFeatureTemplateListResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeFeatureTemplateListResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class DescribeFeatureTemplateListResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result.</p>
+     */
     @NameInMap("ResultObject")
     public java.util.List<DescribeFeatureTemplateListResponseBodyResultObject> resultObject;
 
     /**
+     * <p>Success flag</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,10 +92,18 @@ public class DescribeFeatureTemplateListResponseBody extends TeaModel {
     }
 
     public static class DescribeFeatureTemplateListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Parameter label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51维特征</p>
+         */
         @NameInMap("Label")
         public String label;
 
         /**
+         * <p>Label value.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINANCE_51</p>
          */
