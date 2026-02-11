@@ -212,6 +212,7 @@ public class AgentRuntime extends TeaModel {
     public ProtocolConfiguration protocolConfiguration;
 
     @NameInMap("resourceGroupId")
+    @Deprecated
     public String resourceGroupId;
 
     /**
@@ -249,6 +250,15 @@ public class AgentRuntime extends TeaModel {
      */
     @NameInMap("statusReason")
     public String statusReason;
+
+    /**
+     * <p>智能体运行时所属的工作空间标识符，用于资源隔离和权限管理</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ws-1234567890abcdef</p>
+     */
+    @NameInMap("workspaceId")
+    public String workspaceId;
 
     public static AgentRuntime build(java.util.Map<String, ?> map) throws Exception {
         AgentRuntime self = new AgentRuntime();
@@ -439,6 +449,7 @@ public class AgentRuntime extends TeaModel {
         return this.protocolConfiguration;
     }
 
+    @Deprecated
     public AgentRuntime setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -477,6 +488,14 @@ public class AgentRuntime extends TeaModel {
     }
     public String getStatusReason() {
         return this.statusReason;
+    }
+
+    public AgentRuntime setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

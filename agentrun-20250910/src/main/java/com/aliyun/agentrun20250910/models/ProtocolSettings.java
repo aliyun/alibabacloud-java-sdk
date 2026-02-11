@@ -8,7 +8,14 @@ public class ProtocolSettings extends TeaModel {
      * <p>A2A Agent Card</p>
      */
     @NameInMap("A2AAgentCard")
+    @Deprecated
     public String a2AAgentCard;
+
+    @NameInMap("a2aAgentCard")
+    public String a2aAgentCard;
+
+    @NameInMap("a2aAgentCardUrl")
+    public String a2aAgentCardUrl;
 
     /**
      * <p>请求头</p>
@@ -69,12 +76,29 @@ public class ProtocolSettings extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public ProtocolSettings setA2AAgentCard(String a2AAgentCard) {
         this.a2AAgentCard = a2AAgentCard;
         return this;
     }
     public String getA2AAgentCard() {
         return this.a2AAgentCard;
+    }
+
+    public ProtocolSettings setA2aAgentCard(String a2aAgentCard) {
+        this.a2aAgentCard = a2aAgentCard;
+        return this;
+    }
+    public String getA2aAgentCard() {
+        return this.a2aAgentCard;
+    }
+
+    public ProtocolSettings setA2aAgentCardUrl(String a2aAgentCardUrl) {
+        this.a2aAgentCardUrl = a2aAgentCardUrl;
+        return this;
+    }
+    public String getA2aAgentCardUrl() {
+        return this.a2aAgentCardUrl;
     }
 
     public ProtocolSettings setHeaders(String headers) {

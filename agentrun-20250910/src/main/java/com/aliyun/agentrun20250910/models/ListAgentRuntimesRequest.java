@@ -20,6 +20,7 @@ public class ListAgentRuntimesRequest extends TeaModel {
      * <p>rg-123456</p>
      */
     @NameInMap("discoveryResourceGroupId")
+    @Deprecated
     public String discoveryResourceGroupId;
 
     /**
@@ -41,6 +42,7 @@ public class ListAgentRuntimesRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("resourceGroupId")
+    @Deprecated
     public String resourceGroupId;
 
     /**
@@ -61,6 +63,15 @@ public class ListAgentRuntimesRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>根据工作空间ID进行过滤，用于资源隔离和权限管理</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ws-1234567890abcdef</p>
+     */
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static ListAgentRuntimesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentRuntimesRequest self = new ListAgentRuntimesRequest();
         return TeaModel.build(map, self);
@@ -74,6 +85,7 @@ public class ListAgentRuntimesRequest extends TeaModel {
         return this.agentRuntimeName;
     }
 
+    @Deprecated
     public ListAgentRuntimesRequest setDiscoveryResourceGroupId(String discoveryResourceGroupId) {
         this.discoveryResourceGroupId = discoveryResourceGroupId;
         return this;
@@ -98,6 +110,7 @@ public class ListAgentRuntimesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    @Deprecated
     public ListAgentRuntimesRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -120,6 +133,14 @@ public class ListAgentRuntimesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListAgentRuntimesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

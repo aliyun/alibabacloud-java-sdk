@@ -174,6 +174,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @NameInMap("sessionIdleTimeoutSeconds")
     public Integer sessionIdleTimeoutSeconds;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static UpdateAgentRuntimeInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateAgentRuntimeInput self = new UpdateAgentRuntimeInput();
         return TeaModel.build(map, self);
@@ -337,6 +340,14 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
     public Integer getSessionIdleTimeoutSeconds() {
         return this.sessionIdleTimeoutSeconds;
+    }
+
+    public UpdateAgentRuntimeInput setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

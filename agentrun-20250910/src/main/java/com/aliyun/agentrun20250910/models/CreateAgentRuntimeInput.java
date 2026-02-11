@@ -183,6 +183,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
     public ProtocolConfiguration protocolConfiguration;
 
     @NameInMap("resourceGroupId")
+    @Deprecated
     public String resourceGroupId;
 
     /**
@@ -202,6 +203,15 @@ public class CreateAgentRuntimeInput extends TeaModel {
      */
     @NameInMap("sessionIdleTimeoutSeconds")
     public Integer sessionIdleTimeoutSeconds;
+
+    /**
+     * <p>智能体运行时所属的工作空间标识符，用于资源隔离和权限管理</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ws-1234567890abcdef</p>
+     */
+    @NameInMap("workspaceId")
+    public String workspaceId;
 
     public static CreateAgentRuntimeInput build(java.util.Map<String, ?> map) throws Exception {
         CreateAgentRuntimeInput self = new CreateAgentRuntimeInput();
@@ -361,6 +371,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         return this.protocolConfiguration;
     }
 
+    @Deprecated
     public CreateAgentRuntimeInput setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -383,6 +394,14 @@ public class CreateAgentRuntimeInput extends TeaModel {
     }
     public Integer getSessionIdleTimeoutSeconds() {
         return this.sessionIdleTimeoutSeconds;
+    }
+
+    public CreateAgentRuntimeInput setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
