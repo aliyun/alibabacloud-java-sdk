@@ -282,6 +282,91 @@ public class ListImageResponseBody extends TeaModel {
 
     }
 
+    public static class ListImageResponseBodyDataSnapshotList extends TeaModel {
+        @NameInMap("BindType")
+        public String bindType;
+
+        @NameInMap("DiskCategory")
+        public String diskCategory;
+
+        @NameInMap("DiskSubType")
+        public String diskSubType;
+
+        @NameInMap("DiskType")
+        public String diskType;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        @NameInMap("SnapshotId")
+        public String snapshotId;
+
+        @NameInMap("VersionId")
+        public String versionId;
+
+        public static ListImageResponseBodyDataSnapshotList build(java.util.Map<String, ?> map) throws Exception {
+            ListImageResponseBodyDataSnapshotList self = new ListImageResponseBodyDataSnapshotList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListImageResponseBodyDataSnapshotList setBindType(String bindType) {
+            this.bindType = bindType;
+            return this;
+        }
+        public String getBindType() {
+            return this.bindType;
+        }
+
+        public ListImageResponseBodyDataSnapshotList setDiskCategory(String diskCategory) {
+            this.diskCategory = diskCategory;
+            return this;
+        }
+        public String getDiskCategory() {
+            return this.diskCategory;
+        }
+
+        public ListImageResponseBodyDataSnapshotList setDiskSubType(String diskSubType) {
+            this.diskSubType = diskSubType;
+            return this;
+        }
+        public String getDiskSubType() {
+            return this.diskSubType;
+        }
+
+        public ListImageResponseBodyDataSnapshotList setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        public ListImageResponseBodyDataSnapshotList setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public ListImageResponseBodyDataSnapshotList setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
+        public ListImageResponseBodyDataSnapshotList setVersionId(String versionId) {
+            this.versionId = versionId;
+            return this;
+        }
+        public String getVersionId() {
+            return this.versionId;
+        }
+
+    }
+
     public static class ListImageResponseBodyDataTagList extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -661,6 +746,9 @@ public class ListImageResponseBody extends TeaModel {
          */
         @NameInMap("SessionType")
         public String sessionType;
+
+        @NameInMap("SnapshotList")
+        public java.util.List<ListImageResponseBodyDataSnapshotList> snapshotList;
 
         /**
          * <p>The state of the image.</p>
@@ -1043,6 +1131,14 @@ public class ListImageResponseBody extends TeaModel {
         }
         public String getSessionType() {
             return this.sessionType;
+        }
+
+        public ListImageResponseBodyData setSnapshotList(java.util.List<ListImageResponseBodyDataSnapshotList> snapshotList) {
+            this.snapshotList = snapshotList;
+            return this;
+        }
+        public java.util.List<ListImageResponseBodyDataSnapshotList> getSnapshotList() {
+            return this.snapshotList;
         }
 
         public ListImageResponseBodyData setStatus(String status) {

@@ -88,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>授权用户</p>
+     * <p>Adds assigned users to or removes assigned users from a delivery group. Only users added to the assigned user list can access App Streaming.</p>
      * 
      * @param tmpReq AuthorizeInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -163,7 +163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>授权用户</p>
+     * <p>Adds assigned users to or removes assigned users from a delivery group. Only users added to the assigned user list can access App Streaming.</p>
      * 
      * @param request AuthorizeInstanceGroupRequest
      * @return AuthorizeInstanceGroupResponse
@@ -2190,6 +2190,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BizRegionId", request.bizRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             body.put("ChargeType", request.chargeType);
         }
@@ -2210,12 +2214,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serverInstanceType)) {
             body.put("ServerInstanceType", request.serverInstanceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.users)) {
+            bodyFlat.put("Users", request.users);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.virtualNodePoolId)) {
@@ -2774,6 +2786,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Password", request.password);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.wuyingServerId)) {
             body.put("WuyingServerId", request.wuyingServerId);
         }
@@ -3026,6 +3042,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartWuyingServerResponse restartWuyingServerWithOptions(RestartWuyingServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.wuyingServerIdList)) {
             bodyFlat.put("WuyingServerIdList", request.wuyingServerIdList);
@@ -3139,6 +3159,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartWuyingServerResponse startWuyingServerWithOptions(StartWuyingServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.wuyingServerIdList)) {
             bodyFlat.put("WuyingServerIdList", request.wuyingServerIdList);
@@ -3192,6 +3216,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Force", request.force);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.wuyingServerIdList)) {
             bodyFlat.put("WuyingServerIdList", request.wuyingServerIdList);
@@ -3232,7 +3260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为云资源创建并绑定标签</p>
+     * <p>Creates and adds tags to cloud resources and updates the values of existing cloud resource tags.</p>
      * 
      * @param request TagCloudResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3272,7 +3300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为云资源创建并绑定标签</p>
+     * <p>Creates and adds tags to cloud resources and updates the values of existing cloud resource tags.</p>
      * 
      * @param request TagCloudResourcesRequest
      * @return TagCloudResourcesResponse

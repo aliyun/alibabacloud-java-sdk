@@ -16,6 +16,9 @@ public class ListWuyingServerRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    @NameInMap("BizType")
+    public Integer bizType;
+
     /**
      * <p>The billing method of the Internet access package.</p>
      * 
@@ -61,6 +64,9 @@ public class ListWuyingServerRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProductType")
+    public String productType;
+
     /**
      * <p>Workstation specifications.</p>
      * 
@@ -78,6 +84,9 @@ public class ListWuyingServerRequest extends TeaModel {
      */
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("Users")
+    public java.util.List<String> users;
 
     @NameInMap("VirtualNodePoolId")
     public String virtualNodePoolId;
@@ -116,6 +125,14 @@ public class ListWuyingServerRequest extends TeaModel {
     }
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    public ListWuyingServerRequest setBizType(Integer bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public Integer getBizType() {
+        return this.bizType;
     }
 
     public ListWuyingServerRequest setChargeType(String chargeType) {
@@ -158,6 +175,14 @@ public class ListWuyingServerRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListWuyingServerRequest setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
+    }
+
     public ListWuyingServerRequest setServerInstanceType(String serverInstanceType) {
         this.serverInstanceType = serverInstanceType;
         return this;
@@ -172,6 +197,14 @@ public class ListWuyingServerRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListWuyingServerRequest setUsers(java.util.List<String> users) {
+        this.users = users;
+        return this;
+    }
+    public java.util.List<String> getUsers() {
+        return this.users;
     }
 
     public ListWuyingServerRequest setVirtualNodePoolId(String virtualNodePoolId) {

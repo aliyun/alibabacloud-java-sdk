@@ -18,6 +18,9 @@ public class StopWuyingServerRequest extends TeaModel {
     @NameInMap("Force")
     public Boolean force;
 
+    @NameInMap("ProductType")
+    public String productType;
+
     /**
      * <p>The list of workstation IDs.</p>
      */
@@ -35,6 +38,14 @@ public class StopWuyingServerRequest extends TeaModel {
     }
     public Boolean getForce() {
         return this.force;
+    }
+
+    public StopWuyingServerRequest setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
     }
 
     public StopWuyingServerRequest setWuyingServerIdList(java.util.List<String> wuyingServerIdList) {

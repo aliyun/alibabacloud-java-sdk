@@ -13,6 +13,9 @@ public class ModifyWuyingServerAttributeRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("ProductType")
+    public String productType;
+
     /**
      * <p>The ID of the workstation.</p>
      * 
@@ -42,6 +45,14 @@ public class ModifyWuyingServerAttributeRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public ModifyWuyingServerAttributeRequest setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
     }
 
     public ModifyWuyingServerAttributeRequest setWuyingServerId(String wuyingServerId) {

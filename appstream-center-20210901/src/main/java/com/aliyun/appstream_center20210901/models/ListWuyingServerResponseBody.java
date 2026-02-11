@@ -101,6 +101,12 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
+        @NameInMap("DataDiskId")
+        public String dataDiskId;
+
+        @NameInMap("DataDiskNo")
+        public String dataDiskNo;
+
         /**
          * <p>The PL of the data disk.</p>
          * 
@@ -130,6 +136,22 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public String getDataDiskCategory() {
             return this.dataDiskCategory;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListDataDisk setDataDiskId(String dataDiskId) {
+            this.dataDiskId = dataDiskId;
+            return this;
+        }
+        public String getDataDiskId() {
+            return this.dataDiskId;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListDataDisk setDataDiskNo(String dataDiskNo) {
+            this.dataDiskNo = dataDiskNo;
+            return this;
+        }
+        public String getDataDiskNo() {
+            return this.dataDiskNo;
         }
 
         public ListWuyingServerResponseBodyWuyingServerListDataDisk setDataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
@@ -220,6 +242,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("GpuMemory")
         public Integer gpuMemory;
 
+        @NameInMap("GpuSpec")
+        public String gpuSpec;
+
         /**
          * <p>The memory size. Unit: MB.</p>
          * 
@@ -267,6 +292,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
             return this.gpuMemory;
         }
 
+        public ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo setGpuSpec(String gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public String getGpuSpec() {
+            return this.gpuSpec;
+        }
+
         public ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo setMemory(Integer memory) {
             this.memory = memory;
             return this;
@@ -285,9 +318,45 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     }
 
+    public static class ListWuyingServerResponseBodyWuyingServerListSessions extends TeaModel {
+        @NameInMap("ResourceSessionStartTime")
+        public String resourceSessionStartTime;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        public static ListWuyingServerResponseBodyWuyingServerListSessions build(java.util.Map<String, ?> map) throws Exception {
+            ListWuyingServerResponseBodyWuyingServerListSessions self = new ListWuyingServerResponseBodyWuyingServerListSessions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListSessions setResourceSessionStartTime(String resourceSessionStartTime) {
+            this.resourceSessionStartTime = resourceSessionStartTime;
+            return this;
+        }
+        public String getResourceSessionStartTime() {
+            return this.resourceSessionStartTime;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListSessions setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+    }
+
     public static class ListWuyingServerResponseBodyWuyingServerList extends TeaModel {
         @NameInMap("AddVirtualNodePoolStatus")
         public String addVirtualNodePoolStatus;
+
+        @NameInMap("AliUid")
+        public Long aliUid;
+
+        @NameInMap("Bandwidth")
+        public Integer bandwidth;
 
         /**
          * <p>Region.</p>
@@ -330,6 +399,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
+
+        @NameInMap("FotaVersion")
+        public String fotaVersion;
 
         /**
          * <p>The ID of the custom image.</p>
@@ -400,6 +472,12 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("OsType")
         public String osType;
 
+        @NameInMap("PolicyGroupIdList")
+        public java.util.List<String> policyGroupIdList;
+
+        @NameInMap("ResourceSessionStatus")
+        public String resourceSessionStatus;
+
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
@@ -408,6 +486,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         @NameInMap("ServerInstanceTypeInfo")
         public ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo serverInstanceTypeInfo;
+
+        @NameInMap("Sessions")
+        public java.util.List<ListWuyingServerResponseBodyWuyingServerListSessions> sessions;
 
         /**
          * <p>The status of the workstation.</p>
@@ -430,6 +511,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
+        @NameInMap("SystemDiskId")
+        public String systemDiskId;
+
         /**
          * <p>The performance level (PL) of the system disk.</p>
          * 
@@ -447,6 +531,12 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
+
+        @NameInMap("TimerGroupId")
+        public String timerGroupId;
+
+        @NameInMap("Users")
+        public java.util.List<String> users;
 
         @NameInMap("VirtualKubeletIp")
         public String virtualKubeletIp;
@@ -483,6 +573,22 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public String getAddVirtualNodePoolStatus() {
             return this.addVirtualNodePoolStatus;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setAliUid(Long aliUid) {
+            this.aliUid = aliUid;
+            return this;
+        }
+        public Long getAliUid() {
+            return this.aliUid;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setBandwidth(Integer bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Integer getBandwidth() {
+            return this.bandwidth;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setBizRegionId(String bizRegionId) {
@@ -523,6 +629,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setFotaVersion(String fotaVersion) {
+            this.fotaVersion = fotaVersion;
+            return this;
+        }
+        public String getFotaVersion() {
+            return this.fotaVersion;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setImageId(String imageId) {
@@ -597,6 +711,22 @@ public class ListWuyingServerResponseBody extends TeaModel {
             return this.osType;
         }
 
+        public ListWuyingServerResponseBodyWuyingServerList setPolicyGroupIdList(java.util.List<String> policyGroupIdList) {
+            this.policyGroupIdList = policyGroupIdList;
+            return this;
+        }
+        public java.util.List<String> getPolicyGroupIdList() {
+            return this.policyGroupIdList;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setResourceSessionStatus(String resourceSessionStatus) {
+            this.resourceSessionStatus = resourceSessionStatus;
+            return this;
+        }
+        public String getResourceSessionStatus() {
+            return this.resourceSessionStatus;
+        }
+
         public ListWuyingServerResponseBodyWuyingServerList setSecurityGroupIds(java.util.List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
@@ -611,6 +741,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo getServerInstanceTypeInfo() {
             return this.serverInstanceTypeInfo;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setSessions(java.util.List<ListWuyingServerResponseBodyWuyingServerListSessions> sessions) {
+            this.sessions = sessions;
+            return this;
+        }
+        public java.util.List<ListWuyingServerResponseBodyWuyingServerListSessions> getSessions() {
+            return this.sessions;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setStatus(String status) {
@@ -637,6 +775,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
             return this.systemDiskCategory;
         }
 
+        public ListWuyingServerResponseBodyWuyingServerList setSystemDiskId(String systemDiskId) {
+            this.systemDiskId = systemDiskId;
+            return this;
+        }
+        public String getSystemDiskId() {
+            return this.systemDiskId;
+        }
+
         public ListWuyingServerResponseBodyWuyingServerList setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
             this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
             return this;
@@ -651,6 +797,22 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public Integer getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setTimerGroupId(String timerGroupId) {
+            this.timerGroupId = timerGroupId;
+            return this;
+        }
+        public String getTimerGroupId() {
+            return this.timerGroupId;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setUsers(java.util.List<String> users) {
+            this.users = users;
+            return this;
+        }
+        public java.util.List<String> getUsers() {
+            return this.users;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setVirtualKubeletIp(String virtualKubeletIp) {
