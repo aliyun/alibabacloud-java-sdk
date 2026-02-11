@@ -322,6 +322,13 @@ public class DescribeAlertsResponseBody extends TeaModel {
         public String alertSrcProdModule;
 
         /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AlertStatus")
+        public String alertStatus;
+
+        /**
          * <p>The title of the alert.</p>
          * 
          * <strong>example:</strong>
@@ -647,6 +654,14 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
         public String getAlertSrcProdModule() {
             return this.alertSrcProdModule;
+        }
+
+        public DescribeAlertsResponseBodyDataResponseData setAlertStatus(String alertStatus) {
+            this.alertStatus = alertStatus;
+            return this;
+        }
+        public String getAlertStatus() {
+            return this.alertStatus;
         }
 
         public DescribeAlertsResponseBodyDataResponseData setAlertTitle(String alertTitle) {

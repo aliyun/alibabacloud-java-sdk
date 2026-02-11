@@ -42,6 +42,20 @@ public class GetCapacityResponseBody extends TeaModel {
 
     public static class GetCapacityResponseBodyData extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AgentManagedAssetQuota")
+        public Long agentManagedAssetQuota;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AgentManagedAssetUsed")
+        public Long agentManagedAssetUsed;
+
+        /**
          * <p>Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:</p>
          * <ul>
          * <li>true: The logs are in the normal state. The log analysis feature is available.</li>
@@ -75,6 +89,22 @@ public class GetCapacityResponseBody extends TeaModel {
         public static GetCapacityResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetCapacityResponseBodyData self = new GetCapacityResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetCapacityResponseBodyData setAgentManagedAssetQuota(Long agentManagedAssetQuota) {
+            this.agentManagedAssetQuota = agentManagedAssetQuota;
+            return this;
+        }
+        public Long getAgentManagedAssetQuota() {
+            return this.agentManagedAssetQuota;
+        }
+
+        public GetCapacityResponseBodyData setAgentManagedAssetUsed(Long agentManagedAssetUsed) {
+            this.agentManagedAssetUsed = agentManagedAssetUsed;
+            return this;
+        }
+        public Long getAgentManagedAssetUsed() {
+            return this.agentManagedAssetUsed;
         }
 
         public GetCapacityResponseBodyData setExistLogStore(Boolean existLogStore) {

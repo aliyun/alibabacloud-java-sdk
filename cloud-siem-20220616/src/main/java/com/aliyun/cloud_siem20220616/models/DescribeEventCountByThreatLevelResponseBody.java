@@ -98,7 +98,51 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum extends TeaModel {
+        @NameInMap("Date")
+        public String date;
+
+        @NameInMap("EventNum")
+        public Long eventNum;
+
+        @NameInMap("UndealEventNum")
+        public Long undealEventNum;
+
+        public static DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum self = new DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum setDate(String date) {
+            this.date = date;
+            return this;
+        }
+        public String getDate() {
+            return this.date;
+        }
+
+        public DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum setEventNum(Long eventNum) {
+            this.eventNum = eventNum;
+            return this;
+        }
+        public Long getEventNum() {
+            return this.eventNum;
+        }
+
+        public DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum setUndealEventNum(Long undealEventNum) {
+            this.undealEventNum = undealEventNum;
+            return this;
+        }
+        public Long getUndealEventNum() {
+            return this.undealEventNum;
+        }
+
+    }
+
     public static class DescribeEventCountByThreatLevelResponseBodyData extends TeaModel {
+        @NameInMap("EventDailyNum")
+        public java.util.List<DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum> eventDailyNum;
+
         /**
          * <p>The total number of events.</p>
          * 
@@ -153,6 +197,14 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         public static DescribeEventCountByThreatLevelResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventCountByThreatLevelResponseBodyData self = new DescribeEventCountByThreatLevelResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEventCountByThreatLevelResponseBodyData setEventDailyNum(java.util.List<DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum> eventDailyNum) {
+            this.eventDailyNum = eventDailyNum;
+            return this;
+        }
+        public java.util.List<DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum> getEventDailyNum() {
+            return this.eventDailyNum;
         }
 
         public DescribeEventCountByThreatLevelResponseBodyData setEventNum(Long eventNum) {

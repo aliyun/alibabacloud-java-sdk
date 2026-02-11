@@ -1057,6 +1057,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AlertName", request.alertName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.alertStatus)) {
+            body.put("AlertStatus", request.alertStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.alertTitle)) {
             body.put("AlertTitle", request.alertTitle);
         }
@@ -1576,66 +1580,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAutomateResponseConfigFeatureResponse describeAutomateResponseConfigFeature(DescribeAutomateResponseConfigFeatureRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAutomateResponseConfigFeatureWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries user-defined playbooks.</p>
-     * 
-     * @param request DescribeAutomateResponseConfigPlayBooksRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeAutomateResponseConfigPlayBooksResponse
-     */
-    public DescribeAutomateResponseConfigPlayBooksResponse describeAutomateResponseConfigPlayBooksWithOptions(DescribeAutomateResponseConfigPlayBooksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.autoResponseType)) {
-            body.put("AutoResponseType", request.autoResponseType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
-            body.put("EntityType", request.entityType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            body.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
-            body.put("RoleFor", request.roleFor);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.roleType)) {
-            body.put("RoleType", request.roleType);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeAutomateResponseConfigPlayBooks"),
-            new TeaPair("version", "2022-06-16"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAutomateResponseConfigPlayBooksResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries user-defined playbooks.</p>
-     * 
-     * @param request DescribeAutomateResponseConfigPlayBooksRequest
-     * @return DescribeAutomateResponseConfigPlayBooksResponse
-     */
-    public DescribeAutomateResponseConfigPlayBooksResponse describeAutomateResponseConfigPlayBooks(DescribeAutomateResponseConfigPlayBooksRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeAutomateResponseConfigPlayBooksWithOptions(request, runtime);
     }
 
     /**
@@ -4277,6 +4221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("StartTime", request.startTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -4308,7 +4256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实体列表</p>
+     * <p>Queries entities.</p>
      * 
      * @param request ListEntitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4331,6 +4279,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.entityUuid)) {
             body.put("EntityUuid", request.entityUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityUuids)) {
+            body.put("EntityUuids", request.entityUuids);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.incidentUuid)) {
@@ -4384,7 +4336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实体列表</p>
+     * <p>Queries entities.</p>
      * 
      * @param request ListEntitiesRequest
      * @return ListEntitiesResponse
@@ -5109,12 +5061,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PostEventDisposeAndWhiteruleListResponse postEventDisposeAndWhiteruleListWithOptions(PostEventDisposeAndWhiteruleListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disposeStrategyIds)) {
+            body.put("DisposeStrategyIds", request.disposeStrategyIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.eventDispose)) {
             body.put("EventDispose", request.eventDispose);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.incidentUuid)) {
             body.put("IncidentUuid", request.incidentUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("Owner", request.owner);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.receiverInfo)) {
@@ -5127,6 +5087,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
             body.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseSource)) {
+            body.put("ResponseSource", request.responseSource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {

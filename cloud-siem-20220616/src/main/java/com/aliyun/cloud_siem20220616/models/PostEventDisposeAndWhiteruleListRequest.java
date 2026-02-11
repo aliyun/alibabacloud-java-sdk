@@ -4,6 +4,9 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
+    @NameInMap("DisposeStrategyIds")
+    public String disposeStrategyIds;
+
     /**
      * <p>The configuration of event handling. The value is a JSON object.</p>
      * 
@@ -47,6 +50,13 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     public String incidentUuid;
 
     /**
+     * <strong>example:</strong>
+     * <p>1234567890xxxxxx</p>
+     */
+    @NameInMap("Owner")
+    public String owner;
+
+    /**
      * <p>The configuration of the alert recipient. The value is a JSON object.</p>
      * 
      * <strong>example:</strong>
@@ -80,6 +90,9 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
      */
     @NameInMap("Remark")
     public String remark;
+
+    @NameInMap("ResponseSource")
+    public String responseSource;
 
     /**
      * <p>The ID of the account that you switch from the management account.</p>
@@ -126,6 +139,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PostEventDisposeAndWhiteruleListRequest setDisposeStrategyIds(String disposeStrategyIds) {
+        this.disposeStrategyIds = disposeStrategyIds;
+        return this;
+    }
+    public String getDisposeStrategyIds() {
+        return this.disposeStrategyIds;
+    }
+
     public PostEventDisposeAndWhiteruleListRequest setEventDispose(String eventDispose) {
         this.eventDispose = eventDispose;
         return this;
@@ -140,6 +161,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     }
     public String getIncidentUuid() {
         return this.incidentUuid;
+    }
+
+    public PostEventDisposeAndWhiteruleListRequest setOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    public String getOwner() {
+        return this.owner;
     }
 
     public PostEventDisposeAndWhiteruleListRequest setReceiverInfo(String receiverInfo) {
@@ -164,6 +193,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public PostEventDisposeAndWhiteruleListRequest setResponseSource(String responseSource) {
+        this.responseSource = responseSource;
+        return this;
+    }
+    public String getResponseSource() {
+        return this.responseSource;
     }
 
     public PostEventDisposeAndWhiteruleListRequest setRoleFor(Long roleFor) {

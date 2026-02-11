@@ -188,6 +188,9 @@ public class ListDisposeStrategyRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("Status")
+    public Integer status;
+
     public static ListDisposeStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDisposeStrategyRequest self = new ListDisposeStrategyRequest();
         return TeaModel.build(map, self);
@@ -327,6 +330,14 @@ public class ListDisposeStrategyRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public ListDisposeStrategyRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

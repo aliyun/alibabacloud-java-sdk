@@ -4,12 +4,11 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertsRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("AlertName")
     public String alertName;
+
+    @NameInMap("AlertStatus")
+    public java.util.List<String> alertStatus;
 
     /**
      * <p>The title of the alert.</p>
@@ -20,10 +19,6 @@ public class DescribeAlertsRequest extends TeaModel {
     @NameInMap("AlertTitle")
     public String alertTitle;
 
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("AlertType")
     public String alertType;
 
@@ -36,17 +31,9 @@ public class DescribeAlertsRequest extends TeaModel {
     @NameInMap("AlertUuid")
     public String alertUuid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("AssetId")
     public String assetId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("AssetName")
     public String assetName;
 
@@ -69,17 +56,9 @@ public class DescribeAlertsRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("EntityId")
     public String entityId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("EntityName")
     public String entityName;
 
@@ -200,6 +179,14 @@ public class DescribeAlertsRequest extends TeaModel {
     }
     public String getAlertName() {
         return this.alertName;
+    }
+
+    public DescribeAlertsRequest setAlertStatus(java.util.List<String> alertStatus) {
+        this.alertStatus = alertStatus;
+        return this;
+    }
+    public java.util.List<String> getAlertStatus() {
+        return this.alertStatus;
     }
 
     public DescribeAlertsRequest setAlertTitle(String alertTitle) {

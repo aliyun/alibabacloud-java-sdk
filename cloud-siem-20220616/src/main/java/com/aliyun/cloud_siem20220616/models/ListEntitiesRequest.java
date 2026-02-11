@@ -34,6 +34,9 @@ public class ListEntitiesRequest extends TeaModel {
     @NameInMap("EntityUuid")
     public String entityUuid;
 
+    @NameInMap("EntityUuids")
+    public String entityUuids;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -125,6 +128,14 @@ public class ListEntitiesRequest extends TeaModel {
     }
     public String getEntityUuid() {
         return this.entityUuid;
+    }
+
+    public ListEntitiesRequest setEntityUuids(String entityUuids) {
+        this.entityUuids = entityUuids;
+        return this;
+    }
+    public String getEntityUuids() {
+        return this.entityUuids;
     }
 
     public ListEntitiesRequest setIncidentUuid(String incidentUuid) {
