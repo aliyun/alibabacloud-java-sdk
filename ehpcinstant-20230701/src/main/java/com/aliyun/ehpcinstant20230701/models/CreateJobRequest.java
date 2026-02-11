@@ -864,6 +864,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("Image")
         public String image;
 
+        @NameInMap("ImageRegistryOptions")
+        public String imageRegistryOptions;
+
         /**
          * <p>The working directory of the container.</p>
          * 
@@ -916,6 +919,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getImage() {
             return this.image;
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainer setImageRegistryOptions(String imageRegistryOptions) {
+            this.imageRegistryOptions = imageRegistryOptions;
+            return this;
+        }
+        public String getImageRegistryOptions() {
+            return this.imageRegistryOptions;
         }
 
         public CreateJobRequestTasksTaskSpecTaskExecutorContainer setWorkingDir(String workingDir) {

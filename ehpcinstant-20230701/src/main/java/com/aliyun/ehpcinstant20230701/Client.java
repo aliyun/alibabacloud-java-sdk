@@ -674,7 +674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询作业输出</p>
+     * <p>Query job logs</p>
      * 
      * @param request DescribeJobResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -726,7 +726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询作业输出</p>
+     * <p>Query job logs</p>
      * 
      * @param request DescribeJobResultsRequest
      * @return DescribeJobResultsResponse

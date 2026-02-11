@@ -1,3 +1,7 @@
+2026-02-11 Version: 3.5.2
+- Update API CreateJob: add request parameters Tasks.$.TaskSpec.TaskExecutor.$.Container.ImageRegistryOptions.
+
+
 2026-01-29 Version: 3.5.1
 - Update API GetJob: add response parameters Body.JobInfo.SecurityPolicy.
 - Update API GetJob: add response parameters Body.JobInfo.Tasks.$.TaskSpec.VolumeMount.
