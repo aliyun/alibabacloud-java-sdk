@@ -41,40 +41,15 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
     }
 
     public static class OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList extends TeaModel {
-        /**
-         * <p>The ID of the consumer group that subscribes to the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GID_test</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The consumption mode. Valid values:</p>
-         * <ul>
-         * <li><strong>CLUSTERING</strong>: the clustering consumption mode</li>
-         * <li><strong>BROADCASTING</strong>: the broadcasting consumption mode</li>
-         * </ul>
-         * <p>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CLUSTERING</p>
-         */
         @NameInMap("MessageModel")
         public String messageModel;
 
         @NameInMap("Online")
         public String online;
 
-        /**
-         * <p>The expression based on which consumers in the consumer group subscribe to the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("SubString")
         public String subString;
 
@@ -137,9 +112,6 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
     }
 
     public static class OnsTopicSubDetailResponseBodyData extends TeaModel {
-        /**
-         * <p>The information about the online consumer groups that subscribe to the topic.</p>
-         */
         @NameInMap("SubscriptionDataList")
         public OnsTopicSubDetailResponseBodyDataSubscriptionDataList subscriptionDataList;
 

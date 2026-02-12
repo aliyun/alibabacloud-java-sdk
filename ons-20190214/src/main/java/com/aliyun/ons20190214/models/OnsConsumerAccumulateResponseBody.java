@@ -41,39 +41,15 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerAccumulateResponseBodyDataDetailInTopicListDetailInTopicDo extends TeaModel {
-        /**
-         * <p>The maximum latency of message consumption in the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10000</p>
-         */
         @NameInMap("DelayTime")
         public Long delayTime;
 
-        /**
-         * <p>The point in time when the latest consumed message in the topic was produced.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1566231000000</p>
-         */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
-        /**
-         * <p>The topic name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-mq-topic</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
-        /**
-         * <p>The number of accumulated messages in the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("TotalDiff")
         public Long totalDiff;
 
@@ -154,9 +130,6 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
         @NameInMap("DelayTime")
         public Long delayTime;
 
-        /**
-         * <p>The information about each topic to which the consumer group subscribes. If the <strong>Detail</strong> parameter in the request is set to <strong>false</strong>, the value of this parameter is empty.</p>
-         */
         @NameInMap("DetailInTopicList")
         public OnsConsumerAccumulateResponseBodyDataDetailInTopicList detailInTopicList;
 

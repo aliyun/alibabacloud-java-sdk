@@ -28,15 +28,6 @@ public class OnsTopicListRequest extends TeaModel {
     @NameInMap("Topic")
     public String topic;
 
-    /**
-     * <p>The user ID of the topic owner. Set this parameter to an Alibaba Cloud account ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>138015630679****</p>
-     */
-    @NameInMap("UserId")
-    public String userId;
-
     public static OnsTopicListRequest build(java.util.Map<String, ?> map) throws Exception {
         OnsTopicListRequest self = new OnsTopicListRequest();
         return TeaModel.build(map, self);
@@ -64,14 +55,6 @@ public class OnsTopicListRequest extends TeaModel {
     }
     public String getTopic() {
         return this.topic;
-    }
-
-    public OnsTopicListRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public static class OnsTopicListRequestTag extends TeaModel {

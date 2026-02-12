@@ -4,9 +4,6 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsMessageGetByKeyResponseBody extends TeaModel {
-    /**
-     * <p>The list of returned results.</p>
-     */
     @NameInMap("Data")
     public OnsMessageGetByKeyResponseBodyData data;
 
@@ -41,32 +38,9 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
     }
 
     public static class OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty extends TeaModel {
-        /**
-         * <p>The name of the attribute. Valid values:</p>
-         * <ul>
-         * <li><p><strong>TRACE_ON</strong>: indicates whether the message trace exists.</p>
-         * </li>
-         * <li><p><strong>KEYS</strong>: indicates the key of the message.</p>
-         * </li>
-         * <li><p><strong>TAGS</strong>: indicates the tag that is attached to the message.</p>
-         * </li>
-         * <li><p><strong>INSTANCE_ID</strong>: indicates the ID of the instance that contains the message.</p>
-         * </li>
-         * </ul>
-         * <p>For information about the terms that are used in ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TAGS</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The value of the attribute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TagA</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -113,99 +87,36 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
     }
 
     public static class OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo extends TeaModel {
-        /**
-         * <p>The cyclic redundancy check (CRC) value of the message body.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>914112295</p>
-         */
         @NameInMap("BodyCRC")
         public Integer bodyCRC;
 
-        /**
-         * <p>The producer client that generated the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>42.120.<em><strong>.</strong></em>:59270</p>
-         */
         @NameInMap("BornHost")
         public String bornHost;
 
-        /**
-         * <p>The timestamp that indicates when the message was produced.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570760999721</p>
-         */
         @NameInMap("BornTimestamp")
         public Long bornTimestamp;
 
-        /**
-         * <p>The ID of the instance</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MQ_INST_111111111111_DOxxxxxx</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1E0578FE110F18B4AAC235C05F2*****</p>
-         */
         @NameInMap("MsgId")
         public String msgId;
 
-        /**
-         * <p>The attributes of the message.</p>
-         */
         @NameInMap("PropertyList")
         public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList propertyList;
 
-        /**
-         * <p>The number of retries that were performed to send the message to consumers.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ReconsumeTimes")
         public Integer reconsumeTimes;
 
-        /**
-         * <p>The ApsaraMQ for RocketMQ broker that stores the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11.193.<em><strong>.</strong></em>:10911</p>
-         */
         @NameInMap("StoreHost")
         public String storeHost;
 
-        /**
-         * <p>The size of the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>406</p>
-         */
         @NameInMap("StoreSize")
         public Integer storeSize;
 
-        /**
-         * <p>The timestamp that indicates when the ApsaraMQ for RocketMQ broker stored the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570760999811</p>
-         */
         @NameInMap("StoreTimestamp")
         public Long storeTimestamp;
 
-        /**
-         * <p>The topic to which the message belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-mq_topic</p>
-         */
         @NameInMap("Topic")
         public String topic;
 

@@ -4,9 +4,6 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
-    /**
-     * <p>The returned messages.</p>
-     */
     @NameInMap("Data")
     public OnsDLQMessageResendByIdResponseBodyData data;
 

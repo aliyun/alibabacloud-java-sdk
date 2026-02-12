@@ -4,9 +4,6 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsGroupListResponseBody extends TeaModel {
-    /**
-     * <p>The returned list of subscriptions.</p>
-     */
     @NameInMap("Data")
     public OnsGroupListResponseBodyData data;
 
@@ -41,21 +38,9 @@ public class OnsGroupListResponseBody extends TeaModel {
     }
 
     public static class OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag extends TeaModel {
-        /**
-         * <p>The key of the tag that is attached to the consumer group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CartService</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag that is attached to the consumer group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ServiceA</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -102,89 +87,30 @@ public class OnsGroupListResponseBody extends TeaModel {
     }
 
     public static class OnsGroupListResponseBodyDataSubscribeInfoDo extends TeaModel {
-        /**
-         * <p>The point in time when the consumer group was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1568896605000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The ID of the consumer group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GID_test_group_id</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The protocol over which the queried consumer group publishes and subscribes to messages. All clients in a consumer group communicate with the ApsaraMQ for RocketMQ broker over the same protocol. You must create different consumer groups for TCP clients and HTTP clients. Valid values:</p>
-         * <ul>
-         * <li><strong>tcp</strong>: indicates that the consumer group publishes and subscribes to messages over TCP.</li>
-         * <li><strong>http</strong>: indicates that the consumer group publishes and subscribes to messages over HTTP.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>tcp</p>
-         */
         @NameInMap("GroupType")
         public String groupType;
 
-        /**
-         * <p>Indicates whether the instance uses a namespace. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</li>
-         * <li><strong>false</strong>: The instance does not use a separate namespace. The name of each resource must be globally unique within the instance and across all instances.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
-        /**
-         * <p>The ID of the instance</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MQ_INST_111111111111_DOxxxxxx</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The Alibaba Cloud account ID of the user who created the consumer group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>138015630679****</p>
-         */
         @NameInMap("Owner")
         public String owner;
 
-        /**
-         * <p>The description of the consumer group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The tags that are attached to the consumer group.</p>
-         */
         @NameInMap("Tags")
         public OnsGroupListResponseBodyDataSubscribeInfoDoTags tags;
 
-        /**
-         * <p>The most recent point in time when the consumer group was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570700979000</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

@@ -41,39 +41,15 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo extends TeaModel {
-        /**
-         * <p>The IP address and port number of the consumer client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30.5.121.**</p>
-         */
         @NameInMap("ClientAddr")
         public String clientAddr;
 
-        /**
-         * <p>The ID of the consumer client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30.5.121.**@24813#-1999745829#-1737591554#453111174894656</p>
-         */
         @NameInMap("ClientId")
         public String clientId;
 
-        /**
-         * <p>The programming language in which the consumer application was developed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>JAVA</p>
-         */
         @NameInMap("Language")
         public String language;
 
-        /**
-         * <p>The version of the consumer client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>V4_3_6</p>
-         */
         @NameInMap("Version")
         public String version;
 
@@ -136,9 +112,6 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerGetConnectionResponseBodyData extends TeaModel {
-        /**
-         * <p>The client connection information of the consumer group.</p>
-         */
         @NameInMap("ConnectionList")
         public OnsConsumerGetConnectionResponseBodyDataConnectionList connectionList;
 

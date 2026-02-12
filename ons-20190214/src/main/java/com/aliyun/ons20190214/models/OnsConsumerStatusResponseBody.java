@@ -41,48 +41,25 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerStatusResponseBodyDataConnectionSetConnectionDo extends TeaModel {
-        /**
-         * <p>The IP address and port number of the consumer instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30.5.121.**</p>
-         */
         @NameInMap("ClientAddr")
         public String clientAddr;
 
-        /**
-         * <p>The ID of the consumer instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30.5.121.**@25560#-1999745829#-1737591554#458773089270275</p>
-         */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
-         * <p>The programming language in which the consumer is developed.</p>
-         * 
          * <strong>example:</strong>
-         * <p>JAVA</p>
+         * <p>100</p>
          */
+        @NameInMap("Diff")
+        public Long diff;
+
         @NameInMap("Language")
         public String language;
 
-        /**
-         * <p>The private or public IP address of the host.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>42.120.74.**</p>
-         */
         @NameInMap("RemoteIP")
         public String remoteIP;
 
-        /**
-         * <p>The version of the consumer client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>V4_3_6_SNAPSHOT</p>
-         */
         @NameInMap("Version")
         public String version;
 
@@ -105,6 +82,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         }
         public String getClientId() {
             return this.clientId;
+        }
+
+        public OnsConsumerStatusResponseBodyDataConnectionSetConnectionDo setDiff(Long diff) {
+            this.diff = diff;
+            return this;
+        }
+        public Long getDiff() {
+            return this.diff;
         }
 
         public OnsConsumerStatusResponseBodyDataConnectionSetConnectionDo setLanguage(String language) {
@@ -172,18 +157,9 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoJstackThreadTrackDo extends TeaModel {
-        /**
-         * <p>The name of the thread.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ConsumeMessageThread_0</p>
-         */
         @NameInMap("Thread")
         public String thread;
 
-        /**
-         * <p>The details of thread stack traces.</p>
-         */
         @NameInMap("TrackList")
         public OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoJstackThreadTrackDoTrackList trackList;
 
@@ -230,48 +206,18 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoRunningDataListConsumerRunningDataDo extends TeaModel {
-        /**
-         * <p>The number of messages that failed to be consumed each hour.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("FailedCountPerHour")
         public Long failedCountPerHour;
 
-        /**
-         * <p>The TPS for failed message consumption.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("FailedTps")
         public Float failedTps;
 
-        /**
-         * <p>The TPS for successful message consumption.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("OkTps")
         public Float okTps;
 
-        /**
-         * <p>The consumption RT. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Rt")
         public Float rt;
 
-        /**
-         * <p>The name of the topic to which the consumer subscribes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-mq_topic</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
@@ -361,38 +307,15 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoSubscriptionSetSubscriptionData extends TeaModel {
-        /**
-         * <p>The expression that is used to specify the tags of messages in the subscribed topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("SubString")
         public String subString;
 
-        /**
-         * <p>The subscription version. The value is of the LONG type and is automatically incremented.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570701364301</p>
-         */
         @NameInMap("SubVersion")
         public Long subVersion;
 
-        /**
-         * <p>The information about the tags of the topic to which the consumer subscribes.</p>
-         */
         @NameInMap("TagsSet")
         public OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoSubscriptionSetSubscriptionDataTagsSet tagsSet;
 
-        /**
-         * <p>The name of the topic to which the consumer subscribes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-mq_topic</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
@@ -455,113 +378,39 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDo extends TeaModel {
-        /**
-         * <p>The ID of the consumer instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>30.5.**.**</code>@25560#-1999745829#-1737591554#458773089270275</p>
-         */
         @NameInMap("ClientId")
         public String clientId;
 
-        /**
-         * <p>The connection information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>**</p>
-         */
         @NameInMap("Connection")
         public String connection;
 
-        /**
-         * <p>The consumption mode. Valid values:</p>
-         * <ul>
-         * <li><strong>CLUSTERING</strong>: the clustering consumption mode</li>
-         * <li><strong>BROADCASTING</strong>: the broadcasting consumption mode</li>
-         * </ul>
-         * <p>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CLUSTERING</p>
-         */
         @NameInMap("ConsumeModel")
         public String consumeModel;
 
-        /**
-         * <p>The mode in which the consumer consumes messages. Valid values:</p>
-         * <ul>
-         * <li><strong>PUSH</strong>: The ApsaraMQ for RocketMQ broker pushes messages to the consumer.</li>
-         * <li><strong>PULL</strong>: The consumer pulls messages from the ApsaraMQ for RocketMQ broker.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PUSH</p>
-         */
         @NameInMap("ConsumeType")
         public String consumeType;
 
-        /**
-         * <p>The information about thread stack traces. If you want to obtain the information about thread stack traces, make sure that the <strong>NeedJstack</strong> parameter in the request is set to <strong>true</strong>. If the NeedJstack parameter is not set to true, the value of this parameter is empty.</p>
-         */
         @NameInMap("Jstack")
         public OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoJstack jstack;
 
-        /**
-         * <p>The programming language that the consumer supports.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>JAVA</p>
-         */
         @NameInMap("Language")
         public String language;
 
-        /**
-         * <p>The most recent point in time when a message was consumed.</p>
-         * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570701368114</p>
-         */
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
 
-        /**
-         * <p>The real-time statistics.</p>
-         */
         @NameInMap("RunningDataList")
         public OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoRunningDataList runningDataList;
 
-        /**
-         * <p>The earliest point in time when a message was consumed.</p>
-         * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570701361528</p>
-         */
         @NameInMap("StartTimeStamp")
         public Long startTimeStamp;
 
-        /**
-         * <p>The information about subscriptions.</p>
-         */
         @NameInMap("SubscriptionSet")
         public OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoSubscriptionSet subscriptionSet;
 
-        /**
-         * <p>The number of consumer threads.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("ThreadCount")
         public Integer threadCount;
 
-        /**
-         * <p>The version of the consumer client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>V4_3_6</p>
-         */
         @NameInMap("Version")
         public String version;
 
@@ -688,40 +537,15 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerStatusResponseBodyDataDetailInTopicListDetailInTopicDo extends TeaModel {
-        /**
-         * <p>The latency of message consumption in the topic. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DelayTime")
         public Long delayTime;
 
-        /**
-         * <p>The most recent point in time when a message was consumed.</p>
-         * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570701259403</p>
-         */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
-        /**
-         * <p>The topic name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-mq_topic</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
-        /**
-         * <p>The number of accumulated messages in the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("TotalDiff")
         public Long totalDiff;
 
@@ -784,9 +608,6 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerStatusResponseBodyData extends TeaModel {
-        /**
-         * <p>The information about online consumers in the consumer group.</p>
-         */
         @NameInMap("ConnectionSet")
         public OnsConsumerStatusResponseBodyDataConnectionSet connectionSet;
 
@@ -813,9 +634,6 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         @NameInMap("ConsumeTps")
         public Float consumeTps;
 
-        /**
-         * <p>The details of online consumers in the consumer group, including the information about the thread stack traces and the consumption response time (RT). If you want to obtain the details of online consumers in the consumer group, make sure that the <strong>Detail</strong> parameter in the request is set to <strong>true</strong>. If the Detail parameter is not set to true, the value of this parameter is empty.</p>
-         */
         @NameInMap("ConsumerConnectionInfoList")
         public OnsConsumerStatusResponseBodyDataConsumerConnectionInfoList consumerConnectionInfoList;
 
@@ -828,9 +646,6 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         @NameInMap("DelayTime")
         public Long delayTime;
 
-        /**
-         * <p>The information about message consumption by topic. If you want to obtain the information about the consumption status of each topic, make sure that the <strong>Detail</strong> parameter in the request is set to <strong>true</strong>. If the Detail parameter is not set to true, the value of this parameter is empty.</p>
-         */
         @NameInMap("DetailInTopicList")
         public OnsConsumerStatusResponseBodyDataDetailInTopicList detailInTopicList;
 

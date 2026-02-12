@@ -41,64 +41,21 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
     }
 
     public static class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo extends TeaModel {
-        /**
-         * <p>The address of the consumer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>30.5.**.**</code></p>
-         */
         @NameInMap("ClientHost")
         public String clientHost;
 
-        /**
-         * <p>The period of time that the system took to consume the message. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>43</p>
-         */
         @NameInMap("CostTime")
         public Integer costTime;
 
-        /**
-         * <p>The number of attempts that the ApsaraMQ for RocketMQ broker tried to send the message to the consumer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ReconsumeTimes")
         public Integer reconsumeTimes;
 
-        /**
-         * <p>Indicates whether the message is consumed. Valid values:</p>
-         * <ul>
-         * <li><strong>CONSUME_FAILED</strong>: The message failed to be consumed.</li>
-         * <li><strong>CONSUME_SUCCESS</strong>: The message is consumed.</li>
-         * <li><strong>CONSUME_NOT_RETURN:</strong> No responses are returned.</li>
-         * <li><strong>SEND_UNKNOWN:</strong> The message is a transactional message and is not committed.</li>
-         * <li><strong>SEND_DELAY:</strong> The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>CONSUME_SUCCESS</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the group that contains the consumer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GID_test</p>
-         */
         @NameInMap("SubGroupName")
         public String subGroupName;
 
-        /**
-         * <p>The earliest point in time when the message was consumed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570851590511</p>
-         */
         @NameInMap("SubTime")
         public Long subTime;
 
@@ -177,36 +134,15 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
     }
 
     public static class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo extends TeaModel {
-        /**
-         * <p>The information about message consumption by consumers in the group.</p>
-         */
         @NameInMap("ClientList")
         public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientList clientList;
 
-        /**
-         * <p>The number of consumption failures.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("FailCount")
         public Integer failCount;
 
-        /**
-         * <p>The ID of the consumer group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GID_test</p>
-         */
         @NameInMap("SubGroupName")
         public String subGroupName;
 
-        /**
-         * <p>The number of successful consumptions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("SuccessCount")
         public Integer successCount;
 
@@ -269,97 +205,33 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
     }
 
     public static class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo extends TeaModel {
-        /**
-         * <p>The address of the producer that generated the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>30.5.**.**</code></p>
-         */
         @NameInMap("BornHost")
         public String bornHost;
 
-        /**
-         * <p>The period of time that the system took to send the message. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>24</p>
-         */
         @NameInMap("CostTime")
         public Integer costTime;
 
-        /**
-         * <p>The ID of the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0BC1F01800002A9F000000531246****</p>
-         */
         @NameInMap("MsgId")
         public String msgId;
 
-        /**
-         * <p>The key of the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ORDERID_100</p>
-         */
         @NameInMap("MsgKey")
         public String msgKey;
 
-        /**
-         * <p>The ID of the group that contains the producer.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GID_test</p>
-         */
         @NameInMap("PubGroupName")
         public String pubGroupName;
 
-        /**
-         * <p>The point in time when the message was sent.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570850870478</p>
-         */
         @NameInMap("PubTime")
         public Long pubTime;
 
-        /**
-         * <p>Indicates whether the message is sent. Valid values:</p>
-         * <ul>
-         * <li><strong>SEND_SUCCESS</strong>: The message is sent.</li>
-         * <li><strong>SEND_FAILED</strong>: The message failed to be sent.</li>
-         * <li><strong>SEND_ROLLBACK:</strong> The message is a transactional message and is rolled back.</li>
-         * <li><strong>SEND_UNKNOWN:</strong> The message is a transactional message and is not committed.</li>
-         * <li><strong>SEND_DELAY:</strong> The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SEND_SUCCESS</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The consumption traces of the message.</p>
-         */
         @NameInMap("SubList")
         public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubList subList;
 
-        /**
-         * <p>The tag of the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TagA</p>
-         */
         @NameInMap("Tag")
         public String tag;
 
-        /**
-         * <p>The topic to which the message belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
@@ -538,9 +410,6 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         @NameInMap("Topic")
         public String topic;
 
-        /**
-         * <p>The details of the message trace.</p>
-         */
         @NameInMap("TraceList")
         public OnsTraceGetResultResponseBodyTraceDataTraceList traceList;
 

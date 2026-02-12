@@ -41,23 +41,9 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
     }
 
     public static class OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList extends TeaModel {
-        /**
-         * <p>The expression based on which consumers in the consumer group subscribe to the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("SubString")
         public String subString;
 
-        /**
-         * <p>The name of the topic to which consumers in the consumer group subscribe.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-mq_topic</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
@@ -136,9 +122,6 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
         @NameInMap("Online")
         public Boolean online;
 
-        /**
-         * <p>The topics to which consumers in the consumer group subscribe. If all consumers in the specified group are offline, no topics are returned.</p>
-         */
         @NameInMap("SubscriptionDataList")
         public OnsGroupSubDetailResponseBodyDataSubscriptionDataList subscriptionDataList;
 

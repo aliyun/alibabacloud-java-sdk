@@ -4,9 +4,6 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsRegionListResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("Data")
     public OnsRegionListResponseBodyData data;
 
@@ -41,57 +38,21 @@ public class OnsRegionListResponseBody extends TeaModel {
     }
 
     public static class OnsRegionListResponseBodyDataRegionDo extends TeaModel {
-        /**
-         * <p>The channel name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIYUN</p>
-         */
         @NameInMap("ChannelName")
         public String channelName;
 
-        /**
-         * <p>The time when the instance was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1411623866000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("OnsRegionId")
         public String onsRegionId;
 
-        /**
-         * <p>The region name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
-         */
         @NameInMap("RegionName")
         public String regionName;
 
-        /**
-         * <p>The time when the instance was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1411623866000</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

@@ -41,28 +41,9 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
     }
 
     public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty extends TeaModel {
-        /**
-         * <p>The name of the attribute. Valid values:</p>
-         * <ul>
-         * <li><strong>TRACE_ON</strong>: indicates whether a trace of the message exists.</li>
-         * <li><strong>KEYS</strong>: indicates the key of the message.</li>
-         * <li><strong>TAGS</strong>: indicates the tag that is attached to the message.</li>
-         * <li><strong>INSTANCE_ID</strong>: indicates the ID of the instance that contains the message.</li>
-         * </ul>
-         * <p>For information about the terms that are used in ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TAGS</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The value of the attribute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TagA</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -109,99 +90,36 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
     }
 
     public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo extends TeaModel {
-        /**
-         * <p>The cyclic redundancy check (CRC) value of the message body.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>914112295</p>
-         */
         @NameInMap("BodyCRC")
         public Integer bodyCRC;
 
-        /**
-         * <p>The producer instance that generated the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>42.120.<em><strong>.</strong></em>:59270</p>
-         */
         @NameInMap("BornHost")
         public String bornHost;
 
-        /**
-         * <p>The timestamp that indicates when the message was produced.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570760999721</p>
-         */
         @NameInMap("BornTimestamp")
         public Long bornTimestamp;
 
-        /**
-         * <p>The ID of the instance</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MQ_INST_111111111111_DOxxxxxx</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1E0578FE110F18B4AAC235C05F2*****</p>
-         */
         @NameInMap("MsgId")
         public String msgId;
 
-        /**
-         * <p>The attributes of the message.</p>
-         */
         @NameInMap("PropertyList")
         public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList propertyList;
 
-        /**
-         * <p>The number of retries that were performed to send the message to consumers.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ReconsumeTimes")
         public Integer reconsumeTimes;
 
-        /**
-         * <p>The ApsaraMQ for RocketMQ broker that stores the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11.193.<em><strong>.</strong></em>:10911</p>
-         */
         @NameInMap("StoreHost")
         public String storeHost;
 
-        /**
-         * <p>The size of the message. Unit: KB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>406</p>
-         */
         @NameInMap("StoreSize")
         public Integer storeSize;
 
-        /**
-         * <p>The timestamp that indicates the point in time when the ApsaraMQ for RocketMQ broker stored the message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570760999811</p>
-         */
         @NameInMap("StoreTimestamp")
         public Long storeTimestamp;
 
-        /**
-         * <p>The topic to which the message belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-mq_topic</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
@@ -338,9 +256,6 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
         @NameInMap("MaxPageCount")
         public Long maxPageCount;
 
-        /**
-         * <p>The information about dead-letter messages that are returned on the current page. The information that is contained in this parameter is the same as the information that is returned by the <a href="https://help.aliyun.com/document_detail/112667.html">OnsDLQMessageGetById</a> operation.</p>
-         */
         @NameInMap("MsgFoundList")
         public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList msgFoundList;
 

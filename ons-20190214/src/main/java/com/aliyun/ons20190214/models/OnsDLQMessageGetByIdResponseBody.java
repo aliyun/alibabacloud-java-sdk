@@ -41,28 +41,9 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
     }
 
     public static class OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty extends TeaModel {
-        /**
-         * <p>The name of the attribute. Valid values:</p>
-         * <ul>
-         * <li><strong>TRACE_ON</strong>: indicates whether the message trace exists.</li>
-         * <li><strong>KEYS</strong>: indicates the key of the message.</li>
-         * <li><strong>TAGS</strong>: indicates the tag that is attached to the message.</li>
-         * <li><strong>INSTANCE_ID</strong>: indicates the ID of the instance that contains the message.</li>
-         * </ul>
-         * <p>For information about the terms that are used in ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TAGS</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The value of the attribute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TagA</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -154,9 +135,6 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
         @NameInMap("MsgId")
         public String msgId;
 
-        /**
-         * <p>The attributes of the message.</p>
-         */
         @NameInMap("PropertyList")
         public OnsDLQMessageGetByIdResponseBodyDataPropertyList propertyList;
 

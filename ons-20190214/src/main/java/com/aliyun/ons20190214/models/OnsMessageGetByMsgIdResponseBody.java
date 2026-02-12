@@ -41,28 +41,9 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
     }
 
     public static class OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty extends TeaModel {
-        /**
-         * <p>The name of the attribute. Valid values:</p>
-         * <ul>
-         * <li><strong>TRACE_ON</strong>: indicates whether a trace of the message exists.</li>
-         * <li><strong>KEYS</strong>: indicates the key of the message.</li>
-         * <li><strong>TAGS</strong>: indicates the tag that is attached to the message.</li>
-         * <li><strong>INSTANCE_ID</strong>: indicates the ID of the instance which contains the message.</li>
-         * </ul>
-         * <p>For information about the terms that are used in Message Queue for Apache RocketMQ, see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TAGS</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The value of the attribute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TagA</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -154,9 +135,6 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
         @NameInMap("MsgId")
         public String msgId;
 
-        /**
-         * <p>The attributes of the message.</p>
-         */
         @NameInMap("PropertyList")
         public OnsMessageGetByMsgIdResponseBodyDataPropertyList propertyList;
 

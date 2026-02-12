@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ons20190214</artifactId>
-  <version>2.0.2</version>
+  <version>3.0.0</version>
   <packaging>jar</packaging>
   <name>ons20190214</name>
   <description>Alibaba Cloud Message Queue (20190214) SDK for Java
@@ -25,17 +25,17 @@
   <distributionManagement>
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
     <repository>
       <id>sonatype-nexus-staging</id>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <url>https://central.sonatype.com</url>
     </repository>
   </distributionManagement>
   <scm>
-    <connection/>
-    <developerConnection/>
-    <url/>
+    <connection>scm:git:git://github.com/aliyun/alibabacloud-java-sdk.git</connection>
+    <developerConnection>scm:git:git@github.com:aliyun/alibabacloud-java-sdk.git</developerConnection>
+    <url>https://github.com/aliyun/alibabacloud-java-sdk</url>
   </scm>
   <dependencies>
     <dependency>
@@ -46,17 +46,17 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.7</version>
+      <version>0.3.10</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
-      <version>0.0.7</version>
+      <version>0.0.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.3.1</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -90,23 +90,13 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.3</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>sonatype-nexus-staging</serverId>
-          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
-        </configuration>
-      </plugin>
-      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.1.1</version>
         <configuration>
           <encoding>UTF-8</encoding>
           <doclint>none</doclint>
+          <maxmemory>2048m</maxmemory>
         </configuration>
       </plugin>
       <plugin>
@@ -180,6 +170,16 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.9.0</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+          <autoPublish>true</autoPublish>
+        </configuration>
       </plugin>
     </plugins>
   </build>

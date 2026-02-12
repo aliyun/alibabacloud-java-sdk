@@ -4,9 +4,6 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsInstanceInServiceListResponseBody extends TeaModel {
-    /**
-     * <p>The returned information about the queried instances.</p>
-     */
     @NameInMap("Data")
     public OnsInstanceInServiceListResponseBodyData data;
 
@@ -41,21 +38,9 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
     }
 
     public static class OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CartService</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ServiceA</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -102,106 +87,33 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
     }
 
     public static class OnsInstanceInServiceListResponseBodyDataInstanceVO extends TeaModel {
-        /**
-         * <p>The time when the instance was created. The value of this parameter is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1640847284000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The number of consumer groups.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
-        /**
-         * <p>Indicates whether a namespace is used for the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: A separate namespace is used for the instance. The identifier of each resource in the instance must be unique within the instance. However, the identifier of a resource in the instance can be the same as the identifier of a resource in another instance that uses a different namespace.</li>
-         * <li><strong>false</strong>: A separate namespace is not used for the instance. The name of each resource must be globally unique within the instance and across all instances.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MQ_INST_188077086902****_BXSuW61e</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The instance name.</p>
-         * <p>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test1</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The instance status. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: The instance is being deployed. This value is valid only for Enterprise Platinum Edition instances.</li>
-         * <li><strong>2</strong>: The instance has overdue payments. This value is valid only for Standard Edition instances.</li>
-         * <li><strong>5</strong>: The instance is running. This value is valid only for Standard Edition instances and Enterprise Platinum Edition instances.</li>
-         * <li><strong>7</strong>: The instance is being upgraded and is running. This value is valid only for Enterprise Platinum Edition instances.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("InstanceStatus")
         public Integer instanceStatus;
 
-        /**
-         * <p>The instance type. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: Standard Edition</li>
-         * <li><strong>2</strong>: Enterprise Platinum Edition</li>
-         * </ul>
-         * <p>For information about the instance editions and the differences between the editions, see <a href="https://help.aliyun.com/document_detail/185261.html">Instance editions</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("InstanceType")
         public Integer instanceType;
 
-        /**
-         * <p>The time when the instance expires. If the instance is of Enterprise Platinum Edition, this parameter is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1551024000000</p>
-         */
         @NameInMap("ReleaseTime")
         public Long releaseTime;
 
-        /**
-         * <p>The tags that are attached to the instance.</p>
-         */
         @NameInMap("Tags")
         public OnsInstanceInServiceListResponseBodyDataInstanceVOTags tags;
 
-        /**
-         * <p>The number of topics.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TopicCount")
         public Integer topicCount;
 

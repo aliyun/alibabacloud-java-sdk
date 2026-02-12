@@ -254,6 +254,13 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("SupportClassic")
+        public Integer supportClassic;
+
+        /**
          * <p>The maximum number of topics that can be created on the instance. Valid values: 25, 50, 100, 300, and 500.</p>
          * <blockquote>
          * <p>This parameter is available only to the ApsaraMQ for RocketMQ Enterprise Platinum Edition instances.</p>
@@ -366,6 +373,14 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public OnsInstanceBaseInfoResponseBodyInstanceBaseInfo setSupportClassic(Integer supportClassic) {
+            this.supportClassic = supportClassic;
+            return this;
+        }
+        public Integer getSupportClassic() {
+            return this.supportClassic;
         }
 
         public OnsInstanceBaseInfoResponseBodyInstanceBaseInfo setTopicCapacity(Integer topicCapacity) {

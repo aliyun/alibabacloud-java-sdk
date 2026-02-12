@@ -41,21 +41,9 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
     }
 
     public static class OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo extends TeaModel {
-        /**
-         * <p>The X axis. The value of this parameter is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570852800000</p>
-         */
         @NameInMap("X")
         public Long x;
 
-        /**
-         * <p>The Y axis. This parameter indicates the TPS for message publishing or the number of messages that are published.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Y")
         public Float y;
 
@@ -102,9 +90,6 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
     }
 
     public static class OnsTrendTopicInputTpsResponseBodyData extends TeaModel {
-        /**
-         * <p>The data set returned based on sampling period.</p>
-         */
         @NameInMap("Records")
         public OnsTrendTopicInputTpsResponseBodyDataRecords records;
 

@@ -60,7 +60,7 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The point in time when the earliest stored message was published to the topic.</p>
+         * <p>The point in time when the most recently stored message was published to the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>1570761026804</p>
@@ -69,7 +69,7 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
         public Long maxTimeStamp;
 
         /**
-         * <p>The point in time when the most recently stored message was published to the topic.</p>
+         * <p>The point in time when the earliest stored message was published to the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>1570701231122</p>

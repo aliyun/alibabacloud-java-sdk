@@ -4,9 +4,6 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsTopicListResponseBody extends TeaModel {
-    /**
-     * <p>The information about the topics.</p>
-     */
     @NameInMap("Data")
     public OnsTopicListResponseBodyData data;
 
@@ -41,21 +38,9 @@ public class OnsTopicListResponseBody extends TeaModel {
     }
 
     public static class OnsTopicListResponseBodyDataPublishInfoDoTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CartService</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SrviceA</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -102,120 +87,36 @@ public class OnsTopicListResponseBody extends TeaModel {
     }
 
     public static class OnsTopicListResponseBodyDataPublishInfoDo extends TeaModel {
-        /**
-         * <p>The time when the topic was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1570700947000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>Indicates whether the instance that contains the topic uses a namespace. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</li>
-         * <li><strong>false</strong>: The instance does not use a separate namespace. The name of each resource must be globally unique within an instance and across all instances.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
-        /**
-         * <p>The ID of the instance that contains the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MQ_INST_188077086902****_BXSuW61e</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The message type. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: normal messages</li>
-         * <li><strong>1</strong>: partitionally ordered messages</li>
-         * <li><strong>2</strong>: globally ordered messages</li>
-         * <li><strong>4</strong>: transactional messages</li>
-         * <li><strong>5</strong>: scheduled or delayed messages</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MessageType")
         public Integer messageType;
 
-        /**
-         * <p>The user ID of the topic owner. The value of this parameter is an Alibaba account ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>138015630679****</p>
-         */
         @NameInMap("Owner")
         public String owner;
 
-        /**
-         * <p>Indicates the relationship between the current account and the topic. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: The current account is the owner of the topic.</li>
-         * <li><strong>2</strong>: The current account can publish messages to the topic.</li>
-         * <li><strong>4</strong>: The current account can subscribe to the topic.</li>
-         * <li><strong>6</strong>: The current account can publish messages to and subscribe to the topic.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("Relation")
         public Integer relation;
 
-        /**
-         * <p>The relationship between the current account and the topic. The value of this parameter indicates whether the current account is the owner of the topic, and whether the current account can subscribe or publish messages to the topic. the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Publish and subscribe</p>
-         */
         @NameInMap("RelationName")
         public String relationName;
 
-        /**
-         * <p>The description of the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The status of the topic that is asynchronously created. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: The topic is being created.</li>
-         * <li><strong>1</strong>: The topic is being used.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ServiceStatus")
         public Integer serviceStatus;
 
-        /**
-         * <p>The tags that are attached to the topic.</p>
-         */
         @NameInMap("Tags")
         public OnsTopicListResponseBodyDataPublishInfoDoTags tags;
 
-        /**
-         * <p>The topic name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
