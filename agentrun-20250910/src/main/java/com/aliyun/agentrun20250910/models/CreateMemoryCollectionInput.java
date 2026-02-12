@@ -10,6 +10,12 @@ public class CreateMemoryCollectionInput extends TeaModel {
     @NameInMap("embedderConfig")
     public EmbedderConfig embedderConfig;
 
+    @NameInMap("enableConversationHistory")
+    public Boolean enableConversationHistory;
+
+    @NameInMap("enableConversationState")
+    public Boolean enableConversationState;
+
     @NameInMap("executionRoleArn")
     public String executionRoleArn;
 
@@ -47,6 +53,22 @@ public class CreateMemoryCollectionInput extends TeaModel {
     }
     public EmbedderConfig getEmbedderConfig() {
         return this.embedderConfig;
+    }
+
+    public CreateMemoryCollectionInput setEnableConversationHistory(Boolean enableConversationHistory) {
+        this.enableConversationHistory = enableConversationHistory;
+        return this;
+    }
+    public Boolean getEnableConversationHistory() {
+        return this.enableConversationHistory;
+    }
+
+    public CreateMemoryCollectionInput setEnableConversationState(Boolean enableConversationState) {
+        this.enableConversationState = enableConversationState;
+        return this;
+    }
+    public Boolean getEnableConversationState() {
+        return this.enableConversationState;
     }
 
     public CreateMemoryCollectionInput setExecutionRoleArn(String executionRoleArn) {
