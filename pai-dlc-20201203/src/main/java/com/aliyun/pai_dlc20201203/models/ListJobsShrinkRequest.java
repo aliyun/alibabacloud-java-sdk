@@ -262,6 +262,9 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("Tags")
     public String tagsShrink;
 
+    @NameInMap("TemplateId")
+    public String templateId;
+
     @NameInMap("TimeRangeField")
     public String timeRangeField;
 
@@ -530,6 +533,14 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getTagsShrink() {
         return this.tagsShrink;
+    }
+
+    public ListJobsShrinkRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     public ListJobsShrinkRequest setTimeRangeField(String timeRangeField) {

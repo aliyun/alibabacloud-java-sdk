@@ -389,6 +389,12 @@ public class JobItem extends TeaModel {
     @NameInMap("SystemEnvs")
     public java.util.Map<String, String> systemEnvs;
 
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    @NameInMap("TemplateName")
+    public String templateName;
+
     /**
      * <p>The tenant ID.</p>
      * 
@@ -857,6 +863,22 @@ public class JobItem extends TeaModel {
     }
     public java.util.Map<String, String> getSystemEnvs() {
         return this.systemEnvs;
+    }
+
+    public JobItem setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public JobItem setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
     }
 
     public JobItem setTenantId(String tenantId) {

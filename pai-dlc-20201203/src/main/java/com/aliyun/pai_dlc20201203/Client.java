@@ -76,7 +76,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and compute resources of each node on which a job runs.</p>
+     * <p>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</p>
      * 
      * @param request CreateJobRequest
      * @param headers map
@@ -154,6 +154,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SuccessPolicy", request.successPolicy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateVersion)) {
+            body.put("TemplateVersion", request.templateVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.thirdpartyLibDir)) {
             body.put("ThirdpartyLibDir", request.thirdpartyLibDir);
         }
@@ -197,7 +205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and compute resources of each node on which a job runs.</p>
+     * <p>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -1329,6 +1337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
             query.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeRangeField)) {

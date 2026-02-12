@@ -176,6 +176,24 @@ public class CreateJobRequest extends TeaModel {
     public String successPolicy;
 
     /**
+     * <p>任务模板的 ID。指定后将基于模板创建作业，作业参数需符合模板约束规则。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tplxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    /**
+     * <p>指定使用的模板版本号，不传则使用模板默认版本。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("TemplateVersion")
+    public Integer templateVersion;
+
+    /**
      * <p>The folder in which the third-party Python library file requirements.txt is stored. Before the startup command specified by the UserCommand parameter is run on each node, DLC fetches the requirements.txt file from the folder and runs <code>pip install -r</code> to install the required package and library.</p>
      * 
      * <strong>example:</strong>
@@ -354,6 +372,22 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getSuccessPolicy() {
         return this.successPolicy;
+    }
+
+    public CreateJobRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public CreateJobRequest setTemplateVersion(Integer templateVersion) {
+        this.templateVersion = templateVersion;
+        return this;
+    }
+    public Integer getTemplateVersion() {
+        return this.templateVersion;
     }
 
     public CreateJobRequest setThirdpartyLibDir(String thirdpartyLibDir) {

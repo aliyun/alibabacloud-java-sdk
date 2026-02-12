@@ -262,6 +262,9 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
 
+    @NameInMap("TemplateId")
+    public String templateId;
+
     @NameInMap("TimeRangeField")
     public String timeRangeField;
 
@@ -530,6 +533,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public java.util.Map<String, String> getTags() {
         return this.tags;
+    }
+
+    public ListJobsRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     public ListJobsRequest setTimeRangeField(String timeRangeField) {
