@@ -4,9 +4,18 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class ChatDocumentPageNum extends TeaModel {
+    /**
+     * <p>Page numbers of related documents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("num")
     public Integer num;
 
+    /**
+     * <p>Location information of the document.</p>
+     */
     @NameInMap("pos")
     public java.util.List<java.util.List<ChatRefDocPostion>> pos;
 

@@ -4,51 +4,112 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class FolderItem extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentLevel")
     public Integer currentLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("docCount")
     public Integer docCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("folderDefault")
     public Integer folderDefault;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4b648f6d11344f258df876cbdc24dc1f</p>
+     */
     @NameInMap("folderId")
     public String folderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>“abc” “1234”</p>
+     */
     @NameInMap("folderName")
     public String folderName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("folderNum")
     public Integer folderNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aidoc-energy-api-example.oss-cn-hangzhou.aliyuncs.com</p>
+     */
     @NameInMap("ossDomain")
     public String ossDomain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test/</p>
+     */
     @NameInMap("ossPath")
     public String ossPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1696462764375572</p>
+     */
     @NameInMap("ossUpdateBy")
     public String ossUpdateBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;0&quot; ：parent folder is root
+     * &quot;4b648f6d11344f258df876cbdc24dc1f&quot; ： folderId</p>
+     */
     @NameInMap("parentFolderId")
     public String parentFolderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>folder/manual/</p>
+     */
     @NameInMap("resourcePath")
     public String resourcePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("storageType")
     public Integer storageType;
 
     @NameInMap("subFolderList")
     public java.util.List<FolderItem> subFolderList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("syncParsingStatus")
     public Integer syncParsingStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("syncStatus")
     public Integer syncStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("taskId")
     public Long taskId;
 

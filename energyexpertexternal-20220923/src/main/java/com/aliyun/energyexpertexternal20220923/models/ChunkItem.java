@@ -7,27 +7,51 @@ public class ChunkItem extends TeaModel {
     @NameInMap("chunkContent")
     public String chunkContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b0x7,b1x10</p>
+     */
     @NameInMap("chunkId")
     public String chunkId;
 
     @NameInMap("docElsIds")
     public java.util.List<String> docElsIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b4620821aea92c062d8d19ad793243669cf9ae2b900e6967dee6ee9f3bf5feed</p>
+     */
     @NameInMap("docId")
     public String docId;
 
     @NameInMap("docName")
     public String docName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jobs/a4123b3f-9287-4c61-b59d-32e40fcb0a31/document/8b24a2e06669427fb3dc9812374d9d1a.pdf</p>
+     */
     @NameInMap("docUrl")
     public String docUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.5053711</p>
+     */
     @NameInMap("rerankScore")
     public Float rerankScore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.4295678</p>
+     */
     @NameInMap("score")
     public Float score;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.47252458</p>
+     */
     @NameInMap("weightedScore")
     public Float weightedScore;
 

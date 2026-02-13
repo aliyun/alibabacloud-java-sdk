@@ -4,9 +4,18 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class ChatRefDocInfo extends TeaModel {
+    /**
+     * <p>Detailed information for each page of the document.</p>
+     */
     @NameInMap("pageListInfo")
     public java.util.List<ChatRefDocPageInfo> pageListInfo;
 
+    /**
+     * <p>Total number of pages in the current document.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("pages")
     public Long pages;
 

@@ -4,9 +4,21 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class ChatRefDocPostion extends TeaModel {
+    /**
+     * <p>The x-coordinate of the layout.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("x")
     public Integer x;
 
+    /**
+     * <p>The y-coordinate of the layout.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86</p>
+     */
     @NameInMap("y")
     public Integer y;
 

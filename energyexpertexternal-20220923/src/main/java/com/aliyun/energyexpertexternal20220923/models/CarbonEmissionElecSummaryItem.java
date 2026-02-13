@@ -4,18 +4,48 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class CarbonEmissionElecSummaryItem extends TeaModel {
+    /**
+     * <p>Carbon Equivalent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.22</p>
+     */
     @NameInMap("carbonEmissionData")
     public Double carbonEmissionData;
 
+    /**
+     * <p>The price unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kg</p>
+     */
     @NameInMap("dataUnit")
     public String dataUnit;
 
+    /**
+     * <p>The enterprise name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The percentage of electricity consumption. Valid values: 0 to 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.22</p>
+     */
     @NameInMap("ratio")
     public Double ratio;
 
+    /**
+     * <p>Electricity consumption in Kwh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2</p>
+     */
     @NameInMap("rawData")
     public Double rawData;
 

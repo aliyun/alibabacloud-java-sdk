@@ -4,20 +4,33 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class ContentItem extends TeaModel {
+    /**
+     * <p>The coordinates of the text are in list format.</p>
+     */
     @NameInMap("extInfo")
     public java.util.List<ContentItemExtInfo> extInfo;
 
     /**
+     * <p>Recall confidence</p>
+     * 
      * <strong>example:</strong>
      * <p>0.45</p>
      */
     @NameInMap("score")
     public Double score;
 
+    /**
+     * <p>Recall text.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>content</p>
+     */
     @NameInMap("text")
     public String text;
 
     /**
+     * <p>Text sources: img, table, para.</p>
+     * 
      * <strong>example:</strong>
      * <p>img</p>
      */
@@ -63,6 +76,8 @@ public class ContentItem extends TeaModel {
 
     public static class ContentItemExtInfoPos extends TeaModel {
         /**
+         * <p>X coordinate of the layout.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -70,6 +85,8 @@ public class ContentItem extends TeaModel {
         public Long x;
 
         /**
+         * <p>Y coordinate of the layout.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -101,6 +118,8 @@ public class ContentItem extends TeaModel {
 
     public static class ContentItemExtInfo extends TeaModel {
         /**
+         * <p>Enumeration values for page alignment options: center, left, and right.</p>
+         * 
          * <strong>example:</strong>
          * <p>center</p>
          */
@@ -108,6 +127,8 @@ public class ContentItem extends TeaModel {
         public String alignment;
 
         /**
+         * <p>The index of the layout in the text.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -115,19 +136,29 @@ public class ContentItem extends TeaModel {
         public Long index;
 
         /**
+         * <p>Hierarchy of the layout.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("level")
         public Long level;
 
+        /**
+         * <p>Page numbers of the layout, which may include multiple page numbers.</p>
+         */
         @NameInMap("pageNum")
         public java.util.List<Long> pageNum;
 
+        /**
+         * <p>Position information of the layout, in list format.</p>
+         */
         @NameInMap("pos")
         public java.util.List<ContentItemExtInfoPos> pos;
 
         /**
+         * <p>Enumeration values for the layout subtypes: picture, para, none</p>
+         * 
          * <strong>example:</strong>
          * <p>picture</p>
          */
@@ -135,13 +166,17 @@ public class ContentItem extends TeaModel {
         public String subType;
 
         /**
+         * <p>text</p>
+         * 
          * <strong>example:</strong>
-         * <p>版面内容</p>
+         * <p>content</p>
          */
         @NameInMap("text")
         public String text;
 
         /**
+         * <p>Enumeration values for the layout types: table, figure, text, and none.</p>
+         * 
          * <strong>example:</strong>
          * <p>table</p>
          */
@@ -149,6 +184,8 @@ public class ContentItem extends TeaModel {
         public String type;
 
         /**
+         * <p>Unique layout ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>88c712db271443dd4e3697cb9b5dab3a</p>
          */

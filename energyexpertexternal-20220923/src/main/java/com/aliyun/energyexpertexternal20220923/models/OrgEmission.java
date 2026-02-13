@@ -4,30 +4,78 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class OrgEmission extends TeaModel {
+    /**
+     * <p>Carbon Equivalent</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2</p>
+     */
     @NameInMap("carbonEmissionData")
     public Double carbonEmissionData;
 
+    /**
+     * <p>Sub-module carbon emission data</p>
+     */
     @NameInMap("moduleEmissionList")
     public java.util.List<OrgEmissionModuleEmissionList> moduleEmissionList;
 
+    /**
+     * <p>The name of the organization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EnterpriseZ</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>Enterprise type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Z-20240115-4</p>
+     */
     @NameInMap("nameKey")
     public String nameKey;
 
+    /**
+     * <p>Proportion of carbon emissions</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.2</p>
+     */
     @NameInMap("ratio")
     public Double ratio;
 
+    /**
+     * <p>Sub-level data, that is, site data under the organization</p>
+     */
     @NameInMap("subEmissionItems")
     public java.util.List<OrgEmission> subEmissionItems;
 
+    /**
+     * <p>Calculate carbon emissions by share ratio</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.3</p>
+     */
     @NameInMap("weightingCarbonEmissionData")
     public Double weightingCarbonEmissionData;
 
+    /**
+     * <p>Weight ratio</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.3</p>
+     */
     @NameInMap("weightingProportion")
     public Double weightingProportion;
 
+    /**
+     * <p>Share ratio Carbon emissions YoY</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.4</p>
+     */
     @NameInMap("weightingRatio")
     public Double weightingRatio;
 
@@ -109,15 +157,39 @@ public class OrgEmission extends TeaModel {
     }
 
     public static class OrgEmissionModuleEmissionList extends TeaModel {
+        /**
+         * <p>Carbon emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2</p>
+         */
         @NameInMap("carbonEmissionData")
         public Double carbonEmissionData;
 
+        /**
+         * <p>module name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scope 1: Direct GHG emissions</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Module key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.scope_1_direct_ghg_emissions</p>
+         */
         @NameInMap("nameKey")
         public String nameKey;
 
+        /**
+         * <p>Proportion of carbon emissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
         @NameInMap("ratio")
         public Double ratio;
 

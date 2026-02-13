@@ -4,18 +4,48 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class GwpResourceConstitute extends TeaModel {
+    /**
+     * <p>The carbon emissions. To ensure accuracy, retain 24 decimal places. We recommend that you intercept the carbon emissions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1009.976265540000000000000000000000</p>
+     */
     @NameInMap("carbonEmission")
     public Double carbonEmission;
 
+    /**
+     * <p>Name signifies a concept with distinct layers of meaning, where the outermost layer represents the overall carbon emissions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Energy</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>Percentage of emissions. 98.76 indicates the proportion of 98.76%.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98.76</p>
+     */
     @NameInMap("percent")
     public String percent;
 
+    /**
+     * <p>The type of the inventory. It is meaningful at the inventory layer and can be empty at other layers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("resourceType")
     public Integer resourceType;
 
+    /**
+     * <p>unit of emissions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kgCO₂e/Piece(s)</p>
+     */
     @NameInMap("unit")
     public String unit;
 

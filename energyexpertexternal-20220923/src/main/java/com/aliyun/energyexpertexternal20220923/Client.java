@@ -132,6 +132,287 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>添加AISearch项目中的结构化元素</p>
+     * 
+     * @param request AISearchResourceAddRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AISearchResourceAddResponse
+     */
+    public AISearchResourceAddResponse aISearchResourceAddWithOptions(AISearchResourceAddRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.data)) {
+            body.put("data", request.data);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AISearchResourceAdd"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiSearch/resource/add"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AISearchResourceAddResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加AISearch项目中的结构化元素</p>
+     * 
+     * @param request AISearchResourceAddRequest
+     * @return AISearchResourceAddResponse
+     */
+    public AISearchResourceAddResponse aISearchResourceAdd(AISearchResourceAddRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.aISearchResourceAddWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除AISearch项目中的结构化元素</p>
+     * 
+     * @param request AISearchResourceDeleteRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AISearchResourceDeleteResponse
+     */
+    public AISearchResourceDeleteResponse aISearchResourceDeleteWithOptions(AISearchResourceDeleteRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("resourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AISearchResourceDelete"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiSearch/resource/delete"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AISearchResourceDeleteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除AISearch项目中的结构化元素</p>
+     * 
+     * @param request AISearchResourceDeleteRequest
+     * @return AISearchResourceDeleteResponse
+     */
+    public AISearchResourceDeleteResponse aISearchResourceDelete(AISearchResourceDeleteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.aISearchResourceDeleteWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查找AISearch资源</p>
+     * 
+     * @param tmpReq AISearchResourceGetListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AISearchResourceGetListResponse
+     */
+    public AISearchResourceGetListResponse aISearchResourceGetListWithOptions(AISearchResourceGetListRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AISearchResourceGetListShrinkRequest request = new AISearchResourceGetListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceIds)) {
+            request.resourceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceIds, "resourceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("currentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsShrink)) {
+            query.put("resourceIds", request.resourceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AISearchResourceGetList"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiSearch/resource/list"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AISearchResourceGetListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查找AISearch资源</p>
+     * 
+     * @param request AISearchResourceGetListRequest
+     * @return AISearchResourceGetListResponse
+     */
+    public AISearchResourceGetListResponse aISearchResourceGetList(AISearchResourceGetListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.aISearchResourceGetListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改AISearch项目中的结构化元素</p>
+     * 
+     * @param request AISearchResourceUpdateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AISearchResourceUpdateResponse
+     */
+    public AISearchResourceUpdateResponse aISearchResourceUpdateWithOptions(AISearchResourceUpdateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.data)) {
+            body.put("data", request.data);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            body.put("resourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AISearchResourceUpdate"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiSearch/resource/update"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AISearchResourceUpdateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改AISearch项目中的结构化元素</p>
+     * 
+     * @param request AISearchResourceUpdateRequest
+     * @return AISearchResourceUpdateResponse
+     */
+    public AISearchResourceUpdateResponse aISearchResourceUpdate(AISearchResourceUpdateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.aISearchResourceUpdateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>aisearch问答接口</p>
+     * 
+     * @param request AISearchStreamRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AISearchStreamResponse
+     */
+    public AISearchStreamResponse aISearchStreamWithOptions(AISearchStreamRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
+            body.put("folderId", request.folderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.message)) {
+            body.put("message", request.message);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.question)) {
+            body.put("question", request.question);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypeNeeded)) {
+            body.put("resourceTypeNeeded", request.resourceTypeNeeded);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AISearchStream"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiSearch/searchStream"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AISearchStreamResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>aisearch问答接口</p>
+     * 
+     * @param request AISearchStreamRequest
+     * @return AISearchStreamResponse
+     */
+    public AISearchStreamResponse aISearchStream(AISearchStreamRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.aISearchStreamWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建文件夹</p>
      * 
      * @param request AddFolderRequest
@@ -566,7 +847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Knowledge Base Q&amp;A</p>
+     * <p>Knowledge Base Q\&amp;A</p>
      * 
      * @param request ChatStreamRequest
      * @param headers map
@@ -615,7 +896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Knowledge Base Q&amp;A</p>
+     * <p>Knowledge Base Q\&amp;A</p>
      * 
      * @param request ChatStreamRequest
      * @return ChatStreamResponse
@@ -628,7 +909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Q&amp;A Window</p>
+     * <p>Create Q\&amp;A Window</p>
      * 
      * @param request CreateChatSessionRequest
      * @param headers map
@@ -670,7 +951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Q&amp;A Window</p>
+     * <p>Create Q\&amp;A Window</p>
      * 
      * @param request CreateChatSessionRequest
      * @return CreateChatSessionResponse
@@ -1109,7 +1390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Q&amp;A folder List</p>
+     * <p>Get Q\&amp;A folder List</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1135,7 +1416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Q&amp;A folder List</p>
+     * <p>Get Q\&amp;A folder List</p>
      * @return GetChatFolderListResponse
      */
     public GetChatFolderListResponse getChatFolderList() throws Exception {
@@ -1215,7 +1496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Q&amp;A Session List</p>
+     * <p>Get Q\&amp;A Session List</p>
      * 
      * @param request GetChatSessionListRequest
      * @param headers map
@@ -1261,7 +1542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Q&amp;A Session List</p>
+     * <p>Get Q\&amp;A Session List</p>
      * 
      * @param request GetChatSessionListRequest
      * @return GetChatSessionListResponse
@@ -1648,7 +1929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</p>
+     * <p>null null</p>
      * 
      * @param request GetDocumentAnalyzeResultRequest
      * @param headers map
@@ -1682,7 +1963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</p>
+     * <p>null null</p>
      * 
      * @param request GetDocumentAnalyzeResultRequest
      * @return GetDocumentAnalyzeResultResponse
@@ -3080,7 +3361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>[Important] This api is no longer maintained, please use the Chat api.</p>
+     * <p>null null</p>
      * 
      * @param request SendDocumentAskQuestionRequest
      * @param headers map
@@ -3122,7 +3403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>[Important] This api is no longer maintained, please use the Chat api.</p>
+     * <p>null null</p>
      * 
      * @param request SendDocumentAskQuestionRequest
      * @return SendDocumentAskQuestionResponse
@@ -3552,9 +3833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>[Important] The api is no longer maintained, please use the following api: 
-     * Document parsing using SubmitDocParsingTask. 
-     * Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</p>
+     * <p>The document parsing operation is used to extract the key content of a document and extract the key-value information from the document based on the preset key-value template. The document parsing operation is an asynchronous operation. You need to call the asynchronous submission service for document parsing and then call the GetDocumentAnalyzeResult operation to perform result polling. The asynchronous submission service supports two methods: local files and URL files. Call the SubmitDocumentAnalyzeJob operation to upload URL files. Call the SubmitDocumentAnalyzeJobAdvance operation to upload local files.</p>
      * 
      * @param request SubmitDocumentAnalyzeJobRequest
      * @param headers map
@@ -3604,9 +3883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>[Important] The api is no longer maintained, please use the following api: 
-     * Document parsing using SubmitDocParsingTask. 
-     * Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</p>
+     * <p>The document parsing operation is used to extract the key content of a document and extract the key-value information from the document based on the preset key-value template. The document parsing operation is an asynchronous operation. You need to call the asynchronous submission service for document parsing and then call the GetDocumentAnalyzeResult operation to perform result polling. The asynchronous submission service supports two methods: local files and URL files. Call the SubmitDocumentAnalyzeJob operation to upload URL files. Call the SubmitDocumentAnalyzeJobAdvance operation to upload local files.</p>
      * 
      * @param request SubmitDocumentAnalyzeJobRequest
      * @return SubmitDocumentAnalyzeJobResponse
