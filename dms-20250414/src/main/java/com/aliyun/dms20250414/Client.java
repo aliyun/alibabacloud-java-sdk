@@ -2206,6 +2206,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>ListDataAgentSession</p>
+     * 
+     * @param request ListDataAgentSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAgentSessionResponse
+     */
+    public ListDataAgentSessionResponse listDataAgentSessionWithOptions(ListDataAgentSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createEndTime)) {
+            query.put("CreateEndTime", request.createEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createStartTime)) {
+            query.put("CreateStartTime", request.createStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customAgentId)) {
+            query.put("CustomAgentId", request.customAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSaved)) {
+            query.put("IsSaved", request.isSaved);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAgentSession"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAgentSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListDataAgentSession</p>
+     * 
+     * @param request ListDataAgentSessionRequest
+     * @return ListDataAgentSessionResponse
+     */
+    public ListDataAgentSessionResponse listDataAgentSession(ListDataAgentSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAgentSessionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取主账号下的空间（分页）</p>
      * 
      * @param request ListDataAgentWorkspaceRequest
