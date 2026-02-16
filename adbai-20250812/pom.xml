@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>adbai20250812</artifactId>
-  <version>1.3.0</version>
+  <version>1.4.0</version>
   <packaging>jar</packaging>
   <name>adbai20250812</name>
   <description>Alibaba Cloud ADBAI (20250812) SDK for Java
