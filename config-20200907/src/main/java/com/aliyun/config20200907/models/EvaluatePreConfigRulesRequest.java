@@ -5,14 +5,13 @@ import com.aliyun.tea.*;
 
 public class EvaluatePreConfigRulesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the managed rule. Valid values:</p>
+     * <p>Specifies whether to enable rule templates. Valid values:</p>
      * <ul>
-     * <li>true: enables the managed rule.</li>
-     * <li>false: does not enable the managed rule. This is the default value.</li>
+     * <li><p>true: enables rule templates.</p>
+     * </li>
+     * <li><p>false (default): does not enable rule templates.</p>
+     * </li>
      * </ul>
-     * <blockquote>
-     * <p> After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -21,14 +20,14 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
     public Boolean enableManagedRules;
 
     /**
-     * <p>The resources that you want to evaluate.</p>
+     * <p>An array that contains the resources that you want to evaluate.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceEvaluateItems")
     public java.util.List<EvaluatePreConfigRulesRequestResourceEvaluateItems> resourceEvaluateItems;
 
     /**
-     * <p>下一个查询开始Token</p>
+     * <p>The query start token</p>
      * 
      * <strong>example:</strong>
      * <p>ros</p>
@@ -67,8 +66,11 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
 
     public static class EvaluatePreConfigRulesRequestResourceEvaluateItemsRules extends TeaModel {
         /**
-         * <p>The identifier of the evaluation rule.</p>
-         * <p>For more information about how to obtain the identifier of an evaluation rule, see <a href="https://help.aliyun.com/document_detail/467810.html">ListManagedRules</a>.</p>
+         * <p>The identifier of the rule.</p>
+         * <p>For information about how to obtain the identifier of a rule, see <a href="https://help.aliyun.com/document_detail/467810.html">ListPreManagedRules</a>.</p>
+         * <blockquote>
+         * <p>The <code>ResourceType</code>, <code>Identifier</code>, and <code>ResourceProperties</code> parameters must be specified at the same time.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ecs-instance-deletion-protection-enabled</p>
@@ -77,7 +79,7 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
         public String identifier;
 
         /**
-         * <p>The input parameters of the evaluation rule.</p>
+         * <p>The input parameters of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -111,6 +113,9 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
     public static class EvaluatePreConfigRulesRequestResourceEvaluateItems extends TeaModel {
         /**
          * <p>The logical ID of the resource.</p>
+         * <blockquote>
+         * <p>If this parameter is empty, it is generated based on the Base64 value of <code>ResourceProperties</code>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ResourceLogicId-test</p>
@@ -119,21 +124,23 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
         public String resourceLogicalId;
 
         /**
-         * <p>The properties of the resource.</p>
+         * <p>The resource configuration items (properties of the resource to be created), such as the specifications, region, name, status, and port or network interface switch status of the resource.</p>
+         * <blockquote>
+         * <p>The <code>ResourceType</code>, <code>Identifier</code>, and <code>ResourceProperties</code> parameters must be specified at the same time.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{
-         *     &quot;ImageId&quot;: &quot;ubuntu_18_04_64_20G_alibase_20190624.vhd&quot;,
-         *     &quot;SecurityGroupId&quot;: &quot;sg-bp15ed6xe1yxeycg****&quot;,
-         *     &quot;HostName&quot;: &quot;LocalHostName&quot;,
-         *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
-         * }</p>
+         * <p>{&quot;ResourceGroupId&quot;:&quot;&quot;,&quot;Memory&quot;:8192,&quot;InstanceChargeType&quot;:&quot;PostPaid&quot;,&quot;Cpu&quot;:2}</p>
          */
         @NameInMap("ResourceProperties")
         public String resourceProperties;
 
         /**
          * <p>The type of the resource.</p>
+         * <p>For information about how to obtain the identifier of an evaluation rule, see <a href="https://help.aliyun.com/document_detail/467810.html">ListPreManagedRules</a>.</p>
+         * <blockquote>
+         * <p>The <code>ResourceType</code>, <code>Identifier</code>, and <code>ResourceProperties</code> parameters must be specified at the same time.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Instance</p>
@@ -142,7 +149,7 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The evaluation rules.</p>
+         * <p>An array that contains the evaluation rules.</p>
          */
         @NameInMap("Rules")
         public java.util.List<EvaluatePreConfigRulesRequestResourceEvaluateItemsRules> rules;

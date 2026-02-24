@@ -4,18 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
-    /**
-     * <p>The compliance evaluation results of member accounts for which the compliance package takes effect in an account group.</p>
-     */
     @NameInMap("AccountComplianceResult")
     public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult accountComplianceResult;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,36 +32,12 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
     }
 
     public static class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances extends TeaModel {
-        /**
-         * <p>The ID of the member account in the account group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100931896542****</p>
-         */
         @NameInMap("AccountId")
         public Long accountId;
 
-        /**
-         * <p>The name of the member account in the account group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alice</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The compliance evaluation result. Valid values:</p>
-         * <ul>
-         * <li>COMPLIANT: The resource was evaluated as compliant.</li>
-         * <li>NON_COMPLIANT: The resource was evaluated as incompliant.</li>
-         * <li>NOT_APPLICABLE: The rule did not apply to your resource.</li>
-         * <li>INSUFFICIENT_DATA: No resource data was available.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLIANT</p>
-         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
@@ -106,36 +73,15 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
     }
 
     public static class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult extends TeaModel {
-        /**
-         * <p>The compliance evaluation result of member accounts.</p>
-         */
         @NameInMap("AccountCompliances")
         public java.util.List<GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances> accountCompliances;
 
-        /**
-         * <p>The ID of the compliance package.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cp-541e626622af0087****</p>
-         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
-        /**
-         * <p>The number of non-compliant member accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
-        /**
-         * <p>The total number of member accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

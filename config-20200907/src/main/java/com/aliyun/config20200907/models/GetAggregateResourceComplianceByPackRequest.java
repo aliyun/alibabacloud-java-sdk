@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetAggregateResourceComplianceByPackRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetAggregateResourceComplianceByPackRequest extends TeaModel {
 
     /**
      * <p>The ID of the compliance package.</p>
-     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

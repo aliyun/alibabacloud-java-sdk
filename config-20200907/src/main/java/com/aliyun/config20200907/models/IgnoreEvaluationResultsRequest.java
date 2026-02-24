@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class IgnoreEvaluationResultsRequest extends TeaModel {
     /**
-     * <p>The ID of the rule.</p>
-     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+     * <p>The rule ID.</p>
+     * <p>For more information about how to obtain the rule ID, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +16,9 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
+     * <p>The date on which the ignored evaluation results are automatically restored.</p>
      * <blockquote>
-     * <p> If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+     * <p>If this parameter is left empty, the ignored evaluation results are not automatically restored. You must manually restore them.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,16 +28,16 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
     public String ignoreDate;
 
     /**
-     * <p>The reason why you want to ignore the resource.</p>
+     * <p>The reason for ignoring the resources.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test ignore.</p>
+     * <p>无需检测。</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
-     * <p>The resources to be ignored.</p>
+     * <p>The list of resources to be ignored.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
@@ -82,8 +82,8 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
 
     public static class IgnoreEvaluationResultsRequestResources extends TeaModel {
         /**
-         * <p>The ID of the region in which the resource resides.</p>
-         * <p>For more information about how to obtain the ID of the region in which a resource resides, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+         * <p>The ID of the region to which the resource belongs.</p>
+         * <p>For more information about how to obtain the ID of the region to which the resource belongs, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,8 +103,8 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
         public Long resourceAccountId;
 
         /**
-         * <p>The ID of the resource.</p>
-         * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+         * <p>The resource ID.</p>
+         * <p>For more information about how to obtain the resource ID, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,8 +114,8 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
-         * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+         * <p>The resource type.</p>
+         * <p>For more information about how to obtain the resource type, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

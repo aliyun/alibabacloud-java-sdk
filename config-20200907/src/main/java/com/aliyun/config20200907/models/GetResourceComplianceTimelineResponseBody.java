@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceComplianceTimelineResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8D53A78F-1EB8-4264-A554-72F07E34FAE6</p>
@@ -14,7 +14,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the compliance timeline.</p>
+     * <p>The compliance evaluation history of the resource.</p>
      */
     @NameInMap("ResourceComplianceTimeline")
     public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline resourceComplianceTimeline;
@@ -51,7 +51,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The ID of the zone in which the resource resides.</p>
+         * <p>The zone where the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-f</p>
@@ -60,7 +60,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         public String availabilityZone;
 
         /**
-         * <p>The timestamp when the compliance evaluation was recorded. Unit: milliseconds.</p>
+         * <p>The timestamp when the compliance evaluation of the resource was recorded. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1625200295276</p>
@@ -69,19 +69,19 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         public Long captureTime;
 
         /**
-         * <p>The rules associated with the resource and the compliance details of the rules.</p>
+         * <p>The list of rules associated with the resource and the compliance details of the rules.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Compliance\&quot;:{\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;count\&quot;:1},\&quot;ConfigRuleList\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-9524626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-9524626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;test-rule-name\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;}]}</p>
+         * <p>{\&quot;Compliance\&quot;:{\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;count\&quot;:1},\&quot;ConfigRuleList\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-9524626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-9524626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;OSS存储空间ACL禁止公共读写\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;}]}</p>
          */
         @NameInMap("Configuration")
         public String configuration;
 
         /**
-         * <p>The details of the resource changes that trigger the compliance evaluation.</p>
+         * <p>The details of the resource change that triggered this evaluation.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;test-rule-name\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-965f626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-965f626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;test-rule-name\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;},{}]}</p>
+         * <p>{\&quot;OSS存储空间ACL禁止公共读写\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-965f626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-965f626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;OSS存储空间ACL禁止公共读写\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;},{}]}</p>
          */
         @NameInMap("ConfigurationDiff")
         public String configurationDiff;
@@ -96,7 +96,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The time when the resource was created. Unit: milliseconds.</p>
+         * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1624961112000</p>
@@ -123,20 +123,22 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
+         * <p>The resource status. The resource status is defined by each Alibaba Cloud service. This parameter can be empty. For example:</p>
          * <ul>
-         * <li>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
-         * <li>If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</li>
+         * <li><p>If the resource type is \<code>ACS::ECS::Instance\\</code>, this parameter can be \<code>Running\\</code> or \<code>Stopped\\</code> because ECS instances are stateful.</p>
+         * </li>
+         * <li><p>If the resource type is \<code>ACS::OSS::Bucket\\</code>, this parameter is empty because OSS buckets are stateless.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Running</p>
+         * <p>null</p>
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::OSS::Bucket</p>
@@ -145,7 +147,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The resource tags.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;\&quot;hc\&quot;\&quot;:[\&quot;\&quot;value2\&quot;\&quot;]}</p>
@@ -258,13 +260,13 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
 
     public static class GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline extends TeaModel {
         /**
-         * <p>The compliance evaluation records on the compliance timeline.</p>
+         * <p>The list of compliance evaluation history records.</p>
          */
         @NameInMap("ComplianceList")
         public java.util.List<GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> complianceList;
 
         /**
-         * <p>The maximum number of entries that can be returned for a single request.</p>
+         * <p>The maximum number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -273,7 +275,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that is used to initiate the next request.</p>
+         * <p>The token that you use to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>5OVS5J4I1/UKTkHV5oNs****</p>

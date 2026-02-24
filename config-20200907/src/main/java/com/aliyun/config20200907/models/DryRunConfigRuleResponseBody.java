@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class DryRunConfigRuleResponseBody extends TeaModel {
     /**
+     * <p>The compliance type of the rule. Valid values:</p>
+     * <ul>
+     * <li><p>COMPLIANT: Compliant.</p>
+     * </li>
+     * <li><p>NON_COMPLIANT: Non-compliant.</p>
+     * </li>
+     * <li><p>NOT_APPLICABLE: Not applicable.</p>
+     * </li>
+     * <li><p>INSUFFICIENT_DATA: Insufficient data.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>COMPLIANT</p>
      */
@@ -12,32 +24,33 @@ public class DryRunConfigRuleResponseBody extends TeaModel {
     public String complianceType;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>C32EEAD7-BF64-5927-977A-AFF9342B7275</p>
+     * <p>C32EEAD7-BF64-5927-977A-AFF9342B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The context of the rule conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
-     *             &quot;result&quot;:&quot;NON_COMPLIANT&quot;,
-     *             &quot;children&quot;:[
-     *                 {
-     *                     &quot;featureValue&quot;:&quot;1&quot;,
-     *                     &quot;featureSource&quot;:&quot;CONFIGURATION&quot;,
-     *                     &quot;result&quot;:&quot;NON_COMPLIANT&quot;,
-     *                     &quot;desired&quot;:&quot;4&quot;,
-     *                     &quot;children&quot;:[],
-     *                     &quot;operator&quot;:&quot;StringEquals&quot;,
-     *                     &quot;featurePath&quot;:&quot;$.Cpu&quot;
-     *                 }
-     *             ],
-     *             &quot;operator&quot;:&quot;and&quot;
-     *         }
-     *     }</p>
+     *   &quot;result&quot;:&quot;NON_COMPLIANT&quot;,
+     *   &quot;children&quot;:[
+     *     {
+     *       &quot;featureValue&quot;:&quot;1&quot;,
+     *       &quot;featureSource&quot;:&quot;CONFIGURATION&quot;,
+     *       &quot;result&quot;:&quot;NON_COMPLIANT&quot;,
+     *       &quot;desired&quot;:&quot;4&quot;,
+     *       &quot;children&quot;:[],
+     *       &quot;operator&quot;:&quot;StringEquals&quot;,
+     *       &quot;featurePath&quot;:&quot;$.Cpu&quot;
+     *     }
+     *   ],
+     *   &quot;operator&quot;:&quot;and&quot;
+     * }</p>
      */
     @NameInMap("RuleConditionContext")
     public String ruleConditionContext;

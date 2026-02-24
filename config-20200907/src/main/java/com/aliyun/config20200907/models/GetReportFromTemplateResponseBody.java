@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetReportFromTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DE9FFFE5-FCAD-4B24-9546-BF49273C562B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The report generated from the template.</p>
+     */
     @NameInMap("TemplateReport")
     public GetReportFromTemplateResponseBodyTemplateReport templateReport;
 
@@ -37,6 +42,8 @@ public class GetReportFromTemplateResponseBody extends TeaModel {
 
     public static class GetReportFromTemplateResponseBodyTemplateReport extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>1478085326082xxx</p>
          */
@@ -44,6 +51,8 @@ public class GetReportFromTemplateResponseBody extends TeaModel {
         public Long accountId;
 
         /**
+         * <p>The timestamp when the report was generated. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1763540426815</p>
          */
@@ -51,6 +60,8 @@ public class GetReportFromTemplateResponseBody extends TeaModel {
         public Long reportCreateEndTimestamp;
 
         /**
+         * <p>The timestamp when the report started to be generated. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1763540421815</p>
          */
@@ -58,6 +69,8 @@ public class GetReportFromTemplateResponseBody extends TeaModel {
         public Long reportCreateStartTimestamp;
 
         /**
+         * <p>The ID of the report template.</p>
+         * 
          * <strong>example:</strong>
          * <p>crt-xxx</p>
          */
@@ -65,6 +78,8 @@ public class GetReportFromTemplateResponseBody extends TeaModel {
         public String reportTemplateId;
 
         /**
+         * <p>The download URL of the report.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxx">https://xxx</a></p>
          */
@@ -72,6 +87,18 @@ public class GetReportFromTemplateResponseBody extends TeaModel {
         public String reportUrl;
 
         /**
+         * <p>The status of the report. Valid values:</p>
+         * <ul>
+         * <li><p>COMPLETE: The report is generated.</p>
+         * </li>
+         * <li><p>CREATING: The report is being generated.</p>
+         * </li>
+         * <li><p>FAILED: The report failed to be generated.</p>
+         * </li>
+         * <li><p>TIMEOUT: The request timed out.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
          */
@@ -79,6 +106,8 @@ public class GetReportFromTemplateResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the report generated from the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>crtr-xxx</p>
          */

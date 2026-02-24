@@ -14,7 +14,7 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that contains the relationships.</p>
+     * <p>The list of resource relations.</p>
      */
     @NameInMap("ResourceRelationConfigList")
     public java.util.List<GetSupportedResourceRelationConfigResponseBodyResourceRelationConfigList> resourceRelationConfigList;
@@ -42,12 +42,16 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
 
     public static class GetSupportedResourceRelationConfigResponseBodyResourceRelationConfigList extends TeaModel {
         /**
-         * <p>The type of the relationship between the resource and the object. Valid values:</p>
+         * <p>The type of the resource relation. Valid values:</p>
          * <ul>
-         * <li>IsContained: The object is included as part of the resource.</li>
-         * <li>IsAttachedTo: The object is added to the resource.</li>
-         * <li>IsAssociatedIn: The object is associated with the resource.</li>
-         * <li>Contains: The actual value contains the expected value.</li>
+         * <li><p>IsContained: Is contained in.</p>
+         * </li>
+         * <li><p>IsAttachedTo: Is attached to.</p>
+         * </li>
+         * <li><p>IsAssociatedIn: Is associated with.</p>
+         * </li>
+         * <li><p>Contains: Contains.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,7 +61,7 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
         public String relationType;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The resource type of the relation target.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Disk</p>

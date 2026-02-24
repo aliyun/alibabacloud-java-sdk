@@ -14,7 +14,7 @@ public class CreateAggregateConfigDeliveryChannelResponseBody extends TeaModel {
     public String deliveryChannelId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A7A0FFF8-0B44-40C6-8BBF-3A185EFDERTHG</p>

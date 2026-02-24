@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IgnoreEvaluationResultsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1840CBF2-0B0B-59F2-9E84-07B38267A279</p>

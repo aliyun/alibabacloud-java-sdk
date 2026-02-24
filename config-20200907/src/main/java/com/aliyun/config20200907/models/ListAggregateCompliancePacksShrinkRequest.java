@@ -16,8 +16,8 @@ public class ListAggregateCompliancePacksShrinkRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class ListAggregateCompliancePacksShrinkRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,14 +35,30 @@ public class ListAggregateCompliancePacksShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The risk level of the compliance pack. Valid values:</p>
+     * <ul>
+     * <li><p>1: high</p>
+     * </li>
+     * <li><p>2: medium</p>
+     * </li>
+     * <li><p>3: low</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
     /**
-     * <p>The status of the one or more compliance packages to be queried. Valid values:</p>
+     * <p>The status of the compliance pack. Valid values:</p>
      * <ul>
-     * <li>ACTIVE: compliance packages that are available for use.</li>
-     * <li>CREATING: compliance packages that are being created.</li>
+     * <li><p>ACTIVE: The compliance pack is active.</p>
+     * </li>
+     * <li><p>CREATING: The compliance pack is being created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +68,8 @@ public class ListAggregateCompliancePacksShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;

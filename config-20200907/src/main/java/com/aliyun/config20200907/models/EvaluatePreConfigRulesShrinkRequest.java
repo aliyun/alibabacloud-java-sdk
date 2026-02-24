@@ -5,14 +5,13 @@ import com.aliyun.tea.*;
 
 public class EvaluatePreConfigRulesShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the managed rule. Valid values:</p>
+     * <p>Specifies whether to enable rule templates. Valid values:</p>
      * <ul>
-     * <li>true: enables the managed rule.</li>
-     * <li>false: does not enable the managed rule. This is the default value.</li>
+     * <li><p>true: enables rule templates.</p>
+     * </li>
+     * <li><p>false (default): does not enable rule templates.</p>
+     * </li>
      * </ul>
-     * <blockquote>
-     * <p> After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -21,14 +20,14 @@ public class EvaluatePreConfigRulesShrinkRequest extends TeaModel {
     public Boolean enableManagedRules;
 
     /**
-     * <p>The resources that you want to evaluate.</p>
+     * <p>An array that contains the resources that you want to evaluate.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceEvaluateItems")
     public String resourceEvaluateItemsShrink;
 
     /**
-     * <p>下一个查询开始Token</p>
+     * <p>The query start token</p>
      * 
      * <strong>example:</strong>
      * <p>ros</p>

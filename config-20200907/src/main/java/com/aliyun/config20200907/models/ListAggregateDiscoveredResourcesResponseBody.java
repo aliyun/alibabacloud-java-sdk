@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
     /**
-     * <p>The information about the resources.</p>
+     * <p>The list of resources.</p>
      */
     @NameInMap("DiscoveredResourceProfiles")
     public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles discoveredResourceProfiles;
@@ -42,7 +42,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
 
     public static class ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs. We recommend that you use the ResourceOwnerId parameter.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the resource. We recommend that you use the ResourceOwnerId parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>161259599160****</p>
@@ -51,7 +51,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The ID of the zone in which the resource resides.</p>
+         * <p>The zone where the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-huhehaote-a</p>
@@ -69,7 +69,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The time when the resource was created. Unit: milliseconds.</p>
+         * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1618675206000</p>
@@ -80,8 +80,10 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         /**
          * <p>The status of the resource. Valid values:</p>
          * <ul>
-         * <li>0: The resource is deleted.</li>
-         * <li>1: The resource is retained.</li>
+         * <li><p>0: The resource is deleted.</p>
+         * </li>
+         * <li><p>1: The resource is in use.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +111,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>161259599160****</p>
@@ -118,10 +120,12 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public Long resourceOwnerId;
 
         /**
-         * <p>The status of the resource. The value of this parameter varies with the resource type and may be empty. Examples:</p>
+         * <p>The status of the resource. The status of a resource is defined by the corresponding Alibaba Cloud service. This parameter can be empty. For example:</p>
          * <ul>
-         * <li>If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
-         * <li>If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</li>
+         * <li><p>If the resource type is ACS::ECS::Instance, the resource is stateful. The value of this parameter can be Running or Stopped.</p>
+         * </li>
+         * <li><p>If the resource type is ACS::OSS::Bucket, the resource is stateless. The value of this parameter is empty.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +144,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The resource tags.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;key1\&quot;:[\&quot;value2\&quot;]}</p>
@@ -149,7 +153,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The time when the resource was last updated. The value must be a timestamp in milliseconds.</p>
+         * <p>The timestamp of the last update to the resource. This is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1722441600000</p>
@@ -158,6 +162,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
+         * <p>The ID of the vSwitch to which the resource belongs. The format is vsw-t4n7pokxxxxxxxxxxxxxx. If the resource belongs to multiple vSwitches, the vSwitch IDs are separated by commas (,). An empty string is returned if the resource does not belong to a vSwitch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +175,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The build version of the resource.</p>
+         * <p>The resource build version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -179,6 +184,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public Long version;
 
         /**
+         * <p>The ID of the VPC to which the resource belongs. The format is vpc-t4nhheyvay74fp7n0hxxx. An empty string is returned if the resource does not belong to a VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -325,7 +331,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public java.util.List<ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> discoveredResourceProfileList;
 
         /**
-         * <p>The maximum number of entries returned on each page.</p>
+         * <p>The maximum number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -334,7 +340,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that was used to initiate the next request.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>IWBjqMYSy0is7zSMGu16****</p>

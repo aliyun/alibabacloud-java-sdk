@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     /**
-     * <p>The ID of the compliance package.</p>
-     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+     * <p>The compliance package ID.</p>
+     * <p>For more information about how to obtain a compliance package ID, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cp-f1e3326622af00cb****</p>
@@ -15,13 +15,18 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The compliance evaluation result of the resource. Valid values:</p>
+     * <p>The compliance evaluation result. Valid values:</p>
      * <ul>
-     * <li>COMPLIANT: The resource is evaluated as compliant.</li>
-     * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
-     * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
-     * <li>INSUFFICIENT_DATA: No data is available.</li>
-     * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
+     * <li><p>COMPLIANT: The resource is compliant.</p>
+     * </li>
+     * <li><p>NON_COMPLIANT: The resource is non-compliant.</p>
+     * </li>
+     * <li><p>NOT_APPLICABLE: The rule does not apply to the resource.</p>
+     * </li>
+     * <li><p>INSUFFICIENT_DATA: No data is available.</p>
+     * </li>
+     * <li><p>IGNORED: The evaluation result is ignored.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +40,7 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
 
     /**
      * <p>The rule ID.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</p>
+     * <p>For more information about how to obtain a rule ID, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cr-cac56457e0d900d3****</p>
@@ -44,7 +49,7 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return on each page. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -53,7 +58,7 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * <p>If the response is truncated, use the <code>NextToken</code> to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>IWBjqMYSy0is7zSMGu16****</p>
@@ -62,7 +67,7 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the resources that you want to evaluate reside. Separate multiple region IDs with commas (,).</p>
+     * <p>The region where the evaluated resource resides. Separate multiple regions with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -71,7 +76,7 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public String regions;
 
     /**
-     * <p>The ID of the resource group to which the resources that you want to evaluate belong. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The ID of the resource group to which the evaluated resource belongs. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2indxn3g****</p>
@@ -80,10 +85,10 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public String resourceGroupIds;
 
     /**
-     * <p>The type of the resources that you want to evaluate. Separate multiple resource types with commas (,).</p>
+     * <p>The type of the evaluated resource. Separate multiple resource types with commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>ACS::ECS::Instane</p>
+     * <p>ACS::ECS::Instance</p>
      */
     @NameInMap("ResourceTypes")
     public String resourceTypes;

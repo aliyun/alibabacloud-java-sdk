@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAggregateConfigRuleResponseBody extends TeaModel {
     /**
-     * <p>The information about the rules.</p>
+     * <p>The details of the rule.</p>
      */
     @NameInMap("ConfigRule")
     public GetAggregateConfigRuleResponseBodyConfigRule configRule;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>811234F4-C3AB-4D15-B90B-F55016D1B5AA</p>
@@ -42,12 +42,16 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     public static class GetAggregateConfigRuleResponseBodyConfigRuleCompliance extends TeaModel {
         /**
-         * <p>The statistics on the compliance evaluation results by compliance type. Valid values:</p>
+         * <p>The compliance evaluation result. Valid values:</p>
          * <ul>
-         * <li>COMPLIANT: The resources are evaluated as compliant.</li>
-         * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
-         * <li>NOT_APPLICABLE: The rule does not apply to your resources.</li>
-         * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+         * <li><p>COMPLIANT: The resource is compliant.</p>
+         * </li>
+         * <li><p>NON_COMPLIANT: The resource is not compliant.</p>
+         * </li>
+         * <li><p>NOT_APPLICABLE: The rule does not apply to the resource.</p>
+         * </li>
+         * <li><p>INSUFFICIENT_DATA: No data is available.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,7 +61,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String complianceType;
 
         /**
-         * <p>The number of evaluated resources.</p>
+         * <p>The number of resources that have the corresponding compliance evaluation result.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -90,7 +94,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     public static class GetAggregateConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus extends TeaModel {
         /**
-         * <p>The timestamp when the rule was first triggered.</p>
+         * <p>The timestamp when the rule was first activated.</p>
          * 
          * <strong>example:</strong>
          * <p>1624932221993</p>
@@ -99,10 +103,12 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public Long firstActivatedTimestamp;
 
         /**
-         * <p>Indicates whether resources were evaluated based on the rule. Valid values:</p>
+         * <p>Indicates whether the rule has been evaluated. Valid values:</p>
          * <ul>
-         * <li>true: Resources were evaluated based on the rule.</li>
-         * <li>false: Resources were not evaluated based on the rule.</li>
+         * <li><p>true: The rule has been evaluated.</p>
+         * </li>
+         * <li><p>false: The rule has not been evaluated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,7 +118,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public Boolean firstEvaluationStarted;
 
         /**
-         * <p>The error code returned for the last failed compliance evaluation.</p>
+         * <p>The error code returned for the last failed execution of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>TimeOut</p>
@@ -121,7 +127,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String lastErrorCode;
 
         /**
-         * <p>The error message returned for the last failed compliance evaluation.</p>
+         * <p>The error message returned for the last failed execution of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>time out</p>
@@ -130,7 +136,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String lastErrorMessage;
 
         /**
-         * <p>The timestamp when the last failed compliance evaluation of the rule ended. Unit: milliseconds.</p>
+         * <p>The timestamp of the last failed evaluation. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1614687022000</p>
@@ -139,7 +145,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public Long lastFailedEvaluationTimestamp;
 
         /**
-         * <p>The timestamp when the last failed compliance evaluation of the rule started. Unit: milliseconds.</p>
+         * <p>The timestamp of the last failed invocation. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1614687022000</p>
@@ -148,7 +154,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public Long lastFailedInvocationTimestamp;
 
         /**
-         * <p>The timestamp when the last successful compliance evaluation of the rule ended. Unit: milliseconds.</p>
+         * <p>The timestamp of the last successful evaluation. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1624932227486</p>
@@ -157,7 +163,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public Long lastSuccessfulEvaluationTimestamp;
 
         /**
-         * <p>The timestamp when the last successful compliance evaluation of the rule started. Unit: milliseconds.</p>
+         * <p>The timestamp of the last successful invocation. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1624932227476</p>
@@ -268,13 +274,13 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
          * <p>The name of the compliance package.</p>
          * 
          * <strong>example:</strong>
-         * <p>The name of the compliance package.</p>
+         * <p>OSS合规基线</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
 
         /**
-         * <p>The ID of the account that was used to create the rule.</p>
+         * <p>The ID of the account that created the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>100931896542****</p>
@@ -283,7 +289,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String creatorId;
 
         /**
-         * <p>The name of the account that was used to create the rule.</p>
+         * <p>The name of the rule creator.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
@@ -292,7 +298,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The type of the entity to which the rule belongs. The value is fixed to <code>AGGREGATOR</code>, which indicates an account group.</p>
+         * <p>The type of the rule creator. Only <code>AGGREGATOR</code> (account group) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>AGGREGATOR</p>
@@ -365,7 +371,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     public static class GetAggregateConfigRuleResponseBodyConfigRuleExcludeTagsScope extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-2</p>
@@ -374,7 +380,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-2</p>
@@ -407,9 +413,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     public static class GetAggregateConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails extends TeaModel {
         /**
-         * <p>The event source of the managed rule.</p>
+         * <p>The event source.</p>
          * <blockquote>
-         * <p> Only events related to Cloud Config are supported. The value is fixed to aliyun.config.</p>
+         * <p>Only Cloud Config events are supported: aliyun.config.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -419,13 +425,18 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String eventSource;
 
         /**
-         * <p>The intervals at which the managed rule is triggered. Valid values:</p>
+         * <p>The frequency at which the rule is executed.</p>
          * <ul>
-         * <li>One_Hour: 1 hour.</li>
-         * <li>Three_Hours: 3 hours.</li>
-         * <li>Six_Hours: 6 hours.</li>
-         * <li>Twelve_Hours: 12 hours</li>
-         * <li>TwentyFour_Hours: 24 hours</li>
+         * <li><p>One_Hour: 1 hour.</p>
+         * </li>
+         * <li><p>Three_Hours: 3 hours.</p>
+         * </li>
+         * <li><p>Six_Hours: 6 hours.</p>
+         * </li>
+         * <li><p>Twelve_Hours: 12 hours.</p>
+         * </li>
+         * <li><p>TwentyFour_Hours: 24 hours.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -437,8 +448,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         /**
          * <p>The trigger type of the rule. Valid values:</p>
          * <ul>
-         * <li>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</li>
-         * <li>ScheduledNotification: The managed rule is periodically triggered.</li>
+         * <li><p>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+         * </li>
+         * <li><p>ScheduledNotification: The rule is triggered periodically.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -480,7 +493,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     public static class GetAggregateConfigRuleResponseBodyConfigRuleManagedRule extends TeaModel {
         /**
-         * <p>The required input parameters of the managed rule.</p>
+         * <p>The details of the required input parameters for the managed rule.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -492,7 +505,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
          * <p>The description of the managed rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the managed rule.</p>
+         * <p>ECS磁盘未因欠费或安全等原因而被锁定，视为“合规”。</p>
          */
         @NameInMap("Description")
         public String description;
@@ -507,7 +520,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String identifier;
 
         /**
-         * <p>The tags of the managed rule.</p>
+         * <p>A list of labels for the managed rule.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
@@ -516,13 +529,13 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
          * <p>The name of the managed rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>ram-user-mfa-check</p>
+         * <p>RAM用户开启MFA</p>
          */
         @NameInMap("ManagedRuleName")
         public String managedRuleName;
 
         /**
-         * <p>The optional input parameters of the managed rule.</p>
+         * <p>The details of the optional input parameters for the managed rule.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -531,7 +544,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public java.util.Map<String, ?> optionalInputParameterDetails;
 
         /**
-         * <p>The details of the source of the managed rule.</p>
+         * <p>The details of the managed rule source.</p>
          */
         @NameInMap("SourceDetails")
         public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> sourceDetails;
@@ -601,9 +614,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     public static class GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceDetails extends TeaModel {
         /**
-         * <p>The event source of the managed rule.</p>
+         * <p>The event source.</p>
          * <blockquote>
-         * <p> Only events related to Cloud Config are supported. The value is fixed to aliyun.config.</p>
+         * <p>Only Cloud Config events are supported: aliyun.config.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -613,13 +626,18 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String eventSource;
 
         /**
-         * <p>The intervals at which the managed rule is triggered. Valid values:</p>
+         * <p>The frequency at which the rule is executed. Valid values:</p>
          * <ul>
-         * <li>One_Hour: 1 hour.</li>
-         * <li>Three_Hours: 3 hours.</li>
-         * <li>Six_Hours: 6 hours.</li>
-         * <li>Twelve_Hours: 12 hours</li>
-         * <li>TwentyFour_Hours: 24 hours</li>
+         * <li><p>One_Hour: 1 hour.</p>
+         * </li>
+         * <li><p>Three_Hours: 3 hours.</p>
+         * </li>
+         * <li><p>Six_Hours: 6 hours.</p>
+         * </li>
+         * <li><p>Twelve_Hours: 12 hours.</p>
+         * </li>
+         * <li><p>TwentyFour_Hours: 24 hours.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -631,8 +649,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         /**
          * <p>The trigger type of the rule. Valid values:</p>
          * <ul>
-         * <li>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</li>
-         * <li>ScheduledNotification: The managed rule is periodically triggered.</li>
+         * <li><p>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+         * </li>
+         * <li><p>ScheduledNotification: The rule is triggered periodically.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -676,8 +696,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         /**
          * <p>The identifier of the rule.</p>
          * <ul>
-         * <li>If the rule was created based on a managed rule, the value of this parameter is the name of the managed rule.</li>
-         * <li>If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</li>
+         * <li><p>If the rule is a managed rule, the value of this parameter is the identifier of the managed rule.</p>
+         * </li>
+         * <li><p>If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the function.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -687,10 +709,12 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String identifier;
 
         /**
-         * <p>The way in which the rule was created. Valid values:</p>
+         * <p>The owner of the rule. Valid values:</p>
          * <ul>
-         * <li>CUSTOM_FC: The rule is a custom rule.</li>
-         * <li>ALIYUN: The rule was created based on a managed rule of Alibaba Cloud.</li>
+         * <li><p>CUSTOM_FC: a custom rule.</p>
+         * </li>
+         * <li><p>ALIYUN: a managed rule.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -700,7 +724,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The details of the source of the rule.</p>
+         * <p>The details of the rule source.</p>
          */
         @NameInMap("SourceDetails")
         public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceDetails> sourceDetails;
@@ -780,7 +804,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     public static class GetAggregateConfigRuleResponseBodyConfigRuleTagsScope extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -789,7 +813,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>
@@ -831,7 +855,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The IDs of the members to which the rule applies. Separate multiple member IDs with commas (,).</p>
+         * <p>The rule applies only to resources in the specified member accounts. Separate multiple member account IDs with a comma (,).</p>
          * 
          * <strong>example:</strong>
          * <p>120886317861****</p>
@@ -840,13 +864,13 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String accountIdsScope;
 
         /**
-         * <p>The details of compliance evaluation results.</p>
+         * <p>The compliance statistics of the rule.</p>
          */
         @NameInMap("Compliance")
         public GetAggregateConfigRuleResponseBodyConfigRuleCompliance compliance;
 
         /**
-         * <p>The ARN of the managed rule.</p>
+         * <p>The ARN of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:config::100931896542****:rule/cr-7f7d626622af0041****</p>
@@ -855,13 +879,13 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String configRuleArn;
 
         /**
-         * <p>The information about compliance evaluations performed by the rule.</p>
+         * <p>The execution status of the rule.</p>
          */
         @NameInMap("ConfigRuleEvaluationStatus")
         public GetAggregateConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus configRuleEvaluationStatus;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cr-7f7d626622af0041****</p>
@@ -870,10 +894,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String configRuleId;
 
         /**
-         * <p>The name of the monitoring rule.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>The name of the rule.</p>
+         * <p>RAM用户开启MFA</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -881,10 +905,14 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         /**
          * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li>ACTIVE: The rule is being used to monitor resource configurations.</li>
-         * <li>DELETING: The rule is being deleted.</li>
-         * <li>EVALUATING: The rule is triggered and is being used to monitor resource configurations.</li>
-         * <li>INACTIVE: The rule is disabled and is no longer used to monitor resource configurations.</li>
+         * <li><p>ACTIVE: The rule is enabled.</p>
+         * </li>
+         * <li><p>DELETING: The rule is being deleted.</p>
+         * </li>
+         * <li><p>EVALUATING: The rule is being evaluated.</p>
+         * </li>
+         * <li><p>INACTIVE: The rule is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -896,8 +924,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         /**
          * <p>The trigger type of the rule. Valid values:</p>
          * <ul>
-         * <li>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</li>
-         * <li>ScheduledNotification: The managed rule is periodically triggered.</li>
+         * <li><p>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+         * </li>
+         * <li><p>ScheduledNotification: The rule is triggered periodically.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -907,7 +937,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String configRuleTriggerTypes;
 
         /**
-         * <p>The information about the creation of the rule.</p>
+         * <p>The information about the creator of the rule.</p>
          */
         @NameInMap("CreateBy")
         public GetAggregateConfigRuleResponseBodyConfigRuleCreateBy createBy;
@@ -922,19 +952,16 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The description of the managed rule.</p>
+         * <p>The description of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the managed rule.</p>
+         * <p>RAM用户开启MFA，视为“合规”。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule.</p>
-         * <blockquote>
-         * <p> This parameter applies only to a managed rule.</p>
-         * </blockquote>
+         * <p>The rule does not apply to resources in the specified member accounts. The system does not evaluate resources in these accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>120886317861****</p>
@@ -943,13 +970,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String excludeAccountIdsScope;
 
         /**
-         * <p>The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule.</p>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li>This parameter applies only to a rule of a global account group.</li>
-         * <li>This parameter applies only to a managed rule.</li>
-         * </ul>
+         * <p>The rule does not apply to resources within the member accounts in the specified folders of the resource directory. The system does not evaluate resources in these folders.</p>
          * 
          * <strong>example:</strong>
          * <p>fd-pWmkqZ****</p>
@@ -958,7 +979,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String excludeFolderIdsScope;
 
         /**
-         * <p>The IDs of the regions excluded from the compliance evaluations performed by the rule. Separate multiple region IDs with commas (,).</p>
+         * <p>The rule does not apply to resources in the specified regions. The system does not evaluate resources in these regions. Separate multiple region IDs with a comma (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -967,7 +988,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String excludeRegionIdsScope;
 
         /**
-         * <p>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</p>
+         * <p>The rule does not apply to resources in the specified resource groups. The system does not evaluate resources in these resource groups. Separate multiple resource group IDs with a comma (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzdibsjjc****</p>
@@ -976,7 +997,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String excludeResourceGroupIdsScope;
 
         /**
-         * <p>The ID of the resource excluded from the compliance evaluations performed by the rule.</p>
+         * <p>The IDs of the resources that are not evaluated by the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>23642660635687****</p>
@@ -985,13 +1006,13 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String excludeResourceIdsScope;
 
         /**
-         * <p>The scope of the tag that is excluded.</p>
+         * <p>The excluded scope of the tags.</p>
          */
         @NameInMap("ExcludeTagsScope")
         public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleExcludeTagsScope> excludeTagsScope;
 
         /**
-         * <p>The extended content, which is temporarily only used to configure the trigger time with a 24-hour cycle trigger.</p>
+         * <p>The extended content. This parameter is used to configure the trigger time for a rule that is triggered on a 24-hour cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
@@ -1000,13 +1021,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String extendContent;
 
         /**
-         * <p>The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.</p>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li>This parameter applies only to rules of a global account group.</li>
-         * <li>This parameter applies only to managed rules.</li>
-         * </ul>
+         * <p>The rule applies only to resources within the member accounts in the specified folders of the resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>fd-ZtHsRH****</p>
@@ -1030,13 +1045,18 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public GetAggregateConfigRuleResponseBodyConfigRuleManagedRule managedRule;
 
         /**
-         * <p>The intervals at which the managed rule is triggered. Valid values:</p>
+         * <p>The frequency at which the rule is executed.</p>
          * <ul>
-         * <li>One_Hour: 1 hour.</li>
-         * <li>Three_Hours: 3 hours.</li>
-         * <li>Six_Hours: 6 hours.</li>
-         * <li>Twelve_Hours: 12 hours</li>
-         * <li>TwentyFour_Hours: 24 hours</li>
+         * <li><p>One_Hour: 1 hour.</p>
+         * </li>
+         * <li><p>Three_Hours: 3 hours.</p>
+         * </li>
+         * <li><p>Six_Hours: 6 hours.</p>
+         * </li>
+         * <li><p>Twelve_Hours: 12 hours.</p>
+         * </li>
+         * <li><p>TwentyFour_Hours: 24 hours.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1055,7 +1075,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public Long modifiedTimestamp;
 
         /**
-         * <p>The ID of the region to which the rule applies.</p>
+         * <p>The rule applies only to resources in the specified regions.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -1064,7 +1084,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String regionIdsScope;
 
         /**
-         * <p>The ID of the resource group to which the rule applies.</p>
+         * <p>The rule applies only to resources in the specified resource groups.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzdibsjjc****</p>
@@ -1073,7 +1093,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String resourceGroupIdsScope;
 
         /**
-         * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+         * <p>The rule applies only to the specified resources. Separate multiple resource IDs with a comma (,).</p>
          * 
          * <strong>example:</strong>
          * <p>eip-8vbf3x310fn56ijfd****</p>
@@ -1082,7 +1102,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String resourceIdsScope;
 
         /**
-         * <p>The names of the resource to which the rule applies.</p>
+         * <p>The rule applies only to resources that have the specified names.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxx</p>
@@ -1094,7 +1114,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String resourceNameScope;
 
         /**
-         * <p>The type of the resource evaluated by the rule.</p>
+         * <p>The resource types that are evaluated by the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::RAM::User</p>
@@ -1103,11 +1123,14 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String resourceTypesScope;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <p>The risk level of the rule. Valid values:</p>
          * <ul>
-         * <li>1: high risk level</li>
-         * <li>2: medium risk level</li>
-         * <li>3: low risk level</li>
+         * <li><p>1: high</p>
+         * </li>
+         * <li><p>2: medium</p>
+         * </li>
+         * <li><p>3: low</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1117,19 +1140,19 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>The information about how the rule was created.</p>
+         * <p>The source of the rule.</p>
          */
         @NameInMap("Source")
         public GetAggregateConfigRuleResponseBodyConfigRuleSource source;
 
         /**
-         * <p>When retrieving details of rules created using the parameter <code>TagsScope</code>, this field will not be returned.</p>
-         * <p>To retrieve rules created using the deprecated field <code>TagKeyScope</code> (not recommended): for example, when the parameter <code>TagKeyScope</code> has a value of ECS,OSS, if this parameter is set to <code>AND</code>, it means that the rule only applies to resources bound with both labels ECS and OSS.</p>
-         * <p>Values:</p>
+         * <p>This parameter is not returned for rules that are created using the <code>TagsScope</code> parameter.</p>
+         * <p>This parameter is returned only for rules that are created using the deprecated <code>TagKeyScope</code> parameter. For example, if <code>TagKeyScope</code> is set to <code>ECS,OSS</code> and this parameter is set to <code>AND</code>, the rule applies to resources that have both the <code>ECS</code> and <code>OSS</code> tags.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><p>AND: And.</p>
+         * <li><p>AND</p>
          * </li>
-         * <li><p>OR: Or.</p>
+         * <li><p>OR</p>
          * </li>
          * </ul>
          * 
@@ -1140,8 +1163,8 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String tagKeyLogicScope;
 
         /**
-         * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
-         * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</p>
+         * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter instead.</p>
+         * <p>The rule applies only to resources that have the specified tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>RAM</p>
@@ -1151,8 +1174,8 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String tagKeyScope;
 
         /**
-         * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
-         * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
+         * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter instead.</p>
+         * <p>The rule applies only to resources that have the specified tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>MFA</p>
@@ -1162,13 +1185,13 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String tagValueScope;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The resource tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleTags> tags;
 
         /**
-         * <p>The tag scope.</p>
+         * <p>The scope of the tags.</p>
          */
         @NameInMap("TagsScope")
         public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleTagsScope> tagsScope;

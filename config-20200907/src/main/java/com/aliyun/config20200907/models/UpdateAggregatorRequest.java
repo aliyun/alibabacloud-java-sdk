@@ -7,7 +7,7 @@ public class UpdateAggregatorRequest extends TeaModel {
     /**
      * <p>The members in the account group.</p>
      * <blockquote>
-     * <p> When you modify the configurations of an account group, this parameter can be left empty. In this case, the member list is not updated. If you want to update the member list, you must configure both the <code>AccountId</code> and <code>AccountType</code> parameters.</p>
+     * <p>You can leave this parameter empty to skip updating the member list. To update the member list, you must specify both <code>AccountId</code> and <code>AccountType</code>.</p>
      * </blockquote>
      * 
      * <strong>if can be null:</strong>
@@ -38,7 +38,7 @@ public class UpdateAggregatorRequest extends TeaModel {
     public String aggregatorName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that ensures the idempotence of the request. Generate a unique token for each request. The token can contain only ASCII characters and must be no more than 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
@@ -51,13 +51,13 @@ public class UpdateAggregatorRequest extends TeaModel {
      * <p>For more information about how to obtain the description of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test_Aggregator_Description</p>
+     * <p>测试组</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The folder ID. Separate multiple folder IDs with commas (,).</p>
+     * <p>The ID of the folder. You can enter multiple folder IDs. Separate the IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>fd-brHdgv****,fd-brHdgk****</p>
@@ -66,8 +66,8 @@ public class UpdateAggregatorRequest extends TeaModel {
     public String folderId;
 
     /**
-     * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
+     * <p>The tags of the resource. This parameter is deprecated and no longer takes effect. Ignore this parameter.</p>
+     * <p>You can attach up to 20 tags.</p>
      */
     @NameInMap("Tag")
     @Deprecated
@@ -140,7 +140,7 @@ public class UpdateAggregatorRequest extends TeaModel {
          * <p>The ID of the member.</p>
          * <p>For more information about how to obtain the ID of a member, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</p>
          * <blockquote>
-         * <p> If you want to update the member list, you must configure both the <code>AccountId</code> and <code>AccountType</code> parameters.</p>
+         * <p>To update the member list, you must specify both <code>AccountId</code> and <code>AccountType</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,10 +150,10 @@ public class UpdateAggregatorRequest extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The display name of the member.</p>
+         * <p>The name of the member.</p>
          * <p>For more information about how to obtain the name of a member, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</p>
          * <blockquote>
-         * <p> If you want to update the member list, you must configure both the <code>AccountId</code> and <code>AccountType</code> parameters.</p>
+         * <p>To update the member list, you must specify both <code>AccountId</code> and <code>AccountType</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -163,9 +163,9 @@ public class UpdateAggregatorRequest extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The resource directory to which the member belongs. Valid value: ResourceDirectory. ResourceDirectory indicates that the member belongs to a resource directory.</p>
+         * <p>The affiliation of the member. Only ResourceDirectory is supported.</p>
          * <blockquote>
-         * <p> If you want to update the member list, you must configure both the <code>AccountId</code> and <code>AccountType</code> parameters.</p>
+         * <p>To update the member list, you must specify both <code>AccountId</code> and <code>AccountType</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -207,8 +207,8 @@ public class UpdateAggregatorRequest extends TeaModel {
 
     public static class UpdateAggregatorRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
-         * <p>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs</code>:. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of the tag. A tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -217,9 +217,7 @@ public class UpdateAggregatorRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values.</p>
-         * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

@@ -5,13 +5,24 @@ import com.aliyun.tea.*;
 
 public class GetResourceConfigurationSampleRequest extends TeaModel {
     /**
+     * <p>Specifies whether to obtain only mock data, which is not real resource data.
+     * Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("MockOnly")
     public String mockOnly;
 
     /**
+     * <p>The resource type.</p>
+     * <p>For more information about how to obtain the resource type, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

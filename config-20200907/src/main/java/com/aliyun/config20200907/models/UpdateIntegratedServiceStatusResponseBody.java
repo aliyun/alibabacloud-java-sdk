@@ -4,12 +4,6 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateIntegratedServiceStatusResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>02EB7638-B029-5ABB-93F5-A2ABEEAC282D</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

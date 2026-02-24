@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetAggregateCompliancePackRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class GetAggregateCompliancePackRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The ID of the compliance package.</p>
-     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
+     * <p>The ID of the compliance pack.</p>
+     * <p>For more information about how to obtain the ID of a compliance pack, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,8 +27,8 @@ public class GetAggregateCompliancePackRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
+     * <p>The tags of the resource. This parameter is deprecated and no longer takes effect.</p>
+     * <p>You can attach up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     @Deprecated
@@ -66,8 +66,8 @@ public class GetAggregateCompliancePackRequest extends TeaModel {
 
     public static class GetAggregateCompliancePackRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
-         * <p>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs</code>:. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>You can attach up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -76,9 +76,8 @@ public class GetAggregateCompliancePackRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values.</p>
-         * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value of the resource.</p>
+         * <p>You can attach up to 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

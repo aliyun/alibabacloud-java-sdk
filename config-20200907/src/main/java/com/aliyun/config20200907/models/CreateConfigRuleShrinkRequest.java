@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConfigRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``</p>
+     * <p>A client token. It is used to ensure the idempotence of the request. You can use the client to generate a token, but you must make sure that the token is unique among different requests. The <code>ClientToken</code> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
@@ -14,23 +14,32 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <strong>example:</strong>
+     * <p>{&quot;ComplianceConditions&quot;:&quot;{&quot;operator&quot;:&quot;and&quot;,&quot;children&quot;:[{&quot;operator&quot;:&quot;StringEquals&quot;,&quot;featurePath&quot;:&quot;$.Status&quot;,&quot;desired&quot;:&quot;1&quot;,&quot;featureSource&quot;:&quot;CONFIGURATION&quot;}]}&quot;}</p>
+     */
+    @NameInMap("Conditions")
+    public String conditions;
+
+    /**
      * <p>The name of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>required-tags</p>
+     * <p>存在所有指定标签</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
 
     /**
-     * <p>The trigger type of the rule. Valid values:</p>
+     * <p>The trigger that invokes the rule. Valid values:</p>
      * <ul>
-     * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
-     * <li>ScheduledNotification: The rule is periodically triggered.</li>
+     * <li><p>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+     * </li>
+     * <li><p>ScheduledNotification: The rule is triggered on a regular basis.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If a rule supports the preceding trigger types, separate the types with a comma (,).</p>
+     * <p>If a rule has multiple triggers, separate them with commas (,).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,13 +53,13 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
      * <p>The description of the rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>example-description</p>
+     * <p>最多可以定义6组标签。如果资源同时具有指定的所有标签，则视为“合规”。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>ExcludeRegionIdsScope</p>
+     * <p>The rule does not apply to resources in the specified regions. The compliance of resources in these regions is not evaluated. Separate multiple region IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -59,7 +68,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String excludeRegionIdsScope;
 
     /**
-     * <p>ExcludeResourceGroupIdsScope</p>
+     * <p>The rule does not apply to resources in the specified resource groups. The compliance of resources in these resource groups is not evaluated. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bnczc6r7rml****</p>
@@ -68,9 +77,9 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String excludeResourceGroupIdsScope;
 
     /**
-     * <p>The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+     * <p>The rule does not apply to the specified resources. The compliance of these resources is not evaluated. Separate multiple resource IDs with commas (,).</p>
      * <blockquote>
-     * <p> This parameter applies only to managed rules.</p>
+     * <p>This parameter applies only to rule templates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -80,13 +89,13 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String excludeResourceIdsScope;
 
     /**
-     * <p>ExcludeTagsScope</p>
+     * <p>The scope of the tags to exclude.</p>
      */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<CreateConfigRuleShrinkRequestExcludeTagsScope> excludeTagsScope;
 
     /**
-     * <p>Optional field, only used in conjunction with the 24-hour cycle execution to set the trigger time.</p>
+     * <p>Extended content. This parameter is used only to specify the trigger time for a 24-hour evaluation cycle.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;fixedHour&quot;:&quot;13&quot;}</p>
@@ -95,25 +104,32 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String extendContent;
 
     /**
-     * <p>The input parameter of the rule.</p>
+     * <p>The input parameters of the rule.</p>
+     * <p>You can obtain the input parameters of a rule by calling the <a href="https://help.aliyun.com/document_detail/606993.html">GetManagedRule</a> operation. View the <code>CompulsoryInputParameterDetails</code> and <code>OptionalInputParameterDetails</code> parameters to learn about the required and optional parameters.</p>
+     * <p>The format of the input parameters is <code>{&quot;Parameter 1 Name&quot;:&quot;Parameter 1 Value&quot;,&quot;Parameter 2 Name&quot;:&quot;Parameter 2 Value&quot;}</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;tag1Key&quot;:&quot;ECS&quot;,&quot;tag1Value&quot;:&quot;test&quot;}</p>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}</p>
      */
     @NameInMap("InputParameters")
     public String inputParametersShrink;
 
     /**
-     * <p>The intervals at which the rule is triggered. Valid values:</p>
+     * <p>The frequency at which the rule is executed. Valid values:</p>
      * <ul>
-     * <li>One_Hour: 1 hour.</li>
-     * <li>Three_Hours: 3 hours.</li>
-     * <li>Six_Hours: 6 hours.</li>
-     * <li>Twelve_Hours: 12 hours.</li>
-     * <li>TwentyFour_Hours (default): 24 hours.</li>
+     * <li><p>One_Hour: 1 hour.</p>
+     * </li>
+     * <li><p>Three_Hours: 3 hours.</p>
+     * </li>
+     * <li><p>Six_Hours: 6 hours.</p>
+     * </li>
+     * <li><p>Twelve_Hours: 12 hours.</p>
+     * </li>
+     * <li><p>TwentyFour_Hours (default): 24 hours.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if the ConfigRuleTriggerTypes parameter is set to ScheduledNotification.</p>
+     * <p>This parameter is required if you set ConfigRuleTriggerTypes to ScheduledNotification.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -123,9 +139,9 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String maximumExecutionFrequency;
 
     /**
-     * <p>The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).</p>
+     * <p>The rule applies only to resources in the specified regions. Separate multiple region IDs with commas (,).</p>
      * <blockquote>
-     * <p> This parameter applies only to managed rules.</p>
+     * <p>This parameter applies only to rule templates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -135,9 +151,9 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String regionIdsScope;
 
     /**
-     * <p>The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The rule applies only to resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</p>
      * <blockquote>
-     * <p> This parameter applies only to managed rules.</p>
+     * <p>This parameter applies only to rule templates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -147,7 +163,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>ResourceIdsScope</p>
+     * <p>The rule applies to the specified resources. Separate multiple resource IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>lb-5cmbowstbkss9ta03****</p>
@@ -156,7 +172,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
-     * <p>The names of the resource to which the rule applies.</p>
+     * <p>The rule applies only to resources that have the specified names.</p>
      * 
      * <strong>example:</strong>
      * <p>i-xxx</p>
@@ -168,7 +184,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String resourceNameScope;
 
     /**
-     * <p>The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).</p>
+     * <p>The resource types to be evaluated by the rule. Separate multiple resource types with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -178,11 +194,14 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String resourceTypesScopeShrink;
 
     /**
-     * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+     * <p>The risk level of the rule. Valid values:</p>
      * <ul>
-     * <li>1: high.</li>
-     * <li>2: medium.</li>
-     * <li>3: low.</li>
+     * <li><p>1: high.</p>
+     * </li>
+     * <li><p>2: medium.</p>
+     * </li>
+     * <li><p>3: low.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -193,12 +212,20 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public Integer riskLevel;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The identifier of the rule.</p>
      * <ul>
-     * <li>If you set the SourceOwner parameter to ALIYUN, set this parameter to the name of the managed rule.</li>
-     * <li>If you set the SourceOwner parameter to CUSTOM_FC, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</li>
+     * <li><p>If you set <code>SourceOwner</code> to <code>ALIYUN</code>, specify the identifier of the rule template. Example: <code>required-tags</code>.</p>
+     * <blockquote>
+     * <p>To query the identifier of a rule template, see <a href="https://help.aliyun.com/document_detail/127404.html">List of rule templates</a>.</p>
+     * </blockquote>
+     * </li>
+     * <li><p>If you set <code>SourceOwner</code> to <code>CUSTOM_FC</code>, specify the Alibaba Cloud Resource Name (ARN) of the function.</p>
+     * <p>The ARN must be in the format of <code>acs:fc:{Region}:{AccountID}:services/{ServiceName}.LATEST/functions/{FunctionName}</code>. Example: <code>acs:fc:cn-hangzhou:120886317861****:services/service-test.LATEST/functions/config-test</code>.</p>
+     * <blockquote>
+     * <p>To obtain the ARN of a function, see <a href="https://help.aliyun.com/document_detail/415752.html">ListFunctions</a>.</p>
+     * </blockquote>
+     * </li>
      * </ul>
-     * <p>For more information about how to query the name of a managed rule, see <a href="https://help.aliyun.com/document_detail/127404.html">Managed rules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -208,10 +235,12 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String sourceIdentifier;
 
     /**
-     * <p>The type of the rule Valid values:</p>
+     * <p>The type of the rule to create. Valid values:</p>
      * <ul>
-     * <li>ALIYUN: managed rule.</li>
-     * <li>CUSTOM_FC: custom rule.</li>
+     * <li><p>ALIYUN: rule template.</p>
+     * </li>
+     * <li><p>CUSTOM_FC: custom rule.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -222,19 +251,19 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String sourceOwner;
 
     /**
-     * <p>rule attached tags</p>
+     * <p>The tags of the rule to be created.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;
 
     /**
-     * <p>The logical relationship when parameter <code>TagsScope</code> takes multiple values, for example: When the parameter <code>TagsScope</code> is <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;, &quot;TagsScope.1.TagValue&quot;:&quot;a&quot;, &quot;TagsScope.2.TagKey&quot;:&quot;b&quot;, &quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code>, if this parameter is set to<code> AND</code>, it means that the rule only applies to resources bound with both tags <code>a:a</code> and <code>b:b</code>. If not specified, the default logic is <code>OR</code>.</p>
-     * <p>It can also be used for the deprecated field <code>TagKeyScope</code> (not recommended), for example: When the parameter <code>TagKeyScope</code> has a value of <code>ECS</code>,<code>OSS</code>, if this parameter is set to <code>AND</code>, it means that the rule only applies to resources bound with both labels <code>ECS</code> and <code>OSS</code>.</p>
-     * <p>Values:</p>
+     * <p>The logical operator that applies if you specify multiple tags for the <code>TagsScope</code> parameter. For example, if you set <code>TagsScope</code> to <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>a:a</code> and <code>b:b</code> tags. If you do not specify this parameter, the default value <code>OR</code> is used.</p>
+     * <p>This parameter also works with the deprecated <code>TagKeyScope</code> parameter. For example, if you set <code>TagKeyScope</code> to <code>ECS,OSS</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>ECS</code> and <code>OSS</code> tags.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>AND: And.</p>
+     * <li><p>AND: The AND logic applies.</p>
      * </li>
-     * <li><p>OR: Or.</p>
+     * <li><p>OR: The OR logic applies.</p>
      * </li>
      * </ul>
      * 
@@ -245,9 +274,10 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String tagKeyLogicScope;
 
     /**
-     * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</p>
+     * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter instead.</p>
+     * <p>The rule applies only to resources that have the specified tag key.</p>
      * <blockquote>
-     * <p> This parameter applies only to managed rules. You must specify both <code>TagKeyScope</code> and <code>TagValueScope</code>.</p>
+     * <p>This parameter applies only to managed rules. You must set both <code>TagKeyScope</code> and <code>TagValueScope</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -258,9 +288,10 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String tagKeyScope;
 
     /**
-     * <p>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</p>
+     * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter instead.</p>
+     * <p>The rule applies only to resources that have the specified tag value.</p>
      * <blockquote>
-     * <p> This parameter applies only to managed rules. You must specify both <code>TagKeyScope</code> and <code>TagValueScope</code>.</p>
+     * <p>This parameter applies only to rule templates. You must set both <code>TagKeyScope</code> and <code>TagValueScope</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -271,7 +302,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String tagValueScope;
 
     /**
-     * <p>TagsScope</p>
+     * <p>The scope of the tags.</p>
      */
     @NameInMap("TagsScope")
     public java.util.List<CreateConfigRuleShrinkRequestTagsScope> tagsScope;
@@ -287,6 +318,14 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateConfigRuleShrinkRequest setConditions(String conditions) {
+        this.conditions = conditions;
+        return this;
+    }
+    public String getConditions() {
+        return this.conditions;
     }
 
     public CreateConfigRuleShrinkRequest setConfigRuleName(String configRuleName) {
@@ -477,7 +516,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
 
     public static class CreateConfigRuleShrinkRequestExcludeTagsScope extends TeaModel {
         /**
-         * <p>TagKey</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-2</p>
@@ -486,7 +525,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>TagValue</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-2</p>
@@ -519,7 +558,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
 
     public static class CreateConfigRuleShrinkRequestTagsScope extends TeaModel {
         /**
-         * <p>TagKey</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -528,7 +567,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>TagValue</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteReportTemplateRequest extends TeaModel {
     /**
+     * <p>The ID of the report template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

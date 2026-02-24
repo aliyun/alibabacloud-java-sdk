@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAggregateConfigRuleRequest extends TeaModel {
     /**
-     * <p>The IDs of the member accounts to which the rule applies, which means that the resources within the member accounts are evaluated based on the rule. Separate multiple member account IDs with commas (,).</p>
+     * <p>The rule is effective only for resources of the specified member accounts. Separate multiple member account IDs with commas (,).</p>
+     * <blockquote>
+     * <p>This parameter applies only to rule templates.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>115748125982****</p>
@@ -15,7 +18,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +28,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token to ensure that the request is idempotent. Generate a unique value from your client for each request. The <code>ClientToken</code> parameter must contain only ASCII characters and be no more than 64 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
@@ -34,11 +37,18 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The rule name.</p>
+     * <strong>example:</strong>
+     * <p>{&quot;ComplianceConditions&quot;:&quot;{&quot;operator&quot;:&quot;and&quot;,&quot;children&quot;:[{&quot;operator&quot;:&quot;StringEquals&quot;,&quot;featurePath&quot;:&quot;$.Status&quot;,&quot;desired&quot;:&quot;1&quot;,&quot;featureSource&quot;:&quot;CONFIGURATION&quot;}]}&quot;}</p>
+     */
+    @NameInMap("Conditions")
+    public String conditions;
+
+    /**
+     * <p>The name of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss-default-encryption-kms</p>
+     * <p>存在所有指定标签</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
@@ -46,8 +56,10 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     /**
      * <p>The trigger type of the rule. Valid values:</p>
      * <ul>
-     * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
-     * <li>ScheduledNotification: The rule is periodically triggered.</li>
+     * <li><p>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+     * </li>
+     * <li><p>ScheduledNotification: The rule is triggered on a regular basis.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,15 +73,15 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
      * <p>The description of the rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>description of rule</p>
+     * <p>最多可以定义6组标签。如果资源同时具有指定的所有标签，则视为“合规”。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule. Separate multiple member account IDs with commas (,).</p>
+     * <p>The rule is not effective for resources of the specified member accounts. The resources of the specified member accounts are not evaluated. Separate multiple member account IDs with commas (,).</p>
      * <blockquote>
-     * <p>This parameter applies only to a managed rule.</p>
+     * <p>This parameter applies only to rule templates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,15 +91,15 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String excludeAccountIdsScope;
 
     /**
-     * <p>The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule. Separate multiple resource directory IDs with commas (,).</p>
+     * <p>The rule is not effective for resources of the member accounts in the specified folders. The resources of the member accounts in the specified folders are not evaluated. Separate multiple folder IDs with commas (,).</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter applies only to a rule of a global account group.</p>
+     * <li><p>This parameter applies only to rules of a global account group.</p>
      * </li>
-     * <li><p>This parameter applies only to a managed rule.</p>
+     * <li><p>This parameter applies only to rule templates.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>fd-pWmkqZ****</p>
@@ -96,7 +108,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String excludeFolderIdsScope;
 
     /**
-     * <p>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</p>
+     * <p>The rule is not effective for resources in the specified regions. The resources in the specified regions are not evaluated. Separate multiple region IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -105,7 +117,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String excludeRegionIdsScope;
 
     /**
-     * <p>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The rule is not effective for resources in the specified resource groups. The resources in the specified resource groups are not evaluated. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bnczc6r7rml****</p>
@@ -114,10 +126,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String excludeResourceGroupIdsScope;
 
     /**
-     * <p>The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
-     * <blockquote>
-     * <p>This parameter applies only to a managed rule.</p>
-     * </blockquote>
+     * <p>The rule is not effective for the specified resources. The specified resources are not evaluated. Separate multiple resource IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>lb-t4nbowvtbkss7t326****</p>
@@ -126,13 +135,13 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String excludeResourceIdsScope;
 
     /**
-     * <p>The scope of the tag that is excluded.</p>
+     * <p>The scope of the tags to be excluded.</p>
      */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<CreateAggregateConfigRuleRequestExcludeTagsScope> excludeTagsScope;
 
     /**
-     * <p>The extended content, which is temporarily only used to configure the trigger time with a 24-hour cycle trigger.</p>
+     * <p>The extended content. This parameter specifies the trigger time for a rule that runs on a 24-hour cycle.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
@@ -141,15 +150,15 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String extendContent;
 
     /**
-     * <p>The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.</p>
+     * <p>The rule is effective only for resources of the member accounts in the specified folders. Separate multiple folder IDs with commas (,).</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter applies only to a rule of a global account group.</p>
+     * <li><p>This parameter applies only to rules of a global account group.</p>
      * </li>
-     * <li><p>This parameter applies only to a managed rule.</p>
+     * <li><p>This parameter applies only to rule templates.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>fd-ZtHsRH****</p>
@@ -158,7 +167,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String folderIdsScope;
 
     /**
-     * <p>The input parameter of the rule.</p>
+     * <p>The input parameters of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;tag1Key&quot;:&quot;ECS&quot;,&quot;tag1Value&quot;:&quot;test&quot;}</p>
@@ -167,16 +176,21 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public java.util.Map<String, ?> inputParameters;
 
     /**
-     * <p>The interval at which the rule is triggered. Valid values:</p>
+     * <p>The frequency at which the rule is run. Valid values:</p>
      * <ul>
-     * <li>One_Hour</li>
-     * <li>Three_Hours</li>
-     * <li>Six_Hours</li>
-     * <li>Twelve_Hours</li>
-     * <li>TwentyFour_Hours (default)</li>
+     * <li><p>One_Hour: 1 hour.</p>
+     * </li>
+     * <li><p>Three_Hours: 3 hours.</p>
+     * </li>
+     * <li><p>Six_Hours: 6 hours.</p>
+     * </li>
+     * <li><p>Twelve_Hours: 12 hours.</p>
+     * </li>
+     * <li><p>TwentyFour_Hours (default): 24 hours.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if the <code>ConfigRuleTriggerTypes</code> parameter is set to <code>ScheduledNotification</code>.</p>
+     * <p>This parameter is required if you set <code>ConfigRuleTriggerTypes</code> to <code>ScheduledNotification</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -186,10 +200,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String maximumExecutionFrequency;
 
     /**
-     * <p>The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).</p>
-     * <blockquote>
-     * <p>This parameter applies only to a managed rule.</p>
-     * </blockquote>
+     * <p>The rule is effective only for resources in the specified regions. Separate multiple region IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -198,10 +209,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String regionIdsScope;
 
     /**
-     * <p>The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).</p>
-     * <blockquote>
-     * <p>This parameter applies only to a managed rule.</p>
-     * </blockquote>
+     * <p>The rule is effective only for resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzc7r7rhx****</p>
@@ -210,7 +218,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+     * <p>The rule is effective only for the specified resources. Separate multiple resource IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>lb-5cmbowstbkss9ta03****</p>
@@ -219,7 +227,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
-     * <p>The names of the resource to which the rule applies.</p>
+     * <p>The rule is effective only for resources that have the specified names.</p>
      * 
      * <strong>example:</strong>
      * <p>i-xxx</p>
@@ -231,7 +239,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String resourceNameScope;
 
     /**
-     * <p>The type of the resource evaluated by the rule. Separate multiple resource types with commas (,).</p>
+     * <p>The resource types to be evaluated by the rule. Separate multiple resource types with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -241,11 +249,14 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public java.util.List<String> resourceTypesScope;
 
     /**
-     * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+     * <p>The risk level of the rule. Valid values:</p>
      * <ul>
-     * <li>1: high</li>
-     * <li>2: medium</li>
-     * <li>3: low</li>
+     * <li><p>1: high</p>
+     * </li>
+     * <li><p>2: medium</p>
+     * </li>
+     * <li><p>3: low</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -258,10 +269,18 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     /**
      * <p>The identifier of the rule.</p>
      * <ul>
-     * <li>If you set the SourceOwner parameter to ALIYUN, set this parameter to the name of the managed rule.</li>
-     * <li>If you set the SourceOwner parameter to CUSTOM_FC, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</li>
+     * <li><p>If you set <code>SourceOwner</code> to <code>ALIYUN</code>, enter the identifier of the rule template, such as <code>required-tags</code>.</p>
+     * <blockquote>
+     * <p>For more information about how to query the identifier of a rule template, see <a href="https://help.aliyun.com/document_detail/127404.html">List of rule templates</a>.</p>
+     * </blockquote>
+     * </li>
+     * <li><p>If you set <code>SourceOwner</code> to <code>CUSTOM_FC</code>, enter the Alibaba Cloud Resource Name (ARN) of the function in Function Compute.</p>
+     * <p>The ARN is in the format of <code>acs:fc:{region}:{accountId}:services/{serviceName}.LATEST/functions/{functionName}</code>. For example, <code>acs:fc:cn-hangzhou:120886317861****:services/service-test.LATEST/functions/config-test</code>.</p>
+     * <blockquote>
+     * <p>For more information about how to obtain the ARN of a function, see <a href="https://help.aliyun.com/document_detail/415752.html">ListFunctions</a>.</p>
+     * </blockquote>
+     * </li>
      * </ul>
-     * <p>For more information about how to query the name of a managed rule, see <a href="https://help.aliyun.com/document_detail/127404.html">Managed rules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -273,8 +292,10 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     /**
      * <p>The type of the rule. Valid values:</p>
      * <ul>
-     * <li>ALIYUN: a managed rule.</li>
-     * <li>CUSTOM_FC: a custom rule.</li>
+     * <li><p>ALIYUN: rule template</p>
+     * </li>
+     * <li><p>CUSTOM_FC: custom rule</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -285,19 +306,19 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String sourceOwner;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags to add to the rule. You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateAggregateConfigRuleRequestTag> tag;
 
     /**
-     * <p>The logical relationship when parameter <code>TagsScope</code> takes multiple values, for example: When the parameter <code>TagsScope</code> is <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;, &quot;TagsScope.1.TagValue&quot;:&quot;a&quot;, &quot;TagsScope.2.TagKey&quot;:&quot;b&quot;, &quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code>, if this parameter is set to<code> AND</code>, it means that the rule only applies to resources bound with both tags <code>a:a</code> and <code>b:b</code>. If not specified, the default logic is <code>OR</code>.</p>
-     * <p>It can also be used for the deprecated field <code>TagKeyScope</code> (not recommended), for example: When the parameter <code>TagKeyScope</code> has a value of <code>ECS</code>,<code>OSS</code>, if this parameter is set to <code>AND</code>, it means that the rule only applies to resources bound with both labels <code>ECS</code> and <code>OSS</code>.</p>
-     * <p>Values:</p>
+     * <p>The logical relationship for multiple tags in the <code>TagsScope</code> parameter. For example, if you set the <code>TagsScope</code> parameter to <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>a:a</code> and <code>b:b</code> tags. The default value is <code>OR</code>.</p>
+     * <p>This parameter can also be used for the deprecated <code>TagKeyScope</code> parameter, but this is not recommended. For example, if you set <code>TagKeyScope</code> to <code>ECS,OSS</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>ECS</code> and <code>OSS</code> tags.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>AND: And.</p>
+     * <li><p>AND</p>
      * </li>
-     * <li><p>OR: Or.</p>
+     * <li><p>OR</p>
      * </li>
      * </ul>
      * 
@@ -308,10 +329,10 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String tagKeyLogicScope;
 
     /**
-     * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
-     * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key. Separate multiple parameter values with commas (,).</p>
+     * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter.</p>
+     * <p>The rule is effective only for resources that have the specified tag keys. Separate multiple tag keys with commas (,).</p>
      * <blockquote>
-     * <p> This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
+     * <p>This parameter applies only to rule templates. The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters must be used together.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -322,10 +343,10 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String tagKeyScope;
 
     /**
-     * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
-     * <p>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</p>
+     * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter.</p>
+     * <p>The rule is effective only for resources that have the specified tag values.</p>
      * <blockquote>
-     * <p> This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
+     * <p>This parameter applies only to rule templates. The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters must be used together.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -336,7 +357,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String tagValueScope;
 
     /**
-     * <p>The tag scope.</p>
+     * <p>The scope of the tags.</p>
      */
     @NameInMap("TagsScope")
     public java.util.List<CreateAggregateConfigRuleRequestTagsScope> tagsScope;
@@ -368,6 +389,14 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateAggregateConfigRuleRequest setConditions(String conditions) {
+        this.conditions = conditions;
+        return this;
+    }
+    public String getConditions() {
+        return this.conditions;
     }
 
     public CreateAggregateConfigRuleRequest setConfigRuleName(String configRuleName) {
@@ -582,7 +611,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
 
     public static class CreateAggregateConfigRuleRequestExcludeTagsScope extends TeaModel {
         /**
-         * <p>The tag key of the resource that you want to exclude.</p>
+         * <p>The tag key of the resource to be excluded.</p>
          * 
          * <strong>example:</strong>
          * <p>key-2</p>
@@ -591,7 +620,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the resource that you want to exclude.</p>
+         * <p>The tag value of the resource to be excluded.</p>
          * 
          * <strong>example:</strong>
          * <p>value-2</p>
@@ -624,9 +653,8 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
 
     public static class CreateAggregateConfigRuleRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The key of the tag.</p>
+         * <p>You can add up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -635,9 +663,8 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values.</p>
-         * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+         * <p>The value of the tag.</p>
+         * <p>You can add up to 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>
@@ -670,7 +697,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
 
     public static class CreateAggregateConfigRuleRequestTagsScope extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -679,7 +706,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

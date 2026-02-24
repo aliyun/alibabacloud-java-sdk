@@ -16,7 +16,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The compliance package ID.</p>
+     * <p>The ID of the compliance package.</p>
      * 
      * <strong>example:</strong>
      * <p>cp-fe416457e0d90022****</p>
@@ -27,10 +27,14 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     /**
      * <p>The compliance evaluation result. Valid values:</p>
      * <ul>
-     * <li>COMPLIANT: The resources are evaluated as compliant.</li>
-     * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
-     * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
-     * <li>INSUFFICIENT_DATA: No data is available.</li>
+     * <li><p>COMPLIANT: The resource is compliant.</p>
+     * </li>
+     * <li><p>NON_COMPLIANT: The resource is non-compliant.</p>
+     * </li>
+     * <li><p>NOT_APPLICABLE: The rule does not apply to the resource.</p>
+     * </li>
+     * <li><p>INSUFFICIENT_DATA: No data is available.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,18 +47,22 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
      * <p>The name of the rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-rule-name</p>
+     * <p>The name of the rule.</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
 
     /**
-     * <p>The status of the rule. Valid values:</p>
+     * <p>The state of the rule. Valid values:</p>
      * <ul>
-     * <li>ACTIVE: The rule is being used to monitor resource configurations.</li>
-     * <li>DELETING: The rule is being deleted.</li>
-     * <li>EVALUATING: The rule is triggered and is being used to monitor resource configurations.</li>
-     * <li>INACTIVE: The rule is disabled.</li>
+     * <li><p>ACTIVE: The rule is enabled.</p>
+     * </li>
+     * <li><p>DELETING: The rule is being deleted.</p>
+     * </li>
+     * <li><p>EVALUATING: The rule is being evaluated.</p>
+     * </li>
+     * <li><p>INACTIVE: The rule is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,8 +72,8 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public String configRuleState;
 
     /**
-     * <p>The keyword that is used for queries.</p>
-     * <p>You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.</p>
+     * <p>The keyword for a fuzzy query.</p>
+     * <p>The keyword can be a rule ID, rule name, rule description, or rule template identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -75,7 +83,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1</p>
+     * <p>Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -84,8 +92,8 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10</p>
+     * <p>The number of entries to return on each page.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -94,7 +102,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Resource type for the rule to evaluate.</p>
+     * <p>The resource type to be evaluated by the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>
@@ -103,11 +111,14 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public String resourceTypes;
 
     /**
-     * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+     * <p>The risk level of the rule. Valid values:</p>
      * <ul>
-     * <li>1: high</li>
-     * <li>2: medium</li>
-     * <li>3: low</li>
+     * <li><p>1: high</p>
+     * </li>
+     * <li><p>2: medium</p>
+     * </li>
+     * <li><p>3: low</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,12 +127,18 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    /**
+     * <p>The method that is used to sort the rules. By default, this parameter is not specified. Set the value to <code>CreateDate-Desc</code> to sort the rules in descending order of their creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateDate-Desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
      * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
+     * <p>You can add a maximum of 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListAggregateConfigRulesRequestTag> tag;
@@ -229,9 +246,8 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
 
     public static class ListAggregateConfigRulesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The key of a resource tag.</p>
+         * <p>You can add a maximum of 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -240,8 +256,8 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of a resource tag.</p>
+         * <p>You can add a maximum of 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

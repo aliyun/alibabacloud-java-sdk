@@ -5,33 +5,35 @@ import com.aliyun.tea.*;
 
 public class GetResourceTypePropertiesResponseBody extends TeaModel {
     /**
+     * <p>The property descriptions of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>[
-     *     {
-     *       &quot;description&quot;: &quot;The ID of the resource group to which the instance belongs.\n&quot;,
-     *       &quot;title&quot;: &quot;ResourceGroupId&quot;,
-     *       &quot;type&quot;: &quot;String&quot;,
-     *       &quot;key&quot;: &quot;ResourceGroupId&quot;,
-     *       &quot;example&quot;: &quot;rg-bp67acfmxazb4p****&quot;
-     *     },
-     *     {
-     *       &quot;description&quot;: &quot;The billing method of the instance. Valid values:\n\n*   PrePaid: subscription\n*   PostPaid: pay-as-you-go\n&quot;,
-     *       &quot;title&quot;: &quot;InstanceChargeType&quot;,
-     *       &quot;type&quot;: &quot;String&quot;,
-     *       &quot;key&quot;: &quot;InstanceChargeType&quot;,
-     *       &quot;example&quot;: &quot;PostPaid&quot;
-     *     }]</p>
+     *   {
+     *     &quot;description&quot;: &quot;The ID of the resource group to which the instance belongs.\n&quot;,
+     *     &quot;title&quot;: &quot;ResourceGroupId&quot;,
+     *     &quot;type&quot;: &quot;String&quot;,
+     *     &quot;key&quot;: &quot;ResourceGroupId&quot;,
+     *     &quot;example&quot;: &quot;rg-bp67acfmxazb4p****&quot;
+     *   },
+     *   {
+     *     &quot;description&quot;: &quot;The billing method of the instance. Valid values:\n\n*   PrePaid: subscription\n*   PostPaid: pay-as-you-go\n&quot;,
+     *     &quot;title&quot;: &quot;InstanceChargeType&quot;,
+     *     &quot;type&quot;: &quot;String&quot;,
+     *     &quot;key&quot;: &quot;InstanceChargeType&quot;,
+     *     &quot;example&quot;: &quot;PostPaid&quot;
+     *   }
+     * ]</p>
      */
     @NameInMap("Configuration")
     public String configuration;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>0C2868BF-47EE-5441-B34B-17F080B10DC7</p>
+     * <p>0C2868BF-47EE-5441-B34B-17F080B1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -62,9 +62,12 @@ public class GetConfigRuleSummaryByRiskLevelResponseBody extends TeaModel {
         /**
          * <p>The risk level of the resources that are not compliant with the rules. Valid values:</p>
          * <ul>
-         * <li>1: high risk level.</li>
-         * <li>2: medium risk level.</li>
-         * <li>3: low risk level.</li>
+         * <li><p>1: high risk level.</p>
+         * </li>
+         * <li><p>2: medium risk level.</p>
+         * </li>
+         * <li><p>3: low risk level.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

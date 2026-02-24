@@ -5,22 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListManagedRulesRequest extends TeaModel {
     /**
-     * <p>The scope for filtering managed rules allows you to filter out managed rules without resource coverage. The possible values are:</p>
-     * <ul>
-     * <li><p>ALL: All rules.</p>
-     * </li>
-     * <li><p>UNCOVERED_RESOURCE: Filters managed rules where some resources are not covered.</p>
-     * </li>
-     * </ul>
+     * <p>The scope of the filter.</p>
      * 
      * <strong>example:</strong>
-     * <p>ALL</p>
+     * <p>托管规则筛选范围，可以筛选无资源覆盖的托管规则。取值：</p>
+     * <ul>
+     * <li>ALL 全部</li>
+     * <li>UNCOVERED_RESOURCE 筛选有资源未覆盖的托管规则</li>
+     * </ul>
      */
     @NameInMap("FilterType")
     public String filterType;
 
     /**
-     * <p>The keyword of the managed rule.</p>
+     * <p>The keyword of the rule template.</p>
      * 
      * <strong>example:</strong>
      * <p>CDN</p>
@@ -29,8 +27,8 @@ public class ListManagedRulesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The page number of the page to return.</p>
-     * <p>Pages start from page 1. Default value: 1</p>
+     * <p>The page number.</p>
+     * <p>The value must be greater than or equal to 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,8 +37,8 @@ public class ListManagedRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -49,7 +47,7 @@ public class ListManagedRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the resources to be evaluated based on the rule.</p>
+     * <p>The resource type that is evaluated by the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>
@@ -58,11 +56,14 @@ public class ListManagedRulesRequest extends TeaModel {
     public String resourceTypes;
 
     /**
-     * <p>The risk level of the managed rule. Valid values:</p>
+     * <p>The risk level of the rule template. Valid values:</p>
      * <ul>
-     * <li>1: high</li>
-     * <li>2: medium</li>
-     * <li>3: low</li>
+     * <li><p>1: high</p>
+     * </li>
+     * <li><p>2: medium</p>
+     * </li>
+     * <li><p>3: low</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

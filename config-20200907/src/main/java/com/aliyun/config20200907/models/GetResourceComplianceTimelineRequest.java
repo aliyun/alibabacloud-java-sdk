@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceComplianceTimelineRequest extends TeaModel {
     /**
-     * <p>The timestamp that specifies the end of the time range to query. The default value is the time when the GetResourceComplianceTimeline operation is called. Unit: milliseconds.</p>
+     * <p>The end timestamp. If you do not set this parameter, the system queries data generated up to the time of the API call. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1625821156000</p>
@@ -14,7 +14,7 @@ public class GetResourceComplianceTimelineRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return on a single page. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class GetResourceComplianceTimelineRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return value is truncated, use this token to initiate another request to retrieve the remaining entries.</p>
      * 
      * <strong>example:</strong>
      * <p>IWBjqMYSy0is7zSMGu16****</p>
@@ -32,7 +32,7 @@ public class GetResourceComplianceTimelineRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the resource resides.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,8 @@ public class GetResourceComplianceTimelineRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The ID of the resource.</p>
-     * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+     * <p>The resource ID.</p>
+     * <p>For more information about how to obtain the resource ID, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,8 +53,8 @@ public class GetResourceComplianceTimelineRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the resource.</p>
-     * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+     * <p>The resource type.</p>
+     * <p>For more information about how to obtain the resource type, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class GetResourceComplianceTimelineRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the compliance evaluations in the last 30 days for the specified resource. Unit: milliseconds.</p>
+     * <p>The start timestamp. If you do not set this parameter, the system queries data from the last 30 days. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1623211156000</p>

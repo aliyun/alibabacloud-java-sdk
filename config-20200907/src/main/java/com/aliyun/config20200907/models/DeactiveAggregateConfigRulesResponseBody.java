@@ -4,18 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeactiveAggregateConfigRulesResponseBody extends TeaModel {
-    /**
-     * <p>The results of the operations that are performed to disable the specified rules.</p>
-     */
     @NameInMap("OperateRuleResult")
     public DeactiveAggregateConfigRulesResponseBodyOperateRuleResult operateRuleResult;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,38 +32,12 @@ public class DeactiveAggregateConfigRulesResponseBody extends TeaModel {
     }
 
     public static class DeactiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
-        /**
-         * <p>The rule ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cr-5772ba41209e007b****</p>
-         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
-        /**
-         * <p>The error code.</p>
-         * <ul>
-         * <li>If the rule is disabled, no error code is returned.</li>
-         * <li>If the rule fails to be disabled, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ConfigRuleNotExists</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -108,9 +73,6 @@ public class DeactiveAggregateConfigRulesResponseBody extends TeaModel {
     }
 
     public static class DeactiveAggregateConfigRulesResponseBodyOperateRuleResult extends TeaModel {
-        /**
-         * <p>The operations that are performed to disable the rule.</p>
-         */
         @NameInMap("OperateRuleItemList")
         public java.util.List<DeactiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> operateRuleItemList;
 

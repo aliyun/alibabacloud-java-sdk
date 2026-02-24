@@ -4,12 +4,6 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetDiscoveredResourceCountsGroupByResourceTypeRequest extends TeaModel {
-    /**
-     * <p>The region ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("Region")
     public String region;
 

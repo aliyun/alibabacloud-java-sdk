@@ -14,7 +14,7 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The compliance evaluation results returned.</p>
+     * <p>The compliance results of the resources in the compliance package.</p>
      */
     @NameInMap("ResourceComplianceResult")
     public GetResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult;
@@ -50,12 +50,33 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The number of compliant resources.</p>
+         * <blockquote>
+         * <p>Note: A resource is counted each time a rule evaluates it as compliant. For example, if a resource is evaluated as compliant by two rules, it is counted twice.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
+        /**
+         * <p>The number of resources whose evaluation results are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IgnoredCount")
         public Integer ignoredCount;
 
+        /**
+         * <p>The total number of resources that the rules in the compliance package evaluate as Insufficient Data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InsufficientDataCount")
         public Integer insufficientDataCount;
 
@@ -68,6 +89,15 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
+        /**
+         * <p>The number of resources that are not applicable.</p>
+         * <blockquote>
+         * <p>Note: A resource is counted each time a rule evaluates it as not applicable. For example, if a resource is evaluated as not applicable by two rules, it is counted twice.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NotApplicableCount")
         public Integer notApplicableCount;
 

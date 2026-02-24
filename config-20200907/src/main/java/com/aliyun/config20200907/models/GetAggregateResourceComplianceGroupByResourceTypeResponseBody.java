@@ -4,18 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody extends TeaModel {
-    /**
-     * <p>The queried evaluation results.</p>
-     */
     @NameInMap("ComplianceResult")
     public GetAggregateResourceComplianceGroupByResourceTypeResponseBodyComplianceResult complianceResult;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0CE6AEE1-B3D8-530A-9302-6606B20503BB</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,27 +32,9 @@ public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody exten
     }
 
     public static class GetAggregateResourceComplianceGroupByResourceTypeResponseBodyComplianceResultComplianceResultListCompliances extends TeaModel {
-        /**
-         * <p>The evaluation result. Valid values:</p>
-         * <ul>
-         * <li>COMPLIANT: The resource is evaluated as compliant.</li>
-         * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
-         * <li>NOT_APPLICABLE: The rule does not apply to the resource.</li>
-         * <li>INSUFFICIENT_DATA: No data is available.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLIANT</p>
-         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
-        /**
-         * <p>The number of statistical results.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Count")
         public Long count;
 
@@ -89,18 +62,9 @@ public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody exten
     }
 
     public static class GetAggregateResourceComplianceGroupByResourceTypeResponseBodyComplianceResultComplianceResultList extends TeaModel {
-        /**
-         * <p>The queried evaluation results.</p>
-         */
         @NameInMap("Compliances")
         public java.util.List<GetAggregateResourceComplianceGroupByResourceTypeResponseBodyComplianceResultComplianceResultListCompliances> compliances;
 
-        /**
-         * <p>The type of the evaluated resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ACS::ECS::Instance</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -128,9 +92,6 @@ public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody exten
     }
 
     public static class GetAggregateResourceComplianceGroupByResourceTypeResponseBodyComplianceResult extends TeaModel {
-        /**
-         * <p>The evaluation results grouped by resource type.</p>
-         */
         @NameInMap("ComplianceResultList")
         public java.util.List<GetAggregateResourceComplianceGroupByResourceTypeResponseBodyComplianceResultComplianceResultList> complianceResultList;
 

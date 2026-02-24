@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
     /**
-     * <p>The information about the compliance evaluation results returned.</p>
+     * <p>The compliance results for the rules in the compliance package.</p>
      */
     @NameInMap("ConfigRuleComplianceResult")
     public GetConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResult configRuleComplianceResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
@@ -42,12 +42,16 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
 
     public static class GetConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResultConfigRuleCompliances extends TeaModel {
         /**
-         * <p>The compliance evaluation result. Valid values:</p>
+         * <p>The compliance evaluation result of the rule. Valid values:</p>
          * <ul>
-         * <li>COMPLIANT: The relevant resources are evaluated as compliant.</li>
-         * <li>NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</li>
-         * <li>NOT_APPLICABLE: The rule does not apply to your resources.</li>
-         * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+         * <li><p>COMPLIANT: The rule is compliant.</p>
+         * </li>
+         * <li><p>NON_COMPLIANT: The rule is non-compliant.</p>
+         * </li>
+         * <li><p>NOT_APPLICABLE: The rule is not applicable.</p>
+         * </li>
+         * <li><p>INSUFFICIENT_DATA: No data is available.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,7 +61,7 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
         public String complianceType;
 
         /**
-         * <p>The ID of the rule enabled in the compliance package.</p>
+         * <p>The ID of the rule in the compliance package.</p>
          * 
          * <strong>example:</strong>
          * <p>cr-fdc8626622af00f9****</p>
@@ -66,10 +70,10 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
         public String configRuleId;
 
         /**
-         * <p>The name of the rule enabled in the compliance package.</p>
+         * <p>The name of the rule in the compliance package.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-rule-name</p>
+         * <p>The bandwidth of the Elastic IP instance meets the minimum requirements.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -115,23 +119,41 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The number of compliant rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
         /**
-         * <p>The rule enabled in the compliance package and the compliance evaluation result returned by the rule.</p>
+         * <p>The list of rules in the compliance package and their compliance results.</p>
          */
         @NameInMap("ConfigRuleCompliances")
         public java.util.List<GetConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResultConfigRuleCompliances> configRuleCompliances;
 
+        /**
+         * <p>The number of ignored rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IgnoredCount")
         public Integer ignoredCount;
 
+        /**
+         * <p>The total number of rules within the compliance package whose evaluation results are &quot;No Data&quot; when assessing resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InsufficientDataCount")
         public Integer insufficientDataCount;
 
         /**
-         * <p>The number of rules against which specific resources are evaluated as non-compliant.</p>
+         * <p>The number of non-compliant rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -139,11 +161,17 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
+        /**
+         * <p>The number of rules that are not applicable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NotApplicableCount")
         public Integer notApplicableCount;
 
         /**
-         * <p>The total number of rules enabled in the compliance package.</p>
+         * <p>The total number of rules in the compliance package.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

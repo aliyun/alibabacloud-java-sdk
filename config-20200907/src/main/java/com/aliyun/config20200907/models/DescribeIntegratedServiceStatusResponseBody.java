@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeIntegratedServiceStatusResponseBody extends TeaModel {
     /**
+     * <p>The event type for cross-account integration. The supported event type is:</p>
+     * <ul>
+     * <li>NonCompliantNotification: non-compliance events.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NonCompliantNotification</p>
      */
@@ -12,6 +17,8 @@ public class DescribeIntegratedServiceStatusResponseBody extends TeaModel {
     public String aggregatorDeliveryDataType;
 
     /**
+     * <p>The enabling status of the integrated service.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +26,8 @@ public class DescribeIntegratedServiceStatusResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2E265A38-84D9-5083-A333-B33A2B46D139</p>
      */

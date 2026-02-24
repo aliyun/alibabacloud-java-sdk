@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConfigRulesShrinkRequest extends TeaModel {
     /**
-     * <p>The compliance package ID.</p>
-     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</p>
-     * <blockquote>
-     * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
-     * </blockquote>
+     * <p>The ID of the compliance package.</p>
      * 
      * <strong>example:</strong>
      * <p>cp-fe416457e0d90022****</p>
@@ -20,10 +16,14 @@ public class ListConfigRulesShrinkRequest extends TeaModel {
     /**
      * <p>The compliance evaluation result of the rule. Valid values:</p>
      * <ul>
-     * <li>COMPLIANT: The resources are evaluated as compliant.</li>
-     * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
-     * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
-     * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+     * <li><p>COMPLIANT: Compliant.</p>
+     * </li>
+     * <li><p>NON_COMPLIANT: Non-compliant.</p>
+     * </li>
+     * <li><p>NOT_APPLICABLE: Not applicable.</p>
+     * </li>
+     * <li><p>INSUFFICIENT_DATA: Insufficient data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,18 +36,22 @@ public class ListConfigRulesShrinkRequest extends TeaModel {
      * <p>The name of the rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-rule-name</p>
+     * <p>The name of the rule.</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
 
     /**
-     * <p>The status of the rule. Valid values:</p>
+     * <p>The state of the rule. Valid values:</p>
      * <ul>
-     * <li>ACTIVE: The rule is enabled.</li>
-     * <li>DELETING: The rule is being deleted.</li>
-     * <li>EVALUATING: The rule is being used to evaluate resource configurations.</li>
-     * <li>INACTIVE: The rule is disabled.</li>
+     * <li><p>ACTIVE: The rule is enabled.</p>
+     * </li>
+     * <li><p>DELETING: The rule is being deleted.</p>
+     * </li>
+     * <li><p>EVALUATING: The rule is being evaluated.</p>
+     * </li>
+     * <li><p>INACTIVE: The rule is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,8 +61,8 @@ public class ListConfigRulesShrinkRequest extends TeaModel {
     public String configRuleState;
 
     /**
-     * <p>The query keyword.</p>
-     * <p>You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.</p>
+     * <p>The keyword for the fuzzy query.</p>
+     * <p>Supports fuzzy queries by rule ID, rule name, rule description, or rule template identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -68,7 +72,7 @@ public class ListConfigRulesShrinkRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Page numbers start from 1. Default value: 1.</p>
+     * <p>The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -77,8 +81,8 @@ public class ListConfigRulesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -87,7 +91,7 @@ public class ListConfigRulesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the resources to be evaluated based on the rule.</p>
+     * <p>The type of resource evaluated by the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>
@@ -96,11 +100,14 @@ public class ListConfigRulesShrinkRequest extends TeaModel {
     public String resourceTypes;
 
     /**
-     * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+     * <p>The risk level of the rule. Valid values:</p>
      * <ul>
-     * <li>1: high</li>
-     * <li>2: medium</li>
-     * <li>3: low</li>
+     * <li><p>1: High risk.</p>
+     * </li>
+     * <li><p>2: Medium risk.</p>
+     * </li>
+     * <li><p>3: Low risk.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,12 +116,18 @@ public class ListConfigRulesShrinkRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    /**
+     * <p>The sorting method. This parameter is not required. Set the value to <code>CreateDate-Desc</code> to sort the rules by creation time in descending order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateDate-Desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
      * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
+     * <p>A maximum of 20 tags can be attached.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;

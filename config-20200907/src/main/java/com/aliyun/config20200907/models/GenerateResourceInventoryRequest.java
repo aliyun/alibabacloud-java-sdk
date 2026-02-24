@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateResourceInventoryRequest extends TeaModel {
     /**
-     * <p>The region IDs of the resources. Separate multiple region IDs with commas (,).</p>
+     * <p>The regions where the resources are located. Separate multiple regions with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -14,10 +14,12 @@ public class GenerateResourceInventoryRequest extends TeaModel {
     public String regions;
 
     /**
-     * <p>Indicates whether the resource is deleted. Valid values:</p>
+     * <p>The resource status. Valid values:</p>
      * <ul>
-     * <li>1 (default): The resource is retained.</li>
-     * <li>0: The resource is deleted.</li>
+     * <li><p>1 (default): The resource is retained.</p>
+     * </li>
+     * <li><p>0: The resource is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

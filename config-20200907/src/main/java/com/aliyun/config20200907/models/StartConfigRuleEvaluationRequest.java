@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class StartConfigRuleEvaluationRequest extends TeaModel {
     /**
-     * <p>The compliance package ID.</p>
-     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</p>
+     * <p>The ID of the compliance package.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</p>
      * <blockquote>
-     * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+     * <p>Specify either <code>CompliancePackId</code> or <code>ConfigRuleId</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class StartConfigRuleEvaluationRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The rule ID.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/609222.html">ListConfigRules</a> operation to obtain the rule ID.</p>
+     * <p>The ID of the rule.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/609222.html">ListConfigRules</a>.</p>
      * <blockquote>
-     * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+     * <p>Specify either <code>CompliancePackId</code> or <code>ConfigRuleId</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,12 @@ public class StartConfigRuleEvaluationRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>Specifies whether to re-evaluate the ignored non-compliant resource. Valid values:</p>
+     * <p>Specifies whether to restore evaluation results that were ignored. Valid values:</p>
      * <ul>
-     * <li>true: re-evaluates the ignored non-compliant resource based on the rule.</li>
-     * <li>false (default): does not re-evaluate the ignored non-compliant resource based on the rule.</li>
+     * <li><p>true: Restores ignored evaluation results.</p>
+     * </li>
+     * <li><p>false (default): Does not restore ignored evaluation results.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

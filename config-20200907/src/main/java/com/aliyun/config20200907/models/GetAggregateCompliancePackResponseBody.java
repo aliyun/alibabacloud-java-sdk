@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAggregateCompliancePackResponseBody extends TeaModel {
     /**
-     * <p>The details of the compliance package.</p>
+     * <p>The details of the compliance pack.</p>
      */
     @NameInMap("CompliancePack")
     public GetAggregateCompliancePackResponseBodyCompliancePack compliancePack;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
@@ -60,10 +60,12 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String parameterValue;
 
         /**
-         * <p>Indicates whether the input parameter was required. Valid values:</p>
+         * <p>Indicates whether the input parameter is required. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The input parameter is required.</p>
+         * </li>
+         * <li><p>false: The input parameter is not required.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +107,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePackConfigRules extends TeaModel {
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>cr-a260626622af0005****</p>
@@ -117,13 +119,13 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
          * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>The name of the rule.</p>
+         * <p>弹性IP实例带宽满足最低要求</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
-         * <p>The details of the input parameter of the rule.</p>
+         * <p>The input parameters of the rule.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
@@ -132,13 +134,13 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
          * <p>The description of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the rule.</p>
+         * <p>弹性IP实例可用带宽大于等于指定参数值，视为“合规”。默认值：10 MB。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the rule template.</p>
+         * <p>The identifier of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-bandwidth-limit</p>
@@ -147,7 +149,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String managedRuleIdentifier;
 
         /**
-         * <p>The type of the resource evaluated based on the rule. Multiple resource types are separated with commas (,).</p>
+         * <p>The types of the resources that are evaluated by the rule. Separate multiple resource types with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::EIP::EipAddress</p>
@@ -156,11 +158,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String resourceTypesScope;
 
         /**
-         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+         * <p>The risk level of the rule. Valid values:</p>
          * <ul>
-         * <li>1: high</li>
-         * <li>2: medium</li>
-         * <li>3: low</li>
+         * <li><p>1: high</p>
+         * </li>
+         * <li><p>2: medium</p>
+         * </li>
+         * <li><p>3: low</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +239,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-2</p>
@@ -243,7 +248,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-2</p>
@@ -276,7 +281,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -285,7 +290,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>
@@ -318,7 +323,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePackScope extends TeaModel {
         /**
-         * <p>The IDs of regions that are excluded. Separate multiple region IDs with commas (,).</p>
+         * <p>The IDs of the regions to exclude. Separate multiple region IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -327,7 +332,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String excludeRegionIdsScope;
 
         /**
-         * <p>The IDs of the resource groups whose resources you do not want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
+         * <p>The IDs of the resource groups to exclude. The compliance pack does not apply to resources in these groups. Separate multiple resource group IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzc7r7rhx****</p>
@@ -336,7 +341,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String excludeResourceGroupIdsScope;
 
         /**
-         * <p>The ID of the resource that is not evaluated by using the compliance package.</p>
+         * <p>The IDs of the resources to exclude. The compliance pack does not apply to these resources. Separate multiple resource IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>eip-8vbf3x310fn56ijfd****</p>
@@ -345,13 +350,13 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String excludeResourceIdsScope;
 
         /**
-         * <p>The scope of the tag that is excluded.</p>
+         * <p>The excluded tag scope.</p>
          */
         @NameInMap("ExcludeTagsScope")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope> excludeTagsScope;
 
         /**
-         * <p>The ID of the region whose resources were evaluated by using the compliance package.</p>
+         * <p>The IDs of the regions where the compliance pack applies. Separate multiple region IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -360,7 +365,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String regionIdsScope;
 
         /**
-         * <p>The ID of the resource group whose resources are evaluated by using the compliance package.</p>
+         * <p>The IDs of the resource groups where the compliance pack applies. Separate multiple resource group IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzc7r7rhx****</p>
@@ -378,7 +383,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String resourceIdsScope;
 
         /**
-         * <p>The tag key of the resource that is evaluated by using the compliance package.</p>
+         * <p>The tag key of the resources to which the compliance pack applies.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -387,7 +392,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String tagKeyScope;
 
         /**
-         * <p>The tag value of the resource that is evaluated by using the compliance package.</p>
+         * <p>The tag value of the resources to which the compliance pack applies.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -490,7 +495,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePackTags extends TeaModel {
         /**
-         * <p>The tag keys of the resource.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -499,7 +504,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag values of the resource.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>
@@ -532,7 +537,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePack extends TeaModel {
         /**
-         * <p>The ID of the management account to which the compliance package belongs.</p>
+         * <p>The ID of the management account to which the compliance pack belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>100931896542****</p>
@@ -550,7 +555,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String aggregatorId;
 
         /**
-         * <p>The ID of the compliance package.</p>
+         * <p>The ID of the compliance pack.</p>
          * 
          * <strong>example:</strong>
          * <p>cp-fdc8626622af00f9****</p>
@@ -559,16 +564,16 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String compliancePackId;
 
         /**
-         * <p>The name of the compliance package.</p>
+         * <p>The name of the compliance pack.</p>
          * 
          * <strong>example:</strong>
-         * <p>The name of the compliance package.</p>
+         * <p>等保三级预检合规包</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
 
         /**
-         * <p>The ID of the compliance package template.</p>
+         * <p>The ID of the compliance pack template.</p>
          * 
          * <strong>example:</strong>
          * <p>ct-5f26ff4e06a300c4****</p>
@@ -577,13 +582,13 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String compliancePackTemplateId;
 
         /**
-         * <p>The rules in the compliance package.</p>
+         * <p>The list of rules in the compliance pack.</p>
          */
         @NameInMap("ConfigRules")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRules> configRules;
 
         /**
-         * <p>The timestamp when the compliance package was created. Unit: milliseconds.</p>
+         * <p>The timestamp when the compliance pack was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1624243657000</p>
@@ -592,20 +597,23 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The description of the compliance package.</p>
+         * <p>The description of the compliance pack.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the compliance package.</p>
+         * <p>基于等保2.0三级标准，提供持续检测合规性的建议模板，帮助您提前自检并修复问题，以便快速通过正式检测。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+         * <p>The risk level of the compliance pack. Valid values:</p>
          * <ul>
-         * <li>1: high</li>
-         * <li>2: medium</li>
-         * <li>3: low</li>
+         * <li><p>1: high</p>
+         * </li>
+         * <li><p>2: medium</p>
+         * </li>
+         * <li><p>3: low</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -615,16 +623,18 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>The evaluation scope of the compliance package.</p>
+         * <p>The evaluation scope of the compliance pack.</p>
          */
         @NameInMap("Scope")
         public GetAggregateCompliancePackResponseBodyCompliancePackScope scope;
 
         /**
-         * <p>The status of the compliance package. Valid values:</p>
+         * <p>The status of the compliance pack. Valid values:</p>
          * <ul>
-         * <li>ACTIVE: The compliance package was normal.</li>
-         * <li>CREATING: The compliance package was being created.</li>
+         * <li><p>ACTIVE: The compliance pack is active.</p>
+         * </li>
+         * <li><p>CREATING: The compliance pack is being created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -634,40 +644,64 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the resource.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackTags> tags;
 
         /**
-         * <p>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</p>
+         * <p>The information about the compliance pack template. The list of rules in the template does not include user-defined function rules. You can use the template to quickly create the same compliance pack for other accounts or account groups.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *   &quot;configRuleTemplates&quot;: [
-         *     {
-         *       &quot;configRuleName&quot;: &quot;OSS-test-name&quot;,
-         *       &quot;scope&quot;: {
-         *         &quot;complianceResourceTypes&quot;: [
-         *           &quot;ACS::OSS::Bucket&quot;
-         *         ]
-         *       },
-         *       &quot;description&quot;: &quot;test-description&quot;,
-         *       &quot;source&quot;: {
-         *         &quot;owner&quot;: &quot;ALIYUN&quot;,
-         *         &quot;identifier&quot;: &quot;oss-bucket-referer-xxx&quot;,
-         *         &quot;sourceDetails&quot;: [
-         *           {
-         *             &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
-         *           }
-         *         ]
-         *       },
-         *       &quot;inputParameters&quot;: {
-         *         &quot;allowEmptyReferer&quot;: &quot;true&quot;,
-         *         &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot;
-         *       }
-         *     }
-         *   ]
+         *     &quot;configRuleTemplates&quot;: [
+         *         {
+         *             &quot;configRuleName&quot;: &quot;自定义条件规则示例&quot;,
+         *             &quot;scope&quot;: {
+         *                 &quot;complianceResourceTypes&quot;: [
+         *                     &quot;ACS::ECS::Instance&quot;
+         *                 ]
+         *             },
+         *             &quot;description&quot;: &quot;&quot;,
+         *             &quot;source&quot;: {
+         *                 &quot;owner&quot;: &quot;CUSTOM_CONFIGURATION&quot;,
+         *                 &quot;identifier&quot;: &quot;acs-config-configuration&quot;,
+         *                 &quot;sourceDetails&quot;: [
+         *                     {
+         *                         &quot;messageType&quot;: &quot;ScheduledNotification&quot;,
+         *                         &quot;maximumExecutionFrequency&quot;: &quot;Twelve_Hours&quot;
+         *                     },
+         *                     {
+         *                         &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+         *                     }
+         *                 ],
+         *                 &quot;conditions&quot;: &quot;{\&quot;ComplianceConditions\&quot;:\&quot;{\\\&quot;operator\\\&quot;:\\\&quot;and\\\&quot;,\\\&quot;children\\\&quot;:[{\\\&quot;operator\\\&quot;:\\\&quot;GreaterOrEquals\\\&quot;,\\\&quot;featurePath\\\&quot;:\\\&quot;$.Cpu\\\&quot;,\\\&quot;featureSource\\\&quot;:\\\&quot;CONFIGURATION\\\&quot;,\\\&quot;desired\\\&quot;:\\\&quot;2\\\&quot;}]}\&quot;}&quot;
+         *             },
+         *             &quot;inputParameters&quot;: {}
+         *         },
+         *         {
+         *             &quot;configRuleName&quot;: &quot;OSS存储空间Referer在指定的防盗链白名单中&quot;,
+         *             &quot;scope&quot;: {
+         *                 &quot;complianceResourceTypes&quot;: [
+         *                     &quot;ACS::OSS::Bucket&quot;
+         *                 ]
+         *             },
+         *             &quot;description&quot;: &quot;OSS存储空间开启防盗链并且Referer在指定白名单中，视为“合规”。&quot;,
+         *             &quot;source&quot;: {
+         *                 &quot;owner&quot;: &quot;ALIYUN&quot;,
+         *                 &quot;identifier&quot;: &quot;oss-bucket-referer-limit&quot;,
+         *                 &quot;sourceDetails&quot;: [
+         *                     {
+         *                         &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+         *                     }
+         *                 ]
+         *             },
+         *             &quot;inputParameters&quot;: {
+         *                 &quot;allowEmptyReferer&quot;: &quot;true&quot;,
+         *                 &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot;
+         *             }
+         *         }
+         *     ]
          * }</p>
          */
         @NameInMap("TemplateContent")

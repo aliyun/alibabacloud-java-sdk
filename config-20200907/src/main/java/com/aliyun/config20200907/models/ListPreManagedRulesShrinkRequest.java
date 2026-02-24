@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPreManagedRulesShrinkRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number.</p>
+     * <p>The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,7 +16,7 @@ public class ListPreManagedRulesShrinkRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <p>Default value: 10.</p>
+     * <p>The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -25,7 +25,7 @@ public class ListPreManagedRulesShrinkRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>A list of resource types.</p>
      */
     @NameInMap("ResourceTypes")
     public String resourceTypesShrink;

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <p>The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a></p>
+     * <p>A client-generated token that you can use to ensure the idempotence of the request. You must make sure that the token is unique for each request.</p>
+     * <p>The <code>ClientToken</code> parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
@@ -26,10 +26,12 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to deliver scheduled compliant snapshots. Cloud Config delivers scheduled compliant snapshots to Log Service at <code>04:00Z</code> and <code>16:00Z</code> every day. The time is displayed in UTC. Valid values:</p>
+     * <p>Specifies whether to deliver compliance snapshots. Cloud Config delivers information about the compliance and non-compliance of resources to SLS. Valid values:</p>
      * <ul>
-     * <li>true: Cloud Config delivers scheduled compliant snapshots.</li>
-     * <li>false: Cloud Config does not deliver scheduled compliant snapshots. This is the default value.</li>
+     * <li><p>true: Deliver compliance snapshots.</p>
+     * </li>
+     * <li><p>false: Do not deliver compliance snapshots.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,13 +41,27 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     public Boolean compliantSnapshot;
 
     /**
-     * <p>Specifies whether to deliver resource change logs. If you set this parameter to true, Cloud Config delivers resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:</p>
+     * <p>Specifies whether to deliver the resource configuration change history. If the configurations of a resource change, Cloud Config delivers the configuration change history to OSS, SLS, or MNS. Valid values:</p>
      * <ul>
-     * <li>true: Cloud Config delivers resource change logs.</li>
-     * <li>false: Cloud Config does not deliver resource change logs. This is the default value.</li>
+     * <li><p>true: Deliver the resource configuration change history.</p>
+     * </li>
+     * <li><p>false (default): Do not deliver the resource configuration change history.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is available for delivery channels of the OSS, SLS, and MNS types.</p>
+     * <ul>
+     * <li>If the delivery channel type is OSS, you must set at least one of the \<code>ConfigurationSnapshot\\</code> and \<code>ConfigurationItemChangeNotification\\</code> parameters to true.</li>
+     * </ul>
+     * </blockquote>
+     * <blockquote>
+     * <ul>
+     * <li>If the delivery channel type is SLS, you must set at least one of the \<code>ConfigurationSnapshot\\</code>, \<code>ConfigurationItemChangeNotification\\</code>, and \<code>NonCompliantNotification\\</code> parameters to true.</li>
+     * </ul>
+     * </blockquote>
+     * <blockquote>
+     * <ul>
+     * <li>If the delivery channel type is MNS, you must set at least one of the \<code>ConfigurationItemChangeNotification\\</code> and \<code>NonCompliantNotification\\</code> parameters to true.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,39 +71,50 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     public Boolean configurationItemChangeNotification;
 
     /**
-     * <p>Specifies whether to deliver scheduled resource snapshots. Cloud Config delivers scheduled resource snapshots to OSS, MNS, or Log Service at <code>04:00Z</code> and <code>16:00Z</code> every day. The time is displayed in UTC. Valid values:</p>
+     * <p>Specifies whether to deliver scheduled resource snapshots. Cloud Config delivers scheduled resource snapshots to OSS, SLS, or MNS at <code>04:00Z</code> and <code>16:00Z</code> (UTC) every day. Valid values:</p>
      * <ul>
-     * <li>true: Cloud Config delivers scheduled resource snapshots.</li>
-     * <li>false: Cloud Config does not deliver scheduled resource snapshots. This is the default value.</li>
+     * <li><p>true: Deliver scheduled resource snapshots.</p>
+     * </li>
+     * <li><p>false (default): Do not deliver scheduled resource snapshots.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If the delivery channel type is OSS, you must set at least one of the \<code>ConfigurationSnapshot\\</code> and \<code>ConfigurationItemChangeNotification\\</code> parameters to true.</li>
+     * </ul>
+     * </blockquote>
+     * <blockquote>
+     * <ul>
+     * <li>If the delivery channel type is SLS, you must set at least one of the \<code>ConfigurationSnapshot\\</code>, \<code>ConfigurationItemChangeNotification\\</code>, and \<code>NonCompliantNotification\\</code> parameters to true.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("ConfigurationSnapshot")
     public Boolean configurationSnapshot;
 
     /**
-     * <p>The rule that you want to attach to the delivery channel. This parameter is available when you deliver data of all types to MNS or deliver snapshots to Log Service.</p>
+     * <p>The rule that is used to filter events or resources for the delivery channel. This parameter is supported for all deliveries to MNS channels and for snapshot deliveries to SLS channels.</p>
      * <ul>
-     * <li><p>If you set the DeliveryChannelType parameter to MNS, take note of the following settings of the lowest risk level and the resource types of the events to which you want to subscribe:</p>
+     * <li><p>For an MNS channel, you can specify the following rules to filter events:</p>
      * <ul>
-     * <li><p>The lowest risk level of the events to which you want to subscribe is in the following format: <code>{&quot;filterType&quot;:&quot;RuleRiskLevel&quot;,&quot;value&quot;:&quot;1&quot;,&quot;multiple&quot;:false}</code>.</p>
-     * <p>The <code>value</code> field indicates the risk level of the events to which you want to subscribe. Valid values: 1, 2, and 3. The value 1 indicates the high risk level, the value 2 indicates the medium risk level, and the value 3 indicates the low risk level.</p>
+     * <li><p>The minimum risk level of the events to which you want to subscribe is <code>{&quot;filterType&quot;:&quot;RuleRiskLevel&quot;,&quot;value&quot;:&quot;1&quot;,&quot;multiple&quot;:false}</code>.</p>
+     * <p>The \<code>value\\</code> parameter specifies the risk level. Valid values: 1, 2, and 3. The value 1 indicates high risk. The value 2 indicates medium risk. The value 3 indicates low risk.</p>
      * </li>
-     * <li><p>The setting of the resource types of the events to which you want to subscribe is in the following format: <code>{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ACK::Cluster&quot;,&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;],&quot;multiple&quot;:true}</code>.</p>
-     * <p>The <code>values</code> field indicates the resource types of the events to which you want to subscribe. The value of the field is a JSON array. Example:</p>
+     * <li><p>The resource types of the events to which you want to subscribe are <code>{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ACK::Cluster&quot;,&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;],&quot;multiple&quot;:true}</code>.</p>
+     * <p>The \<code>values\\</code> parameter specifies the resource types of the events to which you want to subscribe. The value of this parameter is a JSON array of strings.
+     * Example:
+     * <code>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</code></p>
      * </li>
      * </ul>
      * </li>
-     * </ul>
+     * <li><p>For an SLS channel, you can specify the following rule to filter snapshots:</p>
+     * <p>The resource types of the snapshots to be delivered are <code>{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ACK::Cluster&quot;,&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;],&quot;multiple&quot;:true}</code>.</p>
      * <p><code>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</code></p>
-     * <ul>
-     * <li><p>If you set the DeliveryChannelType parameter to SLS, the setting of the resource types of the snapshots to which you want to deliver is in the following format: <code>{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ACK::Cluster&quot;,&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;],&quot;multiple&quot;:true}</code>.</p>
-     * <p>The <code>values</code> field specifies the resource types of the snapshots to which you want to deliver. The value of the field is a JSON array. Example:</p>
      * </li>
      * </ul>
-     * <p><code>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</code></p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</p>
@@ -98,7 +125,7 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The name of the delivery channel.</p>
      * <blockquote>
-     * <p>If you do not configure this parameter, this parameter is left empty.</p>
+     * <p>If you do not set this parameter, this parameter is empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -110,9 +137,12 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The ARN of the delivery destination. Valid values:</p>
      * <ul>
-     * <li><code>acs:oss:{RegionId}:{accountId}:{bucketName}</code> if your delivery destination is an OSS bucket. Example: <code>acs:oss:cn-shanghai:100931896542****:new-bucket</code>.</li>
-     * <li><code>acs:mns:{RegionId}:{accountId}:/topics/{topicName}</code> if your delivery destination is an MNS topic. Example: <code>acs:mns:cn-shanghai:100931896542****:/topics/topic1</code>.</li>
-     * <li><code>acs:log:{RegionId}:{accountId}:project/{projectName}/logstore/{logstoreName}</code> if your delivery destination is a Log Service Logstore. Example: <code>acs:log:cn-shanghai:100931896542****:project/project1/logstore/logstore1</code>.</li>
+     * <li><p>If the delivery channel type is OSS, the value of this parameter is in the <code>acs:oss:{RegionId}:{accountId}:{bucketName}</code> format. Example: <code>acs:oss:cn-shanghai:100931896542****:new-bucket</code>.</p>
+     * </li>
+     * <li><p>If the delivery channel type is MNS, the value of this parameter is in the <code>acs:mns:{RegionId}:{accountId}:/topics/{topicName}</code> format. Example: <code>acs:mns:cn-shanghai:100931896542****:/topics/topic1</code>.</p>
+     * </li>
+     * <li><p>If the delivery channel type is SLS, the value of this parameter is in the <code>acs:log:{RegionId}:{accountId}:project/{projectName}/logstore/{logstoreName}</code> format. Example: <code>acs:log:cn-shanghai:100931896542****:project/project1/logstore/logstore1</code>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -125,9 +155,12 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The type of the delivery channel. Valid values:</p>
      * <ul>
-     * <li>OSS: Object Storage Service (OSS)</li>
-     * <li>MNS: Message Service (MNS)</li>
-     * <li>SLS: Log Service</li>
+     * <li><p>OSS: Object Storage Service</p>
+     * </li>
+     * <li><p>MNS: Simple Message Queue</p>
+     * </li>
+     * <li><p>SLS: Simple Log Service</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -138,10 +171,10 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     public String deliveryChannelType;
 
     /**
-     * <p>The time when you want Cloud Config to deliver scheduled resource snapshots every day.</p>
-     * <p>Format: <code>HH:mmZ</code>. This time is displayed in UTC.</p>
+     * <p>The time of day from which scheduled resource snapshots are delivered. The time is displayed in UTC.</p>
+     * <p>The value is in the <code>HH:mmZ</code> format.</p>
      * <blockquote>
-     * <p>When you enable the scheduled resource delivery feature, you can configure this parameter to specify a custom delivery time. If you do not configure this parameter, Cloud Config automatically delivers scheduled resource snapshots at <code>04:00Z</code> and <code>16:00Z</code> every day.</p>
+     * <p>If you enable the scheduled delivery of resource snapshots, you can use this parameter to customize the delivery time. If you do not set this parameter, the snapshots are delivered at <code>04:00Z</code> and <code>16:00Z</code> every day by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -160,13 +193,22 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to deliver resource non-compliance events. If you set this parameter to true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are considered non-compliant. Valid values:</p>
+     * <p>Specifies whether to deliver resource non-compliance events. If a resource is evaluated as non-compliant, Cloud Config delivers the non-compliance event to SLS or MNS. Valid values:</p>
      * <ul>
-     * <li>true: Cloud Config delivers resource non-compliance events.</li>
-     * <li>false: Cloud Config does not deliver resource non-compliance events. This is the default value.</li>
+     * <li><p>true: Deliver resource non-compliance events.</p>
+     * </li>
+     * <li><p>false (default): Do not deliver resource non-compliance events.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is available only for delivery channels of the SLS or MNS type.</p>
+     * <ul>
+     * <li>If the delivery channel type is SLS, you must set at least one of the \<code>ConfigurationSnapshot\\</code>, \<code>ConfigurationItemChangeNotification\\</code>, and \<code>NonCompliantNotification\\</code> parameters to true.</li>
+     * </ul>
+     * </blockquote>
+     * <blockquote>
+     * <ul>
+     * <li>If the delivery channel type is MNS, you must set at least one of the \<code>ConfigurationItemChangeNotification\\</code> and \<code>NonCompliantNotification\\</code> parameters to true.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -176,10 +218,10 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     public Boolean nonCompliantNotification;
 
     /**
-     * <p>The ARN of the OSS bucket to which you want to transfer the delivery data when the size of the data exceeds the specified upper limit of the delivery channel. Format: <code>acs:oss:{RegionId}:{accountId}:{bucketName}</code>.</p>
-     * <p>If you do not configure this parameter, Cloud Config delivers only summary data.</p>
+     * <p>The ARN of the OSS bucket that is used to store oversized data to be delivered when the size of the data exceeds the specified limit of the delivery channel. The value is in the <code>acs:oss:{RegionId}:{accountId}:{bucketName}</code> format.</p>
+     * <p>If you do not set this parameter, Cloud Config delivers only summary information.</p>
      * <blockquote>
-     * <p>This parameter is available only for delivery channels of the SLS or MNS type. The upper limit on the storage size of delivery channels of the SLS type is 1 MB, and the maximum storage size of delivery channels of the MNS type is 64 KB.</p>
+     * <p>This parameter is applicable only to delivery channels of the SLS or MNS type. The maximum size of data that can be delivered to an SLS Logstore is 1 MB. The maximum size of data that can be delivered to an MNS topic is 64 KB.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

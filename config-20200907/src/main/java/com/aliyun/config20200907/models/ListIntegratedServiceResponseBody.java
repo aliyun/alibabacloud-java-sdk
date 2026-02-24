@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntegratedServiceResponseBody extends TeaModel {
     /**
-     * <p>The information about the cloud service that can be integrated.</p>
+     * <p>The information about the integrated services.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListIntegratedServiceResponseBodyData> data;
@@ -42,9 +42,9 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
 
     public static class ListIntegratedServiceResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the event that is integrated across accounts. Valid values:</p>
+         * <p>The event type for cross-account integration. Supported event types:</p>
          * <ul>
-         * <li>NonCompliantNotification: non-compliance event</li>
+         * <li>NonCompliantNotification: non-compliance events.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -54,10 +54,12 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
         public String aggregatorDeliveryDataType;
 
         /**
-         * <p>The types of the integrated events. Separate multiple event types with commas (,). Valid values:</p>
+         * <p>The event types for the integration. Separate multiple types with commas (,). Supported event types:</p>
          * <ul>
-         * <li>ConfigurationItemChangeNotification: resource change event</li>
-         * <li>NonCompliantNotification: non-compliance event</li>
+         * <li><p>ConfigurationItemChangeNotification: resource change events.</p>
+         * </li>
+         * <li><p>NonCompliantNotification: non-compliance events.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -67,11 +69,14 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
         public String integratedTypes;
 
         /**
-         * <p>The identifier of the cloud service. Valid values:</p>
+         * <p>The identifier of the integrable Alibaba Cloud service. Valid values:</p>
          * <ul>
-         * <li>eventbridge: EventBridge</li>
-         * <li>cms: CloudMonitor</li>
-         * <li>bpstudio: Cloud Architect Design Tools</li>
+         * <li><p>eventbridge: EventBridge.</p>
+         * </li>
+         * <li><p>cms: Cloud Monitor.</p>
+         * </li>
+         * <li><p>bpstudio: Cloud Architect Design Tools.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -81,19 +86,21 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
-         * <p>The name of the cloud service.</p>
+         * <p>The name of the integrated service.</p>
          * 
          * <strong>example:</strong>
-         * <p>cms</p>
+         * <p>云监控</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
-         * <p>The integration status of the cloud service. Valid values:</p>
+         * <p>The integration status of the Alibaba Cloud service. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The service is integrated.</p>
+         * </li>
+         * <li><p>false: The service is not integrated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

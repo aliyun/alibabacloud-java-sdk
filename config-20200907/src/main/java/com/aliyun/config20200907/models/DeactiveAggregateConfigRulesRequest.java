@@ -5,33 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeactiveAggregateConfigRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ca-04b3fd170e340007****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
-    /**
-     * <p>The ID of the compliance package.</p>
-     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cp-fe416457e0d90022****</p>
-     */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
-    /**
-     * <p>The rule ID. Separate multiple rule IDs with commas (,).</p>
-     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cr-5772ba41209e007b****</p>
-     */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;
 

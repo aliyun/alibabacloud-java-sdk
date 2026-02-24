@@ -5,34 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetAggregateResourceCountsGroupByRegionRequest extends TeaModel {
     /**
-     * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ca-a260626622af0005****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
-    /**
-     * <p>The ID of the folder in the resource directory. For more information about how to obtain the ID of a folder, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information of a folder</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>r-BU****</p>
-     */
     @NameInMap("FolderId")
     public String folderId;
 
-    /**
-     * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
-     * <blockquote>
-     * <p>You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>100931896542****</p>
-     */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 
@@ -40,13 +20,6 @@ public class GetAggregateResourceCountsGroupByRegionRequest extends TeaModel {
     @Deprecated
     public Long resourceOwnerId;
 
-    /**
-     * <p>The resource type.</p>
-     * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ACS::ECS::Instance</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
 

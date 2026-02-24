@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
     /**
-     * <p>The compliance statistics.</p>
+     * <p>The compliance summary.</p>
      */
     @NameInMap("ComplianceSummary")
     public GetAggregateComplianceSummaryResponseBodyComplianceSummary complianceSummary;
@@ -42,7 +42,7 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
 
     public static class GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule extends TeaModel {
         /**
-         * <p>The time when the compliance statistics were collected. Unit: milliseconds.</p>
+         * <p>The timestamp of the compliance summary. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1589853822103</p>
@@ -118,7 +118,7 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
 
     public static class GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource extends TeaModel {
         /**
-         * <p>The time when the compliance statistics were collected. Unit: milliseconds.</p>
+         * <p>The timestamp of the compliance summary. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1589853822103</p>
@@ -135,12 +135,30 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
+        /**
+         * <p>The number of non-compliant resources detected by high-risk rules. Note: This value is not deduplicated by resource. If a resource is evaluated as non-compliant by two different rules, it is counted twice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("HighRiskRuleNonCompliantResourceCount")
         public Integer highRiskRuleNonCompliantResourceCount;
 
+        /**
+         * <p>The number of non-compliant resources detected by low-risk rules. Note: This value is not deduplicated by resource. If a resource is evaluated as non-compliant by two different rules, it is counted twice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("LowRiskRuleNonCompliantResourceCount")
         public Integer lowRiskRuleNonCompliantResourceCount;
 
+        /**
+         * <p>The number of non-compliant resources detected by medium-risk rules. Note: This value is not deduplicated by resource. If a resource is evaluated as non-compliant by two different rules, it is counted twice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("MediumRiskRuleNonCompliantResourceCount")
         public Integer mediumRiskRuleNonCompliantResourceCount;
 
@@ -227,13 +245,13 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
 
     public static class GetAggregateComplianceSummaryResponseBodyComplianceSummary extends TeaModel {
         /**
-         * <p>The summary of compliance statistics from the rule dimension.</p>
+         * <p>The compliance summary by rule.</p>
          */
         @NameInMap("ComplianceSummaryByConfigRule")
         public GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule complianceSummaryByConfigRule;
 
         /**
-         * <p>The summary of compliance statistics from the resource dimension.</p>
+         * <p>The compliance summary by resource.</p>
          */
         @NameInMap("ComplianceSummaryByResource")
         public GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource complianceSummaryByResource;

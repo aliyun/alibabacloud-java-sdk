@@ -15,8 +15,8 @@ public class GetAggregatorRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
+     * <p>The tags of the resource. This parameter is deprecated and is not in use.</p>
+     * <p>A maximum of 20 tags can be attached.</p>
      */
     @NameInMap("Tag")
     @Deprecated
@@ -46,9 +46,8 @@ public class GetAggregatorRequest extends TeaModel {
 
     public static class GetAggregatorRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>A maximum of 20 tag keys can be attached.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -57,9 +56,8 @@ public class GetAggregatorRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values.</p>
-         * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value of the resource.</p>
+         * <p>A maximum of 20 tag values can be attached.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

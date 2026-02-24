@@ -5,38 +5,14 @@ import com.aliyun.tea.*;
 
 public class ActiveAggregateConfigRulesRequest extends TeaModel {
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ca-a4e5626622af0079****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
-    /**
-     * <p>The rule ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cp-fe416457e0d90022****</p>
-     */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
-    /**
-     * <p>The error code returned.</p>
-     * <ul>
-     * <li>If the rule is enabled, no error code is returned.</li>
-     * <li>If the rule fails to be enabled, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>cr-5772ba41209e007b****</p>
-     */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;
 

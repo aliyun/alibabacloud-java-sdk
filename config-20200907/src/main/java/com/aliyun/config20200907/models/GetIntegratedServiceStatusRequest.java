@@ -5,12 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetIntegratedServiceStatusRequest extends TeaModel {
     /**
-     * <p>The identity of the cloud service that is integrated with Cloud Config. Valid values:</p>
-     * <ul>
-     * <li>eventbridge: EventBridge</li>
-     * <li>cms: CloudMonitor</li>
-     * <li>bpstudio: Cloud Architect Design Tools (CADT)</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

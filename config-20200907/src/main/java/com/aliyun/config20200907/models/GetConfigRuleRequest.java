@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetConfigRuleRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
-     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class GetConfigRuleRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
+     * <p>The tags of the resource. This parameter is deprecated and has no effect.</p>
+     * <p>You can add a maximum of 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     @Deprecated
@@ -47,9 +47,8 @@ public class GetConfigRuleRequest extends TeaModel {
 
     public static class GetConfigRuleRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>You can add a maximum of 20 tag keys to a resource.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -58,7 +57,8 @@ public class GetConfigRuleRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource.</p>
+         * <p>You can add a maximum of 20 tag values to a resource.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

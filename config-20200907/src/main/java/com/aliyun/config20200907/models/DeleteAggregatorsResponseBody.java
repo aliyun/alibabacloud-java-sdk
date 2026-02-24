@@ -4,18 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeleteAggregatorsResponseBody extends TeaModel {
-    /**
-     * <p>The returned result.</p>
-     */
     @NameInMap("OperateAggregatorsResult")
     public DeleteAggregatorsResponseBodyOperateAggregatorsResult operateAggregatorsResult;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>8195B664-9565-4685-89AC-8B5F04B44B92</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,37 +32,12 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
     }
 
     public static class DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators extends TeaModel {
-        /**
-         * <p>The ID of the account group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ca-dacf86d8314e00eb****</p>
-         */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
-        /**
-         * <p>The error code returned.</p>
-         * <blockquote>
-         * <p>No error code is returned for the account group if the account group is deleted.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>AccountNotExisted</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -107,9 +73,6 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
     }
 
     public static class DeleteAggregatorsResponseBodyOperateAggregatorsResult extends TeaModel {
-        /**
-         * <p>The details of the account group.</p>
-         */
         @NameInMap("OperateAggregators")
         public java.util.List<DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators> operateAggregators;
 

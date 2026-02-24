@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetAggregateConfigRuleShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class GetAggregateConfigRuleShrinkRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The ID of the rule.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a> operation to obtain the rule ID.</p>
+     * <p>The rule ID.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,8 +27,8 @@ public class GetAggregateConfigRuleShrinkRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
+     * <p>The tags.
+     * This parameter is deprecated. If you specify this parameter, the value does not take effect.</p>
      */
     @NameInMap("Tag")
     @Deprecated

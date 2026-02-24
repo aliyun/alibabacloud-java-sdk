@@ -7,8 +7,10 @@ public class GetDiscoveredResourceRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the compliance results of the resource. Valid values:</p>
      * <ul>
-     * <li>0 (default): does not query the compliance results of the resource.</li>
-     * <li>1: queries the compliance results of the resource.</li>
+     * <li><p>0 (default): The compliance results are not queried.</p>
+     * </li>
+     * <li><p>1: The compliance results are queried.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +20,8 @@ public class GetDiscoveredResourceRequest extends TeaModel {
     public Integer complianceOption;
 
     /**
-     * <p>The ID of the region in which the resource resides.</p>
-     * <p>For more information about how to query the region ID of a resource, see <a href="https://help.aliyun.com/document_detail/411702.html">ListDiscoveredResources</a>.</p>
+     * <p>The ID of the region where the resource resides.</p>
+     * <p>For more information about how to obtain the region ID of the resource, see <a href="https://help.aliyun.com/document_detail/411702.html">ListDiscoveredResources</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -29,22 +31,22 @@ public class GetDiscoveredResourceRequest extends TeaModel {
 
     /**
      * <p>The resource ID.</p>
-     * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/411702.html">ListDiscoveredResources</a>.</p>
+     * <p>For more information about how to obtain the resource ID, see <a href="https://help.aliyun.com/document_detail/411702.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>new-bucket</p>
+     * <p>i-bp12g4xbl4i0brkn****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
-     * <p>The type of the resource.</p>
-     * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/411702.html">ListDiscoveredResources</a>.</p>
+     * <p>The resource type.</p>
+     * <p>For more information about how to obtain the resource type, see <a href="https://help.aliyun.com/document_detail/411702.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ACS::OSS::Bucket</p>
+     * <p>ACS::ECS::Instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

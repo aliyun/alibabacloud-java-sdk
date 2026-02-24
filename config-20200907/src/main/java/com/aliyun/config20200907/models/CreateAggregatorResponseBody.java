@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAggregatorResponseBody extends TeaModel {
     /**
-     * <p>The account group ID.</p>
+     * <p>The ID of the account group.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-dacf86d8314e00eb****</p>

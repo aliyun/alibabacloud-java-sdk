@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListCompliancePacksShrinkRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,7 +16,7 @@ public class ListCompliancePacksShrinkRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,14 +24,30 @@ public class ListCompliancePacksShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The risk level of the compliance pack. Valid values:</p>
+     * <ul>
+     * <li><p>1: high risk.</p>
+     * </li>
+     * <li><p>2: medium risk.</p>
+     * </li>
+     * <li><p>3: low risk.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
     /**
-     * <p>The status of the compliance package to be queried. Valid values:</p>
+     * <p>The status of the compliance pack. Valid values:</p>
      * <ul>
-     * <li>ACTIVE: The compliance package is active.</li>
-     * <li>CREATING: The compliance package is being created.</li>
+     * <li><p>ACTIVE: The compliance pack is active.</p>
+     * </li>
+     * <li><p>CREATING: The compliance pack is being created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +58,7 @@ public class ListCompliancePacksShrinkRequest extends TeaModel {
 
     /**
      * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
+     * <p>You can attach up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConfigRuleRequest extends TeaModel {
     /**
-     * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``</p>
+     * <p>A client token used to ensure the idempotence of the request. You can use a client to generate the token, but you must make sure that the token is unique for different requests. The <code>ClientToken</code> parameter can contain only ASCII characters and cannot be more than 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
@@ -14,8 +14,18 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the rule.</p>
-     * <p>For more information about how to query the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+     * <strong>example:</strong>
+     * <p>{&quot;ComplianceConditions&quot;:&quot;{&quot;operator&quot;:&quot;and&quot;,&quot;children&quot;:[{&quot;operator&quot;:&quot;StringEquals&quot;,&quot;featurePath&quot;:&quot;$.Status&quot;,&quot;desired&quot;:&quot;1&quot;,&quot;featureSource&quot;:&quot;CONFIGURATION&quot;}]}&quot;}</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Conditions")
+    public String conditions;
+
+    /**
+     * <p>The rule ID.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,10 +36,10 @@ public class UpdateConfigRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the rule.</p>
-     * <p>For more information about how to query the name of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>The name of the rule.</p>
+     * <p>存在所有指定标签</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
@@ -37,11 +47,13 @@ public class UpdateConfigRuleRequest extends TeaModel {
     /**
      * <p>The trigger type of the rule. Valid values:</p>
      * <ul>
-     * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
-     * <li>ScheduledNotification: The rule is periodically triggered.</li>
+     * <li><p>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+     * </li>
+     * <li><p>ScheduledNotification: The rule is triggered on a regular basis.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter applies only to custom rules.</p>
+     * <p>This parameter can be modified only for custom rules.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,16 +63,16 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String configRuleTriggerTypes;
 
     /**
-     * <p>The description of the rule. You can enter up to 500 characters.</p>
+     * <p>The description of the rule. The description can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>The description of the rule.</p>
+     * <p>最多可以定义6组标签。如果资源同时具有指定的所有标签，则视为“合规”。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The IDs of the regions excluded from the compliance evaluations performed by the rule. Separate multiple region IDs with commas (,).</p>
+     * <p>The regions where the rule is not effective. The system does not evaluate resources in these regions. To specify multiple region IDs, separate them with a comma (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -69,7 +81,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String excludeRegionIdsScope;
 
     /**
-     * <p>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The resource groups where the rule is not effective. The system does not evaluate resources in these resource groups. To specify multiple resource group IDs, separate them with a comma (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bnczc6r7rml****</p>
@@ -78,9 +90,9 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String excludeResourceGroupIdsScope;
 
     /**
-     * <p>The IDs of the resources excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+     * <p>The resources that are not evaluated by the rule. The system does not evaluate these resources. To specify multiple resource IDs, separate them with a comma (,).</p>
      * <blockquote>
-     * <p> This parameter applies only to a managed rule.</p>
+     * <p>This parameter applies only to managed rules.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,13 +102,13 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String excludeResourceIdsScope;
 
     /**
-     * <p>The scope of the tag that is excluded.</p>
+     * <p>The tags that are used to exclude resources.</p>
      */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<UpdateConfigRuleRequestExcludeTagsScope> excludeTagsScope;
 
     /**
-     * <p>Optional. The extended content of the resource. This parameter can be used together with the MaximumExecutionFrequency parameter when the MaximumExecutionFrequency parameter is set to TwentyFour_Hours to specify the trigger time.</p>
+     * <p>The extended content. This parameter is optional. You can use this parameter with a 24-hour trigger period to set the trigger time.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
@@ -117,16 +129,21 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public java.util.Map<String, ?> inputParameters;
 
     /**
-     * <p>The interval at which the rule is triggered. Valid values:</p>
+     * <p>The frequency at which the rule is run. Valid values:</p>
      * <ul>
-     * <li>One_Hour</li>
-     * <li>Three_Hours</li>
-     * <li>Six_Hours</li>
-     * <li>Twelve_Hours</li>
-     * <li>TwentyFour_Hours (default)</li>
+     * <li><p>One_Hour: 1 hour.</p>
+     * </li>
+     * <li><p>Three_Hours: 3 hours.</p>
+     * </li>
+     * <li><p>Six_Hours: 6 hours.</p>
+     * </li>
+     * <li><p>Twelve_Hours: 12 hours.</p>
+     * </li>
+     * <li><p>TwentyFour_Hours (default): 24 hours.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if the <code>ConfigRuleTriggerTypes</code> parameter is set to <code>ScheduledNotification</code>.</p>
+     * <p>This parameter is required when <code>ConfigRuleTriggerTypes</code> is set to <code>ScheduledNotification</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -136,9 +153,9 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String maximumExecutionFrequency;
 
     /**
-     * <p>The IDs of the regions to which the rule applies. Separate multiple region IDs with commas (,).</p>
+     * <p>The regions where the rule is effective. The rule evaluates only resources in these regions. To specify multiple region IDs, separate them with a comma (,).</p>
      * <blockquote>
-     * <p> This parameter applies only to a managed rule.</p>
+     * <p>This parameter applies only to managed rules.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -148,9 +165,9 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String regionIdsScope;
 
     /**
-     * <p>The IDs of the resource groups to which the rule applies. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The resource groups where the rule is effective. The rule evaluates only resources in these resource groups. To specify multiple resource group IDs, separate them with a comma (,).</p>
      * <blockquote>
-     * <p> This parameter applies only to a managed rule.</p>
+     * <p>This parameter applies only to managed rules.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -160,7 +177,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+     * <p>The resources that the rule evaluates. To specify multiple resource IDs, separate them with a comma (,).</p>
      * 
      * <strong>example:</strong>
      * <p>lb-5cmbowstbkss9ta03****</p>
@@ -169,7 +186,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
-     * <p>The names of the resource to which the rule applies.</p>
+     * <p>The names of the resources that the rule evaluates.</p>
      * 
      * <strong>example:</strong>
      * <p>i-xxx</p>
@@ -181,7 +198,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String resourceNameScope;
 
     /**
-     * <p>The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).</p>
+     * <p>The resource types that the rule evaluates. To specify multiple resource types, separate them with a comma (,).</p>
      * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>
@@ -190,11 +207,14 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public java.util.List<String> resourceTypesScope;
 
     /**
-     * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+     * <p>The risk level of the rule. Valid values:</p>
      * <ul>
-     * <li>1: high</li>
-     * <li>2: medium</li>
-     * <li>3: low</li>
+     * <li><p>1: high risk.</p>
+     * </li>
+     * <li><p>2: medium risk.</p>
+     * </li>
+     * <li><p>3: low risk.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -204,21 +224,21 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public Integer riskLevel;
 
     /**
-     * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
+     * <p>The tags of the resource. This parameter is deprecated. The value that you specify for this parameter does not take effect.</p>
+     * <p>You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
     @Deprecated
     public java.util.List<UpdateConfigRuleRequestTag> tag;
 
     /**
-     * <p>The logical relationship when parameter <code>TagsScope</code> takes multiple values, for example: When the parameter <code>TagsScope</code> is <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;, &quot;TagsScope.1.TagValue&quot;:&quot;a&quot;, &quot;TagsScope.2.TagKey&quot;:&quot;b&quot;, &quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code>, if this parameter is set to<code> AND</code>, it means that the rule only applies to resources bound with both tags <code>a:a</code> and <code>b:b</code>. If not specified, the default logic is <code>OR</code>.</p>
-     * <p>It can also be used for the deprecated field <code>TagKeyScope</code> (not recommended), for example: When the parameter <code>TagKeyScope</code> has a value of <code>ECS</code>,<code>OSS</code>, if this parameter is set to <code>AND</code>, it means that the rule only applies to resources bound with both labels <code>ECS</code> and <code>OSS</code>.</p>
-     * <p>Values:</p>
+     * <p>The logical relationship for the tags that you specify for the <code>TagsScope</code> parameter. For example, if you set the <code>TagsScope</code> parameter to <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>a:a</code> and <code>b:b</code> tags. If you do not specify this parameter, the <code>OR</code> logic is used by default.</p>
+     * <p>This parameter also applies to the deprecated <code>TagKeyScope</code> parameter, but this is not recommended. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>ECS</code> and <code>OSS</code> tags.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>AND: And.</p>
+     * <li><p>AND</p>
      * </li>
-     * <li><p>OR: Or.</p>
+     * <li><p>OR</p>
      * </li>
      * </ul>
      * 
@@ -229,10 +249,10 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String tagKeyLogicScope;
 
     /**
-     * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
-     * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</p>
+     * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter instead.</p>
+     * <p>The rule is effective only for resources that have the specified tag.</p>
      * <blockquote>
-     * <p> This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
+     * <p>This parameter applies only to managed rules. The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters must be specified at the same time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -243,10 +263,10 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String tagKeyScope;
 
     /**
-     * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
-     * <p>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</p>
+     * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter instead.</p>
+     * <p>The rule is effective only for resources that have the specified tag.</p>
      * <blockquote>
-     * <p> This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
+     * <p>This parameter applies only to managed rules. The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters must be specified at the same time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -257,7 +277,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
     public String tagValueScope;
 
     /**
-     * <p>The tag scope.</p>
+     * <p>The tags that are used to filter resources.</p>
      */
     @NameInMap("TagsScope")
     public java.util.List<UpdateConfigRuleRequestTagsScope> tagsScope;
@@ -273,6 +293,14 @@ public class UpdateConfigRuleRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateConfigRuleRequest setConditions(String conditions) {
+        this.conditions = conditions;
+        return this;
+    }
+    public String getConditions() {
+        return this.conditions;
     }
 
     public UpdateConfigRuleRequest setConfigRuleId(String configRuleId) {
@@ -456,7 +484,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
 
     public static class UpdateConfigRuleRequestExcludeTagsScope extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-2</p>
@@ -465,7 +493,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-2</p>
@@ -498,7 +526,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
 
     public static class UpdateConfigRuleRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -507,7 +535,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> and <code>acs:</code>.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>
@@ -540,7 +568,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
 
     public static class UpdateConfigRuleRequestTagsScope extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -549,7 +577,7 @@ public class UpdateConfigRuleRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

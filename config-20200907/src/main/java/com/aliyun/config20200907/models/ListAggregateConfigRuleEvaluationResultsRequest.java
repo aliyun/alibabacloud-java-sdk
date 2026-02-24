@@ -26,13 +26,18 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The compliance evaluation result of the resource. Valid values:</p>
+     * <p>The compliance evaluation result. Valid values:</p>
      * <ul>
-     * <li>COMPLIANT: The resource is evaluated as compliant.</li>
-     * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
-     * <li>NOT_APPLICABLE: The rule does not apply to your resource.</li>
-     * <li>INSUFFICIENT_DATA: No data is available.</li>
-     * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
+     * <li><p>COMPLIANT: The resource is compliant.</p>
+     * </li>
+     * <li><p>NON_COMPLIANT: The resource is non-compliant.</p>
+     * </li>
+     * <li><p>NOT_APPLICABLE: The rule does not apply to the resource.</p>
+     * </li>
+     * <li><p>INSUFFICIENT_DATA: No data is available.</p>
+     * </li>
+     * <li><p>IGNORED: The evaluation result is ignored.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +48,7 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
 
     /**
      * <p>The rule ID.</p>
-     * <p>For more information about how to query the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+     * <p>For more information about how to obtain a rule ID, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cr-888f626622af00ae****</p>
@@ -52,7 +57,7 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return on a single page. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -61,7 +66,7 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * <p>The pagination token that is returned when the response is truncated. Use this token in the next request to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>IWBjqMYSy0is7zSMGu16****</p>
@@ -70,7 +75,7 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region whose resources you want to evaluate. Separate multiple region IDs with commas (,).</p>
+     * <p>The ID of the region where the resource resides. Separate multiple region IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -79,7 +84,10 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     public String regions;
 
     /**
-     * <p>Member accountId to which the resource to be queried belongs.</p>
+     * <p>The ID of the Alibaba Cloud account to which the resource in the account group belongs.</p>
+     * <blockquote>
+     * <p>Specify this parameter or \<code>ResourceOwnerId\\</code>. We recommend that you specify this parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>100931896542****</p>
@@ -88,7 +96,7 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     public Long resourceAccountId;
 
     /**
-     * <p>The ID of the resource group whose resources you want to evaluate. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The ID of the resource group to which the resource belongs. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2cqyzvuj****</p>
@@ -101,7 +109,7 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resources that you want to evaluate. Separate multiple resource types with commas (,).</p>
+     * <p>The resource type. Separate multiple resource types with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>

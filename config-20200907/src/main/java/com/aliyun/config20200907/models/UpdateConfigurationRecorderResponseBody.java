@@ -4,18 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateConfigurationRecorderResponseBody extends TeaModel {
-    /**
-     * <p>The details of the configuration recorder.</p>
-     */
     @NameInMap("ConfigurationRecorder")
     public UpdateConfigurationRecorderResponseBodyConfigurationRecorder configurationRecorder;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2A1D5095-D1F9-56B6-A712-EA495608E79A</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,24 +32,9 @@ public class UpdateConfigurationRecorderResponseBody extends TeaModel {
     }
 
     public static class UpdateConfigurationRecorderResponseBodyConfigurationRecorder extends TeaModel {
-        /**
-         * <p>The status of the configuration recorder. Valid values:</p>
-         * <ul>
-         * <li>REGISTRABLE: The configuration recorder has not been registered.</li>
-         * <li>BUILDING: The configuration recorder is being deployed.</li>
-         * <li>REGISTERED: The configuration recorder has been registered.</li>
-         * <li>REBUILDING: The configuration recorder is being redeployed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>REGISTERED</p>
-         */
         @NameInMap("ConfigurationRecorderStatus")
         public String configurationRecorderStatus;
 
-        /**
-         * <p>The types of the resources that are monitored by Cloud Config.</p>
-         */
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
 

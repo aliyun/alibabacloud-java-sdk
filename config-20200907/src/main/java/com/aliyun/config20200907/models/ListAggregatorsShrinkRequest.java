@@ -5,28 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListAggregatorsShrinkRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>TGlzdFJlc291cmNlU2hhcmVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
-     */
     @NameInMap("Tag")
     public String tagShrink;
 

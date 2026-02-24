@@ -8,7 +8,7 @@ public class ListSupportedProductsResponseBody extends TeaModel {
      * <p>The maximum number of entries to return for a single request. Valid values: 1 to 500.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>200</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
@@ -17,7 +17,7 @@ public class ListSupportedProductsResponseBody extends TeaModel {
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
-     * <p>D3AjqMNSy0ls7zBNCf3a****</p>
+     * <p>D99AjqMNSy0ls7zBNCfcs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -32,7 +32,7 @@ public class ListSupportedProductsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>610B0276-ABEE-57DF-9C13-C2324FADA9D7</p>
+     * <p>610B0276-ABEE-57DF-9C13-C2415FADA7D6</p>
      */
     @NameInMap("RequestId")
     public String requestId;

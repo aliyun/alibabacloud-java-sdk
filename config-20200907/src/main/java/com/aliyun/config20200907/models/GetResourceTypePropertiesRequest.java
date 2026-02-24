@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourceTypePropertiesRequest extends TeaModel {
     /**
+     * <p>The resource type.</p>
+     * <p>For more information about how to obtain the type, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPreManagedRulesResponseBody extends TeaModel {
     /**
-     * <p>The evaluation rules.</p>
+     * <p>The list of proactive rules.</p>
      */
     @NameInMap("ManagedRules")
     public java.util.List<ListPreManagedRulesResponseBodyManagedRules> managedRules;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A2A9F1BE-0712-1B26-9899-D82F7DA8476C</p>
@@ -76,7 +76,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
 
     public static class ListPreManagedRulesResponseBodyManagedRules extends TeaModel {
         /**
-         * <p>The details of the required input parameters of the rule.</p>
+         * <p>The details of the required input parameters for the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -88,7 +88,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
          * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>ram-user-ak-used-expired-check</p>
+         * <p>ECS实例开启释放保护</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -97,13 +97,13 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
          * <p>The description of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Example description</p>
+         * <p>ECS实例开启释放保护，视为“合规”。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The URL of the topic that describes how the evaluation rule remediates the incompliant configurations.</p>
+         * <p>The URL of the documentation that provides guidance on how to fix a non-compliant resource.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
@@ -121,7 +121,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
         public String identifier;
 
         /**
-         * <p>The details of the optional input parameters of the rule.</p>
+         * <p>The details of the optional input parameters for the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -130,7 +130,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
         public java.util.Map<String, ?> optionalInputParameterDetails;
 
         /**
-         * <p>The type of resource.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Instance</p>

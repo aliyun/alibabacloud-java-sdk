@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAggregateCompliancePacksResponseBody extends TeaModel {
     /**
-     * <p>The compliance packages returned.</p>
+     * <p>The results of the query.</p>
      */
     @NameInMap("CompliancePacksResult")
     public ListAggregateCompliancePacksResponseBodyCompliancePacksResult compliancePacksResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B5806142-3090-4F86-A84E-12B3FE52C1C4</p>
@@ -84,7 +84,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
 
     public static class ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks extends TeaModel {
         /**
-         * <p>The ID of the management account to which the compliance package belongs.</p>
+         * <p>The ID of the management account to which the compliance pack belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>100931896542****</p>
@@ -102,7 +102,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         public String aggregatorId;
 
         /**
-         * <p>The ID of the compliance package.</p>
+         * <p>The compliance pack ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cp-fdc8626622af00f9****</p>
@@ -111,25 +111,25 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         public String compliancePackId;
 
         /**
-         * <p>The name of the compliance package.</p>
+         * <p>The name of the compliance pack.</p>
          * 
          * <strong>example:</strong>
-         * <p>example-name</p>
+         * <p>BestPracticesForResourceStability</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
 
         /**
-         * <p>The ID of the compliance package template.</p>
+         * <p>The ID of the compliance pack template.</p>
          * 
          * <strong>example:</strong>
-         * <p>ct-5f26ff4e06a300c4****</p>
+         * <p>ct-484cff4e06a30062****</p>
          */
         @NameInMap("CompliancePackTemplateId")
         public String compliancePackTemplateId;
 
         /**
-         * <p>The timestamp when the compliance package was created. Unit: milliseconds.</p>
+         * <p>The timestamp when the compliance pack was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1624243657000</p>
@@ -138,20 +138,23 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The description of the compliance package.</p>
+         * <p>The description of the compliance pack.</p>
          * 
          * <strong>example:</strong>
-         * <p>example-description</p>
+         * <p>Check the stability of Alibaba Cloud resources based on the high-availability infrastructure, capacity protection, change management, monitoring management, backup management, and fault isolation. This helps you identify issues at the earliest opportunity and improve stability and the efficiency of O&amp;M.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:</p>
+         * <p>The risk level of the compliance pack. Valid values:</p>
          * <ul>
-         * <li>1: high risk level.</li>
-         * <li>2: medium risk level.</li>
-         * <li>3: low risk level.</li>
+         * <li><p>1: high</p>
+         * </li>
+         * <li><p>2: medium</p>
+         * </li>
+         * <li><p>3: low</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,10 +164,12 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>The status of the compliance package. Valid values:</p>
+         * <p>The status of the compliance pack. Valid values:</p>
          * <ul>
-         * <li>ACTIVE: The compliance package is available for use.</li>
-         * <li>CREATING: The compliance package is being created.</li>
+         * <li><p>ACTIVE: The compliance pack is active.</p>
+         * </li>
+         * <li><p>CREATING: The compliance pack is being created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +179,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag of the resource.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> tags;
@@ -268,13 +273,13 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
 
     public static class ListAggregateCompliancePacksResponseBodyCompliancePacksResult extends TeaModel {
         /**
-         * <p>The compliance packages.</p>
+         * <p>The compliance packs.</p>
          */
         @NameInMap("CompliancePacks")
         public java.util.List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks> compliancePacks;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -292,7 +297,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of compliance packages returned.</p>
+         * <p>The total number of compliance packs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetManagedRuleRequest extends TeaModel {
     /**
-     * <p>The identifier of the managed rule.</p>
-     * <p>For more information about how to obtain the identifier of a managed rule, see <a href="https://help.aliyun.com/document_detail/421144.html">ListManagedRules</a>.</p>
+     * <p>The identifier of the rule template.</p>
+     * <p>For more information about how to obtain the rule template identifier, see <a href="https://help.aliyun.com/document_detail/421144.html">ListManagedRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

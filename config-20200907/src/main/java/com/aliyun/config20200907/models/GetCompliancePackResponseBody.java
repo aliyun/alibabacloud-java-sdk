@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCompliancePackResponseBody extends TeaModel {
     /**
-     * <p>The details of the compliance package.</p>
+     * <p>The information about the compliance package.</p>
      */
     @NameInMap("CompliancePack")
     public GetCompliancePackResponseBodyCompliancePack compliancePack;
@@ -42,7 +42,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     public static class GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters extends TeaModel {
         /**
-         * <p>The name of the input parameter.</p>
+         * <p>The name of the rule parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>bandwidth</p>
@@ -51,7 +51,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The value of the input parameter.</p>
+         * <p>The value of the rule parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -60,10 +60,12 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String parameterValue;
 
         /**
-         * <p>Indicates whether the input parameters are required. Valid values:</p>
+         * <p>Indicates whether the parameter is required for the rule. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The parameter is required.</p>
+         * </li>
+         * <li><p>false: The parameter is not required.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,31 +116,31 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String configRuleId;
 
         /**
-         * <p>The rule name.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>eip-bandwidth-limit</p>
+         * <p>弹性IP实例带宽满足最低要求</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
-         * <p>The input parameters of the rule.</p>
+         * <p>The information about the rule parameters.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
 
         /**
-         * <p>The rule description.</p>
+         * <p>The description of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>example-description</p>
+         * <p>弹性IP实例可用带宽大于等于指定参数值，视为“合规”。默认值：10 MB。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The identifier of the managed rule.</p>
+         * <p>The identifier of the rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-bandwidth-limit</p>
@@ -147,7 +149,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String managedRuleIdentifier;
 
         /**
-         * <p>The type of the resource evaluated based on the rule. Separate multiple resource types with commas (,).</p>
+         * <p>The types of resources that are evaluated by the rule. Separate multiple resource types with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::EIP::EipAddress</p>
@@ -156,11 +158,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String resourceTypesScope;
 
         /**
-         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+         * <p>The risk level of the rule. Valid values:</p>
          * <ul>
-         * <li>1: high</li>
-         * <li>2: medium</li>
-         * <li>3: low</li>
+         * <li><p>1: high risk.</p>
+         * </li>
+         * <li><p>2: medium risk.</p>
+         * </li>
+         * <li><p>3: low risk.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +239,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     public static class GetCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-2</p>
@@ -243,7 +248,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-2</p>
@@ -276,7 +281,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     public static class GetCompliancePackResponseBodyCompliancePackScopeTagsScope extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -285,7 +290,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>
@@ -318,7 +323,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     public static class GetCompliancePackResponseBodyCompliancePackScope extends TeaModel {
         /**
-         * <p>The IDs of regions that are excluded. Separate multiple region IDs with commas (,).</p>
+         * <p>The IDs of the regions from which resources are excluded. Separate multiple region IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -327,7 +332,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String excludeRegionIdsScope;
 
         /**
-         * <p>The IDs of the resource groups whose resources you do not want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
+         * <p>The compliance package is not effective for the resources in the resource groups with the specified IDs. Separate multiple resource group IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzc7r7rhx****</p>
@@ -336,7 +341,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String excludeResourceGroupIdsScope;
 
         /**
-         * <p>The ID of the resource that you do not want to evaluate by using the compliance package.</p>
+         * <p>The compliance package is not effective for the resources with the specified IDs. The resources are not evaluated.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-8vbf3x310fn56ijfd****</p>
@@ -345,14 +350,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String excludeResourceIdsScope;
 
         /**
-         * <p>The scope of the tag that is excluded.</p>
+         * <p>The excluded tag scope.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ExcludeTagsScope")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope> excludeTagsScope;
 
         /**
-         * <p>The ID of the region whose resources you want to evaluate by using the compliance package.</p>
+         * <p>The compliance package is effective only for resources in the specified regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -361,7 +366,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String regionIdsScope;
 
         /**
-         * <p>The ID of the resource group whose resources you want to evaluate by using the compliance package.</p>
+         * <p>The compliance package is effective only for the resources in the resource groups with the specified IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzc7r7rhx****</p>
@@ -370,7 +375,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String resourceGroupIdsScope;
 
         /**
-         * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+         * <p>The compliance package is effective only for resources with the specified IDs. Separate multiple resource IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>eip-8vbf3x310fn56ijfd****</p>
@@ -379,7 +384,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String resourceIdsScope;
 
         /**
-         * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
+         * <p>The compliance package is effective only for the resources that have the specified tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -388,7 +393,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String tagKeyScope;
 
         /**
-         * <p>The tag value of the resource that you want to evaluate by using the compliance package.</p>
+         * <p>The compliance package is effective only for the resources that have the specified tag key-value pair.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -492,7 +497,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     public static class GetCompliancePackResponseBodyCompliancePackTags extends TeaModel {
         /**
-         * <p>The tag keys of the resource.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -501,7 +506,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag values of the resource.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>
@@ -543,7 +548,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The ID of the compliance package.</p>
+         * <p>The compliance package ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cp-a8a8626622af0082****</p>
@@ -555,7 +560,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
          * <p>The name of the compliance package.</p>
          * 
          * <strong>example:</strong>
-         * <p>example-pack-name</p>
+         * <p>等保三级预检合规包</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
@@ -570,7 +575,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String compliancePackTemplateId;
 
         /**
-         * <p>The rules in the compliance package.</p>
+         * <p>The list of rules in the compliance package.</p>
          */
         @NameInMap("ConfigRules")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRules> configRules;
@@ -588,17 +593,20 @@ public class GetCompliancePackResponseBody extends TeaModel {
          * <p>The description of the compliance package.</p>
          * 
          * <strong>example:</strong>
-         * <p>example-name</p>
+         * <p>基于等保2.0三级标准，提供持续检测合规性的建议模板，帮助您提前自检并修复问题，以便快速通过正式检测。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+         * <p>The risk level of the compliance package. Valid values:</p>
          * <ul>
-         * <li>1: high</li>
-         * <li>2: medium</li>
-         * <li>3: low</li>
+         * <li><p>1: high risk.</p>
+         * </li>
+         * <li><p>2: medium risk.</p>
+         * </li>
+         * <li><p>3: low risk.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -608,7 +616,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>The resource group for which the compliance package took effect.</p>
+         * <p>The evaluation scope.</p>
          */
         @NameInMap("Scope")
         public GetCompliancePackResponseBodyCompliancePackScope scope;
@@ -616,8 +624,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
         /**
          * <p>The status of the compliance package. Valid values:</p>
          * <ul>
-         * <li>ACTIVE: The compliance package is normal.</li>
-         * <li>CREATING: The compliance package is being created.</li>
+         * <li><p>ACTIVE: The compliance package is active.</p>
+         * </li>
+         * <li><p>CREATING: The compliance package is being created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -627,19 +637,19 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The resource tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackTags> tags;
 
         /**
-         * <p>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</p>
+         * <p>The template information for the compliance package. The rule list in the template does not include user-defined function rules. You can use this template to quickly create the same compliance package for other accounts or account groups.</p>
          * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;configRuleTemplates&quot;: [
          *         {
-         *             &quot;configRuleName&quot;: &quot;rule-example&quot;,
+         *             &quot;configRuleName&quot;: &quot;自定义条件规则示例&quot;,
          *             &quot;scope&quot;: {
          *                 &quot;complianceResourceTypes&quot;: [
          *                     &quot;ACS::ECS::Instance&quot;
@@ -663,13 +673,13 @@ public class GetCompliancePackResponseBody extends TeaModel {
          *             &quot;inputParameters&quot;: {}
          *         },
          *         {
-         *             &quot;configRuleName&quot;: &quot;name&quot;,
+         *             &quot;configRuleName&quot;: &quot;OSS存储空间Referer在指定的防盗链白名单中&quot;,
          *             &quot;scope&quot;: {
          *                 &quot;complianceResourceTypes&quot;: [
          *                     &quot;ACS::OSS::Bucket&quot;
          *                 ]
          *             },
-         *             &quot;description&quot;: &quot;description-1&quot;,
+         *             &quot;description&quot;: &quot;OSS存储空间开启防盗链并且Referer在指定白名单中，视为“合规”。&quot;,
          *             &quot;source&quot;: {
          *                 &quot;owner&quot;: &quot;ALIYUN&quot;,
          *                 &quot;identifier&quot;: &quot;oss-bucket-referer-limit&quot;,

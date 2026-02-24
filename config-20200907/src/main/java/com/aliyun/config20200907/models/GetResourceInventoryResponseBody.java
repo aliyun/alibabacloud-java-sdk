@@ -14,7 +14,7 @@ public class GetResourceInventoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the resource inventory.</p>
+     * <p>The information about the global resource inventory.</p>
      */
     @NameInMap("ResourceInventory")
     public GetResourceInventoryResponseBodyResourceInventory resourceInventory;
@@ -42,13 +42,13 @@ public class GetResourceInventoryResponseBody extends TeaModel {
 
     public static class GetResourceInventoryResponseBodyResourceInventory extends TeaModel {
         /**
-         * <p>The download URL of the resource inventory.</p>
+         * <p>The download URL of the global resource inventory.</p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
-         * <p>The time when the resource inventory was generated. The value is a timestamp.</p>
+         * <p>The UNIX timestamp when the inventory started to be generated.</p>
          * 
          * <strong>example:</strong>
          * <p>1687674634220</p>
@@ -57,10 +57,12 @@ public class GetResourceInventoryResponseBody extends TeaModel {
         public Long resourceInventoryGenerateTime;
 
         /**
-         * <p>The generation status of the resource inventory. Valid values:</p>
+         * <p>The generation status of the inventory. Valid values:</p>
          * <ul>
-         * <li>CREATING: The resource inventory is being generated.</li>
-         * <li>COMPLETE: The resource inventory is generated.</li>
+         * <li><p>CREATING: The inventory is being generated.</p>
+         * </li>
+         * <li><p>COMPLETE: The inventory is generated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

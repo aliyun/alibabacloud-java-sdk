@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TriggerReportSendRequest extends TeaModel {
     /**
+     * <p>The report template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

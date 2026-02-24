@@ -16,7 +16,7 @@ public class CreateAggregateAdvancedSearchFileRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The SQL statement used to query resources.</p>
+     * <p>The SQL statement for the advanced search.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

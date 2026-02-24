@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAggregateDiscoveredResourceRequest extends TeaModel {
     /**
-     * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>The account group ID.</p>
+     * <p>For more information about how to obtain the account group ID, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,10 @@ public class GetAggregateDiscoveredResourceRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the compliance results of the resource. Valid values:</p>
      * <ul>
-     * <li>0 (default): does not query the compliance results of the resource.</li>
-     * <li>1: queries the compliance results of the resource.</li>
+     * <li><p>0 (default): does not query the compliance results of the resource.</p>
+     * </li>
+     * <li><p>1: queries the compliance results of the resource.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +31,8 @@ public class GetAggregateDiscoveredResourceRequest extends TeaModel {
     public Integer complianceOption;
 
     /**
-     * <p>The ID of the region in which the resource resides.</p>
-     * <p>For more information about how to query the ID of a region in which the resource resides, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
+     * <p>The region ID of the resource.</p>
+     * <p>For more information about how to obtain the region ID of the resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +42,7 @@ public class GetAggregateDiscoveredResourceRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>Required. The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</p>
+     * <p>Required. The ID of the Alibaba Cloud account to which the resource to be queried belongs in the account group.</p>
      * 
      * <strong>example:</strong>
      * <p>100931896542****</p>
@@ -50,11 +52,11 @@ public class GetAggregateDiscoveredResourceRequest extends TeaModel {
 
     /**
      * <p>The resource ID.</p>
-     * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
+     * <p>For more information about how to obtain the resource ID, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>new-bucket</p>
+     * <p>i-bp12g4xbl4i0brkn****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -64,12 +66,12 @@ public class GetAggregateDiscoveredResourceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource.</p>
-     * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
+     * <p>The resource type.</p>
+     * <p>For more information about how to obtain the resource type, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ACS::OSS::Bucket</p>
+     * <p>ACS::ECS::Instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

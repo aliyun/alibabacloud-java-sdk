@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCompliancePackShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``</p>
+     * <p>A client token to ensure the idempotence of the request. Generate a unique token for each request. The <code>ClientToken</code> value can contain only ASCII characters and must be no more than 64 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
@@ -14,8 +14,8 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the compliance package.</p>
-     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+     * <p>The ID of the compliance pack.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,33 +25,33 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The name of the compliance package.</p>
-     * <p>For more information about how to obtain the name of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+     * <p>The name of the compliance pack.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>The name of the compliance package.</p>
+     * <p>等保三级预检合规包</p>
      */
     @NameInMap("CompliancePackName")
     public String compliancePackName;
 
     /**
-     * <p>The rules in the compliance package.</p>
-     * <p>If you leave this parameter empty, the rules in the compliance package remain unchanged. If you configure this parameter, Cloud Config replaces the existing rules in the compliance package with the specified rules.</p>
+     * <p>The rules in the compliance pack.</p>
+     * <p>If you leave this parameter empty when you modify the compliance pack, the original rules are retained. If you specify new rules, they replace the original rules.</p>
      */
     @NameInMap("ConfigRules")
     public String configRulesShrink;
 
     /**
-     * <p>The description of the compliance package.</p>
+     * <p>The description of the compliance pack.</p>
      * 
      * <strong>example:</strong>
-     * <p>The description of the compliance package.</p>
+     * <p>基于等保2.0三级标准，提供持续检测合规性的建议模板，帮助您提前自检并修复问题，以便快速通过正式检测。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</p>
+     * <p>The compliance pack does not evaluate resources in the specified regions. Separate multiple region IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -60,7 +60,7 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public String excludeRegionIdsScope;
 
     /**
-     * <p>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The compliance pack does not evaluate resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bnczc6r7rml****</p>
@@ -69,7 +69,7 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public String excludeResourceGroupIdsScope;
 
     /**
-     * <p>The ID of the resource that you do not want to evaluate by using the compliance package. Separate multiple resource IDs with commas (,).</p>
+     * <p>The compliance pack does not evaluate the specified resources. Separate multiple resource IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>23642660635687****</p>
@@ -78,13 +78,13 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public String excludeResourceIdsScope;
 
     /**
-     * <p>ExcludeTagsScope</p>
+     * <p>The excluded tag scope.</p>
      */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<UpdateCompliancePackShrinkRequestExcludeTagsScope> excludeTagsScope;
 
     /**
-     * <p>The ID of the region whose resources you want to evaluate by using the compliance package. Separate multiple region IDs with commas (,).</p>
+     * <p>The compliance pack evaluates only resources in the specified regions. Separate multiple region IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -93,7 +93,7 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public String regionIdsScope;
 
     /**
-     * <p>The ID of the resource group whose resources you want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The compliance pack evaluates only resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzdibsjjc****</p>
@@ -102,7 +102,7 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+     * <p>The compliance pack evaluates only the specified resources. Separate multiple resource IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>lb-5cmbowstbkss9ta03****</p>
@@ -111,11 +111,14 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
-     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+     * <p>The risk level of the compliance pack. Valid values:</p>
      * <ul>
-     * <li>1: high risk level</li>
-     * <li>2: medium risk level</li>
-     * <li>3: low risk level</li>
+     * <li><p>1: High risk.</p>
+     * </li>
+     * <li><p>2: Medium risk.</p>
+     * </li>
+     * <li><p>3: Low risk.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,15 +128,15 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public Integer riskLevel;
 
     /**
-     * <p>The tags of the resource.</p>
-     * <p>You can add up to 20 tags to a resource.</p>
+     * <p>The tags of the resource. This parameter is deprecated. Ignore this parameter because it is no longer valid.</p>
+     * <p>You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
     @Deprecated
     public String tagShrink;
 
     /**
-     * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
+     * <p>The compliance pack evaluates only resources that have the specified tag key.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
@@ -142,9 +145,9 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public String tagKeyScope;
 
     /**
-     * <p>The tag value of the resource that you want to evaluate by using the compliance package.</p>
+     * <p>The compliance pack evaluates only resources that have the specified tag key and value.</p>
      * <blockquote>
-     * <p> You must configure the TagValueScope parameter together with the TagValueScope parameter.</p>
+     * <p>You must use TagValueScope with TagKeyScope.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -154,7 +157,7 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     public String tagValueScope;
 
     /**
-     * <p>TagsScope</p>
+     * <p>The tag scope.</p>
      */
     @NameInMap("TagsScope")
     public java.util.List<UpdateCompliancePackShrinkRequestTagsScope> tagsScope;
