@@ -4,42 +4,106 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class TransformerForView extends TeaModel {
+    /**
+     * <p>Transformation operation.</p>
+     */
     @NameInMap("actions")
     public java.util.List<TransformAction> actions;
 
+    /**
+     * <p>Create Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58Z</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Whether enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>Filter Setting.</p>
+     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
+    /**
+     * <p>Exit after matching processing.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("quitAfterMatch")
     public Boolean quitAfterMatch;
 
+    /**
+     * <p>Sort order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("sortId")
     public Integer sortId;
 
+    /**
+     * <p>transformer Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1123123123123</p>
+     */
     @NameInMap("transformerId")
     public String transformerId;
 
     /**
+     * <p>Name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test processing flow.</p>
      */
     @NameInMap("transformerName")
     public String transformerName;
 
+    /**
+     * <p>Update Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-01-16T02:27:01Z</p>
+     */
     @NameInMap("updateTime")
     public String updateTime;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123123123**</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <p>workspace</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

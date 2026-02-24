@@ -4,45 +4,117 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentPlanStruct extends TeaModel {
+    /**
+     * <p>Automatic recovery wait time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("autoRecoverSeconds")
     public Integer autoRecoverSeconds;
 
+    /**
+     * <p>Event closure timeout.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86400000</p>
+     */
     @NameInMap("closeExpire")
     public Long closeExpire;
 
+    /**
+     * <p>List of teams or roles involved in collaboration.</p>
+     */
     @NameInMap("corporation")
     public java.util.List<IncidentPlanCorporationStruct> corporation;
 
+    /**
+     * <p>Contingency plan description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Emergency response plan for excessively high database connection count.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>List of escalation policy IDs.</p>
+     */
     @NameInMap("escalationId")
     public java.util.List<String> escalationId;
 
+    /**
+     * <p>Creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741234567890</p>
+     */
     @NameInMap("gmtCreate")
     public Long gmtCreate;
 
+    /**
+     * <p>Last modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741234567890</p>
+     */
     @NameInMap("gmtModified")
     public Long gmtModified;
 
+    /**
+     * <p>Grouping field path.</p>
+     */
     @NameInMap("groupBy")
     public java.util.List<IncidentPlanFieldPath> groupBy;
 
+    /**
+     * <p>Event contingency plan ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plan-001</p>
+     */
     @NameInMap("incidentPlanId")
     public String incidentPlanId;
 
+    /**
+     * <p>Contingency plan name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Database connection count alert contingency plan.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>List of resource field mapping paths.</p>
+     */
     @NameInMap("resourceFiled")
     public java.util.List<IncidentPlanFieldPath> resourceFiled;
 
+    /**
+     * <p>Status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uesr-12345</p>
+     */
     @NameInMap("userId")
     public Long userId;
 
+    /**
+     * <p>Workspace name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

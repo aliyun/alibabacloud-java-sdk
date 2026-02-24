@@ -4,45 +4,120 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentEventStruct extends TeaModel {
+    /**
+     * <p>Automatic recovery time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741234567890</p>
+     */
     @NameInMap("autoRecoverTime")
     public Long autoRecoverTime;
 
+    /**
+     * <p>Content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Detected that the CPU usage of the user-service instance i-abc123 has reached 95%, triggering an alert.</p>
+     */
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>Count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>Dimension.</p>
+     */
     @NameInMap("dimension")
     public java.util.Map<String, String> dimension;
 
+    /**
+     * <p>Used for grouping dimensions.</p>
+     */
     @NameInMap("groupBy")
     public java.util.Map<String, String> groupBy;
 
+    /**
+     * <p>Incident Event Id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>event-001</p>
+     */
     @NameInMap("incidentEventId")
     public String incidentEventId;
 
+    /**
+     * <p>Incident Id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>incident-001</p>
+     */
     @NameInMap("incidentId")
     public String incidentId;
 
+    /**
+     * <p>Last time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741234567890</p>
+     */
     @NameInMap("lastTime")
     public Long lastTime;
 
+    /**
+     * <p>Manual recovery time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741234567890</p>
+     */
     @NameInMap("recoverTime")
     public Long recoverTime;
 
+    /**
+     * <p>Describes the resource information associated with the event.</p>
+     */
     @NameInMap("resource")
     public java.util.Map<String, String> resource;
 
+    /**
+     * <p>Status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("status")
     public Long status;
 
+    /**
+     * <p>Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58Z</p>
+     */
     @NameInMap("time")
     public String time;
 
+    /**
+     * <p>Title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>User service CPU usage is too high.</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-12345</p>
+     */
     @NameInMap("userId")
     public String userId;
 

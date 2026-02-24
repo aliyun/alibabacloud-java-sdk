@@ -10,18 +10,34 @@ public class MergeContactGroup extends TeaModel {
     @NameInMap("extend")
     public java.util.Map<String, ?> extend;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58.789Z</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58.789Z</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>group-12345</p>
+     */
     @NameInMap("identifier")
     public String identifier;
 
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("source")
     public String source;
 

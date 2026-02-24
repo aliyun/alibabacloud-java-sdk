@@ -4,30 +4,81 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentEscalationStageStruct extends TeaModel {
+    /**
+     * <p>Contact list.</p>
+     */
     @NameInMap("contact")
     public java.util.List<IncidentContactStruct> contact;
 
+    /**
+     * <p>Number of recurring notification attempts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("cycleNotifyCount")
     public Integer cycleNotifyCount;
 
+    /**
+     * <p>Recurring notification interval.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("cycleNotifyTime")
     public Integer cycleNotifyTime;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Primary owner responsible for handling production environment alerts.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Effective time period.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-04-05T00:00:00Z</p>
+     */
     @NameInMap("effectTime")
     public String effectTime;
 
+    /**
+     * <p>Name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Operations team.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>Phase index.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("stageIndex")
     public Integer stageIndex;
 
+    /**
+     * <p>Time zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
+     */
     @NameInMap("timeZone")
     public String timeZone;
 
+    /**
+     * <p>Time to wait before proceeding to the next phase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
     @NameInMap("waitToNextStageTime")
     public Integer waitToNextStageTime;
 

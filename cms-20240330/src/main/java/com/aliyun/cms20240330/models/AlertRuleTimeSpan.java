@@ -4,15 +4,36 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleTimeSpan extends TeaModel {
+    /**
+     * <p>Day of the week.</p>
+     */
     @NameInMap("dayOfWeek")
     public java.util.List<Integer> dayOfWeek;
 
+    /**
+     * <p>End time, in HH:mm format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23:00</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>Default time zone is Beijing Time: +0800.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>+0800</p>
+     */
     @NameInMap("gmtOffset")
     public String gmtOffset;
 
+    /**
+     * <p>Start time, in HH:mm format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

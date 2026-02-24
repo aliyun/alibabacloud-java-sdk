@@ -4,24 +4,63 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentResourceStruct extends TeaModel {
+    /**
+     * <p>Description information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Production environment web server.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Incident ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>incident-001</p>
+     */
     @NameInMap("incidentId")
     public String incidentId;
 
+    /**
+     * <p>The unique ID of this resource in the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>res-001</p>
+     */
     @NameInMap("incidentResourceId")
     public String incidentResourceId;
 
+    /**
+     * <p>Event resource details object.</p>
+     */
     @NameInMap("resource")
     public IncidentResourceDetail resource;
 
+    /**
+     * <p>Source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloudmonitor</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <p>Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741234567890</p>
+     */
     @NameInMap("time")
     public Long time;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-12345</p>
+     */
     @NameInMap("userId")
     public Long userId;
 

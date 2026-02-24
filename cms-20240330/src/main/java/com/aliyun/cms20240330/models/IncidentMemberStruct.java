@@ -4,30 +4,72 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentMemberStruct extends TeaModel {
+    /**
+     * <p>Acknowledgement Information Structure.</p>
+     */
     @NameInMap("acknowledge")
     public IncidentMemberStructAcknowledge acknowledge;
 
+    /**
+     * <p>Contact ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-12345</p>
+     */
     @NameInMap("contactId")
     public String contactId;
 
+    /**
+     * <p>Contact list.</p>
+     */
     @NameInMap("contacts")
     public java.util.List<IncidentMemberStructContacts> contacts;
 
+    /**
+     * <p>Escalation phase information.</p>
+     */
     @NameInMap("escalation")
     public IncidentMemberStructEscalation escalation;
 
+    /**
+     * <p>Incident ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>incident-001</p>
+     */
     @NameInMap("incidentId")
     public String incidentId;
 
+    /**
+     * <p>Event Member ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>member-001</p>
+     */
     @NameInMap("incidentMemberId")
     public String incidentMemberId;
 
+    /**
+     * <p>Schedule group.</p>
+     */
     @NameInMap("scheduleGroup")
     public IncidentMemberStructScheduleGroup scheduleGroup;
 
+    /**
+     * <p>Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-10-08 10:18:58</p>
+     */
     @NameInMap("time")
     public Long time;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4123456</p>
+     */
     @NameInMap("userId")
     public Long userId;
 
@@ -109,9 +151,21 @@ public class IncidentMemberStruct extends TeaModel {
     }
 
     public static class IncidentMemberStructAcknowledge extends TeaModel {
+        /**
+         * <p>Acknowledgement level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("breakLevel")
         public String breakLevel;
 
+        /**
+         * <p>Verification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741234567890</p>
+         */
         @NameInMap("verifyTime")
         public Long verifyTime;
 
@@ -139,9 +193,21 @@ public class IncidentMemberStruct extends TeaModel {
     }
 
     public static class IncidentMemberStructContacts extends TeaModel {
+        /**
+         * <p>Channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
         @NameInMap("channel")
         public String channel;
 
+        /**
+         * <p>Contact ID (masked).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-12345</p>
+         */
         @NameInMap("contactMask")
         public String contactMask;
 
@@ -169,18 +235,48 @@ public class IncidentMemberStruct extends TeaModel {
     }
 
     public static class IncidentMemberStructEscalation extends TeaModel {
+        /**
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Notify the operations team.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Event Escalation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>escalation-001</p>
+         */
         @NameInMap("incidentEscalationId")
         public String incidentEscalationId;
 
+        /**
+         * <p>Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Phase one.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Escalation phase index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("stageIndex")
         public String stageIndex;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert escalated to the operations team.</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -232,9 +328,21 @@ public class IncidentMemberStruct extends TeaModel {
     }
 
     public static class IncidentMemberStructScheduleGroup extends TeaModel {
+        /**
+         * <p>Contact ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group-001</p>
+         */
         @NameInMap("contactId")
         public String contactId;
 
+        /**
+         * <p>Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Night shift duty team.</p>
+         */
         @NameInMap("name")
         public String name;
 

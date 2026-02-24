@@ -7,6 +7,10 @@ public class EventResourceForEventView extends TeaModel {
     @NameInMap("entity")
     public EventResourceForEventViewEntity entity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ &quot;env&quot;: &quot;prod&quot;, &quot;project&quot;: &quot;payment-gateway&quot; }</p>
+     */
     @NameInMap("tags")
     public java.util.Map<String, ?> tags;
 
@@ -32,15 +36,31 @@ public class EventResourceForEventView extends TeaModel {
     }
 
     public static class EventResourceForEventViewEntity extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;ECS&quot;</p>
+         */
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;i-bp123456&quot;</p>
+         */
         @NameInMap("entityId")
         public String entityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;Instance&quot;</p>
+         */
         @NameInMap("entityType")
         public String entityType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;name&quot;: &quot;web-server-01&quot;, &quot;ip&quot;: &quot;10.0.0.1&quot; }</p>
+         */
         @NameInMap("prop")
         public java.util.Map<String, ?> prop;
 

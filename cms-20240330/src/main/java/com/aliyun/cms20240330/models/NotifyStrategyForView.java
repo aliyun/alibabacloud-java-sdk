@@ -7,15 +7,36 @@ public class NotifyStrategyForView extends TeaModel {
     @NameInMap("autoRecoverSeconds")
     public Integer autoRecoverSeconds;
 
+    /**
+     * <p>Create Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58Z</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>Notification channel template.</p>
+     */
     @NameInMap("customTemplateEntries")
     public java.util.List<NotifyStrategyForViewCustomTemplateEntries> customTemplateEntries;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Whether enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
@@ -23,22 +44,39 @@ public class NotifyStrategyForView extends TeaModel {
     public FilterSetting filterSetting;
 
     /**
+     * <p>Grouping Setting.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("groupingSetting")
     public NotifyStrategyForViewGroupingSetting groupingSetting;
 
+    /**
+     * <p>Whether to notify on recovery.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ignoreRestoredNotification")
     public Boolean ignoreRestoredNotification;
 
     @NameInMap("incidentEscalationPolicies")
     public java.util.List<?> incidentEscalationPolicies;
 
+    /**
+     * <p>UUID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12312-31-23-123-1-23123</p>
+     */
     @NameInMap("notifyStrategyId")
     public String notifyStrategyId;
 
     /**
+     * <p>Name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test policy.</p>
      */
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;
@@ -53,6 +91,7 @@ public class NotifyStrategyForView extends TeaModel {
     public NotifyStrategyForViewRepeatNotifySetting repeatNotifySetting;
 
     /**
+     * <p>Notification channel routing configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("routes")
@@ -61,12 +100,30 @@ public class NotifyStrategyForView extends TeaModel {
     @NameInMap("syncFromType")
     public String syncFromType;
 
+    /**
+     * <p>Update Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-05-30T02:29:09Z</p>
+     */
     @NameInMap("updateTime")
     public String updateTime;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123123****</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <p>workspace</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 
@@ -240,13 +297,21 @@ public class NotifyStrategyForView extends TeaModel {
 
     public static class NotifyStrategyForViewCustomTemplateEntries extends TeaModel {
         /**
+         * <p>Notification type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS</p>
          */
         @NameInMap("targetType")
         public String targetType;
 
         /**
+         * <p>Template UUID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-12-312-312-31-23</p>
          */
         @NameInMap("templateUuid")
         public String templateUuid;
@@ -275,15 +340,36 @@ public class NotifyStrategyForView extends TeaModel {
     }
 
     public static class NotifyStrategyForViewGroupingSetting extends TeaModel {
+        /**
+         * <p>Grouping Keys</p>
+         */
         @NameInMap("groupingKeys")
         public java.util.List<String> groupingKeys;
 
+        /**
+         * <p>Check interval in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("periodMin")
         public Integer periodMin;
 
+        /**
+         * <p>Silence duration in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("silenceSec")
         public Integer silenceSec;
 
+        /**
+         * <p>Trigger count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("times")
         public Integer times;
 
@@ -399,15 +485,23 @@ public class NotifyStrategyForView extends TeaModel {
 
     public static class NotifyStrategyForViewRoutesChannels extends TeaModel {
         /**
+         * <p>Channel type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTACT</p>
          */
         @NameInMap("channelType")
         public String channelType;
 
+        /**
+         * <p>Enabled notification types.</p>
+         */
         @NameInMap("enabledSubChannels")
         public java.util.List<String> enabledSubChannels;
 
         /**
+         * <p>Channel recipient.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("receivers")
@@ -445,15 +539,36 @@ public class NotifyStrategyForView extends TeaModel {
     }
 
     public static class NotifyStrategyForViewRoutesEffectTimeRange extends TeaModel {
+        /**
+         * <p>Effective days (Monday to Sunday).</p>
+         */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
+        /**
+         * <p>End time (in minutes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("endTimeInMinute")
         public Integer endTimeInMinute;
 
+        /**
+         * <p>Start time (in minutes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("startTimeInMinute")
         public Integer startTimeInMinute;
 
+        /**
+         * <p>Time Zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>+08:00</p>
+         */
         @NameInMap("timeZone")
         public String timeZone;
 
@@ -497,21 +612,33 @@ public class NotifyStrategyForView extends TeaModel {
     }
 
     public static class NotifyStrategyForViewRoutes extends TeaModel {
+        /**
+         * <p>Notification channel.</p>
+         */
         @NameInMap("channels")
         public java.util.List<NotifyStrategyForViewRoutesChannels> channels;
 
         @NameInMap("digitalEmployeeName")
         public String digitalEmployeeName;
 
+        /**
+         * <p>Field.</p>
+         */
         @NameInMap("effectTimeRange")
         public NotifyStrategyForViewRoutesEffectTimeRange effectTimeRange;
 
         @NameInMap("enableRca")
         public Boolean enableRca;
 
+        /**
+         * <p>Routing settings.</p>
+         */
         @NameInMap("filterSetting")
         public FilterSetting filterSetting;
 
+        /**
+         * <p>Severity level list.</p>
+         */
         @NameInMap("severities")
         public java.util.List<String> severities;
 

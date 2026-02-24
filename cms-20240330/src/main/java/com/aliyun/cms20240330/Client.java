@@ -594,6 +594,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建技能</p>
+     * 
+     * @param request CreateDigitalEmployeeSkillRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDigitalEmployeeSkillResponse
+     */
+    public CreateDigitalEmployeeSkillResponse createDigitalEmployeeSkillWithOptions(String name, CreateDigitalEmployeeSkillRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.files)) {
+            body.put("files", request.files);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
+            body.put("skillName", request.skillName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDigitalEmployeeSkill"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/skill"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDigitalEmployeeSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建技能</p>
+     * 
+     * @param request CreateDigitalEmployeeSkillRequest
+     * @return CreateDigitalEmployeeSkillResponse
+     */
+    public CreateDigitalEmployeeSkillResponse createDigitalEmployeeSkill(String name, CreateDigitalEmployeeSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createDigitalEmployeeSkillWithOptions(name, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Create storage related to EntityStore</p>
      * 
      * @param headers map
@@ -1460,6 +1527,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteDigitalEmployeeWithOptions(name, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除技能</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDigitalEmployeeSkillResponse
+     */
+    public DeleteDigitalEmployeeSkillResponse deleteDigitalEmployeeSkillWithOptions(String name, String skillName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDigitalEmployeeSkill"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/skill/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDigitalEmployeeSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除技能</p>
+     * @return DeleteDigitalEmployeeSkillResponse
+     */
+    public DeleteDigitalEmployeeSkillResponse deleteDigitalEmployeeSkill(String name, String skillName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteDigitalEmployeeSkillWithOptions(name, skillName, headers, runtime);
     }
 
     /**
@@ -2391,6 +2495,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getDigitalEmployeeWithOptions(name, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取技能详情</p>
+     * 
+     * @param request GetDigitalEmployeeSkillRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDigitalEmployeeSkillResponse
+     */
+    public GetDigitalEmployeeSkillResponse getDigitalEmployeeSkillWithOptions(String name, String skillName, GetDigitalEmployeeSkillRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDigitalEmployeeSkill"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/skill/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDigitalEmployeeSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取技能详情</p>
+     * 
+     * @param request GetDigitalEmployeeSkillRequest
+     * @return GetDigitalEmployeeSkillResponse
+     */
+    public GetDigitalEmployeeSkillResponse getDigitalEmployeeSkill(String name, String skillName, GetDigitalEmployeeSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDigitalEmployeeSkillWithOptions(name, skillName, request, headers, runtime);
     }
 
     /**
@@ -3465,6 +3616,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listBizTracesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出技能版本</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDigitalEmployeeSkillVersionsResponse
+     */
+    public ListDigitalEmployeeSkillVersionsResponse listDigitalEmployeeSkillVersionsWithOptions(String name, String skillName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDigitalEmployeeSkillVersions"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/skill/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/versions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDigitalEmployeeSkillVersionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出技能版本</p>
+     * @return ListDigitalEmployeeSkillVersionsResponse
+     */
+    public ListDigitalEmployeeSkillVersionsResponse listDigitalEmployeeSkillVersions(String name, String skillName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDigitalEmployeeSkillVersionsWithOptions(name, skillName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出技能</p>
+     * 
+     * @param request ListDigitalEmployeeSkillsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDigitalEmployeeSkillsResponse
+     */
+    public ListDigitalEmployeeSkillsResponse listDigitalEmployeeSkillsWithOptions(String name, ListDigitalEmployeeSkillsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
+            query.put("skillName", request.skillName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDigitalEmployeeSkills"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/skills"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDigitalEmployeeSkillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出技能</p>
+     * 
+     * @param request ListDigitalEmployeeSkillsRequest
+     * @return ListDigitalEmployeeSkillsResponse
+     */
+    public ListDigitalEmployeeSkillsResponse listDigitalEmployeeSkills(String name, ListDigitalEmployeeSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDigitalEmployeeSkillsWithOptions(name, request, headers, runtime);
     }
 
     /**
@@ -5020,7 +5263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Webhook</p>
+     * <p>修改已存在的告警 Webhook 通知配置。</p>
      * 
      * @param request UpdateAlertWebhookRequest
      * @param headers map
@@ -5074,7 +5317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Webhook</p>
+     * <p>修改已存在的告警 Webhook 通知配置。</p>
      * 
      * @param request UpdateAlertWebhookRequest
      * @return UpdateAlertWebhookResponse
@@ -5209,6 +5452,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新技能</p>
+     * 
+     * @param request UpdateDigitalEmployeeSkillRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDigitalEmployeeSkillResponse
+     */
+    public UpdateDigitalEmployeeSkillResponse updateDigitalEmployeeSkillWithOptions(String name, String skillName, UpdateDigitalEmployeeSkillRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.files)) {
+            body.put("files", request.files);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDigitalEmployeeSkill"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/skill/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDigitalEmployeeSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新技能</p>
+     * 
+     * @param request UpdateDigitalEmployeeSkillRequest
+     * @return UpdateDigitalEmployeeSkillResponse
+     */
+    public UpdateDigitalEmployeeSkillResponse updateDigitalEmployeeSkill(String name, String skillName, UpdateDigitalEmployeeSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateDigitalEmployeeSkillWithOptions(name, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Update the specified policy</p>
      * 
      * @param request UpdateIntegrationPolicyRequest
@@ -5268,7 +5574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新通知策略</p>
+     * <p>修改已存在的告警通知策略</p>
      * 
      * @param request UpdateNotifyStrategyRequest
      * @param headers map
@@ -5303,7 +5609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新通知策略</p>
+     * <p>修改已存在的告警通知策略</p>
      * 
      * @param request UpdateNotifyStrategyRequest
      * @return UpdateNotifyStrategyResponse
@@ -5592,7 +5898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新订阅</p>
+     * <p>更新一个已存在的订阅配置</p>
      * 
      * @param request UpdateSubscriptionRequest
      * @param headers map
@@ -5627,7 +5933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新订阅</p>
+     * <p>更新一个已存在的订阅配置</p>
      * 
      * @param request UpdateSubscriptionRequest
      * @return UpdateSubscriptionResponse

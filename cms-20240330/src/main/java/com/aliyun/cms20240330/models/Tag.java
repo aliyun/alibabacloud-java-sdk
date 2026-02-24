@@ -6,14 +6,14 @@ import com.aliyun.tea.*;
 public class Tag extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>test-key</p>
+     * <p>env</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
      * <strong>example:</strong>
-     * <p>test-value</p>
+     * <p>test</p>
      */
     @NameInMap("value")
     public String value;

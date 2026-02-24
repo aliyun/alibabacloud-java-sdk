@@ -4,12 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentResourceDetail extends TeaModel {
+    /**
+     * <p>Additional resource identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-prod-web-01</p>
+     */
     @NameInMap("extraId")
     public String extraId;
 
+    /**
+     * <p>Resource ID object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;type&quot;: &quot;ecs&quot;, &quot;id&quot;: &quot;i-bp1234567890abcdef&quot; }</p>
+     */
     @NameInMap("resourceId")
     public java.util.Map<String, ?> resourceId;
 
+    /**
+     * <p>Resource type, indicating which cloud product the resource belongs to.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("type")
     public String type;
 

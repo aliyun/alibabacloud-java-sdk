@@ -25,6 +25,10 @@ public class EntityDiscoverRule extends TeaModel {
     @NameInMap("regionIds")
     public java.util.List<String> regionIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfm2m7atreujs1</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
@@ -109,9 +113,17 @@ public class EntityDiscoverRule extends TeaModel {
     }
 
     public static class EntityDiscoverRuleAnnotations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>in</p>
+         */
         @NameInMap("op")
         public String op;
 
+        /**
+         * <strong>example:</strong>
+         * <p>instanceId</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
@@ -150,12 +162,20 @@ public class EntityDiscoverRule extends TeaModel {
     }
 
     public static class EntityDiscoverRuleFieldRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>instanceId</p>
+         */
         @NameInMap("fieldKey")
         public String fieldKey;
 
         @NameInMap("fieldValues")
         public java.util.List<String> fieldValues;
 
+        /**
+         * <strong>example:</strong>
+         * <p>in</p>
+         */
         @NameInMap("op")
         public String op;
 
@@ -191,9 +211,17 @@ public class EntityDiscoverRule extends TeaModel {
     }
 
     public static class EntityDiscoverRuleIpMatchRule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.0.1/10</p>
+         */
         @NameInMap("ipCIDR")
         public String ipCIDR;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hostIp</p>
+         */
         @NameInMap("ipFieldKey")
         public String ipFieldKey;
 
@@ -221,9 +249,17 @@ public class EntityDiscoverRule extends TeaModel {
     }
 
     public static class EntityDiscoverRuleLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>in</p>
+         */
         @NameInMap("op")
         public String op;
 
+        /**
+         * <strong>example:</strong>
+         * <p>project</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
@@ -262,9 +298,17 @@ public class EntityDiscoverRule extends TeaModel {
     }
 
     public static class EntityDiscoverRuleTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>in</p>
+         */
         @NameInMap("op")
         public String op;
 
+        /**
+         * <strong>example:</strong>
+         * <p>project</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 

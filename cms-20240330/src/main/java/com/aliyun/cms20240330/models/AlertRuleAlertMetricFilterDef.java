@@ -4,27 +4,72 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleAlertMetricFilterDef extends TeaModel {
+    /**
+     * <p>Dimension in APM metrics.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>status</p>
+     */
     @NameInMap("dim")
     public String dim;
 
+    /**
+     * <p>When true, the filter item will not appear in the GROUP BY clause of the PromQL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("dimDisabled")
     public Boolean dimDisabled;
 
+    /**
+     * <p>Display Name (Chinese).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Application Status</p>
+     */
     @NameInMap("displayNameCn")
     public String displayNameCn;
 
+    /**
+     * <p>Display Name (English).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Application Status</p>
+     */
     @NameInMap("displayNameEn")
     public String displayNameEn;
 
+    /**
+     * <p>Whether to hide. If hidden, it will not be displayed in the frontend UI, but its value can still be included when rendering the PromQL. A typical example is the &quot;pid&quot; filter condition in APM scenarios, which is generally not exposed through configurable UI elements but instead presented as a separate application search list in the frontend.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("hidden")
     public Boolean hidden;
 
+    /**
+     * <p>When true, the filter item will not appear in the label filter of the PromQL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("labelDisabled")
     public Boolean labelDisabled;
 
+    /**
+     * <p>Filter Condition Operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>=</p>
+     */
     @NameInMap("opt")
     public String opt;
 
+    /**
+     * <p>List of supported options.</p>
+     */
     @NameInMap("supportedOpts")
     public java.util.List<AlertRuleAlertMetricFilterDefSupportedOpts> supportedOpts;
 
@@ -98,12 +143,30 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     }
 
     public static class AlertRuleAlertMetricFilterDefSupportedOpts extends TeaModel {
+        /**
+         * <p>Display Name (Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
+         */
         @NameInMap("displayNameCn")
         public String displayNameCn;
 
+        /**
+         * <p>Display Name (English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
+         */
         @NameInMap("displayNameEn")
         public String displayNameEn;
 
+        /**
+         * <p>Matching value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
         @NameInMap("value")
         public String value;
 

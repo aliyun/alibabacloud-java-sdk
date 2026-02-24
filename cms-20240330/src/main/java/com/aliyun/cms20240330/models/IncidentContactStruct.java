@@ -4,12 +4,27 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentContactStruct extends TeaModel {
+    /**
+     * <p>Channel list.</p>
+     */
     @NameInMap("channel")
     public java.util.List<String> channel;
 
+    /**
+     * <p>Contact ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>627415</p>
+     */
     @NameInMap("contactId")
     public String contactId;
 
+    /**
+     * <p>Contact type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GROUP</p>
+     */
     @NameInMap("contactType")
     public String contactType;
 

@@ -4,24 +4,48 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleAlertMetricParamDef extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("maxWidth")
     public Integer maxWidth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("minWidth")
     public Integer minWidth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>env</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("placeholderCn")
     public String placeholderCn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enter value</p>
+     */
     @NameInMap("placeholderEn")
     public String placeholderEn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEXT_PARAM</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>staging</p>
+     */
     @NameInMap("value")
     public String value;
 
@@ -101,9 +125,17 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         @NameInMap("labelCn")
         public String labelCn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Staging</p>
+         */
         @NameInMap("labelEn")
         public String labelEn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>staging</p>
+         */
         @NameInMap("value")
         public String value;
 

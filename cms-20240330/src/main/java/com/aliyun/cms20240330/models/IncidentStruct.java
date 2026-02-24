@@ -4,33 +4,84 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentStruct extends TeaModel {
+    /**
+     * <p>Content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Detected that the connection count of RDS instance rds-bp1234567890abcdef has reached 1000, triggering an alert.</p>
+     */
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>List of escalation policies.</p>
+     */
     @NameInMap("escalations")
     public java.util.List<IncidentEscalationStruct> escalations;
 
+    /**
+     * <p>Incident ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>incident-001</p>
+     */
     @NameInMap("incidentId")
     public String incidentId;
 
+    /**
+     * <p>Associated incident contingency plan.</p>
+     */
     @NameInMap("incidentPlan")
     public IncidentPlanStruct incidentPlan;
 
+    /**
+     * <p>Associated resource details.</p>
+     */
     @NameInMap("resource")
     public IncidentResourceDetail resource;
 
+    /**
+     * <p>Incident severity level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P1</p>
+     */
     @NameInMap("severity")
     public String severity;
 
+    /**
+     * <p>Status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OPEN</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741234567890</p>
+     */
     @NameInMap("time")
     public Long time;
 
+    /**
+     * <p>Title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Excessively high database connection count.</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-12345</p>
+     */
     @NameInMap("userId")
     public String userId;
 

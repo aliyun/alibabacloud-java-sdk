@@ -4,30 +4,58 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class MergeRobot extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58.789Z</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
     @NameInMap("extend")
     public MergeRobotExtend extend;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58.789Z</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>robot-12345</p>
+     */
     @NameInMap("identifier")
     public String identifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("lang")
     public String lang;
 
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></p>
+     */
     @NameInMap("webhook")
     public String webhook;
 
@@ -109,21 +137,45 @@ public class MergeRobot extends TeaModel {
     }
 
     public static class MergeRobotExtend extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>incident-card-template</p>
+         */
         @NameInMap("cardTemplate")
         public String cardTemplate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("dailyNoc")
         public Boolean dailyNoc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>09:00</p>
+         */
         @NameInMap("dailyNocTime")
         public String dailyNocTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc123</p>
+         */
         @NameInMap("dingSignKey")
         public String dingSignKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enableOutgoing")
         public Boolean enableOutgoing;
 
+        /**
+         * <strong>example:</strong>
+         * <p>token-abc123</p>
+         */
         @NameInMap("token")
         public String token;
 

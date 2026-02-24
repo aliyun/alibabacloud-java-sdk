@@ -4,6 +4,12 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertEventIntegrationPolicyForView extends TeaModel {
+    /**
+     * <p>UUID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123123123</p>
+     */
     @NameInMap("alertEventIntegrationPolicyId")
     public String alertEventIntegrationPolicyId;
 
@@ -13,36 +19,74 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     @NameInMap("alertEventIntegrationPolicyName")
     public String alertEventIntegrationPolicyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58Z</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</p>
+     */
     @NameInMap("integrationSetting")
     public String integrationSetting;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10-16818f1445e10a1d012922b285bfb334</p>
+     */
     @NameInMap("token")
     public String token;
 
     @NameInMap("transformerSetting")
     public java.util.List<TransformAction> transformerSetting;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALERT_CUSTOM</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-12-16T02:00:23Z</p>
+     */
     @NameInMap("updateTime")
     public String updateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123123</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <p>workspace</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

@@ -13,36 +13,72 @@ public class AddonMeta extends TeaModel {
     @NameInMap("dashboards")
     public java.util.List<AddonMetaDashboards> dashboards;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The out-of-the-box and comprehensive ECS observe dashboards and alarm rules. Based on AliYun CloudMonitor agentless metrics, exporter agent metrics, host audit logs, host events and other data.</p>
+     */
     @NameInMap("description")
     public String description;
 
     @NameInMap("environments")
     public java.util.List<AddonMetaEnvironments> environments;
 
+    /**
+     * <strong>example:</strong>
+     * <p>assets/logos/ecs.svg</p>
+     */
     @NameInMap("icon")
     public String icon;
 
     @NameInMap("keywords")
     public java.util.List<String> keywords;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-10-25 09:12:12</p>
+     */
     @NameInMap("latestReleaseCreateTime")
     public String latestReleaseCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud-acs-ecs</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true/false</p>
+     */
     @NameInMap("once")
     public Boolean once;
 
+    /**
+     * <strong>example:</strong>
+     * <p>feature</p>
+     */
     @NameInMap("scene")
     public String scene;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.0.1</p>
+     */
     @NameInMap("version")
     public String version;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("weight")
     public Integer weight;
 
@@ -170,6 +206,10 @@ public class AddonMeta extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>assets/dashboards/ecs.png</p>
+         */
         @NameInMap("url")
         public String url;
 
@@ -205,9 +245,17 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironmentsCommonSchemaRefs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acs-ecs</p>
+         */
         @NameInMap("group")
         public String group;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.1.0</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -276,15 +324,31 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironmentsPoliciesBindEntity extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("entityGroupMode")
         public Boolean entityGroupMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acs.ecs.instance</p>
+         */
         @NameInMap("entityType")
         public String entityType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("singleEntityMode")
         public Boolean singleEntityMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpcId</p>
+         */
         @NameInMap("vpcIdFieldKey")
         public String vpcIdFieldKey;
 
@@ -350,12 +414,20 @@ public class AddonMeta extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>assets/logos/ecs.svg</p>
+         */
         @NameInMap("icon")
         public String icon;
 
         @NameInMap("label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Prometheus</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -399,30 +471,54 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironmentsPolicies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("alertDefaultStatus")
         public String alertDefaultStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("bindDefaultPolicy")
         public Boolean bindDefaultPolicy;
 
         @NameInMap("bindEntity")
         public AddonMetaEnvironmentsPoliciesBindEntity bindEntity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("defaultInstall")
         public Boolean defaultInstall;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("enableServiceAccount")
         public Boolean enableServiceAccount;
 
         @NameInMap("metricCheckRule")
         public AddonMetaEnvironmentsPoliciesMetricCheckRule metricCheckRule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("needRestartAfterIntegration")
         public Boolean needRestartAfterIntegration;
 
         @NameInMap("protocols")
         public java.util.List<AddonMetaEnvironmentsPoliciesProtocols> protocols;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud-acs-ecs</p>
+         */
         @NameInMap("targetAddonName")
         public String targetAddonName;
 
@@ -515,18 +611,30 @@ public class AddonMeta extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
         @NameInMap("label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CS/ECS/Cloud/Client</p>
+         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("policies")
         public AddonMetaEnvironmentsPolicies policies;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
         @NameInMap("policyType")
         public String policyType;
 

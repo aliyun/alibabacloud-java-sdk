@@ -5,17 +5,31 @@ import com.aliyun.tea.*;
 
 public class AlertRuleAlertMetricInputFilterValue extends TeaModel {
     /**
+     * <p>Dimension of the filter condition.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rootIp</p>
      */
     @NameInMap("dim")
     public String dim;
 
     /**
+     * <p>Filter Condition Operator.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("opt")
     public String opt;
 
+    /**
+     * <p>Filter Condition Value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("value")
     public String value;
 

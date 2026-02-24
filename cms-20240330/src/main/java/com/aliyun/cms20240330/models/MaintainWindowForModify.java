@@ -4,27 +4,66 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class MaintainWindowForModify extends TeaModel {
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Effective time range.</p>
+     */
     @NameInMap("effectTimeRange")
     public MaintainWindowForModifyEffectTimeRange effectTimeRange;
 
+    /**
+     * <p>Crontab expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li><ul>
+     * <li>14-18 ? * *</li>
+     * </ul>
+     * </li>
+     * </ul>
+     */
     @NameInMap("effective")
     public String effective;
 
+    /**
+     * <p>Effective end time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-09-05 09:30:40</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>Filtering conditions.</p>
+     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
+     * <p>Name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test strategy</p>
      */
     @NameInMap("maintainWindowName")
     public String maintainWindowName;
 
+    /**
+     * <p>Effective start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-04-11 07:55:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
@@ -90,15 +129,36 @@ public class MaintainWindowForModify extends TeaModel {
     }
 
     public static class MaintainWindowForModifyEffectTimeRange extends TeaModel {
+        /**
+         * <p>Effective days (Monday to Sunday).</p>
+         */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
+        /**
+         * <p>End time (in minutes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("endTimeInMinute")
         public Integer endTimeInMinute;
 
+        /**
+         * <p>Start time (in minutes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("startTimeInMinute")
         public Integer startTimeInMinute;
 
+        /**
+         * <p>Time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>+08:00</p>
+         */
         @NameInMap("timeZone")
         public String timeZone;
 

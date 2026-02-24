@@ -4,24 +4,44 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentResponsePlanForView extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("autoRecoverSeconds")
     public Long autoRecoverSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;2025-04-05T10:30:00Z&quot;</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
     @NameInMap("escalationId")
     public java.util.List<String> escalationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;Manual&quot;</p>
+     */
     @NameInMap("mode")
     public String mode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;P1-Critical-Response-Plan&quot;</p>
+     */
     @NameInMap("name")
     public String name;
 
@@ -31,21 +51,45 @@ public class IncidentResponsePlanForView extends TeaModel {
     @NameInMap("repeatNotifySetting")
     public RepeatNotifySetting repeatNotifySetting;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;MANUAL&quot;</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;ARMS&quot;</p>
+     */
     @NameInMap("syncFromType")
     public String syncFromType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;Standard&quot;</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;2025-04-06T09:15:00Z&quot;</p>
+     */
     @NameInMap("updateTime")
     public String updateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
+     */
     @NameInMap("uuid")
     public String uuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;ws-xyz789&quot;</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

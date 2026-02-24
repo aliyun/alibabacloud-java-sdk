@@ -4,39 +4,83 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class MergeWebhook extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>application/json</p>
+     */
     @NameInMap("contentType")
     public String contentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;timeout&quot;: 3000}</p>
+     */
     @NameInMap("extend")
     public String extend;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58.789Z</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58.789Z</p>
+     */
     @NameInMap("gmtModified")
     public java.util.Map<String, ?> gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Authorization&quot;: &quot;Bearer abc123&quot;}</p>
+     */
     @NameInMap("headers")
     public String headers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>webhook-12345</p>
+     */
     @NameInMap("identifier")
     public String identifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>POST</p>
+     */
     @NameInMap("method")
     public String method;
 
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></p>
+     */
     @NameInMap("webhook")
     public String webhook;
 

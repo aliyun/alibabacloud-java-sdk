@@ -4,45 +4,120 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class MaintainWindowForView extends TeaModel {
+    /**
+     * <p>Creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58Z</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Effective time range.</p>
+     */
     @NameInMap("effectTimeRange")
     public MaintainWindowForViewEffectTimeRange effectTimeRange;
 
+    /**
+     * <p>Crontab expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li><ul>
+     * <li>14-18 ? * *</li>
+     * </ul>
+     * </li>
+     * </ul>
+     */
     @NameInMap("effective")
     public String effective;
 
+    /**
+     * <p>Whether enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>Effective end time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-11-26 12:02:01</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>Filtering conditions.</p>
+     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
+    /**
+     * <p>UUID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123-12-312-31-23123</p>
+     */
     @NameInMap("maintainWindowId")
     public String maintainWindowId;
 
     /**
+     * <p>Name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test policy.</p>
      */
     @NameInMap("maintainWindowName")
     public String maintainWindowName;
 
+    /**
+     * <p>Effective start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-11-26 10:02:01</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <p>Update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-05-07T02:19:05Z</p>
+     */
     @NameInMap("updateTime")
     public String updateTime;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12312312***</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <p>workspace</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 
@@ -156,15 +231,36 @@ public class MaintainWindowForView extends TeaModel {
     }
 
     public static class MaintainWindowForViewEffectTimeRange extends TeaModel {
+        /**
+         * <p>Effective days (Monday to Sunday).</p>
+         */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
+        /**
+         * <p>End time (in minutes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
+         */
         @NameInMap("endTimeInMinute")
         public Integer endTimeInMinute;
 
+        /**
+         * <p>Start time (in minutes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("startTimeInMinute")
         public Integer startTimeInMinute;
 
+        /**
+         * <p>Time Zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>+08:00</p>
+         */
         @NameInMap("timeZone")
         public String timeZone;
 

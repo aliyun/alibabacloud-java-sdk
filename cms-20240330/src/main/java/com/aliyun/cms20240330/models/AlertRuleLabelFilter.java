@@ -7,6 +7,10 @@ public class AlertRuleLabelFilter extends TeaModel {
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AND</p>
+     */
     @NameInMap("opt")
     public String opt;
 

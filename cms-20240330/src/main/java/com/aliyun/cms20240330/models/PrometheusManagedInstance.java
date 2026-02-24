@@ -4,24 +4,52 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class PrometheusManagedInstance extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58Z</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("instanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rum-xxx</p>
+     */
     @NameInMap("prometheusInstanceId")
     public String prometheusInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rum-xxx</p>
+     */
     @NameInMap("prometheusInstanceName")
     public String prometheusInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

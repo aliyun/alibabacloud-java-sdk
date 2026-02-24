@@ -4,30 +4,84 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentTimeline extends TeaModel {
+    /**
+     * <p>Subtype.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
     @NameInMap("childType")
     public String childType;
 
+    /**
+     * <p>Content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The operations team has been notified to investigate.</p>
+     */
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>Incident ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>incident-001</p>
+     */
     @NameInMap("incidentId")
     public String incidentId;
 
+    /**
+     * <p>Timeline node unique ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>timeline-001</p>
+     */
     @NameInMap("incidentTimelineId")
     public String incidentTimelineId;
 
+    /**
+     * <p>Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741234567890</p>
+     */
     @NameInMap("time")
     public Long time;
 
+    /**
+     * <p>Parent timeline ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>timeline-main-001</p>
+     */
     @NameInMap("timelineId")
     public String timelineId;
 
+    /**
+     * <p>Title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The operations team has been contacted.</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>Type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACTION</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-12345</p>
+     */
     @NameInMap("userId")
     public String userId;
 

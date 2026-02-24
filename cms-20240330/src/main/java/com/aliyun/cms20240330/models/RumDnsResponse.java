@@ -4,12 +4,24 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class RumDnsResponse extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>rum</p>
+     */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("result")
     public Boolean result;
 

@@ -7,6 +7,10 @@ public class EntityGroupBase extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eg-1234567890</p>
+     */
     @NameInMap("entityGroupId")
     public String entityGroupId;
 
@@ -19,12 +23,24 @@ public class EntityGroupBase extends TeaModel {
     @NameInMap("entityRules")
     public EntityDiscoverRule entityRules;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-heyuan</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1654218***343050</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default-cms-1654218***343050-cn-hangzhou</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 
@@ -98,9 +114,17 @@ public class EntityGroupBase extends TeaModel {
     }
 
     public static class EntityGroupBaseEntityQueries extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acs.ecs.instance</p>
+         */
         @NameInMap("entityType")
         public String entityType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>.entity with(type=\&quot;acs.ecs.instance\&quot;) | where region_id in (\&quot;cn-beijing\&quot;)</p>
+         */
         @NameInMap("spl")
         public String spl;
 

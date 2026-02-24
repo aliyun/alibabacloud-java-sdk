@@ -4,27 +4,72 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentEscalationStruct extends TeaModel {
+    /**
+     * <p>Creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58Z</p>
+     */
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>When an alert is not acknowledged, notify the operations team, on-duty manager, and CTO sequentially.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Event Escalation ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52631388567</p>
+     */
     @NameInMap("incidentEscalationId")
     public String incidentEscalationId;
 
+    /**
+     * <p>Modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58Z</p>
+     */
     @NameInMap("modifyTime")
     public Long modifyTime;
 
+    /**
+     * <p>Name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Production Environment Alert Escalation Policy.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>Region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>Phase.</p>
+     */
     @NameInMap("stage")
     public java.util.List<IncidentEscalationStageStruct> stage;
 
+    /**
+     * <p>Workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

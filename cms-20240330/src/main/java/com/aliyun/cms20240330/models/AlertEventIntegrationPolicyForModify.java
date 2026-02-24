@@ -6,22 +6,37 @@ import com.aliyun.tea.*;
 public class AlertEventIntegrationPolicyForModify extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test integration</p>
      */
     @NameInMap("alertEventIntegrationPolicyName")
     public String alertEventIntegrationPolicyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("description")
     public String description;
 
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</p>
+     */
     @NameInMap("integrationSetting")
     public String integrationSetting;
 
     @NameInMap("transformerSetting")
     public java.util.List<TransformAction> transformerSetting;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALERT_CUSTOM</p>
+     */
     @NameInMap("type")
     public String type;
 

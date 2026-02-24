@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AlertRuleAlertMetricInputParamValue extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paramName</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paramValue</p>
      */
     @NameInMap("value")
     public String value;

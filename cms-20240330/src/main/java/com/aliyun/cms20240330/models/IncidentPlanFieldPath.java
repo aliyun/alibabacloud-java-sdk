@@ -4,9 +4,18 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentPlanFieldPath extends TeaModel {
+    /**
+     * <p>Field alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Service name.</p>
+     */
     @NameInMap("fieldAlias")
     public String fieldAlias;
 
+    /**
+     * <p>List of field paths.</p>
+     */
     @NameInMap("fieldPath")
     public java.util.List<String> fieldPath;
 

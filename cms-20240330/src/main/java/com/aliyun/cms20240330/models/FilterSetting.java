@@ -7,9 +7,17 @@ public class FilterSetting extends TeaModel {
     @NameInMap("conditions")
     public java.util.List<FilterSettingConditions> conditions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1 and 2 or 3</p>
+     */
     @NameInMap("expression")
     public String expression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AND</p>
+     */
     @NameInMap("relation")
     public String relation;
 
@@ -43,12 +51,24 @@ public class FilterSetting extends TeaModel {
     }
 
     public static class FilterSettingConditions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>severity</p>
+         */
         @NameInMap("field")
         public String field;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EQ</p>
+         */
         @NameInMap("op")
         public String op;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
+         */
         @NameInMap("value")
         public String value;
 

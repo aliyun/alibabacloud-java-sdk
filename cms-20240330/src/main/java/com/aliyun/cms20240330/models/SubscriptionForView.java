@@ -4,29 +4,69 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SubscriptionForView extends TeaModel {
+    /**
+     * <p>Create Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-11T08:21:58Z</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Whether enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>Filtering settings.</p>
+     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
+    /**
+     * <p>Notification policy UUID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23123123</p>
+     */
     @NameInMap("notifyStrategyId")
     public String notifyStrategyId;
 
+    /**
+     * <p>Push settings.</p>
+     */
     @NameInMap("pushingSetting")
     public SubscriptionForViewPushingSetting pushingSetting;
 
+    /**
+     * <p>UUID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123123123123</p>
+     */
     @NameInMap("subscriptionId")
     public String subscriptionId;
 
     /**
+     * <p>Name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Subscription test.</p>
      */
     @NameInMap("subscriptionName")
     public String subscriptionName;
@@ -34,12 +74,30 @@ public class SubscriptionForView extends TeaModel {
     @NameInMap("syncFromType")
     public String syncFromType;
 
+    /**
+     * <p>Update Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-05-23T02:29:02Z</p>
+     */
     @NameInMap("updateTime")
     public String updateTime;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123123123</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <p>workspace</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 
@@ -156,15 +214,33 @@ public class SubscriptionForView extends TeaModel {
     }
 
     public static class SubscriptionForViewPushingSetting extends TeaModel {
+        /**
+         * <p>Alert push action integration ID list.</p>
+         */
         @NameInMap("alertActionIds")
         public java.util.List<String> alertActionIds;
 
+        /**
+         * <p>Action plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123</p>
+         */
         @NameInMap("responsePlanId")
         public String responsePlanId;
 
+        /**
+         * <p>Recovery push action integration ID list.</p>
+         */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;
 
+        /**
+         * <p>Template UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123</p>
+         */
         @NameInMap("templateUuid")
         public String templateUuid;
 

@@ -4,9 +4,21 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentPlanCorporationStruct extends TeaModel {
+    /**
+     * <p>Channel name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("channel")
     public String channel;
 
+    /**
+     * <p>Robot ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>robotId-cs-api-test</p>
+     */
     @NameInMap("robotId")
     public String robotId;
 

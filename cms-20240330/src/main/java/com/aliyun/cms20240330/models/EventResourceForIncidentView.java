@@ -4,15 +4,31 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class EventResourceForIncidentView extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>rum</p>
+     */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("entityId")
     public String entityId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;Instance&quot;</p>
+     */
     @NameInMap("entityType")
     public String entityType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;{&quot;name&quot;:&quot;web-server-01&quot;,&quot;ip&quot;:&quot;10.0.0.1&quot;}&quot;</p>
+     */
     @NameInMap("probs")
     public String probs;
 

@@ -7,27 +7,55 @@ public class TransformAction extends TeaModel {
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
+    /**
+     * <strong>example:</strong>
+     * <p>labelkey1</p>
+     */
     @NameInMap("labelKey")
     public String labelKey;
 
     @NameInMap("mapping")
     public java.util.Map<String, String> mapping;
 
+    /**
+     * <strong>example:</strong>
+     * <p>(.<em>):(.</em>)</p>
+     */
     @NameInMap("regExp")
     public String regExp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>data.subject</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUBJECT</p>
+     */
     @NameInMap("target")
     public String target;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SET_FIELD</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>value1</p>
+     */
     @NameInMap("value")
     public String value;
 
+    /**
+     * <strong>example:</strong>
+     * <p>var1</p>
+     */
     @NameInMap("variable")
     public String variable;
 
