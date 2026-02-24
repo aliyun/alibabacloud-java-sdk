@@ -37,6 +37,13 @@ public class ChatBIPatternIndexCreateRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
+    /**
+     * <strong>example:</strong>
      * <p>空字符串</p>
      */
     @NameInMap("TableNameSuffix")
@@ -85,6 +92,14 @@ public class ChatBIPatternIndexCreateRequest extends TeaModel {
     }
     public String getPatternTableName() {
         return this.patternTableName;
+    }
+
+    public ChatBIPatternIndexCreateRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public ChatBIPatternIndexCreateRequest setTableNameSuffix(String tableNameSuffix) {

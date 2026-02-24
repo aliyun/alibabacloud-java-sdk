@@ -13,6 +13,13 @@ public class UpdateMultimodalLabelStudioServiceWhiteListShrinkRequest extends Te
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     @NameInMap("WhiteList")
     public String whiteListShrink;
 
@@ -27,6 +34,14 @@ public class UpdateMultimodalLabelStudioServiceWhiteListShrinkRequest extends Te
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public UpdateMultimodalLabelStudioServiceWhiteListShrinkRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public UpdateMultimodalLabelStudioServiceWhiteListShrinkRequest setWhiteListShrink(String whiteListShrink) {

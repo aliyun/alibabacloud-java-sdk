@@ -27,6 +27,13 @@ public class CreateMultimodalFineTuneDatasetRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static CreateMultimodalFineTuneDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMultimodalFineTuneDatasetRequest self = new CreateMultimodalFineTuneDatasetRequest();
         return TeaModel.build(map, self);
@@ -54,6 +61,14 @@ public class CreateMultimodalFineTuneDatasetRequest extends TeaModel {
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public CreateMultimodalFineTuneDatasetRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

@@ -37,6 +37,13 @@ public class ChatBIConfigDeleteEntryRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static ChatBIConfigDeleteEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBIConfigDeleteEntryRequest self = new ChatBIConfigDeleteEntryRequest();
         return TeaModel.build(map, self);
@@ -80,6 +87,14 @@ public class ChatBIConfigDeleteEntryRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public ChatBIConfigDeleteEntryRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

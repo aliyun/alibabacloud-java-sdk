@@ -49,6 +49,13 @@ public class ChatBISchemaIndexQueryTablesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static ChatBISchemaIndexQueryTablesRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBISchemaIndexQueryTablesRequest self = new ChatBISchemaIndexQueryTablesRequest();
         return TeaModel.build(map, self);
@@ -108,6 +115,14 @@ public class ChatBISchemaIndexQueryTablesRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ChatBISchemaIndexQueryTablesRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

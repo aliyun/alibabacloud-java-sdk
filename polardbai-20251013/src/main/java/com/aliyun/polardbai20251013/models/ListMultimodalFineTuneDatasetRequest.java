@@ -34,6 +34,13 @@ public class ListMultimodalFineTuneDatasetRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static ListMultimodalFineTuneDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMultimodalFineTuneDatasetRequest self = new ListMultimodalFineTuneDatasetRequest();
         return TeaModel.build(map, self);
@@ -69,6 +76,14 @@ public class ListMultimodalFineTuneDatasetRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListMultimodalFineTuneDatasetRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

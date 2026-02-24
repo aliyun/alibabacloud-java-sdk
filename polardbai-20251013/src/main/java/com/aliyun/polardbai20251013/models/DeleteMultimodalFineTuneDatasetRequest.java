@@ -22,6 +22,13 @@ public class DeleteMultimodalFineTuneDatasetRequest extends TeaModel {
     @NameInMap("DatasetId")
     public String datasetId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static DeleteMultimodalFineTuneDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMultimodalFineTuneDatasetRequest self = new DeleteMultimodalFineTuneDatasetRequest();
         return TeaModel.build(map, self);
@@ -41,6 +48,14 @@ public class DeleteMultimodalFineTuneDatasetRequest extends TeaModel {
     }
     public String getDatasetId() {
         return this.datasetId;
+    }
+
+    public DeleteMultimodalFineTuneDatasetRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

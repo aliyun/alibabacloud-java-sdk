@@ -23,6 +23,13 @@ public class GetUserTokenRequest extends TeaModel {
     public String password;
 
     /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +57,14 @@ public class GetUserTokenRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public GetUserTokenRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public GetUserTokenRequest setUsername(String username) {

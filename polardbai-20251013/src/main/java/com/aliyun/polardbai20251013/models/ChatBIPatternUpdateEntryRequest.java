@@ -76,6 +76,13 @@ public class ChatBIPatternUpdateEntryRequest extends TeaModel {
     public String patternSql;
 
     /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -159,6 +166,14 @@ public class ChatBIPatternUpdateEntryRequest extends TeaModel {
     }
     public String getPatternSql() {
         return this.patternSql;
+    }
+
+    public ChatBIPatternUpdateEntryRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public ChatBIPatternUpdateEntryRequest setTableName(String tableName) {

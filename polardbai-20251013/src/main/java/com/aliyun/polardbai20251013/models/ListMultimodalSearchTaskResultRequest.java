@@ -28,6 +28,13 @@ public class ListMultimodalSearchTaskResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +70,14 @@ public class ListMultimodalSearchTaskResultRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListMultimodalSearchTaskResultRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public ListMultimodalSearchTaskResultRequest setTaskId(String taskId) {

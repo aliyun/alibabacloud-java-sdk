@@ -36,6 +36,13 @@ public class CreateMultimodalDatasetEmbeddingRequest extends TeaModel {
     @NameInMap("ModelMode")
     public String modelMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static CreateMultimodalDatasetEmbeddingRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMultimodalDatasetEmbeddingRequest self = new CreateMultimodalDatasetEmbeddingRequest();
         return TeaModel.build(map, self);
@@ -71,6 +78,14 @@ public class CreateMultimodalDatasetEmbeddingRequest extends TeaModel {
     }
     public String getModelMode() {
         return this.modelMode;
+    }
+
+    public CreateMultimodalDatasetEmbeddingRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

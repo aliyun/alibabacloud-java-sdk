@@ -15,6 +15,13 @@ public class DownloadMultimodalSearchTaskResultMetadataRequest extends TeaModel 
 
     /**
      * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
+    /**
+     * <strong>example:</strong>
      * <p>白色汽车</p>
      */
     @NameInMap("TaskId")
@@ -31,6 +38,14 @@ public class DownloadMultimodalSearchTaskResultMetadataRequest extends TeaModel 
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DownloadMultimodalSearchTaskResultMetadataRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public DownloadMultimodalSearchTaskResultMetadataRequest setTaskId(String taskId) {

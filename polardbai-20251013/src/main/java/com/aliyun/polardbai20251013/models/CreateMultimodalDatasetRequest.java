@@ -27,6 +27,13 @@ public class CreateMultimodalDatasetRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static CreateMultimodalDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMultimodalDatasetRequest self = new CreateMultimodalDatasetRequest();
         return TeaModel.build(map, self);
@@ -54,6 +61,14 @@ public class CreateMultimodalDatasetRequest extends TeaModel {
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public CreateMultimodalDatasetRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

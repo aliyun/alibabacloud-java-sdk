@@ -77,6 +77,13 @@ public class ChatBIPredictSseRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
+    /**
+     * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("ThinkingMode")
@@ -173,6 +180,14 @@ public class ChatBIPredictSseRequest extends TeaModel {
     }
     public Boolean getSelectData() {
         return this.selectData;
+    }
+
+    public ChatBIPredictSseRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public ChatBIPredictSseRequest setThinkingMode(Boolean thinkingMode) {

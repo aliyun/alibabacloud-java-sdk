@@ -13,6 +13,13 @@ public class UpdateMultimodalLabelStudioServiceWhiteListRequest extends TeaModel
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     @NameInMap("WhiteList")
     public java.util.List<String> whiteList;
 
@@ -27,6 +34,14 @@ public class UpdateMultimodalLabelStudioServiceWhiteListRequest extends TeaModel
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public UpdateMultimodalLabelStudioServiceWhiteListRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public UpdateMultimodalLabelStudioServiceWhiteListRequest setWhiteList(java.util.List<String> whiteList) {

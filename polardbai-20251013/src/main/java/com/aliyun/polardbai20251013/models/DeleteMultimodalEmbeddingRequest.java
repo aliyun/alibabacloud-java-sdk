@@ -22,6 +22,13 @@ public class DeleteMultimodalEmbeddingRequest extends TeaModel {
     @NameInMap("Embedding")
     public String embedding;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static DeleteMultimodalEmbeddingRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMultimodalEmbeddingRequest self = new DeleteMultimodalEmbeddingRequest();
         return TeaModel.build(map, self);
@@ -41,6 +48,14 @@ public class DeleteMultimodalEmbeddingRequest extends TeaModel {
     }
     public String getEmbedding() {
         return this.embedding;
+    }
+
+    public DeleteMultimodalEmbeddingRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

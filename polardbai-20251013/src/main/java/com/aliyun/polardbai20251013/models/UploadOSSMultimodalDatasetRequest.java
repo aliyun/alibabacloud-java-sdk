@@ -27,6 +27,13 @@ public class UploadOSSMultimodalDatasetRequest extends TeaModel {
     @NameInMap("OssUrl")
     public String ossUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static UploadOSSMultimodalDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadOSSMultimodalDatasetRequest self = new UploadOSSMultimodalDatasetRequest();
         return TeaModel.build(map, self);
@@ -54,6 +61,14 @@ public class UploadOSSMultimodalDatasetRequest extends TeaModel {
     }
     public String getOssUrl() {
         return this.ossUrl;
+    }
+
+    public UploadOSSMultimodalDatasetRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

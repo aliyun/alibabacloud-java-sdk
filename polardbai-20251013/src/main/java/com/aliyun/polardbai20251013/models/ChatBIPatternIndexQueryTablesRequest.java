@@ -49,6 +49,13 @@ public class ChatBIPatternIndexQueryTablesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static ChatBIPatternIndexQueryTablesRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBIPatternIndexQueryTablesRequest self = new ChatBIPatternIndexQueryTablesRequest();
         return TeaModel.build(map, self);
@@ -108,6 +115,14 @@ public class ChatBIPatternIndexQueryTablesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ChatBIPatternIndexQueryTablesRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

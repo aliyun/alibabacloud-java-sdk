@@ -35,6 +35,13 @@ public class ChatBIConfigQueryTablesRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static ChatBIConfigQueryTablesRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBIConfigQueryTablesRequest self = new ChatBIConfigQueryTablesRequest();
         return TeaModel.build(map, self);
@@ -78,6 +85,14 @@ public class ChatBIConfigQueryTablesRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public ChatBIConfigQueryTablesRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

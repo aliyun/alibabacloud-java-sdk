@@ -34,6 +34,13 @@ public class ListMultimodalDatasetRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static ListMultimodalDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMultimodalDatasetRequest self = new ListMultimodalDatasetRequest();
         return TeaModel.build(map, self);
@@ -69,6 +76,14 @@ public class ListMultimodalDatasetRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListMultimodalDatasetRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

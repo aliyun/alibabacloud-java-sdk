@@ -20,6 +20,13 @@ public class ChatBIFileTemplateDownloadRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +62,14 @@ public class ChatBIFileTemplateDownloadRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public ChatBIFileTemplateDownloadRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public ChatBIFileTemplateDownloadRequest setTableType(String tableType) {

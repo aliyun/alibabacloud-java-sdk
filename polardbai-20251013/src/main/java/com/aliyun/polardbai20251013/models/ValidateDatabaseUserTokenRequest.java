@@ -40,6 +40,13 @@ public class ValidateDatabaseUserTokenRequest extends TeaModel {
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static ValidateDatabaseUserTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         ValidateDatabaseUserTokenRequest self = new ValidateDatabaseUserTokenRequest();
         return TeaModel.build(map, self);
@@ -75,6 +82,14 @@ public class ValidateDatabaseUserTokenRequest extends TeaModel {
     }
     public String getDBName() {
         return this.DBName;
+    }
+
+    public ValidateDatabaseUserTokenRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

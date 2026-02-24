@@ -37,6 +37,13 @@ public class ChatBISchemaIndexCreateRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
+    /**
+     * <strong>example:</strong>
      * <p>空字符串</p>
      */
     @NameInMap("TableNameSuffix")
@@ -99,6 +106,14 @@ public class ChatBISchemaIndexCreateRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public ChatBISchemaIndexCreateRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public ChatBISchemaIndexCreateRequest setTableNameSuffix(String tableNameSuffix) {

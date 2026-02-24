@@ -26,6 +26,13 @@ public class ChatBIFileUploadRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static ChatBIFileUploadRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBIFileUploadRequest self = new ChatBIFileUploadRequest();
         return TeaModel.build(map, self);
@@ -61,6 +68,14 @@ public class ChatBIFileUploadRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public ChatBIFileUploadRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }

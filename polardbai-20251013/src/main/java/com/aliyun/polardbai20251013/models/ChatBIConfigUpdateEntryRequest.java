@@ -64,6 +64,13 @@ public class ChatBIConfigUpdateEntryRequest extends TeaModel {
     public String queryFunction;
 
     /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -164,6 +171,14 @@ public class ChatBIConfigUpdateEntryRequest extends TeaModel {
     }
     public String getQueryFunction() {
         return this.queryFunction;
+    }
+
+    public ChatBIConfigUpdateEntryRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public ChatBIConfigUpdateEntryRequest setSqlCondition(String sqlCondition) {

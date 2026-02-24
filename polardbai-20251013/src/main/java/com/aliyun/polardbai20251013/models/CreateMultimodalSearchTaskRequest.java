@@ -50,6 +50,13 @@ public class CreateMultimodalSearchTaskRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
+    /**
+     * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("TopK")
@@ -106,6 +113,14 @@ public class CreateMultimodalSearchTaskRequest extends TeaModel {
     }
     public String getSearchModel() {
         return this.searchModel;
+    }
+
+    public CreateMultimodalSearchTaskRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public CreateMultimodalSearchTaskRequest setTopK(Integer topK) {

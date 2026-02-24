@@ -27,6 +27,13 @@ public class ListMultimodalEmbeddingModelRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     public static ListMultimodalEmbeddingModelRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMultimodalEmbeddingModelRequest self = new ListMultimodalEmbeddingModelRequest();
         return TeaModel.build(map, self);
@@ -54,6 +61,14 @@ public class ListMultimodalEmbeddingModelRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListMultimodalEmbeddingModelRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }
