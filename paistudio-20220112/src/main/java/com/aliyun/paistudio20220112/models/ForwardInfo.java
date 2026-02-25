@@ -4,9 +4,21 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ForwardInfo extends TeaModel {
+    /**
+     * <p>EIP Allocation ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-h29r78ieufbih</p>
+     */
     @NameInMap("EipAllocationId")
     public String eipAllocationId;
 
+    /**
+     * <p>NAT Gateway ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nat-7j4mka9wguxj</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 

@@ -13,6 +13,10 @@ public class MachineGroup extends TeaModel {
     @NameInMap("Cpu")
     public Long cpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1612285282502324</p>
+     */
     @NameInMap("CreatorID")
     public String creatorID;
 
@@ -29,21 +33,45 @@ public class MachineGroup extends TeaModel {
     @NameInMap("DiskPL")
     public String diskPL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("EcsCount")
     public Long ecsCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs.c6.large</p>
+     */
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-22T00:00:00Z</p>
+     */
     @NameInMap("GmtExpiredTime")
     public String gmtExpiredTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtStartedTime")
     public String gmtStartedTime;
 
@@ -66,30 +94,64 @@ public class MachineGroup extends TeaModel {
     @NameInMap("Memory")
     public Long memory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("OrderInstanceId")
     public String orderInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PaymentDuration")
     public String paymentDuration;
 
+    /**
+     * <p>region ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Monthly</p>
+     */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("ReasonCode")
     public String reasonCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rgf0zhfqn1d4ity2</p>
+     */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 

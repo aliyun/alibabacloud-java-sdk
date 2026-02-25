@@ -4,9 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GPUInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("count")
     public Long count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>T4</p>
+     */
     @NameInMap("type")
     public String type;
 

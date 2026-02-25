@@ -1914,6 +1914,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取当前资源配额用户列表和其所使用的资源</p>
+     * 
+     * @param request ListQuotaActiveUserUsagesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListQuotaActiveUserUsagesResponse
+     */
+    public ListQuotaActiveUserUsagesResponse listQuotaActiveUserUsagesWithOptions(String QuotaId, ListQuotaActiveUserUsagesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selfOnly)) {
+            query.put("SelfOnly", request.selfOnly);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListQuotaActiveUserUsages"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/quotas/" + com.aliyun.openapiutil.Client.getEncodeParam(QuotaId) + "/activeuserusages"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListQuotaActiveUserUsagesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取当前资源配额用户列表和其所使用的资源</p>
+     * 
+     * @param request ListQuotaActiveUserUsagesRequest
+     * @return ListQuotaActiveUserUsagesResponse
+     */
+    public ListQuotaActiveUserUsagesResponse listQuotaActiveUserUsages(String QuotaId, ListQuotaActiveUserUsagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listQuotaActiveUserUsagesWithOptions(QuotaId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>您可以通过此API获取Quota上的任务信息列表</p>
      * 
      * @param request ListQuotaWorkloadsRequest

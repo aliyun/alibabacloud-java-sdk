@@ -4,24 +4,48 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class WorkspaceSpec extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("CodeType")
     public String codeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsGuaranteedValid")
     public Boolean isGuaranteedValid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsOverSoldValid")
     public Boolean isOverSoldValid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
     @NameInMap("Spec")
     public ResourceAmount spec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>spec_test</p>
+     */
     @NameInMap("SpecName")
     public String specName;
 

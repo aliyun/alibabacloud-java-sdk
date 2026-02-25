@@ -7,24 +7,52 @@ public class HyperParameterRange extends TeaModel {
     @NameInMap("Enum")
     public java.util.List<String> _enum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ExclusiveMaximum")
     public Boolean exclusiveMaximum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ExclusiveMinimum")
     public Boolean exclusiveMinimum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("MaxLength")
     public Long maxLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Maximum")
     public String maximum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinLength")
     public Long minLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Minimum")
     public String minimum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>^\+?[1-9][0-9]*$</p>
+     */
     @NameInMap("Pattern")
     public String pattern;
 

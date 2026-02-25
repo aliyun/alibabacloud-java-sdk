@@ -4,17 +4,28 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class HyperParameterDefinition extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DefaultValue")
     public String defaultValue;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Batch Size</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>batch_size</p>
      */
     @NameInMap("Name")
     public String name;
@@ -22,11 +33,18 @@ public class HyperParameterDefinition extends TeaModel {
     @NameInMap("Range")
     public HyperParameterRange range;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Required")
     public Boolean required;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Integer</p>
      */
     @NameInMap("Type")
     public String type;

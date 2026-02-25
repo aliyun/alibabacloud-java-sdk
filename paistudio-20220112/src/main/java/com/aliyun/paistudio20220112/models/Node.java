@@ -4,6 +4,10 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Node extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CPU</p>
+     */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
@@ -22,9 +26,17 @@ public class Node extends TeaModel {
     @NameInMap("BoundQuotas")
     public java.util.List<QuotaIdName> boundQuotas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("CPU")
     public String CPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>281044699048527748</p>
+     */
     @NameInMap("CreatorId")
     public String creatorId;
 
@@ -37,78 +49,170 @@ public class Node extends TeaModel {
     @NameInMap("DiskPL")
     public String diskPL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("GPU")
     public String GPU;
 
     @NameInMap("GPUMemory")
     public String GPUMemory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-10T11:49:47Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtExpiredTime")
     public String gmtExpiredTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-10T11:49:47Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     @NameInMap("HyperZone")
     public String hyperZone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsBound")
     public Boolean isBound;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("LimitCPU")
     public String limitCPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("LimitGPU")
     public String limitGPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("LimitMemory")
     public String limitMemory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mg1234456</p>
+     */
     @NameInMap("MachineGroupId")
     public String machineGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("Memory")
     public String memory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>lingjxxxx</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ready</p>
+     */
     @NameInMap("NodeStatus")
     public String nodeStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs.c8i.xlarge</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ready</p>
+     */
     @NameInMap("OrderStatus")
     public String orderStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PodNum")
     public Long podNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ReasonCode")
     public String reasonCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("RequestCPU")
     public String requestCPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RequestGPU")
     public String requestGPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("RequestMemory")
     public String requestMemory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rgf0zhfqn1d4ity2</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 
@@ -127,6 +231,10 @@ public class Node extends TeaModel {
     @NameInMap("Users")
     public java.util.List<UserInfo> users;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("WorkloadNum")
     public Long workloadNum;
 

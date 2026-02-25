@@ -49,12 +49,24 @@ public class UserViewMetric extends TeaModel {
     @NameInMap("NodeNames")
     public java.util.List<String> nodeNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("RequestCPU")
     public Integer requestCPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("RequestGPU")
     public Integer requestGPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>102400000</p>
+     */
     @NameInMap("RequestMemory")
     public Long requestMemory;
 
@@ -65,6 +77,10 @@ public class UserViewMetric extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("TotalCPU")
     public Integer totalCPU;
 

@@ -9,7 +9,7 @@ public class QuotaConfig extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>ceeb37xxxx</p>
+     * <p>ceeb3724255364664</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

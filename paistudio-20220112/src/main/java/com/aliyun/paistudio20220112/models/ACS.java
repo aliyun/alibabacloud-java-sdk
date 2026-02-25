@@ -4,6 +4,12 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ACS extends TeaModel {
+    /**
+     * <p>ACS Identifier</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rq-3kbt2gtimmyw7fgfgothocvh</p>
+     */
     @NameInMap("ACSQuotaId")
     public String ACSQuotaId;
 

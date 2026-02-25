@@ -4,9 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Label extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>testAccTag</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nihao</p>
+     */
     @NameInMap("Value")
     public String value;
 

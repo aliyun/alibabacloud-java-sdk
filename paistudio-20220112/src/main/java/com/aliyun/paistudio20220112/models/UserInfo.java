@@ -4,9 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UserInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>161222222222</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

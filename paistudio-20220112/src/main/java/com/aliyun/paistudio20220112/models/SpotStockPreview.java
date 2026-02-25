@@ -4,6 +4,12 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class SpotStockPreview extends TeaModel {
+    @NameInMap("AvailableQuantity")
+    public Integer availableQuantity;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     /**
      * <strong>example:</strong>
      * <p>ml.gu8xf.8xlarge-gu108</p>
@@ -28,6 +34,22 @@ public class SpotStockPreview extends TeaModel {
     public static SpotStockPreview build(java.util.Map<String, ?> map) throws Exception {
         SpotStockPreview self = new SpotStockPreview();
         return TeaModel.build(map, self);
+    }
+
+    public SpotStockPreview setAvailableQuantity(Integer availableQuantity) {
+        this.availableQuantity = availableQuantity;
+        return this;
+    }
+    public Integer getAvailableQuantity() {
+        return this.availableQuantity;
+    }
+
+    public SpotStockPreview setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public SpotStockPreview setInstanceType(String instanceType) {

@@ -4,9 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Location extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("LocationType")
     public String locationType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://${bucket_name}.oss-${region}.aliyuncs.com/oss/location/path/</p>
+     */
     @NameInMap("LocationValue")
     public java.util.Map<String, ?> locationValue;
 

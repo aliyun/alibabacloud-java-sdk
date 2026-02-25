@@ -4,32 +4,63 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ResourceGroup extends TeaModel {
+    /**
+     * <p>CreatorID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1612285282502324</p>
+     */
     @NameInMap("CreatorID")
     public String creatorID;
 
+    /**
+     * <p>pai resource created time</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
+    /**
+     * <p>GmtModified</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     /**
+     * <p>pai resource group name</p>
+     * 
      * <strong>example:</strong>
      * <p>RG1</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>NodeCount</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("NodeCount")
     public Integer nodeCount;
 
     /**
+     * <p>pai resource group id</p>
+     * 
      * <strong>example:</strong>
      * <p>rg17tmvwiokhzaxg</p>
      */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>UserVpc</p>
+     */
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
@@ -37,6 +68,8 @@ public class ResourceGroup extends TeaModel {
     public String version;
 
     /**
+     * <p>pworkspace id</p>
+     * 
      * <strong>example:</strong>
      * <p>23000</p>
      */

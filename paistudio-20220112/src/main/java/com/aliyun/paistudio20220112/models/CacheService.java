@@ -16,11 +16,17 @@ public class CacheService extends TeaModel {
     @NameInMap("GmtCreated")
     public String gmtCreated;
 
+    @NameInMap("NetworkType")
+    public String networkType;
+
     @NameInMap("QuotaId")
     public String quotaId;
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("SupportRDMA")
+    public String supportRDMA;
 
     @NameInMap("SupportedClientQuotaIds")
     public java.util.List<String> supportedClientQuotaIds;
@@ -71,6 +77,14 @@ public class CacheService extends TeaModel {
         return this.gmtCreated;
     }
 
+    public CacheService setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
     public CacheService setQuotaId(String quotaId) {
         this.quotaId = quotaId;
         return this;
@@ -85,6 +99,14 @@ public class CacheService extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public CacheService setSupportRDMA(String supportRDMA) {
+        this.supportRDMA = supportRDMA;
+        return this;
+    }
+    public String getSupportRDMA() {
+        return this.supportRDMA;
     }
 
     public CacheService setSupportedClientQuotaIds(java.util.List<String> supportedClientQuotaIds) {

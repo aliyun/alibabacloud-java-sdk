@@ -24,6 +24,9 @@ public class AlgorithmSpec extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-shanghai.aliyuncs.com/pai-training/kmeans:v1.0.0</p>
      */
     @NameInMap("Image")
     public String image;
@@ -33,6 +36,9 @@ public class AlgorithmSpec extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TFJob</p>
      */
     @NameInMap("JobType")
     public String jobType;
@@ -52,6 +58,10 @@ public class AlgorithmSpec extends TeaModel {
     @NameInMap("SupportedInstanceTypes")
     public java.util.List<String> supportedInstanceTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SupportsDistributedTraining")
     public Boolean supportsDistributedTraining;
 
@@ -174,13 +184,20 @@ public class AlgorithmSpec extends TeaModel {
 
     public static class AlgorithmSpecComputeResourcePolicy extends TeaModel {
         /**
+         * <p>Policy Value</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Value")
         public String value;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -231,6 +248,10 @@ public class AlgorithmSpec extends TeaModel {
     }
 
     public static class AlgorithmSpecCustomization extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CodeDir")
         public Boolean codeDir;
 
@@ -250,9 +271,17 @@ public class AlgorithmSpec extends TeaModel {
     }
 
     public static class AlgorithmSpecProgressDefinitionsOverallProgress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>training progress</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>^[0-9]+([.][0-9]+){0,1}$</p>
+         */
         @NameInMap("Regex")
         public String regex;
 
@@ -280,9 +309,17 @@ public class AlgorithmSpec extends TeaModel {
     }
 
     public static class AlgorithmSpecProgressDefinitionsRemainingTime extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>training remaining time</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>^[0-9]+([.][0-9]+){0,1}$</p>
+         */
         @NameInMap("Regex")
         public String regex;
 

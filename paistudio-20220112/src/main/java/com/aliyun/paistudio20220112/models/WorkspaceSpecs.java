@@ -4,12 +4,20 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class WorkspaceSpecs extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DLC</p>
+     */
     @NameInMap("Product")
     public String product;
 
     @NameInMap("Specs")
     public java.util.List<WorkspaceSpec> specs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>122421</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

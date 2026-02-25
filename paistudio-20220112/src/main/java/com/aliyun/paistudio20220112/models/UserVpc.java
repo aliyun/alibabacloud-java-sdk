@@ -7,21 +7,54 @@ public class UserVpc extends TeaModel {
     @NameInMap("DefaultForwardInfo")
     public ForwardInfo defaultForwardInfo;
 
+    /**
+     * <p>DefaultRoute</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eth0</p>
+     */
     @NameInMap("DefaultRoute")
     public String defaultRoute;
 
+    /**
+     * <p>ExtendedCIDRs</p>
+     */
     @NameInMap("ExtendedCIDRs")
     public java.util.List<String> extendedCIDRs;
 
+    /**
+     * <p>RoleArn</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::25xxxx:role/AliyunPAIDLCDefaultRole</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 
+    /**
+     * <p>SecurityGroupID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-abcdef****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>VSW ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vs-abcdef****</p>
+     */
     @NameInMap("SwitchId")
     public String switchId;
 
+    /**
+     * <p>VPC ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-abcdef****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

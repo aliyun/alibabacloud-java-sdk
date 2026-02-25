@@ -4,6 +4,10 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeMetric extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>GU108</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
