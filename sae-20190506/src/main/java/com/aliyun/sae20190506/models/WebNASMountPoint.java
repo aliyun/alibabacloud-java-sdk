@@ -4,12 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebNASMountPoint extends TeaModel {
+    /**
+     * <p>The local mount directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/test/consumer/log</p>
+     */
     @NameInMap("MountDir")
     public String mountDir;
 
+    /**
+     * <p>The mount target.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/home</p>
+     */
     @NameInMap("NasAddr")
     public String nasAddr;
 
+    /**
+     * <p>The mount directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("NasPath")
     public String nasPath;
 

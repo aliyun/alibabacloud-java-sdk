@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWebApplicationInput extends TeaModel {
     /**
+     * <p>The name of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateWebApplicationInput extends TeaModel {
     public String applicationName;
 
     /**
+     * <p>The description of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>my sae app</p>
      */
@@ -21,17 +24,30 @@ public class CreateWebApplicationInput extends TeaModel {
     public String description;
 
     /**
+     * <p>The configuration on the application revision.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RevisionConfig")
     public RevisionConfig revisionConfig;
 
+    /**
+     * <p>The network configurations.</p>
+     * <blockquote>
+     * <p> This field is used to configure network for the application.</p>
+     * </blockquote>
+     */
     @NameInMap("WebNetworkConfig")
     public WebNetworkConfig webNetworkConfig;
 
+    /**
+     * <p>The scaling configurations of the applications.</p>
+     */
     @NameInMap("WebScalingConfig")
     public WebScalingConfig webScalingConfig;
 
+    /**
+     * <p>The traffic configurations of the applications.</p>
+     */
     @NameInMap("WebTrafficConfig")
     public WebTrafficConfig webTrafficConfig;
 

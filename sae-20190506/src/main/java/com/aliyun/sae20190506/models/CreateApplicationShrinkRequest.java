@@ -406,6 +406,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("KafkaConfigs")
     public String kafkaConfigs;
 
+    @NameInMap("Labels")
+    public String labelsShrink;
+
     /**
      * <p>Container health check. If the container fails this check, it will be revoked and relaunch again. Use one of the following methods to perform the health check:</p>
      * <ul>
@@ -1296,6 +1299,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getKafkaConfigs() {
         return this.kafkaConfigs;
+    }
+
+    public CreateApplicationShrinkRequest setLabelsShrink(String labelsShrink) {
+        this.labelsShrink = labelsShrink;
+        return this;
+    }
+    public String getLabelsShrink() {
+        return this.labelsShrink;
     }
 
     public CreateApplicationShrinkRequest setLiveness(String liveness) {

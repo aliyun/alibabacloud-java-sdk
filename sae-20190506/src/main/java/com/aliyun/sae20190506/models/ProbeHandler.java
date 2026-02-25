@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ProbeHandler extends TeaModel {
+    /**
+     * <p>The action that specifies the HTTP request to execute.</p>
+     */
     @NameInMap("HttpGet")
     public HTTPGetAction httpGet;
 
+    /**
+     * <p>The action that specifies the involved TCP port.</p>
+     */
     @NameInMap("TcpSocket")
     public TCPSocketAction tcpSocket;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WebCustomDomain extends TeaModel {
     /**
+     * <p>The time when the custom domain name was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-30T08:02:19Z</p>
      */
@@ -12,6 +14,8 @@ public class WebCustomDomain extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The name of the application that is forwarded by the domain name by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>appxxxxx</p>
      */
@@ -19,6 +23,8 @@ public class WebCustomDomain extends TeaModel {
     public String defaultForwardingAppName;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -26,35 +32,59 @@ public class WebCustomDomain extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The time when the custom domain name was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-30T08:02:19Z</p>
      */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <p>The ID of the namespace to which the domain name belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
+     * <p>The protocol type that is supported by the custom domain name. HTTP: Only HTTP is supported. HTTPS: Only HTTPS is supported. HTTP, HTTPS: Both HTTP and HTTPS are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The route configurations.</p>
+     */
     @NameInMap("RouteConfig")
     public RouteConfig routeConfig;
 
+    /**
+     * <p>The information about the HTTPS certificate.</p>
+     */
     @NameInMap("WebCertConfig")
     public WebCertConfig webCertConfig;
 
+    /**
+     * <p>The Transport Layer Security (TLS) configurations.</p>
+     */
     @NameInMap("WebTLSConfig")
     public WebTLSConfig webTLSConfig;
 
+    /**
+     * <p>The WAF configurations.</p>
+     */
     @NameInMap("WebWAFConfig")
     public WebWAFConfig webWAFConfig;
 
     /**
+     * <p>The ID of your Alibaba Cloud account</p>
+     * 
      * <strong>example:</strong>
      * <p>123xxxxxx</p>
      */

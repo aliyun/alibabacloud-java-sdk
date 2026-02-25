@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWebApplicationScalingConfigInput extends TeaModel {
     /**
+     * <p>The maximum number of instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,11 @@ public class UpdateWebApplicationScalingConfigInput extends TeaModel {
     public Long maximumInstanceCount;
 
     /**
+     * <p>The minimum number of instances.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MinimumInstanceCount")
     public Long minimumInstanceCount;

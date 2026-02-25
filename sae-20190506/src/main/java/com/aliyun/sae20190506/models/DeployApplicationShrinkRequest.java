@@ -398,6 +398,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("KafkaConfigs")
     public String kafkaConfigs;
 
+    @NameInMap("Labels")
+    public String labelsShrink;
+
     /**
      * <p>The details of the availability check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. You can use one of the following methods to perform the health check:</p>
      * <ul>
@@ -1314,6 +1317,14 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     }
     public String getKafkaConfigs() {
         return this.kafkaConfigs;
+    }
+
+    public DeployApplicationShrinkRequest setLabelsShrink(String labelsShrink) {
+        this.labelsShrink = labelsShrink;
+        return this;
+    }
+    public String getLabelsShrink() {
+        return this.labelsShrink;
     }
 
     public DeployApplicationShrinkRequest setLiveness(String liveness) {

@@ -4,15 +4,39 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebStaticsInfo extends TeaModel {
+    /**
+     * <p>CPU usage</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1327</p>
+     */
     @NameInMap("CpuUsage")
     public Long cpuUsage;
 
+    /**
+     * <p>Indicates outbound traffic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2792</p>
+     */
     @NameInMap("InternetTrafficOut")
     public Long internetTrafficOut;
 
+    /**
+     * <p>The number of times that the SQL statement is invoked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Invocations")
     public Long invocations;
 
+    /**
+     * <p>The peak memory usage for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5045929297920</p>
+     */
     @NameInMap("MemoryUsage")
     public Long memoryUsage;
 

@@ -4,9 +4,18 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListWebApplicationsOutput extends TeaModel {
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2RN</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The applications.</p>
+     */
     @NameInMap("WebApplicationWithInstanceCount")
     public java.util.List<WebApplicationWithInstanceCount> webApplicationWithInstanceCount;
 

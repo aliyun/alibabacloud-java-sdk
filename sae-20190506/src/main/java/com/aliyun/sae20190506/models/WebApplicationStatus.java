@@ -4,9 +4,18 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebApplicationStatus extends TeaModel {
+    /**
+     * <p>The number of application instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("InstanceCount")
     public Long instanceCount;
 
+    /**
+     * <p>The scaling configurations of the application.</p>
+     */
     @NameInMap("WebScalingConfig")
     public WebScalingConfig webScalingConfig;
 

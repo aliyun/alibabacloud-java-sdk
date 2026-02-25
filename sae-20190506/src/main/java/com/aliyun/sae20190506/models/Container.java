@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Container extends TeaModel {
     /**
+     * <p>The startup parameters of the container.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</p>
      */
@@ -12,16 +14,22 @@ public class Container extends TeaModel {
     public String args;
 
     /**
+     * <p>The startup command of the container.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;/bin/sh&quot;]</p>
      */
     @NameInMap("Command")
     public String command;
 
+    /**
+     * <p>The container environment variables.</p>
+     */
     @NameInMap("EnvironmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
     /**
+     * <p>The container image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +38,21 @@ public class Container extends TeaModel {
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <p>The configuration of the image repository.</p>
+     */
     @NameInMap("ImageRegistryConfig")
     public ImageRegistryConfig imageRegistryConfig;
 
+    /**
+     * <p>The configuration for collecting monitoring records.</p>
+     */
     @NameInMap("MetricsCollectConfig")
     public MetricsCollectConfig metricsCollectConfig;
 
     /**
+     * <p>The port of the container.</p>
+     * 
      * <strong>example:</strong>
      * <p>8080</p>
      */
@@ -44,6 +60,8 @@ public class Container extends TeaModel {
     public Integer port;
 
     /**
+     * <p>The number of concurrent requests on a single instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -51,6 +69,8 @@ public class Container extends TeaModel {
     public Integer requestConcurrency;
 
     /**
+     * <p>The timeout period of the container request.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -58,20 +78,33 @@ public class Container extends TeaModel {
     public Integer requestTimeout;
 
     /**
+     * <p>The configurations of the container resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
     public ContainerResources resources;
 
+    /**
+     * <p>The configuration of container log collection.</p>
+     */
     @NameInMap("SLSCollectConfigs")
     public SLSCollectConfigs SLSCollectConfigs;
 
+    /**
+     * <p>The container startup check configuration.</p>
+     */
     @NameInMap("StartupProbe")
     public StartupProbe startupProbe;
 
+    /**
+     * <p>The container NAS configuration.</p>
+     */
     @NameInMap("WebNASConfig")
     public WebNASConfig webNASConfig;
 
+    /**
+     * <p>The container OSS mount configuration.</p>
+     */
     @NameInMap("WebOSSConfig")
     public WebOSSConfig webOSSConfig;
 

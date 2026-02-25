@@ -4,15 +4,39 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebOSSMountPoint extends TeaModel {
+    /**
+     * <p>The name of the bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gcx-pic-test</p>
+     */
     @NameInMap("BucketName")
     public String bucketName;
 
+    /**
+     * <p>The storage path in an OSS bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>billing-2023-11-06_17:30:18-rn7wG8</p>
+     */
     @NameInMap("BucketPath")
     public String bucketPath;
 
+    /**
+     * <p>The local mount directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/k8s-prod/oms-api-yy-prod/log</p>
+     */
     @NameInMap("MountDir")
     public String mountDir;
 
+    /**
+     * <p>Specifies whether it is read-only.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ReadOnly")
     public Boolean readOnly;
 

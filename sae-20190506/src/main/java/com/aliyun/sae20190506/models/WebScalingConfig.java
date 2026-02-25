@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class WebScalingConfig extends TeaModel {
     /**
+     * <p>The maximum number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaximumInstanceCount")
     public Long maximumInstanceCount;
 
+    /**
+     * <p>The minimum number of instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinimumInstanceCount")
     public Long minimumInstanceCount;
 

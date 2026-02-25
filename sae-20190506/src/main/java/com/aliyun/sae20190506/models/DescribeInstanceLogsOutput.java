@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceLogsOutput extends TeaModel {
+    /**
+     * <p>The log entries.</p>
+     */
     @NameInMap("WebLogEntrys")
     public java.util.List<WebLogEntry> webLogEntrys;
 

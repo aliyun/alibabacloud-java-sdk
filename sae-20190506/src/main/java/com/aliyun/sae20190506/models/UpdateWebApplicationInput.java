@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateWebApplicationInput extends TeaModel {
     /**
+     * <p>The application description.</p>
+     * 
      * <strong>example:</strong>
      * <p>sae-app</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The network configurations of the application.</p>
+     */
     @NameInMap("WebNetworkConfig")
     public WebNetworkConfig webNetworkConfig;
 

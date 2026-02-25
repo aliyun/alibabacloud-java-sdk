@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebNASConfig extends TeaModel {
+    /**
+     * <p>The mount targets.</p>
+     */
     @NameInMap("MountPoints")
     public java.util.List<WebNASMountPoint> mountPoints;
 

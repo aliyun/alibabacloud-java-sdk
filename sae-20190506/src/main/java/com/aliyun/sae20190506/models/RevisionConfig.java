@@ -5,14 +5,31 @@ import com.aliyun.tea.*;
 
 public class RevisionConfig extends TeaModel {
     /**
+     * <p>The container configurations. You can deploy only one container for each application. The maximum length of this array is 1.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Containers")
     public java.util.List<Container> containers;
 
+    /**
+     * <p>Specifies whether to enable Application Real-Time Monitoring Service (ARMS) monitoring. Valid values:</p>
+     * <ul>
+     * <li><strong><code>true</code></strong>: Enables the ARMS monitoring.</li>
+     * <li><strong><code>false</code></strong>: Disables the ARMS monitoring.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableArmsMetrics")
     public Boolean enableArmsMetrics;
 
+    /**
+     * <p>The network configurations.</p>
+     * <blockquote>
+     * <p> This parameter is used to configure network settings for a version of the application.</p>
+     * </blockquote>
+     */
     @NameInMap("WebNetworkConfig")
     public WebNetworkConfig webNetworkConfig;
 

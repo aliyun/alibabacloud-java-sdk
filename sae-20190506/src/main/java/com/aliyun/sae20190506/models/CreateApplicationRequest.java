@@ -406,6 +406,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("KafkaConfigs")
     public String kafkaConfigs;
 
+    @NameInMap("Labels")
+    public java.util.Map<String, String> labels;
+
     /**
      * <p>Container health check. If the container fails this check, it will be revoked and relaunch again. Use one of the following methods to perform the health check:</p>
      * <ul>
@@ -1296,6 +1299,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getKafkaConfigs() {
         return this.kafkaConfigs;
+    }
+
+    public CreateApplicationRequest setLabels(java.util.Map<String, String> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
     }
 
     public CreateApplicationRequest setLiveness(String liveness) {

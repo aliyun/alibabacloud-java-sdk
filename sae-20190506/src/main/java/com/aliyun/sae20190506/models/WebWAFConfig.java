@@ -4,6 +4,16 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebWAFConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to enable Web Application Firewall (WAF). Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enables WAF.</li>
+     * <li><strong>false</strong>: disables WAF.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableWAF")
     public Boolean enableWAF;
 

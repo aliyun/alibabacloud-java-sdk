@@ -4,9 +4,18 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebAppStaticsOutput extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("Length")
     public Integer length;
 
+    /**
+     * <p>The static resources in the web application.</p>
+     */
     @NameInMap("WebAppStatics")
     public java.util.List<WebStaticsInfo> webAppStatics;
 

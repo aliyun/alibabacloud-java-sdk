@@ -4,20 +4,36 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebInstanceInfo extends TeaModel {
+    /**
+     * <p>The instance image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/******:0.0.1</p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
     /**
+     * <p>The ID of the application instance.</p>
+     * 
      * <strong>example:</strong>
-     * <p>c-66691780-1522405d-3021e147e0c3</p>
+     * <p>c-66691780-1522405d-3021e1******</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instance status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Idle</p>
+     */
     @NameInMap("Status")
     public String status;
 
     /**
+     * <p>The ID of the application version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

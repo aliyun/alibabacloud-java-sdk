@@ -4,12 +4,27 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebTLSConfig extends TeaModel {
+    /**
+     * <p>The supported cipher suites.</p>
+     */
     @NameInMap("CipherSuites")
     public java.util.List<String> cipherSuites;
 
+    /**
+     * <p>The supported maximum TLS protocol version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TLSv1.3</p>
+     */
     @NameInMap("MaxVersion")
     public String maxVersion;
 
+    /**
+     * <p>The supported minimum TLS protocol version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TLSv1.0</p>
+     */
     @NameInMap("MinVersion")
     public String minVersion;
 

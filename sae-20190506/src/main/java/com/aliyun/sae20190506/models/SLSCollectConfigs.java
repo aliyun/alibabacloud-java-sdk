@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class SLSCollectConfigs extends TeaModel {
+    /**
+     * <p>The configurations of log collection.</p>
+     */
     @NameInMap("CollectConfigs")
     public java.util.List<SLSCollectConfig> collectConfigs;
 

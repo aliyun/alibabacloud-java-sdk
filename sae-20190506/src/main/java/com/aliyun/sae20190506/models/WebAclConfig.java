@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class WebAclConfig extends TeaModel {
     /**
+     * <p>The IP addresses.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>if can be null:</strong>

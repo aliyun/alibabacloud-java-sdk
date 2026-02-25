@@ -4,18 +4,45 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class HTTPGetAction extends TeaModel {
+    /**
+     * <p>The hostname to which you want to connect. The default value is the IP address of the pod. You may need to specify Host in HttpHeaders.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.22.XX.XX</p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <p>The custom headers that you need to specify in the request. Duplicate headers are allowed in an HTTP request.</p>
+     */
     @NameInMap("HttpHeaders")
     public java.util.List<HTTPHeader> httpHeaders;
 
+    /**
+     * <p>The path of a URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/path1</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <p>The port range. Valid values: 1 to 65535.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>The scheme that you want to use to connect to the host. Default value: http.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>http</p>
+     */
     @NameInMap("Scheme")
     public String scheme;
 

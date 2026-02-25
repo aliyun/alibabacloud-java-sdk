@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebOSSConfig extends TeaModel {
+    /**
+     * <p>The mount point.</p>
+     */
     @NameInMap("MountPoints")
     public java.util.List<WebOSSMountPoint> mountPoints;
 

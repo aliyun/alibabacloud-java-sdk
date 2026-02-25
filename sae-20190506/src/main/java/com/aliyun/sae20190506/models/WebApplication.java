@@ -5,44 +5,103 @@ import com.aliyun.tea.*;
 
 public class WebApplication extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sae-app</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>The time when the application was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-11 15:54:49</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The application description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my sae app</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The public URL for accessing the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>https://****.cn-hangzhou.sae.run</p>
+     */
     @NameInMap("InternetURL")
     public String internetURL;
 
+    /**
+     * <p>The internal URL for accessing the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>https://****.cn-hangzhou-vpc.sae.run</p>
+     */
     @NameInMap("IntranetURL")
     public String intranetURL;
 
+    /**
+     * <p>The time when the application was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-11 20:12:58</p>
+     */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <p>The ID of the namespace to which the application belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>The configurations of the revision version.</p>
+     */
     @NameInMap("RevisionConfig")
     public RevisionConfig revisionConfig;
 
+    /**
+     * <p>The Virtual Private Cloud (VPC) ID of the application namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2ze0i263cnn311nvj****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The scaling configurations of the application.</p>
+     */
     @NameInMap("WebScalingConfig")
     public WebScalingConfig webScalingConfig;
 
+    /**
+     * <p>The traffic configurations of the application.</p>
+     */
     @NameInMap("WebTrafficConfig")
     public WebTrafficConfig webTrafficConfig;
 

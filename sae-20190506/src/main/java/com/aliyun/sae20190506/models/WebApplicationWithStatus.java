@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebApplicationWithStatus extends TeaModel {
+    /**
+     * <p>The status of the application.</p>
+     */
     @NameInMap("Status")
     public WebApplicationStatus status;
 
+    /**
+     * <p>The details of the application.</p>
+     */
     @NameInMap("WebApplication")
     public WebApplication webApplication;
 

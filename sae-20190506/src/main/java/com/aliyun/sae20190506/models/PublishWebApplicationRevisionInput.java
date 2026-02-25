@@ -5,21 +5,36 @@ import com.aliyun.tea.*;
 
 public class PublishWebApplicationRevisionInput extends TeaModel {
     /**
+     * <p>The container configurations of the revision version.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Containers")
     public java.util.List<Container> containers;
 
     /**
+     * <p>The version description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test version</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether to enable Application Real-Time Monitoring Service (ARMS) monitoring.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableArmsMetrics")
     public Boolean enableArmsMetrics;
 
+    /**
+     * <p>Specifies whether to switch all traffic to a new version after the new version is released. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("TakeEffect")
     public Boolean takeEffect;
 

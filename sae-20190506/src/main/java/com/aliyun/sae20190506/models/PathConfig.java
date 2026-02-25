@@ -4,9 +4,21 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class PathConfig extends TeaModel {
+    /**
+     * <p>applicationName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>applicationName</p>
+     */
     @NameInMap("applicationName")
     public String applicationName;
 
+    /**
+     * <p>path</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/packages</p>
+     */
     @NameInMap("path")
     public String path;
 

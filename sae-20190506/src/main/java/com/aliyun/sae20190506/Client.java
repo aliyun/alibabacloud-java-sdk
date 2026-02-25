@@ -349,6 +349,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Binds a Server Load Balancer (SLB) instance to the application.</p>
+     * 
      * @param request BindSlbRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -404,6 +407,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Binds a Server Load Balancer (SLB) instance to the application.</p>
+     * 
      * @param request BindSlbRequest
      * @return BindSlbResponse
      */
@@ -479,6 +485,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.initContainersConfig)) {
             request.initContainersConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.initContainersConfig, "InitContainersConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labels)) {
+            request.labelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labels, "Labels", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sidecarContainersConfig)) {
@@ -612,6 +622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.kafkaConfigs)) {
             query.put("KafkaConfigs", request.kafkaConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelsShrink)) {
+            query.put("Labels", request.labelsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.liveness)) {
@@ -1957,7 +1971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></p>
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></p>
      * 
      * @param request DeleteApplicationScalingRuleRequest
      * @param headers map
@@ -1995,7 +2009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></p>
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></p>
      * 
      * @param request DeleteApplicationScalingRuleRequest
      * @return DeleteApplicationScalingRuleResponse
@@ -2298,7 +2312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a namespace.</p>
+     * <p>Delete a namespace.</p>
      * 
      * @param request DeleteNamespaceRequest
      * @param headers map
@@ -2336,7 +2350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a namespace.</p>
+     * <p>Delete a namespace.</p>
      * 
      * @param request DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
@@ -2625,6 +2639,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.initContainersConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.initContainersConfig, "InitContainersConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labels)) {
+            request.labelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labels, "Labels", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sidecarContainersConfig)) {
             request.sidecarContainersConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sidecarContainersConfig, "SidecarContainersConfig", "json");
         }
@@ -2748,6 +2766,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.kafkaConfigs)) {
             query.put("KafkaConfigs", request.kafkaConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelsShrink)) {
+            query.put("Labels", request.labelsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.liveness)) {
@@ -3496,7 +3518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1\<em>\</em>\<em>\</em></p>
+     * <p>Obtain the SLB configuration of an application.</p>
      * 
      * @param request DescribeApplicationSlbsRequest
      * @param headers map
@@ -3530,7 +3552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1\<em>\</em>\<em>\</em></p>
+     * <p>Obtain the SLB configuration of an application.</p>
      * 
      * @param request DescribeApplicationSlbsRequest
      * @return DescribeApplicationSlbsResponse
@@ -4970,6 +4992,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables an auto scaling policy for an application.</p>
+     * 
      * @param request DisableApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5005,6 +5030,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables an auto scaling policy for an application.</p>
+     * 
      * @param request DisableApplicationScalingRuleRequest
      * @return DisableApplicationScalingRuleResponse
      */
@@ -5299,7 +5327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The application name.</p>
+     * <p>Queries the top N applications in Application Monitoring.</p>
      * 
      * @param request GetArmsTopNMetricRequest
      * @param headers map
@@ -5357,7 +5385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The application name.</p>
+     * <p>Queries the top N applications in Application Monitoring.</p>
      * 
      * @param request GetArmsTopNMetricRequest
      * @return GetArmsTopNMetricResponse
@@ -5563,7 +5591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The number of Warning events.</p>
+     * <p>Queries the top N applications in which Warning events occur.</p>
      * 
      * @param request GetWarningEventMetricRequest
      * @param headers map
@@ -5617,7 +5645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The number of Warning events.</p>
+     * <p>Queries the top N applications in which Warning events occur.</p>
      * 
      * @param request GetWarningEventMetricRequest
      * @return GetWarningEventMetricResponse
@@ -6094,7 +6122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of applications.</p>
+     * <p>Query a list of applications.</p>
      * 
      * @param request ListApplicationsRequest
      * @param headers map
@@ -6172,7 +6200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of applications.</p>
+     * <p>Query a list of applications.</p>
      * 
      * @param request ListApplicationsRequest
      * @return ListApplicationsResponse
@@ -8744,7 +8772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a ConfigMap instance.</p>
+     * <p>Update a ConfigMap.</p>
      * 
      * @param request UpdateConfigMapRequest
      * @param headers map
@@ -8788,7 +8816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a ConfigMap instance.</p>
+     * <p>Update a ConfigMap.</p>
      * 
      * @param request UpdateConfigMapRequest
      * @return UpdateConfigMapResponse
@@ -9218,7 +9246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a namespace.</p>
+     * <p>Update the information about a namespace.</p>
      * 
      * @param request UpdateNamespaceRequest
      * @param headers map
@@ -9268,7 +9296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a namespace.</p>
+     * <p>Update the information about a namespace.</p>
      * 
      * @param request UpdateNamespaceRequest
      * @return UpdateNamespaceResponse
@@ -9281,7 +9309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新命名空间级别sls配置</p>
+     * <p>Updates the Simple Log Service configuration for a namespace.</p>
      * 
      * @param request UpdateNamespaceSlsConfigsRequest
      * @param headers map
@@ -9327,7 +9355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新命名空间级别sls配置</p>
+     * <p>Updates the Simple Log Service configuration for a namespace.</p>
      * 
      * @param request UpdateNamespaceSlsConfigsRequest
      * @return UpdateNamespaceSlsConfigsResponse
@@ -9395,13 +9423,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The HTTP status code. Valid values:</p>
-     * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
-     * </ul>
+     * <p>The HTTP status code. Valid values:
+     * \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
+     * \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
+     * \*   \<em>\<em>4xx\</em>\</em>: The call failed.
+     * \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</p>
      * 
      * @param tmpReq UpdateSecretRequest
      * @param headers map
@@ -9449,13 +9475,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The HTTP status code. Valid values:</p>
-     * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
-     * </ul>
+     * <p>The HTTP status code. Valid values:
+     * \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
+     * \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
+     * \*   \<em>\<em>4xx\</em>\</em>: The call failed.
+     * \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</p>
      * 
      * @param request UpdateSecretRequest
      * @return UpdateSecretResponse

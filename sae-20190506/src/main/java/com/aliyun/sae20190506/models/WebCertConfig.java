@@ -4,12 +4,33 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class WebCertConfig extends TeaModel {
+    /**
+     * <p>The certificate name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sae-certname</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
+    /**
+     * <p>The public key of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----
+     *  …… 
+     * -----END CERTIFICATE-----</p>
+     */
     @NameInMap("Certificate")
     public String certificate;
 
+    /**
+     * <p>The private key of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEA5SIfpNCBoiDrZhX1H39CHwQMVD0kBNeBTWfP9xkeesvfzbOz ******* POVNFfDf9h7pJtQ5fRZNTYTDs/d+cH62Z3+nS74mNnEfff0nkvne 
+     * -----END RSA PRIVATE KEY-----</p>
+     */
     @NameInMap("PrivateKey")
     public String privateKey;
 

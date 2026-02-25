@@ -398,6 +398,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("KafkaConfigs")
     public String kafkaConfigs;
 
+    @NameInMap("Labels")
+    public java.util.Map<String, String> labels;
+
     /**
      * <p>The details of the availability check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. You can use one of the following methods to perform the health check:</p>
      * <ul>
@@ -1314,6 +1317,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getKafkaConfigs() {
         return this.kafkaConfigs;
+    }
+
+    public DeployApplicationRequest setLabels(java.util.Map<String, String> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
     }
 
     public DeployApplicationRequest setLiveness(String liveness) {

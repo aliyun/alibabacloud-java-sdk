@@ -4,12 +4,21 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListWebInstancesOutput extends TeaModel {
+    /**
+     * <p>The error message of instance creation. If the instance creation was successful, this parameter is not returned.</p>
+     */
     @NameInMap("CurrentError")
     public String currentError;
 
+    /**
+     * <p>The application instance.</p>
+     */
     @NameInMap("WebInstances")
     public java.util.List<WebInstanceInfo> webInstances;
 
+    /**
+     * <p>The instance status.</p>
+     */
     @NameInMap("WebVersionStatus")
     public java.util.Map<String, WebVersionStatus> webVersionStatus;
 
