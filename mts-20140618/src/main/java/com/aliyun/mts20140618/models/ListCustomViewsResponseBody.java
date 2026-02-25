@@ -81,17 +81,9 @@ public class ListCustomViewsResponseBody extends TeaModel {
     }
 
     public static class ListCustomViewsResponseBodyCustomViewsCustomView extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CustomViewId")
         public String customViewId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>http://<code>127.66.**.**</code>/photo.jpeg</p>
-         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 

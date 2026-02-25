@@ -77,17 +77,9 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     }
 
     public static class QuerySmarttagJobResponseBodyResultsResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>{&quot;title&quot;:&quot;example-title-****&quot;}</p>
-         */
         @NameInMap("Data")
         public String data;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Meta</p>
-         */
         @NameInMap("Type")
         public String type;
 

@@ -84,10 +84,6 @@ public class ListCustomGroupsResponseBody extends TeaModel {
         @NameInMap("CustomGroupDescription")
         public String customGroupDescription;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CustomGroupId")
         public String customGroupId;
 

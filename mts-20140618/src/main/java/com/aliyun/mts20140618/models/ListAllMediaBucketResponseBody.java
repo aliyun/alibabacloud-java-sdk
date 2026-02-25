@@ -4,9 +4,6 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListAllMediaBucketResponseBody extends TeaModel {
-    /**
-     * <p>The media buckets returned.</p>
-     */
     @NameInMap("MediaBucketList")
     public ListAllMediaBucketResponseBodyMediaBucketList mediaBucketList;
 
@@ -58,34 +55,12 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
     }
 
     public static class ListAllMediaBucketResponseBodyMediaBucketListMediaBucket extends TeaModel {
-        /**
-         * <p>The name of the media bucket.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example-bucket-****</p>
-         */
         @NameInMap("Bucket")
         public String bucket;
 
-        /**
-         * <p>The settings of Object Storage Service (OSS) hotlink protection. For more information, see <a href="https://help.aliyun.com/document_detail/31869.html">Hotlink protection</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.example.com">http://www.example.com</a></p>
-         */
         @NameInMap("Referer")
         public String referer;
 
-        /**
-         * <p>The type of the media bucket. Valid values:</p>
-         * <ul>
-         * <li>Input: input media bucket</li>
-         * <li>Output: output media bucket</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Input</p>
-         */
         @NameInMap("Type")
         public String type;
 

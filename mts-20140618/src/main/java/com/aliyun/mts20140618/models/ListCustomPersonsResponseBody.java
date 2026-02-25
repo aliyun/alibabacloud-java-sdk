@@ -4,9 +4,6 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListCustomPersonsResponseBody extends TeaModel {
-    /**
-     * <p>The array of the figure libraries.</p>
-     */
     @NameInMap("Categories")
     public ListCustomPersonsResponseBodyCategories categories;
 
@@ -41,21 +38,9 @@ public class ListCustomPersonsResponseBody extends TeaModel {
     }
 
     public static class ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace extends TeaModel {
-        /**
-         * <p>The ID of the face.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15****</p>
-         */
         @NameInMap("FaceId")
         public String faceId;
 
-        /**
-         * <p>The URL of the facial image that was registered for the figure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://example-****.jpeg">http://example-****.jpeg</a></p>
-         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
@@ -102,36 +87,15 @@ public class ListCustomPersonsResponseBody extends TeaModel {
     }
 
     public static class ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson extends TeaModel {
-        /**
-         * <p>The array of the faces.</p>
-         */
         @NameInMap("Faces")
         public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFaces faces;
 
-        /**
-         * <p>The description of the figure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PersonDescription-****</p>
-         */
         @NameInMap("PersonDescription")
         public String personDescription;
 
-        /**
-         * <p>The ID of the figure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PersonId-****</p>
-         */
         @NameInMap("PersonId")
         public String personId;
 
-        /**
-         * <p>The name of the figure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PersonName-****</p>
-         */
         @NameInMap("PersonName")
         public String personName;
 
@@ -194,36 +158,15 @@ public class ListCustomPersonsResponseBody extends TeaModel {
     }
 
     public static class ListCustomPersonsResponseBodyCategoriesCategory extends TeaModel {
-        /**
-         * <p>The description of the figure library.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CategoryDescription-****</p>
-         */
         @NameInMap("CategoryDescription")
         public String categoryDescription;
 
-        /**
-         * <p>The ID of the figure library.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CategoryId-****</p>
-         */
         @NameInMap("CategoryId")
         public String categoryId;
 
-        /**
-         * <p>The name of the figure library.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CategoryName-****</p>
-         */
         @NameInMap("CategoryName")
         public String categoryName;
 
-        /**
-         * <p>The array of the figures.</p>
-         */
         @NameInMap("Persons")
         public ListCustomPersonsResponseBodyCategoriesCategoryPersons persons;
 

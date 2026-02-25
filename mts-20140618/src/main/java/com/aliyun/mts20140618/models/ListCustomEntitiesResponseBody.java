@@ -81,24 +81,12 @@ public class ListCustomEntitiesResponseBody extends TeaModel {
     }
 
     public static class ListCustomEntitiesResponseBodyCustomEntitiesCustomEntity extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CustomEntityId")
         public String customEntityId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{ &quot;finegrainName&quot;:&quot;example&quot; }</p>
-         */
         @NameInMap("CustomEntityInfo")
         public String customEntityInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>exampleName</p>
-         */
         @NameInMap("CustomEntityName")
         public String customEntityName;
 

@@ -4,15 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryPipelineListResponseBody extends TeaModel {
-    /**
-     * <p>The IDs of MPS queues that do not exist.</p>
-     */
     @NameInMap("NonExistPids")
     public QueryPipelineListResponseBodyNonExistPids nonExistPids;
 
-    /**
-     * <p>The MPS queues.</p>
-     */
     @NameInMap("PipelineList")
     public QueryPipelineListResponseBodyPipelineList pipelineList;
 
@@ -115,39 +109,15 @@ public class QueryPipelineListResponseBody extends TeaModel {
     }
 
     public static class QueryPipelineListResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
-        /**
-         * <p>The tag string.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mts-test</p>
-         */
         @NameInMap("MqTag")
         public String mqTag;
 
-        /**
-         * <p>The queue of messages that are received.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example1,example2</p>
-         */
         @NameInMap("MqTopic")
         public String mqTopic;
 
-        /**
-         * <p>The name of the queue that is created in MNS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example-queue-****</p>
-         */
         @NameInMap("QueueName")
         public String queueName;
 
-        /**
-         * <p>The name of the topic that is created in MNS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example-topic-****</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
@@ -194,89 +164,27 @@ public class QueryPipelineListResponseBody extends TeaModel {
         @NameInMap("ExtendConfig")
         public QueryPipelineListResponseBodyPipelineListPipelineExtendConfig extendConfig;
 
-        /**
-         * <p>The ID of the MPS queue.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d1ce4d3efcb549419193f50f1fcd****</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The name of the MPS queue.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example-pipeline-****</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The Message Service (MNS) configuration.</p>
-         */
         @NameInMap("NotifyConfig")
         public QueryPipelineListResponseBodyPipelineListPipelineNotifyConfig notifyConfig;
 
-        /**
-         * <p>The quota that is allocated to the MPS queue.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("QuotaAllocate")
         public Long quotaAllocate;
 
-        /**
-         * <p>The role that is assigned to the current RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AliyunMTSDefaultRole</p>
-         */
         @NameInMap("Role")
         public String role;
 
-        /**
-         * <p>The type of the MPS queue. Default value: <strong>Standard</strong>. Valid values:</p>
-         * <ul>
-         * <li><strong>Boost</strong>: MPS queue with transcoding speed boosted</li>
-         * <li><strong>Standard</strong>: standard MPS queue</li>
-         * <li><strong>NarrowBandHDV2</strong>: MPS queue that supports Narrowband HD 2.0</li>
-         * <li><strong>AIVideoCover</strong>: MPS queue for intelligent snapshot capture</li>
-         * <li><strong>AIVideoFPShot</strong>: MPS queue for media fingerprinting</li>
-         * <li><strong>AIVideoCensor</strong>: MPS queue for automated review</li>
-         * <li><strong>AIVideoMCU</strong>: MPS queue for smart tagging</li>
-         * <li><strong>AIVideoSummary</strong>: MPS queue for video synopsis</li>
-         * <li><strong>AIVideoPorn</strong>: MPS queue for pornography detection in videos</li>
-         * <li><strong>AIAudioKWS</strong>: MPS queue for keyword recognition in audio</li>
-         * <li><strong>AIAudioASR</strong>: MPS queue for speech-to-text conversion</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Standard</p>
-         */
         @NameInMap("Speed")
         public String speed;
 
-        /**
-         * <p>The level of the MPS queue.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("SpeedLevel")
         public Long speedLevel;
 
-        /**
-         * <p>The state of the MPS queue. Valid values:</p>
-         * <ul>
-         * <li><strong>Active</strong>: The MPS queue is active.</li>
-         * <li><strong>Paused</strong>: The MPS queue is paused.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Paused</p>
-         */
         @NameInMap("State")
         public String state;
 

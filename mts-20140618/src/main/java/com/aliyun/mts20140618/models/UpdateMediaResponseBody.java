@@ -249,9 +249,6 @@ public class UpdateMediaResponseBody extends TeaModel {
         @NameInMap("PublishState")
         public String publishState;
 
-        /**
-         * <p>The IDs of the media workflow execution instances.</p>
-         */
         @NameInMap("RunIdList")
         public UpdateMediaResponseBodyMediaRunIdList runIdList;
 
@@ -264,9 +261,6 @@ public class UpdateMediaResponseBody extends TeaModel {
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>The information about the tags.</p>
-         */
         @NameInMap("Tags")
         public UpdateMediaResponseBodyMediaTags tags;
 

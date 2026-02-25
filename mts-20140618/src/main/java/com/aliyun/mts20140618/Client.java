@@ -488,7 +488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加labelVersion、knowledgeConfig配置</p>
+     * <p>Adds an analysis template of a smart tagging job.</p>
      * 
      * @param request AddSmarttagTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -596,7 +596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加labelVersion、knowledgeConfig配置</p>
+     * <p>Adds an analysis template of a smart tagging job.</p>
      * 
      * @param request AddSmarttagTemplateRequest
      * @return AddSmarttagTemplateResponse
@@ -851,7 +851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Binds an output media bucket to the media library.</p>
+     * <p>Binds an output media bucket. Media buckets are Object Storage Service (OSS) buckets that are used by ApsaraVideo Media Processing (MPS) to store media resources. After you bind an OSS bucket to MPS as an input media bucket or output media bucket, MPS has the permissions to listen to the messages of the bucket, which indicate that files are uploaded to the bucket. This way, MPS can trigger workflows and return files that are processed. You can all this operation to bind an output media bucket to the media library.</p>
      * 
      * @param request BindOutputBucketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -904,7 +904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Binds an output media bucket to the media library.</p>
+     * <p>Binds an output media bucket. Media buckets are Object Storage Service (OSS) buckets that are used by ApsaraVideo Media Processing (MPS) to store media resources. After you bind an OSS bucket to MPS as an input media bucket or output media bucket, MPS has the permissions to listen to the messages of the bucket, which indicate that files are uploaded to the bucket. This way, MPS can trigger workflows and return files that are processed. You can all this operation to bind an output media bucket to the media library.</p>
      * 
      * @param request BindOutputBucketRequest
      * @return BindOutputBucketResponse
@@ -991,6 +991,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a custom entity in a custom library.</p>
+     * 
      * @param request CreateCustomEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCustomEntityResponse
@@ -1048,6 +1051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a custom entity in a custom library.</p>
+     * 
      * @param request CreateCustomEntityRequest
      * @return CreateCustomEntityResponse
      */
@@ -1057,6 +1063,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a custom library.</p>
+     * 
      * @param request CreateCustomGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCustomGroupResponse
@@ -1110,6 +1119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a custom library.</p>
+     * 
      * @param request CreateCustomGroupRequest
      * @return CreateCustomGroupResponse
      */
@@ -1417,6 +1429,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an image of a custom entity in a custom library.</p>
+     * 
      * @param request DeleteCustomViewRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCustomViewResponse
@@ -1474,6 +1489,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an image of a custom entity in a custom library.</p>
+     * 
      * @param request DeleteCustomViewRequest
      * @return DeleteCustomViewResponse
      */
@@ -2299,6 +2317,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of custom libraries.</p>
+     * 
      * @param request ListCustomGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCustomGroupsResponse
@@ -2352,6 +2373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of custom libraries.</p>
+     * 
      * @param request ListCustomGroupsRequest
      * @return ListCustomGroupsResponse
      */
@@ -2435,6 +2459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of images of an entity in a custom library.</p>
+     * 
      * @param request ListCustomViewsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCustomViewsResponse
@@ -2496,6 +2523,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of images of an entity in a custom library.</p>
+     * 
      * @param request ListCustomViewsRequest
      * @return ListCustomViewsResponse
      */
@@ -2998,7 +3028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询版权水印提取任务</p>
+     * <p>Queries jobs for extracting copyright watermarks.</p>
      * 
      * @param request QueryCopyrightExtractJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3030,7 +3060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询版权水印提取任务</p>
+     * <p>Queries jobs for extracting copyright watermarks.</p>
      * 
      * @param request QueryCopyrightExtractJobRequest
      * @return QueryCopyrightExtractJobResponse
@@ -3042,7 +3072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频版权水印任务</p>
+     * <p>Queries jobs for adding copyright watermarks to videos.</p>
      * 
      * @param request QueryCopyrightJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3094,7 +3124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频版权水印任务</p>
+     * <p>Queries jobs for adding copyright watermarks to videos.</p>
      * 
      * @param request QueryCopyrightJobRequest
      * @return QueryCopyrightJobResponse
@@ -3345,6 +3375,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a smart production job.</p>
+     * 
      * @param request QueryIProductionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryIProductionJobResponse
@@ -3390,6 +3423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a smart production job.</p>
+     * 
      * @param request QueryIProductionJobRequest
      * @return QueryIProductionJobResponse
      */
@@ -4130,7 +4166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询智能标签任务</p>
+     * <p>Queries a smart tagging job.</p>
      * 
      * @param request QuerySmarttagJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4182,7 +4218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询智能标签任务</p>
+     * <p>Queries a smart tagging job.</p>
      * 
      * @param request QuerySmarttagJobRequest
      * @return QuerySmarttagJobResponse
@@ -4432,7 +4468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频溯源水印ab流任务</p>
+     * <p>Queries jobs for adding tracing watermarks to AB video streams.</p>
      * 
      * @param request QueryTraceAbJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4468,7 +4504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频溯源水印ab流任务</p>
+     * <p>Queries jobs for adding tracing watermarks to AB video streams.</p>
      * 
      * @param request QueryTraceAbJobRequest
      * @return QueryTraceAbJobResponse
@@ -4480,7 +4516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询溯源水印提取任务</p>
+     * <p>Queries jobs for extracting tracing watermarks.</p>
      * 
      * @param request QueryTraceExtractJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4512,7 +4548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询溯源水印提取任务</p>
+     * <p>Queries jobs for extracting tracing watermarks.</p>
      * 
      * @param request QueryTraceExtractJobRequest
      * @return QueryTraceExtractJobResponse
@@ -4524,7 +4560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频溯源水印m3u8任务</p>
+     * <p>Queries jobs for adding tracing watermarks to M3U8 videos.</p>
      * 
      * @param request QueryTraceM3u8JobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4572,7 +4608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频溯源水印m3u8任务</p>
+     * <p>Queries jobs for adding tracing watermarks to M3U8 videos.</p>
      * 
      * @param request QueryTraceM3u8JobRequest
      * @return QueryTraceM3u8JobResponse
@@ -4742,7 +4778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册自定义实体项</p>
+     * <p>Registers an image of a custom entity.</p>
      * 
      * @param request RegisterCustomViewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4806,7 +4842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册自定义实体项</p>
+     * <p>Registers an image of a custom entity.</p>
      * 
      * @param request RegisterCustomViewRequest
      * @return RegisterCustomViewResponse
@@ -5218,7 +5254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交版权水印提取任务</p>
+     * <p>Submits a job for extracting a copyright watermark.</p>
      * 
      * @param request SubmitCopyrightExtractJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5266,7 +5302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交版权水印提取任务</p>
+     * <p>Submits a job for extracting a copyright watermark.</p>
      * 
      * @param request SubmitCopyrightExtractJobRequest
      * @return SubmitCopyrightExtractJobResponse
@@ -5278,7 +5314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交视频版权水印</p>
+     * <p>Submits a job for adding a copyright watermark to a video.</p>
      * 
      * @param request SubmitCopyrightJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5350,7 +5386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交视频版权水印</p>
+     * <p>Submits a job for adding a copyright watermark to a video.</p>
      * 
      * @param request SubmitCopyrightJobRequest
      * @return SubmitCopyrightJobResponse
@@ -5647,6 +5683,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3><a href="#qps"></a>QPS limit</h3>
      * <p>You can call this API operation up to 100 times per second per account. Requests that exceed this limit are dropped, and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limits</a>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Submits a smart production job.</p>
+     * 
      * @param request SubmitIProductionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitIProductionJobResponse
@@ -5732,6 +5771,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3><a href="#qps"></a>QPS limit</h3>
      * <p>You can call this API operation up to 100 times per second per account. Requests that exceed this limit are dropped, and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342832.html">QPS limits</a>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Submits a smart production job.</p>
+     * 
      * @param request SubmitIProductionJobRequest
      * @return SubmitIProductionJobResponse
      */
@@ -5742,7 +5784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交图片版权水印任务</p>
+     * <p>Generates a transparent image watermark.</p>
      * 
      * @param request SubmitImageCopyrightRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5782,7 +5824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交图片版权水印任务</p>
+     * <p>Generates a transparent image watermark.</p>
      * 
      * @param request SubmitImageCopyrightRequest
      * @return SubmitImageCopyrightResponse
@@ -6089,6 +6131,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Submits a smart tagging job.</p>
+     * 
      * @param request SubmitSmarttagJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitSmarttagJobResponse
@@ -6174,6 +6219,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Submits a smart tagging job.</p>
+     * 
      * @param request SubmitSmarttagJobRequest
      * @return SubmitSmarttagJobResponse
      */
@@ -6274,7 +6322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交视频溯源水印ab流任务</p>
+     * <p>Submits a job for adding a tracing watermark to an AB video stream.</p>
      * 
      * @param request SubmitTraceAbJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6338,7 +6386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交视频溯源水印ab流任务</p>
+     * <p>Submits a job for adding a tracing watermark to an AB video stream.</p>
      * 
      * @param request SubmitTraceAbJobRequest
      * @return SubmitTraceAbJobResponse
@@ -6350,7 +6398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交溯源水印提取任务</p>
+     * <p>Submits a job for extracting a tracing watermark.</p>
      * 
      * @param request SubmitTraceExtractJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6398,7 +6446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交溯源水印提取任务</p>
+     * <p>Submits a job for extracting a tracing watermark.</p>
      * 
      * @param request SubmitTraceExtractJobRequest
      * @return SubmitTraceExtractJobResponse
@@ -6410,7 +6458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交视频溯源水印m3u8文件任务</p>
+     * <p>Submits a job for adding a tracing watermark to an M3U8 video.</p>
      * 
      * @param request SubmitTraceM3u8JobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6458,7 +6506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交视频溯源水印m3u8文件任务</p>
+     * <p>Submits a job for adding a tracing watermark to an M3U8 video.</p>
      * 
      * @param request SubmitTraceM3u8JobRequest
      * @return SubmitTraceM3u8JobResponse
@@ -6473,7 +6521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The response parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>The description of the figure. The description can be up to 512 characters in length.</p>
+     * <p>Adds tags to a custom figure library or a figure.</p>
      * 
      * @param request TagCustomPersonRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6544,7 +6592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The response parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>The description of the figure. The description can be up to 512 characters in length.</p>
+     * <p>Adds tags to a custom figure library or a figure.</p>
      * 
      * @param request TagCustomPersonRequest
      * @return TagCustomPersonResponse
@@ -6635,9 +6683,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The name of the output media bucket to be unbound. To obtain the media bucket name, you can log on to the <strong>ApsaraVideo Media Processing (MPS)</strong> console and choose <strong>Workflows</strong> &gt; <strong>Media Buckets</strong> in the left-side navigation pane. Alternatively, you can log on to the <strong>Object Storage Service (OSS) console</strong> and click <strong>My OSS Paths</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.</p>
-     * <h2>QPS limit</h2>
-     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">QPS limits</a>.</p>
+     * <p>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.
+     * \## QPS limit
+     * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see [QPS limits]\(<a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit</a>).</p>
      * 
      * @param request UnbindOutputBucketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6688,9 +6736,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The name of the output media bucket to be unbound. To obtain the media bucket name, you can log on to the <strong>ApsaraVideo Media Processing (MPS)</strong> console and choose <strong>Workflows</strong> &gt; <strong>Media Buckets</strong> in the left-side navigation pane. Alternatively, you can log on to the <strong>Object Storage Service (OSS) console</strong> and click <strong>My OSS Paths</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.</p>
-     * <h2>QPS limit</h2>
-     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">QPS limits</a>.</p>
+     * <p>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.
+     * \## QPS limit
+     * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see [QPS limits]\(<a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit</a>).</p>
      * 
      * @param request UnbindOutputBucketRequest
      * @return UnbindOutputBucketResponse
@@ -7352,7 +7400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新智能标签模板接口支持cpv</p>
+     * <p>Updates the analysis template of a smart tagging job.</p>
      * 
      * @param request UpdateSmarttagTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7456,7 +7504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新智能标签模板接口支持cpv</p>
+     * <p>Updates the analysis template of a smart tagging job.</p>
      * 
      * @param request UpdateSmarttagTemplateRequest
      * @return UpdateSmarttagTemplateResponse
