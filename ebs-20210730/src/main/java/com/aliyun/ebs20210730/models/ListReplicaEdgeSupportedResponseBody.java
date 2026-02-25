@@ -66,6 +66,9 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
     }
 
     public static class ListReplicaEdgeSupportedResponseBodySupportedRegionsZones extends TeaModel {
+        @NameInMap("SupportRtc")
+        public Boolean supportRtc;
+
         /**
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
@@ -76,6 +79,14 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
         public static ListReplicaEdgeSupportedResponseBodySupportedRegionsZones build(java.util.Map<String, ?> map) throws Exception {
             ListReplicaEdgeSupportedResponseBodySupportedRegionsZones self = new ListReplicaEdgeSupportedResponseBodySupportedRegionsZones();
             return TeaModel.build(map, self);
+        }
+
+        public ListReplicaEdgeSupportedResponseBodySupportedRegionsZones setSupportRtc(Boolean supportRtc) {
+            this.supportRtc = supportRtc;
+            return this;
+        }
+        public Boolean getSupportRtc() {
+            return this.supportRtc;
         }
 
         public ListReplicaEdgeSupportedResponseBodySupportedRegionsZones setZoneId(String zoneId) {

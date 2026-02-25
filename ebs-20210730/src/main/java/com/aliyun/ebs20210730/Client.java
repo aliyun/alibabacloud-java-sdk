@@ -108,7 +108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables CloudLens for EBS.</p>
+     * <p>Cancels Elastic Block Storage data insight (CloudLens for EBS).</p>
      * 
      * @param request ApplyLensServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -136,7 +136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables CloudLens for EBS.</p>
+     * <p>Cancels Elastic Block Storage data insight (CloudLens for EBS).</p>
      * @return ApplyLensServiceResponse
      */
     public ApplyLensServiceResponse applyLensService() throws Exception {
@@ -206,7 +206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables CloudLens for EBS.</p>
+     * <p>Cancels Elastic Block Storage data insight (CloudLens for EBS).</p>
      * 
      * @param request CancelLensServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -234,7 +234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables CloudLens for EBS.</p>
+     * <p>Cancels Elastic Block Storage data insight (CloudLens for EBS).</p>
      * @return CancelLensServiceResponse
      */
     public CancelLensServiceResponse cancelLensService() throws Exception {
@@ -1250,7 +1250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of one or more disks in a dedicated block storage cluster.</p>
+     * <p>Queries information about cloud disks in a dedicated block storage cluster.</p>
      * 
      * @param request DescribeDedicatedBlockStorageClusterDisksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1304,7 +1304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of one or more disks in a dedicated block storage cluster.</p>
+     * <p>Queries information about cloud disks in a dedicated block storage cluster.</p>
      * 
      * @param request DescribeDedicatedBlockStorageClusterDisksRequest
      * @return DescribeDedicatedBlockStorageClusterDisksResponse
@@ -1326,7 +1326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the dedicated block storage clusters that are created.</p>
+     * <p>Queries dedicated clusters.</p>
      * 
      * @param request DescribeDedicatedBlockStorageClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1414,7 +1414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the dedicated block storage clusters that are created.</p>
+     * <p>Queries dedicated clusters.</p>
      * 
      * @param request DescribeDedicatedBlockStorageClustersRequest
      * @return DescribeDedicatedBlockStorageClustersResponse
@@ -1430,7 +1430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the risk events of a disk.</p>
+     * <p>Queries the risk events of a disk. The operation is getting offline. Switch to the new operation DescribeEvents.</p>
      * 
      * @param request DescribeDiskEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1494,7 +1494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the risk events of a disk.</p>
+     * <p>Queries the risk events of a disk. The operation is getting offline. Switch to the new operation DescribeEvents.</p>
      * 
      * @param request DescribeDiskEventsRequest
      * @return DescribeDiskEventsResponse
@@ -1514,7 +1514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the near real-time monitoring data of a disk.</p>
+     * <p>Queries fine-grained monitoring data of a disk.</p>
      * 
      * @param request DescribeDiskMonitorDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1574,7 +1574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the near real-time monitoring data of a disk.</p>
+     * <p>Queries fine-grained monitoring data of a disk.</p>
      * 
      * @param request DescribeDiskMonitorDataRequest
      * @return DescribeDiskMonitorDataResponse
@@ -1590,7 +1590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the near real-time monitoring data of disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</p>
+     * <p>Queries fine-grained monitoring data of multiple disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</p>
      * 
      * @param request DescribeDiskMonitorDataListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1650,7 +1650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the near real-time monitoring data of disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</p>
+     * <p>Queries fine-grained monitoring data of multiple disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</p>
      * 
      * @param request DescribeDiskMonitorDataListRequest
      * @return DescribeDiskMonitorDataListResponse
@@ -2132,7 +2132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询用户开通ebs数据洞察服务状态</p>
+     * <p>Queries the status of CloudLens for EBS.</p>
      * 
      * @param request DescribeLensServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2160,7 +2160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询用户开通ebs数据洞察服务状态</p>
+     * <p>Queries the status of CloudLens for EBS.</p>
      * @return DescribeLensServiceStatusResponse
      */
     public DescribeLensServiceStatusResponse describeLensServiceStatus() throws Exception {
@@ -2440,7 +2440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询解决方案实例默认配置</p>
+     * <p>Queries the default configurations of a solution.</p>
      * 
      * @param request DescribeSolutionInstanceConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2484,7 +2484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询解决方案实例默认配置</p>
+     * <p>Queries the default configurations of a solution.</p>
      * 
      * @param request DescribeSolutionInstanceConfigurationRequest
      * @return DescribeSolutionInstanceConfigurationResponse
@@ -2892,7 +2892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Centralized Role: Query Historical Reports</p>
+     * <p>Queries historical reports of a specific application.</p>
      * 
      * @param request ListReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2946,7 +2946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Centralized Role: Query Historical Reports</p>
+     * <p>Queries historical reports of a specific application.</p>
      * 
      * @param request ListReportsRequest
      * @return ListReportsResponse
@@ -2966,7 +2966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags that are added to one or more Elastic Block Storage (EBS) resources, or queries the IDs and tags of resources in a specified non-default resource group.</p>
+     * <p>Queries the tags that are added to EBS resources, or queries the IDs and tags of resources in a non-default resource group.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3026,7 +3026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags that are added to one or more Elastic Block Storage (EBS) resources, or queries the IDs and tags of resources in a specified non-default resource group.</p>
+     * <p>Queries the tags that are added to EBS resources, or queries the IDs and tags of resources in a non-default resource group.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -3121,7 +3121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.</p>
      * 
      * <b>summary</b> : 
-     * <p>修改专属集群属性OpenApi</p>
+     * <p>Modifies the information of a dedicated elastic block storage cluster.</p>
      * 
      * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3172,7 +3172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.</p>
      * 
      * <b>summary</b> : 
-     * <p>修改专属集群属性OpenApi</p>
+     * <p>Modifies the information of a dedicated elastic block storage cluster.</p>
      * 
      * @param request ModifyDedicatedBlockStorageClusterAttributeRequest
      * @return ModifyDedicatedBlockStorageClusterAttributeResponse
@@ -3413,7 +3413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Period is the time interval between data retrieval points. When set to 60 (minute interval), a maximum of 1440 data points can be returned; when set to 3600 (hour interval), a maximum of 744 data points can be returned; and when set to 86400 (day interval), a maximum of 366 data points can be returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query dedicated block storage cluster capacity trend data, includ available capacity size and total capacity size.</p>
+     * <p>Queries the capacity trend data of a dedicated Elastic Block Storage (EBS) cluster within a specific time period, including the available capacity and total capacity.</p>
      * 
      * @param request QueryDedicatedBlockStorageClusterInventoryDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3470,7 +3470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Period is the time interval between data retrieval points. When set to 60 (minute interval), a maximum of 1440 data points can be returned; when set to 3600 (hour interval), a maximum of 744 data points can be returned; and when set to 86400 (day interval), a maximum of 366 data points can be returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query dedicated block storage cluster capacity trend data, includ available capacity size and total capacity size.</p>
+     * <p>Queries the capacity trend data of a dedicated Elastic Block Storage (EBS) cluster within a specific time period, including the available capacity and total capacity.</p>
      * 
      * @param request QueryDedicatedBlockStorageClusterInventoryDataRequest
      * @return QueryDedicatedBlockStorageClusterInventoryDataResponse
@@ -3771,7 +3771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. When the async replication feature is enabled for the pairs for the first time, the system first performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks) and then periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</p>
+     * <p>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. The first time the async replication feature is enabled for the replication pairs, the system performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks). Then, the system periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</p>
      * 
      * @param request StartDiskReplicaGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3824,7 +3824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. When the async replication feature is enabled for the pairs for the first time, the system first performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks) and then periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</p>
+     * <p>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. The first time the async replication feature is enabled for the replication pairs, the system performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks). Then, the system periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</p>
      * 
      * @param request StartDiskReplicaGroupRequest
      * @return StartDiskReplicaGroupResponse
@@ -3844,7 +3844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Activates a replication pair.</p>
+     * <p>Activates the async replication feature for a specific replication pair.</p>
      * 
      * @param request StartDiskReplicaPairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3896,7 +3896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Activates a replication pair.</p>
+     * <p>Activates the async replication feature for a specific replication pair.</p>
      * 
      * @param request StartDiskReplicaPairRequest
      * @return StartDiskReplicaPairResponse
@@ -4462,7 +4462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新解决方案实例属性</p>
+     * <p>Updates the attributes of a solution instance.</p>
      * 
      * @param request UpdateSolutionInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4510,7 +4510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新解决方案实例属性</p>
+     * <p>Updates the attributes of a solution instance.</p>
      * 
      * @param request UpdateSolutionInstanceAttributeRequest
      * @return UpdateSolutionInstanceAttributeResponse
