@@ -1127,6 +1127,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取资源组统计</p>
+     * 
      * @param request GetResourceGroupStatisticsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1170,6 +1173,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取资源组统计</p>
+     * 
      * @param request GetResourceGroupStatisticsRequest
      * @return GetResourceGroupStatisticsResponse
      */
@@ -1287,7 +1293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义用户命令</p>
+     * <p>Get the user defined command</p>
      * 
      * @param request GetUserCommandRequest
      * @param headers map
@@ -1325,7 +1331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义用户命令</p>
+     * <p>Get the user defined command</p>
      * 
      * @param request GetUserCommandRequest
      * @return GetUserCommandResponse

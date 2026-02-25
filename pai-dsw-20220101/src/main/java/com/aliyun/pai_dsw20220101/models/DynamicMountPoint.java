@@ -4,11 +4,18 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class DynamicMountPoint extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Options")
     public String options;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/mnt/dynamic/</p>
      */
     @NameInMap("RootPath")
     public String rootPath;

@@ -74,7 +74,7 @@ public class CredentialConfig extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>sub</p>
+         * <p>S</p>
          */
         @NameInMap("Type")
         public String type;

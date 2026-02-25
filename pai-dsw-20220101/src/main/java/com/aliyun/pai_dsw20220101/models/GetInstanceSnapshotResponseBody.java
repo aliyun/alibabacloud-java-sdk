@@ -58,7 +58,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>{&quot;foo&quot;: &quot;bar&quot;}</p>
+     * <p>{\&quot;foo\&quot;: \&quot;bar\&quot;}</p>
      */
     @NameInMap("Labels")
     public java.util.List<GetInstanceSnapshotResponseBodyLabels> labels;
