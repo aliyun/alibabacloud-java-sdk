@@ -54,13 +54,13 @@ public class GetSavedQueryResponseBody extends TeaModel {
          * <p>The description of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
+         * <p>查询我的所有资源，返回所有的列。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The query statement in the template.</p>
+         * <p>The expression of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM resources;</p>
@@ -72,22 +72,22 @@ public class GetSavedQueryResponseBody extends TeaModel {
          * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>Query of All Alibaba Cloud Resources</p>
+         * <p>查询我的所有资源。</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The template ID.</p>
+         * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>sq-GeAck****</p>
+         * <p>cq-GeAck****</p>
          */
         @NameInMap("QueryId")
         public String queryId;
 
         /**
-         * <p>The time when the template was updated. The time is displayed in UTC.</p>
+         * <p>The time when the template was last updated. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-30T01:43:16Z</p>

@@ -99,7 +99,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
          * <p>The name of the Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
-         * <p>Container Service for Kubernetes</p>
+         * <p>容器服务Kubernetes版</p>
          */
         @NameInMap("ProductName")
         public String productName;
@@ -123,7 +123,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
          * <p>The name of the resource type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Cluster</p>
+         * <p>集群</p>
          */
         @NameInMap("ResourceTypeName")
         public String resourceTypeName;

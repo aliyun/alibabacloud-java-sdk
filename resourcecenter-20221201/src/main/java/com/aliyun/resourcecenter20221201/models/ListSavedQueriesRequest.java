@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSavedQueriesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * <p>Valid values: 1 to 50.</p>
      * <p>Default value: 50.</p>
      * 
@@ -16,7 +16,7 @@ public class ListSavedQueriesRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>

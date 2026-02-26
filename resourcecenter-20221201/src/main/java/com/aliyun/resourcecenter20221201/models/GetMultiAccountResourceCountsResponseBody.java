@@ -4,10 +4,15 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class GetMultiAccountResourceCountsResponseBody extends TeaModel {
+    /**
+     * <p>The filter condition.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<GetMultiAccountResourceCountsResponseBodyFilters> filters;
 
     /**
+     * <p>The dimension by which resources are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>ResourceType</p>
      */
@@ -15,16 +20,34 @@ public class GetMultiAccountResourceCountsResponseBody extends TeaModel {
     public String groupByKey;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EFA806B9-7F36-55AB-8B7A-D680C2C5EE57</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The numbers of resources.</p>
+     */
     @NameInMap("ResourceCounts")
     public java.util.List<GetMultiAccountResourceCountsResponseBodyResourceCounts> resourceCounts;
 
     /**
+     * <p>The search scope. Valid values:</p>
+     * <ul>
+     * <li><p>ID of a resource directory: Resources within the management account and all members of the resource directory are searched.</p>
+     * </li>
+     * <li><p>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.</p>
+     * </li>
+     * <li><p>ID of a folder: Resources within all members in the folder are searched.</p>
+     * </li>
+     * <li><p>ID of a member: Resources within the member are searched.</p>
+     * </li>
+     * </ul>
+     * <p>For information about how to obtain the ID of a resource directory, the Root folder, a folder, or a member, see <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a>, <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a>, or <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>rd-r4****</p>
      */
@@ -78,12 +101,17 @@ public class GetMultiAccountResourceCountsResponseBody extends TeaModel {
 
     public static class GetMultiAccountResourceCountsResponseBodyFilters extends TeaModel {
         /**
+         * <p>The key of the filter condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>RegionId</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of the filter condition.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -112,6 +140,8 @@ public class GetMultiAccountResourceCountsResponseBody extends TeaModel {
 
     public static class GetMultiAccountResourceCountsResponseBodyResourceCounts extends TeaModel {
         /**
+         * <p>The number of resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -119,6 +149,8 @@ public class GetMultiAccountResourceCountsResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS::ECS::NetworkInterface</p>
          */

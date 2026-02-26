@@ -11,7 +11,7 @@ public class GetResourceCountsResponseBody extends TeaModel {
     public java.util.List<GetResourceCountsResponseBodyFilters> filters;
 
     /**
-     * <p>The dimension by which resources are queried.</p>
+     * <p>The dimension by which the queried resources are grouped.</p>
      * 
      * <strong>example:</strong>
      * <p>ResourceType</p>
@@ -29,7 +29,7 @@ public class GetResourceCountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The numbers of resources.</p>
+     * <p>The list of resource counts.</p>
      */
     @NameInMap("ResourceCounts")
     public java.util.List<GetResourceCountsResponseBodyResourceCounts> resourceCounts;

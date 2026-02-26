@@ -4,120 +4,45 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class GetResourceConfigurationResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>151266687691****</p>
-     */
     @NameInMap("AccountId")
     public String accountId;
 
-    /**
-     * <p>The configurations of the resource.</p>
-     */
     @NameInMap("Configuration")
     public java.util.Map<String, ?> configuration;
 
-    /**
-     * <p>The time when the resource was created.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2021-06-30T09:20:08Z</p>
-     */
     @NameInMap("CreateTime")
     public String createTime;
 
-    /**
-     * <p>The time when the resource expires.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2021-07-30T09:20:08Z</p>
-     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
-    /**
-     * <p>The attributes of the IP address.</p>
-     */
     @NameInMap("IpAddressAttributes")
     public java.util.List<GetResourceConfigurationResponseBodyIpAddressAttributes> ipAddressAttributes;
 
-    /**
-     * <p>The IP addresses.</p>
-     * <blockquote>
-     * <p>Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
-     * </blockquote>
-     */
     @NameInMap("IpAddresses")
     public java.util.List<String> ipAddresses;
 
-    /**
-     * <p>The region ID of the resource.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>F1CE0D52-32DA-531A-87A4-B9A5B68D5D8E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the resource group to which the resource belongs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmv4k****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The ID of the resource.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>vtb-uf6978gdqbi****</p>
-     */
     @NameInMap("ResourceId")
     public String resourceId;
 
-    /**
-     * <p>The name of the resource.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>group1</p>
-     */
     @NameInMap("ResourceName")
     public String resourceName;
 
-    /**
-     * <p>The type of the resource.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ACS::VPC::VSwitch</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The tags of the resource.</p>
-     */
     @NameInMap("Tags")
     public java.util.List<GetResourceConfigurationResponseBodyTags> tags;
 
-    /**
-     * <p>The zone ID of the resource.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou-k</p>
-     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -239,34 +164,12 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetResourceConfigurationResponseBodyIpAddressAttributes extends TeaModel {
-        /**
-         * <p>The IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.2</p>
-         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
-        /**
-         * <p>The network type. Valid values:</p>
-         * <ul>
-         * <li><strong>Public</strong>: the Internet</li>
-         * <li><strong>Private</strong>: internal network</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Public</p>
-         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        /**
-         * <p>The version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Ipv4</p>
-         */
         @NameInMap("Version")
         public String version;
 
@@ -302,21 +205,9 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetResourceConfigurationResponseBodyTags extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-key</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-value</p>
-         */
         @NameInMap("Value")
         public String value;
 

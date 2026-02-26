@@ -22,8 +22,7 @@ public class SearchMultiAccountResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
-     * <p>If the total number of entries returned for the current request exceeds the value of the <code>MaxResults</code> parameter, the entries are truncated. In this case, you can use the token to initiate another request and obtain the remaining entries.``</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
@@ -32,12 +31,16 @@ public class SearchMultiAccountResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The search scope. You can set the value to one of the following items:</p>
+     * <p>The scope of the accounts in which you want to search for resources. Valid values:</p>
      * <ul>
-     * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a> operation to obtain the ID.</li>
-     * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</li>
-     * <li>ID of a folder: Resources within all members in the folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</li>
-     * <li>ID of a member: Resources within the member are searched. You can call the <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a> operation to obtain the ID.</li>
+     * <li><p>The ID of a resource directory: Searches for resources in the management account and all its member accounts. For more information, see <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a>.</p>
+     * </li>
+     * <li><p>The ID of the Root folder: Searches for resources in all member accounts under the Root folder and its subfolders. For more information, see <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a>.</p>
+     * </li>
+     * <li><p>The ID of a folder: Searches for resources in all member accounts under the folder. For more information, see <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a>.</p>
+     * </li>
+     * <li><p>The ID of a member account: Searches for resources in the member account. For more information, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,7 +51,7 @@ public class SearchMultiAccountResourcesRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The method that is used to sort the entries returned.</p>
+     * <p>The sorting parameters.</p>
      */
     @NameInMap("SortCriterion")
     public SearchMultiAccountResourcesRequestSortCriterion sortCriterion;
@@ -100,7 +103,7 @@ public class SearchMultiAccountResourcesRequest extends TeaModel {
 
     public static class SearchMultiAccountResourcesRequestFilter extends TeaModel {
         /**
-         * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
+         * <p>The key of the filter condition. For more information, see the &quot;<code>Supported filter parameters</code>&quot; section below.</p>
          * 
          * <strong>example:</strong>
          * <p>ResourceGroupId</p>
@@ -109,8 +112,8 @@ public class SearchMultiAccountResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The matching mode.</p>
-         * <p>The value Equals indicates an equal match.</p>
+         * <p>The matching method.</p>
+         * <p>Set this parameter to <code>Equals</code>, which means an exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>Equals</p>
@@ -157,8 +160,8 @@ public class SearchMultiAccountResourcesRequest extends TeaModel {
 
     public static class SearchMultiAccountResourcesRequestSortCriterion extends TeaModel {
         /**
-         * <p>The attribute based on which the entries are sorted.</p>
-         * <p>The value CreateTime indicates the creation time of resources.</p>
+         * <p>The sort key.</p>
+         * <p>Set this parameter to <code>CreateTime</code>, which means the results are sorted by resource creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateTime</p>
@@ -167,11 +170,14 @@ public class SearchMultiAccountResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The order in which the entries are sorted. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>ASC: The entries are sorted in ascending order. This value is the default value.</li>
-         * <li>DESC: The entries are sorted in descending order.</li>
+         * <li><p>ASC: Ascending order.</p>
+         * </li>
+         * <li><p>DESC: Descending order.</p>
+         * </li>
          * </ul>
+         * <p>Default value: ASC.</p>
          * 
          * <strong>example:</strong>
          * <p>ASC</p>

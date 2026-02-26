@@ -9,13 +9,13 @@ public class UpdateSavedQueryRequest extends TeaModel {
      * <p>The description must be 1 to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
+     * <p>查询我的所有资源，返回所有的列。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The query statement in the template.</p>
+     * <p>The expression of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>SELECT * FROM resources;</p>
@@ -26,23 +26,26 @@ public class UpdateSavedQueryRequest extends TeaModel {
     /**
      * <p>The name of the template.</p>
      * <ul>
-     * <li>The name must be 1 to 64 characters in length.</li>
-     * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
-     * <li>The name must be unique.</li>
+     * <li><p>The name must be 1 to 64 characters in length.</p>
+     * </li>
+     * <li><p>It can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * </li>
+     * <li><p>It must be globally unique.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Query of All Alibaba Cloud Resources</p>
+     * <p>查询我的所有资源。</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The template ID.</p>
+     * <p>The ID of the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>sq-GeAck****</p>
+     * <p>cq-GeAck****</p>
      */
     @NameInMap("QueryId")
     public String queryId;

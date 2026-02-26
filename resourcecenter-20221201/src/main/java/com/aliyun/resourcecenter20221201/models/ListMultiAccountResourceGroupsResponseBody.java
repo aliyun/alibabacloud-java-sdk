@@ -14,7 +14,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0FF0A66E-781F-51EE-9531-928F197558F2</p>
@@ -23,7 +23,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the resource groups.</p>
+     * <p>The resource groups.</p>
      */
     @NameInMap("ResourceGroups")
     public java.util.List<ListMultiAccountResourceGroupsResponseBodyResourceGroups> resourceGroups;
@@ -59,7 +59,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
 
     public static class ListMultiAccountResourceGroupsResponseBodyResourceGroups extends TeaModel {
         /**
-         * <p>The ID of the management account or member of the resource directory.</p>
+         * <p>The ID of the management account or a member in the resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>1394339739****</p>
@@ -86,7 +86,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -104,11 +104,14 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the resource group. Valid values:</p>
+         * <p>The status of the resource group.</p>
          * <ul>
-         * <li>Creating: The resource group is being created.</li>
-         * <li>OK: The resource group is created.</li>
-         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+         * <li><p>Creating: The resource group is being created.</p>
+         * </li>
+         * <li><p>OK: The resource group is created.</p>
+         * </li>
+         * <li><p>PendingDelete: The resource group is pending deletion.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

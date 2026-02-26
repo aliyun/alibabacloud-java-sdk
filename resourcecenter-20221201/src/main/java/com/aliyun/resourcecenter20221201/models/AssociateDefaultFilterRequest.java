@@ -9,7 +9,7 @@ public class AssociateDefaultFilterRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>My Filters</p>
+     * <p>所有ECS实例资源</p>
      */
     @NameInMap("FilterName")
     public String filterName;

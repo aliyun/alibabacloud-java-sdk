@@ -8,7 +8,7 @@ public class CreateSavedQueryResponseBody extends TeaModel {
      * <p>The template ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>sq-GeAck****</p>
+     * <p>cq-GeAck****</p>
      */
     @NameInMap("QueryId")
     public String queryId;

@@ -4,25 +4,9 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class EnableMultiAccountResourceCenterResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>767038B7-2027-5508-858B-E213232D57D5</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The status of the feature. Valid values:</p>
-     * <ul>
-     * <li>Pending: The feature is being enabled.</li>
-     * <li>Enabled: The feature is enabled.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Pending</p>
-     */
     @NameInMap("Status")
     public String status;
 

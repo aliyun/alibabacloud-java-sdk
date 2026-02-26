@@ -4,36 +4,15 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class ListResourceRelationshipsResponseBody extends TeaModel {
-    /**
-     * <p>The maximum number of entries per page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>682A3004-38E3-5122-9A11-CCDFAB9C3C4F</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The resource relationships.</p>
-     */
     @NameInMap("ResourceRelationships")
     public java.util.List<ListResourceRelationshipsResponseBodyResourceRelationships> resourceRelationships;
 
@@ -75,57 +54,21 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
     }
 
     public static class ListResourceRelationshipsResponseBodyResourceRelationships extends TeaModel {
-        /**
-         * <p>The region ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the associated resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-uf6m5okksddm6c9lh7***</p>
-         */
         @NameInMap("RelatedResourceId")
         public String relatedResourceId;
 
-        /**
-         * <p>The region ID of the associated resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("RelatedResourceRegionId")
         public String relatedResourceRegionId;
 
-        /**
-         * <p>The type of the associated resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ACS::VPC::VPC</p>
-         */
         @NameInMap("RelatedResourceType")
         public String relatedResourceType;
 
-        /**
-         * <p>The ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>m-eb3hji****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ACS::ACK::Cluster</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 

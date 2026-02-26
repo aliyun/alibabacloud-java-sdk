@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeliveryChannelStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The statistics on the delivery channel.</p>
+     * <p>The statistics of the delivery channel.</p>
      */
     @NameInMap("DeliveryChannelStatistics")
     public GetDeliveryChannelStatisticsResponseBodyDeliveryChannelStatistics deliveryChannelStatistics;
@@ -60,7 +60,7 @@ public class GetDeliveryChannelStatisticsResponseBody extends TeaModel {
         public String deliveryChannelName;
 
         /**
-         * <p>The last delivery time of resource configuration change events.</p>
+         * <p>The last time a resource configuration change was delivered.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-03T16:05:15Z</p>
@@ -69,7 +69,7 @@ public class GetDeliveryChannelStatisticsResponseBody extends TeaModel {
         public String latestChangeDeliveryTime;
 
         /**
-         * <p>The last delivery time of scheduled resource snapshots.</p>
+         * <p>The last time a scheduled resource snapshot was delivered.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-03T16:00:00Z</p>

@@ -28,7 +28,7 @@ public class CreateFilterRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ECS</p>
+     * <p>我的筛选条件。</p>
      */
     @NameInMap("FilterName")
     public String filterName;

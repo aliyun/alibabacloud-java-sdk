@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMultiAccountResourceGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the management account or member of the resource directory.</p>
+     * <p>The ID of the management account or a member in the resource directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListMultiAccountResourceGroupsRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <p>Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListMultiAccountResourceGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The IDs of resource groups.</p>
+     * <p>The resource group IDs.</p>
      */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;

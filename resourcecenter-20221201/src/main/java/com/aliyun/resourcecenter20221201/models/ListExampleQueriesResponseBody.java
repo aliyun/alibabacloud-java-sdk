@@ -79,7 +79,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
          * <p>The description of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
+         * <p>返回所有有权限的资源，并按照资源类型和资源ID排列。</p>
          */
         @NameInMap("Description")
         public String description;
@@ -88,7 +88,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
          * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>Query of All Alibaba Cloud Resources</p>
+         * <p>列出所有阿里云资源</p>
          */
         @NameInMap("Name")
         public String name;

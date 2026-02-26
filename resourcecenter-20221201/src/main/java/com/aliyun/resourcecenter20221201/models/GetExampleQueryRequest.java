@@ -7,7 +7,7 @@ public class GetExampleQueryRequest extends TeaModel {
     /**
      * <p>The ID of the template.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListExampleQueries~~">ListExampleQueries</a> operation to obtain the template ID.</p>
+     * <p>You can call the <a href="~~ListExampleQueries~~">ListExampleQueries</a> operation to obtain the template ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

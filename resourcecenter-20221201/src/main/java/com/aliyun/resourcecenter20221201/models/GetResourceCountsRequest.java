@@ -11,13 +11,14 @@ public class GetResourceCountsRequest extends TeaModel {
     public java.util.List<GetResourceCountsRequestFilter> filter;
 
     /**
-     * <p>The dimension by which resources are queried. Valid values:</p>
+     * <p>The dimension by which the queried resources are grouped. Valid values:</p>
      * <ul>
-     * <li>ResourceType</li>
-     * <li>Region</li>
-     * <li>ResourceGroupId</li>
-     * <li>TagKey</li>
-     * <li>TagValue</li>
+     * <li><p>ResourceType: The resource type.</p>
+     * </li>
+     * <li><p>RegionId: The region.</p>
+     * </li>
+     * <li><p>ResourceGroupId: The resource group ID.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,9 +27,27 @@ public class GetResourceCountsRequest extends TeaModel {
     @NameInMap("GroupByKey")
     public String groupByKey;
 
+    /**
+     * <p>Specifies whether to include deleted resources. Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeDeletedResources")
     public Boolean includeDeletedResources;
 
+    /**
+     * <p>The search keyword. Resource Center filters the search results based on relevance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>keywords</p>
+     */
     @NameInMap("SearchExpression")
     public String searchExpression;
 
@@ -71,7 +90,7 @@ public class GetResourceCountsRequest extends TeaModel {
 
     public static class GetResourceCountsRequestFilter extends TeaModel {
         /**
-         * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
+         * <p>The key of the filter condition. For information about valid values, see the &quot;<code>Supported filter parameters</code>&quot; section below.</p>
          * 
          * <strong>example:</strong>
          * <p>RegionId</p>
@@ -80,8 +99,8 @@ public class GetResourceCountsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The matching mode.</p>
-         * <p>The value Equals indicates an equal match.</p>
+         * <p>The matching method.</p>
+         * <p>Set this parameter to <code>Equals</code>, which means an equal match.</p>
          * 
          * <strong>example:</strong>
          * <p>Equals</p>

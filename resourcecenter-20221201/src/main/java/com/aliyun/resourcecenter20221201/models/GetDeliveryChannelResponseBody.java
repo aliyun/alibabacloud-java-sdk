@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDeliveryChannelResponseBody extends TeaModel {
     /**
      * <p>The description of the delivery channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a description.</p>
      */
     @NameInMap("DeliveryChannelDescription")
     public String deliveryChannelDescription;
@@ -44,13 +47,13 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The configurations for delivery of resource configuration change events.</p>
+     * <p>The settings for delivering resource configuration changes.</p>
      */
     @NameInMap("ResourceChangeDelivery")
     public GetDeliveryChannelResponseBodyResourceChangeDelivery resourceChangeDelivery;
 
     /**
-     * <p>The configurations for delivery of scheduled resource snapshots.</p>
+     * <p>The settings for the scheduled delivery of resource snapshots.</p>
      */
     @NameInMap("ResourceSnapshotDelivery")
     public GetDeliveryChannelResponseBodyResourceSnapshotDelivery resourceSnapshotDelivery;
@@ -118,7 +121,7 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
 
     public static class GetDeliveryChannelResponseBodyDeliveryChannelFilter extends TeaModel {
         /**
-         * <p>The effective resource types of the delivery channel.</p>
+         * <p>The resource types that are delivered.</p>
          */
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
@@ -140,7 +143,7 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
 
     public static class GetDeliveryChannelResponseBodyResourceChangeDeliverySlsProperties extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the destination to which large files are delivered.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the Object Storage Service (OSS) bucket to which oversized data is delivered.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
@@ -164,11 +167,24 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
     }
 
     public static class GetDeliveryChannelResponseBodyResourceChangeDelivery extends TeaModel {
+        /**
+         * <p>Indicates whether to deliver resource configuration changes.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public String enabled;
 
         /**
-         * <p>The Simple Log Service configurations.</p>
+         * <p>The Simple Log Service (SLS) configurations.</p>
          */
         @NameInMap("SlsProperties")
         public GetDeliveryChannelResponseBodyResourceChangeDeliverySlsProperties slsProperties;
@@ -183,7 +199,7 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
         public String targetArn;
 
         /**
-         * <p>The type of the destination.</p>
+         * <p>The type of the delivery destination.</p>
          * 
          * <strong>example:</strong>
          * <p>SLS</p>
@@ -232,7 +248,7 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
 
     public static class GetDeliveryChannelResponseBodyResourceSnapshotDeliverySlsProperties extends TeaModel {
         /**
-         * <p>The ARN of the destination to which large files are delivered.</p>
+         * <p>The ARN of the OSS bucket to which oversized data is delivered.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
@@ -266,7 +282,7 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
         public String customExpression;
 
         /**
-         * <p>The delivery time.</p>
+         * <p>The time when resource snapshots are delivered.</p>
          * 
          * <strong>example:</strong>
          * <p>09:00Z</p>
@@ -274,11 +290,24 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
         @NameInMap("DeliveryTime")
         public String deliveryTime;
 
+        /**
+         * <p>Indicates whether to enable the scheduled delivery of resource snapshots.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public String enabled;
 
         /**
-         * <p>The Simple Log Service configurations.</p>
+         * <p>The SLS configurations.</p>
          */
         @NameInMap("SlsProperties")
         public GetDeliveryChannelResponseBodyResourceSnapshotDeliverySlsProperties slsProperties;
@@ -293,7 +322,7 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
         public String targetArn;
 
         /**
-         * <p>The type of the destination.</p>
+         * <p>The type of the delivery destination.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The description of the delivery channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>投递描述</p>
      */
     @NameInMap("DeliveryChannelDescription")
     public String deliveryChannelDescription;

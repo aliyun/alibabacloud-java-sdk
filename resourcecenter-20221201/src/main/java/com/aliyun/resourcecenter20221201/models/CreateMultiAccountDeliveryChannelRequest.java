@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The description of the delivery channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a description.</p>
      */
     @NameInMap("DeliveryChannelDescription")
     public String deliveryChannelDescription;
@@ -34,7 +37,7 @@ public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
     public CreateMultiAccountDeliveryChannelRequestResourceChangeDelivery resourceChangeDelivery;
 
     /**
-     * <p>The configurations for delivery of scheduled resource snapshots.</p>
+     * <p>The configurations for scheduled delivery of resource snapshots.</p>
      */
     @NameInMap("ResourceSnapshotDelivery")
     public CreateMultiAccountDeliveryChannelRequestResourceSnapshotDelivery resourceSnapshotDelivery;
@@ -86,14 +89,14 @@ public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
 
     public static class CreateMultiAccountDeliveryChannelRequestDeliveryChannelFilter extends TeaModel {
         /**
-         * <p>An array of effective account scopes for the delivery channel.</p>
+         * <p>The account scopes of the delivery channel.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("AccountScopes")
         public java.util.List<String> accountScopes;
 
         /**
-         * <p>The effective resource types of the delivery channel.</p>
+         * <p>The effective resource type of the delivery channel.</p>
          */
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
@@ -123,8 +126,8 @@ public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
 
     public static class CreateMultiAccountDeliveryChannelRequestResourceChangeDeliverySlsProperties extends TeaModel {
         /**
-         * <p>The ARN of the destination to which large files are delivered.</p>
-         * <p>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object. You need to set this parameter to the ARN of a bucket whose name is prefixed with <code>resourcecenter-</code>.</p>
+         * <p>The ARN of the delivery destination for oversized data.</p>
+         * <p>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object. You must enter the ARN of an OSS bucket that has a prefix of <code>resourcecenter-</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
@@ -149,7 +152,7 @@ public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
 
     public static class CreateMultiAccountDeliveryChannelRequestResourceChangeDelivery extends TeaModel {
         /**
-         * <p>The Simple Log Service configurations.</p>
+         * <p>The SLS configurations.</p>
          */
         @NameInMap("SlsProperties")
         public CreateMultiAccountDeliveryChannelRequestResourceChangeDeliverySlsProperties slsProperties;
@@ -157,8 +160,8 @@ public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
         /**
          * <p>The ARN of the delivery destination. Valid values:</p>
          * <ul>
-         * <li>If you set <code>TargetType</code> to <code>OSS</code>, you must set <code>TargetArn</code> to the ARN of a bucket whose name is prefixed with <code>resourcecenter-</code>.</li>
-         * <li>If you set <code>TargetType</code> to <code>SLS</code>, you must set <code>TargetArn</code> to the ARN of a Logstore whose name is prefixed with <code>resourcecenter-</code>.</li>
+         * <li>If you set <code>TargetType</code> to <code>OSS</code>, you must set <code>TargetArn</code> to the ARN of a OSS bucket that has a prefix of <code>resourcecenter-</code>.</li>
+         * <li>If you set <code>TargetType</code> to <code>SLS</code>, you must set <code>TargetArn</code> to the ARN of a SLS Logstore that has a prefix of <code>resourcecenter-</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +172,7 @@ public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
 
         /**
          * <p>The type of the delivery destination.</p>
-         * <p>Set the value to <code>SLS</code>.</p>
+         * <p>Valid value: <code>SLS</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>SLS</p>
@@ -210,10 +213,10 @@ public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
 
     public static class CreateMultiAccountDeliveryChannelRequestResourceSnapshotDeliverySlsProperties extends TeaModel {
         /**
-         * <p>The ARN of the destination to which large files are delivered.</p>
-         * <p>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object. You need to set this parameter to the ARN of a bucket whose name is prefixed with <code>resourcecenter-</code>.</p>
+         * <p>The ARN of the delivery destination for oversized data.</p>
+         * <p>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object. You must enter the ARN of an OSS bucket that has a prefix of <code>resourcecenter-</code>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you use custom delivery for scheduled resource snapshots. You do not need to configure this parameter if you use standard delivery for scheduled resource snapshots.</p>
+         * <p>This parameter takes effect only when you create a custom scheduled delivery task for resource snapshots. You do not need to specify this parameter when you create a standard scheduled delivery task for resource snapshots.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -257,7 +260,7 @@ public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
         public String deliveryTime;
 
         /**
-         * <p>The Simple Log Service configurations.</p>
+         * <p>The SLS configurations.</p>
          */
         @NameInMap("SlsProperties")
         public CreateMultiAccountDeliveryChannelRequestResourceSnapshotDeliverySlsProperties slsProperties;
@@ -265,8 +268,8 @@ public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the delivery destination. Valid values:</p>
          * <ul>
-         * <li>If you set <code>TargetType</code> to <code>OSS</code>, you must set <code>TargetArn</code> to the ARN of a bucket whose name is prefixed with <code>resourcecenter-</code>. Example: <code>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</code>.</li>
-         * <li>If you set <code>TargetType</code> to <code>SLS</code>, you must set <code>TargetArn</code> to the ARN of a Logstore whose name is prefixed with <code>resourcecenter-</code>. Example: <code>acs:log:cn-hangzhou: 191142248777****:project/delivery/logstore/resourcecenter-sls</code>.</li>
+         * <li>If you set <code>TargetType</code> to <code>OSS</code>, you must set <code>TargetArn</code> to the ARN of a OSS bucket that has a prefix of <code>resourcecenter-</code>. Example: <code>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</code>.</li>
+         * <li>If you set <code>TargetType</code> to <code>SLS</code>, you must set <code>TargetArn</code> to the ARN of a SLS Logstore that has a prefix of <code>resourcecenter-</code>. Example: <code>acs:log:cn-hangzhou: 191142248777****:project/delivery/logstore/resourcecenter-sls</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,8 +281,8 @@ public class CreateMultiAccountDeliveryChannelRequest extends TeaModel {
         /**
          * <p>The type of the delivery destination. Valid values:</p>
          * <ul>
-         * <li><code>OSS</code> for standard delivery</li>
-         * <li><code>OSS</code> or <code>SLS</code> for custom delivery</li>
+         * <li><code>OSS</code> for standard delivery</li>
+         * <li><code>OSS</code> or <code>SLS</code> for custom delivery</li>
          * </ul>
          * 
          * <strong>example:</strong>

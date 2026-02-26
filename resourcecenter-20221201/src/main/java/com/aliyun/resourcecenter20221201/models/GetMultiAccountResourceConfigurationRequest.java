@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMultiAccountResourceConfigurationRequest extends TeaModel {
     /**
-     * <p>The ID of the management account or member of the resource directory.</p>
+     * <p>The ID of the management account or member.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetMultiAccountResourceConfigurationRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetMultiAccountResourceConfigurationRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The region ID of the resource.</p>
+     * <p>The ID of the region where the resource resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class GetMultiAccountResourceConfigurationRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

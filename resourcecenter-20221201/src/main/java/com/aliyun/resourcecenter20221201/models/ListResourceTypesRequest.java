@@ -7,8 +7,10 @@ public class ListResourceTypesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
