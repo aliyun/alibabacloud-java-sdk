@@ -2860,6 +2860,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>测试特性配置</p>
+     * 
+     * @param request GetPromptTestResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPromptTestResultResponse
+     */
+    public GetPromptTestResultResponse getPromptTestResultWithOptions(GetPromptTestResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            query.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPromptTestResult"),
+            new TeaPair("version", "2022-09-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPromptTestResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>测试特性配置</p>
+     * 
+     * @param request GetPromptTestResultRequest
+     * @return GetPromptTestResultResponse
+     */
+    public GetPromptTestResultResponse getPromptTestResult(GetPromptTestResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPromptTestResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>User OSS Check Task Pending Inspection Information</p>
      * 
      * @param request GetScanNumRequest
