@@ -20,7 +20,7 @@ public class ShopPageDataResult extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>PID56****2304</p>
+     * <p>56****2304</p>
      */
     @NameInMap("purchaserId")
     public String purchaserId;
@@ -32,16 +32,12 @@ public class ShopPageDataResult extends TeaModel {
     @NameInMap("shopId")
     public String shopId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>儿童座椅分销店铺</p>
-     */
     @NameInMap("shopName")
     public String shopName;
 
     /**
      * <strong>example:</strong>
-     * <p>DistributorQYG</p>
+     * <p>Distribution</p>
      */
     @NameInMap("shopType")
     public String shopType;

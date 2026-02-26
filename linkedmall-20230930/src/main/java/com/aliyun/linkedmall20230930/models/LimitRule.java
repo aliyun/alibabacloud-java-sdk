@@ -4,18 +4,38 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class LimitRule extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1724947200000</p>
+     */
     @NameInMap("beginTime")
     public Long beginTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>day</p>
+     */
     @NameInMap("condcase")
     public String condcase;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1724947200000</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("limitNum")
     public Integer limitNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UpperNumberPerUser</p>
+     */
     @NameInMap("ruleType")
     public String ruleType;
 

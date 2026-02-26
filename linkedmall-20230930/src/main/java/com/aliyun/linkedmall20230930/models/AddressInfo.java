@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class AddressInfo extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>陕西省西安市新城区xxx大厦xx室</p>
      */
     @NameInMap("addressDetail")
     public String addressDetail;
@@ -29,9 +26,6 @@ public class AddressInfo extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>任先生</p>
      */
     @NameInMap("receiver")
     public String receiver;

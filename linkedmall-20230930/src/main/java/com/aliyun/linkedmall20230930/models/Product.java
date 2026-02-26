@@ -52,6 +52,9 @@ public class Product extends TeaModel {
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
+    /**
+     * <p>images</p>
+     */
     @NameInMap("images")
     public java.util.List<String> images;
 
@@ -82,6 +85,9 @@ public class Product extends TeaModel {
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <p>productSpecs</p>
+     */
     @NameInMap("productSpecs")
     public java.util.List<ProductSpec> productSpecs;
 
@@ -126,6 +132,9 @@ public class Product extends TeaModel {
     @NameInMap("shopId")
     public String shopId;
 
+    /**
+     * <p>skus</p>
+     */
     @NameInMap("skus")
     public java.util.List<Sku> skus;
 
@@ -150,10 +159,6 @@ public class Product extends TeaModel {
     @NameInMap("taxRate")
     public Integer taxRate;
 
-    /**
-     * <strong>example:</strong>
-     * <p>发财树</p>
-     */
     @NameInMap("title")
     public String title;
 

@@ -18,10 +18,6 @@ public class Division extends TeaModel {
     @NameInMap("divisionLevel")
     public Long divisionLevel;
 
-    /**
-     * <strong>example:</strong>
-     * <p>上海</p>
-     */
     @NameInMap("divisionName")
     public String divisionName;
 

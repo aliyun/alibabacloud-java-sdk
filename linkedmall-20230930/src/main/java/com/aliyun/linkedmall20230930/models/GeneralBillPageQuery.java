@@ -4,33 +4,63 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class GeneralBillPageQuery extends TeaModel {
+    /**
+     * <p>asc</p>
+     */
     @NameInMap("asc")
     public Boolean asc;
 
+    /**
+     * <p>billId</p>
+     */
     @NameInMap("billId")
     public String billId;
 
+    /**
+     * <p>billPeriod</p>
+     */
     @NameInMap("billPeriod")
     public String billPeriod;
 
+    /**
+     * <p>limit</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>orderBy</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
+    /**
+     * <p>orderDirection</p>
+     */
     @NameInMap("orderDirection")
     public String orderDirection;
 
+    /**
+     * <p>pageNumber</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>pageSize</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>shopId</p>
+     */
     @NameInMap("shopId")
     public String shopId;
 
+    /**
+     * <p>start</p>
+     */
     @NameInMap("start")
     public Integer start;
 

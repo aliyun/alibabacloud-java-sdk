@@ -4,10 +4,6 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SkuSpec extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>颜色分类</p>
-     */
     @NameInMap("key")
     public String key;
 
@@ -18,10 +14,6 @@ public class SkuSpec extends TeaModel {
     @NameInMap("keyId")
     public Long keyId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>天蓝色</p>
-     */
     @NameInMap("value")
     public String value;
 

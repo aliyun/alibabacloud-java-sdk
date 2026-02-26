@@ -4,10 +4,6 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class RefundResult extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>多拍不想要</p>
-     */
     @NameInMap("applyDisputeDesc")
     public String applyDisputeDesc;
 
@@ -28,10 +24,6 @@ public class RefundResult extends TeaModel {
     @NameInMap("disputeCreateTime")
     public String disputeCreateTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>多拍不想要</p>
-     */
     @NameInMap("disputeDesc")
     public String disputeDesc;
 
@@ -87,17 +79,9 @@ public class RefundResult extends TeaModel {
     @NameInMap("refundFeeData")
     public RefundFeeData refundFeeData;
 
-    /**
-     * <strong>example:</strong>
-     * <p>阿里云云谷</p>
-     */
     @NameInMap("refunderAddress")
     public String refunderAddress;
 
-    /**
-     * <strong>example:</strong>
-     * <p>赵先生</p>
-     */
     @NameInMap("refunderName")
     public String refunderName;
 
@@ -129,24 +113,12 @@ public class RefundResult extends TeaModel {
     @NameInMap("returnGoodLogisticsStatus")
     public Integer returnGoodLogisticsStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>同意退款</p>
-     */
     @NameInMap("sellerAgreeMsg")
     public String sellerAgreeMsg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>不同意退款</p>
-     */
     @NameInMap("sellerRefuseAgreementMessage")
     public String sellerRefuseAgreementMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>商品没问题，买家举证无效</p>
-     */
     @NameInMap("sellerRefuseReason")
     public String sellerRefuseReason;
 

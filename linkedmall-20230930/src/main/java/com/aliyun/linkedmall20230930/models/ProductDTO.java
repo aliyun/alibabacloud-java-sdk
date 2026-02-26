@@ -39,6 +39,7 @@ public class ProductDTO extends TeaModel {
     public Integer quantity;
 
     /**
+     * <p>SKUID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -17,10 +17,6 @@ public class PurchaseOrderRenderResult extends TeaModel {
     @NameInMap("extInfo")
     public java.util.Map<String, ?> extInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>库存为0</p>
-     */
     @NameInMap("message")
     public String message;
 

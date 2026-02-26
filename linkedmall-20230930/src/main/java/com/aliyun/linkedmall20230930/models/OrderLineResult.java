@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class OrderLineResult extends TeaModel {
+    @NameInMap("eticketInfos")
+    public java.util.List<EticketInfo> eticketInfos;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,30 +63,32 @@ public class OrderLineResult extends TeaModel {
     @NameInMap("productPic")
     public String productPic;
 
-    /**
-     * <strong>example:</strong>
-     * <p>儿童学习桌</p>
-     */
     @NameInMap("productTitle")
     public String productTitle;
 
     /**
+     * <p>skuId</p>
+     * 
      * <strong>example:</strong>
      * <p>6600****6737</p>
      */
     @NameInMap("skuId")
     public String skuId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>浅绿色</p>
-     */
     @NameInMap("skuTitle")
     public String skuTitle;
 
     public static OrderLineResult build(java.util.Map<String, ?> map) throws Exception {
         OrderLineResult self = new OrderLineResult();
         return TeaModel.build(map, self);
+    }
+
+    public OrderLineResult setEticketInfos(java.util.List<EticketInfo> eticketInfos) {
+        this.eticketInfos = eticketInfos;
+        return this;
+    }
+    public java.util.List<EticketInfo> getEticketInfos() {
+        return this.eticketInfos;
     }
 
     public OrderLineResult setLogisticsStatus(String logisticsStatus) {

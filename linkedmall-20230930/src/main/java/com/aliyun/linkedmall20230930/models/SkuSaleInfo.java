@@ -25,10 +25,6 @@ public class SkuSaleInfo extends TeaModel {
     @NameInMap("divisionCode")
     public String divisionCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>有货</p>
-     */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
@@ -68,6 +64,8 @@ public class SkuSaleInfo extends TeaModel {
     public String shopId;
 
     /**
+     * <p>skuId</p>
+     * 
      * <strong>example:</strong>
      * <p>660460842235822081</p>
      */
@@ -81,10 +79,6 @@ public class SkuSaleInfo extends TeaModel {
     @NameInMap("skuStatus")
     public String skuStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>天蓝色</p>
-     */
     @NameInMap("title")
     public String title;
 

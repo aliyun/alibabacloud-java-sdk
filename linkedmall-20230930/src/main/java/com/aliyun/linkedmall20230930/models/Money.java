@@ -4,24 +4,45 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class Money extends TeaModel {
+    /**
+     * <p>amount</p>
+     */
     @NameInMap("amount")
     public Long amount;
 
+    /**
+     * <p>amountAsString</p>
+     */
     @NameInMap("amountAsString")
     public String amountAsString;
 
+    /**
+     * <p>amountString</p>
+     */
     @NameInMap("amountString")
     public String amountString;
 
+    /**
+     * <p>cent</p>
+     */
     @NameInMap("cent")
     public Long cent;
 
+    /**
+     * <p>currency</p>
+     */
     @NameInMap("currency")
     public MoneyCurrency currency;
 
+    /**
+     * <p>currencyCode</p>
+     */
     @NameInMap("currencyCode")
     public String currencyCode;
 
+    /**
+     * <p>positive</p>
+     */
     @NameInMap("positive")
     public Boolean positive;
 
@@ -87,18 +108,33 @@ public class Money extends TeaModel {
     }
 
     public static class MoneyCurrency extends TeaModel {
+        /**
+         * <p>currencyCode</p>
+         */
         @NameInMap("currencyCode")
         public String currencyCode;
 
+        /**
+         * <p>defaultFractionDigits</p>
+         */
         @NameInMap("defaultFractionDigits")
         public Integer defaultFractionDigits;
 
+        /**
+         * <p>displayName</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <p>numericCode</p>
+         */
         @NameInMap("numericCode")
         public Integer numericCode;
 
+        /**
+         * <p>symbol</p>
+         */
         @NameInMap("symbol")
         public String symbol;
 

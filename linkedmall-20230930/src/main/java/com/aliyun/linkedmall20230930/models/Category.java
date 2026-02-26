@@ -20,21 +20,17 @@ public class Category extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>0</p>
      */
     @NameInMap("level")
     public Integer level;
 
-    /**
-     * <strong>example:</strong>
-     * <p>方便面/拉面/挂面/轻食面速食</p>
-     */
     @NameInMap("name")
     public String name;
 
     /**
      * <strong>example:</strong>
-     * <p>50016422</p>
+     * <p>0</p>
      */
     @NameInMap("parentId")
     public Long parentId;

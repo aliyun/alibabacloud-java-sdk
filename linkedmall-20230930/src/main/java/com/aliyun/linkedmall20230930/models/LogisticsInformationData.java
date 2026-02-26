@@ -4,30 +4,62 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class LogisticsInformationData extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("logisticsStatus")
     public String logisticsStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1713407100321</p>
+     */
     @NameInMap("modifiedTime")
     public String modifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6696070566****8593</p>
+     */
     @NameInMap("orderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6692****5458</p>
+     */
     @NameInMap("orderLineId")
     public String orderLineId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>233111</p>
+     */
     @NameInMap("outerPurchaseOrderId")
     public String outerPurchaseOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PID22000009</p>
+     */
     @NameInMap("purchaserId")
     public String purchaserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SF</p>
+     */
     @NameInMap("trackingCompanyCode")
     public String trackingCompanyCode;
 
     @NameInMap("trackingCompanyName")
     public String trackingCompanyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SF198913131</p>
+     */
     @NameInMap("trackingNumber")
     public String trackingNumber;
 

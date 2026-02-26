@@ -11,10 +11,6 @@ public class ProductExtendProperty extends TeaModel {
     @NameInMap("key")
     public String key;
 
-    /**
-     * <strong>example:</strong>
-     * <p>场景图</p>
-     */
     @NameInMap("value")
     public String value;
 

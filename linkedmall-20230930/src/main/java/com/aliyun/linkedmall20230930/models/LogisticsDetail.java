@@ -11,10 +11,6 @@ public class LogisticsDetail extends TeaModel {
     @NameInMap("ocurrTimeStr")
     public String ocurrTimeStr;
 
-    /**
-     * <strong>example:</strong>
-     * <p>已签收</p>
-     */
     @NameInMap("standerdDesc")
     public String standerdDesc;
 

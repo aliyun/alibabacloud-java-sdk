@@ -21,6 +21,7 @@ public class SkuQueryParam extends TeaModel {
     public String productId;
 
     /**
+     * <p>skuid</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

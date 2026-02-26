@@ -4,10 +4,6 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class LeavePictureList extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>退款凭证</p>
-     */
     @NameInMap("desc")
     public String desc;
 

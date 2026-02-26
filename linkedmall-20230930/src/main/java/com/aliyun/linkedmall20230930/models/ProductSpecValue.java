@@ -4,10 +4,6 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ProductSpecValue extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>白色</p>
-     */
     @NameInMap("value")
     public String value;
 

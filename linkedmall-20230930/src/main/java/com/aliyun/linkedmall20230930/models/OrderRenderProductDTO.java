@@ -32,6 +32,7 @@ public class OrderRenderProductDTO extends TeaModel {
     public Integer quantity;
 
     /**
+     * <p>skuID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -11,10 +11,6 @@ public class ApplyReason extends TeaModel {
     @NameInMap("reasonTextId")
     public Long reasonTextId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>不想要了</p>
-     */
     @NameInMap("reasonTips")
     public String reasonTips;
 

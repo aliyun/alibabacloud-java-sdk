@@ -28,10 +28,6 @@ public class Sku extends TeaModel {
     @NameInMap("divisionCode")
     public String divisionCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>有货</p>
-     */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
@@ -95,19 +91,20 @@ public class Sku extends TeaModel {
     public String skuAlias;
 
     /**
+     * <p>skuId</p>
+     * 
      * <strong>example:</strong>
      * <p>660460842235822081</p>
      */
     @NameInMap("skuId")
     public String skuId;
 
+    /**
+     * <p>sku</p>
+     */
     @NameInMap("skuSpecs")
     public java.util.List<SkuSpec> skuSpecs;
 
-    /**
-     * <strong>example:</strong>
-     * <p>颜色分类:天蓝色</p>
-     */
     @NameInMap("skuSpecsCode")
     public String skuSpecsCode;
 
@@ -121,10 +118,6 @@ public class Sku extends TeaModel {
     @NameInMap("suggestedRetailPrice")
     public Long suggestedRetailPrice;
 
-    /**
-     * <strong>example:</strong>
-     * <p>天蓝色</p>
-     */
     @NameInMap("title")
     public String title;
 

@@ -4,10 +4,6 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class Good extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>儿童学习桌</p>
-     */
     @NameInMap("goodName")
     public String goodName;
 

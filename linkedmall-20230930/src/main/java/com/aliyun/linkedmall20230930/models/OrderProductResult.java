@@ -14,10 +14,6 @@ public class OrderProductResult extends TeaModel {
     @NameInMap("features")
     public java.util.Map<String, ?> features;
 
-    /**
-     * <strong>example:</strong>
-     * <p>库存为0</p>
-     */
     @NameInMap("message")
     public String message;
 
@@ -42,10 +38,6 @@ public class OrderProductResult extends TeaModel {
     @NameInMap("productPicUrl")
     public String productPicUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>儿童学习桌</p>
-     */
     @NameInMap("productTitle")
     public String productTitle;
 
@@ -64,16 +56,14 @@ public class OrderProductResult extends TeaModel {
     public Integer quantity;
 
     /**
+     * <p>SKUID</p>
+     * 
      * <strong>example:</strong>
      * <p>6600****6737</p>
      */
     @NameInMap("skuId")
     public String skuId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>浅绿色</p>
-     */
     @NameInMap("skuTitle")
     public String skuTitle;
 

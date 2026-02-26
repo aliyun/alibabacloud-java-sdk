@@ -13,10 +13,6 @@ public class RefundOrderCmd extends TeaModel {
     @NameInMap("applyReasonTextId")
     public Long applyReasonTextId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>不想要了</p>
-     */
     @NameInMap("applyReasonTips")
     public String applyReasonTips;
 
@@ -56,10 +52,6 @@ public class RefundOrderCmd extends TeaModel {
     @NameInMap("goodsStatus")
     public Integer goodsStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>不想要了</p>
-     */
     @NameInMap("leaveMessage")
     public String leaveMessage;
 

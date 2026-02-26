@@ -18,10 +18,6 @@ public class RefundReason extends TeaModel {
     @NameInMap("reasonTextId")
     public String reasonTextId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>不想要了</p>
-     */
     @NameInMap("reasonTips")
     public String reasonTips;
 

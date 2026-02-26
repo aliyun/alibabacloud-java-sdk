@@ -18,10 +18,6 @@ public class ProductSaleInfo extends TeaModel {
     @NameInMap("divisionCode")
     public String divisionCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>有货</p>
-     */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
@@ -73,10 +69,6 @@ public class ProductSaleInfo extends TeaModel {
     @NameInMap("skus")
     public java.util.List<SkuSaleInfo> skus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>发财树</p>
-     */
     @NameInMap("title")
     public String title;
 
