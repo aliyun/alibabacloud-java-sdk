@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of destination regions for cross-region backups.</p>
-     */
     @NameInMap("Regions")
     public DescribeAvailableCrossRegionResponseBodyRegions regions;
 

@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCollationTimeZonesResponseBody extends TeaModel {
-    /**
-     * <p>The list of the character set collations and time zones that are available.</p>
-     */
     @NameInMap("CollationTimeZones")
     public DescribeCollationTimeZonesResponseBodyCollationTimeZones collationTimeZones;
 
@@ -41,30 +38,12 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone extends TeaModel {
-        /**
-         * <p>The description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Kabul</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The offset of the UTC time. The offset is in the following format: (UTC+<em>HH:mm</em>).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>(UTC+04:30)</p>
-         */
         @NameInMap("StandardTimeOffset")
         public String standardTimeOffset;
 
-        /**
-         * <p>The time zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Afghanistan Standard Time</p>
-         */
         @NameInMap("TimeZone")
         public String timeZone;
 

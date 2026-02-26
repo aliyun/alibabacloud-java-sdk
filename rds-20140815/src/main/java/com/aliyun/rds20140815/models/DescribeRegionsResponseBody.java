@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    /**
-     * <p>The available regions and zones.</p>
-     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
@@ -41,56 +38,18 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRDSRegion extends TeaModel {
-        /**
-         * <p>The region name. The return value of this parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following values are returned for the LocalName parameter:</p>
-         * <ul>
-         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh-CN</strong>, the value  1()is returned for the LocalName parameter.</li>
-         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en-US</strong>, the value China (Hangzhou) is returned for the LocalName parameter.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The endpoint that is used to connect to Alibaba Cloud services in the region. For more information, see <a href="https://help.aliyun.com/document_detail/610370.html">Endpoints</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds.aliyuncs.com</p>
-         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
-        /**
-         * <p>The zone name. The return value of this parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the ZoneId parameter in the response is cn-hangzhou-j, the following values are returned for the ZoneName parameter:</p>
-         * <ul>
-         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh-CN</strong>, the value   J is returned for the ZoneName parameter.</li>
-         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en-US</strong>, the value Hangzhou Zone J is returned for the ZoneName parameter.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Hangzhou Zone H</p>
-         */
         @NameInMap("ZoneName")
         public String zoneName;
 

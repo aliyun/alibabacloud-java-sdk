@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeErrorLogsResponseBody extends TeaModel {
-    /**
-     * <p>Details about the log entries returned.</p>
-     */
     @NameInMap("Items")
     public DescribeErrorLogsResponseBodyItems items;
 
@@ -92,24 +89,12 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeErrorLogsResponseBodyItemsErrorLog extends TeaModel {
-        /**
-         * <p>The time when the error log entry was generated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2011-05-30T12:11:04Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <p>The error log information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>spid52 DBCC TRACEON 3499, server process ID (SPID) 52. This is an informational message only; no user action is required</p>
-         */
         @NameInMap("ErrorInfo")
         public String errorInfo;
 

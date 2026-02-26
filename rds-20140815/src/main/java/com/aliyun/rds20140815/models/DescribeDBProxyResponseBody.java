@@ -4,15 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyResponseBody extends TeaModel {
-    /**
-     * <p>The list of zones that are available for the database proxy.</p>
-     */
     @NameInMap("DBProxyAVZones")
     public DescribeDBProxyResponseBodyDBProxyAVZones DBProxyAVZones;
 
-    /**
-     * <p>An array consisting of the information about the database proxy endpoint that is created for the instance.</p>
-     */
     @NameInMap("DBProxyConnectStringItems")
     public DescribeDBProxyResponseBodyDBProxyConnectStringItems DBProxyConnectStringItems;
 
@@ -116,9 +110,6 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyKindCode")
     public String DBProxyKindCode;
 
-    /**
-     * <p>The proxy nodes.</p>
-     */
     @NameInMap("DBProxyNodes")
     public DescribeDBProxyResponseBodyDBProxyNodes DBProxyNodes;
 
@@ -149,9 +140,6 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyServiceStatus")
     public String DBProxyServiceStatus;
 
-    /**
-     * <p>The proxy terminals of the instance.</p>
-     */
     @NameInMap("DbProxyEndpointItems")
     public DescribeDBProxyResponseBodyDbProxyEndpointItems dbProxyEndpointItems;
 
@@ -342,93 +330,30 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems extends TeaModel {
-        /**
-         * <p>The database proxy endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gos787jog2wk0ye1****-rw4rm.rwlb.rds.aliyuncs.com</p>
-         */
         @NameInMap("DBProxyConnectString")
         public String DBProxyConnectString;
 
-        /**
-         * <p>The network type of the database proxy endpoint. A database proxy endpoint is formerly referred to as a proxy terminal. Valid values:</p>
-         * <ul>
-         * <li>OuterString: Internet</li>
-         * <li>InnerString: internal network</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>InnerString</p>
-         */
         @NameInMap("DBProxyConnectStringNetType")
         public String DBProxyConnectStringNetType;
 
-        /**
-         * <p>The network type of the database proxy. Valid values:</p>
-         * <ul>
-         * <li>0: Internet</li>
-         * <li>1: classic network</li>
-         * <li>2: virtual private cloud (VPC)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("DBProxyConnectStringNetWorkType")
         public String DBProxyConnectStringNetWorkType;
 
-        /**
-         * <p>The port that is associated with the database proxy endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3306</p>
-         */
         @NameInMap("DBProxyConnectStringPort")
         public String DBProxyConnectStringPort;
 
-        /**
-         * <p>The ID of the backend database proxy endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20****</p>
-         */
         @NameInMap("DBProxyEndpointId")
         public String DBProxyEndpointId;
 
-        /**
-         * <p>The name of the database proxy endpoint. The name can be replaced by the ID of the database proxy endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gos787jog2wk0ye1****</p>
-         */
         @NameInMap("DBProxyEndpointName")
         public String DBProxyEndpointName;
 
-        /**
-         * <p>The VPC of the database proxy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-uf6oobt****</p>
-         */
         @NameInMap("DBProxyVpcId")
         public String DBProxyVpcId;
 
-        /**
-         * <p>The ID of the database proxy instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-bp145737x5<strong><strong>131161274792</strong></strong></p>
-         */
         @NameInMap("DBProxyVpcInstanceId")
         public String DBProxyVpcInstanceId;
 
-        /**
-         * <p>The vSwitch of the database proxy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-uf6l0pic17****</p>
-         */
         @NameInMap("DBProxyVswitchId")
         public String DBProxyVswitchId;
 
@@ -550,30 +475,16 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes extends TeaModel {
-        /**
-         * <p>The number of CPU cores of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("cpuCores")
         public String cpuCores;
 
         /**
-         * <p>The ID of the proxy node.</p>
-         * 
          * <strong>example:</strong>
          * <p>pn-xxxxxxx01</p>
          */
         @NameInMap("nodeId")
         public String nodeId;
 
-        /**
-         * <p>The ID of the zone in which the node is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-c</p>
-         */
         @NameInMap("zoneId")
         public String zoneId;
 
@@ -628,47 +539,15 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems extends TeaModel {
-        /**
-         * <p>The description of the database proxy endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>proxy-test</p>
-         */
         @NameInMap("DbProxyEndpointAliases")
         public String dbProxyEndpointAliases;
 
-        /**
-         * <p>The ID of the database proxy endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gos787jog2wk0ye1****</p>
-         */
         @NameInMap("DbProxyEndpointName")
         public String dbProxyEndpointName;
 
-        /**
-         * <p>The type of the database proxy endpoint. Valid values:</p>
-         * <ul>
-         * <li>Custom: custom database proxy endpoint</li>
-         * <li>RWSplit: default database proxy endpoint</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>RWSplit</p>
-         */
         @NameInMap("DbProxyEndpointType")
         public String dbProxyEndpointType;
 
-        /**
-         * <p>The read and write attributes of the database proxy endpoint.</p>
-         * <ul>
-         * <li>ReadOnly</li>
-         * <li>ReadWrite</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ReadWrite</p>
-         */
         @NameInMap("DbProxyReadWriteMode")
         public String dbProxyReadWriteMode;
 

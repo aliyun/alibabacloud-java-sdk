@@ -13,9 +13,6 @@ public class DescribeMetaListResponseBody extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    /**
-     * <p>The information about the databases and tables whose data is included in the backup set.</p>
-     */
     @NameInMap("Items")
     public DescribeMetaListResponseBodyItems items;
 
@@ -126,30 +123,12 @@ public class DescribeMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetaListResponseBodyItemsMeta extends TeaModel {
-        /**
-         * <p>The database name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testdb1</p>
-         */
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <p>The table size. Unit: KB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>64</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>The table name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test1</p>
-         */
         @NameInMap("Tables")
         public String tables;
 

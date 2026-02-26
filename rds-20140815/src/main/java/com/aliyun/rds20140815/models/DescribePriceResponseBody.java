@@ -31,9 +31,6 @@ public class DescribePriceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details of the promotion rule.</p>
-     */
     @NameInMap("Rules")
     public DescribePriceResponseBodyRules rules;
 
@@ -199,39 +196,15 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoCouponsCoupon extends TeaModel {
-        /**
-         * <p>The coupon ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("CouponNo")
         public String couponNo;
 
-        /**
-         * <p>The description of the coupon.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>Indicates whether the coupon is selected.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsSelected")
         public String isSelected;
 
-        /**
-         * <p>The coupon name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -319,9 +292,6 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("ActivityInfo")
         public DescribePriceResponseBodyPriceInfoActivityInfo activityInfo;
 
-        /**
-         * <p>The information about the coupon.</p>
-         */
         @NameInMap("Coupons")
         public DescribePriceResponseBodyPriceInfoCoupons coupons;
 
@@ -361,9 +331,6 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
-        /**
-         * <p>An array that consists of the ID of the promotion rule.</p>
-         */
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyPriceInfoRuleIds ruleIds;
 
@@ -482,30 +449,12 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyRulesRule extends TeaModel {
-        /**
-         * <p>The description of the promotion rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Activity Description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the promotion rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Rule1</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The ID of the promotion rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1020021003939076</p>
-         */
         @NameInMap("RuleId")
         public Long ruleId;
 

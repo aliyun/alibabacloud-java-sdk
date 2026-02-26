@@ -41,61 +41,21 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItemsAddressItem extends TeaModel {
-        /**
-         * <p>The endpoints of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm****.mysql.rds.aliyuncs.com</p>
-         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
-        /**
-         * <p>The IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.71.XX.XX</p>
-         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
-        /**
-         * <p>The type of the IP address. Valid values:</p>
-         * <ul>
-         * <li><strong>Public</strong>: Internet</li>
-         * <li><strong>Private</strong>: internal network</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Private</p>
-         */
         @NameInMap("IpType")
         public String ipType;
 
-        /**
-         * <p>The port number of the endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3306</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The vSwitch ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bp12u14ecz****</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>The VPC ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp17xdic25d****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -174,31 +134,12 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItemsNodeItem extends TeaModel {
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-u****</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>The node ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rn-****13p6tum4289h</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The weight of the node. Read requests are distributed based on the weight.</p>
-         * <p>Valid values: 0 to 100.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -253,46 +194,18 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpoint extends TeaModel {
-        /**
-         * <p>The information about the endpoint.</p>
-         */
         @NameInMap("AddressItems")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItems addressItems;
 
-        /**
-         * <p>The user-defined description of the endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>for readonly business</p>
-         */
         @NameInMap("EndpointDescription")
         public String endpointDescription;
 
-        /**
-         * <p>The endpoint ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ep-****</p>
-         */
         @NameInMap("EndpointId")
         public String endpointId;
 
-        /**
-         * <p>The type of the endpoint. Valid values:</p>
-         * <ul>
-         * <li><strong>Primary</strong>: the read/write endpoint of the instance</li>
-         * <li><strong>Readonly</strong>: the read-only endpoint of the instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Readonly</p>
-         */
         @NameInMap("EndpointType")
         public String endpointType;
 
-        /**
-         * <p>The information about the node that is configured for the endpoint.</p>
-         */
         @NameInMap("NodeItems")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItems nodeItems;
 
@@ -363,9 +276,6 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceEndpointsResponseBodyData extends TeaModel {
-        /**
-         * <p>The information of the endpoints of the instance.</p>
-         */
         @NameInMap("DBInstanceEndpoints")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpoints DBInstanceEndpoints;
 

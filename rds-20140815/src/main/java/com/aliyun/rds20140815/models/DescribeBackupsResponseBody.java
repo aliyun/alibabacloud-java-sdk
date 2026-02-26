@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
-    /**
-     * <p>The returned backup sets.</p>
-     */
     @NameInMap("Items")
     public DescribeBackupsResponseBodyItems items;
 
@@ -109,30 +106,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB extends TeaModel {
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dbs</p>
-         */
         @NameInMap("DataBase")
         public String dataBase;
 
-        /**
-         * <p>The public URL from which you can download the backup set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://cn-hangzhou.bak.rds.aliyuncs.com/custins53664665/hins18676859_2021072909473127987849.zip?Expires=*****&dbList=tb1">https://cn-hangzhou.bak.rds.aliyuncs.com/custins53664665/hins18676859_2021072909473127987849.zip?Expires=*****&amp;dbList=tb1</a></p>
-         */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
-        /**
-         * <p>The internal URL from which you can download the backup set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://cn-hangzhou-internal.bak.rds.aliyuncs.com/custins53664665/hins18676859_2021072909473127987849.zip?Expires=*****&dbList=tb1">https://cn-hangzhou-internal.bak.rds.aliyuncs.com/custins53664665/hins18676859_2021072909473127987849.zip?Expires=*****&amp;dbList=tb1</a></p>
-         */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
@@ -187,278 +166,78 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
-        /**
-         * <p>An array consisting of URLs from which you can download backup sets of individual databases.</p>
-         */
         @NameInMap("BackupDownloadLinkByDB")
         public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB backupDownloadLinkByDB;
 
-        /**
-         * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, null is returned.</p>
-         * <blockquote>
-         * <p> For example, if BackupMethod of an ApsaraDB RDS for SQL Server instance is set to <strong>Snapshot</strong>, a null string is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
-         */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
-        /**
-         * <p>The end time of the backup task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-13T12:20:00Z</p>
-         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
-        /**
-         * <p>The ID of the backup set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>321020562</p>
-         */
         @NameInMap("BackupId")
         public String backupId;
 
-        /**
-         * <p>The initiator of the backup task. Valid values:</p>
-         * <ul>
-         * <li><strong>System</strong></li>
-         * <li><strong>User</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>System</p>
-         */
         @NameInMap("BackupInitiator")
         public String backupInitiator;
 
-        /**
-         * <p>The URL that is used to download the backup set over an internal network. If the backup set cannot be downloaded, null is returned.</p>
-         * <blockquote>
-         * <p> For example, if BackupMethod of an ApsaraDB RDS for SQL Server instance is set to <strong>Snapshot</strong>, a null string is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxx</a></p>
-         */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
-        /**
-         * <p>The method that is used to generate the backup set. Valid values:</p>
-         * <ul>
-         * <li><strong>Logical</strong>: logical backup</li>
-         * <li><strong>Physical</strong>: physical backup</li>
-         * <li><strong>Snapshot</strong>: snapshot backup</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Physical</p>
-         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
-        /**
-         * <p>The backup mode of the backup set. Valid values:</p>
-         * <ul>
-         * <li><strong>Automated</strong></li>
-         * <li><strong>Manual</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Automated</p>
-         */
         @NameInMap("BackupMode")
         public String backupMode;
 
-        /**
-         * <p>The size of the data backup file. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2167808</p>
-         */
         @NameInMap("BackupSize")
         public Long backupSize;
 
-        /**
-         * <p>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-03T12:20:00Z</p>
-         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
-        /**
-         * <p>The state of the backup set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
-        /**
-         * <p>The backup type of the backup set. Valid values:</p>
-         * <ul>
-         * <li><strong>FullBackup</strong></li>
-         * <li><strong>IncrementalBackup</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FullBackup</p>
-         */
         @NameInMap("BackupType")
         public String backupType;
 
-        /**
-         * <p>The checksum. The value of this parameter is calculated by using the CRC64 algorithm.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1835830439**********</p>
-         */
         @NameInMap("Checksum")
         public String checksum;
 
-        /**
-         * <p>The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.</p>
-         * <blockquote>
-         * <p> If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1576506856</p>
-         */
         @NameInMap("ConsistentTime")
         public Long consistentTime;
 
-        /**
-         * <p>The backup mode of the backup set. Valid values:</p>
-         * <ul>
-         * <li>0: the standard mode. This mode supports full backups and incremental backups.</li>
-         * <li>1: the copy-only mode. This mode supports only full backups.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is returned only when the instance runs SQL Server.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("CopyOnlyBackup")
         public String copyOnlyBackup;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>The encryption information about the backup set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("Encryption")
         public String encryption;
 
-        /**
-         * <p>The type of the database engine. Valid values:</p>
-         * <ul>
-         * <li>MySQL</li>
-         * <li>SQLServer</li>
-         * <li>PostgreSQL</li>
-         * <li>MariaDB</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>MySQL</p>
-         */
         @NameInMap("Engine")
         public String engine;
 
-        /**
-         * <p>The version of the database engine.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8.0</p>
-         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         @NameInMap("ExpectExpireTime")
         public String expectExpireTime;
 
-        /**
-         * <p>The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5882781</p>
-         */
         @NameInMap("HostInstanceID")
         public String hostInstanceID;
 
-        /**
-         * <p>Indicates whether the backup set is available. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: The backup set is unavailable.</li>
-         * <li><strong>1</strong>: The backup set is available.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("IsAvail")
         public Integer isAvail;
 
-        /**
-         * <p>The status of the backup set that is used to restore individual databases or tables. Valid values:</p>
-         * <ul>
-         * <li><strong>OK</strong>: The data backup file is normal.</li>
-         * <li><strong>LARGE</strong>: The data backup file contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.</li>
-         * <li><strong>EMPTY</strong>: The data backup file is generated from a failed backup task.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If an empty string is returned, the data backup file cannot be used to restore individual databases or tables.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("MetaStatus")
         public String metaStatus;
 
-        /**
-         * <p>The storage class of the backup set. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: regular storage</li>
-         * <li><strong>1</strong>: archive storage</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("StorageClass")
         public String storageClass;
 
-        /**
-         * <p>Indicates whether the backup set can be deleted. Valid values:</p>
-         * <ul>
-         * <li><strong>Enabled</strong>: The backup set can be deleted.</li>
-         * <li><strong>Disabled</strong>: The backup set cannot be deleted.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Disabled</p>
-         */
         @NameInMap("StoreStatus")
         public String storeStatus;
 

@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventsResponseBody extends TeaModel {
-    /**
-     * <p>The events.</p>
-     */
     @NameInMap("EventItems")
     public DescribeEventsResponseBodyEventItems eventItems;
 
@@ -92,111 +89,39 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyEventItemsEventItems extends TeaModel {
-        /**
-         * <p>The ID of the user who executed the event.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>22973492**********</p>
-         */
         @NameInMap("CallerUid")
         public Long callerUid;
 
-        /**
-         * <p>The event ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11000053</p>
-         */
         @NameInMap("EventId")
         public Integer eventId;
 
-        /**
-         * <p>The event name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ModifySecurityIPList</p>
-         */
         @NameInMap("EventName")
         public String eventName;
 
-        /**
-         * <p>The request or context parameters of the event.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;Domain\&quot;: \&quot;rds-inc-share.aliyuncs.com\&quot;, \&quot;Api\&quot;: \&quot;ReleaseInstancePublicConnection\&quot;}</p>
-         */
         @NameInMap("EventPayload")
         public String eventPayload;
 
-        /**
-         * <p>The source of the event.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FROM_USER</p>
-         */
         @NameInMap("EventReason")
         public String eventReason;
 
-        /**
-         * <p>The time when the event was recorded. The time is slightly later than the time the event occurred.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-08-20T01:12:49Z</p>
-         */
         @NameInMap("EventRecordTime")
         public String eventRecordTime;
 
-        /**
-         * <p>The time when the event occurred.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-08-20T01:08:22Z</p>
-         */
         @NameInMap("EventTime")
         public String eventTime;
 
-        /**
-         * <p>The event type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NetworkManagement</p>
-         */
         @NameInMap("EventType")
         public String eventType;
 
-        /**
-         * <p>The type of the user who executed the event.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SYSTEM</p>
-         */
         @NameInMap("EventUserType")
         public String eventUserType;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the resource associated with the event. Only instance IDs are supported for this parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-bp1z3065m9976ix8a</p>
-         */
         @NameInMap("ResourceName")
         public String resourceName;
 
-        /**
-         * <p>The type of the resource associated with the event. Only instances are supported for this parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 

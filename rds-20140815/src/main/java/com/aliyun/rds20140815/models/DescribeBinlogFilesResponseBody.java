@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeBinlogFilesResponseBody extends TeaModel {
-    /**
-     * <p>The details of the log file.</p>
-     */
     @NameInMap("Items")
     public DescribeBinlogFilesResponseBodyItems items;
 
@@ -109,105 +106,33 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeBinlogFilesResponseBodyItemsBinLogFile extends TeaModel {
-        /**
-         * <p>The checksum. The value of this parameter is calculated by using the CRC64 algorithm.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18358304393468701857</p>
-         */
         @NameInMap("Checksum")
         public String checksum;
 
-        /**
-         * <p>The HTTP-based download URL of the log file. If the return value of this parameter is NULL, ApsaraDB RDS does not provide a download URL for the log file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://rdsxxxxx.oss.aliyuncs.com/xxxxxx">http://rdsxxxxx.oss.aliyuncs.com/xxxxxx</a></p>
-         */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
-        /**
-         * <p>The size of the log file.</p>
-         * <p>Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2269410</p>
-         */
         @NameInMap("FileSize")
         public Long fileSize;
 
-        /**
-         * <p>The ID of the instance to which the log file belongs. This parameter helps determine whether the log file is generated on the primary instance or the secondary instance.</p>
-         * <blockquote>
-         * <p> You can log on to the ApsaraDB RDS console and go to the instance details page. In the left-side navigation pane, click <strong>Service Availability</strong> to view the values of <strong>Primary Instance No.</strong> and <strong>Secondary Instance No.</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>5841973</p>
-         */
         @NameInMap("HostInstanceID")
         public String hostInstanceID;
 
-        /**
-         * <p>The URL that is used to download files over an internal network.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://rdslog-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxxx">http://rdslog-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxxx</a></p>
-         */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
-        /**
-         * <p>The expiration time of the URL.</p>
-         * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2013-06-09T18:00:00Z</p>
-         */
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
-        /**
-         * <p>The beginning of the time range to query.</p>
-         * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-09T17:45:21Z</p>
-         */
         @NameInMap("LogBeginTime")
         public String logBeginTime;
 
-        /**
-         * <p>The end of the time range to query.</p>
-         * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-15T13:10:28Z</p>
-         */
         @NameInMap("LogEndTime")
         public String logEndTime;
 
-        /**
-         * <p>The log file name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>000000040000000000000019</p>
-         */
         @NameInMap("LogFileName")
         public String logFileName;
 
-        /**
-         * <p>The status of the log file that is stored in the Object Storage Service (OSS) bucket.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><strong>Uploading</strong></li>
-         * <li><strong>Completed</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Completed</p>
-         */
         @NameInMap("RemoteStatus")
         public String remoteStatus;
 

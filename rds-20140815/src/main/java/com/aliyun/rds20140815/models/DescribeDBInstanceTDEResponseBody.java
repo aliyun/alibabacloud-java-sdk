@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTDEResponseBody extends TeaModel {
-    /**
-     * <p>The TDE status at the database level.</p>
-     * <blockquote>
-     * <p> If your instance runs SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.</p>
-     * </blockquote>
-     */
     @NameInMap("Databases")
     public DescribeDBInstanceTDEResponseBodyDatabases databases;
 
@@ -104,25 +98,9 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceTDEResponseBodyDatabasesDatabase extends TeaModel {
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test02</p>
-         */
         @NameInMap("DBName")
         public String DBName;
 
-        /**
-         * <p>The TDE status at the database level. Valid values:</p>
-         * <ul>
-         * <li><strong>Enabled</strong></li>
-         * <li><strong>Disabled</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Enabled</p>
-         */
         @NameInMap("TDEStatus")
         public String TDEStatus;
 

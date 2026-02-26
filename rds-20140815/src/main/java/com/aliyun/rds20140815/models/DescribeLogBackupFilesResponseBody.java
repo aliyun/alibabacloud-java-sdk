@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogBackupFilesResponseBody extends TeaModel {
-    /**
-     * <p>The details of log files.</p>
-     */
     @NameInMap("Items")
     public DescribeLogBackupFilesResponseBodyItems items;
 
@@ -109,57 +106,21 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeLogBackupFilesResponseBodyItemsBinLogFile extends TeaModel {
-        /**
-         * <p>The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
-         */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
-        /**
-         * <p>The size of the log file. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>788480</p>
-         */
         @NameInMap("FileSize")
         public Long fileSize;
 
-        /**
-         * <p>The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned. This URL is valid for one hour.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
-         */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
-        /**
-         * <p>The expiration time of the URL. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-03-01T15:04:13Z</p>
-         */
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
-        /**
-         * <p>The start time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-10-31T08:40Z</p>
-         */
         @NameInMap("LogBeginTime")
         public String logBeginTime;
 
-        /**
-         * <p>The end time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-10-31T08:40Z</p>
-         */
         @NameInMap("LogEndTime")
         public String logEndTime;
 

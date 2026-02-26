@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
-    /**
-     * <p>The tags that are added to the instance.</p>
-     */
     @NameInMap("Items")
     public DescribeTagsResponseBodyItems items;
 
@@ -60,27 +57,12 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyItemsTagInfos extends TeaModel {
-        /**
-         * <p>The IDs of the instances to which the tag is added.</p>
-         */
         @NameInMap("DBInstanceIds")
         public DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>key1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value1</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

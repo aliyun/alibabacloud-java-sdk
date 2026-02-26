@@ -13,9 +13,6 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>An array that consists of the modifications to the pg_hba.conf file.</p>
-     */
     @NameInMap("HbaLogItems")
     public DescribeModifyPGHbaConfigLogResponseBodyHbaLogItems hbaLogItems;
 
@@ -75,75 +72,27 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
     }
 
     public static class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemAfterHbaItemsHbaItem extends TeaModel {
-        /**
-         * <p>The IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.0.0.0/0</p>
-         */
         @NameInMap("Address")
         public String address;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>all</p>
-         */
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <p>The mask of the IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Mask")
         public String mask;
 
-        /**
-         * <p>The authentication method.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ldap</p>
-         */
         @NameInMap("Method")
         public String method;
 
-        /**
-         * <p>The value of this parameter was set based on the value of the Method parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Option")
         public String option;
 
-        /**
-         * <p>The priority.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PriorityId")
         public Integer priorityId;
 
-        /**
-         * <p>The connection type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>host</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The username of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ldapuser</p>
-         */
         @NameInMap("User")
         public String user;
 
@@ -238,75 +187,27 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
     }
 
     public static class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemBeforeHbaItemsHbaItem extends TeaModel {
-        /**
-         * <p>The IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.0.0.0/0</p>
-         */
         @NameInMap("Address")
         public String address;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>all</p>
-         */
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <p>The mask of the IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Mask")
         public String mask;
 
-        /**
-         * <p>The authentication method.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>md5</p>
-         */
         @NameInMap("Method")
         public String method;
 
-        /**
-         * <p>The value of this parameter varies based on the value of the Method parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Option")
         public String option;
 
-        /**
-         * <p>The priority.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PriorityId")
         public Integer priorityId;
 
-        /**
-         * <p>The connection type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>host</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The username of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>all</p>
-         */
         @NameInMap("User")
         public String user;
 
@@ -401,47 +302,18 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
     }
 
     public static class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItem extends TeaModel {
-        /**
-         * <p>The configurations of the pg_hba.conf file after modification.</p>
-         */
         @NameInMap("AfterHbaItems")
         public DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemAfterHbaItems afterHbaItems;
 
-        /**
-         * <p>The configurations of the pg_hba.conf file before modification.</p>
-         */
         @NameInMap("BeforeHbaItems")
         public DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemBeforeHbaItems beforeHbaItems;
 
-        /**
-         * <p>The status of the modification.</p>
-         * <ul>
-         * <li><strong>success</strong>: The modification is successful.</li>
-         * <li><strong>failed</strong>: The modification failed.</li>
-         * <li><strong>setting</strong>: The modification is being applied.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ModifyStatus")
         public String modifyStatus;
 
-        /**
-         * <p>The time when the pg_hba.conf file was modified. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-11-25T06:00:40Z</p>
-         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        /**
-         * <p>The reason why the modification failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("StatusReason")
         public String statusReason;
 

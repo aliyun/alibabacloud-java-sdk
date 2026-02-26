@@ -31,9 +31,6 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
-    /**
-     * <p>The log entries.</p>
-     */
     @NameInMap("Items")
     public DescribeModifyParameterLogResponseBodyItems items;
 
@@ -143,52 +140,18 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     }
 
     public static class DescribeModifyParameterLogResponseBodyItemsParameterChangeLog extends TeaModel {
-        /**
-         * <p>The time when the parameter was modified. This value is a UNIX timestamp. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1584076066000</p>
-         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        /**
-         * <p>The new value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("NewParameterValue")
         public String newParameterValue;
 
-        /**
-         * <p>The original value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("OldParameterValue")
         public String oldParameterValue;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>innodb_stats_sample_pages</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The status. Valid values:</p>
-         * <ul>
-         * <li><strong>Applied:</strong> The new value has taken effect.</li>
-         * <li><strong>Syncing:</strong> The new value is being applied and has not taken effect.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Syncing</p>
-         */
         @NameInMap("Status")
         public String status;
 

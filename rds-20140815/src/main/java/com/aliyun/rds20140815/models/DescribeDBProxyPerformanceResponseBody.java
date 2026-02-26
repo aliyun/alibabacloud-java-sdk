@@ -31,9 +31,6 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The performance list.</p>
-     */
     @NameInMap("PerformanceKeys")
     public DescribeDBProxyPerformanceResponseBodyPerformanceKeys performanceKeys;
 
@@ -109,21 +106,9 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue extends TeaModel {
-        /**
-         * <p>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-10-10T09:00:00Z</p>
-         */
         @NameInMap("Date")
         public String date;
 
-        /**
-         * <p>The value of the performance metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2.83</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -170,12 +155,6 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
-        /**
-         * <p>The performance parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cpu_ratio</p>
-         */
         @NameInMap("Key")
         public String key;
 
@@ -185,27 +164,12 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         @NameInMap("Server")
         public String server;
 
-        /**
-         * <p>The service dimension.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>reserve_3</p>
-         */
         @NameInMap("Service")
         public String service;
 
-        /**
-         * <p>The format in which the value of the performance metric is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>docker_container_cpu</p>
-         */
         @NameInMap("ValueFormat")
         public String valueFormat;
 
-        /**
-         * <p>The performance metrics.</p>
-         */
         @NameInMap("Values")
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValues values;
 

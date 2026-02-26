@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the details about the IP address whitelists.</p>
-     */
     @NameInMap("Items")
     public DescribeDBInstanceIPArrayListResponseBodyItems items;
 
@@ -41,42 +38,15 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray extends TeaModel {
-        /**
-         * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
-         * <blockquote>
-         * <p> A whitelist with the hidden attribute does not appear in the console. Such IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>hidden</p>
-         */
         @NameInMap("DBInstanceIPArrayAttribute")
         public String DBInstanceIPArrayAttribute;
 
-        /**
-         * <p>The name of the IP address whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds_default</p>
-         */
         @NameInMap("DBInstanceIPArrayName")
         public String DBInstanceIPArrayName;
 
-        /**
-         * <p>The IP addresses in the IP address whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.0/24</p>
-         */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
-        /**
-         * <p>The type of the IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("SecurityIPType")
         public String securityIPType;
 

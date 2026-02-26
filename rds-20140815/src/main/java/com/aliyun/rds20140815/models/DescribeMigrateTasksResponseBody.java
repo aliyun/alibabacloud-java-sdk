@@ -13,9 +13,6 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The details of the migration task.</p>
-     */
     @NameInMap("Items")
     public DescribeMigrateTasksResponseBodyItems items;
 
@@ -109,86 +106,27 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeMigrateTasksResponseBodyItemsMigrateTask extends TeaModel {
-        /**
-         * <p>The migration task type. Valid values:</p>
-         * <ul>
-         * <li><strong>FULL</strong>: The migration task migrates full backup files that can be used to restore the full data of the instance.</li>
-         * <li><strong>UPDF</strong>: The migration task migrates incremental or log backup files that can be used to restore the incremental data of the instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FULL</p>
-         */
         @NameInMap("BackupMode")
         public String backupMode;
 
-        /**
-         * <p>The time when the migration task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-05-30T12:11:04Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The database name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testDB</p>
-         */
         @NameInMap("DBName")
         public String DBName;
 
-        /**
-         * <p>The description of the migration task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Api description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The time when the migration task was completed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-05-30T13:11:04Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>Indicates whether the imported data overwrites the existing data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("IsDBReplaced")
         public String isDBReplaced;
 
-        /**
-         * <p>The migration task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>564522545</p>
-         */
         @NameInMap("MigrateTaskId")
         public String migrateTaskId;
 
-        /**
-         * <p>The status of the migration task. Valid values:</p>
-         * <ul>
-         * <li><strong>NoStart</strong>: The task is not started.</li>
-         * <li><strong>Running</strong>:The task is in progress.</li>
-         * <li><strong>Success</strong>: The task is successful.</li>
-         * <li><strong>Failed</strong>: The task failed.</li>
-         * <li><strong>Waiting</strong>: The task is waiting for an incremental backup file to be imported.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("Status")
         public String status;
 

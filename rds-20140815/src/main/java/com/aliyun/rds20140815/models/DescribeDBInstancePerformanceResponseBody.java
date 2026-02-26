@@ -31,9 +31,6 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
-    /**
-     * <p>Details of the performance metrics.</p>
-     */
     @NameInMap("PerformanceKeys")
     public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
 
@@ -109,21 +106,9 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue extends TeaModel {
-        /**
-         * <p>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2011-05-30T03:29:00Z</p>
-         */
         @NameInMap("Date")
         public String date;
 
-        /**
-         * <p>The value of the performance metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.0&amp;13.6</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -170,39 +155,15 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
-        /**
-         * <p>The name of the performance metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MySQL_Sessions</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The unit of the performance metrics.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>KB</p>
-         */
         @NameInMap("Unit")
         public String unit;
 
-        /**
-         * <p>The format in which the value of the performance metric is returned.</p>
-         * <blockquote>
-         * <p> If a performance metric value consists of multiple fields, the values are separated with ampersands (&amp;). Example: com_delete\&amp;com_insert\&amp;com_insert_select\&amp;com_replace.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>recv_k&amp;sent_k</p>
-         */
         @NameInMap("ValueFormat")
         public String valueFormat;
 
-        /**
-         * <p>The performance metric values.</p>
-         */
         @NameInMap("Values")
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValues values;
 

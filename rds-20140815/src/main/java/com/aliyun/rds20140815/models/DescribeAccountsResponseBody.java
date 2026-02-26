@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the account.</p>
-     */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
@@ -136,37 +133,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivilegesDatabasePrivilege extends TeaModel {
-        /**
-         * <p>The type of the permissions. Valid values:</p>
-         * <ul>
-         * <li><strong>ReadWrite</strong>: read and write permissions.</li>
-         * <li><strong>ReadOnly</strong>: read-only permissions.</li>
-         * <li><strong>DDLOnly</strong>: DDL-only permissions.</li>
-         * <li><strong>DMLOnly</strong>: DML-only permissions.</li>
-         * <li><strong>Custom</strong>: custom permissions. You can modify the permissions of the account by using SQL commands.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ReadWrite</p>
-         */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
-        /**
-         * <p>The permissions that are granted to the account. For more information, see <a href="https://help.aliyun.com/document_detail/146395.html">Account permissions</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SELECT,INSERT</p>
-         */
         @NameInMap("AccountPrivilegeDetail")
         public String accountPrivilegeDetail;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test1</p>
-         */
         @NameInMap("DBName")
         public String DBName;
 
@@ -221,181 +193,45 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsDBInstanceAccount extends TeaModel {
-        /**
-         * <p>The description of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test account</p>
-         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
-        /**
-         * <p>The name of the database account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test1</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The status of the account. Valid values:</p>
-         * <ul>
-         * <li><strong>Unavailable</strong></li>
-         * <li><strong>Available</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
-        /**
-         * <p>The type of the account. Valid values:</p>
-         * <ul>
-         * <li><strong>Normal</strong>: standard account</li>
-         * <li><strong>Super</strong>: privileged account</li>
-         * <li><strong>Sysadmin</strong>: system admin account, which is supported only for instances running SQL Server</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("AccountType")
         public String accountType;
 
-        /**
-         * <p>Indicates whether the account has the row-level security (RLS) permissions. Valid values:</p>
-         * <ul>
-         * <li><strong>t</strong>: The account has the RLS permissions.</li>
-         * <li><strong>f</strong>: The account does not have the RLS permissions.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>f</p>
-         */
         @NameInMap("BypassRLS")
         public String bypassRLS;
 
-        /**
-         * <p>Indicates whether the password policy is applied.</p>
-         * <blockquote>
-         * <p> This parameter is returned only for instances that run SQL Server.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("CheckPolicy")
         public Boolean checkPolicy;
 
-        /**
-         * <p>Indicates whether the account has the permissions to create databases. Valid values:</p>
-         * <ul>
-         * <li><strong>t</strong>: The account has the permissions to create databases.</li>
-         * <li><strong>f</strong>: The account does not have the permissions to create databases.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>t</p>
-         */
         @NameInMap("CreateDB")
         public String createDB;
 
-        /**
-         * <p>Indicates whether the account has the permissions to create roles. Valid values:</p>
-         * <ul>
-         * <li><strong>t</strong>: The account has the permissions to create roles.</li>
-         * <li><strong>f</strong>: The account does not have the permissions to create roles.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>t</p>
-         */
         @NameInMap("CreateRole")
         public String createRole;
 
-        /**
-         * <p>The ID of the instance to which the account belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-uf6wjk5*****</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>The details about the permissions that are granted to the account.</p>
-         */
         @NameInMap("DatabasePrivileges")
         public DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivileges databasePrivileges;
 
-        /**
-         * <p>The expiration time of the password.</p>
-         * <blockquote>
-         * <p> This parameter is returned only for instances that run SQL Server.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-10-21</p>
-         */
         @NameInMap("PasswordExpireTime")
         public String passwordExpireTime;
 
-        /**
-         * <p>Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: The number of databases that are managed by the account exceeds the upper limit.</li>
-         * <li><strong>0</strong>: The number of databases that are managed by the account does not exceed the upper limit.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PrivExceeded")
         public String privExceeded;
 
-        /**
-         * <p>Indicates whether the account has the replication permissions. Valid values:</p>
-         * <ul>
-         * <li><strong>t</strong>: The account has the replication permissions.</li>
-         * <li><strong>f</strong>: The account does not have the replication permissions.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>t</p>
-         */
         @NameInMap("Replication")
         public String replication;
 
-        /**
-         * <p>The expiration time of the password. Valid values:</p>
-         * <ul>
-         * <li><strong>infinity</strong>: The password never expires.</li>
-         * <li><strong>Empty</strong>: The expiration time is not specified.</li>
-         * <li><strong>Actual expiration time</strong>: in the format of <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z in UTC. Example: 2022-10-01T00:00:00Z.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-10-01T00:00:00Z</p>
-         */
         @NameInMap("ValidUntil")
         public String validUntil;
 

@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionInfosResponseBody extends TeaModel {
-    /**
-     * <p>A list of regions.</p>
-     */
     @NameInMap("Regions")
     public DescribeRegionInfosResponseBodyRegions regions;
 
@@ -41,12 +38,6 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionInfosResponseBodyRegionsRDSRegion extends TeaModel {
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

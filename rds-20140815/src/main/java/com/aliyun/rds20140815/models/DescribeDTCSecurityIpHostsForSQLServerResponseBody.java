@@ -22,9 +22,6 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
     @NameInMap("IpHostPairNum")
     public String ipHostPairNum;
 
-    /**
-     * <p>Details of distributed transaction whitelists.</p>
-     */
     @NameInMap("Items")
     public DescribeDTCSecurityIpHostsForSQLServerResponseBodyItems items;
 
@@ -75,21 +72,9 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
     }
 
     public static class DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups extends TeaModel {
-        /**
-         * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: <code>IP address,Hostname</code>. Multiple values are separated with semicolons (;).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.100,k3ecstest</p>
-         */
         @NameInMap("SecurityIpHosts")
         public String securityIpHosts;
 
-        /**
-         * <p>The name of the distributed transaction whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test1</p>
-         */
         @NameInMap("WhitelistGroupName")
         public String whitelistGroupName;
 

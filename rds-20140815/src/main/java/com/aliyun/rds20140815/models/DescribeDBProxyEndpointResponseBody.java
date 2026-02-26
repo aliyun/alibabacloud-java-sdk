@@ -91,9 +91,6 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DBProxyFeatures")
     public String DBProxyFeatures;
 
-    /**
-     * <p>The proxy nodes that are associated with the proxy terminal.</p>
-     */
     @NameInMap("DBProxyNodes")
     public DescribeDBProxyEndpointResponseBodyDBProxyNodes DBProxyNodes;
 
@@ -146,9 +143,6 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DbProxyEndpointZoneId")
     public String dbProxyEndpointZoneId;
 
-    /**
-     * <p>An array that consists of the information about the proxy endpoint.</p>
-     */
     @NameInMap("EndpointConnectItems")
     public DescribeDBProxyEndpointResponseBodyEndpointConnectItems endpointConnectItems;
 
@@ -357,30 +351,12 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes extends TeaModel {
-        /**
-         * <p>The number of CPU cores of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("cpuCores")
         public String cpuCores;
 
-        /**
-         * <p>The ID of the node in the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pn-xxxxxxx01</p>
-         */
         @NameInMap("nodeId")
         public String nodeId;
 
-        /**
-         * <p>The zone ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-c</p>
-         */
         @NameInMap("zoneId")
         public String zoneId;
 
@@ -435,35 +411,12 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems extends TeaModel {
-        /**
-         * <p>The proxy endpoint queried.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testproxy****.rwlb.rds.aliyuncs.com</p>
-         */
         @NameInMap("DbProxyEndpointConnectString")
         public String dbProxyEndpointConnectString;
 
-        /**
-         * <p>The network type of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: Internet</li>
-         * <li><strong>1</strong>: classic network</li>
-         * <li><strong>2</strong>: virtual private cloud (VPC)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("DbProxyEndpointNetType")
         public String dbProxyEndpointNetType;
 
-        /**
-         * <p>The port number that is associated with the proxy endpoint. Default value: <strong>3306</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3306</p>
-         */
         @NameInMap("DbProxyEndpointPort")
         public String dbProxyEndpointPort;
 

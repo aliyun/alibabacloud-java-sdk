@@ -49,9 +49,6 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
-    /**
-     * <p>The details of the data disk.</p>
-     */
     @NameInMap("DataDisks")
     public DescribeRCInstanceAttributeResponseBodyDataDisks dataDisks;
 
@@ -171,9 +168,6 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
-    /**
-     * <p>The private IP addresses of the instance in the classic network.</p>
-     */
     @NameInMap("InnerIpAddress")
     public DescribeRCInstanceAttributeResponseBodyInnerIpAddress innerIpAddress;
 
@@ -288,15 +282,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("NodeType")
     public String nodeType;
 
-    /**
-     * <p>The reasons why the instance is locked.</p>
-     */
     @NameInMap("OperationLocks")
     public DescribeRCInstanceAttributeResponseBodyOperationLocks operationLocks;
 
-    /**
-     * <p>The public IP address of the instance.</p>
-     */
     @NameInMap("PublicIpAddress")
     public DescribeRCInstanceAttributeResponseBodyPublicIpAddress publicIpAddress;
 
@@ -321,9 +309,6 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The security groups.</p>
-     */
     @NameInMap("SecurityGroupIds")
     public DescribeRCInstanceAttributeResponseBodySecurityGroupIds securityGroupIds;
 
@@ -822,25 +807,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceAttributeResponseBodyDataDisksDataDisk extends TeaModel {
-        /**
-         * <p>The category of the data disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_essd</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>Indicates whether the data disk is released when the instance is released. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The data disk is released when the instance is released.</li>
-         * <li><strong>false</strong>: The data disk is reserved when the instance is released.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
@@ -851,34 +820,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Device")
         public String device;
 
-        /**
-         * <p>Indicates whether the data disk is encrypted. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Encrypted")
         public String encrypted;
 
-        /**
-         * <p>The performance level of data disk. This parameter is available when the data disk is an Enterprise SSD (ESSD).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PL1</p>
-         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
-        /**
-         * <p>The size of the data disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("Size")
         public Long size;
 
@@ -1116,19 +1063,6 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceAttributeResponseBodyOperationLocksLockReason extends TeaModel {
-        /**
-         * <p>The reason why the instance is locked. Valid values:</p>
-         * <ul>
-         * <li><strong>financial</strong>: The instance is locked due to overdue payments.</li>
-         * <li><strong>security</strong>: The instance is locked for security purposes.</li>
-         * <li><strong>recycling</strong>: The instance is locked because the instance is a preemptible instance and pending to be released.</li>
-         * <li><strong>dedicatedhostfinancial</strong>: The instance is locked due to overdue payments for the dedicated host.</li>
-         * <li><strong>refunded</strong>: The instance is locked because a refund was made for the instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>None</p>
-         */
         @NameInMap("LockReason")
         public String lockReason;
 
@@ -1367,9 +1301,6 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("NatIpAddress")
         public String natIpAddress;
 
-        /**
-         * <p>The private IP addresses of the instance.</p>
-         */
         @NameInMap("PrivateIpAddress")
         public DescribeRCInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress privateIpAddress;
 

@@ -29,9 +29,6 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     @NameInMap("HAMode")
     public String HAMode;
 
-    /**
-     * <p>An array that consists of the information of the primary and secondary instances.</p>
-     */
     @NameInMap("HostInstanceInfos")
     public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfos hostInstanceInfos;
 
@@ -107,76 +104,24 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo extends TeaModel {
-        /**
-         * <p>The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-05-05T15:15:00Z</p>
-         */
         @NameInMap("DataSyncTime")
         public String dataSyncTime;
 
-        /**
-         * <p>The time when the secondary instance received logs from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-05-05T15:15:00Z</p>
-         */
         @NameInMap("LogSyncTime")
         public String logSyncTime;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3397027</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The type of the node. Valid values:</p>
-         * <ul>
-         * <li><strong>Master</strong>: the primary node</li>
-         * <li><strong>Slave</strong>: the secondary node</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Master</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        /**
-         * <p>The region ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The synchronization status. Valid values:</p>
-         * <ul>
-         * <li><strong>NotAvailable</strong>: The synchronization fails. This means that faults occur.</li>
-         * <li><strong>Syncing</strong>: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.</li>
-         * <li><strong>Synchronized</strong>: The synchronization is completed.</li>
-         * <li><strong>NotSupport</strong>: The database engine or database engine version does not involve the synchronization between the primary and secondary instances.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>NotAvailable</p>
-         */
         @NameInMap("SyncStatus")
         public String syncStatus;
 
-        /**
-         * <p>The ID of the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-b</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

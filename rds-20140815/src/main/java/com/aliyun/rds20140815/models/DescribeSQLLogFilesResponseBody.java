@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogFilesResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the returned audit log files.</p>
-     */
     @NameInMap("Items")
     public DescribeSQLLogFilesResponseBodyItems items;
 
@@ -92,62 +89,21 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogFilesResponseBodyItemsLogFile extends TeaModel {
-        /**
-         * <p>The file name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>custinsxxxxx.csv</p>
-         */
         @NameInMap("FileID")
         public String fileID;
 
-        /**
-         * <p>The download URL of the file. If the audit log file cannot be downloaded, this parameter is null.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
-         */
         @NameInMap("LogDownloadURL")
         public String logDownloadURL;
 
-        /**
-         * <p>The time at which the last SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-05-24T07:00:00Z</p>
-         */
         @NameInMap("LogEndTime")
         public String logEndTime;
 
-        /**
-         * <p>The size of the audit log file. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3000</p>
-         */
         @NameInMap("LogSize")
         public String logSize;
 
-        /**
-         * <p>The time at which the first SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-05-23T07:00:00Z</p>
-         */
         @NameInMap("LogStartTime")
         public String logStartTime;
 
-        /**
-         * <p>The status of the audit log file. Valid values:</p>
-         * <ul>
-         * <li><strong>Success</strong></li>
-         * <li><strong>Failed</strong></li>
-         * <li><strong>Generating</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("LogStatus")
         public String logStatus;
 

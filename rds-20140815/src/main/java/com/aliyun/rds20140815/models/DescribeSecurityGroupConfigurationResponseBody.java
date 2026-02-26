@@ -13,9 +13,6 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    /**
-     * <p>The information about the ECS security group.</p>
-     */
     @NameInMap("Items")
     public DescribeSecurityGroupConfigurationResponseBodyItems items;
 
@@ -58,43 +55,15 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation extends TeaModel {
-        /**
-         * <p>The network type of the ECS security group. Valid values:</p>
-         * <ul>
-         * <li><strong>Classic</strong></li>
-         * <li><strong>VPC</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the ECS security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-xxxxxxx</p>
-         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        /**
-         * <p>The security group name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>security-group-emraccess</p>
-         */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
 

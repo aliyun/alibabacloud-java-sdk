@@ -36,34 +36,18 @@ public class DescribeSQLServerUpgradeVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLServerUpgradeVersionsResponseBodyItemsItemSQLServerUpgradeVersionsSQLServerUpgradeVersionDBInstanceClassItemsDBInstanceClassItem extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("CPU")
         public String CPU;
 
-        /**
-         * <strong>example:</strong>
-         * <p>mssql.x4.medium.s2</p>
-         */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
         @NameInMap("DBInstanceClassType")
         public String DBInstanceClassType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Group")
         public String group;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8GB</p>
-         */
         @NameInMap("Memory")
         public String memory;
 
@@ -137,17 +121,9 @@ public class DescribeSQLServerUpgradeVersionsResponseBody extends TeaModel {
         @NameInMap("DBInstanceClassItems")
         public DescribeSQLServerUpgradeVersionsResponseBodyItemsItemSQLServerUpgradeVersionsSQLServerUpgradeVersionDBInstanceClassItems DBInstanceClassItems;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NO/YES</p>
-         */
         @NameInMap("EnableUpgrade")
         public String enableUpgrade;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2016_std</p>
-         */
         @NameInMap("Version")
         public String version;
 
@@ -202,10 +178,6 @@ public class DescribeSQLServerUpgradeVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLServerUpgradeVersionsResponseBodyItemsItem extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2016_web</p>
-         */
         @NameInMap("CurrentVersion")
         public String currentVersion;
 

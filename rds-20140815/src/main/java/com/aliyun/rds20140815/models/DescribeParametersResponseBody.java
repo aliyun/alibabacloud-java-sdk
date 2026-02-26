@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
-    /**
-     * <p>The list of parameters that are being synchronized.</p>
-     * <blockquote>
-     * <p>After you modify and submit the parameters, you must wait for the parameters to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.</p>
-     * </blockquote>
-     */
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
@@ -46,9 +40,6 @@ public class DescribeParametersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The parameters that are in use.</p>
-     */
     @NameInMap("RunningParameters")
     public DescribeParametersResponseBodyRunningParameters runningParameters;
 
@@ -106,30 +97,12 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyConfigParametersDBInstanceParameter extends TeaModel {
-        /**
-         * <p>The description of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This parameter sets the default fill factor value at the server scope. A fill factor is provided to optimize index data storage and performance.</p>
-         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fill factor</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -260,48 +233,18 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyRunningParametersDBInstanceParameter extends TeaModel {
-        /**
-         * <p>The default value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("ParameterDefaultValue")
         public String parameterDefaultValue;
 
-        /**
-         * <p>The description of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This parameter sets the default fill factor value at the server scope. A fill factor is provided to optimize index data storage and performance.</p>
-         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fill factor</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
-        /**
-         * <p>The valid values of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1~100</p>
-         */
         @NameInMap("ParameterValueRange")
         public String parameterValueRange;
 

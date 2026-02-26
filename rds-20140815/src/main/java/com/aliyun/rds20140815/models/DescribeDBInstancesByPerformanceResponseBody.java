@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
-    /**
-     * <p>The details about the instance.</p>
-     */
     @NameInMap("Items")
     public DescribeDBInstancesByPerformanceResponseBodyItems items;
 
@@ -92,57 +89,21 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance extends TeaModel {
-        /**
-         * <p>The CPU utilization of the instance in percentage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.70</p>
-         */
         @NameInMap("CPUUsage")
         public String CPUUsage;
 
-        /**
-         * <p>The name of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DatabaseTest</p>
-         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxx</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>The disk usage of the instance in percentage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>14.56</p>
-         */
         @NameInMap("DiskUsage")
         public String diskUsage;
 
-        /**
-         * <p>The IOPS usage of the instance in percentage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.15</p>
-         */
         @NameInMap("IOPSUsage")
         public String IOPSUsage;
 
-        /**
-         * <p>The number of sessions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.10</p>
-         */
         @NameInMap("SessionUsage")
         public String sessionUsage;
 

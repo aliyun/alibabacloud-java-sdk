@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharacterSetNameResponseBody extends TeaModel {
-    /**
-     * <p>The character sets that are supported.</p>
-     */
     @NameInMap("CharacterSetNameItems")
     public DescribeCharacterSetNameResponseBodyCharacterSetNameItems characterSetNameItems;
 

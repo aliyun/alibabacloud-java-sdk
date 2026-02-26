@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CalculateDBInstanceWeightResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of information about the system-assigned read weight.</p>
-     */
     @NameInMap("Items")
     public CalculateDBInstanceWeightResponseBodyItems items;
 
@@ -41,43 +38,15 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
     }
 
     public static class CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight extends TeaModel {
-        /**
-         * <p>The instance ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>The type of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>Master</strong>: primary instance</li>
-         * <li><strong>Readonly</strong>: read-only instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Master</p>
-         */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
-        /**
-         * <p>The latency at which the read-only instances replicate data. The read-only instances replicate data from the primary instance at the latency that is specified by the <strong>ReadonlyInstanceSQLDelayedTime</strong> parameter. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("ReadonlyInstanceSQLDelayedTime")
         public String readonlyInstanceSQLDelayedTime;
 
-        /**
-         * <p>The read weight that the system calculates in real time for the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public String weight;
 

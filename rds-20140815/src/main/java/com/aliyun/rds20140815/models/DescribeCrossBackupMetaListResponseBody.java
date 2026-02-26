@@ -13,9 +13,6 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    /**
-     * <p>An array that consists of the information about the databases and tables whose data is included in the cross-region backup file.</p>
-     */
     @NameInMap("Items")
     public DescribeCrossBackupMetaListResponseBodyItems items;
 
@@ -126,30 +123,12 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeCrossBackupMetaListResponseBodyItemsMeta extends TeaModel {
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testdb1</p>
-         */
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <p>The size of the table. Unit: KB. If the database contains more than one table, the names of these tables are separated by commas (,).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>An array that consists of the names of the tables that the database contains. If the database contains more than one table, the names of these tables are separated by commas (,).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test1,test2</p>
-         */
         @NameInMap("Tables")
         public String tables;
 

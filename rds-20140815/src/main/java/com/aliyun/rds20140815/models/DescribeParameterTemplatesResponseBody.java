@@ -31,9 +31,6 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     @NameInMap("ParameterCount")
     public String parameterCount;
 
-    /**
-     * <p>The details of the parameters.</p>
-     */
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
@@ -92,65 +89,21 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
-        /**
-         * <p>The valid values of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[0-1024]</p>
-         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
-        /**
-         * <p>Indicates whether the parameter can be modified. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ForceModify")
         public String forceModify;
 
-        /**
-         * <p>Indicates whether you must restart the instance for the modifications to take effect. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
-        /**
-         * <p>The description of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Page numbers of multi blocks reading once in some ddl query.</p>
-         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>loose_multi_blocks_ddl_count</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The default value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

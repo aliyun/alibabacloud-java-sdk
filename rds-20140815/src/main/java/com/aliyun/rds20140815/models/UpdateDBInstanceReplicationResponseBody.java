@@ -3,9 +3,9 @@ package com.aliyun.rds20140815.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDBInstanceDescriptionResponseBody extends TeaModel {
+public class UpdateDBInstanceReplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>17F57FEE-EA4F-4337-8D2E-9C23CAA63D74</p>
@@ -13,12 +13,12 @@ public class ModifyDBInstanceDescriptionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyDBInstanceDescriptionResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDBInstanceDescriptionResponseBody self = new ModifyDBInstanceDescriptionResponseBody();
+    public static UpdateDBInstanceReplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateDBInstanceReplicationResponseBody self = new UpdateDBInstanceReplicationResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBInstanceDescriptionResponseBody setRequestId(String requestId) {
+    public UpdateDBInstanceReplicationResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

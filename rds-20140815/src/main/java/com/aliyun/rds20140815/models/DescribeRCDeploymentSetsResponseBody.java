@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
-    /**
-     * <p>The details of the deployment set.</p>
-     */
     @NameInMap("DeploymentSets")
     public DescribeRCDeploymentSetsResponseBodyDeploymentSets deploymentSets;
 
@@ -109,30 +106,12 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacitiesCapacity extends TeaModel {
-        /**
-         * <p>The number of RDS Custom instances that reside in the zone and can be added to the deployment set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18</p>
-         */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
-        /**
-         * <p>The number of RDS Custom instances that reside in the zone in the deployment set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
-        /**
-         * <p>The zone ID. Only the IDs of the zones to which the existing RDS Custom instances in the deployment set belong are returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-j</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -277,108 +256,39 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet extends TeaModel {
-        /**
-         * <p>The details of the capacities of the deployment set. This parameter is valid only when the deployment set contains existing RDS Custom instances. The value contains the details of the capacities of the deployment set in different zones.</p>
-         */
         @NameInMap("Capacities")
         public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities capacities;
 
-        /**
-         * <p>The time when the deployment set was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-06-19T07:15:44Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The deployment set description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DeploymentSetDescription")
         public String deploymentSetDescription;
 
-        /**
-         * <p>The deployment set ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ds-ob5n4rbgy****</p>
-         */
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 
-        /**
-         * <p>The deployment set name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>deployment_test</p>
-         */
         @NameInMap("DeploymentSetName")
         public String deploymentSetName;
 
-        /**
-         * <p>The deployment strategy. The return value of this parameter is the value of the <code>Strategy</code> request parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Availability</p>
-         */
         @NameInMap("DeploymentStrategy")
         public String deploymentStrategy;
 
-        /**
-         * <p>The deployment domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The deployment granularity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>None</p>
-         */
         @NameInMap("Granularity")
         public String granularity;
 
-        /**
-         * <p>The number of groups in the deployment set.</p>
-         * <blockquote>
-         * <p> This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
-        /**
-         * <p>The number of RDS Custom instances in the deployment set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
-        /**
-         * <p>The ID of the RDS Custom instance in the deployment set.</p>
-         */
         @NameInMap("InstanceIds")
         public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds instanceIds;
 
-        /**
-         * <p>The deployment strategy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>LooseDispersion</p>
-         */
         @NameInMap("Strategy")
         public String strategy;
 

@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
-    /**
-     * <p>The information about the instance connection.</p>
-     */
     @NameInMap("DBInstanceNetInfos")
     public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfos DBInstanceNetInfos;
 
@@ -62,47 +59,15 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight extends TeaModel {
-        /**
-         * <p>The availability of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>Unavailable</strong></li>
-         * <li><strong>Available</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Unavailable</p>
-         */
         @NameInMap("Availability")
         public String availability;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-uf6wjk5*****</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>The instance type. Valid values:</p>
-         * <ul>
-         * <li><strong>Master</strong>: primary instance</li>
-         * <li><strong>Readonly</strong>: read-only instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Master</p>
-         */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
-        /**
-         * <p>The weight of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public String weight;
 
@@ -165,21 +130,9 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup extends TeaModel {
-        /**
-         * <p>The name of the IP address whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Default</p>
-         */
         @NameInMap("SecurityIPGroupName")
         public String securityIPGroupName;
 
-        /**
-         * <p>The IP addresses that is contained in the IP address whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127.0.XX.XX</p>
-         */
         @NameInMap("SecurityIPs")
         public String securityIPs;
 
@@ -226,143 +179,45 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfo extends TeaModel {
-        /**
-         * <p>The availability of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>Unavailable</strong></li>
-         * <li><strong>Available</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Unavailable</p>
-         */
         @NameInMap("Availability")
         public String availability;
 
-        /**
-         * <p>The endpoint of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-uf6w*****.mysql.rds.aliyuncs.com</p>
-         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
-        /**
-         * <p>The type of the endpoint. Valid values:</p>
-         * <ul>
-         * <li><strong>Normal</strong>: a regular endpoint</li>
-         * <li><strong>ReadWriteSplitting</strong>: a read/write splitting endpoint that is assigned after the shared proxy feature is enabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("ConnectionStringType")
         public String connectionStringType;
 
-        /**
-         * <p>The information about read weights to implement read/write splitting after the shared proxy feature is enabled.</p>
-         */
         @NameInMap("DBInstanceWeights")
         public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights DBInstanceWeights;
 
-        /**
-         * <p>The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint that is assigned after the shared proxy feature is enabled. Valid values:</p>
-         * <ul>
-         * <li><strong>Standard</strong>: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</li>
-         * <li><strong>Custom</strong>: You must manually allocate read weights to the instance and its read-only instances.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Standard</p>
-         */
         @NameInMap("DistributionType")
         public String distributionType;
 
-        /**
-         * <p>The IP address of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>172.16.XX.XX</p>
-         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
-        /**
-         * <p>The network type of the IP address. Valid values:</p>
-         * <ul>
-         * <li><strong>Public</strong>: the Internet</li>
-         * <li><strong>Inner</strong>: the classic network</li>
-         * <li><strong>Private</strong>: a virtual private cloud (VPC)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Inner</p>
-         */
         @NameInMap("IPType")
         public String IPType;
 
-        /**
-         * <p>The latency threshold that is allowed for read/write splitting of the shared proxy feature. Unit: seconds.</p>
-         * <blockquote>
-         * <p> This parameter is returned only when <strong>ConnectionStringType</strong> is set to <strong>ReadWriteSplitting</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("MaxDelayTime")
         public String maxDelayTime;
 
-        /**
-         * <p>The port number of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6379</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The details of the IP address whitelist.</p>
-         */
         @NameInMap("SecurityIPGroups")
         public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups;
 
-        /**
-         * <p>An internal parameter. You do not need to specify this parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Disabled</p>
-         */
         @NameInMap("Upgradeable")
         public String upgradeable;
 
-        /**
-         * <p>The VPC ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp1nme44gek34slfc****</p>
-         */
         @NameInMap("VPCId")
         public String VPCId;
 
-        /**
-         * <p>The vSwitch ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bp1e7clcw529l773d****</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>The expiration time of the endpoint of the classic network type. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5183779</p>
-         */
         @NameInMap("expiredTime")
         public String expiredTime;
 
