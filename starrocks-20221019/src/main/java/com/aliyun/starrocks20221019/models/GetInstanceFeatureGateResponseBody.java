@@ -257,6 +257,9 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         @NameInMap("UseComputeNode")
         public Boolean useComputeNode;
 
+        @NameInMap("supportCompactionService")
+        public Boolean supportCompactionService;
+
         public static GetInstanceFeatureGateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceFeatureGateResponseBodyData self = new GetInstanceFeatureGateResponseBodyData();
             return TeaModel.build(map, self);
@@ -412,6 +415,14 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
         public Boolean getUseComputeNode() {
             return this.useComputeNode;
+        }
+
+        public GetInstanceFeatureGateResponseBodyData setSupportCompactionService(Boolean supportCompactionService) {
+            this.supportCompactionService = supportCompactionService;
+            return this;
+        }
+        public Boolean getSupportCompactionService() {
+            return this.supportCompactionService;
         }
 
     }
