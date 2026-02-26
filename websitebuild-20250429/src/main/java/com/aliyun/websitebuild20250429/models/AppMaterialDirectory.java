@@ -4,21 +4,37 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class AppMaterialDirectory extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>WD20250814102215000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("Children")
     public java.util.List<AppMaterialDirectory> children;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WS20260206134746000001-system</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SortNum")
     public String sortNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CUSTOM</p>
+     */
     @NameInMap("Type")
     public String type;
 

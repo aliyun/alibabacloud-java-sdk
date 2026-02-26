@@ -1802,7 +1802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材文件列表</p>
+     * <p>Query Material File List</p>
      * 
      * @param tmpReq QueryMaterialFileListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1900,7 +1900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材文件列表</p>
+     * <p>Query Material File List</p>
      * 
      * @param request QueryMaterialFileListRequest
      * @return QueryMaterialFileListResponse

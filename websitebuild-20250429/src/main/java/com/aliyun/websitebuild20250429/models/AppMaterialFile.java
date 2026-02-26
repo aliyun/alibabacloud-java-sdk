@@ -4,45 +4,97 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class AppMaterialFile extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>WD20250703155602000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>image/png</p>
+     */
     @NameInMap("ContentType")
     public String contentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-11-03 02:05:01</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-11-03 02:05:01</p>
+     */
     @NameInMap("DeletedTime")
     public String deletedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ddddwww</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d75e1e9693cc460da218419d67735567</p>
+     */
     @NameInMap("FileId")
     public String fileId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://demo-moshicloud-test.oss-cn-hangzhou-internal.aliyuncs.com/document/testcase/aliyun/api_case/pdf_angle90_page1.pdf">https://demo-moshicloud-test.oss-cn-hangzhou-internal.aliyuncs.com/document/testcase/aliyun/api_case/pdf_angle90_page1.pdf</a></p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1280</p>
+     */
     @NameInMap("Height")
     public Integer height;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23M</p>
+     */
     @NameInMap("StorageSize")
     public String storageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>png</p>
+     */
     @NameInMap("Suffix")
     public String suffix;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IMAGE</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1920</p>
+     */
     @NameInMap("Width")
     public Integer width;
 

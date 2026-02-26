@@ -4,6 +4,10 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class AppMaterialTask extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2025-12-26 11:30:05</p>
+     */
     @NameInMap("CompleteTime")
     public String completeTime;
 
@@ -16,21 +20,41 @@ public class AppMaterialTask extends TeaModel {
     @NameInMap("FinalFileUrls")
     public java.util.List<String> finalFileUrls;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PENDING</p>
+     */
     @NameInMap("SubStatus")
     public String subStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-12-26 11:30:05</p>
+     */
     @NameInMap("SubmitTime")
     public String submitTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>81d04d62c3483b32bacf1d306d2622b2</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
     @NameInMap("TaskParam")
     public String taskParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IMAGE_LOGO</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
