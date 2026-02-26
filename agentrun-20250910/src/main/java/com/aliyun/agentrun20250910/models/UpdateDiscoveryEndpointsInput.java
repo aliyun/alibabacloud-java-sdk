@@ -4,12 +4,23 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class UpdateDiscoveryEndpointsInput extends TeaModel {
+    @NameInMap("credentialName")
+    public String credentialName;
+
     @NameInMap("discoveryEndpoints")
     public java.util.List<DiscoveryEndpoint> discoveryEndpoints;
 
     public static UpdateDiscoveryEndpointsInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateDiscoveryEndpointsInput self = new UpdateDiscoveryEndpointsInput();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateDiscoveryEndpointsInput setCredentialName(String credentialName) {
+        this.credentialName = credentialName;
+        return this;
+    }
+    public String getCredentialName() {
+        return this.credentialName;
     }
 
     public UpdateDiscoveryEndpointsInput setDiscoveryEndpoints(java.util.List<DiscoveryEndpoint> discoveryEndpoints) {

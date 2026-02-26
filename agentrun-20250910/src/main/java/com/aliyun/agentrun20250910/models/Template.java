@@ -104,6 +104,9 @@ public class Template extends TeaModel {
     @NameInMap("templateVersion")
     public String templateVersion;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static Template build(java.util.Map<String, ?> map) throws Exception {
         Template self = new Template();
         return TeaModel.build(map, self);
@@ -340,6 +343,14 @@ public class Template extends TeaModel {
     }
     public String getTemplateVersion() {
         return this.templateVersion;
+    }
+
+    public Template setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     public static class TemplateMcpOptions extends TeaModel {

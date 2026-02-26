@@ -80,6 +80,9 @@ public class CreateAgentRuntimeInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("diskSize")
+    public Integer diskSize;
+
     /**
      * <p>智能体运行时的环境变量配置，用于在运行时传递配置参数</p>
      * 
@@ -281,6 +284,14 @@ public class CreateAgentRuntimeInput extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAgentRuntimeInput setDiskSize(Integer diskSize) {
+        this.diskSize = diskSize;
+        return this;
+    }
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     public CreateAgentRuntimeInput setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {

@@ -78,6 +78,9 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("templateConfiguration")
     public java.util.Map<String, ?> templateConfiguration;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static UpdateTemplateInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateInput self = new UpdateTemplateInput();
         return TeaModel.build(map, self);
@@ -218,6 +221,14 @@ public class UpdateTemplateInput extends TeaModel {
     }
     public java.util.Map<String, ?> getTemplateConfiguration() {
         return this.templateConfiguration;
+    }
+
+    public UpdateTemplateInput setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

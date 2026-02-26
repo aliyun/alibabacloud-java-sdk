@@ -128,6 +128,9 @@ public class CreateTemplateInput extends TeaModel {
     @NameInMap("templateType")
     public String templateType;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static CreateTemplateInput build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateInput self = new CreateTemplateInput();
         return TeaModel.build(map, self);
@@ -292,6 +295,14 @@ public class CreateTemplateInput extends TeaModel {
     }
     public String getTemplateType() {
         return this.templateType;
+    }
+
+    public CreateTemplateInput setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
