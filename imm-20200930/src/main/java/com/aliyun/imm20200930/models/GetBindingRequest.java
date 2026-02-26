@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class GetBindingRequest extends TeaModel {
     /**
      * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>dataset001</p>

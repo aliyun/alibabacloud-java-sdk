@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ImageInsight extends TeaModel {
     /**
+     * <p>Image summary.</p>
+     * <blockquote>
+     * <p> Not supported.</p>
+     * </blockquote>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -12,6 +17,8 @@ public class ImageInsight extends TeaModel {
     public String caption;
 
     /**
+     * <p>The description of the image.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */

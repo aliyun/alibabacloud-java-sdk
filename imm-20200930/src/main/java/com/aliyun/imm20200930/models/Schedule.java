@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Schedule extends TeaModel {
     /**
+     * <p>The learning rate decay. This parameter takes effect only when LRScheduler is set to StepLR.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.97</p>
      */
@@ -12,6 +14,8 @@ public class Schedule extends TeaModel {
     public Float gamma;
 
     /**
+     * <p>The learning rate scheduler.</p>
+     * 
      * <strong>example:</strong>
      * <p>StepLR</p>
      */
@@ -19,6 +23,8 @@ public class Schedule extends TeaModel {
     public String LRScheduler;
 
     /**
+     * <p>The number of epochs the learning rate is changed after. This parameter takes effect only when LRScheduler is set to StepLR.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WebofficeWatermark extends TeaModel {
     /**
+     * <p>The color and transparency of the text watermark.</p>
+     * 
      * <strong>example:</strong>
      * <p>rgba(192, 192, 192, 0.6)</p>
      */
@@ -12,24 +14,63 @@ public class WebofficeWatermark extends TeaModel {
     public String fillStyle;
 
     /**
+     * <p>The font of the text watermark.</p>
+     * 
      * <strong>example:</strong>
      * <p>bold 20px Serif</p>
      */
     @NameInMap("Font")
     public String font;
 
+    /**
+     * <p>The horizontal spacing of the text watermark. Unit: pixel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Horizontal")
     public Long horizontal;
 
+    /**
+     * <p>The rotation of the text watermark. Unit: radian.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-0.7853982</p>
+     */
     @NameInMap("Rotate")
     public Float rotate;
 
+    /**
+     * <p>The watermark type. Valid values:</p>
+     * <ul>
+     * <li>0: no watermark.</li>
+     * <li>1: text watermark.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Type")
     public Long type;
 
+    /**
+     * <p>The watermark text.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set the Type parameter to 1.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
+     */
     @NameInMap("Value")
     public String value;
 
+    /**
+     * <p>The vertical spacing of the text watermark. Unit: pixel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Vertical")
     public Long vertical;
 

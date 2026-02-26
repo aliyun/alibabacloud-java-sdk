@@ -4,9 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ElementRelation extends TeaModel {
+    /**
+     * <p>The ID of the element.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>id1</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <p>The type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>child，parent</p>
+     */
     @NameInMap("Type")
     public String type;
 

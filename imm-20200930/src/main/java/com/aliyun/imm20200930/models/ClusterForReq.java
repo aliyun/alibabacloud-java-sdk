@@ -4,18 +4,45 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ClusterForReq extends TeaModel {
+    /**
+     * <p>The cover.</p>
+     */
     @NameInMap("Cover")
     public ClusterForReqCover cover;
 
+    /**
+     * <p>The custom ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("CustomId")
     public String customId;
 
+    /**
+     * <p>The custom labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
+     */
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
+    /**
+     * <p>The name of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cluster-99b1c333-86dc-45da-8c6****</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
@@ -65,6 +92,12 @@ public class ClusterForReq extends TeaModel {
     }
 
     public static class ClusterForReqCoverFigures extends TeaModel {
+        /**
+         * <p>The person ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2cb3c51e-b406-4b0c-af1b-897d88e1****</p>
+         */
         @NameInMap("FigureId")
         public String figureId;
 
@@ -84,6 +117,9 @@ public class ClusterForReq extends TeaModel {
     }
 
     public static class ClusterForReqCover extends TeaModel {
+        /**
+         * <p>The persons.</p>
+         */
         @NameInMap("Figures")
         public java.util.List<ClusterForReqCoverFigures> figures;
 

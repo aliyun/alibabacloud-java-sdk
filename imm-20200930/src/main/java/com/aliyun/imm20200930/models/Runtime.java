@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class Runtime extends TeaModel {
     /**
+     * <p>The hyperparameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Hyperparameters")
     public Hyperparameters hyperparameters;
 
     /**
+     * <p>The resource.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resource")

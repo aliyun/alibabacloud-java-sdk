@@ -4,15 +4,41 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Codes extends TeaModel {
+    /**
+     * <p>The boundary of the code.</p>
+     */
     @NameInMap("Boundary")
     public Boundary boundary;
 
+    /**
+     * <p>The confidence level of the code. A greater value indicates a higher confidence level. A value exceeding 0.8 signifies a high degree of confidence in the result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.9</p>
+     */
     @NameInMap("Confidence")
     public Float confidence;
 
+    /**
+     * <p>The content of the code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.example.com">https://www.example.com</a></p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The type of the code.</p>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>qrcode</li>
+     * <li>barcode</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>qrcode</p>
+     */
     @NameInMap("Type")
     public String type;
 

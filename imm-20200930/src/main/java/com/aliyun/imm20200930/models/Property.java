@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Property extends TeaModel {
     /**
+     * <p>If you set the ValueType field to array, you must specify the type of the elements within the array. The enumerated values include float, integer, and string.</p>
+     * 
      * <strong>example:</strong>
      * <p>float</p>
      */
@@ -12,6 +14,8 @@ public class Property extends TeaModel {
     public String itemsType;
 
     /**
+     * <p>The property name.</p>
+     * 
      * <strong>example:</strong>
      * <p>channels</p>
      */
@@ -19,6 +23,8 @@ public class Property extends TeaModel {
     public String name;
 
     /**
+     * <p>The value.</p>
+     * 
      * <strong>example:</strong>
      * <p>[40, 80, 160, 320]</p>
      */
@@ -26,6 +32,8 @@ public class Property extends TeaModel {
     public String value;
 
     /**
+     * <p>The type of the property. Supported enumerated values: float, integer, string, and array.</p>
+     * 
      * <strong>example:</strong>
      * <p>array</p>
      */

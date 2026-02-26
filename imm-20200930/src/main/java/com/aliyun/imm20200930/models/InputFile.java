@@ -4,57 +4,178 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class InputFile extends TeaModel {
+    /**
+     * <p>The addresses.</p>
+     */
     @NameInMap("Addresses")
     public java.util.List<Address> addresses;
 
+    /**
+     * <p>The album.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FirstAlbum</p>
+     */
     @NameInMap("Album")
     public String album;
 
+    /**
+     * <p>The album artist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Jane</p>
+     */
     @NameInMap("AlbumArtist")
     public String albumArtist;
 
+    /**
+     * <p>The artist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Jane</p>
+     */
     @NameInMap("Artist")
     public String artist;
 
+    /**
+     * <p>The composer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Jane</p>
+     */
     @NameInMap("Composer")
     public String composer;
 
+    /**
+     * <p>In most cases, you can leave this parameter empty. The Multipurpose Internet Mail Extensions (MIME) type of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image/jpeg</p>
+     */
     @NameInMap("ContentType")
     public String contentType;
 
+    /**
+     * <p>The custom ID of the file. This parameter is optional. When the metadata of the file is indexed into the dataset, the custom ID is stored as the data attribute. You can map the custom ID to other data in your business system. You can configure this parameter based on your business requirements. For example, you can associate a URI with an ID in your business system. We recommend that you set this parameter to a unique value.</p>
+     * <p>This parameter supports prefix searches and sorting during queries. For more information, see <a href="https://help.aliyun.com/document_detail/252856.html">Supported fields and operators</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>member-image-id-0001</p>
+     */
     @NameInMap("CustomId")
     public String customId;
 
+    /**
+     * <p>The custom labels of the file. This parameter is optional. The parameter stores custom key-value labels, which can be used to filter data. For more information, see <a href="https://help.aliyun.com/document_detail/252856.html">Supported fields and operators</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;MemberName&quot;: &quot;Tim&quot;,
+     *       &quot;Enabled&quot;: &quot;True&quot;,
+     *       &quot;ItemCount&quot;: &quot;10&quot;
+     * }</p>
+     */
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
+    /**
+     * <p>This parameter is optional. The persons. This parameter is used to remove a face from a face group or modify a face group. For more information, see <a href="https://help.aliyun.com/document_detail/477175.html">Face clustering</a>.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for the UpdateFileMeta or BatchUpdateFileMeta operation.</p>
+     * </blockquote>
+     */
     @NameInMap("Figures")
     public java.util.List<InputFileFigures> figures;
 
+    /**
+     * <p>The file hash. In most cases, you can leave this parameter empty. This parameter is required only when the URI parameter specifies a file in Photo and Drive Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1d9c280a7c4f67f7ef873e28449dbe17</p>
+     */
     @NameInMap("FileHash")
     public String fileHash;
 
+    /**
+     * <p>The intelligent labels.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    /**
+     * <p>The GPS latitude and longitude information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30.134390,120.074997</p>
+     */
     @NameInMap("LatLong")
     public String latLong;
 
+    /**
+     * <p>In most cases, you can leave this parameter empty. The media type of the file.</p>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>image</li>
+     * <li>other</li>
+     * <li>document</li>
+     * <li>archive</li>
+     * <li>video</li>
+     * <li>audio</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>image</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <p>The path of the OSS object. In most cases, you can leave this parameter empty. You can specify this parameter only if the URI parameter specifies a file in Photo and Drive Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-object.jpg</p>
+     */
     @NameInMap("OSSURI")
     public String OSSURI;
 
+    /**
+     * <p>The performer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Jane</p>
+     */
     @NameInMap("Performer")
     public String performer;
 
+    /**
+     * <p>The time when the image was taken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-29T14:50:13.011643661+08:00</p>
+     */
     @NameInMap("ProduceTime")
     public String produceTime;
 
+    /**
+     * <p>The file title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <p>The URI of the file for which you want to create or update an index in the request. This parameter is required. The URI can represent an object in Object Storage Service (OSS) or a file in Photo and Drive Service.</p>
+     * <p>The OSS URI must be in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that is in the same region as the current project. <code>${Object}</code> specifies the full file path that contains the object name extension.</p>
+     * <p>The URI of a file in Photo and Drive Service must be in the <code>pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision}</code> format.</p>
+     * <blockquote>
+     * <p> URIs that start with HTTP are not supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://examplebucket/sampleobject.jpg</p>
+     */
     @NameInMap("URI")
     public String URI;
 
@@ -208,12 +329,34 @@ public class InputFile extends TeaModel {
     }
 
     public static class InputFileFigures extends TeaModel {
+        /**
+         * <p>The ID of the face cluster. The following IDs of special face clusters are reserved:</p>
+         * <ul>
+         * <li>figure-cluster-id-independent: indicates that the face does not belong to any face cluster. The face may be added to a face cluster in subsequent face clustering tasks after new images are added to the dataset.</li>
+         * <li>figure-cluster-id-unavailable: indicates that the face has not been included in a face clustering task since a new image was added to the dataset.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster-dbe72fec-b84c-4ab6-885b-3678e64****</p>
+         */
         @NameInMap("FigureClusterId")
         public String figureClusterId;
 
+        /**
+         * <p>The person ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2cb3c51e-b406-4b0c-af1b-897d88e1****</p>
+         */
         @NameInMap("FigureId")
         public String figureId;
 
+        /**
+         * <p>The figure type. Set this parameter to <code>face</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>face</p>
+         */
         @NameInMap("FigureType")
         public String figureType;
 

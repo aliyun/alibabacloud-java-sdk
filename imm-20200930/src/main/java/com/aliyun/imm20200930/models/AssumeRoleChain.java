@@ -4,9 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AssumeRoleChain extends TeaModel {
+    /**
+     * <p>The authorization chains.</p>
+     */
     @NameInMap("Chain")
     public java.util.List<AssumeRoleChainNode> chain;
 
+    /**
+     * <p>The policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Policy")
     public String policy;
 

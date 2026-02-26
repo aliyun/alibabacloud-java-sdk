@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DatasetTaskStatus extends TeaModel {
     /**
+     * <p>The time of the last completion.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-06-29T14:50:13.011643661+08:00</p>
      */
@@ -12,6 +14,8 @@ public class DatasetTaskStatus extends TeaModel {
     public String lastSucceededTime;
 
     /**
+     * <p>The start time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-06-29T14:50:13.011643661+08:00</p>
      */
@@ -19,6 +23,8 @@ public class DatasetTaskStatus extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The status of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */

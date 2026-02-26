@@ -4,24 +4,77 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Car extends TeaModel {
+    /**
+     * <p>The boundary information.</p>
+     */
     @NameInMap("Boundary")
     public Boundary boundary;
 
+    /**
+     * <p>The vehicle color. Valid values</p>
+     * <ul>
+     * <li>white</li>
+     * <li>grey</li>
+     * <li>yellow</li>
+     * <li>red</li>
+     * <li>green</li>
+     * <li>blue</li>
+     * <li>black</li>
+     * <li>purple</li>
+     * <li>brown</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>white</p>
+     */
     @NameInMap("CarColor")
     public String carColor;
 
+    /**
+     * <p>The confidence level of the vehicle color. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.604</p>
+     */
     @NameInMap("CarColorConfidence")
     public Double carColorConfidence;
 
+    /**
+     * <p>The vehicle type. Valid values:</p>
+     * <ul>
+     * <li>car</li>
+     * <li>bus</li>
+     * <li>truck</li>
+     * <li>van</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>van</p>
+     */
     @NameInMap("CarType")
     public String carType;
 
+    /**
+     * <p>The confidence level of the vehicle type. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.516</p>
+     */
     @NameInMap("CarTypeConfidence")
     public Double carTypeConfidence;
 
+    /**
+     * <p>The confidence level of the vehicle detection result. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.999</p>
+     */
     @NameInMap("Confidence")
     public Double confidence;
 
+    /**
+     * <p>The license plates.</p>
+     */
     @NameInMap("LicensePlates")
     public java.util.List<LicensePlate> licensePlates;
 

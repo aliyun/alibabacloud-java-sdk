@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SmartClusterRule extends TeaModel {
+    /**
+     * <p>Keywords</p>
+     */
     @NameInMap("Keywords")
     public java.util.List<String> keywords;
 
     /**
+     * <p>Sensitivity</p>
+     * 
      * <strong>example:</strong>
      * <p>0.5</p>
      */

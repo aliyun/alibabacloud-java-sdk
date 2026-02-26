@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VideoInsight extends TeaModel {
     /**
+     * <p>Video summary.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,11 @@ public class VideoInsight extends TeaModel {
     public String caption;
 
     /**
+     * <p>The description of the video file.</p>
+     * <blockquote>
+     * <p> Not supported.</p>
+     * </blockquote>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */

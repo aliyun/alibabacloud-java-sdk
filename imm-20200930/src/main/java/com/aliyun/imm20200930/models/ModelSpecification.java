@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModelSpecification extends TeaModel {
     /**
+     * <p>The basic model information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MetaData")
     public MetaData metaData;
 
     /**
+     * <p>The model specification information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Spec")

@@ -4,15 +4,23 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class LicensePlate extends TeaModel {
+    /**
+     * <p>The boundary information of the license plate.</p>
+     */
     @NameInMap("Boundary")
     public Boundary boundary;
 
+    /**
+     * <p>The confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.789</p>
+     */
     @NameInMap("Confidence")
     public Double confidence;
 
     /**
-     * <strong>example:</strong>
-     * <p>川A0123</p>
+     * <p>The license plate number.</p>
      */
     @NameInMap("Content")
     public String content;

@@ -4,39 +4,111 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Message extends TeaModel {
+    /**
+     * <p>Assistant type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doc/translate</p>
+     */
     @NameInMap("AssistantType")
     public String assistantType;
 
+    /**
+     * <p>The content of the question.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello, which park is closest to me?</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The time when the message was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-14T10:10:52.83948013+08:00</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The dataset that the answer references to.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-dataset</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>The language of the answer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-Hans</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>Indicates whether the message is a regenerated answer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Regenerate")
     public Boolean regenerate;
 
+    /**
+     * <p>The answer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello, I\&quot;m your assistant.</p>
+     */
     @NameInMap("Reply")
     public String reply;
 
+    /**
+     * <p>Rate</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.99</p>
+     */
     @NameInMap("Score")
     public Double score;
 
+    /**
+     * <p>The URI of the source file from which the answer was generated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/sample.docx</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <p>The compliance check results. Valid values: pass block</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pass</p>
+     */
     @NameInMap("Suggestion")
     public String suggestion;
 
+    /**
+     * <p>The tone of the answer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>professional</p>
+     */
     @NameInMap("Tone")
     public String tone;
 
+    /**
+     * <p>The topic in the question.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The value varies based on the value of the AssistantType parameter.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

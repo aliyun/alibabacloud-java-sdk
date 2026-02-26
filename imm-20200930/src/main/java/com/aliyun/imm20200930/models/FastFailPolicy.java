@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class FastFailPolicy extends TeaModel {
     /**
+     * <p>The action when the batch processor or trigger encounters an error.</p>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>abort: stops running.</li>
+     * <li>ignore: ignores the error and keeps running.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>abort</p>
      */

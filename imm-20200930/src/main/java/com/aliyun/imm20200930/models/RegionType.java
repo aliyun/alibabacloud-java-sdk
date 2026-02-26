@@ -4,9 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class RegionType extends TeaModel {
+    /**
+     * <p>The name of the region.</p>
+     */
     @NameInMap("LocalName")
     public String localName;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

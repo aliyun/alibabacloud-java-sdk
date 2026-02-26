@@ -4,30 +4,78 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class App extends TeaModel {
+    /**
+     * <p>AppDescription</p>
+     */
     @NameInMap("AppDescription")
     public String appDescription;
 
+    /**
+     * <p>AppId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>AppKey</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ryBOBW0Z6NnQ3fV9</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>AppName</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>AppRegion</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AppRegion")
     public Long appRegion;
 
+    /**
+     * <p>AppType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AppType")
     public Long appType;
 
+    /**
+     * <p>EnglishName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Taobao</p>
+     */
     @NameInMap("EnglishName")
     public String englishName;
 
+    /**
+     * <p>OwnerId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1023210024677934</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>PackageName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ThisIsAPackageName</p>
+     */
     @NameInMap("PackageName")
     public String packageName;
 

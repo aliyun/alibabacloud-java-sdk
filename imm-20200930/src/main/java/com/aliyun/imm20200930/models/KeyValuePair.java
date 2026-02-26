@@ -4,9 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class KeyValuePair extends TeaModel {
+    /**
+     * <p>The key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bucket</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testbucket</p>
+     */
     @NameInMap("Value")
     public String value;
 

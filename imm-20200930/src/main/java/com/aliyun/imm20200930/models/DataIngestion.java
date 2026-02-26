@@ -4,28 +4,63 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DataIngestion extends TeaModel {
+    /**
+     * <p>The templates.</p>
+     */
     @NameInMap("Actions")
     public java.util.List<DataIngestionActions> actions;
 
+    /**
+     * <p>The time when the task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-11-10T03:50:28Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api returns error: SDKError: StatusCode: 404 Code: ResourceNotFound</p>
+     */
     @NameInMap("Error")
     public String error;
 
+    /**
+     * <p>The unique ID of the data ingestion.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trigger-9f72636a-0f0c-4baf-ae78-38b27bfe****</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The information about the data source.</p>
+     */
     @NameInMap("Input")
     public Input input;
 
+    /**
+     * <p>The task execution location.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpw****</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The notification for task completion.</p>
+     */
     @NameInMap("Notification")
     public DataIngestionNotification notification;
 
     /**
+     * <p>The scanning phase.</p>
+     * 
      * <strong>example:</strong>
      * <p>IncrementalScanning</p>
      */
@@ -33,21 +68,48 @@ public class DataIngestion extends TeaModel {
     public String phase;
 
     /**
+     * <p>The service-linked role.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunIMMBatchTriggerRole</p>
      */
     @NameInMap("ServiceRole")
     public String serviceRole;
 
+    /**
+     * <p>The status of the batch processing task.</p>
+     * <ul>
+     * <li>Ready: The task is created.</li>
+     * <li>Running: The task is running.</li>
+     * <li>Failed: The task fails and cannot be automatically recovered.</li>
+     * <li>Suspended: The task is suspended.</li>
+     * <li>Succeeded: The task is successful.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>The statistical information.</p>
+     */
     @NameInMap("Statistic")
     public DataIngestionStatistic statistic;
 
+    /**
+     * <p>The task tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>The time when the task was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-18T07:40:29Z</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -161,12 +223,24 @@ public class DataIngestion extends TeaModel {
     }
 
     public static class DataIngestionActions extends TeaModel {
+        /**
+         * <p>The on-error policy that is used to quickly troubleshoot an error.</p>
+         */
         @NameInMap("FastFailPolicy")
         public FastFailPolicy fastFailPolicy;
 
+        /**
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doc/convert</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The template parameters.</p>
+         */
         @NameInMap("Parameters")
         public java.util.List<String> parameters;
 
@@ -202,15 +276,33 @@ public class DataIngestion extends TeaModel {
     }
 
     public static class DataIngestionNotification extends TeaModel {
+        /**
+         * <p>The Simple Message Queue (SMQ) endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://1111111111.mns.cn-hangzhou.aliyuncs.com">http://1111111111.mns.cn-hangzhou.aliyuncs.com</a></p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>MNS</p>
+         */
         @NameInMap("MNS")
         public MNS MNS;
 
+        /**
+         * <p>RocketMQ</p>
+         */
         @NameInMap("RocketMQ")
         public RocketMQ rocketMQ;
 
+        /**
+         * <p>The SMQ topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic1</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
@@ -254,12 +346,30 @@ public class DataIngestion extends TeaModel {
     }
 
     public static class DataIngestionStatistic extends TeaModel {
+        /**
+         * <p>The number of files that are skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SkipFiles")
         public Long skipFiles;
 
+        /**
+         * <p>The number of files that fail to be submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SubmitFailure")
         public Long submitFailure;
 
+        /**
+         * <p>The number of files that are submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("SubmitSuccess")
         public Long submitSuccess;
 

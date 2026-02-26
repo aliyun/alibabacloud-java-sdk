@@ -5,16 +5,20 @@ import com.aliyun.tea.*;
 
 public class ContextualMessage extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>你好</p>
+     * <p>The message content.</p>
      */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The files involved in the dialogue.</p>
+     */
     @NameInMap("Files")
     public java.util.List<ContextualFile> files;
 
     /**
+     * <p>The role in the dialogue.</p>
+     * 
      * <strong>example:</strong>
      * <p>user</p>
      */

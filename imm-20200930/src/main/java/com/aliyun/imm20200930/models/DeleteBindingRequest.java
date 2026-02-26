@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteBindingRequest extends TeaModel {
     /**
      * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>dataset001</p>

@@ -4,18 +4,42 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Element extends TeaModel {
+    /**
+     * <p>The element contents.</p>
+     */
     @NameInMap("ElementContents")
     public java.util.List<ElementContent> elementContents;
 
+    /**
+     * <p>The relationships between the current element and other elements.</p>
+     */
     @NameInMap("ElementRelations")
     public java.util.List<ElementRelation> elementRelations;
 
+    /**
+     * <p>The element type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>title; image; table; narrative-text</p>
+     */
     @NameInMap("ElementType")
     public String elementType;
 
+    /**
+     * <p>The unique ID of the element.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>id1</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <p>The similarity between the current file and its extracted semantics.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.8</p>
+     */
     @NameInMap("SemanticSimilarity")
     public Float semanticSimilarity;
 

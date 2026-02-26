@@ -4,11 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class FunctionCall extends TeaModel {
+    /**
+     * <p>The parameters detected by the large language model.</p>
+     */
     @NameInMap("Arguments")
     public String arguments;
 
     /**
+     * <p>The function name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>search_file</p>
      */
     @NameInMap("Name")
     public String name;

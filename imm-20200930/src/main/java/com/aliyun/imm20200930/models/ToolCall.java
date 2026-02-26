@@ -4,9 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ToolCall extends TeaModel {
+    /**
+     * <p>The definition of the function that can be called by the AI assistant.</p>
+     */
     @NameInMap("Function")
     public FunctionCall function;
 
+    /**
+     * <p>The type of the tool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>function</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Hyperparameters extends TeaModel {
     /**
+     * <p>The frequency at which the model configuration is saved. If you set this parameter to 1, model configuration is saved every epoch.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class Hyperparameters extends TeaModel {
     public Long backupInterval;
 
     /**
+     * <p>The batch size for model training.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -19,6 +23,8 @@ public class Hyperparameters extends TeaModel {
     public Long batchSize;
 
     /**
+     * <p>The number of threads used to read the training data.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -26,27 +32,37 @@ public class Hyperparameters extends TeaModel {
     public Long dataLoaderWorkers;
 
     /**
+     * <p>The custom parameters for model training.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Evaluator")
     public CustomParams evaluator;
 
     /**
+     * <p>The image size. The array contains the width and height of the image.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InputSize")
     public java.util.List<Long> inputSize;
 
     /**
+     * <p>The number of epochs.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxEpoch")
     public Long maxEpoch;
 
+    /**
+     * <p>The optimization algorithm.</p>
+     */
     @NameInMap("Optimization")
     public Optimization optimization;
 
+    /**
+     * <p>The learning rate scheduler.</p>
+     */
     @NameInMap("Schedule")
     public Schedule schedule;
 

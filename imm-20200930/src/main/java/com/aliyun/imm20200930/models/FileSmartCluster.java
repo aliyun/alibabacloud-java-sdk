@@ -4,9 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class FileSmartCluster extends TeaModel {
+    /**
+     * <p>Similarity</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.9</p>
+     */
     @NameInMap("Similarity")
     public Float similarity;
 
+    /**
+     * <p>SmartClusterId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SmartCluster-12cd1645-deae-4b5e-9434-613747b75f6d</p>
+     */
     @NameInMap("SmartClusterId")
     public String smartClusterId;
 

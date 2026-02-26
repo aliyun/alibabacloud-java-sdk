@@ -4,57 +4,172 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Project extends TeaModel {
+    /**
+     * <p>The timestamp when the project was created. The timestamp is in the RFC3339Nano format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-29T14:50:13.011643661+08:00</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The current number of datasets in the project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("DatasetCount")
     public Long datasetCount;
 
+    /**
+     * <p>The maximum number of bindings that a dataset can have. Valid values: 1 to 10. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("DatasetMaxBindCount")
     public Long datasetMaxBindCount;
 
+    /**
+     * <p>The maximum number of metadata entities in a dataset. Default value: 10000000000.</p>
+     * <blockquote>
+     * <p> This parameter is reserved and does not actually apply a limit.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10000000000</p>
+     */
     @NameInMap("DatasetMaxEntityCount")
     public Long datasetMaxEntityCount;
 
+    /**
+     * <p>The maximum number of files in a dataset. Valid values: 1 to 100000000. Default value: 100000000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000000</p>
+     */
     @NameInMap("DatasetMaxFileCount")
     public Long datasetMaxFileCount;
 
+    /**
+     * <p>The maximum number of metadata relationships in a dataset. Default value: 100000000000.</p>
+     * <blockquote>
+     * <p> This parameter is reserved and does not actually apply a limit.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>100000000000</p>
+     */
     @NameInMap("DatasetMaxRelationCount")
     public Long datasetMaxRelationCount;
 
+    /**
+     * <p>The maximum total file size for a dataset. If the total file size exceeds this limit, indexes can no longer be added. Default value: 90000000000000000. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90000000000000000</p>
+     */
     @NameInMap("DatasetMaxTotalFileSize")
     public Long datasetMaxTotalFileSize;
 
+    /**
+     * <p>The project description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The maximum number of tasks that the project can process per second. This corresponds to the maximum number of operators that can run in parallel in the project. Default value: 100.</p>
+     * <ul>
+     * <li>If the number of synchronous tasks that run in parallel exceeds this limit, the task execution time will be extended until a timeout occurs.</li>
+     * <li>If the number of asynchronous tasks that run in parallel exceeds this limit, the tasks will be queued. This causes delayed task completion. If a task remains in the queue for longer than the specified time limit (usually dozens of seconds), the task will fail.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("EngineConcurrency")
     public Long engineConcurrency;
 
+    /**
+     * <p>The current number of files in the project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("FileCount")
     public Long fileCount;
 
+    /**
+     * <p>The maximum number of datasets that a project can contain. Valid values: 1 to 1000000000. Default value: 1000000000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000000000</p>
+     */
     @NameInMap("ProjectMaxDatasetCount")
     public Long projectMaxDatasetCount;
 
+    /**
+     * <p>The name of the project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The maximum number of requests that can be processed by the project per second. This corresponds to the maximum number of API operations that can be called in the project per second. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("ProjectQueriesPerSecond")
     public Long projectQueriesPerSecond;
 
+    /**
+     * <p>The service role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunIMMDefaultRole</p>
+     */
     @NameInMap("ServiceRole")
     public String serviceRole;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ProjectTags> tags;
 
+    /**
+     * <p>The ID of the workflow template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DefaultId</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The current total size of files in the project. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000</p>
+     */
     @NameInMap("TotalFileSize")
     public Long totalFileSize;
 
+    /**
+     * <p>The timestamp when the project was last modified. The timestamp is in the RFC3339Nano format.</p>
+     * <blockquote>
+     * <p> If a project is not modified after it is created, the timestamp when the project was created is the same as the timestamp when the project was last modified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-29T14:50:13.011643661+08:00</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -208,9 +323,21 @@ public class Project extends TeaModel {
     }
 
     public static class ProjectTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

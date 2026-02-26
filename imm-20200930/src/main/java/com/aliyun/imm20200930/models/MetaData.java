@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MetaData extends TeaModel {
     /**
+     * <p>The model type identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>detection</p>
      */
@@ -12,6 +14,8 @@ public class MetaData extends TeaModel {
     public String identifier;
 
     /**
+     * <p>The model provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>imm</p>
      */
@@ -19,6 +23,8 @@ public class MetaData extends TeaModel {
     public String provider;
 
     /**
+     * <p>The model version.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */

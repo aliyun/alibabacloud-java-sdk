@@ -4,39 +4,108 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SubtitleStream extends TeaModel {
+    /**
+     * <p>The bitrate. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74</p>
+     */
     @NameInMap("Bitrate")
     public Long bitrate;
 
+    /**
+     * <p>The full name of the codec.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MOV text</p>
+     */
     @NameInMap("CodecLongName")
     public String codecLongName;
 
+    /**
+     * <p>The abbreviated name of the codec.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mov_text</p>
+     */
     @NameInMap("CodecName")
     public String codecName;
 
+    /**
+     * <p>The tag of the codec.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0x67337874</p>
+     */
     @NameInMap("CodecTag")
     public String codecTag;
 
+    /**
+     * <p>The description of the codec tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tx3g</p>
+     */
     @NameInMap("CodecTagString")
     public String codecTagString;
 
+    /**
+     * <p>The subtitle content.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The duration of the subtitle stream in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>71.378</p>
+     */
     @NameInMap("Duration")
     public Double duration;
 
+    /**
+     * <p>The height of the subtitles. Unit: pixels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("Height")
     public Long height;
 
+    /**
+     * <p>The index number of the subtitle stream.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Index")
     public Long index;
 
+    /**
+     * <p>The subtitle language in the BCP 47 standard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>The start time of the subtitle stream in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.000000</p>
+     */
     @NameInMap("StartTime")
     public Double startTime;
 
+    /**
+     * <p>The width of the subtitles. Unit: pixels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
     @NameInMap("Width")
     public Long width;
 

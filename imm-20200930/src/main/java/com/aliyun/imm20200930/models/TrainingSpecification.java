@@ -4,28 +4,41 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class TrainingSpecification extends TeaModel {
+    /**
+     * <p>Name of the dataset</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-dataset</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
     /**
+     * <p>The endpoint of the storage where the dataset is stored.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://1111111111.mns.cn-hangzhou.aliyuncs.com">http://1111111111.mns.cn-hangzhou.aliyuncs.com</a></p>
      */
     @NameInMap("Endpoint")
     public String endpoint;
 
     /**
+     * <p>The model specification details.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ModelSpecification")
     public ModelSpecification modelSpecification;
 
     /**
+     * <p>The information about the runtime for model training.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Runtime")
     public Runtime runtime;
 
     /**
+     * <p>URI of the dataset</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +48,7 @@ public class TrainingSpecification extends TeaModel {
     public String sourceURI;
 
     /**
+     * <p>The storage path to the model data. Only an Object Storage Service (OSS) path is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,10 +57,15 @@ public class TrainingSpecification extends TeaModel {
     @NameInMap("TargetURI")
     public String targetURI;
 
+    /**
+     * <p>Local preprocessing parameters for the dataset.</p>
+     */
     @NameInMap("Transforms")
     public java.util.List<CustomParams> transforms;
 
     /**
+     * <p>The URI of the evaluation dataset. You must specify this parameter or the ValidationSplit parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://imm-alg-dataset-bj/cifar10/test_index.json</p>
      */
@@ -54,6 +73,8 @@ public class TrainingSpecification extends TeaModel {
     public String validationSourceURI;
 
     /**
+     * <p>The ratio for splitting the training dataset into the evaluation dataset. You must specify this parameter or the ValidationSourceURI parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.95</p>
      */

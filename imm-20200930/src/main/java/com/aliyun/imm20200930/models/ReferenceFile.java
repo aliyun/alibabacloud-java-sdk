@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReferenceFile extends TeaModel {
     /**
+     * <p>The name of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-dataset</p>
      */
@@ -12,6 +14,8 @@ public class ReferenceFile extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The unique ID of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>75d5de2c50754e3dadd5c35dbca5f9949369e37eb342a73821f690c94c36c7f7</p>
      */
@@ -19,6 +23,8 @@ public class ReferenceFile extends TeaModel {
     public String objectId;
 
     /**
+     * <p>The name of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-project</p>
      */
@@ -26,6 +32,8 @@ public class ReferenceFile extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The URI of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://test-bucket/test-object.jpg</p>
      */

@@ -4,9 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class PointInt64 extends TeaModel {
+    /**
+     * <p>The distance from the X-coordinate of the vertex to the left edge. Unit: pixel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("X")
     public Long x;
 
+    /**
+     * <p>The distance from the Y-coordinate of the vertex to the top. Unit: pixel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Y")
     public Long y;
 

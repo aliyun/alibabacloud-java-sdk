@@ -4,15 +4,33 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class OCRContents extends TeaModel {
+    /**
+     * <p>The boundary information.</p>
+     */
     @NameInMap("Boundary")
     public Boundary boundary;
 
+    /**
+     * <p>The confidence level of the content. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.8254936695098877</p>
+     */
     @NameInMap("Confidence")
     public Float confidence;
 
+    /**
+     * <p>The content.</p>
+     */
     @NameInMap("Contents")
     public String contents;
 
+    /**
+     * <p>The BCP 47 language code. This parameter is not supported in the current version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-hans</p>
+     */
     @NameInMap("Language")
     public String language;
 

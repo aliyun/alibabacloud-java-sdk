@@ -4,57 +4,153 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Story extends TeaModel {
+    /**
+     * <p>The addresses.</p>
+     */
     @NameInMap("Addresses")
     public java.util.List<Address> addresses;
 
+    /**
+     * <p>The story cover.</p>
+     */
     @NameInMap("Cover")
     public File cover;
 
+    /**
+     * <p>The time when the story was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-14T10:17:18.102700407+08:00</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The custom ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("CustomId")
     public String customId;
 
+    /**
+     * <p>The custom labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;: &quot;val&quot;}</p>
+     */
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
+    /**
+     * <p>The name of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataset001</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>The fluster IDs.</p>
+     */
     @NameInMap("FigureClusterIds")
     public java.util.List<String> figureClusterIds;
 
+    /**
+     * <p>The story files.</p>
+     */
     @NameInMap("Files")
     public java.util.List<File> files;
 
+    /**
+     * <p>The ID of the story object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>id1</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <p>The type of the object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>story</p>
+     */
     @NameInMap("ObjectType")
     public String objectType;
 
+    /**
+     * <p>The ID of the owner to which the story belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102321002****</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The name of the project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The time when the story ends.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-14T10:17:18.102700407+08:00</p>
+     */
     @NameInMap("StoryEndTime")
     public String storyEndTime;
 
+    /**
+     * <p>The name of the story.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name1</p>
+     */
     @NameInMap("StoryName")
     public String storyName;
 
+    /**
+     * <p>The time when the story starts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-14T10:17:18.102700407+08:00</p>
+     */
     @NameInMap("StoryStartTime")
     public String storyStartTime;
 
+    /**
+     * <p>The subtype of the story.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ImportantPerson</p>
+     */
     @NameInMap("StorySubType")
     public String storySubType;
 
+    /**
+     * <p>The story type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PeopleMemory</p>
+     */
     @NameInMap("StoryType")
     public String storyType;
 
+    /**
+     * <p>The time when the story was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-14T10:17:18.102700407+08:00</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 

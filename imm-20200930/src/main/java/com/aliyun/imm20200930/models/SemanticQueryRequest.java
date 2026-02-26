@@ -51,16 +51,32 @@ public class SemanticQueryRequest extends TeaModel {
 
     /**
      * <p>The content of the query that you input.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Scenery of Hangzhou in April 2021</p>
      */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <blockquote>
+     * <p>Either this parameter or the Query parameter must be specified. This parameter is valid only for image searches on datasets configured with a search-by-image workflow.</p>
+     * </blockquote>
+     * <p>URI of the source data for retrieval.
+     * The URI must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</p>
+     * <p>Contact us if you need to configure a workflow template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-object</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 
     /**
-     * <p>The fields that you want to include in the response. Including only necessary metadata fields can help reduce the size of the response.</p>
-     * <p>If you do not specify this parameter or set the value to null, all existing metadata fields are returned.</p>
+     * <blockquote>
+     * <p> Either this parameter or the SourceURI parameter must be specified.</p>
+     * </blockquote>
+     * <p>The content of the query that you input.</p>
      */
     @NameInMap("WithFields")
     public java.util.List<String> withFields;

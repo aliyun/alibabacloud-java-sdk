@@ -4,81 +4,265 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Figure extends TeaModel {
+    /**
+     * <p>The age.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29</p>
+     */
     @NameInMap("Age")
     public Long age;
 
+    /**
+     * <p>The standard deviation of the age.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("AgeSD")
     public Float ageSD;
 
+    /**
+     * <p>The face attractiveness. A high score indicates strong attractiveness. Valid values: 0 to 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.96</p>
+     */
     @NameInMap("Attractive")
     public Float attractive;
 
+    /**
+     * <p>Specifies whether the figure has a beard. Valid values:</p>
+     * <ul>
+     * <li>beard</li>
+     * <li>none</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>none</p>
+     */
     @NameInMap("Beard")
     public String beard;
 
+    /**
+     * <p>The confidence level of detecting whether the figure has a beard. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BeardConfidence")
     public Float beardConfidence;
 
+    /**
+     * <p>The face boundary information.</p>
+     */
     @NameInMap("Boundary")
     public Boundary boundary;
 
+    /**
+     * <p>The emotion. Valid values:</p>
+     * <ul>
+     * <li>happiness</li>
+     * <li>none</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>happiness</p>
+     */
     @NameInMap("Emotion")
     public String emotion;
 
+    /**
+     * <p>The confidence level of the emotion. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.707845687866210</p>
+     */
     @NameInMap("EmotionConfidence")
     public Float emotionConfidence;
 
+    /**
+     * <p>The face quality.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.960875928401947</p>
+     */
     @NameInMap("FaceQuality")
     public Float faceQuality;
 
+    /**
+     * <p>The confidence level of the face clustering task. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FigureClusterConfidence")
     public Float figureClusterConfidence;
 
+    /**
+     * <p>The ID of the face clustering task. The following IDs of special face clustering tasks are reserved:</p>
+     * <ul>
+     * <li>figure-cluster-id-independent: the ID of a face clustering task in which faces do not belong to any face group. After images are added to a dataset, the faces may be categorized into different face groups when you perform face clustering.</li>
+     * <li>figure-cluster-id-unavailable: the ID of a face clustering task in which face clustering is not performed after images are added to a dataset.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Cluster-dbe72fec-b84c-4ab6-885b-3678e64****</p>
+     */
     @NameInMap("FigureClusterId")
     public String figureClusterId;
 
+    /**
+     * <p>The confidence level of the figure. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FigureConfidence")
     public Float figureConfidence;
 
+    /**
+     * <p>The figure ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>868a9e74-cde5-4c7a-9013-28bb984****</p>
+     */
     @NameInMap("FigureId")
     public String figureId;
 
+    /**
+     * <p>The figure type.</p>
+     * <p>Set this parameter to face.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>face</p>
+     */
     @NameInMap("FigureType")
     public String figureType;
 
+    /**
+     * <p>The gender. Valid values:</p>
+     * <ul>
+     * <li>female</li>
+     * <li>male</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>female</p>
+     */
     @NameInMap("Gender")
     public String gender;
 
+    /**
+     * <p>The confidence level of the gender. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GenderConfidence")
     public Float genderConfidence;
 
+    /**
+     * <p>Specifies whether the figure wears glasses. Valid values:</p>
+     * <ul>
+     * <li>glasses</li>
+     * <li>sunglasses</li>
+     * <li>none</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>none</p>
+     */
     @NameInMap("Glasses")
     public String glasses;
 
+    /**
+     * <p>The confidence level of detecting whether the figure wears glasses. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.8</p>
+     */
     @NameInMap("GlassesConfidence")
     public Float glassesConfidence;
 
+    /**
+     * <p>Specifies whether the figure wears a hat. Valid values:</p>
+     * <ul>
+     * <li>hat</li>
+     * <li>none</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>none</p>
+     */
     @NameInMap("Hat")
     public String hat;
 
+    /**
+     * <p>The confidence level of detecting whether the figure wears a hat.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("HatConfidence")
     public Float hatConfidence;
 
+    /**
+     * <p>The head orientation.</p>
+     */
     @NameInMap("HeadPose")
     public HeadPose headPose;
 
+    /**
+     * <p>Specifies whether the figure wears a mask. Valid values:</p>
+     * <ul>
+     * <li>mask</li>
+     * <li>none</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>none</p>
+     */
     @NameInMap("Mask")
     public String mask;
 
+    /**
+     * <p>The confidence level of detecting whether the figure wears a mask. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MaskConfidence")
     public Float maskConfidence;
 
+    /**
+     * <p>Specifies whether the mouth is open. Valid values:</p>
+     * <ul>
+     * <li>open</li>
+     * <li>close</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>close</p>
+     */
     @NameInMap("Mouth")
     public String mouth;
 
+    /**
+     * <p>The confidence level of detecting whether the mouth is open. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MouthConfidence")
     public Float mouthConfidence;
 
+    /**
+     * <p>The clarity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.7</p>
+     */
     @NameInMap("Sharpness")
     public Float sharpness;
 

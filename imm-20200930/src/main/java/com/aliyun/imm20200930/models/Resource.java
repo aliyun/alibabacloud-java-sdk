@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Resource extends TeaModel {
     /**
+     * <p>The number of CPU cores. Valid values: 4 to 96.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class Resource extends TeaModel {
     public Long CPU;
 
     /**
+     * <p>The Elastic Compute Service (ECS) instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.gn5i-c2g1.large</p>
      */
@@ -19,6 +23,8 @@ public class Resource extends TeaModel {
     public String ECSInstance;
 
     /**
+     * <p>The GPU.</p>
+     * 
      * <strong>example:</strong>
      * <p>string	NVIDIA_P4</p>
      */
@@ -26,6 +32,8 @@ public class Resource extends TeaModel {
     public String GPUModel;
 
     /**
+     * <p>The number of GPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class Resource extends TeaModel {
     public Long GPUNum;
 
     /**
+     * <p>The displayed name of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>string	ecs.gn5i-c2g1.large-2vCPU-8GB-1*NVIDIA_P4</p>
      */
@@ -40,6 +50,8 @@ public class Resource extends TeaModel {
     public String name;
 
     /**
+     * <p>The RAM size. Unit: GB. Valid values: 30 to 736.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */

@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class AssumeRoleChainNode extends TeaModel {
     /**
+     * <p>The UID of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1023210024677934</p>
+     * <p>10232100********</p>
      */
     @NameInMap("OwnerId")
     public String ownerId;
 
     /**
+     * <p>The role.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,11 @@ public class AssumeRoleChainNode extends TeaModel {
     public String role;
 
     /**
+     * <p>The type of the account. Valid values:</p>
+     * <ul>
+     * <li>user: Alibaba Cloud account.</li>
+     * <li>service: Alibaba Cloud service.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

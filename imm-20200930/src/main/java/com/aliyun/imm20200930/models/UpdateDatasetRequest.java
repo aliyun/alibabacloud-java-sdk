@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatasetRequest extends TeaModel {
+    @NameInMap("DatasetConfig")
+    public DatasetConfig datasetConfig;
+
     /**
      * <p>The maximum number of bindings per dataset. The value range is from 1 to 10.</p>
      * 
@@ -102,6 +105,14 @@ public class UpdateDatasetRequest extends TeaModel {
     public static UpdateDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetRequest self = new UpdateDatasetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateDatasetRequest setDatasetConfig(DatasetConfig datasetConfig) {
+        this.datasetConfig = datasetConfig;
+        return this;
+    }
+    public DatasetConfig getDatasetConfig() {
+        return this.datasetConfig;
     }
 
     public UpdateDatasetRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {

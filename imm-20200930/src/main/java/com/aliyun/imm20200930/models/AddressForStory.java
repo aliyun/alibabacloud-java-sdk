@@ -4,18 +4,33 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AddressForStory extends TeaModel {
+    /**
+     * <p>The city.</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <p>The country.</p>
+     */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <p>The district.</p>
+     */
     @NameInMap("District")
     public String district;
 
+    /**
+     * <p>The province.</p>
+     */
     @NameInMap("Province")
     public String province;
 
+    /**
+     * <p>The township.</p>
+     */
     @NameInMap("Township")
     public String township;
 

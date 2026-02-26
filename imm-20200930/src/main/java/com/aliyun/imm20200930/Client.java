@@ -710,7 +710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Phase II of AI Assistant, Q\&amp;A API</p>
+     * <p>Phase II of AI Assistant, Q\\\&amp;A API</p>
      * 
      * @param tmpReq ContextualAnswerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -775,7 +775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Phase II of AI Assistant, Q\&amp;A API</p>
+     * <p>Phase II of AI Assistant, Q\\\&amp;A API</p>
      * 
      * @param request ContextualAnswerRequest
      * @return ContextualAnswerResponse
@@ -1393,7 +1393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create Dataset</p>
+     * <p>Creates a dataset.</p>
      * 
      * @param tmpReq CreateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1403,11 +1403,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDatasetShrinkRequest request = new CreateDatasetShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasetConfig)) {
+            request.datasetConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasetConfig, "DatasetConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.workflowParameters)) {
             request.workflowParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.workflowParameters, "WorkflowParameters", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetConfigShrink)) {
+            query.put("DatasetConfig", request.datasetConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.datasetMaxBindCount)) {
             query.put("DatasetMaxBindCount", request.datasetMaxBindCount);
         }
@@ -1475,7 +1483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create Dataset</p>
+     * <p>Creates a dataset.</p>
      * 
      * @param request CreateDatasetRequest
      * @return CreateDatasetResponse
@@ -2609,7 +2617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create Transcoding Service</p>
+     * <p>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</p>
      * 
      * @param tmpReq CreateMediaConvertTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2703,7 +2711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create Transcoding Service</p>
+     * <p>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</p>
      * 
      * @param request CreateMediaConvertTaskRequest
      * @return CreateMediaConvertTaskResponse
@@ -5307,7 +5315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Generates an access token for document preview or editing.</p>
+     * <p>Obtain Document Preview and Edit Token</p>
      * 
      * @param tmpReq GenerateWebofficeTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5443,7 +5451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Generates an access token for document preview or editing.</p>
+     * <p>Obtain Document Preview and Edit Token</p>
      * 
      * @param request GenerateWebofficeTokenRequest
      * @return GenerateWebofficeTokenResponse
@@ -5567,7 +5575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>drmlicense获取</p>
+     * <p>Obtains a Digital Rights Management (DRM) license for encrypted video playback.</p>
      * 
      * @deprecated OpenAPI GetDRMLicense is deprecated
      * 
@@ -5619,7 +5627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>drmlicense获取</p>
+     * <p>Obtains a Digital Rights Management (DRM) license for encrypted video playback.</p>
      * 
      * @deprecated OpenAPI GetDRMLicense is deprecated
      * 
@@ -8415,11 +8423,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateDatasetShrinkRequest request = new UpdateDatasetShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasetConfig)) {
+            request.datasetConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasetConfig, "DatasetConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.workflowParameters)) {
             request.workflowParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.workflowParameters, "WorkflowParameters", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetConfigShrink)) {
+            query.put("DatasetConfig", request.datasetConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.datasetMaxBindCount)) {
             query.put("DatasetMaxBindCount", request.datasetMaxBindCount);
         }

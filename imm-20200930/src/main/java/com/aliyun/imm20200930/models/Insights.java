@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Insights extends TeaModel {
     /**
+     * <p>The summary and description of the image.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class Insights extends TeaModel {
     public ImageInsight image;
 
     /**
+     * <p>The summary and description of the video.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */

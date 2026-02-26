@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Input extends TeaModel {
+    /**
+     * <p>The input data source from Object Storage Service (OSS).</p>
+     */
     @NameInMap("OSS")
     public InputOSS OSS;
 

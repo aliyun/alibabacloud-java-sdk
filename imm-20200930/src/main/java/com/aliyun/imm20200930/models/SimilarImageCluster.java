@@ -4,18 +4,42 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SimilarImageCluster extends TeaModel {
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-02-08T09:42:34.354969088+08:00</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The custom tag.</p>
+     */
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
+    /**
+     * <p>The similar images.</p>
+     */
     @NameInMap("Files")
     public java.util.List<SimilarImage> files;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SimilarImageCluster-748a041e-4ebc-4487-9e74-9c89b1****</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <p>The time when the cluster was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-02-08T09:42:34.354969088+08:00</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 

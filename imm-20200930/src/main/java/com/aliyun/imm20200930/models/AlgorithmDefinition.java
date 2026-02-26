@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AlgorithmDefinition extends TeaModel {
     /**
+     * <p>The ID of the algorithm definition.</p>
+     * 
      * <strong>example:</strong>
      * <p>8fc6e718-8d19-495f-a510-bcee3c598588</p>
      */
@@ -12,16 +14,23 @@ public class AlgorithmDefinition extends TeaModel {
     public String algorithmDefinitionId;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-05-31T10:19:40.572325888+08:00</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>Custom labels.</p>
+     */
     @NameInMap("CustomLabels")
     public java.util.List<java.util.Map<String, String>> customLabels;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -29,6 +38,8 @@ public class AlgorithmDefinition extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>algoName</p>
      */
@@ -36,6 +47,8 @@ public class AlgorithmDefinition extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>user1</p>
      */
@@ -43,16 +56,23 @@ public class AlgorithmDefinition extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The name of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>traningtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The model training parameters.</p>
+     */
     @NameInMap("TrainingSpecification")
     public TrainingSpecification trainingSpecification;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-05-31T10:19:40.572325888+08:00</p>
      */

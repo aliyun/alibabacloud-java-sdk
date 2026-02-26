@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Optimization extends TeaModel {
     /**
+     * <p>The initial learning rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.01</p>
      */
@@ -12,6 +14,8 @@ public class Optimization extends TeaModel {
     public Float learningRate;
 
     /**
+     * <p>The optimization method.</p>
+     * 
      * <strong>example:</strong>
      * <p>SGD</p>
      */

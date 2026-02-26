@@ -4,9 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SimilarImage extends TeaModel {
+    /**
+     * <p>The aesthetic score.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.709</p>
+     */
     @NameInMap("ImageScore")
     public Double imageScore;
 
+    /**
+     * <p>The URI of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-object</p>
+     */
     @NameInMap("URI")
     public String URI;
 

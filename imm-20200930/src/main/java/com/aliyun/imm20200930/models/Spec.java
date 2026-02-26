@@ -4,30 +4,44 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Spec extends TeaModel {
+    /**
+     * <p>The custom parameters for model training.</p>
+     */
     @NameInMap("Backbone")
     public CustomParams backbone;
 
     /**
+     * <p>The number of output classes of the last layer.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("ClassNum")
     public Long classNum;
 
+    /**
+     * <p>The custom parameters for model training.</p>
+     */
     @NameInMap("Head")
     public CustomParams head;
 
     /**
+     * <p>3</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("InputChannel")
     public Long inputChannel;
 
+    /**
+     * <p>The custom parameters for model training.</p>
+     */
     @NameInMap("Loss")
     public CustomParams loss;
 
     /**
+     * <p>The name of the model. The available model names vary with the model category.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,10 +50,15 @@ public class Spec extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The custom parameters for model training.</p>
+     */
     @NameInMap("Neck")
     public CustomParams neck;
 
     /**
+     * <p>The number of face landmarks. This parameter is required for face detection. In most cases, you can set the parameter to 5.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -47,6 +66,8 @@ public class Spec extends TeaModel {
     public Long numLandmarks;
 
     /**
+     * <p>The path to the pretrained model.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://bucket/abc/xxx.json</p>
      */

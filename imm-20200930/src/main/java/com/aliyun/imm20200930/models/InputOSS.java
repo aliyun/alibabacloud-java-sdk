@@ -5,14 +5,27 @@ import com.aliyun.tea.*;
 
 public class InputOSS extends TeaModel {
     /**
+     * <p>The name of the OSS bucket.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-bucket</p>
      */
     @NameInMap("Bucket")
     public String bucket;
 
+    /**
+     * <p>The match expressions.</p>
+     */
     @NameInMap("MatchExpressions")
     public java.util.List<String> matchExpressions;
 
+    /**
+     * <p>The object key prefix.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-object</p>
+     */
     @NameInMap("Prefix")
     public String prefix;
 

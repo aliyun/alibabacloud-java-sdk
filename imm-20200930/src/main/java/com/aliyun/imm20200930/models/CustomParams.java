@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CustomParams extends TeaModel {
     /**
+     * <p>The name of the parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>Normalize</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The properties.</p>
+     */
     @NameInMap("Properties")
     public java.util.List<Property> properties;
 

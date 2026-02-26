@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class Answer extends TeaModel {
     /**
+     * <p>The answer.</p>
+     * 
      * <strong>example:</strong>
-     * <p>你好</p>
+     * <p>Hello</p>
      */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The reference sources of the answer.</p>
+     */
     @NameInMap("References")
     public java.util.List<ReferenceFile> references;
 

@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class ListBindingsRequest extends TeaModel {
     /**
      * <p>The name of the dataset.<a href="~~478160~~"></a></p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test-dataset</p>

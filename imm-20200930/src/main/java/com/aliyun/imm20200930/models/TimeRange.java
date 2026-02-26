@@ -4,9 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class TimeRange extends TeaModel {
+    /**
+     * <p>The end time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-12-31T00:00:00+08:00</p>
+     */
     @NameInMap("End")
     public String end;
 
+    /**
+     * <p>The start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-12-31T00:00:00+08:00</p>
+     */
     @NameInMap("Start")
     public String start;
 

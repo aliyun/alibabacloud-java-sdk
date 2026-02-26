@@ -4,30 +4,90 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ContextualFile extends TeaModel {
+    /**
+     * <p>The Multipurpose Internet Mail Extensions (MIME) type of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text/x-imm-faq</p>
+     */
     @NameInMap("ContentType")
     public String contentType;
 
+    /**
+     * <p>Name of the dataset</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-dataset</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>Elements</p>
+     */
     @NameInMap("Elements")
     public java.util.List<Element> elements;
 
+    /**
+     * <p>Media type of the current file</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>image</li>
+     * <li>other</li>
+     * <li>document</li>
+     * <li>archive</li>
+     * <li>audio</li>
+     * <li>video</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>document</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <p>The URI of the OSS object. This parameter is available only if the value of the URI parameter is the URI of a file in Photo and Drive Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-object.jpg</p>
+     */
     @NameInMap("OSSURI")
     public String OSSURI;
 
+    /**
+     * <p>The identifier of the corresponding file that exists in the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0939d7ed-73fa-4009-bbe6-fbbe07b92b2e</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <p>User ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1482910009923706</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>Name of the project</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>URI of the file. Specify the OSS URI in the oss://${bucketname}/${objectname} format, where ${bucketname} is the name of the bucket in the same region as the current project and ${objectname} is the path of the object. The URI of a file in Photo and Drive Service follows the pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision} format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket</p>
+     */
     @NameInMap("URI")
     public String URI;
 

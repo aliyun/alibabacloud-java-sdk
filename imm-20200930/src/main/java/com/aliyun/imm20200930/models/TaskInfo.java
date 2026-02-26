@@ -4,36 +4,109 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class TaskInfo extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceNotFound</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The end time of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-24T03:01:49.480109219Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource project is not found.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The progress of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Progress")
     public Integer progress;
 
+    /**
+     * <p>The start time of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-24T03:01:41.662060377Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The status of the task. Valid values:</p>
+     * <ul>
+     * <li>Running: The task is running.</li>
+     * <li>Succeeded: The task is successful.</li>
+     * <li>Failed: The task failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags of the task. You can search for tasks by tag.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c2b277b9-0d30-4882-ad6d-ad661382****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The parameter definition in the JSON string format. For more information, see the Request parameters section of the topic about an asynchronous processing task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;ProjectName&quot;:&quot;test-project&quot;,
+     *     &quot;CompressedFormat&quot;:&quot;zip&quot;,
+     *     &quot;TargetURI&quot;:&quot;oss://test-bucket/output/test.zip&quot;,
+     *     &quot;Sources&quot;:[{&quot;URI&quot;:&quot;oss://test-bucket/input/test.jpg&quot;}]
+     * }</p>
+     */
     @NameInMap("TaskRequestDefinition")
     public String taskRequestDefinition;
 
+    /**
+     * <p>The type of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VideoLabelClassification</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>The custom user data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 
