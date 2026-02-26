@@ -17,7 +17,7 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
      * <p>An array that consists of the information about the whitelist.</p>
      */
     @NameInMap("VulWhitelistList")
-    public java.util.List<ModifyCreateVulWhitelistResponseBodyVulWhitelistList> vulWhitelistList;
+    public ModifyCreateVulWhitelistResponseBodyVulWhitelistList vulWhitelistList;
 
     public static ModifyCreateVulWhitelistResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyCreateVulWhitelistResponseBody self = new ModifyCreateVulWhitelistResponseBody();
@@ -32,20 +32,18 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyCreateVulWhitelistResponseBody setVulWhitelistList(java.util.List<ModifyCreateVulWhitelistResponseBodyVulWhitelistList> vulWhitelistList) {
+    public ModifyCreateVulWhitelistResponseBody setVulWhitelistList(ModifyCreateVulWhitelistResponseBodyVulWhitelistList vulWhitelistList) {
         this.vulWhitelistList = vulWhitelistList;
         return this;
     }
-    public java.util.List<ModifyCreateVulWhitelistResponseBodyVulWhitelistList> getVulWhitelistList() {
+    public ModifyCreateVulWhitelistResponseBodyVulWhitelistList getVulWhitelistList() {
         return this.vulWhitelistList;
     }
 
     public static class ModifyCreateVulWhitelistResponseBodyVulWhitelistList extends TeaModel {
         /**
-         * <p>The ID of the whitelist.</p>
-         * 
          * <strong>example:</strong>
-         * <p>30376</p>
+         * <p>1002</p>
          */
         @NameInMap("Id")
         public Long id;

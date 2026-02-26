@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCriteriaResponseBody extends TeaModel {
     /**
-     * <p>The information about the search conditions of assets.</p>
+     * <p>List of asset query condition information.</p>
      */
     @NameInMap("CriteriaList")
     public java.util.List<DescribeCriteriaResponseBodyCriteriaList> criteriaList;
@@ -57,30 +57,50 @@ public class DescribeCriteriaResponseBody extends TeaModel {
         /**
          * <p>The name of the search condition. Valid values:</p>
          * <ul>
-         * <li><strong>internetIp</strong>: the public IP address.</li>
-         * <li><strong>intranetIp</strong>: the private IP address.</li>
-         * <li><strong>instanceName</strong>: the name of the instance.</li>
-         * <li><strong>instanceId</strong>: the instance ID.</li>
-         * <li><strong>vpcInstanceId</strong>: The ID of the virtual private cloud (VPC) to which the instance belongs.</li>
-         * <li><strong>osName</strong>: the operating system.</li>
-         * <li><strong>osType</strong>: the operating system type.</li>
-         * <li><strong>hcStatus</strong>: indicates whether baseline risks exist.</li>
-         * <li><strong>vulStatus</strong>: indicates whether vulnerabilities exist.</li>
-         * <li><strong>alarmStatus</strong>: indicates whether security alerts exist.</li>
-         * <li><strong>riskStatus</strong>: indicates whether risks exist.</li>
-         * <li><strong>clientStatus</strong>: indicates the status of the client.</li>
-         * <li><strong>runningStatus</strong>: the running status of the asset.</li>
-         * <li><strong>tagName</strong>: the name of the tag.</li>
-         * <li><strong>groupName</strong>: the name of the server group.</li>
-         * <li><strong>regionId</strong>: the region ID.</li>
-         * <li><strong>importance</strong>: the importance of the asset.</li>
-         * <li><strong>exposedStatus</strong>: indicates whether the server is exposed.</li>
-         * <li><strong>authVersion</strong>: the authorization version.</li>
-         * <li><strong>flag</strong>: the cloud service provider.</li>
-         * <li><strong>ipList</strong>: the IP address list.</li>
-         * <li><strong>uuidList</strong> :the UUID.</li>
-         * <li><strong>tagKeyValue</strong>: the ECS tag.</li>
-         * <li><strong>vendorAuthAlias</strong>: the account name.</li>
+         * <li><strong>internetIp</strong>: Public IP Address. </li>
+         * <li><strong>intranetIp</strong>: Private IP Address.</li>
+         * <li><strong>instanceName</strong>: Instance Name.</li>
+         * <li><strong>instanceId</strong>: Instance ID. </li>
+         * <li><strong>machineType</strong>: Instance Type. </li>
+         * <li><strong>clusterIdList</strong>: Cluster ID list. </li>
+         * <li><strong>vpcInstanceId</strong>: VPC ID. </li>
+         * <li><strong>osName</strong>: OS. </li>
+         * <li><strong>osType</strong>: OS type. </li>
+         * <li><strong>hcStatus</strong>: Whether Baseline Risk Exists. </li>
+         * <li><strong>vulStatus</strong>: Whether Vulnerability Exists. </li>
+         * <li><strong>asapVulStatus</strong>: Whether there is an urgent vulnerability. </li>
+         * <li><strong>alarmStatus</strong>: Whether Alert Exists. </li>
+         * <li><strong>riskStatus</strong>: Whether there is a risk. </li>
+         * <li><strong>clientStatus</strong>: Whether it is online. </li>
+         * <li><strong>clientSubStatus</strong>: Client sub-status. </li>
+         * <li><strong>runningStatus</strong>: Power-on status. </li>
+         * <li><strong>tagName</strong>: Tag name. </li>
+         * <li><strong>vendorAuthAlias</strong>: Authorized account remarks. </li>
+         * <li><strong>vendorUid</strong>: Authorized account ID. </li>
+         * <li><strong>vendorUserName</strong>: Authorized account name. </li>
+         * <li><strong>namespace</strong>: Namespace. </li>
+         * <li><strong>appName</strong>: Application name. </li>
+         * <li><strong>groupName</strong>: Group name. </li>
+         * <li><strong>regionId</strong>: Region. </li>
+         * <li><strong>groupId</strong>: Group ID. </li>
+         * <li><strong>newInstance</strong>: Whether it is a new asset. </li>
+         * <li><strong>containerStatus</strong>: Whether there is a container. </li>
+         * <li><strong>importance</strong>: Asset importance. </li>
+         * <li><strong>exposedStatus</strong>: Whether it is an exposed server. </li>
+         * <li><strong>clusterId</strong>: Cluster ID. </li>
+         * <li><strong>authVersion</strong>: Authorization version. </li>
+         * <li><strong>flag</strong>: Cloud provider. </li>
+         * <li><strong>ipList</strong>: IP list. </li>
+         * <li><strong>uuidList</strong>: UUID. </li>
+         * <li><strong>aiStatus</strong>: Whether there is an AI component. </li>
+         * <li><strong>tagKeyValue</strong>: ECS tag. </li>
+         * <li><strong>ecsType</strong>: Server type. </li>
+         * <li><strong>alisecguardStatus</strong>: Self-protection status. </li>
+         * <li><strong>alihipsStatus</strong>: AliHips status. </li>
+         * <li><strong>alinetStatus</strong>: AliNet status. </li>
+         * <li><strong>alidetectStatus</strong>: Endpoint engine status. </li>
+         * <li><strong>yundunMonitorStatus</strong>: Information collection component status. </li>
+         * <li><strong>clusterNodeStatus</strong>: Whether it is a cluster node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,6 +124,204 @@ public class DescribeCriteriaResponseBody extends TeaModel {
 
         /**
          * <p>The attribute values of the assets that match the keyword.</p>
+         * <blockquote>
+         * <ul>
+         * <li>When <strong>Name</strong> is <strong>machineType</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>38</strong>: Elastic Container Instance. </li>
+         * <li><strong>51</strong>: RunD Container Instance. </li>
+         * <li><strong>52</strong>: RunC Container Instance.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>osType</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>linux</strong>: Linux. </li>
+         * <li><strong>windows</strong>: Windows.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>hcStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>NO</strong>: No. </li>
+         * <li><strong>YES</strong>: Yes.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>vulStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>NO</strong>: No. </li>
+         * <li><strong>YES</strong>: Yes.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>asapVulStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>NO</strong>: No.</li>
+         * <li><strong>YES</strong>: Yes.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>alarmStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>NO</strong>: No. </li>
+         * <li><strong>YES</strong>: Yes.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>riskStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>NO</strong>: No. </li>
+         * <li><strong>YES</strong>: Yes. </li>
+         * <li><strong>UNKNOWN</strong>: Unknown.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>clientStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>online</strong>: Online. </li>
+         * <li><strong>offline</strong>: Offline. </li>
+         * <li><strong>pause</strong>: Protection Suspended.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>clientSubStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>online</strong>: Online. </li>
+         * <li><strong>offline</strong>: Offline. </li>
+         * <li><strong>pause</strong>: Protection Suspended. </li>
+         * <li><strong>stopped</strong>: Server Shutdown. </li>
+         * <li><strong>uninstalled</strong>: Not Installed.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>runningStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>Running</strong>: On. </li>
+         * <li><strong>notRunning</strong>: Off. </li>
+         * <li><strong>UNKNOWN</strong>: Unknown.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>importance</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>important</strong>: Important. </li>
+         * <li><strong>general</strong>: Normal. </li>
+         * <li><strong>test</strong>: Test.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>containerStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>NO</strong>: No. </li>
+         * <li><strong>YES</strong>: Yes.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>exposedStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>NO</strong>: No. </li>
+         * <li><strong>YES</strong>: Yes.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>authVersion</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>1</strong>: Basic. </li>
+         * <li><strong>3</strong>: Enterprise. </li>
+         * <li><strong>5</strong>: Advanced.</li>
+         * <li><strong>6</strong>: Anti-virus. </li>
+         * <li><strong>7</strong>: Ultimate.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>flag</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>0|8|15</strong>: Alibaba Cloud. </li>
+         * <li><strong>1</strong>: External Host. </li>
+         * <li><strong>2</strong>: IDC. </li>
+         * <li><strong>3</strong>: Tencent Cloud. </li>
+         * <li><strong>4</strong>: Huawei Cloud. </li>
+         * <li><strong>5</strong>: Azure. </li>
+         * <li><strong>7</strong>: AWS. </li>
+         * <li><strong>9</strong>: SAE. </li>
+         * <li><strong>10</strong>: PAI. </li>
+         * <li><strong>13</strong>: ACS. </li>
+         * <li><strong>14</strong>: Volcano Cloud. </li>
+         * <li><strong>16</strong>: Google Cloud.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>aiStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>NO</strong>: No. </li>
+         * <li><strong>YES</strong>: Yes.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>ecsType</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>8</strong>: Simple Application Server. </li>
+         * <li><strong>11</strong>: LINGJUN GPU-accelerated Bare Metal Instance. </li>
+         * <li><strong>15</strong>: RDS Custom. </li>
+         * <li><strong>!8</strong>: Host.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>alisecguardStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>0</strong>: Plug-in Online. </li>
+         * <li><strong>1</strong>: Plug-in Disabled. </li>
+         * <li><strong>2</strong>: Plug-in Offline. </li>
+         * <li><strong>-99</strong>: The installation failed.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>alihipsStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>0</strong>: Plug-in Online. </li>
+         * <li><strong>1</strong>: Plug-in Disabled. </li>
+         * <li><strong>2</strong>: Plug-in Offline. </li>
+         * <li><strong>-99</strong>: The installation failed.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>alinetStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>0</strong>: Plug-in Online. </li>
+         * <li><strong>1</strong>: Plug-in Disabled. </li>
+         * <li><strong>2</strong>: Plug-in Offline. </li>
+         * <li><strong>-99</strong>: The installation failed.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>alidetectStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>0</strong>: Plug-in Online. </li>
+         * <li><strong>1</strong>: Plug-in Disabled. </li>
+         * <li><strong>2</strong>: Plug-in Offline. </li>
+         * <li><strong>-99</strong>: The installation failed.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>yundunMonitorStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>0</strong>: Plug-in Online. </li>
+         * <li><strong>1</strong>: Plug-in Disabled. </li>
+         * <li><strong>2</strong>: Plug-in Offline. </li>
+         * <li><strong>-99</strong>: The installation failed.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li>When <strong>Name</strong> is <strong>clusterNodeStatus</strong>, the enum values are: <blockquote>
+         * <ul>
+         * <li><strong>false</strong>: No. </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>47.96.XX.XX</p>
