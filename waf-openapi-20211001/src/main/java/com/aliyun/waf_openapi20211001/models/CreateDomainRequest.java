@@ -227,6 +227,19 @@ public class CreateDomainRequest extends TeaModel {
         @NameInMap("FocusHttps")
         public Boolean focusHttps;
 
+        @NameInMap("HstsIncludeSubDomain")
+        public Boolean hstsIncludeSubDomain;
+
+        /**
+         * <strong>example:</strong>
+         * <p>365000</p>
+         */
+        @NameInMap("HstsMaxAge")
+        public Long hstsMaxAge;
+
+        @NameInMap("HstsPreload")
+        public Boolean hstsPreload;
+
         /**
          * <p>Specifies whether to enable HTTP/2. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
          * <ul>
@@ -403,6 +416,30 @@ public class CreateDomainRequest extends TeaModel {
         }
         public Boolean getFocusHttps() {
             return this.focusHttps;
+        }
+
+        public CreateDomainRequestListen setHstsIncludeSubDomain(Boolean hstsIncludeSubDomain) {
+            this.hstsIncludeSubDomain = hstsIncludeSubDomain;
+            return this;
+        }
+        public Boolean getHstsIncludeSubDomain() {
+            return this.hstsIncludeSubDomain;
+        }
+
+        public CreateDomainRequestListen setHstsMaxAge(Long hstsMaxAge) {
+            this.hstsMaxAge = hstsMaxAge;
+            return this;
+        }
+        public Long getHstsMaxAge() {
+            return this.hstsMaxAge;
+        }
+
+        public CreateDomainRequestListen setHstsPreload(Boolean hstsPreload) {
+            this.hstsPreload = hstsPreload;
+            return this;
+        }
+        public Boolean getHstsPreload() {
+            return this.hstsPreload;
         }
 
         public CreateDomainRequestListen setHttp2Enabled(Boolean http2Enabled) {
@@ -698,6 +735,9 @@ public class CreateDomainRequest extends TeaModel {
         @NameInMap("MaxBodySize")
         public Integer maxBodySize;
 
+        @NameInMap("ProxyProtocol")
+        public Boolean proxyProtocol;
+
         /**
          * <p>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
@@ -915,6 +955,14 @@ public class CreateDomainRequest extends TeaModel {
         }
         public Integer getMaxBodySize() {
             return this.maxBodySize;
+        }
+
+        public CreateDomainRequestRedirect setProxyProtocol(Boolean proxyProtocol) {
+            this.proxyProtocol = proxyProtocol;
+            return this;
+        }
+        public Boolean getProxyProtocol() {
+            return this.proxyProtocol;
         }
 
         public CreateDomainRequestRedirect setReadTimeout(Integer readTimeout) {

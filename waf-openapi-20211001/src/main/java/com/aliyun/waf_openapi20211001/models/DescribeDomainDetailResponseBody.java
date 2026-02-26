@@ -344,6 +344,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("FocusHttps")
         public Boolean focusHttps;
 
+        @NameInMap("HstsIncludeSubDomain")
+        public Boolean hstsIncludeSubDomain;
+
+        @NameInMap("HstsMaxAge")
+        public Long hstsMaxAge;
+
+        @NameInMap("HstsPreload")
+        public Boolean hstsPreload;
+
         /**
          * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
          * <ul>
@@ -515,6 +524,30 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
         public Boolean getFocusHttps() {
             return this.focusHttps;
+        }
+
+        public DescribeDomainDetailResponseBodyListen setHstsIncludeSubDomain(Boolean hstsIncludeSubDomain) {
+            this.hstsIncludeSubDomain = hstsIncludeSubDomain;
+            return this;
+        }
+        public Boolean getHstsIncludeSubDomain() {
+            return this.hstsIncludeSubDomain;
+        }
+
+        public DescribeDomainDetailResponseBodyListen setHstsMaxAge(Long hstsMaxAge) {
+            this.hstsMaxAge = hstsMaxAge;
+            return this;
+        }
+        public Long getHstsMaxAge() {
+            return this.hstsMaxAge;
+        }
+
+        public DescribeDomainDetailResponseBodyListen setHstsPreload(Boolean hstsPreload) {
+            this.hstsPreload = hstsPreload;
+            return this;
+        }
+        public Boolean getHstsPreload() {
+            return this.hstsPreload;
         }
 
         public DescribeDomainDetailResponseBodyListen setHttp2Enabled(Boolean http2Enabled) {
@@ -857,6 +890,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("MaxBodySize")
         public Integer maxBodySize;
 
+        @NameInMap("ProxyProtocol")
+        public Boolean proxyProtocol;
+
         /**
          * <p>The read timeout period. Unit: seconds. Valid values: 5 to 1800.</p>
          * 
@@ -1058,6 +1094,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
         public Integer getMaxBodySize() {
             return this.maxBodySize;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setProxyProtocol(Boolean proxyProtocol) {
+            this.proxyProtocol = proxyProtocol;
+            return this;
+        }
+        public Boolean getProxyProtocol() {
+            return this.proxyProtocol;
         }
 
         public DescribeDomainDetailResponseBodyRedirect setReadTimeout(Integer readTimeout) {

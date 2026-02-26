@@ -199,6 +199,15 @@ public class ModifyDomainRequest extends TeaModel {
         @NameInMap("FocusHttps")
         public Boolean focusHttps;
 
+        @NameInMap("HstsIncludeSubDomain")
+        public Boolean hstsIncludeSubDomain;
+
+        @NameInMap("HstsMaxAge")
+        public Long hstsMaxAge;
+
+        @NameInMap("HstsPreload")
+        public Boolean hstsPreload;
+
         /**
          * <p>Specifies whether to enable HTTP/2. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
          * <ul>
@@ -369,6 +378,30 @@ public class ModifyDomainRequest extends TeaModel {
         }
         public Boolean getFocusHttps() {
             return this.focusHttps;
+        }
+
+        public ModifyDomainRequestListen setHstsIncludeSubDomain(Boolean hstsIncludeSubDomain) {
+            this.hstsIncludeSubDomain = hstsIncludeSubDomain;
+            return this;
+        }
+        public Boolean getHstsIncludeSubDomain() {
+            return this.hstsIncludeSubDomain;
+        }
+
+        public ModifyDomainRequestListen setHstsMaxAge(Long hstsMaxAge) {
+            this.hstsMaxAge = hstsMaxAge;
+            return this;
+        }
+        public Long getHstsMaxAge() {
+            return this.hstsMaxAge;
+        }
+
+        public ModifyDomainRequestListen setHstsPreload(Boolean hstsPreload) {
+            this.hstsPreload = hstsPreload;
+            return this;
+        }
+        public Boolean getHstsPreload() {
+            return this.hstsPreload;
         }
 
         public ModifyDomainRequestListen setHttp2Enabled(Boolean http2Enabled) {
@@ -668,6 +701,9 @@ public class ModifyDomainRequest extends TeaModel {
         @NameInMap("MaxBodySize")
         public Integer maxBodySize;
 
+        @NameInMap("ProxyProtocol")
+        public Boolean proxyProtocol;
+
         /**
          * <p>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
@@ -901,6 +937,14 @@ public class ModifyDomainRequest extends TeaModel {
         }
         public Integer getMaxBodySize() {
             return this.maxBodySize;
+        }
+
+        public ModifyDomainRequestRedirect setProxyProtocol(Boolean proxyProtocol) {
+            this.proxyProtocol = proxyProtocol;
+            return this;
+        }
+        public Boolean getProxyProtocol() {
+            return this.proxyProtocol;
         }
 
         public ModifyDomainRequestRedirect setReadTimeout(Integer readTimeout) {

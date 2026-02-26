@@ -2428,7 +2428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除日志外发配置</p>
+     * <p>Delets a hybrid cloud log delivery configuration.</p>
      * 
      * @param request DeleteLogDeliveryConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2472,7 +2472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除日志外发配置</p>
+     * <p>Delets a hybrid cloud log delivery configuration.</p>
      * 
      * @param request DeleteLogDeliveryConfigRequest
      * @return DeleteLogDeliveryConfigResponse
@@ -4880,7 +4880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a port of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</p>
+     * <p>Queries the port details of a cloud service instance that is added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances.</p>
      * 
      * @param request DescribeCloudResourceAccessPortDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4944,7 +4944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a port of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</p>
+     * <p>Queries the port details of a cloud service instance that is added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances.</p>
      * 
      * @param request DescribeCloudResourceAccessPortDetailsRequest
      * @return DescribeCloudResourceAccessPortDetailsResponse
