@@ -835,7 +835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates a PolarDB-X instance.</p>
      * 
      * @param tmpReq CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -985,7 +985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates a PolarDB-X instance.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -2122,6 +2122,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>描述备份策略</p>
+     * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupPolicyResponse
@@ -2155,6 +2158,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>描述备份策略</p>
+     * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
      */
@@ -7121,6 +7127,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新备份策略</p>
+     * 
      * @param request UpdateBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateBackupPolicyResponse
@@ -7158,6 +7167,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.crossRegionDataBackupRetention)) {
             query.put("CrossRegionDataBackupRetention", request.crossRegionDataBackupRetention);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossRegionFilterValue)) {
+            query.put("CrossRegionFilterValue", request.crossRegionFilterValue);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.crossRegionLogBackupRetention)) {
@@ -7226,6 +7239,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新备份策略</p>
+     * 
      * @param request UpdateBackupPolicyRequest
      * @return UpdateBackupPolicyResponse
      */

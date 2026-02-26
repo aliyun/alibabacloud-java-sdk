@@ -56,6 +56,9 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     @NameInMap("CrossRegionDataBackupRetention")
     public Integer crossRegionDataBackupRetention;
 
+    @NameInMap("CrossRegionFilterValue")
+    public String crossRegionFilterValue;
+
     @NameInMap("CrossRegionLogBackupRetention")
     public Integer crossRegionLogBackupRetention;
 
@@ -191,6 +194,14 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     }
     public Integer getCrossRegionDataBackupRetention() {
         return this.crossRegionDataBackupRetention;
+    }
+
+    public UpdateBackupPolicyRequest setCrossRegionFilterValue(String crossRegionFilterValue) {
+        this.crossRegionFilterValue = crossRegionFilterValue;
+        return this;
+    }
+    public String getCrossRegionFilterValue() {
+        return this.crossRegionFilterValue;
     }
 
     public UpdateBackupPolicyRequest setCrossRegionLogBackupRetention(Integer crossRegionLogBackupRetention) {
