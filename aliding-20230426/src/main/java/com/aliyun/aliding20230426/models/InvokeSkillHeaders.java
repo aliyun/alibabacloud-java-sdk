@@ -41,6 +41,9 @@ public class InvokeSkillHeaders extends TeaModel {
         @NameInMap("accountId")
         public String accountId;
 
+        @NameInMap("alidingSsoTicket")
+        public String alidingSsoTicket;
+
         @NameInMap("ssoTicket")
         public String ssoTicket;
 
@@ -55,6 +58,14 @@ public class InvokeSkillHeaders extends TeaModel {
         }
         public String getAccountId() {
             return this.accountId;
+        }
+
+        public InvokeSkillHeadersAccountContext setAlidingSsoTicket(String alidingSsoTicket) {
+            this.alidingSsoTicket = alidingSsoTicket;
+            return this;
+        }
+        public String getAlidingSsoTicket() {
+            return this.alidingSsoTicket;
         }
 
         public InvokeSkillHeadersAccountContext setSsoTicket(String ssoTicket) {

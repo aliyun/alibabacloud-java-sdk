@@ -14,6 +14,9 @@ public class InvokeAssistantHeaders extends TeaModel {
     @NameInMap("accountId")
     public String accountId;
 
+    @NameInMap("alidingSsoTicket")
+    public String alidingSsoTicket;
+
     public static InvokeAssistantHeaders build(java.util.Map<String, ?> map) throws Exception {
         InvokeAssistantHeaders self = new InvokeAssistantHeaders();
         return TeaModel.build(map, self);
@@ -33,6 +36,14 @@ public class InvokeAssistantHeaders extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public InvokeAssistantHeaders setAlidingSsoTicket(String alidingSsoTicket) {
+        this.alidingSsoTicket = alidingSsoTicket;
+        return this;
+    }
+    public String getAlidingSsoTicket() {
+        return this.alidingSsoTicket;
     }
 
 }

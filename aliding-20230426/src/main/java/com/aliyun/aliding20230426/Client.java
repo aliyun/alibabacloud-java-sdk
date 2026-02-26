@@ -13895,6 +13895,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("accountId", com.aliyun.teautil.Common.toJSONString(headers.accountId));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.alidingSsoTicket)) {
+            realHeaders.put("alidingSsoTicket", com.aliyun.teautil.Common.toJSONString(headers.alidingSsoTicket));
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))

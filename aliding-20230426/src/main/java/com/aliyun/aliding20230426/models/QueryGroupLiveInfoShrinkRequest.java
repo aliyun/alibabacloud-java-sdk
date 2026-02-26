@@ -8,7 +8,7 @@ public class QueryGroupLiveInfoShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>333d</p>
+     * <p>Eijxxx</p>
      */
     @NameInMap("AnchorUnionId")
     public String anchorUnionId;
@@ -17,7 +17,7 @@ public class QueryGroupLiveInfoShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>4d38xxxxx</p>
+     * <p>123456</p>
      */
     @NameInMap("LiveUuid")
     public String liveUuid;

@@ -63,7 +63,7 @@ public class BatchUpdateFormDataByInstanceIdShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;countrySelectField_l0c1cwiu&quot;:[{&quot;value&quot;:&quot;US&quot;}],&quot;addressField_l0c1cwiy&quot;:{&quot;address&quot;:&quot;111&quot;,&quot;regionIds&quot;:[460000,469027,469023401],&quot;regionText&quot;:[{&quot;en_US&quot;:&quot;hai+nan+sheng&quot;,&quot;zh_CN&quot;:&quot;海南省&quot;},{&quot;en_US&quot;:&quot;cheng+mai+xian&quot;,&quot;zh_CN&quot;:&quot;澄迈县&quot;},{&quot;en_US&quot;:&quot;guo+ying+hong+gang+nong+chang&quot;,&quot;zh_CN&quot;:&quot;国营红岗农场&quot;}]}}</p>
+     * <p>{\&quot;countrySelectField_l0c1cwiu\&quot;:[{\&quot;value\&quot;:\&quot;US\&quot;}],\&quot;addressField_l0c1cwiy\&quot;:{\&quot;address\&quot;:\&quot;111\&quot;,\&quot;regionIds\&quot;:[460000,469027,469023401],\&quot;regionText\&quot;:[{\&quot;en_US\&quot;:\&quot;hai+nan+sheng\&quot;,\&quot;zh_CN\&quot;:\&quot;海南省\&quot;},{\&quot;en_US\&quot;:\&quot;cheng+mai+xian\&quot;,\&quot;zh_CN\&quot;:\&quot;澄迈县\&quot;},{\&quot;en_US\&quot;:\&quot;guo+ying+hong+gang+nong+chang\&quot;,\&quot;zh_CN\&quot;:\&quot;国营红岗农场\&quot;}]}}</p>
      */
     @NameInMap("UpdateFormDataJson")
     public String updateFormDataJson;
