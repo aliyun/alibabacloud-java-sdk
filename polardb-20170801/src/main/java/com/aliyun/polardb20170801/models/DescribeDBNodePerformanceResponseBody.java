@@ -40,9 +40,6 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The cluster performance metrics.</p>
-     */
     @NameInMap("PerformanceKeys")
     public DescribeDBNodePerformanceResponseBodyPerformanceKeys performanceKeys;
 
@@ -126,21 +123,9 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
-        /**
-         * <p>The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1600822800000</p>
-         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        /**
-         * <p>The value of the metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9.33</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -187,27 +172,12 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem extends TeaModel {
-        /**
-         * <p>The performance metrics that you want to query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PolarDBDiskUsage</p>
-         */
         @NameInMap("Measurement")
         public String measurement;
 
-        /**
-         * <p>The name of the performance metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mean_sys_dir_size</p>
-         */
         @NameInMap("MetricName")
         public String metricName;
 
-        /**
-         * <p>The performance metrics.</p>
-         */
         @NameInMap("Points")
         public DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPoints points;
 

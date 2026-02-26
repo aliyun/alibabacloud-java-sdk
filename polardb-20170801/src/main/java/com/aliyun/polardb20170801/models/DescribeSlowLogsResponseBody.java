@@ -31,9 +31,6 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
-    /**
-     * <p>Details about slow query logs.</p>
-     */
     @NameInMap("Items")
     public DescribeSlowLogsResponseBodyItems items;
 
@@ -160,132 +157,48 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogsResponseBodyItemsSQLSlowLog extends TeaModel {
-        /**
-         * <p>The date when the data was generated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-05-30Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PolarDB_MySQL</p>
-         */
         @NameInMap("DBName")
         public String DBName;
 
-        /**
-         * <p>The ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pi-***************</p>
-         */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
-        /**
-         * <p>The longest execution duration of a specific SQL statement in the query. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("MaxExecutionTime")
         public Long maxExecutionTime;
 
         @NameInMap("MaxExecutionTimeMs")
         public String maxExecutionTimeMs;
 
-        /**
-         * <p>The longest lock duration that was caused by a specific SQL statement in the query. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("MaxLockTime")
         public Long maxLockTime;
 
-        /**
-         * <p>The largest number of rows that were parsed by a specific SQL statement in the query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ParseMaxRowCount")
         public Long parseMaxRowCount;
 
-        /**
-         * <p>The total number of rows that were parsed by all SQL statements in the query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("ParseTotalRowCounts")
         public Long parseTotalRowCounts;
 
-        /**
-         * <p>The largest number of rows that were returned by a specific SQL statement in the query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("ReturnMaxRowCount")
         public Long returnMaxRowCount;
 
-        /**
-         * <p>The total number of rows that were returned by all SQL statements in the query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ReturnTotalRowCounts")
         public Long returnTotalRowCounts;
 
-        /**
-         * <p>The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>U2FsdGVkxxxx</p>
-         */
         @NameInMap("SQLHASH")
         public String SQLHASH;
 
-        /**
-         * <p>The SQL statement that is executed in the query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>select id,name from tb_table</p>
-         */
         @NameInMap("SQLText")
         public String SQLText;
 
-        /**
-         * <p>The total number of executions of the SQL statements.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("TotalExecutionCounts")
         public Long totalExecutionCounts;
 
-        /**
-         * <p>The total duration that was caused by all SQL statements in the query. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;
 
-        /**
-         * <p>The total lock duration that was caused by all SQL statements in the query. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TotalLockTimes")
         public Long totalLockTimes;
 

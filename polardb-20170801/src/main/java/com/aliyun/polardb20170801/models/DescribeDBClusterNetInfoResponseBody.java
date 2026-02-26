@@ -62,52 +62,24 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterNetInfoResponseBodyDBClusterNetInfosDBClusterNetInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>pc-****************.pg.polardb.pre.rds.aliyuncs.com</p>
-         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
-        /**
-         * <strong>example:</strong>
-         * <p>MPP</p>
-         */
         @NameInMap("ConnectionStringType")
         public String connectionStringType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>121.<em>.</em>.173</p>
-         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Public</p>
-         */
         @NameInMap("IPType")
         public String IPType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1521</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vpc-***************</p>
-         */
         @NameInMap("VPCId")
         public String VPCId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vsw-bp1li3eavsz8oaexq15dw</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -194,45 +166,21 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterNetInfoResponseBodyDBNodeNetInfosDBNodeNetInfoNetInfosNetInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>pc-****************.pg.polardb.pre.rds.aliyuncs.com</p>
-         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
-        /**
-         * <strong>example:</strong>
-         * <p>47.<em>.</em>.203</p>
-         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Public</p>
-         */
         @NameInMap("IPType")
         public String IPType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5432</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vpc-****************</p>
-         */
         @NameInMap("VPCId")
         public String VPCId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vsw-*************</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -311,17 +259,9 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterNetInfoResponseBodyDBNodeNetInfosDBNodeNetInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>pc-*************</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Writer</p>
-         */
         @NameInMap("DBNodeRole")
         public String DBNodeRole;
 

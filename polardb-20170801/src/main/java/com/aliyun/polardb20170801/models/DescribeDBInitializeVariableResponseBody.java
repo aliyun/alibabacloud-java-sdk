@@ -36,9 +36,6 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The attributes that are returned.</p>
-     */
     @NameInMap("Variables")
     public DescribeDBInitializeVariableResponseBodyVariables variables;
 
@@ -80,49 +77,12 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInitializeVariableResponseBodyVariablesVariable extends TeaModel {
-        /**
-         * <p>The character set that is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EUC_CN</p>
-         */
         @NameInMap("Charset")
         public String charset;
 
-        /**
-         * <p>The language that indicates the collation of the databases that are created.</p>
-         * <blockquote>
-         * <ul>
-         * <li>The language must be compatible with the character set that is specified by <strong>CharacterSetName</strong>.</li>
-         * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</li>
-         * <li>This parameter is optional for PolarDB for MySQL clusters.</li>
-         * </ul>
-         * </blockquote>
-         * <p>To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose <strong>Settings and Management</strong> &gt; <strong>Databases</strong>. Then, click <strong>Create Database</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>C</p>
-         */
         @NameInMap("Collate")
         public String collate;
 
-        /**
-         * <p>The language that indicates the character type of the database.</p>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li><p>The language must be compatible with the character set that is specified by <strong>CharacterSetName</strong>.</p>
-         * </li>
-         * <li><p>The specified parameter value must be the same as the value of <strong>Collate</strong>.</p>
-         * </li>
-         * <li><p>If the PolarDB cluster runs PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL, this parameter is required. If the cluster runs PolarDB for MySQL, this parameter is not supported.</p>
-         * </li>
-         * </ul>
-         * <p>To view the valid values of this parameter, perform the following steps: First, log on to the PolarDB console and click the ID of a cluster. Then, in the left-side navigation pane, choose <strong>Settings and Management</strong> &gt; <strong>Databases</strong>. Finally, click <strong>Create Database</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>C</p>
-         */
         @NameInMap("Ctype")
         public String ctype;
 

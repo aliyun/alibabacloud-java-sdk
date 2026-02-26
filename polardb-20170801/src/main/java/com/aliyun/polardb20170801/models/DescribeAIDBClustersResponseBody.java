@@ -132,97 +132,45 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeAIDBClustersResponseBodyItemsDBCluster extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>vnode</p>
-         */
         @NameInMap("AiNodeType")
         public String aiNodeType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-09-13T15:45:27Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ocpx</p>
-         */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
-        /**
-         * <strong>example:</strong>
-         * <p>pc-**************</p>
-         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Creating</p>
-         */
         @NameInMap("DBClusterStatus")
         public String DBClusterStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>polar.pg.g8.8xlarge.gu30</p>
-         */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
-        /**
-         * <strong>example:</strong>
-         * <p>polardb_ai</p>
-         */
         @NameInMap("DBType")
         public String DBType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2028-09-01T16:00:00Z</p>
-         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>False</p>
-         */
         @NameInMap("Expired")
         public Boolean expired;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxxxxxxxxxxx</p>
-         */
         @NameInMap("KubeClusterId")
         public String kubeClusterId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Unlock</p>
-         */
         @NameInMap("LockMode")
         public String lockMode;
 
         @NameInMap("ModelType")
         public String modelType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Postpaid</p>
-         */
         @NameInMap("PayType")
         public String payType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -233,44 +181,24 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         @NameInMap("RelativeDBClusterId")
         public String relativeDBClusterId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>container</p>
-         */
         @NameInMap("RunType")
         public String runType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("StorageSpace")
         public Integer storageSpace;
 
-        /**
-         * <strong>example:</strong>
-         * <p>essdpl0</p>
-         */
         @NameInMap("StorageType")
         public String storageType;
 
         @NameInMap("Tags")
         public DescribeAIDBClustersResponseBodyItemsDBClusterTags tags;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vpc-***************</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
         @NameInMap("VswitchId")
         public String vswitchId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-j</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

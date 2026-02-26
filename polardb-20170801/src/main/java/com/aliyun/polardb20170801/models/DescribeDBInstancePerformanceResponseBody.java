@@ -126,17 +126,9 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1737424822</p>
-         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12.33</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -183,17 +175,9 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceItem extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>PolarDBDiskUsage</p>
-         */
         @NameInMap("Measurement")
         public String measurement;
 
-        /**
-         * <strong>example:</strong>
-         * <p>mean_data_size</p>
-         */
         @NameInMap("MetricName")
         public String metricName;
 

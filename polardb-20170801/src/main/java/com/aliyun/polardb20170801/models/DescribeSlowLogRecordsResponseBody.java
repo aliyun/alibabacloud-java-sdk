@@ -22,9 +22,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
-    /**
-     * <p>List of slow log details.</p>
-     */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
 
@@ -126,102 +123,39 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord extends TeaModel {
-        /**
-         * <p>Database name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testdb</p>
-         */
         @NameInMap("DBName")
         public String DBName;
 
-        /**
-         * <p>Node ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pi-*****************</p>
-         */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
-        /**
-         * <p>Time when the SQL starts execution. The format is <code>YYYY-MM-DDThh:mmZ</code> (UTC time).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-04-07T03:47Z</p>
-         */
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
 
-        /**
-         * <p>Client address connecting to the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testdb[testdb] @  [100.<strong>.</strong>.242]</p>
-         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         @NameInMap("LockTimeMS")
         public Long lockTimeMS;
 
-        /**
-         * <p>SQL lock duration in seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("LockTimes")
         public Long lockTimes;
 
-        /**
-         * <p>Number of rows parsed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ParseRowCounts")
         public Long parseRowCounts;
 
-        /**
-         * <p>Query time. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("QueryTimeMS")
         public Long queryTimeMS;
 
-        /**
-         * <p>SQL execution duration, in seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("QueryTimes")
         public Long queryTimes;
 
-        /**
-         * <p>Number of rows returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
-        /**
-         * <p>Unique identifier for the SQL statement in slow log statistics.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>U2FsdGVk****</p>
-         */
         @NameInMap("SQLHash")
         public String SQLHash;
 
-        /**
-         * <p>Query statement.</p>
-         */
         @NameInMap("SQLText")
         public String SQLText;
 

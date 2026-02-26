@@ -81,24 +81,12 @@ public class DescribeApplicationsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationsResponseBodyItemsApplicationsEndpointsEndpoint extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>192.168.0.3</p>
-         */
         @NameInMap("IP")
         public String IP;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Public</p>
-         */
         @NameInMap("NetType")
         public String netType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8080</p>
-         */
         @NameInMap("Port")
         public String port;
 
@@ -210,24 +198,12 @@ public class DescribeApplicationsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationsResponseBodyItemsApplications extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>pa-**************</p>
-         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>supabase</p>
-         */
         @NameInMap("ApplicationType")
         public String applicationType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-03-25T09:37:10Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -238,72 +214,36 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>myapp</p>
-         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Endpoints")
         public DescribeApplicationsResponseBodyItemsApplicationsEndpoints endpoints;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1.0.0</p>
-         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-06-25T09:37:10Z</p>
-         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Expired")
         public String expired;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Postpaid</p>
-         */
         @NameInMap("PayType")
         public String payType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>pcs-**************</p>
-         */
         @NameInMap("PolarFSInstanceId")
         public String polarFSInstanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Activated</p>
-         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Tags")
         public DescribeApplicationsResponseBodyItemsApplicationsTags tags;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-b</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

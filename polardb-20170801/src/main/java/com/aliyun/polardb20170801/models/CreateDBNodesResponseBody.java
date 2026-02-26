@@ -13,9 +13,6 @@ public class CreateDBNodesResponseBody extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    /**
-     * <p>Details about the nodes.</p>
-     */
     @NameInMap("DBNodeIds")
     public CreateDBNodesResponseBodyDBNodeIds DBNodeIds;
 

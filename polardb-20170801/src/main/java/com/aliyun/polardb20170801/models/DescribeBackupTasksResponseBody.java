@@ -4,9 +4,6 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTasksResponseBody extends TeaModel {
-    /**
-     * <p>The details of the backup task.</p>
-     */
     @NameInMap("Items")
     public DescribeBackupTasksResponseBodyItems items;
 
@@ -41,73 +38,21 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupTasksResponseBodyItemsBackupJob extends TeaModel {
-        /**
-         * <p>The ID of the backup task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11111111</p>
-         */
         @NameInMap("BackupJobId")
         public String backupJobId;
 
-        /**
-         * <p>The state of the backup task. Valid values:</p>
-         * <ul>
-         * <li><strong>NoStart</strong></li>
-         * <li><strong>Preparing</strong></li>
-         * <li><strong>Waiting</strong></li>
-         * <li><strong>Uploading</strong></li>
-         * <li><strong>Checking</strong></li>
-         * <li><strong>Finished</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>NoStart</p>
-         */
         @NameInMap("BackupProgressStatus")
         public String backupProgressStatus;
 
-        /**
-         * <p>The backup mode. Valid values:</p>
-         * <ul>
-         * <li><strong>Automated</strong></li>
-         * <li><strong>Manual</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Automated</p>
-         */
         @NameInMap("JobMode")
         public String jobMode;
 
-        /**
-         * <p>The progress of the backup task in percentage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Process")
         public String process;
 
-        /**
-         * <p>The time when the backup task started. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-08-08T07:24:01Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The type of the backup task. Valid values:</p>
-         * <ul>
-         * <li><strong>TempBackupTask</strong>: The backup task is an adhoc backup task.</li>
-         * <li><strong>NormalBackupTask</strong>: The backup task is a common backup task.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>NormalBackupTask</p>
-         */
         @NameInMap("TaskAction")
         public String taskAction;
 

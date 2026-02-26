@@ -40,9 +40,6 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The cluster performance metrics.</p>
-     */
     @NameInMap("PerformanceKeys")
     public DescribeDBClusterPerformanceResponseBodyPerformanceKeys performanceKeys;
 
@@ -126,21 +123,9 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
-        /**
-         * <p>The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1600822800000</p>
-         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        /**
-         * <p>The value of the metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>42.38</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -187,39 +172,15 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem extends TeaModel {
-        /**
-         * <p>The ID of the cluster node.</p>
-         * <blockquote>
-         * <p> The value of this parameter is not returned if the <code>Key</code> parameter is set to <code>PolarDBDiskUsage</code>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>pi-*************</p>
-         */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
-        /**
-         * <p>The performance metrics that are returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PolarDBDiskUsage</p>
-         */
         @NameInMap("Measurement")
         public String measurement;
 
-        /**
-         * <p>The name of the performance metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mean_data_size</p>
-         */
         @NameInMap("MetricName")
         public String metricName;
 
-        /**
-         * <p>The performance metrics.</p>
-         */
         @NameInMap("Points")
         public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPoints points;
 
