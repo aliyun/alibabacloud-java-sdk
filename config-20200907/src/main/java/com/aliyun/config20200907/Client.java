@@ -706,14 +706,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Limits</h3>
-     * <p>Each management account and delegated administrator account can have a maximum of 200 rules.</p>
+     * <p>Each management account and delegated administrator account can have up to 200 rules.</p>
      * <h3>Background information</h3>
      * <p>Cloud Config supports the following methods for creating rules:</p>
      * <ul>
      * <li>Create rules from templates
-     * Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principle of rules</a>.</li>
+     * Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). Use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">the referenced document</a>.</li>
      * <li>Create rules based on functions in Function Compute
-     * Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principle of custom function rules</a>.</li>
+     * Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">the referenced document</a>.</li>
      * </ul>
      * <h3>Usage notes</h3>
      * <p>This example shows how to create a rule for the account group <code>ca-a4e5626622af0079****</code> using the \<code>required-tags\\</code> template. The response shows that the rule is created with the ID <code>cr-4e3d626622af0080****</code>.</p>
@@ -889,14 +889,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Limits</h3>
-     * <p>Each management account and delegated administrator account can have a maximum of 200 rules.</p>
+     * <p>Each management account and delegated administrator account can have up to 200 rules.</p>
      * <h3>Background information</h3>
      * <p>Cloud Config supports the following methods for creating rules:</p>
      * <ul>
      * <li>Create rules from templates
-     * Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principle of rules</a>.</li>
+     * Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). Use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">the referenced document</a>.</li>
      * <li>Create rules based on functions in Function Compute
-     * Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principle of custom function rules</a>.</li>
+     * Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">the referenced document</a>.</li>
      * </ul>
      * <h3>Usage notes</h3>
      * <p>This example shows how to create a rule for the account group <code>ca-a4e5626622af0079****</code> using the \<code>required-tags\\</code> template. The response shows that the rule is created with the ID <code>cr-4e3d626622af0080****</code>.</p>
@@ -1386,17 +1386,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Limits</h3>
-     * <p>You can create up to 200 rules for each account.</p>
+     * <p>You can create up to 200 rules per account.</p>
      * <h3>Background information</h3>
-     * <p>You can create rules in Cloud Config in the following ways:</p>
+     * <p>You can create rules in Cloud Config in two ways:</p>
      * <ul>
      * <li>Create rules from templates
-     * Rule templates are predefined rule functions in Function Compute that are provided by Cloud Config. You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</li>
+     * Rule templates are predefined rule functions provided by Cloud Config in Function Compute. You can use rule templates to quickly create rules. For more information, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</li>
      * <li>Create custom rules using Function Compute
-     * Custom rules are based on functions in Function Compute that host your rule code. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information about custom rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</li>
+     * Custom rules use Function Compute functions to host your rule code. If Cloud Config\&quot;s predefined rule templates do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</li>
      * </ul>
      * <h3>Usage notes</h3>
-     * <p>This topic provides an example of how to create a rule from the \<code>required-tags\\</code> template. In the response, a rule is created and its ID is <code>cr-5772ba41209e007b****</code>.</p>
+     * <p>This topic demonstrates how to create a rule from the \<code>required-tags\\</code> template. The response confirms that the rule was created successfully. Its ID is <code>cr-5772ba41209e007b****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a rule from a template or a custom rule using Function Compute to check resource compliance. After you create a rule, Cloud Config runs an initial evaluation and then automatically triggers subsequent evaluations based on the rule\&quot;s trigger. You can also run evaluations manually.</p>
@@ -1549,17 +1549,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Limits</h3>
-     * <p>You can create up to 200 rules for each account.</p>
+     * <p>You can create up to 200 rules per account.</p>
      * <h3>Background information</h3>
-     * <p>You can create rules in Cloud Config in the following ways:</p>
+     * <p>You can create rules in Cloud Config in two ways:</p>
      * <ul>
      * <li>Create rules from templates
-     * Rule templates are predefined rule functions in Function Compute that are provided by Cloud Config. You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</li>
+     * Rule templates are predefined rule functions provided by Cloud Config in Function Compute. You can use rule templates to quickly create rules. For more information, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</li>
      * <li>Create custom rules using Function Compute
-     * Custom rules are based on functions in Function Compute that host your rule code. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information about custom rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</li>
+     * Custom rules use Function Compute functions to host your rule code. If Cloud Config\&quot;s predefined rule templates do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</li>
      * </ul>
      * <h3>Usage notes</h3>
-     * <p>This topic provides an example of how to create a rule from the \<code>required-tags\\</code> template. In the response, a rule is created and its ID is <code>cr-5772ba41209e007b****</code>.</p>
+     * <p>This topic demonstrates how to create a rule from the \<code>required-tags\\</code> template. The response confirms that the rule was created successfully. Its ID is <code>cr-5772ba41209e007b****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a rule from a template or a custom rule using Function Compute to check resource compliance. After you create a rule, Cloud Config runs an initial evaluation and then automatically triggers subsequent evaluations based on the rule\&quot;s trigger. You can also run evaluations manually.</p>
@@ -8023,8 +8023,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic describes how to manually run remediation once for the rule <code>cr-6b7c626622af00b4****</code> in the account group <code>ca-6b4a626622af0012****</code>. The response indicates that remediation completed successfully.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行账号组规则修正</p>
+     * <p>Manually run remediation for a specified account group rule.</p>
      * 
      * @param request StartAggregateRemediationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8045,6 +8048,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceAccountId", request.resourceAccountId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceRegionId)) {
+            query.put("ResourceRegionId", request.resourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -8063,8 +8078,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic describes how to manually run remediation once for the rule <code>cr-6b7c626622af00b4****</code> in the account group <code>ca-6b4a626622af0012****</code>. The response indicates that remediation completed successfully.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行账号组规则修正</p>
+     * <p>Manually run remediation for a specified account group rule.</p>
      * 
      * @param request StartAggregateRemediationRequest
      * @return StartAggregateRemediationResponse
@@ -8211,8 +8229,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of a manual remediation for rule <code>cr-8a973ac2e2be00a2****</code>. The returned result indicates a successful manual remediation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行修正</p>
+     * <p>Manually execute the specified rule remediation.</p>
      * 
      * @param request StartRemediationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8223,6 +8244,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
             query.put("ConfigRuleId", request.configRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceRegionId)) {
+            query.put("ResourceRegionId", request.resourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -8243,8 +8276,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of a manual remediation for rule <code>cr-8a973ac2e2be00a2****</code>. The returned result indicates a successful manual remediation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行修正</p>
+     * <p>Manually execute the specified rule remediation.</p>
      * 
      * @param request StartRemediationRequest
      * @return StartRemediationResponse
@@ -9255,7 +9291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to change the risk level of the rule <code>cr-a260626622af0005****</code> to <code>3</code> (low risk).</p>
+     * <p>This topic shows how to change the risk level of rule <code>cr-a260626622af0005****</code> to <code>3</code>, which indicates low risk.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the description, input parameters, and risk level of a rule.</p>
@@ -9403,7 +9439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to change the risk level of the rule <code>cr-a260626622af0005****</code> to <code>3</code> (low risk).</p>
+     * <p>This topic shows how to change the risk level of rule <code>cr-a260626622af0005****</code> to <code>3</code>, which indicates low risk.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the description, input parameters, and risk level of a rule.</p>

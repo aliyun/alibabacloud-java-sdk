@@ -4,9 +4,27 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class StartRemediationResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConfigRuleShrinkRequest extends TeaModel {
     /**
-     * <p>A client token. It is used to ensure the idempotence of the request. You can use the client to generate a token, but you must make sure that the token is unique among different requests. The <code>ClientToken</code> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token used to ensure request idempotence. Generate a unique token on your client. The <code>ClientToken</code> parameter can contain only ASCII characters and cannot exceed 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
@@ -14,8 +14,10 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The conditions for a custom condition rule, in JSON format.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{&quot;ComplianceConditions&quot;:&quot;{&quot;operator&quot;:&quot;and&quot;,&quot;children&quot;:[{&quot;operator&quot;:&quot;StringEquals&quot;,&quot;featurePath&quot;:&quot;$.Status&quot;,&quot;desired&quot;:&quot;1&quot;,&quot;featureSource&quot;:&quot;CONFIGURATION&quot;}]}&quot;}</p>
+     * <p>{&quot;ComplianceConditions&quot;:&quot;{\&quot;operator\&quot;:\&quot;and\&quot;,\&quot;children\&quot;:[{\&quot;operator\&quot;:\&quot;StringEquals\&quot;,\&quot;featurePath\&quot;:\&quot;$.Status\&quot;,\&quot;desired\&quot;:\&quot;1\&quot;,\&quot;featureSource\&quot;:\&quot;CONFIGURATION\&quot;}]}&quot;}</p>
      */
     @NameInMap("Conditions")
     public String conditions;
@@ -33,9 +35,9 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     /**
      * <p>The trigger that invokes the rule. Valid values:</p>
      * <ul>
-     * <li><p>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+     * <li><p>ConfigurationItemChangeNotification: The rule runs when a resource configuration changes.</p>
      * </li>
-     * <li><p>ScheduledNotification: The rule is triggered on a regular basis.</p>
+     * <li><p>ScheduledNotification: The rule runs on a regular schedule.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -95,7 +97,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public java.util.List<CreateConfigRuleShrinkRequestExcludeTagsScope> excludeTagsScope;
 
     /**
-     * <p>Extended content. This parameter is used only to specify the trigger time for a 24-hour evaluation cycle.</p>
+     * <p>Extended content. This parameter specifies the trigger time for a 24-hour evaluation cycle.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;fixedHour&quot;:&quot;13&quot;}</p>
@@ -104,8 +106,8 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String extendContent;
 
     /**
-     * <p>The input parameters of the rule.</p>
-     * <p>You can obtain the input parameters of a rule by calling the <a href="https://help.aliyun.com/document_detail/606993.html">GetManagedRule</a> operation. View the <code>CompulsoryInputParameterDetails</code> and <code>OptionalInputParameterDetails</code> parameters to learn about the required and optional parameters.</p>
+     * <p>The input parameters for the rule.</p>
+     * <p>You can get the input parameters of a rule by calling the <a href="https://help.aliyun.com/document_detail/606993.html">GetManagedRule</a> operation. View the <code>CompulsoryInputParameterDetails</code> and <code>OptionalInputParameterDetails</code> parameters to learn about the required and optional parameters.</p>
      * <p>The format of the input parameters is <code>{&quot;Parameter 1 Name&quot;:&quot;Parameter 1 Value&quot;,&quot;Parameter 2 Name&quot;:&quot;Parameter 2 Value&quot;}</code>.</p>
      * 
      * <strong>example:</strong>
@@ -115,17 +117,17 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String inputParametersShrink;
 
     /**
-     * <p>The frequency at which the rule is executed. Valid values:</p>
+     * <p>The frequency at which the rule runs. Valid values:</p>
      * <ul>
-     * <li><p>One_Hour: 1 hour.</p>
+     * <li><p>One_Hour: every hour.</p>
      * </li>
-     * <li><p>Three_Hours: 3 hours.</p>
+     * <li><p>Three_Hours: every three hours.</p>
      * </li>
-     * <li><p>Six_Hours: 6 hours.</p>
+     * <li><p>Six_Hours: every six hours.</p>
      * </li>
-     * <li><p>Twelve_Hours: 12 hours.</p>
+     * <li><p>Twelve_Hours: every twelve hours.</p>
      * </li>
-     * <li><p>TwentyFour_Hours (default): 24 hours.</p>
+     * <li><p>TwentyFour_Hours (default): every twenty-four hours.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -184,7 +186,7 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String resourceNameScope;
 
     /**
-     * <p>The resource types to be evaluated by the rule. Separate multiple resource types with commas (,).</p>
+     * <p>The resource types to evaluate. Separate multiple resource types with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -219,8 +221,10 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
      * <p>To query the identifier of a rule template, see <a href="https://help.aliyun.com/document_detail/127404.html">List of rule templates</a>.</p>
      * </blockquote>
      * </li>
+     * <li><p>If you set <code>SourceOwner</code> to <code>CUSTOM_CONFIGURATION</code>, set this parameter to <code>acs-config-configuration</code>.</p>
+     * </li>
      * <li><p>If you set <code>SourceOwner</code> to <code>CUSTOM_FC</code>, specify the Alibaba Cloud Resource Name (ARN) of the function.</p>
-     * <p>The ARN must be in the format of <code>acs:fc:{Region}:{AccountID}:services/{ServiceName}.LATEST/functions/{FunctionName}</code>. Example: <code>acs:fc:cn-hangzhou:120886317861****:services/service-test.LATEST/functions/config-test</code>.</p>
+     * <p>The ARN must be in the format <code>acs:fc:{Region}:{AccountID}:services/{ServiceName}.LATEST/functions/{FunctionName}</code>. Example: <code>acs:fc:cn-hangzhou:120886317861****:services/service-test.LATEST/functions/config-test</code>.</p>
      * <blockquote>
      * <p>To obtain the ARN of a function, see <a href="https://help.aliyun.com/document_detail/415752.html">ListFunctions</a>.</p>
      * </blockquote>
@@ -235,11 +239,13 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String sourceIdentifier;
 
     /**
-     * <p>The type of the rule to create. Valid values:</p>
+     * <p>The type of rule to create. Valid values:</p>
      * <ul>
      * <li><p>ALIYUN: rule template.</p>
      * </li>
-     * <li><p>CUSTOM_FC: custom rule.</p>
+     * <li><p>CUSTOM_FC: custom Function Compute rule.</p>
+     * </li>
+     * <li><p>CUSTOM_CONFIGURATION: custom condition rule.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -251,19 +257,19 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
     public String sourceOwner;
 
     /**
-     * <p>The tags of the rule to be created.</p>
+     * <p>The tags of the rule to create.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;
 
     /**
-     * <p>The logical operator that applies if you specify multiple tags for the <code>TagsScope</code> parameter. For example, if you set <code>TagsScope</code> to <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>a:a</code> and <code>b:b</code> tags. If you do not specify this parameter, the default value <code>OR</code> is used.</p>
+     * <p>The logical operator used when you specify multiple tags for the <code>TagsScope</code> parameter. For example, if you set <code>TagsScope</code> to <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>a:a</code> and <code>b:b</code> tags. If you do not specify this parameter, the default value <code>OR</code> is used.</p>
      * <p>This parameter also works with the deprecated <code>TagKeyScope</code> parameter. For example, if you set <code>TagKeyScope</code> to <code>ECS,OSS</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>ECS</code> and <code>OSS</code> tags.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>AND: The AND logic applies.</p>
+     * <li><p>AND: Use AND logic.</p>
      * </li>
-     * <li><p>OR: The OR logic applies.</p>
+     * <li><p>OR: Use OR logic.</p>
      * </li>
      * </ul>
      * 

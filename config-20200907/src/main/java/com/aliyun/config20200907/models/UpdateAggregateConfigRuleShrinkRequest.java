@@ -17,8 +17,8 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String accountIdsScope;
 
     /**
-     * <p>The ID of the account group.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>The account group ID.</p>
+     * <p>For more information, see <a href="">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,15 +37,17 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The conditions for the custom rule, specified in JSON format.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{&quot;ComplianceConditions&quot;:&quot;{&quot;operator&quot;:&quot;and&quot;,&quot;children&quot;:[{&quot;operator&quot;:&quot;StringEquals&quot;,&quot;featurePath&quot;:&quot;$.Status&quot;,&quot;desired&quot;:&quot;1&quot;,&quot;featureSource&quot;:&quot;CONFIGURATION&quot;}]}&quot;}</p>
+     * <p>{&quot;ComplianceConditions&quot;:&quot;{\&quot;operator\&quot;:\&quot;and\&quot;,\&quot;children\&quot;:[{\&quot;operator\&quot;:\&quot;StringEquals\&quot;,\&quot;featurePath\&quot;:\&quot;$.Status\&quot;,\&quot;desired\&quot;:\&quot;1\&quot;,\&quot;featureSource\&quot;:\&quot;CONFIGURATION\&quot;}]}&quot;}</p>
      */
     @NameInMap("Conditions")
     public String conditions;
 
     /**
      * <p>The rule ID.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+     * <p>For more information, see <a href="">ListAggregateConfigRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,8 +57,8 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The name of the rule.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+     * <p>The rule name.</p>
+     * <p>For more information, see <a href="">ListAggregateConfigRules</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>存在所有指定标签</p>
@@ -65,11 +67,11 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String configRuleName;
 
     /**
-     * <p>The trigger type of the rule. Valid values:</p>
+     * <p>The trigger mechanism of the rule. Valid values:</p>
      * <ul>
-     * <li><p>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+     * <li><p>ConfigurationItemChangeNotification: Configuration changes.</p>
      * </li>
-     * <li><p>ScheduledNotification: The rule is triggered on a regular basis.</p>
+     * <li><p>ScheduledNotification: Scheduled execution.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -157,7 +159,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public java.util.List<UpdateAggregateConfigRuleShrinkRequestExcludeTagsScope> excludeTagsScope;
 
     /**
-     * <p>The rule applies only to resources of member accounts in the specified folders.</p>
+     * <p>The rule applies only to resources of member accounts in the specified resource directory IDs.</p>
      * <blockquote>
      * <ul>
      * <li><p>This parameter applies only to rules in a global account group.</p>
@@ -174,7 +176,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String folderIdsScope;
 
     /**
-     * <p>The input parameters of the rule.</p>
+     * <p>The rule parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;tag1Key&quot;:&quot;ECS&quot;,&quot;tag1Value&quot;:&quot;test&quot;}</p>
@@ -183,7 +185,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String inputParametersShrink;
 
     /**
-     * <p>The frequency at which the rule is run. Valid values:</p>
+     * <p>The frequency at which the rule runs. Valid values:</p>
      * <ul>
      * <li><p>One_Hour: 1 hour.</p>
      * </li>
@@ -207,7 +209,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String maximumExecutionFrequency;
 
     /**
-     * <p>The rule applies only to resources in the specified regions. Separate multiple region IDs with a comma (,).</p>
+     * <p>The rule applies only to resources in the specified region IDs. Separate multiple region IDs with a comma (,).</p>
      * <blockquote>
      * <p>This parameter applies only to rule templates.</p>
      * </blockquote>
@@ -219,7 +221,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String regionIdsScope;
 
     /**
-     * <p>The rule applies only to resources in the specified resource groups. Separate multiple resource group IDs with a comma (,).</p>
+     * <p>The rule applies only to resources in the specified resource group IDs. Separate multiple resource group IDs with a comma (,).</p>
      * <blockquote>
      * <p>This parameter applies only to rule templates.</p>
      * </blockquote>
@@ -231,7 +233,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The rule applies only to the specified resources. Separate multiple resource IDs with a comma (,).</p>
+     * <p>The rule applies only to the specified resource IDs. Separate multiple resource IDs with a comma (,).</p>
      * 
      * <strong>example:</strong>
      * <p>lb-5cmbowstbkss9ta03****</p>
@@ -240,7 +242,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
-     * <p>The rule applies only to resources with the specified name.</p>
+     * <p>The rule applies only to resources with the specified resource name.</p>
      * 
      * <strong>example:</strong>
      * <p>i-xxx</p>
@@ -278,8 +280,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public Integer riskLevel;
 
     /**
-     * <p>The tags of the resource. This input parameter is deprecated and is ignored if specified.</p>
-     * <p>A maximum of 20 tags can be attached.</p>
+     * <p>The rule applies only to resources with the specified resource name.</p>
      */
     @NameInMap("Tag")
     @Deprecated
@@ -287,12 +288,12 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The logical relationship for multiple tags in the <code>TagsScope</code> parameter. For example, if you set the <code>TagsScope</code> parameter to <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>a:a</code> and <code>b:b</code> tags. If you do not set this parameter, the default value is <code>OR</code>.</p>
-     * <p>This parameter also works with the deprecated <code>TagKeyScope</code> parameter. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>ECS</code> and <code>OSS</code> tags.</p>
+     * <p>This parameter also works with the deprecated <code>TagKeyScope</code> parameter (not recommended). For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>ECS</code> and <code>OSS</code> tags.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>AND</p>
+     * <li><p>AND: Logical AND.</p>
      * </li>
-     * <li><p>OR</p>
+     * <li><p>OR: Logical OR.</p>
      * </li>
      * </ul>
      * 
@@ -304,7 +305,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter instead.</p>
-     * <p>The rule applies only to resources that have the specified tag.</p>
+     * <p>The rule applies only to resources with the specified tag.</p>
      * <blockquote>
      * <p>This parameter applies only to rule templates. You must specify both <code>TagKeyScope</code> and <code>TagValueScope</code>.</p>
      * </blockquote>
@@ -318,7 +319,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter instead.</p>
-     * <p>The rule applies only to resources that have the specified tag.</p>
+     * <p>The rule applies only to resources with the specified tag.</p>
      * <blockquote>
      * <p>This parameter applies only to rule templates. You must specify both <code>TagKeyScope</code> and <code>TagValueScope</code>.</p>
      * </blockquote>

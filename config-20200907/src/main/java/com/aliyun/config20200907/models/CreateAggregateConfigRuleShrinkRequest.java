@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The rule is effective only for resources of the specified member accounts. Separate multiple member account IDs with commas (,).</p>
+     * <p>The rule applies only to resources of the specified member accounts. Separate multiple member account IDs with commas (,).</p>
      * <blockquote>
      * <p>This parameter applies only to rule templates.</p>
      * </blockquote>
@@ -18,7 +18,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">the referenced document</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>A client token to ensure that the request is idempotent. Generate a unique value from your client for each request. The <code>ClientToken</code> parameter must contain only ASCII characters and be no more than 64 characters long.</p>
+     * <p>A client token that ensures the request is idempotent. Generate a unique value from your client for each request. The <code>ClientToken</code> parameter must contain only ASCII characters and be no more than 64 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
@@ -37,8 +37,10 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The conditions for a custom condition rule, in JSON format.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{&quot;ComplianceConditions&quot;:&quot;{&quot;operator&quot;:&quot;and&quot;,&quot;children&quot;:[{&quot;operator&quot;:&quot;StringEquals&quot;,&quot;featurePath&quot;:&quot;$.Status&quot;,&quot;desired&quot;:&quot;1&quot;,&quot;featureSource&quot;:&quot;CONFIGURATION&quot;}]}&quot;}</p>
+     * <p>{&quot;ComplianceConditions&quot;:&quot;{\&quot;operator\&quot;:\&quot;and\&quot;,\&quot;children\&quot;:[{\&quot;operator\&quot;:\&quot;StringEquals\&quot;,\&quot;featurePath\&quot;:\&quot;$.Status\&quot;,\&quot;desired\&quot;:\&quot;1\&quot;,\&quot;featureSource\&quot;:\&quot;CONFIGURATION\&quot;}]}&quot;}</p>
      */
     @NameInMap("Conditions")
     public String conditions;
@@ -54,11 +56,11 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String configRuleName;
 
     /**
-     * <p>The trigger type of the rule. Valid values:</p>
+     * <p>The trigger type for the rule. Valid values:</p>
      * <ul>
-     * <li><p>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+     * <li><p>ConfigurationItemChangeNotification: The rule triggers when a resource configuration changes.</p>
      * </li>
-     * <li><p>ScheduledNotification: The rule is triggered on a regular basis.</p>
+     * <li><p>ScheduledNotification: The rule triggers on a schedule.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -70,7 +72,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String configRuleTriggerTypes;
 
     /**
-     * <p>The description of the rule.</p>
+     * <p>A description of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>最多可以定义6组标签。如果资源同时具有指定的所有标签，则视为“合规”。</p>
@@ -79,7 +81,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The rule is not effective for resources of the specified member accounts. The resources of the specified member accounts are not evaluated. Separate multiple member account IDs with commas (,).</p>
+     * <p>The rule does not apply to resources of the specified member accounts. Resources in these accounts are not evaluated. Separate multiple member account IDs with commas (,).</p>
      * <blockquote>
      * <p>This parameter applies only to rule templates.</p>
      * </blockquote>
@@ -91,10 +93,10 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String excludeAccountIdsScope;
 
     /**
-     * <p>The rule is not effective for resources of the member accounts in the specified folders. The resources of the member accounts in the specified folders are not evaluated. Separate multiple folder IDs with commas (,).</p>
+     * <p>The rule does not apply to resources of member accounts in the specified folders. Resources in these folders are not evaluated. Separate multiple folder IDs with commas (,).</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter applies only to rules of a global account group.</p>
+     * <li><p>This parameter applies only to global account group rules.</p>
      * </li>
      * <li><p>This parameter applies only to rule templates.</p>
      * </li>
@@ -108,7 +110,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String excludeFolderIdsScope;
 
     /**
-     * <p>The rule is not effective for resources in the specified regions. The resources in the specified regions are not evaluated. Separate multiple region IDs with commas (,).</p>
+     * <p>The rule does not apply to resources in the specified regions. Resources in these regions are not evaluated. Separate multiple region IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -117,7 +119,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String excludeRegionIdsScope;
 
     /**
-     * <p>The rule is not effective for resources in the specified resource groups. The resources in the specified resource groups are not evaluated. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The rule does not apply to resources in the specified resource groups. Resources in these groups are not evaluated. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bnczc6r7rml****</p>
@@ -126,7 +128,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String excludeResourceGroupIdsScope;
 
     /**
-     * <p>The rule is not effective for the specified resources. The specified resources are not evaluated. Separate multiple resource IDs with commas (,).</p>
+     * <p>The rule does not apply to the specified resources. These resources are not evaluated. Separate multiple resource IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>lb-t4nbowvtbkss7t326****</p>
@@ -135,13 +137,13 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String excludeResourceIdsScope;
 
     /**
-     * <p>The scope of the tags to be excluded.</p>
+     * <p>The scope of tags to exclude.</p>
      */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<CreateAggregateConfigRuleShrinkRequestExcludeTagsScope> excludeTagsScope;
 
     /**
-     * <p>The extended content. This parameter specifies the trigger time for a rule that runs on a 24-hour cycle.</p>
+     * <p>Extended content. This parameter currently supports only setting the trigger time for rules that run on a 24-hour cycle.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
@@ -150,10 +152,10 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String extendContent;
 
     /**
-     * <p>The rule is effective only for resources of the member accounts in the specified folders. Separate multiple folder IDs with commas (,).</p>
+     * <p>The rule applies only to resources of member accounts in the specified folders. Separate multiple folder IDs with commas (,).</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter applies only to rules of a global account group.</p>
+     * <li><p>This parameter applies only to global account group rules.</p>
      * </li>
      * <li><p>This parameter applies only to rule templates.</p>
      * </li>
@@ -167,7 +169,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String folderIdsScope;
 
     /**
-     * <p>The input parameters of the rule.</p>
+     * <p>The input parameters for the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;tag1Key&quot;:&quot;ECS&quot;,&quot;tag1Value&quot;:&quot;test&quot;}</p>
@@ -176,7 +178,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String inputParametersShrink;
 
     /**
-     * <p>The frequency at which the rule is run. Valid values:</p>
+     * <p>The frequency at which the rule runs. Valid values:</p>
      * <ul>
      * <li><p>One_Hour: 1 hour.</p>
      * </li>
@@ -190,7 +192,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if you set <code>ConfigRuleTriggerTypes</code> to <code>ScheduledNotification</code>.</p>
+     * <p>Set this parameter if you set <code>ConfigRuleTriggerTypes</code> to <code>ScheduledNotification</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -200,7 +202,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String maximumExecutionFrequency;
 
     /**
-     * <p>The rule is effective only for resources in the specified regions. Separate multiple region IDs with commas (,).</p>
+     * <p>The rule applies only to resources in the specified regions. Separate multiple region IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -209,7 +211,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String regionIdsScope;
 
     /**
-     * <p>The rule is effective only for resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The rule applies only to resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzc7r7rhx****</p>
@@ -218,7 +220,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The rule is effective only for the specified resources. Separate multiple resource IDs with commas (,).</p>
+     * <p>The rule applies only to the specified resources. Separate multiple resource IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>lb-5cmbowstbkss9ta03****</p>
@@ -227,7 +229,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
-     * <p>The rule is effective only for resources that have the specified names.</p>
+     * <p>The rule applies only to resources with the specified names.</p>
      * 
      * <strong>example:</strong>
      * <p>i-xxx</p>
@@ -239,7 +241,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String resourceNameScope;
 
     /**
-     * <p>The resource types to be evaluated by the rule. Separate multiple resource types with commas (,).</p>
+     * <p>The resource types to evaluate. Separate multiple types with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -269,15 +271,17 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     /**
      * <p>The identifier of the rule.</p>
      * <ul>
-     * <li><p>If you set <code>SourceOwner</code> to <code>ALIYUN</code>, enter the identifier of the rule template, such as <code>required-tags</code>.</p>
+     * <li><p>If <code>SourceOwner</code> is <code>ALIYUN</code>, enter the identifier of the rule template, such as <code>required-tags</code>.</p>
      * <blockquote>
-     * <p>For more information about how to query the identifier of a rule template, see <a href="https://help.aliyun.com/document_detail/127404.html">List of rule templates</a>.</p>
+     * <p>For more information about how to query rule template identifiers, see <a href="https://help.aliyun.com/document_detail/127404.html">the referenced document</a>.</p>
      * </blockquote>
      * </li>
-     * <li><p>If you set <code>SourceOwner</code> to <code>CUSTOM_FC</code>, enter the Alibaba Cloud Resource Name (ARN) of the function in Function Compute.</p>
-     * <p>The ARN is in the format of <code>acs:fc:{region}:{accountId}:services/{serviceName}.LATEST/functions/{functionName}</code>. For example, <code>acs:fc:cn-hangzhou:120886317861****:services/service-test.LATEST/functions/config-test</code>.</p>
+     * <li><p>If <code>SourceOwner</code> is <code>CUSTOM_CONFIGURATION</code>, enter <code>acs-config-configuration</code>.</p>
+     * </li>
+     * <li><p>If <code>SourceOwner</code> is <code>CUSTOM_FC</code>, enter the Alibaba Cloud Resource Name (ARN) of the Function Compute function.</p>
+     * <p>The ARN format is <code>acs:fc:{region}:{accountId}:services/{serviceName}.LATEST/functions/{functionName}</code>. For example, <code>acs:fc:cn-hangzhou:120886317861****:services/service-test.LATEST/functions/config-test</code>.</p>
      * <blockquote>
-     * <p>For more information about how to obtain the ARN of a function, see <a href="https://help.aliyun.com/document_detail/415752.html">ListFunctions</a>.</p>
+     * <p>For more information about how to obtain a function ARN, see <a href="https://help.aliyun.com/document_detail/415752.html">the referenced document</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -290,11 +294,13 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String sourceIdentifier;
 
     /**
-     * <p>The type of the rule. Valid values:</p>
+     * <p>The type of rule. Valid values:</p>
      * <ul>
      * <li><p>ALIYUN: rule template</p>
      * </li>
-     * <li><p>CUSTOM_FC: custom rule</p>
+     * <li><p>CUSTOM_FC: custom Function Compute rule</p>
+     * </li>
+     * <li><p>CUSTOM_CONFIGURATION: custom condition rule</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -306,14 +312,14 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String sourceOwner;
 
     /**
-     * <p>The tags to add to the rule. You can add up to 20 tags.</p>
+     * <p>The tag of the rule.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;
 
     /**
-     * <p>The logical relationship for multiple tags in the <code>TagsScope</code> parameter. For example, if you set the <code>TagsScope</code> parameter to <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>a:a</code> and <code>b:b</code> tags. The default value is <code>OR</code>.</p>
-     * <p>This parameter can also be used for the deprecated <code>TagKeyScope</code> parameter, but this is not recommended. For example, if you set <code>TagKeyScope</code> to <code>ECS,OSS</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>ECS</code> and <code>OSS</code> tags.</p>
+     * <p>The logical relationship between multiple tags in the <code>TagsScope</code> parameter. For example, if you set <code>TagsScope</code> to <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>a:a</code> and <code>b:b</code> tags. The default value is <code>OR</code>.</p>
+     * <p>You can also use this parameter with the deprecated <code>TagKeyScope</code> parameter, but this is not recommended. For example, if you set <code>TagKeyScope</code> to <code>ECS,OSS</code> and set this parameter to <code>AND</code>, the rule applies only to resources that have both the <code>ECS</code> and <code>OSS</code> tags.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><p>AND</p>
@@ -329,10 +335,10 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String tagKeyLogicScope;
 
     /**
-     * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter.</p>
-     * <p>The rule is effective only for resources that have the specified tag keys. Separate multiple tag keys with commas (,).</p>
+     * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter instead.</p>
+     * <p>The rule applies only to resources that have the specified tag keys. Separate multiple tag keys with commas (,).</p>
      * <blockquote>
-     * <p>This parameter applies only to rule templates. The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters must be used together.</p>
+     * <p>This parameter applies only to rule templates. Set both <code>TagKeyScope</code> and <code>TagValueScope</code> together.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -343,10 +349,10 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String tagKeyScope;
 
     /**
-     * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter.</p>
-     * <p>The rule is effective only for resources that have the specified tag values.</p>
+     * <p>This parameter is deprecated. Use the <code>TagsScope</code> parameter instead.</p>
+     * <p>The rule applies only to resources that have the specified tag values.</p>
      * <blockquote>
-     * <p>This parameter applies only to rule templates. The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters must be used together.</p>
+     * <p>This parameter applies only to rule templates. Set both <code>TagKeyScope</code> and <code>TagValueScope</code> together.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -357,7 +363,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String tagValueScope;
 
     /**
-     * <p>The scope of the tags.</p>
+     * <p>The scope of tags to include.</p>
      */
     @NameInMap("TagsScope")
     public java.util.List<CreateAggregateConfigRuleShrinkRequestTagsScope> tagsScope;
@@ -611,7 +617,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
 
     public static class CreateAggregateConfigRuleShrinkRequestExcludeTagsScope extends TeaModel {
         /**
-         * <p>The tag key of the resource to be excluded.</p>
+         * <p>The tag key of the resource to exclude.</p>
          * 
          * <strong>example:</strong>
          * <p>key-2</p>
@@ -620,7 +626,7 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the resource to be excluded.</p>
+         * <p>The tag value of the resource to exclude.</p>
          * 
          * <strong>example:</strong>
          * <p>value-2</p>
