@@ -745,6 +745,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("IsStateful")
         public Boolean isStateful;
 
+        @NameInMap("Labels")
+        public java.util.Map<String, String> labels;
+
         /**
          * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
          * <ul>
@@ -976,6 +979,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public Boolean getIsStateful() {
             return this.isStateful;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setLabels(java.util.Map<String, String> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.Map<String, String> getLabels() {
+            return this.labels;
         }
 
         public ListApplicationsResponseBodyDataApplications setMem(Integer mem) {
