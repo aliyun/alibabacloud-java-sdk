@@ -229,6 +229,13 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>123</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        /**
+         * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("IsDelete")
@@ -265,6 +272,14 @@ public class ListRowPermissionByUserIdResponseBody extends TeaModel {
         }
         public java.util.List<ListRowPermissionByUserIdResponseBodyPageResultDataRulesExpressions> getExpressions() {
             return this.expressions;
+        }
+
+        public ListRowPermissionByUserIdResponseBodyPageResultDataRules setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public ListRowPermissionByUserIdResponseBodyPageResultDataRules setIsDelete(Boolean isDelete) {

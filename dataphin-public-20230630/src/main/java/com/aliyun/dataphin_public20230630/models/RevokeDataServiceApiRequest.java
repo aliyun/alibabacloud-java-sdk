@@ -68,13 +68,32 @@ public class RevokeDataServiceApiRequest extends TeaModel {
         public Long apiId;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>1203</p>
          */
         @NameInMap("AppId")
         public Integer appId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>USE</p>
+         */
+        @NameInMap("AuthType")
+        public String authType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>DEV</p>
+         */
+        @NameInMap("Env")
+        public String env;
+
+        /**
+         * <strong>example:</strong>
+         * <p>APP</p>
+         */
+        @NameInMap("GranteeType")
+        public String granteeType;
 
         /**
          * <p>This parameter is required.</p>
@@ -84,6 +103,13 @@ public class RevokeDataServiceApiRequest extends TeaModel {
          */
         @NameInMap("Reason")
         public String reason;
+
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
+        @NameInMap("UserId")
+        public String userId;
 
         public static RevokeDataServiceApiRequestRevokeCommand build(java.util.Map<String, ?> map) throws Exception {
             RevokeDataServiceApiRequestRevokeCommand self = new RevokeDataServiceApiRequestRevokeCommand();
@@ -106,12 +132,44 @@ public class RevokeDataServiceApiRequest extends TeaModel {
             return this.appId;
         }
 
+        public RevokeDataServiceApiRequestRevokeCommand setAuthType(String authType) {
+            this.authType = authType;
+            return this;
+        }
+        public String getAuthType() {
+            return this.authType;
+        }
+
+        public RevokeDataServiceApiRequestRevokeCommand setEnv(String env) {
+            this.env = env;
+            return this;
+        }
+        public String getEnv() {
+            return this.env;
+        }
+
+        public RevokeDataServiceApiRequestRevokeCommand setGranteeType(String granteeType) {
+            this.granteeType = granteeType;
+            return this;
+        }
+        public String getGranteeType() {
+            return this.granteeType;
+        }
+
         public RevokeDataServiceApiRequestRevokeCommand setReason(String reason) {
             this.reason = reason;
             return this;
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public RevokeDataServiceApiRequestRevokeCommand setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

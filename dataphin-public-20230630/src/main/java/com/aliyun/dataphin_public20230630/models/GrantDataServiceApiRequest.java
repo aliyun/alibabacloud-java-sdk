@@ -58,9 +58,6 @@ public class GrantDataServiceApiRequest extends TeaModel {
     }
 
     public static class GrantDataServiceApiRequestGrantCommandDevFieldList extends TeaModel {
-        /**
-         * <p>This parameter is required.</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
@@ -80,9 +77,6 @@ public class GrantDataServiceApiRequest extends TeaModel {
     }
 
     public static class GrantDataServiceApiRequestGrantCommandProdFieldList extends TeaModel {
-        /**
-         * <p>This parameter is required.</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
@@ -113,7 +107,6 @@ public class GrantDataServiceApiRequest extends TeaModel {
 
         /**
          * <p>AppID</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1201</p>
@@ -127,6 +120,9 @@ public class GrantDataServiceApiRequest extends TeaModel {
         @NameInMap("ApplyProd")
         public Boolean applyProd;
 
+        @NameInMap("AuthTypes")
+        public java.util.List<String> authTypes;
+
         @NameInMap("DevFieldList")
         public java.util.List<GrantDataServiceApiRequestGrantCommandDevFieldList> devFieldList;
 
@@ -139,6 +135,13 @@ public class GrantDataServiceApiRequest extends TeaModel {
         @NameInMap("ExpireDate")
         public String expireDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>APP</p>
+         */
+        @NameInMap("GranteeType")
+        public String granteeType;
+
         @NameInMap("ProdFieldList")
         public java.util.List<GrantDataServiceApiRequestGrantCommandProdFieldList> prodFieldList;
 
@@ -150,6 +153,13 @@ public class GrantDataServiceApiRequest extends TeaModel {
          */
         @NameInMap("Reason")
         public String reason;
+
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
+        @NameInMap("UserId")
+        public String userId;
 
         public static GrantDataServiceApiRequestGrantCommand build(java.util.Map<String, ?> map) throws Exception {
             GrantDataServiceApiRequestGrantCommand self = new GrantDataServiceApiRequestGrantCommand();
@@ -188,6 +198,14 @@ public class GrantDataServiceApiRequest extends TeaModel {
             return this.applyProd;
         }
 
+        public GrantDataServiceApiRequestGrantCommand setAuthTypes(java.util.List<String> authTypes) {
+            this.authTypes = authTypes;
+            return this;
+        }
+        public java.util.List<String> getAuthTypes() {
+            return this.authTypes;
+        }
+
         public GrantDataServiceApiRequestGrantCommand setDevFieldList(java.util.List<GrantDataServiceApiRequestGrantCommandDevFieldList> devFieldList) {
             this.devFieldList = devFieldList;
             return this;
@@ -204,6 +222,14 @@ public class GrantDataServiceApiRequest extends TeaModel {
             return this.expireDate;
         }
 
+        public GrantDataServiceApiRequestGrantCommand setGranteeType(String granteeType) {
+            this.granteeType = granteeType;
+            return this;
+        }
+        public String getGranteeType() {
+            return this.granteeType;
+        }
+
         public GrantDataServiceApiRequestGrantCommand setProdFieldList(java.util.List<GrantDataServiceApiRequestGrantCommandProdFieldList> prodFieldList) {
             this.prodFieldList = prodFieldList;
             return this;
@@ -218,6 +244,14 @@ public class GrantDataServiceApiRequest extends TeaModel {
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public GrantDataServiceApiRequestGrantCommand setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

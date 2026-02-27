@@ -43,13 +43,20 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends TeaModel {
     public static class ListAuthorizedDataServiceApiDetailsRequestListQuery extends TeaModel {
         /**
          * <p>AppKey</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>200000000</p>
          */
         @NameInMap("AppKey")
+        @Deprecated
         public Long appKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>app12345</p>
+         */
+        @NameInMap("AppKeyStr")
+        public String appKeyStr;
 
         /**
          * <p>This parameter is required.</p>
@@ -74,12 +81,21 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public ListAuthorizedDataServiceApiDetailsRequestListQuery setAppKey(Long appKey) {
             this.appKey = appKey;
             return this;
         }
         public Long getAppKey() {
             return this.appKey;
+        }
+
+        public ListAuthorizedDataServiceApiDetailsRequestListQuery setAppKeyStr(String appKeyStr) {
+            this.appKeyStr = appKeyStr;
+            return this;
+        }
+        public String getAppKeyStr() {
+            return this.appKeyStr;
         }
 
         public ListAuthorizedDataServiceApiDetailsRequestListQuery setPage(Integer page) {

@@ -40,7 +40,112 @@ public class CreateDataServiceApiRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public static class CreateDataServiceApiRequestCreateCommandDmlConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("BatchInputDataSize")
+        public Integer batchInputDataSize;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("DataVolumeType")
+        public Integer dataVolumeType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ErrorHandlingType")
+        public Integer errorHandlingType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("MaxInputDataSize")
+        public Integer maxInputDataSize;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ParallelNum")
+        public Integer parallelNum;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("TransactionType")
+        public Integer transactionType;
+
+        public static CreateDataServiceApiRequestCreateCommandDmlConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateDataServiceApiRequestCreateCommandDmlConfig self = new CreateDataServiceApiRequestCreateCommandDmlConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDataServiceApiRequestCreateCommandDmlConfig setBatchInputDataSize(Integer batchInputDataSize) {
+            this.batchInputDataSize = batchInputDataSize;
+            return this;
+        }
+        public Integer getBatchInputDataSize() {
+            return this.batchInputDataSize;
+        }
+
+        public CreateDataServiceApiRequestCreateCommandDmlConfig setDataVolumeType(Integer dataVolumeType) {
+            this.dataVolumeType = dataVolumeType;
+            return this;
+        }
+        public Integer getDataVolumeType() {
+            return this.dataVolumeType;
+        }
+
+        public CreateDataServiceApiRequestCreateCommandDmlConfig setErrorHandlingType(Integer errorHandlingType) {
+            this.errorHandlingType = errorHandlingType;
+            return this;
+        }
+        public Integer getErrorHandlingType() {
+            return this.errorHandlingType;
+        }
+
+        public CreateDataServiceApiRequestCreateCommandDmlConfig setMaxInputDataSize(Integer maxInputDataSize) {
+            this.maxInputDataSize = maxInputDataSize;
+            return this;
+        }
+        public Integer getMaxInputDataSize() {
+            return this.maxInputDataSize;
+        }
+
+        public CreateDataServiceApiRequestCreateCommandDmlConfig setParallelNum(Integer parallelNum) {
+            this.parallelNum = parallelNum;
+            return this;
+        }
+        public Integer getParallelNum() {
+            return this.parallelNum;
+        }
+
+        public CreateDataServiceApiRequestCreateCommandDmlConfig setTransactionType(Integer transactionType) {
+            this.transactionType = transactionType;
+            return this;
+        }
+        public Integer getTransactionType() {
+            return this.transactionType;
+        }
+
+    }
+
     public static class CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
         /**
          * <strong>example:</strong>
          * <p>test</p>
@@ -90,6 +195,14 @@ public class CreateDataServiceApiRequest extends TeaModel {
         public static CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters self = new CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
         }
 
         public CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters setExampleValue(String exampleValue) {
@@ -163,6 +276,13 @@ public class CreateDataServiceApiRequest extends TeaModel {
         public String parameterDescription;
 
         /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        @NameInMap("ParameterLocation")
+        public String parameterLocation;
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +318,14 @@ public class CreateDataServiceApiRequest extends TeaModel {
         }
         public String getParameterDescription() {
             return this.parameterDescription;
+        }
+
+        public CreateDataServiceApiRequestCreateCommandScriptDetailsScriptResponseParameters setParameterLocation(String parameterLocation) {
+            this.parameterLocation = parameterLocation;
+            return this;
+        }
+        public String getParameterLocation() {
+            return this.parameterLocation;
         }
 
         public CreateDataServiceApiRequestCreateCommandScriptDetailsScriptResponseParameters setParameterName(String parameterName) {
@@ -243,15 +371,9 @@ public class CreateDataServiceApiRequest extends TeaModel {
         @NameInMap("Script")
         public String script;
 
-        /**
-         * <p>This parameter is required.</p>
-         */
         @NameInMap("ScriptRequestParameters")
         public java.util.List<CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters> scriptRequestParameters;
 
-        /**
-         * <p>This parameter is required.</p>
-         */
         @NameInMap("ScriptResponseParameters")
         public java.util.List<CreateDataServiceApiRequestCreateCommandScriptDetailsScriptResponseParameters> scriptResponseParameters;
 
@@ -383,8 +505,6 @@ public class CreateDataServiceApiRequest extends TeaModel {
         public java.util.List<Integer> bizProtocol;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>600</p>
          */
@@ -407,6 +527,9 @@ public class CreateDataServiceApiRequest extends TeaModel {
          */
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("DmlConfig")
+        public CreateDataServiceApiRequestCreateCommandDmlConfig dmlConfig;
 
         /**
          * <strong>example:</strong>
@@ -441,6 +564,12 @@ public class CreateDataServiceApiRequest extends TeaModel {
          */
         @NameInMap("RequestType")
         public Integer requestType;
+
+        @NameInMap("ReturnSqlSwitch")
+        public Boolean returnSqlSwitch;
+
+        @NameInMap("RowPermissionIds")
+        public java.util.List<Long> rowPermissionIds;
 
         /**
          * <p>This parameter is required.</p>
@@ -550,6 +679,14 @@ public class CreateDataServiceApiRequest extends TeaModel {
             return this.description;
         }
 
+        public CreateDataServiceApiRequestCreateCommand setDmlConfig(CreateDataServiceApiRequestCreateCommandDmlConfig dmlConfig) {
+            this.dmlConfig = dmlConfig;
+            return this;
+        }
+        public CreateDataServiceApiRequestCreateCommandDmlConfig getDmlConfig() {
+            return this.dmlConfig;
+        }
+
         public CreateDataServiceApiRequestCreateCommand setExecutionTimeout(Integer executionTimeout) {
             this.executionTimeout = executionTimeout;
             return this;
@@ -580,6 +717,22 @@ public class CreateDataServiceApiRequest extends TeaModel {
         }
         public Integer getRequestType() {
             return this.requestType;
+        }
+
+        public CreateDataServiceApiRequestCreateCommand setReturnSqlSwitch(Boolean returnSqlSwitch) {
+            this.returnSqlSwitch = returnSqlSwitch;
+            return this;
+        }
+        public Boolean getReturnSqlSwitch() {
+            return this.returnSqlSwitch;
+        }
+
+        public CreateDataServiceApiRequestCreateCommand setRowPermissionIds(java.util.List<Long> rowPermissionIds) {
+            this.rowPermissionIds = rowPermissionIds;
+            return this;
+        }
+        public java.util.List<Long> getRowPermissionIds() {
+            return this.rowPermissionIds;
         }
 
         public CreateDataServiceApiRequestCreateCommand setScriptDetails(CreateDataServiceApiRequestCreateCommandScriptDetails scriptDetails) {

@@ -1303,6 +1303,9 @@ public class ListApiByAppResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("AuthTypes")
+        public java.util.List<String> authTypes;
+
         /**
          * <strong>example:</strong>
          * <p>exampleModule</p>
@@ -1598,6 +1601,14 @@ public class ListApiByAppResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public ListApiByAppResponseBodyListResultData setAuthTypes(java.util.List<String> authTypes) {
+            this.authTypes = authTypes;
+            return this;
+        }
+        public java.util.List<String> getAuthTypes() {
+            return this.authTypes;
         }
 
         public ListApiByAppResponseBodyListResultData setBizModuleEnName(String bizModuleEnName) {

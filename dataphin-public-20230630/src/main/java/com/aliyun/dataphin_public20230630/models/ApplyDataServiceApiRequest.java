@@ -59,8 +59,6 @@ public class ApplyDataServiceApiRequest extends TeaModel {
 
     public static class ApplyDataServiceApiRequestApplyCommandDevFieldList extends TeaModel {
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -84,8 +82,6 @@ public class ApplyDataServiceApiRequest extends TeaModel {
 
     public static class ApplyDataServiceApiRequestApplyCommandProdFieldList extends TeaModel {
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -119,13 +115,28 @@ public class ApplyDataServiceApiRequest extends TeaModel {
 
         /**
          * <p>AppId</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1203</p>
          */
         @NameInMap("AppId")
         public Integer appId;
+
+        @NameInMap("ApplyDev")
+        public Boolean applyDev;
+
+        @NameInMap("ApplyProd")
+        public Boolean applyProd;
+
+        /**
+         * <strong>example:</strong>
+         * <p>APP</p>
+         */
+        @NameInMap("ApplyType")
+        public String applyType;
+
+        @NameInMap("AuthTypes")
+        public java.util.List<String> authTypes;
 
         @NameInMap("DevFieldList")
         public java.util.List<ApplyDataServiceApiRequestApplyCommandDevFieldList> devFieldList;
@@ -170,6 +181,38 @@ public class ApplyDataServiceApiRequest extends TeaModel {
         }
         public Integer getAppId() {
             return this.appId;
+        }
+
+        public ApplyDataServiceApiRequestApplyCommand setApplyDev(Boolean applyDev) {
+            this.applyDev = applyDev;
+            return this;
+        }
+        public Boolean getApplyDev() {
+            return this.applyDev;
+        }
+
+        public ApplyDataServiceApiRequestApplyCommand setApplyProd(Boolean applyProd) {
+            this.applyProd = applyProd;
+            return this;
+        }
+        public Boolean getApplyProd() {
+            return this.applyProd;
+        }
+
+        public ApplyDataServiceApiRequestApplyCommand setApplyType(String applyType) {
+            this.applyType = applyType;
+            return this;
+        }
+        public String getApplyType() {
+            return this.applyType;
+        }
+
+        public ApplyDataServiceApiRequestApplyCommand setAuthTypes(java.util.List<String> authTypes) {
+            this.authTypes = authTypes;
+            return this;
+        }
+        public java.util.List<String> getAuthTypes() {
+            return this.authTypes;
         }
 
         public ApplyDataServiceApiRequestApplyCommand setDevFieldList(java.util.List<ApplyDataServiceApiRequestApplyCommandDevFieldList> devFieldList) {

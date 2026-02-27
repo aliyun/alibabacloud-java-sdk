@@ -14,12 +14,11 @@ public class GetDataServiceAppGroupsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>102102</p>
      */
     @NameInMap("ProjectId")
+    @Deprecated
     public Integer projectId;
 
     public static GetDataServiceAppGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -35,6 +34,7 @@ public class GetDataServiceAppGroupsRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    @Deprecated
     public GetDataServiceAppGroupsRequest setProjectId(Integer projectId) {
         this.projectId = projectId;
         return this;

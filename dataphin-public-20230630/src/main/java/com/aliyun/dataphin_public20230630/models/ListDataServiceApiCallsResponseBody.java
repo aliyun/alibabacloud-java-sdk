@@ -113,7 +113,15 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
          * <p>201211</p>
          */
         @NameInMap("AppKey")
+        @Deprecated
         public Long appKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>abc12345</p>
+         */
+        @NameInMap("AppKeyStr")
+        public String appKeyStr;
 
         /**
          * <strong>example:</strong>
@@ -300,12 +308,21 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             return this.apiName;
         }
 
+        @Deprecated
         public ListDataServiceApiCallsResponseBodyPageResultCallLogList setAppKey(Long appKey) {
             this.appKey = appKey;
             return this;
         }
         public Long getAppKey() {
             return this.appKey;
+        }
+
+        public ListDataServiceApiCallsResponseBodyPageResultCallLogList setAppKeyStr(String appKeyStr) {
+            this.appKeyStr = appKeyStr;
+            return this;
+        }
+        public String getAppKeyStr() {
+            return this.appKeyStr;
         }
 
         public ListDataServiceApiCallsResponseBodyPageResultCallLogList setAppName(String appName) {

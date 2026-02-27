@@ -79,7 +79,15 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
          * <p>1021</p>
          */
         @NameInMap("AppKey")
+        @Deprecated
         public Long appKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>app12345</p>
+         */
+        @NameInMap("AppKeyStr")
+        public String appKeyStr;
 
         /**
          * <strong>example:</strong>
@@ -144,12 +152,21 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
             return this.apiName;
         }
 
+        @Deprecated
         public ListDataServiceApiCallsRequestListQuery setAppKey(Long appKey) {
             this.appKey = appKey;
             return this;
         }
         public Long getAppKey() {
             return this.appKey;
+        }
+
+        public ListDataServiceApiCallsRequestListQuery setAppKeyStr(String appKeyStr) {
+            this.appKeyStr = appKeyStr;
+            return this;
+        }
+        public String getAppKeyStr() {
+            return this.appKeyStr;
         }
 
         public ListDataServiceApiCallsRequestListQuery setClientIp(String clientIp) {

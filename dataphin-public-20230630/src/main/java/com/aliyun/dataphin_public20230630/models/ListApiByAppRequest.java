@@ -43,13 +43,20 @@ public class ListApiByAppRequest extends TeaModel {
     public static class ListApiByAppRequestPageQuery extends TeaModel {
         /**
          * <p>appKey</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10121101</p>
          */
         @NameInMap("AppKey")
+        @Deprecated
         public Long appKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>app12345</p>
+         */
+        @NameInMap("AppKeyStr")
+        public String appKeyStr;
 
         /**
          * <strong>example:</strong>
@@ -59,8 +66,6 @@ public class ListApiByAppRequest extends TeaModel {
         public String keyword;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -68,8 +73,6 @@ public class ListApiByAppRequest extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -81,12 +84,21 @@ public class ListApiByAppRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public ListApiByAppRequestPageQuery setAppKey(Long appKey) {
             this.appKey = appKey;
             return this;
         }
         public Long getAppKey() {
             return this.appKey;
+        }
+
+        public ListApiByAppRequestPageQuery setAppKeyStr(String appKeyStr) {
+            this.appKeyStr = appKeyStr;
+            return this;
+        }
+        public String getAppKeyStr() {
+            return this.appKeyStr;
         }
 
         public ListApiByAppRequestPageQuery setKeyword(String keyword) {
