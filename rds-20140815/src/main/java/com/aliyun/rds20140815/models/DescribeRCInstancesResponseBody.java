@@ -248,6 +248,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstancesResponseBodyRCInstances extends TeaModel {
+        @NameInMap("AutoRenew")
+        public Boolean autoRenew;
+
         /**
          * <p>The cluster name.</p>
          * 
@@ -444,6 +447,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         public static DescribeRCInstancesResponseBodyRCInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeRCInstancesResponseBodyRCInstances self = new DescribeRCInstancesResponseBodyRCInstances();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setClusterName(String clusterName) {

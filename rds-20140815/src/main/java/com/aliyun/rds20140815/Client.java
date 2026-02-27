@@ -33578,6 +33578,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.dataDiskShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataDisk, "DataDisk", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.securityGroupIds)) {
+            request.securityGroupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.securityGroupIds, "SecurityGroupIds", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.systemDisk)) {
             request.systemDiskShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.systemDisk, "SystemDisk", "json");
         }
@@ -33691,6 +33695,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PeriodUnit", request.periodUnit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
+            query.put("PrivateIpAddress", request.privateIpAddress);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
             query.put("PromotionCode", request.promotionCode);
         }
@@ -33713,6 +33721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
             query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupIdsShrink)) {
+            query.put("SecurityGroupIds", request.securityGroupIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.spotStrategy)) {

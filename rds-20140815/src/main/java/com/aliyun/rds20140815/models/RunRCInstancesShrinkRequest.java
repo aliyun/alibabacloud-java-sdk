@@ -221,6 +221,13 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p><code>10.1.**.**</code></p>
+     */
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
     @NameInMap("PromotionCode")
     public String promotionCode;
 
@@ -264,6 +271,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
+
+    @NameInMap("SecurityGroupIds")
+    public String securityGroupIdsShrink;
 
     @NameInMap("SpotStrategy")
     public String spotStrategy;
@@ -532,6 +542,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
         return this.periodUnit;
     }
 
+    public RunRCInstancesShrinkRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
     public RunRCInstancesShrinkRequest setPromotionCode(String promotionCode) {
         this.promotionCode = promotionCode;
         return this;
@@ -578,6 +596,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public RunRCInstancesShrinkRequest setSecurityGroupIdsShrink(String securityGroupIdsShrink) {
+        this.securityGroupIdsShrink = securityGroupIdsShrink;
+        return this;
+    }
+    public String getSecurityGroupIdsShrink() {
+        return this.securityGroupIdsShrink;
     }
 
     public RunRCInstancesShrinkRequest setSpotStrategy(String spotStrategy) {

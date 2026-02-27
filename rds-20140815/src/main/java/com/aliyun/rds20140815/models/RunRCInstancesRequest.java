@@ -221,6 +221,13 @@ public class RunRCInstancesRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p><code>10.1.**.**</code></p>
+     */
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
     @NameInMap("PromotionCode")
     public String promotionCode;
 
@@ -264,6 +271,9 @@ public class RunRCInstancesRequest extends TeaModel {
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
+
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
 
     @NameInMap("SpotStrategy")
     public String spotStrategy;
@@ -532,6 +542,14 @@ public class RunRCInstancesRequest extends TeaModel {
         return this.periodUnit;
     }
 
+    public RunRCInstancesRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
     public RunRCInstancesRequest setPromotionCode(String promotionCode) {
         this.promotionCode = promotionCode;
         return this;
@@ -578,6 +596,14 @@ public class RunRCInstancesRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public RunRCInstancesRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
     public RunRCInstancesRequest setSpotStrategy(String spotStrategy) {
