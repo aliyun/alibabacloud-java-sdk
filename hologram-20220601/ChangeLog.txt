@@ -1,3 +1,6 @@
+2026-02-27 Version: 1.6.2
+- Generated java 2022-06-01 for Hologram.
+
 2025-11-26 Version: 1.6.1
 - Update API GetInstance: add response parameters Body.Instance.EnableSSL.
 - Update API ListInstances: add response parameters Body.InstanceList.$.EnableSSL.
