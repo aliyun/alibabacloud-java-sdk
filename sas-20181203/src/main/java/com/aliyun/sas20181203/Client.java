@@ -23170,6 +23170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Dealed", request.dealed);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.detectSource)) {
+            query.put("DetectSource", request.detectSource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.eventNames)) {
             query.put("EventNames", request.eventNames);
         }

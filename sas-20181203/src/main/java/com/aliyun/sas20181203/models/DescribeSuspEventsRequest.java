@@ -85,6 +85,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("Dealed")
     public String dealed;
 
+    @NameInMap("DetectSource")
+    public String detectSource;
+
     /**
      * <p>The subtype of the alert event. Separate multiple subtypes with commas (,).</p>
      * 
@@ -476,6 +479,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public String getDealed() {
         return this.dealed;
+    }
+
+    public DescribeSuspEventsRequest setDetectSource(String detectSource) {
+        this.detectSource = detectSource;
+        return this;
+    }
+    public String getDetectSource() {
+        return this.detectSource;
     }
 
     public DescribeSuspEventsRequest setEventNames(String eventNames) {

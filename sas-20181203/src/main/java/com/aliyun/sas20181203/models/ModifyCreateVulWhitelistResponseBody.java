@@ -14,7 +14,8 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the information about the whitelist.</p>
+     * <p>Vulnerability whitelist information. 
+     * <notice> This data is not returned when adding or updating the vulnerability whitelist in batches, it is only returned when adding or updating a single vulnerability whitelist entry. </notice></p>
      */
     @NameInMap("VulWhitelistList")
     public ModifyCreateVulWhitelistResponseBodyVulWhitelistList vulWhitelistList;
@@ -42,6 +43,8 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
 
     public static class ModifyCreateVulWhitelistResponseBodyVulWhitelistList extends TeaModel {
         /**
+         * <p>Vulnerability whitelist ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1002</p>
          */

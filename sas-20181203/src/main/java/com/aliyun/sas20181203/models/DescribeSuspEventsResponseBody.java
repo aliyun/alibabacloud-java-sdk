@@ -448,6 +448,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Details")
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsDetails> details;
 
+        @NameInMap("DetectSource")
+        public String detectSource;
+
         /**
          * <p>Indicates whether the alert event can be detected by cloud sandbox. Valid values:</p>
          * <ul>
@@ -969,6 +972,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsDetails> getDetails() {
             return this.details;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setDetectSource(String detectSource) {
+            this.detectSource = detectSource;
+            return this;
+        }
+        public String getDetectSource() {
+            return this.detectSource;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setDisplaySandboxResult(Boolean displaySandboxResult) {
