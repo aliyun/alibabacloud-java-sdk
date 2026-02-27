@@ -8139,6 +8139,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>根据任务ID查询视频审校结果，包含视频信息、分镜信息和审核结果</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询视频审校结果</p>
+     * 
+     * @param request QueryVideoAuditResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryVideoAuditResultResponse
+     */
+    public QueryVideoAuditResultResponse queryVideoAuditResultWithOptions(QueryVideoAuditResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryVideoAuditResult"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVideoAuditResultResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据任务ID查询视频审校结果，包含视频信息、分镜信息和审核结果</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询视频审校结果</p>
+     * 
+     * @param request QueryVideoAuditResultRequest
+     * @return QueryVideoAuditResultResponse
+     */
+    public QueryVideoAuditResultResponse queryVideoAuditResult(QueryVideoAuditResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryVideoAuditResultWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>内容缩写</p>
      * 
@@ -12208,6 +12262,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitTopicSelectionPerspectiveAnalysisTaskResponse submitTopicSelectionPerspectiveAnalysisTask(SubmitTopicSelectionPerspectiveAnalysisTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitTopicSelectionPerspectiveAnalysisTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>提交视频审校任务，支持传入fileKey或url，系统会对视频进行分镜检测、抽帧审核，返回任务ID</p>
+     * 
+     * <b>summary</b> : 
+     * <p>提交视频审校</p>
+     * 
+     * @param request SubmitVideoAuditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoAuditResponse
+     */
+    public SubmitVideoAuditResponse submitVideoAuditWithOptions(SubmitVideoAuditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ext)) {
+            body.put("Ext", request.ext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileKey)) {
+            body.put("FileKey", request.fileKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotInterval)) {
+            body.put("SnapshotInterval", request.snapshotInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoAudit"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoAuditResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>提交视频审校任务，支持传入fileKey或url，系统会对视频进行分镜检测、抽帧审核，返回任务ID</p>
+     * 
+     * <b>summary</b> : 
+     * <p>提交视频审校</p>
+     * 
+     * @param request SubmitVideoAuditRequest
+     * @return SubmitVideoAuditResponse
+     */
+    public SubmitVideoAuditResponse submitVideoAudit(SubmitVideoAuditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitVideoAuditWithOptions(request, runtime);
     }
 
     /**
