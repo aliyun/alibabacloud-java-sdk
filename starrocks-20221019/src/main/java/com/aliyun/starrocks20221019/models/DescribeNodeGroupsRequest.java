@@ -56,6 +56,9 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("tags")
+    public java.util.List<DescribeNodeGroupsRequestTags> tags;
+
     public static DescribeNodeGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNodeGroupsRequest self = new DescribeNodeGroupsRequest();
         return TeaModel.build(map, self);
@@ -123,6 +126,44 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeNodeGroupsRequest setTags(java.util.List<DescribeNodeGroupsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeNodeGroupsRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class DescribeNodeGroupsRequestTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static DescribeNodeGroupsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNodeGroupsRequestTags self = new DescribeNodeGroupsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNodeGroupsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeNodeGroupsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
