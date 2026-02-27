@@ -91,104 +91,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
         return this.rules;
     }
 
-    public static class DescribeAutoRepairPolicyResponseBodyRulesIncidentsConditions extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>xxxx</p>
-         */
-        @NameInMap("reason")
-        public String reason;
-
-        /**
-         * <strong>example:</strong>
-         * <p>False</p>
-         */
-        @NameInMap("status")
-        public String status;
-
-        /**
-         * <strong>example:</strong>
-         * <p>KubeletReady</p>
-         */
-        @NameInMap("type")
-        public String type;
-
-        public static DescribeAutoRepairPolicyResponseBodyRulesIncidentsConditions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAutoRepairPolicyResponseBodyRulesIncidentsConditions self = new DescribeAutoRepairPolicyResponseBodyRulesIncidentsConditions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoRepairPolicyResponseBodyRulesIncidentsConditions setReason(String reason) {
-            this.reason = reason;
-            return this;
-        }
-        public String getReason() {
-            return this.reason;
-        }
-
-        public DescribeAutoRepairPolicyResponseBodyRulesIncidentsConditions setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeAutoRepairPolicyResponseBodyRulesIncidentsConditions setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
-    public static class DescribeAutoRepairPolicyResponseBodyRulesIncidentsEvents extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>xxxx</p>
-         */
-        @NameInMap("reason")
-        public String reason;
-
-        /**
-         * <strong>example:</strong>
-         * <p>xxxx</p>
-         */
-        @NameInMap("type")
-        public String type;
-
-        public static DescribeAutoRepairPolicyResponseBodyRulesIncidentsEvents build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAutoRepairPolicyResponseBodyRulesIncidentsEvents self = new DescribeAutoRepairPolicyResponseBodyRulesIncidentsEvents();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoRepairPolicyResponseBodyRulesIncidentsEvents setReason(String reason) {
-            this.reason = reason;
-            return this;
-        }
-        public String getReason() {
-            return this.reason;
-        }
-
-        public DescribeAutoRepairPolicyResponseBodyRulesIncidentsEvents setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
     public static class DescribeAutoRepairPolicyResponseBodyRulesIncidents extends TeaModel {
-        @NameInMap("conditions")
-        public java.util.List<DescribeAutoRepairPolicyResponseBodyRulesIncidentsConditions> conditions;
-
-        @NameInMap("events")
-        public java.util.List<DescribeAutoRepairPolicyResponseBodyRulesIncidentsEvents> events;
-
         /**
          * <strong>example:</strong>
          * <p>Node.FaultNeedReboot.HOST</p>
@@ -206,22 +109,6 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
         public static DescribeAutoRepairPolicyResponseBodyRulesIncidents build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoRepairPolicyResponseBodyRulesIncidents self = new DescribeAutoRepairPolicyResponseBodyRulesIncidents();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoRepairPolicyResponseBodyRulesIncidents setConditions(java.util.List<DescribeAutoRepairPolicyResponseBodyRulesIncidentsConditions> conditions) {
-            this.conditions = conditions;
-            return this;
-        }
-        public java.util.List<DescribeAutoRepairPolicyResponseBodyRulesIncidentsConditions> getConditions() {
-            return this.conditions;
-        }
-
-        public DescribeAutoRepairPolicyResponseBodyRulesIncidents setEvents(java.util.List<DescribeAutoRepairPolicyResponseBodyRulesIncidentsEvents> events) {
-            this.events = events;
-            return this;
-        }
-        public java.util.List<DescribeAutoRepairPolicyResponseBodyRulesIncidentsEvents> getEvents() {
-            return this.events;
         }
 
         public DescribeAutoRepairPolicyResponseBodyRulesIncidents setName(String name) {
@@ -327,7 +214,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
          * <p>true</p>
          */
         @NameInMap("enable")
-        public String enable;
+        public Boolean enable;
 
         @NameInMap("inquiring_label")
         public DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureInterventionInquiringLabel inquiringLabel;
@@ -352,11 +239,11 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
             return this.approvedLabel;
         }
 
-        public DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureIntervention setEnable(String enable) {
+        public DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureIntervention setEnable(Boolean enable) {
             this.enable = enable;
             return this;
         }
-        public String getEnable() {
+        public Boolean getEnable() {
             return this.enable;
         }
 

@@ -1,3 +1,7 @@
+2026-02-27 Version: 6.6.0
+- Support API UpdateKMSEncryption.
+
+
 2026-01-29 Version: 6.5.2
 - Update API CreateClusterNodePool: add request parameters body.scaling_group.disk_init.
 - Update API DescribeClusterNodePoolDetail: add response parameters Body.scaling_group.disk_init.

@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class Addon extends TeaModel {
     /**
+     * <p>The configuration of the component.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{&quot;IngressSlbNetworkType&quot;:&quot;internet&quot;}</p>
+     * <p>{\&quot;IngressSlbNetworkType\&quot;:\&quot;internet\&quot;}</p>
      */
     @NameInMap("config")
     public String config;
 
     /**
+     * <p>Specifies whether to disable automatic installation. When you create a cluster, some additional log components are automatically installed in addition to the required components. You can disable the automatic installations of a component and install the component later by calling the component API or in the corresponding console. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: disables the automatic installation of a component.</li>
+     * <li><code>false</code>: allows the automatic installation of a component.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +27,8 @@ public class Addon extends TeaModel {
     public Boolean disabled;
 
     /**
+     * <p>The component name.</p>
+     * 
      * <strong>example:</strong>
      * <p>nginx-ingress-controller</p>
      */
@@ -26,6 +36,8 @@ public class Addon extends TeaModel {
     public String name;
 
     /**
+     * <p>The version of the component.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1.9.3-aliyun.1</p>
      */

@@ -4,13 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class KubeletConfig extends TeaModel {
+    /**
+     * <p>The whitelisted unsafe sysctls.</p>
+     */
     @NameInMap("allowedUnsafeSysctls")
     public java.util.List<String> allowedUnsafeSysctls;
 
+    /**
+     * <p>The list of IP addresses of the DNS servers.</p>
+     */
     @NameInMap("clusterDNS")
     public java.util.List<String> clusterDNS;
 
     /**
+     * <p>The maximum number of log files that can be stored in each container.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -18,6 +26,8 @@ public class KubeletConfig extends TeaModel {
     public Long containerLogMaxFiles;
 
     /**
+     * <p>The maximum size that a log file can reach before it is rotated.</p>
+     * 
      * <strong>example:</strong>
      * <p>10Mi</p>
      */
@@ -25,6 +35,8 @@ public class KubeletConfig extends TeaModel {
     public String containerLogMaxSize;
 
     /**
+     * <p>The maximum number of concurrent programs that rotate logs</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,6 +44,8 @@ public class KubeletConfig extends TeaModel {
     public Integer containerLogMaxWorkers;
 
     /**
+     * <p>The duration at which the container logs are monitored for rotating logs.</p>
+     * 
      * <strong>example:</strong>
      * <p>10s</p>
      */
@@ -39,6 +53,8 @@ public class KubeletConfig extends TeaModel {
     public String containerLogMonitorInterval;
 
     /**
+     * <p>Specifies whether to use Completely Fair Scheduler (CFS) quota to enforce pod CPU limits.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -46,6 +62,8 @@ public class KubeletConfig extends TeaModel {
     public Boolean cpuCFSQuota;
 
     /**
+     * <p>The duration for the CPU CFS quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>100ms</p>
      */
@@ -53,6 +71,8 @@ public class KubeletConfig extends TeaModel {
     public String cpuCFSQuotaPeriod;
 
     /**
+     * <p>The CPU management policy used by kubelet.</p>
+     * 
      * <strong>example:</strong>
      * <p>none</p>
      */
@@ -60,6 +80,8 @@ public class KubeletConfig extends TeaModel {
     public String cpuManagerPolicy;
 
     /**
+     * <p>The maximum number of burst peaks for the event records.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -67,25 +89,41 @@ public class KubeletConfig extends TeaModel {
     public Long eventBurst;
 
     /**
+     * <p>Specifies the maximum number of events that can be generated per second.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("eventRecordQPS")
     public Long eventRecordQPS;
 
+    /**
+     * <p>A set of eviction thresholds that will trigger a pod eviction if met.</p>
+     */
     @NameInMap("evictionHard")
     public java.util.Map<String, ?> evictionHard;
 
+    /**
+     * <p>A set of eviction thresholds that will trigger a pod eviction if met over a corresponding grace period.</p>
+     */
     @NameInMap("evictionSoft")
     public java.util.Map<String, ?> evictionSoft;
 
+    /**
+     * <p>A set of grace periods for eviction thresholds.</p>
+     */
     @NameInMap("evictionSoftGracePeriod")
     public java.util.Map<String, ?> evictionSoftGracePeriod;
 
+    /**
+     * <p>A feature gate that is used to enable an experimental feature.</p>
+     */
     @NameInMap("featureGates")
     public java.util.Map<String, ?> featureGates;
 
     /**
+     * <p>The percentage of disk usage after which image garbage collection always runs.</p>
+     * 
      * <strong>example:</strong>
      * <p>85</p>
      */
@@ -93,6 +131,8 @@ public class KubeletConfig extends TeaModel {
     public Integer imageGCHighThresholdPercent;
 
     /**
+     * <p>The percentage of disk usage before which image garbage collection never runs.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -100,6 +140,8 @@ public class KubeletConfig extends TeaModel {
     public Integer imageGCLowThresholdPercent;
 
     /**
+     * <p>The maximum number of burst requests sent to the API server per second.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -107,16 +149,23 @@ public class KubeletConfig extends TeaModel {
     public Long kubeAPIBurst;
 
     /**
+     * <p>The QPS when kubelet communicates with the Kubernetes API server.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("kubeAPIQPS")
     public Long kubeAPIQPS;
 
+    /**
+     * <p>A set of configurations that specify resources reserved for the Kubernetes system.</p>
+     */
     @NameInMap("kubeReserved")
     public java.util.Map<String, ?> kubeReserved;
 
     /**
+     * <p>The maximum number of running pods.</p>
+     * 
      * <strong>example:</strong>
      * <p>110</p>
      */
@@ -124,6 +173,8 @@ public class KubeletConfig extends TeaModel {
     public Long maxPods;
 
     /**
+     * <p>The name of the policy to be used by the memory manager.</p>
+     * 
      * <strong>example:</strong>
      * <p>none</p>
      */
@@ -131,6 +182,8 @@ public class KubeletConfig extends TeaModel {
     public String memoryManagerPolicy;
 
     /**
+     * <p>The maximum number of processes per pod.</p>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -138,6 +191,8 @@ public class KubeletConfig extends TeaModel {
     public Long podPidsLimit;
 
     /**
+     * <p>The read-only port.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -145,6 +200,8 @@ public class KubeletConfig extends TeaModel {
     public Long readOnlyPort;
 
     /**
+     * <p>The maximum number of images that can be pulled from bursty image pulls.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -152,16 +209,23 @@ public class KubeletConfig extends TeaModel {
     public Long registryBurst;
 
     /**
+     * <p>The maximum queries per second (QPS) of the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("registryPullQPS")
     public Long registryPullQPS;
 
+    /**
+     * <p>A list of configurations that specify memory reservations for non-uniform memory access (NUMA) nodes.</p>
+     */
     @NameInMap("reservedMemory")
     public java.util.List<KubeletConfigReservedMemory> reservedMemory;
 
     /**
+     * <p>Specifies whether to pull one image at a time.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -171,16 +235,24 @@ public class KubeletConfig extends TeaModel {
     @NameInMap("serverTLSBootstrap")
     public Boolean serverTLSBootstrap;
 
+    /**
+     * <p>A set of configurations that specify reserved resources for the system.</p>
+     */
     @NameInMap("systemReserved")
     public java.util.Map<String, ?> systemReserved;
 
     /**
+     * <p>The name of the Topology Manager policy that you want to use.</p>
+     * 
      * <strong>example:</strong>
      * <p>restricted</p>
      */
     @NameInMap("topologyManagerPolicy")
     public String topologyManagerPolicy;
 
+    /**
+     * <p>The versioned configuration information for the Managed Service for OpenTelemetry client.</p>
+     */
     @NameInMap("tracing")
     public KubeletConfigTracing tracing;
 
@@ -446,9 +518,21 @@ public class KubeletConfig extends TeaModel {
     }
 
     public static class KubeletConfigReservedMemory extends TeaModel {
+        /**
+         * <p>The memory limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;memory&quot;: &quot;1Gi&quot;}</p>
+         */
         @NameInMap("limits")
         public java.util.Map<String, ?> limits;
 
+        /**
+         * <p>The NUMA node identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("numaNode")
         public Integer numaNode;
 
@@ -477,12 +561,20 @@ public class KubeletConfig extends TeaModel {
 
     public static class KubeletConfigTracing extends TeaModel {
         /**
+         * <p>The endpoint of the collector.</p>
+         * 
          * <strong>example:</strong>
          * <p>localhost:4317</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The number of samples to be collected per million spans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200000</p>
+         */
         @NameInMap("samplingRatePerMillion")
         public Integer samplingRatePerMillion;
 

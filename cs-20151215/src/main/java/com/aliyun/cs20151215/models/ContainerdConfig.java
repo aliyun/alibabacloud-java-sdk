@@ -7,6 +7,9 @@ public class ContainerdConfig extends TeaModel {
     @NameInMap("ignoreImageDefinedVolume")
     public Boolean ignoreImageDefinedVolume;
 
+    /**
+     * <p>Insecure image repositories that skipped the TLS certificate verification.</p>
+     */
     @NameInMap("insecureRegistries")
     public java.util.List<String> insecureRegistries;
 
@@ -22,6 +25,9 @@ public class ContainerdConfig extends TeaModel {
     @NameInMap("maxConcurrentDownloads")
     public Long maxConcurrentDownloads;
 
+    /**
+     * <p>The image accelerator configuration.</p>
+     */
     @NameInMap("registryMirrors")
     public java.util.List<String> registryMirrors;
 

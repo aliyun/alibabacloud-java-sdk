@@ -35,104 +35,7 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
         return this.rules;
     }
 
-    public static class ModifyAutoRepairPolicyRequestRulesIncidentsConditions extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
-        @NameInMap("reason")
-        public String reason;
-
-        /**
-         * <strong>example:</strong>
-         * <p>False</p>
-         */
-        @NameInMap("status")
-        public String status;
-
-        /**
-         * <strong>example:</strong>
-         * <p>KubeletReady</p>
-         */
-        @NameInMap("type")
-        public String type;
-
-        public static ModifyAutoRepairPolicyRequestRulesIncidentsConditions build(java.util.Map<String, ?> map) throws Exception {
-            ModifyAutoRepairPolicyRequestRulesIncidentsConditions self = new ModifyAutoRepairPolicyRequestRulesIncidentsConditions();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyAutoRepairPolicyRequestRulesIncidentsConditions setReason(String reason) {
-            this.reason = reason;
-            return this;
-        }
-        public String getReason() {
-            return this.reason;
-        }
-
-        public ModifyAutoRepairPolicyRequestRulesIncidentsConditions setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ModifyAutoRepairPolicyRequestRulesIncidentsConditions setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
-    public static class ModifyAutoRepairPolicyRequestRulesIncidentsEvents extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
-        @NameInMap("reason")
-        public String reason;
-
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
-        @NameInMap("type")
-        public String type;
-
-        public static ModifyAutoRepairPolicyRequestRulesIncidentsEvents build(java.util.Map<String, ?> map) throws Exception {
-            ModifyAutoRepairPolicyRequestRulesIncidentsEvents self = new ModifyAutoRepairPolicyRequestRulesIncidentsEvents();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyAutoRepairPolicyRequestRulesIncidentsEvents setReason(String reason) {
-            this.reason = reason;
-            return this;
-        }
-        public String getReason() {
-            return this.reason;
-        }
-
-        public ModifyAutoRepairPolicyRequestRulesIncidentsEvents setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
     public static class ModifyAutoRepairPolicyRequestRulesIncidents extends TeaModel {
-        @NameInMap("conditions")
-        public java.util.List<ModifyAutoRepairPolicyRequestRulesIncidentsConditions> conditions;
-
-        @NameInMap("events")
-        public java.util.List<ModifyAutoRepairPolicyRequestRulesIncidentsEvents> events;
-
         /**
          * <strong>example:</strong>
          * <p>Node.FaultNeedReboot.HOST</p>
@@ -150,22 +53,6 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
         public static ModifyAutoRepairPolicyRequestRulesIncidents build(java.util.Map<String, ?> map) throws Exception {
             ModifyAutoRepairPolicyRequestRulesIncidents self = new ModifyAutoRepairPolicyRequestRulesIncidents();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyAutoRepairPolicyRequestRulesIncidents setConditions(java.util.List<ModifyAutoRepairPolicyRequestRulesIncidentsConditions> conditions) {
-            this.conditions = conditions;
-            return this;
-        }
-        public java.util.List<ModifyAutoRepairPolicyRequestRulesIncidentsConditions> getConditions() {
-            return this.conditions;
-        }
-
-        public ModifyAutoRepairPolicyRequestRulesIncidents setEvents(java.util.List<ModifyAutoRepairPolicyRequestRulesIncidentsEvents> events) {
-            this.events = events;
-            return this;
-        }
-        public java.util.List<ModifyAutoRepairPolicyRequestRulesIncidentsEvents> getEvents() {
-            return this.events;
         }
 
         public ModifyAutoRepairPolicyRequestRulesIncidents setName(String name) {

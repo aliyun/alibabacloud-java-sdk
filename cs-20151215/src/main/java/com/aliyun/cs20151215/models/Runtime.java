@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class Runtime extends TeaModel {
     /**
+     * <p>The name of a container runtime. The following types of runtime are supported by Container Service for Kubernetes (ACK).</p>
+     * <ul>
+     * <li><code>containerd</code>: supports all Kubernetes versions. We recommend that you set the parameter to this value.</li>
+     * <li><code>Sandboxed-Container.runv</code>: Sandboxed container provides enhanced isolation and supports Kubernetes 1.24 and earlier.</li>
+     * <li><code>docker</code>: supports Kubernetes 1.22 and earlier.</li>
+     * </ul>
+     * <p>Default value: <code>containerd</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>docker</p>
      */
@@ -12,6 +20,9 @@ public class Runtime extends TeaModel {
     public String name;
 
     /**
+     * <p>The version of the container runtime. By default, the latest version is used.</p>
+     * <p>For more information about the changes to Sandboxed-Container, see <a href="https://help.aliyun.com/document_detail/160312.html">Sandboxed-Container release notes</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>19.03.5</p>
      */

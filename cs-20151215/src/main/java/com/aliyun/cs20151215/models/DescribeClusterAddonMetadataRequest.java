@@ -4,6 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterAddonMetadataRequest extends TeaModel {
+    /**
+     * <p>The component version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.8.4.1</p>
+     */
     @NameInMap("version")
     public String version;
 
