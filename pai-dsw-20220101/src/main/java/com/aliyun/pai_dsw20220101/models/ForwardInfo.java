@@ -56,6 +56,9 @@ public class ForwardInfo extends TeaModel {
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    @NameInMap("NlbGatewayId")
+    public String nlbGatewayId;
+
     /**
      * <strong>example:</strong>
      * <p>ssh-rsa AAAAB3****************************</p>
@@ -130,6 +133,14 @@ public class ForwardInfo extends TeaModel {
     }
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    public ForwardInfo setNlbGatewayId(String nlbGatewayId) {
+        this.nlbGatewayId = nlbGatewayId;
+        return this;
+    }
+    public String getNlbGatewayId() {
+        return this.nlbGatewayId;
     }
 
     public ForwardInfo setSSHPublicKey(String SSHPublicKey) {
