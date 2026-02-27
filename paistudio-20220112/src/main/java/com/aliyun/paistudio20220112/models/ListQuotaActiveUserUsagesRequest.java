@@ -53,6 +53,9 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    @NameInMap("WorkloadCount")
+    public Integer workloadCount;
+
     /**
      * <strong>example:</strong>
      * <p>12345</p>
@@ -119,6 +122,14 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     }
     public String getUsername() {
         return this.username;
+    }
+
+    public ListQuotaActiveUserUsagesRequest setWorkloadCount(Integer workloadCount) {
+        this.workloadCount = workloadCount;
+        return this;
+    }
+    public Integer getWorkloadCount() {
+        return this.workloadCount;
     }
 
     public ListQuotaActiveUserUsagesRequest setWorkspaceId(String workspaceId) {

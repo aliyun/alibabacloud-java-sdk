@@ -17,6 +17,9 @@ public class ListNodesShrinkRequest extends TeaModel {
     @NameInMap("CliqueID")
     public String cliqueID;
 
+    @NameInMap("DiskPL")
+    public String diskPL;
+
     /**
      * <strong>example:</strong>
      * <p>quotamtl37ge7gkvdz</p>
@@ -115,6 +118,9 @@ public class ListNodesShrinkRequest extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    @NameInMap("PodNum")
+    public Integer podNum;
+
     /**
      * <strong>example:</strong>
      * <p>quotamtl37ge7gkvdz</p>
@@ -132,6 +138,9 @@ public class ListNodesShrinkRequest extends TeaModel {
     @NameInMap("ResourceGroupIds")
     public String resourceGroupIds;
 
+    @NameInMap("ResourceGroupName")
+    public String resourceGroupName;
+
     /**
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -145,6 +154,9 @@ public class ListNodesShrinkRequest extends TeaModel {
      */
     @NameInMap("Verbose")
     public Boolean verbose;
+
+    @NameInMap("WorkloadNum")
+    public Integer workloadNum;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -176,6 +188,14 @@ public class ListNodesShrinkRequest extends TeaModel {
     }
     public String getCliqueID() {
         return this.cliqueID;
+    }
+
+    public ListNodesShrinkRequest setDiskPL(String diskPL) {
+        this.diskPL = diskPL;
+        return this;
+    }
+    public String getDiskPL() {
+        return this.diskPL;
     }
 
     public ListNodesShrinkRequest setFilterByQuotaId(String filterByQuotaId) {
@@ -322,6 +342,14 @@ public class ListNodesShrinkRequest extends TeaModel {
         return this.paymentType;
     }
 
+    public ListNodesShrinkRequest setPodNum(Integer podNum) {
+        this.podNum = podNum;
+        return this;
+    }
+    public Integer getPodNum() {
+        return this.podNum;
+    }
+
     public ListNodesShrinkRequest setQuotaId(String quotaId) {
         this.quotaId = quotaId;
         return this;
@@ -346,6 +374,14 @@ public class ListNodesShrinkRequest extends TeaModel {
         return this.resourceGroupIds;
     }
 
+    public ListNodesShrinkRequest setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
+    }
+
     public ListNodesShrinkRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -360,6 +396,14 @@ public class ListNodesShrinkRequest extends TeaModel {
     }
     public Boolean getVerbose() {
         return this.verbose;
+    }
+
+    public ListNodesShrinkRequest setWorkloadNum(Integer workloadNum) {
+        this.workloadNum = workloadNum;
+        return this;
+    }
+    public Integer getWorkloadNum() {
+        return this.workloadNum;
     }
 
     public ListNodesShrinkRequest setWorkspaceId(String workspaceId) {

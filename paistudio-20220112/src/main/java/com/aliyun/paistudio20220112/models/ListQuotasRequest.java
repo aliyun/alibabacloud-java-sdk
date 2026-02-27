@@ -11,6 +11,9 @@ public class ListQuotasRequest extends TeaModel {
     @NameInMap("ClusterType")
     public String clusterType;
 
+    @NameInMap("GPUType")
+    public String GPUType;
+
     @NameInMap("HasResource")
     public String hasResource;
 
@@ -118,6 +121,14 @@ public class ListQuotasRequest extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    public ListQuotasRequest setGPUType(String GPUType) {
+        this.GPUType = GPUType;
+        return this;
+    }
+    public String getGPUType() {
+        return this.GPUType;
     }
 
     public ListQuotasRequest setHasResource(String hasResource) {

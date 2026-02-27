@@ -11,6 +11,9 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     @NameInMap("CreatorID")
     public String creatorID;
 
+    @NameInMap("DiskPL")
+    public String diskPL;
+
     /**
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
@@ -102,6 +105,14 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     }
     public String getCreatorID() {
         return this.creatorID;
+    }
+
+    public ListResourceGroupMachineGroupsRequest setDiskPL(String diskPL) {
+        this.diskPL = diskPL;
+        return this;
+    }
+    public String getDiskPL() {
+        return this.diskPL;
     }
 
     public ListResourceGroupMachineGroupsRequest setEcsSpec(String ecsSpec) {

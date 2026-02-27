@@ -20,6 +20,9 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     @NameInMap("GmtPositionModifiedTimeRange")
     public TimeRangeFilter gmtPositionModifiedTimeRange;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     /**
      * <strong>example:</strong>
      * <p>lrn48278127617</p>
@@ -47,6 +50,12 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Position")
+    public Integer position;
+
+    @NameInMap("Priority")
+    public Integer priority;
 
     /**
      * <strong>example:</strong>
@@ -76,6 +85,9 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     @NameInMap("SubQuotaIds")
     public String subQuotaIds;
 
+    @NameInMap("UseOversoldResource")
+    public Boolean useOversoldResource;
+
     /**
      * <strong>example:</strong>
      * <p>29043893812,23829093093</p>
@@ -95,6 +107,9 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
      */
     @NameInMap("WorkloadIds")
     public String workloadIds;
+
+    @NameInMap("WorkloadNames")
+    public String workloadNames;
 
     /**
      * <strong>example:</strong>
@@ -154,6 +169,14 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
         return this.gmtPositionModifiedTimeRange;
     }
 
+    public ListQuotaWorkloadsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public ListQuotaWorkloadsRequest setNodeName(String nodeName) {
         this.nodeName = nodeName;
         return this;
@@ -184,6 +207,22 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListQuotaWorkloadsRequest setPosition(Integer position) {
+        this.position = position;
+        return this;
+    }
+    public Integer getPosition() {
+        return this.position;
+    }
+
+    public ListQuotaWorkloadsRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public ListQuotaWorkloadsRequest setShowOwn(Boolean showOwn) {
@@ -218,6 +257,14 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
         return this.subQuotaIds;
     }
 
+    public ListQuotaWorkloadsRequest setUseOversoldResource(Boolean useOversoldResource) {
+        this.useOversoldResource = useOversoldResource;
+        return this;
+    }
+    public Boolean getUseOversoldResource() {
+        return this.useOversoldResource;
+    }
+
     public ListQuotaWorkloadsRequest setUserIds(String userIds) {
         this.userIds = userIds;
         return this;
@@ -248,6 +295,14 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     }
     public String getWorkloadIds() {
         return this.workloadIds;
+    }
+
+    public ListQuotaWorkloadsRequest setWorkloadNames(String workloadNames) {
+        this.workloadNames = workloadNames;
+        return this;
+    }
+    public String getWorkloadNames() {
+        return this.workloadNames;
     }
 
     public ListQuotaWorkloadsRequest setWorkloadStatuses(String workloadStatuses) {

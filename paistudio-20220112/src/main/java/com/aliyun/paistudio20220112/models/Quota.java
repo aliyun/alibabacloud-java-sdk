@@ -13,6 +13,9 @@ public class Quota extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("GPUType")
+    public String GPUType;
+
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
@@ -111,6 +114,14 @@ public class Quota extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public Quota setGPUType(String GPUType) {
+        this.GPUType = GPUType;
+        return this;
+    }
+    public String getGPUType() {
+        return this.GPUType;
     }
 
     public Quota setGmtCreatedTime(String gmtCreatedTime) {

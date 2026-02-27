@@ -1785,6 +1785,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CliqueID", request.cliqueID);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.diskPL)) {
+            query.put("DiskPL", request.diskPL);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filterByQuotaId)) {
             query.put("FilterByQuotaId", request.filterByQuotaId);
         }
@@ -1857,6 +1861,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PaymentType", request.paymentType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.podNum)) {
+            query.put("PodNum", request.podNum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.quotaId)) {
             query.put("QuotaId", request.quotaId);
         }
@@ -1869,12 +1877,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupIds", request.resourceGroupIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            query.put("ResourceGroupName", request.resourceGroupName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
             query.put("SortBy", request.sortBy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.verbose)) {
             query.put("Verbose", request.verbose);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workloadNum)) {
+            query.put("WorkloadNum", request.workloadNum);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -1952,6 +1968,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Username", request.username);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workloadCount)) {
+            query.put("WorkloadCount", request.workloadCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
@@ -2015,6 +2035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GmtPositionModifiedTimeRange", request.gmtPositionModifiedTimeRange);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
             query.put("NodeName", request.nodeName);
         }
@@ -2029,6 +2053,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.position)) {
+            query.put("Position", request.position);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.showOwn)) {
@@ -2047,6 +2079,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubQuotaIds", request.subQuotaIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useOversoldResource)) {
+            query.put("UseOversoldResource", request.useOversoldResource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
             query.put("UserIds", request.userIds);
         }
@@ -2061,6 +2097,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.workloadIds)) {
             query.put("WorkloadIds", request.workloadIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workloadNames)) {
+            query.put("WorkloadNames", request.workloadNames);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workloadStatuses)) {
@@ -2120,6 +2160,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clusterType)) {
             query.put("ClusterType", request.clusterType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.GPUType)) {
+            query.put("GPUType", request.GPUType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hasResource)) {
@@ -2231,6 +2275,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.creatorID)) {
             query.put("CreatorID", request.creatorID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskPL)) {
+            query.put("DiskPL", request.diskPL);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ecsSpec)) {
