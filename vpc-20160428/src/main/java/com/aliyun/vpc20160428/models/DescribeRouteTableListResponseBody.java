@@ -31,9 +31,6 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The detailed information about the route tables.</p>
-     */
     @NameInMap("RouterTableList")
     public DescribeRouteTableListResponseBodyRouterTableList routerTableList;
 
@@ -111,21 +108,9 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag extends TeaModel {
-        /**
-         * <p>The key of the tag that is added to the route table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>type</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag that is added to the route table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ingress</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -191,163 +176,51 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListType extends TeaModel {
-        /**
-         * <p>The type of the cloud resource with which the route table is associated. Valid values:</p>
-         * <ul>
-         * <li><strong>VSwitch</strong>: vSwitch</li>
-         * <li><strong>Gateway</strong>: IPv4 gateway</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VSwitch</p>
-         */
         @NameInMap("AssociateType")
         public String associateType;
 
-        /**
-         * <p>The time when the route table was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-08-22T10:40:25Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The information about the route table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is Route Table.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The detailed information about the IPv4 gateway.</p>
-         */
         @NameInMap("GatewayIds")
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds gatewayIds;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the route table belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>253460731706911258</p>
-         */
         @NameInMap("OwnerId")
         public Long ownerId;
 
-        /**
-         * <p>The ID of the resource group to which the route table belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmxazb4ph****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>Whether to receive the propagation routes. Valid Values:</p>
-         * <ul>
-         * <li><p><strong>true</strong>: received.</p>
-         * </li>
-         * <li><p><strong>false</strong>: not received.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("RoutePropagationEnable")
         public Boolean routePropagationEnable;
 
-        /**
-         * <p>The ID of the route table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vtb-bp145q7glnuzdvzu2****</p>
-         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
-        /**
-         * <p>The name of the route table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>doctest</p>
-         */
         @NameInMap("RouteTableName")
         public String routeTableName;
 
-        /**
-         * <p>The type of the route table. Valid values:</p>
-         * <ul>
-         * <li><strong>Custom</strong></li>
-         * <li><strong>System</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>System</p>
-         */
         @NameInMap("RouteTableType")
         public String routeTableType;
 
-        /**
-         * <p>The ID of the vRouter to which the route table belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vrt-bp1lhl0taikrteen8****</p>
-         */
         @NameInMap("RouterId")
         public String routerId;
 
-        /**
-         * <p>The type of the vRouter to which the route table belongs. Valid values:</p>
-         * <ul>
-         * <li><p><strong>VRouter</strong>: a vRouter.</p>
-         * </li>
-         * <li><p><strong>VBR</strong>: a VBR.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VRouter</p>
-         */
         @NameInMap("RouterType")
         public String routerType;
 
-        /**
-         * <p>The status of the route table. Valid values:</p>
-         * <ul>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags tags;
 
-        /**
-         * <p>The vSwitch IDs.</p>
-         */
         @NameInMap("VSwitchIds")
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds vSwitchIds;
 
-        /**
-         * <p>The ID of the VPC to which the route table belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp15zckdt37pq72****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 

@@ -105,8 +105,8 @@ public class AllocateEipAddressProRequest extends TeaModel {
      * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
      * <li><strong>PayByTraffic</strong>: pay-by-data-transfer.</li>
      * </ul>
-     * <p>When <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, you must set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>.</p>
-     * <p>When <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
+     * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, you must set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>.</p>
+     * <p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, <strong>InternetChargeType</strong> can be set to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>PayByBandwidth</p>
@@ -171,7 +171,7 @@ public class AllocateEipAddressProRequest extends TeaModel {
     /**
      * <p>The ID of the IP address pool.</p>
      * <p>The EIP is allocated from the IP address pool.</p>
-     * <p>By default, you cannot use the IP address pool. To use this feature, apply for the privilege in the Quota Center console. For more information, see the &quot;Request a quota increase in the Quota Center console&quot; section of <a href="https://help.aliyun.com/document_detail/108213.html">Manage EIP quotas</a>.</p>
+     * <p>By default, the IP address pool feature is unavailable. If you need to use this feature, contact your account manager.</p>
      * 
      * <strong>example:</strong>
      * <p>pippool-2vc0kxcedhquybdsz****</p>
@@ -385,9 +385,17 @@ public class AllocateEipAddressProRequest extends TeaModel {
     }
 
     public static class AllocateEipAddressProRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
+         */
         @NameInMap("Value")
         public String value;
 

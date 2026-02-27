@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the access point.</p>
-     */
     @NameInMap("AccessPointSet")
     public DescribeAccessPointsResponseBodyAccessPointSet accessPointSet;
 
@@ -92,21 +89,9 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessPointsResponseBodyAccessPointSetAccessPointTypeAccessPointFeatureModelsAccessPointFeatureModel extends TeaModel {
-        /**
-         * <p>The feature of the access point.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AP_Support_VbrBandwidthLimit</p>
-         */
         @NameInMap("FeatureKey")
         public String featureKey;
 
-        /**
-         * <p>The feature value of the access point.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("FeatureValue")
         public String featureValue;
 
@@ -153,87 +138,30 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessPointsResponseBodyAccessPointSetAccessPointType extends TeaModel {
-        /**
-         * <p>The feature model of the access point.</p>
-         */
         @NameInMap("AccessPointFeatureModels")
         public DescribeAccessPointsResponseBodyAccessPointSetAccessPointTypeAccessPointFeatureModels accessPointFeatureModels;
 
-        /**
-         * <p>The ID of the access point.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ap-cn-hangzhou-****</p>
-         */
         @NameInMap("AccessPointId")
         public String accessPointId;
 
-        /**
-         * <p>The region ID of the access point.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("AttachedRegionNo")
         public String attachedRegionNo;
 
-        /**
-         * <p>The description of the access point.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The description of the access point.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The Internet service provider (ISP) of the access point. Valid values:</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Telehouse</p>
-         */
         @NameInMap("HostOperator")
         public String hostOperator;
 
-        /**
-         * <p>The location of the access point.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Hangzhou</p>
-         */
         @NameInMap("Location")
         public String location;
 
-        /**
-         * <p>The name of the access point.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Name</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The status of the access point. Valid values:</p>
-         * <ul>
-         * <li><strong>recommended</strong>: The access point is ready for use.</li>
-         * <li><strong>hot</strong>: A large number of Express Connect circuits are connected to the access point.</li>
-         * <li><strong>full</strong>: The number of Express Connect circuits connected to the access point has reached the upper limit.</li>
-         * <li><strong>disabled</strong>: The access point is unavailable.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>recommended</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The network type of the Express Connect circuit. Default value: <strong>VPC</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("Type")
         public String type;
 

@@ -87,9 +87,6 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The list of tags added to the customer gateway.</p>
-     */
     @NameInMap("Tags")
     public DescribeCustomerGatewayResponseBodyTags tags;
 
@@ -179,21 +176,9 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomerGatewayResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TagKey</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TagValue</p>
-         */
         @NameInMap("Value")
         public String value;
 

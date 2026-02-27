@@ -41,57 +41,18 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
     }
 
     public static class DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOATypePMInfoPMInfo extends TeaModel {
-        /**
-         * <p>The identity document number of the construction worker.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345671****</p>
-         */
         @NameInMap("PMCertificateNo")
         public String PMCertificateNo;
 
-        /**
-         * <p>The identity document type of the construction worker. Valid values:</p>
-         * <ul>
-         * <li><strong>IDCard</strong></li>
-         * <li><strong>Passport</strong></li>
-         * <li><strong>Other</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Other</p>
-         */
         @NameInMap("PMCertificateType")
         public String PMCertificateType;
 
-        /**
-         * <p>The phone number of the construction worker.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18910010****</p>
-         */
         @NameInMap("PMContactInfo")
         public String PMContactInfo;
 
-        /**
-         * <p>The gender of the construction worker. Valid values:</p>
-         * <ul>
-         * <li><strong>Male</strong></li>
-         * <li><strong>Female</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Male</p>
-         */
         @NameInMap("PMGender")
         public String PMGender;
 
-        /**
-         * <p>The name of the construction worker.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("PMName")
         public String PMName;
 
@@ -267,9 +228,6 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         @NameInMap("LoaUrl")
         public String loaUrl;
 
-        /**
-         * <p>The information about the construction workers.</p>
-         */
         @NameInMap("PMInfo")
         public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOATypePMInfo PMInfo;
 

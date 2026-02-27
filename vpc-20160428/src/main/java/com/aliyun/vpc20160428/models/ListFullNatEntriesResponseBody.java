@@ -130,6 +130,12 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     }
 
     public static class ListFullNatEntriesResponseBodyFullNatEntries extends TeaModel {
+        /**
+         * <p>The backend domain name for FULLNAT address translation in a FULLNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.com</p>
+         */
         @NameInMap("AccessDomain")
         public String accessDomain;
 
@@ -160,6 +166,12 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The IP resolved from the backend domain name for address translation in the FULLNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
+         */
         @NameInMap("DomainResolve")
         public String domainResolve;
 

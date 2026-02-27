@@ -13,9 +13,6 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The detailed information about the EIP.</p>
-     */
     @NameInMap("EipInfos")
     public DescribeEipGatewayInfoResponseBodyEipInfos eipInfos;
 
@@ -75,30 +72,12 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeEipGatewayInfoResponseBodyEipInfosEipInfo extends TeaModel {
-        /**
-         * <p>The IP address of the EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>47.XX.XX.236</p>
-         */
         @NameInMap("Ip")
         public String ip;
 
-        /**
-         * <p>The IP address of the gateway that is associated with the EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>47.XX.XX.1</p>
-         */
         @NameInMap("IpGw")
         public String ipGw;
 
-        /**
-         * <p>The subnet mask of the EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>255.255.255.0</p>
-         */
         @NameInMap("IpMask")
         public String ipMask;
 

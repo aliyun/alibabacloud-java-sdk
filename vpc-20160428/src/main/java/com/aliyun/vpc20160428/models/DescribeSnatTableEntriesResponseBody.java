@@ -31,9 +31,6 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details of SNAT entries.</p>
-     */
     @NameInMap("SnatTableEntries")
     public DescribeSnatTableEntriesResponseBodySnatTableEntries snatTableEntries;
 
@@ -92,110 +89,33 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry extends TeaModel {
-        /**
-         * <p>Whether to enable IP affinity. Values:</p>
-         * <ul>
-         * <li><strong>0</strong>: Disable IP affinity. - <strong>1</strong>: Enable IP affinity.<blockquote>
-         * <p>After enabling the IP affinity switch, if an SNAT entry is bound to multiple EIPs or NAT IPs, the same client will use the same EIP or NAT IP for access. Otherwise, the client will randomly select from the bound EIPs or NAT IPs for access.</p>
-         * </blockquote>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("EipAffinity")
         public String eipAffinity;
 
-        /**
-         * <p>The ID of the NAT gateway to which the SNAT entry belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ngw-bp1uewa15k4iy5770****</p>
-         */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
-        /**
-         * <p>Elastic Network Interface ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eni-gw8g131ef2dnbu3k****</p>
-         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        /**
-         * <p>The ID of the SNAT entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>snat-kmd6nv8fy****</p>
-         */
         @NameInMap("SnatEntryId")
         public String snatEntryId;
 
-        /**
-         * <p>The name of the SNAT entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SnatEntry-1</p>
-         */
         @NameInMap("SnatEntryName")
         public String snatEntryName;
 
-        /**
-         * <ul>
-         * <li>When you query SNAT entries of Internet NAT gateways, this parameter indicates the EIP in an SNAT entry.</li>
-         * <li>When you query SNAT entries of VPC NAT gateways, this parameter indicates the NAT IP address in an SNAT entry.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>116.22.XX.XX</p>
-         */
         @NameInMap("SnatIp")
         public String snatIp;
 
-        /**
-         * <p>The ID of the SNAT table to which the SNAT entry belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>stb-gz3r3odawdgffde****</p>
-         */
         @NameInMap("SnatTableId")
         public String snatTableId;
 
-        /**
-         * <p>The source CIDR block specified in the SNAT entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>116.22.XX.XX/24</p>
-         */
         @NameInMap("SourceCIDR")
         public String sourceCIDR;
 
-        /**
-         * <ul>
-         * <li>When you query SNAT entries of Internet NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access the Internet.</li>
-         * <li>When you query SNAT entries of VPC NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access external networks.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-3xbdsffvfgdfds****</p>
-         */
         @NameInMap("SourceVSwitchId")
         public String sourceVSwitchId;
 
-        /**
-         * <p>The status of the SNAT entry. Valid values:</p>
-         * <ul>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Pending</p>
-         */
         @NameInMap("Status")
         public String status;
 

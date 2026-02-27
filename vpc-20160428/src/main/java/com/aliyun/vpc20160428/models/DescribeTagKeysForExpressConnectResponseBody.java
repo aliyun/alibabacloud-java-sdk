@@ -26,9 +26,6 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The tag keys.</p>
-     */
     @NameInMap("TagKeys")
     public DescribeTagKeysForExpressConnectResponseBodyTagKeys tagKeys;
 
@@ -62,21 +59,9 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
     }
 
     public static class DescribeTagKeysForExpressConnectResponseBodyTagKeysTagKey extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The type of the resource. The value is set to <strong>PHYSICALCONNECTION</strong>, which indicates an Express Connect circuit.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PHYSICALCONNECTION</p>
-         */
         @NameInMap("Type")
         public String type;
 

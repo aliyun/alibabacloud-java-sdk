@@ -31,9 +31,6 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The detailed information about the route tables.</p>
-     */
     @NameInMap("RouteTables")
     public DescribeRouteTablesResponseBodyRouteTables routeTables;
 
@@ -92,53 +89,15 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop extends TeaModel {
-        /**
-         * <p>Indicates whether the route is available. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: unavailable</li>
-         * <li><strong>1</strong>: available</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Enabled")
         public Integer enabled;
 
-        /**
-         * <p>The ID of the next hop.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ri-2zeo3xzyf38r4urzdpvqw</p>
-         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
-        /**
-         * <p>The type of the next hop. Valid values:</p>
-         * <ul>
-         * <li><strong>Instance</strong>: an ECS instance</li>
-         * <li><strong>HaVip</strong>: an HaVip</li>
-         * <li><strong>VpnGateway</strong>: a VPN gateway</li>
-         * <li><strong>NatGateway</strong>: a NAT gateway</li>
-         * <li><strong>NetworkInterface</strong>: a secondary ENI</li>
-         * <li><strong>RouterInterface</strong>: a router interface</li>
-         * <li><strong>IPv6Gateway</strong>: an IPv6 gateway</li>
-         * <li><strong>Attachment</strong>: a transit router</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>HaVip</p>
-         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
-        /**
-         * <p>The weight of the route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -201,116 +160,33 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry extends TeaModel {
-        /**
-         * <p>The description of the route. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RouteEntryDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The destination CIDR block of the route. The destination CIDR block supports IPv4 and IPv6. Make sure that the destination CIDR block meets the following requirements:</p>
-         * <ul>
-         * <li>The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</li>
-         * <li>The destination CIDR block of each route in the route table is unique.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.0.1/24</p>
-         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
-        /**
-         * <p>The ID of the instance associated with the next hop.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ri-2zeo3xzyf38r4urzd****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The type of the next hop. Valid values:</p>
-         * <ul>
-         * <li><strong>Instance</strong> (default): an Elastic Compute Service (ECS) instance</li>
-         * <li><strong>HaVip</strong>: a high-availability virtual IP address (HaVip).</li>
-         * <li><strong>VpnGateway</strong>: a VPN gateway</li>
-         * <li><strong>NatGateway</strong>: a NAT gateway</li>
-         * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI)</li>
-         * <li><strong>RouterInterface</strong>: a router interface</li>
-         * <li><strong>IPv6Gateway</strong>: an IPv6 gateway</li>
-         * <li><strong>Attachment</strong>: a transit router</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>local</p>
-         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
-        /**
-         * <p>The information about the next hop.</p>
-         */
         @NameInMap("NextHops")
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops nextHops;
 
-        /**
-         * <p>The ID of the route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rte-bp1mnnr2al0naomnpxxx</p>
-         */
         @NameInMap("RouteEntryId")
         public String routeEntryId;
 
-        /**
-         * <p>The route name.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("RouteEntryName")
         public String routeEntryName;
 
-        /**
-         * <p>The route table ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vtb-bp145q7glnuzdvzu2****</p>
-         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
-        /**
-         * <p>The route status. Valid values:</p>
-         * <ul>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Modifying</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Pending</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The route type. Valid values:</p>
-         * <ul>
-         * <li><strong>Custom</strong></li>
-         * <li><strong>System</strong></li>
-         * <li><strong>BGP</strong></li>
-         * <li><strong>CEN</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>System</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -440,78 +316,27 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteTablesResponseBodyRouteTablesRouteTable extends TeaModel {
-        /**
-         * <p>The time when the route table was created.</p>
-         * <p>The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-08-22T10:40:25Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The ID of the resource group to which the route table belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmxazb4ph****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The information about the route.</p>
-         */
         @NameInMap("RouteEntrys")
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys routeEntrys;
 
-        /**
-         * <p>The ID of the route table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vtb-bp145q7glnuzdvzu2****</p>
-         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
-        /**
-         * <p>The type of the route table. Valid values:</p>
-         * <ul>
-         * <li><strong>Custom</strong></li>
-         * <li><strong>System</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>System</p>
-         */
         @NameInMap("RouteTableType")
         public String routeTableType;
 
-        /**
-         * <p>The status of the route table. Valid values:</p>
-         * <ul>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Available</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The vRouter ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vrt-bp1lhl0taikrteen8****</p>
-         */
         @NameInMap("VRouterId")
         public String VRouterId;
 
-        /**
-         * <p>The vSwitch ID.</p>
-         */
         @NameInMap("VSwitchIds")
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableVSwitchIds vSwitchIds;
 

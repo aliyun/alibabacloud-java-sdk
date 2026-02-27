@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeBgpNetworksResponseBody extends TeaModel {
-    /**
-     * <p>BGP networks.</p>
-     */
     @NameInMap("BgpNetworks")
     public DescribeBgpNetworksResponseBodyBgpNetworks bgpNetworks;
 
@@ -92,39 +89,15 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork extends TeaModel {
-        /**
-         * <p>The CIDR block of the advertised BGP network.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.1.XX.XX/24</p>
-         */
         @NameInMap("DstCidrBlock")
         public String dstCidrBlock;
 
-        /**
-         * <p>The ID of the VBR.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vrt-bp1lhl0taikrteen8****</p>
-         */
         @NameInMap("RouterId")
         public String routerId;
 
-        /**
-         * <p>The status of the advertised BGP network.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Enabled</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the virtual private cloud (VPC) in which the master instance resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp1qpo0kug3a2*****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 

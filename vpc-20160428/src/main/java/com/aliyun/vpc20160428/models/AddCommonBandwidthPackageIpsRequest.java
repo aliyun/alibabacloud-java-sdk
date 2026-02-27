@@ -36,7 +36,7 @@ public class AddCommonBandwidthPackageIpsRequest extends TeaModel {
     public java.util.List<String> ipInstanceIds;
 
     /**
-     * <p>The type of the IP address. Set the value to <strong>EIP</strong> to associate EIPs with the EIP bandwidth plan.</p>
+     * <p>The IP type. Set the value to <strong>EIP</strong>, which indicates that an EIP is added to the Shared Bandwidth.</p>
      * 
      * <strong>example:</strong>
      * <p>EIP</p>

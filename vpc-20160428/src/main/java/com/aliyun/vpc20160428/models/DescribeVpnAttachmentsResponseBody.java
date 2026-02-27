@@ -222,6 +222,16 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         @NameInMap("TransitRouterName")
         public String transitRouterName;
 
+        /**
+         * <p>Specifies the bandwidth specifications for a single tunnel in VPN attachment. Available options:</p>
+         * <ul>
+         * <li><strong>Standard</strong>: Standard, 1Gbps</li>
+         * <li><strong>Large</strong>:  Large-sized, 3Gbps</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("TunnelBandwidth")
         public String tunnelBandwidth;
 

@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowLogsResponseBody extends TeaModel {
-    /**
-     * <p>List of flow logs.</p>
-     */
     @NameInMap("FlowLogs")
     public DescribeFlowLogsResponseBodyFlowLogs flowLogs;
 
@@ -113,21 +110,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
-        /**
-         * <p>Tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>Tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -193,219 +178,63 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLog extends TeaModel {
-        /**
-         * <p>The sampling interval of the flow log. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("AggregationInterval")
         public Integer aggregationInterval;
 
-        /**
-         * <p>The business status. Values:</p>
-         * <ul>
-         * <li><strong>Normal</strong>: Normal status.</li>
-         * <li><strong>FinancialLocked</strong>: Locked due to unpaid bills.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
-        /**
-         * <p>The creation time of the flow log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-01-21T03:08:50Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the flow log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>When log delivery fails, you can troubleshoot based on the error messages. Possible error messages include:</p>
-         * <ul>
-         * <li><strong>UnavaliableTarget</strong>: The Logstore of the Log Service SLS is unavailable and cannot receive logs. It is recommended to check if the corresponding Logstore actually exists and is accessible. </li>
-         * <li><strong>ProjectNotExist</strong>: The Project of the Log Service SLS does not exist. It is suggested to delete the original flow log and create a new one pointing to an existing Project. </li>
-         * <li><strong>UnknownError</strong>: An internal error has occurred. Please try again later.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>UnavaliableTarget</p>
-         */
         @NameInMap("FlowLogDeliverErrorMessage")
         public String flowLogDeliverErrorMessage;
 
-        /**
-         * <p>The delivery status of the flow log, with values:</p>
-         * <ul>
-         * <li><strong>SUCCESS</strong>: Delivery succeeded. </li>
-         * <li><strong>FAILED</strong>: Delivery failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FAILED</p>
-         */
         @NameInMap("FlowLogDeliverStatus")
         public String flowLogDeliverStatus;
 
-        /**
-         * <p>The ID of the flow log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fl-bp1f6qqhsrc2c12ta****</p>
-         */
         @NameInMap("FlowLogId")
         public String flowLogId;
 
-        /**
-         * <p>The name of the flow log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>myFlowlog</p>
-         */
         @NameInMap("FlowLogName")
         public String flowLogName;
 
-        /**
-         * <p>The type of IP address for collecting flow log traffic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
-        /**
-         * <p>The Logstore where the captured traffic is stored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FlowLogStore</p>
-         */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
-        /**
-         * <p>The Project that manages the captured traffic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FlowLogProject</p>
-         */
         @NameInMap("ProjectName")
         public String projectName;
 
-        /**
-         * <p>The region ID to which the flow log belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the resource group to which the flow log belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4ph****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The resource ID of the traffic captured by the flow log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eni-askldfas****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The resource type of the traffic captured by the flow log:</p>
-         * <ul>
-         * <li><strong>NetworkInterface</strong>: Elastic network interface.</li>
-         * <li><strong>VSwitch</strong>: All elastic network interfaces within a VSwitch.</li>
-         * <li><strong>VPC</strong>: All elastic network interfaces within a VPC.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>NetworkInterface</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The hosting type of the cloud service.</p>
-         * <ul>
-         * <li>It can be empty, indicating that the flow log was created by the user. </li>
-         * <li>When not empty, the only supported value is: <strong>sls</strong>, indicating that the flow log was created through the Log Service console.<blockquote>
-         * <p>Flow log instances created through the Log Service console can be displayed in the VPC list, but they cannot be modified, started, stopped, or deleted within the VPC. If you need to perform these operations on the flow log, you can log in to the <a href="https://sls.console.aliyun.com">Log Service console</a> to modify, start, stop, or delete it.</p>
-         * </blockquote>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>sls</p>
-         */
         @NameInMap("ServiceType")
         public String serviceType;
 
-        /**
-         * <p>The status of the flow log. Values:</p>
-         * <ul>
-         * <li><p><strong>Active</strong>: The flow log is in an active state.</p>
-         * </li>
-         * <li><p><strong>Activating</strong>: The flow log is being created.</p>
-         * </li>
-         * <li><p><strong>Inactive</strong>: The flow log is in an inactive state.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>List of tags</p>
-         */
         @NameInMap("Tags")
         public DescribeFlowLogsResponseBodyFlowLogsFlowLogTags tags;
 
-        /**
-         * <p>The path of the captured traffic. Values:</p>
-         * <ul>
-         * <li><strong>all</strong>: Indicates full collection.</li>
-         * <li><strong>internetGateway</strong>: Indicates public network traffic collection.</li>
-         * </ul>
-         */
         @NameInMap("TrafficPath")
         public DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath trafficPath;
 
-        /**
-         * <p>The type of traffic captured by the flow log. Values:</p>
-         * <ul>
-         * <li><strong>All</strong>: All traffic.</li>
-         * <li><strong>Allow</strong>: Traffic allowed by access control.</li>
-         * <li><strong>Drop</strong>: Traffic denied by access control.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>All</p>
-         */
         @NameInMap("TrafficType")
         public String trafficType;
 

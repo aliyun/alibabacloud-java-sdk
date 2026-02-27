@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeHaVipsResponseBody extends TeaModel {
-    /**
-     * <p>The details about the HaVip.</p>
-     */
     @NameInMap("HaVips")
     public DescribeHaVipsResponseBodyHaVips haVips;
 
@@ -130,21 +127,9 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     }
 
     public static class DescribeHaVipsResponseBodyHaVipsHaVipTagsTag extends TeaModel {
-        /**
-         * <p>The key of tag N added to the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of tag N added to the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -191,147 +176,51 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     }
 
     public static class DescribeHaVipsResponseBodyHaVipsHaVip extends TeaModel {
-        /**
-         * <p>The list of EIPs associated with the HaVip.</p>
-         */
         @NameInMap("AssociatedEipAddresses")
         public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses associatedEipAddresses;
 
-        /**
-         * <p>The type of the instance with which the HaVip is associated. Valid values:</p>
-         * <ul>
-         * <li><strong>EcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
-         * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>EcsInstance</p>
-         */
         @NameInMap("AssociatedInstanceType")
         public String associatedInstanceType;
 
-        /**
-         * <p>The information about the instance associated with the HaVip.</p>
-         */
         @NameInMap("AssociatedInstances")
         public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances associatedInstances;
 
-        /**
-         * <p>The parameter is invalid. No value is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>none</p>
-         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        /**
-         * <p>The time when the HaVip was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-07-03T14:25:26Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The description of the HaVip.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>My HaVip</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the HaVip.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>havip-bp149uyvut73dpld****</p>
-         */
         @NameInMap("HaVipId")
         public String haVipId;
 
-        /**
-         * <p>The private IP address of the HaVip.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.24.5</p>
-         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
-        /**
-         * <p>The ID of the active instance that is associated with the HaVip.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp145q7glnuzdvz****</p>
-         */
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
 
-        /**
-         * <p>The name of the HaVip.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The ID of the region to which the HaVip belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the resource group to which the HaVip belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4ph****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The status of the HaVip. Valid values:</p>
-         * <ul>
-         * <li><strong>Creating</strong>: The server group is being created.</li>
-         * <li><strong>Available</strong>: The FULLNAT entry is available.</li>
-         * <li><strong>Deleting</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tag list.</p>
-         */
         @NameInMap("Tags")
         public DescribeHaVipsResponseBodyHaVipsHaVipTags tags;
 
-        /**
-         * <p>The ID of the vSwitch to which the HaVip belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bp1pkt1fba8e824ez****</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>The ID of the VPC to which the HaVip belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp1kcm36tevkpms97****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 

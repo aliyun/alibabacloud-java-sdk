@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeBgpGroupsResponseBody extends TeaModel {
-    /**
-     * <p>The detailed information about the BGP group.</p>
-     */
     @NameInMap("BgpGroups")
     public DescribeBgpGroupsResponseBodyBgpGroups bgpGroups;
 
@@ -92,140 +89,45 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBgpGroupsResponseBodyBgpGroupsBgpGroup extends TeaModel {
-        /**
-         * <p>The key used by the BGP group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>!PWZ****</p>
-         */
         @NameInMap("AuthKey")
         public String authKey;
 
-        /**
-         * <p>The ID of the BGP group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bgpg-bp1k25cyp26cllath****</p>
-         */
         @NameInMap("BgpGroupId")
         public String bgpGroupId;
 
-        /**
-         * <p>The description of the BGP group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The description of the BGP group.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The hold time to receive BGP messages. Unit: seconds.</p>
-         * <blockquote>
-         * <p> If no message is received within the hold time, the BGP peer is considered disconnected.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("Hold")
         public String hold;
 
-        /**
-         * <p>The IP version of the BGP group. Valid values:</p>
-         * <ul>
-         * <li><strong>ipv4</strong>: IPv4</li>
-         * <li><strong>ipv6</strong>: IPv6. IPv6 is supported only if the VBR of the BGP group has IPv6 enabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
-        /**
-         * <p>Indicates whether the ASN is fake. Valid values:</p>
-         * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsFake")
         public String isFake;
 
-        /**
-         * <p>The keepalive time. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Keepalive")
         public String keepalive;
 
-        /**
-         * <p>The ASN of the device on the Alibaba Cloud side.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>45104</p>
-         */
         @NameInMap("LocalAsn")
         public String localAsn;
 
-        /**
-         * <p>The name of the BGP group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The autonomous system number (ASN) of the on-premises device in the data center.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1****</p>
-         */
         @NameInMap("PeerAsn")
         public String peerAsn;
 
-        /**
-         * <p>The ID of the region to which the BGP group belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The maximum number of route entries for BGP dynamic route learning.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>99</p>
-         */
         @NameInMap("RouteLimit")
         public String routeLimit;
 
-        /**
-         * <p>The ID of the VBR.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vbr-bp1ctxy813985gkuk****</p>
-         */
         @NameInMap("RouterId")
         public String routerId;
 
-        /**
-         * <p>The status of the BGP group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 

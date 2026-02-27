@@ -26,9 +26,6 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the routes.</p>
-     */
     @NameInMap("RouteEntrys")
     public DescribeRouteEntryListResponseBodyRouteEntrys routeEntrys;
 
@@ -62,35 +59,12 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHopNextHopRelatedInfo extends TeaModel {
-        /**
-         * <p>The ID of the instance that is associated with the next hop.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp1t36rn9l53iwbsf****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The type of the instance associated with the next hop. Valid values:</p>
-         * <ul>
-         * <li><strong>VPC</strong>: a VPC</li>
-         * <li><strong>VBR</strong>: a VBR</li>
-         * <li><strong>PCONN</strong>: an Express Connect circuit</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The region ID of the instance associated with the next hop. Valid values:</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ch-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -126,81 +100,21 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHop extends TeaModel {
-        /**
-         * <p>Indicates whether the route is available. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: unavailable</li>
-         * <li><strong>1</strong>: available</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is returned when the next hop type is set to <strong>RouterInterface</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Enabled")
         public Integer enabled;
 
-        /**
-         * <p>The ID of the next hop.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpn-bp10zyaph5cc8b7c7****</p>
-         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
-        /**
-         * <p>The ID of the region where the next hop is deployed.</p>
-         * <blockquote>
-         * <p> This parameter is returned when the next hop type is set to <strong>RouterInterface</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("NextHopRegionId")
         public String nextHopRegionId;
 
-        /**
-         * <p>The information about the next hop.</p>
-         */
         @NameInMap("NextHopRelatedInfo")
         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHopNextHopRelatedInfo nextHopRelatedInfo;
 
-        /**
-         * <p>The next hop type. Valid values:</p>
-         * <ul>
-         * <li><strong>Instance</strong>: an ECS instance.</li>
-         * <li><strong>HaVip</strong>: an HaVip.</li>
-         * <li><strong>VpnGateway</strong>: a VPN gateway.</li>
-         * <li><strong>NatGateway</strong>: a NAT gateway.</li>
-         * <li><strong>NetworkInterface</strong>: a secondary ENI.</li>
-         * <li><strong>RouterInterface</strong>: a router interface.</li>
-         * <li><strong>IPv6Gateway</strong>: an IPv6 gateway.</li>
-         * <li><strong>Attachment</strong>: a transit router.</li>
-         * <li><strong>Ipv4Gateway</strong>: an IPv4 gateway.</li>
-         * <li><strong>GatewayEndpoint</strong>: a gateway endpoint.</li>
-         * <li><strong>CenBasic</strong>: CEN does not support transit routers.</li>
-         * <li><strong>Ecr</strong>: ECR.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Instance</p>
-         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
-        /**
-         * <p>The weight of the route.</p>
-         * <blockquote>
-         * <p> This parameter is returned when the next hop type is set to <strong>RouterInterface</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -279,132 +193,42 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry extends TeaModel {
-        /**
-         * <p>The description of the route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RouteEntryDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The destination CIDR block of the route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.2.0/24</p>
-         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
-         * <p>The time when the route was modified. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-05-09T03:00:07Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The IP version. Valid values: Valid values:</p>
-         * <ul>
-         * <li><strong>ipv4</strong></li>
-         * <li><strong>ipv6</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
-        /**
-         * <p>The information about the next hops.</p>
-         */
         @NameInMap("NextHops")
         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHops nextHops;
 
-        /**
-         * <p>The route origin. Valid values:</p>
-         * <ul>
-         * <li><strong>RoutePropagation</strong>: The route is created by a dynamic propagation source.</li>
-         * <li><strong>SystemCreate</strong>: The route is created by the system.</li>
-         * <li><strong>CustomCreate</strong>: The route is created by a user.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>RoutePropagation</p>
-         */
         @NameInMap("Origin")
         public String origin;
 
-        /**
-         * <p>The ID of the route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rte-bp1mnnr2al0naomnp****</p>
-         */
         @NameInMap("RouteEntryId")
         public String routeEntryId;
 
-        /**
-         * <p>The name of the route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aaa</p>
-         */
         @NameInMap("RouteEntryName")
         public String routeEntryName;
 
-        /**
-         * <p>The ID of the route table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vtb-bp15w5q90d2rk3bww****</p>
-         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
-        /**
-         * <p>Indicates whether the route is hosted. If the parameter is empty, the route is not hosted.</p>
-         * <p>If <strong>TR</strong> is returned, the route is hosted by a transit router.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TR</p>
-         */
         @NameInMap("ServiceType")
         public String serviceType;
 
-        /**
-         * <p>The status of the route entry. Valid values:</p>
-         * <ul>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Modifying</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The route type. Valid values:</p>
-         * <ul>
-         * <li><strong>Custom</strong>: custom routes.</li>
-         * <li><strong>System</strong>: system routes.</li>
-         * <li><strong>BGP</strong>: BGP routes.</li>
-         * <li><strong>CEN</strong>: CEN routes.</li>
-         * <li><strong>ECR</strong>: ECR routes.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Custom</p>
-         */
         @NameInMap("Type")
         public String type;
 

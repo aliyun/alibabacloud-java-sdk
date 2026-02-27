@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends TeaModel {
-    /**
-     * <p>The ENIs associated with the VPC NAT gateway.</p>
-     */
     @NameInMap("AssociateNetworkInterfaces")
     public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfaces associateNetworkInterfaces;
 
@@ -130,25 +127,9 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     }
 
     public static class DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterfaceIPv4SetsIPv4Set extends TeaModel {
-        /**
-         * <p>The primary private IP address of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>172.17.**.**</code></p>
-         */
         @NameInMap("IPv4Address")
         public String IPv4Address;
 
-        /**
-         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
-         * <ul>
-         * <li>true: Primary private IP address</li>
-         * <li>false: Secondary private IP addresses</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Primary")
         public Boolean primary;
 
@@ -195,63 +176,24 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     }
 
     public static class DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterface extends TeaModel {
-        /**
-         * <p>The IPv4 addresses of the ENIs.</p>
-         */
         @NameInMap("IPv4Sets")
         public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterfaceIPv4Sets IPv4Sets;
 
-        /**
-         * <p>The ID of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eni-gw8g131ef2dnbu3k****</p>
-         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        /**
-         * <p>The ID of the service resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ep-8psre8c8936596cd****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The UID of the account to which the service resource belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>138859086900****</p>
-         */
         @NameInMap("ResourceOwnerId")
         public String resourceOwnerId;
 
-        /**
-         * <p>The type of the service resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PrivateLink</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>VPC ID of the service resource</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp1di7uewzmtvfuq8****</p>
-         */
         @NameInMap("ResourceVpcId")
         public String resourceVpcId;
 
-        /**
-         * <p>The ID of the tunnel index.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>41a5489ea2a0****</p>
-         */
         @NameInMap("TunnelIndex")
         public String tunnelIndex;
 

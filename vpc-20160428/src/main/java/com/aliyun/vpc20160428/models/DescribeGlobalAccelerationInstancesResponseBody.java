@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
-    /**
-     * <p>The details of the GA instances.</p>
-     */
     @NameInMap("GlobalAccelerationInstances")
     public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstances globalAccelerationInstances;
 
@@ -92,43 +89,15 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer extends TeaModel {
-        /**
-         * <p>The region where the backend servers are deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-2zeg83zvn5d4ed4y****</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The IP address of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>172.xx.xx.109</p>
-         */
         @NameInMap("ServerIpAddress")
         public String serverIpAddress;
 
-        /**
-         * <p>The type of the backend server.</p>
-         * <ul>
-         * <li><strong>EcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
-         * <li><strong>SlbInstance</strong>: Server Load Balancer (SLB) instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>EcsInstance</p>
-         */
         @NameInMap("ServerType")
         public String serverType;
 
@@ -191,21 +160,9 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress extends TeaModel {
-        /**
-         * <p>The ID of the public IP address of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eip-bp19yqraac4w3y0jd****</p>
-         */
         @NameInMap("AllocationId")
         public String allocationId;
 
-        /**
-         * <p>The public IP address of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12.xx.xx.78</p>
-         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
@@ -252,151 +209,51 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance extends TeaModel {
-        /**
-         * <p>The acceleration area of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>china-mainland</p>
-         */
         @NameInMap("AccelerationLocation")
         public String accelerationLocation;
 
-        /**
-         * <p>The details about the backend servers of the GA instance.</p>
-         */
         @NameInMap("BackendServers")
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServers backendServers;
 
-        /**
-         * <p>The maximum bandwidth of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
-        /**
-         * <p>The bandwidth type of the GA instance.</p>
-         * <ul>
-         * <li><strong>Sharing</strong></li>
-         * <li><strong>Exclusive</strong> (default)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Exclusive</p>
-         */
         @NameInMap("BandwidthType")
         public String bandwidthType;
 
-        /**
-         * <p>The billing method of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PrePaid</p>
-         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        /**
-         * <p>The time when the GA instance was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-07-05T03:39:31Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>apiDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The time when the instance expires.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-08-05T16:00Z</p>
-         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        /**
-         * <p>The ID of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ga-bp1x99kj7kl1ziw5x****</p>
-         */
         @NameInMap("GlobalAccelerationInstanceId")
         public String globalAccelerationInstanceId;
 
-        /**
-         * <p>The billing method of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PayByBandwidth</p>
-         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
-        /**
-         * <p>The public IP address of the dedicated GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>47.xx.xx.99</p>
-         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
-        /**
-         * <p>The name of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instanceName</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The public IP address.</p>
-         */
         @NameInMap("PublicIpAddresses")
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses publicIpAddresses;
 
-        /**
-         * <p>The region ID of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The service area of the GA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>china-mainland</p>
-         */
         @NameInMap("ServiceLocation")
         public String serviceLocation;
 
-        /**
-         * <p>The status of the GA instance.</p>
-         * <ul>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Inuse</strong></li>
-         * <li><strong>Associating</strong></li>
-         * <li><strong>Unassociating</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>InUse</p>
-         */
         @NameInMap("Status")
         public String status;
 

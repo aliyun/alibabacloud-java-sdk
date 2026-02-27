@@ -26,9 +26,6 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The tags that are added to the resource.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesForExpressConnectResponseBodyTagResources tagResources;
 
@@ -62,44 +59,15 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesForExpressConnectResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pc-bp16qjewdsunr41m1****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource. Valid values:</p>
-         * <ul>
-         * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
-         * <li><strong>VIRTUALBORDERROUTER</strong>: VBR.</li>
-         * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PHYSICALCONNECTION</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The key of the tag that is added to the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of the tag that is added to the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

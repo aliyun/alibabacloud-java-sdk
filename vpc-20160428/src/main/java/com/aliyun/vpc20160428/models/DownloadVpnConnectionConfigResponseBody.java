@@ -376,7 +376,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm in the IKE phase.</p>
+         * <p>IKE阶段认证算法。</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -385,7 +385,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikeAuthAlg;
 
         /**
-         * <p>The encryption algorithm in the IKE phase.</p>
+         * <p>IKE阶段加密算法。</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -394,7 +394,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikeEncAlg;
 
         /**
-         * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+         * <p>IKE阶段生存时间。单位：秒。</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -403,10 +403,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public Long ikeLifetime;
 
         /**
-         * <p>The IKE negotiation mode. Valid values:</p>
+         * <p>IKE协商模式。</p>
          * <ul>
-         * <li><strong>main</strong>: This mode offers higher security during negotiations.</li>
-         * <li><strong>aggressive</strong>: This mode is faster and has a higher success rate.</li>
+         * <li><strong>main</strong>：主模式，协商过程安全性高。</li>
+         * <li><strong>aggressive</strong>：野蛮模式，协商快速且协商成功率高。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -416,7 +416,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikeMode;
 
         /**
-         * <p>The DH group in the IKE phase.</p>
+         * <p>IKE阶段DH分组。</p>
          * 
          * <strong>example:</strong>
          * <p>group2</p>
@@ -425,16 +425,16 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikePfs;
 
         /**
-         * <p>The IKE version.</p>
+         * <p>IKE协议的版本。</p>
          * 
          * <strong>example:</strong>
-         * <p>ikev1</p>
+         * <p>ikev2</p>
          */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
         /**
-         * <p>The identifier of the tunnel on the data center side.</p>
+         * <p>本地IDC侧隧道的标识。</p>
          * 
          * <strong>example:</strong>
          * <p>47.21.XX.XX</p>
@@ -443,7 +443,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String localId;
 
         /**
-         * <p>The pre-shared key.</p>
+         * <p>预共享密钥。</p>
          * 
          * <strong>example:</strong>
          * <p>pgw6dy7d1i8i****</p>
@@ -452,7 +452,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String psk;
 
         /**
-         * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
+         * <p>阿里云侧隧道的标识。</p>
          * 
          * <strong>example:</strong>
          * <p>47.24.XX.XX</p>
@@ -541,7 +541,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm in the IPsec phase.</p>
+         * <p>IPsec阶段认证算法。</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -550,7 +550,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ipsecAuthAlg;
 
         /**
-         * <p>The encryption algorithm in the IPsec phase.</p>
+         * <p>IPsec阶段加密算法。</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -559,7 +559,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ipsecEncAlg;
 
         /**
-         * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+         * <p>IPsec阶段生存时间。单位：秒。</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -568,7 +568,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public Long ipsecLifetime;
 
         /**
-         * <p>The DH group in the IPsec phase.</p>
+         * <p>IPsec阶段DH分组。</p>
          * 
          * <strong>example:</strong>
          * <p>group2</p>
@@ -617,19 +617,19 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig extends TeaModel {
         /**
-         * <p>The configurations of Phase 1 negotiations.</p>
+         * <p>第一阶段协商的配置信息。</p>
          */
         @NameInMap("IkeConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig ikeConfig;
 
         /**
-         * <p>The configurations of Phase 2 negotiations.</p>
+         * <p>第二阶段协商的配置信息。</p>
          */
         @NameInMap("IpsecConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig ipsecConfig;
 
         /**
-         * <p>The identifier of the tunnel on the data center side.</p>
+         * <p>本地IDC侧隧道的标识。</p>
          * 
          * <strong>example:</strong>
          * <p>47.21.XX.XX</p>
@@ -638,7 +638,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String local;
 
         /**
-         * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
+         * <p>阿里云侧隧道的标识。</p>
          * 
          * <strong>example:</strong>
          * <p>47.24.XX.XX</p>
@@ -647,7 +647,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String remote;
 
         /**
-         * <p>The tunnel ID.</p>
+         * <p>隧道ID。</p>
          * 
          * <strong>example:</strong>
          * <p>tun-opsqc4d97wni27****</p>
@@ -773,10 +773,6 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         @NameInMap("RemoteSubnet")
         public String remoteSubnet;
 
-        /**
-         * <p>The tunnel configurations of the peer gateway device.</p>
-         * <p>The parameters in <strong>TunnelsConfig</strong> are returned only when the IPsec-VPN connection supports the dual-tunnel mode.</p>
-         */
         @NameInMap("TunnelsConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig tunnelsConfig;
 

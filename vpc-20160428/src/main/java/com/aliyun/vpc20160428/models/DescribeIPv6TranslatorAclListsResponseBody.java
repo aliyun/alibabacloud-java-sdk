@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
-    /**
-     * <p>The list of network ACLs.</p>
-     */
     @NameInMap("Ipv6TranslatorAcls")
     public DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls ipv6TranslatorAcls;
 
@@ -92,21 +89,9 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
     }
 
     public static class DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAclsIPv6TranslatorAcl extends TeaModel {
-        /**
-         * <p>The ACL ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipv6transacl-bp1de2****</p>
-         */
         @NameInMap("AclId")
         public String aclId;
 
-        /**
-         * <p>The ACL name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acl1</p>
-         */
         @NameInMap("AclName")
         public String aclName;
 

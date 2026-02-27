@@ -13,9 +13,6 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
     @NameInMap("Count")
     public Integer count;
 
-    /**
-     * <p>Log information list.</p>
-     */
     @NameInMap("Data")
     public DescribeVpnSslServerLogsResponseBodyData data;
 

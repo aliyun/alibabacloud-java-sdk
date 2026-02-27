@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipMonitorDataResponseBody extends TeaModel {
-    /**
-     * <p>The detailed information about the monitoring data of the EIP.</p>
-     */
     @NameInMap("EipMonitorDatas")
     public DescribeEipMonitorDataResponseBodyEipMonitorDatas eipMonitorDatas;
 
@@ -41,55 +38,21 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("EipBandwidth")
         public Integer eipBandwidth;
 
-        /**
-         * <p>The sum of inbound and outbound traffic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>465</p>
-         */
         @NameInMap("EipFlow")
         public Long eipFlow;
 
-        /**
-         * <p>The number of packets.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3434</p>
-         */
         @NameInMap("EipPackets")
         public Integer eipPackets;
 
-        /**
-         * <p>The inbound traffic. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>122</p>
-         */
         @NameInMap("EipRX")
         public Long eipRX;
 
-        /**
-         * <p>The outbound traffic. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>343</p>
-         */
         @NameInMap("EipTX")
         public Long eipTX;
 
-        /**
-         * <p>The timestamp of the monitoring data. Specify the time in the ISO8601 standard. Example: <code>2020-01-21T09:50:23Z</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-01-21T09:50:23Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -5,9 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateVcoRouteEntryResponseBody extends TeaModel {
     /**
-     * <p>The timestamp when the destination-based route was created. Unit: milliseconds.</p>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * 
      * <strong>example:</strong>
      * <p>1658387202664</p>
      */
@@ -15,8 +12,6 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The description of the destination-based route.</p>
-     * 
      * <strong>example:</strong>
      * <p>desctest</p>
      */
@@ -24,8 +19,6 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The next hop of the destination-based route.</p>
-     * 
      * <strong>example:</strong>
      * <p>vco-p0w2jpkhi2eeop6q6****</p>
      */
@@ -33,9 +26,6 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol.</p>
-     * <p>The value is set to <strong>Ipsec</strong>, which indicates the IPsec tunneling protocol.</p>
-     * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
      */
@@ -43,8 +33,6 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     public String overlayMode;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>CFC4D13B-E680-3985-95B1-87AA155481DF</p>
      */
@@ -52,7 +40,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The destination CIDR block of the destination-based route.</p>
+     * <p>The description of the destination-based route.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.10.0/24</p>
@@ -61,9 +49,6 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     public String routeDest;
 
     /**
-     * <p>The status of the destination-based route.</p>
-     * <p>Only <strong>published</strong> is returned, which indicates that the current route is published to the transit router.</p>
-     * 
      * <strong>example:</strong>
      * <p>published</p>
      */
@@ -71,7 +56,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The ID of the IPsec-VPN connection.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vco-p0w2jpkhi2eeop6q6****</p>
@@ -80,12 +65,6 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     public String vpnConnectionId;
 
     /**
-     * <p>The weight of the destination-based route. Valid values:</p>
-     * <ul>
-     * <li><strong>0</strong>: a low priority.</li>
-     * <li><strong>100</strong>: a high priority.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

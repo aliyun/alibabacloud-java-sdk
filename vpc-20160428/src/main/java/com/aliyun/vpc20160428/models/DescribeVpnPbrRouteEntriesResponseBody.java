@@ -40,9 +40,6 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The list of policy-based routes.</p>
-     */
     @NameInMap("VpnPbrRouteEntries")
     public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntries vpnPbrRouteEntries;
 
@@ -92,99 +89,30 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry extends TeaModel {
-        /**
-         * <p>The time when the policy-based route was created. Unit: millisecond.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1492747187000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The next hop of the policy-based route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vco-bp15oes1py4i66rmd****</p>
-         */
         @NameInMap("NextHop")
         public String nextHop;
 
-        /**
-         * <p>The ID of the tunnel associated with the next hop of the policy-based route.</p>
-         * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tun-opsqc4d97wni2****</p>
-         */
         @NameInMap("NextHopTunnelId")
         public String nextHopTunnelId;
 
-        /**
-         * <p>The priority of the policy-based route.</p>
-         * <p>A smaller value indicates a higher priority.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Priority")
         public Integer priority;
 
-        /**
-         * <p>The destination CIDR block of the policy-based route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.0.0.0/24</p>
-         */
         @NameInMap("RouteDest")
         public String routeDest;
 
-        /**
-         * <p>The source CIDR block of the policy-based route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.0.0/24</p>
-         */
         @NameInMap("RouteSource")
         public String routeSource;
 
-        /**
-         * <p>The status of the policy-based route. Valid values:</p>
-         * <ul>
-         * <li><strong>published</strong>: advertised to the VPC route table.</li>
-         * <li><strong>normal</strong>: not advertised to the VPC route table.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>published</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <p>The ID of the VPN gateway.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpn-bp1a3kqjiiq9legfx****</p>
-         */
         @NameInMap("VpnInstanceId")
         public String vpnInstanceId;
 
-        /**
-         * <p>The weight of the policy-based route.</p>
-         * <p>For a VPN gateway that supports IPsec-VPN connections in single-tunnel mode, the weight of a policy-based route indicates the priority of the route.</p>
-         * <ul>
-         * <li><strong>100</strong>: a high priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.</li>
-         * <li><strong>0</strong>: a low priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.</li>
-         * </ul>
-         * <blockquote>
-         * <p> For a VPN gateway that does not support IPsec-VPN connections in single-tunnel mode, this parameter does not take effect.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 

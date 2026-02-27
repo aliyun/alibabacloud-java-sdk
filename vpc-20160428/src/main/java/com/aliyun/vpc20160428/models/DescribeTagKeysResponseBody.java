@@ -26,9 +26,6 @@ public class DescribeTagKeysResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of tag keys.</p>
-     */
     @NameInMap("TagKeys")
     public DescribeTagKeysResponseBodyTagKeys tagKeys;
 
@@ -62,25 +59,9 @@ public class DescribeTagKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeTagKeysResponseBodyTagKeysTagKey extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The type of the tag key. Valid values:</p>
-         * <ul>
-         * <li><strong>Custom</strong>: custom</li>
-         * <li><strong>System</strong>: system</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Custom</p>
-         */
         @NameInMap("Type")
         public String type;
 

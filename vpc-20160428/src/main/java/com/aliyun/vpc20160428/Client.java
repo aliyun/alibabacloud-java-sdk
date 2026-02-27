@@ -294,20 +294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
-     * <ul>
-     * <li>When you call this operation to associate an EIP with an Internet Shared Bandwidth instance, make sure that the EIP meets the following requirements:<ul>
-     * <li>The EIP uses the pay-as-you-go billing method.</li>
-     * <li>The EIP and the Internet Shared Bandwidth instance belong to the same region.</li>
-     * <li>The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.</li>
-     * </ul>
-     * </li>
-     * <li><strong>AddCommonBandwidthPackageIp</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> operation to query the status of the operation.<ul>
-     * <li>If the Internet Shared Bandwidth instance is in the <strong>BINDING</strong> state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.</li>
-     * <li>If the Internet Shared Bandwidth instance is in the <strong>BINDED</strong> state, the EIP is associated with the Internet Shared Bandwidth instance.</li>
-     * </ul>
-     * </li>
-     * </ul>
+     * <p>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</p>
@@ -374,20 +361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
-     * <ul>
-     * <li>When you call this operation to associate an EIP with an Internet Shared Bandwidth instance, make sure that the EIP meets the following requirements:<ul>
-     * <li>The EIP uses the pay-as-you-go billing method.</li>
-     * <li>The EIP and the Internet Shared Bandwidth instance belong to the same region.</li>
-     * <li>The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.</li>
-     * </ul>
-     * </li>
-     * <li><strong>AddCommonBandwidthPackageIp</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> operation to query the status of the operation.<ul>
-     * <li>If the Internet Shared Bandwidth instance is in the <strong>BINDING</strong> state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.</li>
-     * <li>If the Internet Shared Bandwidth instance is in the <strong>BINDED</strong> state, the EIP is associated with the Internet Shared Bandwidth instance.</li>
-     * </ul>
-     * </li>
-     * </ul>
+     * <p>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</p>
@@ -2668,7 +2642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>将DHCP选项集与VPC关联</p>
+     * <p>Associates a DHCP options set with a virtual private cloud (VPC).</p>
      * 
      * @param request AttachDhcpOptionsSetToVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2740,7 +2714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>将DHCP选项集与VPC关联</p>
+     * <p>Associates a DHCP options set with a virtual private cloud (VPC).</p>
      * 
      * @param request AttachDhcpOptionsSetToVpcRequest
      * @return AttachDhcpOptionsSetToVpcResponse
@@ -5828,7 +5802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建IPv4网关。</p>
+     * <p>Creates an IPv4 gateway.</p>
      * 
      * @param request CreateIpv4GatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5916,7 +5890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建IPv4网关。</p>
+     * <p>Creates an IPv4 gateway.</p>
      * 
      * @param request CreateIpv4GatewayRequest
      * @return CreateIpv4GatewayResponse
@@ -7438,7 +7412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create Route Target Group</p>
+     * <p>Creates a route target group instance.</p>
      * 
      * @param request CreateRouteTargetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7514,7 +7488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create Route Target Group</p>
+     * <p>Creates a route target group instance.</p>
      * 
      * @param request CreateRouteTargetGroupRequest
      * @return CreateRouteTargetGroupResponse
@@ -8403,7 +8377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建交换机。</p>
+     * <p>Creates a vSwitch.</p>
      * 
      * @param request CreateVSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8504,7 +8478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建交换机。</p>
+     * <p>Creates a vSwitch.</p>
      * 
      * @param request CreateVSwitchRequest
      * @return CreateVSwitchResponse
@@ -8730,17 +8704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The IPsec-VPN connection must be associated with a transit router. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</p>
-     * <ul>
-     * <li>You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.</li>
-     * <li>Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.</li>
-     * <li><strong>CreateVcoRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the status of the task.<ul>
-     * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the destination-based route is being created.</li>
-     * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the destination-based route is created.</li>
-     * </ul>
-     * </li>
-     * <li>You cannot repeatedly call <strong>CreateVcoRouteEntry</strong> within the specified period of time.</li>
-     * </ul>
+     * <p>Adds a destination-based route for an IPsec-VPN connection.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds a destination-based route for an IPsec-VPN connection.</p>
@@ -8819,17 +8783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The IPsec-VPN connection must be associated with a transit router. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</p>
-     * <ul>
-     * <li>You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.</li>
-     * <li>Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.</li>
-     * <li><strong>CreateVcoRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the status of the task.<ul>
-     * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the destination-based route is being created.</li>
-     * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the destination-based route is created.</li>
-     * </ul>
-     * </li>
-     * <li>You cannot repeatedly call <strong>CreateVcoRouteEntry</strong> within the specified period of time.</li>
-     * </ul>
+     * <p>Adds a destination-based route for an IPsec-VPN connection.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds a destination-based route for an IPsec-VPN connection.</p>
@@ -10012,16 +9966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the match rules of and limits on policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Manage policy-based routes</a>.</p>
-     * <ul>
-     * <li>Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</li>
-     * <li><strong>CreateVpnPbrRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway.<ul>
-     * <li>If the VPN gateway is in the <strong>updating</strong> state, the policy-based route is being created.</li>
-     * <li>If the VPN gateway is in the <strong>active</strong> state, the policy-based route is created.</li>
-     * </ul>
-     * </li>
-     * <li>You cannot call the <strong>CreateVpnPbrRouteEntry</strong> operation to create multiple policy-based routes for a VPN gateway at a time.</li>
-     * </ul>
+     * <p>Creates a policy-based route for a VPN gateway.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a policy-based route for a VPN gateway.</p>
@@ -10116,16 +10061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the match rules of and limits on policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Manage policy-based routes</a>.</p>
-     * <ul>
-     * <li>Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</li>
-     * <li><strong>CreateVpnPbrRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway.<ul>
-     * <li>If the VPN gateway is in the <strong>updating</strong> state, the policy-based route is being created.</li>
-     * <li>If the VPN gateway is in the <strong>active</strong> state, the policy-based route is created.</li>
-     * </ul>
-     * </li>
-     * <li>You cannot call the <strong>CreateVpnPbrRouteEntry</strong> operation to create multiple policy-based routes for a VPN gateway at a time.</li>
-     * </ul>
+     * <p>Creates a policy-based route for a VPN gateway.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a policy-based route for a VPN gateway.</p>
@@ -10252,7 +10188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>冻结路由器接口</p>
+     * <p>Deactivates a router interface.</p>
      * 
      * @param request DeactivateRouterInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10300,7 +10236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>冻结路由器接口</p>
+     * <p>Deactivates a router interface.</p>
      * 
      * @param request DeactivateRouterInterfaceRequest
      * @return DeactivateRouterInterfaceResponse
@@ -11486,7 +11422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a Global Accelerator (GA) instance.</p>
+     * <p>Deletes a GA instance.</p>
      * 
      * @param request DeleteGlobalAccelerationInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11546,7 +11482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a Global Accelerator (GA) instance.</p>
+     * <p>Deletes a GA instance.</p>
      * 
      * @param request DeleteGlobalAccelerationInstanceRequest
      * @return DeleteGlobalAccelerationInstanceResponse
@@ -13275,7 +13211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete Route Target Group</p>
+     * <p>Deletes a route target group.</p>
      * 
      * @param request DeleteRouteTargetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13328,7 +13264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete Route Target Group</p>
+     * <p>Deletes a route target group.</p>
      * 
      * @param request DeleteRouteTargetGroupRequest
      * @return DeleteRouteTargetGroupResponse
@@ -13614,7 +13550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an SSL server.</p>
+     * <p>Deletes an SSL server. The system automatically deletes all SSL client certificates that are associated with the SSL server. In this case, the SSL-VPN connections of the clients on which the SSL client certificates are installed are automatically disconnected.</p>
      * 
      * @param request DeleteSslVpnServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13678,7 +13614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an SSL server.</p>
+     * <p>Deletes an SSL server. The system automatically deletes all SSL client certificates that are associated with the SSL server. In this case, the SSL-VPN connections of the clients on which the SSL client certificates are installed are automatically disconnected.</p>
      * 
      * @param request DeleteSslVpnServerRequest
      * @return DeleteSslVpnServerResponse
@@ -15103,7 +15039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After you enable deletion protection for an instance, you cannot delete the instance. You must disable deletion protection before you can delete the instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>设置实例删除保护功能。</p>
+     * <p>Set the deletion protection feature for an instance.</p>
      * 
      * @param request DeletionProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15170,7 +15106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After you enable deletion protection for an instance, you cannot delete the instance. You must disable deletion protection before you can delete the instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>设置实例删除保护功能。</p>
+     * <p>Set the deletion protection feature for an instance.</p>
      * 
      * @param request DeletionProtectionRequest
      * @return DeletionProtectionResponse
@@ -15322,7 +15258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Border Gateway Protocol (BGP) groups in a region.</p>
+     * <p>Queries BGP groups in a specified region.</p>
      * 
      * @param request DescribeBgpGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15390,7 +15326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Border Gateway Protocol (BGP) groups in a region.</p>
+     * <p>Queries BGP groups in a specified region.</p>
      * 
      * @param request DescribeBgpGroupsRequest
      * @return DescribeBgpGroupsResponse
@@ -16081,7 +16017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>To improve user experience in querying monitoring data, we recommend that you call the DescribeMetricList API operation provided by CloudMonitor to query EIP monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a> and <a href="https://help.aliyun.com/document_detail/162874.html">EIP monitoring data</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</p>
+     * <p>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</p>
      * 
      * @param request DescribeEipMonitorDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16148,7 +16084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>To improve user experience in querying monitoring data, we recommend that you call the DescribeMetricList API operation provided by CloudMonitor to query EIP monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a> and <a href="https://help.aliyun.com/document_detail/162874.html">EIP monitoring data</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</p>
+     * <p>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</p>
      * 
      * @param request DescribeEipMonitorDataRequest
      * @return DescribeEipMonitorDataResponse
@@ -16844,7 +16780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Global Accelerator (GA) instances.</p>
+     * <p>Queries created GA instances.</p>
      * 
      * @param request DescribeGlobalAccelerationInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16932,7 +16868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Global Accelerator (GA) instances.</p>
+     * <p>Queries created GA instances.</p>
      * 
      * @param request DescribeGlobalAccelerationInstancesRequest
      * @return DescribeGlobalAccelerationInstancesResponse
@@ -16944,7 +16880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定网络实例（VPC、VBR）的云企业网跨账号授权信息</p>
+     * <p>Queries cross-account authorization on virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances.</p>
      * 
      * @param request DescribeGrantRulesToCenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17016,7 +16952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定网络实例（VPC、VBR）的云企业网跨账号授权信息</p>
+     * <p>Queries cross-account authorization on virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances.</p>
      * 
      * @param request DescribeGrantRulesToCenRequest
      * @return DescribeGrantRulesToCenResponse
@@ -18394,7 +18330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询物理专线LOA信息</p>
+     * <p>Queries the LOA information about an Express Connect circuit.</p>
      * 
      * @param request DescribePhysicalConnectionLOARequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18450,7 +18386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询物理专线LOA信息</p>
+     * <p>Queries the LOA information about an Express Connect circuit.</p>
      * 
      * @param request DescribePhysicalConnectionLOARequest
      * @return DescribePhysicalConnectionLOAResponse
@@ -19169,7 +19105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries Global Accelerator (GA) instances that are associated with a backend server.</p>
+     * <p>Queries the GA instances that are associated with a specified backend server.</p>
      * 
      * @param request DescribeServerRelatedGlobalAccelerationInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19230,7 +19166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries Global Accelerator (GA) instances that are associated with a backend server.</p>
+     * <p>Queries the GA instances that are associated with a specified backend server.</p>
      * 
      * @param request DescribeServerRelatedGlobalAccelerationInstancesRequest
      * @return DescribeServerRelatedGlobalAccelerationInstancesResponse
@@ -21478,7 +21414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log entries of an SSL server.</p>
+     * <p>Queries the log of an SSL server.</p>
      * 
      * @param request DescribeVpnSslServerLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21554,7 +21490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log entries of an SSL server.</p>
+     * <p>Queries the log of an SSL server.</p>
      * 
      * @param request DescribeVpnSslServerLogsRequest
      * @return DescribeVpnSslServerLogsResponse
@@ -21645,7 +21581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a DHCP options set from a virtual private cloud (VPC).</p>
+     * <p>Disassociates a DHCP options set from a VPC.</p>
      * 
      * @param request DetachDhcpOptionsSetFromVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21720,7 +21656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a DHCP options set from a virtual private cloud (VPC).</p>
+     * <p>Disassociates a DHCP options set from a VPC.</p>
      * 
      * @param request DetachDhcpOptionsSetFromVpcRequest
      * @return DetachDhcpOptionsSetFromVpcResponse
@@ -21878,12 +21814,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables ClassicLink for a virtual private cloud (VPC).</p>
+     * <p>Disables ClassicLink for a VPC.</p>
+     * 
+     * @deprecated OpenAPI DisableVpcClassicLink is deprecated
      * 
      * @param request DisableVpcClassicLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableVpcClassicLinkResponse
      */
+    @Deprecated
+    // Deprecated
     public DisableVpcClassicLinkResponse disableVpcClassicLinkWithOptions(DisableVpcClassicLinkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21934,11 +21874,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables ClassicLink for a virtual private cloud (VPC).</p>
+     * <p>Disables ClassicLink for a VPC.</p>
+     * 
+     * @deprecated OpenAPI DisableVpcClassicLink is deprecated
      * 
      * @param request DisableVpcClassicLinkRequest
      * @return DisableVpcClassicLinkResponse
      */
+    @Deprecated
+    // Deprecated
     public DisableVpcClassicLinkResponse disableVpcClassicLink(DisableVpcClassicLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableVpcClassicLinkWithOptions(request, runtime);
@@ -22342,10 +22286,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Enables ClassicLink for a VPC.</p>
      * 
+     * @deprecated OpenAPI EnableVpcClassicLink is deprecated
+     * 
      * @param request EnableVpcClassicLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableVpcClassicLinkResponse
      */
+    @Deprecated
+    // Deprecated
     public EnableVpcClassicLinkResponse enableVpcClassicLinkWithOptions(EnableVpcClassicLinkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22398,9 +22346,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Enables ClassicLink for a VPC.</p>
      * 
+     * @deprecated OpenAPI EnableVpcClassicLink is deprecated
+     * 
      * @param request EnableVpcClassicLinkRequest
      * @return EnableVpcClassicLinkResponse
      */
+    @Deprecated
+    // Deprecated
     public EnableVpcClassicLinkResponse enableVpcClassicLink(EnableVpcClassicLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableVpcClassicLinkWithOptions(request, runtime);
@@ -22787,7 +22739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this API operation to query the status of outbound data transfer billing for the current account. For more information about outbound data transfer billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Outbound data transfer billing</a> and <a href="https://help.aliyun.com/document_detail/54582.html">Billing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询是否开通了出云流量服务</p>
+     * <p>Checks whether outbound data transfer billing is enabled for the current account.</p>
      * 
      * @param request GetPhysicalConnectionServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22838,7 +22790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this API operation to query the status of outbound data transfer billing for the current account. For more information about outbound data transfer billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Outbound data transfer billing</a> and <a href="https://help.aliyun.com/document_detail/54582.html">Billing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询是否开通了出云流量服务</p>
+     * <p>Checks whether outbound data transfer billing is enabled for the current account.</p>
      * 
      * @param request GetPhysicalConnectionServiceStatusRequest
      * @return GetPhysicalConnectionServiceStatusResponse
@@ -22921,7 +22873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Get the information of the route target group instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Get the route target group</p>
+     * <p>Gets the information of a route target group.</p>
      * 
      * @param request GetRouteTargetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22968,7 +22920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Get the information of the route target group instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Get the route target group</p>
+     * <p>Gets the information of a route target group.</p>
      * 
      * @param request GetRouteTargetGroupRequest
      * @return GetRouteTargetGroupResponse
@@ -23328,7 +23280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询路由类型的明细。</p>
+     * <p>Queries route types.</p>
      * 
      * @param request GetVpcRouteEntrySummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23388,7 +23340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询路由类型的明细。</p>
+     * <p>Queries route types.</p>
      * 
      * @param request GetVpcRouteEntrySummaryRequest
      * @return GetVpcRouteEntrySummaryResponse
@@ -23471,7 +23423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Grants permissions to a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Grants permissions to a CEN instance.</p>
      * 
      * @param request GrantInstanceToCenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23548,7 +23500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Grants permissions to a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Grants permissions to a CEN instance.</p>
      * 
      * @param request GrantInstanceToCenRequest
      * @return GrantInstanceToCenResponse
@@ -23686,7 +23638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of regions available for an Express Connect circuit.</p>
+     * <p>Queries the list of regions available for an Express Connect circuit.</p>
      * 
      * @param request ListBusinessRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23718,7 +23670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of regions available for an Express Connect circuit.</p>
+     * <p>Queries the list of regions available for an Express Connect circuit.</p>
      * 
      * @param request ListBusinessRegionsRequest
      * @return ListBusinessRegionsResponse
@@ -24550,7 +24502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Querying the connection features supported by a Express Connect circuit.</p>
+     * <p>Queries he connection features supported by a Express Connect circuit.</p>
      * 
      * @param request ListPhysicalConnectionFeaturesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24606,7 +24558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Querying the connection features supported by a Express Connect circuit.</p>
+     * <p>Queries he connection features supported by a Express Connect circuit.</p>
      * 
      * @param request ListPhysicalConnectionFeaturesRequest
      * @return ListPhysicalConnectionFeaturesResponse
@@ -24702,7 +24654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IP地址池中的IP地址网段信息</p>
+     * <p>Queries CIDR blocks in an IP address pool.</p>
      * 
      * @param request ListPublicIpAddressPoolCidrBlocksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24770,7 +24722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IP地址池中的IP地址网段信息</p>
+     * <p>Queries CIDR blocks in an IP address pool.</p>
      * 
      * @param request ListPublicIpAddressPoolCidrBlocksRequest
      * @return ListPublicIpAddressPoolCidrBlocksResponse
@@ -24885,7 +24837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Lists the route target groups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch query for route target groups</p>
+     * <p>Queries the list of route target groups.</p>
      * 
      * @param request ListRouteTargetGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24952,7 +24904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Lists the route target groups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch query for route target groups</p>
+     * <p>Queries the list of route target groups.</p>
      * 
      * @param request ListRouteTargetGroupsRequest
      * @return ListRouteTargetGroupsResponse
@@ -25692,7 +25644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries advertised routes.</p>
+     * <p>Query the route publishing status</p>
      * 
      * @param request ListVpcPublishedRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25768,7 +25720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries advertised routes.</p>
+     * <p>Query the route publishing status</p>
      * 
      * @param request ListVpcPublishedRouteEntriesRequest
      * @return ListVpcPublishedRouteEntriesResponse
@@ -29740,7 +29692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>修改VSwitch属性</p>
+     * <p>Modifies the name and description of a vSwitch.</p>
      * 
      * @param request ModifyVSwitchAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29820,7 +29772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>修改VSwitch属性</p>
+     * <p>Modifies the name and description of a vSwitch.</p>
      * 
      * @param request ModifyVSwitchAttributeRequest
      * @return ModifyVSwitchAttributeResponse
@@ -29836,7 +29788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot repeatedly call <strong>ModifyVSwitchCidrReservationAttribute</strong> within a specific time period.</p>
      * 
      * <b>summary</b> : 
-     * <p>修改交换机预留网段的名称和描述信息。</p>
+     * <p>Modifies the name and description of a CIDR block reserved for a vSwitch.</p>
      * 
      * @param request ModifyVSwitchCidrReservationAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29908,7 +29860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot repeatedly call <strong>ModifyVSwitchCidrReservationAttribute</strong> within a specific time period.</p>
      * 
      * <b>summary</b> : 
-     * <p>修改交换机预留网段的名称和描述信息。</p>
+     * <p>Modifies the name and description of a CIDR block reserved for a vSwitch.</p>
      * 
      * @param request ModifyVSwitchCidrReservationAttributeRequest
      * @return ModifyVSwitchCidrReservationAttributeResponse
@@ -30186,7 +30138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot repeatedly call the <strong>ModifyVpcAttribute</strong> operation to modify the name and description of a VPC within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name and description of a virtual private cloud (VPC).</p>
+     * <p>Modifies the configurations of a specified VPC.</p>
      * 
      * @param request ModifyVpcAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30270,7 +30222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot repeatedly call the <strong>ModifyVpcAttribute</strong> operation to modify the name and description of a VPC within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name and description of a virtual private cloud (VPC).</p>
+     * <p>Modifies the configurations of a specified VPC.</p>
      * 
      * @param request ModifyVpcAttributeRequest
      * @return ModifyVpcAttributeResponse
@@ -30720,7 +30672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name and description of a VPN gateway.</p>
+     * <p>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</p>
      * 
      * @param request ModifyVpnGatewayAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30796,7 +30748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name and description of a VPN gateway.</p>
+     * <p>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</p>
      * 
      * @param request ModifyVpnGatewayAttributeRequest
      * @return ModifyVpnGatewayAttributeResponse
@@ -31690,7 +31642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Advertises VPC routes to an external component.</p>
+     * <p>Publish VPC Routes</p>
      * 
      * @param request PublishVpcRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31758,7 +31710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Advertises VPC routes to an external component.</p>
+     * <p>Publish VPC Routes</p>
      * 
      * @param request PublishVpcRouteEntriesRequest
      * @return PublishVpcRouteEntriesResponse
@@ -32335,6 +32287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disassociates an EIP from a shared-bandwidth GA instance.</p>
+     * 
      * @param request RemoveGlobalAccelerationInstanceIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveGlobalAccelerationInstanceIpResponse
@@ -32388,6 +32343,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disassociates an EIP from a shared-bandwidth GA instance.</p>
+     * 
      * @param request RemoveGlobalAccelerationInstanceIpRequest
      * @return RemoveGlobalAccelerationInstanceIpResponse
      */
@@ -32570,7 +32528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更改DHCP选项集与VPC的关联。</p>
+     * <p>Replaces the DHCP options set that is associated with a virtual private cloud (VPC).</p>
      * 
      * @param request ReplaceVpcDhcpOptionsSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32642,7 +32600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更改DHCP选项集与VPC的关联。</p>
+     * <p>Replaces the DHCP options set that is associated with a virtual private cloud (VPC).</p>
      * 
      * @param request ReplaceVpcDhcpOptionsSetRequest
      * @return ReplaceVpcDhcpOptionsSetResponse
@@ -33249,7 +33207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Switch Active and Standby For RouteTargetGroup.</p>
      * 
      * <b>summary</b> : 
-     * <p>Switch Active and Standby For RouteTargetGroup.</p>
+     * <p>Performs primary and secondary switchover for the route target group.</p>
      * 
      * @param request SwitchActiveRouteTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33296,7 +33254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Switch Active and Standby For RouteTargetGroup.</p>
      * 
      * <b>summary</b> : 
-     * <p>Switch Active and Standby For RouteTargetGroup.</p>
+     * <p>Performs primary and secondary switchover for the route target group.</p>
      * 
      * @param request SwitchActiveRouteTargetRequest
      * @return SwitchActiveRouteTargetResponse
@@ -34512,7 +34470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Dhcp选项集信息</p>
+     * <p>Modifies the configuration of a DHCP options set.</p>
      * 
      * @param request UpdateDhcpOptionsSetAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34596,7 +34554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Dhcp选项集信息</p>
+     * <p>Modifies the configuration of a DHCP options set.</p>
      * 
      * @param request UpdateDhcpOptionsSetAttributeRequest
      * @return UpdateDhcpOptionsSetAttributeResponse
@@ -35321,7 +35279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Update Route Target Group</p>
+     * <p>Updates the information about a routing target group instance, including the name, description, and members that are not enabled.</p>
      * 
      * @param request UpdateRouteTargetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35382,7 +35340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Update Route Target Group</p>
+     * <p>Updates the information about a routing target group instance, including the name, description, and members that are not enabled.</p>
      * 
      * @param request UpdateRouteTargetGroupRequest
      * @return UpdateRouteTargetGroupResponse
@@ -35488,7 +35446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of an inbound or outbound rule for traffic mirroring.</p>
+     * <p>Modifies the configuration of an inbound or outbound rule for traffic mirror.</p>
      * 
      * @param request UpdateTrafficMirrorFilterRuleAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35584,7 +35542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of an inbound or outbound rule for traffic mirroring.</p>
+     * <p>Modifies the configuration of an inbound or outbound rule for traffic mirror.</p>
      * 
      * @param request UpdateTrafficMirrorFilterRuleAttributeRequest
      * @return UpdateTrafficMirrorFilterRuleAttributeResponse
@@ -35965,7 +35923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, make sure that a VPC NAT gateway is created. For more information, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>查看eni quota</p>
+     * <p>Queries the quota of endpoints that can be created in the reversely accessed VPC NAT gateway.</p>
      * 
      * @param request VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36028,7 +35986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, make sure that a VPC NAT gateway is created. For more information, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>查看eni quota</p>
+     * <p>Queries the quota of endpoints that can be created in the reversely accessed VPC NAT gateway.</p>
      * 
      * @param request VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest
      * @return VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse

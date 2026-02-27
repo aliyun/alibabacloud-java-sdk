@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeForwardTableEntriesResponseBody extends TeaModel {
-    /**
-     * <p>The details of DNAT entries.</p>
-     */
     @NameInMap("ForwardTableEntries")
     public DescribeForwardTableEntriesResponseBodyForwardTableEntries forwardTableEntries;
 
@@ -92,116 +89,33 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry extends TeaModel {
-        /**
-         * <ul>
-         * <li>The EIPs that can be accessed over the Internet when you query DNAT entries of Internet NAT gateways.</li>
-         * <li>The NAT IP addresses that can be accessed by external networks when you query DNAT entries of VPC NAT gateways.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>139.79.XX.XX</p>
-         */
         @NameInMap("ExternalIp")
         public String externalIp;
 
-        /**
-         * <ul>
-         * <li>The external port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</li>
-         * <li>The port that is used when the NAT IP address can be accessed by external networks when you query DNAT entries of VPC NAT gateways.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("ExternalPort")
         public String externalPort;
 
-        /**
-         * <p>The ID of the DNAT entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fwd-119smw5tk****</p>
-         */
         @NameInMap("ForwardEntryId")
         public String forwardEntryId;
 
-        /**
-         * <p>The name of the DNAT entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ForwardEntry-1</p>
-         */
         @NameInMap("ForwardEntryName")
         public String forwardEntryName;
 
-        /**
-         * <p>The ID of the DNAT table to which the DNAT entry belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ftb-11tc6xgmv****</p>
-         */
         @NameInMap("ForwardTableId")
         public String forwardTableId;
 
-        /**
-         * <p>The private IP address.</p>
-         * <ul>
-         * <li>The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you query DNAT entries of Internet NAT gateways.</li>
-         * <li>The private IP address that uses DNAT entries when you query DNAT entries of VPC NAT gateways.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.XX.XX</p>
-         */
         @NameInMap("InternalIp")
         public String internalIp;
 
-        /**
-         * <ul>
-         * <li>The internal port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</li>
-         * <li>The destination ECS instance port to be mapped when you query DNAT entries of VPC NAT gateways.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>25</p>
-         */
         @NameInMap("InternalPort")
         public String internalPort;
 
-        /**
-         * <p>The protocol. Valid values:</p>
-         * <ul>
-         * <li><strong>TCP</strong></li>
-         * <li><strong>UDP</strong></li>
-         * <li><strong>Any</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>TCP</p>
-         */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        /**
-         * <p>The ID of the NAT gateway to which the DNAT entry belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ngw-bp1uewa15k4iy5770****</p>
-         */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
-        /**
-         * <p>The status of the DNAT entry. Valid values:</p>
-         * <ul>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 

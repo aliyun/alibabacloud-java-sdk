@@ -40,18 +40,9 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The information about route entries of the VPN gateway in dual-tunnel mode.</p>
-     * <blockquote>
-     * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</p>
-     * </blockquote>
-     */
     @NameInMap("VpnRouteCounts")
     public DescribeVpnRouteEntriesResponseBodyVpnRouteCounts vpnRouteCounts;
 
-    /**
-     * <p>The route entry list.</p>
-     */
     @NameInMap("VpnRouteEntries")
     public DescribeVpnRouteEntriesResponseBodyVpnRouteEntries vpnRouteEntries;
 
@@ -109,38 +100,12 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount extends TeaModel {
-        /**
-         * <p>The number of route entries.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("RouteCount")
         public Integer routeCount;
 
-        /**
-         * <p>The route type. Valid values:</p>
-         * <ul>
-         * <li><strong>custom</strong> (default): destination-based route.</li>
-         * <li><strong>bgp</strong> : BGP route entry.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>bgp</p>
-         */
         @NameInMap("RouteEntryType")
         public String routeEntryType;
 
-        /**
-         * <p>The source of the BGP route. Valid values:</p>
-         * <ul>
-         * <li><strong>CLOUD</strong>: advertised from a cloud service associated with the VPN gateway.</li>
-         * <li><strong>VPN_BGP</strong>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPN_BGP</p>
-         */
         @NameInMap("Source")
         public String source;
 
@@ -195,121 +160,36 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry extends TeaModel {
-        /**
-         * <p>The AS path of the route entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>65501,65001,60011</p>
-         */
         @NameInMap("AsPath")
         public String asPath;
 
-        /**
-         * <p>The community attributes of the route entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>65001:1000,65501:2000</p>
-         */
         @NameInMap("Community")
         public String community;
 
-        /**
-         * <p>The timestamp when the route entry was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1563874074000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The next hop of the route entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vco-bp1tui07ob10fmuro****</p>
-         */
         @NameInMap("NextHop")
         public String nextHop;
 
-        /**
-         * <p>The ID of the tunnel associated with the next hop. </p>
-         * <blockquote>
-         * <p>This parameter is returned only if the VPN gateway supports the dual-tunnel mode.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>tun-36cfgpwjn58axj****</p>
-         */
         @NameInMap("NextHopTunnelId")
         public String nextHopTunnelId;
 
-        /**
-         * <p>The destination CIDR block of the route entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.0.0.0/24</p>
-         */
         @NameInMap("RouteDest")
         public String routeDest;
 
-        /**
-         * <p>The type of the route entry. Valid values:</p>
-         * <ul>
-         * <li><strong>Custom</strong>: custom</li>
-         * <li><strong>System</strong>: system</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>System</p>
-         */
         @NameInMap("RouteEntryType")
         public String routeEntryType;
 
-        /**
-         * <p>The source of the BGP route. Valid values:</p>
-         * <ul>
-         * <li><strong>CLOUD</strong>: advertised from a cloud service associated with the VPN gateway.</li>
-         * <li><strong>VPN_BGP</strong>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.10.0/24</p>
-         */
         @NameInMap("Source")
         public String source;
 
-        /**
-         * <p>The status of the route entry. Valid values:</p>
-         * <ul>
-         * <li><strong>published</strong>: advertised</li>
-         * <li><strong>normal</strong>: not advertised</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>normal</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <p>The ID of the VPN gateway.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpn-bp1cmw7jh1nfe43m9****</p>
-         */
         @NameInMap("VpnInstanceId")
         public String vpnInstanceId;
 
-        /**
-         * <p>The weight of the route entry. Valid values: <strong>0</strong> and <strong>100</strong>.</p>
-         * <ul>
-         * <li><strong>0</strong>: a low priority</li>
-         * <li><strong>100</strong>: a high priority</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 

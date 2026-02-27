@@ -4,16 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.</p>
-     * <p>If the VPC is not attached to a CEN instance, the parameter is not returned.</p>
-     */
     @NameInMap("AssociatedCens")
     public DescribeVpcAttributeResponseBodyAssociatedCens associatedCens;
 
-    /**
-     * <p>The route source associated with the VPC.</p>
-     */
     @NameInMap("AssociatedPropagationSources")
     public DescribeVpcAttributeResponseBodyAssociatedPropagationSources associatedPropagationSources;
 
@@ -37,11 +30,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("ClassicLinkEnabled")
+    @Deprecated
     public Boolean classicLinkEnabled;
 
-    /**
-     * <p>The list of resources deployed in the VPC.</p>
-     */
     @NameInMap("CloudResources")
     public DescribeVpcAttributeResponseBodyCloudResources cloudResources;
 
@@ -127,9 +118,6 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
-    /**
-     * <p>The IPv6 CIDR block of the VPC.</p>
-     */
     @NameInMap("Ipv6CidrBlocks")
     public DescribeVpcAttributeResponseBodyIpv6CidrBlocks ipv6CidrBlocks;
 
@@ -182,9 +170,6 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The secondary IPv4 CIDR block of the VPC.</p>
-     */
     @NameInMap("SecondaryCidrBlocks")
     public DescribeVpcAttributeResponseBodySecondaryCidrBlocks secondaryCidrBlocks;
 
@@ -214,15 +199,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("SupportIpv4Gateway")
     public Boolean supportIpv4Gateway;
 
-    /**
-     * <p>The information about the tags.</p>
-     */
     @NameInMap("Tags")
     public DescribeVpcAttributeResponseBodyTags tags;
 
-    /**
-     * <p>The user CIDR block. Multiple CIDR blocks are separated by commas (,). At most three CIDR blocks are returned.</p>
-     */
     @NameInMap("UserCidrs")
     public DescribeVpcAttributeResponseBodyUserCidrs userCidrs;
 
@@ -235,9 +214,6 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("VRouterId")
     public String VRouterId;
 
-    /**
-     * <p>The list of vSwitches deployed in the VPC.</p>
-     */
     @NameInMap("VSwitchIds")
     public DescribeVpcAttributeResponseBodyVSwitchIds vSwitchIds;
 
@@ -288,6 +264,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         return this.cidrBlock;
     }
 
+    @Deprecated
     public DescribeVpcAttributeResponseBody setClassicLinkEnabled(Boolean classicLinkEnabled) {
         this.classicLinkEnabled = classicLinkEnabled;
         return this;
@@ -489,31 +466,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen extends TeaModel {
-        /**
-         * <p>The ID of the CEN instance to which the VPC is attached.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cen-7qthudw0ll6jmc****</p>
-         */
         @NameInMap("CenId")
         public String cenId;
 
-        /**
-         * <p>The ID of the account to which the CEN instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>28311773240248****</p>
-         */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
-        /**
-         * <p>The status of the CEN instance.</p>
-         * <p><strong>Attached</strong> is returned only when the VPC is attached to a CEN instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Attached</p>
-         */
         @NameInMap("CenStatus")
         public String cenStatus;
 
@@ -568,59 +526,18 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources extends TeaModel {
-        /**
-         * <p>Indicates whether routes are advertised to the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("RoutePropagated")
         public Boolean routePropagated;
 
-        /**
-         * <p>The instance ID of the source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cen-dc4vwznpwbobrl****</p>
-         */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
-        /**
-         * <p>The account ID of the source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>153980532164****</p>
-         */
         @NameInMap("SourceOwnerId")
         public Long sourceOwnerId;
 
-        /**
-         * <p>The source type.</p>
-         * <ul>
-         * <li><strong>CEN</strong></li>
-         * <li><strong>VPN</strong></li>
-         * <li><strong>TR</strong></li>
-         * <li><strong>ECR</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>CEN</p>
-         */
         @NameInMap("SourceType")
         public String sourceType;
 
-        /**
-         * <p>The binding status.</p>
-         * <ul>
-         * <li><strong>Attaching</strong></li>
-         * <li><strong>Attached</strong></li>
-         * <li><strong>Detaching</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Attaching</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -691,26 +608,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType extends TeaModel {
-        /**
-         * <p>The number of resources in the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ResourceCount")
         public Integer resourceCount;
 
-        /**
-         * <p>The type of resource deployed in the VPC. Valid values: Valid values:</p>
-         * <ul>
-         * <li><strong>VSwitch</strong></li>
-         * <li><strong>VRouter</strong></li>
-         * <li><strong>RouteTable</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VSwitch</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -757,30 +657,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock extends TeaModel {
-        /**
-         * <p>The IPv6 CIDR block of the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2408:XXXX:0:6a::/56</p>
-         */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
 
-        /**
-         * <p>The IPv6 CIDR block type of the VPC. Valid values:</p>
-         * <ul>
-         * <li><strong>BGP</strong> (default)</li>
-         * <li><strong>ChinaMobile</strong></li>
-         * <li><strong>ChinaUnicom</strong></li>
-         * <li><strong>ChinaTelecom</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p> If you are allowed to use single-ISP bandwidth, valid values are <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, and <strong>ChinaMobile</strong></p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP</p>
-         */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
 
@@ -846,21 +725,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAttributeResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The key of tag N.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of tag N.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("Value")
         public String value;
 

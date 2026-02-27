@@ -4,15 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateNatGatewayResponseBody extends TeaModel {
-    /**
-     * <p>A list of DNAT entries.</p>
-     */
     @NameInMap("ForwardTableIds")
     public CreateNatGatewayResponseBodyForwardTableIds forwardTableIds;
 
-    /**
-     * <p>A list of FULLNAT entries.</p>
-     */
     @NameInMap("FullNatTableIds")
     public CreateNatGatewayResponseBodyFullNatTableIds fullNatTableIds;
 
@@ -34,9 +28,6 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>A list of SNAT entries.</p>
-     */
     @NameInMap("SnatTableIds")
     public CreateNatGatewayResponseBodySnatTableIds snatTableIds;
 

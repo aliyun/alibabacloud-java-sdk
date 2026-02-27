@@ -40,9 +40,6 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The information about the IPsec-VPN connections.</p>
-     */
     @NameInMap("VpnConnections")
     public DescribeVpnConnectionsResponseBodyVpnConnections vpnConnections;
 
@@ -93,7 +90,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIkeConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm in the IKE phase.</p>
+         * <p>IKE阶段认证算法。</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -102,7 +99,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikeAuthAlg;
 
         /**
-         * <p>The encryption algorithm in the IKE phase.</p>
+         * <p>IKE阶段加密算法。</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -111,7 +108,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikeEncAlg;
 
         /**
-         * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+         * <p>IKE阶段生存时间。单位：秒。</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -120,10 +117,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Long ikeLifetime;
 
         /**
-         * <p>The IKE negotiation mode.</p>
+         * <p>IKE阶段协商模式。</p>
          * <ul>
-         * <li><strong>main</strong>: This mode offers higher security during negotiations.</li>
-         * <li><strong>aggressive</strong>: This mode is faster and has a higher success rate.</li>
+         * <li><strong>main</strong>：主模式，协商过程安全性高。</li>
+         * <li><strong>aggressive</strong>：野蛮模式，协商快速且协商成功率高。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +130,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikeMode;
 
         /**
-         * <p>The DH group in the IKE phase.</p>
+         * <p>IKE阶段DH分组。</p>
          * 
          * <strong>example:</strong>
          * <p>group2</p>
@@ -142,12 +139,12 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikePfs;
 
         /**
-         * <p>The version of the IKE protocol.</p>
+         * <p>IKE协议版本。</p>
          * <ul>
          * <li><strong>ikev1</strong></li>
          * <li><strong>ikev2</strong></li>
          * </ul>
-         * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.</p>
+         * <p>相对于IKEv1版本，IKEv2版本简化了SA的协商过程并且对于多网段的场景提供了更好的支持。</p>
          * 
          * <strong>example:</strong>
          * <p>ikev1</p>
@@ -156,7 +153,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikeVersion;
 
         /**
-         * <p>The identifier of the IPsec-VPN connection on the data center side.</p>
+         * <p>IPsec连接对端本地数据中心侧的标识。</p>
          * 
          * <strong>example:</strong>
          * <p>116.64.XX.XX</p>
@@ -165,7 +162,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String localId;
 
         /**
-         * <p>The pre-shared key.</p>
+         * <p>预共享密钥。</p>
          * 
          * <strong>example:</strong>
          * <p>pgw6dy7****</p>
@@ -174,7 +171,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String psk;
 
         /**
-         * <p>The identifier of the IPsec-VPN connection on the Alibaba Cloud side.</p>
+         * <p>IPsec连接阿里云侧的标识。</p>
          * 
          * <strong>example:</strong>
          * <p>139.17.XX.XX</p>
@@ -263,7 +260,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIpsecConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm in the IPsec phase.</p>
+         * <p>IPsec阶段认证算法。</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -272,7 +269,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ipsecAuthAlg;
 
         /**
-         * <p>The encryption algorithm in the IPsec phase.</p>
+         * <p>IPsec阶段加密算法。</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -281,7 +278,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ipsecEncAlg;
 
         /**
-         * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+         * <p>IPsec阶段生存时间。单位：秒。</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -290,7 +287,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Long ipsecLifetime;
 
         /**
-         * <p>The DH group in the IPsec phase.</p>
+         * <p>IPsec阶段DH分组。</p>
          * 
          * <strong>example:</strong>
          * <p>group2</p>
@@ -339,7 +336,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag extends TeaModel {
         /**
-         * <p>The tag key of the IPsec-VPN connection.</p>
+         * <p>标签键。</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey</p>
@@ -348,7 +345,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the IPsec-VPN connection.</p>
+         * <p>标签值。</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>
@@ -400,10 +397,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig extends TeaModel {
         /**
-         * <p>The negotiation state of BGP. Valid values:</p>
+         * <p>BGP的协商状态。</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>success</strong>：正常。</li>
+         * <li><strong>failed</strong>：异常。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -413,7 +410,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String bgpStatus;
 
         /**
-         * <p>The ASN on the Alibaba Cloud side.</p>
+         * <p>隧道本端（阿里云侧）的自治系统号。</p>
          * 
          * <strong>example:</strong>
          * <p>65530</p>
@@ -422,7 +419,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String localAsn;
 
         /**
-         * <p>The BGP address on the Alibaba Cloud side.</p>
+         * <p>隧道本端（阿里云侧）的BGP地址。</p>
          * 
          * <strong>example:</strong>
          * <p>169.254.10.1</p>
@@ -431,7 +428,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String localBgpIp;
 
         /**
-         * <p>The ASN of the tunnel peer.</p>
+         * <p>隧道对端的自治系统号。</p>
          * 
          * <strong>example:</strong>
          * <p>65531</p>
@@ -440,7 +437,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String peerAsn;
 
         /**
-         * <p>The BGP IP address of the tunnel peer.</p>
+         * <p>隧道对端的BGP地址。</p>
          * 
          * <strong>example:</strong>
          * <p>169.254.10.2</p>
@@ -449,7 +446,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String peerBgpIp;
 
         /**
-         * <p>The BGP CIDR block of the tunnel.</p>
+         * <p>隧道的BGP网段。</p>
          * 
          * <strong>example:</strong>
          * <p>169.254.10.0/30</p>
@@ -514,7 +511,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm in the IKE phase.</p>
+         * <p>IKE阶段认证算法。</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -523,7 +520,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikeAuthAlg;
 
         /**
-         * <p>The encryption algorithm in the IKE phase.</p>
+         * <p>IKE阶段加密算法。</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -532,7 +529,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikeEncAlg;
 
         /**
-         * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+         * <p>IKE阶段生存时间。单位：秒。</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -541,10 +538,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikeLifetime;
 
         /**
-         * <p>The IKE negotiation mode.</p>
+         * <p>IKE协商模式。</p>
          * <ul>
-         * <li><strong>main</strong>: This mode offers higher security during negotiations.</li>
-         * <li><strong>aggressive</strong>: This mode is faster and has a higher success rate.</li>
+         * <li><strong>main</strong>：主模式，协商过程安全性高。</li>
+         * <li><strong>aggressive</strong>：野蛮模式，协商快速且协商成功率高。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -554,7 +551,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikeMode;
 
         /**
-         * <p>The DH group in the IKE phase.</p>
+         * <p>IKE阶段DH分组。</p>
          * 
          * <strong>example:</strong>
          * <p>group2</p>
@@ -563,7 +560,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikePfs;
 
         /**
-         * <p>The version of the IKE protocol.</p>
+         * <p>IKE协议版本。</p>
          * 
          * <strong>example:</strong>
          * <p>ikev1</p>
@@ -572,7 +569,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikeVersion;
 
         /**
-         * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
+         * <p>隧道本端（阿里云侧）的标识。</p>
          * 
          * <strong>example:</strong>
          * <p>47.21.XX.XX</p>
@@ -581,7 +578,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String localId;
 
         /**
-         * <p>The pre-shared key.</p>
+         * <p>预共享密钥。</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -590,7 +587,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String psk;
 
         /**
-         * <p>The identifier of the tunnel peer.</p>
+         * <p>隧道对端的标识。</p>
          * 
          * <strong>example:</strong>
          * <p>47.42.XX.XX</p>
@@ -679,7 +676,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm in the IPsec phase.</p>
+         * <p>IPsec阶段认证算法。</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -688,7 +685,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ipsecAuthAlg;
 
         /**
-         * <p>The encryption algorithm in the IPsec phase.</p>
+         * <p>IPsec阶段加密算法。</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -697,7 +694,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ipsecEncAlg;
 
         /**
-         * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+         * <p>IPsec阶段生存时间。单位：秒。</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -706,7 +703,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ipsecLifetime;
 
         /**
-         * <p>The DH group in the IPsec phase.</p>
+         * <p>IPsec阶段DH分组。</p>
          * 
          * <strong>example:</strong>
          * <p>group2</p>
@@ -755,7 +752,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptions extends TeaModel {
         /**
-         * <p>The ID of the customer gateway associated with the tunnel.</p>
+         * <p>隧道关联的用户网关ID。</p>
          * 
          * <strong>example:</strong>
          * <p>cgw-p0wy363lucf1uyae8****</p>
@@ -764,10 +761,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String customerGatewayId;
 
         /**
-         * <p>Indicates whether the DPD feature is enabled for the tunnel. Valid values:</p>
+         * <p>隧道是否已开启DPD（对等体存活检测）功能。</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>：未开启。</li>
+         * <li><strong>true</strong>：已开启。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -777,10 +774,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String enableDpd;
 
         /**
-         * <p>Indicates whether NAT traversal is enabled for the tunnel. Valid values:</p>
+         * <p>隧道是否已开启NAT穿越功能。</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>：未开启。</li>
+         * <li><strong>true</strong>：已开启。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -790,7 +787,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String enableNatTraversal;
 
         /**
-         * <p>The tunnel IP address.</p>
+         * <p>隧道的IP地址。</p>
          * 
          * <strong>example:</strong>
          * <p>47.21.XX.XX</p>
@@ -799,8 +796,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String internetIp;
 
         /**
-         * <p>The CA certificate of the tunnel peer.</p>
-         * <p>This parameter is returned only if the VPN gateway is of the SM type.</p>
+         * <p>隧道对端的CA证书。</p>
+         * <p>仅VPN网关实例的类型为国密型时才会返回当前参数。</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</p>
@@ -809,10 +806,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String remoteCaCertificate;
 
         /**
-         * <p>The tunnel role. Valid values:</p>
+         * <p>隧道的角色。</p>
          * <ul>
-         * <li><strong>master</strong>: The tunnel is an active tunnel.</li>
-         * <li><strong>slave</strong>: The tunnel is a standby tunnel.</li>
+         * <li><strong>master</strong>：表示当前隧道为主隧道。</li>
+         * <li><strong>slave</strong>：表示当前隧道为备隧道。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -822,11 +819,11 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The tunnel status. Valid values:</p>
+         * <p>隧道的状态。</p>
          * <ul>
-         * <li><strong>active</strong></li>
-         * <li><strong>updating</strong></li>
-         * <li><strong>deleting</strong></li>
+         * <li><strong>active</strong>：状态正常。</li>
+         * <li><strong>updating</strong>：更新中。</li>
+         * <li><strong>deleting</strong>：删除中。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -836,12 +833,16 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The state of the IPsec-VPN connection. Valid values:</p>
+         * <p>IPsec连接的状态。</p>
          * <ul>
-         * <li><strong>ike_sa_not_established</strong>: Phase 1 negotiations failed.</li>
-         * <li><strong>ike_sa_established</strong>: Phase 1 negotiations succeeded.</li>
-         * <li><strong>ipsec_sa_not_established</strong>: Phase 2 negotiations failed.</li>
-         * <li><strong>ipsec_sa_established</strong>: Phase 2 negotiations succeeded.</li>
+         * <li><p><strong>ike_sa_not_established</strong>：第一阶段协商失败。</p>
+         * </li>
+         * <li><p><strong>ike_sa_established</strong>：第一阶段协商成功。</p>
+         * </li>
+         * <li><p><strong>ipsec_sa_not_established</strong>：第二阶段协商失败。</p>
+         * </li>
+         * <li><p><strong>ipsec_sa_established</strong>：第二阶段协商成功。</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -851,13 +852,13 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The BGP configurations.</p>
+         * <p>隧道的BGP配置信息。</p>
          */
         @NameInMap("TunnelBgpConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig tunnelBgpConfig;
 
         /**
-         * <p>The tunnel ID.</p>
+         * <p>隧道ID。</p>
          * 
          * <strong>example:</strong>
          * <p>tun-opsqc4d97wni27****</p>
@@ -866,19 +867,19 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String tunnelId;
 
         /**
-         * <p>The configuration of Phase 1 negotiations.</p>
+         * <p>第一阶段协商的配置。</p>
          */
         @NameInMap("TunnelIkeConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig tunnelIkeConfig;
 
         /**
-         * <p>The order in which the tunnel is created.</p>
+         * <p>隧道的创建顺序。</p>
          * <ul>
-         * <li><strong>1</strong>: Tunnel 1.</li>
-         * <li><strong>2</strong>: Tunnel 2.</li>
+         * <li><strong>1</strong>：第一条隧道。</li>
+         * <li><strong>2</strong>：第二条隧道。</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only if the IPsec-VPN connection is associated with a transit router.</p>
+         * <p>仅IPsec连接绑定转发路由器时会返回该参数。</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -888,13 +889,13 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Integer tunnelIndex;
 
         /**
-         * <p>The configurations of Phase 2 negotiations.</p>
+         * <p>第二阶段协商的配置。</p>
          */
         @NameInMap("TunnelIpsecConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig tunnelIpsecConfig;
 
         /**
-         * <p>The zone of the tunnel.</p>
+         * <p>隧道部署的可用区。</p>
          * 
          * <strong>example:</strong>
          * <p>ap-southeast-5a</p>
@@ -1042,7 +1043,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck extends TeaModel {
         /**
-         * <p>The destination IP address.</p>
+         * <p>目的IP地址。</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1</p>
@@ -1051,10 +1052,12 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String dip;
 
         /**
-         * <p>Indicates whether the health check feature is enabled.</p>
+         * <p>健康检查的开启状态。</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>：已开启。</p>
+         * </li>
+         * <li><p><strong>false</strong>：未开启。</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1064,7 +1067,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String enable;
 
         /**
-         * <p>The interval between two consecutive health checks. Unit: seconds.</p>
+         * <p>健康检查的时间间隔。单位：秒。</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1073,10 +1076,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>Indicates whether advertised routes are withdrawn when the health check fails.</p>
+         * <p>健康检查失败时是否撤销已发布的路由。</p>
          * <ul>
-         * <li><strong>revoke_route</strong>: Advertised routes are withdrawn.</li>
-         * <li><strong>reserve_route</strong>: Advertised routes are not withdrawn.</li>
+         * <li><strong>revoke_route</strong>：撤销路由。</li>
+         * <li><strong>reserve_route</strong>：不撤销路由。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1086,7 +1089,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String policy;
 
         /**
-         * <p>The maximum number of health check retries.</p>
+         * <p>健康检查的重试发包次数。</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1095,7 +1098,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Integer retry;
 
         /**
-         * <p>The source IP address.</p>
+         * <p>源IP地址。</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.50</p>
@@ -1104,10 +1107,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String sip;
 
         /**
-         * <p>The state of the health check. Valid values:</p>
+         * <p>健康检查状态。</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>failed</strong></li>
+         * <li><strong>success</strong>：正常。</li>
+         * <li><strong>failed</strong>：异常。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1181,7 +1184,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVpnBgpConfig extends TeaModel {
         /**
-         * <p>The authentication key of the BGP routing protocol.</p>
+         * <p>BGP路由协议的认证密钥。</p>
          * 
          * <strong>example:</strong>
          * <p>AuthKey****</p>
@@ -1190,7 +1193,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String authKey;
 
         /**
-         * <p>The ASN on the Alibaba Cloud side.</p>
+         * <p>阿里云侧自治系统号。</p>
          * 
          * <strong>example:</strong>
          * <p>65531</p>
@@ -1199,7 +1202,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Long localAsn;
 
         /**
-         * <p>The BGP IP address on the Alibaba Cloud side.</p>
+         * <p>阿里云侧BGP地址。</p>
          * 
          * <strong>example:</strong>
          * <p>169.254.10.2</p>
@@ -1208,7 +1211,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String localBgpIp;
 
         /**
-         * <p>The ASN of the peer.</p>
+         * <p>对端自治系统号。</p>
          * 
          * <strong>example:</strong>
          * <p>65530</p>
@@ -1217,7 +1220,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Long peerAsn;
 
         /**
-         * <p>The BGP IP address of the peer.</p>
+         * <p>对端BGP地址。</p>
          * 
          * <strong>example:</strong>
          * <p>169.254.10.1</p>
@@ -1226,10 +1229,12 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String peerBgpIp;
 
         /**
-         * <p>The negotiation state of the BGP routing protocol. Valid values:</p>
+         * <p>BGP路由协议的协商状态。</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>success</strong>：正常。</p>
+         * </li>
+         * <li><p><strong>false</strong>：异常。</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1239,7 +1244,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The BGP CIDR block of the IPsec-VPN connection. The CIDR block falls within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.</p>
+         * <p>IPsec连接BGP网段。该网段是一个在169.254.0.0/16内的子网掩码长度为30的网段。</p>
          * 
          * <strong>example:</strong>
          * <p>169.254.10.0/30</p>
@@ -1312,7 +1317,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection extends TeaModel {
         /**
-         * <p>The ID of the CEN instance to which the transit router belongs.</p>
+         * <p>转发路由器实例所属的云企业网实例ID。</p>
          * 
          * <strong>example:</strong>
          * <p>cen-lxxpbpalc776qz****</p>
@@ -1321,11 +1326,11 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String attachInstanceId;
 
         /**
-         * <p>The type of resource that is associated with the IPsec-VPN connection. Valid values:</p>
+         * <p>IPsec连接绑定的资源类型。</p>
          * <ul>
-         * <li><strong>CEN</strong>: indicates that the IPsec-VPN connection is associated with a transit router of a Cloud Enterprise Network (CEN) instance.</li>
-         * <li><strong>NO_ASSOCIATED</strong>: indicates that the IPsec-VPN connection is not associated with any resource.</li>
-         * <li><strong>VPNGW</strong>: indicates that the IPsec-VPN connection is associated with a VPN gateway.</li>
+         * <li><strong>CEN</strong>：表示IPsec连接已绑定云企业网实例下的转发路由器实例。</li>
+         * <li><strong>NO_ASSOCIATED</strong>：表示IPsec连接未绑定任何资源。</li>
+         * <li><strong>VPNGW</strong>：表示IPsec连接绑定了VPN网关实例。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1335,8 +1340,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String attachType;
 
         /**
-         * <p>The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>创建IPsec连接的时间戳。单位：毫秒。</p>
+         * <p>时间戳的格式采用Unix时间戳，表示从格林威治时间1970年01月01日00时00分00秒至创建IPsec连接时的总时长。</p>
          * 
          * <strong>example:</strong>
          * <p>1492753817000</p>
@@ -1345,10 +1350,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Indicates whether the IPsec-VPN connection is associated with a transit router that belongs to another Alibaba Cloud account. Valid values:</p>
+         * <p>IPsec连接是否绑定了跨账号的转发路由器实例。</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>：是。</li>
+         * <li><strong>false</strong>：否。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1358,7 +1363,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Boolean crossAccountAuthorized;
 
         /**
-         * <p>The ID of the customer gateway associated with the IPsec-VPN connection.</p>
+         * <p>IPsec连接关联的用户网关的实例ID。</p>
          * 
          * <strong>example:</strong>
          * <p>cgw-bp1mvj4g9kogw****</p>
@@ -1367,10 +1372,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String customerGatewayId;
 
         /**
-         * <p>Indicates whether IPsec negotiations immediately start.</p>
+         * <p>IPsec连接的配置是否立即生效。</p>
          * <ul>
-         * <li><strong>true</strong>: Negotiations are reinitiated after the configuration is changed.</li>
-         * <li><strong>false</strong>: Negotiations are reinitiated after traffic is detected.</li>
+         * <li><strong>true</strong>：是，配置变更完成后触发重连。</li>
+         * <li><strong>false</strong>：否，有流量时触发重连。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1380,12 +1385,12 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Boolean effectImmediately;
 
         /**
-         * <p>Indicates whether dead peer detection (DPD) is enabled for the IPsec-VPN connection. Valid values:</p>
+         * <p>IPsec连接是否已开启DPD（对等体存活检测）功能。</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * <p>The initiator of the IPsec-VPN connection sends DPD packets to check the existence and availability of the peer. If no feedback is received from the peer within a specific period of time, the connection fails. Then, the ISAKMP security association (SA), IPsec SA, and IPsec tunnel are deleted.</p>
+         * <li><p><strong>true</strong>：开启DPD功能。</p>
+         * <p>  IPsec发起端会发送DPD报文用来检测对端的设备是否存活，如果在设定时间内未收到正确回应则认为对端已经断线，IPsec将删除ISAKMP SA和相应的IPsec SA，安全隧道同样也会被删除。</p>
          * </li>
-         * <li><p><strong>false</strong></p>
+         * <li><p><strong>false</strong>：不开启DPD功能，IPsec发起端不会发送DPD探测报文。</p>
          * </li>
          * </ul>
          * 
@@ -1396,12 +1401,12 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Boolean enableDpd;
 
         /**
-         * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection.</p>
+         * <p>IPsec连接是否已开启NAT穿越功能。</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * <p>After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec tunnel.</p>
+         * <li><p><strong>true</strong>：开启NAT穿越功能。</p>
+         * <p> 开启后，IKE协商过程会删除对UDP端口号的验证过程，同时实现对VPN隧道中NAT网关设备的发现功能。</p>
          * </li>
-         * <li><p><strong>false</strong></p>
+         * <li><p><strong>false</strong>：不开启NAT穿越功能。</p>
          * </li>
          * </ul>
          * 
@@ -1412,10 +1417,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Boolean enableNatTraversal;
 
         /**
-         * <p>Indicates whether BGP is enabled for the tunnel. Valid values:</p>
+         * <p>隧道BGP的开启状态。</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>：已开启。</li>
+         * <li><strong>false</strong>：未开启。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1425,15 +1430,15 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Boolean enableTunnelsBgp;
 
         /**
-         * <p>The configurations of Phase 1 negotiations.</p>
+         * <p>第一阶段协商的配置。</p>
          */
         @NameInMap("IkeConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIkeConfig ikeConfig;
 
         /**
-         * <p>The gateway IP address of the IPsec-VPN connection.</p>
+         * <p>IPsec连接的网关IP地址。</p>
          * <blockquote>
-         * <p> This parameter is returned only if the IPsec-VPN connection is associated with a transit router.</p>
+         * <p>仅IPsec连接绑定转发路由器实例时会返回当前参数。</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1443,14 +1448,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String internetIp;
 
         /**
-         * <p>The configurations of Phase 2 negotiations.</p>
+         * <p>第二阶段协商的配置。</p>
          */
         @NameInMap("IpsecConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIpsecConfig ipsecConfig;
 
         /**
-         * <p>The CIDR block on the Alibaba Cloud side.</p>
-         * <p>Multiple CIDR blocks are separated by commas (,).</p>
+         * <p>IPsec连接阿里云侧的网段。</p>
+         * <p>在多个网段的情况下，网段之间使用半角逗号（,）分隔。</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16,172.17.0.0/16</p>
@@ -1459,7 +1464,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String localSubnet;
 
         /**
-         * <p>The name of the IPsec-VPN connection.</p>
+         * <p>IPsec连接的名称。</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -1468,10 +1473,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The network type of the IPsec-VPN connection. Valid values:</p>
+         * <p>IPsec连接的网络类型。</p>
          * <ul>
-         * <li><strong>public</strong></li>
-         * <li><strong>private</strong></li>
+         * <li><strong>public</strong>：公网，表示IPsec连接通过公网建立加密通信通道。</li>
+         * <li><strong>private</strong>：私网，表示IPsec连接通过私网建立加密通信通道。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1481,7 +1486,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The certificate authority (CA) certificate of the peer.</p>
+         * <p>对端的CA证书。</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</p>
@@ -1490,8 +1495,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String remoteCaCertificate;
 
         /**
-         * <p>The CIDR block of the data center.</p>
-         * <p>Multiple CIDR blocks are separated by commas (,).</p>
+         * <p>本地数据中心侧的网段。</p>
+         * <p>在多个网段的情况下，网段之间使用半角逗号（,）分隔。</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8,172.16.0.0/16</p>
@@ -1500,8 +1505,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String remoteSubnet;
 
         /**
-         * <p>The ID of the resource group to which the IPsec-VPN connection belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</p>
+         * <p>IPsec连接所属的资源组ID。</p>
+         * <p>您可以调用<a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>接口查询资源组信息。</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>
@@ -1510,7 +1515,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The bandwidth specification of the IPsec-VPN connection. Unit: <strong>Mbit/s</strong>.</p>
+         * <p>IPsec连接的带宽规格。单位：<strong>Mbps</strong>。</p>
          * 
          * <strong>example:</strong>
          * <p>1000M</p>
@@ -1519,18 +1524,18 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String spec;
 
         /**
-         * <p>The association state of the IPsec-VPN connection. Valid values:</p>
+         * <p>IPsec连接与转发路由器实例的绑定状态。</p>
          * <ul>
-         * <li><strong>active</strong>: The IPsec-VPN connection is associated with a VPN gateway.</li>
-         * <li><strong>init</strong>: The IPsec-VPN connection is not associated with any resource and is being initialized.</li>
-         * <li><strong>attaching</strong>: The IPsec-VPN connection is being associated with a transit router.</li>
-         * <li><strong>attached</strong>: The IPsec-VPN connection is associated with a transit router.</li>
-         * <li><strong>detaching</strong>: The IPsec-VPN connection is being disassociated from a transit router.</li>
-         * <li><strong>financialLocked</strong>: The IPsec-VPN connection is locked due to overdue payments.</li>
-         * <li><strong>provisioning</strong>: The IPsec-VPN connection is being prepared.</li>
-         * <li><strong>updating</strong>: The IPsec-VPN connection is being updated.</li>
-         * <li><strong>Upgrading</strong>: The IPsec-VPN connection is being upgraded.</li>
-         * <li><strong>deleted</strong>: The IPsec-VPN connection is deleted.</li>
+         * <li><strong>active</strong>：IPsec连接已与VPN网关实例绑定，状态正常。</li>
+         * <li><strong>init</strong>：IPsec连接未绑定任何资源，IPsec连接初始化。</li>
+         * <li><strong>attaching</strong>：IPsec连接与转发路由器实例绑定中。</li>
+         * <li><strong>attached</strong>：IPsec连接已与转发路由器实例绑定。</li>
+         * <li><strong>detaching</strong>：IPsec连接与转发路由器实例解绑中。</li>
+         * <li><strong>financialLocked</strong>：欠费锁定。</li>
+         * <li><strong>provisioning</strong>：资源准备中。</li>
+         * <li><strong>updating</strong>：更新中。</li>
+         * <li><strong>upgrading</strong>：升级中。</li>
+         * <li><strong>deleted</strong>：已删除。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1540,12 +1545,16 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The status of the IPsec-VPN connection. Valid values:</p>
+         * <p>IPsec连接的状态。</p>
          * <ul>
-         * <li><strong>ike_sa_not_established</strong>: Phase 1 negotiations failed.</li>
-         * <li><strong>ike_sa_established</strong>: Phase 1 negotiations succeeded.</li>
-         * <li><strong>ipsec_sa_not_established</strong>: Phase 2 negotiations failed.</li>
-         * <li><strong>ipsec_sa_established</strong>: Phase 2 negotiations succeeded.</li>
+         * <li><p><strong>ike_sa_not_established</strong>：第一阶段协商失败。</p>
+         * </li>
+         * <li><p><strong>ike_sa_established</strong>：第一阶段协商成功。</p>
+         * </li>
+         * <li><p><strong>ipsec_sa_not_established</strong>：第二阶段协商失败。</p>
+         * </li>
+         * <li><p><strong>ipsec_sa_established</strong>：第二阶段协商成功。</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1555,13 +1564,13 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of tags to be added to the IPsec-VPN connection.</p>
+         * <p>IPsec连接绑定的标签列表。</p>
          */
         @NameInMap("Tag")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTag tag;
 
         /**
-         * <p>The ID of the transit router with which the IPsec-VPN connection is associated.</p>
+         * <p>IPsec连接绑定的转发路由器实例ID。</p>
          * 
          * <strong>example:</strong>
          * <p>tr-p0we2edef9qr44a85****</p>
@@ -1570,7 +1579,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String transitRouterId;
 
         /**
-         * <p>The name of the transit router.</p>
+         * <p>转发路由器实例的名称。</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -1578,30 +1587,38 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("TransitRouterName")
         public String transitRouterName;
 
+        /**
+         * <p>用于说明VPN单条隧道的带宽规格，取值：
+         * Standard（默认值）：标准型，默认带宽1Gbps
+         * Large（大型）：大型，默认带宽3Gbps</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("TunnelBandwidth")
         public String tunnelBandwidth;
 
         /**
-         * <p>The tunnel configurations of the IPsec-VPN connection.</p>
-         * <p>Parameters in <strong>TunnelOptionsSpecification</strong> are returned only if you query an IPsec-VPN connection in dual-tunnel mode.</p>
+         * <p>IPsec连接的隧道配置信息。</p>
+         * <p>仅查询双隧道模式的IPsec连接会返回<strong>TunnelOptionsSpecification</strong>数组下的参数。</p>
          */
         @NameInMap("TunnelOptionsSpecification")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecification tunnelOptionsSpecification;
 
         /**
-         * <p>The health check configuration of the IPsec-VPN connection.</p>
+         * <p>IPsec连接的健康检查配置。</p>
          */
         @NameInMap("VcoHealthCheck")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck vcoHealthCheck;
 
         /**
-         * <p>The BGP configuration of the IPsec-VPN connection.</p>
+         * <p>IPsec连接BGP路由协议的配置。</p>
          */
         @NameInMap("VpnBgpConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVpnBgpConfig vpnBgpConfig;
 
         /**
-         * <p>The ID of the IPsec-VPN connection.</p>
+         * <p>IPsec连接的ID。</p>
          * 
          * <strong>example:</strong>
          * <p>vco-bp10lz7aejumd****</p>
@@ -1610,7 +1627,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String vpnConnectionId;
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>VPN网关的实例ID。</p>
          * 
          * <strong>example:</strong>
          * <p>vpn-bp1q8bgx4xnkm****</p>

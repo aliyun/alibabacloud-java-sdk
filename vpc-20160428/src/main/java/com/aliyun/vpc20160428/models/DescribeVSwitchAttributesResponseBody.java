@@ -144,9 +144,6 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>The information about the tags.</p>
-     */
     @NameInMap("Tags")
     public DescribeVSwitchAttributesResponseBodyTags tags;
 
@@ -390,21 +387,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchAttributesResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The key of tag N added to the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of tag N added to the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("Value")
         public String value;
 

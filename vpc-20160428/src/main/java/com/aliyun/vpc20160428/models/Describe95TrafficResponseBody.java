@@ -41,39 +41,15 @@ public class Describe95TrafficResponseBody extends TeaModel {
     }
 
     public static class Describe95TrafficResponseBodyTraffic95SummaryTraffic95DetailListTraffic95Detail extends TeaModel {
-        /**
-         * <p>The sampled bandwidth value, which is the larger bandwidth value in the inbound and outbound directions within a sampling interval. Unit: Mbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>118.5090322113037</p>
-         */
         @NameInMap("BillBandwidth")
         public String billBandwidth;
 
-        /**
-         * <p>The inbound bandwidth. Unit: Mbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>118.5090322113037</p>
-         */
         @NameInMap("InBandwidth")
         public String inBandwidth;
 
-        /**
-         * <p>The outbound bandwidth. Unit: Mbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>96.41217480977376</p>
-         */
         @NameInMap("OutBandwidth")
         public String outBandwidth;
 
-        /**
-         * <p>The statistical time. The value is a string.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-01-01T00:00:00Z</p>
-         */
         @NameInMap("Time")
         public String time;
 
@@ -187,9 +163,6 @@ public class Describe95TrafficResponseBody extends TeaModel {
         @NameInMap("MinimumConsumeBandwidth")
         public String minimumConsumeBandwidth;
 
-        /**
-         * <p>The average bandwidth every 5 minutes in the inbound and outbound directions.</p>
-         */
         @NameInMap("Traffic95DetailList")
         public Describe95TrafficResponseBodyTraffic95SummaryTraffic95DetailList traffic95DetailList;
 

@@ -136,9 +136,6 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>The information about the tags.</p>
-     */
     @NameInMap("Tags")
     public DescribeIpv6GatewayAttributeResponseBodyTags tags;
 
@@ -277,23 +274,9 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeIpv6GatewayAttributeResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of tag N. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("Value")
         public String value;
 

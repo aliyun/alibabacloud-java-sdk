@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToCenResponseBody extends TeaModel {
-    /**
-     * <p>The information about the authorization.</p>
-     */
     @NameInMap("CenGrantRules")
     public DescribeGrantRulesToCenResponseBodyCenGrantRules cenGrantRules;
 
@@ -92,30 +89,12 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     }
 
     public static class DescribeGrantRulesToCenResponseBodyCenGrantRulesCbnGrantRule extends TeaModel {
-        /**
-         * <p>The ID of the authorized CEN instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cen-9gsm1q2yh1prpt****</p>
-         */
         @NameInMap("CenInstanceId")
         public String cenInstanceId;
 
-        /**
-         * <p>The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>132193271328****</p>
-         */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
-        /**
-         * <p>The time when the instance was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-11-15T09:26:36Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 

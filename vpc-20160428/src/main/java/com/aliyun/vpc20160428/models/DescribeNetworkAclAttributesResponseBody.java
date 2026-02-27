@@ -41,109 +41,30 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeEgressAclEntriesEgressAclEntry extends TeaModel {
-        /**
-         * <p>The description of the outbound rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is EgressAclEntries.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The destination CIDR block.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.0.0.0/24</p>
-         */
         @NameInMap("DestinationCidrIp")
         public String destinationCidrIp;
 
-        /**
-         * <p>The type of the inbound rule.</p>
-         * <ul>
-         * <li><p><strong>custom</strong></p>
-         * </li>
-         * <li><p><strong>system</strong></p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>custom</p>
-         */
         @NameInMap("EntryType")
         public String entryType;
 
-        /**
-         * <p>The IP version. Valid values:</p>
-         * <ul>
-         * <li><strong>IPv4</strong></li>
-         * <li><strong>IPv6</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
-        /**
-         * <p>The ID of the outbound rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nae-a2d447uw4tillxdcv****</p>
-         */
         @NameInMap("NetworkAclEntryId")
         public String networkAclEntryId;
 
-        /**
-         * <p>The name of the outbound rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acl-2</p>
-         */
         @NameInMap("NetworkAclEntryName")
         public String networkAclEntryName;
 
-        /**
-         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
-         * <ul>
-         * <li><strong>accept</strong></li>
-         * <li><strong>drop</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>accept</p>
-         */
         @NameInMap("Policy")
         public String policy;
 
-        /**
-         * <p>The destination port range of the outbound traffic.</p>
-         * <ul>
-         * <li>If the <strong>protocol</strong> of the outbound rule is set to <strong>all</strong>, <strong>icmp</strong>, or <strong>gre</strong>, the port range is -1/-1, which specified all ports.</li>
-         * <li>If the <strong>protocol</strong> of the outbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, set the port range in the following format: <strong>1/200</strong> or <strong>80/80</strong>, which specifies port 1 to port 200 or port 80. Valid values for a port: <strong>1</strong> to <strong>65535</strong>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>-1/-1</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The protocol type. Valid values:</p>
-         * <ul>
-         * <li><strong>icmp</strong></li>
-         * <li><strong>gre</strong></li>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
-         * <li><strong>all</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>all</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -246,109 +167,30 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeIngressAclEntriesIngressAclEntry extends TeaModel {
-        /**
-         * <p>The description of the inbound rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is IngressAclEntries.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The type of the inbound rule.</p>
-         * <ul>
-         * <li><p><strong>custom</strong></p>
-         * </li>
-         * <li><p><strong>system</strong></p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>custom</p>
-         */
         @NameInMap("EntryType")
         public String entryType;
 
-        /**
-         * <p>The IP version. Valid values:</p>
-         * <ul>
-         * <li><strong>IPv4</strong></li>
-         * <li><strong>IPv6</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
-        /**
-         * <p>The ID of the inbound rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nae-a2dk86arlydmevfbg****</p>
-         */
         @NameInMap("NetworkAclEntryId")
         public String networkAclEntryId;
 
-        /**
-         * <p>The name of the inbound rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acl-3</p>
-         */
         @NameInMap("NetworkAclEntryName")
         public String networkAclEntryName;
 
-        /**
-         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
-         * <ul>
-         * <li><strong>accept</strong></li>
-         * <li><strong>drop</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>accept</p>
-         */
         @NameInMap("Policy")
         public String policy;
 
-        /**
-         * <p>The destination port range of the inbound traffic.</p>
-         * <ul>
-         * <li>If the <strong>protocol</strong> of the inbound rule is set to <strong>all</strong>, <strong>icmp</strong>, or <strong>gre</strong>, the port range is -1/-1, which specifies all ports.</li>
-         * <li>If the <strong>protocol</strong> of the inbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, set the port range in the following format: <strong>1/200</strong> or <strong>80/80</strong>, which specifies port 1 to port 200 or port 80. Valid ports: <strong>1</strong> to <strong>65535</strong>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>-1/-1</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The protocol type. Valid values:</p>
-         * <ul>
-         * <li><strong>icmp</strong></li>
-         * <li><strong>gre</strong></li>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
-         * <li><strong>all</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>all</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
-        /**
-         * <p>The source CIDR block.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.0.0.0/24</p>
-         */
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
 
@@ -451,35 +293,12 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeResourcesResource extends TeaModel {
-        /**
-         * <p>The ID of the associated resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bp1de348lntdwxscd****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of resource with which you want to associate the network ACL. The value is set to <strong>VSwitch</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>VSwitch</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The association status of the resource. Valid values:</p>
-         * <ul>
-         * <li><strong>BINDED</strong></li>
-         * <li><strong>BINDING</strong></li>
-         * <li><strong>UNBINDING</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>BINDED</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -534,21 +353,9 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeTagsTag extends TeaModel {
-        /**
-         * <p>The key of tag N added to the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of tag N added to the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -613,15 +420,9 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The information about the outbound rules of the network ACL.</p>
-         */
         @NameInMap("EgressAclEntries")
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeEgressAclEntries egressAclEntries;
 
-        /**
-         * <p>The information about the inbound rules of the network ACL.</p>
-         */
         @NameInMap("IngressAclEntries")
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeIngressAclEntries ingressAclEntries;
 
@@ -661,9 +462,6 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The resources that are associated with the network ACL.</p>
-         */
         @NameInMap("Resources")
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeResources resources;
 
@@ -680,9 +478,6 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The information about the tags.</p>
-         */
         @NameInMap("Tags")
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeTags tags;
 

@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
-    /**
-     * <p>The details about the egress-only rules.</p>
-     */
     @NameInMap("Ipv6EgressOnlyRules")
     public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRules ipv6EgressOnlyRules;
 
@@ -92,57 +89,21 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule extends TeaModel {
-        /**
-         * <p>The description of the egress-only rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ruledescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the instance to which the egress-only rule applies.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipv6gw-bp1rhhs9zjlxukc5e****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The type of the instance to which the egress-only rule applies.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Ipv6Address</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The ID of the egress-only rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipv6py-bp1rr7fq1md8pbb3k****</p>
-         */
         @NameInMap("Ipv6EgressOnlyRuleId")
         public String ipv6EgressOnlyRuleId;
 
-        /**
-         * <p>The name of the egress-only rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rulename</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The status of the egress-only rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 

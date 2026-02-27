@@ -31,9 +31,6 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the SSL client certificates.</p>
-     */
     @NameInMap("SslVpnClientCertKeys")
     public DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeys sslVpnClientCertKeys;
 
@@ -92,83 +89,27 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
     }
 
     public static class DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey extends TeaModel {
-        /**
-         * <p>The timestamp generated when the SSL client certificate was created. Unit: milliseconds.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1492747187000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The timestamp generated when the SSL client certificate expires. Unit: milliseconds.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1494966335000</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <p>The name of the SSL client certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cert1</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The region ID of the SSL client certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmzs372yg****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The ID of the SSL client certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsc-bp1n8wcf134yl0osr****</p>
-         */
         @NameInMap("SslVpnClientCertId")
         public String sslVpnClientCertId;
 
-        /**
-         * <p>The ID of the SSL server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vss-bp18q7hzj6largv4v****</p>
-         */
         @NameInMap("SslVpnServerId")
         public String sslVpnServerId;
 
-        /**
-         * <p>The status of the SSL client certificate. Valid values:</p>
-         * <ul>
-         * <li><strong>expiring-soon</strong>: The certificate expires in one week.</li>
-         * <li><strong>normal</strong></li>
-         * <li><strong>expired</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>normal</p>
-         */
         @NameInMap("Status")
         public String status;
 

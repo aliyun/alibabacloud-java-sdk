@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaModel {
-    /**
-     * <p>The ACLs.</p>
-     */
     @NameInMap("AclEntries")
     public DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntries aclEntries;
 
@@ -126,30 +123,12 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
     }
 
     public static class DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntriesAclEntry extends TeaModel {
-        /**
-         * <p>The remarks of the ACL entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>client IP</p>
-         */
         @NameInMap("AclEntryComment")
         public String aclEntryComment;
 
-        /**
-         * <p>The ID of the ACL entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipv6transaclentry-bp105jrs****</p>
-         */
         @NameInMap("AclEntryId")
         public String aclEntryId;
 
-        /**
-         * <p>The IP address specified in the ACL entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12ab:0:0:XXXX::0102/128</p>
-         */
         @NameInMap("AclEntryIp")
         public String aclEntryIp;
 

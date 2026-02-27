@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateFullNatEntryRequest extends TeaModel {
+    /**
+     * <p>The backend domain name for FULLNAT address translation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx.com</p>
+     */
     @NameInMap("AccessDomain")
     public String accessDomain;
 
