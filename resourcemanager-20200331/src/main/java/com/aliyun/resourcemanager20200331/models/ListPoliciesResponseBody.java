@@ -22,9 +22,6 @@ public class ListPoliciesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The information about the permission policies.</p>
-     */
     @NameInMap("Policies")
     public ListPoliciesResponseBodyPolicies policies;
 
@@ -92,70 +89,24 @@ public class ListPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListPoliciesResponseBodyPoliciesPolicy extends TeaModel {
-        /**
-         * <p>The number of references to the permission policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AttachmentCount")
         public Integer attachmentCount;
 
-        /**
-         * <p>The time when the permission policy was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The default version of the permission policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
-         */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
-        /**
-         * <p>The description of the permission policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSS administrator</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the permission policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSS-Administrator</p>
-         */
         @NameInMap("PolicyName")
         public String policyName;
 
-        /**
-         * <p>The type of the permission policy. Valid values:</p>
-         * <ul>
-         * <li>Custom</li>
-         * <li>System</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Custom</p>
-         */
         @NameInMap("PolicyType")
         public String policyType;
 
-        /**
-         * <p>The time when the permission policy was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-02-11T18:39:12Z</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

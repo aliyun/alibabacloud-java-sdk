@@ -22,9 +22,6 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The information about the permission policies.</p>
-     */
     @NameInMap("PolicyAttachments")
     public ListPolicyAttachmentsResponseBodyPolicyAttachments policyAttachments;
 
@@ -92,75 +89,24 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyAttachmentsResponseBodyPolicyAttachmentsPolicyAttachment extends TeaModel {
-        /**
-         * <p>The time when the permission policy is attached.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("AttachDate")
         public String attachDate;
 
-        /**
-         * <p>The description of the permission policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The description of the policy.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the permission policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AdministratorAccess</p>
-         */
         @NameInMap("PolicyName")
         public String policyName;
 
-        /**
-         * <p>The type of the permission policy. Valid values:</p>
-         * <ul>
-         * <li>Custom</li>
-         * <li>System</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>System</p>
-         */
         @NameInMap("PolicyType")
         public String policyType;
 
-        /**
-         * <p>The name of the object to which the permission policy is attached.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:alice@demo.onaliyun.com">alice@demo.onaliyun.com</a></p>
-         */
         @NameInMap("PrincipalName")
         public String principalName;
 
-        /**
-         * <p>The type of the object to which the permission policy is attached. Valid values:</p>
-         * <ul>
-         * <li>IMSUser: RAM user</li>
-         * <li>IMSGroup: RAM user group</li>
-         * <li>ServiceRole: RAM role</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IMSUser</p>
-         */
         @NameInMap("PrincipalType")
         public String principalType;
 
-        /**
-         * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-9gLOoK****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

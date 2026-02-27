@@ -31,9 +31,6 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information of the resource groups.</p>
-     */
     @NameInMap("ResourceGroups")
     public ListResourceGroupsResponseBodyResourceGroups resourceGroups;
 
@@ -92,21 +89,9 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListResourceGroupsResponseBodyResourceGroupsResourceGroupTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>k1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -153,68 +138,24 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListResourceGroupsResponseBodyResourceGroupsResourceGroup extends TeaModel {
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456789****</p>
-         */
         @NameInMap("AccountId")
         public String accountId;
 
-        /**
-         * <p>The time when the resource group was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The display name of the resource group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>my-project</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The ID of the resource group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-9gLOoK****</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The identifier of the resource group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>my-project</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The status of the resource group. Valid values:</p>
-         * <ul>
-         * <li>Creating: The resource group is being created.</li>
-         * <li>OK: The resource group is created.</li>
-         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags that are added to the resource group.</p>
-         */
         @NameInMap("Tags")
         public ListResourceGroupsResponseBodyResourceGroupsResourceGroupTags tags;
 

@@ -31,9 +31,6 @@ public class ListResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the resources.</p>
-     */
     @NameInMap("Resources")
     public ListResourcesResponseBodyResources resources;
 
@@ -92,57 +89,21 @@ public class ListResourcesResponseBody extends TeaModel {
     }
 
     public static class ListResourcesResponseBodyResourcesResource extends TeaModel {
-        /**
-         * <p>The time when the resource was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the resource group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-uPJpP****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-23v38****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The resource type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The ID of the Alibaba Cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Service")
         public String service;
 

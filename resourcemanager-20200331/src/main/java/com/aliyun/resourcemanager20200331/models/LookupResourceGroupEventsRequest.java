@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LookupResourceGroupEventsRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-11-30 23:43:16</p>
      */
@@ -12,6 +14,7 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The event type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,16 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
     @NameInMap("EventCategory")
     public String eventCategory;
 
+    /**
+     * <p>The attributes used for advanced search.</p>
+     */
     @NameInMap("LookupAttributes")
     public java.util.List<LookupResourceGroupEventsRequestLookupAttributes> lookupAttributes;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -31,6 +40,8 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
     public String maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cm****</p>
      */
@@ -38,6 +49,8 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The resource group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ProjectA</p>
      */
@@ -45,6 +58,8 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
     public String resourceGroupDisplayName;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-9gLOoK****</p>
      */
@@ -52,6 +67,8 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The beginning of the time range to query. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-11-30 23:43:16</p>
      */
@@ -129,6 +146,8 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
 
     public static class LookupResourceGroupEventsRequestLookupAttributes extends TeaModel {
         /**
+         * <p>The key of the attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>key</p>
          */
@@ -136,6 +155,8 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */

@@ -41,27 +41,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     public static class GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus extends TeaModel {
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-qingdao</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The status of the resource group. Valid values:</p>
-         * <ul>
-         * <li>Creating: The resource group is being created.</li>
-         * <li>OK: The resource group is created.</li>
-         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
-         * <li>Deleting: The resource group is being deleted.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -108,21 +90,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     public static class GetResourceGroupResponseBodyResourceGroupTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>k1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -214,9 +184,6 @@ public class GetResourceGroupResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The status of the resource group in all regions.</p>
-         */
         @NameInMap("RegionStatuses")
         public GetResourceGroupResponseBodyResourceGroupRegionStatuses regionStatuses;
 
@@ -234,9 +201,6 @@ public class GetResourceGroupResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags that are added to the resource group.</p>
-         */
         @NameInMap("Tags")
         public GetResourceGroupResponseBodyResourceGroupTags tags;
 

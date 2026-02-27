@@ -4,9 +4,6 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListFoldersForParentResponseBody extends TeaModel {
-    /**
-     * <p>The information of the folders.</p>
-     */
     @NameInMap("Folders")
     public ListFoldersForParentResponseBodyFolders folders;
 
@@ -92,30 +89,12 @@ public class ListFoldersForParentResponseBody extends TeaModel {
     }
 
     public static class ListFoldersForParentResponseBodyFoldersFolder extends TeaModel {
-        /**
-         * <p>The time when the folder was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The ID of the folder.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rd-evic31****</p>
-         */
         @NameInMap("FolderId")
         public String folderId;
 
-        /**
-         * <p>The name of the folder.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>project-1</p>
-         */
         @NameInMap("FolderName")
         public String folderName;
 

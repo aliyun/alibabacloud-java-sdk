@@ -31,9 +31,6 @@ public class ListRolesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the roles.</p>
-     */
     @NameInMap("Roles")
     public ListRolesResponseBodyRoles roles;
 
@@ -92,21 +89,9 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyRolesRoleLatestDeletionTask extends TeaModel {
-        /**
-         * <p>The time when the deletion task was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-10-23T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The ID of the deletion task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECSAdmin/cc61514b-26eb-4453-ab53-b142eb70****</p>
-         */
         @NameInMap("DeletionTaskId")
         public String deletionTaskId;
 
@@ -134,90 +119,33 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyRolesRole extends TeaModel {
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:ram::123456789012****:role/ECSAdmin</p>
-         */
         @NameInMap("Arn")
         public String arn;
 
-        /**
-         * <p>The time when the role was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The description of the role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS administrator</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>Indicates whether the role is a service-linked role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsServiceLinkedRole")
         public Boolean isServiceLinkedRole;
 
-        /**
-         * <p>The information of the most recent deletion task.</p>
-         */
         @NameInMap("LatestDeletionTask")
         public ListRolesResponseBodyRolesRoleLatestDeletionTask latestDeletionTask;
 
-        /**
-         * <p>The maximum session duration of the role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3600</p>
-         */
         @NameInMap("MaxSessionDuration")
         public Long maxSessionDuration;
 
-        /**
-         * <p>The ID of the role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90123456789****</p>
-         */
         @NameInMap("RoleId")
         public String roleId;
 
-        /**
-         * <p>The name of the role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECSAdmin</p>
-         */
         @NameInMap("RoleName")
         public String roleName;
 
-        /**
-         * <p>The name of the role after authorization.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>
-         */
         @NameInMap("RolePrincipalName")
         public String rolePrincipalName;
 
-        /**
-         * <p>The time when the role was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-01-23T12:33:18Z</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

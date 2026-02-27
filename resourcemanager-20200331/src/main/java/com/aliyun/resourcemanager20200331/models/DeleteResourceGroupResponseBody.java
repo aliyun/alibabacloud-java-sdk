@@ -41,27 +41,9 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus extends TeaModel {
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-qingdao</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The status of the resource group. Valid values:</p>
-         * <ul>
-         * <li>Creating: The resource group is being created.</li>
-         * <li>OK: The resource group is created.</li>
-         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
-         * <li>Deleting: The resource group is being deleted.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PendingDelete</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -153,9 +135,6 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The status of the resource group in all regions.</p>
-         */
         @NameInMap("RegionStatuses")
         public DeleteResourceGroupResponseBodyResourceGroupRegionStatuses regionStatuses;
 

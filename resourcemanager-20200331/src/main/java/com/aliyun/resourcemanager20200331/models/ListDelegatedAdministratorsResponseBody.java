@@ -4,9 +4,6 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListDelegatedAdministratorsResponseBody extends TeaModel {
-    /**
-     * <p>The information of the delegated administrator accounts.</p>
-     */
     @NameInMap("Accounts")
     public ListDelegatedAdministratorsResponseBodyAccounts accounts;
 
@@ -92,52 +89,18 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
     }
 
     public static class ListDelegatedAdministratorsResponseBodyAccountsAccount extends TeaModel {
-        /**
-         * <p>The ID of the member.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>138660628348****</p>
-         */
         @NameInMap("AccountId")
         public String accountId;
 
-        /**
-         * <p>The time when the member was specified as a delegated administrator account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1616652684164</p>
-         */
         @NameInMap("DelegationEnabledTime")
         public String delegationEnabledTime;
 
-        /**
-         * <p>The display name of the member.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The way in which the member joins the resource directory. Valid values:</p>
-         * <ul>
-         * <li>invited: The member is invited to join the resource directory.</li>
-         * <li>created: The member is directly created in the resource directory.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>created</p>
-         */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
-        /**
-         * <p>The identifier of the trusted service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloudfw.aliyuncs.com</p>
-         */
         @NameInMap("ServicePrincipal")
         public String servicePrincipal;
 

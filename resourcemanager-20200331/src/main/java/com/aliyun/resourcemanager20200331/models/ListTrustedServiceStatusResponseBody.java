@@ -4,9 +4,6 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListTrustedServiceStatusResponseBody extends TeaModel {
-    /**
-     * <p>The trusted services that are enabled.</p>
-     */
     @NameInMap("EnabledServicePrincipals")
     public ListTrustedServiceStatusResponseBodyEnabledServicePrincipals enabledServicePrincipals;
 
@@ -92,21 +89,9 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
     }
 
     public static class ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal extends TeaModel {
-        /**
-         * <p>The time when the trusted service was enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-18T15:32:10.473Z</p>
-         */
         @NameInMap("EnableTime")
         public String enableTime;
 
-        /**
-         * <p>The identification of the trusted service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>config.aliyuncs.com</p>
-         */
         @NameInMap("ServicePrincipal")
         public String servicePrincipal;
 

@@ -86,6 +86,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * A maximum of 10 access control policies can be attached to a folder or member.
      * This topic provides an example on how to call the API operation to attach the custom access control policy <code>cp-jExXAqIYkwHN****</code> to the folder <code>fd-ZDNPiT****</code>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Attaches an access control policy.</p>
+     * 
      * @param request AttachControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachControlPolicyResponse
@@ -125,6 +128,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
      * A maximum of 10 access control policies can be attached to a folder or member.
      * This topic provides an example on how to call the API operation to attach the custom access control policy <code>cp-jExXAqIYkwHN****</code> to the folder <code>fd-ZDNPiT****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Attaches an access control policy.</p>
      * 
      * @param request AttachControlPolicyRequest
      * @return AttachControlPolicyResponse
@@ -207,7 +213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to bind a mobile phone number to the member <code>138660628348****</code> for security purposes.</p>
      * 
      * <b>summary</b> : 
-     * <p>设置安全手机号</p>
+     * <p>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</p>
      * 
      * @param request BindSecureMobilePhoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -252,7 +258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to bind a mobile phone number to the member <code>138660628348****</code> for security purposes.</p>
      * 
      * <b>summary</b> : 
-     * <p>设置安全手机号</p>
+     * <p>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</p>
      * 
      * @param request BindSecureMobilePhoneRequest
      * @return BindSecureMobilePhoneResponse
@@ -264,7 +270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消修改邮箱</p>
+     * <p>Cancels the email address change of a member.</p>
      * 
      * @param request CancelChangeAccountEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -296,7 +302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消修改邮箱</p>
+     * <p>Cancels the email address change of a member.</p>
      * 
      * @param request CancelChangeAccountEmailRequest
      * @return CancelChangeAccountEmailResponse
@@ -308,7 +314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消创建云账号类型的成员</p>
+     * <p>Cancels the creation of a cloud account.</p>
      * 
      * @param request CancelCreateCloudAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -340,7 +346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消创建云账号类型的成员</p>
+     * <p>Cancels the creation of a cloud account.</p>
      * 
      * @param request CancelCreateCloudAccountRequest
      * @return CancelCreateCloudAccountResponse
@@ -402,7 +408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消升级资源账号</p>
+     * <p>Cancels the upgrade from a resource account to a cloud account.</p>
      * 
      * @param request CancelPromoteResourceAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -434,7 +440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消升级资源账号</p>
+     * <p>Cancels the upgrade from a resource account to a cloud account.</p>
      * 
      * @param request CancelPromoteResourceAccountRequest
      * @return CancelPromoteResourceAccountResponse
@@ -446,7 +452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>成员账号设置安全邮箱</p>
+     * <p>Changes the email address that is bound to a member.</p>
      * 
      * @param request ChangeAccountEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -482,7 +488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>成员账号设置安全邮箱</p>
+     * <p>Changes the email address that is bound to a member.</p>
      * 
      * @param request ChangeAccountEmailRequest
      * @return ChangeAccountEmailResponse
@@ -650,7 +656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建云账号</p>
+     * <p>Creates a cloud account.</p>
      * 
      * @param request CreateCloudAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -704,7 +710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建云账号</p>
+     * <p>Creates a cloud account.</p>
      * 
      * @param request CreateCloudAccountRequest
      * @return CreateCloudAccountResponse
@@ -717,6 +723,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to create a custom access control policy named <code>ExampleControlPolicy</code>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom access control policy.</p>
      * 
      * @param request CreateControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -762,6 +771,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to create a custom access control policy named <code>ExampleControlPolicy</code>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Creates a custom access control policy.</p>
+     * 
      * @param request CreateControlPolicyRequest
      * @return CreateControlPolicyResponse
      */
@@ -776,6 +788,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p> A maximum of five levels of folders can be created under the root folder.
      * In this example, a folder named <code>rdFolder</code> is created under the root folder.</p>
      * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a folder.</p>
      * 
      * @param request CreateFolderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -815,6 +830,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p> A maximum of five levels of folders can be created under the root folder.
      * In this example, a folder named <code>rdFolder</code> is created under the root folder.</p>
      * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a folder.</p>
      * 
      * @param request CreateFolderRequest
      * @return CreateFolderResponse
@@ -1214,10 +1232,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the member that you want to delete.</p>
+     * <p>Before you delete a member, we recommend that you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
+     * After you submit a deletion request for a member, you can call the <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>账号一键删除</p>
+     * <p>Deletes a member of the resource account type.</p>
      * 
      * @param tmpReq DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1259,10 +1278,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the member that you want to delete.</p>
+     * <p>Before you delete a member, we recommend that you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
+     * After you submit a deletion request for a member, you can call the <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>账号一键删除</p>
+     * <p>Deletes a member of the resource account type.</p>
      * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -1322,7 +1342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * In this example, the custom control policy <code>cp-SImPt8GCEwiq****</code> is deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除管控策略</p>
+     * <p>Deletes a custom control policy.</p>
      * 
      * @param request DeleteControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1358,7 +1378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * In this example, the custom control policy <code>cp-SImPt8GCEwiq****</code> is deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除管控策略</p>
+     * <p>Deletes a custom control policy.</p>
      * 
      * @param request DeleteControlPolicyRequest
      * @return DeleteControlPolicyResponse
@@ -1373,6 +1393,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p> Before you delete a folder, make sure that the folder does not contain any member accounts or child folders.</p>
      * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a folder.</p>
      * 
      * @param request DeleteFolderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1407,6 +1430,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p> Before you delete a folder, make sure that the folder does not contain any member accounts or child folders.</p>
      * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a folder.</p>
      * 
      * @param request DeleteFolderRequest
      * @return DeleteFolderResponse
@@ -1686,7 +1712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>注销代理管理员</p>
+     * <p>Removes a delegated administrator account for a trusted service.</p>
      * 
      * @param request DeregisterDelegatedAdministratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1728,7 +1754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>注销代理管理员</p>
+     * <p>Removes a delegated administrator account for a trusted service.</p>
      * 
      * @param request DeregisterDelegatedAdministratorRequest
      * @return DeregisterDelegatedAdministratorResponse
@@ -1745,6 +1771,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>All member accounts must be removed from the resource directory. For more information about how to remove a member account, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</li>
      * <li>All folders except the root folder must be deleted from the resource directory. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</li>
      * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables a resource directory. This operation cannot be undone. Therefore, exercise caution when you perform it.</p>
      * 
      * @param request DestroyResourceDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1773,6 +1802,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>All member accounts must be removed from the resource directory. For more information about how to remove a member account, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</li>
      * <li>All folders except the root folder must be deleted from the resource directory. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</li>
      * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables a resource directory. This operation cannot be undone. Therefore, exercise caution when you perform it.</p>
      * @return DestroyResourceDirectoryResponse
      */
     public DestroyResourceDirectoryResponse destroyResourceDirectory() throws Exception {
@@ -1787,7 +1819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to detach the custom control policy <code>cp-jExXAqIYkwHN****</code> from the folder <code>fd-ZDNPiT****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>解绑管控策略</p>
+     * <p>Detaches an access control policy.</p>
      * 
      * @param request DetachControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1828,7 +1860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to detach the custom control policy <code>cp-jExXAqIYkwHN****</code> from the folder <code>fd-ZDNPiT****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>解绑管控策略</p>
+     * <p>Detaches an access control policy.</p>
      * 
      * @param request DetachControlPolicyRequest
      * @return DetachControlPolicyResponse
@@ -1974,7 +2006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>禁用管控策略</p>
+     * <p>Disables the Control Policy feature.</p>
      * 
      * @param request DisableControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2004,7 +2036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>禁用管控策略</p>
+     * <p>Disables the Control Policy feature.</p>
      * @return DisableControlPolicyResponse
      */
     public DisableControlPolicyResponse disableControlPolicy() throws Exception {
@@ -2160,7 +2192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * In this example, the current account is used to enable a resource directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>开启RD</p>
+     * <p>Enables a resource directory.</p>
      * 
      * @param request EnableResourceDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2208,7 +2240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * In this example, the current account is used to enable a resource directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>开启RD</p>
+     * <p>Enables a resource directory.</p>
      * 
      * @param request EnableResourceDirectoryRequest
      * @return EnableResourceDirectoryResponse
@@ -2256,6 +2288,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <code>181761095690****</code>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Queries the information of a member.</p>
+     * 
      * @param request GetAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAccountResponse
@@ -2291,6 +2326,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <code>181761095690****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information of a member.</p>
      * 
      * @param request GetAccountRequest
      * @return GetAccountResponse
@@ -2484,6 +2522,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <code>cp-SImPt8GCEwiq****</code>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an access control policy.</p>
+     * 
      * @param request GetControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetControlPolicyResponse
@@ -2519,6 +2560,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <code>cp-SImPt8GCEwiq****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an access control policy.</p>
      * 
      * @param request GetControlPolicyRequest
      * @return GetControlPolicyResponse
@@ -2566,6 +2610,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>In this example, the information of the folder <code>fd-Jyl5U7****</code> is queried.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Queries the information of a folder.</p>
+     * 
      * @param request GetFolderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFolderResponse
@@ -2597,6 +2644,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>In this example, the information of the folder <code>fd-Jyl5U7****</code> is queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information of a folder.</p>
      * 
      * @param request GetFolderRequest
      * @return GetFolderResponse
@@ -2657,6 +2707,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information of a settlement account.</p>
+     * 
      * @param request GetPayerForAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPayerForAccountResponse
@@ -2686,6 +2739,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information of a settlement account.</p>
+     * 
      * @param request GetPayerForAccountRequest
      * @return GetPayerForAccountResponse
      */
@@ -3341,6 +3397,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information of all the parent folders of a specified folder. The system returns the information of the folders based on their top-down hierarchy.</p>
+     * 
      * @param request ListAncestorsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAncestorsResponse
@@ -3370,6 +3429,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information of all the parent folders of a specified folder. The system returns the information of the folders based on their top-down hierarchy.</p>
+     * 
      * @param request ListAncestorsRequest
      * @return ListAncestorsResponse
      */
@@ -3614,6 +3676,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <code>fd-ZDNPiT****</code>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Queries the access control policies that are attached to a folder or member.</p>
+     * 
      * @param request ListControlPolicyAttachmentsForTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListControlPolicyAttachmentsForTargetResponse
@@ -3650,6 +3715,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <code>fd-ZDNPiT****</code>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Queries the access control policies that are attached to a folder or member.</p>
+     * 
      * @param request ListControlPolicyAttachmentsForTargetRequest
      * @return ListControlPolicyAttachmentsForTargetResponse
      */
@@ -3663,7 +3731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to call the API operation to query all delegated administrator accounts in a resource directory. The response shows that two delegated administrator accounts for Cloud Firewall exist in the resource directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出所有的代理管理员</p>
+     * <p>Queries delegated administrator accounts.</p>
      * 
      * @param request ListDelegatedAdministratorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3706,7 +3774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to call the API operation to query all delegated administrator accounts in a resource directory. The response shows that two delegated administrator accounts for Cloud Firewall exist in the resource directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出所有的代理管理员</p>
+     * <p>Queries delegated administrator accounts.</p>
      * 
      * @param request ListDelegatedAdministratorsRequest
      * @return ListDelegatedAdministratorsResponse
@@ -3721,7 +3789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to call the API operation to query the trusted services for which the member <code>138660628348****</code> is specified as a delegated administrator account. The response shows that the member is specified as a delegated administrator account of Cloud Firewall.</p>
      * 
      * <b>summary</b> : 
-     * <p>查看指定账号被设置为哪些可信服务的委派管理员</p>
+     * <p>Queries the trusted services for which a member is specified as a delegated administrator account.</p>
      * 
      * @param request ListDelegatedServicesForAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3756,7 +3824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to call the API operation to query the trusted services for which the member <code>138660628348****</code> is specified as a delegated administrator account. The response shows that the member is specified as a delegated administrator account of Cloud Firewall.</p>
      * 
      * <b>summary</b> : 
-     * <p>查看指定账号被设置为哪些可信服务的委派管理员</p>
+     * <p>Queries the trusted services for which a member is specified as a delegated administrator account.</p>
      * 
      * @param request ListDelegatedServicesForAccountRequest
      * @return ListDelegatedServicesForAccountResponse
@@ -3771,6 +3839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p> You can view the information of only the first-level subfolders of a folder.</p>
      * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information of all subfolders of a folder.</p>
      * 
      * @param request ListFoldersForParentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3817,6 +3888,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p> You can view the information of only the first-level subfolders of a folder.</p>
      * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information of all subfolders of a folder.</p>
      * 
      * @param request ListFoldersForParentRequest
      * @return ListFoldersForParentResponse
@@ -4122,7 +4196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出资源组能力项</p>
+     * <p>Queries whether a specific resource type or a given cloud service supports resource group events.</p>
      * 
      * @param request ListResourceGroupCapabilityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4162,7 +4236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出资源组能力项</p>
+     * <p>Queries whether a specific resource type or a given cloud service supports resource group events.</p>
      * 
      * @param request ListResourceGroupCapabilityRequest
      * @return ListResourceGroupCapabilityResponse
@@ -4176,6 +4250,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
      * This topic provides an example on how to call the API operation to query the basic information about the resource groups <code>rg-1hSBH2****</code> and <code>rg-9gLOoK****</code> within the current account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries resource groups.</p>
      * 
      * @param request ListResourceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4242,6 +4319,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
      * This topic provides an example on how to call the API operation to query the basic information about the resource groups <code>rg-1hSBH2****</code> and <code>rg-9gLOoK****</code> within the current account.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Queries resource groups.</p>
+     * 
      * @param request ListResourceGroupsRequest
      * @return ListResourceGroupsResponse
      */
@@ -4252,7 +4332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出资源组与用户授权信息</p>
+     * <p>Queries resource groups and their user authorization information.</p>
      * 
      * @param request ListResourceGroupsWithAuthDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4320,7 +4400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出资源组与用户授权信息</p>
+     * <p>Queries resource groups and their user authorization information.</p>
      * 
      * @param request ListResourceGroupsWithAuthDetailsRequest
      * @return ListResourceGroupsWithAuthDetailsResponse
@@ -4471,7 +4551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to call the API operation to query tag keys. The response shows that the custom tag key team exists.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出所有的Tag key</p>
+     * <p>Queries tag keys.</p>
      * 
      * @param request ListTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4518,7 +4598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to call the API operation to query tag keys. The response shows that the custom tag key team exists.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出所有的Tag key</p>
+     * <p>Queries tag keys.</p>
      * 
      * @param request ListTagKeysRequest
      * @return ListTagKeysResponse
@@ -4599,7 +4679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to call the API operation to query the tag values of the tag key k1. The response shows that the tag value of the tag key k1 is v1.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出所有的Tag values</p>
+     * <p>Queries the tag values of a tag key.</p>
      * 
      * @param request ListTagValuesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4650,7 +4730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to call the API operation to query the tag values of the tag key k1. The response shows that the tag value of the tag key k1 is v1.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出所有的Tag values</p>
+     * <p>Queries the tag values of a tag key.</p>
      * 
      * @param request ListTagValuesRequest
      * @return ListTagValuesResponse
@@ -4725,6 +4805,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * In this example, the trusted services that are enabled within an enterprise management account are queried. The returned result shows that the trusted services Cloud Config and ActionTrail are enabled within the enterprise management account.</p>
      * </blockquote>
      * 
+     * <b>summary</b> : 
+     * <p>Queries the trusted services that are enabled within an enterprise management account or delegated administrator account.</p>
+     * 
      * @param request ListTrustedServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTrustedServiceStatusResponse
@@ -4768,6 +4851,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * In this example, the trusted services that are enabled within an enterprise management account are queried. The returned result shows that the trusted services Cloud Config and ActionTrail are enabled within the enterprise management account.</p>
      * </blockquote>
      * 
+     * <b>summary</b> : 
+     * <p>Queries the trusted services that are enabled within an enterprise management account or delegated administrator account.</p>
+     * 
      * @param request ListTrustedServiceStatusRequest
      * @return ListTrustedServiceStatusResponse
      */
@@ -4778,7 +4864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源组事件</p>
+     * <p>Queries the events of resource groups.</p>
      * 
      * @param request LookupResourceGroupEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4838,7 +4924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源组事件</p>
+     * <p>Queries the events of resource groups.</p>
      * 
      * @param request LookupResourceGroupEventsRequest
      * @return LookupResourceGroupEventsResponse
@@ -4850,7 +4936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动账号</p>
+     * <p>Moves a member account from a folder to another.</p>
      * 
      * @param request MoveAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4886,7 +4972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动账号</p>
+     * <p>Moves a member account from a folder to another.</p>
      * 
      * @param request MoveAccountRequest
      * @return MoveAccountResponse
@@ -4954,7 +5040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级资源账号</p>
+     * <p>Upgrades a resource account to a cloud account.</p>
      * 
      * @param request PromoteResourceAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4990,7 +5076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级资源账号</p>
+     * <p>Upgrades a resource account to a cloud account.</p>
      * 
      * @param request PromoteResourceAccountRequest
      * @return PromoteResourceAccountResponse
@@ -5010,6 +5096,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
      * This topic provides an example on how to call the API operation to specify the member <code>181761095690****</code> as a delegated administrator account of Cloud Firewall.</li>
      * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</p>
      * 
      * @param request RegisterDelegatedAdministratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5054,6 +5143,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to specify the member <code>181761095690****</code> as a delegated administrator account of Cloud Firewall.</li>
      * </ul>
      * 
+     * <b>summary</b> : 
+     * <p>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</p>
+     * 
      * @param request RegisterDelegatedAdministratorRequest
      * @return RegisterDelegatedAdministratorResponse
      */
@@ -5065,6 +5157,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to remove the member <code>177242285274****</code> from a resource directory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a member of the cloud account type. After you remove a member of the cloud account type, the member is no longer managed by the management account of the resource directory to which the member belonged.</p>
      * 
      * @param request RemoveCloudAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5098,6 +5193,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to remove the member <code>177242285274****</code> from a resource directory.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Removes a member of the cloud account type. After you remove a member of the cloud account type, the member is no longer managed by the management account of the resource directory to which the member belonged.</p>
+     * 
      * @param request RemoveCloudAccountRequest
      * @return RemoveCloudAccountResponse
      */
@@ -5108,7 +5206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新发送创建云账号的邮箱验证</p>
+     * <p>Resends an email that is used to confirm the creation of a cloud account.</p>
      * 
      * @param request ResendCreateCloudAccountEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5140,7 +5238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新发送创建云账号的邮箱验证</p>
+     * <p>Resends an email that is used to confirm the creation of a cloud account.</p>
      * 
      * @param request ResendCreateCloudAccountEmailRequest
      * @return ResendCreateCloudAccountEmailResponse
@@ -5152,7 +5250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新发送升级资源账号的邮箱验证</p>
+     * <p>Resends an email that is used to confirm the upgrade from a resource account to a cloud account.</p>
      * 
      * @param request ResendPromoteResourceAccountEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5184,7 +5282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新发送升级资源账号的邮箱验证</p>
+     * <p>Resends an email that is used to confirm the upgrade from a resource account to a cloud account.</p>
      * 
      * @param request ResendPromoteResourceAccountEmailRequest
      * @return ResendPromoteResourceAccountEmailResponse
@@ -5196,7 +5294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新发送确认邮件</p>
+     * <p>Resends a verification email for the email address change of a member.</p>
      * 
      * @param request RetryChangeAccountEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5228,7 +5326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新发送确认邮件</p>
+     * <p>Resends a verification email for the email address change of a member.</p>
      * 
      * @param request RetryChangeAccountEmailRequest
      * @return RetryChangeAccountEmailResponse
@@ -5244,7 +5342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * In this example, a verification code is sent to the mobile phone number that you want to bind to the resource account <code>138660628348****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>发送绑定安全手机验证码</p>
+     * <p>Sends a verification code to the mobile phone number that you want to bind to a resource account in a resource directory for security purposes.</p>
      * 
      * @param request SendVerificationCodeForBindSecureMobilePhoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5284,7 +5382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * In this example, a verification code is sent to the mobile phone number that you want to bind to the resource account <code>138660628348****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>发送绑定安全手机验证码</p>
+     * <p>Sends a verification code to the mobile phone number that you want to bind to a resource account in a resource directory for security purposes.</p>
      * 
      * @param request SendVerificationCodeForBindSecureMobilePhoneRequest
      * @return SendVerificationCodeForBindSecureMobilePhoneResponse
@@ -5299,7 +5397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</p>
      * 
      * <b>summary</b> : 
-     * <p>发送开启资源目录短信</p>
+     * <p>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</p>
      * 
      * @param request SendVerificationCodeForEnableRDRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5334,7 +5432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</p>
      * 
      * <b>summary</b> : 
-     * <p>发送开启资源目录短信</p>
+     * <p>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</p>
      * 
      * @param request SendVerificationCodeForEnableRDRequest
      * @return SendVerificationCodeForEnableRDResponse
@@ -5397,7 +5495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Members of the resource account type can be deleted only after the member deletion feature is enabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>开启或关闭成员删除许可</p>
+     * <p>Enables or disables the member deletion feature.</p>
      * 
      * @param request SetMemberDeletionPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5432,7 +5530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Members of the resource account type can be deleted only after the member deletion feature is enabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>开启或关闭成员删除许可</p>
+     * <p>Enables or disables the member deletion feature.</p>
      * 
      * @param request SetMemberDeletionPermissionRequest
      * @return SetMemberDeletionPermissionResponse
@@ -5571,6 +5669,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This example provides an example on how to call the API operation to change the display name of the member <code>12323344****</code> to <code>admin</code>.</li>
      * </ul>
      * 
+     * <b>summary</b> : 
+     * <p>Changes the display name of a member, or switches the type of a member.</p>
+     * 
      * @param request UpdateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAccountResponse
@@ -5615,6 +5716,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.
      * This example provides an example on how to call the API operation to change the display name of the member <code>12323344****</code> to <code>admin</code>.</li>
      * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the display name of a member, or switches the type of a member.</p>
      * 
      * @param request UpdateAccountRequest
      * @return UpdateAccountResponse
@@ -5814,6 +5918,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>In this example, the name of the access control policy whose ID is <code>cp-jExXAqIYkwHN****</code> is changed to <code>NewControlPolicy</code>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Updates a custom access control policy.</p>
+     * 
      * @param request UpdateControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateControlPolicyResponse
@@ -5858,6 +5965,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>In this example, the name of the access control policy whose ID is <code>cp-jExXAqIYkwHN****</code> is changed to <code>NewControlPolicy</code>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>Updates a custom access control policy.</p>
+     * 
      * @param request UpdateControlPolicyRequest
      * @return UpdateControlPolicyResponse
      */
@@ -5867,6 +5977,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Changes the name of a folder.</p>
+     * 
      * @param request UpdateFolderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateFolderResponse
@@ -5900,6 +6013,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Changes the name of a folder.</p>
+     * 
      * @param request UpdateFolderRequest
      * @return UpdateFolderResponse
      */
@@ -5911,6 +6027,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>In this example, the display name of the resource group <code>rg-9gLOoK****</code> is changed to <code>project</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the basic information of a resource group.</p>
      * 
      * @param request UpdateResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5947,6 +6066,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>In this example, the display name of the resource group <code>rg-9gLOoK****</code> is changed to <code>project</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the basic information of a resource group.</p>
      * 
      * @param request UpdateResourceGroupRequest
      * @return UpdateResourceGroupResponse

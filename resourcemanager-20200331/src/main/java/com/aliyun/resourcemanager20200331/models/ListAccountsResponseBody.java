@@ -4,9 +4,6 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListAccountsResponseBody extends TeaModel {
-    /**
-     * <p>The members returned.</p>
-     */
     @NameInMap("Accounts")
     public ListAccountsResponseBodyAccounts accounts;
 
@@ -92,21 +89,9 @@ public class ListAccountsResponseBody extends TeaModel {
     }
 
     public static class ListAccountsResponseBodyAccountsAccountTagsTag extends TeaModel {
-        /**
-         * <p>A tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tag_key</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>A tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tag_value</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -153,113 +138,36 @@ public class ListAccountsResponseBody extends TeaModel {
     }
 
     public static class ListAccountsResponseBodyAccountsAccount extends TeaModel {
-        /**
-         * <p>The Alibaba Cloud account ID of the member.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>181761095690****</p>
-         */
         @NameInMap("AccountId")
         public String accountId;
 
-        /**
-         * <p>The display name of the member.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The ID of the folder.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fd-QRzuim****</p>
-         */
         @NameInMap("FolderId")
         public String folderId;
 
-        /**
-         * <p>The way in which the member joins the resource directory. Valid values:</p>
-         * <ul>
-         * <li>invited: The member is invited to join the resource directory.</li>
-         * <li>created: The member is directly created in the resource directory.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>created</p>
-         */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
-        /**
-         * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-01-18T08:01:50.522Z</p>
-         */
         @NameInMap("JoinTime")
         public String joinTime;
 
-        /**
-         * <p>The time when the member was modified. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-01-18T08:04:37.668Z</p>
-         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        /**
-         * <p>The ID of the resource directory.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rd-3G****</p>
-         */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
-        /**
-         * <p>The path of the member in the resource directory.</p>
-         */
         @NameInMap("ResourceDirectoryPath")
         public String resourceDirectoryPath;
 
-        /**
-         * <p>The status of the member. Valid values:</p>
-         * <ul>
-         * <li>CreateSuccess: The member is created.</li>
-         * <li>PromoteVerifying: The upgrade of the member is being confirmed.</li>
-         * <li>PromoteFailed: The upgrade of the member fails.</li>
-         * <li>PromoteExpired: The upgrade of the member expires.</li>
-         * <li>PromoteCancelled: The upgrade of the member is canceled.</li>
-         * <li>PromoteSuccess: The member is upgraded.</li>
-         * <li>InviteSuccess: The member accepts the invitation.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>CreateSuccess</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags that are added to the member.</p>
-         */
         @NameInMap("Tags")
         public ListAccountsResponseBodyAccountsAccountTags tags;
 
-        /**
-         * <p>The type of the member. Valid values:</p>
-         * <ul>
-         * <li>CloudAccount: cloud account</li>
-         * <li>ResourceAccount: resource account</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ResourceAccount</p>
-         */
         @NameInMap("Type")
         public String type;
 

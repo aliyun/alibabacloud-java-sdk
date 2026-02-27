@@ -84,18 +84,9 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
     }
 
     public static class GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsage extends TeaModel {
-        /**
-         * <p>The region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>global</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The information about resources.</p>
-         */
         @NameInMap("Resources")
         public GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsageResources resources;
 
@@ -151,9 +142,6 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The information about the resources that the service-linked role can use.</p>
-         */
         @NameInMap("RoleUsages")
         public GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsages roleUsages;
 

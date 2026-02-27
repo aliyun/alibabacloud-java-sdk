@@ -31,9 +31,6 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of objects to which the control policy is attached.</p>
-     */
     @NameInMap("TargetAttachments")
     public ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachments targetAttachments;
 
@@ -92,44 +89,15 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
     }
 
     public static class ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment extends TeaModel {
-        /**
-         * <p>The time when the control policy was attached to the object.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-03-19T02:56:24Z</p>
-         */
         @NameInMap("AttachDate")
         public String attachDate;
 
-        /**
-         * <p>The ID of the object.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fd-ZDNPiT****</p>
-         */
         @NameInMap("TargetId")
         public String targetId;
 
-        /**
-         * <p>The name of the object.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Dev_Department</p>
-         */
         @NameInMap("TargetName")
         public String targetName;
 
-        /**
-         * <p>The type of the object. Valid values:</p>
-         * <ul>
-         * <li>Root: Root folder</li>
-         * <li>Folder: child folder of the Root folder</li>
-         * <li>Account: member account</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Folder</p>
-         */
         @NameInMap("TargetType")
         public String targetType;
 

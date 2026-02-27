@@ -41,9 +41,25 @@ public class CreateResourceGroupResponseBody extends TeaModel {
     }
 
     public static class CreateResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the resource group. Valid values:</p>
+         * <ul>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>OK: The resource group is created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
+         */
         @NameInMap("Status")
         public String status;
 

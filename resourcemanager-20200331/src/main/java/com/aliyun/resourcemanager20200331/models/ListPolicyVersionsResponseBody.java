@@ -4,9 +4,6 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListPolicyVersionsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the policy version.</p>
-     */
     @NameInMap("PolicyVersions")
     public ListPolicyVersionsResponseBodyPolicyVersions policyVersions;
 
@@ -41,30 +38,12 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion extends TeaModel {
-        /**
-         * <p>The time when the policy version was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>Indicates whether the policy version is the default version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("IsDefaultVersion")
         public Boolean isDefaultVersion;
 
-        /**
-         * <p>The ID of the policy version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v3</p>
-         */
         @NameInMap("VersionId")
         public String versionId;
 

@@ -4,10 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class LookupResourceGroupEventsResponseBody extends TeaModel {
+    /**
+     * <p>The queried events.</p>
+     */
     @NameInMap("Events")
     public java.util.List<LookupResourceGroupEventsResponseBodyEvents> events;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cm****</p>
      */
@@ -15,6 +20,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F7701451-340B-5CB3-AEA7-7D831F7F****</p>
      */
@@ -52,6 +59,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
 
     public static class LookupResourceGroupEventsResponseBodyEventsSourceResourceGroupInfo extends TeaModel {
         /**
+         * <p>The resource group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestGroupA</p>
          */
@@ -59,6 +68,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String resourceGroupDisplayName;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aekz25pfurj****</p>
          */
@@ -90,6 +101,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
 
     public static class LookupResourceGroupEventsResponseBodyEventsTargetResourceGroupInfo extends TeaModel {
         /**
+         * <p>The resource group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestGroupB</p>
          */
@@ -97,6 +110,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String resourceGroupDisplayName;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfmwfrxcre****</p>
          */
@@ -128,6 +143,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
 
     public static class LookupResourceGroupEventsResponseBodyEvents extends TeaModel {
         /**
+         * <p>The type of the resource change event.</p>
+         * 
          * <strong>example:</strong>
          * <p>Add</p>
          */
@@ -135,6 +152,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String changeType;
 
         /**
+         * <p>The time when the event was triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-04T18:35:17Z</p>
          */
@@ -142,6 +161,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String eventTime;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */
@@ -149,6 +170,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ProjectA</p>
          */
@@ -156,6 +179,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String resourceGroupDisplayName;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfm2sohr74****</p>
          */
@@ -163,6 +188,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-wz9fpfe64****</p>
          */
@@ -170,6 +197,9 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type.</p>
+         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance</p>
          */
@@ -177,15 +207,24 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The service code.</p>
+         * <p>You can obtain the code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */
         @NameInMap("Service")
         public String service;
 
+        /**
+         * <p>The source resource group.</p>
+         */
         @NameInMap("SourceResourceGroupInfo")
         public LookupResourceGroupEventsResponseBodyEventsSourceResourceGroupInfo sourceResourceGroupInfo;
 
+        /**
+         * <p>The destination resource group.</p>
+         */
         @NameInMap("TargetResourceGroupInfo")
         public LookupResourceGroupEventsResponseBodyEventsTargetResourceGroupInfo targetResourceGroupInfo;
 
