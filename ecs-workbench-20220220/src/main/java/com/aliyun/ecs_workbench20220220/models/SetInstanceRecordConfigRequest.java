@@ -43,6 +43,9 @@ public class SetInstanceRecordConfigRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceRegionId")
+    public String resourceRegionId;
+
     public static SetInstanceRecordConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetInstanceRecordConfigRequest self = new SetInstanceRecordConfigRequest();
         return TeaModel.build(map, self);
@@ -86,6 +89,14 @@ public class SetInstanceRecordConfigRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SetInstanceRecordConfigRequest setResourceRegionId(String resourceRegionId) {
+        this.resourceRegionId = resourceRegionId;
+        return this;
+    }
+    public String getResourceRegionId() {
+        return this.resourceRegionId;
     }
 
 }
