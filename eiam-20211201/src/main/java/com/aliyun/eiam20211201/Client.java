@@ -15309,6 +15309,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetPasswordComplexityConfigurationResponse setPasswordComplexityConfigurationWithOptions(SetPasswordComplexityConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disabledWeakPasswordLogin)) {
+            query.put("DisabledWeakPasswordLogin", request.disabledWeakPasswordLogin);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

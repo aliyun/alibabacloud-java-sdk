@@ -76,6 +76,12 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration extends TeaModel {
+        @NameInMap("DisabledWeakPasswordLogin")
+        public Boolean disabledWeakPasswordLogin;
+
+        @NameInMap("DisabledWeakPasswordLoginStartedAt")
+        public Long disabledWeakPasswordLoginStartedAt;
+
         /**
          * <p>The password complexity rules.</p>
          */
@@ -94,6 +100,22 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         public static GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration build(java.util.Map<String, ?> map) throws Exception {
             GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration self = new GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration setDisabledWeakPasswordLogin(Boolean disabledWeakPasswordLogin) {
+            this.disabledWeakPasswordLogin = disabledWeakPasswordLogin;
+            return this;
+        }
+        public Boolean getDisabledWeakPasswordLogin() {
+            return this.disabledWeakPasswordLogin;
+        }
+
+        public GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration setDisabledWeakPasswordLoginStartedAt(Long disabledWeakPasswordLoginStartedAt) {
+            this.disabledWeakPasswordLoginStartedAt = disabledWeakPasswordLoginStartedAt;
+            return this;
+        }
+        public Long getDisabledWeakPasswordLoginStartedAt() {
+            return this.disabledWeakPasswordLoginStartedAt;
         }
 
         public GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration setPasswordComplexityRules(java.util.List<GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfigurationPasswordComplexityRules> passwordComplexityRules) {

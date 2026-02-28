@@ -4,6 +4,9 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class SetPasswordComplexityConfigurationRequest extends TeaModel {
+    @NameInMap("DisabledWeakPasswordLogin")
+    public Boolean disabledWeakPasswordLogin;
+
     /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
@@ -33,6 +36,14 @@ public class SetPasswordComplexityConfigurationRequest extends TeaModel {
     public static SetPasswordComplexityConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         SetPasswordComplexityConfigurationRequest self = new SetPasswordComplexityConfigurationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetPasswordComplexityConfigurationRequest setDisabledWeakPasswordLogin(Boolean disabledWeakPasswordLogin) {
+        this.disabledWeakPasswordLogin = disabledWeakPasswordLogin;
+        return this;
+    }
+    public Boolean getDisabledWeakPasswordLogin() {
+        return this.disabledWeakPasswordLogin;
     }
 
     public SetPasswordComplexityConfigurationRequest setInstanceId(String instanceId) {
