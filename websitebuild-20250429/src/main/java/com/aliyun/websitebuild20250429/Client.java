@@ -740,6 +740,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>生码-获取插件配置信息</p>
+     * 
+     * @param request GetAppPluginConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAppPluginConfigResponse
+     */
+    public GetAppPluginConfigResponse getAppPluginConfigWithOptions(GetAppPluginConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            body.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
+            body.put("PluginId", request.pluginId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAppPluginConfig"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAppPluginConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生码-获取插件配置信息</p>
+     * 
+     * @param request GetAppPluginConfigRequest
+     * @return GetAppPluginConfigResponse
+     */
+    public GetAppPluginConfigResponse getAppPluginConfig(GetAppPluginConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAppPluginConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询Logo创建任务</p>
      * 
      * @param request GetCreateLogoTaskRequest
