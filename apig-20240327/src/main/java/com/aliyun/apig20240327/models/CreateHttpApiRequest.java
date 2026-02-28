@@ -50,6 +50,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String description;
 
     @NameInMap("dryRun")
+    @Deprecated
     public Boolean dryRun;
 
     /**
@@ -198,6 +199,7 @@ public class CreateHttpApiRequest extends TeaModel {
         return this.description;
     }
 
+    @Deprecated
     public CreateHttpApiRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;

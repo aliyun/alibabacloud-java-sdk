@@ -940,6 +940,36 @@ public class HttpApiDeployConfig extends TeaModel {
 
     }
 
+    public static class HttpApiDeployConfigPolicyConfigsAiStatisticsConfig extends TeaModel {
+        @NameInMap("logRequestContent")
+        public Boolean logRequestContent;
+
+        @NameInMap("logResponseContent")
+        public Boolean logResponseContent;
+
+        public static HttpApiDeployConfigPolicyConfigsAiStatisticsConfig build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiStatisticsConfig self = new HttpApiDeployConfigPolicyConfigsAiStatisticsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiStatisticsConfig setLogRequestContent(Boolean logRequestContent) {
+            this.logRequestContent = logRequestContent;
+            return this;
+        }
+        public Boolean getLogRequestContent() {
+            return this.logRequestContent;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiStatisticsConfig setLogResponseContent(Boolean logResponseContent) {
+            this.logResponseContent = logResponseContent;
+            return this;
+        }
+        public Boolean getLogResponseContent() {
+            return this.logResponseContent;
+        }
+
+    }
+
     public static class HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfigGlobalRules extends TeaModel {
         /**
          * <p>Limit mode for global rules</p>
@@ -1226,6 +1256,9 @@ public class HttpApiDeployConfig extends TeaModel {
         @NameInMap("aiSecurityGuardConfig")
         public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig aiSecurityGuardConfig;
 
+        @NameInMap("aiStatisticsConfig")
+        public HttpApiDeployConfigPolicyConfigsAiStatisticsConfig aiStatisticsConfig;
+
         /**
          * <p>AI Token Rate Limit configuration</p>
          */
@@ -1269,6 +1302,14 @@ public class HttpApiDeployConfig extends TeaModel {
         }
         public HttpApiDeployConfigPolicyConfigsAiSecurityGuardConfig getAiSecurityGuardConfig() {
             return this.aiSecurityGuardConfig;
+        }
+
+        public HttpApiDeployConfigPolicyConfigs setAiStatisticsConfig(HttpApiDeployConfigPolicyConfigsAiStatisticsConfig aiStatisticsConfig) {
+            this.aiStatisticsConfig = aiStatisticsConfig;
+            return this;
+        }
+        public HttpApiDeployConfigPolicyConfigsAiStatisticsConfig getAiStatisticsConfig() {
+            return this.aiStatisticsConfig;
         }
 
         public HttpApiDeployConfigPolicyConfigs setAiTokenRateLimitConfig(HttpApiDeployConfigPolicyConfigsAiTokenRateLimitConfig aiTokenRateLimitConfig) {

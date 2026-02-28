@@ -174,6 +174,9 @@ public class Service extends TeaModel {
     @NameInMap("updateTimestamp")
     public Long updateTimestamp;
 
+    @NameInMap("versions")
+    public java.util.List<ServiceVersions> versions;
+
     public static Service build(java.util.Map<String, ?> map) throws Exception {
         Service self = new Service();
         return TeaModel.build(map, self);
@@ -347,6 +350,14 @@ public class Service extends TeaModel {
         return this.updateTimestamp;
     }
 
+    public Service setVersions(java.util.List<ServiceVersions> versions) {
+        this.versions = versions;
+        return this;
+    }
+    public java.util.List<ServiceVersions> getVersions() {
+        return this.versions;
+    }
+
     public static class ServicePorts extends TeaModel {
         /**
          * <p>The port name.</p>
@@ -402,6 +413,66 @@ public class Service extends TeaModel {
         }
         public String getProtocol() {
             return this.protocol;
+        }
+
+    }
+
+    public static class ServiceVersionsLabels extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ServiceVersionsLabels build(java.util.Map<String, ?> map) throws Exception {
+            ServiceVersionsLabels self = new ServiceVersionsLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ServiceVersionsLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ServiceVersionsLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ServiceVersions extends TeaModel {
+        @NameInMap("labels")
+        public java.util.List<ServiceVersionsLabels> labels;
+
+        @NameInMap("name")
+        public String name;
+
+        public static ServiceVersions build(java.util.Map<String, ?> map) throws Exception {
+            ServiceVersions self = new ServiceVersions();
+            return TeaModel.build(map, self);
+        }
+
+        public ServiceVersions setLabels(java.util.List<ServiceVersionsLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<ServiceVersionsLabels> getLabels() {
+            return this.labels;
+        }
+
+        public ServiceVersions setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
