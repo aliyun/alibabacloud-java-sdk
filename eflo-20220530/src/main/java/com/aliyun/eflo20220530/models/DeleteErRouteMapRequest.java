@@ -14,6 +14,12 @@ public class DeleteErRouteMapRequest extends TeaModel {
     @NameInMap("ErId")
     public String erId;
 
+    /**
+     * <p>routing policy ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-rmap-uwglhzom</p>
+     */
     @NameInMap("ErRouteMapId")
     public String erRouteMapId;
 
