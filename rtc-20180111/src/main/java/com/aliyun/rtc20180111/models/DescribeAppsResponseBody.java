@@ -85,48 +85,24 @@ public class DescribeAppsResponseBody extends TeaModel {
     }
 
     public static class DescribeAppsResponseBodyAppListApp extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>rgf1****&quot;</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Default AppName</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>universal</p>
-         */
         @NameInMap("AppType")
         public String appType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>paybyduration</p>
-         */
         @NameInMap("BillType")
         public String billType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-01-09T02:02:29Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("ServiceAreas")
         public DescribeAppsResponseBodyAppListAppServiceAreas serviceAreas;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 

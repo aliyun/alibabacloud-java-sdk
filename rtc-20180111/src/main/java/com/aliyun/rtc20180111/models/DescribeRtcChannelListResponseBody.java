@@ -103,31 +103,15 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         @NameInMap("CallArea")
         public DescribeRtcChannelListResponseBodyChannelListChannelListCallArea callArea;
 
-        /**
-         * <strong>example:</strong>
-         * <p>testChannel</p>
-         */
         @NameInMap("ChannelId")
         public String channelId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2018-01-29T02:00:00Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2018-01-29T01:00:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("TotalUserCnt")
         public Long totalUserCnt;
 

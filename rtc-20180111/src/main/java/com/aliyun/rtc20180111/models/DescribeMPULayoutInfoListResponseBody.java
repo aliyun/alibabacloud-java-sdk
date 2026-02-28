@@ -66,52 +66,24 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
     }
 
     public static class DescribeMPULayoutInfoListResponseBodyLayoutsLayoutPanesPanes extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0.5</p>
-         */
         @NameInMap("Height")
         public Float height;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MajorPane")
         public Integer majorPane;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PaneId")
         public Integer paneId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.5</p>
-         */
         @NameInMap("Width")
         public Float width;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.5</p>
-         */
         @NameInMap("X")
         public Float x;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.5</p>
-         */
         @NameInMap("Y")
         public Float y;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -198,24 +170,12 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
     }
 
     public static class DescribeMPULayoutInfoListResponseBodyLayoutsLayout extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("AudioMixCount")
         public Integer audioMixCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("LayoutId")
         public Long layoutId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>LayoutName</p>
-         */
         @NameInMap("Name")
         public String name;
 

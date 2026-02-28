@@ -73,12 +73,6 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         @NameInMap("Height")
         public Float height;
 
-        /**
-         * <p>MajorPane。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MajorPane")
         public Integer majorPane;
 
@@ -200,19 +194,9 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemLayoutListResponseBodyLayoutsLayout extends TeaModel {
-        /**
-         * <p>AudioMixCount。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("AudioMixCount")
         public Integer audioMixCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>22</p>
-         */
         @NameInMap("LayoutId")
         public Long layoutId;
 

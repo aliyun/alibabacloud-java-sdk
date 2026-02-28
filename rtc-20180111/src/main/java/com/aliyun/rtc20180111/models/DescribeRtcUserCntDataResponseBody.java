@@ -36,17 +36,9 @@ public class DescribeRtcUserCntDataResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcUserCntDataResponseBodyUserCntDataPerIntervalUserCntModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("ActiveUserCnt")
         public Long activeUserCnt;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2018-01-29T00:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

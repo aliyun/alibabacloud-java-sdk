@@ -13,9 +13,6 @@ public class DeleteRecordTemplateRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <p>1</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 

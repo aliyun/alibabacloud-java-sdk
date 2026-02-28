@@ -36,24 +36,12 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcPeakChannelCntDataResponseBodyPeakChannelCntDataPerIntervalPeakChannelCntModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("ActiveChannelPeak")
         public Long activeChannelPeak;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2018-01-29T00:01:00Z</p>
-         */
         @NameInMap("ActiveChannelPeakTime")
         public String activeChannelPeakTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2018-01-29T00:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

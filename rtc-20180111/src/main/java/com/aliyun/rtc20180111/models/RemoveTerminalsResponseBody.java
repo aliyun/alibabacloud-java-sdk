@@ -36,24 +36,12 @@ public class RemoveTerminalsResponseBody extends TeaModel {
     }
 
     public static class RemoveTerminalsResponseBodyTerminalsTerminal extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Code")
         public Integer code;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1811****</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("Message")
         public String message;
 

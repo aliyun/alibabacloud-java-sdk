@@ -446,6 +446,12 @@ public class StartAgentRequest extends TeaModel {
         @NameInMap("Temperature")
         public Double temperature;
 
+        @NameInMap("ToolExecutionConfig")
+        public Object toolExecutionConfig;
+
+        @NameInMap("Tools")
+        public java.util.List<?> tools;
+
         /**
          * <strong>example:</strong>
          * <p>0.8</p>
@@ -534,6 +540,22 @@ public class StartAgentRequest extends TeaModel {
         }
         public Double getTemperature() {
             return this.temperature;
+        }
+
+        public StartAgentRequestVoiceChatConfigLLMConfig setToolExecutionConfig(Object toolExecutionConfig) {
+            this.toolExecutionConfig = toolExecutionConfig;
+            return this;
+        }
+        public Object getToolExecutionConfig() {
+            return this.toolExecutionConfig;
+        }
+
+        public StartAgentRequestVoiceChatConfigLLMConfig setTools(java.util.List<?> tools) {
+            this.tools = tools;
+            return this;
+        }
+        public java.util.List<?> getTools() {
+            return this.tools;
         }
 
         public StartAgentRequestVoiceChatConfigLLMConfig setTopP(Double topP) {
