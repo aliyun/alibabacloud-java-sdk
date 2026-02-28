@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListUserApplicationsRequest extends TeaModel {
+    @NameInMap("Address")
+    public String address;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -41,6 +44,14 @@ public class ListUserApplicationsRequest extends TeaModel {
     public static ListUserApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUserApplicationsRequest self = new ListUserApplicationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListUserApplicationsRequest setAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    public String getAddress() {
+        return this.address;
     }
 
     public ListUserApplicationsRequest setCurrentPage(Integer currentPage) {

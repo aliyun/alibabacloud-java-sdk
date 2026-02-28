@@ -11,7 +11,7 @@ public class ListConnectorsResponseBody extends TeaModel {
     public java.util.List<ListConnectorsResponseBodyConnectors> connectors;
 
     /**
-     * <p>ID of the current request.</p>
+     * <p>The ID of the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
@@ -101,7 +101,7 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     public static class ListConnectorsResponseBodyConnectorsConnectorClients extends TeaModel {
         /**
-         * <p>Connection status between ConnectorClient and ConnectorServer.</p>
+         * <p>Connection status between the ConnectorClient and ConnectorServer.</p>
          * 
          * <strong>example:</strong>
          * <p>Disconnected</p>
@@ -219,6 +219,19 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     public static class ListConnectorsResponseBodyConnectors extends TeaModel {
         /**
+         * <p>Whether to enable global acceleration. Values: </p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Turn on. </li>
+         * <li><strong>Disabled</strong>: Turn off.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
+        @NameInMap("AccelerateStatus")
+        public String accelerateStatus;
+
+        /**
          * <p>Collection of associated internal network access applications.</p>
          */
         @NameInMap("Applications")
@@ -249,7 +262,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public java.util.List<ListConnectorsResponseBodyConnectorsConnectorClients> connectorClients;
 
         /**
-         * <p>Connector ID.</p>
+         * <p>ConnectorID.</p>
          * 
          * <strong>example:</strong>
          * <p>connector-94db94e06b98****</p>
@@ -258,7 +271,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String connectorId;
 
         /**
-         * <p>Creation time of the Connector.</p>
+         * <p>Connector creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-27 18:10:25</p>
@@ -311,7 +324,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String switchStatus;
 
         /**
-         * <p>Connector upgrade time.</p>
+         * <p>Connector升级时间。</p>
          */
         @NameInMap("UpgradeTime")
         public ListConnectorsResponseBodyConnectorsUpgradeTime upgradeTime;
@@ -319,6 +332,14 @@ public class ListConnectorsResponseBody extends TeaModel {
         public static ListConnectorsResponseBodyConnectors build(java.util.Map<String, ?> map) throws Exception {
             ListConnectorsResponseBodyConnectors self = new ListConnectorsResponseBodyConnectors();
             return TeaModel.build(map, self);
+        }
+
+        public ListConnectorsResponseBodyConnectors setAccelerateStatus(String accelerateStatus) {
+            this.accelerateStatus = accelerateStatus;
+            return this;
+        }
+        public String getAccelerateStatus() {
+            return this.accelerateStatus;
         }
 
         public ListConnectorsResponseBodyConnectors setApplications(java.util.List<ListConnectorsResponseBodyConnectorsApplications> applications) {

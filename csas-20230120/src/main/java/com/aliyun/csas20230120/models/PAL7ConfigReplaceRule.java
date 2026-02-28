@@ -6,14 +6,14 @@ import com.aliyun.tea.*;
 public class PAL7ConfigReplaceRule extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>aaa</p>
+     * <p>before</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <strong>example:</strong>
-     * <p>bbb</p>
+     * <p>after</p>
      */
     @NameInMap("To")
     public String to;

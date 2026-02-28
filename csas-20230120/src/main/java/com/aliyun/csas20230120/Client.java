@@ -550,12 +550,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addressGroups)) {
+            bodyFlat.put("AddressGroups", request.addressGroups);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.addresses)) {
             bodyFlat.put("Addresses", request.addresses);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.browserAccessStatus)) {
             body.put("BrowserAccessStatus", request.browserAccessStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configMode)) {
+            body.put("ConfigMode", request.configMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -711,6 +719,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.userGroupMode)) {
             body.put("UserGroupMode", request.userGroupMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validFrom)) {
+            body.put("ValidFrom", request.validFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validTimeStatus)) {
+            body.put("ValidTimeStatus", request.validTimeStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validUntil)) {
+            body.put("ValidUntil", request.validUntil);
         }
 
         body = TeaConverter.merge(Object.class,
@@ -1820,7 +1840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除用户非在线设备</p>
+     * <p>Deletes multiple user terminals at a time.</p>
      * 
      * @param request DeleteUserDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1857,7 +1877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除用户非在线设备</p>
+     * <p>Deletes multiple user terminals at a time.</p>
      * 
      * @param request DeleteUserDevicesRequest
      * @return DeleteUserDevicesResponse
@@ -1915,10 +1935,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>卸载connector的应用</p>
      * 
+     * @deprecated OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.
+     * 
      * @param tmpReq DetachApplication2ConnectorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachApplication2ConnectorResponse
      */
+    @Deprecated
+    // Deprecated
     public DetachApplication2ConnectorResponse detachApplication2ConnectorWithOptions(DetachApplication2ConnectorRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DetachApplication2ConnectorShrinkRequest request = new DetachApplication2ConnectorShrinkRequest();
@@ -1957,9 +1981,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>卸载connector的应用</p>
      * 
+     * @deprecated OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.
+     * 
      * @param request DetachApplication2ConnectorRequest
      * @return DetachApplication2ConnectorResponse
      */
+    @Deprecated
+    // Deprecated
     public DetachApplication2ConnectorResponse detachApplication2Connector(DetachApplication2ConnectorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachApplication2ConnectorWithOptions(request, runtime);
@@ -2107,7 +2135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询用户设备列表</p>
+     * <p>Exports the information about user terminals in an Excel file.</p>
      * 
      * @param request ExportUserDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2200,7 +2228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询用户设备列表</p>
+     * <p>Exports the information about user terminals in an Excel file.</p>
      * 
      * @param request ExportUserDevicesRequest
      * @return ExportUserDevicesResponse
@@ -2400,7 +2428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自定义身份源指定用户</p>
+     * <p>Query a specified user from a custom identity source</p>
      * 
      * @param request GetClientUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2428,7 +2456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自定义身份源指定用户</p>
+     * <p>Query a specified user from a custom identity source</p>
      * 
      * @param request GetClientUserRequest
      * @return GetClientUserResponse
@@ -5377,12 +5405,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addressGroups)) {
+            bodyFlat.put("AddressGroups", request.addressGroups);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.addresses)) {
             bodyFlat.put("Addresses", request.addresses);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
             body.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configMode)) {
+            body.put("ConfigMode", request.configMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -5407,6 +5443,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.modifyType)) {
             body.put("ModifyType", request.modifyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.portRanges)) {
@@ -5498,6 +5538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ModifyType", request.modifyType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.policyAction)) {
             body.put("PolicyAction", request.policyAction);
         }
@@ -5540,6 +5584,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.userGroupMode)) {
             body.put("UserGroupMode", request.userGroupMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validFrom)) {
+            body.put("ValidFrom", request.validFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validTimeStatus)) {
+            body.put("ValidTimeStatus", request.validTimeStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validUntil)) {
+            body.put("ValidUntil", request.validUntil);
         }
 
         body = TeaConverter.merge(Object.class,

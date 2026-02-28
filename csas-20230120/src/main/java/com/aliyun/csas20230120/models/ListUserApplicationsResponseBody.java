@@ -98,6 +98,9 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         @NameInMap("Action")
         public String action;
 
+        @NameInMap("AddressGroups")
+        public java.util.List<AddressGroup> addressGroups;
+
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
@@ -107,6 +110,9 @@ public class ListUserApplicationsResponseBody extends TeaModel {
          */
         @NameInMap("ApplicationId")
         public String applicationId;
+
+        @NameInMap("ConfigMode")
+        public String configMode;
 
         /**
          * <strong>example:</strong>
@@ -138,6 +144,14 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             return this.action;
         }
 
+        public ListUserApplicationsResponseBodyApplications setAddressGroups(java.util.List<AddressGroup> addressGroups) {
+            this.addressGroups = addressGroups;
+            return this;
+        }
+        public java.util.List<AddressGroup> getAddressGroups() {
+            return this.addressGroups;
+        }
+
         public ListUserApplicationsResponseBodyApplications setAddresses(java.util.List<String> addresses) {
             this.addresses = addresses;
             return this;
@@ -152,6 +166,14 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         }
         public String getApplicationId() {
             return this.applicationId;
+        }
+
+        public ListUserApplicationsResponseBodyApplications setConfigMode(String configMode) {
+            this.configMode = configMode;
+            return this;
+        }
+        public String getConfigMode() {
+            return this.configMode;
         }
 
         public ListUserApplicationsResponseBodyApplications setName(String name) {

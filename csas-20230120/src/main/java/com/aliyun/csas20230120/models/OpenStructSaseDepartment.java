@@ -7,8 +7,14 @@ public class OpenStructSaseDepartment extends TeaModel {
     @NameInMap("DepartmentId")
     public String departmentId;
 
+    @NameInMap("FullDepartmentIdPath")
+    public String fullDepartmentIdPath;
+
     @NameInMap("FullDn")
     public String fullDn;
+
+    @NameInMap("IdpId")
+    public Long idpId;
 
     @NameInMap("Name")
     public String name;
@@ -29,12 +35,28 @@ public class OpenStructSaseDepartment extends TeaModel {
         return this.departmentId;
     }
 
+    public OpenStructSaseDepartment setFullDepartmentIdPath(String fullDepartmentIdPath) {
+        this.fullDepartmentIdPath = fullDepartmentIdPath;
+        return this;
+    }
+    public String getFullDepartmentIdPath() {
+        return this.fullDepartmentIdPath;
+    }
+
     public OpenStructSaseDepartment setFullDn(String fullDn) {
         this.fullDn = fullDn;
         return this;
     }
     public String getFullDn() {
         return this.fullDn;
+    }
+
+    public OpenStructSaseDepartment setIdpId(Long idpId) {
+        this.idpId = idpId;
+        return this;
+    }
+    public Long getIdpId() {
+        return this.idpId;
     }
 
     public OpenStructSaseDepartment setName(String name) {

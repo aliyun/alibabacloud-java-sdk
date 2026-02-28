@@ -76,6 +76,9 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("ModifyType")
     public String modifyType;
 
+    @NameInMap("Name")
+    public String name;
+
     /**
      * <p>Action of the private access policy. Values:</p>
      * <ul>
@@ -192,6 +195,33 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("UserGroupMode")
     public String userGroupMode;
 
+    /**
+     * <p>The start time when the zero trust policy takes effect, represented as a timestamp in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("ValidFrom")
+    public Long validFrom;
+
+    /**
+     * <p>Switch status for effective time. Values: - <strong>Enabled</strong>: On. - <strong>Disabled</strong>: Off.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
+    @NameInMap("ValidTimeStatus")
+    public String validTimeStatus;
+
+    /**
+     * <p>The expiration time of the zero trust policy, in seconds timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1764727544</p>
+     */
+    @NameInMap("ValidUntil")
+    public Long validUntil;
+
     public static UpdatePrivateAccessPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePrivateAccessPolicyRequest self = new UpdatePrivateAccessPolicyRequest();
         return TeaModel.build(map, self);
@@ -251,6 +281,14 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     }
     public String getModifyType() {
         return this.modifyType;
+    }
+
+    public UpdatePrivateAccessPolicyRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public UpdatePrivateAccessPolicyRequest setPolicyAction(String policyAction) {
@@ -339,6 +377,30 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     }
     public String getUserGroupMode() {
         return this.userGroupMode;
+    }
+
+    public UpdatePrivateAccessPolicyRequest setValidFrom(Long validFrom) {
+        this.validFrom = validFrom;
+        return this;
+    }
+    public Long getValidFrom() {
+        return this.validFrom;
+    }
+
+    public UpdatePrivateAccessPolicyRequest setValidTimeStatus(String validTimeStatus) {
+        this.validTimeStatus = validTimeStatus;
+        return this;
+    }
+    public String getValidTimeStatus() {
+        return this.validTimeStatus;
+    }
+
+    public UpdatePrivateAccessPolicyRequest setValidUntil(Long validUntil) {
+        this.validUntil = validUntil;
+        return this;
+    }
+    public Long getValidUntil() {
+        return this.validUntil;
     }
 
     public static class UpdatePrivateAccessPolicyRequestCustomUserAttributes extends TeaModel {

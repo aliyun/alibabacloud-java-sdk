@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
+    @NameInMap("AddressGroups")
+    public java.util.List<AddressGroup> addressGroups;
+
     /**
      * <p>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</p>
      */
@@ -23,6 +26,9 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
      */
     @NameInMap("ApplicationId")
     public String applicationId;
+
+    @NameInMap("ConfigMode")
+    public String configMode;
 
     /**
      * <p>The description of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
@@ -80,6 +86,9 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
     @NameInMap("ModifyType")
     public String modifyType;
 
+    @NameInMap("Name")
+    public String name;
+
     /**
      * <p>The port ranges of the office applications. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicated or overlapped.</p>
      */
@@ -127,6 +136,14 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdatePrivateAccessApplicationShrinkRequest setAddressGroups(java.util.List<AddressGroup> addressGroups) {
+        this.addressGroups = addressGroups;
+        return this;
+    }
+    public java.util.List<AddressGroup> getAddressGroups() {
+        return this.addressGroups;
+    }
+
     public UpdatePrivateAccessApplicationShrinkRequest setAddresses(java.util.List<String> addresses) {
         this.addresses = addresses;
         return this;
@@ -141,6 +158,14 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
     }
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    public UpdatePrivateAccessApplicationShrinkRequest setConfigMode(String configMode) {
+        this.configMode = configMode;
+        return this;
+    }
+    public String getConfigMode() {
+        return this.configMode;
     }
 
     public UpdatePrivateAccessApplicationShrinkRequest setDescription(String description) {
@@ -190,6 +215,14 @@ public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
     }
     public String getModifyType() {
         return this.modifyType;
+    }
+
+    public UpdatePrivateAccessApplicationShrinkRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public UpdatePrivateAccessApplicationShrinkRequest setPortRanges(java.util.List<UpdatePrivateAccessApplicationShrinkRequestPortRanges> portRanges) {

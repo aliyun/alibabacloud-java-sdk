@@ -4,22 +4,38 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class PAL7ConfigRewriteOp extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>X-Test-Param</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>old_value</p>
+     */
     @NameInMap("OldValue")
     public String oldValue;
 
     /**
      * <strong>example:</strong>
-     * <p>add,set,delete,replace</p>
+     * <p>add</p>
      */
     @NameInMap("Op")
     public String op;
 
+    /**
+     * <strong>example:</strong>
+     * <p>new_value</p>
+     */
     @NameInMap("Value")
     public String value;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sase_app_name</p>
+     */
     @NameInMap("ValueVariable")
     public String valueVariable;
 

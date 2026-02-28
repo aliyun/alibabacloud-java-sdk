@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateEnterpriseAcceleratePolicyResponseBody extends TeaModel {
+    @NameInMap("EapId")
+    public String eapId;
+
     /**
      * <strong>example:</strong>
      * <p>2CABFEBB-0CE7-575E-833A-266F75D46713</p>
@@ -14,6 +17,14 @@ public class CreateEnterpriseAcceleratePolicyResponseBody extends TeaModel {
     public static CreateEnterpriseAcceleratePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateEnterpriseAcceleratePolicyResponseBody self = new CreateEnterpriseAcceleratePolicyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateEnterpriseAcceleratePolicyResponseBody setEapId(String eapId) {
+        this.eapId = eapId;
+        return this;
+    }
+    public String getEapId() {
+        return this.eapId;
     }
 
     public CreateEnterpriseAcceleratePolicyResponseBody setRequestId(String requestId) {

@@ -83,6 +83,9 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
     }
 
     public static class GetPrivateAccessApplicationResponseBodyApplication extends TeaModel {
+        @NameInMap("AddressGroups")
+        public java.util.List<AddressGroup> addressGroups;
+
         /**
          * <p>The addresses of the office applications.</p>
          */
@@ -113,6 +116,9 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
          */
         @NameInMap("BrowserAccessStatus")
         public String browserAccessStatus;
+
+        @NameInMap("ConfigMode")
+        public String configMode;
 
         /**
          * <p>The IDs of connectors.</p>
@@ -218,6 +224,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetPrivateAccessApplicationResponseBodyApplication setAddressGroups(java.util.List<AddressGroup> addressGroups) {
+            this.addressGroups = addressGroups;
+            return this;
+        }
+        public java.util.List<AddressGroup> getAddressGroups() {
+            return this.addressGroups;
+        }
+
         public GetPrivateAccessApplicationResponseBodyApplication setAddresses(java.util.List<String> addresses) {
             this.addresses = addresses;
             return this;
@@ -248,6 +262,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         }
         public String getBrowserAccessStatus() {
             return this.browserAccessStatus;
+        }
+
+        public GetPrivateAccessApplicationResponseBodyApplication setConfigMode(String configMode) {
+            this.configMode = configMode;
+            return this;
+        }
+        public String getConfigMode() {
+            return this.configMode;
         }
 
         public GetPrivateAccessApplicationResponseBodyApplication setConnectorIds(java.util.List<String> connectorIds) {

@@ -46,6 +46,9 @@ public class OpenStructSaseUser extends TeaModel {
     @NameInMap("UpdateTimeUnix")
     public Long updateTimeUnix;
 
+    @NameInMap("UserTags")
+    public java.util.List<OpenStructSaseUserUserTags> userTags;
+
     @NameInMap("Username")
     public String username;
 
@@ -169,6 +172,14 @@ public class OpenStructSaseUser extends TeaModel {
         return this.updateTimeUnix;
     }
 
+    public OpenStructSaseUser setUserTags(java.util.List<OpenStructSaseUserUserTags> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+    public java.util.List<OpenStructSaseUserUserTags> getUserTags() {
+        return this.userTags;
+    }
+
     public OpenStructSaseUser setUsername(String username) {
         this.username = username;
         return this;
@@ -183,6 +194,69 @@ public class OpenStructSaseUser extends TeaModel {
     }
     public String getWorkStatus() {
         return this.workStatus;
+    }
+
+    public static class OpenStructSaseUserUserTags extends TeaModel {
+        @NameInMap("Aliuid")
+        public String aliuid;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("SaseUserId")
+        public String saseUserId;
+
+        @NameInMap("TagId")
+        public String tagId;
+
+        public static OpenStructSaseUserUserTags build(java.util.Map<String, ?> map) throws Exception {
+            OpenStructSaseUserUserTags self = new OpenStructSaseUserUserTags();
+            return TeaModel.build(map, self);
+        }
+
+        public OpenStructSaseUserUserTags setAliuid(String aliuid) {
+            this.aliuid = aliuid;
+            return this;
+        }
+        public String getAliuid() {
+            return this.aliuid;
+        }
+
+        public OpenStructSaseUserUserTags setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public OpenStructSaseUserUserTags setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public OpenStructSaseUserUserTags setSaseUserId(String saseUserId) {
+            this.saseUserId = saseUserId;
+            return this;
+        }
+        public String getSaseUserId() {
+            return this.saseUserId;
+        }
+
+        public OpenStructSaseUserUserTags setTagId(String tagId) {
+            this.tagId = tagId;
+            return this;
+        }
+        public String getTagId() {
+            return this.tagId;
+        }
+
     }
 
 }

@@ -4,9 +4,11 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreatePrivateAccessApplicationRequest extends TeaModel {
+    @NameInMap("AddressGroups")
+    public java.util.List<AddressGroup> addressGroups;
+
     /**
      * <p>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
@@ -23,6 +25,9 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
      */
     @NameInMap("BrowserAccessStatus")
     public String browserAccessStatus;
+
+    @NameInMap("ConfigMode")
+    public String configMode;
 
     /**
      * <p>The description of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
@@ -66,7 +71,6 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
 
     /**
      * <p>The port ranges of the office applications. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicated or overlapped.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<CreatePrivateAccessApplicationRequestPortRanges> portRanges;
@@ -111,6 +115,14 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreatePrivateAccessApplicationRequest setAddressGroups(java.util.List<AddressGroup> addressGroups) {
+        this.addressGroups = addressGroups;
+        return this;
+    }
+    public java.util.List<AddressGroup> getAddressGroups() {
+        return this.addressGroups;
+    }
+
     public CreatePrivateAccessApplicationRequest setAddresses(java.util.List<String> addresses) {
         this.addresses = addresses;
         return this;
@@ -125,6 +137,14 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     }
     public String getBrowserAccessStatus() {
         return this.browserAccessStatus;
+    }
+
+    public CreatePrivateAccessApplicationRequest setConfigMode(String configMode) {
+        this.configMode = configMode;
+        return this;
+    }
+    public String getConfigMode() {
+        return this.configMode;
     }
 
     public CreatePrivateAccessApplicationRequest setDescription(String description) {

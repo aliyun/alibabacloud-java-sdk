@@ -1,3 +1,33 @@
+2026-02-28 Version: 1.15.4
+- Update API CreateEnterpriseAcceleratePolicy: add response parameters Body.EapId.
+- Update API CreatePrivateAccessApplication: add request parameters AddressGroups.
+- Update API CreatePrivateAccessApplication: add request parameters ConfigMode.
+- Update API CreatePrivateAccessPolicy: add request parameters ValidFrom.
+- Update API CreatePrivateAccessPolicy: add request parameters ValidTimeStatus.
+- Update API CreatePrivateAccessPolicy: add request parameters ValidUntil.
+- Update API GetPrivateAccessApplication: add response parameters Body.Application.AddressGroups.
+- Update API GetPrivateAccessApplication: add response parameters Body.Application.ConfigMode.
+- Update API GetPrivateAccessPolicy: add response parameters Body.Policy.ValidFrom.
+- Update API GetPrivateAccessPolicy: add response parameters Body.Policy.ValidTimeStatus.
+- Update API GetPrivateAccessPolicy: add response parameters Body.Policy.ValidUntil.
+- Update API ListConnectors: add response parameters Body.Connectors.$.AccelerateStatus.
+- Update API ListPrivateAccessApplications: add response parameters Body.Applications.$.AddressGroups.
+- Update API ListPrivateAccessApplications: add response parameters Body.Applications.$.ConfigMode.
+- Update API ListPrivateAccessPolices: add response parameters Body.Polices.$.ValidFrom.
+- Update API ListPrivateAccessPolices: add response parameters Body.Polices.$.ValidTimeStatus.
+- Update API ListPrivateAccessPolices: add response parameters Body.Polices.$.ValidUntil.
+- Update API ListUserApplications: add request parameters Address.
+- Update API ListUserApplications: add response parameters Body.Applications.$.AddressGroups.
+- Update API ListUserApplications: add response parameters Body.Applications.$.ConfigMode.
+- Update API UpdatePrivateAccessApplication: add request parameters AddressGroups.
+- Update API UpdatePrivateAccessApplication: add request parameters ConfigMode.
+- Update API UpdatePrivateAccessApplication: add request parameters Name.
+- Update API UpdatePrivateAccessPolicy: add request parameters Name.
+- Update API UpdatePrivateAccessPolicy: add request parameters ValidFrom.
+- Update API UpdatePrivateAccessPolicy: add request parameters ValidTimeStatus.
+- Update API UpdatePrivateAccessPolicy: add request parameters ValidUntil.
+
+
 2025-09-26 Version: 1.15.1
 - Update API GetApprovalProcess: add response parameters Body.Process.AppUninstallPolicies.FieldMap.$.DisplayFieldValue.
 - Update API GetApprovalProcess: add response parameters Body.Process.DeviceRegistrationPolicies.FieldMap.$.DisplayFieldValue.

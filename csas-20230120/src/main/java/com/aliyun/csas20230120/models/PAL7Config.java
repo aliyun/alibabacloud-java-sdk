@@ -7,6 +7,10 @@ public class PAL7Config extends TeaModel {
     @NameInMap("BypassConfig")
     public PAL7ConfigBypassConfig bypassConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cert-xxxx</p>
+     */
     @NameInMap("CertId")
     public String certId;
 
@@ -18,7 +22,7 @@ public class PAL7Config extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>逗号分隔的枚举值：automatic,custom</p>
+     * <p>automatic</p>
      */
     @NameInMap("ProxyDomainTypes")
     public byte[] proxyDomainTypes;
@@ -146,6 +150,10 @@ public class PAL7Config extends TeaModel {
         @NameInMap("AppBypassFroms")
         public java.util.List<String> appBypassFroms;
 
+        /**
+         * <strong>example:</strong>
+         * <p>disabled</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
@@ -203,6 +211,10 @@ public class PAL7Config extends TeaModel {
     }
 
     public static class PAL7ConfigJsHookConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>disabled</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
@@ -290,6 +302,10 @@ public class PAL7Config extends TeaModel {
     }
 
     public static class PAL7ConfigResponseRewriteConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
         @NameInMap("Mode")
         public String mode;
 

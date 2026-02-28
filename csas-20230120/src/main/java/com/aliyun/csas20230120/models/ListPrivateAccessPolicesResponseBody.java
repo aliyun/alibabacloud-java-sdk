@@ -327,6 +327,33 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         @NameInMap("UserGroupMode")
         public String userGroupMode;
 
+        /**
+         * <p>The start time when the zero trust policy takes effect, represented as a timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("ValidFrom")
+        public Long validFrom;
+
+        /**
+         * <p>Switch status for effective time. Values: - <strong>Enabled</strong>: On. - <strong>Disabled</strong>: Off.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
+        @NameInMap("ValidTimeStatus")
+        public String validTimeStatus;
+
+        /**
+         * <p>The expiration time of the zero trust policy, in seconds timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1764727544</p>
+         */
+        @NameInMap("ValidUntil")
+        public Long validUntil;
+
         public static ListPrivateAccessPolicesResponseBodyPolices build(java.util.Map<String, ?> map) throws Exception {
             ListPrivateAccessPolicesResponseBodyPolices self = new ListPrivateAccessPolicesResponseBodyPolices();
             return TeaModel.build(map, self);
@@ -482,6 +509,30 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         }
         public String getUserGroupMode() {
             return this.userGroupMode;
+        }
+
+        public ListPrivateAccessPolicesResponseBodyPolices setValidFrom(Long validFrom) {
+            this.validFrom = validFrom;
+            return this;
+        }
+        public Long getValidFrom() {
+            return this.validFrom;
+        }
+
+        public ListPrivateAccessPolicesResponseBodyPolices setValidTimeStatus(String validTimeStatus) {
+            this.validTimeStatus = validTimeStatus;
+            return this;
+        }
+        public String getValidTimeStatus() {
+            return this.validTimeStatus;
+        }
+
+        public ListPrivateAccessPolicesResponseBodyPolices setValidUntil(Long validUntil) {
+            this.validUntil = validUntil;
+            return this;
+        }
+        public Long getValidUntil() {
+            return this.validUntil;
         }
 
     }

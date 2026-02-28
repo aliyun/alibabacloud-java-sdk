@@ -28,6 +28,9 @@ public class IdpConfig extends TeaModel {
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 
+    @NameInMap("IdpId")
+    public Long idpId;
+
     @NameInMap("LastSyncTimeUnix")
     public Long lastSyncTimeUnix;
 
@@ -36,6 +39,9 @@ public class IdpConfig extends TeaModel {
 
     @NameInMap("LoginConfig")
     public IdpLoginConfig loginConfig;
+
+    @NameInMap("LogoDirectory")
+    public String logoDirectory;
 
     @NameInMap("Name")
     public String name;
@@ -124,6 +130,14 @@ public class IdpConfig extends TeaModel {
         return this.idpConfigId;
     }
 
+    public IdpConfig setIdpId(Long idpId) {
+        this.idpId = idpId;
+        return this;
+    }
+    public Long getIdpId() {
+        return this.idpId;
+    }
+
     public IdpConfig setLastSyncTimeUnix(Long lastSyncTimeUnix) {
         this.lastSyncTimeUnix = lastSyncTimeUnix;
         return this;
@@ -146,6 +160,14 @@ public class IdpConfig extends TeaModel {
     }
     public IdpLoginConfig getLoginConfig() {
         return this.loginConfig;
+    }
+
+    public IdpConfig setLogoDirectory(String logoDirectory) {
+        this.logoDirectory = logoDirectory;
+        return this;
+    }
+    public String getLogoDirectory() {
+        return this.logoDirectory;
     }
 
     public IdpConfig setName(String name) {
