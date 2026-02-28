@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListMultiChannelRecordingsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ch-user-<strong><strong>-</strong></strong>-1772180844645-job-******</p>
+     */
+    @NameInMap("AgentChannelId")
+    public String agentChannelId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
+    @NameInMap("AgentId")
+    public String agentId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +39,22 @@ public class ListMultiChannelRecordingsRequest extends TeaModel {
     public static ListMultiChannelRecordingsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMultiChannelRecordingsRequest self = new ListMultiChannelRecordingsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListMultiChannelRecordingsRequest setAgentChannelId(String agentChannelId) {
+        this.agentChannelId = agentChannelId;
+        return this;
+    }
+    public String getAgentChannelId() {
+        return this.agentChannelId;
+    }
+
+    public ListMultiChannelRecordingsRequest setAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    public String getAgentId() {
+        return this.agentId;
     }
 
     public ListMultiChannelRecordingsRequest setContactId(String contactId) {

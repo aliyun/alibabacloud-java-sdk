@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetConversationDetailRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
+    @NameInMap("AgentId")
+    public String agentId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +32,14 @@ public class GetConversationDetailRequest extends TeaModel {
     public static GetConversationDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetConversationDetailRequest self = new GetConversationDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetConversationDetailRequest setAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    public String getAgentId() {
+        return this.agentId;
     }
 
     public GetConversationDetailRequest setContactId(String contactId) {

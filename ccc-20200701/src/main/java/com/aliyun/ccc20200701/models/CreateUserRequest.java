@@ -54,6 +54,13 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("NeedEmailNotification")
+    public String needEmailNotification;
+
     @NameInMap("Nickname")
     public String nickname;
 
@@ -146,6 +153,14 @@ public class CreateUserRequest extends TeaModel {
     }
     public String getMobile() {
         return this.mobile;
+    }
+
+    public CreateUserRequest setNeedEmailNotification(String needEmailNotification) {
+        this.needEmailNotification = needEmailNotification;
+        return this;
+    }
+    public String getNeedEmailNotification() {
+        return this.needEmailNotification;
     }
 
     public CreateUserRequest setNickname(String nickname) {

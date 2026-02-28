@@ -2191,6 +2191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建坐席</p>
+     * 
      * @param request CreateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUserResponse
@@ -2224,6 +2227,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
             query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needEmailNotification)) {
+            query.put("NeedEmailNotification", request.needEmailNotification);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nickname)) {
@@ -2264,6 +2271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建坐席</p>
+     * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
      */
@@ -3763,6 +3773,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConversationDetailResponse getConversationDetailWithOptions(GetConversationDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
             query.put("ContactId", request.contactId);
         }
@@ -5271,6 +5285,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>导入自有线路号码</p>
+     * 
      * @param request ImportCorpNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportCorpNumbersResponse
@@ -5320,6 +5337,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>导入自有线路号码</p>
+     * 
      * @param request ImportCorpNumbersRequest
      * @return ImportCorpNumbersResponse
      */
@@ -8289,6 +8309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取单轨录音</p>
+     * 
      * @param request ListMonoRecordingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListMonoRecordingsResponse
@@ -8296,6 +8319,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListMonoRecordingsResponse listMonoRecordingsWithOptions(ListMonoRecordingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentChannelId)) {
+            query.put("AgentChannelId", request.agentChannelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
             query.put("ContactId", request.contactId);
         }
@@ -8322,6 +8353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取单轨录音</p>
+     * 
      * @param request ListMonoRecordingsRequest
      * @return ListMonoRecordingsResponse
      */
@@ -8331,6 +8365,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取分轨录音</p>
+     * 
      * @param request ListMultiChannelRecordingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListMultiChannelRecordingsResponse
@@ -8338,6 +8375,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListMultiChannelRecordingsResponse listMultiChannelRecordingsWithOptions(ListMultiChannelRecordingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentChannelId)) {
+            query.put("AgentChannelId", request.agentChannelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
             query.put("ContactId", request.contactId);
         }
@@ -8364,6 +8409,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取分轨录音</p>
+     * 
      * @param request ListMultiChannelRecordingsRequest
      * @return ListMultiChannelRecordingsResponse
      */
@@ -9151,6 +9199,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>使用ListSmsMetadata获取短信配置信息。</p>
+     * 
      * @param request ListSmsMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSmsMetadataResponse
@@ -9192,6 +9243,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>使用ListSmsMetadata获取短信配置信息。</p>
+     * 
      * @param request ListSmsMetadataRequest
      * @return ListSmsMetadataResponse
      */
@@ -9635,6 +9689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询语音信箱列表</p>
+     * 
      * @param request ListVoicemailsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListVoicemailsResponse
@@ -9692,6 +9749,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询语音信箱列表</p>
+     * 
      * @param request ListVoicemailsRequest
      * @return ListVoicemailsResponse
      */
