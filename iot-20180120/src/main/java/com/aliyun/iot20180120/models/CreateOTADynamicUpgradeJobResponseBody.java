@@ -4,46 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
-    /**
-     * <p>The error message returned if the call fails.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The unique identifier of the update batch.</p>
-     */
     @NameInMap("Data")
     public CreateOTADynamicUpgradeJobResponseBodyData data;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>Indicates whether the call was successful.</p>
-     * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>9F41D14E-CB5F-4CCE-939C-057F39E688F5</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The update batch information returned if the call is successful. For more information, see Data.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,19 +65,9 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
     }
 
     public static class CreateOTADynamicUpgradeJobResponseBodyData extends TeaModel {
-        /**
-         * <p>The time when the update batch was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>XUbmsMHmkqv0PiAG****010001</p>
-         */
         @NameInMap("JobId")
         public String jobId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-05-10T02:18:53.000Z</p>
-         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 

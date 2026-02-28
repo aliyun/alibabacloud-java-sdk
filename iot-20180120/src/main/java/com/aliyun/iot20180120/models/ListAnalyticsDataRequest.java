@@ -15,31 +15,16 @@ public class ListAnalyticsDataRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot-cn-npk1u******</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>oxs_iso_id</p>
-     */
     @NameInMap("IsoId")
     public String isoId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -97,42 +82,24 @@ public class ListAnalyticsDataRequest extends TeaModel {
     }
 
     public static class ListAnalyticsDataRequestCondition extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("BetweenEnd")
         public String betweenEnd;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("BetweenStart")
         public String betweenStart;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testCode</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>=</p>
          */
         @NameInMap("Operate")
         public String operate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("Value")
         public String value;
 

@@ -4,46 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceDistributeJobResponseBody extends TeaModel {
-    /**
-     * <p>The error code that is returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The distribution tasks that are returned if the call is successful. For more information, see the <strong>JobInfo</strong> parameter.</p>
-     */
     @NameInMap("Data")
     public ListDeviceDistributeJobResponseBodyData data;
 
-    /**
-     * <p>The error message that is returned if the call fails.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,27 +65,12 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
     }
 
     public static class ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs extends TeaModel {
-        /**
-         * <p>The ID of the destination instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>iot-cn-6ja***</p>
-         */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
-        /**
-         * <p>The name of the destination instance.</p>
-         */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
-        /**
-         * <p>The region where the destination instance resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("TargetRegion")
         public String targetRegion;
 
@@ -168,119 +125,39 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
     }
 
     public static class ListDeviceDistributeJobResponseBodyDataJobInfoItems extends TeaModel {
-        /**
-         * <p>The time when the task was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1581595942000</p>
-         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        /**
-         * <p>The ID of the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>UbmsMHmkqv0PiAG****010001</p>
-         */
         @NameInMap("JobId")
         public String jobId;
 
-        /**
-         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a1BwAGV****</p>
-         */
         @NameInMap("ProductKey")
         public String productKey;
 
-        /**
-         * <p>The ID of the source instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>iot-cn-6ja***</p>
-         */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
-        /**
-         * <p>The name of the source instance.</p>
-         */
         @NameInMap("SourceInstanceName")
         public String sourceInstanceName;
 
-        /**
-         * <p>The region where the source instance resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("SourceRegion")
         public String sourceRegion;
 
-        /**
-         * <p>The ID of the source Alibaba Cloud account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>198***</p>
-         */
         @NameInMap("SourceUid")
         public String sourceUid;
 
-        /**
-         * <p>The status of the task.</p>
-         * <ul>
-         * <li><strong>0</strong>: The task is being initialized.</li>
-         * <li><strong>1</strong>: The task is running.</li>
-         * <li><strong>2</strong>: The task is completed. The status indicates that the distribution task is complete but does not indicate that all products and devices are distributed. To obtain distribution results, call the <a href="https://help.aliyun.com/document_detail/199533.html">QueryDeviceDistributeDetail</a> operation.</li>
-         * <li><strong>3</strong>: The task is unexpectedly interrupted.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The distribution policy.</p>
-         * <ul>
-         * <li><strong>0</strong>: distributes devices to specified instances in a specified region. This is the default value.</li>
-         * <li><strong>1</strong>: configures instance IDs in multiple regions and distributes devices to the nearest regions based on the IP addresses of the devices.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Strategy")
         public Integer strategy;
 
-        /**
-         * <p>The IDs of the destination instances.</p>
-         * <ul>
-         * <li>If the value of the <strong>Strategy</strong> parameter is <strong>1</strong>, multiple instance IDs exist.</li>
-         * <li>If the value of the <strong>Strategy</strong> parameter is <strong>0</strong>, only one instance ID exists.</li>
-         * </ul>
-         */
         @NameInMap("TargetInstanceConfigs")
         public ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigs targetInstanceConfigs;
 
-        /**
-         * <p>The ID of the destination Alibaba Cloud account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>198***</p>
-         */
         @NameInMap("TargetUid")
         public String targetUid;
 
-        /**
-         * <p>The total number of devices in the distribution task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("Total")
         public Integer total;
 
@@ -407,28 +284,12 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
     }
 
     public static class ListDeviceDistributeJobResponseBodyData extends TeaModel {
-        /**
-         * <p>The information about the task.</p>
-         */
         @NameInMap("JobInfo")
         public ListDeviceDistributeJobResponseBodyDataJobInfo jobInfo;
 
-        /**
-         * <p>The token that is used to retrieve the subsequent pages of the query results. The value of this parameter can be used in the next query to obtain the subsequent pages of results. </p>
-         * <p>If the return value is empty, no subsequent page exists.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TGlzdFJlc291***</p>
-         */
         @NameInMap("NextToken")
         public String nextToken;
 
-        /**
-         * <p>The total number of device distribution tasks.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Total")
         public Integer total;
 

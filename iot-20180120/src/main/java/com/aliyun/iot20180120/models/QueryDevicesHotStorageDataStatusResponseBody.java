@@ -4,10 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicesHotStorageDataStatusResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
@@ -17,17 +13,9 @@ public class QueryDevicesHotStorageDataStatusResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -77,24 +65,12 @@ public class QueryDevicesHotStorageDataStatusResponseBody extends TeaModel {
     }
 
     public static class QueryDevicesHotStorageDataStatusResponseBodyDataListPropertyStatusDataInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Temperture</p>
-         */
         @NameInMap("Identifier")
         public String identifier;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1517553572362</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <strong>example:</strong>
-         * <p>22</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -152,17 +128,9 @@ public class QueryDevicesHotStorageDataStatusResponseBody extends TeaModel {
         @NameInMap("List")
         public QueryDevicesHotStorageDataStatusResponseBodyDataList list;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Bo***x44Qx</p>
-         */
         @NameInMap("NextPageToken")
         public String nextPageToken;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("NextValid")
         public Boolean nextValid;
 

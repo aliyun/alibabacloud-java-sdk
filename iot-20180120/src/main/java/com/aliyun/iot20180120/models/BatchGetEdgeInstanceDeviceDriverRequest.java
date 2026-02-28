@@ -6,26 +6,16 @@ import com.aliyun.tea.*;
 public class BatchGetEdgeInstanceDeviceDriverRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6GaTtvTj7vJhiS******</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Hathoyxglj9jpYPyw3WN******</p>
      */
     @NameInMap("IotIds")
     public java.util.List<String> iotIds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot_instc_pu****_c*-v64********</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

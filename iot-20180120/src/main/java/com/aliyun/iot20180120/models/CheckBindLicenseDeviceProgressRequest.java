@@ -6,34 +6,21 @@ import com.aliyun.tea.*;
 public class CheckBindLicenseDeviceProgressRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>23****</p>
      */
     @NameInMap("CheckProgressId")
     public String checkProgressId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot-2ws****</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>720P</p>
      */
     @NameInMap("LicenseCode")
     public String licenseCode;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>uhf5****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;

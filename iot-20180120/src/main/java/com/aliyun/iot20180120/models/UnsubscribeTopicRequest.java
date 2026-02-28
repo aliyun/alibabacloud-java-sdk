@@ -6,25 +6,15 @@ import com.aliyun.tea.*;
 public class UnsubscribeTopicRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>device1</p>
      */
     @NameInMap("DeviceName")
     public String deviceName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot-cn-n6w1y59****</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>a1BwAGV****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;

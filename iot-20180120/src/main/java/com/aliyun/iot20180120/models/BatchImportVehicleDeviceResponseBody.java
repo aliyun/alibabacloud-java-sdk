@@ -4,10 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchImportVehicleDeviceResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
@@ -17,17 +13,9 @@ public class BatchImportVehicleDeviceResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -273,10 +261,6 @@ public class BatchImportVehicleDeviceResponseBody extends TeaModel {
     }
 
     public static class BatchImportVehicleDeviceResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1295006</p>
-         */
         @NameInMap("ApplyId")
         public Long applyId;
 

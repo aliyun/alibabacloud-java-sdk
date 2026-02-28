@@ -4,46 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceFileResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The file information returned if the call succeeds.</p>
-     */
     @NameInMap("Data")
     public QueryDeviceFileResponseBodyData data;
 
-    /**
-     * <p>The error message returned if the call fails.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful.</p>
-     * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,45 +65,18 @@ public class QueryDeviceFileResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceFileResponseBodyData extends TeaModel {
-        /**
-         * <p>The download URL of the file.</p>
-         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
-        /**
-         * <p>The ID of the file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6UCo1SqbqnQEoh9aKqDQ01****</p>
-         */
         @NameInMap("FileId")
         public String fileId;
 
-        /**
-         * <p>The name of the file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testFile3.txt</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The size of the file. Unit: KB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>102400</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>The time when the file was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-03-21T08:45:42.000Z</p>
-         */
         @NameInMap("UtcCreatedOn")
         public String utcCreatedOn;
 

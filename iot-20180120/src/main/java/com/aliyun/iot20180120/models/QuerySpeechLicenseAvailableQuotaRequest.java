@@ -4,10 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySpeechLicenseAvailableQuotaRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>iot-2w****</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

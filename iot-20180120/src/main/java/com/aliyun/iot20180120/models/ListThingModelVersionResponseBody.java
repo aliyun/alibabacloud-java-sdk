@@ -4,46 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListThingModelVersionResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The data returned if the call is successful.</p>
-     */
     @NameInMap("Data")
     public ListThingModelVersionResponseBodyData data;
 
-    /**
-     * <p>The error message returned if the call fails.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful.</p>
-     * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,27 +65,12 @@ public class ListThingModelVersionResponseBody extends TeaModel {
     }
 
     public static class ListThingModelVersionResponseBodyDataModelVersions extends TeaModel {
-        /**
-         * <p>The description of the TSL model version.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The timestamp when the TSL model version was published. The time is displayed in UTC. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1579235657535</p>
-         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        /**
-         * <p>The version number of the TSL model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>V1.0.0</p>
-         */
         @NameInMap("ModelVersion")
         public String modelVersion;
 
@@ -149,9 +106,6 @@ public class ListThingModelVersionResponseBody extends TeaModel {
     }
 
     public static class ListThingModelVersionResponseBodyData extends TeaModel {
-        /**
-         * <p>The list of TSL model versions. The versions are displayed in descending order based on the release time. The first version is the current version.</p>
-         */
         @NameInMap("ModelVersions")
         public java.util.List<ListThingModelVersionResponseBodyDataModelVersions> modelVersions;
 

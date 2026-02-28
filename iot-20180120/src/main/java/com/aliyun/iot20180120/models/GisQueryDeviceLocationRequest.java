@@ -4,10 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GisQueryDeviceLocationRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>iot-a****13l</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -39,17 +35,9 @@ public class GisQueryDeviceLocationRequest extends TeaModel {
     }
 
     public static class GisQueryDeviceLocationRequestThingList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>mock_device_name</p>
-         */
         @NameInMap("DeviceName")
         public String deviceName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>g3r****Vjta</p>
-         */
         @NameInMap("ProductKey")
         public String productKey;
 

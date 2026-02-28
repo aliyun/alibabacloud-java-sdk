@@ -4,70 +4,24 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicePropertiesDataResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The error message returned if the call fails.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The start time to query on the next page.</p>
-     * <p>You can use the value of the <strong>NextTime</strong> parameter as the value of the <strong>StartTime</strong> parameter when you query the next page of results.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1579249499000</p>
-     */
     @NameInMap("NextTime")
     public Long nextTime;
 
-    /**
-     * <p>Indicates whether the next page exists.</p>
-     * <ul>
-     * <li><strong>true</strong>: The next page exists.</li>
-     * <li><strong>false</strong>: The next page does not exist.</li>
-     * </ul>
-     * <p>If the return value of the <strong>NextValid</strong> parameter is <strong>true</strong>, you can use the value of the <strong>NextTime</strong> parameter as the value of the <strong>StartTime</strong> parameter when you query the next page of results.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("NextValid")
     public Boolean nextValid;
 
-    /**
-     * <p>The list of property records returned if the call is successful. For more information, see <strong>PropertyDataInfo</strong>.</p>
-     */
     @NameInMap("PropertyDataInfos")
     public QueryDevicePropertiesDataResponseBodyPropertyDataInfos propertyDataInfos;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful. </p>
-     * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -133,21 +87,9 @@ public class QueryDevicePropertiesDataResponseBody extends TeaModel {
     }
 
     public static class QueryDevicePropertiesDataResponseBodyPropertyDataInfosPropertyDataInfoListPropertyInfo extends TeaModel {
-        /**
-         * <p>The time when the property was submitted. The value is a timestamp in milliseconds, such as 1579249499000.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1579249499000</p>
-         */
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <p>The value of the property.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>21.3</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -194,18 +136,9 @@ public class QueryDevicePropertiesDataResponseBody extends TeaModel {
     }
 
     public static class QueryDevicePropertiesDataResponseBodyPropertyDataInfosPropertyDataInfo extends TeaModel {
-        /**
-         * <p>The identifier of the property.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>temperature</p>
-         */
         @NameInMap("Identifier")
         public String identifier;
 
-        /**
-         * <p>The list of property records.</p>
-         */
         @NameInMap("List")
         public QueryDevicePropertiesDataResponseBodyPropertyDataInfosPropertyDataInfoList list;
 

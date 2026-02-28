@@ -11,20 +11,13 @@ public class BatchCheckVehicleDeviceRequest extends TeaModel {
     public java.util.List<BatchCheckVehicleDeviceRequestDeviceList> deviceList;
 
     /**
-     * <p>BatchCheckVehicleDevice</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot-1n8t****</p>
      */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>a1Bw****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;

@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class CreateEdgeInstanceChannelRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>le_name0</p>
      */
     @NameInMap("ChannelName")
     public String channelName;
@@ -21,26 +18,16 @@ public class CreateEdgeInstanceChannelRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>9c1ae7bd59f1469abbdccc9592******</p>
      */
     @NameInMap("DriverId")
     public String driverId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6GaTtvTj7vJhiS******</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot_instc_pu****_c*-v64********</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -92,26 +79,16 @@ public class CreateEdgeInstanceChannelRequest extends TeaModel {
     public static class CreateEdgeInstanceChannelRequestConfigs extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;protocol&quot;:&quot;TCP&quot;, &quot;ip&quot;:&quot;1.2.3.4&quot;, &quot;port&quot;:1}</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>JSON</p>
          */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <strong>example:</strong>
-         * <p>key1</p>
-         */
         @NameInMap("Key")
         public String key;
 

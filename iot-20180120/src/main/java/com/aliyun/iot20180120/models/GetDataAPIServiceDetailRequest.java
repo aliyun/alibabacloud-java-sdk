@@ -6,17 +6,10 @@ import com.aliyun.tea.*;
 public class GetDataAPIServiceDetailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>acs:iot:<em>:127103983461</em>***:serveapi/device/getDeviceCountByStatus2</p>
      */
     @NameInMap("ApiSrn")
     public String apiSrn;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot_instc_pu****_c*-v64********</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

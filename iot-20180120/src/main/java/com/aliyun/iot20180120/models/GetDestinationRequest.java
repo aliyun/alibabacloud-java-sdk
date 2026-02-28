@@ -6,17 +6,10 @@ import com.aliyun.tea.*;
 public class GetDestinationRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1004</p>
      */
     @NameInMap("DestinationId")
     public Long destinationId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot-2w****</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

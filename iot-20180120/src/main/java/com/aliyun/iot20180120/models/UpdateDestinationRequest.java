@@ -15,34 +15,21 @@ public class UpdateDestinationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1002</p>
      */
     @NameInMap("DestinationId")
     public Long destinationId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot-2w****</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>DataPurpose</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>REPUBLISH</p>
      */
     @NameInMap("Type")
     public String type;

@@ -10,10 +10,6 @@ public class ImportDTDataRequest extends TeaModel {
     @NameInMap("DTInstanceId")
     public String DTInstanceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot-****001</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -25,9 +21,6 @@ public class ImportDTDataRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>dgb9****</p>
      */
     @NameInMap("ProductKey")
     public String productKey;
@@ -72,18 +65,12 @@ public class ImportDTDataRequest extends TeaModel {
     public static class ImportDTDataRequestItems extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Device1</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;key1&quot;:12,&quot;key2&quot;:56}</p>
          */
         @NameInMap("Params")
         public String params;

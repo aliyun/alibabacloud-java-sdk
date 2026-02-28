@@ -4,37 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceGroupByTagsRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return. Default value: 1.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The ID of the instance. You can view the instance <strong>ID</strong> on the <strong>Overview</strong> page in the IoT Platform console.</p>
-     * <blockquote>
-     * <ul>
-     * <li>If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.</li>
-     * <li>If your instance has no <strong>Overview</strong> page or ID, you do not need to set this parameter.</li>
-     * </ul>
-     * </blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/356505.html">Overview</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot_instc_pu****_c*-v64********</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -80,21 +55,13 @@ public class QueryDeviceGroupByTagsRequest extends TeaModel {
 
     public static class QueryDeviceGroupByTagsRequestTag extends TeaModel {
         /**
-         * <p>The key of each tag.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>group</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tag</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

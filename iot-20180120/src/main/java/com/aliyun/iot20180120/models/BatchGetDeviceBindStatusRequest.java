@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class BatchGetDeviceBindStatusRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sjI0Sd124XFYyjBYMiYO******</p>
      */
     @NameInMap("IotIds")
     public java.util.List<String> iotIds;

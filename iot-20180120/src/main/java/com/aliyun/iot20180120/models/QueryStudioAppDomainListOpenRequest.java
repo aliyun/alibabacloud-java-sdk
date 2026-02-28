@@ -6,25 +6,15 @@ import com.aliyun.tea.*;
 public class QueryStudioAppDomainListOpenRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>a12******</p>
      */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot_instc_pu****_c*-v64********</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>a12******</p>
      */
     @NameInMap("ProjectId")
     public String projectId;

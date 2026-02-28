@@ -4,46 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceEventDataResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The event records returned if the call succeeds.</p>
-     */
     @NameInMap("Data")
     public QueryDeviceEventDataResponseBodyData data;
 
-    /**
-     * <p>The error message returned if the call fails.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful.</p>
-     * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,50 +65,18 @@ public class QueryDeviceEventDataResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceEventDataResponseBodyDataListEventInfo extends TeaModel {
-        /**
-         * <p>The type of the event. Valid values:</p>
-         * <ul>
-         * <li><strong>info</strong>: information.</li>
-         * <li><strong>alert</strong>: alert.</li>
-         * <li><strong>error</strong>: error.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>info</p>
-         */
         @NameInMap("EventType")
         public String eventType;
 
-        /**
-         * <p>The identifier of the event.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PowerOff</p>
-         */
         @NameInMap("Identifier")
         public String identifier;
 
-        /**
-         * <p>The name of the event.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The output parameter of the event. The value is a string in the MAP format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;structArgs&quot;:{&quot;structchildFLOATf71c20e&quot;:1.23}}</p>
-         */
         @NameInMap("OutputData")
         public String outputData;
 
-        /**
-         * <p>The time when the event occurred. The value is a timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1579163099000</p>
-         */
         @NameInMap("Time")
         public String time;
 
@@ -207,35 +147,12 @@ public class QueryDeviceEventDataResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceEventDataResponseBodyData extends TeaModel {
-        /**
-         * <p>The array of events. Each element represents an event.</p>
-         */
         @NameInMap("List")
         public QueryDeviceEventDataResponseBodyDataList list;
 
-        /**
-         * <p>The start time of the event records on the next page. The value is a timestamp in milliseconds.  </p>
-         * <ul>
-         * <li>If the <strong>Asc</strong> parameter is set to 0, you can specify this value for the <strong>EndTime</strong> parameter when you call this operation again to query the next page of event records.</li>
-         * <li>If the <strong>Asc</strong> parameter is set to 1, you can specify this value for the <strong>StartTime</strong> parameter when you call this operation again to query the next page of event records.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1579163099000</p>
-         */
         @NameInMap("NextTime")
         public Long nextTime;
 
-        /**
-         * <p>Indicates whether the next page exists.</p>
-         * <ul>
-         * <li><strong>true</strong>: The next page exists. The value of the <strong>NextTime</strong> parameter is returned. For more information, see the description of the <strong>NextTime</strong> parameter in this topic.</li>
-         * <li><strong>false</strong>: The next page does not exist.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("NextValid")
         public Boolean nextValid;
 

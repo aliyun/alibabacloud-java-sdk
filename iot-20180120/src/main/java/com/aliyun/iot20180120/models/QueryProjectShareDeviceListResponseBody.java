@@ -4,49 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryProjectShareDeviceListResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The result of the request.</p>
-     */
     @NameInMap("Data")
     public QueryProjectShareDeviceListResponseBodyData data;
 
-    /**
-     * <p>The error message returned if the request fails.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>An internal error occurred. Try again later.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>671D0F8F-FDC7-4B12-93FA-336C079C965A</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,43 +65,15 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
     }
 
     public static class QueryProjectShareDeviceListResponseBodyDataDeviceListItems extends TeaModel {
-        /**
-         * <p>The DeviceName of the device.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DeviceName")
         public String deviceName;
 
-        /**
-         * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Q7uOhVRdZRRlDnTLv****00100</p>
-         */
         @NameInMap("IotId")
         public String iotId;
 
-        /**
-         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a1BwAGV****</p>
-         */
         @NameInMap("ProductKey")
         public String productKey;
 
-        /**
-         * <p>Indicates whether the project was shared to the device.</p>
-         * <ul>
-         * <li><strong>1</strong>: The project was shared.</li>
-         * <li><strong>0</strong>: The project failed to be shared.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Sharable")
         public Long sharable;
 
@@ -195,36 +136,15 @@ public class QueryProjectShareDeviceListResponseBody extends TeaModel {
     }
 
     public static class QueryProjectShareDeviceListResponseBodyData extends TeaModel {
-        /**
-         * <p>The information about devices that you queried.</p>
-         */
         @NameInMap("DeviceList")
         public QueryProjectShareDeviceListResponseBodyDataDeviceList deviceList;
 
-        /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PageId")
         public Integer pageId;
 
-        /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Total")
         public Integer total;
 

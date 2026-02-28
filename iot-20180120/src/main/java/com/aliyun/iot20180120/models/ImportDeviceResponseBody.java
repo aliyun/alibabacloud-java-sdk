@@ -4,49 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ImportDeviceResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The device information returned if the request is successful.</p>
-     */
     @NameInMap("Data")
     public ImportDeviceResponseBodyData data;
 
-    /**
-     * <p>The error message returned if the request fails.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>A system exception occurred.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful.</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,72 +65,21 @@ public class ImportDeviceResponseBody extends TeaModel {
     }
 
     public static class ImportDeviceResponseBodyData extends TeaModel {
-        /**
-         * <p>The DeviceName of the device.</p>
-         * <blockquote>
-         * <p> Keep the information confidential.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>light</p>
-         */
         @NameInMap("DeviceName")
         public String deviceName;
 
-        /**
-         * <p>The DeviceSecret of the device.</p>
-         * <blockquote>
-         * <p> Keep the information confidential.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>b4d43f7******10ba5e5</p>
-         */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
-        /**
-         * <p>The ID of the device. The ID is a unique identifier that is issued by IoT Platform to the device.</p>
-         * <blockquote>
-         * <p> Keep the information confidential.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1O4YPNtRqB2anumz2Canp4GB7*****</p>
-         */
         @NameInMap("IotId")
         public String iotId;
 
-        /**
-         * <p>The alias of the device.</p>
-         * <blockquote>
-         * <p>If you did not specify an alias for the device, the response parameter is empty.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Campus light</p>
-         */
         @NameInMap("Nickname")
         public String nickname;
 
-        /**
-         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a1BwAGV****</p>
-         */
         @NameInMap("ProductKey")
         public String productKey;
 
-        /**
-         * <p>The SN of the device.</p>
-         * <blockquote>
-         * <p>If you did not specify an SN for the device, the response parameter is empty.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>QC4******001</p>
-         */
         @NameInMap("Sn")
         public String sn;
 

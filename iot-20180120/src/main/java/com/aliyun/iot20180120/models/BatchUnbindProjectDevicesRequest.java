@@ -10,18 +10,11 @@ public class BatchUnbindProjectDevicesRequest extends TeaModel {
     @NameInMap("Devices")
     public java.util.List<BatchUnbindProjectDevicesRequestDevices> devices;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot_instc_pu****_c*-v64********</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>a12******</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
@@ -58,18 +51,12 @@ public class BatchUnbindProjectDevicesRequest extends TeaModel {
     public static class BatchUnbindProjectDevicesRequestDevices extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Ee2******</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a1BwAGV****</p>
          */
         @NameInMap("ProductKey")
         public String productKey;

@@ -4,46 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceGroupResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The group information returned if the call succeeds.</p>
-     */
     @NameInMap("Data")
     public CreateDeviceGroupResponseBodyData data;
 
-    /**
-     * <p>The error message returned if the call fails.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4D6D7F71-1C94-4160-8511-EFF4B8F0634D</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful.</p>
-     * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,39 +65,15 @@ public class CreateDeviceGroupResponseBody extends TeaModel {
     }
 
     public static class CreateDeviceGroupResponseBodyData extends TeaModel {
-        /**
-         * <p>The description of each group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Group test</p>
-         */
         @NameInMap("GroupDesc")
         public String groupDesc;
 
-        /**
-         * <p>The ID of the group. The ID is the globally unique identifier (GUID) that the system generates for the group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HtMLECKbdJQL****</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>grouptest</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The time when the group was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-10-17T11:19:31.000Z</p>
-         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 

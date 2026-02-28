@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class UpdateParserDataSourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1001</p>
      */
     @NameInMap("DataSourceId")
     public Long dataSourceId;
@@ -16,18 +13,11 @@ public class UpdateParserDataSourceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot-2w****</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>DataSource</p>
      */
     @NameInMap("Name")
     public String name;

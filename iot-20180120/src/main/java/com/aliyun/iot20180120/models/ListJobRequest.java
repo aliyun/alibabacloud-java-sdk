@@ -6,33 +6,19 @@ import com.aliyun.tea.*;
 public class ListJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot-cn-0pp1n8t****</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>IN_PROGRESS</p>
-     */
     @NameInMap("Status")
     public String status;
 

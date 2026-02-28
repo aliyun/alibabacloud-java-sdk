@@ -4,45 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceHistoricDeploymentResponseBody extends TeaModel {
-    /**
-     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The data that is returned if the call was successful.</p>
-     */
     @NameInMap("Data")
     public QueryEdgeInstanceHistoricDeploymentResponseBodyData data;
 
-    /**
-     * <p>The error message that is returned if the call failed.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>request parameter error</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>C9D9C91B-1B3B-4D84-BE58-68E7B2A989E4</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -92,103 +65,33 @@ public class QueryEdgeInstanceHistoricDeploymentResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceHistoricDeploymentResponseBodyDataDeploymentList extends TeaModel {
-        /**
-         * <p>The ID of the deployment task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>e4803e566b424fa68e7f4b1c747c****</p>
-         */
         @NameInMap("DeploymentId")
         public String deploymentId;
 
-        /**
-         * <p>The description of the deployment task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>deploy_1561694817061</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The time when the deployment task was complete.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-06-28 12:07:16</p>
-         */
         @NameInMap("GmtCompleted")
         public String gmtCompleted;
 
-        /**
-         * <p>The UNIX timestamp when the deployment task was complete.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1581912859713</p>
-         */
         @NameInMap("GmtCompletedTimestamp")
         public Long gmtCompletedTimestamp;
 
-        /**
-         * <p>The time when the deployment task was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-06-26 18:12:29</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <p>The UNIX timestamp when the deployment task was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1581912859713</p>
-         */
         @NameInMap("GmtCreateTimestamp")
         public Long gmtCreateTimestamp;
 
-        /**
-         * <p>The last time when the deployment task was modified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-06-28 12:07:16</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The last UNIX timestamp when the deployment task was modified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1581912859713</p>
-         */
         @NameInMap("GmtModifiedTimestamp")
         public Long gmtModifiedTimestamp;
 
-        /**
-         * <p>The status of the deployment task.</p>
-         * <ul>
-         * <li>0: The task was not started.</li>
-         * <li>1: The task was being processed.</li>
-         * <li>2: The task was successful.</li>
-         * <li>3: The task failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The type of the deployment task.</p>
-         * <ul>
-         * <li>deploy: deploys the edge instance.</li>
-         * <li>reset: resets the edge instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>deploy</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -280,36 +183,15 @@ public class QueryEdgeInstanceHistoricDeploymentResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceHistoricDeploymentResponseBodyData extends TeaModel {
-        /**
-         * <p>The page number of the returned page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The list of deployment tasks.</p>
-         */
         @NameInMap("DeploymentList")
         public java.util.List<QueryEdgeInstanceHistoricDeploymentResponseBodyDataDeploymentList> deploymentList;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of deployment tasks.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("Total")
         public Integer total;
 

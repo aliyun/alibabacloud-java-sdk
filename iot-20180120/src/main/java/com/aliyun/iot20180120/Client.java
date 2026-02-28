@@ -478,16 +478,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common request parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchAddDeviceGroupRelationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchAddDeviceGroupRelationsResponse
@@ -525,16 +515,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common request parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchAddDeviceGroupRelationsRequest
      * @return BatchAddDeviceGroupRelationsResponse
      */
@@ -544,23 +524,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can attach up to 10 sub-devices to a gateway in a single call.</p>
-     * <ul>
-     * <li>The API operation caller must be the gateway owner.</li>
-     * <li>If you specify a sub-device that is already attached to a gateway, the original gateway is replaced with the specified gateway.</li>
-     * <li>If one of the specified sub-devices fails to establish a topological relationship with the gateway, the system rolls back, and all specified sub-devices fail to establish topological relationships with the gateway.</li>
-     * <li>After you call this operation to establish topological relationships between sub-devices and the gateway, IoT Platform uses the <code>/sys/${productKey}/${deviceName}/thing/topo/change</code> topic to push information that includes the result of this operation to the gateway. For more information, see <a href="https://help.aliyun.com/document_detail/89299.html">Notify gateways of changes of topological relationships</a>.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per Alibaba Cloud account. </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Establishes multiple topological relationships at a time.</p>
-     * 
      * @param request BatchAddThingTopoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchAddThingTopoResponse
@@ -602,23 +565,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can attach up to 10 sub-devices to a gateway in a single call.</p>
-     * <ul>
-     * <li>The API operation caller must be the gateway owner.</li>
-     * <li>If you specify a sub-device that is already attached to a gateway, the original gateway is replaced with the specified gateway.</li>
-     * <li>If one of the specified sub-devices fails to establish a topological relationship with the gateway, the system rolls back, and all specified sub-devices fail to establish topological relationships with the gateway.</li>
-     * <li>After you call this operation to establish topological relationships between sub-devices and the gateway, IoT Platform uses the <code>/sys/${productKey}/${deviceName}/thing/topo/change</code> topic to push information that includes the result of this operation to the gateway. For more information, see <a href="https://help.aliyun.com/document_detail/89299.html">Notify gateways of changes of topological relationships</a>.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per Alibaba Cloud account. </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Establishes multiple topological relationships at a time.</p>
-     * 
      * @param request BatchAddThingTopoRequest
      * @return BatchAddThingTopoResponse
      */
@@ -628,16 +574,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/30561.html">Common parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchBindDeviceToEdgeInstanceWithDriverRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchBindDeviceToEdgeInstanceWithDriverResponse
@@ -679,16 +615,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/30561.html">Common parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchBindDeviceToEdgeInstanceWithDriverRequest
      * @return BatchBindDeviceToEdgeInstanceWithDriverResponse
      */
@@ -790,23 +716,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation with the <strong>BatchRegisterDeviceWithApplyId</strong> operation to register multiple devices under a product. Each device carries a unique DeviceName.
-     * Procedure:
-     * 1\. Call this operation to specify the DeviceNames of the devices to be registered. IoT Platform returns an application ID (<strong>ApplyId</strong>). A successful response indicates that the request to verify the DeviceNames is submitted. The actual registration process is asynchronously implemented and takes some minutes.
-     * 2\. Call the <a href="https://help.aliyun.com/document_detail/69483.html">QueryBatchRegisterDeviceStatus</a> operation to query the name setting result.
-     * 3\. Call the <a href="https://help.aliyun.com/document_detail/69514.html">BatchRegisterDeviceWithApplyId</a> operation to register multiple devices.
-     * 4\. Optional. Call the <a href="https://help.aliyun.com/document_detail/69483.html">QueryBatchRegisterDeviceStatus</a> operation to view the registration result.
-     * 5\. Call the <a href="https://help.aliyun.com/document_detail/69518.html">QueryPageByApplyId</a> operation to query the information about the registered devices.</p>
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can specify a maximum of 10,000 DeviceNames in a single call.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).  &gt;  RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates multiple custom DeviceNames under a specified product. IoT Platform checks the validity of these DeviceNames.</p>
-     * 
      * @param request BatchCheckDeviceNamesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchCheckDeviceNamesResponse
@@ -850,23 +759,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation with the <strong>BatchRegisterDeviceWithApplyId</strong> operation to register multiple devices under a product. Each device carries a unique DeviceName.
-     * Procedure:
-     * 1\. Call this operation to specify the DeviceNames of the devices to be registered. IoT Platform returns an application ID (<strong>ApplyId</strong>). A successful response indicates that the request to verify the DeviceNames is submitted. The actual registration process is asynchronously implemented and takes some minutes.
-     * 2\. Call the <a href="https://help.aliyun.com/document_detail/69483.html">QueryBatchRegisterDeviceStatus</a> operation to query the name setting result.
-     * 3\. Call the <a href="https://help.aliyun.com/document_detail/69514.html">BatchRegisterDeviceWithApplyId</a> operation to register multiple devices.
-     * 4\. Optional. Call the <a href="https://help.aliyun.com/document_detail/69483.html">QueryBatchRegisterDeviceStatus</a> operation to view the registration result.
-     * 5\. Call the <a href="https://help.aliyun.com/document_detail/69518.html">QueryPageByApplyId</a> operation to query the information about the registered devices.</p>
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can specify a maximum of 10,000 DeviceNames in a single call.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).  &gt;  RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates multiple custom DeviceNames under a specified product. IoT Platform checks the validity of these DeviceNames.</p>
-     * 
      * @param request BatchCheckDeviceNamesRequest
      * @return BatchCheckDeviceNamesResponse
      */
@@ -876,16 +768,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Verifies multiple devices that are added at the same time.</p>
-     * 
      * @param request BatchCheckImportDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchCheckImportDeviceResponse
@@ -925,16 +807,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Verifies multiple devices that are added at the same time.</p>
-     * 
      * @param request BatchCheckImportDeviceRequest
      * @return BatchCheckImportDeviceResponse
      */
@@ -944,12 +816,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The invalid device models returned if the call fails.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>The invalid device IDs returned if the call fails.</p>
-     * 
      * @param request BatchCheckVehicleDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchCheckVehicleDeviceResponse
@@ -989,12 +855,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The invalid device models returned if the call fails.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>The invalid device IDs returned if the call fails.</p>
-     * 
      * @param request BatchCheckVehicleDeviceRequest
      * @return BatchCheckVehicleDeviceResponse
      */
@@ -1004,13 +864,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchClearEdgeInstanceDeviceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchClearEdgeInstanceDeviceConfigResponse
@@ -1048,13 +901,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchClearEdgeInstanceDeviceConfigRequest
      * @return BatchClearEdgeInstanceDeviceConfigResponse
      */
@@ -1164,13 +1010,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchDeleteDeviceGroupRelationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchDeleteDeviceGroupRelationsResponse
@@ -1208,13 +1047,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchDeleteDeviceGroupRelationsRequest
      * @return BatchDeleteDeviceGroupRelationsResponse
      */
@@ -1316,24 +1148,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When you call this operation, you can perform the following operations:</p>
-     * <ul>
-     * <li>You can specify a value for the <strong>ProductKey</strong> parameter and multiple values for the <strong>DeviceName</strong> parameter to query the status of devices that belong to a product.</li>
-     * <li>You can specify multiple values for the <strong>IotId</strong> parameter to query the status of devices that belong to different products.****<blockquote>
-     * <p>You can query the status of up to 50 devices in a call.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the status of multiple devices at a time.</p>
-     * 
      * @param request BatchGetDeviceStateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchGetDeviceStateResponse
@@ -1375,24 +1189,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When you call this operation, you can perform the following operations:</p>
-     * <ul>
-     * <li>You can specify a value for the <strong>ProductKey</strong> parameter and multiple values for the <strong>DeviceName</strong> parameter to query the status of devices that belong to a product.</li>
-     * <li>You can specify multiple values for the <strong>IotId</strong> parameter to query the status of devices that belong to different products.****<blockquote>
-     * <p>You can query the status of up to 50 devices in a call.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the status of multiple devices at a time.</p>
-     * 
      * @param request BatchGetDeviceStateRequest
      * @return BatchGetDeviceStateResponse
      */
@@ -1402,13 +1198,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>A single Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request BatchGetEdgeDriverRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchGetEdgeDriverResponse
@@ -1442,13 +1231,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>A single Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request BatchGetEdgeDriverRequest
      * @return BatchGetEdgeDriverResponse
      */
@@ -1558,13 +1340,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchGetEdgeInstanceDeviceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchGetEdgeInstanceDeviceConfigResponse
@@ -1602,13 +1377,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchGetEdgeInstanceDeviceConfigRequest
      * @return BatchGetEdgeInstanceDeviceConfigResponse
      */
@@ -1664,13 +1432,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchGetEdgeInstanceDriverConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchGetEdgeInstanceDriverConfigsResponse
@@ -1708,13 +1469,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchGetEdgeInstanceDriverConfigsRequest
      * @return BatchGetEdgeInstanceDriverConfigsResponse
      */
@@ -1768,18 +1522,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Before you call this operation, make sure that an MQTT gateway and the related product are created and the <strong>ProductKey</strong> of the product is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/433804.html">Create an MQTT gateway</a>.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Adds multiple devices to a Message Queuing Telemetry Transport (MQTT) gateway product at the same time.</p>
-     * 
      * @param request BatchImportDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchImportDeviceResponse
@@ -1819,18 +1561,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Before you call this operation, make sure that an MQTT gateway and the related product are created and the <strong>ProductKey</strong> of the product is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/433804.html">Create an MQTT gateway</a>.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Adds multiple devices to a Message Queuing Telemetry Transport (MQTT) gateway product at the same time.</p>
-     * 
      * @param request BatchImportDeviceRequest
      * @return BatchImportDeviceResponse
      */
@@ -1840,16 +1570,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Indicates whether the call was successful. Valid values: </p>
-     * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>The ID of the request.</p>
-     * 
      * @param request BatchImportVehicleDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchImportVehicleDeviceResponse
@@ -1889,16 +1609,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Indicates whether the call was successful. Valid values: </p>
-     * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>The ID of the request.</p>
-     * 
      * @param request BatchImportVehicleDeviceRequest
      * @return BatchImportVehicleDeviceResponse
      */
@@ -1908,16 +1618,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call this operation to publish a message to a maximum of 100 devices of a product at a time.</p>
-     * <ul>
-     * <li>The BatchPub operation cannot be used to send commands of setting properties or calling services. If you need to set properties, use the <a href="https://help.aliyun.com/document_detail/69579.html">SetDeviceProperty</a> or <a href="https://help.aliyun.com/document_detail/96243.html">SetDevicesProperty</a> operation. If you need to call services, use the <a href="https://help.aliyun.com/document_detail/69584.html">InvokeThingService</a> or <a href="https://help.aliyun.com/document_detail/96242.html">InvokeThingsService</a> operation.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request BatchPubRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchPubResponse
@@ -2001,16 +1701,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call this operation to publish a message to a maximum of 100 devices of a product at a time.</p>
-     * <ul>
-     * <li>The BatchPub operation cannot be used to send commands of setting properties or calling services. If you need to set properties, use the <a href="https://help.aliyun.com/document_detail/69579.html">SetDeviceProperty</a> or <a href="https://help.aliyun.com/document_detail/96243.html">SetDevicesProperty</a> operation. If you need to call services, use the <a href="https://help.aliyun.com/document_detail/69584.html">InvokeThingService</a> or <a href="https://help.aliyun.com/document_detail/96242.html">InvokeThingsService</a> operation.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request BatchPubRequest
      * @return BatchPubResponse
      */
@@ -2020,21 +1710,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can query a maximum of 100 devices in a single call.</li>
-     * <li>You can query the details of devices that belong only to the current Alibaba Cloud account. If you specify a device that does not belong to the current account, an error message is returned.</li>
-     * <li>If you specify multiple devices and some devices do not exist, only the details of existing devices are returned.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the details of multiple devices under a product.</p>
-     * 
      * @param request BatchQueryDeviceDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchQueryDeviceDetailResponse
@@ -2072,21 +1747,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can query a maximum of 100 devices in a single call.</li>
-     * <li>You can query the details of devices that belong only to the current Alibaba Cloud account. If you specify a device that does not belong to the current account, an error message is returned.</li>
-     * <li>If you specify multiple devices and some devices do not exist, only the details of existing devices are returned.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the details of multiple devices under a product.</p>
-     * 
      * @param request BatchQueryDeviceDetailRequest
      * @return BatchQueryDeviceDetailResponse
      */
@@ -2096,25 +1756,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can use one of the following methods to register multiple devices:</p>
-     * <ul>
-     * <li>If you want to generate random DeviceNames, call the BatchRegisterDevice operation.
-     * Perform the following steps to register devices and view the result:
-     * 1\. Call the BatchRegisterDevice operation to register multiple devices. A successful response indicates that the registration request is submitted. The actual registration process is asynchronously implemented and takes some minutes.
-     * 2\. Call the <a href="https://help.aliyun.com/document_detail/69483.html">QueryBatchRegisterDeviceStatus</a> operation to query the device registration result.
-     * 3\. Call the <a href="https://help.aliyun.com/document_detail/69518.html">QueryPageByApplyId</a> operation to view the details of registered devices. The details include the DeviceName, DeviceSecret, and IotId parameters.</li>
-     * <li>If you want to specify custom DeviceNames, call the BatchRegisterDeviceWithApplyId operation. For more information, see <a href="https://help.aliyun.com/document_detail/69514.html">BatchRegisterDeviceWithApplyId</a>.</li>
-     * </ul>
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can create a maximum of 10,000 devices in a single call.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).  &gt;  RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Registers multiple devices under a product. The DeviceNames of these devices are randomly generated.</p>
-     * 
      * @param request BatchRegisterDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchRegisterDeviceResponse
@@ -2152,25 +1793,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can use one of the following methods to register multiple devices:</p>
-     * <ul>
-     * <li>If you want to generate random DeviceNames, call the BatchRegisterDevice operation.
-     * Perform the following steps to register devices and view the result:
-     * 1\. Call the BatchRegisterDevice operation to register multiple devices. A successful response indicates that the registration request is submitted. The actual registration process is asynchronously implemented and takes some minutes.
-     * 2\. Call the <a href="https://help.aliyun.com/document_detail/69483.html">QueryBatchRegisterDeviceStatus</a> operation to query the device registration result.
-     * 3\. Call the <a href="https://help.aliyun.com/document_detail/69518.html">QueryPageByApplyId</a> operation to view the details of registered devices. The details include the DeviceName, DeviceSecret, and IotId parameters.</li>
-     * <li>If you want to specify custom DeviceNames, call the BatchRegisterDeviceWithApplyId operation. For more information, see <a href="https://help.aliyun.com/document_detail/69514.html">BatchRegisterDeviceWithApplyId</a>.</li>
-     * </ul>
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can create a maximum of 10,000 devices in a single call.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).  &gt;  RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Registers multiple devices under a product. The DeviceNames of these devices are randomly generated.</p>
-     * 
      * @param request BatchRegisterDeviceRequest
      * @return BatchRegisterDeviceResponse
      */
@@ -2180,26 +1802,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can use one of the following methods to register multiple devices at a time:</p>
-     * <ul>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/69473.html">BatchRegisterDevice</a> operation to generate random DeviceNames.</li>
-     * <li>Call the BatchRegisterDeviceWithApplyId and <strong>BatchCheckDeviceNames</strong> operations to specify custom DeviceNames. Procedure:
-     * Call the <a href="https://help.aliyun.com/document_detail/69482.html">BatchCheckDeviceNames</a> operation and specify the names of devices that you want to register. If the DeviceNames are valid, IoT Platform returns an application ID that is specified by the <strong>ApplyId</strong> parameter. You can query the DeviceName setting results, device registration results, and device details by <strong>ApplyId</strong>.
-     * Call the <a href="https://help.aliyun.com/document_detail/69483.html">QueryBatchRegisterDeviceStatus</a> operation to query the name setting result.
-     * Call the BatchRegisterDeviceWithApplyId operation to register multiple devices. The successful result that is returned by this operation indicates that only the batch registration request is submitted. In actual scenarios, the registration process takes a few minutes.
-     * Optional. Call the <a href="https://help.aliyun.com/document_detail/69483.html">QueryBatchRegisterDeviceStatus</a> operation to query the device registration result.
-     * Call the <a href="https://help.aliyun.com/document_detail/69518.html">QueryPageByApplyId</a> operation to view the details of devices that are registered in batches.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Registers multiple devices by using an application ID at a time.</p>
-     * 
      * @param request BatchRegisterDeviceWithApplyIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchRegisterDeviceWithApplyIdResponse
@@ -2237,26 +1839,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can use one of the following methods to register multiple devices at a time:</p>
-     * <ul>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/69473.html">BatchRegisterDevice</a> operation to generate random DeviceNames.</li>
-     * <li>Call the BatchRegisterDeviceWithApplyId and <strong>BatchCheckDeviceNames</strong> operations to specify custom DeviceNames. Procedure:
-     * Call the <a href="https://help.aliyun.com/document_detail/69482.html">BatchCheckDeviceNames</a> operation and specify the names of devices that you want to register. If the DeviceNames are valid, IoT Platform returns an application ID that is specified by the <strong>ApplyId</strong> parameter. You can query the DeviceName setting results, device registration results, and device details by <strong>ApplyId</strong>.
-     * Call the <a href="https://help.aliyun.com/document_detail/69483.html">QueryBatchRegisterDeviceStatus</a> operation to query the name setting result.
-     * Call the BatchRegisterDeviceWithApplyId operation to register multiple devices. The successful result that is returned by this operation indicates that only the batch registration request is submitted. In actual scenarios, the registration process takes a few minutes.
-     * Optional. Call the <a href="https://help.aliyun.com/document_detail/69483.html">QueryBatchRegisterDeviceStatus</a> operation to query the device registration result.
-     * Call the <a href="https://help.aliyun.com/document_detail/69518.html">QueryPageByApplyId</a> operation to view the details of devices that are registered in batches.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Registers multiple devices by using an application ID at a time.</p>
-     * 
      * @param request BatchRegisterDeviceWithApplyIdRequest
      * @return BatchRegisterDeviceWithApplyIdResponse
      */
@@ -2366,13 +1948,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchUnbindDeviceFromEdgeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchUnbindDeviceFromEdgeInstanceResponse
@@ -2410,13 +1985,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchUnbindDeviceFromEdgeInstanceRequest
      * @return BatchUnbindDeviceFromEdgeInstanceResponse
      */
@@ -2518,13 +2086,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchUpdateDeviceNicknameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchUpdateDeviceNicknameResponse
@@ -2558,13 +2119,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BatchUpdateDeviceNicknameRequest
      * @return BatchUpdateDeviceNicknameResponse
      */
@@ -2624,13 +2178,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BindDriverToEdgeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindDriverToEdgeInstanceResponse
@@ -2676,13 +2223,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BindDriverToEdgeInstanceRequest
      * @return BindDriverToEdgeInstanceResponse
      */
@@ -2692,13 +2232,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BindGatewayToEdgeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindGatewayToEdgeInstanceResponse
@@ -2744,13 +2277,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request BindGatewayToEdgeInstanceRequest
      * @return BindGatewayToEdgeInstanceResponse
      */
@@ -2760,22 +2286,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Before you call this operation, make sure that the following steps are complete:</p>
-     * <ol>
-     * <li>A license is purchased. For more information, see <a href="https://help.aliyun.com/document_detail/427935.html">Purchase a license</a>.</li>
-     * <li>The license is bound to a product. The devices to which you want to bind the license belong to the product. For more information, see <a href="https://help.aliyun.com/document_detail/427956.html">BindLicenseProduct</a> or <a href="https://help.aliyun.com/document_detail/427937.html">Bind a license to a product</a>.</li>
-     * </ol>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Binds a license to devices of a specific product.</p>
-     * 
      * @param request BindLicenseDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindLicenseDeviceResponse
@@ -2823,22 +2333,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Before you call this operation, make sure that the following steps are complete:</p>
-     * <ol>
-     * <li>A license is purchased. For more information, see <a href="https://help.aliyun.com/document_detail/427935.html">Purchase a license</a>.</li>
-     * <li>The license is bound to a product. The devices to which you want to bind the license belong to the product. For more information, see <a href="https://help.aliyun.com/document_detail/427956.html">BindLicenseProduct</a> or <a href="https://help.aliyun.com/document_detail/427937.html">Bind a license to a product</a>.</li>
-     * </ol>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Binds a license to devices of a specific product.</p>
-     * 
      * @param request BindLicenseDeviceRequest
      * @return BindLicenseDeviceResponse
      */
@@ -3032,17 +2526,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can cancel only the dynamic update policy that is attached to a dynamic update batch. This operation is not applicable to static update batches.
-     * After the operation is successful, the <strong>JobStatus</strong> parameter is set to CANCELED.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request CancelOTAStrategyByJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelOTAStrategyByJobResponse
@@ -3076,17 +2559,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can cancel only the dynamic update policy that is attached to a dynamic update batch. This operation is not applicable to static update batches.
-     * After the operation is successful, the <strong>JobStatus</strong> parameter is set to CANCELED.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request CancelOTAStrategyByJobRequest
      * @return CancelOTAStrategyByJobResponse
      */
@@ -3096,17 +2568,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation can cancel device update tasks only when the tasks are in the to be pushed, pushed, or in upgrade state.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Cancels the device update tasks that are in the to be pushed, pushed, or in upgrade state of an OTA update package.</p>
-     * 
      * @param request CancelOTATaskByDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelOTATaskByDeviceResponse
@@ -3152,17 +2613,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation can cancel device update tasks only when the tasks are in the to be pushed, pushed, or in upgrade state.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Cancels the device update tasks that are in the to be pushed, pushed, or in upgrade state of an OTA update package.</p>
-     * 
      * @param request CancelOTATaskByDeviceRequest
      * @return CancelOTATaskByDeviceResponse
      */
@@ -3172,17 +2622,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When you call this operation, make sure that you specify at least one of the CancelScheduledTask, CancelQueuedTask, CancelInProgressTask, CancelNotifiedTask, and CancelUnconfirmedTask parameters. Otherwise, the request will fail.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Cancels update tasks of a specified batch.</p>
-     * 
      * @param request CancelOTATaskByJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelOTATaskByJobResponse
@@ -3236,17 +2675,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When you call this operation, make sure that you specify at least one of the CancelScheduledTask, CancelQueuedTask, CancelInProgressTask, CancelNotifiedTask, and CancelUnconfirmedTask parameters. Otherwise, the request will fail.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Cancels update tasks of a specified batch.</p>
-     * 
      * @param request CancelOTATaskByJobRequest
      * @return CancelOTATaskByJobResponse
      */
@@ -3256,12 +2684,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CancelReleaseProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelReleaseProductResponse
@@ -3295,12 +2717,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CancelReleaseProductRequest
      * @return CancelReleaseProductResponse
      */
@@ -3360,21 +2776,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  Each time you call this operation, you must specify the identifiers of properties whose desired values you want to delete for the <strong>Identifies</strong> parameter. If you do not configure the <strong>Identifies</strong> parameter, the call fails.</p>
-     * <ul>
-     * <li>You can specify up to 10 property identifiers for the <strong>Identifies</strong> parameter in a single call.</li>
-     * <li>After you call this operation to deletes the desired values of properties of a device, you can call the <a href="https://help.aliyun.com/document_detail/107566.html">QueryDeviceDesiredProperty</a> operation to query the desired values of properties of the device. In this case, the QueryDeviceDesiredProperty operation returns the <strong>Identifier</strong> parameter instead of the <strong>Value</strong> parameter.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes the desired values of properties of a device.</p>
-     * 
      * @param request ClearDeviceDesiredPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ClearDeviceDesiredPropertyResponse
@@ -3422,21 +2823,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  Each time you call this operation, you must specify the identifiers of properties whose desired values you want to delete for the <strong>Identifies</strong> parameter. If you do not configure the <strong>Identifies</strong> parameter, the call fails.</p>
-     * <ul>
-     * <li>You can specify up to 10 property identifiers for the <strong>Identifies</strong> parameter in a single call.</li>
-     * <li>After you call this operation to deletes the desired values of properties of a device, you can call the <a href="https://help.aliyun.com/document_detail/107566.html">QueryDeviceDesiredProperty</a> operation to query the desired values of properties of the device. In this case, the QueryDeviceDesiredProperty operation returns the <strong>Identifier</strong> parameter instead of the <strong>Value</strong> parameter.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes the desired values of properties of a device.</p>
-     * 
      * @param request ClearDeviceDesiredPropertyRequest
      * @return ClearDeviceDesiredPropertyResponse
      */
@@ -3446,13 +2832,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request ClearEdgeInstanceDriverConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ClearEdgeInstanceDriverConfigsResponse
@@ -3490,13 +2869,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request ClearEdgeInstanceDriverConfigsRequest
      * @return ClearEdgeInstanceDriverConfigsResponse
      */
@@ -3548,16 +2920,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Stops the deployment tasks of an edge instance.</p>
-     * 
      * @param request CloseEdgeInstanceDeploymentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CloseEdgeInstanceDeploymentResponse
@@ -3591,16 +2953,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Stops the deployment tasks of an edge instance.</p>
-     * 
      * @param request CloseEdgeInstanceDeploymentRequest
      * @return CloseEdgeInstanceDeploymentResponse
      */
@@ -3610,17 +2962,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>To confirm update tasks in a scheduled update batch, you must call this operation within the specified time range.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Confirms the device update tasks that are in the pending confirmation status.</p>
-     * 
      * @param request ConfirmOTATaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConfirmOTATaskResponse
@@ -3654,17 +2995,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>To confirm update tasks in a scheduled update batch, you must call this operation within the specified time range.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Confirms the device update tasks that are in the pending confirmation status.</p>
-     * 
      * @param request ConfirmOTATaskRequest
      * @return ConfirmOTATaskResponse
      */
@@ -3674,21 +3004,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  If a destination product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you can copy a TSL model.</p>
-     * <ul>
-     * <li>The categories of the source product and destination product must be the same. The product category is indicated by the <strong>CategoryKey</strong> parameter. You can call the <a href="https://help.aliyun.com/document_detail/69272.html">QueryProduct</a> operation and view the <strong>CategoryKey</strong> parameter of a product in the returned result.</li>
-     * <li>You must specify the version of the TSL model that you want to copy by using the <strong>SourceModelVersion</strong> parameter in the request. Otherwise, the CopyThingModel operation fails.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to five queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Copies a Thing Specification Language (TSL) model from a source product to a destination product.</p>
-     * 
      * @param request CopyThingModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CopyThingModelResponse
@@ -3734,21 +3049,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  If a destination product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you can copy a TSL model.</p>
-     * <ul>
-     * <li>The categories of the source product and destination product must be the same. The product category is indicated by the <strong>CategoryKey</strong> parameter. You can call the <a href="https://help.aliyun.com/document_detail/69272.html">QueryProduct</a> operation and view the <strong>CategoryKey</strong> parameter of a product in the returned result.</li>
-     * <li>You must specify the version of the TSL model that you want to copy by using the <strong>SourceModelVersion</strong> parameter in the request. Otherwise, the CopyThingModel operation fails.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to five queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Copies a Thing Specification Language (TSL) model from a source product to a destination product.</p>
-     * 
      * @param request CopyThingModelRequest
      * @return CopyThingModelResponse
      */
@@ -3808,18 +3108,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>You can call this operation to query the shared speeches that were broadcasted six hours ago. For example, if a speech was broadcasted at 07:15, you can query the speech after 13:15.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 100 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the number of speeches that were broadcasted in a specific hour.</p>
-     * 
      * @param request CountSpeechBroadcastHourRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CountSpeechBroadcastHourResponse
@@ -3859,18 +3147,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>You can call this operation to query the shared speeches that were broadcasted six hours ago. For example, if a speech was broadcasted at 07:15, you can query the speech after 13:15.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 100 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the number of speeches that were broadcasted in a specific hour.</p>
-     * 
      * @param request CountSpeechBroadcastHourRequest
      * @return CountSpeechBroadcastHourResponse
      */
@@ -3880,13 +3156,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateConsumerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateConsumerGroupResponse
@@ -3920,13 +3189,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateConsumerGroupRequest
      * @return CreateConsumerGroupResponse
      */
@@ -3936,13 +3198,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateConsumerGroupSubscribeRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateConsumerGroupSubscribeRelationResponse
@@ -3980,13 +3235,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateConsumerGroupSubscribeRelationRequest
      * @return CreateConsumerGroupSubscribeRelationResponse
      */
@@ -4062,18 +3310,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Before you call this operation, perform the following steps: First, create a data source. For information about how to create a data source, see Step 1 to Step 6 in the <a href="https://help.aliyun.com/document_detail/270932.html">Create a data source</a> topic. Second, go to the <strong>Data Source</strong> tab on the <strong>Message Forwarding</strong> page of the instance that you want to manage in the IoT Platform console. Then, view and record the ID of the <strong>data source</strong> that you created.</p>
-     * <blockquote>
-     * <p> If you set Topic to a custom topic for a product or device that uses the open source Message Queuing Telemetry Transport (MQTT) protocol, you must specify ScopeType and ProductKey. If ScopeType is set to DEVICE, you must also specify DeviceName.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateDataSourceItemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataSourceItemResponse
@@ -4123,18 +3359,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Before you call this operation, perform the following steps: First, create a data source. For information about how to create a data source, see Step 1 to Step 6 in the <a href="https://help.aliyun.com/document_detail/270932.html">Create a data source</a> topic. Second, go to the <strong>Data Source</strong> tab on the <strong>Message Forwarding</strong> page of the instance that you want to manage in the IoT Platform console. Then, view and record the ID of the <strong>data source</strong> that you created.</p>
-     * <blockquote>
-     * <p> If you set Topic to a custom topic for a product or device that uses the open source Message Queuing Telemetry Transport (MQTT) protocol, you must specify ScopeType and ProductKey. If ScopeType is set to DEVICE, you must also specify DeviceName.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateDataSourceItemRequest
      * @return CreateDataSourceItemResponse
      */
@@ -4198,35 +3422,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>To distribute devices, perform the following steps:
-     * 1\. Asynchronously call this operation to create a device distribution task and obtain the <strong>JobId</strong> parameter.
-     * 2\. Use <strong>JobId</strong> as a request parameter and repeatedly call the <a href="https://help.aliyun.com/document_detail/199536.html">QueryDeviceDistributeJob</a> operation to obtain the <strong>Status</strong> parameter.</p>
-     * <blockquote>
-     * <p> You must control the frequency of calls based on the QPS limit of the QueryDeviceDistributeJob operation.
-     * If either of the following values is returned for the <strong>Status</strong> parameter, the distribution task ends:</p>
-     * </blockquote>
-     * <ul>
-     * <li><strong>2</strong>: The device distribution task is completed. This return value does not indicate that the devices are distributed. To obtain the distribution result of each device, perform the next step.</li>
-     * <li><strong>3</strong>: The distribution is unexpectedly interrupted. After you process the error, you can initiate a device distribution task again.
-     * 3\. Use <strong>JobId</strong> that is returned in Step 1 as a request parameter and call the <a href="https://help.aliyun.com/document_detail/199533.html">QueryDeviceDistributeDetail</a> operation to obtain the <strong>File</strong> parameter. The File parameter indicates the file URL of the distribution result.<blockquote>
-     * <p> The file URL is valid for 10 minutes.
-     * 4\. Obtain the distribution result by using the file URL. The <strong>Code</strong> parameter indicates whether a device is distributed. If the value of the <strong>Code</strong> parameter is 200, the device is distributed.
-     * If the distribution fails, you can perform the preceding steps to distribute devices again.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</li>
-     * <li>You cannot call this operation to distribute devices across accounts.</li>
-     * <li>Each Alibaba Cloud account can create a maximum of 10 tasks to distribute products or devices. For more information about how to create a product distribution task, see <a href="/help/en/iot-platform/latest/createproductdistributejob">CreateProductDistributeJob</a>.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).  &gt;  RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a task to distribute devices. The product to which the devices belong is distributed by default.</p>
-     * 
      * @param request CreateDeviceDistributeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDeviceDistributeJobResponse
@@ -4280,35 +3475,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>To distribute devices, perform the following steps:
-     * 1\. Asynchronously call this operation to create a device distribution task and obtain the <strong>JobId</strong> parameter.
-     * 2\. Use <strong>JobId</strong> as a request parameter and repeatedly call the <a href="https://help.aliyun.com/document_detail/199536.html">QueryDeviceDistributeJob</a> operation to obtain the <strong>Status</strong> parameter.</p>
-     * <blockquote>
-     * <p> You must control the frequency of calls based on the QPS limit of the QueryDeviceDistributeJob operation.
-     * If either of the following values is returned for the <strong>Status</strong> parameter, the distribution task ends:</p>
-     * </blockquote>
-     * <ul>
-     * <li><strong>2</strong>: The device distribution task is completed. This return value does not indicate that the devices are distributed. To obtain the distribution result of each device, perform the next step.</li>
-     * <li><strong>3</strong>: The distribution is unexpectedly interrupted. After you process the error, you can initiate a device distribution task again.
-     * 3\. Use <strong>JobId</strong> that is returned in Step 1 as a request parameter and call the <a href="https://help.aliyun.com/document_detail/199533.html">QueryDeviceDistributeDetail</a> operation to obtain the <strong>File</strong> parameter. The File parameter indicates the file URL of the distribution result.<blockquote>
-     * <p> The file URL is valid for 10 minutes.
-     * 4\. Obtain the distribution result by using the file URL. The <strong>Code</strong> parameter indicates whether a device is distributed. If the value of the <strong>Code</strong> parameter is 200, the device is distributed.
-     * If the distribution fails, you can perform the preceding steps to distribute devices again.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</li>
-     * <li>You cannot call this operation to distribute devices across accounts.</li>
-     * <li>Each Alibaba Cloud account can create a maximum of 10 tasks to distribute products or devices. For more information about how to create a product distribution task, see <a href="/help/en/iot-platform/latest/createproductdistributejob">CreateProductDistributeJob</a>.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).  &gt;  RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a task to distribute devices. The product to which the devices belong is distributed by default.</p>
-     * 
      * @param request CreateDeviceDistributeJobRequest
      * @return CreateDeviceDistributeJobResponse
      */
@@ -4368,13 +3534,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateDeviceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDeviceGroupResponse
@@ -4416,13 +3575,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateDeviceGroupRequest
      * @return CreateDeviceGroupResponse
      */
@@ -4556,13 +3708,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>A single Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request CreateEdgeDriverRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEdgeDriverResponse
@@ -4612,13 +3757,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>A single Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request CreateEdgeDriverRequest
      * @return CreateEdgeDriverResponse
      */
@@ -4628,16 +3766,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a driver version.</p>
-     * 
      * @param request CreateEdgeDriverVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEdgeDriverVersionResponse
@@ -4703,16 +3831,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a driver version.</p>
-     * 
      * @param request CreateEdgeDriverVersionRequest
      * @return CreateEdgeDriverVersionResponse
      */
@@ -4722,13 +3840,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>A single Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request CreateEdgeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEdgeInstanceResponse
@@ -4770,13 +3881,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>A single Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request CreateEdgeInstanceRequest
      * @return CreateEdgeInstanceResponse
      */
@@ -4840,13 +3944,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateEdgeInstanceDeploymentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEdgeInstanceDeploymentResponse
@@ -4884,13 +3981,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateEdgeInstanceDeploymentRequest
      * @return CreateEdgeInstanceDeploymentResponse
      */
@@ -4970,16 +4060,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a pre-signed URL for an object that is stored in Object Storage Service (OSS).</p>
-     * 
      * @param request CreateEdgeOssPreSignedAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEdgeOssPreSignedAddressResponse
@@ -5029,16 +4109,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a pre-signed URL for an object that is stored in Object Storage Service (OSS).</p>
-     * 
      * @param request CreateEdgeOssPreSignedAddressRequest
      * @return CreateEdgeOssPreSignedAddressResponse
      */
@@ -5140,18 +4210,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>You can call this operation to create up to 500 devices.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates multiple Long Range Wide Area Networking (LoRaWAN) devices.</p>
-     * 
      * @param request CreateLoRaNodesTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLoRaNodesTaskResponse
@@ -5189,18 +4247,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>You can call this operation to create up to 500 devices.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates multiple Long Range Wide Area Networking (LoRaWAN) devices.</p>
-     * 
      * @param request CreateLoRaNodesTaskRequest
      * @return CreateLoRaNodesTaskResponse
      */
@@ -5210,19 +4256,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>  You can specify that an update package does not need to be verified when you call the <a href="https://help.aliyun.com/document_detail/147311.html">CreateOTAFirmware</a> operation. Otherwise, you must make sure that the update package is verified before you call the CreateOTADynamicUpgradeJob operation to create an update batch. For more information about how to create a task to verify an update package, see <a href="https://help.aliyun.com/document_detail/147480.html">CreateOTAVerifyJob</a>.</p>
-     * <ul>
-     * <li>Each device can be in the pending or updating status only in one update task. If you initiate another update task for a device that is in the pending or updating status, the update task fails.</li>
-     * <li>Each update package can have only one dynamic update task that is in the running state.</li>
-     * <li>If a device is included in dynamic update policies of different update packages, the device performs the latest dynamic update.</li>
-     * <li>After a dynamic update job is created, the system automatically creates the corresponding dynamic update policy. You can call the <a href="https://help.aliyun.com/document_detail/147905.html">CancelOTAStrategyByJob</a> operation to cancel a dynamic update policy.</li>
-     * <li>Only devices in the China (Shanghai) region can download update packages over the MQTT protocol.</li>
-     * </ul>
-     * 
      * @param request CreateOTADynamicUpgradeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOTADynamicUpgradeJobResponse
@@ -5316,19 +4349,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>  You can specify that an update package does not need to be verified when you call the <a href="https://help.aliyun.com/document_detail/147311.html">CreateOTAFirmware</a> operation. Otherwise, you must make sure that the update package is verified before you call the CreateOTADynamicUpgradeJob operation to create an update batch. For more information about how to create a task to verify an update package, see <a href="https://help.aliyun.com/document_detail/147480.html">CreateOTAVerifyJob</a>.</p>
-     * <ul>
-     * <li>Each device can be in the pending or updating status only in one update task. If you initiate another update task for a device that is in the pending or updating status, the update task fails.</li>
-     * <li>Each update package can have only one dynamic update task that is in the running state.</li>
-     * <li>If a device is included in dynamic update policies of different update packages, the device performs the latest dynamic update.</li>
-     * <li>After a dynamic update job is created, the system automatically creates the corresponding dynamic update policy. You can call the <a href="https://help.aliyun.com/document_detail/147905.html">CancelOTAStrategyByJob</a> operation to cancel a dynamic update policy.</li>
-     * <li>Only devices in the China (Shanghai) region can download update packages over the MQTT protocol.</li>
-     * </ul>
-     * 
      * @param request CreateOTADynamicUpgradeJobRequest
      * @return CreateOTADynamicUpgradeJobResponse
      */
@@ -5338,19 +4358,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Before you call this operation to create an OTA update package, you must call the <a href="https://help.aliyun.com/document_detail/147310.html">GenerateOTAUploadURL</a> operation to generate the information about the files that you want to add to the OTA update package and call the Object Storage Service (OSS) <a href="https://help.aliyun.com/document_detail/31988.html">PostObject</a> operation to upload the files.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can have up to 500 update packages. </p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates an over-the-air (OTA) update package for devices after you generate a URL for each file that you want to add to the OTA update package.</p>
-     * 
      * @param request CreateOTAFirmwareRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOTAFirmwareResponse
@@ -5436,19 +4443,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Before you call this operation to create an OTA update package, you must call the <a href="https://help.aliyun.com/document_detail/147310.html">GenerateOTAUploadURL</a> operation to generate the information about the files that you want to add to the OTA update package and call the Object Storage Service (OSS) <a href="https://help.aliyun.com/document_detail/31988.html">PostObject</a> operation to upload the files.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can have up to 500 update packages. </p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates an over-the-air (OTA) update package for devices after you generate a URL for each file that you want to add to the OTA update package.</p>
-     * 
      * @param request CreateOTAFirmwareRequest
      * @return CreateOTAFirmwareResponse
      */
@@ -5458,21 +4452,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>OTA modules are the updatable units of the devices that belong to the same product. The default module indicates the entire firmware of a device. You can call this operation to create a custom OTA module.</p>
-     * <ul>
-     * <li>You can create a maximum of 10 custom OTA modules for each product.</li>
-     * <li>After an OTA module is created, you cannot modify its name. You can call the <a href="https://help.aliyun.com/document_detail/186061.html">UpdateOTAModule</a> operation to modify the module alias and description.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates an over-the-air (OTA) module for a product.</p>
-     * 
      * @param request CreateOTAModuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOTAModuleResponse
@@ -5518,21 +4497,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>OTA modules are the updatable units of the devices that belong to the same product. The default module indicates the entire firmware of a device. You can call this operation to create a custom OTA module.</p>
-     * <ul>
-     * <li>You can create a maximum of 10 custom OTA modules for each product.</li>
-     * <li>After an OTA module is created, you cannot modify its name. You can call the <a href="https://help.aliyun.com/document_detail/186061.html">UpdateOTAModule</a> operation to modify the module alias and description.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates an over-the-air (OTA) module for a product.</p>
-     * 
      * @param request CreateOTAModuleRequest
      * @return CreateOTAModuleResponse
      */
@@ -5542,24 +4506,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  If you specify that an update package does not need to be verified when you call the <a href="https://help.aliyun.com/document_detail/147311.html">CreateOTAFirmware</a> operation, you must make sure that the update package is verified before you call the CreateOTAStaticUpgradeJob operation to create an update batch. For more information about how to create a task to verify an update package, see <a href="https://help.aliyun.com/document_detail/147480.html">CreateOTAVerifyJob</a>.</p>
-     * <ul>
-     * <li>You can initiate update tasks for a maximum of 200 devices in each call. If you use a device list file, you can initiate update tasks for a maximum of 1,000,000 devices. However, you must call the <a href="https://help.aliyun.com/document_detail/186062.html">GenerateDeviceNameListURL</a> operation to generate a URL for the device list file. Then, you can perform the operations as prompted to upload the device list file.</li>
-     * <li>When you initiate update tasks for multiple devices, the devices that already have the destination firmware versions are skipped.</li>
-     * <li>Each device can be in the pending or updating status only in one update task. If you initiate another update task for a device that is in the pending or updating status, the update task fails.</li>
-     * <li>You can create multiple static update batches by using a single update package.</li>
-     * <li>Downloading update packages through the MQTT protocol is supported only in the China (Shanghai) region.</li>
-     * </ul>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a static update batch.</p>
-     * 
      * @param request CreateOTAStaticUpgradeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOTAStaticUpgradeJobResponse
@@ -5673,24 +4619,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  If you specify that an update package does not need to be verified when you call the <a href="https://help.aliyun.com/document_detail/147311.html">CreateOTAFirmware</a> operation, you must make sure that the update package is verified before you call the CreateOTAStaticUpgradeJob operation to create an update batch. For more information about how to create a task to verify an update package, see <a href="https://help.aliyun.com/document_detail/147480.html">CreateOTAVerifyJob</a>.</p>
-     * <ul>
-     * <li>You can initiate update tasks for a maximum of 200 devices in each call. If you use a device list file, you can initiate update tasks for a maximum of 1,000,000 devices. However, you must call the <a href="https://help.aliyun.com/document_detail/186062.html">GenerateDeviceNameListURL</a> operation to generate a URL for the device list file. Then, you can perform the operations as prompted to upload the device list file.</li>
-     * <li>When you initiate update tasks for multiple devices, the devices that already have the destination firmware versions are skipped.</li>
-     * <li>Each device can be in the pending or updating status only in one update task. If you initiate another update task for a device that is in the pending or updating status, the update task fails.</li>
-     * <li>You can create multiple static update batches by using a single update package.</li>
-     * <li>Downloading update packages through the MQTT protocol is supported only in the China (Shanghai) region.</li>
-     * </ul>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a static update batch.</p>
-     * 
      * @param request CreateOTAStaticUpgradeJobRequest
      * @return CreateOTAStaticUpgradeJobResponse
      */
@@ -5700,21 +4628,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You must verify an update package before you push the package to devices for a batch update. Only verified update packages can be used to update devices in batches. You can call the <a href="https://help.aliyun.com/document_detail/147461.html">QueryOTAFirmware</a> operation to view the status of a verification task.</p>
-     * <ul>
-     * <li>You cannot initiate a verification task for an update package that is being verified or has been verified.</li>
-     * <li>You can specify a maximum of 10 devices for a verification task.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a task to verify an over-the-air (OTA) update package.</p>
-     * 
      * @param request CreateOTAVerifyJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOTAVerifyJobResponse
@@ -5776,21 +4689,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You must verify an update package before you push the package to devices for a batch update. Only verified update packages can be used to update devices in batches. You can call the <a href="https://help.aliyun.com/document_detail/147461.html">QueryOTAFirmware</a> operation to view the status of a verification task.</p>
-     * <ul>
-     * <li>You cannot initiate a verification task for an update package that is being verified or has been verified.</li>
-     * <li>You can specify a maximum of 10 devices for a verification task.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a task to verify an over-the-air (OTA) update package.</p>
-     * 
      * @param request CreateOTAVerifyJobRequest
      * @return CreateOTAVerifyJobResponse
      */
@@ -5892,17 +4790,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If a Thing Specification Language (TSL) model is required to create a product, you must set the <strong>AliyunCommodityCode</strong> parameter to iothub_senior and configure the <strong>DataFormat</strong> parameter.******** For more information, see the &quot;<strong>Request parameters</strong>&quot; section of this topic.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a product.</p>
-     * 
      * @param request CreateProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateProductResponse
@@ -5988,17 +4875,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If a Thing Specification Language (TSL) model is required to create a product, you must set the <strong>AliyunCommodityCode</strong> parameter to iothub_senior and configure the <strong>DataFormat</strong> parameter.******** For more information, see the &quot;<strong>Request parameters</strong>&quot; section of this topic.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a product.</p>
-     * 
      * @param request CreateProductRequest
      * @return CreateProductResponse
      */
@@ -6008,18 +4884,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>You cannot call this operation to distribute a product across accounts.</li>
-     * <li>A product distribution task does not distribute the devices under the product.</li>
-     * <li>After a product is distributed, you cannot modify its TSL model and scripts.</li>
-     * <li>Each Alibaba Cloud account can create a maximum of 10 tasks to distribute products or devices. For more information about how to create a device distribution task, see <a href="https://help.aliyun.com/document_detail/199390.html">CreateDeviceDistributeJob</a>.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).
-     * **
-     * <strong>Note</strong> RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
      * @param request CreateProductDistributeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateProductDistributeJobResponse
@@ -6065,18 +4929,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>You cannot call this operation to distribute a product across accounts.</li>
-     * <li>A product distribution task does not distribute the devices under the product.</li>
-     * <li>After a product is distributed, you cannot modify its TSL model and scripts.</li>
-     * <li>Each Alibaba Cloud account can create a maximum of 10 tasks to distribute products or devices. For more information about how to create a device distribution task, see <a href="https://help.aliyun.com/document_detail/199390.html">CreateDeviceDistributeJob</a>.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).
-     * **
-     * <strong>Note</strong> RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
      * @param request CreateProductDistributeJobRequest
      * @return CreateProductDistributeJobResponse
      */
@@ -6086,23 +4938,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can create a maximum of 10 tags for a product in a single call.</p>
-     * <ul>
-     * <li>Each product can have a maximum of 100 tags.<blockquote>
-     * <p>You must specify the tag keys and tag values. Otherwise, the call fails. For description about the tag values, see the &quot;<strong>Request parameters</strong>&quot; section of this topic.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates tags for a product.</p>
-     * 
      * @param request CreateProductTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateProductTagsResponse
@@ -6140,23 +4975,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can create a maximum of 10 tags for a product in a single call.</p>
-     * <ul>
-     * <li>Each product can have a maximum of 100 tags.<blockquote>
-     * <p>You must specify the tag keys and tag values. Otherwise, the call fails. For description about the tag values, see the &quot;<strong>Request parameters</strong>&quot; section of this topic.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates tags for a product.</p>
-     * 
      * @param request CreateProductTagsRequest
      * @return CreateProductTagsResponse
      */
@@ -6166,13 +4984,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 1 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateProductTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateProductTopicResponse
@@ -6226,13 +5037,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 1 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request CreateProductTopicRequest
      * @return CreateProductTopicResponse
      */
@@ -6242,17 +5046,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When you call this operation, you must specify the <strong>ProductKey</strong> parameter in the request.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a data forwarding rule for a specified topic.</p>
-     * 
      * @param request CreateRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRuleResponse
@@ -6322,17 +5115,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When you call this operation, you must specify the <strong>ProductKey</strong> parameter in the request.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a data forwarding rule for a specified topic.</p>
-     * 
      * @param request CreateRuleRequest
      * @return CreateRuleResponse
      */
@@ -6342,21 +5124,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>Destination Alibaba Cloud services that are supported by the rules engine vary based on regions. For more information about the regions and destination cloud services that are supported by the rules engine, see <a href="https://help.aliyun.com/document_detail/85669.html">Regions and zones</a>.</li>
-     * <li>You can create a maximum of 10 rule actions for each rule.</li>
-     * <li>You can call this API operation to define rule actions to forward data to an IoT Platform topic, AMQP consumer group, or Alibaba Cloud service. The supported Alibaba Cloud services include Message Service (MNS), Function Compute, and Tablestore. If you need to forward data to ApsaraDB RDS, you must use the <a href="https://iot.console.aliyun.com">IoT Platform console</a>.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a rule action for a specified rule to forward processed data from a topic to another topic or a supported Alibaba Cloud service.</p>
-     * 
      * @param request CreateRuleActionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRuleActionResponse
@@ -6402,21 +5169,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>Destination Alibaba Cloud services that are supported by the rules engine vary based on regions. For more information about the regions and destination cloud services that are supported by the rules engine, see <a href="https://help.aliyun.com/document_detail/85669.html">Regions and zones</a>.</li>
-     * <li>You can create a maximum of 10 rule actions for each rule.</li>
-     * <li>You can call this API operation to define rule actions to forward data to an IoT Platform topic, AMQP consumer group, or Alibaba Cloud service. The supported Alibaba Cloud services include Message Service (MNS), Function Compute, and Tablestore. If you need to forward data to ApsaraDB RDS, you must use the <a href="https://iot.console.aliyun.com">IoT Platform console</a>.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a rule action for a specified rule to forward processed data from a topic to another topic or a supported Alibaba Cloud service.</p>
-     * 
      * @param request CreateRuleActionRequest
      * @return CreateRuleActionResponse
      */
@@ -6954,25 +5706,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Server-side subscriptions are categorized into the following two types:</p>
-     * <ul>
-     * <li>MNS subscription: pushes subscribed messages to MNS queues. Your server applications listen to MNS queues to receive device messages. For more information, see <a href="https://help.aliyun.com/document_detail/68948.html">Configure MNS server-side subscriptions</a>. You can call this operation to create an MNS subscription.</li>
-     * <li>AMQP subscription: pushes subscribed messages to your server by using the AMQP channel. For more information, see <a href="https://help.aliyun.com/document_detail/142376.html">Configure AMQP server-side subscriptions</a>. To configure an AMQP subscription, perform the following steps:
-     * 1\. Call the <a href="https://help.aliyun.com/document_detail/170388.html">CreateConsumerGroup</a> operation to create a consumer group and obtain the returned consumer group ID. Messages are pushed to the consumer group. The AMQP client carries the consumer group ID when the client connected to IoT Platform. For more information, see <a href="https://help.aliyun.com/document_detail/142489.html">Connect an AMQP client to IoT Platform</a>.
-     * 2\. Call the CreateSubscribeRelation operation to create an AMQP subscription.
-     * 3\. Optional. Call the <a href="https://help.aliyun.com/document_detail/170354.html">CreateConsumerGroupSubscribeRelation</a> operation to add a consumer group to the AMQP subscription. You can also call the <a href="https://help.aliyun.com/document_detail/170357.html">DeleteConsumerGroupSubscribeRelation</a> operation to remove a consumer group from an AMQP subscription.
-     * 4\. Optional. Call the <a href="https://help.aliyun.com/document_detail/170358.html">QueryConsumerGroupStatus</a> operation to query the status of a consumer group, including online client information, message consumption rate, number of accumulated messages, and last message consumption time. You can also call the <a href="https://help.aliyun.com/document_detail/170355.html">ResetConsumerGroupPosition</a> operation to clear the accumulated messages of the consumer group.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to five times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a Message Service (MNS) or Advanced Message Queuing Protocol (AMQP) server-side subscription.</p>
-     * 
      * @param request CreateSubscribeRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSubscribeRelationResponse
@@ -7062,25 +5795,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Server-side subscriptions are categorized into the following two types:</p>
-     * <ul>
-     * <li>MNS subscription: pushes subscribed messages to MNS queues. Your server applications listen to MNS queues to receive device messages. For more information, see <a href="https://help.aliyun.com/document_detail/68948.html">Configure MNS server-side subscriptions</a>. You can call this operation to create an MNS subscription.</li>
-     * <li>AMQP subscription: pushes subscribed messages to your server by using the AMQP channel. For more information, see <a href="https://help.aliyun.com/document_detail/142376.html">Configure AMQP server-side subscriptions</a>. To configure an AMQP subscription, perform the following steps:
-     * 1\. Call the <a href="https://help.aliyun.com/document_detail/170388.html">CreateConsumerGroup</a> operation to create a consumer group and obtain the returned consumer group ID. Messages are pushed to the consumer group. The AMQP client carries the consumer group ID when the client connected to IoT Platform. For more information, see <a href="https://help.aliyun.com/document_detail/142489.html">Connect an AMQP client to IoT Platform</a>.
-     * 2\. Call the CreateSubscribeRelation operation to create an AMQP subscription.
-     * 3\. Optional. Call the <a href="https://help.aliyun.com/document_detail/170354.html">CreateConsumerGroupSubscribeRelation</a> operation to add a consumer group to the AMQP subscription. You can also call the <a href="https://help.aliyun.com/document_detail/170357.html">DeleteConsumerGroupSubscribeRelation</a> operation to remove a consumer group from an AMQP subscription.
-     * 4\. Optional. Call the <a href="https://help.aliyun.com/document_detail/170358.html">QueryConsumerGroupStatus</a> operation to query the status of a consumer group, including online client information, message consumption rate, number of accumulated messages, and last message consumption time. You can also call the <a href="https://help.aliyun.com/document_detail/170355.html">ResetConsumerGroupPosition</a> operation to clear the accumulated messages of the consumer group.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to five times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a Message Service (MNS) or Advanced Message Queuing Protocol (AMQP) server-side subscription.</p>
-     * 
      * @param request CreateSubscribeRelationRequest
      * @return CreateSubscribeRelationResponse
      */
@@ -7090,18 +5804,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If a product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you call this operation.</li>
-     * <li>Before you call the operation, you can use the <a href="https://github.com/everit-org/json-schema?spm=a2c4g.11186623.2.23.575832d9zD7fZb">json-schema</a> library to verify the input parameters in <strong>ThingModelJson</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/150457.html">Data structure of ThingModelJson</a>.</li>
-     * <li>You can call this operation to add a maximum of 10 TSL features. TSL features include properties, services, and events.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request CreateThingModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateThingModelResponse
@@ -7147,18 +5849,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If a product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you call this operation.</li>
-     * <li>Before you call the operation, you can use the <a href="https://github.com/everit-org/json-schema?spm=a2c4g.11186623.2.23.575832d9zD7fZb">json-schema</a> library to verify the input parameters in <strong>ThingModelJson</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/150457.html">Data structure of ThingModelJson</a>.</li>
-     * <li>You can call this operation to add a maximum of 10 TSL features. TSL features include properties, services, and events.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request CreateThingModelRequest
      * @return CreateThingModelResponse
      */
@@ -7168,20 +5858,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>A data parsing script is used to convert data submitted by devices into the JSON format. The data submitted by devices is in a custom format. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see <a href="https://help.aliyun.com/document_detail/149963.html">Submit scripts for data parsing</a>.</p>
-     * <blockquote>
-     * <p>If the data format is <strong>Alink JSON</strong>, the CreateThingScript operation is not supported. Alink JSON is a standard data format that is defined by IoT Connectivity Alliance (ICA).</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Submits a data parsing script for a specified product.</p>
-     * 
      * @param request CreateThingScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateThingScriptResponse
@@ -7223,20 +5899,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>A data parsing script is used to convert data submitted by devices into the JSON format. The data submitted by devices is in a custom format. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see <a href="https://help.aliyun.com/document_detail/149963.html">Submit scripts for data parsing</a>.</p>
-     * <blockquote>
-     * <p>If the data format is <strong>Alink JSON</strong>, the CreateThingScript operation is not supported. Alink JSON is a standard data format that is defined by IoT Connectivity Alliance (ICA).</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Submits a data parsing script for a specified product.</p>
-     * 
      * @param request CreateThingScriptRequest
      * @return CreateThingScriptResponse
      */
@@ -7312,18 +5974,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can specify a maximum of 100 destination topics for a source topic.</li>
-     * <li>The device to which the source topic belongs must be activated.</li>
-     * <li>The source and destination topics support only custom topics.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request CreateTopicRouteTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTopicRouteTableResponse
@@ -7361,18 +6011,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can specify a maximum of 100 destination topics for a source topic.</li>
-     * <li>The device to which the source topic belongs must be activated.</li>
-     * <li>The source and destination topics support only custom topics.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request CreateTopicRouteTableRequest
      * @return CreateTopicRouteTableResponse
      */
@@ -7382,20 +6020,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call the <a href="https://help.aliyun.com/document_detail/371985.html">QueryClientIds</a> operation to view the ClientIDs of a device and obtain the number of ClientIDs.</p>
-     * <ul>
-     * <li>After you call the DeleteClientIds operation, all ClientIDs of the device are deleted and cannot be resumed. To obtain a new ClientID, you can register the device again.</li>
-     * </ul>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes all ClientIDs of a device if the number of ClientIDs exceeds the limit 5. This API operation applies to preregistration-free unique-certificate-per-product authentication.</p>
-     * 
      * @param request DeleteClientIdsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteClientIdsResponse
@@ -7429,20 +6053,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call the <a href="https://help.aliyun.com/document_detail/371985.html">QueryClientIds</a> operation to view the ClientIDs of a device and obtain the number of ClientIDs.</p>
-     * <ul>
-     * <li>After you call the DeleteClientIds operation, all ClientIDs of the device are deleted and cannot be resumed. To obtain a new ClientID, you can register the device again.</li>
-     * </ul>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes all ClientIDs of a device if the number of ClientIDs exceeds the limit 5. This API operation applies to preregistration-free unique-certificate-per-product authentication.</p>
-     * 
      * @param request DeleteClientIdsRequest
      * @return DeleteClientIdsResponse
      */
@@ -7452,17 +6062,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You cannot delete the default consumer group provided by IoT Platform.</li>
-     * <li>If the consumer group is associated with an AMQP subscription, you must disassociate the consumer group from the subscription. If the subscription has multiple consumer groups, you can call the <a href="https://help.aliyun.com/document_detail/170357.html">DeleteConsumerGroupSubscribeRelation</a> operation to remove the consumer group from the subscription. If the subscription has only one consumer group, you can call the <a href="https://help.aliyun.com/document_detail/170351.html">UpdateSubscribeRelation</a> operation to change the consumer group or call the <a href="https://help.aliyun.com/document_detail/170353.html">DeleteSubscribeRelation</a> operation to delete the subscription.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteConsumerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteConsumerGroupResponse
@@ -7496,17 +6095,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You cannot delete the default consumer group provided by IoT Platform.</li>
-     * <li>If the consumer group is associated with an AMQP subscription, you must disassociate the consumer group from the subscription. If the subscription has multiple consumer groups, you can call the <a href="https://help.aliyun.com/document_detail/170357.html">DeleteConsumerGroupSubscribeRelation</a> operation to remove the consumer group from the subscription. If the subscription has only one consumer group, you can call the <a href="https://help.aliyun.com/document_detail/170351.html">UpdateSubscribeRelation</a> operation to change the consumer group or call the <a href="https://help.aliyun.com/document_detail/170353.html">DeleteSubscribeRelation</a> operation to delete the subscription.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteConsumerGroupRequest
      * @return DeleteConsumerGroupResponse
      */
@@ -7516,16 +6104,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If the AMQP subscription has only one consumer group, you cannot call this operation to remove the consumer group.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteConsumerGroupSubscribeRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteConsumerGroupSubscribeRelationResponse
@@ -7563,16 +6141,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If the AMQP subscription has only one consumer group, you cannot call this operation to remove the consumer group.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteConsumerGroupSubscribeRelationRequest
      * @return DeleteConsumerGroupSubscribeRelationResponse
      */
@@ -7670,29 +6238,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  When you call this operation with an Alibaba Cloud account, IoT Platform sends a verification code by text message to confirm your identity.</p>
-     * <ul>
-     * <li>When you call this operation with a RAM user, IoT Platform does not send a verification code. To ensure device security, you can create custom permission policies to perform fine-grained permission management. For more information, see <a href="https://help.aliyun.com/document_detail/47485.html">Mapping of IoT Platform operations and RAM policies</a> and <a href="https://help.aliyun.com/document_detail/47495.html">Custom permissions</a>.
-     * <strong>Warning</strong></li>
-     * <li>After a device is deleted, the device ID (<strong>IotId</strong>) becomes invalid, and all other information associated with the device is deleted. In addition, you can no longer perform an operation on the device.</li>
-     * <li>Before you delete a device in the IoT Platform console, make sure that the corresponding actual device is offline. Otherwise, after the device is deleted from IoT Platform, the actual device continues to initiate connection requests to IoT Platform. If the number of requests exceeds the upper limit, IoT Platform starts request throttling. In this case, access of other devices within your Alibaba Cloud account is affected.</li>
-     * <li>After you delete a device, the certificate of the device becomes invalid and cannot be restored. Proceed with caution.</li>
-     * </ul>
-     * <hr>
-     * <ul>
-     * <li>You must specify a value for the <strong>IotId</strong> parameter or values for the <strong>ProductKey</strong> and <strong>DeviceName</strong> parameters to identify a device.</li>
-     * <li>If you specify a gateway and the number of sub-devices that belong to the gateway exceeds 2,000, you can call this operation to create a device job to delete the topological relationships in an asynchronous manner. The operation returns the <strong>JobId</strong> parameter.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes a device. You can also call this operation to delete the topological relationships between a gateway and the sub-devices that are connected to the gateway.</p>
-     * 
      * @param request DeleteDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDeviceResponse
@@ -7734,29 +6279,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  When you call this operation with an Alibaba Cloud account, IoT Platform sends a verification code by text message to confirm your identity.</p>
-     * <ul>
-     * <li>When you call this operation with a RAM user, IoT Platform does not send a verification code. To ensure device security, you can create custom permission policies to perform fine-grained permission management. For more information, see <a href="https://help.aliyun.com/document_detail/47485.html">Mapping of IoT Platform operations and RAM policies</a> and <a href="https://help.aliyun.com/document_detail/47495.html">Custom permissions</a>.
-     * <strong>Warning</strong></li>
-     * <li>After a device is deleted, the device ID (<strong>IotId</strong>) becomes invalid, and all other information associated with the device is deleted. In addition, you can no longer perform an operation on the device.</li>
-     * <li>Before you delete a device in the IoT Platform console, make sure that the corresponding actual device is offline. Otherwise, after the device is deleted from IoT Platform, the actual device continues to initiate connection requests to IoT Platform. If the number of requests exceeds the upper limit, IoT Platform starts request throttling. In this case, access of other devices within your Alibaba Cloud account is affected.</li>
-     * <li>After you delete a device, the certificate of the device becomes invalid and cannot be restored. Proceed with caution.</li>
-     * </ul>
-     * <hr>
-     * <ul>
-     * <li>You must specify a value for the <strong>IotId</strong> parameter or values for the <strong>ProductKey</strong> and <strong>DeviceName</strong> parameters to identify a device.</li>
-     * <li>If you specify a gateway and the number of sub-devices that belong to the gateway exceeds 2,000, you can call this operation to create a device job to delete the topological relationships in an asynchronous manner. The operation returns the <strong>JobId</strong> parameter.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes a device. You can also call this operation to delete the topological relationships between a gateway and the sub-devices that are connected to the gateway.</p>
-     * 
      * @param request DeleteDeviceRequest
      * @return DeleteDeviceResponse
      */
@@ -7766,15 +6288,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteDeviceDistributeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDeviceDistributeJobResponse
@@ -7804,15 +6317,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteDeviceDistributeJobRequest
      * @return DeleteDeviceDistributeJobResponse
      */
@@ -7864,13 +6368,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteDeviceFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDeviceFileResponse
@@ -7916,13 +6413,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteDeviceFileRequest
      * @return DeleteDeviceFileResponse
      */
@@ -7932,13 +6422,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteDeviceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDeviceGroupResponse
@@ -7972,13 +6455,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteDeviceGroupRequest
      * @return DeleteDeviceGroupResponse
      */
@@ -7988,13 +6464,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteDevicePropRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDevicePropResponse
@@ -8040,13 +6509,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteDevicePropRequest
      * @return DeleteDevicePropResponse
      */
@@ -8144,16 +6606,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You are not allowed to delete a driver that has a published version.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteEdgeDriverRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteEdgeDriverResponse
@@ -8187,16 +6639,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You are not allowed to delete a driver that has a published version.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteEdgeDriverRequest
      * @return DeleteEdgeDriverResponse
      */
@@ -8206,16 +6648,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You are not allowed to delete a published driver version.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteEdgeDriverVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteEdgeDriverVersionResponse
@@ -8253,16 +6685,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You are not allowed to delete a published driver version.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteEdgeDriverVersionRequest
      * @return DeleteEdgeDriverVersionResponse
      */
@@ -8272,12 +6694,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteEdgeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteEdgeInstanceResponse
@@ -8311,12 +6727,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteEdgeInstanceRequest
      * @return DeleteEdgeInstanceResponse
      */
@@ -8414,13 +6824,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteOTAFirmwareRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteOTAFirmwareResponse
@@ -8454,13 +6857,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteOTAFirmwareRequest
      * @return DeleteOTAFirmwareResponse
      */
@@ -8470,17 +6866,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>The default module cannot be deleted.</li>
-     * <li>If an update package exists in an OTA module, you cannot delete the OTA module.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteOTAModuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteOTAModuleResponse
@@ -8518,17 +6903,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>The default module cannot be deleted.</li>
-     * <li>If an update package exists in an OTA module, you cannot delete the OTA module.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteOTAModuleRequest
      * @return DeleteOTAModuleResponse
      */
@@ -8668,16 +7042,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>After a product is deleted, the ProductKey of the product is invalid. The related information about the product is also deleted. You cannot perform the required operations on the product.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteProductResponse
@@ -8711,16 +7075,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>After a product is deleted, the ProductKey of the product is invalid. The related information about the product is also deleted. You cannot perform the required operations on the product.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteProductRequest
      * @return DeleteProductResponse
      */
@@ -8730,16 +7084,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can delete a maximum of 10 tags in a single call.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteProductTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteProductTagsResponse
@@ -8777,16 +7121,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can delete a maximum of 10 tags in a single call.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DeleteProductTagsRequest
      * @return DeleteProductTagsResponse
      */
@@ -8796,13 +7130,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteProductTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteProductTopicResponse
@@ -8836,13 +7163,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteProductTopicRequest
      * @return DeleteProductTopicResponse
      */
@@ -8852,13 +7172,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteRuleResponse
@@ -8892,13 +7205,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteRuleRequest
      * @return DeleteRuleResponse
      */
@@ -8908,13 +7214,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteRuleActionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteRuleActionResponse
@@ -8948,13 +7247,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteRuleActionRequest
      * @return DeleteRuleActionResponse
      */
@@ -9312,13 +7604,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteSubscribeRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSubscribeRelationResponse
@@ -9356,13 +7641,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteSubscribeRelationRequest
      * @return DeleteSubscribeRelationResponse
      */
@@ -9372,31 +7650,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  If a product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you call the DeleteThingModel operation.</p>
-     * <ul>
-     * <li>If an existing feature or custom TSL module in a product is not published, you can call the DeleteThingModel operation to remove the feature or delete the custom TSL module.</li>
-     * <li>When you call the DeleteThingModel operation, you must specify a value for the <strong>ProductKey</strong> parameter. The following list describes how the DeleteThingModel operation works:<ul>
-     * <li>If you specify a value only for the <strong>ProductKey</strong> parameter, the operation deletes all custom TSL modules and removes all features in the default TSL module from the specified product.</li>
-     * <li>If you specify values only for the <strong>ProductKey</strong> and <strong>FunctionBlockId</strong> parameters, the operation deletes the specified custom TSL module from the specified product.</li>
-     * <li>If you specify a value for the <strong>ProductKey</strong> parameter and a value for the <strong>PropertyIdentifier.N</strong>, <strong>ServiceIdentifier.N</strong>, or <strong>EventIdentifier.N</strong> parameter, the operation removes one or more specified features from the default TSL module of the specified product. The operation removes the specified features only if the features exist. If the value that you specified for the <strong>PropertyIdentifier.N</strong>, <strong>ServiceIdentifier.N</strong>, or <strong>EventIdentifier.N</strong> parameter does not exist in the default TSL module, the operation returns the same result as when you specify a value only for the <strong>ProductKey</strong> parameter.</li>
-     * <li>If you specify values for the <strong>ProductKey</strong> and <strong>FunctionBlockId</strong> parameters and a value for the <strong>PropertyIdentifier.N</strong>, <strong>ServiceIdentifier.N</strong>, or <strong>EventIdentifier.N</strong> parameter, the operation removes one or more specified features from a specified custom TSL module in a specified product. The operation removes the specified features only if the features exist. If the value that you specified for the <strong>PropertyIdentifier.N</strong>, <strong>ServiceIdentifier.N</strong>, or <strong>EventIdentifier.N</strong> parameter does not exist, the operation returns the same result as when you specify values only for the <strong>ProductKey</strong> and <strong>FunctionBlockId</strong> parameters.<blockquote>
-     * <p>You must specify up to 10 identifiers for the <strong>PropertyIdentifier.N</strong>, <strong>ServiceIdentifier.N</strong>, or <strong>EventIdentifier.N</strong> parameter.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>After you call the DeleteThingModel operation to remove one or more features from a product, you must call the <a href="https://help.aliyun.com/document_detail/150311.html">PublishThingModel</a> operation to re-publish the TSL model of the product. This way, the change takes effect.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 5 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Removes one or more Thing Specification Language (TSL) features from a specified product. The features can be properties, services, or events.</p>
-     * 
      * @param request DeleteThingModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteThingModelResponse
@@ -9450,31 +7703,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  If a product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you call the DeleteThingModel operation.</p>
-     * <ul>
-     * <li>If an existing feature or custom TSL module in a product is not published, you can call the DeleteThingModel operation to remove the feature or delete the custom TSL module.</li>
-     * <li>When you call the DeleteThingModel operation, you must specify a value for the <strong>ProductKey</strong> parameter. The following list describes how the DeleteThingModel operation works:<ul>
-     * <li>If you specify a value only for the <strong>ProductKey</strong> parameter, the operation deletes all custom TSL modules and removes all features in the default TSL module from the specified product.</li>
-     * <li>If you specify values only for the <strong>ProductKey</strong> and <strong>FunctionBlockId</strong> parameters, the operation deletes the specified custom TSL module from the specified product.</li>
-     * <li>If you specify a value for the <strong>ProductKey</strong> parameter and a value for the <strong>PropertyIdentifier.N</strong>, <strong>ServiceIdentifier.N</strong>, or <strong>EventIdentifier.N</strong> parameter, the operation removes one or more specified features from the default TSL module of the specified product. The operation removes the specified features only if the features exist. If the value that you specified for the <strong>PropertyIdentifier.N</strong>, <strong>ServiceIdentifier.N</strong>, or <strong>EventIdentifier.N</strong> parameter does not exist in the default TSL module, the operation returns the same result as when you specify a value only for the <strong>ProductKey</strong> parameter.</li>
-     * <li>If you specify values for the <strong>ProductKey</strong> and <strong>FunctionBlockId</strong> parameters and a value for the <strong>PropertyIdentifier.N</strong>, <strong>ServiceIdentifier.N</strong>, or <strong>EventIdentifier.N</strong> parameter, the operation removes one or more specified features from a specified custom TSL module in a specified product. The operation removes the specified features only if the features exist. If the value that you specified for the <strong>PropertyIdentifier.N</strong>, <strong>ServiceIdentifier.N</strong>, or <strong>EventIdentifier.N</strong> parameter does not exist, the operation returns the same result as when you specify values only for the <strong>ProductKey</strong> and <strong>FunctionBlockId</strong> parameters.<blockquote>
-     * <p>You must specify up to 10 identifiers for the <strong>PropertyIdentifier.N</strong>, <strong>ServiceIdentifier.N</strong>, or <strong>EventIdentifier.N</strong> parameter.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>After you call the DeleteThingModel operation to remove one or more features from a product, you must call the <a href="https://help.aliyun.com/document_detail/150311.html">PublishThingModel</a> operation to re-publish the TSL model of the product. This way, the change takes effect.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 5 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Removes one or more Thing Specification Language (TSL) features from a specified product. The features can be properties, services, or events.</p>
-     * 
      * @param request DeleteThingModelRequest
      * @return DeleteThingModelResponse
      */
@@ -9530,13 +7758,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteTopicRouteTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTopicRouteTableResponse
@@ -9574,13 +7795,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request DeleteTopicRouteTableRequest
      * @return DeleteTopicRouteTableResponse
      */
@@ -9642,13 +7856,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request DetachDestinationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachDestinationResponse
@@ -9686,13 +7893,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request DetachDestinationRequest
      * @return DetachDestinationResponse
      */
@@ -9882,16 +8082,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>After a device is disabled, you cannot connect the device to IoT Platform. You can perform device-specific operations on the device. However, the information about the device is still retained in IoT Platform. You can use the <a href="https://help.aliyun.com/document_detail/69603.html">EnableThing</a> API operation to connect the disabled device to IoT Platform again.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DisableThingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableThingResponse
@@ -9933,16 +8123,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>After a device is disabled, you cannot connect the device to IoT Platform. You can perform device-specific operations on the device. However, the information about the device is still retained in IoT Platform. You can use the <a href="https://help.aliyun.com/document_detail/69603.html">EnableThing</a> API operation to connect the disabled device to IoT Platform again.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request DisableThingRequest
      * @return DisableThingResponse
      */
@@ -10086,13 +8266,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request EnableThingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableThingResponse
@@ -10134,13 +8307,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request EnableThingRequest
      * @return EnableThingResponse
      */
@@ -10150,30 +8316,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation can be used with other operations to upload a device list file. Procedure:</p>
-     * <ol>
-     * <li>Call this operation to generate the information of a device list file that you want to upload to OSS.<br>The response parameters of this API operation include:
-     * The following request parameters of the OSS <a href="/help/en/object-storage-service/latest/postobject">PostObject</a> operation that is used to upload the device list file: <strong>Key</strong>, <strong>AccessKeyId</strong>, <strong>Signature</strong>, and <strong>Policy</strong>.  </li>
-     * <li>Use an <a href="/help/en/object-storage-service/latest/sdk-code-samples-overview">OSS SDK</a> to call the <a href="/help/en/object-storage-service/latest/postobject">PostObject</a> operation to upload the device list file within 1 minute after a response is returned. For more information about sample code, see the &quot;Usage of response parameters&quot; section in this topic.  <blockquote>
-     * <p> The parameter information that is returned by this operation is valid for 1 minute. You must upload the device list file within 1 minute.  3. After you upload the device list file, call the <a href="/help/en/iot-platform/latest/e1qtmo">CreateOTAStaticUpgradeJob</a> operation of IoT Platform to create a static update batch within 60 minutes.<br>If you upload device list files but you do not call the CreateOTAStaticUpgradeJob operation to create a static update batch, the system automatically deletes the uploaded files. The system deletes files on a regular basis.</p>
-     * </blockquote>
-     * </li>
-     * </ol>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account. </p>
-     * </blockquote>
-     * <h2>Requirements</h2>
-     * <ul>
-     * <li>A device list file contains the names of devices. Separate multiple device names with line feeds. Each line contains only one device name. A device list file must be in the CSV format. The maximum size of a device list file is 5 MB.</li>
-     * <li>Each device list file can contain up to 10,000 names for the devices in a product that is related to an update package. If the number of device names in a device list file exceeds the limit, an error occurs when you use the file to create a static update batch.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Generates the URL and details of a device list file that you want to upload to Object Storage Service (OSS). When you create a static update batch, you can specify devices that you want to update in a device list file.</p>
-     * 
      * @param request GenerateDeviceNameListURLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateDeviceNameListURLResponse
@@ -10203,30 +8345,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation can be used with other operations to upload a device list file. Procedure:</p>
-     * <ol>
-     * <li>Call this operation to generate the information of a device list file that you want to upload to OSS.<br>The response parameters of this API operation include:
-     * The following request parameters of the OSS <a href="/help/en/object-storage-service/latest/postobject">PostObject</a> operation that is used to upload the device list file: <strong>Key</strong>, <strong>AccessKeyId</strong>, <strong>Signature</strong>, and <strong>Policy</strong>.  </li>
-     * <li>Use an <a href="/help/en/object-storage-service/latest/sdk-code-samples-overview">OSS SDK</a> to call the <a href="/help/en/object-storage-service/latest/postobject">PostObject</a> operation to upload the device list file within 1 minute after a response is returned. For more information about sample code, see the &quot;Usage of response parameters&quot; section in this topic.  <blockquote>
-     * <p> The parameter information that is returned by this operation is valid for 1 minute. You must upload the device list file within 1 minute.  3. After you upload the device list file, call the <a href="/help/en/iot-platform/latest/e1qtmo">CreateOTAStaticUpgradeJob</a> operation of IoT Platform to create a static update batch within 60 minutes.<br>If you upload device list files but you do not call the CreateOTAStaticUpgradeJob operation to create a static update batch, the system automatically deletes the uploaded files. The system deletes files on a regular basis.</p>
-     * </blockquote>
-     * </li>
-     * </ol>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account. </p>
-     * </blockquote>
-     * <h2>Requirements</h2>
-     * <ul>
-     * <li>A device list file contains the names of devices. Separate multiple device names with line feeds. Each line contains only one device name. A device list file must be in the CSV format. The maximum size of a device list file is 5 MB.</li>
-     * <li>Each device list file can contain up to 10,000 names for the devices in a product that is related to an update package. If the number of device names in a device list file exceeds the limit, an error occurs when you use the file to create a static update batch.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Generates the URL and details of a device list file that you want to upload to Object Storage Service (OSS). When you create a static update batch, you can specify devices that you want to update in a device list file.</p>
-     * 
      * @param request GenerateDeviceNameListURLRequest
      * @return GenerateDeviceNameListURLResponse
      */
@@ -10286,29 +8404,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation can be used together with other operations to create an update package. Procedure:
-     * 1\. Call this API operation to generate the details of an update package file that you want to upload to OSS.
-     * The following section describes the response parameters of this API operation:</p>
-     * <ul>
-     * <li>The following request parameters of the OSS <a href="https://help.aliyun.com/document_detail/31988.html">PostObject</a> operation that is used to upload the update package file: <strong>Key</strong>, <strong>OSSAccessKeyId</strong>, <strong>Signature</strong>, and <strong>Policy</strong>.</li>
-     * <li>The following request parameter of the <a href="https://help.aliyun.com/document_detail/147311.html">CreateOTAFirmware</a> operation that is used to create the update package: <strong>FirmwareUrl</strong>.
-     * 2\. Use an <a href="https://help.aliyun.com/document_detail/52834.html">OSS SDK</a> to call the <a href="https://help.aliyun.com/document_detail/31988.html">PostObject</a> operation to upload the update package file. For more information about sample code, see the &quot;Usage of response parameters&quot; section.<blockquote>
-     * <p>The parameter information that is returned by this operation is valid for 1 minute. You must upload the update package file within 1 minute. The maximum size of the uploaded update package file is 1,000 MB.
-     * 3\. After the update package file is uploaded, call the <a href="https://help.aliyun.com/document_detail/147311.html">CreateOTAFirmware</a> operation to create an update package within 60 minutes.
-     * If update package files are uploaded but you do not call the CreateOTAFirmware operation to create update packages for the files, the uploaded files are automatically deleted by the system on a regular basis.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Generates the URL and other information that are required to upload an update package file to Object Storage Service (OSS).</p>
-     * 
      * @param request GenerateOTAUploadURLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateOTAUploadURLResponse
@@ -10342,29 +8437,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation can be used together with other operations to create an update package. Procedure:
-     * 1\. Call this API operation to generate the details of an update package file that you want to upload to OSS.
-     * The following section describes the response parameters of this API operation:</p>
-     * <ul>
-     * <li>The following request parameters of the OSS <a href="https://help.aliyun.com/document_detail/31988.html">PostObject</a> operation that is used to upload the update package file: <strong>Key</strong>, <strong>OSSAccessKeyId</strong>, <strong>Signature</strong>, and <strong>Policy</strong>.</li>
-     * <li>The following request parameter of the <a href="https://help.aliyun.com/document_detail/147311.html">CreateOTAFirmware</a> operation that is used to create the update package: <strong>FirmwareUrl</strong>.
-     * 2\. Use an <a href="https://help.aliyun.com/document_detail/52834.html">OSS SDK</a> to call the <a href="https://help.aliyun.com/document_detail/31988.html">PostObject</a> operation to upload the update package file. For more information about sample code, see the &quot;Usage of response parameters&quot; section.<blockquote>
-     * <p>The parameter information that is returned by this operation is valid for 1 minute. You must upload the update package file within 1 minute. The maximum size of the uploaded update package file is 1,000 MB.
-     * 3\. After the update package file is uploaded, call the <a href="https://help.aliyun.com/document_detail/147311.html">CreateOTAFirmware</a> operation to create an update package within 60 minutes.
-     * If update package files are uploaded but you do not call the CreateOTAFirmware operation to create update packages for the files, the uploaded files are automatically deleted by the system on a regular basis.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Generates the URL and other information that are required to upload an update package file to Object Storage Service (OSS).</p>
-     * 
      * @param request GenerateOTAUploadURLRequest
      * @return GenerateOTAUploadURLResponse
      */
@@ -10458,13 +8530,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 500 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetDeviceShadowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDeviceShadowResponse
@@ -10502,13 +8567,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 500 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetDeviceShadowRequest
      * @return GetDeviceShadowResponse
      */
@@ -10518,13 +8576,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetDeviceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDeviceStatusResponse
@@ -10566,13 +8617,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetDeviceStatusRequest
      * @return GetDeviceStatusResponse
      */
@@ -10728,16 +8772,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries information about a driver version.</p>
-     * 
      * @param request GetEdgeDriverVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEdgeDriverVersionResponse
@@ -10775,16 +8809,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries information about a driver version.</p>
-     * 
      * @param request GetEdgeDriverVersionRequest
      * @return GetEdgeDriverVersionResponse
      */
@@ -10794,13 +8818,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetEdgeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEdgeInstanceResponse
@@ -10834,13 +8851,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetEdgeInstanceRequest
      * @return GetEdgeInstanceResponse
      */
@@ -10850,16 +8860,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries detailed information about a deployment task of an edge instance.</p>
-     * 
      * @param request GetEdgeInstanceDeploymentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEdgeInstanceDeploymentResponse
@@ -10897,16 +8897,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries detailed information about a deployment task of an edge instance.</p>
-     * 
      * @param request GetEdgeInstanceDeploymentRequest
      * @return GetEdgeInstanceDeploymentResponse
      */
@@ -10962,13 +8952,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetGatewayBySubDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGatewayBySubDeviceResponse
@@ -11010,13 +8993,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetGatewayBySubDeviceRequest
      * @return GetGatewayBySubDeviceResponse
      */
@@ -11026,16 +9002,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the status of the task for creating multiple Long Range Wide Area Networking (LoRaWAN) devices at the same time.</p>
-     * 
      * @param request GetLoraNodesTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLoraNodesTaskResponse
@@ -11069,16 +9035,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the status of the task for creating multiple Long Range Wide Area Networking (LoRaWAN) devices at the same time.</p>
-     * 
      * @param request GetLoraNodesTaskRequest
      * @return GetLoraNodesTaskResponse
      */
@@ -11172,13 +9128,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRuleResponse
@@ -11212,13 +9161,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetRuleRequest
      * @return GetRuleResponse
      */
@@ -11228,16 +9170,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common request parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetRuleActionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRuleActionResponse
@@ -11271,16 +9203,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common request parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetRuleActionRequest
      * @return GetRuleActionResponse
      */
@@ -11554,16 +9476,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to three times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the information about Speech Sending Service licenses that are bound to devices.</p>
-     * 
      * @param request GetSpeechLicenseDeviceStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSpeechLicenseDeviceStatisticsResponse
@@ -11593,16 +9505,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to three times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the information about Speech Sending Service licenses that are bound to devices.</p>
-     * 
      * @param request GetSpeechLicenseDeviceStatisticsRequest
      * @return GetSpeechLicenseDeviceStatisticsResponse
      */
@@ -11733,16 +9635,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common request parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetThingModelTslRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetThingModelTslResponse
@@ -11788,16 +9680,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common request parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetThingModelTslRequest
      * @return GetThingModelTslResponse
      */
@@ -11807,13 +9689,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetThingModelTslPublishedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetThingModelTslPublishedResponse
@@ -11863,13 +9738,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetThingModelTslPublishedRequest
      * @return GetThingModelTslPublishedResponse
      */
@@ -11879,15 +9747,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  A data parsing script is used to convert the custom-formatted data to JSON data after the data is submitted by a device. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see <a href="https://help.aliyun.com/document_detail/149963.html">Submit scripts for data parsing</a>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request GetThingScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetThingScriptResponse
@@ -11921,15 +9780,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  A data parsing script is used to convert the custom-formatted data to JSON data after the data is submitted by a device. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see <a href="https://help.aliyun.com/document_detail/149963.html">Submit scripts for data parsing</a>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request GetThingScriptRequest
      * @return GetThingScriptResponse
      */
@@ -11939,13 +9789,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetThingTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetThingTemplateResponse
@@ -11983,13 +9826,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 2 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request GetThingTemplateRequest
      * @return GetThingTemplateResponse
      */
@@ -11999,16 +9835,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can initiate a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the sub-devices of a specified gateway device.</p>
-     * 
      * @param request GetThingTopoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetThingTopoResponse
@@ -12058,16 +9884,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can initiate a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the sub-devices of a specified gateway device.</p>
-     * 
      * @param request GetThingTopoRequest
      * @return GetThingTopoResponse
      */
@@ -12229,18 +10045,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Before you call this operation, make sure that an MQTT gateway and the related product are created and the <strong>ProductKey</strong> of the product is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/433804.html">Create an MQTT gateway</a>.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Adds a device to a Message Queuing Telemetry Transport (MQTT) gateway product.</p>
-     * 
      * @param request ImportDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportDeviceResponse
@@ -12290,18 +10094,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Before you call this operation, make sure that an MQTT gateway and the related product are created and the <strong>ProductKey</strong> of the product is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/433804.html">Create an MQTT gateway</a>.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Adds a device to a Message Queuing Telemetry Transport (MQTT) gateway product.</p>
-     * 
      * @param request ImportDeviceRequest
      * @return ImportDeviceResponse
      */
@@ -12311,16 +10103,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If a product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you call this operation.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request ImportThingModelTslRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportThingModelTslResponse
@@ -12374,16 +10156,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If a product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you call this operation.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request ImportThingModelTslRequest
      * @return ImportThingModelTslResponse
      */
@@ -12439,44 +10211,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When you define a service in a Thing Specification Language (TSL) model, the mode in which the service is called is specified. When you call a service by using this operation, IoT Platform uses a call mode based on the value of the <strong>Identifier</strong> parameter.</p>
-     * <ul>
-     * <li>Synchronous mode: IoT Platform sends a revert-remote procedure call (RRPC) request to a device. Then, the device synchronously returns an RRPC response. For more information about how to use an RRPC, see <a href="https://help.aliyun.com/document_detail/90567.html">What is RRPC?</a></li>
-     * <li>Asynchronous mode: IoT Platform sends an RRPC request to a device. Then, the device asynchronously returns an RRPC response. For more information about topics, see <a href="https://help.aliyun.com/document_detail/89301.html">Device properties, events, and services</a>.<blockquote>
-     * <p>If you set the Checksum Type parameter to <strong>Verification-free</strong> when you create a product, the asynchronous mode is used.
-     * When the device receives the service call, the device returns a response to the service caller. When you configure the device, you must specify the response logic and response parameters. The data formats of response parameters must comply with the Alink protocol. Example:</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <pre><code>{
-     *     &quot;id&quot;: &quot;58***89&quot;,
-     *     &quot;code&quot;: 200,
-     *     &quot;data&quot;: {},
-     *     &quot;message&quot;: &quot;success&quot;,
-     *     &quot;localizedMsg&quot;: &quot;localizedMsg&quot;
-     * }
-     * </code></pre>
-     * <blockquote>
-     * <ul>
-     * <li>The <strong>id</strong> parameter specifies the unique identifier of the request. The ID is generated by IoT Platform. The device can obtain the ID from the request parameters and then return the ID.</li>
-     * <li>The <strong>code</strong> parameter specifies the result of the service call. The value of the parameter is an integer.</li>
-     * <li>The <strong>data</strong> parameter specifies the result of the service call. This parameter is returned to the service caller. You can configure the parameters that you want to include in the returned result. The data must be in the JSON format.</li>
-     * <li>The <strong>message</strong> and <strong>localizedMsg</strong> parameters are optional.</li>
-     * <li>Link SDK for C of IoT Platform provides an example on how to use a TSL model. For more information, see <a href="https://help.aliyun.com/document_detail/258239.html">Call device services</a>.</li>
-     * </ul>
-     * </blockquote>
-     * <h2>Limits</h2>
-     * <p>If you synchronously call a service, the timeout period is 8 seconds. If a server does not receive a response within 8 seconds, a timeout error occurs. No limit is imposed on the timeout period of asynchronous calls. </p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Calls a service of a device.</p>
-     * 
      * @param request InvokeThingServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InvokeThingServiceResponse
@@ -12530,44 +10264,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When you define a service in a Thing Specification Language (TSL) model, the mode in which the service is called is specified. When you call a service by using this operation, IoT Platform uses a call mode based on the value of the <strong>Identifier</strong> parameter.</p>
-     * <ul>
-     * <li>Synchronous mode: IoT Platform sends a revert-remote procedure call (RRPC) request to a device. Then, the device synchronously returns an RRPC response. For more information about how to use an RRPC, see <a href="https://help.aliyun.com/document_detail/90567.html">What is RRPC?</a></li>
-     * <li>Asynchronous mode: IoT Platform sends an RRPC request to a device. Then, the device asynchronously returns an RRPC response. For more information about topics, see <a href="https://help.aliyun.com/document_detail/89301.html">Device properties, events, and services</a>.<blockquote>
-     * <p>If you set the Checksum Type parameter to <strong>Verification-free</strong> when you create a product, the asynchronous mode is used.
-     * When the device receives the service call, the device returns a response to the service caller. When you configure the device, you must specify the response logic and response parameters. The data formats of response parameters must comply with the Alink protocol. Example:</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <pre><code>{
-     *     &quot;id&quot;: &quot;58***89&quot;,
-     *     &quot;code&quot;: 200,
-     *     &quot;data&quot;: {},
-     *     &quot;message&quot;: &quot;success&quot;,
-     *     &quot;localizedMsg&quot;: &quot;localizedMsg&quot;
-     * }
-     * </code></pre>
-     * <blockquote>
-     * <ul>
-     * <li>The <strong>id</strong> parameter specifies the unique identifier of the request. The ID is generated by IoT Platform. The device can obtain the ID from the request parameters and then return the ID.</li>
-     * <li>The <strong>code</strong> parameter specifies the result of the service call. The value of the parameter is an integer.</li>
-     * <li>The <strong>data</strong> parameter specifies the result of the service call. This parameter is returned to the service caller. You can configure the parameters that you want to include in the returned result. The data must be in the JSON format.</li>
-     * <li>The <strong>message</strong> and <strong>localizedMsg</strong> parameters are optional.</li>
-     * <li>Link SDK for C of IoT Platform provides an example on how to use a TSL model. For more information, see <a href="https://help.aliyun.com/document_detail/258239.html">Call device services</a>.</li>
-     * </ul>
-     * </blockquote>
-     * <h2>Limits</h2>
-     * <p>If you synchronously call a service, the timeout period is 8 seconds. If a server does not receive a response within 8 seconds, a timeout error occurs. No limit is imposed on the timeout period of asynchronous calls. </p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Calls a service of a device.</p>
-     * 
      * @param request InvokeThingServiceRequest
      * @return InvokeThingServiceResponse
      */
@@ -12577,35 +10273,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can only asynchronously call this operation.
-     * When the device receives the service call, the device returns a response to the service caller. When you configure the device, you must specify the response logic and response parameters. The data formats of response parameters must comply with the Alink protocol. Example:</p>
-     * <pre><code>{
-     *     &quot;id&quot;: &quot;58***89&quot;,
-     *     &quot;code&quot;: 200,
-     *     &quot;data&quot;: {},
-     *     &quot;message&quot;: &quot;success&quot;,
-     *     &quot;localizedMsg&quot;: &quot;localizedMsg&quot;
-     * }
-     * </code></pre>
-     * <blockquote>
-     * <ul>
-     * <li>The <strong>id</strong> parameter specifies the unique identifier of the request. The ID is generated by IoT Platform. The device can obtain the ID from the request parameters and return the ID.</li>
-     * <li>The <strong>code</strong> parameter specifies the result of the service call. The value of the parameter is an integer.</li>
-     * <li>The <strong>data</strong> parameter specifies the result of the service call. This parameter is returned to the service caller. You can specify the parameters included in the returned result. The data must be in JSON format.</li>
-     * <li>The <strong>message</strong> and <strong>localizedMsg</strong> parameters are optional.</li>
-     * <li>Link SDK for C of IoT Platform provides an example on how to use a TSL model. For more information, see <a href="https://help.aliyun.com/document_detail/258239.html">Call device services</a>.</li>
-     * </ul>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Calls multiple device services at a time.</p>
-     * 
      * @param request InvokeThingsServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InvokeThingsServiceResponse
@@ -12655,35 +10322,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can only asynchronously call this operation.
-     * When the device receives the service call, the device returns a response to the service caller. When you configure the device, you must specify the response logic and response parameters. The data formats of response parameters must comply with the Alink protocol. Example:</p>
-     * <pre><code>{
-     *     &quot;id&quot;: &quot;58***89&quot;,
-     *     &quot;code&quot;: 200,
-     *     &quot;data&quot;: {},
-     *     &quot;message&quot;: &quot;success&quot;,
-     *     &quot;localizedMsg&quot;: &quot;localizedMsg&quot;
-     * }
-     * </code></pre>
-     * <blockquote>
-     * <ul>
-     * <li>The <strong>id</strong> parameter specifies the unique identifier of the request. The ID is generated by IoT Platform. The device can obtain the ID from the request parameters and return the ID.</li>
-     * <li>The <strong>code</strong> parameter specifies the result of the service call. The value of the parameter is an integer.</li>
-     * <li>The <strong>data</strong> parameter specifies the result of the service call. This parameter is returned to the service caller. You can specify the parameters included in the returned result. The data must be in JSON format.</li>
-     * <li>The <strong>message</strong> and <strong>localizedMsg</strong> parameters are optional.</li>
-     * <li>Link SDK for C of IoT Platform provides an example on how to use a TSL model. For more information, see <a href="https://help.aliyun.com/document_detail/258239.html">Call device services</a>.</li>
-     * </ul>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Calls multiple device services at a time.</p>
-     * 
      * @param request InvokeThingsServiceRequest
      * @return InvokeThingsServiceResponse
      */
@@ -12751,13 +10389,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request ListDataSourceItemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataSourceItemResponse
@@ -12803,13 +10434,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request ListDataSourceItemRequest
      * @return ListDataSourceItemResponse
      */
@@ -12873,17 +10497,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If you use an Enterprise Edition instance, you must specify the <strong>IotInstanceId</strong> parameter when you call this operation. Otherwise, the call fails.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to five times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries device distribution tasks.</p>
-     * 
      * @param request ListDeviceDistributeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDeviceDistributeJobResponse
@@ -12939,17 +10552,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If you use an Enterprise Edition instance, you must specify the <strong>IotInstanceId</strong> parameter when you call this operation. Otherwise, the call fails.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to five times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries device distribution tasks.</p>
-     * 
      * @param request ListDeviceDistributeJobRequest
      * @return ListDeviceDistributeJobResponse
      */
@@ -12959,19 +10561,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * <li>Multiple Alibaba Cloud accounts can run a maximum of 200 QPS at the same time.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries distributed devices.</p>
-     * 
      * @param request ListDistributedDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDistributedDeviceResponse
@@ -13021,19 +10610,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * <li>Multiple Alibaba Cloud accounts can run a maximum of 200 QPS at the same time.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries distributed devices.</p>
-     * 
      * @param request ListDistributedDeviceRequest
      * @return ListDistributedDeviceResponse
      */
@@ -13043,14 +10619,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to five times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request ListDistributedProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDistributedProductResponse
@@ -13100,14 +10668,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to five times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request ListDistributedProductRequest
      * @return ListDistributedProductResponse
      */
@@ -13167,16 +10727,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries over-the-air (OTA) update packages.</p>
-     * 
      * @param request ListOTAFirmwareRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListOTAFirmwareResponse
@@ -13222,16 +10772,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries over-the-air (OTA) update packages.</p>
-     * 
      * @param request ListOTAFirmwareRequest
      * @return ListOTAFirmwareResponse
      */
@@ -13241,16 +10781,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all the update batches of a device by update package.</p>
-     * 
      * @param request ListOTAJobByDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListOTAJobByDeviceResponse
@@ -13300,16 +10830,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all the update batches of a device by update package.</p>
-     * 
      * @param request ListOTAJobByDeviceRequest
      * @return ListOTAJobByDeviceResponse
      */
@@ -13319,16 +10839,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the update batches of an update package.</p>
-     * 
      * @param request ListOTAJobByFirmwareRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListOTAJobByFirmwareResponse
@@ -13370,16 +10880,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the update batches of an update package.</p>
-     * 
      * @param request ListOTAJobByFirmwareRequest
      * @return ListOTAJobByFirmwareResponse
      */
@@ -13389,13 +10889,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request ListOTAModuleByProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListOTAModuleByProductResponse
@@ -13421,13 +10914,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request ListOTAModuleByProductRequest
      * @return ListOTAModuleByProductResponse
      */
@@ -13437,16 +10923,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the version information of the over-the-air (OTA) modules that are submitted by a device.</p>
-     * 
      * @param request ListOTAModuleVersionsByDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListOTAModuleVersionsByDeviceResponse
@@ -13496,16 +10972,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the version information of the over-the-air (OTA) modules that are submitted by a device.</p>
-     * 
      * @param request ListOTAModuleVersionsByDeviceRequest
      * @return ListOTAModuleVersionsByDeviceResponse
      */
@@ -13515,16 +10981,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the update tasks of a device by update batch.</p>
-     * 
      * @param request ListOTATaskByJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListOTATaskByJobResponse
@@ -13574,16 +11030,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the update tasks of a device by update batch.</p>
-     * 
      * @param request ListOTATaskByJobRequest
      * @return ListOTATaskByJobResponse
      */
@@ -13593,16 +11039,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries uncompleted update tasks of a specified device.</p>
-     * 
      * @param request ListOTAUnfinishedTaskByDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListOTAUnfinishedTaskByDeviceResponse
@@ -13656,16 +11092,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries uncompleted update tasks of a specified device.</p>
-     * 
      * @param request ListOTAUnfinishedTaskByDeviceRequest
      * @return ListOTAUnfinishedTaskByDeviceResponse
      */
@@ -13725,9 +11151,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Queries the data sources of a parser.</p>
-     * 
      * @param request ListParserDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListParserDataSourceResponse
@@ -13769,9 +11192,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Queries the data sources of a parser.</p>
-     * 
      * @param request ListParserDataSourceRequest
      * @return ListParserDataSourceResponse
      */
@@ -13881,17 +11301,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * <li>You can specify a tag key or a tag key-value pair for search.</li>
-     * <li>If you specify multiple tags, the logical relationship among these tags is <strong>OR</strong>.</li>
-     * </ul>
-     * 
      * @param request ListProductByTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListProductByTagsResponse
@@ -13933,17 +11342,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * <li>You can specify a tag key or a tag key-value pair for search.</li>
-     * <li>If you specify multiple tags, the logical relationship among these tags is <strong>OR</strong>.</li>
-     * </ul>
-     * 
      * @param request ListProductByTagsRequest
      * @return ListProductByTagsResponse
      */
@@ -13953,16 +11351,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all the tags of a product.</p>
-     * 
      * @param request ListProductTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListProductTagsResponse
@@ -13996,16 +11384,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all the tags of a product.</p>
-     * 
      * @param request ListProductTagsRequest
      * @return ListProductTagsResponse
      */
@@ -14015,16 +11393,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 20 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries rules by page.</p>
-     * 
      * @param request ListRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRuleResponse
@@ -14066,16 +11434,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 20 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries rules by page.</p>
-     * 
      * @param request ListRuleRequest
      * @return ListRuleResponse
      */
@@ -14085,16 +11443,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all the configured data forwarding actions of a specific rule. When the rule is triggered, data can be forwarded to different destinations based on the configured actions.</p>
-     * 
      * @param request ListRuleActionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRuleActionsResponse
@@ -14128,16 +11476,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all the configured data forwarding actions of a specific rule. When the rule is triggered, data can be forwarded to different destinations based on the configured actions.</p>
-     * 
      * @param request ListRuleActionsRequest
      * @return ListRuleActionsResponse
      */
@@ -14211,17 +11549,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can manage TSL models by version. After you import a TSL model by calling the <a href="https://help.aliyun.com/document_detail/150320.html">ImportThingModelTsl</a> operation, copy a TSL model by calling the <a href="https://help.aliyun.com/document_detail/150322.html">CopyThingModel</a> operation, or edit a TSL model, you must publish the TSL model by calling the <a href="https://help.aliyun.com/document_detail/150311.html">PublishThingModel</a> operation. Then, the TSL model can be used. Each time a TSL model of a product is published, a new version is generated.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the Thing Specification Language (TSL) model versions of a specified product.</p>
-     * 
      * @param request ListThingModelVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListThingModelVersionResponse
@@ -14255,17 +11582,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can manage TSL models by version. After you import a TSL model by calling the <a href="https://help.aliyun.com/document_detail/150320.html">ImportThingModelTsl</a> operation, copy a TSL model by calling the <a href="https://help.aliyun.com/document_detail/150322.html">CopyThingModel</a> operation, or edit a TSL model, you must publish the TSL model by calling the <a href="https://help.aliyun.com/document_detail/150311.html">PublishThingModel</a> operation. Then, the TSL model can be used. Each time a TSL model of a product is published, a new version is generated.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the Thing Specification Language (TSL) model versions of a specified product.</p>
-     * 
      * @param request ListThingModelVersionRequest
      * @return ListThingModelVersionResponse
      */
@@ -14275,18 +11591,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>IoT Platform provides product categories that have defined TSL models, such as street lamps, vehicle location cards, and water immersion detectors.
-     * When you call the <a href="https://help.aliyun.com/document_detail/69123.html">CreateProduct</a> operation to create a product, you can set the CategoryKey parameter to specify a product category. The product that you create references the standardized TSL model of the specified category.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries standard product categories that are predefined by IoT Platform.</p>
-     * 
      * @param request ListThingTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListThingTemplatesResponse
@@ -14316,18 +11620,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>IoT Platform provides product categories that have defined TSL models, such as street lamps, vehicle location cards, and water immersion detectors.
-     * When you call the <a href="https://help.aliyun.com/document_detail/69123.html">CreateProduct</a> operation to create a product, you can set the CategoryKey parameter to specify a product category. The product that you create references the standardized TSL model of the specified category.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries standard product categories that are predefined by IoT Platform.</p>
-     * 
      * @param request ListThingTemplatesRequest
      * @return ListThingTemplatesResponse
      */
@@ -14453,18 +11745,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>A successful response indicates that the command to add topological relationships is sent to the gateway. It does not indicate that the topological relationships are added.
-     * When you develop the gateway, you must subscribe to the topic that is used to send notifications when you add topological relationships. For more information about the topic and message format, see <a href="https://help.aliyun.com/document_detail/89299.html">Manage topological relationships</a>.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Notifies a gateway to add topological relationships.</p>
-     * 
      * @param request NotifyAddThingTopoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return NotifyAddThingTopoResponse
@@ -14510,18 +11790,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>A successful response indicates that the command to add topological relationships is sent to the gateway. It does not indicate that the topological relationships are added.
-     * When you develop the gateway, you must subscribe to the topic that is used to send notifications when you add topological relationships. For more information about the topic and message format, see <a href="https://help.aliyun.com/document_detail/89299.html">Manage topological relationships</a>.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Notifies a gateway to add topological relationships.</p>
-     * 
      * @param request NotifyAddThingTopoRequest
      * @return NotifyAddThingTopoResponse
      */
@@ -14611,16 +11879,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the speeches that you share.</p>
-     * 
      * @param request PageQuerySharedSpeechOpenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PageQuerySharedSpeechOpenResponse
@@ -14678,16 +11936,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the speeches that you share.</p>
-     * 
      * @param request PageQuerySharedSpeechOpenRequest
      * @return PageQuerySharedSpeechOpenResponse
      */
@@ -14697,18 +11945,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>You can call this operation to query only shared speech broadcasting data six hours ago. For example, if a shared speech was broadcasted at 07:15, you can query the speech after 13:15.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the shared speech broadcasting data of a specific hour by page in Speech Sending Service.</p>
-     * 
      * @param request PageQuerySpeechBroadcastHourRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PageQuerySpeechBroadcastHourResponse
@@ -14756,18 +11992,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>You can call this operation to query only shared speech broadcasting data six hours ago. For example, if a shared speech was broadcasted at 07:15, you can query the speech after 13:15.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the shared speech broadcasting data of a specific hour by page in Speech Sending Service.</p>
-     * 
      * @param request PageQuerySpeechBroadcastHourRequest
      * @return PageQuerySpeechBroadcastHourResponse
      */
@@ -14777,18 +12001,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Before you call this operation, a receipt template must be available in the Letter Sending Service console. Otherwise, the request fails.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Prints a receipt that follows the template in the Letter Sending Service console.</p>
-     * 
      * @param request PrintByTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PrintByTemplateResponse
@@ -14842,18 +12054,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Before you call this operation, a receipt template must be available in the Letter Sending Service console. Otherwise, the request fails.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Prints a receipt that follows the template in the Letter Sending Service console.</p>
-     * 
      * @param request PrintByTemplateRequest
      * @return PrintByTemplateResponse
      */
@@ -14863,21 +12063,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation does not support device property settings and service invocations.</p>
-     * <ul>
-     * <li>To set properties, call the <a href="https://help.aliyun.com/document_detail/69579.html">SetDeviceProperty</a> or <a href="https://help.aliyun.com/document_detail/96243.html">SetDevicesProperty</a> operation.</li>
-     * <li>To invoke a service, call the <a href="https://help.aliyun.com/document_detail/69584.html">InvokeThingService</a> or <a href="https://help.aliyun.com/document_detail/96242.html">InvokeThingsService</a> operation.</li>
-     * </ul>
-     * <h2>QPS limit</h2>
-     * <p>You can call this API operation up to 1,600 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Publishes a message to a specified device by using a custom topic.</p>
-     * 
      * @param request PubRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PubResponse
@@ -14961,21 +12146,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation does not support device property settings and service invocations.</p>
-     * <ul>
-     * <li>To set properties, call the <a href="https://help.aliyun.com/document_detail/69579.html">SetDeviceProperty</a> or <a href="https://help.aliyun.com/document_detail/96243.html">SetDevicesProperty</a> operation.</li>
-     * <li>To invoke a service, call the <a href="https://help.aliyun.com/document_detail/69584.html">InvokeThingService</a> or <a href="https://help.aliyun.com/document_detail/96242.html">InvokeThingsService</a> operation.</li>
-     * </ul>
-     * <h2>QPS limit</h2>
-     * <p>You can call this API operation up to 1,600 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Publishes a message to a specified device by using a custom topic.</p>
-     * 
      * @param request PubRequest
      * @return PubResponse
      */
@@ -14985,17 +12155,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can use the <strong>TopicFullName</strong> parameter in the <strong>request</strong> to specify the devices to which you want to broadcast messages. For more information, see the description about the <strong>TopicFullName</strong> parameter in this topic.</p>
-     * <h2>QPS limits</h2>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run only one query per second (QPS) to broadcast a message to devices that subscribe to a topic.</li>
-     * <li>Each Alibaba Cloud account can run only one query per minute (QPM) to broadcast a message to all online devices of a product.      &gt;  The RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Broadcasts messages to online devices of a product. You can specify all online devices or only the online devices that subscribe to a specified topic.</p>
-     * 
      * @param request PubBroadcastRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PubBroadcastResponse
@@ -15037,17 +12196,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can use the <strong>TopicFullName</strong> parameter in the <strong>request</strong> to specify the devices to which you want to broadcast messages. For more information, see the description about the <strong>TopicFullName</strong> parameter in this topic.</p>
-     * <h2>QPS limits</h2>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run only one query per second (QPS) to broadcast a message to devices that subscribe to a topic.</li>
-     * <li>Each Alibaba Cloud account can run only one query per minute (QPM) to broadcast a message to all online devices of a product.      &gt;  The RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Broadcasts messages to online devices of a product. You can specify all online devices or only the online devices that subscribe to a specified topic.</p>
-     * 
      * @param request PubBroadcastRequest
      * @return PubBroadcastResponse
      */
@@ -15149,16 +12297,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If a product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you call this operation.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request PublishThingModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PublishThingModelResponse
@@ -15204,16 +12342,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If a product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you call this operation.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request PublishThingModelRequest
      * @return PublishThingModelResponse
      */
@@ -15387,13 +12515,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 30 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryBatchRegisterDeviceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryBatchRegisterDeviceStatusResponse
@@ -15431,13 +12552,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 30 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryBatchRegisterDeviceStatusRequest
      * @return QueryBatchRegisterDeviceStatusResponse
      */
@@ -15447,16 +12561,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the URL from which you can download the X.509 certificates of created devices.</p>
-     * 
      * @param request QueryCertUrlByApplyIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryCertUrlByApplyIdResponse
@@ -15490,16 +12594,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the URL from which you can download the X.509 certificates of created devices.</p>
-     * 
      * @param request QueryCertUrlByApplyIdRequest
      * @return QueryCertUrlByApplyIdResponse
      */
@@ -15509,13 +12603,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryClientIdsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryClientIdsResponse
@@ -15549,13 +12636,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryClientIdsRequest
      * @return QueryClientIdsResponse
      */
@@ -15565,13 +12645,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryConsumerGroupByGroupIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryConsumerGroupByGroupIdResponse
@@ -15605,13 +12678,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryConsumerGroupByGroupIdRequest
      * @return QueryConsumerGroupByGroupIdResponse
      */
@@ -15621,16 +12687,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all consumer groups of the current account when you use AMQP server-side subscriptions. You can also call this operation to perform a fuzzy search by consumer group name.</p>
-     * 
      * @param request QueryConsumerGroupListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryConsumerGroupListResponse
@@ -15684,16 +12740,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all consumer groups of the current account when you use AMQP server-side subscriptions. You can also call this operation to perform a fuzzy search by consumer group name.</p>
-     * 
      * @param request QueryConsumerGroupListRequest
      * @return QueryConsumerGroupListResponse
      */
@@ -15703,16 +12749,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the status of a consumer group when you use an AMQP server-side subscription. The status information includes online client information, message consumption rate, number of accumulated messages, and last message consumption time.</p>
-     * 
      * @param request QueryConsumerGroupStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryConsumerGroupStatusResponse
@@ -15746,16 +12782,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the status of a consumer group when you use an AMQP server-side subscription. The status information includes online client information, message consumption rate, number of accumulated messages, and last message consumption time.</p>
-     * 
      * @param request QueryConsumerGroupStatusRequest
      * @return QueryConsumerGroupStatusResponse
      */
@@ -15869,18 +12895,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The QueryDevice operation can return up to one million devices each time you call the operation.</p>
-     * <h2>QPS limits</h2>
-     * <ul>
-     * <li>You can call this API operation up to 50 times per second per account. &gt;  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</li>
-     * <li>If the product of the value of the <strong>CurrentPage</strong> parameter and the value of the <strong>PageSize</strong> parameter is greater than or equal to 100,000, the queries per second (QPS) of this operation decreases. 
-     * In this case, you can call this API operation up to two times per second per account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices of a product.</p>
-     * 
      * @param request QueryDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceResponse
@@ -15926,18 +12940,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The QueryDevice operation can return up to one million devices each time you call the operation.</p>
-     * <h2>QPS limits</h2>
-     * <ul>
-     * <li>You can call this API operation up to 50 times per second per account. &gt;  The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</li>
-     * <li>If the product of the value of the <strong>CurrentPage</strong> parameter and the value of the <strong>PageSize</strong> parameter is greater than or equal to 100,000, the queries per second (QPS) of this operation decreases. 
-     * In this case, you can call this API operation up to two times per second per account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices of a product.</p>
-     * 
      * @param request QueryDeviceRequest
      * @return QueryDeviceResponse
      */
@@ -15947,20 +12949,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can query devices on Enterprise Edition instances only in the China (Shanghai) and Japan (Tokyo) regions.</p>
-     * <ul>
-     * <li>The QueryDeviceBySQL operation can return up to 10,000 devices each time you call the operation. For more information, see the &quot;<code>Syntax of LIMIT clauses</code>&quot; section of this topic.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries devices by executing an SQL-like statement. This operation returns the devices that meet the conditions that you specified in the SQL-like statement.</p>
-     * 
      * @param request QueryDeviceBySQLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceBySQLResponse
@@ -15994,20 +12982,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can query devices on Enterprise Edition instances only in the China (Shanghai) and Japan (Tokyo) regions.</p>
-     * <ul>
-     * <li>The QueryDeviceBySQL operation can return up to 10,000 devices each time you call the operation. For more information, see the &quot;<code>Syntax of LIMIT clauses</code>&quot; section of this topic.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries devices by executing an SQL-like statement. This operation returns the devices that meet the conditions that you specified in the SQL-like statement.</p>
-     * 
      * @param request QueryDeviceBySQLRequest
      * @return QueryDeviceBySQLResponse
      */
@@ -16017,19 +12991,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>After the status of a device changes, the new status is applied within 10 seconds. After the new status is applied, you can search for the device by using the new status. Before the new status is applied, you can search for the device by using the previous status.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries devices by status.</p>
-     * 
      * @param request QueryDeviceByStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceByStatusResponse
@@ -16079,19 +13040,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>After the status of a device changes, the new status is applied within 10 seconds. After the new status is applied, you can search for the device by using the new status. Before the new status is applied, you can search for the device by using the previous status.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries devices by status.</p>
-     * 
      * @param request QueryDeviceByStatusRequest
      * @return QueryDeviceByStatusResponse
      */
@@ -16101,19 +13049,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can specify a maximum of 10 tags in a single call.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries devices by tag.</p>
-     * 
      * @param request QueryDeviceByTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceByTagsResponse
@@ -16155,19 +13090,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can specify a maximum of 10 tags in a single call.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries devices by tag.</p>
-     * 
      * @param request QueryDeviceByTagsRequest
      * @return QueryDeviceByTagsResponse
      */
@@ -16223,20 +13145,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  The desired values of read-only properties cannot be queried.</p>
-     * <ul>
-     * <li>You can query the desired values of up to 10 properties in a single call.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the desired values of properties of a device.</p>
-     * 
      * @param request QueryDeviceDesiredPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceDesiredPropertyResponse
@@ -16286,20 +13194,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  The desired values of read-only properties cannot be queried.</p>
-     * <ul>
-     * <li>You can query the desired values of up to 10 properties in a single call.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the desired values of properties of a device.</p>
-     * 
      * @param request QueryDeviceDesiredPropertyRequest
      * @return QueryDeviceDesiredPropertyResponse
      */
@@ -16309,13 +13203,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceDetailResponse
@@ -16357,13 +13244,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceDetailRequest
      * @return QueryDeviceDetailResponse
      */
@@ -16373,15 +13253,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request QueryDeviceDistributeDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceDistributeDetailResponse
@@ -16411,15 +13282,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request QueryDeviceDistributeDetailRequest
      * @return QueryDeviceDistributeDetailResponse
      */
@@ -16429,15 +13291,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request QueryDeviceDistributeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceDistributeJobResponse
@@ -16467,15 +13320,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  This operation can be called only by using the following <strong>endpoint</strong>: <code>iot.cn-shanghai.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request QueryDeviceDistributeJobRequest
      * @return QueryDeviceDistributeJobResponse
      */
@@ -16485,20 +13329,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can query only the event records that are generated in the previous 30 days.</p>
-     * <blockquote>
-     * <p> The storage period of an event record is calculated from the day when the record is generated.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the event records of a specified device.</p>
-     * 
      * @param request QueryDeviceEventDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceEventDataResponse
@@ -16564,20 +13394,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can query only the event records that are generated in the previous 30 days.</p>
-     * <blockquote>
-     * <p> The storage period of an event record is calculated from the day when the record is generated.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the event records of a specified device.</p>
-     * 
      * @param request QueryDeviceEventDataRequest
      * @return QueryDeviceEventDataResponse
      */
@@ -16587,13 +13403,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceFileResponse
@@ -16639,13 +13448,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceFileRequest
      * @return QueryDeviceFileResponse
      */
@@ -16655,19 +13457,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>The returned file information for this operation call does not contain download URLs. To obtain the download URL of a file, call <a href="https://help.aliyun.com/document_detail/112002.html">QueryDeviceFile</a>.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries information about all files that are uploaded to IoT Platform from a device.</p>
-     * 
      * @param request QueryDeviceFileListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceFileListResponse
@@ -16717,19 +13506,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>The returned file information for this operation call does not contain download URLs. To obtain the download URL of a file, call <a href="https://help.aliyun.com/document_detail/112002.html">QueryDeviceFile</a>.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries information about all files that are uploaded to IoT Platform from a device.</p>
-     * 
      * @param request QueryDeviceFileListRequest
      * @return QueryDeviceFileListResponse
      */
@@ -16739,19 +13515,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can add a device to a maximum of 10 groups.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries groups to which a device belongs.</p>
-     * 
      * @param request QueryDeviceGroupByDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceGroupByDeviceResponse
@@ -16789,19 +13552,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can add a device to a maximum of 10 groups.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries groups to which a device belongs.</p>
-     * 
      * @param request QueryDeviceGroupByDeviceRequest
      * @return QueryDeviceGroupByDeviceResponse
      */
@@ -16811,16 +13561,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries device groups by tag.</p>
-     * 
      * @param request QueryDeviceGroupByTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceGroupByTagsResponse
@@ -16862,16 +13602,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries device groups by tag.</p>
-     * 
      * @param request QueryDeviceGroupByTagsRequest
      * @return QueryDeviceGroupByTagsResponse
      */
@@ -16881,16 +13611,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 30 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the details of a group.</p>
-     * 
      * @param request QueryDeviceGroupInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceGroupInfoResponse
@@ -16928,16 +13648,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 30 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the details of a group.</p>
-     * 
      * @param request QueryDeviceGroupInfoRequest
      * @return QueryDeviceGroupInfoResponse
      */
@@ -16947,16 +13657,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 100 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries groups by page.</p>
-     * 
      * @param request QueryDeviceGroupListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceGroupListResponse
@@ -17006,16 +13706,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 100 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries groups by page.</p>
-     * 
      * @param request QueryDeviceGroupListRequest
      * @return QueryDeviceGroupListResponse
      */
@@ -17025,16 +13715,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the tags of a group.</p>
-     * 
      * @param request QueryDeviceGroupTagListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceGroupTagListResponse
@@ -17072,16 +13752,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the tags of a group.</p>
-     * 
      * @param request QueryDeviceGroupTagListRequest
      * @return QueryDeviceGroupTagListResponse
      */
@@ -17091,16 +13761,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common request parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceInfoResponse
@@ -17142,16 +13802,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common request parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceInfoRequest
      * @return QueryDeviceInfoResponse
      */
@@ -17161,13 +13811,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceListByDeviceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceListByDeviceGroupResponse
@@ -17209,13 +13852,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceListByDeviceGroupRequest
      * @return QueryDeviceListByDeviceGroupResponse
      */
@@ -17225,22 +13861,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can query only the event records that are generated in the last 30 days.<blockquote>
-     * <p> The storage period of an event record is calculated from the day when the record is generated.</p>
-     * </blockquote>
-     * </li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the event records that are submitted by a specified device. These records include events that are verified and not verified by a specified Thing Specification Language (TSL) model.</p>
-     * 
      * @param request QueryDeviceOriginalEventDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceOriginalEventDataResponse
@@ -17306,22 +13926,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can query only the event records that are generated in the last 30 days.<blockquote>
-     * <p> The storage period of an event record is calculated from the day when the record is generated.</p>
-     * </blockquote>
-     * </li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the event records that are submitted by a specified device. These records include events that are verified and not verified by a specified Thing Specification Language (TSL) model.</p>
-     * 
      * @param request QueryDeviceOriginalEventDataRequest
      * @return QueryDeviceOriginalEventDataResponse
      */
@@ -17331,20 +13935,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can query only the property records that are generated within the previous 30 days.</p>
-     * <blockquote>
-     * <p> The data of a property is stored from the day when the data is generated.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the original property records that are submitted by a specified device. These records include the records of properties that passed and failed the verification of a specified Thing Specification Language (TSL) model.</p>
-     * 
      * @param request QueryDeviceOriginalPropertyDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceOriginalPropertyDataResponse
@@ -17410,20 +14000,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can query only the property records that are generated within the previous 30 days.</p>
-     * <blockquote>
-     * <p> The data of a property is stored from the day when the data is generated.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the original property records that are submitted by a specified device. These records include the records of properties that passed and failed the verification of a specified Thing Specification Language (TSL) model.</p>
-     * 
      * @param request QueryDeviceOriginalPropertyDataRequest
      * @return QueryDeviceOriginalPropertyDataResponse
      */
@@ -17433,16 +14009,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the original property snapshots that are submitted by a specified device. These snapshots include properties that are verified and not verified by a specified Thing Specification Language (TSL) model.</p>
-     * 
      * @param request QueryDeviceOriginalPropertyStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceOriginalPropertyStatusResponse
@@ -17496,16 +14062,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the original property snapshots that are submitted by a specified device. These snapshots include properties that are verified and not verified by a specified Thing Specification Language (TSL) model.</p>
-     * 
      * @param request QueryDeviceOriginalPropertyStatusRequest
      * @return QueryDeviceOriginalPropertyStatusResponse
      */
@@ -17515,22 +14071,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can query only the service call records that are generated in the last 30 days.<blockquote>
-     * <p> The storage period of a service call record is calculated from the day when the service is called.</p>
-     * </blockquote>
-     * </li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the original service records that are submitted by a specified device. These records include services that are verified and not verified by a specified Thing Specification Language (TSL) model.</p>
-     * 
      * @param request QueryDeviceOriginalServiceDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceOriginalServiceDataResponse
@@ -17596,22 +14136,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You can query only the service call records that are generated in the last 30 days.<blockquote>
-     * <p> The storage period of a service call record is calculated from the day when the service is called.</p>
-     * </blockquote>
-     * </li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the original service records that are submitted by a specified device. These records include services that are verified and not verified by a specified Thing Specification Language (TSL) model.</p>
-     * 
      * @param request QueryDeviceOriginalServiceDataRequest
      * @return QueryDeviceOriginalServiceDataResponse
      */
@@ -17621,13 +14145,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDevicePropRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDevicePropResponse
@@ -17669,13 +14186,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDevicePropRequest
      * @return QueryDevicePropResponse
      */
@@ -17685,28 +14195,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When you call this operation to query property records within a specified period, the number of records for a property at a point in time may reach the limit.**** The limit is specified by the <strong>PageSize</strong> parameter. In this case, the query stops. Some records of other properties may be not returned.**** You can check whether all records of a property are returned based on the NextValid repsonse parameter: </p>
-     * <ul>
-     * <li>If the value of the <strong>NextValid</strong> parameter is true, unretrieved records exist in the period that is indicated by the <strong>NextTime</strong> and <strong>EndTime</strong> parameter.<br>You can use the value of the <strong>NextTime</strong> response parameter as the value of the StartTime request parameter and call this operation again to query the rest records. You can call this operation multiple times until the value of the <strong>NextValid</strong> parameter is false.  &gt;  To retrieve all property records within a specified period, you can set the <strong>PageSize</strong> parameter to the maximum value. Then, call this operation multiple times until the value of the <strong>NextValid</strong> parameter is false.</li>
-     * <li>If the value of the <strong>NextValid</strong> parameter is false, all property records are returned.</li>
-     * </ul>
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>A maximum of 10 properties can be queried at a time. A maximum of 100 records can be queried for each property.</li>
-     * <li>You can query property data that is generated within the last 30 days.<blockquote>
-     * <p>The storage period of a property record is calculated from the day when the property record was generated.</p>
-     * </blockquote>
-     * </li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries multiple properties that are submitted by a device within a specified period.</p>
-     * 
      * @param request QueryDevicePropertiesDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDevicePropertiesDataResponse
@@ -17768,28 +14256,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When you call this operation to query property records within a specified period, the number of records for a property at a point in time may reach the limit.**** The limit is specified by the <strong>PageSize</strong> parameter. In this case, the query stops. Some records of other properties may be not returned.**** You can check whether all records of a property are returned based on the NextValid repsonse parameter: </p>
-     * <ul>
-     * <li>If the value of the <strong>NextValid</strong> parameter is true, unretrieved records exist in the period that is indicated by the <strong>NextTime</strong> and <strong>EndTime</strong> parameter.<br>You can use the value of the <strong>NextTime</strong> response parameter as the value of the StartTime request parameter and call this operation again to query the rest records. You can call this operation multiple times until the value of the <strong>NextValid</strong> parameter is false.  &gt;  To retrieve all property records within a specified period, you can set the <strong>PageSize</strong> parameter to the maximum value. Then, call this operation multiple times until the value of the <strong>NextValid</strong> parameter is false.</li>
-     * <li>If the value of the <strong>NextValid</strong> parameter is false, all property records are returned.</li>
-     * </ul>
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>A maximum of 10 properties can be queried at a time. A maximum of 100 records can be queried for each property.</li>
-     * <li>You can query property data that is generated within the last 30 days.<blockquote>
-     * <p>The storage period of a property record is calculated from the day when the property record was generated.</p>
-     * </blockquote>
-     * </li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries multiple properties that are submitted by a device within a specified period.</p>
-     * 
      * @param request QueryDevicePropertiesDataRequest
      * @return QueryDevicePropertiesDataResponse
      */
@@ -17799,22 +14265,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If a device or a digital twin node has multiple properties, you can call this operation to query the data of the properties multiple times. You must specify a value for the <strong>Identifier</strong> parameter each time you call the operation. You can also call the <a href="https://help.aliyun.com/document_detail/99237.html">QueryDevicePropertiesData</a> operation and specify multiple values for the <strong>Identifier</strong> parameter to query the data of the properties.</p>
-     * <h2>Limits</h2>
-     * <p>You can query only property data that is generated within the previous 30 days. </p>
-     * <blockquote>
-     * <p> The data of a property is stored from the day when the data is generated.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the data of a property in a device or a digital twin node within a specified period of time.</p>
-     * 
      * @param request QueryDevicePropertyDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDevicePropertyDataResponse
@@ -17876,22 +14326,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If a device or a digital twin node has multiple properties, you can call this operation to query the data of the properties multiple times. You must specify a value for the <strong>Identifier</strong> parameter each time you call the operation. You can also call the <a href="https://help.aliyun.com/document_detail/99237.html">QueryDevicePropertiesData</a> operation and specify multiple values for the <strong>Identifier</strong> parameter to query the data of the properties.</p>
-     * <h2>Limits</h2>
-     * <p>You can query only property data that is generated within the previous 30 days. </p>
-     * <blockquote>
-     * <p> The data of a property is stored from the day when the data is generated.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the data of a property in a device or a digital twin node within a specified period of time.</p>
-     * 
      * @param request QueryDevicePropertyDataRequest
      * @return QueryDevicePropertyDataResponse
      */
@@ -17901,17 +14335,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>To query the property data of a digital twin node, you must set the <strong>IotId</strong> parameter to the ID of the digital twin node.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 200 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all the property snapshots of a device or digital twin node.</p>
-     * 
      * @param request QueryDevicePropertyStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDevicePropertyStatusResponse
@@ -17957,17 +14380,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>To query the property data of a digital twin node, you must set the <strong>IotId</strong> parameter to the ID of the digital twin node.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 200 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all the property snapshots of a device or digital twin node.</p>
-     * 
      * @param request QueryDevicePropertyStatusRequest
      * @return QueryDevicePropertyStatusResponse
      */
@@ -18021,20 +14433,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can query only the service call records of the previous 30 days.</p>
-     * <blockquote>
-     * <p> The storage period of a service call record is calculated from the day when the service is called.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the service call records of a specified device.</p>
-     * 
      * @param request QueryDeviceServiceDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceServiceDataResponse
@@ -18096,20 +14494,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can query only the service call records of the previous 30 days.</p>
-     * <blockquote>
-     * <p> The storage period of a service call record is calculated from the day when the service is called.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the service call records of a specified device.</p>
-     * 
      * @param request QueryDeviceServiceDataRequest
      * @return QueryDeviceServiceDataResponse
      */
@@ -18169,13 +14553,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceStatisticsResponse
@@ -18213,13 +14590,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceStatisticsRequest
      * @return QueryDeviceStatisticsResponse
      */
@@ -18229,13 +14599,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceSubTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDeviceSubTopicResponse
@@ -18273,13 +14636,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryDeviceSubTopicRequest
      * @return QueryDeviceSubTopicResponse
      */
@@ -18475,18 +14831,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>The dynamic group feature is available for public instances and Enterprise Edition instances in the China (Shanghai) region. For more information, see <a href="https://help.aliyun.com/document_detail/147356.html">Manage instances</a>.</li>
-     * <li>Each Alibaba Cloud account can run up to 50 queries per second (QPS).
-     * **
-     * <strong>Note</strong>The RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices in a dynamic group</p>
-     * 
      * @param request QueryDynamicGroupDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDynamicGroupDevicesResponse
@@ -18548,18 +14892,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>The dynamic group feature is available for public instances and Enterprise Edition instances in the China (Shanghai) region. For more information, see <a href="https://help.aliyun.com/document_detail/147356.html">Manage instances</a>.</li>
-     * <li>Each Alibaba Cloud account can run up to 50 queries per second (QPS).
-     * **
-     * <strong>Note</strong>The RAM users of an Alibaba Cloud account share the quota of the account.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices in a dynamic group</p>
-     * 
      * @param request QueryDynamicGroupDevicesRequest
      * @return QueryDynamicGroupDevicesResponse
      */
@@ -18569,13 +14901,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>A single Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeDriverRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEdgeDriverResponse
@@ -18621,13 +14946,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>A single Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeDriverRequest
      * @return QueryEdgeDriverResponse
      */
@@ -18637,13 +14955,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeDriverVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEdgeDriverVersionResponse
@@ -18693,13 +15004,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeDriverVersionRequest
      * @return QueryEdgeDriverVersionResponse
      */
@@ -18709,16 +15013,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding exclusive request parameters, you must specify common request parameters when calling this API operation. For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/30561.html">Common parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>A single Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEdgeInstanceResponse
@@ -18760,16 +15054,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding exclusive request parameters, you must specify common request parameters when calling this API operation. For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/30561.html">Common parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>A single Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeInstanceRequest
      * @return QueryEdgeInstanceResponse
      */
@@ -18837,16 +15121,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices that are bound to an edge instance.</p>
-     * 
      * @param request QueryEdgeInstanceDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEdgeInstanceDeviceResponse
@@ -18888,16 +15162,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices that are bound to an edge instance.</p>
-     * 
      * @param request QueryEdgeInstanceDeviceRequest
      * @return QueryEdgeInstanceDeviceResponse
      */
@@ -18965,13 +15229,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeInstanceDriverRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEdgeInstanceDriverResponse
@@ -19013,13 +15270,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeInstanceDriverRequest
      * @return QueryEdgeInstanceDriverResponse
      */
@@ -19029,13 +15279,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeInstanceGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEdgeInstanceGatewayResponse
@@ -19069,13 +15312,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeInstanceGatewayRequest
      * @return QueryEdgeInstanceGatewayResponse
      */
@@ -19085,13 +15321,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeInstanceHistoricDeploymentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEdgeInstanceHistoricDeploymentResponse
@@ -19141,13 +15370,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryEdgeInstanceHistoricDeploymentRequest
      * @return QueryEdgeInstanceHistoricDeploymentResponse
      */
@@ -19257,16 +15479,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries multiple devices that are added at the same time by application ID.</p>
-     * 
      * @param request QueryImportedDeviceByApplyIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryImportedDeviceByApplyIdResponse
@@ -19308,16 +15520,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries multiple devices that are added at the same time by application ID.</p>
-     * 
      * @param request QueryImportedDeviceByApplyIdRequest
      * @return QueryImportedDeviceByApplyIdResponse
      */
@@ -19403,16 +15605,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices that are bound to a license.</p>
-     * 
      * @param request QueryLicenseDeviceListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryLicenseDeviceListResponse
@@ -19470,16 +15662,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices that are bound to a license.</p>
-     * 
      * @param request QueryLicenseDeviceListRequest
      * @return QueryLicenseDeviceListResponse
      */
@@ -19527,9 +15709,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Queries the details of an upstream or downstream device message. The details include the content, time when the message was created, and name of the topic from which the message is sent.</p>
-     * 
      * @param request QueryMessageInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryMessageInfoResponse
@@ -19563,9 +15742,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Queries the details of an upstream or downstream device message. The details include the content, time when the message was created, and name of the topic from which the message is sent.</p>
-     * 
      * @param request QueryMessageInfoRequest
      * @return QueryMessageInfoResponse
      */
@@ -19575,13 +15751,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryOTAFirmwareRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryOTAFirmwareResponse
@@ -19615,13 +15784,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryOTAFirmwareRequest
      * @return QueryOTAFirmwareResponse
      */
@@ -19631,17 +15793,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>After you call the <a href="https://help.aliyun.com/document_detail/147480.html">CreateOTAVerifyJob</a>, <a href="https://help.aliyun.com/document_detail/147496.html">CreateOTAStaticUpgradeJob</a>, or <a href="https://help.aliyun.com/document_detail/147887.html">CreateOTADynamicUpgradeJob</a> API operation to create an update batch, the <strong>JobId</strong> parameter is returned. You can use this parameter to query the details of the update batch.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the details of an update batch.</p>
-     * 
      * @param request QueryOTAJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryOTAJobResponse
@@ -19675,17 +15826,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>After you call the <a href="https://help.aliyun.com/document_detail/147480.html">CreateOTAVerifyJob</a>, <a href="https://help.aliyun.com/document_detail/147496.html">CreateOTAStaticUpgradeJob</a>, or <a href="https://help.aliyun.com/document_detail/147887.html">CreateOTADynamicUpgradeJob</a> API operation to create an update batch, the <strong>JobId</strong> parameter is returned. You can use this parameter to query the details of the update batch.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the details of an update batch.</p>
-     * 
      * @param request QueryOTAJobRequest
      * @return QueryOTAJobResponse
      */
@@ -19695,16 +15835,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the information of multiple devices that you have registered.</p>
-     * 
      * @param request QueryPageByApplyIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryPageByApplyIdResponse
@@ -19746,16 +15876,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the information of multiple devices that you have registered.</p>
-     * 
      * @param request QueryPageByApplyIdRequest
      * @return QueryPageByApplyIdResponse
      */
@@ -19765,13 +15885,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryProductResponse
@@ -19805,13 +15918,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryProductRequest
      * @return QueryProductResponse
      */
@@ -19821,16 +15927,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 30 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the X.509 certificate information of a product.</p>
-     * 
      * @param request QueryProductCertInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryProductCertInfoResponse
@@ -19864,16 +15960,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 30 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the X.509 certificate information of a product.</p>
-     * 
      * @param request QueryProductCertInfoRequest
      * @return QueryProductCertInfoResponse
      */
@@ -19883,20 +15969,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run up to 50 queries per second (QPS).<blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * </li>
-     * <li>If the product of the value of the <strong>CurrentPage</strong> parameter and the value of the <strong>PageSize</strong> parameter is greater than or equal to 100,000, the QPS of this operation decreases.
-     * In this case, each Alibaba Cloud account can run up to 2 QPS.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all products.</p>
-     * 
      * @param request QueryProductListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryProductListResponse
@@ -19942,20 +16014,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run up to 50 queries per second (QPS).<blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * </li>
-     * <li>If the product of the value of the <strong>CurrentPage</strong> parameter and the value of the <strong>PageSize</strong> parameter is greater than or equal to 100,000, the QPS of this operation decreases.
-     * In this case, each Alibaba Cloud account can run up to 2 QPS.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries all products.</p>
-     * 
      * @param request QueryProductListRequest
      * @return QueryProductListResponse
      */
@@ -19965,16 +16023,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 3 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the topic categories of a specified product.</p>
-     * 
      * @param request QueryProductTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryProductTopicResponse
@@ -20008,16 +16056,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 3 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the topic categories of a specified product.</p>
-     * 
      * @param request QueryProductTopicRequest
      * @return QueryProductTopicResponse
      */
@@ -20027,16 +16065,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to three times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices to which a project is shared.</p>
-     * 
      * @param request QueryProjectShareDeviceListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryProjectShareDeviceListResponse
@@ -20082,16 +16110,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to three times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices to which a project is shared.</p>
-     * 
      * @param request QueryProjectShareDeviceListRequest
      * @return QueryProjectShareDeviceListResponse
      */
@@ -20289,16 +16307,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to three times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices in a sharing task.</p>
-     * 
      * @param request QueryShareTaskDeviceListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryShareTaskDeviceListResponse
@@ -20344,16 +16352,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to three times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the devices in a sharing task.</p>
-     * 
      * @param request QueryShareTaskDeviceListRequest
      * @return QueryShareTaskDeviceListResponse
      */
@@ -20793,16 +16791,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to three times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the information about devices that are bound to Speech Sending Service licenses.</p>
-     * 
      * @param request QuerySpeechLicenseDeviceListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QuerySpeechLicenseDeviceListResponse
@@ -20858,16 +16846,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to three times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the information about devices that are bound to Speech Sending Service licenses.</p>
-     * 
      * @param request QuerySpeechLicenseDeviceListRequest
      * @return QuerySpeechLicenseDeviceListResponse
      */
@@ -21315,13 +17293,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QuerySubscribeRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QuerySubscribeRelationResponse
@@ -21359,13 +17330,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QuerySubscribeRelationRequest
      * @return QuerySubscribeRelationResponse
      */
@@ -21437,16 +17401,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the information of a parent group by subgroup ID.</p>
-     * 
      * @param request QuerySuperDeviceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QuerySuperDeviceGroupResponse
@@ -21480,16 +17434,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the information of a parent group by subgroup ID.</p>
-     * 
      * @param request QuerySuperDeviceGroupRequest
      * @return QuerySuperDeviceGroupResponse
      */
@@ -21541,19 +17485,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>TSL features include properties, services, and events.
-     * If you add custom modules to a TSL model and the value of the <strong>FunctionBlockId</strong> parameter is empty, you can obtain the TSL features of each custom module. If the value of the FunctionBlockId parameter is not empty, you can obtain the TSL features of a specified custom module.
-     * For more information about the data format of the <strong>ThingModelJson</strong> parameter, see <a href="https://help.aliyun.com/document_detail/150457.html">Data structure of ThingModelJson</a>.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the TSL features of a specified product.</p>
-     * 
      * @param request QueryThingModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryThingModelResponse
@@ -21599,19 +17530,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>TSL features include properties, services, and events.
-     * If you add custom modules to a TSL model and the value of the <strong>FunctionBlockId</strong> parameter is empty, you can obtain the TSL features of each custom module. If the value of the FunctionBlockId parameter is not empty, you can obtain the TSL features of a specified custom module.
-     * For more information about the data format of the <strong>ThingModelJson</strong> parameter, see <a href="https://help.aliyun.com/document_detail/150457.html">Data structure of ThingModelJson</a>.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the TSL features of a specified product.</p>
-     * 
      * @param request QueryThingModelRequest
      * @return QueryThingModelResponse
      */
@@ -21621,13 +17539,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryThingModelExtendConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryThingModelExtendConfigResponse
@@ -21673,13 +17584,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryThingModelExtendConfigRequest
      * @return QueryThingModelExtendConfigResponse
      */
@@ -21689,13 +17593,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryThingModelExtendConfigPublishedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryThingModelExtendConfigPublishedResponse
@@ -21737,13 +17634,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryThingModelExtendConfigPublishedRequest
      * @return QueryThingModelExtendConfigPublishedResponse
      */
@@ -21753,13 +17643,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryThingModelPublishedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryThingModelPublishedResponse
@@ -21805,13 +17688,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryThingModelPublishedRequest
      * @return QueryThingModelPublishedResponse
      */
@@ -21863,16 +17739,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common request parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryTopicReverseRouteTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTopicReverseRouteTableResponse
@@ -21910,16 +17776,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In addition to the preceding operation-specific request parameters, you must specify common request parameters when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/30561.html">Common request parameters</a>.</p>
-     * 
-     * <b>summary</b> : 
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryTopicReverseRouteTableRequest
      * @return QueryTopicReverseRouteTableResponse
      */
@@ -21929,13 +17785,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryTopicRouteTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTopicRouteTableResponse
@@ -21969,13 +17818,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request QueryTopicRouteTableRequest
      * @return QueryTopicRouteTableResponse
      */
@@ -21985,20 +17827,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call this operation to query the information about a device of a JT/T 808 gateway product.</p>
-     * <ul>
-     * <li>When you call this operation, you must specify a <strong>ProductKey</strong> and a <strong>DeviceName</strong>. Otherwise, the call fails.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the information about a device of a JT/T 808 gateway product.</p>
-     * 
      * @param request QueryVehicleDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryVehicleDeviceResponse
@@ -22036,20 +17864,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call this operation to query the information about a device of a JT/T 808 gateway product.</p>
-     * <ul>
-     * <li>When you call this operation, you must specify a <strong>ProductKey</strong> and a <strong>DeviceName</strong>. Otherwise, the call fails.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account. </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the information about a device of a JT/T 808 gateway product.</p>
-     * 
      * @param request QueryVehicleDeviceRequest
      * @return QueryVehicleDeviceResponse
      */
@@ -22059,17 +17873,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If the device fails to send a response within the timeout period after you call the operation, IoT Platform considers that the call fails even if the device receives the message. The timeout period is specified by the <strong>Timeout</strong> parameter.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 1000 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Sends a request to a specified device and synchronously receives a response from the device.</p>
-     * 
      * @param request RRpcRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RRpcResponse
@@ -22125,17 +17928,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If the device fails to send a response within the timeout period after you call the operation, IoT Platform considers that the call fails even if the device receives the message. The timeout period is specified by the <strong>Timeout</strong> parameter.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 1000 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Sends a request to a specified device and synchronously receives a response from the device.</p>
-     * 
      * @param request RRpcRequest
      * @return RRpcResponse
      */
@@ -22145,16 +17937,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to five times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Rebinds a license to multiple devices of a specific product.</p>
-     * 
      * @param request ReBindLicenseDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReBindLicenseDeviceResponse
@@ -22198,16 +17980,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to five times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Rebinds a license to multiple devices of a specific product.</p>
-     * 
      * @param request ReBindLicenseDeviceRequest
      * @return ReBindLicenseDeviceResponse
      */
@@ -22309,19 +18081,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If you call this operation to register a device under a product, the device is added to the product in the IoT Platform console. After the device is registered, IoT Platform issues the IotId parameter to the device. This parameter is a globally unique identifier (GUID) of the device. To perform operations on a device, you must use the IotId parameter to identify the device.
-     * You can also use a combination of the ProductKey and DeviceName parameters to identify a device. A ProductKey is issued by IoT Platform to a product when you create the product. A DeviceName is specified or randomly generated when you create a device. The IotId parameter has a higher priority than a combination of the ProductKey and DeviceName parameters.
-     * For information about how to register multiple devices under a product at the same time, see <a href="https://help.aliyun.com/document_detail/69514.html">BatchRegisterDeviceWithApplyId</a>.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 30 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Registers a device under a product.</p>
-     * 
      * @param request RegisterDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RegisterDeviceResponse
@@ -22383,19 +18142,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If you call this operation to register a device under a product, the device is added to the product in the IoT Platform console. After the device is registered, IoT Platform issues the IotId parameter to the device. This parameter is a globally unique identifier (GUID) of the device. To perform operations on a device, you must use the IotId parameter to identify the device.
-     * You can also use a combination of the ProductKey and DeviceName parameters to identify a device. A ProductKey is issued by IoT Platform to a product when you create the product. A DeviceName is specified or randomly generated when you create a device. The IotId parameter has a higher priority than a combination of the ProductKey and DeviceName parameters.
-     * For information about how to register multiple devices under a product at the same time, see <a href="https://help.aliyun.com/document_detail/69514.html">BatchRegisterDeviceWithApplyId</a>.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 30 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Registers a device under a product.</p>
-     * 
      * @param request RegisterDeviceRequest
      * @return RegisterDeviceResponse
      */
@@ -22451,15 +18197,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  After a product is published, you cannot call the <a href="https://help.aliyun.com/document_detail/150323.html">CreateThingModel</a>, <a href="https://help.aliyun.com/document_detail/151240.html">UpdateThingModel</a>, <a href="https://help.aliyun.com/document_detail/150320.html">ImportThingModelTSL</a>, <a href="https://help.aliyun.com/document_detail/150311.html">PublishThingModel</a>, <a href="https://help.aliyun.com/document_detail/150312.html">DeleteThingModel</a>, or <a href="https://help.aliyun.com/document_detail/150322.html">CopyThingModel</a> operation to edit the Thing Specification Language (TSL) model of the product. To edit the TSL model, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request ReleaseProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseProductResponse
@@ -22493,15 +18230,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  After a product is published, you cannot call the <a href="https://help.aliyun.com/document_detail/150323.html">CreateThingModel</a>, <a href="https://help.aliyun.com/document_detail/151240.html">UpdateThingModel</a>, <a href="https://help.aliyun.com/document_detail/150320.html">ImportThingModelTSL</a>, <a href="https://help.aliyun.com/document_detail/150311.html">PublishThingModel</a>, <a href="https://help.aliyun.com/document_detail/150312.html">DeleteThingModel</a>, or <a href="https://help.aliyun.com/document_detail/150322.html">CopyThingModel</a> operation to edit the Thing Specification Language (TSL) model of the product. To edit the TSL model, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request ReleaseProductRequest
      * @return ReleaseProductResponse
      */
@@ -22511,20 +18239,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  If you specify a gateway, this operation removes the topological relationships between the gateway and all attached sub-devices.</p>
-     * <ul>
-     * <li>If you specify a sub-device, this operation removes the topological relationship between the sub-device and the gateway to which the sub-device is attached.</li>
-     * </ul>
-     * <h1>QPS limits</h1>
-     * <p>Each Alibaba Cloud account can run up to 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes the topological relationships between a gateway and all attached sub-devices, or the topological relationship between a sub-device and the gateway to which the sub-device is attached.</p>
-     * 
      * @param request RemoveThingTopoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveThingTopoResponse
@@ -22566,20 +18280,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  If you specify a gateway, this operation removes the topological relationships between the gateway and all attached sub-devices.</p>
-     * <ul>
-     * <li>If you specify a sub-device, this operation removes the topological relationship between the sub-device and the gateway to which the sub-device is attached.</li>
-     * </ul>
-     * <h1>QPS limits</h1>
-     * <p>Each Alibaba Cloud account can run up to 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes the topological relationships between a gateway and all attached sub-devices, or the topological relationship between a sub-device and the gateway to which the sub-device is attached.</p>
-     * 
      * @param request RemoveThingTopoRequest
      * @return RemoveThingTopoResponse
      */
@@ -22681,13 +18381,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request ResetConsumerGroupPositionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetConsumerGroupPositionResponse
@@ -22721,13 +18414,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request ResetConsumerGroupPositionRequest
      * @return ResetConsumerGroupPositionResponse
      */
@@ -22783,23 +18469,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  After you use dynamic registration to obtain the device certificate information of a directly connected device and activate the device, you can call this operation to reset the dynamic registration status of the status to unregistered in the IoT Platform console. Then, you can use dynamic registration again to obtain the device certificate information. The device certificate information includes ProductKey, DeviceName, and DeviceSecret.</p>
-     * <blockquote>
-     * <p>This operation is called to reset the dynamic registration status instead of activation status of a device. After you call the operation to reset the dynamic registration status of a device, the status of the device in the IoT Platform console is not reset to inactive.</p>
-     * </blockquote>
-     * <ul>
-     * <li>If you specify a gateway and the number of sub-devices that belong to the gateway exceeds 2,000, you can call this operation to create a device job to delete the topological relationships in an asynchronous manner. The operation returns the <strong>JobId</strong> parameter.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Resets the unique-certificate-per-product registration status of a device that is directly connected to IoT Platform, or deletes the current topology of the device.</p>
-     * 
      * @param request ResetThingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetThingResponse
@@ -22841,23 +18510,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  After you use dynamic registration to obtain the device certificate information of a directly connected device and activate the device, you can call this operation to reset the dynamic registration status of the status to unregistered in the IoT Platform console. Then, you can use dynamic registration again to obtain the device certificate information. The device certificate information includes ProductKey, DeviceName, and DeviceSecret.</p>
-     * <blockquote>
-     * <p>This operation is called to reset the dynamic registration status instead of activation status of a device. After you call the operation to reset the dynamic registration status of a device, the status of the device in the IoT Platform console is not reset to inactive.</p>
-     * </blockquote>
-     * <ul>
-     * <li>If you specify a gateway and the number of sub-devices that belong to the gateway exceeds 2,000, you can call this operation to create a device job to delete the topological relationships in an asynchronous manner. The operation returns the <strong>JobId</strong> parameter.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Resets the unique-certificate-per-product registration status of a device that is directly connected to IoT Platform, or deletes the current topology of the device.</p>
-     * 
      * @param request ResetThingRequest
      * @return ResetThingResponse
      */
@@ -22909,17 +18561,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If the update task requires confirmation, you must make sure that it has been confirmed before you call this operation. You can call the <a href="https://help.aliyun.com/document_detail/254666.html">ConfirmOTATask</a> operation to confirm update tasks.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Reruns one or more failed or canceled device update tasks in a specified update batch.</p>
-     * 
      * @param request ReupgradeOTATaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReupgradeOTATaskResponse
@@ -22957,17 +18598,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If the update task requires confirmation, you must make sure that it has been confirmed before you call this operation. You can call the <a href="https://help.aliyun.com/document_detail/254666.html">ConfirmOTATask</a> operation to confirm update tasks.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 20 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Reruns one or more failed or canceled device update tasks in a specified update batch.</p>
-     * 
      * @param request ReupgradeOTATaskRequest
      * @return ReupgradeOTATaskResponse
      */
@@ -22977,20 +18607,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  A device can have a maximum of 100 tags.</p>
-     * <ul>
-     * <li>You can modify or add a maximum of 100 tags at a time.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies a tag for a device.</p>
-     * 
      * @param request SaveDevicePropRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveDevicePropResponse
@@ -23036,20 +18652,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  A device can have a maximum of 100 tags.</p>
-     * <ul>
-     * <li>You can modify or add a maximum of 100 tags at a time.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies a tag for a device.</p>
-     * 
      * @param request SaveDevicePropRequest
      * @return SaveDevicePropResponse
      */
@@ -23105,24 +18707,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You cannot query the desired values of read-only properties.</p>
-     * <ul>
-     * <li>You can specify up to 10 desired property values in a call.</li>
-     * <li>After a device is created, the value of the <strong>Version</strong> parameter is 0. If you want to configure the <strong>Version</strong> parameter the first time you specify a desired property value, set the <strong>Version</strong> parameter to 0.<blockquote>
-     * <p>If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies desired values for multiple device properties at a time.</p>
-     * 
      * @param request SetDeviceDesiredPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDeviceDesiredPropertyResponse
@@ -23172,24 +18756,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You cannot query the desired values of read-only properties.</p>
-     * <ul>
-     * <li>You can specify up to 10 desired property values in a call.</li>
-     * <li>After a device is created, the value of the <strong>Version</strong> parameter is 0. If you want to configure the <strong>Version</strong> parameter the first time you specify a desired property value, set the <strong>Version</strong> parameter to 0.<blockquote>
-     * <p>If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies desired values for multiple device properties at a time.</p>
-     * 
      * @param request SetDeviceDesiredPropertyRequest
      * @return SetDeviceDesiredPropertyResponse
      */
@@ -23199,17 +18765,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>A device group can have a maximum of 100 tags.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Adds, updates, or deletes group tags.</p>
-     * 
      * @param request SetDeviceGroupTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDeviceGroupTagsResponse
@@ -23251,17 +18806,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>A device group can have a maximum of 100 tags.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 50 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Adds, updates, or deletes group tags.</p>
-     * 
      * @param request SetDeviceGroupTagsRequest
      * @return SetDeviceGroupTagsResponse
      */
@@ -23271,20 +18815,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>After IoT Platform sends a request to configure device properties, the device receives and processes the request in an asynchronous manner. When you call this operation, a successful response indicates that IoT Platform sent a request. The response does not indicate that the device received and processed the request. After the device SDK responds to the request, the device properties are configured.</p>
-     * <blockquote>
-     * <p>If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies values for the properties of a device.</p>
-     * 
      * @param request SetDevicePropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDevicePropertyResponse
@@ -23334,20 +18864,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>After IoT Platform sends a request to configure device properties, the device receives and processes the request in an asynchronous manner. When you call this operation, a successful response indicates that IoT Platform sent a request. The response does not indicate that the device received and processed the request. After the device SDK responds to the request, the device properties are configured.</p>
-     * <blockquote>
-     * <p>If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies values for the properties of a device.</p>
-     * 
      * @param request SetDevicePropertyRequest
      * @return SetDevicePropertyResponse
      */
@@ -23357,17 +18873,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies values for multiple device properties at a time.</p>
-     * 
      * @param request SetDevicesPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDevicesPropertyResponse
@@ -23413,17 +18918,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If the Thing Specification Language (TSL) data is of the float or double type, the parameter values that correspond to the TSL data contain at least one decimal place. Examples: 10.0 and 11.1.</p>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies values for multiple device properties at a time.</p>
-     * 
      * @param request SetDevicesPropertyRequest
      * @return SetDevicesPropertyResponse
      */
@@ -23483,16 +18977,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 30 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies X.509 certificate information for a product.</p>
-     * 
      * @param request SetProductCertInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetProductCertInfoResponse
@@ -23530,16 +19014,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 30 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies X.509 certificate information for a product.</p>
-     * 
      * @param request SetProductCertInfoRequest
      * @return SetProductCertInfoResponse
      */
@@ -23641,16 +19115,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Shares and combines audio files for broadcasting on a device.</p>
-     * 
      * @param request ShareSpeechByCombinationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ShareSpeechByCombinationResponse
@@ -23704,16 +19168,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 50 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Shares and combines audio files for broadcasting on a device.</p>
-     * 
      * @param request ShareSpeechByCombinationRequest
      * @return ShareSpeechByCombinationResponse
      */
@@ -23971,16 +19425,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You must verify that the rule has SQL statements configured before you start the rule. If you do not set an SQL statement when you create the rule, call the <a href="https://help.aliyun.com/document_detail/69513.html">UpdateRule</a> operation to add an SQL statement and update the rule.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request StartRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartRuleResponse
@@ -24014,16 +19458,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You must verify that the rule has SQL statements configured before you start the rule. If you do not set an SQL statement when you create the rule, call the <a href="https://help.aliyun.com/document_detail/69513.html">UpdateRule</a> operation to add an SQL statement and update the rule.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request StartRuleRequest
      * @return StartRuleResponse
      */
@@ -24075,13 +19509,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request StopRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopRuleResponse
@@ -24115,13 +19542,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request StopRuleRequest
      * @return StopRuleResponse
      */
@@ -24131,20 +19551,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  The device that needs to subscribe to topics must be connected to IoT Platform and online.</p>
-     * <ul>
-     * <li>You can call this operation to subscribe to the topics of a specified device. You can specify a maximum of 10 topics in a single call.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Subscribes to one or more topics for a device.</p>
-     * 
      * @param request SubscribeTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubscribeTopicResponse
@@ -24186,20 +19592,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  The device that needs to subscribe to topics must be connected to IoT Platform and online.</p>
-     * <ul>
-     * <li>You can call this operation to subscribe to the topics of a specified device. You can specify a maximum of 10 topics in a single call.</li>
-     * </ul>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run up to 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Subscribes to one or more topics for a device.</p>
-     * 
      * @param request SubscribeTopicRequest
      * @return SubscribeTopicResponse
      */
@@ -24401,17 +19793,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/371985.html">QueryClientIds</a> operation to view the ClientIDs of a device.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies a valid ClientID for a device to prevent illegal logons if the device contains multiple ClientIDs. This API operation applies to preregistration-free unique-certificate-per-product authentication.</p>
-     * 
      * @param request TransformClientIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TransformClientIdResponse
@@ -24449,17 +19830,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/371985.html">QueryClientIds</a> operation to view the ClientIDs of a device.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Specifies a valid ClientID for a device to prevent illegal logons if the device contains multiple ClientIDs. This API operation applies to preregistration-free unique-certificate-per-product authentication.</p>
-     * 
      * @param request TransformClientIdRequest
      * @return TransformClientIdResponse
      */
@@ -24561,13 +19931,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UnbindDriverFromEdgeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnbindDriverFromEdgeInstanceResponse
@@ -24605,13 +19968,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UnbindDriverFromEdgeInstanceRequest
      * @return UnbindDriverFromEdgeInstanceResponse
      */
@@ -24621,18 +19977,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>A license is bound with a product. For more information, see <a href="https://help.aliyun.com/document_detail/427956.html">BindLicenseProduct</a> or <a href="https://help.aliyun.com/document_detail/427937.html">Bind a license to a product</a>.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Unbinds a license from a specific product.</p>
-     * 
      * @param request UnbindLicenseProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnbindLicenseProductResponse
@@ -24670,18 +20014,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>A license is bound with a product. For more information, see <a href="https://help.aliyun.com/document_detail/427956.html">BindLicenseProduct</a> or <a href="https://help.aliyun.com/document_detail/427937.html">Bind a license to a product</a>.</p>
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p>The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Unbinds a license from a specific product.</p>
-     * 
      * @param request UnbindLicenseProductRequest
      * @return UnbindLicenseProductResponse
      */
@@ -24829,16 +20161,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You cannot modify the default consumer group provided by IoT Platform.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request UpdateConsumerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateConsumerGroupResponse
@@ -24876,16 +20198,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>You cannot modify the default consumer group provided by IoT Platform.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request UpdateConsumerGroupRequest
      * @return UpdateConsumerGroupResponse
      */
@@ -24953,13 +20265,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateDeviceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDeviceGroupResponse
@@ -25001,13 +20306,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateDeviceGroupRequest
      * @return UpdateDeviceGroupResponse
      */
@@ -25017,13 +20315,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 500 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateDeviceShadowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDeviceShadowResponse
@@ -25069,13 +20360,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 500 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateDeviceShadowRequest
      * @return UpdateDeviceShadowResponse
      */
@@ -25085,20 +20369,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If a request parameter is not specified, the original value of the parameter will be cleared for the driver version.</li>
-     * <li>You are not allowed to update a published driver version.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Updates a driver version.</p>
-     * 
      * @param request UpdateEdgeDriverVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateEdgeDriverVersionResponse
@@ -25164,20 +20434,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If a request parameter is not specified, the original value of the parameter will be cleared for the driver version.</li>
-     * <li>You are not allowed to update a published driver version.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Updates a driver version.</p>
-     * 
      * @param request UpdateEdgeDriverVersionRequest
      * @return UpdateEdgeDriverVersionResponse
      */
@@ -25187,13 +20443,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateEdgeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateEdgeInstanceResponse
@@ -25243,13 +20492,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of five queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateEdgeInstanceRequest
      * @return UpdateEdgeInstanceResponse
      */
@@ -25521,13 +20763,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateOTAModuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateOTAModuleResponse
@@ -25573,13 +20808,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateOTAModuleRequest
      * @return UpdateOTAModuleResponse
      */
@@ -25639,9 +20867,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Updates a data source for a parser.</p>
-     * 
      * @param request UpdateParserDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateParserDataSourceResponse
@@ -25683,9 +20908,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Updates a data source for a parser.</p>
-     * 
      * @param request UpdateParserDataSourceRequest
      * @return UpdateParserDataSourceResponse
      */
@@ -25695,13 +20917,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateProductResponse
@@ -25743,13 +20958,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>You can call this API operation up to 10 times per second per account.</p>
-     * <blockquote>
-     * <p> The RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateProductRequest
      * @return UpdateProductResponse
      */
@@ -25759,19 +20967,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Message deduplication rules</h2>
-     * <p>Based on the rules that you set, IoT Platform determines whether to use the rules engine or server-side subscriptions to forward property data that is submitted by devices to a specified destination.
-     * The triggering conditions of rules are related by the logic AND relation. For example, if you set the PropertyValueFilter=true and PropertyTimestampFilter=true conditions, the rule to remove duplicate messages is triggered only when both of the conditions are met.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Updates the deduplication rules for property messages that are submitted by the devices of a product. If the call succeeds, the new rules are applied to all the devices of the product.</p>
-     * 
      * @param request UpdateProductFilterConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateProductFilterConfigResponse
@@ -25813,19 +21008,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Message deduplication rules</h2>
-     * <p>Based on the rules that you set, IoT Platform determines whether to use the rules engine or server-side subscriptions to forward property data that is submitted by devices to a specified destination.
-     * The triggering conditions of rules are related by the logic AND relation. For example, if you set the PropertyValueFilter=true and PropertyTimestampFilter=true conditions, the rule to remove duplicate messages is triggered only when both of the conditions are met.</p>
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Updates the deduplication rules for property messages that are submitted by the devices of a product. If the call succeeds, the new rules are applied to all the devices of the product.</p>
-     * 
      * @param request UpdateProductFilterConfigRequest
      * @return UpdateProductFilterConfigResponse
      */
@@ -25835,20 +21017,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can update a maximum of 10 tags in a single call.</p>
-     * <blockquote>
-     * <p>You must specify the tag keys and tag values. Otherwise, the call fails. For description about the tag values, see the &quot;<strong>Request parameters</strong>&quot; section of this topic.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Updates product tags.</p>
-     * 
      * @param request UpdateProductTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateProductTagsResponse
@@ -25886,20 +21054,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can update a maximum of 10 tags in a single call.</p>
-     * <blockquote>
-     * <p>You must specify the tag keys and tag values. Otherwise, the call fails. For description about the tag values, see the &quot;<strong>Request parameters</strong>&quot; section of this topic.</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 500 queries per second (QPS). </p>
-     * <blockquote>
-     * <p> The Resource Access Management (RAM) users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Updates product tags.</p>
-     * 
      * @param request UpdateProductTagsRequest
      * @return UpdateProductTagsResponse
      */
@@ -25909,13 +21063,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateProductTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateProductTopicResponse
@@ -25969,13 +21116,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateProductTopicRequest
      * @return UpdateProductTopicResponse
      */
@@ -25985,13 +21125,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateRuleResponse
@@ -26057,13 +21190,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateRuleRequest
      * @return UpdateRuleResponse
      */
@@ -26073,13 +21199,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateRuleActionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateRuleActionResponse
@@ -26121,13 +21240,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 50 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
      * @param request UpdateRuleActionRequest
      * @return UpdateRuleActionResponse
      */
@@ -26491,16 +21603,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Modifies a Message Service (MNS) or AMQP server-side subscription.</p>
-     * 
      * @param request UpdateSubscribeRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateSubscribeRelationResponse
@@ -26590,16 +21692,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).</p>
-     * <blockquote>
-     * <p> RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Modifies a Message Service (MNS) or AMQP server-side subscription.</p>
-     * 
      * @param request UpdateSubscribeRelationRequest
      * @return UpdateSubscribeRelationResponse
      */
@@ -26609,18 +21701,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If a product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you call this operation.</li>
-     * <li>When you call this operation, you can use the <a href="https://github.com/everit-org/json-schema?spm=a2c4g.11186623.2.23.575832d9zD7fZb">json-schema</a> library to verify the input parameters in <strong>ThingModelJson</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/150457.html">Data structure of ThingModelJson</a>.</li>
-     * <li>You can call this operation to update only one feature. TSL features include properties, services, and events.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request UpdateThingModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateThingModelResponse
@@ -26670,18 +21750,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Limits</h2>
-     * <ul>
-     * <li>If a product is published, you must call the <a href="https://help.aliyun.com/document_detail/213875.html">CancelReleaseProduct</a> operation to unpublish the product before you call this operation.</li>
-     * <li>When you call this operation, you can use the <a href="https://github.com/everit-org/json-schema?spm=a2c4g.11186623.2.23.575832d9zD7fZb">json-schema</a> library to verify the input parameters in <strong>ThingModelJson</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/150457.html">Data structure of ThingModelJson</a>.</li>
-     * <li>You can call this operation to update only one feature. TSL features include properties, services, and events.</li>
-     * <li>Each Alibaba Cloud account can run a maximum of 5 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request UpdateThingModelRequest
      * @return UpdateThingModelResponse
      */
@@ -26691,15 +21759,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  A data parsing script is used to convert the custom-formatted data to JSON data after the data is submitted by a device. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see <a href="https://help.aliyun.com/document_detail/149963.html">Submit scripts for data parsing</a>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request UpdateThingScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateThingScriptResponse
@@ -26741,15 +21800,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  A data parsing script is used to convert the custom-formatted data to JSON data after the data is submitted by a device. You can write a script in JavaScript, Python 2.7, and PHP 7.2. For more information, see <a href="https://help.aliyun.com/document_detail/149963.html">Submit scripts for data parsing</a>.</p>
-     * <ul>
-     * <li>Each Alibaba Cloud account can run a maximum of 10 queries per second (QPS).<blockquote>
-     * <p>RAM users of an Alibaba Cloud account share the quota of the account.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request UpdateThingScriptRequest
      * @return UpdateThingScriptResponse
      */
@@ -26759,9 +21809,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Enables or disables the retained message broadcasting feature for a custom topic.</p>
-     * 
      * @param request UpdateTopicConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTopicConfigResponse
@@ -26819,9 +21866,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Enables or disables the retained message broadcasting feature for a custom topic.</p>
-     * 
      * @param request UpdateTopicConfigRequest
      * @return UpdateTopicConfigResponse
      */

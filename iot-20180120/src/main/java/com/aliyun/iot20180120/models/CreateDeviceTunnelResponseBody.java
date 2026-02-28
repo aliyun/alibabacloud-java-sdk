@@ -4,10 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceTunnelResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
@@ -17,17 +13,9 @@ public class CreateDeviceTunnelResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>E55E50B7-40EE-4B6B-8BBE-D3ED55CCF565</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -77,20 +65,12 @@ public class CreateDeviceTunnelResponseBody extends TeaModel {
     }
 
     public static class CreateDeviceTunnelResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>521c43e4-a6da-***</p>
-         */
         @NameInMap("SourceAccessToken")
         public String sourceAccessToken;
 
         @NameInMap("SourceURI")
         public String sourceURI;
 
-        /**
-         * <strong>example:</strong>
-         * <p>d4098041-***</p>
-         */
         @NameInMap("TunnelId")
         public String tunnelId;
 

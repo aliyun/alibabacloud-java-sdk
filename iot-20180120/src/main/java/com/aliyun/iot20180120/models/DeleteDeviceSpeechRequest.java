@@ -12,17 +12,10 @@ public class DeleteDeviceSpeechRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4de2c367**<strong>8c585e5992</strong></p>
      */
     @NameInMap("IotId")
     public String iotId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot_instc_pu****_c*-v64********</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -58,18 +51,12 @@ public class DeleteDeviceSpeechRequest extends TeaModel {
     public static class DeleteDeviceSpeechRequestDeviceSpeechList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>wav</p>
          */
         @NameInMap("AudioFormat")
         public String audioFormat;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>identifying</p>
          */
         @NameInMap("BizCode")
         public String bizCode;

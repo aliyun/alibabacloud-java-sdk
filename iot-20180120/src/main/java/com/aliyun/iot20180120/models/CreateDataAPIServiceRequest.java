@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class CreateDataAPIServiceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>device/getDeviceCountByStatus</p>
      */
     @NameInMap("ApiPath")
     public String apiPath;
@@ -22,18 +19,11 @@ public class CreateDataAPIServiceRequest extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iot_instc_pu****_c*-v64********</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>SELECT COUNT(iot_id) AS deviceCount FROM ${system.device} WHERE status=1</p>
      */
     @NameInMap("OriginSql")
     public String originSql;
@@ -46,9 +36,6 @@ public class CreateDataAPIServiceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>SELECT COUNT(iot_id) AS deviceCount FROM ${system.device} WHERE status=${status}</p>
      */
     @NameInMap("TemplateSql")
     public String templateSql;
@@ -126,31 +113,15 @@ public class CreateDataAPIServiceRequest extends TeaModel {
         @NameInMap("Desc")
         public String desc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>dksiaiek23s</p>
-         */
         @NameInMap("Example")
         public String example;
 
-        /**
-         * <strong>example:</strong>
-         * <p>status</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Required")
         public Boolean required;
 
-        /**
-         * <strong>example:</strong>
-         * <p>VARCHAR</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -205,31 +176,15 @@ public class CreateDataAPIServiceRequest extends TeaModel {
         @NameInMap("Desc")
         public String desc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Example")
         public String example;
 
-        /**
-         * <strong>example:</strong>
-         * <p>deviceCount</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Required")
         public Boolean required;
 
-        /**
-         * <strong>example:</strong>
-         * <p>INTEGER</p>
-         */
         @NameInMap("Type")
         public String type;
 

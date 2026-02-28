@@ -4,46 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryVehicleDeviceResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the call fails. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The device information returned.</p>
-     */
     @NameInMap("Data")
     public QueryVehicleDeviceResponseBodyData data;
 
-    /**
-     * <p>The error message returned if the call fails.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -211,51 +183,21 @@ public class QueryVehicleDeviceResponseBody extends TeaModel {
     }
 
     public static class QueryVehicleDeviceResponseBodyData extends TeaModel {
-        /**
-         * <p>The timestamp when the device was created. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1557062301656</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The DeviceName of the device.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>light</p>
-         */
         @NameInMap("DeviceName")
         public String deviceName;
 
-        /**
-         * <p>The ID is a unique identifier that is issued by IoT Platform to the device.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dm0001</p>
-         */
         @NameInMap("IotId")
         public String iotId;
 
         @NameInMap("JtProtocolDeviceData")
         public QueryVehicleDeviceResponseBodyDataJtProtocolDeviceData jtProtocolDeviceData;
 
-        /**
-         * <p>The timestamp when the device was last updated. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1657062301656</p>
-         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
-        /**
-         * <p>The <strong>ProductKey</strong> of the gateway product to which the device belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a1BwAGV****</p>
-         */
         @NameInMap("ProductKey")
         public String productKey;
 

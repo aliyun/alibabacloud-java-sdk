@@ -4,45 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
-    /**
-     * <p>The return code of the operation. A value of Success indicates that the call was successful. Other values indicate that specific errors occurred. For more information, see <a href="https://help.aliyun.com/document_detail/135200.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The data that is returned if the call was successful.</p>
-     */
     @NameInMap("Data")
     public QueryEdgeInstanceDriverResponseBodyData data;
 
-    /**
-     * <p>The error message that is returned if the call failed.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>request parameter error</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>77F540BC-A0EF-46A4-ABDE-18644C69AAF5</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -92,48 +65,18 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceDriverResponseBodyDataDriverList extends TeaModel {
-        /**
-         * <p>The ID of the driver.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9c1ae7bd59f1469abbdccc959228****</p>
-         */
         @NameInMap("DriverId")
         public String driverId;
 
-        /**
-         * <p>The version number of the driver.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.0.0</p>
-         */
         @NameInMap("DriverVersion")
         public String driverVersion;
 
-        /**
-         * <p>The time when the driver was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-06-26 17:22:25</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <p>The last time when the driver was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-06-26 17:22:25</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The ID of the order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11123458765423</p>
-         */
         @NameInMap("OrderId")
         public String orderId;
 
@@ -185,36 +128,15 @@ public class QueryEdgeInstanceDriverResponseBody extends TeaModel {
     }
 
     public static class QueryEdgeInstanceDriverResponseBodyData extends TeaModel {
-        /**
-         * <p>The page number of the returned page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The list of drivers.</p>
-         */
         @NameInMap("DriverList")
         public java.util.List<QueryEdgeInstanceDriverResponseBodyDataDriverList> driverList;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The number of drivers.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Total")
         public Integer total;
 

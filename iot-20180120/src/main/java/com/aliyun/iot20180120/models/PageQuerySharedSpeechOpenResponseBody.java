@@ -4,46 +4,18 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned if the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>String	iot.system.SystemException</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The result returned if the request was successful.</p>
-     */
     @NameInMap("Data")
     public PageQuerySharedSpeechOpenResponseBodyData data;
 
-    /**
-     * <p>The error message returned if the request fails.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E4C0FF92-2A86-41DB-92D3-73B60310D25E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful.</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,80 +65,27 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
     }
 
     public static class PageQuerySharedSpeechOpenResponseBodyDataResultDataData extends TeaModel {
-        /**
-         * <p>The audio format. Valid values: <strong>wav</strong>, <strong>mp3</strong>, and <strong>amr</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>wav</p>
-         */
         @NameInMap("AudioFormat")
         public String audioFormat;
 
-        /**
-         * <p>The unique identifier of the speech in the project.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>identifying</p>
-         */
         @NameInMap("BizCode")
         public String bizCode;
 
-        /**
-         * <p>The unique identifier of the template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ws****</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The broadcasting speed. Valid values: -500 to 500.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
-        /**
-         * <p>The status of the speeches. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: The speeches are pending approval.</li>
-         * <li><strong>2</strong>: The speeches are approved.</li>
-         * <li><strong>3</strong>: The speeches are rejected.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The content of the speech.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Text")
         public String text;
 
-        /**
-         * <p>The sound effect that is used to broadcast speeches.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Siyue</p>
-         */
         @NameInMap("Voice")
         public String voice;
 
-        /**
-         * <p>The volume. Valid values: 0 to 100.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("Volume")
         public Integer volume;
 
@@ -261,36 +180,15 @@ public class PageQuerySharedSpeechOpenResponseBody extends TeaModel {
     }
 
     public static class PageQuerySharedSpeechOpenResponseBodyData extends TeaModel {
-        /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PageId")
         public Integer pageId;
 
-        /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The information about shared speeches.</p>
-         */
         @NameInMap("ResultData")
         public PageQuerySharedSpeechOpenResponseBodyDataResultData resultData;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Total")
         public Integer total;
 

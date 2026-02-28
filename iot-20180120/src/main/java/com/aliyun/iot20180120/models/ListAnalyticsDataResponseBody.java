@@ -4,10 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListAnalyticsDataResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Code")
     public String code;
 
@@ -17,17 +13,9 @@ public class ListAnalyticsDataResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>7EC5B624-AF1B-4C4D-BA82-A02BA1******</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -77,31 +65,15 @@ public class ListAnalyticsDataResponseBody extends TeaModel {
     }
 
     public static class ListAnalyticsDataResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 

@@ -4,31 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetThingTemplateRequest extends TeaModel {
-    /**
-     * <p>The error message returned if the call fails.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Lighting</p>
-     */
     @NameInMap("CategoryKey")
     public String categoryKey;
 
-    /**
-     * <p>The identifier of the category that you want to query.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/150316.html">ListThingTemplates</a> operation and view all category keys in the response.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iot_instc_pu****_c*-v64********</p>
-     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    /**
-     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/87387.html">Error codes</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfm4l5tcwd****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
