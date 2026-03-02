@@ -4568,6 +4568,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables global acceleration for office networks.</p>
+     * 
+     * @param request CreateOfficeSiteAcceleratorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOfficeSiteAcceleratorResponse
+     */
+    public CreateOfficeSiteAcceleratorResponse createOfficeSiteAcceleratorWithOptions(CreateOfficeSiteAcceleratorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accelerateRegion)) {
+            query.put("AccelerateRegion", request.accelerateRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOfficeSiteAccelerator"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOfficeSiteAcceleratorResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables global acceleration for office networks.</p>
+     * 
+     * @param request CreateOfficeSiteAcceleratorRequest
+     * @return CreateOfficeSiteAcceleratorResponse
+     */
+    public CreateOfficeSiteAcceleratorResponse createOfficeSiteAccelerator(CreateOfficeSiteAcceleratorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createOfficeSiteAcceleratorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
      * 
      * <b>summary</b> : 
@@ -6533,6 +6599,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteNetworkPackagesResponse deleteNetworkPackages(DeleteNetworkPackagesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNetworkPackagesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes Global Accelerator (GA) configuration.</p>
+     * 
+     * @param request DeleteOfficeSiteAcceleratorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOfficeSiteAcceleratorResponse
+     */
+    public DeleteOfficeSiteAcceleratorResponse deleteOfficeSiteAcceleratorWithOptions(DeleteOfficeSiteAcceleratorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOfficeSiteAccelerator"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOfficeSiteAcceleratorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes Global Accelerator (GA) configuration.</p>
+     * 
+     * @param request DeleteOfficeSiteAcceleratorRequest
+     * @return DeleteOfficeSiteAcceleratorResponse
+     */
+    public DeleteOfficeSiteAcceleratorResponse deleteOfficeSiteAccelerator(DeleteOfficeSiteAcceleratorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOfficeSiteAcceleratorWithOptions(request, runtime);
     }
 
     /**
@@ -12670,6 +12784,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcAccessZone)) {
+            query.put("VpcAccessZone", request.vpcAccessZone);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneType)) {
             query.put("ZoneType", request.zoneType);
         }
@@ -17301,6 +17419,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改全球加速配置</p>
+     * 
+     * @param request ModifyOfficeSiteAcceleratorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyOfficeSiteAcceleratorResponse
+     */
+    public ModifyOfficeSiteAcceleratorResponse modifyOfficeSiteAcceleratorWithOptions(ModifyOfficeSiteAcceleratorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accelerateRegion)) {
+            query.put("AccelerateRegion", request.accelerateRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyOfficeSiteAccelerator"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyOfficeSiteAcceleratorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改全球加速配置</p>
+     * 
+     * @param request ModifyOfficeSiteAcceleratorRequest
+     * @return ModifyOfficeSiteAcceleratorResponse
+     */
+    public ModifyOfficeSiteAcceleratorResponse modifyOfficeSiteAccelerator(ModifyOfficeSiteAcceleratorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyOfficeSiteAcceleratorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the basic properties of an office network, including the name and local administrator permission settings.</p>
      * 
      * @param request ModifyOfficeSiteAttributeRequest
@@ -17356,6 +17526,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
             query.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

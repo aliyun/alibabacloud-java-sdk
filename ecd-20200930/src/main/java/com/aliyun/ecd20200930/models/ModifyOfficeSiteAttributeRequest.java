@@ -99,6 +99,9 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     @NameInMap("TenantId")
     public String tenantId;
 
+    @NameInMap("VSwitchId")
+    public java.util.List<String> vSwitchId;
+
     public static ModifyOfficeSiteAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyOfficeSiteAttributeRequest self = new ModifyOfficeSiteAttributeRequest();
         return TeaModel.build(map, self);
@@ -198,6 +201,14 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public ModifyOfficeSiteAttributeRequest setVSwitchId(java.util.List<String> vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public java.util.List<String> getVSwitchId() {
+        return this.vSwitchId;
     }
 
 }

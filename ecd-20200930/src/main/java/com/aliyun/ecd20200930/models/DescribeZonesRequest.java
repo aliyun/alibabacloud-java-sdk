@@ -14,6 +14,9 @@ public class DescribeZonesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("VpcAccessZone")
+    public Boolean vpcAccessZone;
+
     /**
      * <p>The type of the zone. Default value: <code>AvailabilityZone</code>. This value indicates Alibaba Cloud zones.</p>
      * 
@@ -34,6 +37,14 @@ public class DescribeZonesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeZonesRequest setVpcAccessZone(Boolean vpcAccessZone) {
+        this.vpcAccessZone = vpcAccessZone;
+        return this;
+    }
+    public Boolean getVpcAccessZone() {
+        return this.vpcAccessZone;
     }
 
     public DescribeZonesRequest setZoneType(String zoneType) {
