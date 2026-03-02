@@ -4,18 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1B56DD42-6962-4F89-A19C-079EED1F0FE3</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the RAM user.</p>
-     */
     @NameInMap("User")
     public UpdateUserResponseBodyUser user;
 
@@ -41,104 +32,33 @@ public class UpdateUserResponseBody extends TeaModel {
     }
 
     public static class UpdateUserResponseBodyUser extends TeaModel {
-        /**
-         * <p>The description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is a cloud computing engineer.</p>
-         */
         @NameInMap("Comments")
         public String comments;
 
-        /**
-         * <p>The time when the RAM user was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-12T09:12:00Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The display name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>new</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The email address of the RAM user.</p>
-         * <blockquote>
-         * <p>This parameter is valid only on the China site (aliyun.com).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
-         */
         @NameInMap("Email")
         public String email;
 
-        /**
-         * <p>The last time when the RAM user logged on to the Alibaba Cloud Management Console.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-12T09:12:00Z</p>
-         */
         @NameInMap("LastLoginDate")
         public String lastLoginDate;
 
-        /**
-         * <p>The mobile phone number of the RAM user.</p>
-         * <blockquote>
-         * <p>This parameter is valid only on the China site (aliyun.com).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>86-1868888****</p>
-         */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
-        /**
-         * <p>The source of the RAM user. Valid values:</p>
-         * <ul>
-         * <li>Manual: The RAM user is manually created in the RAM console.</li>
-         * <li>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</li>
-         * <li>CloudSSO: The RAM user is mapped from a CloudSSO user.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Manual</p>
-         */
         @NameInMap("ProvisionType")
         public String provisionType;
 
-        /**
-         * <p>The time when the information about the RAM user was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-13T09:19:49Z</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
-        /**
-         * <p>The ID of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20732900249392****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The logon name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:new@example.onaliyun.com">new@example.onaliyun.com</a></p>
-         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 

@@ -11,7 +11,7 @@ public class GetApplicationResponseBody extends TeaModel {
     public GetApplicationResponseBodyApplication application;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6616F09B-2768-4C11-8866-A8EE4C4A583E</p>
@@ -41,35 +41,12 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope extends TeaModel {
-        /**
-         * <p>The description of the permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>openid</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * <p><code>openid</code> is required by default.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Required")
         public Boolean required;
 
@@ -124,9 +101,6 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
-        /**
-         * <p>The information about the permissions that are granted on the application.</p>
-         */
         @NameInMap("PredefinedScopes")
         public GetApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
 
@@ -184,7 +158,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>472457090344041****</p>
@@ -193,7 +167,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>myapp</p>
@@ -202,11 +176,14 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The type of the application. Valid values:</p>
+         * <p>The application type. Valid values:</p>
          * <ul>
-         * <li>WebApp: a web application.</li>
-         * <li>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</li>
-         * <li>ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.</li>
+         * <li><p>WebApp: a web application that is based on browser interaction.</p>
+         * </li>
+         * <li><p>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
+         * </li>
+         * <li><p>ServerApp: an application that can directly access Alibaba Cloud services without user logon. Currently, only applications that use the System for Cross-domain Identity Management (SCIM) for user synchronization are supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +193,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -225,7 +202,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The information about the permissions that are granted on the application.</p>
+         * <p>The permission scopes of the application.</p>
          */
         @NameInMap("DelegatedScope")
         public GetApplicationResponseBodyApplicationDelegatedScope delegatedScope;
@@ -240,7 +217,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+         * <p>Indicates whether the application can be installed by other Alibaba Cloud accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -248,12 +225,21 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
 
+        /**
+         * <p>The OAuth protocol version of the application. Valid values:</p>
+         * <ul>
+         * <li><p><code>2.0</code>: OAuth 2.0.</p>
+         * </li>
+         * <li><p><code>2.1</code>: OAuth 2.1.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("ProtocolVersion")
         public String protocolVersion;
 
-        /**
-         * <p>The callback URL.</p>
-         */
         @NameInMap("RedirectUris")
         public GetApplicationResponseBodyApplicationRedirectUris redirectUris;
 
@@ -267,7 +253,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer refreshTokenValidity;
 
         /**
-         * <p>Indicates whether a secret is required.</p>
+         * <p>Indicates whether an application key is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -276,7 +262,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Boolean secretRequired;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the application was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>

@@ -4,24 +4,12 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetVerificationInfoResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>B182C041-8C64-5F2F-A07B-FC67FAF89CF9</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the email.</p>
-     */
     @NameInMap("SecurityEmailDevice")
     public GetVerificationInfoResponseBodySecurityEmailDevice securityEmailDevice;
 
-    /**
-     * <p>The information about the mobile phone.</p>
-     */
     @NameInMap("SecurityPhoneDevice")
     public GetVerificationInfoResponseBodySecurityPhoneDevice securityPhoneDevice;
 
@@ -55,25 +43,9 @@ public class GetVerificationInfoResponseBody extends TeaModel {
     }
 
     public static class GetVerificationInfoResponseBodySecurityEmailDevice extends TeaModel {
-        /**
-         * <p>The email address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:username@example.com">username@example.com</a></p>
-         */
         @NameInMap("Email")
         public String email;
 
-        /**
-         * <p>The status of the email. Valid values:</p>
-         * <ul>
-         * <li>active: The email is activated.</li>
-         * <li>pending: The email is pending for activation.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>active</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -101,34 +73,12 @@ public class GetVerificationInfoResponseBody extends TeaModel {
     }
 
     public static class GetVerificationInfoResponseBodySecurityPhoneDevice extends TeaModel {
-        /**
-         * <p>The international dialing code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>86</p>
-         */
         @NameInMap("AreaCode")
         public String areaCode;
 
-        /**
-         * <p>The mobile phone number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>13900001234</p>
-         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        /**
-         * <p>The status of the mobile phone. Valid values:</p>
-         * <ul>
-         * <li>active: The mobile phone is activated.</li>
-         * <li>pending: The mobile phone is pending for activation.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>active</p>
-         */
         @NameInMap("Status")
         public String status;
 

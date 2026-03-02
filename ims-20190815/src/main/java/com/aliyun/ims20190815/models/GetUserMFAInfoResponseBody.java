@@ -4,31 +4,12 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetUserMFAInfoResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the MFA device is enabled. Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("IsMFAEnable")
     public Boolean isMFAEnable;
 
-    /**
-     * <p>The information about the MFA device.</p>
-     */
     @NameInMap("MFADevice")
     public GetUserMFAInfoResponseBodyMFADevice MFADevice;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>FCF7322A-20A9-4F68-8B7F-F86958839BC0</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -62,25 +43,9 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
     }
 
     public static class GetUserMFAInfoResponseBodyMFADevice extends TeaModel {
-        /**
-         * <p>The serial number of the MFA device.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:ram::177242285274****:mfa/device001</p>
-         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
-        /**
-         * <p>The type of the MFA device. Valid values:</p>
-         * <ul>
-         * <li>VMFA: virtual MFA device.</li>
-         * <li>U2F: Universal 2nd Factor (U2F) security key.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VMFA</p>
-         */
         @NameInMap("Type")
         public String type;
 

@@ -4,40 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListSAMLProvidersResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the response is truncated. Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
-    /**
-     * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``</p>
-     * 
-     * <strong>example:</strong>
-     * <p>EXAMPLE</p>
-     */
     @NameInMap("Marker")
     public String marker;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2D8B70D3-E194-41C9-93C5-F6A10D716D24</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about IdPs.</p>
-     */
     @NameInMap("SAMLProviders")
     public ListSAMLProvidersResponseBodySAMLProviders SAMLProviders;
 
@@ -79,48 +54,18 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
     }
 
     public static class ListSAMLProvidersResponseBodySAMLProvidersSAMLProvider extends TeaModel {
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:ram::177242285274****:saml-provider/test-provider</p>
-         */
         @NameInMap("Arn")
         public String arn;
 
-        /**
-         * <p>The creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-22T06:26:15Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is a provider.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the IdP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-provider</p>
-         */
         @NameInMap("SAMLProviderName")
         public String SAMLProviderName;
 
-        /**
-         * <p>The update time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-22T06:26:15Z</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

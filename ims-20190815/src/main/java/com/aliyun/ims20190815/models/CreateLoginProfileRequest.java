@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateLoginProfileRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcefully enable multi-factor authentication (MFA) for the RAM user. Valid values:</p>
+     * <p>Specifies whether the RAM user must enable multi-factor authentication (MFA). Valid values:</p>
      * <ul>
-     * <li>true: forcefully enables MFA for the RAM user. The RAM user must bind an MFA device upon the next logon.</li>
-     * <li>false (default): does not forcefully enable MFA for the RAM user.</li>
+     * <li><p>true: MFA is required. The RAM user must bind an MFA device at the next logon.</p>
+     * </li>
+     * <li><p>false (default): MFA is not required.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +20,8 @@ public class CreateLoginProfileRequest extends TeaModel {
     public Boolean MFABindRequired;
 
     /**
-     * <p>The password that the RAM user uses to log on to the console.</p>
-     * <p>The password must meet the complexity requirements.</p>
+     * <p>The logon password for the RAM user.</p>
+     * <p>The password must meet the password strength requirements.</p>
      * 
      * <strong>example:</strong>
      * <p>mypassword</p>
@@ -28,10 +30,12 @@ public class CreateLoginProfileRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>Specifies whether the RAM user is required to reset the password upon the next logon. Valid values:</p>
+     * <p>Specifies whether the RAM user must reset the password at the next logon. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,10 +45,12 @@ public class CreateLoginProfileRequest extends TeaModel {
     public Boolean passwordResetRequired;
 
     /**
-     * <p>Specifies whether to enable password-based logons to the console. Valid values:</p>
+     * <p>Specifies whether to enable password-based logon for the console. Valid values:</p>
      * <ul>
-     * <li>Active: Password-based logon is enabled. This is the default value.</li>
-     * <li>Inactive: Password-based logon is disabled.</li>
+     * <li><p>Active (default): Enables logon.</p>
+     * </li>
+     * <li><p>Inactive: Disables logon.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -4,13 +4,25 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UpdateSAMLProviderRequest extends TeaModel {
+    /**
+     * <p>The signature algorithm supported by the Alibaba Cloud service provider (SP). Valid values:</p>
+     * <ul>
+     * <li><p>rsa-sha256</p>
+     * </li>
+     * <li><p>rsa-sha1</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>rsa-sha1</p>
+     */
     @NameInMap("AuthnSignAlgo")
     public String authnSignAlgo;
 
     /**
      * <p>The new description.</p>
      * <blockquote>
-     * <p> You must specify at least one of the <code>NewDescription</code> and <code>NewEncodedSAMLMetadataDocument</code> parameters.</p>
+     * <p>Specify at least one of the <code>NewDescription</code> and <code>NewEncodedSAMLMetadataDocument</code> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,7 +34,7 @@ public class UpdateSAMLProviderRequest extends TeaModel {
     /**
      * <p>The new metadata file.</p>
      * <blockquote>
-     * <p> You must specify at least one of the <code>NewDescription</code> and <code>NewEncodedSAMLMetadataDocument</code> parameters.</p>
+     * <p>Specify at least one of the <code>NewDescription</code> and <code>NewEncodedSAMLMetadataDocument</code> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +44,7 @@ public class UpdateSAMLProviderRequest extends TeaModel {
     public String newEncodedSAMLMetadataDocument;
 
     /**
-     * <p>The name of the IdP whose information you want to modify.</p>
+     * <p>The name of the identity provider to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

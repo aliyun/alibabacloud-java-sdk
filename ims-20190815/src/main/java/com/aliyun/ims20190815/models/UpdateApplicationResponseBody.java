@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationResponseBody extends TeaModel {
     /**
-     * <p>The information about the application.</p>
+     * <p>The application information.</p>
      */
     @NameInMap("Application")
     public UpdateApplicationResponseBodyApplication application;
@@ -41,35 +41,12 @@ public class UpdateApplicationResponseBody extends TeaModel {
     }
 
     public static class UpdateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope extends TeaModel {
-        /**
-         * <p>The description of the permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>openid</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * <p><code>openid</code> is required by default.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Required")
         public Boolean required;
 
@@ -124,9 +101,6 @@ public class UpdateApplicationResponseBody extends TeaModel {
     }
 
     public static class UpdateApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
-        /**
-         * <p>The information about the permissions that are granted on the application.</p>
-         */
         @NameInMap("PredefinedScopes")
         public UpdateApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
 
@@ -184,7 +158,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>472457090344041****</p>
@@ -211,7 +185,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -220,7 +194,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The information about the permissions that are granted on the application.</p>
+         * <p>The information about the permission scopes of the application.</p>
          */
         @NameInMap("DelegatedScope")
         public UpdateApplicationResponseBodyApplicationDelegatedScope delegatedScope;
@@ -235,7 +209,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+         * <p>Indicates whether the application can be installed by other Alibaba Cloud accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -243,12 +217,21 @@ public class UpdateApplicationResponseBody extends TeaModel {
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
 
+        /**
+         * <p>The OAuth protocol version of the application. Valid values:</p>
+         * <ul>
+         * <li><p><code>2.0</code>: OAuth 2.0.</p>
+         * </li>
+         * <li><p><code>2.1</code>: OAuth 2.1.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("ProtocolVersion")
         public String protocolVersion;
 
-        /**
-         * <p>The callback URLs.</p>
-         */
         @NameInMap("RedirectUris")
         public UpdateApplicationResponseBodyApplicationRedirectUris redirectUris;
 
@@ -262,7 +245,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public Integer refreshTokenValidity;
 
         /**
-         * <p>Indicates whether a secret is required.</p>
+         * <p>Indicates whether an application key is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -271,7 +254,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public Boolean secretRequired;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the application was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>

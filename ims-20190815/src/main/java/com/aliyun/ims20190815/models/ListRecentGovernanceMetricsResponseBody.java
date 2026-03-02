@@ -13,9 +13,6 @@ public class ListRecentGovernanceMetricsResponseBody extends TeaModel {
     @NameInMap("GenerateTime")
     public String generateTime;
 
-    /**
-     * <p>The metric values of all governance items. The value of the parameter is an array, and each row in the array contains the metric value of a governance item.</p>
-     */
     @NameInMap("GovernanceMetrics")
     public ListRecentGovernanceMetricsResponseBodyGovernanceMetrics governanceMetrics;
 
@@ -58,35 +55,12 @@ public class ListRecentGovernanceMetricsResponseBody extends TeaModel {
     }
 
     public static class ListRecentGovernanceMetricsResponseBodyGovernanceMetricsGovernanceMetric extends TeaModel {
-        /**
-         * <p>The name of the governance item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RecentAccountLoginTimes</p>
-         */
         @NameInMap("GovernanceItem")
         public String governanceItem;
 
-        /**
-         * <p>The type of the metric value. Valid values:</p>
-         * <ul>
-         * <li>Number</li>
-         * <li>String</li>
-         * <li>Boolean</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Number</p>
-         */
         @NameInMap("MetricType")
         public String metricType;
 
-        /**
-         * <p>The metric value. The type of the metric value is determined by <code>MetricType</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("MetricValue")
         public Object metricValue;
 

@@ -4,18 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListAccessKeysResponseBody extends TeaModel {
-    /**
-     * <p>The AccessKey pairs.</p>
-     */
     @NameInMap("AccessKeys")
     public ListAccessKeysResponseBodyAccessKeys accessKeys;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,43 +32,15 @@ public class ListAccessKeysResponseBody extends TeaModel {
     }
 
     public static class ListAccessKeysResponseBodyAccessKeysAccessKey extends TeaModel {
-        /**
-         * <p>The AccessKey ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>LTAI*******************</p>
-         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
-        /**
-         * <p>The time when the AccessKey pair was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-13T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The status of the AccessKey pair. Valid values:</p>
-         * <ul>
-         * <li>Active</li>
-         * <li>Inactive</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The time when the AccessKey pair was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-13T12:33:18Z</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

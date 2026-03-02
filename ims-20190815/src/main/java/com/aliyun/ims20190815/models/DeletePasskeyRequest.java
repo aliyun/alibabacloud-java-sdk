@@ -4,21 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class DeletePasskeyRequest extends TeaModel {
-    /**
-     * <p>The ID of the passkey.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>PASSKEY-CuZjEHhWcr7GIQOMGvkS</p>
-     */
     @NameInMap("PasskeyId")
     public String passkeyId;
 
-    /**
-     * <p>The logon name of the RAM user.</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
-     */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
 

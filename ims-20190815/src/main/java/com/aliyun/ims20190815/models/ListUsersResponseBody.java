@@ -7,8 +7,10 @@ public class ListUsersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the response is truncated. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,9 +37,6 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the RAM users.</p>
-     */
     @NameInMap("Users")
     public ListUsersResponseBodyUsers users;
 
@@ -79,21 +78,9 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsersUserTagsTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oparator</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of the tag</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alice</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -140,119 +127,39 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsersUser extends TeaModel {
-        /**
-         * <p>The description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is a cloud computing engineer.</p>
-         */
         @NameInMap("Comments")
         public String comments;
 
-        /**
-         * <p>The point in time when the RAM user was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-12T09:12:00Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The display name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The email address of the RAM user.</p>
-         * <blockquote>
-         * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
-         */
         @NameInMap("Email")
         public String email;
 
-        /**
-         * <p>The timestamp when the RAM user last logged on to the console.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-12T09:12:00Z</p>
-         */
         @NameInMap("LastLoginDate")
         public String lastLoginDate;
 
-        /**
-         * <p>The mobile phone number of the RAM user.</p>
-         * <blockquote>
-         * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>86-1868888****</p>
-         */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
-        /**
-         * <p>The source of the RAM user. Valid values:</p>
-         * <ul>
-         * <li>Manual: The RAM user is manually created in the RAM console.</li>
-         * <li>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</li>
-         * <li>CloudSSO: The RAM user is mapped from a CloudSSO user.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>CloudSSO</p>
-         */
         @NameInMap("ProvisionType")
         public String provisionType;
 
-        /**
-         * <p>The status of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public ListUsersResponseBodyUsersUserTags tags;
 
-        /**
-         * <p>The point in time when the information about the RAM user was last modified. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-13T09:19:49Z</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
-        /**
-         * <p>The ID of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20732900249392****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The logon name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
-         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 

@@ -4,12 +4,6 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UpdateAccessKeyResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>B9AF80E4-1565-42D9-9256-0B8B0D9FD3EC</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,18 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListPasskeysResponseBody extends TeaModel {
-    /**
-     * <p>The information about the passkeys.</p>
-     */
     @NameInMap("Passkeys")
     public java.util.List<ListPasskeysResponseBodyPasskeys> passkeys;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,39 +32,15 @@ public class ListPasskeysResponseBody extends TeaModel {
     }
 
     public static class ListPasskeysResponseBodyPasskeys extends TeaModel {
-        /**
-         * <p>The time when the passkey was created. The value is a timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1737450279</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The time when the passkey was last used. The value is a timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1737450390</p>
-         */
         @NameInMap("LastUseDate")
         public String lastUseDate;
 
-        /**
-         * <p>The ID of the passkey.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PASSKEY-CuZjEHhWcr7GIQOMGvkS</p>
-         */
         @NameInMap("PasskeyId")
         public String passkeyId;
 
-        /**
-         * <p>The name of the passkey.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>device1</p>
-         */
         @NameInMap("PasskeyName")
         public String passkeyName;
 

@@ -4,9 +4,6 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListPredefinedScopesResponseBody extends TeaModel {
-    /**
-     * <p>The information about application permissions.</p>
-     */
     @NameInMap("PredefinedScopes")
     public ListPredefinedScopesResponseBodyPredefinedScopes predefinedScopes;
 
@@ -41,21 +38,9 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
     }
 
     public static class ListPredefinedScopesResponseBodyPredefinedScopesPredefinedScope extends TeaModel {
-        /**
-         * <p>The description of the permission scope.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the permission scope.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>openid</p>
-         */
         @NameInMap("Name")
         public String name;
 

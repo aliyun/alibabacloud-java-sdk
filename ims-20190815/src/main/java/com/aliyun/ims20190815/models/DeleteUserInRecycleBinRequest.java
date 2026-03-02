@@ -4,12 +4,6 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserInRecycleBinRequest extends TeaModel {
-    /**
-     * <p>The ID of the RAM user.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20732900249392****</p>
-     */
     @NameInMap("UserId")
     public String userId;
 

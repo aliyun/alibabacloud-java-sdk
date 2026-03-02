@@ -7,8 +7,10 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the response is truncated. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +22,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <blockquote>
-     * <p> This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
+     * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,9 +40,6 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the MFA device.</p>
-     */
     @NameInMap("VirtualMFADevices")
     public ListVirtualMFADevicesResponseBodyVirtualMFADevices virtualMFADevices;
 
@@ -82,30 +81,12 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser extends TeaModel {
-        /**
-         * <p>The display name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The ID of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20732900249392****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The logon name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test@177242285274****.onaliyun.com</p>
-         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 
@@ -141,27 +122,12 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice extends TeaModel {
-        /**
-         * <p>The time when the MFA device was activated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-16T06:02:09Z</p>
-         */
         @NameInMap("ActivateDate")
         public String activateDate;
 
-        /**
-         * <p>The serial number of the MFA device.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:ram::177242285274****:mfa/test</p>
-         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
-        /**
-         * <p>The information of the RAM user that has an MFA device bound.</p>
-         */
         @NameInMap("User")
         public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser user;
 

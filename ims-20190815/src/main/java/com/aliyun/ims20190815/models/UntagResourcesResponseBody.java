@@ -4,12 +4,6 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6AC79B74-9A78-58E2-818B-1D38EDC64D67</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

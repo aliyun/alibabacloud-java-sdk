@@ -7,8 +7,10 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the response is truncated. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``</p>
+     * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.\<code>\\</code></p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>
@@ -35,9 +37,6 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The basic information about the RAM users.</p>
-     */
     @NameInMap("UserBasicInfos")
     public ListUserBasicInfosResponseBodyUserBasicInfos userBasicInfos;
 
@@ -79,39 +78,15 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
     }
 
     public static class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo extends TeaModel {
-        /**
-         * <p>The display name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The status of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20732900249392****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The logon name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
-         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 

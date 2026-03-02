@@ -4,18 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetExternalApplicationResponseBody extends TeaModel {
-    /**
-     * <p>The information about the external application.</p>
-     */
     @NameInMap("ExternalApplication")
     public GetExternalApplicationResponseBodyExternalApplication externalApplication;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E4C4D1BD-2558-5BD1-8C36-A5D7FB174A55</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,21 +32,9 @@ public class GetExternalApplicationResponseBody extends TeaModel {
     }
 
     public static class GetExternalApplicationResponseBodyExternalApplicationDelegatedScopePredefinedScopesPredefinedScope extends TeaModel {
-        /**
-         * <p>The description of the permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Obtains the OpenID of the user. This is the default scope and cannot be deleted.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>openid</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -102,9 +81,6 @@ public class GetExternalApplicationResponseBody extends TeaModel {
     }
 
     public static class GetExternalApplicationResponseBodyExternalApplicationDelegatedScope extends TeaModel {
-        /**
-         * <p>The information about the permissions that are granted on the application.</p>
-         */
         @NameInMap("PredefinedScopes")
         public GetExternalApplicationResponseBodyExternalApplicationDelegatedScopePredefinedScopes predefinedScopes;
 
@@ -124,63 +100,24 @@ public class GetExternalApplicationResponseBody extends TeaModel {
     }
 
     public static class GetExternalApplicationResponseBodyExternalApplication extends TeaModel {
-        /**
-         * <p>The name of the application principal. The value is in the <code>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</code> format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:GiteePrd@app.153082740420">GiteePrd@app.153082740420</a>****.onaliyun.com</p>
-         */
         @NameInMap("AppPrincipalName")
         public String appPrincipalName;
 
-        /**
-         * <p>The time when the application was installed. The value is a timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1737534146000</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The information about the permissions that are granted on the application.</p>
-         */
         @NameInMap("DelegatedScope")
         public GetExternalApplicationResponseBodyExternalApplicationDelegatedScope delegatedScope;
 
-        /**
-         * <p>The display name of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GiteeAliyun</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The ID of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>407426893752729****</p>
-         */
         @NameInMap("ForeignAppId")
         public String foreignAppId;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account for which the application is installed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>173082740420****</p>
-         */
         @NameInMap("TenantId")
         public String tenantId;
 
-        /**
-         * <p>The update time of the application. The value is a timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1737534146000</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

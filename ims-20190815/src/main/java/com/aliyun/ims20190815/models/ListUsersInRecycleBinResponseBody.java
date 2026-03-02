@@ -4,40 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListUsersInRecycleBinResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the response is truncated. Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
-    /**
-     * <p>The parameter that is used to obtain the truncated part. It takes effect only when <code>IsTruncated</code> is set to <code>true</code>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>EXAMPLE</p>
-     */
     @NameInMap("Marker")
     public String marker;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>3687BD52-49FD-585B-AB14-CD05B7C76963</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the RAM users.</p>
-     */
     @NameInMap("Users")
     public ListUsersInRecycleBinResponseBodyUsers users;
 
@@ -79,57 +54,21 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
     }
 
     public static class ListUsersInRecycleBinResponseBodyUsersUser extends TeaModel {
-        /**
-         * <p>The time when the RAM user was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-12T09:12:00Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The time when the RAM user will be permanently deleted from the recycle bin.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-11-15T09:12:00Z</p>
-         */
         @NameInMap("DeleteDate")
         public String deleteDate;
 
-        /**
-         * <p>The display name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The time when the RAM user was deleted and moved to the recycle bin.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-15T09:12:00Z</p>
-         */
         @NameInMap("RecycleDate")
         public String recycleDate;
 
-        /**
-         * <p>The ID of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20732900249392****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The logon name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
-         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 

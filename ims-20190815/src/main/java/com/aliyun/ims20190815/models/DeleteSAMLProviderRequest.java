@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSAMLProviderRequest extends TeaModel {
     /**
-     * <p>The name of the IdP that you want to delete.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>test-provider</p>
      */
     @NameInMap("SAMLProviderName")
     public String SAMLProviderName;

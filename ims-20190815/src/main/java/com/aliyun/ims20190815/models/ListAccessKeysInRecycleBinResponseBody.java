@@ -4,18 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListAccessKeysInRecycleBinResponseBody extends TeaModel {
-    /**
-     * <p>The information about the AccessKey pairs.</p>
-     */
     @NameInMap("AccessKeys")
     public ListAccessKeysInRecycleBinResponseBodyAccessKeys accessKeys;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4507D1CD-526A-4E2B-A1E2-3AB045D1EE0B</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,39 +32,15 @@ public class ListAccessKeysInRecycleBinResponseBody extends TeaModel {
     }
 
     public static class ListAccessKeysInRecycleBinResponseBodyAccessKeysAccessKey extends TeaModel {
-        /**
-         * <p>The AccessKey ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>LTAI*******************</p>
-         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
-        /**
-         * <p>The time when the AccessKey pair was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-11T09:12:00Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The time when the AccessKey pair will be permanently deleted from the recycle bin.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-11-12T09:12:00Z</p>
-         */
         @NameInMap("DeleteDate")
         public String deleteDate;
 
-        /**
-         * <p>The time when the AccessKey pair was deleted and moved to the recycle bin.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-12T09:12:00Z</p>
-         */
         @NameInMap("RecycleDate")
         public String recycleDate;
 

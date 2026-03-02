@@ -14,7 +14,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of security preferences.</p>
+     * <p>The information about security preferences.</p>
      */
     @NameInMap("SecurityPreference")
     public GetSecurityPreferenceResponseBodySecurityPreference securityPreference;
@@ -42,10 +42,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference extends TeaModel {
         /**
-         * <p>Indicates whether RAM users can manage their AccessKey pairs. Valid values:</p>
+         * <p>Indicates whether RAM users can manage their own AccessKey pairs. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -71,10 +73,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference extends TeaModel {
         /**
-         * <p>Indicates whether RAM users can change their passwords. Valid values:</p>
+         * <p>Indicates whether RAM users can manage their own passwords. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -84,10 +88,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public Boolean allowUserToChangePassword;
 
         /**
-         * <p>Indicates whether a RAM user can use a passkey for logon. Valid values:</p>
+         * <p>Indicates whether RAM users can log on using passkeys. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,10 +103,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public Boolean allowUserToLoginWithPasskey;
 
         /**
-         * <p>Indicates whether RAM users can remember the multi-factor authentication (MFA) devices for seven days. Valid values:</p>
+         * <p>Indicates whether to save the multi-factor authentication (MFA) status for seven days after a RAM user logs on using MFA. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +118,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public Boolean enableSaveMFATicket;
 
         /**
-         * <p>The subnet mask.</p>
+         * <p>The the IP addresses or CIDR blocks from which RAM users are allowed to sign in to the Alibaba Cloud console.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -119,7 +127,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public String loginNetworkMasks;
 
         /**
-         * <p>The validity period of the logon session of RAM users. Unit: hours.</p>
+         * <p>The duration of a logon session for a RAM user. Unit: hours.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -128,11 +136,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public Integer loginSessionDuration;
 
         /**
-         * <p>Indicates whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. Valid values:</p>
+         * <p>Indicates whether MFA is required for logon. This parameter replaces <code>EnforceMFAForLogin</code>. The <code>EnforceMFAForLogin</code> parameter is still valid, but using this new parameter is recommended. Valid values:</p>
          * <ul>
-         * <li>mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.</li>
-         * <li>independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.</li>
-         * <li>adaptive: MFA is required only for RAM users who initiated unusual logons.</li>
+         * <li><p>mandatory: MFA is required for all RAM users. This value corresponds to <code>true</code> for the <code>EnforceMFAForLogin</code> parameter.</p>
+         * </li>
+         * <li><p>independent (default): The MFA configuration of each RAM user is used. This value corresponds to <code>false</code> for the <code>EnforceMFAForLogin</code> parameter.</p>
+         * </li>
+         * <li><p>adaptive: MFA is required only for abnormal logons.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,10 +153,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public String MFAOperationForLogin;
 
         /**
-         * <p>Indicates whether to enable MFA for RAM users who initiated unusual logons. Valid values:</p>
+         * <p>Indicates whether to use MFA for secondary authentication during an abnormal logon. Valid values:</p>
          * <ul>
-         * <li>autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.</li>
-         * <li>enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.</li>
+         * <li><p>autonomous (default): The secondary authentication can be skipped. The attachment of an MFA device is not required.</p>
+         * </li>
+         * <li><p>enforceVerify: The secondary authentication is required.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,10 +234,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference extends TeaModel {
         /**
-         * <p>Indicates whether RAM users can manage their MFA devices. Valid values:</p>
+         * <p>Indicates whether RAM users can manage their own MFA devices. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,7 +265,9 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays extends TeaModel {
         /**
-         * <p>The maximum number of days that the AccessKey pair of a RAM user can stay unused. If an AccessKey pair is not used in the previous specified number of days, the AccessKey pair is automatically disabled on the next day. The default value is 730. You cannot change the value.</p>
+         * <p>The maximum idle period for the AccessKey pair of a RAM user. If an AccessKey pair remains unused for this period, it is automatically disabled the next day.</p>
+         * <p>Default value: 730.</p>
+         * <p>Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>730</p>
@@ -259,7 +276,9 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public Integer maxIdleDaysForAccessKeys;
 
         /**
-         * <p>The maximum number of days that a RAM user can stay idle. If a RAM user for whom console logon is enabled does not log on to the console in the previous specified number of days, console logon is automatically disabled for the RAM user on the next day. Single sign-on (SSO) is not involved. The default value is 730. You cannot change the value.</p>
+         * <p>The maximum idle period for RAM users. If a RAM user with console logon enabled remains inactive for this period, their console logon is automatically disabled the next day. This does not apply to single sign-on (SSO) logons.</p>
+         * <p>Default value: 730.</p>
+         * <p>Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>730</p>
@@ -292,10 +311,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference extends TeaModel {
         /**
-         * <p>Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:</p>
+         * <p>Indicates whether RAM users can attach or detach their personal DingTalk accounts. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,37 +364,37 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     public static class GetSecurityPreferenceResponseBodySecurityPreference extends TeaModel {
         /**
-         * <p>The AccessKey pair preference.</p>
+         * <p>The AccessKey preference.</p>
          */
         @NameInMap("AccessKeyPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference accessKeyPreference;
 
         /**
-         * <p>The logon preference.</p>
+         * <p>The logon preferences.</p>
          */
         @NameInMap("LoginProfilePreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference loginProfilePreference;
 
         /**
-         * <p>The MFA preference.</p>
+         * <p>The MFA preferences.</p>
          */
         @NameInMap("MFAPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
 
         /**
-         * <p>The maximum idle periods. Unit: days.</p>
+         * <p>The configuration of the maximum idle period.</p>
          */
         @NameInMap("MaxIdleDays")
         public GetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays maxIdleDays;
 
         /**
-         * <p>The personal information preference.</p>
+         * <p>The personal information preferences.</p>
          */
         @NameInMap("PersonalInfoPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference personalInfoPreference;
 
         /**
-         * <p>The MFA method preference.</p>
+         * <p>The preferences for MFA methods.</p>
          */
         @NameInMap("VerificationPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference verificationPreference;

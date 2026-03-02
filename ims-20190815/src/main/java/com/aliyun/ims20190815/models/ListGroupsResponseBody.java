@@ -4,17 +4,16 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the RAM user groups.</p>
-     */
     @NameInMap("Groups")
     public ListGroupsResponseBodyGroups groups;
 
     /**
      * <p>Indicates whether the response is truncated. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,57 +78,21 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static class ListGroupsResponseBodyGroupsGroup extends TeaModel {
-        /**
-         * <p>The description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Dev-Team</p>
-         */
         @NameInMap("Comments")
         public String comments;
 
-        /**
-         * <p>The creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-19T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The display name of the RAM user group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Dev-Team</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The ID of the RAM user group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>740317625433843****</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the RAM user group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dev-team</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The update time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-10-19T12:33:18Z</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
