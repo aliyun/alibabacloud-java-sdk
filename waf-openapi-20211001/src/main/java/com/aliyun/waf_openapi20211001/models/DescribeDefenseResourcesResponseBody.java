@@ -178,6 +178,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         /**
          * <p>The Alibaba Cloud account to which the protected object belongs. You can specify this parameter to query protected objects that belong to a specific Alibaba Cloud account. Exact match is supported.</p>
          * 
@@ -323,6 +326,14 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeDefenseResourcesResponseBodyResources setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeDefenseResourcesResponseBodyResources setOwnerUserId(String ownerUserId) {

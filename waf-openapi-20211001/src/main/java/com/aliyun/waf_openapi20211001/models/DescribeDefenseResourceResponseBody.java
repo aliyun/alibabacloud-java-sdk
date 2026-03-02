@@ -170,6 +170,9 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         /**
          * <p>The user ID (UID) of the Alibaba Cloud account to which the protected object belongs.</p>
          * 
@@ -323,6 +326,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeDefenseResourceResponseBodyResource setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeDefenseResourceResponseBodyResource setOwnerUserId(String ownerUserId) {
