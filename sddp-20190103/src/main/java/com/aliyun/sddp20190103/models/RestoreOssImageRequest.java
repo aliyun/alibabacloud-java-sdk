@@ -13,10 +13,6 @@ public class RestoreOssImageRequest extends TeaModel {
     @NameInMap("Bucket")
     public String bucket;
 
-    /**
-     * <strong>example:</strong>
-     * <p>zh</p>
-     */
     @NameInMap("Lang")
     public String lang;
 

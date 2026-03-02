@@ -1,3 +1,39 @@
+2026-03-02 Version: 1.6.5
+- Update API DescribeColumns: add request parameters ServiceRegionId.
+- Update API DescribeDataObjects: add request parameters APIVersion.
+- Update API DescribeDataObjects: add request parameters Bucket.
+- Update API DescribeDataObjects: add request parameters DbName.
+- Update API DescribeDataObjects: add request parameters LogStore.
+- Update API DescribeDataObjects: add request parameters LogStoreFlag.
+- Update API DescribeDataObjects: add request parameters Path.
+- Update API DescribeDataObjects: add request parameters ProductId.
+- Update API DescribeDataObjects: add request parameters Project.
+- Update API DescribeDataObjects: add request parameters RegionId.
+- Update API DescribeDataObjects: add request parameters RiskLevelIdList.
+- Update API DescribeDataObjects: add request parameters RuleIds.
+- Update API DescribeDataObjects: add request parameters TableName.
+- Update API DescribeDataObjects: add request parameters TaskId.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.Comment.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.DataType.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.DbName.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.FileCategoryCode.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.IsRevision.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.LogStore.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.MaskStatus.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.Project.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.RiskLevelId.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.RuleCount.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.Size.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.Sx.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.TableName.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.TaskId.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.TaskName.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.TaskNumber.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.TemplateName.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.RuleList.$.RuleCategoryNameList.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.RuleList.$.SampleList.
+
+
 2026-01-20 Version: 1.6.4
 - Update API DescribeAuditLogs: add request parameters RuleId.
 

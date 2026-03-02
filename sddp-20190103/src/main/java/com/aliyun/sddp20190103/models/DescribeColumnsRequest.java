@@ -181,6 +181,13 @@ public class DescribeColumnsRequest extends TeaModel {
     public String sensLevelName;
 
     /**
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
+     */
+    @NameInMap("ServiceRegionId")
+    public String serviceRegionId;
+
+    /**
      * <p>The ID of the table to which the column belongs.</p>
      * <blockquote>
      * <p>You can call the <a href="~~DescribeTables~~">DescribeTables</a> operation to query the IDs of tables.</p>
@@ -340,6 +347,14 @@ public class DescribeColumnsRequest extends TeaModel {
     }
     public String getSensLevelName() {
         return this.sensLevelName;
+    }
+
+    public DescribeColumnsRequest setServiceRegionId(String serviceRegionId) {
+        this.serviceRegionId = serviceRegionId;
+        return this;
+    }
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
     }
 
     public DescribeColumnsRequest setTableId(Long tableId) {

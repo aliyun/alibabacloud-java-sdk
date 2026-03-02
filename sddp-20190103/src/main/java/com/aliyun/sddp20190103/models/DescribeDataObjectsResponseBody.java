@@ -177,6 +177,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String riskLevelName;
 
         /**
+         * <strong>example:</strong>
+         * <p>“个人信息”-“身份证”</p>
+         */
+        @NameInMap("RuleCategoryNameList")
+        public String ruleCategoryNameList;
+
+        /**
          * <p>Number of matched identification models.</p>
          * 
          * <strong>example:</strong>
@@ -203,6 +210,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;张三&quot;，&quot;李四&quot;]</p>
+         */
+        @NameInMap("SampleList")
+        public String sampleList;
+
         public static DescribeDataObjectsResponseBodyItemsRuleList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataObjectsResponseBodyItemsRuleList self = new DescribeDataObjectsResponseBodyItemsRuleList();
             return TeaModel.build(map, self);
@@ -222,6 +236,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
         public String getRiskLevelName() {
             return this.riskLevelName;
+        }
+
+        public DescribeDataObjectsResponseBodyItemsRuleList setRuleCategoryNameList(String ruleCategoryNameList) {
+            this.ruleCategoryNameList = ruleCategoryNameList;
+            return this;
+        }
+        public String getRuleCategoryNameList() {
+            return this.ruleCategoryNameList;
         }
 
         public DescribeDataObjectsResponseBodyItemsRuleList setRuleCount(Integer ruleCount) {
@@ -248,6 +270,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             return this.ruleName;
         }
 
+        public DescribeDataObjectsResponseBodyItemsRuleList setSampleList(String sampleList) {
+            this.sampleList = sampleList;
+            return this;
+        }
+        public String getSampleList() {
+            return this.sampleList;
+        }
+
     }
 
     public static class DescribeDataObjectsResponseBodyItems extends TeaModel {
@@ -256,6 +286,34 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
+
+        /**
+         * <strong>example:</strong>
+         * <p>备注</p>
+         */
+        @NameInMap("Comment")
+        public String comment;
+
+        /**
+         * <strong>example:</strong>
+         * <p>varchar</p>
+         */
+        @NameInMap("DataType")
+        public String dataType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>DataBaseName</p>
+         */
+        @NameInMap("DbName")
+        public String dbName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("FileCategoryCode")
+        public Integer fileCategoryCode;
 
         /**
          * <p>The unique identifier ID of the data object.</p>
@@ -285,6 +343,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
+        @NameInMap("IsRevision")
+        public Integer isRevision;
+
+        /**
          * <p>Latest file modification time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -301,6 +366,20 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>logStore</p>
+         */
+        @NameInMap("LogStore")
+        public String logStore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
+        @NameInMap("MaskStatus")
+        public Integer maskStatus;
 
         /**
          * <p>Member account ID.</p>
@@ -400,6 +479,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long productId;
 
         /**
+         * <strong>example:</strong>
+         * <p>project</p>
+         */
+        @NameInMap("Project")
+        public String project;
+
+        /**
          * <p>The region ID to which the OSS storage object belongs.</p>
          * 
          * <strong>example:</strong>
@@ -418,6 +504,20 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String regionName;
 
         /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RiskLevelId")
+        public Integer riskLevelId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("RuleCount")
+        public Integer ruleCount;
+
+        /**
          * <p>List of matched identification models.</p>
          */
         @NameInMap("RuleList")
@@ -433,6 +533,48 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Integer sensitiveCount;
 
         /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("Size")
+        public Long size;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
+         */
+        @NameInMap("Sx")
+        public String sx;
+
+        /**
+         * <strong>example:</strong>
+         * <p>tableName</p>
+         */
+        @NameInMap("TableName")
+        public String tableName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("TaskId")
+        public Long taskId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>任务名</p>
+         */
+        @NameInMap("TaskName")
+        public String taskName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("TaskNumber")
+        public Long taskNumber;
+
+        /**
          * <p>Industry template ID</p>
          * 
          * <strong>example:</strong>
@@ -440,6 +582,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         @NameInMap("TemplateId")
         public Long templateId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>模板名</p>
+         */
+        @NameInMap("TemplateName")
+        public String templateName;
 
         public static DescribeDataObjectsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataObjectsResponseBodyItems self = new DescribeDataObjectsResponseBodyItems();
@@ -452,6 +601,38 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
         public java.util.List<String> getCategories() {
             return this.categories;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setDataType(String dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setDbName(String dbName) {
+            this.dbName = dbName;
+            return this;
+        }
+        public String getDbName() {
+            return this.dbName;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setFileCategoryCode(Integer fileCategoryCode) {
+            this.fileCategoryCode = fileCategoryCode;
+            return this;
+        }
+        public Integer getFileCategoryCode() {
+            return this.fileCategoryCode;
         }
 
         public DescribeDataObjectsResponseBodyItems setId(String id) {
@@ -478,6 +659,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public DescribeDataObjectsResponseBodyItems setIsRevision(Integer isRevision) {
+            this.isRevision = isRevision;
+            return this;
+        }
+        public Integer getIsRevision() {
+            return this.isRevision;
+        }
+
         public DescribeDataObjectsResponseBodyItems setLastModifiedTime(Long lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
@@ -492,6 +681,22 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
         public Long getLastScanTime() {
             return this.lastScanTime;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setLogStore(String logStore) {
+            this.logStore = logStore;
+            return this;
+        }
+        public String getLogStore() {
+            return this.logStore;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setMaskStatus(Integer maskStatus) {
+            this.maskStatus = maskStatus;
+            return this;
+        }
+        public Integer getMaskStatus() {
+            return this.maskStatus;
         }
 
         public DescribeDataObjectsResponseBodyItems setMemberAccount(Long memberAccount) {
@@ -558,6 +763,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             return this.productId;
         }
 
+        public DescribeDataObjectsResponseBodyItems setProject(String project) {
+            this.project = project;
+            return this;
+        }
+        public String getProject() {
+            return this.project;
+        }
+
         public DescribeDataObjectsResponseBodyItems setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -572,6 +785,22 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
         public String getRegionName() {
             return this.regionName;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setRiskLevelId(Integer riskLevelId) {
+            this.riskLevelId = riskLevelId;
+            return this;
+        }
+        public Integer getRiskLevelId() {
+            return this.riskLevelId;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setRuleCount(Integer ruleCount) {
+            this.ruleCount = ruleCount;
+            return this;
+        }
+        public Integer getRuleCount() {
+            return this.ruleCount;
         }
 
         public DescribeDataObjectsResponseBodyItems setRuleList(java.util.List<DescribeDataObjectsResponseBodyItemsRuleList> ruleList) {
@@ -590,12 +819,68 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             return this.sensitiveCount;
         }
 
+        public DescribeDataObjectsResponseBodyItems setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setSx(String sx) {
+            this.sx = sx;
+            return this;
+        }
+        public String getSx() {
+            return this.sx;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setTaskId(Long taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public Long getTaskId() {
+            return this.taskId;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setTaskNumber(Long taskNumber) {
+            this.taskNumber = taskNumber;
+            return this;
+        }
+        public Long getTaskNumber() {
+            return this.taskNumber;
+        }
+
         public DescribeDataObjectsResponseBodyItems setTemplateId(Long templateId) {
             this.templateId = templateId;
             return this;
         }
         public Long getTemplateId() {
             return this.templateId;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
         }
 
     }

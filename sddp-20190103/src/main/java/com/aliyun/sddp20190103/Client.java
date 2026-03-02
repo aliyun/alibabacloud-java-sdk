@@ -995,6 +995,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SensLevelName", request.sensLevelName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
+            query.put("ServiceRegionId", request.serviceRegionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tableId)) {
             query.put("TableId", request.tableId);
         }
@@ -1318,7 +1322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries data assets, such as instances, databases, and Object Storage Service (OSS) buckets, that you authorize Data Security Center (DSC) to scan in a service.</p>
+     * <p>Queries assets that Data Security Center (DSC) is authorized to scan, or the regions that DSC supports.</p>
      * 
      * @param request DescribeDataLimitSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1371,7 +1375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries data assets, such as instances, databases, and Object Storage Service (OSS) buckets, that you authorize Data Security Center (DSC) to scan in a service.</p>
+     * <p>Queries assets that Data Security Center (DSC) is authorized to scan, or the regions that DSC supports.</p>
      * 
      * @param request DescribeDataLimitSetRequest
      * @return DescribeDataLimitSetResponse
@@ -1808,8 +1812,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDataObjectsResponse describeDataObjectsWithOptions(DescribeDataObjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.APIVersion)) {
+            query.put("APIVersion", request.APIVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bucket)) {
+            query.put("Bucket", request.bucket);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            query.put("DbName", request.dbName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainId)) {
@@ -1836,6 +1852,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.logStore)) {
+            query.put("LogStore", request.logStore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logStoreFlag)) {
+            query.put("LogStoreFlag", request.logStoreFlag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memberAccount)) {
             query.put("MemberAccount", request.memberAccount);
         }
@@ -1856,20 +1880,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ParentCategoryIds", request.parentCategoryIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
+            query.put("ProductId", request.productId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.productIds)) {
             query.put("ProductIds", request.productIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.project)) {
+            query.put("Project", request.project);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.queryName)) {
             query.put("QueryName", request.queryName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevelIdList)) {
+            query.put("RiskLevelIdList", request.riskLevelIdList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.riskLevels)) {
             query.put("RiskLevels", request.riskLevels);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleIds)) {
+            query.put("RuleIds", request.ruleIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
             query.put("ServiceRegionId", request.serviceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
@@ -2992,7 +3048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries tables in data assets, such as MaxCompute projects and ApsaraDB RDS instances, that you authorize Data Security Center (DSC) to access.</p>
+     * <p>Queries tables in data assets such as MaxCompute projects and ApsaraDB RDS instances that Data Security Center (DSC) is authorized to access.</p>
      * 
      * @param request DescribeTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3073,7 +3129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries tables in data assets, such as MaxCompute projects and ApsaraDB RDS instances, that you authorize Data Security Center (DSC) to access.</p>
+     * <p>Queries tables in data assets such as MaxCompute projects and ApsaraDB RDS instances that Data Security Center (DSC) is authorized to access.</p>
      * 
      * @param request DescribeTablesRequest
      * @return DescribeTablesResponse

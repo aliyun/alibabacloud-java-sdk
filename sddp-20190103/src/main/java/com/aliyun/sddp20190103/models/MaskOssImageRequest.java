@@ -23,10 +23,6 @@ public class MaskOssImageRequest extends TeaModel {
     @NameInMap("IsSupportRestore")
     public Boolean isSupportRestore;
 
-    /**
-     * <strong>example:</strong>
-     * <p>zh</p>
-     */
     @NameInMap("Lang")
     public String lang;
 

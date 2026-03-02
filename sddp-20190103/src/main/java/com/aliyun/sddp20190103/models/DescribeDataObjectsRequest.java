@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeDataObjectsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("APIVersion")
+    public Integer APIVersion;
+
+    /**
+     * <strong>example:</strong>
+     * <p>bucketName</p>
+     */
+    @NameInMap("Bucket")
+    public String bucket;
+
+    /**
      * <p>Page number for the paginated query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -12,6 +26,13 @@ public class DescribeDataObjectsRequest extends TeaModel {
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    /**
+     * <strong>example:</strong>
+     * <p>dataBaseName</p>
+     */
+    @NameInMap("DbName")
+    public String dbName;
 
     /**
      * <p>ID of the data domain to which the data asset belongs.</p>
@@ -75,6 +96,20 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <strong>example:</strong>
+     * <p>logstore</p>
+     */
+    @NameInMap("LogStore")
+    public String logStore;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("LogStoreFlag")
+    public Integer logStoreFlag;
+
+    /**
      * <p>Member account ID.</p>
      * 
      * <strong>example:</strong>
@@ -128,6 +163,20 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String parentCategoryIds;
 
     /**
+     * <strong>example:</strong>
+     * <p>road</p>
+     */
+    @NameInMap("Path")
+    public String path;
+
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("ProductId")
+    public Integer productId;
+
+    /**
      * <p>It is recommended to fill in the list of product IDs to be queried, separated by commas. Values:</p>
      * <ul>
      * <li><strong>1</strong>: MaxCompute</li>
@@ -154,6 +203,13 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String productIds;
 
     /**
+     * <strong>example:</strong>
+     * <p>project</p>
+     */
+    @NameInMap("Project")
+    public String project;
+
+    /**
      * <p>Keyword for the data object to be queried.</p>
      * 
      * <strong>example:</strong>
@@ -161,6 +217,20 @@ public class DescribeDataObjectsRequest extends TeaModel {
      */
     @NameInMap("QueryName")
     public String queryName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
+    @NameInMap("RiskLevelIdList")
+    public String riskLevelIdList;
 
     /**
      * <p>Specify the risk levels of the data assets to be queried, separated by commas if multiple.</p>
@@ -176,6 +246,13 @@ public class DescribeDataObjectsRequest extends TeaModel {
      */
     @NameInMap("RiskLevels")
     public String riskLevels;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
+    @NameInMap("RuleIds")
+    public String ruleIds;
 
     /**
      * <p>Region where the asset is located. Values:</p>
@@ -196,6 +273,20 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
+     * <strong>example:</strong>
+     * <p>TableName</p>
+     */
+    @NameInMap("TableName")
+    public String tableName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("TaskId")
+    public Long taskId;
+
+    /**
      * <p>Industry template ID.</p>
      * <blockquote>
      * <p>You can obtain the industry template identifier ID by calling <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a>.</p>
@@ -213,12 +304,36 @@ public class DescribeDataObjectsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDataObjectsRequest setAPIVersion(Integer APIVersion) {
+        this.APIVersion = APIVersion;
+        return this;
+    }
+    public Integer getAPIVersion() {
+        return this.APIVersion;
+    }
+
+    public DescribeDataObjectsRequest setBucket(String bucket) {
+        this.bucket = bucket;
+        return this;
+    }
+    public String getBucket() {
+        return this.bucket;
+    }
+
     public DescribeDataObjectsRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeDataObjectsRequest setDbName(String dbName) {
+        this.dbName = dbName;
+        return this;
+    }
+    public String getDbName() {
+        return this.dbName;
     }
 
     public DescribeDataObjectsRequest setDomainId(Long domainId) {
@@ -269,6 +384,22 @@ public class DescribeDataObjectsRequest extends TeaModel {
         return this.lang;
     }
 
+    public DescribeDataObjectsRequest setLogStore(String logStore) {
+        this.logStore = logStore;
+        return this;
+    }
+    public String getLogStore() {
+        return this.logStore;
+    }
+
+    public DescribeDataObjectsRequest setLogStoreFlag(Integer logStoreFlag) {
+        this.logStoreFlag = logStoreFlag;
+        return this;
+    }
+    public Integer getLogStoreFlag() {
+        return this.logStoreFlag;
+    }
+
     public DescribeDataObjectsRequest setMemberAccount(Long memberAccount) {
         this.memberAccount = memberAccount;
         return this;
@@ -309,12 +440,36 @@ public class DescribeDataObjectsRequest extends TeaModel {
         return this.parentCategoryIds;
     }
 
+    public DescribeDataObjectsRequest setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
+    }
+
+    public DescribeDataObjectsRequest setProductId(Integer productId) {
+        this.productId = productId;
+        return this;
+    }
+    public Integer getProductId() {
+        return this.productId;
+    }
+
     public DescribeDataObjectsRequest setProductIds(String productIds) {
         this.productIds = productIds;
         return this;
     }
     public String getProductIds() {
         return this.productIds;
+    }
+
+    public DescribeDataObjectsRequest setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
     }
 
     public DescribeDataObjectsRequest setQueryName(String queryName) {
@@ -325,6 +480,22 @@ public class DescribeDataObjectsRequest extends TeaModel {
         return this.queryName;
     }
 
+    public DescribeDataObjectsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDataObjectsRequest setRiskLevelIdList(String riskLevelIdList) {
+        this.riskLevelIdList = riskLevelIdList;
+        return this;
+    }
+    public String getRiskLevelIdList() {
+        return this.riskLevelIdList;
+    }
+
     public DescribeDataObjectsRequest setRiskLevels(String riskLevels) {
         this.riskLevels = riskLevels;
         return this;
@@ -333,12 +504,36 @@ public class DescribeDataObjectsRequest extends TeaModel {
         return this.riskLevels;
     }
 
+    public DescribeDataObjectsRequest setRuleIds(String ruleIds) {
+        this.ruleIds = ruleIds;
+        return this;
+    }
+    public String getRuleIds() {
+        return this.ruleIds;
+    }
+
     public DescribeDataObjectsRequest setServiceRegionId(String serviceRegionId) {
         this.serviceRegionId = serviceRegionId;
         return this;
     }
     public String getServiceRegionId() {
         return this.serviceRegionId;
+    }
+
+    public DescribeDataObjectsRequest setTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    public String getTableName() {
+        return this.tableName;
+    }
+
+    public DescribeDataObjectsRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
     public DescribeDataObjectsRequest setTemplateId(Long templateId) {
