@@ -243,6 +243,9 @@ public class DescribeAttacksResponseBody extends TeaModel {
         @NameInMap("LanguageVersion")
         public String languageVersion;
 
+        @NameInMap("LlmAsset")
+        public Boolean llmAsset;
+
         /**
          * <strong>example:</strong>
          * <p>1727281449756</p>
@@ -576,6 +579,14 @@ public class DescribeAttacksResponseBody extends TeaModel {
         }
         public String getLanguageVersion() {
             return this.languageVersion;
+        }
+
+        public DescribeAttacksResponseBodyAttacks setLlmAsset(Boolean llmAsset) {
+            this.llmAsset = llmAsset;
+            return this;
+        }
+        public Boolean getLlmAsset() {
+            return this.llmAsset;
         }
 
         public DescribeAttacksResponseBodyAttacks setMaxTimestamp(Long maxTimestamp) {
