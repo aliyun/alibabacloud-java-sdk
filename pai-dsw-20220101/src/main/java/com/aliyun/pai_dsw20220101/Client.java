@@ -148,6 +148,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessRestrictionRules)) {
+            body.put("AccessRestrictionRules", request.accessRestrictionRules);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
             body.put("Accessibility", request.accessibility);
         }
@@ -170,6 +174,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.datasets)) {
             body.put("Datasets", request.datasets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dockerConfig)) {
+            body.put("DockerConfig", request.dockerConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.driver)) {

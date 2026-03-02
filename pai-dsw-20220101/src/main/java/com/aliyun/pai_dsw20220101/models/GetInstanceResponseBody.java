@@ -18,6 +18,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    @NameInMap("AccessRestrictionRules")
+    public java.util.Map<String, String> accessRestrictionRules;
+
     /**
      * <p>The accessibility. Valid values:</p>
      * <ul>
@@ -79,6 +82,9 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     @NameInMap("Datasets")
     public java.util.List<GetInstanceResponseBodyDatasets> datasets;
+
+    @NameInMap("DockerConfig")
+    public GetInstanceResponseBodyDockerConfig dockerConfig;
 
     /**
      * <p>The NVIDIA driver configuration.</p>
@@ -503,6 +509,14 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.acceleratorType;
     }
 
+    public GetInstanceResponseBody setAccessRestrictionRules(java.util.Map<String, String> accessRestrictionRules) {
+        this.accessRestrictionRules = accessRestrictionRules;
+        return this;
+    }
+    public java.util.Map<String, String> getAccessRestrictionRules() {
+        return this.accessRestrictionRules;
+    }
+
     public GetInstanceResponseBody setAccessibility(String accessibility) {
         this.accessibility = accessibility;
         return this;
@@ -557,6 +571,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public java.util.List<GetInstanceResponseBodyDatasets> getDatasets() {
         return this.datasets;
+    }
+
+    public GetInstanceResponseBody setDockerConfig(GetInstanceResponseBodyDockerConfig dockerConfig) {
+        this.dockerConfig = dockerConfig;
+        return this;
+    }
+    public GetInstanceResponseBodyDockerConfig getDockerConfig() {
+        return this.dockerConfig;
     }
 
     public GetInstanceResponseBody setDriver(String driver) {
@@ -1258,6 +1280,55 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getUri() {
             return this.uri;
+        }
+
+    }
+
+    public static class GetInstanceResponseBodyDockerConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("ContainersLimit")
+        public Long containersLimit;
+
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>/etc/docker/dockerboard/mount_access.json</p>
+         */
+        @NameInMap("MountAccessConfigPath")
+        public String mountAccessConfigPath;
+
+        public static GetInstanceResponseBodyDockerConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyDockerConfig self = new GetInstanceResponseBodyDockerConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDockerConfig setContainersLimit(Long containersLimit) {
+            this.containersLimit = containersLimit;
+            return this;
+        }
+        public Long getContainersLimit() {
+            return this.containersLimit;
+        }
+
+        public GetInstanceResponseBodyDockerConfig setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public GetInstanceResponseBodyDockerConfig setMountAccessConfigPath(String mountAccessConfigPath) {
+            this.mountAccessConfigPath = mountAccessConfigPath;
+            return this;
+        }
+        public String getMountAccessConfigPath() {
+            return this.mountAccessConfigPath;
         }
 
     }

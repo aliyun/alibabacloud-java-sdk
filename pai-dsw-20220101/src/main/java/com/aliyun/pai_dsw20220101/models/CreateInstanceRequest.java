@@ -4,6 +4,9 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    @NameInMap("AccessRestrictionRules")
+    public java.util.Map<String, String> accessRestrictionRules;
+
     /**
      * <p>The instance accessibility.</p>
      * <p>Valid values:</p>
@@ -47,6 +50,9 @@ public class CreateInstanceRequest extends TeaModel {
      */
     @NameInMap("Datasets")
     public java.util.List<CreateInstanceRequestDatasets> datasets;
+
+    @NameInMap("DockerConfig")
+    public CreateInstanceRequestDockerConfig dockerConfig;
 
     /**
      * <p>The NVIDIA driver configuration.</p>
@@ -229,6 +235,14 @@ public class CreateInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateInstanceRequest setAccessRestrictionRules(java.util.Map<String, String> accessRestrictionRules) {
+        this.accessRestrictionRules = accessRestrictionRules;
+        return this;
+    }
+    public java.util.Map<String, String> getAccessRestrictionRules() {
+        return this.accessRestrictionRules;
+    }
+
     public CreateInstanceRequest setAccessibility(String accessibility) {
         this.accessibility = accessibility;
         return this;
@@ -275,6 +289,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public java.util.List<CreateInstanceRequestDatasets> getDatasets() {
         return this.datasets;
+    }
+
+    public CreateInstanceRequest setDockerConfig(CreateInstanceRequestDockerConfig dockerConfig) {
+        this.dockerConfig = dockerConfig;
+        return this;
+    }
+    public CreateInstanceRequestDockerConfig getDockerConfig() {
+        return this.dockerConfig;
     }
 
     public CreateInstanceRequest setDriver(String driver) {
@@ -859,6 +881,51 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getUri() {
             return this.uri;
+        }
+
+    }
+
+    public static class CreateInstanceRequestDockerConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("ContainersLimit")
+        public Long containersLimit;
+
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("MountAccessConfigPath")
+        public String mountAccessConfigPath;
+
+        public static CreateInstanceRequestDockerConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestDockerConfig self = new CreateInstanceRequestDockerConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestDockerConfig setContainersLimit(Long containersLimit) {
+            this.containersLimit = containersLimit;
+            return this;
+        }
+        public Long getContainersLimit() {
+            return this.containersLimit;
+        }
+
+        public CreateInstanceRequestDockerConfig setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public CreateInstanceRequestDockerConfig setMountAccessConfigPath(String mountAccessConfigPath) {
+            this.mountAccessConfigPath = mountAccessConfigPath;
+            return this;
+        }
+        public String getMountAccessConfigPath() {
+            return this.mountAccessConfigPath;
         }
 
     }
