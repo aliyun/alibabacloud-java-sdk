@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Log4jLogger extends TeaModel {
     /**
+     * <p>The level of the output log.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR</p>
      */
@@ -12,6 +14,8 @@ public class Log4jLogger extends TeaModel {
     public String loggerLevel;
 
     /**
+     * <p>The name of the class of the output log.</p>
+     * 
      * <strong>example:</strong>
      * <p>StdOutErrConsoleAppender</p>
      */

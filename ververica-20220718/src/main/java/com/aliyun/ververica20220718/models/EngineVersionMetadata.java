@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EngineVersionMetadata extends TeaModel {
     /**
+     * <p>The engine version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,20 @@ public class EngineVersionMetadata extends TeaModel {
     @NameInMap("engineVersion")
     public String engineVersion;
 
+    /**
+     * <p>The features supported by the engine version.</p>
+     */
     @NameInMap("features")
     public EngineVersionSupportedFeatures features;
 
     /**
+     * <p>The status of the engine version.</p>
+     * <ul>
+     * <li>STABLE</li>
+     * <li>BETA</li>
+     * <li>DEPRECATED</li>
+     * <li>EXPIRED</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class JobMetric extends TeaModel {
     /**
+     * <p>The number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class JobMetric extends TeaModel {
     public Double totalCpu;
 
     /**
+     * <p>The memory size. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>4096</p>
      */

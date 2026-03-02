@@ -4,9 +4,17 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class WatermarkSpec extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>time</p>
+     */
     @NameInMap("column")
     public String column;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INTERVAL \&quot;5\&quot; SECOND</p>
+     */
     @NameInMap("watermarkExpression")
     public String watermarkExpression;
 

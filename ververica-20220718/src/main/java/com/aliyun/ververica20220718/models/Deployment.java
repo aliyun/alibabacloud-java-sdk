@@ -4,16 +4,30 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Deployment extends TeaModel {
+    /**
+     * <p>The parameters that are required for starting a deployment.</p>
+     */
     @NameInMap("artifact")
     public Artifact artifact;
 
+    /**
+     * <p>The resource configuration of the batch deployment.</p>
+     */
     @NameInMap("batchResourceSetting")
     public BatchResourceSetting batchResourceSetting;
 
+    /**
+     * <p>The time at which the deployment was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1714058507</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
     /**
+     * <p>The ID of the account that is used to create the deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>27846363877456****</p>
      */
@@ -21,6 +35,8 @@ public class Deployment extends TeaModel {
     public String creator;
 
     /**
+     * <p>The name of the account that is used to create the deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>****@streamcompute.onaliyun.com</p>
      */
@@ -28,6 +44,8 @@ public class Deployment extends TeaModel {
     public String creatorName;
 
     /**
+     * <p>Specifies whether the deployment is modified after the deployment is started.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -35,16 +53,23 @@ public class Deployment extends TeaModel {
     public Boolean deploymentHasChanged;
 
     /**
+     * <p>The ID of the deployment.</p>
+     * 
      * <strong>example:</strong>
-     * <p>00000000-0000-0000-0000-000000000001</p>
+     * <p>00000000-0000-0000-0000-0000012312****</p>
      */
     @NameInMap("deploymentId")
     public String deploymentId;
 
+    /**
+     * <p>The cluster on which the deployment is deployed.</p>
+     */
     @NameInMap("deploymentTarget")
     public BriefDeploymentTarget deploymentTarget;
 
     /**
+     * <p>The description of the deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a deployment description</p>
      */
@@ -52,6 +77,8 @@ public class Deployment extends TeaModel {
     public String description;
 
     /**
+     * <p>The engine version of the deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>vvr-6.0.0-flink-1.15</p>
      */
@@ -59,35 +86,60 @@ public class Deployment extends TeaModel {
     public String engineVersion;
 
     /**
+     * <p>The execution mode of the deployment. Valid values:</p>
+     * <ul>
+     * <li>STREAMING</li>
+     * <li>BATCH</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>STREAMING | BATCH</p>
+     * <p>STREAMING</p>
      */
     @NameInMap("executionMode")
     public String executionMode;
 
     /**
+     * <p>The Realtime Compute for Apache Flink configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;taskmanager.numberOfTaskSlots&quot;:&quot;1&quot;}</p>
      */
     @NameInMap("flinkConf")
     public java.util.Map<String, ?> flinkConf;
 
+    /**
+     * <p>The summary of jobs in the deployment.</p>
+     */
     @NameInMap("jobSummary")
     public JobSummary jobSummary;
 
     @NameInMap("labels")
     public java.util.Map<String, ?> labels;
 
+    /**
+     * <p>The variables of the deployment.</p>
+     */
     @NameInMap("localVariables")
     public java.util.List<LocalVariable> localVariables;
 
+    /**
+     * <p>The logging configuration.</p>
+     */
     @NameInMap("logging")
     public Logging logging;
 
+    /**
+     * <p>The time at which the deployment was modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1714058843</p>
+     */
     @NameInMap("modifiedAt")
     public String modifiedAt;
 
     /**
+     * <p>The ID of the account that is used to modify the deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>27846363877456****</p>
      */
@@ -95,6 +147,8 @@ public class Deployment extends TeaModel {
     public String modifier;
 
     /**
+     * <p>The name of the account that is used to modify the deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>****@streamcompute.onaliyun.com</p>
      */
@@ -102,6 +156,8 @@ public class Deployment extends TeaModel {
     public String modifierName;
 
     /**
+     * <p>The name of the deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>deploymentName</p>
      */
@@ -109,6 +165,8 @@ public class Deployment extends TeaModel {
     public String name;
 
     /**
+     * <p>The name of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-namespace</p>
      */
@@ -122,10 +180,15 @@ public class Deployment extends TeaModel {
     @NameInMap("referencedDeploymentDraftId")
     public String referencedDeploymentDraftId;
 
+    /**
+     * <p>The resource configuration of the streaming deployment.</p>
+     */
     @NameInMap("streamingResourceSetting")
     public StreamingResourceSetting streamingResourceSetting;
 
     /**
+     * <p>The workspace to which the deployment belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>edcef******b4f</p>
      */

@@ -4,21 +4,54 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Node extends TeaModel {
+    /**
+     * <p>The name of the catalog.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paimon</p>
+     */
     @NameInMap("catalogName")
     public String catalogName;
 
+    /**
+     * <p>The name of the connector.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paimon</p>
+     */
     @NameInMap("connector")
     public String connector;
 
+    /**
+     * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paimon-ods</p>
+     */
     @NameInMap("databaseName")
     public String databaseName;
 
+    /**
+     * <p>The ID of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97383</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <p>Specifies whether the table is a temporary table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("isTemporary")
     public Boolean isTemporary;
 
+    /**
+     * <p>The information about the table.</p>
+     */
     @NameInMap("tables")
     public java.util.List<LineageTable> tables;
 

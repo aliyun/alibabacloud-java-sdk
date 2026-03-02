@@ -4,16 +4,24 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class BasicResourceSetting extends TeaModel {
+    /**
+     * <p>The resource configuration of the JobManager.</p>
+     */
     @NameInMap("jobmanagerResourceSettingSpec")
     public BasicResourceSettingSpec jobmanagerResourceSettingSpec;
 
     /**
+     * <p>The parallelism for a deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
     @NameInMap("parallelism")
     public Long parallelism;
 
+    /**
+     * <p>The resource configuration of a TaskManager.</p>
+     */
     @NameInMap("taskmanagerResourceSettingSpec")
     public BasicResourceSettingSpec taskmanagerResourceSettingSpec;
 

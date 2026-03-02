@@ -4,22 +4,36 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JobStartParameters extends TeaModel {
+    /**
+     * <p>The deployment ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>737d0921-c5ac-47fc-9ba9-07a1e0b4****</p>
+     */
     @NameInMap("deploymentId")
     public String deploymentId;
 
     @NameInMap("jobId")
     public String jobId;
 
+    /**
+     * <p>The variables.</p>
+     */
     @NameInMap("localVariables")
     public java.util.List<LocalVariable> localVariables;
 
     /**
+     * <p>The queue in which the deployment is running.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-queue</p>
      */
     @NameInMap("resourceQueueName")
     public String resourceQueueName;
 
+    /**
+     * <p>The configuration of the start offset of the deployment.</p>
+     */
     @NameInMap("restoreStrategy")
     public DeploymentRestoreStrategy restoreStrategy;
 

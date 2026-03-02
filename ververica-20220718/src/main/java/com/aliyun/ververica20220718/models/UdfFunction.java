@@ -4,12 +4,24 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class UdfFunction extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>myFunctionTest</p>
+     */
     @NameInMap("className")
     public String className;
 
+    /**
+     * <strong>example:</strong>
+     * <p>myFunction</p>
+     */
     @NameInMap("functionName")
     public String functionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>udfCollection.jar</p>
+     */
     @NameInMap("udfArtifactName")
     public String udfArtifactName;
 

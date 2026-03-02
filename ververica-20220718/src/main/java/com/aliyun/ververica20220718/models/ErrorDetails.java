@@ -4,21 +4,54 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ErrorDetails extends TeaModel {
+    /**
+     * <p>The number of the column at which the error starts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("columnNumber")
     public String columnNumber;
 
+    /**
+     * <p>The number of the column at which the error ends.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
+     */
     @NameInMap("endColumnNumber")
     public String endColumnNumber;
 
+    /**
+     * <p>The number of the row at which the error ends.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("endLineNumber")
     public String endLineNumber;
 
+    /**
+     * <p>The list of invalid configurations of Realtime Compute for Apache Flink.</p>
+     */
     @NameInMap("invalidflinkConf")
     public java.util.List<String> invalidflinkConf;
 
+    /**
+     * <p>The number the row at which the error starts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("lineNumber")
     public String lineNumber;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("message")
     public String message;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFolderRequest extends TeaModel {
     /**
+     * <p>The data structure of the folder.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

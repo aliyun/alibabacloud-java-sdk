@@ -4,21 +4,60 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JobDiagnosis extends TeaModel {
+    /**
+     * <p>The diagnostic task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ba30cd99-37a5-4a20-8cd9-ed4b*****</p>
+     */
     @NameInMap("diagnoseId")
     public String diagnoseId;
 
+    /**
+     * <p>The time when the deployment is diagnosed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1740389560871</p>
+     */
     @NameInMap("diagnoseTime")
     public Long diagnoseTime;
 
+    /**
+     * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-namespace-*****</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The severity level of the risk.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>RISK_LEVEL_HIGH</li>
+     * <li>RISK_LEVEL_MID</li>
+     * <li>RISK_LEVEL_LOW</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RISK_LEVEL_LOW</p>
+     */
     @NameInMap("riskLevel")
     public String riskLevel;
 
+    /**
+     * <p>The diagnostic details.</p>
+     */
     @NameInMap("symptoms")
     public JobDiagnosisSymptoms symptoms;
 
+    /**
+     * <p>The workspace to which the deployment belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a14bd5d90a****</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

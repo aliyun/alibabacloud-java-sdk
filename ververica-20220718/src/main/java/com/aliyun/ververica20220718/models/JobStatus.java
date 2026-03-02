@@ -5,12 +5,25 @@ import com.aliyun.tea.*;
 
 public class JobStatus extends TeaModel {
     /**
+     * <p>The status of the current job. Valid values:</p>
+     * <ul>
+     * <li>STARTING</li>
+     * <li>RUNNING</li>
+     * <li>CANCELLING</li>
+     * <li>FAILED</li>
+     * <li>CANCELLED</li>
+     * <li>FINISHED</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
     @NameInMap("currentJobStatus")
     public String currentJobStatus;
 
+    /**
+     * <p>The information about the job failure. This parameter is valid when the value of the currentJobStatus parameter is FAILED.</p>
+     */
     @NameInMap("failure")
     public JobFailure failure;
 
@@ -20,6 +33,9 @@ public class JobStatus extends TeaModel {
     @NameInMap("riskLevel")
     public String riskLevel;
 
+    /**
+     * <p>The details of the job. This parameter is valid when the value of the currentJobStatus parameter is RUNNING.</p>
+     */
     @NameInMap("running")
     public JobStatusRunning running;
 

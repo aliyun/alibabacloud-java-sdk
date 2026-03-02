@@ -4,12 +4,24 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class HotUpdateJobFailureInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>LOW</p>
+     */
     @NameInMap("failureSeverity")
     public String failureSeverity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("reason")
     public String reason;
 

@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JarArtifact extends TeaModel {
+    /**
+     * <p>The full URL of the additional dependency file. You can enter the dependency file for the JAR deployment.</p>
+     */
     @NameInMap("additionalDependencies")
     public java.util.List<String> additionalDependencies;
 
     /**
+     * <p>The entry class. You must enter the full name of the class.</p>
+     * 
      * <strong>example:</strong>
      * <p>org.apapche.flink.test</p>
      */
@@ -15,12 +20,20 @@ public class JarArtifact extends TeaModel {
     public String entryClass;
 
     /**
+     * <p>The full URL for the JAR deployment.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://oss//bucket//test.jar">https://oss//bucket//test.jar</a></p>
+     * <p><a href="https://oss/bucket/test.jar">https://oss/bucket/test.jar</a></p>
      */
     @NameInMap("jarUri")
     public String jarUri;
 
+    /**
+     * <p>The parameters required by the entry class.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>start from main</p>
+     */
     @NameInMap("mainArgs")
     public String mainArgs;
 

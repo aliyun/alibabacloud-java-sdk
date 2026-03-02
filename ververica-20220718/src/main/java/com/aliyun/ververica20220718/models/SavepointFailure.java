@@ -5,15 +5,29 @@ import com.aliyun.tea.*;
 
 public class SavepointFailure extends TeaModel {
     /**
+     * <p>The time when the deployment fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>1655006835</p>
      */
     @NameInMap("failedAt")
     public Long failedAt;
 
+    /**
+     * <p>The failure information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>create savepoint failed</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The reason for the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IO Exception</p>
+     */
     @NameInMap("reason")
     public String reason;
 

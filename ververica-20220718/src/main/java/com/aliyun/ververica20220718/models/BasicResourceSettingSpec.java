@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BasicResourceSettingSpec extends TeaModel {
     /**
+     * <p>The number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
@@ -12,8 +14,10 @@ public class BasicResourceSettingSpec extends TeaModel {
     public Double cpu;
 
     /**
+     * <p>The capacity of the memory. Unit: GiB.</p>
+     * 
      * <strong>example:</strong>
-     * <p>4Gi</p>
+     * <p>4 GiB</p>
      */
     @NameInMap("memory")
     public String memory;

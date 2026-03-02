@@ -4,12 +4,27 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class HotUpdateJobStatus extends TeaModel {
+    /**
+     * <p>The error message of the dynamical update.</p>
+     */
     @NameInMap("failure")
     public HotUpdateJobFailureInfo failure;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The status of the dynamic update.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HOT_UPDATED</p>
+     */
     @NameInMap("status")
     public String status;
 

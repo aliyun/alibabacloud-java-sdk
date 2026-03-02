@@ -4,15 +4,36 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class SqlStatementValidationResult extends TeaModel {
+    /**
+     * <p>The error message of the verification result.</p>
+     */
     @NameInMap("errorDetails")
     public ErrorDetails errorDetails;
 
+    /**
+     * <p>The verification information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>The verification result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VALIDATION_RESULT_INVALID</p>
+     */
     @NameInMap("validationResult")
     public String validationResult;
 

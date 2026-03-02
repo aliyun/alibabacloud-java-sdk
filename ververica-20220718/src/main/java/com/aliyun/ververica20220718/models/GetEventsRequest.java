@@ -11,6 +11,9 @@ public class GetEventsRequest extends TeaModel {
     @NameInMap("deploymentId")
     public String deploymentId;
 
+    @NameInMap("deploymentName")
+    public String deploymentName;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,6 +39,14 @@ public class GetEventsRequest extends TeaModel {
     }
     public String getDeploymentId() {
         return this.deploymentId;
+    }
+
+    public GetEventsRequest setDeploymentName(String deploymentName) {
+        this.deploymentName = deploymentName;
+        return this;
+    }
+    public String getDeploymentName() {
+        return this.deploymentName;
     }
 
     public GetEventsRequest setPageIndex(Integer pageIndex) {

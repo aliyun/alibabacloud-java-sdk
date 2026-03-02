@@ -4,12 +4,24 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Relation extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TableB</p>
+     */
     @NameInMap("destination")
     public String destination;
 
+    /**
+     * <strong>example:</strong>
+     * <p>664cc64d-5dea-4ad3-9ee4-8432a874****</p>
+     */
     @NameInMap("jobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TableA</p>
+     */
     @NameInMap("source")
     public String source;
 

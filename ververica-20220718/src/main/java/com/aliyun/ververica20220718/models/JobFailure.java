@@ -5,15 +5,29 @@ import com.aliyun.tea.*;
 
 public class JobFailure extends TeaModel {
     /**
+     * <p>The time when the deployment fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>1660120062</p>
      */
     @NameInMap("failedAt")
     public Long failedAt;
 
+    /**
+     * <p>The details of the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Kubernetes deployment resource with name job-8b7db913-5b1f-4ac5-a332-8d50f342**** is not progressing.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The reason for the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KubernetesDeploymentNotProgressing</p>
+     */
     @NameInMap("reason")
     public String reason;
 

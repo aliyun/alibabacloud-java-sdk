@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class TableSchema extends TeaModel {
+    @NameInMap("collectSinkOperatorId")
+    public String collectSinkOperatorId;
+
     @NameInMap("schema")
     public Schema schema;
 
@@ -13,6 +16,14 @@ public class TableSchema extends TeaModel {
     public static TableSchema build(java.util.Map<String, ?> map) throws Exception {
         TableSchema self = new TableSchema();
         return TeaModel.build(map, self);
+    }
+
+    public TableSchema setCollectSinkOperatorId(String collectSinkOperatorId) {
+        this.collectSinkOperatorId = collectSinkOperatorId;
+        return this;
+    }
+    public String getCollectSinkOperatorId() {
+        return this.collectSinkOperatorId;
     }
 
     public TableSchema setSchema(Schema schema) {

@@ -11,6 +11,13 @@ public class GetFolderRequest extends TeaModel {
     @NameInMap("folderId")
     public String folderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DEVELOPMENT</p>
+     */
+    @NameInMap("rootType")
+    public String rootType;
+
     public static GetFolderRequest build(java.util.Map<String, ?> map) throws Exception {
         GetFolderRequest self = new GetFolderRequest();
         return TeaModel.build(map, self);
@@ -22,6 +29,14 @@ public class GetFolderRequest extends TeaModel {
     }
     public String getFolderId() {
         return this.folderId;
+    }
+
+    public GetFolderRequest setRootType(String rootType) {
+        this.rootType = rootType;
+        return this;
+    }
+    public String getRootType() {
+        return this.rootType;
     }
 
 }

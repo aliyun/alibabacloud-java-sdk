@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Variable extends TeaModel {
     /**
+     * <p>The description of the variable.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a variable description</p>
      */
@@ -12,6 +14,7 @@ public class Variable extends TeaModel {
     public String description;
 
     /**
+     * <p>The type of the variable. Valid value: Plain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class Variable extends TeaModel {
     public String kind;
 
     /**
+     * <p>The name of the variable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class Variable extends TeaModel {
     public String name;
 
     /**
+     * <p>The value of the variable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

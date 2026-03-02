@@ -4,9 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Edge extends TeaModel {
+    /**
+     * <p>The field-level data lineage.</p>
+     */
     @NameInMap("columnLineage")
     public java.util.List<Relation> columnLineage;
 
+    /**
+     * <p>The table-level data lineage.</p>
+     */
     @NameInMap("tableLineage")
     public java.util.List<Relation> tableLineage;
 

@@ -8,6 +8,7 @@ public class CreateFolderHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The name of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

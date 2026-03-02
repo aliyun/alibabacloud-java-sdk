@@ -4,20 +4,36 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Folder extends TeaModel {
+    /**
+     * <p>The time when the folder was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1723537978</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
     /**
+     * <p>The ID of the folder.</p>
+     * 
      * <strong>example:</strong>
      * <p>00000000-0000-0000-0000-0000012312****</p>
      */
     @NameInMap("folderId")
     public String folderId;
 
+    /**
+     * <p>The time when the folder was modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1723537978</p>
+     */
     @NameInMap("modifiedAt")
     public Long modifiedAt;
 
     /**
+     * <p>The name of the folder.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -25,6 +41,8 @@ public class Folder extends TeaModel {
     public String name;
 
     /**
+     * <p>The name of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-namespace</p>
      */
@@ -32,16 +50,23 @@ public class Folder extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The ID of the parent folder.</p>
+     * 
      * <strong>example:</strong>
      * <p>00000000-0000-0000-0000-0000012390****</p>
      */
     @NameInMap("parentId")
     public String parentId;
 
+    /**
+     * <p>The list of subfolders.</p>
+     */
     @NameInMap("subFolder")
     public java.util.List<SubFolder> subFolder;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>edcef******b4f</p>
      */

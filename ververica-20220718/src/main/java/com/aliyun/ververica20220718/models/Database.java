@@ -4,12 +4,27 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Database extends TeaModel {
+    /**
+     * <p>The comment.</p>
+     */
     @NameInMap("comment")
     public String comment;
 
+    /**
+     * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>database-test</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The parameters of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("properties")
     public java.util.Map<String, ?> properties;
 

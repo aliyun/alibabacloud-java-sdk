@@ -4,15 +4,33 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class CreateUdfArtifactResult extends TeaModel {
+    /**
+     * <p>All classes in conflict.</p>
+     */
     @NameInMap("collidingClasses")
     public java.util.List<UdfClass> collidingClasses;
 
+    /**
+     * <p>Indicates whether the JAR file was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("createSuccess")
     public Boolean createSuccess;
 
+    /**
+     * <p>The message used to create the JAR file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The JAR file that you created.</p>
+     */
     @NameInMap("udfArtifact")
     public UdfArtifact udfArtifact;
 

@@ -4,18 +4,48 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Lock extends TeaModel {
+    /**
+     * <p>The ID of the lock holder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18389966****</p>
+     */
     @NameInMap("holderId")
     public String holderId;
 
+    /**
+     * <p>The username of the lock holder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userA</p>
+     */
     @NameInMap("holderName")
     public String holderName;
 
+    /**
+     * <p>The lock ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stt-fu1658tbk6mnkk2****</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-namespace</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a14bd5d90a****</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

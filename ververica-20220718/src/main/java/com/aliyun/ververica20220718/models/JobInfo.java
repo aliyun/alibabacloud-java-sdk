@@ -4,9 +4,17 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JobInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>664cc64d-5dea-4ad3-9ee4-8432a874****</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;id:xxx&quot;,&quot;createTime:v&quot;}</p>
+     */
     @NameInMap("properties")
     public java.util.Map<String, ?> properties;
 

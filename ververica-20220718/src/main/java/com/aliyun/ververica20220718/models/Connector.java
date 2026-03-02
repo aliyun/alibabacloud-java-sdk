@@ -4,39 +4,102 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Connector extends TeaModel {
+    /**
+     * <p>The ID of the user who creates the connector.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>183899668*******</p>
+     */
     @NameInMap("creator")
     public String creator;
 
+    /**
+     * <p>The nickname of the user who creates the connector.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userA</p>
+     */
     @NameInMap("creatorName")
     public String creatorName;
 
+    /**
+     * <p>The additional dependency files.</p>
+     */
     @NameInMap("dependencies")
     public java.util.List<String> dependencies;
 
+    /**
+     * <p>Indicates whether the connector can be used as a lookup table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("lookup")
     public Boolean lookup;
 
+    /**
+     * <p>The ID of the user who modifies the connector.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>183899668*******</p>
+     */
     @NameInMap("modifier")
     public String modifier;
 
+    /**
+     * <p>The nickname of the user who modifies the connector.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userA</p>
+     */
     @NameInMap("modifierName")
     public String modifierName;
 
+    /**
+     * <p>The name of the connector.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql-test</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The parameter configurations.</p>
+     */
     @NameInMap("properties")
     public java.util.List<Property> properties;
 
+    /**
+     * <p>Indicates whether the connector can be used as the sink.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("sink")
     public Boolean sink;
 
+    /**
+     * <p>Indicates whether the connector can be used as the source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flase</p>
+     */
     @NameInMap("source")
     public Boolean source;
 
+    /**
+     * <p>The array of formats that are supported by the connector.</p>
+     */
     @NameInMap("supportedFormats")
     public java.util.List<String> supportedFormats;
 
+    /**
+     * <p>The type of the connector.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql-test</p>
+     */
     @NameInMap("type")
     public String type;
 

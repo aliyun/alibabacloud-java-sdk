@@ -4,24 +4,47 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class PythonArtifact extends TeaModel {
+    /**
+     * <p>The URL of the additional dependency file.</p>
+     */
     @NameInMap("additionalDependencies")
     public java.util.List<String> additionalDependencies;
 
+    /**
+     * <p>The Python archive file on which the deployment depends.</p>
+     */
     @NameInMap("additionalPythonArchives")
     public java.util.List<String> additionalPythonArchives;
 
+    /**
+     * <p>The Python library file on which the deployment depends.</p>
+     */
     @NameInMap("additionalPythonLibraries")
     public java.util.List<String> additionalPythonLibraries;
 
+    /**
+     * <p>The startup module for the Python deployment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test.py</p>
+     */
     @NameInMap("entryModule")
     public String entryModule;
 
+    /**
+     * <p>The startup parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>start from main</p>
+     */
     @NameInMap("mainArgs")
     public String mainArgs;
 
     /**
+     * <p>The full URL for the Python deployment.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://oss//bucket//test.py">https://oss//bucket//test.py</a></p>
+     * <p><a href="https://oss/bucket/test.py">https://oss/bucket/test.py</a></p>
      */
     @NameInMap("pythonArtifactUri")
     public String pythonArtifactUri;

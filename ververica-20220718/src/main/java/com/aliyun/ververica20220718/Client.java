@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行定时计划</p>
+     * <p>Executes a scheduled plan.</p>
      * 
      * @param headers ApplyScheduledPlanHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -63,7 +63,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行定时计划</p>
+     * <p>Executes a scheduled plan.</p>
      * @return ApplyScheduledPlanResponse
      */
     public ApplyScheduledPlanResponse applyScheduledPlan(String namespace, String scheduledPlanId) throws Exception {
@@ -189,7 +189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>create a deploymentDraft</p>
+     * <p>Creates an SQL draft.</p>
      * 
      * @param request CreateDeploymentDraftRequest
      * @param headers CreateDeploymentDraftHeaders
@@ -227,7 +227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>create a deploymentDraft</p>
+     * <p>Creates an SQL draft.</p>
      * 
      * @param request CreateDeploymentDraftRequest
      * @return CreateDeploymentDraftResponse
@@ -240,7 +240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建deploymentTarget</p>
+     * <p>Creates a deployment target.</p>
      * 
      * @param request CreateDeploymentTargetRequest
      * @param headers CreateDeploymentTargetHeaders
@@ -284,7 +284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建deploymentTarget</p>
+     * <p>Creates a deployment target.</p>
      * 
      * @param request CreateDeploymentTargetRequest
      * @return CreateDeploymentTargetResponse
@@ -354,7 +354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>create a folder</p>
+     * <p>Creates a folder.</p>
      * 
      * @param request CreateFolderRequest
      * @param headers CreateFolderHeaders
@@ -392,7 +392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>create a folder</p>
+     * <p>Creates a folder.</p>
      * 
      * @param request CreateFolderRequest
      * @return CreateFolderResponse
@@ -520,7 +520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建定时执行计划</p>
+     * <p>Creates a scheduled tuning plan.</p>
      * 
      * @param request CreateScheduledPlanRequest
      * @param headers CreateScheduledPlanHeaders
@@ -558,7 +558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建定时执行计划</p>
+     * <p>Creates a scheduled tuning plan.</p>
      * 
      * @param request CreateScheduledPlanRequest
      * @return CreateScheduledPlanResponse
@@ -571,7 +571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建session集群</p>
+     * <p>Create a session cluster</p>
      * 
      * @param request CreateSessionClusterRequest
      * @param headers CreateSessionClusterHeaders
@@ -609,7 +609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建session集群</p>
+     * <p>Create a session cluster</p>
      * 
      * @param request CreateSessionClusterRequest
      * @return CreateSessionClusterResponse
@@ -816,7 +816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete a deploymentDraft</p>
+     * <p>Deletes an SQL draft. If the draft is deployed as a deployment and the deployment is published or the deployment status is RUNNING, the deployment for the draft cannot be deleted.</p>
      * 
      * @param headers DeleteDeploymentDraftHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -851,7 +851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete a deploymentDraft</p>
+     * <p>Deletes an SQL draft. If the draft is deployed as a deployment and the deployment is published or the deployment status is RUNNING, the deployment for the draft cannot be deleted.</p>
      * @return DeleteDeploymentDraftResponse
      */
     public DeleteDeploymentDraftResponse deleteDeploymentDraft(String namespace, String deploymentDraftId) throws Exception {
@@ -862,7 +862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除deploymentTarget</p>
+     * <p>Deletes a deployment target.</p>
      * 
      * @param headers DeleteDeploymentTargetHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -897,7 +897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除deploymentTarget</p>
+     * <p>Deletes a deployment target.</p>
      * @return DeleteDeploymentTargetResponse
      */
     public DeleteDeploymentTargetResponse deleteDeploymentTarget(String namespace, String deploymentTargetName) throws Exception {
@@ -908,7 +908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete a folder</p>
+     * <p>Deletes an empty folder. If files or folders exist in a folder, the folder cannot be deleted.</p>
      * 
      * @param headers DeleteFolderHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -943,7 +943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete a folder</p>
+     * <p>Deletes an empty folder. If files or folders exist in a folder, the folder cannot be deleted.</p>
      * @return DeleteFolderResponse
      */
     public DeleteFolderResponse deleteFolder(String namespace, String folderId) throws Exception {
@@ -1092,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除定时执行计划</p>
+     * <p>Deletes a scheduled tuning plan.</p>
      * 
      * @param headers DeleteScheduledPlanHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1127,7 +1127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除定时执行计划</p>
+     * <p>Deletes a scheduled tuning plan.</p>
      * @return DeleteScheduledPlanResponse
      */
     public DeleteScheduledPlanResponse deleteScheduledPlan(String namespace, String scheduledPlanId) throws Exception {
@@ -1138,7 +1138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除session集群</p>
+     * <p>Deletes a session cluster.</p>
      * 
      * @param headers DeleteSessionClusterHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1173,7 +1173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除session集群</p>
+     * <p>Deletes a session cluster.</p>
      * @return DeleteSessionClusterResponse
      */
     public DeleteSessionClusterResponse deleteSessionCluster(String namespace, String sessionClusterName) throws Exception {
@@ -1184,7 +1184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除UdfArtifact</p>
+     * <p>Deletes resources of a user-defined function (UDF) from a namespace. Before you delete the resources of a UDF, you must delete the UDF.</p>
      * 
      * @param headers DeleteUdfArtifactHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1219,7 +1219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除UdfArtifact</p>
+     * <p>Deletes resources of a user-defined function (UDF) from a namespace. Before you delete the resources of a UDF, you must delete the UDF.</p>
      * @return DeleteUdfArtifactResponse
      */
     public DeleteUdfArtifactResponse deleteUdfArtifact(String namespace, String udfArtifactName) throws Exception {
@@ -1336,7 +1336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>deploy deploymentDraft async</p>
+     * <p>Deploys an SQL draft.</p>
      * 
      * @param request DeployDeploymentDraftAsyncRequest
      * @param headers DeployDeploymentDraftAsyncHeaders
@@ -1374,7 +1374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>deploy deploymentDraft async</p>
+     * <p>Deploys an SQL draft.</p>
      * 
      * @param request DeployDeploymentDraftAsyncRequest
      * @return DeployDeploymentDraftAsyncResponse
@@ -1387,7 +1387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行sql语句</p>
+     * <p>Executes SQL statements to query the metadata. Only DDL and DML statements are supported. DQL statements are not supported.</p>
      * 
      * @param request ExecuteSqlStatementRequest
      * @param headers ExecuteSqlStatementHeaders
@@ -1425,7 +1425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行sql语句</p>
+     * <p>Executes SQL statements to query the metadata. Only DDL and DML statements are supported. DQL statements are not supported.</p>
      * 
      * @param request ExecuteSqlStatementRequest
      * @return ExecuteSqlStatementResponse
@@ -1502,7 +1502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides a Flink request proxy.</p>
+     * <p>Provides a proxy for Realtime Compute for Apache Flink requests.</p>
      * 
      * @param request FlinkApiProxyRequest
      * @param headers FlinkApiProxyHeaders
@@ -1557,7 +1557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides a Flink request proxy.</p>
+     * <p>Provides a proxy for Realtime Compute for Apache Flink requests.</p>
      * 
      * @param request FlinkApiProxyRequest
      * @return FlinkApiProxyResponse
@@ -1621,7 +1621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用中的执行定时计划</p>
+     * <p>Queries the scheduled plan of an application.</p>
      * 
      * @param request GetAppliedScheduledPlanRequest
      * @param headers GetAppliedScheduledPlanHeaders
@@ -1664,7 +1664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用中的执行定时计划</p>
+     * <p>Queries the scheduled plan of an application.</p>
      * 
      * @param request GetAppliedScheduledPlanRequest
      * @return GetAppliedScheduledPlanResponse
@@ -1677,7 +1677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取catalog</p>
+     * <p>Obtains details of the specified catalog or all catalogs.</p>
      * 
      * @param request GetCatalogsRequest
      * @param headers GetCatalogsHeaders
@@ -1720,7 +1720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取catalog</p>
+     * <p>Obtains details of the specified catalog or all catalogs.</p>
      * 
      * @param request GetCatalogsRequest
      * @return GetCatalogsResponse
@@ -1733,7 +1733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取database</p>
+     * <p>Obtains the information about a database in a specified catalog or lists all databases in a specified catalog.</p>
      * 
      * @param request GetDatabasesRequest
      * @param headers GetDatabasesHeaders
@@ -1776,7 +1776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取database</p>
+     * <p>Obtains the information about a database in a specified catalog or lists all databases in a specified catalog.</p>
      * 
      * @param request GetDatabasesRequest
      * @return GetDatabasesResponse
@@ -1789,7 +1789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get deploy deploymentDraft result</p>
+     * <p>Obtains the deployment result based on the ID of the asynchronous ticket.</p>
      * 
      * @param headers GetDeployDeploymentDraftResultHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1824,7 +1824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get deploy deploymentDraft result</p>
+     * <p>Obtains the deployment result based on the ID of the asynchronous ticket.</p>
      * @return GetDeployDeploymentDraftResultResponse
      */
     public GetDeployDeploymentDraftResultResponse getDeployDeploymentDraftResult(String namespace, String ticketId) throws Exception {
@@ -1881,7 +1881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get a deploymentDraft</p>
+     * <p>Obtains the details of an SQL draft.</p>
      * 
      * @param headers GetDeploymentDraftHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1916,7 +1916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get a deploymentDraft</p>
+     * <p>Obtains the details of an SQL draft.</p>
      * @return GetDeploymentDraftResponse
      */
     public GetDeploymentDraftResponse getDeploymentDraft(String namespace, String deploymentDraftId) throws Exception {
@@ -1927,7 +1927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get deploymentDraft lock</p>
+     * <p>Obtains the lock that is used to edit a draft. This can prevent operations performed on the page and API operations from affecting each other.</p>
      * 
      * @param request GetDeploymentDraftLockRequest
      * @param headers GetDeploymentDraftLockHeaders
@@ -1970,7 +1970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get deploymentDraft lock</p>
+     * <p>Obtains the lock that is used to edit a draft. This can prevent operations performed on the page and API operations from affecting each other.</p>
      * 
      * @param request GetDeploymentDraftLockRequest
      * @return GetDeploymentDraftLockResponse
@@ -2187,7 +2187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取运行事件</p>
+     * <p>Queries events.</p>
      * 
      * @param request GetEventsRequest
      * @param headers GetEventsHeaders
@@ -2199,6 +2199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.deploymentId)) {
             query.put("deploymentId", request.deploymentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentName)) {
+            query.put("deploymentName", request.deploymentName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
@@ -2238,7 +2242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取运行事件</p>
+     * <p>Queries events.</p>
      * 
      * @param request GetEventsRequest
      * @return GetEventsResponse
@@ -2251,7 +2255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get a folder</p>
+     * <p>Obtains the details of a folder.</p>
      * 
      * @param request GetFolderRequest
      * @param headers GetFolderHeaders
@@ -2263,6 +2267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
             query.put("folderId", request.folderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rootType)) {
+            query.put("rootType", request.rootType);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -2294,7 +2302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get a folder</p>
+     * <p>Obtains the details of a folder.</p>
      * 
      * @param request GetFolderRequest
      * @return GetFolderResponse
@@ -2353,7 +2361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询动态更新结果</p>
+     * <p>Obtains the dynamic update result of a deployment when you dynamically update the deployment.</p>
      * 
      * @param headers GetHotUpdateJobResultHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -2388,7 +2396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询动态更新结果</p>
+     * <p>Obtains the dynamic update result of a deployment when you dynamically update the deployment.</p>
      * @return GetHotUpdateJobResultResponse
      */
     public GetHotUpdateJobResultResponse getHotUpdateJobResult(String namespace, String jobHotUpdateId) throws Exception {
@@ -2445,7 +2453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取作业诊断信息</p>
+     * <p>Queries information about abnormal diagnostic items based on the intelligent deployment diagnostics feature.</p>
      * 
      * @param headers GetJobDiagnosisHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -2480,7 +2488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取作业诊断信息</p>
+     * <p>Queries information about abnormal diagnostic items based on the intelligent deployment diagnostics feature.</p>
      * @return GetJobDiagnosisResponse
      */
     public GetJobDiagnosisResponse getJobDiagnosis(String namespace, String deploymentId, String jobId) throws Exception {
@@ -2736,7 +2744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取session集群</p>
+     * <p>Queries the information about a session cluster.</p>
      * 
      * @param headers GetSessionClusterHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -2771,7 +2779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取session集群</p>
+     * <p>Queries the information about a session cluster.</p>
      * @return GetSessionClusterResponse
      */
     public GetSessionClusterResponse getSessionCluster(String namespace, String sessionClusterName) throws Exception {
@@ -2782,7 +2790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取table</p>
+     * <p>Obtains the details of a specific table in a database of a specific catalog or the information about all tables in a database.</p>
      * 
      * @param request GetTablesRequest
      * @param headers GetTablesHeaders
@@ -2825,7 +2833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取table</p>
+     * <p>Obtains the details of a specific table in a database of a specific catalog or the information about all tables in a database.</p>
      * 
      * @param request GetTablesRequest
      * @return GetTablesResponse
@@ -3032,7 +3040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list deploymentDrafts</p>
+     * <p>Queries a list of SQL drafts.</p>
      * 
      * @param request ListDeploymentDraftsRequest
      * @param headers ListDeploymentDraftsHeaders
@@ -3079,7 +3087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list deploymentDrafts</p>
+     * <p>Queries a list of SQL drafts.</p>
      * 
      * @param request ListDeploymentDraftsRequest
      * @return ListDeploymentDraftsResponse
@@ -3553,7 +3561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表定时执行计划</p>
+     * <p>Obtains a list of scheduled tuning plans.</p>
      * 
      * @param request ListScheduledPlanRequest
      * @param headers ListScheduledPlanHeaders
@@ -3604,7 +3612,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表定时执行计划</p>
+     * <p>Obtains a list of scheduled tuning plans.</p>
      * 
      * @param request ListScheduledPlanRequest
      * @return ListScheduledPlanResponse
@@ -3617,7 +3625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取作业资源变更历史</p>
+     * <p>Queries the execution history of a scheduled plan.</p>
      * 
      * @param request ListScheduledPlanExecutedHistoryRequest
      * @param headers ListScheduledPlanExecutedHistoryHeaders
@@ -3664,7 +3672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取作业资源变更历史</p>
+     * <p>Queries the execution history of a scheduled plan.</p>
      * 
      * @param request ListScheduledPlanExecutedHistoryRequest
      * @return ListScheduledPlanExecutedHistoryResponse
@@ -3677,7 +3685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举session集群</p>
+     * <p>Queries a list of session clusters.</p>
      * 
      * @param headers ListSessionClustersHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -3712,7 +3720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举session集群</p>
+     * <p>Queries a list of session clusters.</p>
      * @return ListSessionClustersResponse
      */
     public ListSessionClustersResponse listSessionClusters(String namespace) throws Exception {
@@ -4013,7 +4021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动session集群</p>
+     * <p>Starts a session cluster.</p>
      * 
      * @param headers StartSessionClusterHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -4048,7 +4056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动session集群</p>
+     * <p>Starts a session cluster.</p>
      * @return StartSessionClusterResponse
      */
     public StartSessionClusterResponse startSessionCluster(String namespace, String sessionClusterName) throws Exception {
@@ -4059,7 +4067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止应用执行定时计划</p>
+     * <p>Stops the scheduled plan of an application.</p>
      * 
      * @param headers StopApplyScheduledPlanHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -4094,7 +4102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止应用执行定时计划</p>
+     * <p>Stops the scheduled plan of an application.</p>
      * @return StopApplyScheduledPlanResponse
      */
     public StopApplyScheduledPlanResponse stopApplyScheduledPlan(String namespace, String scheduledPlanId) throws Exception {
@@ -4156,7 +4164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止session集群</p>
+     * <p>Stops a session cluster.</p>
      * 
      * @param headers StopSessionClusterHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -4191,7 +4199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止session集群</p>
+     * <p>Stops a session cluster.</p>
      * @return StopSessionClusterResponse
      */
     public StopSessionClusterResponse stopSessionCluster(String namespace, String sessionClusterName) throws Exception {
@@ -4310,7 +4318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update a deploymentDraft</p>
+     * <p>Updates an SQL draft.</p>
      * 
      * @param request UpdateDeploymentDraftRequest
      * @param headers UpdateDeploymentDraftHeaders
@@ -4348,7 +4356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update a deploymentDraft</p>
+     * <p>Updates an SQL draft.</p>
      * 
      * @param request UpdateDeploymentDraftRequest
      * @return UpdateDeploymentDraftResponse
@@ -4361,7 +4369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改deploymentTarget</p>
+     * <p>Updates a cluster on which the deployment is deployed.</p>
      * 
      * @param request UpdateDeploymentTargetRequest
      * @param headers UpdateDeploymentTargetHeaders
@@ -4399,7 +4407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改deploymentTarget</p>
+     * <p>Updates a cluster on which the deployment is deployed.</p>
      * 
      * @param request UpdateDeploymentTargetRequest
      * @return UpdateDeploymentTargetResponse
@@ -4463,7 +4471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update a folder</p>
+     * <p>Updates a folder.</p>
      * 
      * @param request UpdateFolderRequest
      * @param headers UpdateFolderHeaders
@@ -4501,7 +4509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update a folder</p>
+     * <p>Updates a folder.</p>
      * 
      * @param request UpdateFolderRequest
      * @return UpdateFolderResponse
@@ -4565,7 +4573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新定时执行计划</p>
+     * <p>Update a scheduled tuning plan.</p>
      * 
      * @param request UpdateScheduledPlanRequest
      * @param headers UpdateScheduledPlanHeaders
@@ -4603,7 +4611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新定时执行计划</p>
+     * <p>Update a scheduled tuning plan.</p>
      * 
      * @param request UpdateScheduledPlanRequest
      * @return UpdateScheduledPlanResponse
@@ -4616,7 +4624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新session集群</p>
+     * <p>Updates a session cluster.</p>
      * 
      * @param request UpdateSessionClusterRequest
      * @param headers UpdateSessionClusterHeaders
@@ -4654,7 +4662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新session集群</p>
+     * <p>Updates a session cluster.</p>
      * 
      * @param request UpdateSessionClusterRequest
      * @return UpdateSessionClusterResponse
@@ -4718,7 +4726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新秘钥</p>
+     * <p>Updates the information about a variable in a namespace.</p>
      * 
      * @param request UpdateVariableRequest
      * @param headers UpdateVariableHeaders
@@ -4756,7 +4764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新秘钥</p>
+     * <p>Updates the information about a variable in a namespace.</p>
      * 
      * @param request UpdateVariableRequest
      * @return UpdateVariableResponse

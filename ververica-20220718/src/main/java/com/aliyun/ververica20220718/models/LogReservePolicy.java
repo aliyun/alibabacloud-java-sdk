@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class LogReservePolicy extends TeaModel {
     /**
+     * <p>The number of days for which logs are retained after you enable the
+     * log archiving feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -12,6 +15,8 @@ public class LogReservePolicy extends TeaModel {
     public Long expirationDays;
 
     /**
+     * <p>Specifies whether to enable the log archiving feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -4,33 +4,90 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class LineageColumn extends TeaModel {
+    /**
+     * <p>The name of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("columnName")
     public String columnName;
 
+    /**
+     * <p>The original type of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>string</p>
+     */
     @NameInMap("columnNativeType")
     public String columnNativeType;
 
+    /**
+     * <p>The column type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>string</p>
+     */
     @NameInMap("columnType")
     public String columnType;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1723537978</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <p>The user that creates the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userA</p>
+     */
     @NameInMap("creator")
     public String creator;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The field ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123ss3</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <p>The modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1723537978</p>
+     */
     @NameInMap("modifiedAt")
     public Long modifiedAt;
 
+    /**
+     * <p>The ID of the account that is used to modify the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userA</p>
+     */
     @NameInMap("modifier")
     public String modifier;
 
+    /**
+     * <p>Indicates whether the value is nullable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("nullable")
     public Boolean nullable;
 

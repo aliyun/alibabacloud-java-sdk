@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class DraftDeployResult extends TeaModel {
+    /**
+     * <p>The verification result of the SQL syntax.</p>
+     */
     @NameInMap("artifactValidationDetail")
     public ValidateStatementResult artifactValidationDetail;
 
     /**
+     * <p>The deployment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>58718c99-3b29-4c5e-93bb-c9fc4ec6****</p>
      */
@@ -15,6 +20,8 @@ public class DraftDeployResult extends TeaModel {
     public String deploymentId;
 
     /**
+     * <p>The deployment information.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class DraftDeployResult extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

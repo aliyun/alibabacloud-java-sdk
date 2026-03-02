@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class Member extends TeaModel {
     /**
+     * <p>The member ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class Member extends TeaModel {
     public String member;
 
     /**
+     * <p>The role of the member.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>EDITOR</li>
+     * <li>VIEWER</li>
+     * <li>ADMIN</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VIEWER</p>
      */

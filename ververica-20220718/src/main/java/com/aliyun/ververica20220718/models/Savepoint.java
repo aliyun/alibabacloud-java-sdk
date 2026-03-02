@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Savepoint extends TeaModel {
     /**
+     * <p>The time when the savepoint was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1659066711</p>
      */
@@ -12,16 +14,23 @@ public class Savepoint extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The deployment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d716b22-6aad-4be2-85c2-50cfc757****</p>
      */
     @NameInMap("deploymentId")
     public String deploymentId;
 
+    /**
+     * <p>The description of the savepoint.</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5af678c0-7db0-4650-94c2-d2604f0a****</p>
      */
@@ -29,6 +38,8 @@ public class Savepoint extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The time when the savepoint was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1659069473</p>
      */
@@ -36,6 +47,8 @@ public class Savepoint extends TeaModel {
     public Long modifiedAt;
 
     /**
+     * <p>The name of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>namespacetest</p>
      */
@@ -43,6 +56,8 @@ public class Savepoint extends TeaModel {
     public String namespace;
 
     /**
+     * <p>Specifies whether the savepoint is in native format.</p>
+     * 
      * <strong>example:</strong>
      * <p>TRUE</p>
      */
@@ -50,6 +65,8 @@ public class Savepoint extends TeaModel {
     public Boolean nativeFormat;
 
     /**
+     * <p>The savepoint ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>354dde66-a3ae-463e-967a-0b4107fd****</p>
      */
@@ -57,6 +74,8 @@ public class Savepoint extends TeaModel {
     public String savepointId;
 
     /**
+     * <p>The storage URL of the savepoint.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oss/bucket/flink/flink-jobs/namespaces/vvp-team/deployments/5a19a71b-1c42-4f34-94fd-86cf60782c81/checkpoints/sp-3285">https://oss/bucket/flink/flink-jobs/namespaces/vvp-team/deployments/5a19a71b-1c42-4f34-94fd-86cf60782c81/checkpoints/sp-3285</a></p>
      */
@@ -64,16 +83,28 @@ public class Savepoint extends TeaModel {
     public String savepointLocation;
 
     /**
+     * <p>The method that is used to create a savepoint.</p>
+     * <ul>
+     * <li><code>USER_REQUEST</code>: The savepoint is manually created.</li>
+     * <li><code>STOP_WITH_SAVEPOINT</code>: The savepoint is created when you cancel the deployment.</li>
+     * <li><code>RETAINED_CHECKPOINT</code>: The savepoint is created based on the returned checkpoint.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>USER_REQUEST</p>
      */
     @NameInMap("savepointOrigin")
     public String savepointOrigin;
 
+    /**
+     * <p>The status of the savepoint.</p>
+     */
     @NameInMap("status")
     public SavepointStatus status;
 
     /**
+     * <p>Specifies whether to use the stop-with-drain mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>TRUE</p>
      */

@@ -4,12 +4,24 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class BriefResourceSetting extends TeaModel {
+    /**
+     * <p>The resource configuration for the deployment in batch mode. This parameter is required for a deployment in batch mode.</p>
+     */
     @NameInMap("batchResourceSetting")
     public BatchResourceSetting batchResourceSetting;
 
+    /**
+     * <p>The Realtime Compute for Apache Flink configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>“execution.checkpointing.interval: 180s”</p>
+     */
     @NameInMap("flinkConf")
     public java.util.Map<String, ?> flinkConf;
 
+    /**
+     * <p>The resource configuration for the deployment in streaming mode. This parameter is required for a deployment in streaming mode.</p>
+     */
     @NameInMap("streamingResourceSetting")
     public StreamingResourceSetting streamingResourceSetting;
 

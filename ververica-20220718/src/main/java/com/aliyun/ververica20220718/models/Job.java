@@ -4,16 +4,30 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Job extends TeaModel {
+    /**
+     * <p>The content template of the job.</p>
+     */
     @NameInMap("artifact")
     public Artifact artifact;
 
+    /**
+     * <p>The resource configuration of the job in batch mode.</p>
+     */
     @NameInMap("batchResourceSetting")
     public BatchResourceSetting batchResourceSetting;
 
+    /**
+     * <p>The time when the job was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1714058507</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
     /**
+     * <p>The ID of the account that is used to create the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>27846363877456****</p>
      */
@@ -21,6 +35,8 @@ public class Job extends TeaModel {
     public String creator;
 
     /**
+     * <p>The name of the account that is used to create the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>****@streamcompute.onaliyun.com</p>
      */
@@ -28,6 +44,8 @@ public class Job extends TeaModel {
     public String creatorName;
 
     /**
+     * <p>The deployment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>354dde66-a3ae-463e-967a-0b4107fd****</p>
      */
@@ -35,6 +53,8 @@ public class Job extends TeaModel {
     public String deploymentId;
 
     /**
+     * <p>The name of the deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>flinktest</p>
      */
@@ -42,6 +62,8 @@ public class Job extends TeaModel {
     public String deploymentName;
 
     /**
+     * <p>The end time of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>1660277235</p>
      */
@@ -49,6 +71,8 @@ public class Job extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The engine version of the deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>vvr-4.0.14-flink-1.13</p>
      */
@@ -56,35 +80,66 @@ public class Job extends TeaModel {
     public String engineVersion;
 
     /**
+     * <p>The execution mode of the job. Valid values:</p>
+     * <ul>
+     * <li>STREAM</li>
+     * <li>BATCH</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>BATCH</p>
      */
     @NameInMap("executionMode")
     public String executionMode;
 
+    /**
+     * <p>The configuration of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{execution.checkpointing.unaligned: false}</p>
+     */
     @NameInMap("flinkConf")
     public java.util.Map<String, ?> flinkConf;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>354dde66-a3ae-463e-967a-0b4107fd****</p>
      */
     @NameInMap("jobId")
     public String jobId;
 
+    /**
+     * <p>The variables.</p>
+     */
     @NameInMap("localVariables")
     public java.util.List<LocalVariable> localVariables;
 
+    /**
+     * <p>The logging configuration of the job.</p>
+     */
     @NameInMap("logging")
     public Logging logging;
 
+    /**
+     * <p>The resource information of the job.</p>
+     */
     @NameInMap("metric")
     public JobMetric metric;
 
+    /**
+     * <p>The time when the job was modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1714058800</p>
+     */
     @NameInMap("modifiedAt")
     public String modifiedAt;
 
     /**
+     * <p>The ID of the account that is used to modify the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>27846363877456****</p>
      */
@@ -92,6 +147,8 @@ public class Job extends TeaModel {
     public String modifier;
 
     /**
+     * <p>The name of the account that is used to modify the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>****@streamcompute.onaliyun.com</p>
      */
@@ -99,16 +156,23 @@ public class Job extends TeaModel {
     public String modifierName;
 
     /**
+     * <p>The name of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>namespacetest</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The startup strategy of the job.</p>
+     */
     @NameInMap("restoreStrategy")
     public DeploymentRestoreStrategy restoreStrategy;
 
     /**
+     * <p>If the job runs in a session cluster, the value of this parameter is the name of the session cluster. Otherwise, the value of this parameter is null.</p>
+     * 
      * <strong>example:</strong>
      * <p>preview</p>
      */
@@ -116,22 +180,35 @@ public class Job extends TeaModel {
     public String sessionClusterName;
 
     /**
+     * <p>The start time of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>1660190835</p>
      */
     @NameInMap("startTime")
     public Long startTime;
 
+    /**
+     * <p>The status of the job.</p>
+     */
     @NameInMap("status")
     public JobStatus status;
 
+    /**
+     * <p>The resource configuration of the job in streaming mode.</p>
+     */
     @NameInMap("streamingResourceSetting")
     public StreamingResourceSetting streamingResourceSetting;
 
+    /**
+     * <p>The Flink configuration.</p>
+     */
     @NameInMap("userFlinkConf")
     public java.util.Map<String, ?> userFlinkConf;
 
     /**
+     * <p>The workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>edcef******b4f</p>
      */

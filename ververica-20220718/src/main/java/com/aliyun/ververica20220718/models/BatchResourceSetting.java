@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class BatchResourceSetting extends TeaModel {
+    /**
+     * <p>The resource parameters in basic mode.</p>
+     */
     @NameInMap("basicResourceSetting")
     public BasicResourceSetting basicResourceSetting;
 
     /**
+     * <p>The maximum number of slots.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

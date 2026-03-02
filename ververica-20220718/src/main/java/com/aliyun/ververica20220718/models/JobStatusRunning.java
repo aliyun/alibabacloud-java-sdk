@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class JobStatusRunning extends TeaModel {
     /**
+     * <p>The number of times the job is restarted.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -12,6 +14,8 @@ public class JobStatusRunning extends TeaModel {
     public Long observedFlinkJobRestarts;
 
     /**
+     * <p>The status of the Flink job.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

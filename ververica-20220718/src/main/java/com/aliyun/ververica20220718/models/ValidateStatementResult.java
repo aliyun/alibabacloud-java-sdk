@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ValidateStatementResult extends TeaModel {
+    /**
+     * <p>The details of verification errors of the SQL syntax.</p>
+     */
     @NameInMap("errorDetails")
     public ValidationErrorDetails errorDetails;
 
     /**
+     * <p>The verification result.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;there have some errors&quot;&quot;</p>
      */

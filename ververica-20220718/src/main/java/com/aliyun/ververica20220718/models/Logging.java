@@ -5,19 +5,30 @@ import com.aliyun.tea.*;
 
 public class Logging extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>xml格式文本</p>
+     * <p>Custom log templates.</p>
      */
     @NameInMap("log4j2ConfigurationTemplate")
     public String log4j2ConfigurationTemplate;
 
+    /**
+     * <p>The Log4j configuration.</p>
+     */
     @NameInMap("log4jLoggers")
     public java.util.List<Log4jLogger> log4jLoggers;
 
+    /**
+     * <p>The log retention policy.</p>
+     */
     @NameInMap("logReservePolicy")
     public LogReservePolicy logReservePolicy;
 
     /**
+     * <p>The type of the system log template.</p>
+     * <ul>
+     * <li>default: The default template is used.</li>
+     * <li>oss: Logs are delivered to Object Storage Service (OSS).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */

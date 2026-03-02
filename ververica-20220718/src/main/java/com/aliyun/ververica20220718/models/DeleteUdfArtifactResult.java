@@ -4,12 +4,27 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class DeleteUdfArtifactResult extends TeaModel {
+    /**
+     * <p>Indicates whether the JAR file was deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("deleteSuccess")
     public Boolean deleteSuccess;
 
+    /**
+     * <p>The message used to delete the JAR file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>All associated classes.</p>
+     */
     @NameInMap("referencedClasses")
     public java.util.List<UdfClass> referencedClasses;
 

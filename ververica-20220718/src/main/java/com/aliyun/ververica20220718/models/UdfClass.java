@@ -4,15 +4,36 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class UdfClass extends TeaModel {
+    /**
+     * <p>The name of the class.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myfunctionTest</p>
+     */
     @NameInMap("className")
     public String className;
 
+    /**
+     * <p>The type of the class.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UDF_TYPE_TABLE_AGGREGATE</p>
+     */
     @NameInMap("classType")
     public String classType;
 
+    /**
+     * <p>The list of UDF names.</p>
+     */
     @NameInMap("functionNames")
     public java.util.List<String> functionNames;
 
+    /**
+     * <p>The name of the UDF JAR file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>udfCollection.jar</p>
+     */
     @NameInMap("udfArtifactName")
     public String udfArtifactName;
 

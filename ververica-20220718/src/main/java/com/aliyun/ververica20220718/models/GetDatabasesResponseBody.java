@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class GetDatabasesResponseBody extends TeaModel {
+    /**
+     * <p>If the value of success was true, the list of databases that meet the specified condition was returned. If the value of success was false, a null value was returned.</p>
+     */
     @NameInMap("data")
     public java.util.List<Database> data;
 

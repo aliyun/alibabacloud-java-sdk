@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class AsyncDraftDeployResult extends TeaModel {
+    /**
+     * <p>The verification result of the SQL syntax.</p>
+     */
     @NameInMap("artifactValidationDetail")
     public ValidateStatementResult artifactValidationDetail;
 
     /**
+     * <p>The deployment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -15,6 +20,8 @@ public class AsyncDraftDeployResult extends TeaModel {
     public String deploymentId;
 
     /**
+     * <p>The information about the deployment result.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Validation error: SQL validate failed&quot;</p>
      */
@@ -22,6 +29,8 @@ public class AsyncDraftDeployResult extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -29,6 +38,8 @@ public class AsyncDraftDeployResult extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The state of the execution.</p>
+     * 
      * <strong>example:</strong>
      * <p>FINISHED</p>
      */

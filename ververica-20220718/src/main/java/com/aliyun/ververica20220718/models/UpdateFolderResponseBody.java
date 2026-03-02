@@ -4,10 +4,18 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class UpdateFolderResponseBody extends TeaModel {
+    /**
+     * <p>The information returned after the folder is updated.</p>
+     */
     @NameInMap("data")
     public Folder data;
 
     /**
+     * <ul>
+     * <li>If the value of success was false, an error code was returned.</li>
+     * <li>If the value of success was true, a null value was returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +23,11 @@ public class UpdateFolderResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <ul>
+     * <li>If the value of success was false, an error message was returned.</li>
+     * <li>If the value of success was true, a null value was returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +35,8 @@ public class UpdateFolderResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +44,8 @@ public class UpdateFolderResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -36,6 +53,8 @@ public class UpdateFolderResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

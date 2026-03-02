@@ -4,12 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Schema extends TeaModel {
+    /**
+     * <p>The information about columns.</p>
+     */
     @NameInMap("columns")
     public java.util.List<TableColumn> columns;
 
+    /**
+     * <p>The information about the primary key.</p>
+     */
     @NameInMap("primaryKey")
     public PrimaryKey primaryKey;
 
+    /**
+     * <p>The watermark information.</p>
+     */
     @NameInMap("watermarkSpecs")
     public java.util.List<WatermarkSpec> watermarkSpecs;
 

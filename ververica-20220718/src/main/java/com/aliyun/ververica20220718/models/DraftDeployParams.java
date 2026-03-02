@@ -4,13 +4,24 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class DraftDeployParams extends TeaModel {
+    /**
+     * <p>The draft ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c84d73be-40ad-4627-8bdd-fa1eba51****</p>
+     */
     @NameInMap("deploymentDraftId")
     public String deploymentDraftId;
 
+    /**
+     * <p>The cluster on which the deployment is deployed.</p>
+     */
     @NameInMap("deploymentTarget")
     public BriefDeploymentTarget deploymentTarget;
 
     /**
+     * <p>Specifies whether to skip the syntax check.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

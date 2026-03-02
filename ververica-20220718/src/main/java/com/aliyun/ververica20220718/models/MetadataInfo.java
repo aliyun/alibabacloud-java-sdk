@@ -4,9 +4,18 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class MetadataInfo extends TeaModel {
+    /**
+     * <p>The metadata field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>topic</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>Specifies whether the metadata is read only.</p>
+     */
     @NameInMap("virtual")
     public Boolean virtual;
 

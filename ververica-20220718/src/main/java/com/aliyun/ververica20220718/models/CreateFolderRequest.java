@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class CreateFolderRequest extends TeaModel {
+    /**
+     * <p>The structure of data in the folder.</p>
+     */
     @NameInMap("body")
     public Folder body;
 

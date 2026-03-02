@@ -4,21 +4,54 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Property extends TeaModel {
+    /**
+     * <p>The default value of the parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userA</p>
+     */
     @NameInMap("defaultValue")
     public String defaultValue;
 
+    /**
+     * <p>Indicates whether the format is defined.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flase</p>
+     */
     @NameInMap("definesFormat")
     public Boolean definesFormat;
 
+    /**
+     * <p>The description of the parameter.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The name of the parameter key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>Indicates whether the parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("required")
     public Boolean required;
 
+    /**
+     * <p>Indiactes whether the data is sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("sensitive")
     public Boolean sensitive;
 

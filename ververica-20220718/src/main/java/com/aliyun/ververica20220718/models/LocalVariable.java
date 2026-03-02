@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LocalVariable extends TeaModel {
     /**
+     * <p>The name of the variable.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class LocalVariable extends TeaModel {
     public String name;
 
     /**
+     * <p>The value of the variable.</p>
+     * 
      * <strong>example:</strong>
      * <p>datagen</p>
      */

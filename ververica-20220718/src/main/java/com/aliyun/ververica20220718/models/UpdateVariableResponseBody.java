@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateVariableResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denial. This parameter is returned in scenarios where the account is not authorized to perform operations.</p>
+     * 
      * <strong>example:</strong>
      * <p>“”</p>
      */
     @NameInMap("accessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The variable structure after the update.</p>
+     */
     @NameInMap("data")
     public Variable data;
 
     /**
+     * <p>If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class UpdateVariableResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -29,6 +38,8 @@ public class UpdateVariableResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class UpdateVariableResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1EF03B0C-F44F-47AD-BB48-D002D0F7B8C9</p>
      */
@@ -43,6 +56,8 @@ public class UpdateVariableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

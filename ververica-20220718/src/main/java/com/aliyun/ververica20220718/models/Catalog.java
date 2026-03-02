@@ -9,6 +9,9 @@ public class Catalog extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paimon-test</p>
      */
     @NameInMap("name")
     public String name;

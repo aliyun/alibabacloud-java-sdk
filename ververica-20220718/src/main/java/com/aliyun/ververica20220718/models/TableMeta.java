@@ -4,12 +4,24 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class TableMeta extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>paimon</p>
+     */
     @NameInMap("catalogName")
     public String catalogName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>paimon-ods</p>
+     */
     @NameInMap("databaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>order-table</p>
+     */
     @NameInMap("tableName")
     public String tableName;
 

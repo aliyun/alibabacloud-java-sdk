@@ -4,12 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JobDiagnosisSymptom extends TeaModel {
+    /**
+     * <p>The diagnostic result.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The diagnostic task name.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The fixing suggestions.</p>
+     */
     @NameInMap("recommendation")
     public String recommendation;
 

@@ -5,41 +5,53 @@ import com.aliyun.tea.*;
 
 public class JobSummary extends TeaModel {
     /**
+     * <p>The number of jobs that are in the cancelled state.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>5</p>
      */
     @NameInMap("cancelled")
     public Integer cancelled;
 
     /**
+     * <p>The number of jobs that are in the cancelling state.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("cancelling")
     public Integer cancelling;
 
     /**
+     * <p>The number of jobs that are in the failed state.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>6</p>
      */
     @NameInMap("failed")
     public Integer failed;
 
     /**
+     * <p>The number of jobs that are in the finished state.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>4</p>
      */
     @NameInMap("finished")
     public Integer finished;
 
     /**
+     * <p>The number of jobs that are in the running state.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("running")
     public Integer running;
 
     /**
+     * <p>The number of jobs that are in the starting state.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

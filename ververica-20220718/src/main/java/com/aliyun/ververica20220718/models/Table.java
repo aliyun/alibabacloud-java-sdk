@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Table extends TeaModel {
+    /**
+     * <p>The comment.</p>
+     */
     @NameInMap("comment")
     public String comment;
 
@@ -11,21 +14,37 @@ public class Table extends TeaModel {
     public java.util.Map<String, String> metadata;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order-test</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The partition key column.</p>
+     */
     @NameInMap("partitionKeys")
     public java.util.List<String> partitionKeys;
 
+    /**
+     * <p>The parameter configurations of the table.</p>
+     */
     @NameInMap("properties")
     public java.util.Map<String, ?> properties;
 
+    /**
+     * <p>The schema information about the table.</p>
+     */
     @NameInMap("schema")
     public Schema schema;
 
     /**
+     * <p>TABLE;
+     *   MATERIALIZED_TABLE;
+     *   VIEW;</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("tableType")

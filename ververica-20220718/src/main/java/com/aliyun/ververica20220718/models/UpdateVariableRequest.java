@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateVariableRequest extends TeaModel {
     /**
+     * <p>The information about the variable after the update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

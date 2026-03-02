@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ExecuteSqlStatementResponseBody extends TeaModel {
+    /**
+     * <p>The result of executing the SQL statement to query the metadata.</p>
+     */
     @NameInMap("data")
     public SqlStatementExecuteResult data;
 

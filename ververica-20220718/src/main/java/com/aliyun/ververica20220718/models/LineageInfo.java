@@ -4,12 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class LineageInfo extends TeaModel {
+    /**
+     * <p>The edge information.</p>
+     */
     @NameInMap("edges")
     public Edge edges;
 
+    /**
+     * <p>The deployments.</p>
+     */
     @NameInMap("jobInfos")
     public java.util.List<JobInfo> jobInfos;
 
+    /**
+     * <p>The nodes.</p>
+     */
     @NameInMap("nodes")
     public java.util.List<Node> nodes;
 

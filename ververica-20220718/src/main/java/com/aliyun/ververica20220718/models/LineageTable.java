@@ -4,18 +4,39 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class LineageTable extends TeaModel {
+    /**
+     * <p>The information about columns.</p>
+     */
     @NameInMap("columns")
     public java.util.List<LineageColumn> columns;
 
+    /**
+     * <p>The table ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>434508</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <p>The information about the table. The information includes the user who creates the table, the user who modifies the table, and the creation time and modification time of the table.</p>
+     */
     @NameInMap("properties")
     public java.util.Map<String, ?> properties;
 
+    /**
+     * <p>The name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order-test</p>
+     */
     @NameInMap("tableName")
     public String tableName;
 
+    /**
+     * <p>The parameters of the table.</p>
+     */
     @NameInMap("with")
     public java.util.Map<String, ?> with;
 

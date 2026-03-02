@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EngineVersionSupportedFeatures extends TeaModel {
     /**
+     * <p>Specifies whether the engine version can be used to create a native savepoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class EngineVersionSupportedFeatures extends TeaModel {
     public Boolean supportNativeSavepoint;
 
     /**
+     * <p>Specifies whether the engine version can be used to submit an SQL deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

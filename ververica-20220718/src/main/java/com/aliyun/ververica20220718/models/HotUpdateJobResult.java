@@ -7,9 +7,17 @@ public class HotUpdateJobResult extends TeaModel {
     @NameInMap("hotUpdateParams")
     public HotUpdateJobParams hotUpdateParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123hashd****</p>
+     */
     @NameInMap("jobHotUpdateId")
     public String jobHotUpdateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5af678c0-7db0-4650-94c2-d2604f0a****</p>
+     */
     @NameInMap("jobId")
     public String jobId;
 

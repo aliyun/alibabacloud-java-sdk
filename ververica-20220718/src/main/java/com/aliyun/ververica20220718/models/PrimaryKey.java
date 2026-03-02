@@ -12,6 +12,9 @@ public class PrimaryKey extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pk</p>
      */
     @NameInMap("constraintName")
     public String constraintName;

@@ -4,9 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class BriefDeploymentTarget extends TeaModel {
+    /**
+     * <p>The deployment mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PER_JOB</p>
+     */
     @NameInMap("mode")
     public String mode;
 
+    /**
+     * <p>The name of the queue used for the deployment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vvp-workload</p>
+     */
     @NameInMap("name")
     public String name;
 
