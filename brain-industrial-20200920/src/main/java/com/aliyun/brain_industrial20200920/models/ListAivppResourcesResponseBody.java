@@ -135,6 +135,13 @@ public class ListAivppResourcesResponseBody extends TeaModel {
         @NameInMap("ConnectNum")
         public Integer connectNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>industry-brain.aliyun.com</p>
+         */
+        @NameInMap("ConsoleUrl")
+        public String consoleUrl;
+
         @NameInMap("Detail")
         public String detail;
 
@@ -226,6 +233,14 @@ public class ListAivppResourcesResponseBody extends TeaModel {
         }
         public Integer getConnectNum() {
             return this.connectNum;
+        }
+
+        public ListAivppResourcesResponseBodyData setConsoleUrl(String consoleUrl) {
+            this.consoleUrl = consoleUrl;
+            return this;
+        }
+        public String getConsoleUrl() {
+            return this.consoleUrl;
         }
 
         public ListAivppResourcesResponseBodyData setDetail(String detail) {
