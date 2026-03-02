@@ -805,7 +805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a certificate signing request (CSR) file.</p>
+     * <p>Deletes a Certificate Signing Request (CSR) that is no longer required.</p>
      * 
      * @param request DeleteCsrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -837,7 +837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a certificate signing request (CSR) file.</p>
+     * <p>Deletes a Certificate Signing Request (CSR) that is no longer required.</p>
      * 
      * @param request DeleteCsrRequest
      * @return DeleteCsrResponse
@@ -1386,11 +1386,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>统计资产数量</p>
+     * 
+     * @param request GetAssetCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAssetCountResponse
+     */
+    public GetAssetCountResponse getAssetCountWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAssetCount"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAssetCountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>统计资产数量</p>
+     * @return GetAssetCountResponse
+     */
+    public GetAssetCountResponse getAssetCount() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAssetCountWithOptions(runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the quota for certificate repositories.</p>
+     * <p>Queries the API call quota for certificate application repositories. When you call API operations for signature generation, signature verification, data encryption, and data decryption, your API call quota for certificate application repositories is consumed. If your API call quota is exhausted, you can no longer call specific certificate application repository-related operations. You can call this operation to query the API call quota for certificate application repositories.</p>
      * 
      * @param request GetCertWarehouseQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1417,7 +1451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the quota for certificate repositories.</p>
+     * <p>Queries the API call quota for certificate application repositories. When you call API operations for signature generation, signature verification, data encryption, and data decryption, your API call quota for certificate application repositories is consumed. If your API call quota is exhausted, you can no longer call specific certificate application repository-related operations. You can call this operation to query the API call quota for certificate application repositories.</p>
      * @return GetCertWarehouseQuotaResponse
      */
     public GetCertWarehouseQuotaResponse getCertWarehouseQuota() throws Exception {
@@ -1603,6 +1637,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>统计风险资产数量</p>
+     * 
+     * @param request GetRiskCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRiskCountResponse
+     */
+    public GetRiskCountResponse getRiskCountWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRiskCount"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRiskCountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>统计风险资产数量</p>
+     * @return GetRiskCountResponse
+     */
+    public GetRiskCountResponse getRiskCount() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRiskCountWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询异步任务状态</p>
      * 
      * @param request GetTaskAttributeRequest
@@ -1654,7 +1722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a certificate.</p>
+     * <p>Queries certificate details, including the basic information and public and private key content. You can call this operation to download the certificate and private key.</p>
      * 
      * @param request GetUserCertificateDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1693,7 +1761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a certificate.</p>
+     * <p>Queries certificate details, including the basic information and public and private key content. You can call this operation to download the certificate and private key.</p>
      * 
      * @param request GetUserCertificateDetailRequest
      * @return GetUserCertificateDetailResponse
@@ -1701,6 +1769,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetUserCertificateDetailResponse getUserCertificateDetail(GetUserCertificateDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUserCertificateDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云产品资源统计列表</p>
+     * 
+     * @param request ListAssetCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAssetCountResponse
+     */
+    public ListAssetCountResponse listAssetCountWithOptions(ListAssetCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showSize)) {
+            query.put("ShowSize", request.showSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAssetCount"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAssetCountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云产品资源统计列表</p>
+     * 
+     * @param request ListAssetCountRequest
+     * @return ListAssetCountResponse
+     */
+    public ListAssetCountResponse listAssetCount(ListAssetCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAssetCountWithOptions(request, runtime);
     }
 
     /**
@@ -2099,7 +2223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries certificate signing requests (CSRs).</p>
+     * <p>Queries the details of Certificate Signing Requests (CSRs).</p>
      * 
      * @param request ListCsrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2143,7 +2267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries certificate signing requests (CSRs).</p>
+     * <p>Queries the details of Certificate Signing Requests (CSRs).</p>
      * 
      * @param request ListCsrRequest
      * @return ListCsrResponse
@@ -2791,7 +2915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the private key of a certificate signing request (CSR).</p>
+     * <p>Uploads or updates the private key for a Certificate Signing Request (CSR). If you did not upload the required priviate when you uploaded a CSR, you can call this operation to upload or update the private key.</p>
      * 
      * @param request UpdateCsrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2827,7 +2951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the private key of a certificate signing request (CSR).</p>
+     * <p>Uploads or updates the private key for a Certificate Signing Request (CSR). If you did not upload the required priviate when you uploaded a CSR, you can call this operation to upload or update the private key.</p>
      * 
      * @param request UpdateCsrRequest
      * @return UpdateCsrResponse
@@ -3103,7 +3227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uploads a certificate signing request (CSR) file</p>
+     * <p>Uploads an existing Certificate Signing Request (CSR). You can use the CSR when you upload a certificate. You can also manage the uploaded CSRs in a centralized manner.</p>
      * 
      * @param request UploadCsrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3143,7 +3267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uploads a certificate signing request (CSR) file</p>
+     * <p>Uploads an existing Certificate Signing Request (CSR). You can use the CSR when you upload a certificate. You can also manage the uploaded CSRs in a centralized manner.</p>
      * 
      * @param request UploadCsrRequest
      * @return UploadCsrResponse
