@@ -23,6 +23,13 @@ public class InvokeAssistantResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>done</p>
+     */
+    @NameInMap("sessionStatus")
+    public String sessionStatus;
+
+    /**
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("streamEnd")
@@ -55,6 +62,14 @@ public class InvokeAssistantResponseBody extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public InvokeAssistantResponseBody setSessionStatus(String sessionStatus) {
+        this.sessionStatus = sessionStatus;
+        return this;
+    }
+    public String getSessionStatus() {
+        return this.sessionStatus;
     }
 
     public InvokeAssistantResponseBody setStreamEnd(Boolean streamEnd) {

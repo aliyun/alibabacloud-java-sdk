@@ -17,6 +17,9 @@ public class CreateRunResponseBody extends TeaModel {
     @NameInMap("run")
     public CreateRunResponseBodyRun run;
 
+    @NameInMap("thread")
+    public CreateRunResponseBodyThread thread;
+
     public static CreateRunResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRunResponseBody self = new CreateRunResponseBody();
         return TeaModel.build(map, self);
@@ -44,6 +47,14 @@ public class CreateRunResponseBody extends TeaModel {
     }
     public CreateRunResponseBodyRun getRun() {
         return this.run;
+    }
+
+    public CreateRunResponseBody setThread(CreateRunResponseBodyThread thread) {
+        this.thread = thread;
+        return this;
+    }
+    public CreateRunResponseBodyThread getThread() {
+        return this.thread;
     }
 
     public static class CreateRunResponseBodyMessagesContentCardCallback extends TeaModel {
@@ -1626,6 +1637,47 @@ public class CreateRunResponseBody extends TeaModel {
         }
         public String getThreadId() {
             return this.threadId;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyThread extends TeaModel {
+        @NameInMap("createAt")
+        public Long createAt;
+
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("status")
+        public String status;
+
+        public static CreateRunResponseBodyThread build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyThread self = new CreateRunResponseBodyThread();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyThread setCreateAt(Long createAt) {
+            this.createAt = createAt;
+            return this;
+        }
+        public Long getCreateAt() {
+            return this.createAt;
+        }
+
+        public CreateRunResponseBodyThread setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public CreateRunResponseBodyThread setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
