@@ -64,6 +64,63 @@ public class InstancePreivewResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>epId</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ep-xxx</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO build(java.util.Map<String, ?> map) throws Exception {
+            InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO self = new InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO();
+            return TeaModel.build(map, self);
+        }
+
+        public InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class InstancePreivewResponseBodyDataInstancesInstancesVOPvlParams extends TeaModel {
+        @NameInMap("PvlVO")
+        public java.util.List<InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO> pvlVO;
+
+        public static InstancePreivewResponseBodyDataInstancesInstancesVOPvlParams build(java.util.Map<String, ?> map) throws Exception {
+            InstancePreivewResponseBodyDataInstancesInstancesVOPvlParams self = new InstancePreivewResponseBodyDataInstancesInstancesVOPvlParams();
+            return TeaModel.build(map, self);
+        }
+
+        public InstancePreivewResponseBodyDataInstancesInstancesVOPvlParams setPvlVO(java.util.List<InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO> pvlVO) {
+            this.pvlVO = pvlVO;
+            return this;
+        }
+        public java.util.List<InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO> getPvlVO() {
+            return this.pvlVO;
+        }
+
+    }
+
     public static class InstancePreivewResponseBodyDataInstancesInstancesVOTagsTagsVO extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -147,6 +204,13 @@ public class InstancePreivewResponseBody extends TeaModel {
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tcp_and_ssl</p>
+         */
+        @NameInMap("ListenerMode")
+        public String listenerMode;
+
         @NameInMap("MaxBindingCount")
         public Integer maxBindingCount;
 
@@ -201,8 +265,18 @@ public class InstancePreivewResponseBody extends TeaModel {
         @NameInMap("PrivateEndpoint")
         public String privateEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pvl</p>
+         */
+        @NameInMap("PrivateEndpointType")
+        public String privateEndpointType;
+
         @NameInMap("PublicEndpoint")
         public String publicEndpoint;
+
+        @NameInMap("PvlParams")
+        public InstancePreivewResponseBodyDataInstancesInstancesVOPvlParams pvlParams;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -331,6 +405,14 @@ public class InstancePreivewResponseBody extends TeaModel {
         }
         public String getKmsKeyId() {
             return this.kmsKeyId;
+        }
+
+        public InstancePreivewResponseBodyDataInstancesInstancesVO setListenerMode(String listenerMode) {
+            this.listenerMode = listenerMode;
+            return this;
+        }
+        public String getListenerMode() {
+            return this.listenerMode;
         }
 
         public InstancePreivewResponseBodyDataInstancesInstancesVO setMaxBindingCount(Integer maxBindingCount) {
@@ -477,12 +559,28 @@ public class InstancePreivewResponseBody extends TeaModel {
             return this.privateEndpoint;
         }
 
+        public InstancePreivewResponseBodyDataInstancesInstancesVO setPrivateEndpointType(String privateEndpointType) {
+            this.privateEndpointType = privateEndpointType;
+            return this;
+        }
+        public String getPrivateEndpointType() {
+            return this.privateEndpointType;
+        }
+
         public InstancePreivewResponseBodyDataInstancesInstancesVO setPublicEndpoint(String publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
         }
         public String getPublicEndpoint() {
             return this.publicEndpoint;
+        }
+
+        public InstancePreivewResponseBodyDataInstancesInstancesVO setPvlParams(InstancePreivewResponseBodyDataInstancesInstancesVOPvlParams pvlParams) {
+            this.pvlParams = pvlParams;
+            return this;
+        }
+        public InstancePreivewResponseBodyDataInstancesInstancesVOPvlParams getPvlParams() {
+            return this.pvlParams;
         }
 
         public InstancePreivewResponseBodyDataInstancesInstancesVO setResourceGroupId(String resourceGroupId) {
