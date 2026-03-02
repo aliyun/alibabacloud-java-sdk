@@ -21,8 +21,6 @@ public class CreateCommandShrinkRequest extends TeaModel {
     public String domainCode;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>shopping_t</p>
      */
