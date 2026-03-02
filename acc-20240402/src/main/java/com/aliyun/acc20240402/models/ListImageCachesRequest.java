@@ -4,6 +4,9 @@ package com.aliyun.acc20240402.models;
 import com.aliyun.tea.*;
 
 public class ListImageCachesRequest extends TeaModel {
+    @NameInMap("Image")
+    public String image;
+
     /**
      * <strong>example:</strong>
      * <p>my-imc</p>
@@ -54,6 +57,14 @@ public class ListImageCachesRequest extends TeaModel {
     public static ListImageCachesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImageCachesRequest self = new ListImageCachesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListImageCachesRequest setImage(String image) {
+        this.image = image;
+        return this;
+    }
+    public String getImage() {
+        return this.image;
     }
 
     public ListImageCachesRequest setImageCacheName(String imageCacheName) {

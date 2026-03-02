@@ -38,6 +38,9 @@ public class CreateImageCacheShrinkRequest extends TeaModel {
     @NameInMap("NetworkConfig")
     public String networkConfigShrink;
 
+    @NameInMap("Platform")
+    public String platform;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -108,6 +111,14 @@ public class CreateImageCacheShrinkRequest extends TeaModel {
     }
     public String getNetworkConfigShrink() {
         return this.networkConfigShrink;
+    }
+
+    public CreateImageCacheShrinkRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
     }
 
     public CreateImageCacheShrinkRequest setRegionId(String regionId) {

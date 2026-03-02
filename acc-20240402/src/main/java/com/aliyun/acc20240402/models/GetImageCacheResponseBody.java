@@ -41,6 +41,9 @@ public class GetImageCacheResponseBody extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    @NameInMap("Platform")
+    public String platform;
+
     /**
      * <strong>example:</strong>
      * <p>2025-**-**T07:58:25Z</p>
@@ -145,6 +148,14 @@ public class GetImageCacheResponseBody extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public GetImageCacheResponseBody setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
     }
 
     public GetImageCacheResponseBody setReadyTime(String readyTime) {

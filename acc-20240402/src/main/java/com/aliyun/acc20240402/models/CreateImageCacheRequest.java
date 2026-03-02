@@ -38,6 +38,9 @@ public class CreateImageCacheRequest extends TeaModel {
     @NameInMap("NetworkConfig")
     public CreateImageCacheRequestNetworkConfig networkConfig;
 
+    @NameInMap("Platform")
+    public String platform;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -108,6 +111,14 @@ public class CreateImageCacheRequest extends TeaModel {
     }
     public CreateImageCacheRequestNetworkConfig getNetworkConfig() {
         return this.networkConfig;
+    }
+
+    public CreateImageCacheRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
     }
 
     public CreateImageCacheRequest setRegionId(String regionId) {

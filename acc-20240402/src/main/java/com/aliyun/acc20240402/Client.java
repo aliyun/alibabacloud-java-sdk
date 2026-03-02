@@ -105,6 +105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NetworkConfig", request.networkConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -257,6 +261,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListImageCachesResponse listImageCachesWithOptions(ListImageCachesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.image)) {
+            query.put("Image", request.image);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageCacheName)) {
             query.put("ImageCacheName", request.imageCacheName);
         }
