@@ -10,9 +10,17 @@ public class MonitorNotifyAlert extends TeaModel {
     @NameInMap("contacts")
     public java.util.List<MonitorContact> contacts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1439</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
@@ -25,9 +33,19 @@ public class MonitorNotifyAlert extends TeaModel {
     @NameInMap("ruleNames")
     public java.util.List<String> ruleNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>日志</p>
+     */
     @NameInMap("type")
     public String type;
 

@@ -4,24 +4,52 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class Privilege extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121321412341</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;write,edit&quot;</p>
+     */
     @NameInMap("actions")
     public String actions;
 
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>neuron:catalog:company/1:pbc/2</p>
+     */
     @NameInMap("resource")
     public String resource;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("roleId")
     public Long roleId;
 

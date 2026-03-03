@@ -10,6 +10,9 @@ public class ListEnvInfosRequest extends TeaModel {
     @NameInMap("env")
     public String env;
 
+    @NameInMap("pbcId")
+    public Long pbcId;
+
     @NameInMap("region")
     public String region;
 
@@ -32,6 +35,14 @@ public class ListEnvInfosRequest extends TeaModel {
     }
     public String getEnv() {
         return this.env;
+    }
+
+    public ListEnvInfosRequest setPbcId(Long pbcId) {
+        this.pbcId = pbcId;
+        return this;
+    }
+    public Long getPbcId() {
+        return this.pbcId;
     }
 
     public ListEnvInfosRequest setRegion(String region) {

@@ -4,45 +4,112 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PdpHistoryConfig extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121321412341</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>account1</p>
+     */
     @NameInMap("accountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("askId")
     public String askId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("configId")
     public Long configId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{key:value}</p>
+     */
     @NameInMap("context")
     public String context;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("enterpriseId")
     public Long enterpriseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("env")
     public String env;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-2-22 11:11:2</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>neuron-developer-spring-config</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pbcId")
     public Long pbcId;
 
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("serviceId")
     public Long serviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SERVICE_SYSTEM</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -145,6 +212,14 @@ public class PdpHistoryConfig extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public PdpHistoryConfig setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
+        return this;
+    }
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public PdpHistoryConfig setServiceId(Long serviceId) {

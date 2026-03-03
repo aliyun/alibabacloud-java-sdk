@@ -10,6 +10,10 @@ public class PbcListResult extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
     @NameInMap("total")
     public Integer total;
 

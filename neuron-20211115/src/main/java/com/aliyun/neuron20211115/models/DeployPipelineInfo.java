@@ -7,9 +7,17 @@ public class DeployPipelineInfo extends TeaModel {
     @NameInMap("deployInstanceInfos")
     public java.util.List<DeployInstanceInfo> deployInstanceInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>528f9a66-cbe3-4cd8-91c0-bc4260a13d87</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Batch 1 Change</p>
+     */
     @NameInMap("name")
     public String name;
 

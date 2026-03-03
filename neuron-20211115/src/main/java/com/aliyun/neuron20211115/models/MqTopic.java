@@ -4,6 +4,9 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MqTopic extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("env")
     public String env;
 
@@ -16,12 +19,21 @@ public class MqTopic extends TeaModel {
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("messageType")
     public String messageType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("pbcId")
     public String pbcId;
 

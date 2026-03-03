@@ -4,9 +4,21 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PdpImage extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-v12wpq</p>
+     */
     @NameInMap("imageId")
     public String imageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20220421100717_prepub</p>
+     */
     @NameInMap("imageTag")
     public String imageTag;
 

@@ -7,6 +7,9 @@ public class ListPdpServicesShrinkRequest extends TeaModel {
     @NameInMap("alias")
     public String alias;
 
+    @NameInMap("enterpriseId")
+    public Long enterpriseId;
+
     @NameInMap("name")
     public String name;
 
@@ -28,6 +31,9 @@ public class ListPdpServicesShrinkRequest extends TeaModel {
     @NameInMap("pdpServiceIds")
     public String pdpServiceIdsShrink;
 
+    @NameInMap("productId")
+    public Long productId;
+
     public static ListPdpServicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPdpServicesShrinkRequest self = new ListPdpServicesShrinkRequest();
         return TeaModel.build(map, self);
@@ -39,6 +45,14 @@ public class ListPdpServicesShrinkRequest extends TeaModel {
     }
     public String getAlias() {
         return this.alias;
+    }
+
+    public ListPdpServicesShrinkRequest setEnterpriseId(Long enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+    }
+    public Long getEnterpriseId() {
+        return this.enterpriseId;
     }
 
     public ListPdpServicesShrinkRequest setName(String name) {
@@ -95,6 +109,14 @@ public class ListPdpServicesShrinkRequest extends TeaModel {
     }
     public String getPdpServiceIdsShrink() {
         return this.pdpServiceIdsShrink;
+    }
+
+    public ListPdpServicesShrinkRequest setProductId(Long productId) {
+        this.productId = productId;
+        return this;
+    }
+    public Long getProductId() {
+        return this.productId;
     }
 
 }

@@ -4,29 +4,26 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListRuntimeTokensRequest extends TeaModel {
-    @NameInMap("enterprise_id")
+    @NameInMap("enterpriseId")
     public Long enterpriseId;
 
-    @NameInMap("env")
-    public String env;
-
-    @NameInMap("order_by")
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public String pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public String pageSize;
 
-    @NameInMap("pbc_id")
+    @NameInMap("pbcId")
     public Long pbcId;
 
-    @NameInMap("service_id")
-    public Long serviceId;
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
 
     public static ListRuntimeTokensRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRuntimeTokensRequest self = new ListRuntimeTokensRequest();
@@ -39,14 +36,6 @@ public class ListRuntimeTokensRequest extends TeaModel {
     }
     public Long getEnterpriseId() {
         return this.enterpriseId;
-    }
-
-    public ListRuntimeTokensRequest setEnv(String env) {
-        this.env = env;
-        return this;
-    }
-    public String getEnv() {
-        return this.env;
     }
 
     public ListRuntimeTokensRequest setOrderBy(String orderBy) {
@@ -89,12 +78,12 @@ public class ListRuntimeTokensRequest extends TeaModel {
         return this.pbcId;
     }
 
-    public ListRuntimeTokensRequest setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
+    public ListRuntimeTokensRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
-    public Long getServiceId() {
-        return this.serviceId;
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
 }

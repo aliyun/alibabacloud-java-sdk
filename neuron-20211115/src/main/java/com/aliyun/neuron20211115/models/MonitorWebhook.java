@@ -4,27 +4,69 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorWebhook extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("enterpriseId")
     public Long enterpriseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-01T00:00:00.000Z</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-01T00:00:00.000Z</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POST</p>
+     */
     @NameInMap("method")
     public String method;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>钉钉机器人</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DINGDING</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>**********</p>
+     */
     @NameInMap("url")
     public String url;
 

@@ -4,39 +4,82 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorArmsAlert extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OR</p>
+     */
     @NameInMap("condition")
     public String condition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("env")
     public String env;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-08-24T00:00:00.000Z</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-08-24T00:00:00.000Z</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
     @NameInMap("monitorArmsAlertRules")
     public java.util.List<MonitorArmsAlertRule> monitorArmsAlertRules;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("monitorNotifyStrategy")
     public MonitorNotifyStrategy monitorNotifyStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>报警任务1</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("pbcId")
     public String pbcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>测试任务</p>
+     */
     @NameInMap("remark")
     public String remark;
 
-    @NameInMap("serviceId")
-    public String serviceId;
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
+    @NameInMap("serviceGroupId")
+    public String serviceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ARMS</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -125,12 +168,12 @@ public class MonitorArmsAlert extends TeaModel {
         return this.remark;
     }
 
-    public MonitorArmsAlert setServiceId(String serviceId) {
-        this.serviceId = serviceId;
+    public MonitorArmsAlert setServiceGroupId(String serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
-    public String getServiceId() {
-        return this.serviceId;
+    public String getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public MonitorArmsAlert setType(String type) {

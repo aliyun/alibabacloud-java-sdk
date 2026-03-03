@@ -10,6 +10,10 @@ public class ListPbcsRequest extends TeaModel {
     @NameInMap("developerId")
     public String developerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("marketId")
     public Long marketId;
 

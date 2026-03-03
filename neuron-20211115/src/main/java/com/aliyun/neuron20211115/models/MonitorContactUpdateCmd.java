@@ -4,15 +4,39 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorContactUpdateCmd extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:xxx@alibaba.com">xxx@alibaba.com</a></p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>尚仁</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15113456789</p>
+     */
     @NameInMap("phone")
     public String phone;
 

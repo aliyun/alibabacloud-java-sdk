@@ -4,21 +4,43 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PbcVersion extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("companyId")
     public Long companyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>企业服务团队</p>
+     */
     @NameInMap("companyName")
     public String companyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("developerId")
     public Long developerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
     @NameInMap("isWatched")
     public Boolean isWatched;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>product</p>
+     */
     @NameInMap("name")
     public String name;
 
@@ -28,18 +50,44 @@ public class PbcVersion extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("reviewId")
     public Long reviewId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DEVELOPING</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SPEC</p>
+     */
     @NameInMap("stepStatus")
     public String stepStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;2022-04-01&quot;</p>
+     */
     @NameInMap("version")
     public String version;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("visibilityLevel")
     public String visibilityLevel;
 

@@ -4,6 +4,9 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class CreatePdpServiceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("body")
     public PdpService body;
 

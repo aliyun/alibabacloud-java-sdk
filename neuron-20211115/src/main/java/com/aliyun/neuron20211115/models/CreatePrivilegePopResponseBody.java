@@ -7,6 +7,10 @@ public class CreatePrivilegePopResponseBody extends TeaModel {
     @NameInMap("list")
     public java.util.List<Privilege> list;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sdadawqewe</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

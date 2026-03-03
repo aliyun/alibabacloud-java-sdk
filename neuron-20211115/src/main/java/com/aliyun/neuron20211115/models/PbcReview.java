@@ -4,54 +4,122 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PbcReview extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("developerId")
     public Long developerId;
 
     @NameInMap("developerName")
     public String developerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>符合规范</p>
+     */
     @NameInMap("feedbackPbcApi")
     public String feedbackPbcApi;
 
+    /**
+     * <strong>example:</strong>
+     * <p>符合规范</p>
+     */
     @NameInMap("feedbackPbcInstruction")
     public String feedbackPbcInstruction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>符合pbc规格规范</p>
+     */
     @NameInMap("feedbackPbcSchema")
     public String feedbackPbcSchema;
 
+    /**
+     * <strong>example:</strong>
+     * <p>服务安全</p>
+     */
     @NameInMap("feedbackSecurity")
     public String feedbackSecurity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>服务可用</p>
+     */
     @NameInMap("feedbackServiceAvailable")
     public String feedbackServiceAvailable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("marketId")
     public Long marketId;
 
     @NameInMap("marketName")
     public String marketName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>基础商品</p>
+     */
     @NameInMap("pbcName")
     public String pbcName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://catalog.e2.aliyun.com/pbc/product">https://catalog.e2.aliyun.com/pbc/product</a></p>
+     */
     @NameInMap("pbcUrl")
     public String pbcUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-04-01T00:00:00.000Z</p>
+     */
     @NameInMap("pbcVersion")
     public String pbcVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("remainTime")
     public String remainTime;
 
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("reviewerId")
     public Long reviewerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REVIEWING</p>
+     */
     @NameInMap("status")
     public String status;
 

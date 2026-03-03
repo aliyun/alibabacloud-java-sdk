@@ -4,24 +4,54 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PdpServiceUpdateCmd extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>员工管理</p>
+     */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dev</p>
+     */
     @NameInMap("codeBranch")
     public String codeBranch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>员工管理</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SDK</p>
+     */
     @NameInMap("extraInfo")
     public String extraInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:git@gitlab.alibaba-inc.com">git@gitlab.alibaba-inc.com</a>:neuron/manager-developer.git</p>
+     */
     @NameInMap("gitRepo")
     public String gitRepo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://aone.alibaba-inc.com/appcenter/app/onlinetask/SUBMIT_RESOURCE_APPLY?appId=195041">https://aone.alibaba-inc.com/appcenter/app/onlinetask/SUBMIT_RESOURCE_APPLY?appId=195041</a></p>
+     */
     @NameInMap("jumpUrl")
     public String jumpUrl;
 

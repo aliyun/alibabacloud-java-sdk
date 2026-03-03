@@ -4,93 +4,250 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PdpServiceDeployment extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121321412341</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MULTI_TENANT_DAPR</p>
+     */
+    @NameInMap("applicationType")
+    public String applicationType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cd65b247-****-475b-ad4b-7039040d625c</p>
+     */
     @NameInMap("changeOrderId")
     public String changeOrderId;
 
     @NameInMap("context")
     public String context;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("cpu")
     public Integer cpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AUTO</p>
+     */
     @NameInMap("deploymentType")
     public String deploymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>部署员工管理</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sdad</p>
+     */
     @NameInMap("edasId")
     public String edasId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("enterpriseId")
     public Long enterpriseId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("env")
     public String env;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-2-22 11:11:2</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-2-22 11:11:2</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-v12wpq</p>
+     */
     @NameInMap("imageId")
     public String imageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20220421100717_prepub</p>
+     */
     @NameInMap("imageTag")
     public String imageTag;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("instanceCount")
     public Integer instanceCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("isServiceGroupEnable")
+    public Integer isServiceGroupEnable;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("memory")
     public Integer memory;
 
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INNER</p>
+     */
     @NameInMap("orgType")
     public String orgType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pbcId")
     public Long pbcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>management</p>
+     */
     @NameInMap("pbcName")
     public String pbcName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("pipelineTimes")
     public Integer pipelineTimes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cri-v1d49e57e8ojcwpq</p>
+     */
     @NameInMap("repositoryId")
     public String repositoryId;
 
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DEPLOYMENT_PENDING</p>
+     */
     @NameInMap("rollbackStatus")
     public String rollbackStatus;
 
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("serviceId")
     public Long serviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>employee</p>
+     */
     @NameInMap("serviceName")
     public String serviceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEPLOYMENT_PENDING</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("times")
     public Integer times;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SERVICE</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -105,6 +262,14 @@ public class PdpServiceDeployment extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public PdpServiceDeployment setApplicationType(String applicationType) {
+        this.applicationType = applicationType;
+        return this;
+    }
+    public String getApplicationType() {
+        return this.applicationType;
     }
 
     public PdpServiceDeployment setChangeOrderId(String changeOrderId) {
@@ -219,6 +384,14 @@ public class PdpServiceDeployment extends TeaModel {
         return this.instanceCount;
     }
 
+    public PdpServiceDeployment setIsServiceGroupEnable(Integer isServiceGroupEnable) {
+        this.isServiceGroupEnable = isServiceGroupEnable;
+        return this;
+    }
+    public Integer getIsServiceGroupEnable() {
+        return this.isServiceGroupEnable;
+    }
+
     public PdpServiceDeployment setMemory(Integer memory) {
         this.memory = memory;
         return this;
@@ -289,6 +462,14 @@ public class PdpServiceDeployment extends TeaModel {
     }
     public String getRollbackStatus() {
         return this.rollbackStatus;
+    }
+
+    public PdpServiceDeployment setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
+        return this;
+    }
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public PdpServiceDeployment setServiceId(Long serviceId) {

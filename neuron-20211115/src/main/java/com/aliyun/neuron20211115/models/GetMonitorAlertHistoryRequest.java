@@ -10,6 +10,9 @@ public class GetMonitorAlertHistoryRequest extends TeaModel {
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("env")
     public String env;
 
@@ -26,14 +29,17 @@ public class GetMonitorAlertHistoryRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("pbcId")
-    public String pbcId;
+    public Long pbcId;
 
-    @NameInMap("serviceId")
-    public String serviceId;
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
 
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -98,20 +104,20 @@ public class GetMonitorAlertHistoryRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public GetMonitorAlertHistoryRequest setPbcId(String pbcId) {
+    public GetMonitorAlertHistoryRequest setPbcId(Long pbcId) {
         this.pbcId = pbcId;
         return this;
     }
-    public String getPbcId() {
+    public Long getPbcId() {
         return this.pbcId;
     }
 
-    public GetMonitorAlertHistoryRequest setServiceId(String serviceId) {
-        this.serviceId = serviceId;
+    public GetMonitorAlertHistoryRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
-    public String getServiceId() {
-        return this.serviceId;
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public GetMonitorAlertHistoryRequest setStartTime(String startTime) {

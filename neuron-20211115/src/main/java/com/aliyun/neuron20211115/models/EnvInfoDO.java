@@ -4,21 +4,45 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class EnvInfoDO extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("env")
     public String env;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("envType")
     public String envType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INNER</p>
+     */
     @NameInMap("orgType")
     public String orgType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231</p>
+     */
     @NameInMap("productId")
     public Long productId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yunmall</p>
+     */
     @NameInMap("productName")
     public String productName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
+     */
     @NameInMap("region")
     public String region;
 

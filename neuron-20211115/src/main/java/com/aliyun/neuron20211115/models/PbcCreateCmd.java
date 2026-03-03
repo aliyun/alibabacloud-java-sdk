@@ -4,30 +4,62 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PbcCreateCmd extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>基础商品</p>
+     */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <strong>example:</strong>
+     * <p>企业服务</p>
+     */
     @NameInMap("company")
     public String company;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("companyId")
     public Long companyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>基础商品PBC</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("developerId")
     public String developerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>common</p>
+     */
     @NameInMap("industry")
     public String industry;
 
     @NameInMap("marketId")
     public Long marketId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>product</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>foundation</p>
+     */
     @NameInMap("type")
     public String type;
 

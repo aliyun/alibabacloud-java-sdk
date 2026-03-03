@@ -10,6 +10,9 @@ public class PdpPbcUpdateCmd extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("id")
+    public Long id;
+
     @NameInMap("name")
     public String name;
 
@@ -32,6 +35,14 @@ public class PdpPbcUpdateCmd extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public PdpPbcUpdateCmd setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public PdpPbcUpdateCmd setName(String name) {

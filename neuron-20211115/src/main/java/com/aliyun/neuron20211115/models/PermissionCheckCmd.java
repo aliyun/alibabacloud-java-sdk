@@ -4,15 +4,39 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PermissionCheckCmd extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>write</p>
+     */
     @NameInMap("action")
     public String action;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("operatorId")
     public String operatorId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>developer</p>
+     */
     @NameInMap("operatorType")
     public String operatorType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>neuron:catalog:company/1:pbc/2</p>
+     */
     @NameInMap("resource")
     public String resource;
 

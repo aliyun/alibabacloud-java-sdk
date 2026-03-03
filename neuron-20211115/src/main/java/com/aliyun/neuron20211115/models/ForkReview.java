@@ -4,18 +4,38 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ForkReview extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>旭坤</p>
+     */
     @NameInMap("applicant")
     public String applicant;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("forkId")
     public Long forkId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>global-mall</p>
+     */
     @NameInMap("gitGroup")
     public String gitGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>product</p>
+     */
     @NameInMap("pbcName")
     public String pbcName;
 
@@ -25,15 +45,31 @@ public class ForkReview extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>中驿</p>
+     */
     @NameInMap("reviewer")
     public String reviewer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>194835334</p>
+     */
     @NameInMap("reviewerId")
     public String reviewerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>待审核</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>商城国际化版本</p>
+     */
     @NameInMap("usage")
     public String usage;
 

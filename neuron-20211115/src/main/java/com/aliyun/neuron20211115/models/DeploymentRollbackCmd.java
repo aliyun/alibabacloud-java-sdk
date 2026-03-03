@@ -4,6 +4,12 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class DeploymentRollbackCmd extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("deploymentId")
     public Long deploymentId;
 

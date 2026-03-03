@@ -7,6 +7,9 @@ public class ProductUpdateCmd extends TeaModel {
     @NameInMap("alias")
     public String alias;
 
+    @NameInMap("companyId")
+    public Long companyId;
+
     @NameInMap("description")
     public String description;
 
@@ -27,6 +30,14 @@ public class ProductUpdateCmd extends TeaModel {
     }
     public String getAlias() {
         return this.alias;
+    }
+
+    public ProductUpdateCmd setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
     }
 
     public ProductUpdateCmd setDescription(String description) {

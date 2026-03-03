@@ -4,6 +4,9 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class UpdatePbcSchemaRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("body")
     public PbcSchema body;
 

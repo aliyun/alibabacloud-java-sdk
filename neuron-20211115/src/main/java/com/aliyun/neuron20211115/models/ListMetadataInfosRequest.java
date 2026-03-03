@@ -28,6 +28,9 @@ public class ListMetadataInfosRequest extends TeaModel {
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("pbc_id")
     public Long pbcId;
 

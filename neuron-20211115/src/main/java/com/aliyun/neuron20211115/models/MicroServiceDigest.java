@@ -4,26 +4,18 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MicroServiceDigest extends TeaModel {
-    @NameInMap("MqGroups")
-    public MqGroup mqGroups;
-
     @NameInMap("ServiceId")
     public Long serviceId;
 
     @NameInMap("ServiceName")
     public String serviceName;
 
+    @NameInMap("laneMqGroupInfos")
+    public LaneMqGroupInfo laneMqGroupInfos;
+
     public static MicroServiceDigest build(java.util.Map<String, ?> map) throws Exception {
         MicroServiceDigest self = new MicroServiceDigest();
         return TeaModel.build(map, self);
-    }
-
-    public MicroServiceDigest setMqGroups(MqGroup mqGroups) {
-        this.mqGroups = mqGroups;
-        return this;
-    }
-    public MqGroup getMqGroups() {
-        return this.mqGroups;
     }
 
     public MicroServiceDigest setServiceId(Long serviceId) {
@@ -40,6 +32,14 @@ public class MicroServiceDigest extends TeaModel {
     }
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    public MicroServiceDigest setLaneMqGroupInfos(LaneMqGroupInfo laneMqGroupInfos) {
+        this.laneMqGroupInfos = laneMqGroupInfos;
+        return this;
+    }
+    public LaneMqGroupInfo getLaneMqGroupInfos() {
+        return this.laneMqGroupInfos;
     }
 
 }

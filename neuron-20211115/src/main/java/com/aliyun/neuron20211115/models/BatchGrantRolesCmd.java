@@ -4,6 +4,12 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class BatchGrantRolesCmd extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 

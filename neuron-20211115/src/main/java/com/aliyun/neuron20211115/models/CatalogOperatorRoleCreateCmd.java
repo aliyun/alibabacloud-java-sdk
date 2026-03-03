@@ -4,12 +4,30 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class CatalogOperatorRoleCreateCmd extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("companyId")
     public Long companyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("marketId")
     public Long marketId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inner</p>
+     */
     @NameInMap("marketType")
     public String marketType;
 

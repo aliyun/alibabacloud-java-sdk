@@ -4,6 +4,10 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListMarketsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>41</p>
+     */
     @NameInMap("companyId")
     public Long companyId;
 

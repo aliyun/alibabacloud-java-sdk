@@ -7,6 +7,12 @@ public class MonitorGroupMemberDeleteCmd extends TeaModel {
     @NameInMap("contactIds")
     public java.util.List<Long> contactIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("groupId")
     public Long groupId;
 

@@ -4,15 +4,24 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListServiceMetricsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("env")
     public String env;
 
     @NameInMap("groupId")
     public Long groupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("intervalInSec")
     public Integer intervalInSec;
 
@@ -22,15 +31,21 @@ public class ListServiceMetricsRequest extends TeaModel {
     @NameInMap("measures")
     public String measures;
 
-    @NameInMap("serviceId")
-    public Long serviceId;
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
     @NameInMap("topicId")
     public Long topicId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -87,12 +102,12 @@ public class ListServiceMetricsRequest extends TeaModel {
         return this.measures;
     }
 
-    public ListServiceMetricsRequest setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
+    public ListServiceMetricsRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
-    public Long getServiceId() {
-        return this.serviceId;
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public ListServiceMetricsRequest setStartTime(String startTime) {

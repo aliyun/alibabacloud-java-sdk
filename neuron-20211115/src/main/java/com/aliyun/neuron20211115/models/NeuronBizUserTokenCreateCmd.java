@@ -7,9 +7,19 @@ public class NeuronBizUserTokenCreateCmd extends TeaModel {
     @NameInMap("accountId")
     public Long accountId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>233131</p>
+     */
     @NameInMap("bizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ADMIN</p>
+     */
     @NameInMap("permission")
     public String permission;
 

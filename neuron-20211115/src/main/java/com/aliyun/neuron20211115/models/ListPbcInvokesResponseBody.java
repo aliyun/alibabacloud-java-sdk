@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListPbcInvokesResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sdadawqewe</p>
      */
     @NameInMap("requestId")
     public String requestId;

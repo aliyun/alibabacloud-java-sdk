@@ -4,33 +4,65 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class Pbc extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>基础商品</p>
+     */
     @NameInMap("alias")
     public String alias;
 
     @NameInMap("assetType")
     public String assetType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>企业服务</p>
+     */
     @NameInMap("company")
     public String company;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("companyId")
     public Long companyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>基础商品PBC</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("developerId")
     public String developerId;
 
     @NameInMap("developerName")
     public String developerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("forkCount")
     public Integer forkCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>common</p>
+     */
     @NameInMap("industry")
     public String industry;
 
@@ -46,12 +78,20 @@ public class Pbc extends TeaModel {
     @NameInMap("marketId")
     public Long marketId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>product</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>foundation</p>
+     */
     @NameInMap("type")
     public String type;
 

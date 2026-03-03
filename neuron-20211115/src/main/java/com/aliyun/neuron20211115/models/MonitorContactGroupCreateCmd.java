@@ -4,15 +4,31 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorContactGroupCreateCmd extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>121321412341</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
     @NameInMap("contactIds")
     public java.util.List<Long> contactIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("enterpriseId")
     public Long enterpriseId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>尚仁</p>
+     */
     @NameInMap("name")
     public String name;
 

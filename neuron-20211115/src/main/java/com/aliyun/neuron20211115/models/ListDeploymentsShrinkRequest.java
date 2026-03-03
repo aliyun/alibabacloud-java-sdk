@@ -4,9 +4,6 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListDeploymentsShrinkRequest extends TeaModel {
-    @NameInMap("env")
-    public String env;
-
     @NameInMap("excludeStatus")
     public String excludeStatusShrink;
 
@@ -22,8 +19,11 @@ public class ListDeploymentsShrinkRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("serviceId")
-    public Long serviceId;
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
 
     @NameInMap("status")
     public String statusShrink;
@@ -31,14 +31,6 @@ public class ListDeploymentsShrinkRequest extends TeaModel {
     public static ListDeploymentsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeploymentsShrinkRequest self = new ListDeploymentsShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDeploymentsShrinkRequest setEnv(String env) {
-        this.env = env;
-        return this;
-    }
-    public String getEnv() {
-        return this.env;
     }
 
     public ListDeploymentsShrinkRequest setExcludeStatusShrink(String excludeStatusShrink) {
@@ -81,12 +73,12 @@ public class ListDeploymentsShrinkRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDeploymentsShrinkRequest setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
+    public ListDeploymentsShrinkRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
-    public Long getServiceId() {
-        return this.serviceId;
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public ListDeploymentsShrinkRequest setStatusShrink(String statusShrink) {

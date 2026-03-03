@@ -4,18 +4,38 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PbcRelationItem extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>企业服务</p>
+     */
     @NameInMap("company")
     public String company;
 
+    /**
+     * <strong>example:</strong>
+     * <p>中驿</p>
+     */
     @NameInMap("developer")
     public String developer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>category</p>
+     */
     @NameInMap("pbcName")
     public String pbcName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-01T00:00:00.000Z</p>
+     */
     @NameInMap("pbcVersion")
     public String pbcVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>资产市场</p>
+     */
     @NameInMap("summary")
     public String summary;
 

@@ -7,6 +7,9 @@ public class ListPdpServicesRequest extends TeaModel {
     @NameInMap("alias")
     public String alias;
 
+    @NameInMap("enterpriseId")
+    public Long enterpriseId;
+
     @NameInMap("name")
     public String name;
 
@@ -28,6 +31,9 @@ public class ListPdpServicesRequest extends TeaModel {
     @NameInMap("pdpServiceIds")
     public java.util.List<Long> pdpServiceIds;
 
+    @NameInMap("productId")
+    public Long productId;
+
     public static ListPdpServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPdpServicesRequest self = new ListPdpServicesRequest();
         return TeaModel.build(map, self);
@@ -39,6 +45,14 @@ public class ListPdpServicesRequest extends TeaModel {
     }
     public String getAlias() {
         return this.alias;
+    }
+
+    public ListPdpServicesRequest setEnterpriseId(Long enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+    }
+    public Long getEnterpriseId() {
+        return this.enterpriseId;
     }
 
     public ListPdpServicesRequest setName(String name) {
@@ -95,6 +109,14 @@ public class ListPdpServicesRequest extends TeaModel {
     }
     public java.util.List<Long> getPdpServiceIds() {
         return this.pdpServiceIds;
+    }
+
+    public ListPdpServicesRequest setProductId(Long productId) {
+        this.productId = productId;
+        return this;
+    }
+    public Long getProductId() {
+        return this.productId;
     }
 
 }

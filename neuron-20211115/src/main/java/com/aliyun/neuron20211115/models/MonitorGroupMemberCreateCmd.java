@@ -4,6 +4,10 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorGroupMemberCreateCmd extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>121321412341</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 

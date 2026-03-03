@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListMicroServiceResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public MqMsgPageResult body;
+    public MicroServicePageResult body;
 
     public static ListMicroServiceResponse build(java.util.Map<String, ?> map) throws Exception {
         ListMicroServiceResponse self = new ListMicroServiceResponse();
@@ -37,11 +34,11 @@ public class ListMicroServiceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListMicroServiceResponse setBody(MqMsgPageResult body) {
+    public ListMicroServiceResponse setBody(MicroServicePageResult body) {
         this.body = body;
         return this;
     }
-    public MqMsgPageResult getBody() {
+    public MicroServicePageResult getBody() {
         return this.body;
     }
 

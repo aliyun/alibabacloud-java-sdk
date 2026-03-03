@@ -4,28 +4,25 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListPdpLogsRequest extends TeaModel {
-    @NameInMap("env")
-    public String env;
-
     @NameInMap("from")
     public Long from;
 
     @NameInMap("ip")
     public String ip;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("query")
     public String query;
 
-    @NameInMap("service_id")
-    public Long serviceId;
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
 
-    @NameInMap("source_type")
+    @NameInMap("sourceType")
     public String sourceType;
 
     @NameInMap("to")
@@ -34,14 +31,6 @@ public class ListPdpLogsRequest extends TeaModel {
     public static ListPdpLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPdpLogsRequest self = new ListPdpLogsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListPdpLogsRequest setEnv(String env) {
-        this.env = env;
-        return this;
-    }
-    public String getEnv() {
-        return this.env;
     }
 
     public ListPdpLogsRequest setFrom(Long from) {
@@ -84,12 +73,12 @@ public class ListPdpLogsRequest extends TeaModel {
         return this.query;
     }
 
-    public ListPdpLogsRequest setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
+    public ListPdpLogsRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
-    public Long getServiceId() {
-        return this.serviceId;
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public ListPdpLogsRequest setSourceType(String sourceType) {

@@ -7,9 +7,17 @@ public class Product extends TeaModel {
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>多端商城</p>
+     */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("companyId")
     public Long companyId;
 
@@ -22,14 +30,25 @@ public class Product extends TeaModel {
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yunmall</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("type")
+    public String type;
 
     public static Product build(java.util.Map<String, ?> map) throws Exception {
         Product self = new Product();
@@ -106,6 +125,14 @@ public class Product extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public Product setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

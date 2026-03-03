@@ -4,36 +4,85 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesByPageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-11-08 15:03:21</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("env")
     public String env;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("minDuration")
     public Long minDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/demo/queryNotExistDB/11</p>
+     */
     @NameInMap("operationName")
     public String operationName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("orderDirection")
     public String orderDirection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("serviceId")
-    public Long serviceId;
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dev-sellercenter</p>
+     */
     @NameInMap("serviceName")
     public String serviceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-10-31 11:10:22</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
@@ -106,12 +155,12 @@ public class SearchTracesByPageRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public SearchTracesByPageRequest setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
+    public SearchTracesByPageRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
-    public Long getServiceId() {
-        return this.serviceId;
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public SearchTracesByPageRequest setServiceName(String serviceName) {

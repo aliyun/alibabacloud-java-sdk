@@ -4,21 +4,53 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class Enterprise extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121321412341</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>互联网企业</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>linkedmall</p>
+     */
+    @NameInMap("identification")
+    public String identification;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>内部</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -49,6 +81,14 @@ public class Enterprise extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public Enterprise setIdentification(String identification) {
+        this.identification = identification;
+        return this;
+    }
+    public String getIdentification() {
+        return this.identification;
     }
 
     public Enterprise setName(String name) {

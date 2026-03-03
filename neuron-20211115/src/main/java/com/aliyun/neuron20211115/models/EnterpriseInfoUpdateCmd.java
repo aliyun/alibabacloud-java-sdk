@@ -4,12 +4,26 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class EnterpriseInfoUpdateCmd extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>互联网企业</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>阿里</p>
+     */
     @NameInMap("name")
     public String name;
 

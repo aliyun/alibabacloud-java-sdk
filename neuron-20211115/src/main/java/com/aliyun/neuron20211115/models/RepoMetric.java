@@ -4,21 +4,47 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class RepoMetric extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>294</p>
+     */
     @NameInMap("codeLines")
     public Long codeLines;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("commitCnt")
     public Long commitCnt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("developerCnt")
     public Long developerCnt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-03T00:00:00.000Z</p>
+     */
     @NameInMap("refreshDate")
     public String refreshDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>neuron/catalog.git</p>
+     */
     @NameInMap("repoShortUrl")
     public String repoShortUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:git@gitlab.alibaba-inc.com">git@gitlab.alibaba-inc.com</a>:neuron/catalog.git</p>
+     */
     @NameInMap("repoUrl")
     public String repoUrl;
 

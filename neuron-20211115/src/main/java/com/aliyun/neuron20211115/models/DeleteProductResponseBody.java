@@ -4,11 +4,18 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class DeleteProductResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("data")
     public Boolean data;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2dc580ca52ce43f59f890eaec37c8dad</p>
      */
     @NameInMap("requestId")
     public String requestId;

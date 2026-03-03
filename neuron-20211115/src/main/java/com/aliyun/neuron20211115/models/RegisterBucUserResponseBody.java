@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RegisterBucUserResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D372D265-81C4-5B84-8827-596F0CF768FF</p>
      */
     @NameInMap("requestId")
     public String requestId;

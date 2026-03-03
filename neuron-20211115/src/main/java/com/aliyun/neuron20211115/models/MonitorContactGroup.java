@@ -4,24 +4,52 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorContactGroup extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>121321412341</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
     @NameInMap("contacts")
     public java.util.List<MonitorContact> contacts;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("enterpriseId")
     public Long enterpriseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-01T00:00:00.000Z</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-01T00:00:00.000Z</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yani</p>
+     */
     @NameInMap("name")
     public String name;
 

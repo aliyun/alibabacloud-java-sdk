@@ -4,6 +4,9 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListMqTopicMsgsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
@@ -22,6 +25,9 @@ public class ListMqTopicMsgsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

@@ -4,24 +4,47 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>41</p>
+     */
     @NameInMap("companyId")
     public Long companyId;
 
     /**
      * <p>A short description of struct</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yunmall</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gmtCreate</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("orderDirection")
     public String orderDirection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

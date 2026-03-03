@@ -4,21 +4,45 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class RuntimeToken extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("env")
     public String env;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("pbcId")
     public Long pbcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yunmall-item</p>
+     */
     @NameInMap("pbcName")
     public String pbcName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("serviceId")
     public Long serviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yunmall-item</p>
+     */
     @NameInMap("serviceName")
     public String serviceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dfsdf</p>
+     */
     @NameInMap("token")
     public String token;
 

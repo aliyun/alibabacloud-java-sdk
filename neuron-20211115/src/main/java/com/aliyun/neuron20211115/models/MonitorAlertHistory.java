@@ -4,12 +4,24 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorAlertHistory extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-10-13 13:58:42</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>已解决</p>
+     */
     @NameInMap("eventState")
     public String eventState;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
@@ -22,9 +34,19 @@ public class MonitorAlertHistory extends TeaModel {
     @NameInMap("ruleName")
     public String ruleName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-10-13 12:18:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>日志</p>
+     */
     @NameInMap("type")
     public String type;
 

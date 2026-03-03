@@ -7,6 +7,12 @@ public class Market extends TeaModel {
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>内部市场</p>
+     */
     @NameInMap("name")
     public String name;
 

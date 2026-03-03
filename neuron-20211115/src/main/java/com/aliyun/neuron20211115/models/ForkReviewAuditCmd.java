@@ -4,6 +4,10 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ForkReviewAuditCmd extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("approve")
     public Boolean approve;
 

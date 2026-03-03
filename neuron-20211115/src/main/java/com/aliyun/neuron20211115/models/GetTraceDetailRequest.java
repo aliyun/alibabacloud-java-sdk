@@ -4,12 +4,24 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class GetTraceDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-10-27 15:05:48</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("env")
     public String env;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-10-28 14:36:53</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

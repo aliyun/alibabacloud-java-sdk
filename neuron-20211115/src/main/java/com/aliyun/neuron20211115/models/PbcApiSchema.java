@@ -4,9 +4,16 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PbcApiSchema extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("apiSchema")
     public String apiSchema;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 

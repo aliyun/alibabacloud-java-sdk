@@ -4,12 +4,28 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PdpConfigUpdateCmd extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1223435435</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+     */
     @NameInMap("context")
     public String context;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("id")
     public Long id;
 

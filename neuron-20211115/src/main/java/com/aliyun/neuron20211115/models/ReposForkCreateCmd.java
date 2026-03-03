@@ -7,15 +7,33 @@ public class ReposForkCreateCmd extends TeaModel {
     @NameInMap("companyId")
     public Long companyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>global-mall</p>
+     */
     @NameInMap("gitGroup")
     public String gitGroup;
 
     @NameInMap("marketId")
     public Long marketId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pbcId")
     public Long pbcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>商城国际化版本</p>
+     */
     @NameInMap("usage")
     public String usage;
 

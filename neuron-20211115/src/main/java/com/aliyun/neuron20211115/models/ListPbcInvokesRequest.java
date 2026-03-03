@@ -4,6 +4,10 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListPbcInvokesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>223352752411587433</p>
+     */
     @NameInMap("applicant")
     public String applicant;
 

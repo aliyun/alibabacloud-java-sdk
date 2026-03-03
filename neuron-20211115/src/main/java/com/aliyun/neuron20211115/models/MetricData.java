@@ -4,21 +4,53 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MetricData extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("data")
     public String data;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youngGcCount</p>
+     */
     @NameInMap("measures")
     public String measures;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>appstat.vm</p>
+     */
     @NameInMap("metric")
     public String metric;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1654777095632</p>
+     */
     @NameInMap("time")
     public Long time;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rootIp</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.1.1</p>
+     */
     @NameInMap("typeValue")
     public String typeValue;
 

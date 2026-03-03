@@ -4,15 +4,31 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ReposFork extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>global-mall</p>
+     */
     @NameInMap("gitGroup")
     public String gitGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-03T00:00:00.000Z</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isOrigin")
     public Boolean isOrigin;
 
@@ -22,6 +38,10 @@ public class ReposFork extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>商城国际版本</p>
+     */
     @NameInMap("usage")
     public String usage;
 

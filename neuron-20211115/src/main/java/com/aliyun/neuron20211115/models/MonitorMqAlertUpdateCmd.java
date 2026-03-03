@@ -4,9 +4,19 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorMqAlertUpdateCmd extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OR</p>
+     */
     @NameInMap("condition")
     public String condition;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 

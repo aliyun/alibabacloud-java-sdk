@@ -4,15 +4,27 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListMonitorNotifyObjectsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("enterpriseId")
     public Long enterpriseId;
 
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("type")
     public Integer type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DINGDING</p>
+     */
     @NameInMap("webhookType")
     public String webhookType;
 

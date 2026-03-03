@@ -4,9 +4,21 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class DeployInstanceInfo extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.1.1.1</p>
+     */
     @NameInMap("ip")
     public String ip;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXECUTING</p>
+     */
     @NameInMap("status")
     public String status;
 

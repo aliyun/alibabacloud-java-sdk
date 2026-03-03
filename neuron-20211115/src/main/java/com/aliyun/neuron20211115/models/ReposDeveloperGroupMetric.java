@@ -4,24 +4,52 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ReposDeveloperGroupMetric extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>342</p>
+     */
     @NameInMap("addLines")
     public Long addLines;
 
+    /**
+     * <strong>example:</strong>
+     * <p>242</p>
+     */
     @NameInMap("commentLines")
     public Long commentLines;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14</p>
+     */
     @NameInMap("commitCnt")
     public Long commitCnt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("delLines")
     public Long delLines;
 
+    /**
+     * <strong>example:</strong>
+     * <p>129</p>
+     */
     @NameInMap("modLines")
     public Long modLines;
 
+    /**
+     * <strong>example:</strong>
+     * <p>旭坤</p>
+     */
     @NameInMap("showName")
     public String showName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>64634</p>
+     */
     @NameInMap("workNo")
     public String workNo;
 

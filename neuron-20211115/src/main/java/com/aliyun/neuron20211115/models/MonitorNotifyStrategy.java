@@ -19,18 +19,34 @@ public class MonitorNotifyStrategy extends TeaModel {
     @NameInMap("contacts")
     public java.util.List<MonitorContact> contacts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1439</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>告警策略1</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

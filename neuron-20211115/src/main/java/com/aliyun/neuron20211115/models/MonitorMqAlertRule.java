@@ -4,27 +4,59 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorMqAlertRule extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PBC_Topic1</p>
+     */
     @NameInMap("metricDimension")
     public String metricDimension;
 
+    /**
+     * <strong>example:</strong>
+     * <p>appstat.jvm.gc.oldgccountinstant</p>
+     */
     @NameInMap("metricKey")
     public String metricKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TOPIC</p>
+     */
     @NameInMap("metricType")
     public String metricType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>规则1</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("triggerInterval")
     public Long triggerInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GreaterThanOrEqualToThreshold</p>
+     */
     @NameInMap("triggerOperator")
     public String triggerOperator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("triggerThreshold")
     public Long triggerThreshold;
 

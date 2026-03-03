@@ -7,6 +7,10 @@ public class PdpListEnvInfoResult extends TeaModel {
     @NameInMap("data")
     public java.util.List<EnvInfoDO> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>121</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -4,6 +4,10 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorMetricMeasureData extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>youngGcCount</p>
+     */
     @NameInMap("measure")
     public String measure;
 

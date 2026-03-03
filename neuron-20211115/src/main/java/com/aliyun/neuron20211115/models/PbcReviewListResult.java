@@ -9,6 +9,9 @@ public class PbcReviewListResult extends TeaModel {
 
     /**
      * <p>总数量</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
      */
     @NameInMap("total")
     public Integer total;

@@ -4,9 +4,15 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListLibrarysRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("companyId")
     public Long companyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("marketId")
     public Long marketId;
 

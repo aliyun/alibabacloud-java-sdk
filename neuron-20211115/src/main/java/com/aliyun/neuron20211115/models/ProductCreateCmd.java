@@ -7,15 +7,27 @@ public class ProductCreateCmd extends TeaModel {
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>多端商城</p>
+     */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("companyId")
     public Long companyId;
 
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yunmall</p>
+     */
     @NameInMap("name")
     public String name;
 

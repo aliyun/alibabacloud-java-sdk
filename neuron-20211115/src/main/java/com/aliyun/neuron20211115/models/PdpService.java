@@ -4,54 +4,126 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class PdpService extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>121321412341</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>员工管理</p>
+     */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dev</p>
+     */
     @NameInMap("codeBranch")
     public String codeBranch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>员工管理</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("enterpriseId")
     public Long enterpriseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SDK</p>
+     */
     @NameInMap("extraInfo")
     public String extraInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:git@gitlab.alibaba-inc.com">git@gitlab.alibaba-inc.com</a>:neuron/manager-developer.git</p>
+     */
     @NameInMap("gitRepo")
     public String gitRepo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-2-22 11:11:2</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-2-22 11:11:2</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://cd.aone.alibaba-inc.com/ec/pipelines/44156?spm=a2o8d.aone_cd_assets_pages_pipeline_index.0.0.68b81c05WLmX79&name=%E3%80%90%E6%B5%8B%E8%AF%95%E3%80%91neuron-developer%E6%9D%AD%E5%B7%9E">https://cd.aone.alibaba-inc.com/ec/pipelines/44156?spm=a2o8d.aone_cd_assets_pages_pipeline_index.0.0.68b81c05WLmX79&amp;name=%E3%80%90%E6%B5%8B%E8%AF%95%E3%80%91neuron-developer%E6%9D%AD%E5%B7%9E</a></p>
+     */
     @NameInMap("jumpUrl")
     public String jumpUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>employee</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INNER</p>
+     */
     @NameInMap("orgType")
     public String orgType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pbcId")
     public Long pbcId;
 
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Active</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SDK</p>
+     */
     @NameInMap("type")
     public String type;
 

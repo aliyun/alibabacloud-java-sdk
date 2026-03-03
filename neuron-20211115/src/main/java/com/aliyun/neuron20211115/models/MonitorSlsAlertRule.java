@@ -4,27 +4,61 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class MonitorSlsAlertRule extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>规则1</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li>| select status, count(*) as total group by status</li>
+     * </ul>
+     */
     @NameInMap("queryCondition")
     public String queryCondition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("triggerInterval")
     public Long triggerInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MINUTE</p>
+     */
     @NameInMap("triggerIntervalUnit")
     public String triggerIntervalUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CURRENT_GTE</p>
+     */
     @NameInMap("triggerOperator")
     public String triggerOperator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("triggerThreshold")
     public Long triggerThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("triggerThresholdUpper")
     public Long triggerThresholdUpper;
 

@@ -4,9 +4,6 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListPdpConfigsRequest extends TeaModel {
-    @NameInMap("env")
-    public String env;
-
     @NameInMap("orderBy")
     public String orderBy;
 
@@ -19,8 +16,11 @@ public class ListPdpConfigsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("serviceId")
-    public Long serviceId;
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
 
     @NameInMap("type")
     public String type;
@@ -28,14 +28,6 @@ public class ListPdpConfigsRequest extends TeaModel {
     public static ListPdpConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPdpConfigsRequest self = new ListPdpConfigsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListPdpConfigsRequest setEnv(String env) {
-        this.env = env;
-        return this;
-    }
-    public String getEnv() {
-        return this.env;
     }
 
     public ListPdpConfigsRequest setOrderBy(String orderBy) {
@@ -70,12 +62,12 @@ public class ListPdpConfigsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListPdpConfigsRequest setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
+    public ListPdpConfigsRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
-    public Long getServiceId() {
-        return this.serviceId;
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public ListPdpConfigsRequest setType(String type) {

@@ -4,21 +4,53 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class Developer extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121321412341</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>121321412341</p>
+     */
     @NameInMap("codeupAccountId")
     public String codeupAccountId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:xxx@alibaba.com">xxx@alibaba.com</a></p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("enterpriseId")
     public Long enterpriseId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>尚仁</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15113456789</p>
+     */
     @NameInMap("phone")
     public String phone;
 

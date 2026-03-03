@@ -4,24 +4,66 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class FeedbackReviewCmd extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>符合规范</p>
+     */
     @NameInMap("feedbackPbcAPI")
     public String feedbackPbcAPI;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>符合规范</p>
+     */
     @NameInMap("feedbackPbcInstruction")
     public String feedbackPbcInstruction;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>符合规范</p>
+     */
     @NameInMap("feedbackPbcSchema")
     public String feedbackPbcSchema;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>服务安全</p>
+     */
     @NameInMap("feedbackSecurity")
     public String feedbackSecurity;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>服务可运行</p>
+     */
     @NameInMap("feedbackServiceAvailable")
     public String feedbackServiceAvailable;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("reviewId")
     public Long reviewId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REVIEW_FAILED</p>
+     */
     @NameInMap("status")
     public String status;
 

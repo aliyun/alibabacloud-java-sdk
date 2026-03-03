@@ -4,33 +4,64 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListMonitorTasksRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>alert</p>
+     */
     @NameInMap("alertName")
     public String alertName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("env")
     public String env;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("orderDirection")
     public String orderDirection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("pbcId")
     public String pbcId;
 
-    /**
-     * <p>serviceId</p>
-     */
-    @NameInMap("serviceId")
-    public String serviceId;
+    @NameInMap("serviceGroupId")
+    public String serviceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SLS</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -95,12 +126,12 @@ public class ListMonitorTasksRequest extends TeaModel {
         return this.pbcId;
     }
 
-    public ListMonitorTasksRequest setServiceId(String serviceId) {
-        this.serviceId = serviceId;
+    public ListMonitorTasksRequest setServiceGroupId(String serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
-    public String getServiceId() {
-        return this.serviceId;
+    public String getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public ListMonitorTasksRequest setType(String type) {

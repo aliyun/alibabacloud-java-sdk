@@ -7,6 +7,9 @@ public class ListPbcReviewsRequest extends TeaModel {
     @NameInMap("applicant")
     public String applicant;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("marketId")
     public Long marketId;
 

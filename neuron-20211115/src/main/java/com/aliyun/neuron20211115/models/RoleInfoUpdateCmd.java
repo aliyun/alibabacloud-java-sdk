@@ -4,9 +4,19 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class RoleInfoUpdateCmd extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>开发者</p>
+     */
     @NameInMap("name")
     public String name;
 

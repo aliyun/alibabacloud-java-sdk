@@ -4,18 +4,41 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class GetStackDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-11-08 15:03:22</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("env")
     public String env;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("rpcId")
     public String rpcId;
 
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>feishu-attendance-app</p>
+     */
     @NameInMap("serviceName")
     public String serviceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-12-06 10:24:44</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
@@ -46,6 +69,14 @@ public class GetStackDetailRequest extends TeaModel {
     }
     public String getRpcId() {
         return this.rpcId;
+    }
+
+    public GetStackDetailRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
+        return this;
+    }
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public GetStackDetailRequest setServiceName(String serviceName) {

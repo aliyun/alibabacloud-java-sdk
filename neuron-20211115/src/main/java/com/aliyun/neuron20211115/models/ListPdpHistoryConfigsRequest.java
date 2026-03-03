@@ -7,9 +7,6 @@ public class ListPdpHistoryConfigsRequest extends TeaModel {
     @NameInMap("configId")
     public Long configId;
 
-    @NameInMap("env")
-    public String env;
-
     @NameInMap("orderBy")
     public String orderBy;
 
@@ -22,8 +19,8 @@ public class ListPdpHistoryConfigsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("serviceId")
-    public Long serviceId;
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
 
     @NameInMap("type")
     public String type;
@@ -39,14 +36,6 @@ public class ListPdpHistoryConfigsRequest extends TeaModel {
     }
     public Long getConfigId() {
         return this.configId;
-    }
-
-    public ListPdpHistoryConfigsRequest setEnv(String env) {
-        this.env = env;
-        return this;
-    }
-    public String getEnv() {
-        return this.env;
     }
 
     public ListPdpHistoryConfigsRequest setOrderBy(String orderBy) {
@@ -81,12 +70,12 @@ public class ListPdpHistoryConfigsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListPdpHistoryConfigsRequest setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
+    public ListPdpHistoryConfigsRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
-    public Long getServiceId() {
-        return this.serviceId;
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public ListPdpHistoryConfigsRequest setType(String type) {
