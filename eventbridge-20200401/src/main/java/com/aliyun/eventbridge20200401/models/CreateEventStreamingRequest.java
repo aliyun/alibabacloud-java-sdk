@@ -2829,6 +2829,172 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
+        @NameInMap("Form")
+        public String form;
+
+        /**
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
+        @NameInMap("Template")
+        public String template;
+
+        /**
+         * <strong>example:</strong>
+         * <p>$.data.value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue self = new CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
+        @NameInMap("ColumnName")
+        public String columnName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
+        @NameInMap("ColumnType")
+        public String columnType;
+
+        @NameInMap("ColumnValue")
+        public CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue columnValue;
+
+        public static CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRules build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRules self = new CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRules();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRules setColumnName(String columnName) {
+            this.columnName = columnName;
+            return this;
+        }
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        public CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRules setColumnType(String columnType) {
+            this.columnType = columnType;
+            return this;
+        }
+        public String getColumnType() {
+            return this.columnType;
+        }
+
+        public CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRules setColumnValue(CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue columnValue) {
+            this.columnValue = columnValue;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue getColumnValue() {
+            return this.columnValue;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkEventHouseParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
+        @NameInMap("CatalogName")
+        public String catalogName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>demo-table</p>
+         */
+        @NameInMap("EventTableName")
+        public String eventTableName;
+
+        @NameInMap("MappingRules")
+        public java.util.List<CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRules> mappingRules;
+
+        /**
+         * <strong>example:</strong>
+         * <p>name1</p>
+         */
+        @NameInMap("NamespaceName")
+        public String namespaceName;
+
+        public static CreateEventStreamingRequestSinkSinkEventHouseParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkEventHouseParameters self = new CreateEventStreamingRequestSinkSinkEventHouseParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkEventHouseParameters setCatalogName(String catalogName) {
+            this.catalogName = catalogName;
+            return this;
+        }
+        public String getCatalogName() {
+            return this.catalogName;
+        }
+
+        public CreateEventStreamingRequestSinkSinkEventHouseParameters setEventTableName(String eventTableName) {
+            this.eventTableName = eventTableName;
+            return this;
+        }
+        public String getEventTableName() {
+            return this.eventTableName;
+        }
+
+        public CreateEventStreamingRequestSinkSinkEventHouseParameters setMappingRules(java.util.List<CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRules> mappingRules) {
+            this.mappingRules = mappingRules;
+            return this;
+        }
+        public java.util.List<CreateEventStreamingRequestSinkSinkEventHouseParametersMappingRules> getMappingRules() {
+            return this.mappingRules;
+        }
+
+        public CreateEventStreamingRequestSinkSinkEventHouseParameters setNamespaceName(String namespaceName) {
+            this.namespaceName = namespaceName;
+            return this;
+        }
+        public String getNamespaceName() {
+            return this.namespaceName;
+        }
+
+    }
+
     public static class CreateEventStreamingRequestSinkSinkFcParametersBody extends TeaModel {
         /**
          * <p>The method that you want to use to transform events.</p>
@@ -7843,6 +8009,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("SinkDorisParameters")
         public CreateEventStreamingRequestSinkSinkDorisParameters sinkDorisParameters;
 
+        @NameInMap("SinkEventHouseParameters")
+        public CreateEventStreamingRequestSinkSinkEventHouseParameters sinkEventHouseParameters;
+
         /**
          * <p>The parameters that are configured if you specify Function Compute as the event target.</p>
          */
@@ -7995,6 +8164,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkDorisParameters getSinkDorisParameters() {
             return this.sinkDorisParameters;
+        }
+
+        public CreateEventStreamingRequestSink setSinkEventHouseParameters(CreateEventStreamingRequestSinkSinkEventHouseParameters sinkEventHouseParameters) {
+            this.sinkEventHouseParameters = sinkEventHouseParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkEventHouseParameters getSinkEventHouseParameters() {
+            return this.sinkEventHouseParameters;
         }
 
         public CreateEventStreamingRequestSink setSinkFcParameters(CreateEventStreamingRequestSinkSinkFcParameters sinkFcParameters) {

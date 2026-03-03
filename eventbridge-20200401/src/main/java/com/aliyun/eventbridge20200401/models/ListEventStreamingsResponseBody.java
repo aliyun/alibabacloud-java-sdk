@@ -2246,6 +2246,172 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
 
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
+        @NameInMap("Form")
+        public String form;
+
+        /**
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
+        @NameInMap("Template")
+        public String template;
+
+        /**
+         * <strong>example:</strong>
+         * <p>$.data.value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
+        @NameInMap("ColumnName")
+        public String columnName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
+        @NameInMap("ColumnType")
+        public String columnType;
+
+        @NameInMap("ColumnValue")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue columnValue;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules setColumnName(String columnName) {
+            this.columnName = columnName;
+            return this;
+        }
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules setColumnType(String columnType) {
+            this.columnType = columnType;
+            return this;
+        }
+        public String getColumnType() {
+            return this.columnType;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules setColumnValue(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue columnValue) {
+            this.columnValue = columnValue;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue getColumnValue() {
+            return this.columnValue;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cat1</p>
+         */
+        @NameInMap("CatalogName")
+        public String catalogName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>table1</p>
+         */
+        @NameInMap("EventTableName")
+        public String eventTableName;
+
+        @NameInMap("MappingRules")
+        public java.util.List<ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules> mappingRules;
+
+        /**
+         * <strong>example:</strong>
+         * <p>name1</p>
+         */
+        @NameInMap("NamespaceName")
+        public String namespaceName;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters setCatalogName(String catalogName) {
+            this.catalogName = catalogName;
+            return this;
+        }
+        public String getCatalogName() {
+            return this.catalogName;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters setEventTableName(String eventTableName) {
+            this.eventTableName = eventTableName;
+            return this;
+        }
+        public String getEventTableName() {
+            return this.eventTableName;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters setMappingRules(java.util.List<ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules> mappingRules) {
+            this.mappingRules = mappingRules;
+            return this;
+        }
+        public java.util.List<ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules> getMappingRules() {
+            return this.mappingRules;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters setNamespaceName(String namespaceName) {
+            this.namespaceName = namespaceName;
+            return this;
+        }
+        public String getNamespaceName() {
+            return this.namespaceName;
+        }
+
+    }
+
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFcParametersBody extends TeaModel {
         /**
          * <p>The method that is used to transform events.</p>
@@ -6539,6 +6705,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("SinkDorisParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDorisParameters sinkDorisParameters;
 
+        @NameInMap("SinkEventHouseParameters")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters sinkEventHouseParameters;
+
         /**
          * <p>The parameters that are returned if Function Compute is specified as the event target.</p>
          */
@@ -6669,6 +6838,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDorisParameters getSinkDorisParameters() {
             return this.sinkDorisParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkEventHouseParameters(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters sinkEventHouseParameters) {
+            this.sinkEventHouseParameters = sinkEventHouseParameters;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters getSinkEventHouseParameters() {
+            return this.sinkEventHouseParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkFcParameters(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFcParameters sinkFcParameters) {

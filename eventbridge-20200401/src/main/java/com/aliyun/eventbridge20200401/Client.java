@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查账号是否存在ServiceLinkedRole授权</p>
+     * <p>Checks whether a service-linked role is created for an Alibaba Cloud account.</p>
      * 
      * @param request CheckServiceLinkedRoleForProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -60,7 +60,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查账号是否存在ServiceLinkedRole授权</p>
+     * <p>Checks whether a service-linked role is created for an Alibaba Cloud account.</p>
      * 
      * @param request CheckServiceLinkedRoleForProductRequest
      * @return CheckServiceLinkedRoleForProductResponse
@@ -1054,7 +1054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发现EventSource(例如：Mysql)的Schema和SimpleData</p>
+     * <p>Discovers the schema and simple data of an event source (such as MySQL).</p>
      * 
      * @param tmpReq DiscoverEventSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1092,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发现EventSource(例如：Mysql)的Schema和SimpleData</p>
+     * <p>Discovers the schema and simple data of an event source (such as MySQL).</p>
      * 
      * @param request DiscoverEventSourceRequest
      * @return DiscoverEventSourceResponse
@@ -2900,7 +2900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询事件流</p>
+     * <p>This API operation allows you to query event streams.</p>
      * 
      * @param request UpdateEventStreamingBusinessOptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2944,7 +2944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询事件流</p>
+     * <p>This API operation allows you to query event streams.</p>
      * 
      * @param request UpdateEventStreamingBusinessOptionRequest
      * @return UpdateEventStreamingBusinessOptionResponse
