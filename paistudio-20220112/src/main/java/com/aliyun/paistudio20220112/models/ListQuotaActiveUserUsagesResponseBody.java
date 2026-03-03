@@ -7,6 +7,9 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
     @NameInMap("QuotaUserUsage")
     public java.util.List<QuotaUser> quotaUserUsage;
 
+    @NameInMap("QuotaUserUsages")
+    public java.util.List<QuotaUser> quotaUserUsages;
+
     /**
      * <p>Id of the request</p>
      * 
@@ -34,6 +37,14 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
     }
     public java.util.List<QuotaUser> getQuotaUserUsage() {
         return this.quotaUserUsage;
+    }
+
+    public ListQuotaActiveUserUsagesResponseBody setQuotaUserUsages(java.util.List<QuotaUser> quotaUserUsages) {
+        this.quotaUserUsages = quotaUserUsages;
+        return this;
+    }
+    public java.util.List<QuotaUser> getQuotaUserUsages() {
+        return this.quotaUserUsages;
     }
 
     public ListQuotaActiveUserUsagesResponseBody setRequestId(String requestId) {

@@ -11,6 +11,9 @@ public class WorkspaceIdName extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    @NameInMap("WorkspaceName")
+    public String workspaceName;
+
     public static WorkspaceIdName build(java.util.Map<String, ?> map) throws Exception {
         WorkspaceIdName self = new WorkspaceIdName();
         return TeaModel.build(map, self);
@@ -22,6 +25,14 @@ public class WorkspaceIdName extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public WorkspaceIdName setWorkspaceName(String workspaceName) {
+        this.workspaceName = workspaceName;
+        return this;
+    }
+    public String getWorkspaceName() {
+        return this.workspaceName;
     }
 
 }

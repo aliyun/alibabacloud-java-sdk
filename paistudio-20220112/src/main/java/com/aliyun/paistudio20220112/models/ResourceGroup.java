@@ -58,6 +58,12 @@ public class ResourceGroup extends TeaModel {
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("Status")
+    public String status;
+
     /**
      * <p>UserVpc</p>
      */
@@ -127,6 +133,22 @@ public class ResourceGroup extends TeaModel {
     }
     public String getResourceGroupID() {
         return this.resourceGroupID;
+    }
+
+    public ResourceGroup setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public ResourceGroup setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ResourceGroup setUserVpc(UserVpc userVpc) {
