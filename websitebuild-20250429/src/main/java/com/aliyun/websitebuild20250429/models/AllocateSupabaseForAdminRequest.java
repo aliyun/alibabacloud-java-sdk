@@ -3,50 +3,57 @@ package com.aliyun.websitebuild20250429.models;
 
 import com.aliyun.tea.*;
 
-public class QuerySupabaseInstanceInfoForAdminRequest extends TeaModel {
+public class AllocateSupabaseForAdminRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>WD20250703155602000001</p>
+     * <p>WS20250801154628000001</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
-     * <p>staging</p>
+     * <p>gmtCreated</p>
      */
-    @NameInMap("Env")
-    public String env;
-
     @NameInMap("OrderColumn")
     public String orderColumn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BUY</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>111</p>
      */
     @NameInMap("UserId")
     public String userId;
 
-    public static QuerySupabaseInstanceInfoForAdminRequest build(java.util.Map<String, ?> map) throws Exception {
-        QuerySupabaseInstanceInfoForAdminRequest self = new QuerySupabaseInstanceInfoForAdminRequest();
+    public static AllocateSupabaseForAdminRequest build(java.util.Map<String, ?> map) throws Exception {
+        AllocateSupabaseForAdminRequest self = new AllocateSupabaseForAdminRequest();
         return TeaModel.build(map, self);
     }
 
-    public QuerySupabaseInstanceInfoForAdminRequest setBizId(String bizId) {
+    public AllocateSupabaseForAdminRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
@@ -54,15 +61,7 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QuerySupabaseInstanceInfoForAdminRequest setEnv(String env) {
-        this.env = env;
-        return this;
-    }
-    public String getEnv() {
-        return this.env;
-    }
-
-    public QuerySupabaseInstanceInfoForAdminRequest setOrderColumn(String orderColumn) {
+    public AllocateSupabaseForAdminRequest setOrderColumn(String orderColumn) {
         this.orderColumn = orderColumn;
         return this;
     }
@@ -70,7 +69,7 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends TeaModel {
         return this.orderColumn;
     }
 
-    public QuerySupabaseInstanceInfoForAdminRequest setOrderType(String orderType) {
+    public AllocateSupabaseForAdminRequest setOrderType(String orderType) {
         this.orderType = orderType;
         return this;
     }
@@ -78,7 +77,7 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends TeaModel {
         return this.orderType;
     }
 
-    public QuerySupabaseInstanceInfoForAdminRequest setPageNum(Integer pageNum) {
+    public AllocateSupabaseForAdminRequest setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
@@ -86,7 +85,7 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public QuerySupabaseInstanceInfoForAdminRequest setPageSize(Integer pageSize) {
+    public AllocateSupabaseForAdminRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -94,7 +93,7 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QuerySupabaseInstanceInfoForAdminRequest setUserId(String userId) {
+    public AllocateSupabaseForAdminRequest setUserId(String userId) {
         this.userId = userId;
         return this;
     }
