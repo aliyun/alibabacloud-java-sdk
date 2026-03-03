@@ -4,9 +4,17 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListMicroServiceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>gmtCreated</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("orderDirection")
     public String orderDirection;
 
@@ -16,9 +24,17 @@ public class ListMicroServiceRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pbcId")
     public Long pbcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("serviceIds")
     public String serviceIds;
 

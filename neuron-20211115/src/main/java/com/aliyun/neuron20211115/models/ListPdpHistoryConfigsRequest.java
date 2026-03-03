@@ -7,18 +7,38 @@ public class ListPdpHistoryConfigsRequest extends TeaModel {
     @NameInMap("configId")
     public Long configId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gmtCreated</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("orderDirection")
     public String orderDirection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 

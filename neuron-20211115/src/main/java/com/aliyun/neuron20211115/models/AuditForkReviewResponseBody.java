@@ -4,9 +4,17 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class AuditForkReviewResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>fsahkfkjsjfsdjlfalsf</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("result")
     public String result;
 

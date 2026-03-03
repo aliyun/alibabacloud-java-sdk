@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetLastDeploymentConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
      */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;

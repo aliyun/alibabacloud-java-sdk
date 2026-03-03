@@ -66,6 +66,9 @@ public class SearchTracesByPageRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;

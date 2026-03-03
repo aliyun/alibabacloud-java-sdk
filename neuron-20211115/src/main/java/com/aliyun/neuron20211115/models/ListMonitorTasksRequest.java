@@ -55,6 +55,10 @@ public class ListMonitorTasksRequest extends TeaModel {
     @NameInMap("pbcId")
     public String pbcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("serviceGroupId")
     public String serviceGroupId;
 

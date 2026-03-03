@@ -28,9 +28,17 @@ public class GetMonitorAlertHistoryRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("pbcId")
     public Long pbcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 

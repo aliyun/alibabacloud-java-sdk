@@ -4,6 +4,10 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class AuditPbcInvokeReviewResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>210548f617721779253531433de6e0</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
