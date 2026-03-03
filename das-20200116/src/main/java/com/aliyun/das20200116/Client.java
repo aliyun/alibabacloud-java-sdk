@@ -601,7 +601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建最近死锁分析任务</p>
+     * <p>Creates a recent deadlock analysis task.</p>
      * 
      * @param request CreateLatestDeadLockAnalysisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -637,7 +637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建最近死锁分析任务</p>
+     * <p>Creates a recent deadlock analysis task.</p>
      * 
      * @param request CreateLatestDeadLockAnalysisRequest
      * @return CreateLatestDeadLockAnalysisResponse
@@ -2005,7 +2005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取执行计划</p>
+     * <p>Queries the execution plan of an SQL statement.</p>
      * 
      * @param request DescribeQueryExplainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2053,7 +2053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取执行计划</p>
+     * <p>Queries the execution plan of an SQL statement.</p>
      * 
      * @param request DescribeQueryExplainRequest
      * @return DescribeQueryExplainResponse
@@ -2157,7 +2157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DescribeSlowLogHistogramAsync</p>
+     * <p>Asynchronously queries the trend data of slow query logs of an instance.</p>
      * 
      * @param request DescribeSlowLogHistogramAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2205,7 +2205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DescribeSlowLogHistogramAsync</p>
+     * <p>Asynchronously queries the trend data of slow query logs of an instance.</p>
      * 
      * @param request DescribeSlowLogHistogramAsyncRequest
      * @return DescribeSlowLogHistogramAsyncResponse
@@ -2217,7 +2217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看慢日志明细接口</p>
+     * <p>Queries the slow logs of a database instance. You can filter and sort data by multiple conditions.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2283,7 +2283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看慢日志明细接口</p>
+     * <p>Queries the slow logs of a database instance. You can filter and sort data by multiple conditions.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -2295,7 +2295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>慢日志统计信息</p>
+     * <p>Queries statistical information about slow query logs.</p>
      * 
      * @param request DescribeSlowLogStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2367,7 +2367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>慢日志统计信息</p>
+     * <p>Queries statistical information about slow query logs.</p>
      * 
      * @param request DescribeSlowLogStatisticRequest
      * @return DescribeSlowLogStatisticResponse
@@ -4493,7 +4493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个死锁详情</p>
+     * <p>Queries the details of a deadlock.</p>
      * 
      * @param request GetDeadLockDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4537,7 +4537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个死锁详情</p>
+     * <p>Queries the details of a deadlock.</p>
      * 
      * @param request GetDeadLockDetailRequest
      * @return GetDeadLockDetailResponse
@@ -4627,7 +4627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取历史死锁记录</p>
+     * <p>Queries the historical tasks of recent deadlock analysis and full deadlock analysis.</p>
      * 
      * @param request GetDeadLockHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4683,7 +4683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取历史死锁记录</p>
+     * <p>Queries the historical tasks of recent deadlock analysis and full deadlock analysis.</p>
      * 
      * @param request GetDeadLockHistoryRequest
      * @return GetDeadLockHistoryResponse
@@ -4695,7 +4695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询时间范围内基于错误日志分析的死锁数量</p>
+     * <p>Queries the trend of the number of deadlocks in full deadlock analysis within a specified period of time.</p>
      * 
      * @param request GetDeadlockHistogramRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4743,7 +4743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询时间范围内基于错误日志分析的死锁数量</p>
+     * <p>Queries the trend of the number of deadlocks in full deadlock analysis within a specified period of time.</p>
      * 
      * @param request GetDeadlockHistogramRequest
      * @return GetDeadlockHistogramResponse
@@ -7635,6 +7635,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetStorageAnalysisResultResponse getStorageAnalysisResult(GetStorageAnalysisResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getStorageAnalysisResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>瑶池AI助理大模型能力接口</p>
+     * 
+     * @param request GetYaoChiAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetYaoChiAgentResponse
+     */
+    public GetYaoChiAgentResponse getYaoChiAgentWithOptions(GetYaoChiAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            query.put("ExtraInfo", request.extraInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetYaoChiAgent"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetYaoChiAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>瑶池AI助理大模型能力接口</p>
+     * 
+     * @param request GetYaoChiAgentRequest
+     * @return GetYaoChiAgentResponse
+     */
+    public GetYaoChiAgentResponse getYaoChiAgent(GetYaoChiAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getYaoChiAgentWithOptions(request, runtime);
     }
 
     /**

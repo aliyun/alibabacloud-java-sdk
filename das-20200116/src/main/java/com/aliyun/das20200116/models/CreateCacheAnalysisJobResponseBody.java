@@ -99,75 +99,27 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class CreateCacheAnalysisJobResponseBodyDataBigKeysKeyInfo extends TeaModel {
-        /**
-         * <p>The number of bytes that are occupied by the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
-         */
         @NameInMap("Bytes")
         public Long bytes;
 
-        /**
-         * <p>The number of elements in the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Db")
         public Integer db;
 
-        /**
-         * <p>The data type of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hashtable</p>
-         */
         @NameInMap("Encoding")
         public String encoding;
 
-        /**
-         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1596256542547</p>
-         */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
-        /**
-         * <p>The name of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>task_x****</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The ID of the data node on the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-x****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The data type of the ApsaraDB for Redis instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hash</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -262,9 +214,6 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class CreateCacheAnalysisJobResponseBodyData extends TeaModel {
-        /**
-         * <p>The number of elements in the key.</p>
-         */
         @NameInMap("BigKeys")
         public CreateCacheAnalysisJobResponseBodyDataBigKeys bigKeys;
 

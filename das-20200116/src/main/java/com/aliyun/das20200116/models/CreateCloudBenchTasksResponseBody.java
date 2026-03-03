@@ -13,9 +13,6 @@ public class CreateCloudBenchTasksResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The detailed information.</p>
-     */
     @NameInMap("Data")
     public CreateCloudBenchTasksResponseBodyData data;
 

@@ -13,9 +13,6 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The detailed information about the hot keys.</p>
-     */
     @NameInMap("Data")
     public DescribeTopHotKeysResponseBodyData data;
 
@@ -99,60 +96,24 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The database in which the key is stored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Db")
         public Integer db;
 
-        /**
-         * <p>The frequency at which the key is accessed, which indicates the QPS of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5500~6000</p>
-         */
         @NameInMap("Hot")
         public String hot;
 
         @NameInMap("InBytes")
         public Long inBytes;
 
-        /**
-         * <p>The key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc:def:eng</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The type of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zset</p>
-         */
         @NameInMap("KeyType")
         public String keyType;
 
-        /**
-         * <p>The statistical value that is calculated based on the least frequently used (LFU) caching algorithm.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>253</p>
-         */
         @NameInMap("Lfu")
         public Integer lfu;
 
-        /**
-         * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-x****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 

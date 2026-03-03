@@ -13,12 +13,6 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The detailed information about the large keys.</p>
-     * <blockquote>
-     * <p>This parameter is left empty If no large keys exist within the specified time range.</p>
-     * </blockquote>
-     */
     @NameInMap("Data")
     public DescribeTopBigKeysResponseBodyData data;
 
@@ -99,48 +93,18 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeTopBigKeysResponseBodyDataBigKey extends TeaModel {
-        /**
-         * <p>The database in which the key is stored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Db")
         public Integer db;
 
-        /**
-         * <p>The key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc:def:eng</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The type of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zset</p>
-         */
         @NameInMap("KeyType")
         public String keyType;
 
-        /**
-         * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-x****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The number of elements in the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Size")
         public Long size;
 

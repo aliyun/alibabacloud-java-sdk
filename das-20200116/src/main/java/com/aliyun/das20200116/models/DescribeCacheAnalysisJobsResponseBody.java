@@ -99,75 +99,27 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisJobsResponseBodyDataListCacheAnalysisJobBigKeysKeyInfo extends TeaModel {
-        /**
-         * <p>The number of bytes that are occupied by the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
-         */
         @NameInMap("Bytes")
         public Long bytes;
 
-        /**
-         * <p>The number of elements in the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Db")
         public Integer db;
 
-        /**
-         * <p>The data type of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hashtable</p>
-         */
         @NameInMap("Encoding")
         public String encoding;
 
-        /**
-         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1596256542547</p>
-         */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
-        /**
-         * <p>The name of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>task_*****</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The ID of the data node on the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The data type of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hash</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -262,66 +214,21 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisJobsResponseBodyDataListCacheAnalysisJob extends TeaModel {
-        /**
-         * <p>The details about the large keys.</p>
-         * <blockquote>
-         * <p>The sub-parameters of this parameter and the content of the sub-parameters are not returned. To query the detailed information about the cache analysis tasks, call the <a href="https://help.aliyun.com/document_detail/443012.html">DescribeCacheAnalysisJob</a> operation.</p>
-         * </blockquote>
-         */
         @NameInMap("BigKeys")
         public DescribeCacheAnalysisJobsResponseBodyDataListCacheAnalysisJobBigKeys bigKeys;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp18ff4a195d****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the cache analysis task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sf79-sd99-sa37-****</p>
-         */
         @NameInMap("JobId")
         public String jobId;
 
-        /**
-         * <p>The returned message.</p>
-         * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Successful</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The ID of the data node on the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-x****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The state of the cache analysis task. Valid values:</p>
-         * <ul>
-         * <li><strong>BACKUP</strong>: The data is being backed up.</li>
-         * <li><strong>ANALYZING</strong>: The data is being analyzed.</li>
-         * <li><strong>FINISHED</strong>: The data is analyzed.</li>
-         * <li><strong>FAILED</strong>: An error occurred.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>BACKUP</p>
-         */
         @NameInMap("TaskState")
         public String taskState;
 
@@ -409,9 +316,6 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
         @NameInMap("Extra")
         public String extra;
 
-        /**
-         * <p>The ID of the data node on the instance.</p>
-         */
         @NameInMap("List")
         public DescribeCacheAnalysisJobsResponseBodyDataList list;
 

@@ -13,9 +13,6 @@ public class DescribeHotKeysResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The details of the hot keys.</p>
-     */
     @NameInMap("Data")
     public DescribeHotKeysResponseBodyData data;
 
@@ -102,42 +99,18 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The database in which the key is stored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Db")
         public Integer db;
 
-        /**
-         * <p>The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5500~6000</p>
-         */
         @NameInMap("Hot")
         public String hot;
 
         @NameInMap("InBytes")
         public Long inBytes;
 
-        /**
-         * <p>The name of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc:def:eng</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The type of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zset</p>
-         */
         @NameInMap("KeyType")
         public String keyType;
 
@@ -147,12 +120,6 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         @NameInMap("OutBytes")
         public Long outBytes;
 
-        /**
-         * <p>The number of elements in the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Size")
         public Long size;
 

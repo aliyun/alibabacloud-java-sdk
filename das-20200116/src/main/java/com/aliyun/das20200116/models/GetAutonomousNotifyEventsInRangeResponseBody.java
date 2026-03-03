@@ -127,9 +127,6 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         @NameInMap("Extra")
         public String extra;
 
-        /**
-         * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
-         */
         @NameInMap("List")
         public GetAutonomousNotifyEventsInRangeResponseBodyDataList list;
 

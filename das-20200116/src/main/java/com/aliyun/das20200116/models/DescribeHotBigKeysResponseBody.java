@@ -96,48 +96,18 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeHotBigKeysResponseBodyDataBigKeysBigKey extends TeaModel {
-        /**
-         * <p>The database in which the key is stored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Db")
         public Integer db;
 
-        /**
-         * <p>The key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc:def:eng</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The type of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zset</p>
-         */
         @NameInMap("KeyType")
         public String keyType;
 
-        /**
-         * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-x****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The number of elements in the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Size")
         public Long size;
 
@@ -323,57 +293,21 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeHotBigKeysResponseBodyDataHotKeysHotKey extends TeaModel {
-        /**
-         * <p>The database in which the key is stored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Db")
         public Integer db;
 
-        /**
-         * <p>The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5500~6000</p>
-         */
         @NameInMap("Hot")
         public String hot;
 
-        /**
-         * <p>The key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc:def:eng</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The type of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zset</p>
-         */
         @NameInMap("KeyType")
         public String keyType;
 
-        /**
-         * <p>The statistical value that is calculated based on the least frequently used (LFU) caching algorithm.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>253</p>
-         */
         @NameInMap("Lfu")
         public Integer lfu;
 
-        /**
-         * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-x****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
@@ -554,9 +488,6 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         @NameInMap("BigKeyMsg")
         public String bigKeyMsg;
 
-        /**
-         * <p>The list of large keys.</p>
-         */
         @NameInMap("BigKeys")
         public DescribeHotBigKeysResponseBodyDataBigKeys bigKeys;
 
@@ -575,9 +506,6 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         @NameInMap("HotKeyMsg")
         public String hotKeyMsg;
 
-        /**
-         * <p>The list of hot keys.</p>
-         */
         @NameInMap("HotKeys")
         public DescribeHotBigKeysResponseBodyDataHotKeys hotKeys;
 
