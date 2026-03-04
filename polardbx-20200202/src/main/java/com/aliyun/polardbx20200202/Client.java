@@ -910,6 +910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NetworkType", request.networkType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.originMinorVersion)) {
+            query.put("OriginMinorVersion", request.originMinorVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
             query.put("PayType", request.payType);
         }
@@ -940,6 +944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.series)) {
             query.put("Series", request.series);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tertiaryZone)) {

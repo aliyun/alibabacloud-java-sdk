@@ -79,6 +79,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("NetworkType")
     public String networkType;
 
+    @NameInMap("OriginMinorVersion")
+    public String originMinorVersion;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -134,6 +137,9 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     @NameInMap("Series")
     public String series;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     /**
      * <strong>example:</strong>
@@ -306,6 +312,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.networkType;
     }
 
+    public CreateDBInstanceRequest setOriginMinorVersion(String originMinorVersion) {
+        this.originMinorVersion = originMinorVersion;
+        return this;
+    }
+    public String getOriginMinorVersion() {
+        return this.originMinorVersion;
+    }
+
     public CreateDBInstanceRequest setPayType(String payType) {
         this.payType = payType;
         return this;
@@ -368,6 +382,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getSeries() {
         return this.series;
+    }
+
+    public CreateDBInstanceRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public CreateDBInstanceRequest setTertiaryZone(String tertiaryZone) {
