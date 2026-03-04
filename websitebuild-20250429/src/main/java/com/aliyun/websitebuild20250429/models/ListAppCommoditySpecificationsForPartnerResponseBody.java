@@ -3,7 +3,7 @@ package com.aliyun.websitebuild20250429.models;
 
 import com.aliyun.tea.*;
 
-public class OperateSupabaseForAdminResponseBody extends TeaModel {
+public class ListAppCommoditySpecificationsForPartnerResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>{}</p>
@@ -42,12 +42,8 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Module")
-    public String module;
+    public ListAppCommoditySpecificationsForPartnerResponseBodyModule module;
 
     /**
      * <p>Id of the request</p>
@@ -75,12 +71,12 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
     @NameInMap("Synchro")
     public Boolean synchro;
 
-    public static OperateSupabaseForAdminResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        OperateSupabaseForAdminResponseBody self = new OperateSupabaseForAdminResponseBody();
+    public static ListAppCommoditySpecificationsForPartnerResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListAppCommoditySpecificationsForPartnerResponseBody self = new ListAppCommoditySpecificationsForPartnerResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public OperateSupabaseForAdminResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
         this.accessDeniedDetail = accessDeniedDetail;
         return this;
     }
@@ -88,7 +84,7 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public OperateSupabaseForAdminResponseBody setAllowRetry(Boolean allowRetry) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setAllowRetry(Boolean allowRetry) {
         this.allowRetry = allowRetry;
         return this;
     }
@@ -96,7 +92,7 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
         return this.allowRetry;
     }
 
-    public OperateSupabaseForAdminResponseBody setAppName(String appName) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -104,7 +100,7 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
         return this.appName;
     }
 
-    public OperateSupabaseForAdminResponseBody setDynamicCode(String dynamicCode) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setDynamicCode(String dynamicCode) {
         this.dynamicCode = dynamicCode;
         return this;
     }
@@ -112,7 +108,7 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
         return this.dynamicCode;
     }
 
-    public OperateSupabaseForAdminResponseBody setDynamicMessage(String dynamicMessage) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setDynamicMessage(String dynamicMessage) {
         this.dynamicMessage = dynamicMessage;
         return this;
     }
@@ -120,7 +116,7 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
         return this.dynamicMessage;
     }
 
-    public OperateSupabaseForAdminResponseBody setErrorArgs(java.util.List<?> errorArgs) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setErrorArgs(java.util.List<?> errorArgs) {
         this.errorArgs = errorArgs;
         return this;
     }
@@ -128,15 +124,15 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
         return this.errorArgs;
     }
 
-    public OperateSupabaseForAdminResponseBody setModule(String module) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setModule(ListAppCommoditySpecificationsForPartnerResponseBodyModule module) {
         this.module = module;
         return this;
     }
-    public String getModule() {
+    public ListAppCommoditySpecificationsForPartnerResponseBodyModule getModule() {
         return this.module;
     }
 
-    public OperateSupabaseForAdminResponseBody setRequestId(String requestId) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -144,7 +140,7 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public OperateSupabaseForAdminResponseBody setRootErrorCode(String rootErrorCode) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setRootErrorCode(String rootErrorCode) {
         this.rootErrorCode = rootErrorCode;
         return this;
     }
@@ -152,7 +148,7 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
         return this.rootErrorCode;
     }
 
-    public OperateSupabaseForAdminResponseBody setRootErrorMsg(String rootErrorMsg) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setRootErrorMsg(String rootErrorMsg) {
         this.rootErrorMsg = rootErrorMsg;
         return this;
     }
@@ -160,12 +156,31 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
         return this.rootErrorMsg;
     }
 
-    public OperateSupabaseForAdminResponseBody setSynchro(Boolean synchro) {
+    public ListAppCommoditySpecificationsForPartnerResponseBody setSynchro(Boolean synchro) {
         this.synchro = synchro;
         return this;
     }
     public Boolean getSynchro() {
         return this.synchro;
+    }
+
+    public static class ListAppCommoditySpecificationsForPartnerResponseBodyModule extends TeaModel {
+        @NameInMap("Versions")
+        public java.util.Map<String, ModuleVersionsValue> versions;
+
+        public static ListAppCommoditySpecificationsForPartnerResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
+            ListAppCommoditySpecificationsForPartnerResponseBodyModule self = new ListAppCommoditySpecificationsForPartnerResponseBodyModule();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppCommoditySpecificationsForPartnerResponseBodyModule setVersions(java.util.Map<String, ModuleVersionsValue> versions) {
+            this.versions = versions;
+            return this;
+        }
+        public java.util.Map<String, ModuleVersionsValue> getVersions() {
+            return this.versions;
+        }
+
     }
 
 }
