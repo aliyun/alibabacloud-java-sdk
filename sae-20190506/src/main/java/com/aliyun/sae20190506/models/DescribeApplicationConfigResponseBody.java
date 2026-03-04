@@ -351,6 +351,58 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("SecretId")
+        public Long secretId;
+
+        @NameInMap("SecretName")
+        public String secretName;
+
+        public static DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc self = new DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc setSecretId(Long secretId) {
+            this.secretId = secretId;
+            return this;
+        }
+        public Long getSecretId() {
+            return this.secretId;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc setSecretName(String secretName) {
+            this.secretName = secretName;
+            return this;
+        }
+        public String getSecretName() {
+            return this.secretName;
+        }
+
+    }
+
     public static class DescribeApplicationConfigResponseBodyDataInitContainersConfig extends TeaModel {
         /**
          * <p>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</p>
@@ -431,6 +483,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("SecretMountDesc")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc> secretMountDesc;
+
         public static DescribeApplicationConfigResponseBodyDataInitContainersConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationConfigResponseBodyDataInitContainersConfig self = new DescribeApplicationConfigResponseBodyDataInitContainersConfig();
             return TeaModel.build(map, self);
@@ -490,6 +545,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfig setSecretMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc> secretMountDesc) {
+            this.secretMountDesc = secretMountDesc;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigSecretMountDesc> getSecretMountDesc() {
+            return this.secretMountDesc;
         }
 
     }

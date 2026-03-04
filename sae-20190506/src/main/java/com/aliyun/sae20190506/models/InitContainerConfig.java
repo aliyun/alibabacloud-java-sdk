@@ -25,6 +25,9 @@ public class InitContainerConfig extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("SecretMountDesc")
+    public String secretMountDesc;
+
     public static InitContainerConfig build(java.util.Map<String, ?> map) throws Exception {
         InitContainerConfig self = new InitContainerConfig();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class InitContainerConfig extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public InitContainerConfig setSecretMountDesc(String secretMountDesc) {
+        this.secretMountDesc = secretMountDesc;
+        return this;
+    }
+    public String getSecretMountDesc() {
+        return this.secretMountDesc;
     }
 
 }
