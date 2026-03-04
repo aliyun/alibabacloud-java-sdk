@@ -8422,6 +8422,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询消息推送记录</p>
+     * 
+     * @param request ListNotificationRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNotificationRecordsResponse
+     */
+    public ListNotificationRecordsResponse listNotificationRecordsWithOptions(ListNotificationRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationKeys)) {
+            query.put("NotificationKeys", request.notificationKeys);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNotificationRecords"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNotificationRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询消息推送记录</p>
+     * 
+     * @param request ListNotificationRecordsRequest
+     * @return ListNotificationRecordsResponse
+     */
+    public ListNotificationRecordsResponse listNotificationRecords(ListNotificationRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNotificationRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>该坐席可用的外呼号码列表</p>
      * 
      * @param request ListOutboundNumbersOfUserRequest
@@ -13372,6 +13420,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSchemaPropertyResponse updateSchemaProperty(UpdateSchemaPropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSchemaPropertyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>UpdateSubscription</p>
+     * 
+     * @param request UpdateSubscriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSubscriptionResponse
+     */
+    public UpdateSubscriptionResponse updateSubscriptionWithOptions(UpdateSubscriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessPoint)) {
+            query.put("AccessPoint", request.accessPoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunUid)) {
+            query.put("AliyunUid", request.aliyunUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultTopic)) {
+            query.put("DefaultTopic", request.defaultTopic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventSubscriptionsJson)) {
+            query.put("EventSubscriptionsJson", request.eventSubscriptionsJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mqInstanceId)) {
+            query.put("MqInstanceId", request.mqInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mqType)) {
+            query.put("MqType", request.mqType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.producerId)) {
+            query.put("ProducerId", request.producerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSubscription"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>UpdateSubscription</p>
+     * 
+     * @param request UpdateSubscriptionRequest
+     * @return UpdateSubscriptionResponse
+     */
+    public UpdateSubscriptionResponse updateSubscription(UpdateSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSubscriptionWithOptions(request, runtime);
     }
 
     /**
