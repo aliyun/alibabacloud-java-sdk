@@ -39,6 +39,9 @@ public class ListMemoryCollectionsRequest extends TeaModel {
     @NameInMap("type")
     public String type;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static ListMemoryCollectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMemoryCollectionsRequest self = new ListMemoryCollectionsRequest();
         return TeaModel.build(map, self);
@@ -82,6 +85,14 @@ public class ListMemoryCollectionsRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public ListMemoryCollectionsRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

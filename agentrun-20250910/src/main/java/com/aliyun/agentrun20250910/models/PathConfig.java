@@ -28,6 +28,9 @@ public class PathConfig extends TeaModel {
     @NameInMap("path")
     public String path;
 
+    @NameInMap("removeBasePathOnForward")
+    public Boolean removeBasePathOnForward;
+
     /**
      * <p>资源名称</p>
      */
@@ -70,6 +73,14 @@ public class PathConfig extends TeaModel {
     }
     public String getPath() {
         return this.path;
+    }
+
+    public PathConfig setRemoveBasePathOnForward(Boolean removeBasePathOnForward) {
+        this.removeBasePathOnForward = removeBasePathOnForward;
+        return this;
+    }
+    public Boolean getRemoveBasePathOnForward() {
+        return this.removeBasePathOnForward;
     }
 
     public PathConfig setResourceName(String resourceName) {

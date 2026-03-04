@@ -34,6 +34,9 @@ public class CreateMemoryCollectionInput extends TeaModel {
     @NameInMap("vectorStoreConfig")
     public VectorStoreConfig vectorStoreConfig;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static CreateMemoryCollectionInput build(java.util.Map<String, ?> map) throws Exception {
         CreateMemoryCollectionInput self = new CreateMemoryCollectionInput();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class CreateMemoryCollectionInput extends TeaModel {
     }
     public VectorStoreConfig getVectorStoreConfig() {
         return this.vectorStoreConfig;
+    }
+
+    public CreateMemoryCollectionInput setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

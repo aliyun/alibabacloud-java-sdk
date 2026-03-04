@@ -72,6 +72,9 @@ public class ListAgentRuntimesRequest extends TeaModel {
     @NameInMap("workspaceId")
     public String workspaceId;
 
+    @NameInMap("workspaceIds")
+    public String workspaceIds;
+
     public static ListAgentRuntimesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentRuntimesRequest self = new ListAgentRuntimesRequest();
         return TeaModel.build(map, self);
@@ -141,6 +144,14 @@ public class ListAgentRuntimesRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public ListAgentRuntimesRequest setWorkspaceIds(String workspaceIds) {
+        this.workspaceIds = workspaceIds;
+        return this;
+    }
+    public String getWorkspaceIds() {
+        return this.workspaceIds;
     }
 
 }

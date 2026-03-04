@@ -619,6 +619,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>创建工作空间</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建工作空间</p>
+     * 
+     * @param request CreateWorkspaceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkspaceResponse
+     */
+    public CreateWorkspaceResponse createWorkspaceWithOptions(CreateWorkspaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkspace"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/workspaces"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建工作空间</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建工作空间</p>
+     * 
+     * @param request CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    public CreateWorkspaceResponse createWorkspace(CreateWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createWorkspaceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>删除指定的智能体运行时实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
      * 
      * <b>summary</b> : 
@@ -1083,6 +1131,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteTemplateWithOptions(templateName, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除工作空间</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除工作空间</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWorkspaceResponse
+     */
+    public DeleteWorkspaceResponse deleteWorkspaceWithOptions(String workspaceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWorkspace"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除工作空间</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除工作空间</p>
+     * @return DeleteWorkspaceResponse
+     */
+    public DeleteWorkspaceResponse deleteWorkspace(String workspaceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteWorkspaceWithOptions(workspaceId, headers, runtime);
     }
 
     /**
@@ -1626,6 +1717,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>查看工作空间</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查看工作空间</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspaceResponse
+     */
+    public GetWorkspaceResponse getWorkspaceWithOptions(String workspaceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspace"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查看工作空间</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查看工作空间</p>
+     * @return GetWorkspaceResponse
+     */
+    public GetWorkspaceResponse getWorkspace(String workspaceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkspaceWithOptions(workspaceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取工作空间下的发现端点</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspaceDiscoveryEndpointsResponse
+     */
+    public GetWorkspaceDiscoveryEndpointsResponse getWorkspaceDiscoveryEndpointsWithOptions(String workspaceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspaceDiscoveryEndpoints"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/discovery/endpoints"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceDiscoveryEndpointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取工作空间下的发现端点</p>
+     * @return GetWorkspaceDiscoveryEndpointsResponse
+     */
+    public GetWorkspaceDiscoveryEndpointsResponse getWorkspaceDiscoveryEndpoints(String workspaceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkspaceDiscoveryEndpointsWithOptions(workspaceId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>获取指定智能体运行时的所有端点列表，支持按名称过滤和分页查询。端点用于外部系统访问智能体运行时服务。</p>
      * 
      * <b>summary</b> : 
@@ -1785,6 +1956,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("workspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceIds)) {
+            query.put("workspaceIds", request.workspaceIds);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2034,6 +2209,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("domainName", request.domainName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.domainType)) {
+            query.put("domainType", request.domainType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }
@@ -2166,6 +2345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3048,5 +3231,95 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateTemplateWithOptions(templateName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新工作空间</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新工作空间</p>
+     * 
+     * @param request UpdateWorkspaceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWorkspaceResponse
+     */
+    public UpdateWorkspaceResponse updateWorkspaceWithOptions(String workspaceId, UpdateWorkspaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWorkspace"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新工作空间</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新工作空间</p>
+     * 
+     * @param request UpdateWorkspaceRequest
+     * @return UpdateWorkspaceResponse
+     */
+    public UpdateWorkspaceResponse updateWorkspace(String workspaceId, UpdateWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateWorkspaceWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取工作空间下的发现端点</p>
+     * 
+     * @param request UpdateWorkspaceDiscoveryEndpointsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWorkspaceDiscoveryEndpointsResponse
+     */
+    public UpdateWorkspaceDiscoveryEndpointsResponse updateWorkspaceDiscoveryEndpointsWithOptions(String workspaceId, UpdateWorkspaceDiscoveryEndpointsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWorkspaceDiscoveryEndpoints"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/discovery/endpoints"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWorkspaceDiscoveryEndpointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取工作空间下的发现端点</p>
+     * 
+     * @param request UpdateWorkspaceDiscoveryEndpointsRequest
+     * @return UpdateWorkspaceDiscoveryEndpointsResponse
+     */
+    public UpdateWorkspaceDiscoveryEndpointsResponse updateWorkspaceDiscoveryEndpoints(String workspaceId, UpdateWorkspaceDiscoveryEndpointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateWorkspaceDiscoveryEndpointsWithOptions(workspaceId, request, headers, runtime);
     }
 }

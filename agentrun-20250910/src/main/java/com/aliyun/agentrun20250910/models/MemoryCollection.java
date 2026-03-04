@@ -40,6 +40,9 @@ public class MemoryCollection extends TeaModel {
     @NameInMap("vectorStoreConfig")
     public VectorStoreConfig vectorStoreConfig;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static MemoryCollection build(java.util.Map<String, ?> map) throws Exception {
         MemoryCollection self = new MemoryCollection();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class MemoryCollection extends TeaModel {
     }
     public VectorStoreConfig getVectorStoreConfig() {
         return this.vectorStoreConfig;
+    }
+
+    public MemoryCollection setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

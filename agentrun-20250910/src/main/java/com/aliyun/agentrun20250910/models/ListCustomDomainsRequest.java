@@ -11,6 +11,9 @@ public class ListCustomDomainsRequest extends TeaModel {
     @NameInMap("domainName")
     public String domainName;
 
+    @NameInMap("domainType")
+    public String domainType;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,6 +53,14 @@ public class ListCustomDomainsRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public ListCustomDomainsRequest setDomainType(String domainType) {
+        this.domainType = domainType;
+        return this;
+    }
+    public String getDomainType() {
+        return this.domainType;
     }
 
     public ListCustomDomainsRequest setPageNumber(Integer pageNumber) {
