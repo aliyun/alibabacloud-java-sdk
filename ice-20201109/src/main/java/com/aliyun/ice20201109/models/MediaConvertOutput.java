@@ -4,21 +4,54 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class MediaConvertOutput extends TeaModel {
+    /**
+     * <p>The feature parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Features")
     public String features;
 
+    /**
+     * <p>The name of the output.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>output-video</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The output file.</p>
+     */
     @NameInMap("OutputFile")
     public MediaObject outputFile;
 
+    /**
+     * <p>A JSON string containing parameters to overwrite the corresponding settings of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("OverrideParams")
     public String overrideParams;
 
+    /**
+     * <p>The priority. Valid values: 1 to 10. A larger value indicates a higher priority. Default value: 6.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ID of the transcoding template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

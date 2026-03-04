@@ -60,6 +60,12 @@ public class UpdateEditingProjectRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The timeline of the online editing project, in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>cc3308ac500ca54328bc3443</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<em><strong><em>da87a9cff64</em>d88bc6d8326e4</strong></em>*&quot;}]}]}</p>
+     */
     @NameInMap("Timeline")
     public String timeline;
 

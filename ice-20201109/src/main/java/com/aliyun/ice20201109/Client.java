@@ -854,7 +854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改库</p>
+     * <p>Modifies a search library.</p>
      * 
      * @param request AlterSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -890,7 +890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改库</p>
+     * <p>Modifies a search library.</p>
      * 
      * @param request AlterSearchLibRequest
      * @return AlterSearchLibResponse
@@ -1376,7 +1376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a digital human training job. You can configure the basic information of the digital human and the materials required for the training. Note: This operation is used to initialize the training job. It does not submit the training job. To submit the training job, call the SubmitAvatarTrainingJob operation.</p>
+     * <p>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</p>
      * 
      * @param request CreateAvatarTrainingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1432,7 +1432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a digital human training job. You can configure the basic information of the digital human and the materials required for the training. Note: This operation is used to initialize the training job. It does not submit the training job. To submit the training job, call the SubmitAvatarTrainingJob operation.</p>
+     * <p>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</p>
      * 
      * @param request CreateAvatarTrainingJobRequest
      * @return CreateAvatarTrainingJobResponse
@@ -1516,7 +1516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom template.</p>
+     * <p>Creates a custom media processing template.</p>
      * 
      * @param request CreateCustomTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1560,7 +1560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom template.</p>
+     * <p>Creates a custom media processing template.</p>
      * 
      * @param request CreateCustomTemplateRequest
      * @return CreateCustomTemplateResponse
@@ -1850,7 +1850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>IPC下单</p>
+     * <p>Creates an IPC order. The purchased capacity is shared at the account level.</p>
      * 
      * @param request CreateIpcOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1890,7 +1890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>IPC下单</p>
+     * <p>Creates an IPC order. The purchased capacity is shared at the account level.</p>
      * 
      * @param request CreateIpcOrderRequest
      * @return CreateIpcOrderResponse
@@ -2276,7 +2276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a live stream transcoding template to submit live stream transcoding jobs.</p>
+     * <p>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</p>
      * 
      * @param tmpReq CreateLiveTranscodeTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2322,7 +2322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a live stream transcoding template to submit live stream transcoding jobs.</p>
+     * <p>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</p>
      * 
      * @param request CreateLiveTranscodeTemplateRequest
      * @return CreateLiveTranscodeTemplateResponse
@@ -2997,7 +2997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建搜索索引</p>
+     * <p>Creates a search index in a search library. Each search library can contain multiple indexes.</p>
      * 
      * @param request CreateSearchIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3044,7 +3044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建搜索索引</p>
+     * <p>Creates a search index in a search library. Each search library can contain multiple indexes.</p>
      * 
      * @param request CreateSearchIndexRequest
      * @return CreateSearchIndexResponse
@@ -3498,7 +3498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a packaging configuration.</p>
+     * <p>Creates a VOD packaging configuration.</p>
      * 
      * @param tmpReq CreateVodPackagingConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3552,7 +3552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a packaging configuration.</p>
+     * <p>Creates a VOD packaging configuration.</p>
      * 
      * @param request CreateVodPackagingConfigurationRequest
      * @return CreateVodPackagingConfigurationResponse
@@ -3564,7 +3564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a packaging group.</p>
+     * <p>Creates a VOD packaging group.</p>
      * 
      * @param request CreateVodPackagingGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3600,7 +3600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a packaging group.</p>
+     * <p>Creates a VOD packaging group.</p>
      * 
      * @param request CreateVodPackagingGroupRequest
      * @return CreateVodPackagingGroupResponse
@@ -3608,6 +3608,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateVodPackagingGroupResponse createVodPackagingGroup(CreateVodPackagingGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVodPackagingGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻媒资上传凭证</p>
+     * 
+     * @param request CreateYikeAssetUploadRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateYikeAssetUploadResponse
+     */
+    public CreateYikeAssetUploadResponse createYikeAssetUploadWithOptions(CreateYikeAssetUploadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileExt)) {
+            query.put("FileExt", request.fileExt);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateYikeAssetUpload"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateYikeAssetUploadResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻媒资上传凭证</p>
+     * 
+     * @param request CreateYikeAssetUploadRequest
+     * @return CreateYikeAssetUploadResponse
+     */
+    public CreateYikeAssetUploadResponse createYikeAssetUpload(CreateYikeAssetUploadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createYikeAssetUploadWithOptions(request, runtime);
     }
 
     /**
@@ -5842,7 +5886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a packaging configuration.</p>
+     * <p>Deletes a VOD packaging configuration.</p>
      * 
      * @param request DeleteVodPackagingConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5874,7 +5918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a packaging configuration.</p>
+     * <p>Deletes a VOD packaging configuration.</p>
      * 
      * @param request DeleteVodPackagingConfigurationRequest
      * @return DeleteVodPackagingConfigurationResponse
@@ -5886,7 +5930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a packaging group.</p>
+     * <p>Deletes a VOD packaging group.</p>
      * 
      * @param request DeleteVodPackagingGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5918,7 +5962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a packaging group.</p>
+     * <p>Deletes a VOD packaging group.</p>
      * 
      * @param request DeleteVodPackagingGroupRequest
      * @return DeleteVodPackagingGroupResponse
@@ -6390,7 +6434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例</p>
+     * <p>Queries the information about an AI agent for real-time communication (RTC).</p>
      * 
      * @param request DescribeRtcRobotInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6422,7 +6466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例</p>
+     * <p>Queries the information about an AI agent for real-time communication (RTC).</p>
      * 
      * @param request DescribeRtcRobotInstanceRequest
      * @return DescribeRtcRobotInstanceResponse
@@ -7902,7 +7946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IPC设备信息</p>
+     * <p>Retrieves information about IPC devices.</p>
      * 
      * @param request GetIpcDeviceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7954,7 +7998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IPC设备信息</p>
+     * <p>Retrieves information about IPC devices.</p>
      * 
      * @param request GetIpcDeviceInfoRequest
      * @return GetIpcDeviceInfoResponse
@@ -9207,7 +9251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the playback URL of a video or audio file based on its ID.</p>
+     * <p>Queries the playback URL of a video or audio file by its ID. You can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</p>
      * 
      * @param request GetPlayInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9250,7 +9294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the playback URL of a video or audio file based on its ID.</p>
+     * <p>Queries the playback URL of a video or audio file by its ID. You can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</p>
      * 
      * @param request GetPlayInfoRequest
      * @return GetPlayInfoResponse
@@ -10226,7 +10270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a packaging group.</p>
+     * <p>Queries a VOD packaging group.</p>
      * 
      * @param request GetVodPackagingGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10258,7 +10302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a packaging group.</p>
+     * <p>Queries a VOD packaging group.</p>
      * 
      * @param request GetVodPackagingGroupRequest
      * @return GetVodPackagingGroupResponse
@@ -10310,6 +10354,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWorkflowTaskResponse getWorkflowTask(GetWorkflowTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkflowTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻AI应用任务</p>
+     * 
+     * @param request GetYikeAIAppJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetYikeAIAppJobResponse
+     */
+    public GetYikeAIAppJobResponse getYikeAIAppJobWithOptions(GetYikeAIAppJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetYikeAIAppJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetYikeAIAppJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻AI应用任务</p>
+     * 
+     * @param request GetYikeAIAppJobRequest
+     * @return GetYikeAIAppJobResponse
+     */
+    public GetYikeAIAppJobResponse getYikeAIAppJob(GetYikeAIAppJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getYikeAIAppJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻媒资内容信息</p>
+     * 
+     * @param request GetYikeAssetMediaInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetYikeAssetMediaInfoResponse
+     */
+    public GetYikeAssetMediaInfoResponse getYikeAssetMediaInfoWithOptions(GetYikeAssetMediaInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetYikeAssetMediaInfo"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetYikeAssetMediaInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻媒资内容信息</p>
+     * 
+     * @param request GetYikeAssetMediaInfoRequest
+     * @return GetYikeAssetMediaInfoResponse
+     */
+    public GetYikeAssetMediaInfoResponse getYikeAssetMediaInfo(GetYikeAssetMediaInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getYikeAssetMediaInfoWithOptions(request, runtime);
     }
 
     /**
@@ -10526,7 +10658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>罗列用户电话资源接口</p>
+     * <p>Lists available phone numbers.</p>
      * 
      * @param request ListAIAgentPhoneNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10570,7 +10702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>罗列用户电话资源接口</p>
+     * <p>Lists available phone numbers.</p>
      * 
      * @param request ListAIAgentPhoneNumberRequest
      * @return ListAIAgentPhoneNumberResponse
@@ -12850,7 +12982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of packaging jobs.</p>
+     * <p>Queries packaging jobs.</p>
      * 
      * @param request ListPackageJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12906,7 +13038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of packaging jobs.</p>
+     * <p>Queries packaging jobs.</p>
      * 
      * @param request ListPackageJobsRequest
      * @return ListPackageJobsResponse
@@ -14118,7 +14250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists packaging configurations.</p>
+     * <p>Lists VOD packaging configurations.</p>
      * 
      * @param request ListVodPackagingConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14166,7 +14298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists packaging configurations.</p>
+     * <p>Lists VOD packaging configurations.</p>
      * 
      * @param request ListVodPackagingConfigurationsRequest
      * @return ListVodPackagingConfigurationsResponse
@@ -14178,7 +14310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists packaging groups.</p>
+     * <p>Lists VOD packaging groups.</p>
      * 
      * @param request ListVodPackagingGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14222,7 +14354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists packaging groups.</p>
+     * <p>Lists VOD packaging groups.</p>
      * 
      * @param request ListVodPackagingGroupsRequest
      * @return ListVodPackagingGroupsResponse
@@ -14304,6 +14436,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListWorkflowTasksResponse listWorkflowTasks(ListWorkflowTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listWorkflowTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻文件夹列表</p>
+     * 
+     * @param request ListYikeAssetFoldersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListYikeAssetFoldersResponse
+     */
+    public ListYikeAssetFoldersResponse listYikeAssetFoldersWithOptions(ListYikeAssetFoldersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productionId)) {
+            query.put("ProductionId", request.productionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListYikeAssetFolders"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListYikeAssetFoldersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻文件夹列表</p>
+     * 
+     * @param request ListYikeAssetFoldersRequest
+     * @return ListYikeAssetFoldersResponse
+     */
+    public ListYikeAssetFoldersResponse listYikeAssetFolders(ListYikeAssetFoldersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listYikeAssetFoldersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻项目列表</p>
+     * 
+     * @param request ListYikeProductionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListYikeProductionsResponse
+     */
+    public ListYikeProductionsResponse listYikeProductionsWithOptions(ListYikeProductionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListYikeProductions"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListYikeProductionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻项目列表</p>
+     * 
+     * @param request ListYikeProductionsRequest
+     * @return ListYikeProductionsResponse
+     */
+    public ListYikeProductionsResponse listYikeProductions(ListYikeProductionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listYikeProductionsWithOptions(request, runtime);
     }
 
     /**
@@ -14586,7 +14826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IPC用量</p>
+     * <p>Queries the usage for the IPC service.</p>
      * 
      * @param request QueryIpcQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14634,7 +14874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IPC用量</p>
+     * <p>Queries the usage for the IPC service.</p>
      * 
      * @param request QueryIpcQuotaRequest
      * @return QueryIpcQuotaResponse
@@ -15462,6 +15702,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RegisterMediaStreamResponse registerMediaStream(RegisterMediaStreamRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.registerMediaStreamWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>注册一刻媒资</p>
+     * 
+     * @param request RegisterYikeAssetMediaInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RegisterYikeAssetMediaInfoResponse
+     */
+    public RegisterYikeAssetMediaInfoResponse registerYikeAssetMediaInfoWithOptions(RegisterYikeAssetMediaInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
+            query.put("FolderId", request.folderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputURL)) {
+            query.put("InputURL", request.inputURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productionId)) {
+            query.put("ProductionId", request.productionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RegisterYikeAssetMediaInfo"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterYikeAssetMediaInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>注册一刻媒资</p>
+     * 
+     * @param request RegisterYikeAssetMediaInfoRequest
+     * @return RegisterYikeAssetMediaInfoResponse
+     */
+    public RegisterYikeAssetMediaInfoResponse registerYikeAssetMediaInfo(RegisterYikeAssetMediaInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.registerYikeAssetMediaInfoWithOptions(request, runtime);
     }
 
     /**
@@ -16972,7 +17268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</p>
+     * <p>Initiates an outbound phone call for an AI agent.</p>
      * 
      * @param tmpReq StartAIAgentOutboundCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17034,7 +17330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</p>
+     * <p>Initiates an outbound phone call for an AI agent.</p>
      * 
      * @param request StartAIAgentOutboundCallRequest
      * @return StartAIAgentOutboundCallResponse
@@ -17206,7 +17502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启一个机器人实例</p>
+     * <p>Starts an AI agent and joins a real-time communication (RTC) call.</p>
      * 
      * @param tmpReq StartRtcRobotInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17264,7 +17560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启一个机器人实例</p>
+     * <p>Starts an AI agent and joins a real-time communication (RTC) call.</p>
      * 
      * @param request StartRtcRobotInstanceRequest
      * @return StartRtcRobotInstanceResponse
@@ -17548,7 +17844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止一个机器人实例</p>
+     * <p>Stops an AI agent for real-time communication (RTC).</p>
      * 
      * @param request StopRtcRobotInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17580,7 +17876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止一个机器人实例</p>
+     * <p>Stops an AI agent for real-time communication (RTC).</p>
      * 
      * @param request StopRtcRobotInstanceRequest
      * @return StopRtcRobotInstanceResponse
@@ -17744,7 +18040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an audio production job that converts text into an audio file.</p>
+     * <p>Converts the provided text content into a high-quality audio file.</p>
      * 
      * @param request SubmitAudioProduceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17800,7 +18096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an audio production job that converts text into an audio file.</p>
+     * <p>Converts the provided text content into a high-quality audio file.</p>
      * 
      * @param request SubmitAudioProduceJobRequest
      * @return SubmitAudioProduceJobResponse
@@ -18164,7 +18460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</p>
+     * <p>Submits a basic voice cloning job.</p>
      * 
      * @param request SubmitCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18200,7 +18496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</p>
+     * <p>Submits a basic voice cloning job.</p>
      * 
      * @param request SubmitCustomizedVoiceJobRequest
      * @return SubmitCustomizedVoiceJobResponse
@@ -20681,7 +20977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a video translation job. You can call this operation to translate subtitles in a video and audio to a specific language. Lip-sync adaptation will be supported in the future.</p>
+     * <p>Submits a video translation job. You can call this operation to translate video subtitles and speech to a specific language, and synchronize the speakers\&quot; lip movements with the translated audio.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20760,7 +21056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a video translation job. You can call this operation to translate subtitles in a video and audio to a specific language. Lip-sync adaptation will be supported in the future.</p>
+     * <p>Submits a video translation job. You can call this operation to translate video subtitles and speech to a specific language, and synchronize the speakers\&quot; lip movements with the translated audio.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @return SubmitVideoTranslationJobResponse
@@ -20768,6 +21064,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitVideoTranslationJobResponse submitVideoTranslationJob(SubmitVideoTranslationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitVideoTranslationJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交一刻AI应用任务</p>
+     * 
+     * @param request SubmitYikeAIAppJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitYikeAIAppJobResponse
+     */
+    public SubmitYikeAIAppJobResponse submitYikeAIAppJobWithOptions(SubmitYikeAIAppJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appParams)) {
+            body.put("AppParams", request.appParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
+            body.put("FolderId", request.folderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productionId)) {
+            body.put("ProductionId", request.productionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitYikeAIAppJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitYikeAIAppJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交一刻AI应用任务</p>
+     * 
+     * @param request SubmitYikeAIAppJobRequest
+     * @return SubmitYikeAIAppJobResponse
+     */
+    public SubmitYikeAIAppJobResponse submitYikeAIAppJob(SubmitYikeAIAppJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitYikeAIAppJobWithOptions(request, runtime);
     }
 
     /**
@@ -22750,7 +23102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例的配置</p>
+     * <p>Modifies an AI agent for real-time communication (RTC), such as the tone and greeting.</p>
      * 
      * @param tmpReq UpdateRtcRobotInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22792,7 +23144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例的配置</p>
+     * <p>Modifies an AI agent for real-time communication (RTC), such as the tone and greeting.</p>
      * 
      * @param request UpdateRtcRobotInstanceRequest
      * @return UpdateRtcRobotInstanceResponse
@@ -22804,7 +23156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a source in MediaWeaver.</p>
+     * <p>Modifies a source.</p>
      * 
      * @param request UpdateSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22848,7 +23200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a source in MediaWeaver.</p>
+     * <p>Modifies a source.</p>
      * 
      * @param request UpdateSourceRequest
      * @return UpdateSourceResponse

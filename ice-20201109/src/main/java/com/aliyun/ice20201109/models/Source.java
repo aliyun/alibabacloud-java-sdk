@@ -4,27 +4,79 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class Source extends TeaModel {
+    /**
+     * <p>The ARN of the source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ims:mediaweaver:<regionId>:<userId>:vodSource/mySourceLocation/mySource</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-11-07T10:12:01Z</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>The modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-11-07T10:12:01Z</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The source configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{
+     *     &quot;sourceGroupName&quot;: &quot;mySourceGroup-1&quot;,
+     *     &quot;relativePath&quot;: &quot;group1/hls.m3u8&quot;,
+     *     &quot;packageType&quot;: &quot;hls&quot;
+     * }]</p>
+     */
     @NameInMap("HttpPackageConfigurations")
     public String httpPackageConfigurations;
 
+    /**
+     * <p>The name of the source location.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySourceLocation</p>
+     */
     @NameInMap("SourceLocationName")
     public String sourceLocationName;
 
+    /**
+     * <p>The name of the source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyVodSource</p>
+     */
     @NameInMap("SourceName")
     public String sourceName;
 
+    /**
+     * <p>The source type. Valid values: vodSource and liveSource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vodSource</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>The status of the source. 0: normal. 1: deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("State")
     public Integer state;
 

@@ -81,6 +81,8 @@ public class CreateEditingProjectRequest extends TeaModel {
     public String templateType;
 
     /**
+     * <p>The timeline of the online editing project, in the JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;}]}]}</p>
      */

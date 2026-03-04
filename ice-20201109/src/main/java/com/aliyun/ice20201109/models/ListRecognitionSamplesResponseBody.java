@@ -31,9 +31,6 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The samples.</p>
-     */
     @NameInMap("Samples")
     public ListRecognitionSamplesResponseBodySamples samples;
 
@@ -95,24 +92,12 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         @NameInMap("EntityId")
         public String entityId;
 
-        /**
-         * <p>The URL of the image sample.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://example.com/sample.png">https://example.com/sample.png</a></p>
-         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
         @NameInMap("LibId")
         public String libId;
 
-        /**
-         * <p>The sample ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxxxxxxxxxxx</p>
-         */
         @NameInMap("SampleId")
         public String sampleId;
 

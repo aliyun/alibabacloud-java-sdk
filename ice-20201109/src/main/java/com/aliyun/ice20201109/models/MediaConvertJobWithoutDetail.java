@@ -4,36 +4,106 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class MediaConvertJobWithoutDetail extends TeaModel {
+    /**
+     * <p>The idempotency token provided during the task creation request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>12e8864746a0a398</strong></strong></p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The error code for a failed task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.ResourceNotFound</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The task configuration.</p>
+     */
     @NameInMap("Config")
     public MediaConvertJobWithoutDetailConfig config;
 
+    /**
+     * <p>The time the task was created, in UTC format (<em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-12-07T13:01:07Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The time the task finished processing, in UTC format (<em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-12-07T13:01:07Z</p>
+     */
     @NameInMap("FinishTime")
     public String finishTime;
 
+    /**
+     * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The reason for a task failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The resource operated &quot;%s&quot; cannot be found</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the queue on which this task was processed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>688c2a8bfa4e44ddbba0c8730db91b0c</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
+    /**
+     * <p>The ID of the API request that created this task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the task.</p>
+     * <ul>
+     * <li>Inited: The task is initialized.</li>
+     * <li>Running</li>
+     * <li>Complete</li>
+     * <li>Error</li>
+     * <li>Cancelled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Inited</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>The user-defined data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;info&quot;: &quot;xxx&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -131,15 +201,30 @@ public class MediaConvertJobWithoutDetail extends TeaModel {
     }
 
     public static class MediaConvertJobWithoutDetailConfig extends TeaModel {
+        /**
+         * <p>The input files for the task.</p>
+         */
         @NameInMap("Inputs")
         public java.util.List<MediaConvertInput> inputs;
 
+        /**
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>The output groups.</p>
+         */
         @NameInMap("OutputGroups")
         public java.util.List<MediaConvertOutputGroup> outputGroups;
 
+        /**
+         * <p>The output configurations.</p>
+         */
         @NameInMap("Outputs")
         public java.util.List<MediaConvertOutput> outputs;
 

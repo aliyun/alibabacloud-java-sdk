@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class TranspositionResult extends TeaModel {
     /**
+     * <ul>
+     * <li>The target language of the translation.</li>
+     * <li>This field is only used in translation-related scenarios.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,8 +17,10 @@ public class TranspositionResult extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <strong>example:</strong>
-     * <p>你好</p>
+     * <ul>
+     * <li>The translated text corresponding to the matched hotwords. Maximum length: 100 characters.</li>
+     * <li>This field is only used in translation-related scenarios.</li>
+     * </ul>
      */
     @NameInMap("TranslatedText")
     public String translatedText;

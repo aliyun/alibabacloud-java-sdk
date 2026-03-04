@@ -4,23 +4,50 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AIAgentRuntimeConfig extends TeaModel {
+    /**
+     * <p>The name of the agent in the ARTC channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>877ae632caae49b1afc81c2e8194ffb4</p>
+     */
     @NameInMap("AgentUserId")
     public String agentUserId;
 
+    /**
+     * <p>The authentication token for the agent to join the channel. This must be generated using your AppKey.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
+     */
     @NameInMap("AuthToken")
     public String authToken;
 
+    /**
+     * <p>The runtime parameters of the avatar call.</p>
+     */
     @NameInMap("AvatarChat3D")
     @Deprecated
     public AIAgentRuntimeConfigAvatarChat3D avatarChat3D;
 
+    /**
+     * <p>The ID of the ARTC channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70f22d5784194938a7e387052f2b3208</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>The runtime parameters of the vision call.</p>
+     */
     @NameInMap("VisionChat")
     @Deprecated
     public AIAgentRuntimeConfigVisionChat visionChat;
 
+    /**
+     * <p>The runtime parameters of the voice call.</p>
+     */
     @NameInMap("VoiceChat")
     @Deprecated
     public AIAgentRuntimeConfigVoiceChat voiceChat;
@@ -82,12 +109,30 @@ public class AIAgentRuntimeConfig extends TeaModel {
     }
 
     public static class AIAgentRuntimeConfigAvatarChat3D extends TeaModel {
+        /**
+         * <p>Required. The name of the agent in the ARTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877ae632caae49b1afc81c2e8194ffb4</p>
+         */
         @NameInMap("AgentUserId")
         public String agentUserId;
 
+        /**
+         * <p>Required. The authentication token for the agent to join the channel. This must be generated using your AppKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
+         */
         @NameInMap("AuthToken")
         public String authToken;
 
+        /**
+         * <p>Required. The ID of the ARTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70f22d5784194938a7e387052f2b3208</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
@@ -123,12 +168,30 @@ public class AIAgentRuntimeConfig extends TeaModel {
     }
 
     public static class AIAgentRuntimeConfigVisionChat extends TeaModel {
+        /**
+         * <p>Required. The name of the agent in the ARTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877ae632caae49b1afc81c2e8194ffb4</p>
+         */
         @NameInMap("AgentUserId")
         public String agentUserId;
 
+        /**
+         * <p>Required. The authentication token for the agent to join the channel. This must be generated using your AppKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
+         */
         @NameInMap("AuthToken")
         public String authToken;
 
+        /**
+         * <p>Required. The ID of the ARTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70f22d5784194938a7e387052f2b3208</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
@@ -164,12 +227,30 @@ public class AIAgentRuntimeConfig extends TeaModel {
     }
 
     public static class AIAgentRuntimeConfigVoiceChat extends TeaModel {
+        /**
+         * <p>Required. The name of the agent in the ARTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877ae632caae49b1afc81c2e8194ffb4</p>
+         */
         @NameInMap("AgentUserId")
         public String agentUserId;
 
+        /**
+         * <p>Required. The authentication token for the agent to join the channel. This must be generated using your AppKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
+         */
         @NameInMap("AuthToken")
         public String authToken;
 
+        /**
+         * <p>Required. The ID of the ARTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70f22d5784194938a7e387052f2b3208</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 

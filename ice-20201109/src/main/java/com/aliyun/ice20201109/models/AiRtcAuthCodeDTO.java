@@ -4,30 +4,68 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AiRtcAuthCodeDTO extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024-01-01 06:57:43</p>
+     */
     @NameInMap("ActivatedTime")
     public String activatedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iU1IeJech7***</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-12-23T13:33:49Z</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>device-***</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>license。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a659a06659a***</p>
+     */
     @NameInMap("License")
     public String license;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11096067***</p>
+     */
     @NameInMap("LicenseItemId")
     public String licenseItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-12-23T13:33:49Z</p>
+     */
     @NameInMap("ModificationTime")
     public String modificationTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Type")
     public Integer type;
 

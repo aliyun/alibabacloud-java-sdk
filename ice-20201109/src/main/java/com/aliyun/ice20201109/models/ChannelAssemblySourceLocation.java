@@ -4,24 +4,66 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ChannelAssemblySourceLocation extends TeaModel {
+    /**
+     * <p>The ARN of the source location.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ims:mediaweaver:<regionId>:<UserId>:sourcelocation/MySourceLocation</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <p>The base URL of the source location.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://xxxx.com">http://xxxx.com</a></p>
+     */
     @NameInMap("BaseUrl")
     public String baseUrl;
 
+    /**
+     * <p>The time when the source location was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-03-29T02:03:17Z</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>The time when the source location was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-03-29T02:03:17Z</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The segment delivery server configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://segmentdelivery.com">http://segmentdelivery.com</a></p>
+     */
     @NameInMap("SegmentDeliveryConfigurations")
     public String segmentDeliveryConfigurations;
 
+    /**
+     * <p>The name of the source location.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySourceLocation</p>
+     */
     @NameInMap("SourceLocationName")
     public String sourceLocationName;
 
+    /**
+     * <p>The status of the source location. 0: normal. 1: deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("State")
     public Integer state;
 

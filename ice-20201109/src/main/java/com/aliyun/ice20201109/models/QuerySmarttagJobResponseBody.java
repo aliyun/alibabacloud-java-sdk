@@ -28,9 +28,6 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The analysis results of the smart tagging job. The value is an array.</p>
-     */
     @NameInMap("Results")
     public QuerySmarttagJobResponseBodyResults results;
 
@@ -92,45 +89,9 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     }
 
     public static class QuerySmarttagJobResponseBodyResultsResult extends TeaModel {
-        /**
-         * <p>The details of the analysis result. The value is a JSON string. For more information about the parameters of different result types, see the &quot;Parameters of different result types&quot; section of this topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;title&quot;:&quot;example-title-****&quot;}</p>
-         */
         @NameInMap("Data")
         public String data;
 
-        /**
-         * <p>The type of the analysis result.</p>
-         * <ul>
-         * <li>The type of the analysis result based on Smart tagging V1.0. Valid values:</li>
-         * </ul>
-         * <ol>
-         * <li>TextLabel: the text tag.</li>
-         * <li>VideoLabel: the video tag.</li>
-         * <li>ASR: the original result of automatic speech recognition (ASR). By default, this type of result is not returned.</li>
-         * <li>OCR: the original result of optical character recognition (OCR). By default, this type of result is not returned.</li>
-         * <li>NLP: the natural language processing (NLP)-based result. By default, this type of result is not returned.</li>
-         * </ol>
-         * <ul>
-         * <li>The type of the analysis result based on Smart tagging V2.0. Valid values:</li>
-         * </ul>
-         * <ol>
-         * <li>CPVLabel</li>
-         * <li>Meta: the information about the video file, such as the title of the video. By default, this type of information is not returned.</li>
-         * </ol>
-         * <ul>
-         * <li>The type of the analysis result based on Smart tagging V2.0-custom. Valid values:</li>
-         * </ul>
-         * <ol>
-         * <li>CPVLabel</li>
-         * <li>Meta: the information about the video file, such as the title of the video. By default, this type of information is not returned.</li>
-         * </ol>
-         * 
-         * <strong>example:</strong>
-         * <p>Meta</p>
-         */
         @NameInMap("Type")
         public String type;
 

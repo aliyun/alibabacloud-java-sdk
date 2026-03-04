@@ -122,6 +122,15 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The timeline of the online editing job. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configurations</a>.</p>
+     * <blockquote>
+     * <p>: You must specify one of ProgectId, Timeline, and TempalteId and leave the other two parameters empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;}]}]}</p>
+     */
     @NameInMap("Timeline")
     public String timeline;
 

@@ -4,12 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class MediaConvertOutputGroup extends TeaModel {
+    /**
+     * <p>The output group configuration.</p>
+     */
     @NameInMap("GroupConfig")
     public MediaConvertOutputGroupConfig groupConfig;
 
+    /**
+     * <p>The name of the output group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hls-group</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>A list of individual output stream configurations. Each object in this array defines a specific rendition.</p>
+     */
     @NameInMap("Outputs")
     public java.util.List<MediaConvertOutputGroupOutput> outputs;
 

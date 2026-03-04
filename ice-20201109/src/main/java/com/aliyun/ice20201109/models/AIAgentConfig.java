@@ -4,21 +4,42 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AIAgentConfig extends TeaModel {
+    /**
+     * <p>Configuration for the ambient sound played during the call.</p>
+     */
     @NameInMap("AmbientSoundConfig")
     public AIAgentConfigAmbientSoundConfig ambientSoundConfig;
 
+    /**
+     * <p>The configuration for Automatic Speech Recognition (ASR).</p>
+     */
     @NameInMap("AsrConfig")
     public AIAgentConfigAsrConfig asrConfig;
 
     @NameInMap("AutoSpeechConfig")
     public AIAgentConfigAutoSpeechConfig autoSpeechConfig;
 
+    /**
+     * <p>The avatar configuration. Only effective if the workflow includes an avatar node.</p>
+     */
     @NameInMap("AvatarConfig")
     public AIAgentConfigAvatarConfig avatarConfig;
 
+    /**
+     * <p>The URL for the agent\&quot;s profile image in audio-only calls. Default value: None.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://example.com/a.jpg">http://example.com/a.jpg</a></p>
+     */
     @NameInMap("AvatarUrl")
     public String avatarUrl;
 
+    /**
+     * <p>The type of the avatar URL. Default value: None.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
+     */
     @NameInMap("AvatarUrlType")
     public String avatarUrlType;
 
@@ -29,54 +50,142 @@ public class AIAgentConfig extends TeaModel {
     @NameInMap("BackChannelingConfigs")
     public java.util.List<AIAgentConfigBackChannelingConfigs> backChannelingConfigs;
 
+    /**
+     * <p>If enabled, the system intelligently merges short, interim segments into a single sentence. Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableIntelligentSegment")
     public Boolean enableIntelligentSegment;
 
+    /**
+     * <p>Specifies whether to enable the push-to-talk mode. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnablePushToTalk")
     public Boolean enablePushToTalk;
 
+    /**
+     * <p>The parameters for experimental features. Contact support for details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ExperimentalConfig")
     public String experimentalConfig;
 
+    /**
+     * <p>Specifies whether to enable graceful shutdown. Default value: false.</p>
+     * <p>If enabled, when the agent is stopped, it will finish its current sentence before disconnecting (up to 10 seconds).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("GracefulShutdown")
     public Boolean gracefulShutdown;
 
+    /**
+     * <p>The welcome message that the agent says upon joining. Changes take effect in the next session. Default value: None.</p>
+     */
     @NameInMap("Greeting")
     public String greeting;
 
+    /**
+     * <p>The configuration for the speech interruption strategy.</p>
+     */
     @NameInMap("InterruptConfig")
     public AIAgentConfigInterruptConfig interruptConfig;
 
+    /**
+     * <p>The configuration for the large language model (LLM).</p>
+     */
     @NameInMap("LlmConfig")
     public AIAgentConfigLlmConfig llmConfig;
 
+    /**
+     * <p>The maximum time the agent will wait for interaction before it hangs up. Unit: seconds. Default value: 600.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
     @NameInMap("MaxIdleTime")
     public Integer maxIdleTime;
 
+    /**
+     * <p>The configuration for Text-to-Speech (TTS).</p>
+     */
     @NameInMap("TtsConfig")
     public AIAgentConfigTtsConfig ttsConfig;
 
+    /**
+     * <p>The configuration for detecting the end of a user\&quot;s conversational turn.</p>
+     */
     @NameInMap("TurnDetectionConfig")
     public AIAgentConfigTurnDetectionConfig turnDetectionConfig;
 
+    /**
+     * <p>The timeout period for the agent to close the task after the user has left the channel. Unit: seconds. Default value: 5.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("UserOfflineTimeout")
     public Integer userOfflineTimeout;
 
+    /**
+     * <p>The timeout period for the agent to close the task if no user joins the channel. Unit: seconds. Default value: 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("UserOnlineTimeout")
     public Integer userOnlineTimeout;
 
+    /**
+     * <p>Configuration for video content recognition. When enabled, the system sends callbacks to the client with details about content identified.</p>
+     */
     @NameInMap("VcrConfig")
     public AIAgentConfigVcrConfig vcrConfig;
 
+    /**
+     * <p>The configuration for voiceprint recognition.</p>
+     */
     @NameInMap("VoiceprintConfig")
     public AIAgentConfigVoiceprintConfig voiceprintConfig;
 
+    /**
+     * <p>The agent\&quot;s speaking volume.</p>
+     * <ul>
+     * <li>If this parameter is not specified, the adaptive volume mode is used by default.</li>
+     * <li>To specify this parameter, enter a value between 0 and 400. Output volume = Workflow output volume × Volume/100. Example:</li>
+     * </ul>
+     * <ol>
+     * <li>If Volume is set to 0, the output is muted.</li>
+     * <li>If Volume is set to 100, the output volume is the original volume.</li>
+     * <li>If Volume is set to 200, the output volume is 2 times the original volume.</li>
+     * </ol>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Volume")
     public Long volume;
 
+    /**
+     * <p>A command given to the agent before the call starts. The agent will respond to this query immediately after the call begins.</p>
+     */
     @NameInMap("WakeUpQuery")
     public String wakeUpQuery;
 
+    /**
+     * <p>The parameters to override the workflow configuration. Default value: None.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("WorkflowOverrideParams")
     public String workflowOverrideParams;
 
@@ -287,9 +396,21 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigAmbientSoundConfig extends TeaModel {
+        /**
+         * <p>The ID of the ambient sound. This ID can be obtained from the advanced settings section of the agent configuration in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f67901c595834************</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The volume of the ambient sound. Valid values: [0, 100]. A value of 0 disables the ambient sound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Volume")
         public Integer volume;
 
@@ -317,21 +438,61 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigAsrConfig extends TeaModel {
+        /**
+         * <p>Hotwords for ASR to improve recognition accuracy. Maximum of 128 hotwords.</p>
+         */
         @NameInMap("AsrHotWords")
         public java.util.List<String> asrHotWords;
 
+        /**
+         * <p>The language ID for ASR. Valid values:</p>
+         * <ul>
+         * <li>zh_mandarin: Chinese</li>
+         * <li>en: English</li>
+         * <li>zh_en: Chinese and English</li>
+         * <li>es: Spanish</li>
+         * <li>jp: Japanese</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_mandarin</p>
+         */
         @NameInMap("AsrLanguageId")
         public String asrLanguageId;
 
+        /**
+         * <p>The silence threshold for sentence segmentation. A pause longer than this value is considered a sentence break. Unit: milliseconds. Default value: 400. Valid values: 200 to 1200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
+        /**
+         * <p>Passthrough parameters for ASR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mode=fast&amp;sample=16000&amp;format=wav</p>
+         */
         @NameInMap("CustomParams")
         public String customParams;
 
+        /**
+         * <p>The minimum duration for voice activity detection, in milliseconds. This parameter controls the sensitivity of interruptions, preventing the agent from cutting off user speech too early during short pauses. 0: Disables this feature. Valid values: 200 to 2000. Recommended: 200 to 500 ms, which typically corresponds to the length of 1 to 4 words. By default, this parameter is left empty, which indicates the feature is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("VadDuration")
         public Integer vadDuration;
 
+        /**
+         * <p>The voice activity detection (VAD) threshold for interruption. A higher value makes it harder to trigger interruptions. Valid values: 0 to 10. Default value: 1. The value of 0 specifies to disable the VAD feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("VadLevel")
         public Integer vadLevel;
 
@@ -552,6 +713,12 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigAvatarConfig extends TeaModel {
+        /**
+         * <p>The model ID of the avatar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5257</p>
+         */
         @NameInMap("AvatarId")
         public String avatarId;
 
@@ -735,9 +902,18 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigInterruptConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to allow the user to interrupt the agent by speaking. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
 
+        /**
+         * <p>Words or phrases that will trigger an interruption.</p>
+         */
         @NameInMap("InterruptWords")
         public java.util.List<String> interruptWords;
 
@@ -776,9 +952,21 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigLlmConfigFunctionMap extends TeaModel {
+        /**
+         * <p>The name of the built-in agent capability. Only hangup is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangup</p>
+         */
         @NameInMap("Function")
         public String function;
 
+        /**
+         * <p>The corresponding user-defined function name in your LLM. When the LLM calls this function, it will trigger the mapped agent capability.<a href="~~2839094~~"></a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangup</p>
+         */
         @NameInMap("MatchFunction")
         public String matchFunction;
 
@@ -806,9 +994,26 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigLlmConfigLlmHistory extends TeaModel {
+        /**
+         * <p>The actual text content of the message for that role.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The role of the participant in the conversation. Valid values:</p>
+         * <ul>
+         * <li>user</li>
+         * <li>assistant</li>
+         * <li>system</li>
+         * <li>function</li>
+         * <li>plugin</li>
+         * <li>tool</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("Role")
         public String role;
 
@@ -836,33 +1041,75 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigLlmConfig extends TeaModel {
+        /**
+         * <p>Alibaba Cloud Model Studio Application Center parameters in a JSON format. Reference: <a href="https://help.aliyun.com/document_detail/2858132.html">Model Studio Application Center Parameter</a></p>
+         */
         @NameInMap("BailianAppParams")
         public String bailianAppParams;
 
+        /**
+         * <p>Maps agent capabilities to LLM functions. Only supports function calling with custom LLMs that adhere to the OpenAI protocol.</p>
+         */
         @NameInMap("FunctionMap")
         public java.util.List<AIAgentConfigLlmConfigFunctionMap> functionMap;
 
         @NameInMap("HistorySyncWithTTS")
         public Boolean historySyncWithTTS;
 
+        /**
+         * <p>If true, the service sends the complete result from the LLM to the client in a single response after the generation process is finished.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("LlmCompleteReply")
         public Boolean llmCompleteReply;
 
+        /**
+         * <p>The LLM/MLLM conversation history context.</p>
+         */
         @NameInMap("LlmHistory")
         public java.util.List<AIAgentConfigLlmConfigLlmHistory> llmHistory;
 
+        /**
+         * <p>The maximum number of conversational turns to retain in the history. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("LlmHistoryLimit")
         public Integer llmHistoryLimit;
 
+        /**
+         * <p>The system prompt for the LLM.</p>
+         */
         @NameInMap("LlmSystemPrompt")
         public String llmSystemPrompt;
 
+        /**
+         * <p>Additional query parameters to be sent to the OpenAI-protocol LLM, formatted as a URL query string (key=value pairs separated by &amp;). All values must be strings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-version=2024-02-01&amp;api-key=sk-xxx</p>
+         */
         @NameInMap("OpenAIExtraQuery")
         public String openAIExtraQuery;
 
+        /**
+         * <p>The maximum time (in milliseconds) to buffer text before it is forcibly sent to the client. Valid values: [1000,10000]. A value of 0 or an empty string (default) disables this limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("OutputMaxDelay")
         public Integer outputMaxDelay;
 
+        /**
+         * <p>The minimum number of characters that must be buffered before a text chunk is sent. Valid values: [0, 100]. A value of 0 or an empty string (default) disables this limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("OutputMinLength")
         public Integer outputMinLength;
 
@@ -954,12 +1201,27 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigTtsConfigPronunciationRules extends TeaModel {
+        /**
+         * <p>The target pronunciation. The value supports up to 10 Chinese characters. Other characters, including spaces, are not supported.</p>
+         */
         @NameInMap("Pronunciation")
         public String pronunciation;
 
+        /**
+         * <p>The type of rule. Valid value:</p>
+         * <ul>
+         * <li>replacement: replaces every occurrence of Word value with Pronunciation value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>replacement</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The word to be replaced. The value supports up to 10 Chinese characters. Other characters, including spaces, are not supported.</p>
+         */
         @NameInMap("Word")
         public String word;
 
@@ -995,24 +1257,97 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigTtsConfig extends TeaModel {
+        /**
+         * <p>Applies only to MiniMax models. Seven types of emotions are supported:</p>
+         * <ul>
+         * <li>happy</li>
+         * <li>sad</li>
+         * <li>angry</li>
+         * <li>fearful</li>
+         * <li>disgusted</li>
+         * <li>surprised</li>
+         * <li>calm</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>happy</p>
+         */
         @NameInMap("Emotion")
         public String emotion;
 
+        /**
+         * <p>Applies only to MiniMax models. By default, this parameter is left empty. This enhances speech recognition accuracy for specific languages and dialects. If the language type is unknown, set it to auto to have the model automatically detect it. Valid values:</p>
+         * <p><strong>Supported languages</strong></p>
+         * <ul>
+         * <li>Chinese</li>
+         * <li>Chinese,Yue</li>
+         * <li>English</li>
+         * <li>Arabic</li>
+         * <li>Russian</li>
+         * <li>Spanish</li>
+         * <li>French</li>
+         * <li>Portuguese</li>
+         * <li>German</li>
+         * <li>Turkish</li>
+         * <li>Dutch</li>
+         * <li>Ukrainian</li>
+         * <li>Vietnamese</li>
+         * <li>Indonesian</li>
+         * <li>Japanese</li>
+         * <li>Italian</li>
+         * <li>Korean</li>
+         * <li>Thai</li>
+         * <li>Polish</li>
+         * <li>Romanian</li>
+         * <li>Greek</li>
+         * <li>Czech</li>
+         * <li>Finnish</li>
+         * <li>Hindi</li>
+         * <li>auto</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Chinese</p>
+         */
         @NameInMap("LanguageId")
         public String languageId;
 
+        /**
+         * <p>Applies only to MiniMax models. Valid values: speech-01-turbo and speech-02-turbo</p>
+         * 
+         * <strong>example:</strong>
+         * <p>speech-01-turbo</p>
+         */
         @NameInMap("ModelId")
         public String modelId;
 
+        /**
+         * <p>The pronunciation rules, executed in order. Maximum of 20 rules.</p>
+         */
         @NameInMap("PronunciationRules")
         public java.util.List<AIAgentConfigTtsConfigPronunciationRules> pronunciationRules;
 
+        /**
+         * <p>Supports all platforms. For CosyVoice, the default value is 1.0. Valid values: 0.5 to 2.0. For MiniMax, the default value is 1.0. Valid values: 0.5 to 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("SpeechRate")
         public Double speechRate;
 
+        /**
+         * <p>The voice ID. Changes take effect on the next sentence. If not set, the system uses the default voice ID specified in the agent template. This parameter takes effect only for the preset TTS model. Max length: 64 characters. Refer to <a href="https://help.aliyun.com/document_detail/449563.html">Intelligent voice samples</a> for options.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>longcheng_v2</p>
+         */
         @NameInMap("VoiceId")
         public String voiceId;
 
+        /**
+         * <p>Available voices.</p>
+         */
         @NameInMap("VoiceIdList")
         public java.util.List<String> voiceIdList;
 
@@ -1083,12 +1418,38 @@ public class AIAgentConfig extends TeaModel {
         @NameInMap("Eagerness")
         public String eagerness;
 
+        /**
+         * <p>The mode of turn detection.</p>
+         * <ul>
+         * <li>Normal: uses simple pause detection.</li>
+         * <li>Semantic: uses AI to analyze context.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Semantic</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>Specifies how long to wait after a user stops speaking for the agent to decide if the turn is over. Unit: milliseconds. Default value: -1.</p>
+         * <ul>
+         * <li>\-1: AI decides an appropriate wait time automatically.</li>
+         * <li>0 to 10000: A custom wait time. Recommended: 0 to 1500 ms.</li>
+         * </ul>
+         * <blockquote>
+         * <p> In Normal mode, this field is ignored.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("SemanticWaitDuration")
         public Integer semanticWaitDuration;
 
+        /**
+         * <p>Keywords that signify the end of the user\&quot;s turn.</p>
+         */
         @NameInMap("TurnEndWords")
         public java.util.List<String> turnEndWords;
 
@@ -1132,6 +1493,12 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigVcrConfigEquipment extends TeaModel {
+        /**
+         * <p>Enables or disables device identification. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -1151,6 +1518,12 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigVcrConfigHeadMotion extends TeaModel {
+        /**
+         * <p>Enables or disables head motion detection. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -1170,9 +1543,21 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigVcrConfigInvalidFrameMotion extends TeaModel {
+        /**
+         * <p>The delay in milliseconds before an invalid frame detection event is triggered. The callback is sent only after the frame has been considered invalid for this duration. If not set, the value from the console configuration is used. Valid values: [200, 5000].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("CallbackDelay")
         public Integer callbackDelay;
 
+        /**
+         * <p>Enables or disables invalid frame detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -1200,6 +1585,12 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigVcrConfigLookAway extends TeaModel {
+        /**
+         * <p>Enables or disables this feature. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -1219,6 +1610,12 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigVcrConfigPeopleCount extends TeaModel {
+        /**
+         * <p>Enables or disables the feature. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -1238,9 +1635,21 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigVcrConfigStillFrameMotion extends TeaModel {
+        /**
+         * <p>The delay in milliseconds before a still frame detection event is triggered. The callback is sent only after the video has been static for this duration. If not set, the value from the console configuration is used. Valid values: [200,5000].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("CallbackDelay")
         public Integer callbackDelay;
 
+        /**
+         * <p>Enables or disables still frame detection. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -1268,21 +1677,39 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigVcrConfig extends TeaModel {
+        /**
+         * <p>Configuration for device identification.</p>
+         */
         @NameInMap("Equipment")
         public AIAgentConfigVcrConfigEquipment equipment;
 
+        /**
+         * <p>Configuration for head motion detection.</p>
+         */
         @NameInMap("HeadMotion")
         public AIAgentConfigVcrConfigHeadMotion headMotion;
 
+        /**
+         * <p>Configuration for detecting invalid frames.</p>
+         */
         @NameInMap("InvalidFrameMotion")
         public AIAgentConfigVcrConfigInvalidFrameMotion invalidFrameMotion;
 
+        /**
+         * <p>Configuration for detecting if the user is looking away from the screen.</p>
+         */
         @NameInMap("LookAway")
         public AIAgentConfigVcrConfigLookAway lookAway;
 
+        /**
+         * <p>Configuration for the people counting feature.</p>
+         */
         @NameInMap("PeopleCount")
         public AIAgentConfigVcrConfigPeopleCount peopleCount;
 
+        /**
+         * <p>Configuration for detecting still frames.</p>
+         */
         @NameInMap("StillFrameMotion")
         public AIAgentConfigVcrConfigStillFrameMotion stillFrameMotion;
 
@@ -1345,9 +1772,21 @@ public class AIAgentConfig extends TeaModel {
         @NameInMap("RegistrationMode")
         public String registrationMode;
 
+        /**
+         * <p>Specifies whether to enable voiceprint recognition. Default value: false. You must specify a valid voiceprint ID when you enable voiceprint recognition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UseVoiceprint")
         public Boolean useVoiceprint;
 
+        /**
+         * <p>The unique ID of the voiceprint. Default value: None.<a href="~~2964738~~"></a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhixiaoxia</p>
+         */
         @NameInMap("VoiceprintId")
         public String voiceprintId;
 

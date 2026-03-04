@@ -4,39 +4,108 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class Channel extends TeaModel {
+    /**
+     * <p>Specifies whether to enable access control.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AccessPolicy")
     public Boolean accessPolicy;
 
+    /**
+     * <p>The token for accessing the channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
+     */
     @NameInMap("AccessToken")
     public String accessToken;
 
+    /**
+     * <p>The ARN of the channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ims:mediaweaver:<regionId>:<userId>:channel/myChannel</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <p>The name of the channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyChannel</p>
+     */
     @NameInMap("ChannelName")
     public String channelName;
 
+    /**
+     * <p>The tier of the channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>basic</p>
+     */
     @NameInMap("ChannelTier")
     public String channelTier;
 
+    /**
+     * <p>The source location of the filler slate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySourceLocation</p>
+     */
     @NameInMap("FillerSourceLocationName")
     public String fillerSourceLocationName;
 
+    /**
+     * <p>The source name of the filler slate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySource</p>
+     */
     @NameInMap("FillerSourceName")
     public String fillerSourceName;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-01-15T03:44:16Z</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>The modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-09-01T10:09Z</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The output configurations.</p>
+     */
     @NameInMap("OutPutConfigList")
     public java.util.List<ChannelOutPutConfigList> outPutConfigList;
 
+    /**
+     * <p>The playback mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>loop</p>
+     */
     @NameInMap("PlaybackMode")
     public String playbackMode;
 
+    /**
+     * <p>The state of the channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("State")
     public Integer state;
 
@@ -142,21 +211,57 @@ public class Channel extends TeaModel {
     }
 
     public static class ChannelOutPutConfigList extends TeaModel {
+        /**
+         * <p>The name of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyChannel</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
+        /**
+         * <p>The format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hls</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The manifest name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index1</p>
+         */
         @NameInMap("ManifestName")
         public String manifestName;
 
+        /**
+         * <p>The manifest settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;WindowDuration&quot;: 60,&quot;AdMarkType&quot;:&quot;Daterange&quot;}</p>
+         */
         @NameInMap("ManifestSettings")
         public String manifestSettings;
 
+        /**
+         * <p>The playback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxx.com/xxx.m3u8">https://xxxxx.com/xxx.m3u8</a></p>
+         */
         @NameInMap("PlaybackUrl")
         public String playbackUrl;
 
+        /**
+         * <p>The name of the source group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
+         */
         @NameInMap("SourceGroupName")
         public String sourceGroupName;
 

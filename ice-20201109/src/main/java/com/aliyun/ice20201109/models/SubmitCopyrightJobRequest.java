@@ -181,13 +181,28 @@ public class SubmitCopyrightJobRequest extends TeaModel {
 
     public static class SubmitCopyrightJobRequestInput extends TeaModel {
         /**
+         * <p>The URL of the source file. You can specify the path of an OSS object in one of the following formats:</p>
+         * <p>1\. oss://bucket/object</p>
+         * <p>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+         * <p>where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/object</p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
+         * <p>The type of the source file. Valid values:</p>
+         * <ol>
+         * <li>OSS: an OSS object.</li>
+         * <li>Media: a media asset.</li>
+         * </ol>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -217,13 +232,26 @@ public class SubmitCopyrightJobRequest extends TeaModel {
 
     public static class SubmitCopyrightJobRequestOutput extends TeaModel {
         /**
+         * <p>The OSS path where the output file is saved. You can specify the path in one of the following formats:</p>
+         * <p>1\. oss://bucket/object</p>
+         * <p>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/output.mp4</p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
+         * <p>The type of the output file. Valid value:</p>
+         * <ol>
+         * <li>OSS: an OSS object.</li>
+         * </ol>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("Type")
         public String type;

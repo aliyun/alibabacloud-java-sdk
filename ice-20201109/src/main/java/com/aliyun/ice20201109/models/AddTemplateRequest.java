@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class AddTemplateRequest extends TeaModel {
     /**
+     * <ul>
+     * <li>The template configurations. The Config object of a regular template is encapsulated based on the Timeline object of an online editing project. The Config object of a custom template provides more flexible features. If you have special requirements, we recommend that you understand the structure of a Config object and configure a custom template. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</li>
+     * <li>For more information about Config object examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Basic template configurations</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>参见Timeline模板Config文档</p>
      */

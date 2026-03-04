@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class MediaConvertJobOverwiteParams extends TeaModel {
+    /**
+     * <p>Subtitle stream configurations.</p>
+     */
     @NameInMap("Subtitles")
     public java.util.List<MediaConvertJobOverwiteParamsSubtitles> subtitles;
 
@@ -21,6 +24,12 @@ public class MediaConvertJobOverwiteParams extends TeaModel {
     }
 
     public static class MediaConvertJobOverwiteParamsSubtitles extends TeaModel {
+        /**
+         * <p>The encoding format for the subtitle stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VTT</p>
+         */
         @NameInMap("Codec")
         public String codec;
 

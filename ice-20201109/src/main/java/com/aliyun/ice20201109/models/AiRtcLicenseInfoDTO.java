@@ -4,39 +4,119 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AiRtcLicenseInfoDTO extends TeaModel {
+    /**
+     * <p>The remaining usage capacity of the batch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000000</p>
+     */
     @NameInMap("AvailableCapacity")
     public Long availableCapacity;
 
+    /**
+     * <p>The time when the batch became active.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-12-23T13:33:49Z</p>
+     */
     @NameInMap("BeginOn")
     public String beginOn;
 
+    /**
+     * <p>The contract number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>258396267390***</p>
+     */
     @NameInMap("ContractNo")
     public String contractNo;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-12-23T13:33:49Z</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The expiration time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-23T13:33:49Z</p>
+     */
     @NameInMap("ExpiredOn")
     public String expiredOn;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ice_CoverAILicense_public_cn***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The total number of licenses contained within this batch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("LicenseCount")
     public Long licenseCount;
 
+    /**
+     * <p>The ID of the batch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17712***</p>
+     */
     @NameInMap("LicenseItemId")
     public String licenseItemId;
 
+    /**
+     * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-12-23T13:33:49Z</p>
+     */
     @NameInMap("ModificationTime")
     public String modificationTime;
 
+    /**
+     * <p>The status of the batch. Valid values:</p>
+     * <ul>
+     * <li>1: Active</li>
+     * <li>2\. Expired</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The license type. Valid values:</p>
+     * <ul>
+     * <li>1: Audio call</li>
+     * <li>2: Vision call</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
+    /**
+     * <p>The validity period of the licenses in this batch, in days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365</p>
+     */
     @NameInMap("ValidDays")
     public Long validDays;
 

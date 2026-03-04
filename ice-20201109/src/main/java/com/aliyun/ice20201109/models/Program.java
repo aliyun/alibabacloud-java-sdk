@@ -4,36 +4,99 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class Program extends TeaModel {
+    /**
+     * <p>The ad breaks.</p>
+     */
     @NameInMap("AdBreaks")
     public java.util.List<ProgramAdBreaks> adBreaks;
 
+    /**
+     * <p>The ARN of the program.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ims:mediaweaver:<regionId>:<userId>:program/myChannel/MyProgram</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <p>The name of the channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyChannel</p>
+     */
     @NameInMap("ChannelName")
     public String channelName;
 
+    /**
+     * <p>The information about the clip.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{StartOffsetMillis: 213123, EndOffsetMillis: 213134}</p>
+     */
     @NameInMap("ClipRange")
     public String clipRange;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-04-02T00:58:19Z</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>The modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-04-02T00:58:19Z</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The name of the program.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>program1</p>
+     */
     @NameInMap("ProgramName")
     public String programName;
 
+    /**
+     * <p>The name of the source location.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySourceLocation</p>
+     */
     @NameInMap("SourceLocationName")
     public String sourceLocationName;
 
+    /**
+     * <p>The name of the source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySource</p>
+     */
     @NameInMap("SourceName")
     public String sourceName;
 
+    /**
+     * <p>The source type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vodSource</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>The program transition method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Type&quot;: &quot;RELATIVE&quot;, &quot;RelativePosition&quot;: &quot;AFTER_PROGRAM&quot;, &quot;RelativeProgram&quot;: &quot;program2&quot;}</p>
+     */
     @NameInMap("Transition")
     public String transition;
 
@@ -131,27 +194,75 @@ public class Program extends TeaModel {
     }
 
     public static class ProgramAdBreaks extends TeaModel {
+        /**
+         * <p>The name of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyChannel</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
+        /**
+         * <p>MessageType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPLICE_INSERT</p>
+         */
         @NameInMap("MessageType")
         public String messageType;
 
+        /**
+         * <p>The offset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("OffsetMillis")
         public Long offsetMillis;
 
+        /**
+         * <p>The name of the program.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>program_name</p>
+         */
         @NameInMap("ProgramName")
         public String programName;
 
+        /**
+         * <p>The name of the source location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLocation</p>
+         */
         @NameInMap("SourceLocationName")
         public String sourceLocationName;
 
+        /**
+         * <p>The name of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyAdSource</p>
+         */
         @NameInMap("SourceName")
         public String sourceName;
 
+        /**
+         * <p>The SpliceInsert configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AvailNumber&quot;:0,&quot;AvailExpected&quot;:0,&quot;SpliceEventID&quot;:1,&quot;UniqueProgramID&quot;:0}</p>
+         */
         @NameInMap("SpliceInsertSettings")
         public String spliceInsertSettings;
 
+        /**
+         * <p>The TimeSignal configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;segmentationEventID&quot;:0,&quot;segmentationUPIDType&quot;:14,&quot;segmentationUPID&quot;:&quot;upid&quot;,&quot;segmentationTypeID&quot;:48,&quot;segmentNumber&quot;:0,&quot;segmentsExpected&quot;:0,&quot;subSegmentNumber&quot;:1,&quot;subSegmentsExpected&quot;:0}</p>
+         */
         @NameInMap("TimeSignalSettings")
         public String timeSignalSettings;
 

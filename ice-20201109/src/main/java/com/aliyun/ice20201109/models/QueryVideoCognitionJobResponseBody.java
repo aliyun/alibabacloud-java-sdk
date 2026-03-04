@@ -28,9 +28,6 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array of analysis result objects.</p>
-     */
     @NameInMap("Results")
     public QueryVideoCognitionJobResponseBodyResults results;
 
@@ -81,29 +78,9 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     }
 
     public static class QueryVideoCognitionJobResponseBodyResultsResult extends TeaModel {
-        /**
-         * <p>A JSON string containing the detailed analysis data. The structure of this data depends on the Type field. For details, see the Result parameters section below.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;title&quot;:&quot;example-title-****&quot;}</p>
-         */
         @NameInMap("Data")
         public String data;
 
-        /**
-         * <p>The type of analysis result. Valid values:</p>
-         * <ol>
-         * <li>TextLabel: Tags from text content.</li>
-         * <li>VideoLabel: Tags from video content.</li>
-         * <li>ASR: Raw speech recognition results. Not returned by default.</li>
-         * <li>OCR: Raw text recognition results. Not returned by default.</li>
-         * <li>NLP: Natural Language Processing results. Not returned by default.</li>
-         * <li>Process: URL to the raw algorithm output. Not returned by default.</li>
-         * </ol>
-         * 
-         * <strong>example:</strong>
-         * <p>ASR</p>
-         */
         @NameInMap("Type")
         public String type;
 

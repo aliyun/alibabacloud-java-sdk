@@ -4,9 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListRecognitionEntitiesResponseBody extends TeaModel {
-    /**
-     * <p>The entities.</p>
-     */
     @NameInMap("Entities")
     public ListRecognitionEntitiesResponseBodyEntities entities;
 
@@ -92,27 +89,12 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
     }
 
     public static class ListRecognitionEntitiesResponseBodyEntitiesEntity extends TeaModel {
-        /**
-         * <p>The ID of the entity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>**<strong><strong><strong><strong><strong><strong>544cb84754</strong></strong></strong></strong></strong></strong></p>
-         */
         @NameInMap("EntityId")
         public String entityId;
 
-        /**
-         * <p>The additional information of the entity, in JSON format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("EntityInfo")
         public String entityInfo;
 
-        /**
-         * <p>The name of the entity.</p>
-         */
         @NameInMap("EntityName")
         public String entityName;
 

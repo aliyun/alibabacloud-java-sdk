@@ -4,9 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class MediaConvertInput extends TeaModel {
+    /**
+     * <p>The input file.</p>
+     */
     @NameInMap("InputFile")
     public MediaObject inputFile;
 
+    /**
+     * <p>The name of the input file. If Output contains InputRef, use this name to reference the input file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InputVideo</p>
+     */
     @NameInMap("Name")
     public String name;
 

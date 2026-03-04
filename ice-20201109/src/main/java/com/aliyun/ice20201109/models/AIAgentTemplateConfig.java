@@ -4,12 +4,21 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AIAgentTemplateConfig extends TeaModel {
+    /**
+     * <p>The parameters of the 3D avatar.</p>
+     */
     @NameInMap("AvatarChat3D")
     public AIAgentTemplateConfigAvatarChat3D avatarChat3D;
 
+    /**
+     * <p>The parameters of the visual intelligent agent.</p>
+     */
     @NameInMap("VisionChat")
     public AIAgentTemplateConfigVisionChat visionChat;
 
+    /**
+     * <p>The voice call parameters.</p>
+     */
     @NameInMap("VoiceChat")
     public AIAgentTemplateConfigVoiceChat voiceChat;
 
@@ -46,6 +55,10 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("Role")
         public String role;
 
@@ -79,30 +92,76 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("AsrLanguageId")
         public String asrLanguageId;
 
+        /**
+         * <p>The threshold used to determine the end of a sentence. If the duration of silence exceeds this threshold, the system determines that a sentence ends. Unit: milliseconds. Default value: 400. Valid values: 200 to 1200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
+        /**
+         * <p>The ID of the avatar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231</p>
+         */
         @NameInMap("AvatarId")
         public String avatarId;
 
+        /**
+         * <p>The parameters of the application center of Alibaba Cloud Model Studio. For more information about the parameter format, see <a href="https://help.aliyun.com/document_detail/2858132.html">Parameters of the application center of Alibaba Cloud Model Studio</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("BailianAppParams")
         public String bailianAppParams;
 
         @NameInMap("CharBreak")
         public Boolean charBreak;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableIntelligentSegment")
         public Boolean enableIntelligentSegment;
 
+        /**
+         * <p>Specifies whether to enable the intercom mode. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnablePushToTalk")
         public Boolean enablePushToTalk;
 
+        /**
+         * <p>Specifies whether the intelligent agent can be interrupted by voice. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
 
+        /**
+         * <p>Specifies whether the intelligent agent supports graceful shutdown. Default value: false.</p>
+         * <ul>
+         * <li>Graceful shutdown: When the intelligent agent is stopped, it completes its current sentence before stopping. However, the intelligent agent can speak for 10 seconds at most.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("GracefulShutdown")
         public Boolean gracefulShutdown;
 
+        /**
+         * <p>The greetings spoken by the intelligent agent when it joins the meeting. If you do not specify this parameter, the system uses the default greetings specified in the template of the intelligent agent. The greetings can be up to 128 characters in length.</p>
+         */
         @NameInMap("Greeting")
         public String greeting;
 
@@ -112,42 +171,99 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("LlmHistory")
         public java.util.List<AIAgentTemplateConfigAvatarChat3DLlmHistory> llmHistory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("LlmHistoryLimit")
         public Integer llmHistoryLimit;
 
         @NameInMap("LlmSystemPrompt")
         public String llmSystemPrompt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("MaxIdleTime")
         public Integer maxIdleTime;
 
+        /**
+         * <p>Specifies whether to enable voiceprint recognition. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UseVoiceprint")
         public Boolean useVoiceprint;
 
+        /**
+         * <p>The timeout period after the user leaves the meeting. Unit: seconds. Default value: 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("UserOfflineTimeout")
         public Integer userOfflineTimeout;
 
+        /**
+         * <p>The timeout period before the user joins the meeting. Unit: seconds. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("UserOnlineTimeout")
         public Integer userOnlineTimeout;
 
         @NameInMap("VadLevel")
         public Integer vadLevel;
 
+        /**
+         * <p>The voice ID of the intelligent agent. The modification takes effect in the next sentence. If you do not specify this parameter, the system uses the default voice ID specified in the template of the intelligent agent. This parameter takes effect only for the preset TTS model. The ID can be up to 64 characters in length. For more information about the available voices, visit <a href="url">https://help.aliyun.com/zh/ims/developer-reference/smart-voice-effect-example</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhixiaoxia</p>
+         */
         @NameInMap("VoiceId")
         public String voiceId;
 
         @NameInMap("VoiceIdList")
         public java.util.List<String> voiceIdList;
 
+        /**
+         * <p>The unique ID of the voiceprint. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uniqueId</p>
+         */
         @NameInMap("VoiceprintId")
         public String voiceprintId;
 
+        /**
+         * <p>The speech volume of the intelligent agent.</p>
+         * <ul>
+         * <li>If this parameter is not specified, the adaptive volume mode recommended by Alibaba Cloud is used by default.</li>
+         * <li>To specify this parameter, enter a value between 0 and 400. The output volume is calculated by using the following formula: Output volume = Voice output volume specified in the workflow × Volume/100. Example:</li>
+         * </ul>
+         * <ol>
+         * <li>If Volume is set to 0, the output volume is 0.</li>
+         * <li>If Volume is set to 100, the output volume is the voice output volume specified in the workflow.</li>
+         * <li>If Volume is set to 200, the output volume is twice the voice output volume specified in the workflow.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Volume")
         public Long volume;
 
         @NameInMap("WakeUpQuery")
         public String wakeUpQuery;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("WorkflowOverrideParams")
         public String workflowOverrideParams;
 
@@ -370,6 +486,10 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("Role")
         public String role;
 
@@ -403,27 +523,70 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("AsrLanguageId")
         public String asrLanguageId;
 
+        /**
+         * <p>The threshold used to determine the end of a sentence. If the duration of silence exceeds this threshold, the system determines that a sentence ends. Unit: milliseconds. Default value: 400. Valid values: 200 to 1200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
+        /**
+         * <p>The parameters of the application center of Alibaba Cloud Model Studio. For more information about the parameter format, see <a href="https://help.aliyun.com/document_detail/2858132.html">Parameters of the application center of Alibaba Cloud Model Studio</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("BailianAppParams")
         public String bailianAppParams;
 
         @NameInMap("CharBreak")
         public Boolean charBreak;
 
+        /**
+         * <p>Specifies whether to enable intelligent sentence segmentation. This feature intelligently combines the segments of a speech into a single sentence if brief pauses occur when users are speaking. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableIntelligentSegment")
         public Boolean enableIntelligentSegment;
 
+        /**
+         * <p>Specifies whether to enable the intercom mode. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnablePushToTalk")
         public Boolean enablePushToTalk;
 
+        /**
+         * <p>Specifies whether the intelligent agent can be interrupted by voice. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
 
+        /**
+         * <p>Specifies whether the intelligent agent supports graceful shutdown. Default value: false.</p>
+         * <p>Graceful shutdown: When the intelligent agent is stopped, it completes its current sentence before stopping. However, the intelligent agent can speak for 10 seconds at most.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("GracefulShutdown")
         public Boolean gracefulShutdown;
 
+        /**
+         * <p>The greetings spoken by the intelligent agent when it joins the meeting. If you do not specify this parameter, the system uses the default greetings specified in the template of the intelligent agent. The value can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Good morning, my friend!</p>
+         */
         @NameInMap("Greeting")
         public String greeting;
 
@@ -433,42 +596,95 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("LlmHistory")
         public java.util.List<AIAgentTemplateConfigVisionChatLlmHistory> llmHistory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("LlmHistoryLimit")
         public Integer llmHistoryLimit;
 
         @NameInMap("LlmSystemPrompt")
         public String llmSystemPrompt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("MaxIdleTime")
         public Integer maxIdleTime;
 
+        /**
+         * <p>Specifies whether to enable voiceprint recognition. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UseVoiceprint")
         public Boolean useVoiceprint;
 
+        /**
+         * <p>The timeout period after the user leaves the meeting. Unit: seconds. Default value: 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("UserOfflineTimeout")
         public Integer userOfflineTimeout;
 
+        /**
+         * <p>The timeout period before the user joins the meeting. Unit: seconds. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("UserOnlineTimeout")
         public Integer userOnlineTimeout;
 
         @NameInMap("VadLevel")
         public Integer vadLevel;
 
+        /**
+         * <p>The voice ID of the intelligent agent. The modification takes effect in the next sentence. If you do not specify this parameter, the system uses the default voice ID specified in the template of the intelligent agent. This parameter takes effect only for the preset TTS model. The ID can be up to 64 characters in length. For more information about the available voices, visit <a href="url">https://help.aliyun.com/zh/ims/developer-reference/smart-voice-effect-example</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhixiaoxia</p>
+         */
         @NameInMap("VoiceId")
         public String voiceId;
 
         @NameInMap("VoiceIdList")
         public java.util.List<String> voiceIdList;
 
+        /**
+         * <p>The unique ID of the voiceprint. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uniqueId</p>
+         */
         @NameInMap("VoiceprintId")
         public String voiceprintId;
 
+        /**
+         * <p>The speech volume of the intelligent agent.</p>
+         * <p>If this parameter is not specified, the adaptive volume mode recommended by Alibaba Cloud is used by default.</p>
+         * <p>To specify this parameter, enter a value between 0 and 400. The output volume is calculated by using the following formula: Output volume = Voice output volume specified in the workflow × Volume/100. Example:</p>
+         * <p>If Volume is set to 0, the output volume is 0.</p>
+         * <p>If Volume is set to 100, the output volume is the voice output volume specified in the workflow.</p>
+         * <p>If Volume is set to 200, the output volume is twice the voice output volume specified in the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Volume")
         public Long volume;
 
         @NameInMap("WakeUpQuery")
         public String wakeUpQuery;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("WorkflowOverrideParams")
         public String workflowOverrideParams;
 
@@ -683,6 +899,10 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("Role")
         public String role;
 
@@ -716,33 +936,81 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("AsrLanguageId")
         public String asrLanguageId;
 
+        /**
+         * <p>The threshold used to determine the end of a sentence. If the duration of silence exceeds this threshold, the system determines that a sentence ends. Unit: milliseconds. Default value: 400. Valid values: 200 to 1200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/a.jpg">http://example.com/a.jpg</a></p>
+         */
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>USER</p>
+         */
         @NameInMap("AvatarUrlType")
         public String avatarUrlType;
 
+        /**
+         * <p>The parameters of the application center of Alibaba Cloud Model Studio. For more information about the parameter format, see <a href="https://help.aliyun.com/document_detail/2858132.html">Parameters of the application center of Alibaba Cloud Model Studio</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("BailianAppParams")
         public String bailianAppParams;
 
         @NameInMap("CharBreak")
         public Boolean charBreak;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableIntelligentSegment")
         public Boolean enableIntelligentSegment;
 
+        /**
+         * <p>Specifies whether to enable the intercom mode. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnablePushToTalk")
         public Boolean enablePushToTalk;
 
+        /**
+         * <p>Specifies whether the intelligent agent can be interrupted by voice. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
 
+        /**
+         * <p>Specifies whether the intelligent agent supports graceful shutdown. Default value: false.</p>
+         * <ul>
+         * <li>Graceful shutdown: When the intelligent agent is stopped, it completes its current sentence before stopping. However, the intelligent agent can speak for 10 seconds at most.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("GracefulShutdown")
         public Boolean gracefulShutdown;
 
+        /**
+         * <p>The greetings spoken by the intelligent agent when it joins the meeting. If you do not specify this parameter, the system uses the default greetings specified in the template of the intelligent agent. The value can be up to 128 characters in length.</p>
+         */
         @NameInMap("Greeting")
         public String greeting;
 
@@ -752,42 +1020,99 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("LlmHistory")
         public java.util.List<AIAgentTemplateConfigVoiceChatLlmHistory> llmHistory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("LlmHistoryLimit")
         public Integer llmHistoryLimit;
 
         @NameInMap("LlmSystemPrompt")
         public String llmSystemPrompt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("MaxIdleTime")
         public Integer maxIdleTime;
 
+        /**
+         * <p>Specifies whether to enable voiceprint recognition. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UseVoiceprint")
         public Boolean useVoiceprint;
 
+        /**
+         * <p>The timeout period after the user leaves the meeting. Unit: seconds. Default value: 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("UserOfflineTimeout")
         public Integer userOfflineTimeout;
 
+        /**
+         * <p>The timeout period before the user joins the meeting. Unit: seconds. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("UserOnlineTimeout")
         public Integer userOnlineTimeout;
 
         @NameInMap("VadLevel")
         public Integer vadLevel;
 
+        /**
+         * <p>The voice ID of the intelligent agent. The modification takes effect in the next sentence. If you do not specify this parameter, the system uses the default voice ID specified in the template of the intelligent agent. This parameter takes effect only for the preset TTS model. The ID can be up to 64 characters in length. For more information about the available voices, visit <a href="url">https://help.aliyun.com/zh/ims/developer-reference/smart-voice-effect-example</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhixiaoxia</p>
+         */
         @NameInMap("VoiceId")
         public String voiceId;
 
         @NameInMap("VoiceIdList")
         public java.util.List<String> voiceIdList;
 
+        /**
+         * <p>The unique ID of the voiceprint. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uniqueId</p>
+         */
         @NameInMap("VoiceprintId")
         public String voiceprintId;
 
+        /**
+         * <p>The speech volume of the intelligent agent.</p>
+         * <ul>
+         * <li>If this parameter is not specified, the adaptive volume mode recommended by Alibaba Cloud is used by default.</li>
+         * <li>To specify this parameter, enter a value between 0 and 400. The output volume is calculated by using the following formula: Output volume = Voice output volume specified in the workflow × Volume/100. Example:</li>
+         * </ul>
+         * <ol>
+         * <li>If Volume is set to 0, the output volume is 0.</li>
+         * <li>If Volume is set to 100, the output volume is the voice output volume specified in the workflow.</li>
+         * <li>If Volume is set to 200, the output volume is twice the voice output volume specified in the workflow.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Volume")
         public Long volume;
 
         @NameInMap("WakeUpQuery")
         public String wakeUpQuery;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("WorkflowOverrideParams")
         public String workflowOverrideParams;
 

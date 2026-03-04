@@ -5,8 +5,24 @@ import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
     /**
+     * <p>The template configurations. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>参见模板Config文档</p>
+     * <p>{
+     *     &quot;VideoTracks&quot;: [
+     *         {
+     *             &quot;VideoTrackClips&quot;: [
+     *                 {
+     *                     &quot;Sys_Type&quot; : &quot;ArrayItems&quot;,
+     *                     &quot;Sys_ArrayObject&quot; : &quot;$VideoArray&quot;,
+     *                     &quot;Sys_Template&quot; : {
+     *                         &quot;MediaId&quot; : &quot;$MediaId&quot;
+     *                     }
+     *                 }
+     *             ]
+     *         }
+     *     ]
+     * }</p>
      */
     @NameInMap("Config")
     public String config;
