@@ -508,6 +508,9 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
+        @NameInMap("PromotionId")
+        public String promotionId;
+
         @NameInMap("VisibleType")
         public String visibleType;
 
@@ -602,6 +605,14 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         }
         public String getPeriodUnit() {
             return this.periodUnit;
+        }
+
+        public CreateAndroidInstanceGroupRequestNetworkInfo setPromotionId(String promotionId) {
+            this.promotionId = promotionId;
+            return this;
+        }
+        public String getPromotionId() {
+            return this.promotionId;
         }
 
         public CreateAndroidInstanceGroupRequestNetworkInfo setVisibleType(String visibleType) {

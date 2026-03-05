@@ -61,9 +61,21 @@ public class SendFileResponseBody extends TeaModel {
     }
 
     public static class SendFileResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the cloud phone instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-34pqe4r0kd9kn****</p>
+         */
         @NameInMap("AndroidInstanceId")
         public String androidInstanceId;
 
+        /**
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4ks224ujixw****</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
