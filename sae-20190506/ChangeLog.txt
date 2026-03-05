@@ -1,3 +1,9 @@
+2026-03-05 Version: 2.12.5
+- Update API DescribeApplicationConfig: add response parameters Body.Data.SidecarContainersConfig.$.Liveness.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.SidecarContainersConfig.$.Readiness.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.SidecarContainersConfig.$.SecretMountDesc.
+
+
 2026-03-04 Version: 2.12.4
 - Update API DescribeApplicationConfig: add response parameters Body.Data.InitContainersConfig.$.SecretMountDesc.
 

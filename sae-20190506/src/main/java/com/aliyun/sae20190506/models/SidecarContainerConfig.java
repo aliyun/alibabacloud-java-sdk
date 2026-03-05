@@ -76,6 +76,9 @@ public class SidecarContainerConfig extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    @NameInMap("Liveness")
+    public String liveness;
+
     /**
      * <p>Memory</p>
      * 
@@ -93,6 +96,12 @@ public class SidecarContainerConfig extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Readiness")
+    public String readiness;
+
+    @NameInMap("SecretMountDesc")
+    public String secretMountDesc;
 
     public static SidecarContainerConfig build(java.util.Map<String, ?> map) throws Exception {
         SidecarContainerConfig self = new SidecarContainerConfig();
@@ -163,6 +172,14 @@ public class SidecarContainerConfig extends TeaModel {
         return this.imageUrl;
     }
 
+    public SidecarContainerConfig setLiveness(String liveness) {
+        this.liveness = liveness;
+        return this;
+    }
+    public String getLiveness() {
+        return this.liveness;
+    }
+
     public SidecarContainerConfig setMemory(Integer memory) {
         this.memory = memory;
         return this;
@@ -177,6 +194,22 @@ public class SidecarContainerConfig extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public SidecarContainerConfig setReadiness(String readiness) {
+        this.readiness = readiness;
+        return this;
+    }
+    public String getReadiness() {
+        return this.readiness;
+    }
+
+    public SidecarContainerConfig setSecretMountDesc(String secretMountDesc) {
+        this.secretMountDesc = secretMountDesc;
+        return this;
+    }
+    public String getSecretMountDesc() {
+        return this.secretMountDesc;
     }
 
 }

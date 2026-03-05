@@ -873,6 +873,58 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("SecretId")
+        public Long secretId;
+
+        @NameInMap("SecretName")
+        public String secretName;
+
+        public static DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc self = new DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc setSecretId(Long secretId) {
+            this.secretId = secretId;
+            return this;
+        }
+        public Long getSecretId() {
+            return this.secretId;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc setSecretName(String secretName) {
+            this.secretName = secretName;
+            return this;
+        }
+        public String getSecretName() {
+            return this.secretName;
+        }
+
+    }
+
     public static class DescribeApplicationConfigResponseBodyDataSidecarContainersConfig extends TeaModel {
         /**
          * <p>The ID of Container Registry Enterprise Edition instance. This parameter is required when the <strong>ImageUrl</strong> parameter is set to the URL of an image in an ACR Enterprise Edition instance.</p>
@@ -975,6 +1027,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        @NameInMap("Liveness")
+        public String liveness;
+
         /**
          * <p>Set the memory limit of the primary container that can be used by Sidecar container.</p>
          * 
@@ -992,6 +1047,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Readiness")
+        public String readiness;
+
+        @NameInMap("SecretMountDesc")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc> secretMountDesc;
 
         public static DescribeApplicationConfigResponseBodyDataSidecarContainersConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationConfigResponseBodyDataSidecarContainersConfig self = new DescribeApplicationConfigResponseBodyDataSidecarContainersConfig();
@@ -1062,6 +1123,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.imageUrl;
         }
 
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setLiveness(String liveness) {
+            this.liveness = liveness;
+            return this;
+        }
+        public String getLiveness() {
+            return this.liveness;
+        }
+
         public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setMemory(Integer memory) {
             this.memory = memory;
             return this;
@@ -1076,6 +1145,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setReadiness(String readiness) {
+            this.readiness = readiness;
+            return this;
+        }
+        public String getReadiness() {
+            return this.readiness;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setSecretMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc> secretMountDesc) {
+            this.secretMountDesc = secretMountDesc;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc> getSecretMountDesc() {
+            return this.secretMountDesc;
         }
 
     }
