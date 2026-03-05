@@ -196,6 +196,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("InstanceClass")
     public String instanceClass;
 
+    @NameInMap("InstanceEndpointType")
+    public String instanceEndpointType;
+
     /**
      * <p>The name of the instance. The name must meet the following requirements:</p>
      * <ul>
@@ -651,6 +654,14 @@ public class CreateTairInstanceRequest extends TeaModel {
     }
     public String getInstanceClass() {
         return this.instanceClass;
+    }
+
+    public CreateTairInstanceRequest setInstanceEndpointType(String instanceEndpointType) {
+        this.instanceEndpointType = instanceEndpointType;
+        return this;
+    }
+    public String getInstanceEndpointType() {
+        return this.instanceEndpointType;
     }
 
     public CreateTairInstanceRequest setInstanceName(String instanceName) {

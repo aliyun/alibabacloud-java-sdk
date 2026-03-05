@@ -4,9 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
-    /**
-     * <p>Details of the auto-renewal information for the instance.</p>
-     */
     @NameInMap("Items")
     public DescribeInstanceAutoRenewalAttributeResponseBodyItems items;
 
@@ -92,43 +89,15 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem extends TeaModel {
-        /**
-         * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
-         * <li><strong>false</strong>: Auto-renewal is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("AutoRenew")
         public String autoRenew;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp1zxszhcgatnx****</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        /**
-         * <p>The auto-renewal period. Unit: months.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Duration")
         public Integer duration;
 
-        /**
-         * <p>The region ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

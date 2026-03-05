@@ -4,9 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
-    /**
-     * <p>The configuration parameters that have not taken effect.</p>
-     */
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
@@ -37,9 +34,6 @@ public class DescribeParametersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The running parameters.</p>
-     */
     @NameInMap("RunningParameters")
     public DescribeParametersResponseBodyRunningParameters runningParameters;
 
@@ -89,65 +83,21 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyConfigParametersParameter extends TeaModel {
-        /**
-         * <p>The check code that indicates the valid values of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[0|1]</p>
-         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
-        /**
-         * <p>Indicates whether the instance must be restarted for the modifications to take effect. Valid values:</p>
-         * <ul>
-         * <li><strong>True</strong>: The instance must be restarted for the modifications to take effect.</li>
-         * <li><strong>False</strong>: The instance does not need to be restarted for the modifications to take effect. Modifications immediately take effect.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
-        /**
-         * <p>Indicates whether the parameter can be reset. Valid values:</p>
-         * <ul>
-         * <li><strong>False</strong>: The parameter cannot be reset.</li>
-         * <li><strong>True</strong>: The parameter can be reset.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ModifiableStatus")
         public Boolean modifiableStatus;
 
-        /**
-         * <p>The description of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Check all keys passed in the KEYS array map to the same slot.</p>
-         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>script_check_enable</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -226,65 +176,21 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyRunningParametersParameter extends TeaModel {
-        /**
-         * <p>The check code that indicates the valid values of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[0|1]</p>
-         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
-        /**
-         * <p>Indicates whether the instance must be restarted for the modifications to take effect. Valid values:</p>
-         * <ul>
-         * <li><strong>True</strong>: The instance must be restarted for the modifications to take effect.</li>
-         * <li><strong>False</strong>: The instance does not need to be restarted for the modifications to take effect. Modifications immediately take effect.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
-        /**
-         * <p>Indicates whether the parameter can be reset. Valid values:</p>
-         * <ul>
-         * <li><strong>False</strong>: The parameter cannot be reset.</li>
-         * <li><strong>True</strong>: The parameter can be reset.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ModifiableStatus")
         public String modifiableStatus;
 
-        /**
-         * <p>The description of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>You can disable some dangerous commands, for example \&quot;keys,flushdb,flushall\&quot;, the commands must be in [flushall,flushdb,keys,hgetall,eval,evalsha,script].</p>
-         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>#no_loose_disabled-commands</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>keys,flushall,flushdb</p>
-         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

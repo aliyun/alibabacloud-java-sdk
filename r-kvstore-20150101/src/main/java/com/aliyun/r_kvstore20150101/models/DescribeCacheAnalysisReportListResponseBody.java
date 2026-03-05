@@ -4,9 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
-    /**
-     * <p>The list of the offline key analysis reports.</p>
-     */
     @NameInMap("DailyTasks")
     public DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks;
 
@@ -58,43 +55,15 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask extends TeaModel {
-        /**
-         * <p>The ID of the child node in the cluster instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp1zxszhcgatnx****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The start time of the offline key analytics task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-08-01T19:08:49Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The state of the offline key analytics task. Valid values:</p>
-         * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>running</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>156465****</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 
@@ -157,18 +126,9 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask extends TeaModel {
-        /**
-         * <p>The date when the offline key analytics task was performed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-08-01Z</p>
-         */
         @NameInMap("Date")
         public String date;
 
-        /**
-         * <p>Details about the offline key analysis reports.</p>
-         */
         @NameInMap("Tasks")
         public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks tasks;
 

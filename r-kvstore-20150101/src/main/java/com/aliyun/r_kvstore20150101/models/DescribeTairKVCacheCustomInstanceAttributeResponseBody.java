@@ -418,24 +418,12 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
     }
 
     public static class DescribeTairKVCacheCustomInstanceAttributeResponseBodyDisksDisk extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>d-5v1aggi3ffoxufb57**</p>
-         */
         @NameInMap("DiskId")
         public String diskId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <strong>example:</strong>
-         * <p>data</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -490,17 +478,9 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
     }
 
     public static class DescribeTairKVCacheCustomInstanceAttributeResponseBodyTagsTag extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>tag1</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <strong>example:</strong>
-         * <p>value1</p>
-         */
         @NameInMap("Value")
         public String value;
 

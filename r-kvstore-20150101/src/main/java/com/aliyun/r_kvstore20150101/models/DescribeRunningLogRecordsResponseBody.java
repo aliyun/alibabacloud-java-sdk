@@ -22,9 +22,6 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>Details about the log entries.</p>
-     */
     @NameInMap("Items")
     public DescribeRunningLogRecordsResponseBodyItems items;
 
@@ -160,42 +157,15 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeRunningLogRecordsResponseBodyItemsLogRecords extends TeaModel {
-        /**
-         * <p>The content of the log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CONFIG REWRITE executed with success.</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The time when the log was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-12-03T07:07:30Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp1zxszhcgatnx****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the node.</p>
-         * <blockquote>
-         * <p> If a standard instance is queried, <code>(null)</code> is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp1zxszhcgatnx****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 

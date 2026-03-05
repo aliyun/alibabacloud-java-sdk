@@ -22,9 +22,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the instances and tags.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -58,39 +55,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The resource ID, which is also the ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp1zxszhcgatnx****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The resource type. The return value is <strong>ALIYUN::KVSTORE::INSTANCE</strong>. This value indicates a Tair (Redis OSS-compatible) instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIYUN::KVSTORE::INSTANCE</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The keys of the tags.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demokey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The values of the tags.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demovalue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

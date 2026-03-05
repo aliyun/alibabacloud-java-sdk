@@ -4,9 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    /**
-     * <p>The <strong>region IDs</strong>.</p>
-     */
     @NameInMap("RegionIds")
     public DescribeRegionsResponseBodyRegionIds regionIds;
 
@@ -60,45 +57,18 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionIdsKVStoreRegion extends TeaModel {
-        /**
-         * <p>The name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The endpoint of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-kvstore.aliyuncs.com</p>
-         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The zone IDs.</p>
-         */
         @NameInMap("ZoneIdList")
         public DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList zoneIdList;
 
-        /**
-         * <p>The IDs of the zones in the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
-         */
         @NameInMap("ZoneIds")
         public String zoneIds;
 

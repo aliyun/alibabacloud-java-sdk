@@ -22,9 +22,6 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    /**
-     * <p>The collection of returned audit log entries.</p>
-     */
     @NameInMap("Items")
     public DescribeAuditRecordsResponseBodyItems items;
 
@@ -143,87 +140,30 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeAuditRecordsResponseBodyItemsSQL extends TeaModel {
-        /**
-         * <p>The username of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The database name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        /**
-         * <p>The time when the command was run.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-03-25T03:22:08Z</p>
-         */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
-        /**
-         * <p>The IP address of the client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127.0.0.1</p>
-         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
-        /**
-         * <p>The IP address of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.16.100.***</p>
-         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
-        /**
-         * <p>The ID of the node.</p>
-         * <blockquote>
-         * <p>A specific node ID is returned only if the instance uses the cluster or read/write splitting architecture.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp1zxszhcgatnx****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The command that was run.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CONFIG GET maxmemory</p>
-         */
         @NameInMap("SQLText")
         public String SQLText;
 
-        /**
-         * <p>The type of the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>non_read_write</p>
-         */
         @NameInMap("SQLType")
         public String SQLType;
 
-        /**
-         * <p>The amount of time consumed to run the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("TotalExecutionTimes")
         public String totalExecutionTimes;
 

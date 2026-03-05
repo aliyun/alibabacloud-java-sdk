@@ -13,15 +13,9 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The detailed proxy information, including information about proxy nodes.</p>
-     */
     @NameInMap("RedisProxyList")
     public DescribeLogicInstanceTopologyResponseBodyRedisProxyList redisProxyList;
 
-    /**
-     * <p>Details of data shards, which includes node information such as NodeInfo.</p>
-     */
     @NameInMap("RedisShardList")
     public DescribeLogicInstanceTopologyResponseBodyRedisShardList redisShardList;
 
@@ -72,52 +66,18 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo extends TeaModel {
-        /**
-         * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>96</p>
-         */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
-        /**
-         * <p>The storage capacity of the node. Unit: MB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5120</p>
-         */
         @NameInMap("Capacity")
         public String capacity;
 
-        /**
-         * <p>The maximum number of connections.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>320000</p>
-         */
         @NameInMap("Connection")
         public String connection;
 
-        /**
-         * <p>The ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp10noxlhcoim2****-proxy-3#542****</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The node type. Valid values:</p>
-         * <ul>
-         * <li><strong>proxy</strong>: proxy node</li>
-         * <li><strong>db</strong>: data node</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>proxy</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
@@ -188,65 +148,21 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo extends TeaModel {
-        /**
-         * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>96</p>
-         */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
-        /**
-         * <p>The storage capacity of the node. Unit: MB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2048</p>
-         */
         @NameInMap("Capacity")
         public String capacity;
 
-        /**
-         * <p>The maximum number of connections.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10000</p>
-         */
         @NameInMap("Connection")
         public String connection;
 
-        /**
-         * <p>The ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp10noxlhcoim2****-db-0#688****</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The node type. Valid values:</p>
-         * <ul>
-         * <li><strong>proxy</strong>: proxy node</li>
-         * <li><strong>db</strong>: data node</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>db</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        /**
-         * <p>子实例类型，返回值：</p>
-         * <ul>
-         * <li><strong>master</strong>：主节点类型。</li>
-         * <li><strong>readonly</strong>：只读实例类型。</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>master</p>
-         */
         @NameInMap("SubInstanceType")
         public String subInstanceType;
 

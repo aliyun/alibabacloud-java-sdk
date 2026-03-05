@@ -4,9 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
-    /**
-     * <p>Details about returned accounts of the instance.</p>
-     */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
@@ -41,16 +38,6 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege extends TeaModel {
-        /**
-         * <p>The permission of the account. Default value: RoleReadWrite. Valid values:</p>
-         * <ul>
-         * <li><strong>RoleReadOnly</strong>: The account has the read-only permissions.</li>
-         * <li><strong>RoleReadWrite</strong>: The account has the read and write permissions.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>RoleReadWrite</p>
-         */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
@@ -89,62 +76,21 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
-        /**
-         * <p>The description of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testdec</p>
-         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
-        /**
-         * <p>The name of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demoaccount</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The state of the account. Valid values:</p>
-         * <ul>
-         * <li><strong>Unavailable</strong>: The account is unavailable.</li>
-         * <li><strong>Available</strong>: The account is available.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
-        /**
-         * <p>The type of the account. Valid values:</p>
-         * <ul>
-         * <li><strong>Normal</strong>: standard account</li>
-         * <li><strong>Super</strong>: super account</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("AccountType")
         public String accountType;
 
-        /**
-         * <p>Details about account permissions.</p>
-         */
         @NameInMap("DatabasePrivileges")
         public DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges databasePrivileges;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp10noxlhcoim2****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 

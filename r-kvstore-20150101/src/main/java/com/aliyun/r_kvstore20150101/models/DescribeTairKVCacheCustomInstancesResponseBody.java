@@ -81,17 +81,9 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeTairKVCacheCustomInstancesResponseBodyInstancesKVStoreInstanceTagsTag extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>tagkey</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <strong>example:</strong>
-         * <p>tagvalue</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -138,104 +130,48 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeTairKVCacheCustomInstancesResponseBodyInstancesKVStoreInstance extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>PrePaid</p>
-         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2018-11-07T08:49:00Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-04-28T10:03:01Z</p>
-         */
         @NameInMap("DestroyTime")
         public String destroyTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-05-21T00:00:00Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>tair.gpu.test.16g</p>
-         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
-        /**
-         * <strong>example:</strong>
-         * <p>tc-bp1zxszhcgatnx****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>testdb</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TairCustom</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("NetworkType")
         public String networkType;
 
         @NameInMap("PrivateIp")
         public String privateIp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rg-acfmyiu4ekp****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("Storage")
         public Long storage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>essd_pl1</p>
-         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -245,24 +181,12 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
         @NameInMap("UseEni")
         public Boolean useEni;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vsw-bp1e7clcw529l773d****</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vpc-bp1nme44gek34slfc****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-e</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

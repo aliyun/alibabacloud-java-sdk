@@ -31,9 +31,6 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     @NameInMap("ParameterCount")
     public String parameterCount;
 
-    /**
-     * <p>An array that consists of the details about the parameters returned.</p>
-     */
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
@@ -92,65 +89,21 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
-        /**
-         * <p>The valid values of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[yes|no]</p>
-         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
-        /**
-         * <p>Indicates whether the parameter can be reconfigured. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The parameter can be reconfigured.</li>
-         * <li><strong>false</strong>: The parameter cannot be reconfigured.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ForceModify")
         public Boolean forceModify;
 
-        /**
-         * <p>Indicates whether a restart of the instance is required after the parameter is reconfigured. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: After the parameter is reconfigured, you must restart the instance to make the new value of the parameter take effect.</li>
-         * <li><strong>false</strong>: After the parameter is reconfigured, the new value of the parameter immediately takes effect. You do not need to restart the instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
-        /**
-         * <p>The description of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test description</p>
-         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
-        /**
-         * <p>The name of the parameter. For more information about the parameters and the parameter settings, see <a href="https://help.aliyun.com/document_detail/259681.html">Parameters</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>appendonly</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The default value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>yes</p>
-         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

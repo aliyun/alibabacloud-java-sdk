@@ -22,9 +22,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The slow query log entries.</p>
-     */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
 
@@ -160,84 +157,30 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodyItemsLogRecords extends TeaModel {
-        /**
-         * <p>The ID of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Account")
         public String account;
 
-        /**
-         * <p>The username of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The slow query statement.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>KEYS *</p>
-         */
         @NameInMap("Command")
         public String command;
 
-        /**
-         * <p>The database name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("DBName")
         public String DBName;
 
-        /**
-         * <p>The database name. This parameter serves the same purpose as the <strong>DBName</strong> parameter. We recommend that you use the <strong>DBName</strong> parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("DataBaseName")
         public String dataBaseName;
 
-        /**
-         * <p>The amount of time consumed to execute the slow query statement. Unit: microseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>248</p>
-         */
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
-        /**
-         * <p>The start time when the slow query statement was executed. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-03-20T09:18:41Z</p>
-         */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
-        /**
-         * <p>The IP address of the client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>172.16.88.***</p>
-         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
-        /**
-         * <p>The node ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp1zxszhcgatnx****-db-0</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 

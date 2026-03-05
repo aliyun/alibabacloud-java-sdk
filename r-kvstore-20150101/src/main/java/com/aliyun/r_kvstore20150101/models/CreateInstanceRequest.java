@@ -227,6 +227,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("InstanceClass")
     public String instanceClass;
 
+    @NameInMap("InstanceEndpointType")
+    public String instanceEndpointType;
+
     /**
      * <p>The name of the instance. The name must be 2 to 80 characters in length and must start with a letter. It cannot contain spaces or specific special characters. These special characters include <code>@ / : = &quot; &lt; &gt; { [ ] }</code></p>
      * 
@@ -425,9 +428,6 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
 
-    /**
-     * <p>系统自动生成的安全 Token，无需传入</p>
-     */
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -662,6 +662,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getInstanceClass() {
         return this.instanceClass;
+    }
+
+    public CreateInstanceRequest setInstanceEndpointType(String instanceEndpointType) {
+        this.instanceEndpointType = instanceEndpointType;
+        return this;
+    }
+    public String getInstanceEndpointType() {
+        return this.instanceEndpointType;
     }
 
     public CreateInstanceRequest setInstanceName(String instanceName) {

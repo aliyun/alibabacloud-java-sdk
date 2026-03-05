@@ -333,48 +333,18 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList extends TeaModel {
-        /**
-         * <p>The creation time of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-11-21T13:28Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The importance level.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Level")
         public String level;
 
-        /**
-         * <p>The release notes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>netbank1022</p>
-         */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
-        /**
-         * <p>The description of the minor versions to which the instance can be updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ReleaseNoteEn</p>
-         */
         @NameInMap("ReleaseNoteEn")
         public String releaseNoteEn;
 
-        /**
-         * <p>The release version of EMR.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EMR-5.7.0</p>
-         */
         @NameInMap("ReleaseVersion")
         public String releaseVersion;
 
@@ -445,9 +415,6 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionRelease extends TeaModel {
-        /**
-         * <p>The information about the minor versions.</p>
-         */
         @NameInMap("ReleaseInfo")
         public DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfo releaseInfo;
 
@@ -550,53 +517,18 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList extends TeaModel {
-        /**
-         * <p>The time when the version was released.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-08-23T14:26:20Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The version update level. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: regular</li>
-         * <li><strong>1</strong>: recommended</li>
-         * <li><strong>2</strong>: critical</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Level")
         public String level;
 
-        /**
-         * <p>The release notes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>x x x x</p>
-         */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
-        /**
-         * <p>The description of the minor versions to which the instance can be updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ReleaseNoteEn</p>
-         */
         @NameInMap("ReleaseNoteEn")
         public String releaseNoteEn;
 
-        /**
-         * <p>The release version of EMR.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EMR-5.9.1</p>
-         */
         @NameInMap("ReleaseVersion")
         public String releaseVersion;
 
@@ -667,9 +599,6 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionRelease extends TeaModel {
-        /**
-         * <p>The information about the minor versions.</p>
-         */
         @NameInMap("ReleaseInfo")
         public DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfo releaseInfo;
 

@@ -4,9 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
-    /**
-     * <p>The list of security groups.</p>
-     */
     @NameInMap("Items")
     public DescribeSecurityGroupConfigurationResponseBodyItems items;
 
@@ -41,34 +38,12 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation extends TeaModel {
-        /**
-         * <p>The network type of the security group. Valid values:</p>
-         * <ul>
-         * <li><strong>classic</strong>: the classic network.</li>
-         * <li><strong>vpc</strong>: the virtual private cloud (VPC).</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc</p>
-         */
         @NameInMap("NetType")
         public String netType;
 
-        /**
-         * <p>The ID of the region where the instance is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-bp14p9y07ns3gwq****</p>
-         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

@@ -4,9 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
-    /**
-     * <p>The modification records of the parameters.</p>
-     */
     @NameInMap("HistoricalParameters")
     public DescribeParameterModificationHistoryResponseBodyHistoricalParameters historicalParameters;
 
@@ -41,39 +38,15 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter extends TeaModel {
-        /**
-         * <p>The time when the parameter was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-09-05T09:56:10Z</p>
-         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        /**
-         * <p>The parameter value after modification.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("NewParameterValue")
         public String newParameterValue;
 
-        /**
-         * <p>The parameter value before modification.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>-2</p>
-         */
         @NameInMap("OldParameterValue")
         public String oldParameterValue;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>script_check_enable</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
