@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApiMcpServerValidateHclRequest extends TeaModel {
     /**
+     * <p>The content of the Terraform HCL code. For more information, see <a href="https://www.alibabacloud.com/help/en/terraform/terraform-configuration-and-hcl-language-overview">HCL language overview</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>variable &quot;name&quot; {
      *   default = &quot;terraform-example&quot;

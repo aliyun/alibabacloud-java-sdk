@@ -32,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证 Terraform HCL 语法</p>
+     * <p>Validates the syntax of HashiCorp Configuration Language (HCL) for Terraform.</p>
      * 
      * @param request ApiMcpServerValidateHclRequest
      * @param headers map
@@ -66,7 +66,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证 Terraform HCL 语法</p>
+     * <p>Validates the syntax of HashiCorp Configuration Language (HCL) for Terraform.</p>
      * 
      * @param request ApiMcpServerValidateHclRequest
      * @return ApiMcpServerValidateHclResponse
@@ -79,7 +79,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建ApiMcpServer</p>
+     * <p>Creates an API MCP service.</p>
      * 
      * @param request CreateApiMcpServerRequest
      * @param headers map
@@ -177,7 +177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建ApiMcpServer</p>
+     * <p>Creates an API MCP service.</p>
      * 
      * @param request CreateApiMcpServerRequest
      * @return CreateApiMcpServerResponse
@@ -190,7 +190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除ApiMcpServer</p>
+     * <p>Deletes an API MCP service.</p>
      * 
      * @param request DeleteApiMcpServerRequest
      * @param headers map
@@ -228,7 +228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除ApiMcpServer</p>
+     * <p>Deletes an API MCP service.</p>
      * 
      * @param request DeleteApiMcpServerRequest
      * @return DeleteApiMcpServerResponse
@@ -241,7 +241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>动态生成Aliyun CLI命令</p>
+     * <p>Generates commands for the Alibaba Cloud command-line interface (CLI).</p>
      * 
      * @param tmpReq GenerateCLICommandRequest
      * @param headers map
@@ -257,6 +257,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatePagination)) {
+            body.put("aggregatePagination", request.aggregatePagination);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.api)) {
             body.put("api", request.api);
         }
@@ -301,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>动态生成Aliyun CLI命令</p>
+     * <p>Generates commands for the Alibaba Cloud command-line interface (CLI).</p>
      * 
      * @param request GenerateCLICommandRequest
      * @return GenerateCLICommandResponse
@@ -314,7 +318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取产品相关接口的开放元数据</p>
+     * <p>Retrieves the OpenAPI metadata for an API in a product.</p>
      * 
      * @param request GetApiDefinitionRequest
      * @param headers map
@@ -356,7 +360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取产品相关接口的开放元数据</p>
+     * <p>Retrieves the OpenAPI metadata for an API in a product.</p>
      * 
      * @param request GetApiDefinitionRequest
      * @return GetApiDefinitionResponse
@@ -369,7 +373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 ApiMcpServer</p>
+     * <p>Retrieves the details of a specific API MCP service.</p>
      * 
      * @param request GetApiMcpServerRequest
      * @param headers map
@@ -403,7 +407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 ApiMcpServer</p>
+     * <p>Retrieves the details of a specific API MCP service.</p>
      * 
      * @param request GetApiMcpServerRequest
      * @return GetApiMcpServerResponse
@@ -416,7 +420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户全局API MCP Server配置</p>
+     * <p>Queries the global API MCP Server configuration for a user. The configuration includes settings for public network access and the whitelist of source VPC IDs for requests from a VPC.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -442,7 +446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户全局API MCP Server配置</p>
+     * <p>Queries the global API MCP Server configuration for a user. The configuration includes settings for public network access and the whitelist of source VPC IDs for requests from a VPC.</p>
      * @return GetApiMcpServerUserConfigResponse
      */
     public GetApiMcpServerUserConfigResponse getApiMcpServerUserConfig() throws Exception {
@@ -518,10 +522,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Permissions on this API cannot be granted to other members.</p>
+     * <p>This API does not support authorization.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the log of an API call performed by using the current account based on the returned request ID of the API to troubleshoot issues.</p>
+     * <p>Queries the details of an OpenAPI call log for your account using the request ID returned from an API call. This operation is used for troubleshooting.</p>
      * 
      * @param request GetOwnRequestLogRequest
      * @param headers map
@@ -555,10 +559,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Permissions on this API cannot be granted to other members.</p>
+     * <p>This API does not support authorization.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the log of an API call performed by using the current account based on the returned request ID of the API to troubleshoot issues.</p>
+     * <p>Queries the details of an OpenAPI call log for your account using the request ID returned from an API call. This operation is used for troubleshooting.</p>
      * 
      * @param request GetOwnRequestLogRequest
      * @return GetOwnRequestLogResponse
@@ -571,7 +575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取产品的接入点信息</p>
+     * <p>Retrieves the endpoint information for a product.</p>
      * 
      * @param request GetProductEndpointsRequest
      * @param headers map
@@ -605,7 +609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取产品的接入点信息</p>
+     * <p>Retrieves the endpoint information for a product.</p>
      * 
      * @param request GetProductEndpointsRequest
      * @return GetProductEndpointsResponse
@@ -618,10 +622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can grant permissions to a Resource Access Management (RAM) user or assume a role to query the log of an API call across RAM users or Alibaba Cloud accounts. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Grant permissions to troubleshoot API errors across accounts</a>.</p>
+     * <p>You can query call logs across different RAM users or Alibaba Cloud accounts using RAM authorization or role assumption. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Cross-account API error diagnosis authorization</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the log of an API call based on the returned request ID of the API to troubleshoot issues.</p>
+     * <p>Queries the details of a request log using the request ID that is returned from an API call. This operation is useful for troubleshooting.</p>
      * 
      * @param request GetRequestLogRequest
      * @param headers map
@@ -655,10 +659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can grant permissions to a Resource Access Management (RAM) user or assume a role to query the log of an API call across RAM users or Alibaba Cloud accounts. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Grant permissions to troubleshoot API errors across accounts</a>.</p>
+     * <p>You can query call logs across different RAM users or Alibaba Cloud accounts using RAM authorization or role assumption. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Cross-account API error diagnosis authorization</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the log of an API call based on the returned request ID of the API to troubleshoot issues.</p>
+     * <p>Queries the details of a request log using the request ID that is returned from an API call. This operation is useful for troubleshooting.</p>
      * 
      * @param request GetRequestLogRequest
      * @return GetRequestLogResponse
@@ -671,7 +675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取产品的开放元数据</p>
+     * <p>Retrieves the OpenAPI metadata for a product.</p>
      * 
      * @param request ListApiDefinitionsRequest
      * @param headers map
@@ -709,7 +713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取产品的开放元数据</p>
+     * <p>Retrieves the OpenAPI metadata for a product.</p>
      * 
      * @param request ListApiDefinitionsRequest
      * @return ListApiDefinitionsResponse
@@ -722,7 +726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询系统工具列表</p>
+     * <p>Lists the system tools supported by the MCP service.</p>
      * 
      * @param request ListApiMcpServerSystemToolsRequest
      * @param headers map
@@ -764,7 +768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询系统工具列表</p>
+     * <p>Lists the system tools supported by the MCP service.</p>
      * 
      * @param request ListApiMcpServerSystemToolsRequest
      * @return ListApiMcpServerSystemToolsResponse
@@ -777,7 +781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出资源ApiMcpServer</p>
+     * <p>This operation queries a list of all API MCP servers in an Alibaba Cloud account.</p>
      * 
      * @param request ListApiMcpServersRequest
      * @param headers map
@@ -847,7 +851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出资源ApiMcpServer</p>
+     * <p>This operation queries a list of all API MCP servers in an Alibaba Cloud account.</p>
      * 
      * @param request ListApiMcpServersRequest
      * @return ListApiMcpServersResponse
@@ -860,7 +864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新UpdateApiMcpServer</p>
+     * <p>Updates an API MCP service.</p>
      * 
      * @param request UpdateApiMcpServerRequest
      * @param headers map
@@ -960,7 +964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新UpdateApiMcpServer</p>
+     * <p>Updates an API MCP service.</p>
      * 
      * @param request UpdateApiMcpServerRequest
      * @return UpdateApiMcpServerResponse
@@ -973,7 +977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改用户全局API MCP Server配置</p>
+     * <p>Updates the global API MCP Server configuration for a user.</p>
      * 
      * @param request UpdateApiMcpServerUserConfigRequest
      * @param headers map
@@ -1011,7 +1015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改用户全局API MCP Server配置</p>
+     * <p>Updates the global API MCP Server configuration for a user.</p>
      * 
      * @param request UpdateApiMcpServerUserConfigRequest
      * @return UpdateApiMcpServerUserConfigResponse

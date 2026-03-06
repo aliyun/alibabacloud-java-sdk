@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApiMcpServerSystemToolsRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries to return on each page. The maximum value is 100. The default value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,11 @@ public class ListApiMcpServerSystemToolsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to start the next query. Set this parameter to the NextToken value returned by the last API call.</p>
+     * <blockquote>
+     * <p>Do not specify this parameter for the first query. If a query does not return all results, pass the NextToken value from the previous response to the next query to continue.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAZjtYxxxxxxxx</p>
      */
@@ -19,6 +26,8 @@ public class ListApiMcpServerSystemToolsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries to skip.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

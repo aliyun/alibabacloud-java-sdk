@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApiDefinitionRequest extends TeaModel {
     /**
+     * <p>The API name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetApiDefinitionRequest extends TeaModel {
     public String api;
 
     /**
+     * <p>The API version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,14 @@ public class GetApiDefinitionRequest extends TeaModel {
     public String apiVersion;
 
     /**
+     * <p>The product code.</p>
+     * <ul>
+     * <li><p>Call the GetRequestLog operation to obtain the product code from the response.</p>
+     * </li>
+     * <li><p>Find the product code in the product\&quot;s OpenAPI Portal URL. &lt;props=&quot;china&quot;&gt;For example, the OpenAPI Portal URL for Short Message Service is https\://api.aliyun.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi.
+     * &lt;props=&quot;intl&quot;&gt;For example, the OpenAPI Portal URL for Short Message Service is https\://api.alibabacloud.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApiMcpServerSystemToolsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries to return on each page. The maximum value is 100. The default value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,11 @@ public class ListApiMcpServerSystemToolsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The NextToken value. Use this value to retrieve more results.</p>
+     * <blockquote>
+     * <p>If this parameter is not returned, no more results are available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAZjtYxxxxxxxx</p>
      */
@@ -19,16 +26,23 @@ public class ListApiMcpServerSystemToolsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9BFC4AC1-6BE4-5405-BDEC-CA288D404812</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of system tools.</p>
+     */
     @NameInMap("systemTools")
     public java.util.List<ListApiMcpServerSystemToolsResponseBodySystemTools> systemTools;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>22</p>
      */
@@ -82,6 +96,8 @@ public class ListApiMcpServerSystemToolsResponseBody extends TeaModel {
 
     public static class ListApiMcpServerSystemToolsResponseBodySystemTools extends TeaModel {
         /**
+         * <p>The description of the system tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>system tool description</p>
          */
@@ -89,6 +105,8 @@ public class ListApiMcpServerSystemToolsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the system tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>mcp-system</p>
          */

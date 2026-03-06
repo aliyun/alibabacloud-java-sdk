@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ApiMcpServerValidateHclResponseBody extends TeaModel {
     /**
+     * <p>The diagnostic report of the code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Argument or block definition required: An argument or block definition is required here.</p>
      */
     @NameInMap("diagnosticReport")
     public Object diagnosticReport;
 
+    /**
+     * <p>The list of error messages.</p>
+     */
     @NameInMap("errors")
     public java.util.List<String> errors;
 
     /**
+     * <p>The unique identifier of the Terraform HCL code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0628e13692023222bef9d6377dd03da3304b689e1b2df60f584ea27b4163bf07</p>
      */
@@ -22,22 +29,32 @@ public class ApiMcpServerValidateHclResponseBody extends TeaModel {
     public String hash;
 
     /**
+     * <p>Indicates whether the code is valid.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("isValid")
     public Boolean isValid;
 
+    /**
+     * <p>The list of parameters.</p>
+     */
     @NameInMap("parameters")
     public java.util.List<?> parameters;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9BFC4AC1-6BE4-5405-BDEC-CA288D404812</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of warning messages.</p>
+     */
     @NameInMap("warnings")
     public java.util.List<String> warnings;
 

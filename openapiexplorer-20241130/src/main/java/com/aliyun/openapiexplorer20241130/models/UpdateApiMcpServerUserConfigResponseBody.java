@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateApiMcpServerUserConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9BFC4AC1-6BE4-5405-BDEC-CA288D404812</p>
      */
