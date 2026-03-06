@@ -22,6 +22,9 @@ public class QuotaDetails extends TeaModel {
     @NameInMap("DesiredMinQuota")
     public ResourceAmount desiredMinQuota;
 
+    @NameInMap("NodeStatistics")
+    public QuotaNodeStatistics nodeStatistics;
+
     @NameInMap("RequestedQuota")
     public ResourceAmount requestedQuota;
 
@@ -88,6 +91,14 @@ public class QuotaDetails extends TeaModel {
     }
     public ResourceAmount getDesiredMinQuota() {
         return this.desiredMinQuota;
+    }
+
+    public QuotaDetails setNodeStatistics(QuotaNodeStatistics nodeStatistics) {
+        this.nodeStatistics = nodeStatistics;
+        return this;
+    }
+    public QuotaNodeStatistics getNodeStatistics() {
+        return this.nodeStatistics;
     }
 
     public QuotaDetails setRequestedQuota(ResourceAmount requestedQuota) {
