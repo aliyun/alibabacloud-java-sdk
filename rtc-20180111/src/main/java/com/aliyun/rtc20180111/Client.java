@@ -201,6 +201,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ChatMode", request.chatMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableVideoUnderstanding)) {
+            query.put("EnableVideoUnderstanding", request.enableVideoUnderstanding);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.greeting)) {
             query.put("Greeting", request.greeting);
         }
@@ -219,6 +223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preferVideo)) {
+            query.put("PreferVideo", request.preferVideo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ttsConfigShrink)) {
@@ -4893,6 +4901,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ChatMode", request.chatMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableVideoUnderstanding)) {
+            query.put("EnableVideoUnderstanding", request.enableVideoUnderstanding);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.greeting)) {
             query.put("Greeting", request.greeting);
         }
@@ -4915,6 +4927,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preferVideo)) {
+            query.put("PreferVideo", request.preferVideo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ttsConfigShrink)) {

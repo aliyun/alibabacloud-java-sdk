@@ -32,6 +32,9 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
     @NameInMap("ChatMode")
     public Integer chatMode;
 
+    @NameInMap("EnableVideoUnderstanding")
+    public Boolean enableVideoUnderstanding;
+
     @NameInMap("Greeting")
     public String greeting;
 
@@ -65,6 +68,13 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("PreferVideo")
+    public Integer preferVideo;
 
     @NameInMap("TtsConfig")
     public String ttsConfigShrink;
@@ -129,6 +139,14 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
         return this.chatMode;
     }
 
+    public ModifyAppAgentTemplateShrinkRequest setEnableVideoUnderstanding(Boolean enableVideoUnderstanding) {
+        this.enableVideoUnderstanding = enableVideoUnderstanding;
+        return this;
+    }
+    public Boolean getEnableVideoUnderstanding() {
+        return this.enableVideoUnderstanding;
+    }
+
     public ModifyAppAgentTemplateShrinkRequest setGreeting(String greeting) {
         this.greeting = greeting;
         return this;
@@ -175,6 +193,14 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyAppAgentTemplateShrinkRequest setPreferVideo(Integer preferVideo) {
+        this.preferVideo = preferVideo;
+        return this;
+    }
+    public Integer getPreferVideo() {
+        return this.preferVideo;
     }
 
     public ModifyAppAgentTemplateShrinkRequest setTtsConfigShrink(String ttsConfigShrink) {

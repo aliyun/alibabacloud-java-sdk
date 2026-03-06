@@ -408,6 +408,9 @@ public class StartAgentRequest extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
+        @NameInMap("BizParams")
+        public Object bizParams;
+
         /**
          * <strong>example:</strong>
          * <p>3</p>
@@ -492,6 +495,14 @@ public class StartAgentRequest extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
+        }
+
+        public StartAgentRequestVoiceChatConfigLLMConfig setBizParams(Object bizParams) {
+            this.bizParams = bizParams;
+            return this;
+        }
+        public Object getBizParams() {
+            return this.bizParams;
         }
 
         public StartAgentRequestVoiceChatConfigLLMConfig setHistoryDepth(Integer historyDepth) {
@@ -728,6 +739,9 @@ public class StartAgentRequest extends TeaModel {
         @NameInMap("ChatMode")
         public Integer chatMode;
 
+        @NameInMap("EnableVideoUnderstanding")
+        public Boolean enableVideoUnderstanding;
+
         @NameInMap("Greeting")
         public String greeting;
 
@@ -746,6 +760,9 @@ public class StartAgentRequest extends TeaModel {
 
         @NameInMap("TTSConfig")
         public StartAgentRequestVoiceChatConfigTTSConfig TTSConfig;
+
+        @NameInMap("preferVideo")
+        public Integer preferVideo;
 
         public static StartAgentRequestVoiceChatConfig build(java.util.Map<String, ?> map) throws Exception {
             StartAgentRequestVoiceChatConfig self = new StartAgentRequestVoiceChatConfig();
@@ -792,6 +809,14 @@ public class StartAgentRequest extends TeaModel {
             return this.chatMode;
         }
 
+        public StartAgentRequestVoiceChatConfig setEnableVideoUnderstanding(Boolean enableVideoUnderstanding) {
+            this.enableVideoUnderstanding = enableVideoUnderstanding;
+            return this;
+        }
+        public Boolean getEnableVideoUnderstanding() {
+            return this.enableVideoUnderstanding;
+        }
+
         public StartAgentRequestVoiceChatConfig setGreeting(String greeting) {
             this.greeting = greeting;
             return this;
@@ -830,6 +855,14 @@ public class StartAgentRequest extends TeaModel {
         }
         public StartAgentRequestVoiceChatConfigTTSConfig getTTSConfig() {
             return this.TTSConfig;
+        }
+
+        public StartAgentRequestVoiceChatConfig setPreferVideo(Integer preferVideo) {
+            this.preferVideo = preferVideo;
+            return this;
+        }
+        public Integer getPreferVideo() {
+            return this.preferVideo;
         }
 
     }

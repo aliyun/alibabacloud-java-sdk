@@ -665,6 +665,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("EnableVideoUnderstanding")
+        public Boolean enableVideoUnderstanding;
+
         /**
          * <strong>example:</strong>
          * <p>你好，机器人。</p>
@@ -698,6 +701,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("PreferVideo")
+        public Integer preferVideo;
 
         @NameInMap("TtsConfig")
         public DescribeAppAgentTemplatesResponseBodyTemplatesTtsConfig ttsConfig;
@@ -762,6 +768,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DescribeAppAgentTemplatesResponseBodyTemplates setEnableVideoUnderstanding(Boolean enableVideoUnderstanding) {
+            this.enableVideoUnderstanding = enableVideoUnderstanding;
+            return this;
+        }
+        public Boolean getEnableVideoUnderstanding() {
+            return this.enableVideoUnderstanding;
+        }
+
         public DescribeAppAgentTemplatesResponseBodyTemplates setGreeting(String greeting) {
             this.greeting = greeting;
             return this;
@@ -808,6 +822,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplates setPreferVideo(Integer preferVideo) {
+            this.preferVideo = preferVideo;
+            return this;
+        }
+        public Integer getPreferVideo() {
+            return this.preferVideo;
         }
 
         public DescribeAppAgentTemplatesResponseBodyTemplates setTtsConfig(DescribeAppAgentTemplatesResponseBodyTemplatesTtsConfig ttsConfig) {
