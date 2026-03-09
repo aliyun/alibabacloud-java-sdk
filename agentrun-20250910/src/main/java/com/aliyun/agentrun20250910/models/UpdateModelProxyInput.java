@@ -25,6 +25,9 @@ public class UpdateModelProxyInput extends TeaModel {
     @NameInMap("proxyConfig")
     public ProxyConfig proxyConfig;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static UpdateModelProxyInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateModelProxyInput self = new UpdateModelProxyInput();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class UpdateModelProxyInput extends TeaModel {
     }
     public ProxyConfig getProxyConfig() {
         return this.proxyConfig;
+    }
+
+    public UpdateModelProxyInput setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

@@ -43,6 +43,9 @@ public class ModelService extends TeaModel {
     @NameInMap("statusReason")
     public String statusReason;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static ModelService build(java.util.Map<String, ?> map) throws Exception {
         ModelService self = new ModelService();
         return TeaModel.build(map, self);
@@ -150,6 +153,14 @@ public class ModelService extends TeaModel {
     }
     public String getStatusReason() {
         return this.statusReason;
+    }
+
+    public ModelService setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

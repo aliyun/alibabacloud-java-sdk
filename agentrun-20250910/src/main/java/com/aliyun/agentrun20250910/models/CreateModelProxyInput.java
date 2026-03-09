@@ -9,19 +9,42 @@ public class CreateModelProxyInput extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("cpu")
     public Float cpu;
 
+    /**
+     * <p>credentialName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>credentialName</p>
+     */
     @NameInMap("credentialName")
     public String credentialName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>executionRoleArn</p>
+     */
     @NameInMap("executionRoleArn")
     public String executionRoleArn;
 
+    /**
+     * <p>litellmVersion</p>
+     * 
+     * <strong>example:</strong>
+     * <p>litellmVersion</p>
+     */
     @NameInMap("litellmVersion")
     public String litellmVersion;
 
@@ -30,16 +53,27 @@ public class CreateModelProxyInput extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31</p>
      */
     @NameInMap("memory")
     public Integer memory;
 
     /**
+     * <p>modelProxyName</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>modelProxyName</p>
      */
     @NameInMap("modelProxyName")
     public String modelProxyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>system</p>
+     */
     @NameInMap("modelType")
     public String modelType;
 
@@ -47,19 +81,33 @@ public class CreateModelProxyInput extends TeaModel {
     public NetworkConfiguration networkConfiguration;
 
     /**
+     * <p>ProxyConfig</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("proxyConfig")
     public ProxyConfig proxyConfig;
 
     /**
+     * <p>proxyMode</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>proxyMode</p>
      */
     @NameInMap("proxyMode")
     public String proxyMode;
 
+    /**
+     * <p>serviceRegionId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>serviceRegionId</p>
+     */
     @NameInMap("serviceRegionId")
     public String serviceRegionId;
+
+    @NameInMap("workspaceId")
+    public String workspaceId;
 
     public static CreateModelProxyInput build(java.util.Map<String, ?> map) throws Exception {
         CreateModelProxyInput self = new CreateModelProxyInput();
@@ -176,6 +224,14 @@ public class CreateModelProxyInput extends TeaModel {
     }
     public String getServiceRegionId() {
         return this.serviceRegionId;
+    }
+
+    public CreateModelProxyInput setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

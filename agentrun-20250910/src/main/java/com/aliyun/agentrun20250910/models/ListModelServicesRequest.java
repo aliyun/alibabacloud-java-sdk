@@ -41,6 +41,9 @@ public class ListModelServicesRequest extends TeaModel {
     @NameInMap("providerType")
     public String providerType;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static ListModelServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListModelServicesRequest self = new ListModelServicesRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class ListModelServicesRequest extends TeaModel {
     }
     public String getProviderType() {
         return this.providerType;
+    }
+
+    public ListModelServicesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

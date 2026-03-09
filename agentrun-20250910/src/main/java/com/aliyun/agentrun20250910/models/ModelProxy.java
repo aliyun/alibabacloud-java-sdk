@@ -64,6 +64,9 @@ public class ModelProxy extends TeaModel {
     @NameInMap("statusReason")
     public String statusReason;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static ModelProxy build(java.util.Map<String, ?> map) throws Exception {
         ModelProxy self = new ModelProxy();
         return TeaModel.build(map, self);
@@ -227,6 +230,14 @@ public class ModelProxy extends TeaModel {
     }
     public String getStatusReason() {
         return this.statusReason;
+    }
+
+    public ModelProxy setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

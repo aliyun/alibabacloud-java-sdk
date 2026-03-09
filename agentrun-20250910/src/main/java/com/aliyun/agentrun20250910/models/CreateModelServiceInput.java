@@ -4,23 +4,41 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateModelServiceInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>credentialName</p>
+     */
     @NameInMap("credentialName")
     public String credentialName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Auto generate task: Pipeline[pipeline-run-1742178254775] pipelineTemplate[data-export-service-online-iVnQB5] taskTemplate[serverless-runner-task], time[2025-03-17T02:24:36Z]</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>modelInfoConfigs</p>
+     */
     @NameInMap("modelInfoConfigs")
     public java.util.List<ModelInfoConfig> modelInfoConfigs;
 
     /**
+     * <p>modelServiceName</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>modelServiceName</p>
      */
     @NameInMap("modelServiceName")
     public String modelServiceName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
      */
     @NameInMap("modelType")
     public String modelType;
@@ -30,15 +48,22 @@ public class CreateModelServiceInput extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
      */
     @NameInMap("provider")
     public String provider;
 
     /**
+     * <p>providerSettings</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("providerSettings")
     public ProviderSettings providerSettings;
+
+    @NameInMap("workspaceId")
+    public String workspaceId;
 
     public static CreateModelServiceInput build(java.util.Map<String, ?> map) throws Exception {
         CreateModelServiceInput self = new CreateModelServiceInput();
@@ -107,6 +132,14 @@ public class CreateModelServiceInput extends TeaModel {
     }
     public ProviderSettings getProviderSettings() {
         return this.providerSettings;
+    }
+
+    public CreateModelServiceInput setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
