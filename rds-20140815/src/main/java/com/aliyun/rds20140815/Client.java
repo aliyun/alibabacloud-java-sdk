@@ -3379,7 +3379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>原生复制实例创建复制通道</p>
+     * <p>Create a replication channel for a native replication instance</p>
      * 
      * @param request CreateDBInstanceReplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3439,7 +3439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>原生复制实例创建复制通道</p>
+     * <p>Create a replication channel for a native replication instance</p>
      * 
      * @param request CreateDBInstanceReplicationRequest
      * @return CreateDBInstanceReplicationResponse
@@ -6863,7 +6863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>原生复制实例删除复制通道</p>
+     * <p>Delete a replication link from a native replication instance</p>
      * 
      * @param request DeleteDBInstanceReplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6907,7 +6907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>原生复制实例删除复制通道</p>
+     * <p>Delete a replication link from a native replication instance</p>
      * 
      * @param request DeleteDBInstanceReplicationRequest
      * @return DeleteDBInstanceReplicationResponse
@@ -18805,6 +18805,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRCMetricListResponse describeRCMetricList(DescribeRCMetricListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRCMetricListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeRCNetworkInterfaces</p>
+     * 
+     * @param request DescribeRCNetworkInterfacesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRCNetworkInterfacesResponse
+     */
+    public DescribeRCNetworkInterfacesResponse describeRCNetworkInterfacesWithOptions(DescribeRCNetworkInterfacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRCNetworkInterfaces"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRCNetworkInterfacesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeRCNetworkInterfaces</p>
+     * 
+     * @param request DescribeRCNetworkInterfacesRequest
+     * @return DescribeRCNetworkInterfacesResponse
+     */
+    public DescribeRCNetworkInterfacesResponse describeRCNetworkInterfaces(DescribeRCNetworkInterfacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRCNetworkInterfacesWithOptions(request, runtime);
     }
 
     /**
@@ -35411,7 +35455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>原生复制实例更新复制通道</p>
+     * <p>Update replication channel for a native replication instance</p>
      * 
      * @param request UpdateDBInstanceReplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35475,7 +35519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>原生复制实例更新复制通道</p>
+     * <p>Update replication channel for a native replication instance</p>
      * 
      * @param request UpdateDBInstanceReplicationRequest
      * @return UpdateDBInstanceReplicationResponse
