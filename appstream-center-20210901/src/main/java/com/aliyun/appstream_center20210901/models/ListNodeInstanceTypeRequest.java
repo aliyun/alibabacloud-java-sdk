@@ -27,6 +27,9 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("GpuMemory")
     public Integer gpuMemory;
 
+    @NameInMap("InstanceTypeForModify")
+    public String instanceTypeForModify;
+
     /**
      * <p>The language that you want to use.</p>
      * <p>Valid values:</p>
@@ -58,6 +61,9 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
 
     @NameInMap("OrderBy")
     public String orderBy;
+
+    @NameInMap("OrderType")
+    public String orderType;
 
     /**
      * <p>The operating system that is supported.</p>
@@ -146,6 +152,14 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
         return this.gpuMemory;
     }
 
+    public ListNodeInstanceTypeRequest setInstanceTypeForModify(String instanceTypeForModify) {
+        this.instanceTypeForModify = instanceTypeForModify;
+        return this;
+    }
+    public String getInstanceTypeForModify() {
+        return this.instanceTypeForModify;
+    }
+
     public ListNodeInstanceTypeRequest setLanguage(String language) {
         this.language = language;
         return this;
@@ -184,6 +198,14 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     }
     public String getOrderBy() {
         return this.orderBy;
+    }
+
+    public ListNodeInstanceTypeRequest setOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    public String getOrderType() {
+        return this.orderType;
     }
 
     public ListNodeInstanceTypeRequest setOsType(String osType) {

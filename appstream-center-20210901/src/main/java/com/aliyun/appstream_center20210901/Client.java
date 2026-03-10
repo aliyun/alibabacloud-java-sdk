@@ -1777,6 +1777,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GpuMemory", request.gpuMemory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeForModify)) {
+            query.put("InstanceTypeForModify", request.instanceTypeForModify);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
             query.put("Language", request.language);
         }
@@ -1795,6 +1799,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
             query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
