@@ -11,6 +11,9 @@ public class GetAppRecommendedCommoditiesRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("ResourceConditions")
+    public String resourceConditions;
+
     /**
      * <strong>example:</strong>
      * <p>DataworksManualTask</p>
@@ -29,6 +32,14 @@ public class GetAppRecommendedCommoditiesRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public GetAppRecommendedCommoditiesRequest setResourceConditions(String resourceConditions) {
+        this.resourceConditions = resourceConditions;
+        return this;
+    }
+    public String getResourceConditions() {
+        return this.resourceConditions;
     }
 
     public GetAppRecommendedCommoditiesRequest setScene(String scene) {

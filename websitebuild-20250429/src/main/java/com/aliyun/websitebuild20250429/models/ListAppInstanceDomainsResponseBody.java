@@ -363,6 +363,47 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     }
 
+    public static class ListAppInstanceDomainsResponseBodyModuleDataQualification extends TeaModel {
+        @NameInMap("IcpRecordNumber")
+        public String icpRecordNumber;
+
+        @NameInMap("IcpSiteRecordNumber")
+        public String icpSiteRecordNumber;
+
+        @NameInMap("PoliceRecordNumber")
+        public String policeRecordNumber;
+
+        public static ListAppInstanceDomainsResponseBodyModuleDataQualification build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceDomainsResponseBodyModuleDataQualification self = new ListAppInstanceDomainsResponseBodyModuleDataQualification();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataQualification setIcpRecordNumber(String icpRecordNumber) {
+            this.icpRecordNumber = icpRecordNumber;
+            return this;
+        }
+        public String getIcpRecordNumber() {
+            return this.icpRecordNumber;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataQualification setIcpSiteRecordNumber(String icpSiteRecordNumber) {
+            this.icpSiteRecordNumber = icpSiteRecordNumber;
+            return this;
+        }
+        public String getIcpSiteRecordNumber() {
+            return this.icpSiteRecordNumber;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataQualification setPoliceRecordNumber(String policeRecordNumber) {
+            this.policeRecordNumber = policeRecordNumber;
+            return this;
+        }
+        public String getPoliceRecordNumber() {
+            return this.policeRecordNumber;
+        }
+
+    }
+
     public static class ListAppInstanceDomainsResponseBodyModuleDataResolutionDnsRecord extends TeaModel {
         /**
          * <p>Host record</p>
@@ -650,6 +691,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @NameInMap("Ownership")
         public ListAppInstanceDomainsResponseBodyModuleDataOwnership ownership;
 
+        @NameInMap("Qualification")
+        public ListAppInstanceDomainsResponseBodyModuleDataQualification qualification;
+
         /**
          * <p>Domain resolution information</p>
          */
@@ -705,6 +749,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
         public ListAppInstanceDomainsResponseBodyModuleDataOwnership getOwnership() {
             return this.ownership;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleData setQualification(ListAppInstanceDomainsResponseBodyModuleDataQualification qualification) {
+            this.qualification = qualification;
+            return this;
+        }
+        public ListAppInstanceDomainsResponseBodyModuleDataQualification getQualification() {
+            return this.qualification;
         }
 
         public ListAppInstanceDomainsResponseBodyModuleData setResolution(ListAppInstanceDomainsResponseBodyModuleDataResolution resolution) {
@@ -839,6 +891,47 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
         public String getProvider() {
             return this.provider;
+        }
+
+    }
+
+    public static class ListAppInstanceDomainsResponseBodyModuleNextQualification extends TeaModel {
+        @NameInMap("IcpRecordNumber")
+        public String icpRecordNumber;
+
+        @NameInMap("IcpSiteRecordNumber")
+        public String icpSiteRecordNumber;
+
+        @NameInMap("PoliceRecordNumber")
+        public String policeRecordNumber;
+
+        public static ListAppInstanceDomainsResponseBodyModuleNextQualification build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceDomainsResponseBodyModuleNextQualification self = new ListAppInstanceDomainsResponseBodyModuleNextQualification();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextQualification setIcpRecordNumber(String icpRecordNumber) {
+            this.icpRecordNumber = icpRecordNumber;
+            return this;
+        }
+        public String getIcpRecordNumber() {
+            return this.icpRecordNumber;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextQualification setIcpSiteRecordNumber(String icpSiteRecordNumber) {
+            this.icpSiteRecordNumber = icpSiteRecordNumber;
+            return this;
+        }
+        public String getIcpSiteRecordNumber() {
+            return this.icpSiteRecordNumber;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextQualification setPoliceRecordNumber(String policeRecordNumber) {
+            this.policeRecordNumber = policeRecordNumber;
+            return this;
+        }
+        public String getPoliceRecordNumber() {
+            return this.policeRecordNumber;
         }
 
     }
@@ -1113,6 +1206,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @NameInMap("Ownership")
         public ListAppInstanceDomainsResponseBodyModuleNextOwnership ownership;
 
+        @NameInMap("Qualification")
+        public ListAppInstanceDomainsResponseBodyModuleNextQualification qualification;
+
         /**
          * <p>Domain resolution information</p>
          */
@@ -1168,6 +1264,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
         public ListAppInstanceDomainsResponseBodyModuleNextOwnership getOwnership() {
             return this.ownership;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNext setQualification(ListAppInstanceDomainsResponseBodyModuleNextQualification qualification) {
+            this.qualification = qualification;
+            return this;
+        }
+        public ListAppInstanceDomainsResponseBodyModuleNextQualification getQualification() {
+            return this.qualification;
         }
 
         public ListAppInstanceDomainsResponseBodyModuleNext setResolution(ListAppInstanceDomainsResponseBodyModuleNextResolution resolution) {
