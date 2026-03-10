@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class InsightsConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh-Hans</p>
+     */
     @NameInMap("Language")
     public String language;
 

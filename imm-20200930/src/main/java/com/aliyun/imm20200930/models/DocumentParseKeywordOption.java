@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DocumentParseKeywordOption extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Count")
     public Integer count;
 

@@ -2118,6 +2118,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建高光任务</p>
+     * 
+     * @param tmpReq CreateHighlightTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHighlightTaskResponse
+     */
+    public CreateHighlightTaskResponse createHighlightTaskWithOptions(CreateHighlightTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateHighlightTaskShrinkRequest request = new CreateHighlightTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.credentialConfig)) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.edit)) {
+            request.editShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.edit, "Edit", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.highlight)) {
+            request.highlightShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.highlight, "Highlight", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.output)) {
+            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.output, "Output", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
+            request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            body.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.editShrink)) {
+            body.put("Edit", request.editShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.highlightShrink)) {
+            body.put("Highlight", request.highlightShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            body.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            body.put("Notification", request.notificationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputShrink)) {
+            body.put("Output", request.outputShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourcesShrink)) {
+            body.put("Sources", request.sourcesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            body.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            body.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateHighlightTask"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHighlightTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建高光任务</p>
+     * 
+     * @param request CreateHighlightTaskRequest
+     * @return CreateHighlightTaskResponse
+     */
+    public CreateHighlightTaskResponse createHighlightTask(CreateHighlightTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createHighlightTaskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
      *     **
