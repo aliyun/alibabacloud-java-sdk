@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IndexJsonKey extends TeaModel {
     @NameInMap("chn")
-    public String chn;
+    public Boolean chn;
 
     @NameInMap("type")
     public String type;
@@ -15,11 +15,11 @@ public class IndexJsonKey extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public IndexJsonKey setChn(String chn) {
+    public IndexJsonKey setChn(Boolean chn) {
         this.chn = chn;
         return this;
     }
-    public String getChn() {
+    public Boolean getChn() {
         return this.chn;
     }
 
