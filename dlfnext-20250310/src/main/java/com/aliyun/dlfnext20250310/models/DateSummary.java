@@ -4,11 +4,18 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class DateSummary extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2025-06-01</p>
+     */
     @NameInMap("date")
     public String date;
 
     /**
      * <p>Metric value at corresponding date</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("value")
     public Long value;

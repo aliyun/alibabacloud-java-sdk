@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class MoMValues extends TeaModel {
     /**
      * <p>total</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("currentValue")
     public Long currentValue;
 
     /**
      * <p>daily addition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>800</p>
      */
     @NameInMap("lastDayValue")
     public Long lastDayValue;
 
     /**
      * <p>monthly addition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("lastMonthValue")
     public Long lastMonthValue;

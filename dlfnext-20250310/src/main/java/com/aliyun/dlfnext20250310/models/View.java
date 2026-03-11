@@ -4,27 +4,55 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class View extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>view_test</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("owner")
     public String owner;
 
     @NameInMap("schema")
     public ViewSchema schema;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

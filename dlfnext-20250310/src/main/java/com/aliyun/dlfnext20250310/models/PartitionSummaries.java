@@ -4,6 +4,10 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class PartitionSummaries extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>hh=10</p>
+     */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 

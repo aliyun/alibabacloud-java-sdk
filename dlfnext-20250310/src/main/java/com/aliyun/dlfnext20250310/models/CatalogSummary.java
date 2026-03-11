@@ -4,6 +4,10 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class CatalogSummary extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("apiVisitCountMonthly")
     public Long apiVisitCountMonthly;
 
@@ -15,6 +19,9 @@ public class CatalogSummary extends TeaModel {
 
     /**
      * <p>Update date of the statistics</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-01-01</p>
      */
     @NameInMap("generatedDate")
     public String generatedDate;
@@ -37,6 +44,10 @@ public class CatalogSummary extends TeaModel {
     @NameInMap("tableCount")
     public MoMValues tableCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("throughputMonthly")
     public Long throughputMonthly;
 

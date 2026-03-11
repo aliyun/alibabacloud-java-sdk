@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DatabaseSummary extends TeaModel {
     /**
      * <p>Creation timestamp in milliseconds</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
      */
     @NameInMap("createdAt")
     public Long createdAt;
 
     /**
      * <p>库名 - Database name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("databaseName")
     public String databaseName;
 
     /**
      * <p>Last profile update date in format yyyyMMdd</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-06-01</p>
      */
     @NameInMap("generatedDate")
     public String generatedDate;
 
     /**
      * <p>Storage location URI</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://clg-paimon-xxx/db-xxx</p>
      */
     @NameInMap("location")
     public String location;
@@ -40,20 +52,34 @@ public class DatabaseSummary extends TeaModel {
     @NameInMap("objTypeStandardSize")
     public Long objTypeStandardSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("partitionCount")
     public Long partitionCount;
 
     /**
      * <p>Total storage in bytes</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("tableCount")
     public Long tableCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000</p>
+     */
     @NameInMap("totalFileCount")
     public Long totalFileCount;
 
     /**
      * <p>Total file count</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1048576</p>
      */
     @NameInMap("totalFileSizeInBytes")
     public Long totalFileSizeInBytes;

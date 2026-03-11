@@ -4,9 +4,17 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class FunctionFileResource extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>JAR</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://tmp/SimpleUdf.jar</p>
+     */
     @NameInMap("uri")
     public String uri;
 

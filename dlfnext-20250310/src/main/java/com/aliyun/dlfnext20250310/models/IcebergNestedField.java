@@ -4,18 +4,40 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class IcebergNestedField extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>desc1</p>
+     */
     @NameInMap("doc")
     public String doc;
 
+    /**
+     * <p>id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>col1</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("optional")
     public Boolean optional;
 
+    /**
+     * <strong>example:</strong>
+     * <p>string</p>
+     */
     @NameInMap("type")
     public String type;
 

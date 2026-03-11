@@ -4,33 +4,65 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Table extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1741266704867</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
     @NameInMap("icebergTableMetadata")
     public IcebergTableMetadata icebergTableMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isExternal")
     public Boolean isExternal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table_test</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://clg-paimon-xxx/db-xxx/tbl-xxxx</p>
+     */
     @NameInMap("path")
     public String path;
 
     @NameInMap("schema")
     public Schema schema;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("schemaId")
     public Long schemaId;
 
@@ -46,9 +78,17 @@ public class Table extends TeaModel {
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1741266704867</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

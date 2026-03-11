@@ -4,45 +4,95 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class CacheCluster extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dc-wqewqr*****</p>
+     */
     @NameInMap("clusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cluster_name</p>
+     */
     @NameInMap("clusterName")
     public String clusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("deployInstanceVersion")
     public String deployInstanceVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("deployOptionsVersion")
     public Long deployOptionsVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("instanceVersion")
     public String instanceVersion;
 
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("optionsVersion")
     public Long optionsVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1764555848748</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 
     @NameInMap("vSwitches")
     public java.util.List<CacheClusterVSwitches> vSwitches;
 
+    /**
+     * <p>VPC ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2ze****</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 
@@ -164,9 +214,17 @@ public class CacheCluster extends TeaModel {
     }
 
     public static class CacheClusterVSwitches extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-bp1thxw8sgypzj2j*****</p>
+         */
         @NameInMap("vSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
+         */
         @NameInMap("zone")
         public String zone;
 

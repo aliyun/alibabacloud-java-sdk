@@ -4,15 +4,31 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class IcebergPartitionField extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("fieldId")
     public Long fieldId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ts_day</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("sourceId")
     public Long sourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>day</p>
+     */
     @NameInMap("transform")
     public String transform;
 

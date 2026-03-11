@@ -4,33 +4,63 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class IcebergSnapshot extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("addedRows")
     public Long addedRows;
 
+    /**
+     * <p>id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2443368274334000657</p>
+     */
     @NameInMap("id")
     public Long id;
 
     @NameInMap("idString")
     public String idString;
 
+    /**
+     * <strong>example:</strong>
+     * <p>append</p>
+     */
     @NameInMap("operation")
     public String operation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("parentId")
     public Long parentId;
 
     @NameInMap("parentIdString")
     public String parentIdString;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("schemaId")
     public Long schemaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("sequenceNumber")
     public Long sequenceNumber;
 
     @NameInMap("summary")
     public java.util.Map<String, String> summary;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1750313724369</p>
+     */
     @NameInMap("timestampMillis")
     public Long timestampMillis;
 

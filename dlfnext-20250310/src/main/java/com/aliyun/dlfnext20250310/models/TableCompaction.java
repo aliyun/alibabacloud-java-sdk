@@ -4,13 +4,24 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class TableCompaction extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>clg-paimon-xxx</p>
+     */
     @NameInMap("catalogId")
     public String catalogId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("cuUsage")
     public Double cuUsage;
 
     /**
+     * <strong>example:</strong>
+     * <p>1759111660075</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -18,10 +29,17 @@ public class TableCompaction extends TeaModel {
     @Deprecated
     public Long lastCompactedFileTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1760321763633</p>
+     */
     @NameInMap("latencyFileEarliestTime")
     public Long latencyFileEarliestTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -29,6 +47,10 @@ public class TableCompaction extends TeaModel {
     @Deprecated
     public String maxLevel0FileCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tbl-xxx</p>
+     */
     @NameInMap("tableId")
     public String tableId;
 

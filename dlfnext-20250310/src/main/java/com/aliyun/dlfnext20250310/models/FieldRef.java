@@ -4,9 +4,17 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class FieldRef extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("index")
     public Integer index;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("name")
     public String name;
 

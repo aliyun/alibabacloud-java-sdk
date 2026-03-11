@@ -4,45 +4,97 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Partition extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1747120676378</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("done")
     public Boolean done;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("fileCount")
     public Long fileCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("fileSizeInBytes")
     public Long fileSizeInBytes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1741701564261</p>
+     */
     @NameInMap("lastFileCreationTime")
     public Long lastFileCreationTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("recordCount")
     public Long recordCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;year&quot;:&quot;2025&quot;}</p>
+     */
     @NameInMap("spec")
     public java.util.Map<String, ?> spec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>COMPLETE</p>
+     */
     @NameInMap("storageAction")
     public String storageAction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1758189669915</p>
+     */
     @NameInMap("storageActionTimestamp")
     public Long storageActionTimestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
     @NameInMap("storageClass")
     public String storageClass;
 
     @NameInMap("totalBuckets")
     public Integer totalBuckets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

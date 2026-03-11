@@ -4,33 +4,69 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class IcebergTable extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1747120676378</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::1045689747920334:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
     @NameInMap("icebergTableMetadata")
     public IcebergTableMetadata icebergTableMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tbl-424fc31c-4876-4df5-97a5-c78f3046e739</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table1</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::1045689747920334:root</p>
+     */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://clg-iceberg-bcc387be9d24490da5f194bbaf990906/ns-b314a3c3-dff5-4e30-8ba2-0493a60566c7.db/iceberg-tbl-56539259-1879-4d6d-bd6e-d1ddb3364cc9</p>
+     */
     @NameInMap("path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::1045689747920334:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("version")
     public Long version;
 

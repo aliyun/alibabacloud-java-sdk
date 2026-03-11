@@ -4,30 +4,66 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class User extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user_display_name</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RAM_USER</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>222748924538****</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user_name</p>
+     */
     @NameInMap("userName")
     public String userName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:user/user_name</p>
+     */
     @NameInMap("userPrincipal")
     public String userPrincipal;
 

@@ -1855,6 +1855,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取可信 VPC 配置</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVpcConfigResponse
+     */
+    public GetVpcConfigResponse getVpcConfigWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVpcConfig"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/auth/vpc"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVpcConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取可信 VPC 配置</p>
+     * @return GetVpcConfigResponse
+     */
+    public GetVpcConfigResponse getVpcConfig() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVpcConfigWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>批量授予角色权限给用户</p>
      * 
      * @param request GrantRoleToUsersRequest

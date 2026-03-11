@@ -6,19 +6,33 @@ import com.aliyun.tea.*;
 public class TableSummary extends TeaModel {
     /**
      * <p>Latest snapshot storage size</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
      */
     @NameInMap("createdAt")
     public Long createdAt;
 
     /**
      * <p>Database name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("databaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-06-01</p>
+     */
     @NameInMap("generatedDate")
     public String generatedDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("lastAccessTime")
     public Long lastAccessTime;
 
@@ -36,10 +50,17 @@ public class TableSummary extends TeaModel {
 
     /**
      * <p>Creation timestamp in milliseconds</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("partitionCount")
     public Long partitionCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://clg-xxxx/db-xxxx/tbl-xxxx</p>
+     */
     @NameInMap("path")
     public String path;
 
@@ -54,16 +75,26 @@ public class TableSummary extends TeaModel {
 
     /**
      * <p>Table name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table1</p>
      */
     @NameInMap("tableName")
     public String tableName;
 
     /**
      * <p>30-day access count</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("totalFileCount")
     public Long totalFileCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("totalFileSizeInBytes")
     public Long totalFileSizeInBytes;
 

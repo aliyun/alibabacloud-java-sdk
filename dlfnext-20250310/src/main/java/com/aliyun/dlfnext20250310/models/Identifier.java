@@ -4,9 +4,17 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Identifier extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>database_name</p>
+     */
     @NameInMap("database")
     public String database;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table_name</p>
+     */
     @NameInMap("object")
     public String object;
 

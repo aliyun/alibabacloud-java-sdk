@@ -4,12 +4,20 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Permission extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DROP</p>
+     */
     @NameInMap("access")
     public String access;
 
     @NameInMap("columns")
     public PermissionColumns columns;
 
+    /**
+     * <strong>example:</strong>
+     * <p>database_name</p>
+     */
     @NameInMap("database")
     public String database;
 
@@ -19,15 +27,27 @@ public class Permission extends TeaModel {
     @NameInMap("function")
     public String function;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:user/user_name</p>
+     */
     @NameInMap("principal")
     public String principal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CATALOG</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 
     @NameInMap("rowFilter")
     public RowFilter rowFilter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table_name</p>
+     */
     @NameInMap("table")
     public String table;
 

@@ -4,11 +4,18 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class FullSchemaChange extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>setOption</p>
+     */
     @NameInMap("action")
     public String action;
 
     /**
      * <p>required in UpdateComment/AddColumn</p>
+     * 
+     * <strong>example:</strong>
+     * <p>col_comment</p>
      */
     @NameInMap("comment")
     public String comment;
@@ -24,12 +31,18 @@ public class FullSchemaChange extends TeaModel {
 
     /**
      * <p>required in UpdateColumnType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("keepNullability")
     public Boolean keepNullability;
 
     /**
      * <p>required in SetOption/RemoveOption</p>
+     * 
+     * <strong>example:</strong>
+     * <p>\&quot;true\&quot;</p>
      */
     @NameInMap("key")
     public String key;
@@ -39,6 +52,9 @@ public class FullSchemaChange extends TeaModel {
 
     /**
      * <p>required in UpdateColumnComment</p>
+     * 
+     * <strong>example:</strong>
+     * <p>col_comment_test</p>
      */
     @NameInMap("newComment")
     public String newComment;
@@ -48,18 +64,27 @@ public class FullSchemaChange extends TeaModel {
 
     /**
      * <p>required in RenameColumn</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new_col_test</p>
      */
     @NameInMap("newName")
     public String newName;
 
     /**
      * <p>required in UpdateColumnNullability</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("newNullability")
     public Boolean newNullability;
 
     /**
      * <p>required in SetOption</p>
+     * 
+     * <strong>example:</strong>
+     * <p>\&quot;manifest.delete-file-drop-stats\&quot;</p>
      */
     @NameInMap("value")
     public String value;

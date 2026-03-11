@@ -4,24 +4,52 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class ShareResource extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>database_name</p>
+     */
     @NameInMap("databaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TABLE</p>
+     */
     @NameInMap("shareType")
     public String shareType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table_name</p>
+     */
     @NameInMap("tableName")
     public String tableName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

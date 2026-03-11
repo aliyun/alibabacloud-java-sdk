@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class PartitionSummary extends TeaModel {
     /**
      * <p>Partition creation timestamp in milliseconds</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
      */
     @NameInMap("createdAt")
     public Long createdAt;
 
     /**
      * <p>Database name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("databaseName")
     public String databaseName;
 
     /**
      * <p>Total files in partition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
      */
     @NameInMap("lastAccessTime")
     public Long lastAccessTime;
 
     /**
      * <p>Partition identifier</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hh=18</p>
      */
     @NameInMap("partitionName")
     public String partitionName;
@@ -39,22 +51,35 @@ public class PartitionSummary extends TeaModel {
 
     /**
      * <p>Table name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table1</p>
      */
     @NameInMap("tableName")
     public String tableName;
 
     /**
      * <p>24h access count</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("totalFileCount")
     public Long totalFileCount;
 
     /**
      * <p>Last data access timestamp in milliseconds</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
      */
     @NameInMap("totalFileSizeInBytes")
     public Long totalFileSizeInBytes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 

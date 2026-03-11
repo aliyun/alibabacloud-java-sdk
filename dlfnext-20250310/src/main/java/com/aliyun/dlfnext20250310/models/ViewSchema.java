@@ -4,6 +4,10 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class ViewSchema extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
     @NameInMap("comment")
     public String comment;
 
@@ -16,6 +20,10 @@ public class ViewSchema extends TeaModel {
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>select id from t1;</p>
+     */
     @NameInMap("query")
     public String query;
 

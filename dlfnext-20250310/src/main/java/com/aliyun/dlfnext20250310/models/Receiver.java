@@ -4,24 +4,52 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Receiver extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
     @NameInMap("comment")
     public String comment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>receiver_name</p>
+     */
     @NameInMap("receiverName")
     public String receiverName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1111</p>
+     */
     @NameInMap("receiverTenantId")
     public Long receiverTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

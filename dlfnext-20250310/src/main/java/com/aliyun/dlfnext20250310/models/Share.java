@@ -4,33 +4,69 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Share extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("comment")
     public String comment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
     @NameInMap("enableWrite")
     public Boolean enableWrite;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1111</p>
+     */
     @NameInMap("providerTenantId")
     public Long providerTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1111</p>
+     */
     @NameInMap("shareId")
     public String shareId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>share_name</p>
+     */
     @NameInMap("shareName")
     public String shareName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

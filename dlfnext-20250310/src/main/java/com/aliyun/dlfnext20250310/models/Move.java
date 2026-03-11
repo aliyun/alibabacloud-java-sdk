@@ -4,12 +4,24 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Move extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>other_col_test</p>
+     */
     @NameInMap("fieldName")
     public String fieldName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>col_test</p>
+     */
     @NameInMap("referenceFieldName")
     public String referenceFieldName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FIRST</p>
+     */
     @NameInMap("type")
     public String type;
 

@@ -4,6 +4,10 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Schema extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>description</p>
+     */
     @NameInMap("comment")
     public String comment;
 

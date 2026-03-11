@@ -4,24 +4,46 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Catalog extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>clg-paimon-xxxx</p>
+     */
     @NameInMap("id")
     public String id;
 
     @NameInMap("isShared")
     public Boolean isShared;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_catalog</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    /**
+     * <p>Owner。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("owner")
     public String owner;
 
@@ -34,9 +56,17 @@ public class Catalog extends TeaModel {
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

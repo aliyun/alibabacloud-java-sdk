@@ -13,6 +13,10 @@ public class FullDataType extends TeaModel {
     @NameInMap("key")
     public FullDataType key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>STRING</p>
+     */
     @NameInMap("type")
     public String type;
 

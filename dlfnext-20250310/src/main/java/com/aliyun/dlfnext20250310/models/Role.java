@@ -4,30 +4,66 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Role extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>role_description</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>role_display_name</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isPredefined")
     public String isPredefined;
 
+    /**
+     * <strong>example:</strong>
+     * <p>role_name</p>
+     */
     @NameInMap("roleName")
     public String roleName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:dlf::[accountId]:role/role_name</p>
+     */
     @NameInMap("rolePrincipal")
     public String rolePrincipal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

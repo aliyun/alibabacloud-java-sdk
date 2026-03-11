@@ -4,12 +4,24 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class DataField extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>description</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("id")
     public Integer id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>order_id</p>
+     */
     @NameInMap("name")
     public String name;
 
