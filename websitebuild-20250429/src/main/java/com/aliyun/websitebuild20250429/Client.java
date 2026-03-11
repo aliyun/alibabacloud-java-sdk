@@ -424,7 +424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>万小智开通灵感值服务</p>
+     * <p>Activate the Wanxiaozhi Inspiration Value service</p>
      * 
      * @param request CreateAppTokenServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -456,7 +456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>万小智开通灵感值服务</p>
+     * <p>Activate the Wanxiaozhi Inspiration Value service</p>
      * 
      * @param request CreateAppTokenServiceRequest
      * @return CreateAppTokenServiceResponse
@@ -980,7 +980,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例详情查询</p>
+     * <p>Query application instance information</p>
+     * 
+     * @param request GetAppInstanceForAdminRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAppInstanceForAdminResponse
+     */
+    public GetAppInstanceForAdminResponse getAppInstanceForAdminWithOptions(GetAppInstanceForAdminRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAppInstanceForAdmin"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAppInstanceForAdminResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query application instance information</p>
+     * 
+     * @param request GetAppInstanceForAdminRequest
+     * @return GetAppInstanceForAdminResponse
+     */
+    public GetAppInstanceForAdminResponse getAppInstanceForAdmin(GetAppInstanceForAdminRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAppInstanceForAdminWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query instance details</p>
      * 
      * @param request GetAppInstanceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1012,7 +1060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例详情查询</p>
+     * <p>Query instance details</p>
      * 
      * @param request GetAppInstanceForPartnerRequest
      * @return GetAppInstanceForPartnerResponse
