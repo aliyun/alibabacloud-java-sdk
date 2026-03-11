@@ -10,6 +10,9 @@ public class CreateSandboxInput extends TeaModel {
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    @NameInMap("polarFsConfig")
+    public PolarFsConfig polarFsConfig;
+
     /**
      * <strong>example:</strong>
      * <p>01KE8DAJ35JC8SKP9CNFRZ8CW7</p>
@@ -59,6 +62,14 @@ public class CreateSandboxInput extends TeaModel {
     }
     public OSSMountConfig getOssMountConfig() {
         return this.ossMountConfig;
+    }
+
+    public CreateSandboxInput setPolarFsConfig(PolarFsConfig polarFsConfig) {
+        this.polarFsConfig = polarFsConfig;
+        return this;
+    }
+    public PolarFsConfig getPolarFsConfig() {
+        return this.polarFsConfig;
     }
 
     public CreateSandboxInput setSandboxId(String sandboxId) {
