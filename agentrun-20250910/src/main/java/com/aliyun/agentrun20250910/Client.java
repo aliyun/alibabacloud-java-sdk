@@ -2351,6 +2351,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("workspaceId", request.workspaceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceIds)) {
+            query.put("workspaceIds", request.workspaceIds);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -2477,6 +2481,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("workspaceId", request.workspaceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceIds)) {
+            query.put("workspaceIds", request.workspaceIds);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -2542,6 +2550,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("workspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceIds)) {
+            query.put("workspaceIds", request.workspaceIds);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -37,6 +37,9 @@ public class ListModelProxiesRequest extends TeaModel {
     @NameInMap("workspaceId")
     public String workspaceId;
 
+    @NameInMap("workspaceIds")
+    public String workspaceIds;
+
     public static ListModelProxiesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListModelProxiesRequest self = new ListModelProxiesRequest();
         return TeaModel.build(map, self);
@@ -80,6 +83,14 @@ public class ListModelProxiesRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public ListModelProxiesRequest setWorkspaceIds(String workspaceIds) {
+        this.workspaceIds = workspaceIds;
+        return this;
+    }
+    public String getWorkspaceIds() {
+        return this.workspaceIds;
     }
 
 }
