@@ -545,6 +545,9 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         @NameInMap("LimitedBandwidth")
         public Integer limitedBandwidth;
 
+        @NameInMap("PaidCallbackUrl")
+        public String paidCallbackUrl;
+
         @NameInMap("PayType")
         public String payType;
 
@@ -602,6 +605,14 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         }
         public Integer getLimitedBandwidth() {
             return this.limitedBandwidth;
+        }
+
+        public CreateCloudPhoneNodeRequestNetworkInfo setPaidCallbackUrl(String paidCallbackUrl) {
+            this.paidCallbackUrl = paidCallbackUrl;
+            return this;
+        }
+        public String getPaidCallbackUrl() {
+            return this.paidCallbackUrl;
         }
 
         public CreateCloudPhoneNodeRequestNetworkInfo setPayType(String payType) {

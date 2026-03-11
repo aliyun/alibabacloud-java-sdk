@@ -499,6 +499,9 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         @NameInMap("LimitedBandwidth")
         public Integer limitedBandwidth;
 
+        @NameInMap("PaidCallbackUrl")
+        public String paidCallbackUrl;
+
         @NameInMap("PayType")
         public String payType;
 
@@ -581,6 +584,14 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         }
         public Integer getLimitedBandwidth() {
             return this.limitedBandwidth;
+        }
+
+        public CreateAndroidInstanceGroupRequestNetworkInfo setPaidCallbackUrl(String paidCallbackUrl) {
+            this.paidCallbackUrl = paidCallbackUrl;
+            return this;
+        }
+        public String getPaidCallbackUrl() {
+            return this.paidCallbackUrl;
         }
 
         public CreateAndroidInstanceGroupRequestNetworkInfo setPayType(String payType) {
