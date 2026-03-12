@@ -397,6 +397,156 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询实例配置历史</p>
+     * 
+     * @param request DescribeConfigHistoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeConfigHistoryResponse
+     */
+    public DescribeConfigHistoryResponse describeConfigHistoryWithOptions(DescribeConfigHistoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.effectStatuses)) {
+            query.put("EffectStatuses", request.effectStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needTotal)) {
+            query.put("NeedTotal", request.needTotal);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeConfigHistory"),
+            new TeaPair("version", "2022-10-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/config/describeConfigHistory"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConfigHistoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例配置历史</p>
+     * 
+     * @param request DescribeConfigHistoryRequest
+     * @return DescribeConfigHistoryResponse
+     */
+    public DescribeConfigHistoryResponse describeConfigHistory(DescribeConfigHistoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeConfigHistoryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例配置</p>
+     * 
+     * @param request DescribeInstanceConfigsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInstanceConfigsResponse
+     */
+    public DescribeInstanceConfigsResponse describeInstanceConfigsWithOptions(DescribeInstanceConfigsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowModify)) {
+            query.put("AllowModify", request.allowModify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configKey)) {
+            query.put("ConfigKey", request.configKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
+            query.put("ConfigType", request.configType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needTotal)) {
+            query.put("NeedTotal", request.needTotal);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
+            query.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceConfigs"),
+            new TeaPair("version", "2022-10-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/config/describeInstanceConfigs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceConfigsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例配置</p>
+     * 
+     * @param request DescribeInstanceConfigsRequest
+     * @return DescribeInstanceConfigsResponse
+     */
+    public DescribeInstanceConfigsResponse describeInstanceConfigs(DescribeInstanceConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeInstanceConfigsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>This operation is used to query Serverless StarRocks instances, supporting filtering based on instance name or tags and other information.</p>
      * 
      * @param tmpReq DescribeInstancesRequest
@@ -1346,6 +1496,152 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改实例配置</p>
+     * 
+     * @param request ModifyInstanceConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceConfigResponse
+     */
+    public ModifyInstanceConfigResponse modifyInstanceConfigWithOptions(ModifyInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addConfigList)) {
+            query.put("AddConfigList", request.addConfigList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configList)) {
+            query.put("ConfigList", request.configList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteConfigList)) {
+            query.put("DeleteConfigList", request.deleteConfigList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            query.put("Reason", request.reason);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configsToAdd)) {
+            body.put("configsToAdd", request.configsToAdd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configsToDelete)) {
+            body.put("configsToDelete", request.configsToDelete);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configsToUpdate)) {
+            body.put("configsToUpdate", request.configsToUpdate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fastMode)) {
+            body.put("fastMode", request.fastMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.restart)) {
+            body.put("restart", request.restart);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceConfig"),
+            new TeaPair("version", "2022-10-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/config/modifyInstanceConfig"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例配置</p>
+     * 
+     * @param request ModifyInstanceConfigRequest
+     * @return ModifyInstanceConfigResponse
+     */
+    public ModifyInstanceConfigResponse modifyInstanceConfig(ModifyInstanceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyInstanceConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置变更预检查，返回此次变更需要重启的计算组ID</p>
+     * 
+     * @param request ModifyInstanceConfigPreCheckRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceConfigPreCheckResponse
+     */
+    public ModifyInstanceConfigPreCheckResponse modifyInstanceConfigPreCheckWithOptions(ModifyInstanceConfigPreCheckRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configsToAdd)) {
+            body.put("configsToAdd", request.configsToAdd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configsToDelete)) {
+            body.put("configsToDelete", request.configsToDelete);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configsToUpdate)) {
+            body.put("configsToUpdate", request.configsToUpdate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceConfigPreCheck"),
+            new TeaPair("version", "2022-10-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/config/modifyInstanceConfigPreCheck"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceConfigPreCheckResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置变更预检查，返回此次变更需要重启的计算组ID</p>
+     * 
+     * @param request ModifyInstanceConfigPreCheckRequest
+     * @return ModifyInstanceConfigPreCheckResponse
+     */
+    public ModifyInstanceConfigPreCheckResponse modifyInstanceConfigPreCheck(ModifyInstanceConfigPreCheckRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyInstanceConfigPreCheckWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -1898,6 +2194,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.resumeInstanceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>回滚正在进行中的配置修改</p>
+     * 
+     * @param request RollbackConfigModificationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RollbackConfigModificationResponse
+     */
+    public RollbackConfigModificationResponse rollbackConfigModificationWithOptions(RollbackConfigModificationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configHistoryId)) {
+            query.put("ConfigHistoryId", request.configHistoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.restart)) {
+            query.put("Restart", request.restart);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RollbackConfigModification"),
+            new TeaPair("version", "2022-10-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/config/rollbackConfigModification"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RollbackConfigModificationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>回滚正在进行中的配置修改</p>
+     * 
+     * @param request RollbackConfigModificationRequest
+     * @return RollbackConfigModificationResponse
+     */
+    public RollbackConfigModificationResponse rollbackConfigModification(RollbackConfigModificationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.rollbackConfigModificationWithOptions(request, headers, runtime);
     }
 
     /**
