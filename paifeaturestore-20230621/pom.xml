@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>paifeaturestore20230621</artifactId>
-  <version>6.0.7</version>
+  <version>6.0.8</version>
   <packaging>jar</packaging>
   <name>paifeaturestore20230621</name>
   <description>Alibaba Cloud PaiFeatureStore (20230621) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.23</version>
+      <version>0.2.26</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.10</version>
+      <version>0.3.12</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

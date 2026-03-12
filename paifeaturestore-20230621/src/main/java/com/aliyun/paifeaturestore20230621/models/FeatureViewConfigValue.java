@@ -23,6 +23,13 @@ public class FeatureViewConfigValue extends TeaModel {
     @NameInMap("Snapshot")
     public FeatureViewConfigValueSnapshot snapshot;
 
+    /**
+     * <strong>example:</strong>
+     * <p>request_id</p>
+     */
+    @NameInMap("SecondJoinKey")
+    public String secondJoinKey;
+
     public static FeatureViewConfigValue build(java.util.Map<String, ?> map) throws Exception {
         FeatureViewConfigValue self = new FeatureViewConfigValue();
         return TeaModel.build(map, self);
@@ -66,6 +73,14 @@ public class FeatureViewConfigValue extends TeaModel {
     }
     public FeatureViewConfigValueSnapshot getSnapshot() {
         return this.snapshot;
+    }
+
+    public FeatureViewConfigValue setSecondJoinKey(String secondJoinKey) {
+        this.secondJoinKey = secondJoinKey;
+        return this;
+    }
+    public String getSecondJoinKey() {
+        return this.secondJoinKey;
     }
 
     public static class FeatureViewConfigValueSnapshot extends TeaModel {
