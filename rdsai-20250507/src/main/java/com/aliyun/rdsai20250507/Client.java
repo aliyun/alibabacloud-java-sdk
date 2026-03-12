@@ -332,7 +332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个批量实例巡检任务</p>
+     * <p>Creates an inspection task for multiple instances.</p>
      * 
      * @param request CreateInspectionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -351,6 +351,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
+            query.put("ReportLanguage", request.reportLanguage);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -376,7 +380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个批量实例巡检任务</p>
+     * <p>Creates an inspection task for multiple instances.</p>
      * 
      * @param request CreateInspectionTaskRequest
      * @return CreateInspectionTaskResponse
@@ -388,7 +392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的批量实例巡检任务</p>
+     * <p>Creates a new scheduled inspection configuration for multiple instances.</p>
      * 
      * @param request CreateScheduledTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -411,6 +415,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
+            query.put("ReportLanguage", request.reportLanguage);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -440,7 +448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的批量实例巡检任务</p>
+     * <p>Creates a new scheduled inspection configuration for multiple instances.</p>
      * 
      * @param request CreateScheduledTaskRequest
      * @return CreateScheduledTaskResponse
@@ -452,7 +460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Skill</p>
+     * <p>Create a user-defined skill.</p>
      * 
      * @param tmpReq CreateSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -506,7 +514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Skill</p>
+     * <p>Create a user-defined skill.</p>
      * 
      * @param request CreateSkillRequest
      * @return CreateSkillResponse
@@ -634,7 +642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定的巡检任务</p>
+     * <p>Deletes a specified inspection configuration.</p>
      * 
      * @param request DeleteScheduledTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -666,7 +674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定的巡检任务</p>
+     * <p>Deletes a specified inspection configuration.</p>
      * 
      * @param request DeleteScheduledTaskRequest
      * @return DeleteScheduledTaskResponse
@@ -678,7 +686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Skill</p>
+     * <p>Deletes the specified skill.</p>
      * 
      * @param request DeleteSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -710,7 +718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Skill</p>
+     * <p>Deletes the specified skill.</p>
      * 
      * @param request DeleteSkillRequest
      * @return DeleteSkillResponse
@@ -1376,7 +1384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取巡检任务报告结果</p>
+     * <p>Queries the content of a specified inspection report.</p>
      * 
      * @param request GetInspectionReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1412,7 +1420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取巡检任务报告结果</p>
+     * <p>Queries the content of a specified inspection report.</p>
      * 
      * @param request GetInspectionReportRequest
      * @return GetInspectionReportResponse
@@ -1480,7 +1488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定定时任务配置中包含的所有实例ID列表，支持分页</p>
+     * <p>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</p>
      * 
      * @param request GetScheduledInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1520,7 +1528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定定时任务配置中包含的所有实例ID列表，支持分页</p>
+     * <p>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</p>
      * 
      * @param request GetScheduledInstancesRequest
      * @return GetScheduledInstancesResponse
@@ -1532,7 +1540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取定时任务的所有巡检报告，支持分页</p>
+     * <p>Queries the list of all inspection reports for a specified scheduled task. You can filter and paginate inspection reports by time range.</p>
      * 
      * @param request GetScheduledReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1580,7 +1588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取定时任务的所有巡检报告，支持分页</p>
+     * <p>Queries the list of all inspection reports for a specified scheduled task. You can filter and paginate inspection reports by time range.</p>
      * 
      * @param request GetScheduledReportsRequest
      * @return GetScheduledReportsResponse
@@ -1592,7 +1600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Skill详情</p>
+     * <p>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</p>
      * 
      * @param request GetSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1628,7 +1636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Skill详情</p>
+     * <p>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</p>
      * 
      * @param request GetSkillRequest
      * @return GetSkillResponse
@@ -1640,7 +1648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定用户下所有非定时任务的单独巡检报告列表，支持分页</p>
+     * <p>Queries the individual inspection reports of all non-scheduled tasks under a specified user. Pagination is supported.</p>
      * 
      * @param request GetStandAloneReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1684,7 +1692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定用户下所有非定时任务的单独巡检报告列表，支持分页</p>
+     * <p>Queries the individual inspection reports of all non-scheduled tasks under a specified user. Pagination is supported.</p>
      * 
      * @param request GetStandAloneReportsRequest
      * @return GetStandAloneReportsResponse
@@ -1778,7 +1786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定用户UID下所有巡检任务的基本信息列表</p>
+     * <p>Queries the basic information of all inspection configurations under a specified user.</p>
      * 
      * @param request ListScheduledTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1818,7 +1826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定用户UID下所有巡检任务的基本信息列表</p>
+     * <p>Queries the basic information of all inspection configurations under a specified user.</p>
      * 
      * @param request ListScheduledTasksRequest
      * @return ListScheduledTasksResponse
@@ -1830,7 +1838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Skill列表</p>
+     * <p>Obtains the user-defined skills and all system preset skills of the current user.</p>
      * 
      * @param request ListSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1870,7 +1878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Skill列表</p>
+     * <p>Obtains the user-defined skills and all system preset skills of the current user.</p>
      * 
      * @param request ListSkillRequest
      * @return ListSkillResponse
@@ -2444,7 +2452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改已存在的巡检任务信息</p>
+     * <p>Modifies an existing inspection configuration.</p>
      * 
      * @param request ModifyScheduledTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2467,6 +2475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
+            query.put("ReportLanguage", request.reportLanguage);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduledId)) {
@@ -2500,7 +2512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改已存在的巡检任务信息</p>
+     * <p>Modifies an existing inspection configuration.</p>
      * 
      * @param request ModifyScheduledTaskRequest
      * @return ModifyScheduledTaskResponse
@@ -2840,7 +2852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Skill</p>
+     * <p>Updates the information about a specified skill.</p>
      * 
      * @param tmpReq UpdateSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2898,7 +2910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Skill</p>
+     * <p>Updates the information about a specified skill.</p>
      * 
      * @param request UpdateSkillRequest
      * @return UpdateSkillResponse

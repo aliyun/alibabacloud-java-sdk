@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInspectionTaskRequest extends TeaModel {
     /**
+     * <p>The end time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. By default, the time range of the task is the latest 24 hours.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-30T02:10:48Z</p>
      */
@@ -12,6 +14,23 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The inspection items. Separates multiple items with commas (,). If this parameter is empty or not specified, all inspection items are executed.</p>
+     * <h3><a href="#"></a>Valid values:</h3>
+     * <ul>
+     * <li>instance_info</li>
+     * <li>resource_usage</li>
+     * <li>connection_session_management</li>
+     * <li>performance_metrics</li>
+     * <li>slow_query_analysis</li>
+     * <li>error_log_analysis</li>
+     * <li>lock_wait_deadlock_analysis</li>
+     * <li>backup_recovery_analysis</li>
+     * <li>high_availability_disaster_recovery_analysis</li>
+     * <li>security_configuration_analysis</li>
+     * <li>storage_engine_analysis</li>
+     * <li>schema_object_analysis</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>instance_info, resource_usage</p>
      */
@@ -19,6 +38,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String inspectionItems;
 
     /**
+     * <p>The instances covered by the task. Separates multiple instance IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +47,12 @@ public class CreateInspectionTaskRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    @NameInMap("ReportLanguage")
+    public String reportLanguage;
+
     /**
+     * <p>The start time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. By default, the time range of the task is the latest 24 hours.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-28T16:00:00Z</p>
      */
@@ -61,6 +86,14 @@ public class CreateInspectionTaskRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public CreateInspectionTaskRequest setReportLanguage(String reportLanguage) {
+        this.reportLanguage = reportLanguage;
+        return this;
+    }
+    public String getReportLanguage() {
+        return this.reportLanguage;
     }
 
     public CreateInspectionTaskRequest setStartTime(String startTime) {

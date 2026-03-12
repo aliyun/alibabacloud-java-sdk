@@ -4,16 +4,27 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class UpdateSkillRequest extends TeaModel {
+    /**
+     * <p>The content of the skill.</p>
+     */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    /**
+     * <p>The list of database engines.</p>
+     */
     @NameInMap("Dbtypes")
     public java.util.List<String> dbtypes;
 
+    /**
+     * <p>The description of the Skill. It can be up to 1000 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The name of the skill, which can contain only lowercase letters, numbers, and hyphens.</p>
+     * 
      * <strong>example:</strong>
      * <p>sql-optimization</p>
      */
@@ -21,6 +32,7 @@ public class UpdateSkillRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The unique identifier of the skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

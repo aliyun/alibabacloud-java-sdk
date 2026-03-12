@@ -4,10 +4,18 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DeleteScheduledTaskResponseBody extends TeaModel {
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The scheduled task is deleted.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -15,6 +23,8 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

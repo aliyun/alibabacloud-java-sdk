@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteScheduledTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the scheduled inspection configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

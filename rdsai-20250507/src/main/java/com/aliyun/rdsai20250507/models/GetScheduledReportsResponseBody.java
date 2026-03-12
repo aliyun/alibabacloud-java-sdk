@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class GetScheduledReportsResponseBody extends TeaModel {
+    /**
+     * <p>The response message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,16 +20,23 @@ public class GetScheduledReportsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of reports returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The details of the report.</p>
+     */
     @NameInMap("Reports")
     public java.util.List<GetScheduledReportsResponseBodyReports> reports;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -32,6 +44,8 @@ public class GetScheduledReportsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +53,8 @@ public class GetScheduledReportsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of returned reports.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -108,6 +124,8 @@ public class GetScheduledReportsResponseBody extends TeaModel {
 
     public static class GetScheduledReportsResponseBodyReports extends TeaModel {
         /**
+         * <p>The creation time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01T22:59:59Z</p>
          */
@@ -115,13 +133,20 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The end time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01T23:59:59Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("ReportLanguage")
+        public String reportLanguage;
+
         /**
+         * <p>The start time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01T00:00:00Z</p>
          */
@@ -129,6 +154,8 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -136,6 +163,8 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the report.</p>
+         * 
          * <strong>example:</strong>
          * <p>65f0053b-f933-49f5-bf65-4e4593e1****</p>
          */
@@ -161,6 +190,14 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public GetScheduledReportsResponseBodyReports setReportLanguage(String reportLanguage) {
+            this.reportLanguage = reportLanguage;
+            return this;
+        }
+        public String getReportLanguage() {
+            return this.reportLanguage;
         }
 
         public GetScheduledReportsResponseBodyReports setStartTime(String startTime) {

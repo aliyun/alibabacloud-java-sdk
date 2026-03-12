@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ListScheduledTasksResponseBody extends TeaModel {
+    /**
+     * <p>The response message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of records returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,16 +29,23 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of scheduled inspection tasks.</p>
+     */
     @NameInMap("Schedules")
     public java.util.List<ListScheduledTasksResponseBodySchedules> schedules;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +53,8 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries that are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -108,16 +124,34 @@ public class ListScheduledTasksResponseBody extends TeaModel {
 
     public static class ListScheduledTasksResponseBodySchedules extends TeaModel {
         /**
+         * <p>The creation time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-02-04T06:51:24Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the inspection task.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The new inspection frequency. Separate multiple values with commas (,). Default value: DAILY. Valid values:</p>
+         * <ul>
+         * <li>DAILY</li>
+         * <li>Monday</li>
+         * <li>Tuesday</li>
+         * <li>Wednesday</li>
+         * <li>Thursday</li>
+         * <li>Friday</li>
+         * <li>Saturday</li>
+         * <li>Sunday</li>
+         * </ul>
+         * <h3><a href="#daily--dailymonday--daily-"></a>Note: DAILY takes precedence over other values. For example, if you set this parameter to DAILY,Monday, the backend will use DAILY as the inspection frequency.</h3>
+         * 
          * <strong>example:</strong>
          * <p>Monday</p>
          */
@@ -125,16 +159,26 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String frequency;
 
         /**
+         * <p>The number of instances covered by the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ReportLanguage")
+        public String reportLanguage;
+
         /**
+         * <p>The ID of the scheduled inspection configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>9d246af2-a0cd-4f69-857d-3785048f****</p>
          */
@@ -142,12 +186,17 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String scheduledId;
 
         /**
+         * <p>The actual start time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>18:00:00Z</p>
          */
         @NameInMap("TaskStartTime")
         public String taskStartTime;
 
+        /**
+         * <p>The inspection time range. The default value is the latest 24 hours. Valid values: 1 to 168. The maximum value is 7 days.</p>
+         */
         @NameInMap("TimeRange")
         public String timeRange;
 
@@ -194,6 +243,14 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListScheduledTasksResponseBodySchedules setReportLanguage(String reportLanguage) {
+            this.reportLanguage = reportLanguage;
+            return this;
+        }
+        public String getReportLanguage() {
+            return this.reportLanguage;
         }
 
         public ListScheduledTasksResponseBodySchedules setScheduledId(String scheduledId) {

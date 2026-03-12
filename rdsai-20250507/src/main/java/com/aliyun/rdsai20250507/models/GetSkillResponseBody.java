@@ -4,23 +4,36 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class GetSkillResponseBody extends TeaModel {
+    /**
+     * <p>The content of the skill.</p>
+     */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
     /**
+     * <p>The creation time of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-06-04T02:25:43Z</p>
      */
     @NameInMap("CreatedAt")
     public String createdAt;
 
+    /**
+     * <p>The list of database engines.</p>
+     */
     @NameInMap("Dbtypes")
     public java.util.List<String> dbtypes;
 
+    /**
+     * <p>The description of the skill. It can be up to 1000 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The unique identifier of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
      */
@@ -28,6 +41,8 @@ public class GetSkillResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the skill, which can contain only lowercase letters, numbers, and hyphens.</p>
+     * 
      * <strong>example:</strong>
      * <p>sql-optimization</p>
      */
@@ -35,6 +50,8 @@ public class GetSkillResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -42,6 +59,8 @@ public class GetSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The type of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>user</p>
      */
@@ -49,6 +68,8 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillType;
 
     /**
+     * <p>The update time of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-02-04T21:14:45Z</p>
      */

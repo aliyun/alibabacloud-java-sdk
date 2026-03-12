@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class GetStandAloneReportsResponseBody extends TeaModel {
+    /**
+     * <p>The response message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,16 +20,23 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The reports.</p>
+     */
     @NameInMap("Reports")
     public java.util.List<GetStandAloneReportsResponseBodyReports> reports;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -32,6 +44,8 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned results.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +53,8 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -108,6 +124,8 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
 
     public static class GetStandAloneReportsResponseBodyReports extends TeaModel {
         /**
+         * <p>The creation time of the inspection task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-22T08:20:31Z</p>
          */
@@ -115,13 +133,20 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The end time of the inspection. The time is in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-23T08:20:31Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("ReportLanguage")
+        public String reportLanguage;
+
         /**
+         * <p>The start time of the inspection. The time is in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-23T08:00:31Z</p>
          */
@@ -129,6 +154,8 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the inspection task.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -136,6 +163,8 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the inspection report.</p>
+         * 
          * <strong>example:</strong>
          * <p>0f19210c-7bb8-4e38-a099-f94152df****</p>
          */
@@ -161,6 +190,14 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public GetStandAloneReportsResponseBodyReports setReportLanguage(String reportLanguage) {
+            this.reportLanguage = reportLanguage;
+            return this;
+        }
+        public String getReportLanguage() {
+            return this.reportLanguage;
         }
 
         public GetStandAloneReportsResponseBodyReports setStartTime(String startTime) {

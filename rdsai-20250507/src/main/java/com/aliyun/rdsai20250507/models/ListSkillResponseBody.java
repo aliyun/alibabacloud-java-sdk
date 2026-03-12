@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ListSkillResponseBody extends TeaModel {
+    /**
+     * <p>The list of skills.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSkillResponseBodyData> data;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListSkillResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of records returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListSkillResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -29,6 +38,8 @@ public class ListSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of returned records.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -81,23 +92,36 @@ public class ListSkillResponseBody extends TeaModel {
     }
 
     public static class ListSkillResponseBodyData extends TeaModel {
+        /**
+         * <p>The content of the skill.</p>
+         */
         @NameInMap("Content")
         public java.util.Map<String, ?> content;
 
         /**
+         * <p>The creation time of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-02-04T21:14:45Z</p>
          */
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>The list of database engines.</p>
+         */
         @NameInMap("Dbtypes")
         public java.util.List<String> dbtypes;
 
+        /**
+         * <p>The description of the skill.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The unique identifier of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>9a2ba261-7bb2-41a7-9c6e-1799fb5b****</p>
          */
@@ -105,6 +129,8 @@ public class ListSkillResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>sql-review</p>
          */
@@ -112,6 +138,8 @@ public class ListSkillResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>system</p>
          */
@@ -119,6 +147,8 @@ public class ListSkillResponseBody extends TeaModel {
         public String skillType;
 
         /**
+         * <p>The update time of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-02-04T21:14:45Z</p>
          */

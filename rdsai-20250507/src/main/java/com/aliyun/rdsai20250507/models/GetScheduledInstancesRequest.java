@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetScheduledInstancesRequest extends TeaModel {
     /**
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetScheduledInstancesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,7 @@ public class GetScheduledInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the scheduled inspection configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

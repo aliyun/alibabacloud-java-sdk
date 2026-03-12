@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSkillRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

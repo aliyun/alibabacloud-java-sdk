@@ -4,13 +4,21 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class GetInspectionReportResponseBody extends TeaModel {
+    /**
+     * <p>The details of the result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetInspectionReportResponseBodyData> data;
 
+    /**
+     * <p>The report text in the markdown format.</p>
+     */
     @NameInMap("MarkdownText")
     public String markdownText;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -18,6 +26,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The inspection report ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9d246af2-a0cd-4f69-857d-3785048f****</p>
      */
@@ -63,6 +73,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
 
     public static class GetInspectionReportResponseBodyDataDataItemsData extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>DBInstanceStatus</p>
          */
@@ -70,6 +82,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -100,20 +114,30 @@ public class GetInspectionReportResponseBody extends TeaModel {
     }
 
     public static class GetInspectionReportResponseBodyDataDataItems extends TeaModel {
+        /**
+         * <p>The returned results.</p>
+         */
         @NameInMap("Data")
         public java.util.List<GetInspectionReportResponseBodyDataDataItemsData> data;
 
         /**
+         * <p>The level of the alert.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The response message.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>The name of the category.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance_runningstatus</p>
          */
@@ -161,12 +185,17 @@ public class GetInspectionReportResponseBody extends TeaModel {
 
     public static class GetInspectionReportResponseBodyDataData extends TeaModel {
         /**
+         * <p>The group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance_info</p>
          */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The items in the result.</p>
+         */
         @NameInMap("Items")
         public java.util.List<GetInspectionReportResponseBodyDataDataItems> items;
 
@@ -195,6 +224,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
 
     public static class GetInspectionReportResponseBodyDataLevelSummary extends TeaModel {
         /**
+         * <p>The number of errors in the report.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -202,6 +233,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
         public Long error;
 
         /**
+         * <p>The number of failures in the report.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -209,6 +242,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
         public Long failed;
 
         /**
+         * <p>The number of normal records in the report.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -216,6 +251,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
         public Long normal;
 
         /**
+         * <p>The number of warnings in the report.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -262,10 +299,15 @@ public class GetInspectionReportResponseBody extends TeaModel {
     }
 
     public static class GetInspectionReportResponseBodyData extends TeaModel {
+        /**
+         * <p>The returned results.</p>
+         */
         @NameInMap("Data")
         public java.util.List<GetInspectionReportResponseBodyDataData> data;
 
         /**
+         * <p>The end time of the inspection. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-31T02:05:04Z</p>
          */
@@ -273,29 +315,48 @@ public class GetInspectionReportResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
         @NameInMap("EngineType")
         public String engineType;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("InstanceDesc")
         public String instanceDesc;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-2zep6e5u6l2yu****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The hierarchical summary of the report.</p>
+         */
         @NameInMap("LevelSummary")
         public GetInspectionReportResponseBodyDataLevelSummary levelSummary;
 
+        /**
+         * <p>The report text in the markdown format.</p>
+         * <ul>
+         * <li>If the InstanceId parameter is not specified, all content of the inspection report is returned. However, the MarkdownText field is empty.</li>
+         * <li>If the InstanceId parameter is specified, the content related to the instance is returned in the MarkdownText field.</li>
+         * </ul>
+         */
         @NameInMap("MarkdownText")
         public String markdownText;
 
         /**
+         * <p>The region where the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -303,6 +364,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The start time of the inspection task. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-06T16:00:00Z</p>
          */

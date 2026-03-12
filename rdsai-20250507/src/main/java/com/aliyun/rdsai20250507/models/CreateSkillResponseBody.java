@@ -4,23 +4,36 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class CreateSkillResponseBody extends TeaModel {
+    /**
+     * <p>The database engine-specific content.</p>
+     */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
     /**
+     * <p>The creation time of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-02-04T21:14:45Z</p>
      */
     @NameInMap("CreatedAt")
     public String createdAt;
 
+    /**
+     * <p>The list of database engines.</p>
+     */
     @NameInMap("Dbtypes")
     public java.util.List<String> dbtypes;
 
+    /**
+     * <p>The description of the skill.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The unique identifier of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
      */
@@ -28,6 +41,8 @@ public class CreateSkillResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>query-optimization</p>
      */
@@ -35,6 +50,8 @@ public class CreateSkillResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -42,6 +59,8 @@ public class CreateSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The type of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>user</p>
      */

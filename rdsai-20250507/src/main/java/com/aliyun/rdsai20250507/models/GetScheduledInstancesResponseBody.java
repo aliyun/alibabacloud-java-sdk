@@ -4,13 +4,21 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class GetScheduledInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of instances included in the inspection configuration.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<GetScheduledInstancesResponseBodyInstances> instances;
 
+    /**
+     * <p>The response message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +26,8 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -25,6 +35,8 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -32,6 +44,8 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +53,8 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records that are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -108,16 +124,23 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
 
     public static class GetScheduledInstancesResponseBodyInstances extends TeaModel {
         /**
+         * <p>The engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
         @NameInMap("EngineType")
         public String engineType;
 
+        /**
+         * <p>The instance description.</p>
+         */
         @NameInMap("InstanceDesc")
         public String instanceDesc;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-2zep6e5u6l2yu****</p>
          */
@@ -125,6 +148,8 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The region in which the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -132,6 +157,8 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The status of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */

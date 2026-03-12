@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetSkillRequest extends TeaModel {
     /**
+     * <p>The languages supported by the skill. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Simplified Chinese</li>
+     * <li>zh-TW: Traditional Chinese</li>
+     * <li>en-US: English</li>
+     * <li>ja-JP: Japanese</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -12,6 +20,7 @@ public class GetSkillRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The unique identifier of the skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

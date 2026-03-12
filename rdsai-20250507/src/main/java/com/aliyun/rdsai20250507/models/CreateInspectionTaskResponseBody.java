@@ -4,13 +4,21 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class CreateInspectionTaskResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the result is returned.</p>
+     */
     @NameInMap("Data")
     public CreateInspectionTaskResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -18,6 +26,8 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -63,6 +73,8 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
 
     public static class CreateInspectionTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the inspection task.</p>
+         * 
          * <strong>example:</strong>
          * <p>9adf8567-b619-4d37-8ff2-01d38a76****</p>
          */

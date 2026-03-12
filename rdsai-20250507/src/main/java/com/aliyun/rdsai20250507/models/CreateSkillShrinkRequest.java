@@ -4,22 +4,28 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class CreateSkillShrinkRequest extends TeaModel {
+    /**
+     * <p>The content of the skill.</p>
+     */
     @NameInMap("Content")
     public String contentShrink;
 
     /**
+     * <p>The list of database engines.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Dbtypes")
     public String dbtypesShrink;
 
     /**
+     * <p>The description of the skill. It can be up to 1000 characters in length.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The name of the skill, which can contain only lowercase letters, numbers, and hyphens.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

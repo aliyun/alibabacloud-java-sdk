@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyScheduledTaskResponseBody extends TeaModel {
+    /**
+     * <p>The response message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -15,6 +20,8 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned results.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
