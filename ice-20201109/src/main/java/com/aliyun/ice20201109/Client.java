@@ -1007,6 +1007,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量获取一刻AI应用生成任务</p>
+     * 
+     * @param request BatchGetYikeAIAppJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchGetYikeAIAppJobResponse
+     */
+    public BatchGetYikeAIAppJobResponse batchGetYikeAIAppJobWithOptions(BatchGetYikeAIAppJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobIds)) {
+            query.put("JobIds", request.jobIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchGetYikeAIAppJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGetYikeAIAppJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量获取一刻AI应用生成任务</p>
+     * 
+     * @param request BatchGetYikeAIAppJobRequest
+     * @return BatchGetYikeAIAppJobResponse
+     */
+    public BatchGetYikeAIAppJobResponse batchGetYikeAIAppJob(BatchGetYikeAIAppJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchGetYikeAIAppJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量获取媒资信息</p>
+     * 
+     * @param request BatchGetYikeAssetMediaInfosRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchGetYikeAssetMediaInfosResponse
+     */
+    public BatchGetYikeAssetMediaInfosResponse batchGetYikeAssetMediaInfosWithOptions(BatchGetYikeAssetMediaInfosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaIds)) {
+            query.put("MediaIds", request.mediaIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchGetYikeAssetMediaInfos"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGetYikeAssetMediaInfosResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量获取媒资信息</p>
+     * 
+     * @param request BatchGetYikeAssetMediaInfosRequest
+     * @return BatchGetYikeAssetMediaInfosResponse
+     */
+    public BatchGetYikeAssetMediaInfosResponse batchGetYikeAssetMediaInfos(BatchGetYikeAssetMediaInfosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchGetYikeAssetMediaInfosWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  You can cancel a media fingerprint analysis job only if the job is in the Queuing state.</p>
      * <ul>
@@ -5970,6 +6058,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteVodPackagingGroupResponse deleteVodPackagingGroup(DeleteVodPackagingGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVodPackagingGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除媒资信息</p>
+     * 
+     * @param request DeleteYikeAssetMediaInfosRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteYikeAssetMediaInfosResponse
+     */
+    public DeleteYikeAssetMediaInfosResponse deleteYikeAssetMediaInfosWithOptions(DeleteYikeAssetMediaInfosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logicDelete)) {
+            query.put("LogicDelete", request.logicDelete);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaIds)) {
+            query.put("MediaIds", request.mediaIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteYikeAssetMediaInfos"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteYikeAssetMediaInfosResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除媒资信息</p>
+     * 
+     * @param request DeleteYikeAssetMediaInfosRequest
+     * @return DeleteYikeAssetMediaInfosResponse
+     */
+    public DeleteYikeAssetMediaInfosResponse deleteYikeAssetMediaInfos(DeleteYikeAssetMediaInfosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteYikeAssetMediaInfosWithOptions(request, runtime);
     }
 
     /**
