@@ -86,7 +86,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>按量付费转包年包月</p>
+     * <p>Changes the billing method of a workspace from pay-as-you-go to subscription.</p>
      * 
      * @param tmpReq ConvertInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -152,7 +152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>按量付费转包年包月</p>
+     * <p>Changes the billing method of a workspace from pay-as-you-go to subscription.</p>
      * 
      * @param request ConvertInstanceRequest
      * @return ConvertInstanceResponse
@@ -164,7 +164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>包年包月转按量付费</p>
+     * <p>Changes the billing method of a workspace from subscription to pay-as-you-go.</p>
      * 
      * @param request ConvertPrepayInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -200,7 +200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>包年包月转按量付费</p>
+     * <p>Changes the billing method of a workspace from subscription to pay-as-you-go.</p>
      * 
      * @param request ConvertPrepayInstanceRequest
      * @return ConvertPrepayInstanceResponse
@@ -212,7 +212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates a subscription workspace or a pay-as-you-go workspace of Realtime Compute for Apache Flink.</p>
      * 
      * @param tmpReq CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -346,7 +346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates a subscription workspace or a pay-as-you-go workspace of Realtime Compute for Apache Flink.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -358,7 +358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建命名空间</p>
+     * <p>Creates a namespace in a Realtime Compute for Apache Flink workspace.</p>
      * 
      * @param tmpReq CreateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -412,7 +412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建命名空间</p>
+     * <p>Creates a namespace in a Realtime Compute for Apache Flink workspace.</p>
      * 
      * @param request CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -424,7 +424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放按量付费的实例</p>
+     * <p>Deletes a pay-as-you-go workspace of Realtime Compute for Apache Flink.</p>
      * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -460,7 +460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放按量付费的实例</p>
+     * <p>Deletes a pay-as-you-go workspace of Realtime Compute for Apache Flink.</p>
      * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -472,7 +472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除namespace</p>
+     * <p>Deletes a namespace.</p>
      * 
      * @param request DeleteNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -512,7 +512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除namespace</p>
+     * <p>Deletes a namespace.</p>
      * 
      * @param request DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
@@ -524,7 +524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>instance列表</p>
+     * <p>Queries the details of one or more Realtime Compute for Apache Flink workspaces.</p>
      * 
      * @param tmpReq DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -558,7 +558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>instance列表</p>
+     * <p>Queries the details of one or more Realtime Compute for Apache Flink workspaces.</p>
      * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -570,7 +570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>namespace列表</p>
+     * <p>Queries the information about a namespace that belongs to a workspace.</p>
      * 
      * @param tmpReq DescribeNamespacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -604,7 +604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>namespace列表</p>
+     * <p>Queries the information about a namespace that belongs to a workspace.</p>
      * 
      * @param request DescribeNamespacesRequest
      * @return DescribeNamespacesResponse
@@ -616,7 +616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取支持的region列表</p>
+     * <p>Queries the regions that are available in which Realtime Compute for Apache Flink is supported.</p>
      * 
      * @param request DescribeSupportedRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -640,7 +640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取支持的region列表</p>
+     * <p>Queries the regions that are available in which Realtime Compute for Apache Flink is supported.</p>
      * @return DescribeSupportedRegionsResponse
      */
     public DescribeSupportedRegionsResponse describeSupportedRegions() throws Exception {
@@ -650,7 +650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取支持的zoneId列表</p>
+     * <p>Obtains the zones that are supported by Realtime Compute for Apache Flink.</p>
      * 
      * @param request DescribeSupportedZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -678,7 +678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取支持的zoneId列表</p>
+     * <p>Obtains the zones that are supported by Realtime Compute for Apache Flink.</p>
      * 
      * @param request DescribeSupportedZonesRequest
      * @return DescribeSupportedZonesResponse
@@ -690,7 +690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举flinkasi标签</p>
+     * <p>Queries the tags of specified resources. You can query the key of a tag by tag value, or query the value of a tag by tag key. You can also obtain information about all tags that you use in a workspace in the console of fully managed Flink.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -738,7 +738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举flinkasi标签</p>
+     * <p>Queries the tags of specified resources. You can query the key of a tag by tag value, or query the value of a tag by tag key. You can also obtain information about all tags that you use in a workspace in the console of fully managed Flink.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -808,7 +808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对包年实例升降配，对按量实例修改resource quota</p>
+     * <p>Scale in or out a workspace to reconfigure resources for the workspace.</p>
      * 
      * @param tmpReq ModifyInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -882,7 +882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对包年实例升降配，对按量实例修改resource quota</p>
+     * <p>Scale in or out a workspace to reconfigure resources for the workspace.</p>
      * 
      * @param request ModifyInstanceSpecRequest
      * @return ModifyInstanceSpecResponse
@@ -1040,7 +1040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扩容/缩容</p>
+     * <p>Modifies the configuration of the computing resources of a subscription fully managed Flink workspace. If the number of computing resources after the modification is less than the current number of computing resources, the scale-in operation is performed. If the number of computing resources after the modification is larger than the current number of computing resources, the scale-out operation is performed.</p>
      * 
      * @deprecated OpenAPI ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.
      * 
@@ -1114,7 +1114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扩容/缩容</p>
+     * <p>Modifies the configuration of the computing resources of a subscription fully managed Flink workspace. If the number of computing resources after the modification is less than the current number of computing resources, the scale-in operation is performed. If the number of computing resources after the modification is larger than the current number of computing resources, the scale-out operation is performed.</p>
      * 
      * @deprecated OpenAPI ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.
      * 
@@ -1130,7 +1130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改namespace资源分配</p>
+     * <p>Modifies the resource configurations of a namespace in a subscription workspace.</p>
      * 
      * @deprecated OpenAPI ModifyPrepayNamespaceSpec is deprecated, please use foasconsole::2021-10-28::ModifyNamespaceSpec instead.
      * 
@@ -1184,7 +1184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改namespace资源分配</p>
+     * <p>Modifies the resource configurations of a namespace in a subscription workspace.</p>
      * 
      * @deprecated OpenAPI ModifyPrepayNamespaceSpec is deprecated, please use foasconsole::2021-10-28::ModifyNamespaceSpec instead.
      * 
@@ -1200,7 +1200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>按量付费转包年包月询价</p>
+     * <p>Queries the fee of switching the billing method of a workspace from pay-as-you-go to subscription.</p>
      * 
      * @param tmpReq QueryConvertInstancePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1266,7 +1266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>按量付费转包年包月询价</p>
+     * <p>Queries the fee of switching the billing method of a workspace from pay-as-you-go to subscription.</p>
      * 
      * @param request QueryConvertInstancePriceRequest
      * @return QueryConvertInstancePriceResponse
@@ -1278,7 +1278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>包年包月转按量付费询价</p>
+     * <p>Obtains the estimated refund after the billing method of your Realtime Compute for Apache Flink workspace is changed from subscription to pay-as-you-go. After you change the billing method of your workspace to pay-as-you-go, bills are generated on an hourly basis.</p>
      * 
      * @param request QueryConvertPrepayInstancePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1314,7 +1314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>包年包月转按量付费询价</p>
+     * <p>Obtains the estimated refund after the billing method of your Realtime Compute for Apache Flink workspace is changed from subscription to pay-as-you-go. After you change the billing method of your workspace to pay-as-you-go, bills are generated on an hourly basis.</p>
      * 
      * @param request QueryConvertPrepayInstancePriceRequest
      * @return QueryConvertPrepayInstancePriceResponse
@@ -1326,7 +1326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取创建实例的价格</p>
+     * <p>Queries the fee of creating a workspace.</p>
      * 
      * @param tmpReq QueryCreateInstancePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1436,7 +1436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取创建实例的价格</p>
+     * <p>Queries the fee of creating a workspace.</p>
      * 
      * @param request QueryCreateInstancePriceRequest
      * @return QueryCreateInstancePriceResponse
@@ -1448,7 +1448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询付费类型为包年包月的实例修改资源规格的价格</p>
+     * <p>Queries the fee of modifying the resource configuration of a workspace.</p>
      * 
      * @param tmpReq QueryModifyInstancePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1522,7 +1522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询付费类型为包年包月的实例修改资源规格的价格</p>
+     * <p>Queries the fee of modifying the resource configuration of a workspace.</p>
      * 
      * @param request QueryModifyInstancePriceRequest
      * @return QueryModifyInstancePriceResponse
@@ -1534,7 +1534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询付费类型为包年包月的实例续费价格</p>
+     * <p>Queries the fee of renewing a subscription workspace.</p>
      * 
      * @param request QueryRenewInstancePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1586,7 +1586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询付费类型为包年包月的实例续费价格</p>
+     * <p>Queries the fee of renewing a subscription workspace.</p>
      * 
      * @param request QueryRenewInstancePriceRequest
      * @return QueryRenewInstancePriceResponse
@@ -1598,7 +1598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费</p>
+     * <p>Renews a subscription workspace of Realtime Compute for Apache Flink.</p>
      * 
      * @param request RenewInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1650,7 +1650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费</p>
+     * <p>Renews a subscription workspace of Realtime Compute for Apache Flink.</p>
      * 
      * @param request RenewInstanceRequest
      * @return RenewInstanceResponse
@@ -1662,7 +1662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打标签接口</p>
+     * <p>Adds tags to specified resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1706,7 +1706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打标签接口</p>
+     * <p>Adds tags to specified resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -1718,7 +1718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>flinkasi去标签</p>
+     * <p>Removes tags from specified resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1766,7 +1766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>flinkasi去标签</p>
+     * <p>Removes tags from specified resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
