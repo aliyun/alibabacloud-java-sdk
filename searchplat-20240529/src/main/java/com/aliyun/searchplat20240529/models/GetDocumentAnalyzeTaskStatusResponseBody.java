@@ -63,6 +63,9 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         @NameInMap("page_num")
         public Integer pageNum;
 
+        @NameInMap("pages")
+        public java.util.List<String> pages;
+
         public static GetDocumentAnalyzeTaskStatusResponseBodyResultData build(java.util.Map<String, ?> map) throws Exception {
             GetDocumentAnalyzeTaskStatusResponseBodyResultData self = new GetDocumentAnalyzeTaskStatusResponseBodyResultData();
             return TeaModel.build(map, self);
@@ -90,6 +93,14 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         }
         public Integer getPageNum() {
             return this.pageNum;
+        }
+
+        public GetDocumentAnalyzeTaskStatusResponseBodyResultData setPages(java.util.List<String> pages) {
+            this.pages = pages;
+            return this;
+        }
+        public java.util.List<String> getPages() {
+            return this.pages;
         }
 
     }

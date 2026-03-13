@@ -52,6 +52,9 @@ public class CreateAudioAsrTaskRequest extends TeaModel {
         @NameInMap("oss")
         public String oss;
 
+        @NameInMap("url")
+        public String url;
+
         public static CreateAudioAsrTaskRequestInput build(java.util.Map<String, ?> map) throws Exception {
             CreateAudioAsrTaskRequestInput self = new CreateAudioAsrTaskRequestInput();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class CreateAudioAsrTaskRequest extends TeaModel {
         }
         public String getOss() {
             return this.oss;
+        }
+
+        public CreateAudioAsrTaskRequestInput setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }

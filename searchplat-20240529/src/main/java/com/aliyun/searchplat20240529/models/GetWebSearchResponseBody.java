@@ -60,6 +60,9 @@ public class GetWebSearchResponseBody extends TeaModel {
         @NameInMap("link")
         public String link;
 
+        @NameInMap("meta_info")
+        public java.util.Map<String, ?> metaInfo;
+
         @NameInMap("position")
         public Long position;
 
@@ -88,6 +91,14 @@ public class GetWebSearchResponseBody extends TeaModel {
         }
         public String getLink() {
             return this.link;
+        }
+
+        public GetWebSearchResponseBodyResultSearchResult setMetaInfo(java.util.Map<String, ?> metaInfo) {
+            this.metaInfo = metaInfo;
+            return this;
+        }
+        public java.util.Map<String, ?> getMetaInfo() {
+            return this.metaInfo;
         }
 
         public GetWebSearchResponseBodyResultSearchResult setPosition(Long position) {

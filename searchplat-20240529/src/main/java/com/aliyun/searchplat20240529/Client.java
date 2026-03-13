@@ -174,6 +174,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建视频切割异步任务</p>
+     * 
+     * @param request CreateVideoSegmentationTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVideoSegmentationTaskResponse
+     */
+    public CreateVideoSegmentationTaskResponse createVideoSegmentationTaskWithOptions(String workspaceName, String serviceId, CreateVideoSegmentationTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            body.put("output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            body.put("parameters", request.parameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVideoSegmentationTask"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/video-segmentation/" + serviceId + "/async"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateVideoSegmentationTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建视频切割异步任务</p>
+     * 
+     * @param request CreateVideoSegmentationTaskRequest
+     * @return CreateVideoSegmentationTaskResponse
+     */
+    public CreateVideoSegmentationTaskResponse createVideoSegmentationTask(String workspaceName, String serviceId, CreateVideoSegmentationTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createVideoSegmentationTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建语音转录异步任务</p>
      * 
      * @param request CreateVideoSnapshotTaskRequest
@@ -225,6 +280,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createVideoSnapshotTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建视频总结异步任务</p>
+     * 
+     * @param request CreateVideoSummarizationTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVideoSummarizationTaskResponse
+     */
+    public CreateVideoSummarizationTaskResponse createVideoSummarizationTaskWithOptions(String workspaceName, String serviceId, CreateVideoSummarizationTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            body.put("output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            body.put("parameters", request.parameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVideoSummarizationTask"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/video-summarization/" + serviceId + "/async"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateVideoSummarizationTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建视频总结异步任务</p>
+     * 
+     * @param request CreateVideoSummarizationTaskRequest
+     * @return CreateVideoSummarizationTaskResponse
+     */
+    public CreateVideoSummarizationTaskResponse createVideoSummarizationTask(String workspaceName, String serviceId, CreateVideoSummarizationTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createVideoSummarizationTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
     }
 
     /**
@@ -955,6 +1065,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取视频切割异步任务状态</p>
+     * 
+     * @param request GetVideoSegmentationTaskStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoSegmentationTaskStatusResponse
+     */
+    public GetVideoSegmentationTaskStatusResponse getVideoSegmentationTaskStatusWithOptions(String workspaceName, String serviceId, GetVideoSegmentationTaskStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("task_id", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoSegmentationTaskStatus"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/video-segmentation/" + serviceId + "/async/task-status"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetVideoSegmentationTaskStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频切割异步任务状态</p>
+     * 
+     * @param request GetVideoSegmentationTaskStatusRequest
+     * @return GetVideoSegmentationTaskStatusResponse
+     */
+    public GetVideoSegmentationTaskStatusResponse getVideoSegmentationTaskStatus(String workspaceName, String serviceId, GetVideoSegmentationTaskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVideoSegmentationTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取视频截帧异步提取任务状态</p>
      * 
      * @param request GetVideoSnapshotTaskStatusRequest
@@ -998,6 +1155,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getVideoSnapshotTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频总结异步任务状态</p>
+     * 
+     * @param request GetVideoSummarizationTaskStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoSummarizationTaskStatusResponse
+     */
+    public GetVideoSummarizationTaskStatusResponse getVideoSummarizationTaskStatusWithOptions(String workspaceName, String serviceId, GetVideoSummarizationTaskStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("task_id", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoSummarizationTaskStatus"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/video-summarization/" + serviceId + "/async/task-status"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetVideoSummarizationTaskStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频总结异步任务状态</p>
+     * 
+     * @param request GetVideoSummarizationTaskStatusRequest
+     * @return GetVideoSummarizationTaskStatusResponse
+     */
+    public GetVideoSummarizationTaskStatusResponse getVideoSummarizationTaskStatus(String workspaceName, String serviceId, GetVideoSummarizationTaskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVideoSummarizationTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
     }
 
     /**

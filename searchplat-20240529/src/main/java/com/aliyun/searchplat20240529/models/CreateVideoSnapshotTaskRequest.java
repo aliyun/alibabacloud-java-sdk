@@ -52,6 +52,9 @@ public class CreateVideoSnapshotTaskRequest extends TeaModel {
         @NameInMap("oss")
         public String oss;
 
+        @NameInMap("url")
+        public String url;
+
         public static CreateVideoSnapshotTaskRequestInput build(java.util.Map<String, ?> map) throws Exception {
             CreateVideoSnapshotTaskRequestInput self = new CreateVideoSnapshotTaskRequestInput();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class CreateVideoSnapshotTaskRequest extends TeaModel {
         }
         public String getOss() {
             return this.oss;
+        }
+
+        public CreateVideoSnapshotTaskRequestInput setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
