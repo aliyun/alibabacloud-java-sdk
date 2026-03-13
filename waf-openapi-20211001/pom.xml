@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>waf_openapi20211001</artifactId>
-  <version>6.5.2</version>
+  <version>6.6.0</version>
   <packaging>jar</packaging>
   <name>waf_openapi20211001</name>
   <description>Alibaba Cloud waf-openapi (20211001) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.23</version>
+      <version>0.2.26</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.10</version>
+      <version>0.3.12</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
