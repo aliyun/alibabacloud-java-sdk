@@ -4,6 +4,10 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class DescribeMultimodalModerationResultRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAA-BBBBB-AIXI-1314-CCCCC</p>
+     */
     @NameInMap("ReqId")
     public String reqId;
 

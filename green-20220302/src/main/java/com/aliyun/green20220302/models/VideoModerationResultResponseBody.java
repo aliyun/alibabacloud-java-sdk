@@ -415,6 +415,140 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
 
+    public static class VideoModerationResultResponseBodyDataExtAigcDataAIGC extends TeaModel {
+        @NameInMap("ContentProducer")
+        public String contentProducer;
+
+        @NameInMap("ContentPropagator")
+        public String contentPropagator;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("ProduceID")
+        public String produceID;
+
+        @NameInMap("PropagateID")
+        public String propagateID;
+
+        @NameInMap("ReservedCode1")
+        public String reservedCode1;
+
+        @NameInMap("ReservedCode2")
+        public String reservedCode2;
+
+        public static VideoModerationResultResponseBodyDataExtAigcDataAIGC build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataExtAigcDataAIGC self = new VideoModerationResultResponseBodyDataExtAigcDataAIGC();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataExtAigcDataAIGC setContentProducer(String contentProducer) {
+            this.contentProducer = contentProducer;
+            return this;
+        }
+        public String getContentProducer() {
+            return this.contentProducer;
+        }
+
+        public VideoModerationResultResponseBodyDataExtAigcDataAIGC setContentPropagator(String contentPropagator) {
+            this.contentPropagator = contentPropagator;
+            return this;
+        }
+        public String getContentPropagator() {
+            return this.contentPropagator;
+        }
+
+        public VideoModerationResultResponseBodyDataExtAigcDataAIGC setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public VideoModerationResultResponseBodyDataExtAigcDataAIGC setProduceID(String produceID) {
+            this.produceID = produceID;
+            return this;
+        }
+        public String getProduceID() {
+            return this.produceID;
+        }
+
+        public VideoModerationResultResponseBodyDataExtAigcDataAIGC setPropagateID(String propagateID) {
+            this.propagateID = propagateID;
+            return this;
+        }
+        public String getPropagateID() {
+            return this.propagateID;
+        }
+
+        public VideoModerationResultResponseBodyDataExtAigcDataAIGC setReservedCode1(String reservedCode1) {
+            this.reservedCode1 = reservedCode1;
+            return this;
+        }
+        public String getReservedCode1() {
+            return this.reservedCode1;
+        }
+
+        public VideoModerationResultResponseBodyDataExtAigcDataAIGC setReservedCode2(String reservedCode2) {
+            this.reservedCode2 = reservedCode2;
+            return this;
+        }
+        public String getReservedCode2() {
+            return this.reservedCode2;
+        }
+
+    }
+
+    public static class VideoModerationResultResponseBodyDataExtAigcData extends TeaModel {
+        @NameInMap("AIGC")
+        public VideoModerationResultResponseBodyDataExtAigcDataAIGC AIGC;
+
+        @NameInMap("Result")
+        public String result;
+
+        public static VideoModerationResultResponseBodyDataExtAigcData build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataExtAigcData self = new VideoModerationResultResponseBodyDataExtAigcData();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataExtAigcData setAIGC(VideoModerationResultResponseBodyDataExtAigcDataAIGC AIGC) {
+            this.AIGC = AIGC;
+            return this;
+        }
+        public VideoModerationResultResponseBodyDataExtAigcDataAIGC getAIGC() {
+            return this.AIGC;
+        }
+
+        public VideoModerationResultResponseBodyDataExtAigcData setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+    }
+
+    public static class VideoModerationResultResponseBodyDataExt extends TeaModel {
+        @NameInMap("AigcData")
+        public VideoModerationResultResponseBodyDataExtAigcData aigcData;
+
+        public static VideoModerationResultResponseBodyDataExt build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataExt self = new VideoModerationResultResponseBodyDataExt();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataExt setAigcData(VideoModerationResultResponseBodyDataExtAigcData aigcData) {
+            this.aigcData = aigcData;
+            return this;
+        }
+        public VideoModerationResultResponseBodyDataExtAigcData getAigcData() {
+            return this.aigcData;
+        }
+
+    }
+
     public static class VideoModerationResultResponseBodyDataFrameResultFrameSummarys extends TeaModel {
         /**
          * <p>The description of the result.</p>
@@ -1116,6 +1250,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("DataId")
         public String dataId;
 
+        @NameInMap("Ext")
+        public VideoModerationResultResponseBodyDataExt ext;
+
         /**
          * <p>The image moderation results. If the call is successful, the HTTP status code 200 and moderation results are returned. The moderation results contain a structure.</p>
          */
@@ -1171,6 +1308,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public String getDataId() {
             return this.dataId;
+        }
+
+        public VideoModerationResultResponseBodyData setExt(VideoModerationResultResponseBodyDataExt ext) {
+            this.ext = ext;
+            return this;
+        }
+        public VideoModerationResultResponseBodyDataExt getExt() {
+            return this.ext;
         }
 
         public VideoModerationResultResponseBodyData setFrameResult(VideoModerationResultResponseBodyDataFrameResult frameResult) {

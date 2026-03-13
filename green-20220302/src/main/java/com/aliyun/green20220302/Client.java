@@ -152,7 +152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询检测结果辅助信息</p>
+     * <p>Obtains more auxiliary information that is identified by calling the Image Moderation 2.0 API. The auxiliary information includes the moderation results of images and text and the hit information of custom image libraries.</p>
      * 
      * @param request DescribeImageResultExtRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -188,7 +188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询检测结果辅助信息</p>
+     * <p>Obtains more auxiliary information that is identified by calling the Image Moderation 2.0 API. The auxiliary information includes the moderation results of images and text and the hit information of custom image libraries.</p>
      * 
      * @param request DescribeImageResultExtRequest
      * @return DescribeImageResultExtResponse
@@ -244,7 +244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询上传token</p>
+     * <p>Queries the token for uploading files.</p>
      * 
      * @param request DescribeUploadTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -268,7 +268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询上传token</p>
+     * <p>Queries the token for uploading files.</p>
      * @return DescribeUploadTokenResponse
      */
     public DescribeUploadTokenResponse describeUploadToken() throws Exception {
@@ -336,7 +336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档审核</p>
+     * <p>Moderates files.</p>
      * 
      * @param request FileModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -372,7 +372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档审核</p>
+     * <p>Moderates files.</p>
      * 
      * @param request FileModerationRequest
      * @return FileModerationResponse
@@ -384,7 +384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>图片异步检测</p>
+     * <p>Moderates images in asynchronous mode. An asynchronous image moderation task does not return the moderation results in real time. To obtain moderation results, you can poll the moderation results periodically or enable callback notification. The moderation results are retained for a maximum of 3 days.</p>
      * 
      * @param request ImageAsyncModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -420,7 +420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>图片异步检测</p>
+     * <p>Moderates images in asynchronous mode. An asynchronous image moderation task does not return the moderation results in real time. To obtain moderation results, you can poll the moderation results periodically or enable callback notification. The moderation results are retained for a maximum of 3 days.</p>
      * 
      * @param request ImageAsyncModerationRequest
      * @return ImageAsyncModerationResponse
@@ -1044,7 +1044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>url异步检测</p>
+     * <p>Identifies whether URL links contain risks such as fraud, pornographic, and gambling content, to protect the platform content ecosystem.</p>
      * 
      * @param request UrlAsyncModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1080,7 +1080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>url异步检测</p>
+     * <p>Identifies whether URL links contain risks such as fraud, pornographic, and gambling content, to protect the platform content ecosystem.</p>
      * 
      * @param request UrlAsyncModerationRequest
      * @return UrlAsyncModerationResponse
@@ -1092,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>视频检测任务提交</p>
+     * <p>Identifies risky or illegal content in video files. You can call this operation to submit a moderation task.</p>
      * 
      * @param request VideoModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1128,7 +1128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>视频检测任务提交</p>
+     * <p>Identifies risky or illegal content in video files. You can call this operation to submit a moderation task.</p>
      * 
      * @param request VideoModerationRequest
      * @return VideoModerationResponse
@@ -1140,7 +1140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消视频直播流检测</p>
+     * <p>Cancels a live stream moderation task.</p>
      * 
      * @param request VideoModerationCancelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1176,7 +1176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消视频直播流检测</p>
+     * <p>Cancels a live stream moderation task.</p>
      * 
      * @param request VideoModerationCancelRequest
      * @return VideoModerationCancelResponse
@@ -1242,7 +1242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>语音审核</p>
+     * <p>Submits a Voice Moderation 2.0 task.</p>
      * 
      * @param request VoiceModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1278,7 +1278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>语音审核</p>
+     * <p>Submits a Voice Moderation 2.0 task.</p>
      * 
      * @param request VoiceModerationRequest
      * @return VoiceModerationResponse
@@ -1290,7 +1290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消检测</p>
+     * <p>Cancels a Voice Moderation 2.0 task.</p>
      * 
      * @param request VoiceModerationCancelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1326,7 +1326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消检测</p>
+     * <p>Cancels a Voice Moderation 2.0 task.</p>
      * 
      * @param request VoiceModerationCancelRequest
      * @return VoiceModerationCancelResponse

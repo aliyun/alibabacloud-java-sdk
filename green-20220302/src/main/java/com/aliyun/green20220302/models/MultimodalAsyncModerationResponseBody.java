@@ -4,15 +4,29 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class MultimodalAsyncModerationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public MultimodalAsyncModerationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +68,17 @@ public class MultimodalAsyncModerationResponseBody extends TeaModel {
     }
 
     public static class MultimodalAsyncModerationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>26769ada6e264e7ba9aa048241e12be9</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A07B3DB9-D762-5C56-95B1-8EC55CF176D2</p>
+         */
         @NameInMap("ReqId")
         public String reqId;
 

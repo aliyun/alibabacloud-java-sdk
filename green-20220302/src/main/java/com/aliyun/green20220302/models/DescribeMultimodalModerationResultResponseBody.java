@@ -4,15 +4,27 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public DescribeMultimodalModerationResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,6 +69,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>violent_explosion</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -106,6 +122,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>violent_explosion</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -166,6 +186,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>violent_explosion</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -215,15 +239,27 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
         @NameInMap("CommentDatas")
         public java.util.List<DescribeMultimodalModerationResultResponseBodyDataCommentDatas> commentDatas;
 
+        /**
+         * <strong>example:</strong>
+         * <p>data1234</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
         @NameInMap("MainData")
         public DescribeMultimodalModerationResultResponseBodyDataMainData mainData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
+         */
         @NameInMap("ReqId")
         public String reqId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
