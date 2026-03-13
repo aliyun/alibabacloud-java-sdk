@@ -19,6 +19,9 @@ public class CredentialListItem extends TeaModel {
     @NameInMap("credentialSourceType")
     public String credentialSourceType;
 
+    @NameInMap("description")
+    public String description;
+
     @NameInMap("enabled")
     public Boolean enabled;
 
@@ -71,6 +74,14 @@ public class CredentialListItem extends TeaModel {
     }
     public String getCredentialSourceType() {
         return this.credentialSourceType;
+    }
+
+    public CredentialListItem setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CredentialListItem setEnabled(Boolean enabled) {

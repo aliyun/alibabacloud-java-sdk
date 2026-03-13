@@ -13,6 +13,12 @@ public class CredentialPublicConfig extends TeaModel {
     @NameInMap("headerKey")
     public String headerKey;
 
+    @NameInMap("jwks")
+    public String jwks;
+
+    @NameInMap("prefix")
+    public String prefix;
+
     @NameInMap("provider")
     public String provider;
 
@@ -49,6 +55,22 @@ public class CredentialPublicConfig extends TeaModel {
     }
     public String getHeaderKey() {
         return this.headerKey;
+    }
+
+    public CredentialPublicConfig setJwks(String jwks) {
+        this.jwks = jwks;
+        return this;
+    }
+    public String getJwks() {
+        return this.jwks;
+    }
+
+    public CredentialPublicConfig setPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    public String getPrefix() {
+        return this.prefix;
     }
 
     public CredentialPublicConfig setProvider(String provider) {

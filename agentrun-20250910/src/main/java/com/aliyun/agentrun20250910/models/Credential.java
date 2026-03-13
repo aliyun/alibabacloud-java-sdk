@@ -17,7 +17,7 @@ public class Credential extends TeaModel {
     public String credentialName;
 
     @NameInMap("credentialPublicConfig")
-    public java.util.Map<String, String> credentialPublicConfig;
+    public CredentialPublicConfig credentialPublicConfig;
 
     @NameInMap("credentialSecret")
     public String credentialSecret;
@@ -74,11 +74,11 @@ public class Credential extends TeaModel {
         return this.credentialName;
     }
 
-    public Credential setCredentialPublicConfig(java.util.Map<String, String> credentialPublicConfig) {
+    public Credential setCredentialPublicConfig(CredentialPublicConfig credentialPublicConfig) {
         this.credentialPublicConfig = credentialPublicConfig;
         return this;
     }
-    public java.util.Map<String, String> getCredentialPublicConfig() {
+    public CredentialPublicConfig getCredentialPublicConfig() {
         return this.credentialPublicConfig;
     }
 
