@@ -17,17 +17,9 @@ public class KeywordSuggestInfo extends TeaModel {
     @NameInMap("city_code")
     public Integer cityCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>杭州</p>
-     */
     @NameInMap("city_name")
     public String cityName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>杭州东站</p>
-     */
     @NameInMap("display_name")
     public String displayName;
 
@@ -38,13 +30,13 @@ public class KeywordSuggestInfo extends TeaModel {
     @NameInMap("hotel_id")
     public String hotelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png">https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png</a></p>
+     */
     @NameInMap("icon")
     public String icon;
 
-    /**
-     * <strong>example:</strong>
-     * <p>4.8分</p>
-     */
     @NameInMap("point")
     public String point;
 
@@ -62,13 +54,13 @@ public class KeywordSuggestInfo extends TeaModel {
     @NameInMap("region")
     public Integer region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("type")
     public Integer type;
 
-    /**
-     * <strong>example:</strong>
-     * <p>景点</p>
-     */
     @NameInMap("type_desc")
     public String typeDesc;
 

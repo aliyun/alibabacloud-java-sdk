@@ -28,6 +28,9 @@ public class FlightItineraryScanQueryRequest extends TeaModel {
     @NameInMap("itinerary_num")
     public String itineraryNum;
 
+    @NameInMap("order_id")
+    public Long orderId;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -80,6 +83,14 @@ public class FlightItineraryScanQueryRequest extends TeaModel {
     }
     public String getItineraryNum() {
         return this.itineraryNum;
+    }
+
+    public FlightItineraryScanQueryRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public FlightItineraryScanQueryRequest setPageNo(Integer pageNo) {

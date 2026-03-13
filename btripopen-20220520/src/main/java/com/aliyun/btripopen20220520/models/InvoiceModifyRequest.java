@@ -21,6 +21,9 @@ public class InvoiceModifyRequest extends TeaModel {
     @NameInMap("bank_no")
     public String bankNo;
 
+    @NameInMap("mail_third_part_id")
+    public String mailThirdPartId;
+
     /**
      * <strong>example:</strong>
      * <p>122333121</p>
@@ -89,6 +92,14 @@ public class InvoiceModifyRequest extends TeaModel {
     }
     public String getBankNo() {
         return this.bankNo;
+    }
+
+    public InvoiceModifyRequest setMailThirdPartId(String mailThirdPartId) {
+        this.mailThirdPartId = mailThirdPartId;
+        return this;
+    }
+    public String getMailThirdPartId() {
+        return this.mailThirdPartId;
     }
 
     public InvoiceModifyRequest setTaxNo(String taxNo) {

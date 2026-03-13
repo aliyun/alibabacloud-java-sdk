@@ -17,6 +17,9 @@ public class MealApplyAddRequest extends TeaModel {
     @NameInMap("cost_center_id")
     public Long costCenterId;
 
+    @NameInMap("extend_field")
+    public String extendField;
+
     /**
      * <strong>example:</strong>
      * <p>123</p>
@@ -104,6 +107,14 @@ public class MealApplyAddRequest extends TeaModel {
     }
     public Long getCostCenterId() {
         return this.costCenterId;
+    }
+
+    public MealApplyAddRequest setExtendField(String extendField) {
+        this.extendField = extendField;
+        return this;
+    }
+    public String getExtendField() {
+        return this.extendField;
     }
 
     public MealApplyAddRequest setInvoiceId(Long invoiceId) {

@@ -204,6 +204,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("base_location")
         public String baseLocation;
 
+        @NameInMap("before_ticket_no")
+        public String beforeTicketNo;
+
         /**
          * <strong>example:</strong>
          * <p>2023-01-01 00:00:00</p>
@@ -630,6 +633,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("seal_price")
         public Double sealPrice;
 
+        @NameInMap("segment_list")
+        public String segmentList;
+
         /**
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -947,6 +953,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getBaseLocation() {
             return this.baseLocation;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setBeforeTicketNo(String beforeTicketNo) {
+            this.beforeTicketNo = beforeTicketNo;
+            return this;
+        }
+        public String getBeforeTicketNo() {
+            return this.beforeTicketNo;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setBillRecordTime(String billRecordTime) {
@@ -1603,6 +1617,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getSealPrice() {
             return this.sealPrice;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setSegmentList(String segmentList) {
+            this.segmentList = segmentList;
+            return this;
+        }
+        public String getSegmentList() {
+            return this.segmentList;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setServiceFee(Double serviceFee) {

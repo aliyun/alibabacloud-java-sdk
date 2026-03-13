@@ -500,6 +500,12 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("arr_airport")
         public String arrAirport;
 
+        @NameInMap("arr_apt_prefecture_ad_code")
+        public String arrAptPrefectureAdCode;
+
+        @NameInMap("arr_apt_prefecture_name")
+        public String arrAptPrefectureName;
+
         @NameInMap("arr_city")
         public String arrCity;
 
@@ -530,6 +536,12 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
 
         @NameInMap("dep_airport")
         public String depAirport;
+
+        @NameInMap("dep_apt_prefecture_ad_code")
+        public String depAptPrefectureAdCode;
+
+        @NameInMap("dep_apt_prefecture_name")
+        public String depAptPrefectureName;
 
         @NameInMap("dep_city")
         public String depCity;
@@ -696,6 +708,22 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             return this.arrAirport;
         }
 
+        public FlightOrderListQueryResponseBodyModule setArrAptPrefectureAdCode(String arrAptPrefectureAdCode) {
+            this.arrAptPrefectureAdCode = arrAptPrefectureAdCode;
+            return this;
+        }
+        public String getArrAptPrefectureAdCode() {
+            return this.arrAptPrefectureAdCode;
+        }
+
+        public FlightOrderListQueryResponseBodyModule setArrAptPrefectureName(String arrAptPrefectureName) {
+            this.arrAptPrefectureName = arrAptPrefectureName;
+            return this;
+        }
+        public String getArrAptPrefectureName() {
+            return this.arrAptPrefectureName;
+        }
+
         public FlightOrderListQueryResponseBodyModule setArrCity(String arrCity) {
             this.arrCity = arrCity;
             return this;
@@ -766,6 +794,22 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         }
         public String getDepAirport() {
             return this.depAirport;
+        }
+
+        public FlightOrderListQueryResponseBodyModule setDepAptPrefectureAdCode(String depAptPrefectureAdCode) {
+            this.depAptPrefectureAdCode = depAptPrefectureAdCode;
+            return this;
+        }
+        public String getDepAptPrefectureAdCode() {
+            return this.depAptPrefectureAdCode;
+        }
+
+        public FlightOrderListQueryResponseBodyModule setDepAptPrefectureName(String depAptPrefectureName) {
+            this.depAptPrefectureName = depAptPrefectureName;
+            return this;
+        }
+        public String getDepAptPrefectureName() {
+            return this.depAptPrefectureName;
         }
 
         public FlightOrderListQueryResponseBodyModule setDepCity(String depCity) {

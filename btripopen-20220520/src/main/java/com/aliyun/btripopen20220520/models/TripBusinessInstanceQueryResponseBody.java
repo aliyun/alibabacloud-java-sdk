@@ -97,6 +97,9 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
     }
 
     public static class TripBusinessInstanceQueryResponseBodyModule extends TeaModel {
+        @NameInMap("business_data")
+        public String businessData;
+
         @NameInMap("creator")
         public String creator;
 
@@ -124,6 +127,14 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
         public static TripBusinessInstanceQueryResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             TripBusinessInstanceQueryResponseBodyModule self = new TripBusinessInstanceQueryResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public TripBusinessInstanceQueryResponseBodyModule setBusinessData(String businessData) {
+            this.businessData = businessData;
+            return this;
+        }
+        public String getBusinessData() {
+            return this.businessData;
         }
 
         public TripBusinessInstanceQueryResponseBodyModule setCreator(String creator) {

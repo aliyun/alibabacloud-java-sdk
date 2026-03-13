@@ -167,6 +167,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("room_type")
         public String roomType;
 
+        @NameInMap("star")
+        public String star;
+
         public static HotelOrderQueryResponseBodyModuleHotelInfo build(java.util.Map<String, ?> map) throws Exception {
             HotelOrderQueryResponseBodyModuleHotelInfo self = new HotelOrderQueryResponseBodyModuleHotelInfo();
             return TeaModel.build(map, self);
@@ -298,6 +301,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
         public String getRoomType() {
             return this.roomType;
+        }
+
+        public HotelOrderQueryResponseBodyModuleHotelInfo setStar(String star) {
+            this.star = star;
+            return this;
+        }
+        public String getStar() {
+            return this.star;
         }
 
     }

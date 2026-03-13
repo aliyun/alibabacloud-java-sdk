@@ -11,6 +11,12 @@ public class VasBillSettlementQueryRequest extends TeaModel {
     @NameInMap("bill_batch")
     public String billBatch;
 
+    @NameInMap("bill_record_time_end")
+    public String billRecordTimeEnd;
+
+    @NameInMap("bill_record_time_start")
+    public String billRecordTimeStart;
+
     /**
      * <strong>example:</strong>
      * <p>cooperator_alibtrip</p>
@@ -82,6 +88,22 @@ public class VasBillSettlementQueryRequest extends TeaModel {
     }
     public String getBillBatch() {
         return this.billBatch;
+    }
+
+    public VasBillSettlementQueryRequest setBillRecordTimeEnd(String billRecordTimeEnd) {
+        this.billRecordTimeEnd = billRecordTimeEnd;
+        return this;
+    }
+    public String getBillRecordTimeEnd() {
+        return this.billRecordTimeEnd;
+    }
+
+    public VasBillSettlementQueryRequest setBillRecordTimeStart(String billRecordTimeStart) {
+        this.billRecordTimeStart = billRecordTimeStart;
+        return this;
+    }
+    public String getBillRecordTimeStart() {
+        return this.billRecordTimeStart;
     }
 
     public VasBillSettlementQueryRequest setCooperatorId(String cooperatorId) {

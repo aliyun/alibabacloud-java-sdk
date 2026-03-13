@@ -574,6 +574,9 @@ public class CarOrderQueryResponseBody extends TeaModel {
         @NameInMap("btrip_title")
         public String btripTitle;
 
+        @NameInMap("car_order_source_type")
+        public Long carOrderSourceType;
+
         /**
          * <strong>example:</strong>
          * <p>xxxxxxxx</p>
@@ -697,6 +700,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
         }
         public String getBtripTitle() {
             return this.btripTitle;
+        }
+
+        public CarOrderQueryResponseBodyModuleOrderBaseInfo setCarOrderSourceType(Long carOrderSourceType) {
+            this.carOrderSourceType = carOrderSourceType;
+            return this;
+        }
+        public Long getCarOrderSourceType() {
+            return this.carOrderSourceType;
         }
 
         public CarOrderQueryResponseBodyModuleOrderBaseInfo setCorpId(String corpId) {

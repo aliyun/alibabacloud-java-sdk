@@ -7,6 +7,12 @@ public class CarBillSettlementQueryRequest extends TeaModel {
     @NameInMap("bill_batch")
     public String billBatch;
 
+    @NameInMap("bill_record_time_end")
+    public String billRecordTimeEnd;
+
+    @NameInMap("bill_record_time_start")
+    public String billRecordTimeStart;
+
     @NameInMap("order_id")
     public Long orderId;
 
@@ -59,6 +65,22 @@ public class CarBillSettlementQueryRequest extends TeaModel {
     }
     public String getBillBatch() {
         return this.billBatch;
+    }
+
+    public CarBillSettlementQueryRequest setBillRecordTimeEnd(String billRecordTimeEnd) {
+        this.billRecordTimeEnd = billRecordTimeEnd;
+        return this;
+    }
+    public String getBillRecordTimeEnd() {
+        return this.billRecordTimeEnd;
+    }
+
+    public CarBillSettlementQueryRequest setBillRecordTimeStart(String billRecordTimeStart) {
+        this.billRecordTimeStart = billRecordTimeStart;
+        return this;
+    }
+    public String getBillRecordTimeStart() {
+        return this.billRecordTimeStart;
     }
 
     public CarBillSettlementQueryRequest setOrderId(Long orderId) {

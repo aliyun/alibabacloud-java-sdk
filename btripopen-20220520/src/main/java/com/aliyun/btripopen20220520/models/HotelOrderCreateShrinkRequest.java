@@ -92,6 +92,9 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
     @NameInMap("itinerary_no")
     public String itineraryNo;
 
+    @NameInMap("member_info")
+    public String memberInfoShrink;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -272,6 +275,14 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
     }
     public String getItineraryNo() {
         return this.itineraryNo;
+    }
+
+    public HotelOrderCreateShrinkRequest setMemberInfoShrink(String memberInfoShrink) {
+        this.memberInfoShrink = memberInfoShrink;
+        return this;
+    }
+    public String getMemberInfoShrink() {
+        return this.memberInfoShrink;
     }
 
     public HotelOrderCreateShrinkRequest setOccupantInfoListShrink(String occupantInfoListShrink) {

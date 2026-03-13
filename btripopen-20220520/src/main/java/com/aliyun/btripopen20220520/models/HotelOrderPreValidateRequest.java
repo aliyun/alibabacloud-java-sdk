@@ -56,6 +56,9 @@ public class HotelOrderPreValidateRequest extends TeaModel {
     @NameInMap("occupant_info_list")
     public java.util.List<HotelOrderPreValidateRequestOccupantInfoList> occupantInfoList;
 
+    @NameInMap("rate_key")
+    public String rateKey;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -169,6 +172,14 @@ public class HotelOrderPreValidateRequest extends TeaModel {
     }
     public java.util.List<HotelOrderPreValidateRequestOccupantInfoList> getOccupantInfoList() {
         return this.occupantInfoList;
+    }
+
+    public HotelOrderPreValidateRequest setRateKey(String rateKey) {
+        this.rateKey = rateKey;
+        return this;
+    }
+    public String getRateKey() {
+        return this.rateKey;
     }
 
     public HotelOrderPreValidateRequest setRatePlanId(Long ratePlanId) {

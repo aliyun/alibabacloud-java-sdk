@@ -56,6 +56,9 @@ public class HotelOrderPreValidateShrinkRequest extends TeaModel {
     @NameInMap("occupant_info_list")
     public String occupantInfoListShrink;
 
+    @NameInMap("rate_key")
+    public String rateKey;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -169,6 +172,14 @@ public class HotelOrderPreValidateShrinkRequest extends TeaModel {
     }
     public String getOccupantInfoListShrink() {
         return this.occupantInfoListShrink;
+    }
+
+    public HotelOrderPreValidateShrinkRequest setRateKey(String rateKey) {
+        this.rateKey = rateKey;
+        return this;
+    }
+    public String getRateKey() {
+        return this.rateKey;
     }
 
     public HotelOrderPreValidateShrinkRequest setRatePlanId(Long ratePlanId) {

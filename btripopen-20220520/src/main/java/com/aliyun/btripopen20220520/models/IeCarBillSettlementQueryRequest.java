@@ -3,7 +3,11 @@ package com.aliyun.btripopen20220520.models;
 
 import com.aliyun.tea.*;
 
-public class IeFlightBillSettlementQueryRequest extends TeaModel {
+public class IeCarBillSettlementQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20250725</p>
+     */
     @NameInMap("bill_batch")
     public String billBatch;
 
@@ -13,6 +17,10 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
     @NameInMap("bill_record_time_start")
     public String billRecordTimeStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1002002203361199686</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
@@ -29,7 +37,7 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>10</p>
      */
     @NameInMap("page_size")
     public Integer pageSize;
@@ -48,18 +56,26 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
     @NameInMap("period_start")
     public String periodStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CAESBgoEIgIIABgAIhkKFwMSAAAAMUw4MDAwMDAwMDA3MzA1MGJj</p>
+     */
     @NameInMap("scroll_id")
     public String scrollId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("scroll_mod")
     public Boolean scrollMod;
 
-    public static IeFlightBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
-        IeFlightBillSettlementQueryRequest self = new IeFlightBillSettlementQueryRequest();
+    public static IeCarBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
+        IeCarBillSettlementQueryRequest self = new IeCarBillSettlementQueryRequest();
         return TeaModel.build(map, self);
     }
 
-    public IeFlightBillSettlementQueryRequest setBillBatch(String billBatch) {
+    public IeCarBillSettlementQueryRequest setBillBatch(String billBatch) {
         this.billBatch = billBatch;
         return this;
     }
@@ -67,7 +83,7 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
         return this.billBatch;
     }
 
-    public IeFlightBillSettlementQueryRequest setBillRecordTimeEnd(String billRecordTimeEnd) {
+    public IeCarBillSettlementQueryRequest setBillRecordTimeEnd(String billRecordTimeEnd) {
         this.billRecordTimeEnd = billRecordTimeEnd;
         return this;
     }
@@ -75,7 +91,7 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
         return this.billRecordTimeEnd;
     }
 
-    public IeFlightBillSettlementQueryRequest setBillRecordTimeStart(String billRecordTimeStart) {
+    public IeCarBillSettlementQueryRequest setBillRecordTimeStart(String billRecordTimeStart) {
         this.billRecordTimeStart = billRecordTimeStart;
         return this;
     }
@@ -83,7 +99,7 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
         return this.billRecordTimeStart;
     }
 
-    public IeFlightBillSettlementQueryRequest setOrderId(Long orderId) {
+    public IeCarBillSettlementQueryRequest setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -91,7 +107,7 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
         return this.orderId;
     }
 
-    public IeFlightBillSettlementQueryRequest setPageNo(Integer pageNo) {
+    public IeCarBillSettlementQueryRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
     }
@@ -99,7 +115,7 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
         return this.pageNo;
     }
 
-    public IeFlightBillSettlementQueryRequest setPageSize(Integer pageSize) {
+    public IeCarBillSettlementQueryRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -107,7 +123,7 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public IeFlightBillSettlementQueryRequest setPeriodEnd(String periodEnd) {
+    public IeCarBillSettlementQueryRequest setPeriodEnd(String periodEnd) {
         this.periodEnd = periodEnd;
         return this;
     }
@@ -115,7 +131,7 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
         return this.periodEnd;
     }
 
-    public IeFlightBillSettlementQueryRequest setPeriodStart(String periodStart) {
+    public IeCarBillSettlementQueryRequest setPeriodStart(String periodStart) {
         this.periodStart = periodStart;
         return this;
     }
@@ -123,7 +139,7 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
         return this.periodStart;
     }
 
-    public IeFlightBillSettlementQueryRequest setScrollId(String scrollId) {
+    public IeCarBillSettlementQueryRequest setScrollId(String scrollId) {
         this.scrollId = scrollId;
         return this;
     }
@@ -131,7 +147,7 @@ public class IeFlightBillSettlementQueryRequest extends TeaModel {
         return this.scrollId;
     }
 
-    public IeFlightBillSettlementQueryRequest setScrollMod(Boolean scrollMod) {
+    public IeCarBillSettlementQueryRequest setScrollMod(Boolean scrollMod) {
         this.scrollMod = scrollMod;
         return this;
     }

@@ -511,6 +511,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("amount")
         public String amount;
 
+        @NameInMap("payee_account_number")
+        public String payeeAccountNumber;
+
         /**
          * <strong>example:</strong>
          * <p>userId</p>
@@ -529,6 +532,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
         public String getAmount() {
             return this.amount;
+        }
+
+        public QueryReimbursementOrderResponseBodyModulePaymentInfos setPayeeAccountNumber(String payeeAccountNumber) {
+            this.payeeAccountNumber = payeeAccountNumber;
+            return this;
+        }
+        public String getPayeeAccountNumber() {
+            return this.payeeAccountNumber;
         }
 
         public QueryReimbursementOrderResponseBodyModulePaymentInfos setPayeeUserId(String payeeUserId) {

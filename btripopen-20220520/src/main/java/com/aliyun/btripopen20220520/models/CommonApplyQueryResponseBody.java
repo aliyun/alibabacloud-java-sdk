@@ -126,6 +126,9 @@ public class CommonApplyQueryResponseBody extends TeaModel {
         @NameInMap("gmt_create")
         public String gmtCreate;
 
+        @NameInMap("order_id")
+        public Long orderId;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -211,6 +214,14 @@ public class CommonApplyQueryResponseBody extends TeaModel {
         }
         public String getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public CommonApplyQueryResponseBodyModule setOrderId(Long orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public Long getOrderId() {
+            return this.orderId;
         }
 
         public CommonApplyQueryResponseBodyModule setStatus(Integer status) {

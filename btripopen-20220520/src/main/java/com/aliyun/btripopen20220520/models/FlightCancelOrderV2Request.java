@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class FlightCancelOrderV2Request extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cheshiapi</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195798359369</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cheshiapi002kwl</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 

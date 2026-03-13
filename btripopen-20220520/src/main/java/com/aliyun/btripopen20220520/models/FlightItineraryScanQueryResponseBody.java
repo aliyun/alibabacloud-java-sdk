@@ -318,6 +318,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("bill_date")
         public String billDate;
 
+        @NameInMap("blue_or_red")
+        public Integer blueOrRed;
+
         /**
          * <strong>example:</strong>
          * <p>50</p>
@@ -405,6 +408,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("oss_url")
         public String ossUrl;
 
+        @NameInMap("other_taxes")
+        public String otherTaxes;
+
         @NameInMap("passenger_name")
         public String passengerName;
 
@@ -473,6 +479,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("validation_code")
         public String validationCode;
 
+        @NameInMap("xml_oss_url")
+        public String xmlOssUrl;
+
         public static FlightItineraryScanQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             FlightItineraryScanQueryResponseBodyModuleItems self = new FlightItineraryScanQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
@@ -500,6 +509,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
         public String getBillDate() {
             return this.billDate;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setBlueOrRed(Integer blueOrRed) {
+            this.blueOrRed = blueOrRed;
+            return this;
+        }
+        public Integer getBlueOrRed() {
+            return this.blueOrRed;
         }
 
         public FlightItineraryScanQueryResponseBodyModuleItems setBuild(String build) {
@@ -622,6 +639,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             return this.ossUrl;
         }
 
+        public FlightItineraryScanQueryResponseBodyModuleItems setOtherTaxes(String otherTaxes) {
+            this.otherTaxes = otherTaxes;
+            return this;
+        }
+        public String getOtherTaxes() {
+            return this.otherTaxes;
+        }
+
         public FlightItineraryScanQueryResponseBodyModuleItems setPassengerName(String passengerName) {
             this.passengerName = passengerName;
             return this;
@@ -724,6 +749,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
         public String getValidationCode() {
             return this.validationCode;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setXmlOssUrl(String xmlOssUrl) {
+            this.xmlOssUrl = xmlOssUrl;
+            return this;
+        }
+        public String getXmlOssUrl() {
+            return this.xmlOssUrl;
         }
 
     }

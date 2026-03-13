@@ -553,6 +553,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("seal_price")
         public Double sealPrice;
 
+        @NameInMap("segment_list")
+        public String segmentList;
+
         @NameInMap("segment_type")
         public String segmentType;
 
@@ -1439,6 +1442,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getSealPrice() {
             return this.sealPrice;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setSegmentList(String segmentList) {
+            this.segmentList = segmentList;
+            return this;
+        }
+        public String getSegmentList() {
+            return this.segmentList;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setSegmentType(String segmentType) {

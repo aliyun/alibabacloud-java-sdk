@@ -128,8 +128,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("department")
         public String department;
 
+        @NameInMap("electronic_ticket_no")
+        public String electronicTicketNo;
+
         @NameInMap("fee_type_show_code")
         public Integer feeTypeShowCode;
+
+        @NameInMap("has_changed")
+        public Boolean hasChanged;
 
         /**
          * <strong>example:</strong>
@@ -156,6 +162,9 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
          */
         @NameInMap("order_id")
         public Long orderId;
+
+        @NameInMap("origin_ticket_no")
+        public String originTicketNo;
 
         /**
          * <strong>example:</strong>
@@ -231,6 +240,9 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("train_no")
         public String trainNo;
 
+        @NameInMap("xml_url")
+        public String xmlUrl;
+
         public static TrainTicketScanQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             TrainTicketScanQueryResponseBodyModuleItems self = new TrainTicketScanQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
@@ -300,12 +312,28 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             return this.department;
         }
 
+        public TrainTicketScanQueryResponseBodyModuleItems setElectronicTicketNo(String electronicTicketNo) {
+            this.electronicTicketNo = electronicTicketNo;
+            return this;
+        }
+        public String getElectronicTicketNo() {
+            return this.electronicTicketNo;
+        }
+
         public TrainTicketScanQueryResponseBodyModuleItems setFeeTypeShowCode(Integer feeTypeShowCode) {
             this.feeTypeShowCode = feeTypeShowCode;
             return this;
         }
         public Integer getFeeTypeShowCode() {
             return this.feeTypeShowCode;
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setHasChanged(Boolean hasChanged) {
+            this.hasChanged = hasChanged;
+            return this;
+        }
+        public Boolean getHasChanged() {
+            return this.hasChanged;
         }
 
         public TrainTicketScanQueryResponseBodyModuleItems setId(String id) {
@@ -354,6 +382,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
         public Long getOrderId() {
             return this.orderId;
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setOriginTicketNo(String originTicketNo) {
+            this.originTicketNo = originTicketNo;
+            return this;
+        }
+        public String getOriginTicketNo() {
+            return this.originTicketNo;
         }
 
         public TrainTicketScanQueryResponseBodyModuleItems setOssUrl(String ossUrl) {
@@ -466,6 +502,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
         public String getTrainNo() {
             return this.trainNo;
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setXmlUrl(String xmlUrl) {
+            this.xmlUrl = xmlUrl;
+            return this;
+        }
+        public String getXmlUrl() {
+            return this.xmlUrl;
         }
 
     }

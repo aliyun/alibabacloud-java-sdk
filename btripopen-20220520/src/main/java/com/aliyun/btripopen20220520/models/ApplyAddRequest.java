@@ -69,6 +69,10 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("hotel_share")
     public ApplyAddRequestHotelShare hotelShare;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("international_flight_cabins")
     public String internationalFlightCabins;
 

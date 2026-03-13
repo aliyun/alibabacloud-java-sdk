@@ -575,6 +575,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("order_status")
         public Integer orderStatus;
 
+        @NameInMap("replenish_order_ids")
+        public String replenishOrderIds;
+
+        @NameInMap("replenish_original_order_id")
+        public String replenishOriginalOrderId;
+
         @NameInMap("thirdPart_business_id")
         public String thirdPartBusinessId;
 
@@ -739,6 +745,22 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public Integer getOrderStatus() {
             return this.orderStatus;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleOrderBaseInfo setReplenishOrderIds(String replenishOrderIds) {
+            this.replenishOrderIds = replenishOrderIds;
+            return this;
+        }
+        public String getReplenishOrderIds() {
+            return this.replenishOrderIds;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleOrderBaseInfo setReplenishOriginalOrderId(String replenishOriginalOrderId) {
+            this.replenishOriginalOrderId = replenishOriginalOrderId;
+            return this;
+        }
+        public String getReplenishOriginalOrderId() {
+            return this.replenishOriginalOrderId;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleOrderBaseInfo setThirdPartBusinessId(String thirdPartBusinessId) {

@@ -69,6 +69,10 @@ public class ApplyAddShrinkRequest extends TeaModel {
     @NameInMap("hotel_share")
     public String hotelShareShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("international_flight_cabins")
     public String internationalFlightCabins;
 

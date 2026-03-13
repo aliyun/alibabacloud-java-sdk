@@ -486,6 +486,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("btrip_hotel_cancel_policy_d_t_o")
         public HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO;
 
+        @NameInMap("cert_type_list")
+        public java.util.List<String> certTypeList;
+
         /**
          * <strong>example:</strong>
          * <p>12:00</p>
@@ -564,6 +567,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
         public HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTO getBtripHotelCancelPolicyDTO() {
             return this.btripHotelCancelPolicyDTO;
+        }
+
+        public HotelOrderPreValidateResponseBodyModuleRatePlanInfo setCertTypeList(java.util.List<String> certTypeList) {
+            this.certTypeList = certTypeList;
+            return this;
+        }
+        public java.util.List<String> getCertTypeList() {
+            return this.certTypeList;
         }
 
         public HotelOrderPreValidateResponseBodyModuleRatePlanInfo setEarliestCheckInTime(String earliestCheckInTime) {

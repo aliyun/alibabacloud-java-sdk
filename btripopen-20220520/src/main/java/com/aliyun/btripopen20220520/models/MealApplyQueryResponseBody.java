@@ -220,6 +220,9 @@ public class MealApplyQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
+        @NameInMap("extend_field")
+        public String extendField;
+
         /**
          * <strong>example:</strong>
          * <p>2022-07-04T16:13Z</p>
@@ -304,6 +307,14 @@ public class MealApplyQueryResponseBody extends TeaModel {
         }
         public Long getCostCenterId() {
             return this.costCenterId;
+        }
+
+        public MealApplyQueryResponseBodyModule setExtendField(String extendField) {
+            this.extendField = extendField;
+            return this;
+        }
+        public String getExtendField() {
+            return this.extendField;
         }
 
         public MealApplyQueryResponseBodyModule setGmtCreate(String gmtCreate) {

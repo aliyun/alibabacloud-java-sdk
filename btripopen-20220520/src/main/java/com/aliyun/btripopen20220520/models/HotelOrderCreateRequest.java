@@ -92,6 +92,9 @@ public class HotelOrderCreateRequest extends TeaModel {
     @NameInMap("itinerary_no")
     public String itineraryNo;
 
+    @NameInMap("member_info")
+    public HotelOrderCreateRequestMemberInfo memberInfo;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -272,6 +275,14 @@ public class HotelOrderCreateRequest extends TeaModel {
     }
     public String getItineraryNo() {
         return this.itineraryNo;
+    }
+
+    public HotelOrderCreateRequest setMemberInfo(HotelOrderCreateRequestMemberInfo memberInfo) {
+        this.memberInfo = memberInfo;
+        return this;
+    }
+    public HotelOrderCreateRequestMemberInfo getMemberInfo() {
+        return this.memberInfo;
     }
 
     public HotelOrderCreateRequest setOccupantInfoList(java.util.List<HotelOrderCreateRequestOccupantInfoList> occupantInfoList) {
@@ -593,6 +604,121 @@ public class HotelOrderCreateRequest extends TeaModel {
 
     }
 
+    public static class HotelOrderCreateRequestMemberInfo extends TeaModel {
+        @NameInMap("card_no")
+        public String cardNo;
+
+        @NameInMap("real_name")
+        public String realName;
+
+        public static HotelOrderCreateRequestMemberInfo build(java.util.Map<String, ?> map) throws Exception {
+            HotelOrderCreateRequestMemberInfo self = new HotelOrderCreateRequestMemberInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public HotelOrderCreateRequestMemberInfo setCardNo(String cardNo) {
+            this.cardNo = cardNo;
+            return this;
+        }
+        public String getCardNo() {
+            return this.cardNo;
+        }
+
+        public HotelOrderCreateRequestMemberInfo setRealName(String realName) {
+            this.realName = realName;
+            return this;
+        }
+        public String getRealName() {
+            return this.realName;
+        }
+
+    }
+
+    public static class HotelOrderCreateRequestOccupantInfoListCostCenterInfo extends TeaModel {
+        @NameInMap("cost_center_id")
+        public String costCenterId;
+
+        @NameInMap("cost_center_name")
+        public String costCenterName;
+
+        @NameInMap("cost_center_no")
+        public String costCenterNo;
+
+        @NameInMap("invoice_id")
+        public String invoiceId;
+
+        @NameInMap("invoice_title")
+        public String invoiceTitle;
+
+        @NameInMap("project_code")
+        public String projectCode;
+
+        @NameInMap("project_title")
+        public String projectTitle;
+
+        public static HotelOrderCreateRequestOccupantInfoListCostCenterInfo build(java.util.Map<String, ?> map) throws Exception {
+            HotelOrderCreateRequestOccupantInfoListCostCenterInfo self = new HotelOrderCreateRequestOccupantInfoListCostCenterInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public HotelOrderCreateRequestOccupantInfoListCostCenterInfo setCostCenterId(String costCenterId) {
+            this.costCenterId = costCenterId;
+            return this;
+        }
+        public String getCostCenterId() {
+            return this.costCenterId;
+        }
+
+        public HotelOrderCreateRequestOccupantInfoListCostCenterInfo setCostCenterName(String costCenterName) {
+            this.costCenterName = costCenterName;
+            return this;
+        }
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        public HotelOrderCreateRequestOccupantInfoListCostCenterInfo setCostCenterNo(String costCenterNo) {
+            this.costCenterNo = costCenterNo;
+            return this;
+        }
+        public String getCostCenterNo() {
+            return this.costCenterNo;
+        }
+
+        public HotelOrderCreateRequestOccupantInfoListCostCenterInfo setInvoiceId(String invoiceId) {
+            this.invoiceId = invoiceId;
+            return this;
+        }
+        public String getInvoiceId() {
+            return this.invoiceId;
+        }
+
+        public HotelOrderCreateRequestOccupantInfoListCostCenterInfo setInvoiceTitle(String invoiceTitle) {
+            this.invoiceTitle = invoiceTitle;
+            return this;
+        }
+        public String getInvoiceTitle() {
+            return this.invoiceTitle;
+        }
+
+        public HotelOrderCreateRequestOccupantInfoListCostCenterInfo setProjectCode(String projectCode) {
+            this.projectCode = projectCode;
+            return this;
+        }
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        public HotelOrderCreateRequestOccupantInfoListCostCenterInfo setProjectTitle(String projectTitle) {
+            this.projectTitle = projectTitle;
+            return this;
+        }
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+    }
+
     public static class HotelOrderCreateRequestOccupantInfoList extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -607,6 +733,12 @@ public class HotelOrderCreateRequest extends TeaModel {
          */
         @NameInMap("card_type")
         public Integer cardType;
+
+        @NameInMap("cascade_dept_name")
+        public String cascadeDeptName;
+
+        @NameInMap("cost_center_info")
+        public HotelOrderCreateRequestOccupantInfoListCostCenterInfo costCenterInfo;
 
         /**
          * <strong>example:</strong>
@@ -645,6 +777,9 @@ public class HotelOrderCreateRequest extends TeaModel {
          */
         @NameInMap("first_name")
         public String firstName;
+
+        @NameInMap("is_booker")
+        public Boolean isBooker;
 
         /**
          * <strong>example:</strong>
@@ -706,6 +841,22 @@ public class HotelOrderCreateRequest extends TeaModel {
             return this.cardType;
         }
 
+        public HotelOrderCreateRequestOccupantInfoList setCascadeDeptName(String cascadeDeptName) {
+            this.cascadeDeptName = cascadeDeptName;
+            return this;
+        }
+        public String getCascadeDeptName() {
+            return this.cascadeDeptName;
+        }
+
+        public HotelOrderCreateRequestOccupantInfoList setCostCenterInfo(HotelOrderCreateRequestOccupantInfoListCostCenterInfo costCenterInfo) {
+            this.costCenterInfo = costCenterInfo;
+            return this;
+        }
+        public HotelOrderCreateRequestOccupantInfoListCostCenterInfo getCostCenterInfo() {
+            return this.costCenterInfo;
+        }
+
         public HotelOrderCreateRequestOccupantInfoList setCustomerType(Integer customerType) {
             this.customerType = customerType;
             return this;
@@ -752,6 +903,14 @@ public class HotelOrderCreateRequest extends TeaModel {
         }
         public String getFirstName() {
             return this.firstName;
+        }
+
+        public HotelOrderCreateRequestOccupantInfoList setIsBooker(Boolean isBooker) {
+            this.isBooker = isBooker;
+            return this;
+        }
+        public Boolean getIsBooker() {
+            return this.isBooker;
         }
 
         public HotelOrderCreateRequestOccupantInfoList setLastName(String lastName) {

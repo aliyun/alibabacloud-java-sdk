@@ -189,6 +189,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("base_location")
         public String baseLocation;
 
+        @NameInMap("before_ticket_no")
+        public String beforeTicketNo;
+
         /**
          * <strong>example:</strong>
          * <p>2020-12-23T20:18Z</p>
@@ -587,6 +590,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("seal_price")
         public Double sealPrice;
 
+        @NameInMap("segment_list")
+        public String segmentList;
+
         /**
          * <strong>example:</strong>
          * <p>23.9</p>
@@ -884,6 +890,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getBaseLocation() {
             return this.baseLocation;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setBeforeTicketNo(String beforeTicketNo) {
+            this.beforeTicketNo = beforeTicketNo;
+            return this;
+        }
+        public String getBeforeTicketNo() {
+            return this.beforeTicketNo;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setBillRecordTime(String billRecordTime) {
@@ -1572,6 +1586,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getSealPrice() {
             return this.sealPrice;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setSegmentList(String segmentList) {
+            this.segmentList = segmentList;
+            return this;
+        }
+        public String getSegmentList() {
+            return this.segmentList;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setServiceFee(Double serviceFee) {

@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightCreateOrderRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>fcoid_deb6372db8194f1c94c23bc4fadc508d</p>
+     */
     @NameInMap("async_create_order_key")
     public String asyncCreateOrderKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("async_create_order_mode")
     public Boolean asyncCreateOrderMode;
 
@@ -37,6 +45,10 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
     @NameInMap("extra_info")
     public java.util.Map<String, String> extraInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>open12k0lclldfdc7v10E2HaRrOr00</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
@@ -45,10 +57,17 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>56319a175bdf4b1898190bd7edb603b5_0</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F11380075736888770560</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
@@ -58,6 +77,10 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
     @NameInMap("passenger_list")
     public java.util.List<IntlFlightCreateOrderRequestPassengerList> passengerList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fcoid_deb6372db8194f1c94c23bc4fadc508d</p>
+     */
     @NameInMap("render_key")
     public String renderKey;
 
@@ -165,6 +188,9 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
     public static class IntlFlightCreateOrderRequestContactInfo extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:XXX@aliyun.com">XXX@aliyun.com</a></p>
          */
         @NameInMap("contact_email")
         public String contactEmail;
@@ -177,6 +203,9 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13812341234</p>
          */
         @NameInMap("contact_phone")
         public String contactPhone;
@@ -217,7 +246,7 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>E1234567</p>
+         * <p>H123456</p>
          */
         @NameInMap("cert_no")
         public String certNo;
@@ -235,7 +264,7 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2029-12-31</p>
+         * <p>2030-01-01</p>
          */
         @NameInMap("cert_valid_date")
         public String certValidDate;
@@ -293,7 +322,7 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1998-12-28</p>
+         * <p>2020-01-01</p>
          */
         @NameInMap("birthday")
         public String birthday;
@@ -324,7 +353,7 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>L5000924</p>
+         * <p>ZNW0525</p>
          */
         @NameInMap("job_no")
         public String jobNo;
@@ -340,6 +369,9 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         @NameInMap("nationality_code")
         public String nationalityCode;
@@ -348,7 +380,7 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>13100008888</p>
+         * <p>18012341234</p>
          */
         @NameInMap("phone")
         public String phone;
@@ -366,7 +398,7 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>12292812036903456</p>
+         * <p>13123123212</p>
          */
         @NameInMap("user_id")
         public String userId;

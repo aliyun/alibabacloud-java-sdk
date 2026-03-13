@@ -499,6 +499,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("company_aassist")
         public String companyAassist;
 
+        @NameInMap("company_assist_type")
+        public String companyAssistType;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -539,6 +542,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
 
         @NameInMap("hotel_detail_rate_price_d_t_o")
         public java.util.List<HotelGoodsQueryResponseBodyModuleRoomsRatesHotelDetailRatePriceDTO> hotelDetailRatePriceDTO;
+
+        @NameInMap("hotel_member_benefit")
+        public java.util.Map<String, String> hotelMemberBenefit;
 
         /**
          * <strong>example:</strong>
@@ -609,6 +615,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("min_days")
         public Integer minDays;
 
+        @NameInMap("need_certificate")
+        public Boolean needCertificate;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -657,6 +666,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
          */
         @NameInMap("rate_id")
         public Long rateId;
+
+        @NameInMap("rate_key")
+        public String rateKey;
 
         @NameInMap("rate_plan_name")
         public String ratePlanName;
@@ -794,6 +806,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             return this.companyAassist;
         }
 
+        public HotelGoodsQueryResponseBodyModuleRoomsRates setCompanyAssistType(String companyAssistType) {
+            this.companyAssistType = companyAssistType;
+            return this;
+        }
+        public String getCompanyAssistType() {
+            return this.companyAssistType;
+        }
+
         public HotelGoodsQueryResponseBodyModuleRoomsRates setConfirmType(Integer confirmType) {
             this.confirmType = confirmType;
             return this;
@@ -848,6 +868,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
         public java.util.List<HotelGoodsQueryResponseBodyModuleRoomsRatesHotelDetailRatePriceDTO> getHotelDetailRatePriceDTO() {
             return this.hotelDetailRatePriceDTO;
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRates setHotelMemberBenefit(java.util.Map<String, String> hotelMemberBenefit) {
+            this.hotelMemberBenefit = hotelMemberBenefit;
+            return this;
+        }
+        public java.util.Map<String, String> getHotelMemberBenefit() {
+            return this.hotelMemberBenefit;
         }
 
         public HotelGoodsQueryResponseBodyModuleRoomsRates setInstantConfirm(Boolean instantConfirm) {
@@ -938,6 +966,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             return this.minDays;
         }
 
+        public HotelGoodsQueryResponseBodyModuleRoomsRates setNeedCertificate(Boolean needCertificate) {
+            this.needCertificate = needCertificate;
+            return this;
+        }
+        public Boolean getNeedCertificate() {
+            return this.needCertificate;
+        }
+
         public HotelGoodsQueryResponseBodyModuleRoomsRates setNod(Integer nod) {
             this.nod = nod;
             return this;
@@ -992,6 +1028,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
         public Long getRateId() {
             return this.rateId;
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRates setRateKey(String rateKey) {
+            this.rateKey = rateKey;
+            return this;
+        }
+        public String getRateKey() {
+            return this.rateKey;
         }
 
         public HotelGoodsQueryResponseBodyModuleRoomsRates setRatePlanName(String ratePlanName) {
@@ -1385,6 +1429,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("early_arrival_time")
         public String earlyArrivalTime;
 
+        @NameInMap("hotel_group_desc")
+        public String hotelGroupDesc;
+
         /**
          * <strong>example:</strong>
          * <p>29382</p>
@@ -1479,6 +1526,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
         public String getEarlyArrivalTime() {
             return this.earlyArrivalTime;
+        }
+
+        public HotelGoodsQueryResponseBodyModule setHotelGroupDesc(String hotelGroupDesc) {
+            this.hotelGroupDesc = hotelGroupDesc;
+            return this;
+        }
+        public String getHotelGroupDesc() {
+            return this.hotelGroupDesc;
         }
 
         public HotelGoodsQueryResponseBodyModule setHotelId(Long hotelId) {

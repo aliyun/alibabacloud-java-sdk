@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class TrainTicketScanQueryRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>2022-12-01</p>
      */
@@ -20,12 +18,21 @@ public class TrainTicketScanQueryRequest extends TeaModel {
     @NameInMap("bill_id")
     public Long billId;
 
+    @NameInMap("invoice_date_end")
+    public String invoiceDateEnd;
+
+    @NameInMap("invoice_date_start")
+    public String invoiceDateStart;
+
     /**
      * <strong>example:</strong>
      * <p>456</p>
      */
     @NameInMap("invoice_sub_task_id")
     public Long invoiceSubTaskId;
+
+    @NameInMap("order_id")
+    public Long orderId;
 
     /**
      * <strong>example:</strong>
@@ -68,12 +75,36 @@ public class TrainTicketScanQueryRequest extends TeaModel {
         return this.billId;
     }
 
+    public TrainTicketScanQueryRequest setInvoiceDateEnd(String invoiceDateEnd) {
+        this.invoiceDateEnd = invoiceDateEnd;
+        return this;
+    }
+    public String getInvoiceDateEnd() {
+        return this.invoiceDateEnd;
+    }
+
+    public TrainTicketScanQueryRequest setInvoiceDateStart(String invoiceDateStart) {
+        this.invoiceDateStart = invoiceDateStart;
+        return this;
+    }
+    public String getInvoiceDateStart() {
+        return this.invoiceDateStart;
+    }
+
     public TrainTicketScanQueryRequest setInvoiceSubTaskId(Long invoiceSubTaskId) {
         this.invoiceSubTaskId = invoiceSubTaskId;
         return this;
     }
     public Long getInvoiceSubTaskId() {
         return this.invoiceSubTaskId;
+    }
+
+    public TrainTicketScanQueryRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public TrainTicketScanQueryRequest setPageNo(Integer pageNo) {

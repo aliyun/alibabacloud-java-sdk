@@ -75,6 +75,9 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         @NameInMap("hotel_special_invoice_fee")
         public String hotelSpecialInvoiceFee;
 
+        @NameInMap("ie_vehicle_normal_invoice_fee")
+        public String ieVehicleNormalInvoiceFee;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -111,6 +114,9 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
 
         @NameInMap("meal_normal_invoice_fee")
         public String mealNormalInvoiceFee;
+
+        @NameInMap("meal_tc7_normal_invoice_fee")
+        public String mealTc7NormalInvoiceFee;
 
         /**
          * <strong>example:</strong>
@@ -215,6 +221,14 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
             return this.hotelSpecialInvoiceFee;
         }
 
+        public ApplyInvoiceTaskRequestInvoiceTaskList setIeVehicleNormalInvoiceFee(String ieVehicleNormalInvoiceFee) {
+            this.ieVehicleNormalInvoiceFee = ieVehicleNormalInvoiceFee;
+            return this;
+        }
+        public String getIeVehicleNormalInvoiceFee() {
+            return this.ieVehicleNormalInvoiceFee;
+        }
+
         public ApplyInvoiceTaskRequestInvoiceTaskList setInternationalFlightInvoiceFee(String internationalFlightInvoiceFee) {
             this.internationalFlightInvoiceFee = internationalFlightInvoiceFee;
             return this;
@@ -285,6 +299,14 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         }
         public String getMealNormalInvoiceFee() {
             return this.mealNormalInvoiceFee;
+        }
+
+        public ApplyInvoiceTaskRequestInvoiceTaskList setMealTc7NormalInvoiceFee(String mealTc7NormalInvoiceFee) {
+            this.mealTc7NormalInvoiceFee = mealTc7NormalInvoiceFee;
+            return this;
+        }
+        public String getMealTc7NormalInvoiceFee() {
+            return this.mealTc7NormalInvoiceFee;
         }
 
         public ApplyInvoiceTaskRequestInvoiceTaskList setPenaltyFee(String penaltyFee) {

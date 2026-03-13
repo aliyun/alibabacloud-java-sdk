@@ -7,6 +7,12 @@ public class MealBillSettlementQueryRequest extends TeaModel {
     @NameInMap("bill_batch")
     public String billBatch;
 
+    @NameInMap("bill_record_time_end")
+    public String billRecordTimeEnd;
+
+    @NameInMap("bill_record_time_start")
+    public String billRecordTimeStart;
+
     @NameInMap("order_id")
     public Long orderId;
 
@@ -59,6 +65,22 @@ public class MealBillSettlementQueryRequest extends TeaModel {
     }
     public String getBillBatch() {
         return this.billBatch;
+    }
+
+    public MealBillSettlementQueryRequest setBillRecordTimeEnd(String billRecordTimeEnd) {
+        this.billRecordTimeEnd = billRecordTimeEnd;
+        return this;
+    }
+    public String getBillRecordTimeEnd() {
+        return this.billRecordTimeEnd;
+    }
+
+    public MealBillSettlementQueryRequest setBillRecordTimeStart(String billRecordTimeStart) {
+        this.billRecordTimeStart = billRecordTimeStart;
+        return this;
+    }
+    public String getBillRecordTimeStart() {
+        return this.billRecordTimeStart;
     }
 
     public MealBillSettlementQueryRequest setOrderId(Long orderId) {
