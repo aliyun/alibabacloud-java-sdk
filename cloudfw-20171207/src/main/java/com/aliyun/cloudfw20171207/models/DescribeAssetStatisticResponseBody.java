@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetStatisticResponseBody extends TeaModel {
+    @NameInMap("AutoResourceEnable")
+    public Boolean autoResourceEnable;
+
     @NameInMap("GeneralInstanceSpecStatistic")
     public DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic generalInstanceSpecStatistic;
 
@@ -25,6 +28,14 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
     public static DescribeAssetStatisticResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAssetStatisticResponseBody self = new DescribeAssetStatisticResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAssetStatisticResponseBody setAutoResourceEnable(Boolean autoResourceEnable) {
+        this.autoResourceEnable = autoResourceEnable;
+        return this;
+    }
+    public Boolean getAutoResourceEnable() {
+        return this.autoResourceEnable;
     }
 
     public DescribeAssetStatisticResponseBody setGeneralInstanceSpecStatistic(DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic generalInstanceSpecStatistic) {

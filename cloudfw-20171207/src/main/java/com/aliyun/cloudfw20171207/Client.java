@@ -7812,7 +7812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>概览页-NAT流量趋势</p>
+     * <p>Queries the traffic trend of NAT gateways.</p>
      * 
      * @param request DescribeNatFirewallTrafficTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7840,7 +7840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>概览页-NAT流量趋势</p>
+     * <p>Queries the traffic trend of NAT gateways.</p>
      * 
      * @param request DescribeNatFirewallTrafficTrendRequest
      * @return DescribeNatFirewallTrafficTrendResponse
@@ -10894,7 +10894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取正向代理</p>
+     * <p>Queries information about NAT firewalls.</p>
      * 
      * @deprecated OpenAPI DescribeSecurityProxy is deprecated, please use Cloudfw::2017-12-07::DescribeNatFirewallList instead.
      * 
@@ -10970,7 +10970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取正向代理</p>
+     * <p>Queries information about NAT firewalls.</p>
      * 
      * @deprecated OpenAPI DescribeSecurityProxy is deprecated, please use Cloudfw::2017-12-07::DescribeNatFirewallList instead.
      * 
