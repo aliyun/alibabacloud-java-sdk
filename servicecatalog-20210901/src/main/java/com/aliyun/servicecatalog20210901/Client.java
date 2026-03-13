@@ -80,7 +80,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将产品组合授权给某个RAM实体</p>
+     * <p>Grants a Resource Access Management (RAM) user or RAM role that belongs to the current Alibaba Cloud account the permissions to access a product portfolio.</p>
      * 
      * @param request AssociatePrincipalWithPortfolioRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -124,7 +124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将产品组合授权给某个RAM实体</p>
+     * <p>Grants a Resource Access Management (RAM) user or RAM role that belongs to the current Alibaba Cloud account the permissions to access a product portfolio.</p>
      * 
      * @param request AssociatePrincipalWithPortfolioRequest
      * @return AssociatePrincipalWithPortfolioResponse
@@ -1788,7 +1788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The number of entries returned per page.</p>
+     * <p>Queries product portfolios.</p>
      * 
      * @param request ListPortfoliosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1844,7 +1844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The number of entries returned per page.</p>
+     * <p>Queries product portfolios.</p>
      * 
      * @param request ListPortfoliosRequest
      * @return ListPortfoliosResponse
@@ -2374,7 +2374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The page number of the returned page.</p>
+     * <p>Queries tasks.</p>
      * 
      * @param request ListTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2422,7 +2422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The page number of the returned page.</p>
+     * <p>Queries tasks.</p>
      * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
@@ -2536,7 +2536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the product portfolio.</p>
+     * <p>Updates the information about a product portfolio.</p>
      * 
      * @param request UpdatePortfolioRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2580,7 +2580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the product portfolio.</p>
+     * <p>Updates the information about a product portfolio.</p>
      * 
      * @param request UpdatePortfolioRequest
      * @return UpdatePortfolioResponse
@@ -2592,7 +2592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the product.</p>
+     * <p>Updates the information about a product.</p>
      * 
      * @param request UpdateProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2636,7 +2636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the product.</p>
+     * <p>Updates the information about a product.</p>
      * 
      * @param request UpdateProductRequest
      * @return UpdateProductResponse
