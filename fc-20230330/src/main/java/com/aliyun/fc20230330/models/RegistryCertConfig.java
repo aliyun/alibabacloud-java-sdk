@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class RegistryCertConfig extends TeaModel {
+    /**
+     * <p>Whether to skip certificate verification.</p>
+     */
     @NameInMap("insecure")
     public Boolean insecure;
 
     /**
+     * <p>The certificate authority (CA) certificate of the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>cm9vdF9jYV9jZXJ0</p>
      */

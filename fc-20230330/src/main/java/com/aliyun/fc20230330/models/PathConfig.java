@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PathConfig extends TeaModel {
     /**
+     * <p>The name of the function.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class PathConfig extends TeaModel {
     @NameInMap("functionName")
     public String functionName;
 
+    /**
+     * <p>The supported methods.</p>
+     */
     @NameInMap("methods")
     public java.util.List<String> methods;
 
     /**
+     * <p>The route matching rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,12 +31,17 @@ public class PathConfig extends TeaModel {
     public String path;
 
     /**
+     * <p>The version or alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>myAlias</p>
      */
     @NameInMap("qualifier")
     public String qualifier;
 
+    /**
+     * <p>The rewrite configuration.</p>
+     */
     @NameInMap("rewriteConfig")
     public RewriteConfig rewriteConfig;
 

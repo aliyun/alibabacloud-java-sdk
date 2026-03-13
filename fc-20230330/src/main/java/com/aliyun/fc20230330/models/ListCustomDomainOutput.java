@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListCustomDomainOutput extends TeaModel {
+    /**
+     * <p>The custom domain names.</p>
+     */
     @NameInMap("customDomains")
     public java.util.List<CustomDomain> customDomains;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>next_domain_name</p>
      */

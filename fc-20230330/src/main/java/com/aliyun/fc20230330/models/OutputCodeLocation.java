@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OutputCodeLocation extends TeaModel {
     /**
+     * <p>The address of the code package.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xyz.oss-cn-shanghai.aliyuncs.com/xxx/xxx/xxx">https://xyz.oss-cn-shanghai.aliyuncs.com/xxx/xxx/xxx</a></p>
      */
@@ -12,6 +14,8 @@ public class OutputCodeLocation extends TeaModel {
     public String location;
 
     /**
+     * <p>The type of the code package.</p>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */

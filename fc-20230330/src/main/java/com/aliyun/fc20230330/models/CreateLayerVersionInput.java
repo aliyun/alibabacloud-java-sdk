@@ -4,13 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateLayerVersionInput extends TeaModel {
+    /**
+     * <p>The code information of the layer.</p>
+     */
     @NameInMap("code")
     public InputCodeLocation code;
 
+    /**
+     * <p>The runtimes that are supported by the layer.</p>
+     */
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
 
     /**
+     * <p>The description of the layer version.</p>
+     * 
      * <strong>example:</strong>
      * <p>my first layer</p>
      */
@@ -18,6 +26,8 @@ public class CreateLayerVersionInput extends TeaModel {
     public String description;
 
     /**
+     * <p>The license agreement for the layer.</p>
+     * 
      * <strong>example:</strong>
      * <p>Apache</p>
      */

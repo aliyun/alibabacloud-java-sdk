@@ -5,21 +5,35 @@ import com.aliyun.tea.*;
 
 public class SLSTriggerConfig extends TeaModel {
     /**
+     * <p>Specifies whether to enable the trigger.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>The invocation configurations. Simple Log Service passes the configurations into the function as part of the event. The configuration content must be a JSON string.</p>
+     */
     @NameInMap("functionParameter")
     public java.util.Map<String, String> functionParameter;
 
+    /**
+     * <p>The interval at which the trigger reads logs, and the retry configuration upon errors.</p>
+     */
     @NameInMap("jobConfig")
     public JobConfig jobConfig;
 
+    /**
+     * <p>The log configurations of the trigger.</p>
+     */
     @NameInMap("logConfig")
     public SLSTriggerLogConfig logConfig;
 
+    /**
+     * <p>The configurations of the trigger source.</p>
+     */
     @NameInMap("sourceConfig")
     public SourceConfig sourceConfig;
 

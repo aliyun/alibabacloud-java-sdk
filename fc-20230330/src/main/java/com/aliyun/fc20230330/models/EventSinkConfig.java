@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class EventSinkConfig extends TeaModel {
+    /**
+     * <p>The event push configurations.</p>
+     */
     @NameInMap("deliveryOption")
     public DeliveryOption deliveryOption;
 

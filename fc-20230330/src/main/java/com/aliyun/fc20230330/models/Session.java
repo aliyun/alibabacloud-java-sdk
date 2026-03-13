@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Session extends TeaModel {
     /**
+     * <p>The ID of the function instance associated with the session.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-68999e02-16a1955c-d2a03d1ccs</p>
      */
@@ -12,6 +14,8 @@ public class Session extends TeaModel {
     public String containerId;
 
     /**
+     * <p>The time when the session was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-04-01T08:15:27Z</p>
      */
@@ -22,6 +26,8 @@ public class Session extends TeaModel {
     public Boolean disableSessionIdReuse;
 
     /**
+     * <p>The name of the function to which the session belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>functionName1</p>
      */
@@ -29,12 +35,17 @@ public class Session extends TeaModel {
     public String functionName;
 
     /**
+     * <p>The time when the session was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-04-01T18:15:27Z</p>
      */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <p>The File Storage NAS (NAS) configuration. Once configured, the instance associated with the session can access designated NAS resources.</p>
+     */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
@@ -45,6 +56,8 @@ public class Session extends TeaModel {
     public PolarFsConfig polarFsConfig;
 
     /**
+     * <p>The qualifier specified when creating a session. If not provided, the default value is LATEST.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliasName1</p>
      */
@@ -52,6 +65,8 @@ public class Session extends TeaModel {
     public String qualifier;
 
     /**
+     * <p>The session affinity type.</p>
+     * 
      * <strong>example:</strong>
      * <p>HEADER_FIELD</p>
      */
@@ -59,6 +74,8 @@ public class Session extends TeaModel {
     public String sessionAffinityType;
 
     /**
+     * <p>The unique identifier of the function session.</p>
+     * 
      * <strong>example:</strong>
      * <p>81f70ae156904eb9b7d43e12f511fe58</p>
      */
@@ -66,6 +83,8 @@ public class Session extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The timeout period for idle sessions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1800</p>
      */
@@ -73,6 +92,8 @@ public class Session extends TeaModel {
     public Long sessionIdleTimeoutInSeconds;
 
     /**
+     * <p>The session status, which can be either Active (session is valid) or Expired (session has expired).</p>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */
@@ -80,6 +101,8 @@ public class Session extends TeaModel {
     public String sessionStatus;
 
     /**
+     * <p>The maximum session lifecycle.</p>
+     * 
      * <strong>example:</strong>
      * <p>21600</p>
      */

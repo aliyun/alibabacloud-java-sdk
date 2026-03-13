@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InputCodeLocation extends TeaModel {
     /**
+     * <p>The CRC-64 value of the function code package. If checksum is provided, Function Compute checks whether the checksum of the code package is the same as that provided.</p>
+     * 
      * <strong>example:</strong>
      * <p>2825179536350****</p>
      */
@@ -12,6 +14,8 @@ public class InputCodeLocation extends TeaModel {
     public String checksum;
 
     /**
+     * <p>The name of the OSS bucket where the ZIP package of the function code is stored.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo-bucket</p>
      */
@@ -19,6 +23,8 @@ public class InputCodeLocation extends TeaModel {
     public String ossBucketName;
 
     /**
+     * <p>The name of the OSS object where the ZIP package of the function code is stored.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo-object</p>
      */
@@ -26,6 +32,8 @@ public class InputCodeLocation extends TeaModel {
     public String ossObjectName;
 
     /**
+     * <p>The ZIP package of the function code that is encoded in Base64 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>UEsDBAoAAAAAANF</p>
      */

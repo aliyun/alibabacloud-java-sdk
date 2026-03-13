@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DNSOption extends TeaModel {
     /**
+     * <p>The name of the configuration item.</p>
+     * 
      * <strong>example:</strong>
      * <p>ndots</p>
      */
@@ -12,6 +14,8 @@ public class DNSOption extends TeaModel {
     public String name;
 
     /**
+     * <p>The value of the configuration item.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

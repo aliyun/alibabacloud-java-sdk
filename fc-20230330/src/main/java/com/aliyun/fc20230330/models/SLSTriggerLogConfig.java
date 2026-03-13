@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SLSTriggerLogConfig extends TeaModel {
     /**
+     * <p>The name of the Logstore. Exceptions and function execution statistics during function triggering are recorded in the Logstore.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-sls-logstore-name</p>
      */
@@ -12,6 +14,8 @@ public class SLSTriggerLogConfig extends TeaModel {
     public String logstore;
 
     /**
+     * <p>The name of the project. Exceptions that occur during function triggering and execution statistics are recorded in the Logstore under the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-sls-project-name</p>
      */

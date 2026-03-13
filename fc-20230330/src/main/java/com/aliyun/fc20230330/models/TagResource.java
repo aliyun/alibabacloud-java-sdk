@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TagResource extends TeaModel {
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-shanghai:****:functions/demo</p>
      */
@@ -12,13 +14,18 @@ public class TagResource extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The name of the resource type.</p>
+     * <p>The function type in Function Compute 3.0 is ALIYUN::FC::FUNCTION, which is abbreviated as &quot;function&quot;.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ALIYUN::FC::FUNCTION</p>
+     * <p>function</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
+     * <p>The tag key.</p>
+     * 
      * <strong>example:</strong>
      * <p>key1</p>
      */
@@ -26,6 +33,8 @@ public class TagResource extends TeaModel {
     public String tagKey;
 
     /**
+     * <p>The tag value.</p>
+     * 
      * <strong>example:</strong>
      * <p>key1</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OSSMountPoint extends TeaModel {
     /**
+     * <p>The OSS bucket that you want to mount.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-bucket</p>
      */
@@ -12,6 +14,8 @@ public class OSSMountPoint extends TeaModel {
     public String bucketName;
 
     /**
+     * <p>The path of the mounted OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>/my-dir</p>
      */
@@ -19,6 +23,8 @@ public class OSSMountPoint extends TeaModel {
     public String bucketPath;
 
     /**
+     * <p>The OSS endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://oss-cn-shanghai.aliyuncs.com">http://oss-cn-shanghai.aliyuncs.com</a></p>
      */
@@ -26,6 +32,8 @@ public class OSSMountPoint extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>The mount directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>/mnt/dir</p>
      */
@@ -33,6 +41,8 @@ public class OSSMountPoint extends TeaModel {
     public String mountDir;
 
     /**
+     * <p>Specifies whether it is read-only.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SourceRocketMQParameters extends TeaModel {
     /**
+     * <p>The authentication type. Set the value to ACL or leave the value empty. The value ACL indicates that authentication is enabled. In this case, you must specify InstanceUsername and InstancePassword.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACL</p>
      */
@@ -12,6 +14,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String authType;
 
     /**
+     * <p>The message filter type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Tag</p>
      */
@@ -19,6 +23,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String filterType;
 
     /**
+     * <p>The ID of the consumer group of the ApsaraMQ for RocketMQ instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>GID_group1</p>
      */
@@ -26,6 +32,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String groupID;
 
     /**
+     * <p>The information about the endpoint of the ApsaraMQ for RocketMQ instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
      */
@@ -33,6 +41,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String instanceEndpoint;
 
     /**
+     * <p>The ID of the ApsaraMQ for RocketMQ instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>MQ_INST_164901546557****_BAAN****</p>
      */
@@ -40,6 +50,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The network type.</p>
+     * 
      * <strong>example:</strong>
      * <p>PrivateNetwork</p>
      */
@@ -47,6 +59,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String instanceNetwork;
 
     /**
+     * <p>The password of the ApsaraMQ for RocketMQ instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -54,6 +68,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String instancePassword;
 
     /**
+     * <p>The security group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-hp35r2hc3a3sv8q2****</p>
      */
@@ -61,6 +77,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String instanceSecurityGroupId;
 
     /**
+     * <p>The type of ApsaraMQ for RocketMQ instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>Cloud_5</p>
      */
@@ -68,6 +86,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The username of the ApsaraMQ for RocketMQ instance. If you use the Internet, you must configure the username and password of the instance in the SDK code for authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>6W0xz2uPfiwp****</p>
      */
@@ -75,6 +95,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String instanceUsername;
 
     /**
+     * <p>The ID of the vSwitch associated with the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-uf6gwtbn6etadpvz7****</p>
      */
@@ -82,6 +104,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String instanceVSwitchIds;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) associated with the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-uf6of9452b2pba82c****</p>
      */
@@ -89,6 +113,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String instanceVpcId;
 
     /**
+     * <p>The consumer offset of the message. CONSUME_FROM_LAST_OFFSET: consumes messages from the latest offset. This is the default value. CONSUME_FROM_FIRST_OFFSET: consumes messages from the earliest offset. CONSUME_FROM_TIMESTAMP: consumes messages from the offset at the specified point in time.</p>
+     * 
      * <strong>example:</strong>
      * <p>CONSUME_FROM_TIMESTAMP</p>
      */
@@ -96,6 +122,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String offset;
 
     /**
+     * <p>The region to which the ApsaraMQ for RocketMQ queue belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -103,6 +131,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The tags that are used to filter messages.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -110,6 +140,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public String tag;
 
     /**
+     * <p>The timestamp. This parameter is valid only when you set Offset to CONSUME_FROM_TIMESTAMP.</p>
+     * 
      * <strong>example:</strong>
      * <p>1636597951964</p>
      */
@@ -117,6 +149,8 @@ public class SourceRocketMQParameters extends TeaModel {
     public Integer timestamp;
 
     /**
+     * <p>The name of the topic in the ApsaraMQ for RocketMQ instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>myTopic</p>
      */

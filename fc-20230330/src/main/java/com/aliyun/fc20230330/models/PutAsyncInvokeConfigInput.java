@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class PutAsyncInvokeConfigInput extends TeaModel {
     /**
+     * <p>Optional. Specify whether to enable the asynchronous task feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("asyncTask")
     public Boolean asyncTask;
 
+    /**
+     * <p>Optional. The struct of the destination of asynchronous invocations.</p>
+     */
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
     /**
+     * <p>Optional. The maximum validity period of a message. Valid values: [1,604800]. Default value: 86400. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -22,6 +29,8 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
     public Long maxAsyncEventAgeInSeconds;
 
     /**
+     * <p>Optional. The maximum number of retries if an asynchronous invocation fails. Valid values: [0,8]. If you do not configure this parameter, the default number of retries is 3.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

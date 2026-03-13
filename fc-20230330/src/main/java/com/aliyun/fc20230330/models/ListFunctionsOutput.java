@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionsOutput extends TeaModel {
+    /**
+     * <p>The information about functions.</p>
+     */
     @NameInMap("functions")
     public java.util.List<Function> functions;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>next_function_name</p>
      */

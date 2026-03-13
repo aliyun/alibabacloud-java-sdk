@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublishVersionInput extends TeaModel {
     /**
+     * <p>The description of the layer version.</p>
+     * 
      * <strong>example:</strong>
      * <p>my version</p>
      */

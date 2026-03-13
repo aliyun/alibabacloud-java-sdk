@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Version extends TeaModel {
     /**
+     * <p>The time when the version was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05Z07:00</p>
      */
@@ -12,6 +14,8 @@ public class Version extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The description of the layer version.</p>
+     * 
      * <strong>example:</strong>
      * <p>my version</p>
      */
@@ -19,6 +23,8 @@ public class Version extends TeaModel {
     public String description;
 
     /**
+     * <p>The time when the version was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05Z07:00</p>
      */
@@ -26,6 +32,8 @@ public class Version extends TeaModel {
     public String lastModifiedTime;
 
     /**
+     * <p>The version ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

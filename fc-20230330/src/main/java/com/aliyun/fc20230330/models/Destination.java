@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Destination extends TeaModel {
     /**
+     * <p>The descriptor of the destination for the asynchronous invocation.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-shanghai:xxx:functions/f1</p>
      */

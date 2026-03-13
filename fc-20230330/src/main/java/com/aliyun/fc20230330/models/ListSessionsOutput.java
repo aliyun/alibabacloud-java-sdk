@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListSessionsOutput extends TeaModel {
     /**
+     * <p>The starting position for the next session list query.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of sessions.</p>
+     */
     @NameInMap("sessions")
     public java.util.List<Session> sessions;
 

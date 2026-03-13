@@ -4,21 +4,41 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutScalingConfigInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("enableMixMode")
     public Boolean enableMixMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("enableOnDemandScaling")
     public Boolean enableOnDemandScaling;
 
     @NameInMap("horizontalScalingPolicies")
     public java.util.List<ScalingPolicy> horizontalScalingPolicies;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("minInstances")
     public Long minInstances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Balanced</p>
+     */
     @NameInMap("requestDispatchPolicy")
     public String requestDispatchPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fc-pool-a2b664c1f87171j4******</p>
+     */
     @NameInMap("residentPoolId")
     public String residentPoolId;
 

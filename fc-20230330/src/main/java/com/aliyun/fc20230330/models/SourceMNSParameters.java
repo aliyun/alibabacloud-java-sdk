@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SourceMNSParameters extends TeaModel {
     /**
+     * <p>Specify whether to enable Base64 encoding. Default value: true. Valid values: true false</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class SourceMNSParameters extends TeaModel {
     public Boolean isBase64Decode;
 
     /**
+     * <p>The name of the queue of Simple Message Queue (formerly MNS).</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -19,6 +23,8 @@ public class SourceMNSParameters extends TeaModel {
     public String queueName;
 
     /**
+     * <p>The region to which the queue of Simple Message Queue (formerly MNS) belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

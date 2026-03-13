@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FunctionLayer extends TeaModel {
     /**
+     * <p>The resource identifier of the layer version.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-beijing:186824xxxxxx:layers/fc_layer/versions/1</p>
      */
@@ -12,6 +14,8 @@ public class FunctionLayer extends TeaModel {
     public String arn;
 
     /**
+     * <p>The size of the layer code package. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>421</p>
      */

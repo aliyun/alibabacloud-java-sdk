@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AsyncTask extends TeaModel {
     /**
+     * <p>The number of retries after the asynchronous task fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,6 +14,8 @@ public class AsyncTask extends TeaModel {
     public Long alreadyRetriedTimes;
 
     /**
+     * <p>The final state of the asynchronous task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */
@@ -19,6 +23,8 @@ public class AsyncTask extends TeaModel {
     public String destinationStatus;
 
     /**
+     * <p>The execution duration of the asynchronous task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -26,16 +32,23 @@ public class AsyncTask extends TeaModel {
     public Long durationMs;
 
     /**
+     * <p>The end time of the asynchronous task. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1633449590000</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>The events of the asynchronous task.</p>
+     */
     @NameInMap("events")
     public java.util.List<AsyncTaskEvent> events;
 
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-shanghai:1234/functions/my-func</p>
      */
@@ -43,6 +56,8 @@ public class AsyncTask extends TeaModel {
     public String functionArn;
 
     /**
+     * <p>The ID of the instance that corresponds to the asynchronous task.</p>
+     * 
      * <strong>example:</strong>
      * <p>D4-*******9FD1-882707E</p>
      */
@@ -50,6 +65,8 @@ public class AsyncTask extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The version or alias of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>prod</p>
      */
@@ -57,6 +74,8 @@ public class AsyncTask extends TeaModel {
     public String qualifier;
 
     /**
+     * <p>The ID of the request corresponding to this asynchronous task.</p>
+     * 
      * <strong>example:</strong>
      * <p>e026ae92-61e5-472f-b32d-1c9e3c4e****</p>
      */
@@ -64,6 +83,8 @@ public class AsyncTask extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The content of the response after the asynchronous task is executed. The maximum size is 1 MB. This parameter is in public preview. If you want to use this parameter, <a href="https://help.aliyun.com/document_detail/2513733.html">contact us</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>result</p>
      */
@@ -71,6 +92,8 @@ public class AsyncTask extends TeaModel {
     public String returnPayload;
 
     /**
+     * <p>The start time of the asynchronous task. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1633449590000</p>
      */
@@ -78,6 +101,19 @@ public class AsyncTask extends TeaModel {
     public Long startedTime;
 
     /**
+     * <p>The state of the asynchronous task.</p>
+     * <ul>
+     * <li>Enqueued: The asynchronous invocation is enqueued and waiting to be executed.</li>
+     * <li>Succeeded: The invocation is successful.</li>
+     * <li>Failed: The invocation fails.</li>
+     * <li>Running: The invocation is being executed.</li>
+     * <li>Stopped: The invocation is terminated.</li>
+     * <li>Stopping: The invocation is being terminated.</li>
+     * <li>Invalid: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.</li>
+     * <li>Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period of messages expires.</li>
+     * <li>Retrying: The asynchronous invocation is being retried due to an execution error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -85,6 +121,8 @@ public class AsyncTask extends TeaModel {
     public String status;
 
     /**
+     * <p>The error message for an asynchronous task failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnhandledInvocationError</p>
      */
@@ -92,6 +130,8 @@ public class AsyncTask extends TeaModel {
     public String taskErrorMessage;
 
     /**
+     * <p>The ID of the asynchronous task.</p>
+     * 
      * <strong>example:</strong>
      * <p>e026ae92-61e5-472f-b32d-1c9e3c4e****</p>
      */
@@ -99,6 +139,8 @@ public class AsyncTask extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The content of the input parameter during asynchronous task execution.</p>
+     * 
      * <strong>example:</strong>
      * <p>body</p>
      */

@@ -76,7 +76,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建函数别名。</p>
+     * <p>Creates an alias.</p>
      * 
      * @param request CreateAliasRequest
      * @param headers map
@@ -105,7 +105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建函数别名。</p>
+     * <p>Creates an alias.</p>
      * 
      * @param request CreateAliasRequest
      * @return CreateAliasResponse
@@ -214,7 +214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建层版本。</p>
+     * <p>Releases a layer version.</p>
      * 
      * @param request CreateLayerVersionRequest
      * @param headers map
@@ -243,7 +243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建层版本。</p>
+     * <p>Releases a layer version.</p>
      * 
      * @param request CreateLayerVersionRequest
      * @return CreateLayerVersionResponse
@@ -304,7 +304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建函数触发器。</p>
+     * <p>Creates a trigger.</p>
      * 
      * @param request CreateTriggerRequest
      * @param headers map
@@ -333,7 +333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建函数触发器。</p>
+     * <p>Creates a trigger.</p>
      * 
      * @param request CreateTriggerRequest
      * @return CreateTriggerResponse
@@ -583,7 +583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></p>
+     * <p>Deletes a function version.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -609,7 +609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></p>
+     * <p>Deletes a function version.</p>
      * @return DeleteFunctionVersionResponse
      */
     public DeleteFunctionVersionResponse deleteFunctionVersion(String functionName, String versionId) throws Exception {
@@ -1836,7 +1836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出函数并发度配置。</p>
+     * <p>Queries a list of concurrency configurations.</p>
      * 
      * @param request ListConcurrencyConfigsRequest
      * @param headers map
@@ -1878,7 +1878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出函数并发度配置。</p>
+     * <p>Queries a list of concurrency configurations.</p>
      * 
      * @param request ListConcurrencyConfigsRequest
      * @return ListConcurrencyConfigsResponse
@@ -2004,7 +2004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出函数。</p>
+     * <p>Queries a list of functions.</p>
      * 
      * @param tmpReq ListFunctionsRequest
      * @param headers map
@@ -2083,7 +2083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出函数。</p>
+     * <p>Queries a list of functions.</p>
      * 
      * @param request ListFunctionsRequest
      * @return ListFunctionsResponse
@@ -2633,6 +2633,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>暂停/保存会话</p>
+     * 
+     * @param request PauseSessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PauseSessionResponse
+     */
+    public PauseSessionResponse pauseSessionWithOptions(String functionName, String sessionId, PauseSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PauseSession"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/sessions/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionId) + "/pause"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PauseSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>暂停/保存会话</p>
+     * 
+     * @param request PauseSessionRequest
+     * @return PauseSessionResponse
+     */
+    public PauseSessionResponse pauseSession(String functionName, String sessionId, PauseSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.pauseSessionWithOptions(functionName, sessionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Publishes a function version.</p>
      * 
      * @param request PublishFunctionVersionRequest
@@ -2908,6 +2955,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.putScalingConfigWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复会话</p>
+     * 
+     * @param request ResumeSessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResumeSessionResponse
+     */
+    public ResumeSessionResponse resumeSessionWithOptions(String functionName, String sessionId, ResumeSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResumeSession"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/sessions/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionId) + "/resume"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复会话</p>
+     * 
+     * @param request ResumeSessionRequest
+     * @return ResumeSessionResponse
+     */
+    public ResumeSessionResponse resumeSession(String functionName, String sessionId, ResumeSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.resumeSessionWithOptions(functionName, sessionId, request, headers, runtime);
     }
 
     /**

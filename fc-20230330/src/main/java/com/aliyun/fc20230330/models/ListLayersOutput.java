@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListLayersOutput extends TeaModel {
+    /**
+     * <p>The layers.</p>
+     */
     @NameInMap("layers")
     public java.util.List<Layer> layers;
 
     /**
+     * <p>The name of the start layer for the next query, which is also the token used to obtain more results.</p>
+     * 
      * <strong>example:</strong>
      * <p>next-layer-name</p>
      */

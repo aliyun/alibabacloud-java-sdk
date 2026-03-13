@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WAFConfig extends TeaModel {
     /**
+     * <p>Specifies whether to enable WAF protection.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

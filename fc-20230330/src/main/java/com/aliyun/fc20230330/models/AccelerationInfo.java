@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class AccelerationInfo extends TeaModel {
     /**
+     * <p>The status of image acceleration.</p>
+     * 
      * <strong>example:</strong>
-     * <p>deprecated</p>
+     * <p>Ready</p>
      */
     @NameInMap("status")
     public String status;

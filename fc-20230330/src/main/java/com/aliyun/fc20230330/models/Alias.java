@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Alias extends TeaModel {
+    /**
+     * <p>The weight of the canary release version.</p>
+     */
     @NameInMap("additionalVersionWeight")
     public java.util.Map<String, Float> additionalVersionWeight;
 
     /**
+     * <p>The name of the alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>prod</p>
      */
@@ -15,6 +20,8 @@ public class Alias extends TeaModel {
     public String aliasName;
 
     /**
+     * <p>The time when the alias was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05Z07:00</p>
      */
@@ -22,6 +29,8 @@ public class Alias extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The description of the alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>alias for pre env</p>
      */
@@ -29,6 +38,8 @@ public class Alias extends TeaModel {
     public String description;
 
     /**
+     * <p>The time when the alias was modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05Z07:00</p>
      */
@@ -36,6 +47,8 @@ public class Alias extends TeaModel {
     public String lastModifiedTime;
 
     /**
+     * <p>The version to which the alias points.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -4,27 +4,59 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ScalingPolicy extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-10T10:10:10Z</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxInstances")
     public Long maxInstances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.6</p>
+     */
     @NameInMap("metricTarget")
     public Float metricTarget;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CPUUtilization</p>
+     */
     @NameInMap("metricType")
     public String metricType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("minInstances")
     public Long minInstances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-10T10:10:10Z</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
+     */
     @NameInMap("timeZone")
     public String timeZone;
 

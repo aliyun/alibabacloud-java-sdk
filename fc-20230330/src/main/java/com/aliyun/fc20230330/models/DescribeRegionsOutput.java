@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsOutput extends TeaModel {
+    /**
+     * <p>The region information.</p>
+     */
     @NameInMap("Regions")
     public DescribeRegionsOutputRegions regions;
 
@@ -21,9 +24,18 @@ public class DescribeRegionsOutput extends TeaModel {
     }
 
     public static class DescribeRegionsOutputRegionsRegion extends TeaModel {
+        /**
+         * <p>The region name.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -51,6 +63,9 @@ public class DescribeRegionsOutput extends TeaModel {
     }
 
     public static class DescribeRegionsOutputRegions extends TeaModel {
+        /**
+         * <p>The collection of region information.</p>
+         */
         @NameInMap("Region")
         public java.util.List<DescribeRegionsOutputRegionsRegion> region;
 

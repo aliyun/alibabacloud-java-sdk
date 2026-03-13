@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListConcurrencyConfigsOutput extends TeaModel {
+    /**
+     * <p>The list of concurrency configurations.</p>
+     */
     @NameInMap("configs")
     public java.util.List<ConcurrencyConfig> configs;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is not returned, all the concurrency configurations are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>next_token</p>
      */

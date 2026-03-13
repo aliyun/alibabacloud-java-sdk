@@ -4,9 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomDomainInput extends TeaModel {
+    /**
+     * <p>The configuration of permission authentication.</p>
+     */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
+    /**
+     * <p>The configuration of the HTTPS certificate.</p>
+     */
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
@@ -14,18 +20,29 @@ public class UpdateCustomDomainInput extends TeaModel {
     public CORSConfig corsConfig;
 
     /**
+     * <p>The protocol type that is supported by the custom domain name. Valid values: HTTP HTTPS HTTP,HTTPS</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <p>The route table that maps paths to functions when the function is invoked by using the custom domain name.</p>
+     */
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
+    /**
+     * <p>The Transport Layer Security (TLS) configuration.</p>
+     */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
+    /**
+     * <p>The Web Application Firewall (WAF) configuration.</p>
+     */
     @NameInMap("wafConfig")
     public WAFConfig wafConfig;
 

@@ -5,15 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesOutput extends TeaModel {
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>next_token</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the queried resources and tags.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<TagResource> tagResources;
 

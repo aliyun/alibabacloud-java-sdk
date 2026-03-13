@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class TargetTrackingPolicy extends TeaModel {
     /**
+     * <p>The end time of the policy, in UTC.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2024-03-10T10:10:10</p>
+     * <p>2024-03-10T10:10:10Z</p>
      */
     @NameInMap("endTime")
     public String endTime;
 
     /**
+     * <p>The maximum number of provisioned instances for scale-out.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class TargetTrackingPolicy extends TeaModel {
     public Long maxCapacity;
 
     /**
+     * <p>The threshold value for metric-based auto scaling.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class TargetTrackingPolicy extends TeaModel {
     public Float metricTarget;
 
     /**
+     * <p>The metric type for tracing. ProvisionedConcurrencyUtilization: the concurrency utilization of provisioned instances. CPUUtilization: the CPU utilization. GPUMemUtilization: the GPU utilization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class TargetTrackingPolicy extends TeaModel {
     public String metricType;
 
     /**
+     * <p>The minimum number of provisioned instances for scale-in.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,7 @@ public class TargetTrackingPolicy extends TeaModel {
     public Long minCapacity;
 
     /**
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,13 +64,17 @@ public class TargetTrackingPolicy extends TeaModel {
     public String name;
 
     /**
+     * <p>The time when the policy starts to take effect, in UTC.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2023-03-10T10:10:10</p>
+     * <p>2023-03-10T10:10:10Z</p>
      */
     @NameInMap("startTime")
     public String startTime;
 
     /**
+     * <p>The time zone. If the time zone parameter is empty, the time of startTime and endTime must be in UTC format.</p>
+     * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>
      */

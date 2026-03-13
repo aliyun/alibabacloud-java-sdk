@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Filter extends TeaModel {
+    /**
+     * <p>The description of the event filtering rule.</p>
+     */
     @NameInMap("key")
     public Key key;
 

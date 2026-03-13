@@ -8,6 +8,8 @@ public class LifecycleHook extends TeaModel {
     public java.util.List<String> command;
 
     /**
+     * <p>The handler of the hook. The definition is similar to that of a request handler.</p>
+     * 
      * <strong>example:</strong>
      * <p>index.initializer</p>
      */
@@ -15,6 +17,8 @@ public class LifecycleHook extends TeaModel {
     public String handler;
 
     /**
+     * <p>The timeout period of the hook. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

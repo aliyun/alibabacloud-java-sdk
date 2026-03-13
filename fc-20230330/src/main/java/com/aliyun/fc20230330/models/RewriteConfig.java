@@ -4,12 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class RewriteConfig extends TeaModel {
+    /**
+     * <p>The exact match rules.</p>
+     */
     @NameInMap("equalRules")
     public java.util.List<EqualRule> equalRules;
 
+    /**
+     * <p>The regex matching rules.</p>
+     */
     @NameInMap("regexRules")
     public java.util.List<RegexRule> regexRules;
 
+    /**
+     * <p>The wildcard matching rules.</p>
+     */
     @NameInMap("wildcardRules")
     public java.util.List<WildcardRule> wildcardRules;
 

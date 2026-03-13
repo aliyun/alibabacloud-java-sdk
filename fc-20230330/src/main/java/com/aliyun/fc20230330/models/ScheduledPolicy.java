@@ -4,21 +4,45 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ScheduledPolicy extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1633449590000</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>student_app_shop_analyzer</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>。</p>
+     */
     @NameInMap("scheduleExpression")
     public String scheduleExpression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1764432000000</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("target")
     public Long target;
 
+    /**
+     * <strong>example:</strong>
+     * <p>。</p>
+     */
     @NameInMap("timeZone")
     public String timeZone;
 

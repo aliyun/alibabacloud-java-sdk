@@ -4,12 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CustomDNS extends TeaModel {
+    /**
+     * <p>The DNS resolution configurations in the resolv.conf file. Each item corresponds to a key-value pair in the key:value format, in which the key is required.</p>
+     */
     @NameInMap("dnsOptions")
     public java.util.List<DNSOption> dnsOptions;
 
+    /**
+     * <p>The IP addresses of the DNS server.</p>
+     */
     @NameInMap("nameServers")
     public java.util.List<String> nameServers;
 
+    /**
+     * <p>The search domains of DNS server.</p>
+     */
     @NameInMap("searches")
     public java.util.List<String> searches;
 

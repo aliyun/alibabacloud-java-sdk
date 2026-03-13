@@ -4,9 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class OSSTriggerConfig extends TeaModel {
+    /**
+     * <p>The list of events. Enter an event related to OSS. For more information about event types,see <a href="https://help.aliyun.com/document_detail/2513613.html">OSS events</a>.</p>
+     */
     @NameInMap("events")
     public java.util.List<String> events;
 
+    /**
+     * <p>The event filtering rule.</p>
+     */
     @NameInMap("filter")
     public Filter filter;
 

@@ -19,12 +19,20 @@ public class PutProvisionConfigInput extends TeaModel {
     public Boolean alwaysAllocateGPU;
 
     /**
+     * <p>The number of target provisioned instances. Valid values: [0,10000].</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("defaultTarget")
     public Long defaultTarget;
 
+    /**
+     * <p>public</p>
+     */
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledAction> scheduledActions;
 

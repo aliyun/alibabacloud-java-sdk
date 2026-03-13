@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class MCPSSESessionAffinityConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("sessionConcurrencyPerInstance")
     public Long sessionConcurrencyPerInstance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/sse</p>
+     */
     @NameInMap("sseEndpointPath")
     public String sseEndpointPath;
 

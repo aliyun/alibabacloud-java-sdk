@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesOutput extends TeaModel {
+    /**
+     * <p>The information about aliases.</p>
+     */
     @NameInMap("aliases")
     public java.util.List<Alias> aliases;
 
     /**
+     * <p>The next version.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

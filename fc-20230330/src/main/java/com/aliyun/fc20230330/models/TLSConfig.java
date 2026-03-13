@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class TLSConfig extends TeaModel {
     /**
+     * <p>The TLS cipher suites.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("cipherSuites")
     public java.util.List<String> cipherSuites;
 
     /**
+     * <p>The maximum TLS version. Valid values: TLSv1.3 and TLSv1.2.</p>
+     * 
      * <strong>example:</strong>
      * <p>TLSv1.3</p>
      */
@@ -18,6 +21,7 @@ public class TLSConfig extends TeaModel {
     public String maxVersion;
 
     /**
+     * <p>The minimum TLS version. Valid values: TLSv1.3 and TLSv1.2.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SourceMQTTParameters extends TeaModel {
     /**
+     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>mqtt-****</p>
      */
@@ -12,6 +14,8 @@ public class SourceMQTTParameters extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region in which the ApsaraMQ for MQTT instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class SourceMQTTParameters extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the topic in the ApsaraMQ for MQTT instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>testTopic</p>
      */

@@ -4,12 +4,24 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class MCPStreamableSessionAffinityConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("sessionConcurrencyPerInstance")
     public Long sessionConcurrencyPerInstance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1800</p>
+     */
     @NameInMap("sessionIdleTimeoutInSeconds")
     public Long sessionIdleTimeoutInSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21600</p>
+     */
     @NameInMap("sessionTTLInSeconds")
     public Long sessionTTLInSeconds;
 

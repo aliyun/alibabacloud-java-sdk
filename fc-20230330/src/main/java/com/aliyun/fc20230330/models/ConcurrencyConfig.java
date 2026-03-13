@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConcurrencyConfig extends TeaModel {
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN).</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-shanghai:123:functions/demo</p>
      */
@@ -12,6 +14,8 @@ public class ConcurrencyConfig extends TeaModel {
     public String functionArn;
 
     /**
+     * <p>The reserved concurrency of the function. Other functions cannot use the concurrency. The reserved concurrency includes the total concurrency of provisioned instances and on-demand instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

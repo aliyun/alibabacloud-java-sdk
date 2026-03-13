@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesOutput extends TeaModel {
+    /**
+     * <p>public</p>
+     */
     @NameInMap("instances")
     public java.util.List<InstanceInfo> instances;
 

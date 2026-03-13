@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AsyncConfig extends TeaModel {
     /**
+     * <p>Specifies whether to enable the asynchronous task feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,16 +14,23 @@ public class AsyncConfig extends TeaModel {
     public Boolean asyncTask;
 
     /**
+     * <p>The time when the asynchronous invocation configuration was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05Z07:00</p>
      */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <p>The destination configuration.</p>
+     */
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-shanghai:1234/functions/my-func</p>
      */
@@ -29,6 +38,8 @@ public class AsyncConfig extends TeaModel {
     public String functionArn;
 
     /**
+     * <p>The time when the asynchronous invocation was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05Z07:00</p>
      */
@@ -36,6 +47,8 @@ public class AsyncConfig extends TeaModel {
     public String lastModifiedTime;
 
     /**
+     * <p>The maximum time to live (TTL) value of an event.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -43,6 +56,8 @@ public class AsyncConfig extends TeaModel {
     public Long maxAsyncEventAgeInSeconds;
 
     /**
+     * <p>The number of times when an asynchronous invocation is retried.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

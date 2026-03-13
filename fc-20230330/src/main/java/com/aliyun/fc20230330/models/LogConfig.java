@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LogConfig extends TeaModel {
     /**
+     * <p>Specifies whether to enable the collection of instance-level metrics. If you enable this feature, you can view core metrics, such as CPU utilization, memory usage, network conditions of instances, and the number of requests that an instance concurrently processes. Valid values: false: disables the collection of instance-level metrics. This is the default value. true: enables the collection of instance-level metrics.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +17,8 @@ public class LogConfig extends TeaModel {
     public Boolean enableLlmMetrics;
 
     /**
+     * <p>Specifies whether to enable request-level metrics. If you enable this feature, you can view the amount of time and memory consumed for a specific invocation of each function in the service. Valid values: false: disables request-level metrics. true: enables request-level metrics. This is the default value.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +26,8 @@ public class LogConfig extends TeaModel {
     public Boolean enableRequestMetrics;
 
     /**
+     * <p>The log segmentation rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>DefaultRegex</p>
      */
@@ -29,6 +35,8 @@ public class LogConfig extends TeaModel {
     public String logBeginRule;
 
     /**
+     * <p>The name of the Logstore of Simple Log Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-logstore</p>
      */
@@ -36,6 +44,8 @@ public class LogConfig extends TeaModel {
     public String logstore;
 
     /**
+     * <p>The name of the project in Simple Log Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-project</p>
      */

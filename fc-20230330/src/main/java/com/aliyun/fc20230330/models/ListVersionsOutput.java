@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVersionsOutput extends TeaModel {
     /**
+     * <p>The sorting method of versions.</p>
+     * 
      * <strong>example:</strong>
      * <p>FORWARD</p>
      */
@@ -12,12 +14,17 @@ public class ListVersionsOutput extends TeaModel {
     public String direction;
 
     /**
+     * <p>The ID of the next version.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The version IDs.</p>
+     */
     @NameInMap("versions")
     public java.util.List<Version> versions;
 

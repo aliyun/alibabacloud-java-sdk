@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class ProvisionConfig extends TeaModel {
     /**
+     * <p>The target number of provisioned instances at the current time. If a metric-based or scheduled auto scaling policy is in effect, the value of this parameter is the number of provisioned instances as calculated by the policy. Otherwise, the value is the default number of provisioned instances when all auto scaling policies become invalid.</p>
+     * <blockquote>
+     * <p> Comparison between this parameter and defaultTarget\
+     * Assume that after the number of provisioned instances is set to 1, a scheduled auto scaling policy is added, and this auto scaling policy increases the number of provisioned instances during a specified time period to 5.</p>
+     * </blockquote>
+     * <ul>
+     * <li><p>During the time period when the scheduled policy <strong>takes effect</strong>, the value of the target parameter is 5, while the value of the defaultTarget parameter is 1.</p>
+     * </li>
+     * <li><p>When the scheduled policy <strong>is ineffective</strong>, both the target value and defaultTarget value are 1.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +31,8 @@ public class ProvisionConfig extends TeaModel {
     public Boolean alwaysAllocateGPU;
 
     /**
+     * <p>public</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +40,8 @@ public class ProvisionConfig extends TeaModel {
     public Long current;
 
     /**
+     * <p>public</p>
+     * 
      * <strong>example:</strong>
      * <p>image not found</p>
      */
@@ -33,6 +49,8 @@ public class ProvisionConfig extends TeaModel {
     public String currentError;
 
     /**
+     * <p>public</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -46,6 +64,9 @@ public class ProvisionConfig extends TeaModel {
     @NameInMap("functionArn")
     public String functionArn;
 
+    /**
+     * <p>public</p>
+     */
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledAction> scheduledActions;
 

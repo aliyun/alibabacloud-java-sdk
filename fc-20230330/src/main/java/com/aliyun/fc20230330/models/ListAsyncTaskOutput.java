@@ -4,9 +4,18 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListAsyncTaskOutput extends TeaModel {
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTIzNCNhYmM=</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The asynchronous tasks.</p>
+     */
     @NameInMap("tasks")
     public java.util.List<AsyncTask> tasks;
 

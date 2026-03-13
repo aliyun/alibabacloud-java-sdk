@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class TagResourcesInput extends TeaModel {
     /**
+     * <p>The resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The type of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>FUNCTION</p>
      */
@@ -18,6 +21,7 @@ public class TagResourcesInput extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")

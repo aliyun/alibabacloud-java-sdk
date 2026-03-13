@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourceTagsOutput extends TeaModel {
     /**
+     * <p>The name of the resource type. Valid values: ALIYUN::FC::FUNCTION and ALIYUN::FC::SERVICE. The former name is used in Function Compute 3.0, and the latter name is used in earlier versions of Function Compute.</p>
+     * 
      * <strong>example:</strong>
      * <p>ALIYUN::FC::FUNCTION</p>
      */
@@ -12,12 +14,17 @@ public class GetResourceTagsOutput extends TeaModel {
     public String resouceType;
 
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-shanghai:****:functions/demo</p>
      */
     @NameInMap("resourceArn")
     public String resourceArn;
 
+    /**
+     * <p>The tag dictionary.</p>
+     */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 

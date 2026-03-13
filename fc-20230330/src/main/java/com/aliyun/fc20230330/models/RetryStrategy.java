@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class RetryStrategy extends TeaModel {
     /**
+     * <p>The retry policy. Valid values:</p>
+     * <ul>
+     * <li><strong>BACKOFF_RETRY</strong>: retries with a fixed backoff interval.</li>
+     * <li><strong>EXPONENTIAL_DECAY_RETRY</strong>: retries with exponential backoff.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>BACKOFF_RETRY</p>
      */

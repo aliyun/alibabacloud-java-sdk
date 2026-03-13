@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListProvisionConfigsOutput extends TeaModel {
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>next_token</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The provisioned configurations of the function.</p>
+     */
     @NameInMap("provisionConfigs")
     public java.util.List<ProvisionConfig> provisionConfigs;
 

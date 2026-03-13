@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ScheduledAction extends TeaModel {
     /**
+     * <p>The time when the policy expires.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2024-03-10T10:10:10</p>
+     * <p>2024-03-10T10:10:10Z</p>
      */
     @NameInMap("endTime")
     public String endTime;
 
     /**
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ScheduledAction extends TeaModel {
     public String name;
 
     /**
+     * <p>The schedule expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +34,16 @@ public class ScheduledAction extends TeaModel {
     public String scheduleExpression;
 
     /**
+     * <p>The time when the policy takes effect.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2023-03-10T10:10:10</p>
+     * <p>2023-03-10T10:10:10Z</p>
      */
     @NameInMap("startTime")
     public String startTime;
 
     /**
+     * <p>The number of target provisioned instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,8 @@ public class ScheduledAction extends TeaModel {
     public Long target;
 
     /**
+     * <p>The time zone. If the time zone parameter is empty, the value of startTime, endTime, and scheduleExpression must be in UTC format.</p>
+     * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>
      */

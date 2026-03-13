@@ -4,16 +4,27 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CustomRuntimeConfig extends TeaModel {
+    /**
+     * <p>The arguments that are passed to the startup command.</p>
+     */
     @NameInMap("args")
     public java.util.List<String> args;
 
+    /**
+     * <p>The startup commands.</p>
+     */
     @NameInMap("command")
     public java.util.List<String> command;
 
+    /**
+     * <p>The custom health check configuration of the function.</p>
+     */
     @NameInMap("healthCheckConfig")
     public CustomHealthCheckConfig healthCheckConfig;
 
     /**
+     * <p>The port on which the HTTP server is listening.</p>
+     * 
      * <strong>example:</strong>
      * <p>9000</p>
      */

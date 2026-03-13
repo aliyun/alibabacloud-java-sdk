@@ -4,10 +4,18 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class NASMountConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to use the Transport Layer Security (TLS) protocol to secure data transmission. Note: Only General-purpose NAS supports transmission encryption.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableTLS")
     public Boolean enableTLS;
 
     /**
+     * <p>The local mount directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>/home/test</p>
      */
@@ -15,6 +23,8 @@ public class NASMountConfig extends TeaModel {
     public String mountDir;
 
     /**
+     * <p>The address of a NAS server.</p>
+     * 
      * <strong>example:</strong>
      * <p>***-uni85.cn-hangzhou.nas.com:/</p>
      */

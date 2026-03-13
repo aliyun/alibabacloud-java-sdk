@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegistryNetworkConfig extends TeaModel {
     /**
+     * <p>The ID of the security group that can be used to connect to the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-xxxxxxxxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class RegistryNetworkConfig extends TeaModel {
     public String securityGroupId;
 
     /**
+     * <p>The ID of the vSwitch that can be used to connect to the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-xxxxxxxxxxxxxx</p>
      */
@@ -19,6 +23,8 @@ public class RegistryNetworkConfig extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) that can be used to connect to the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-xxxxxxxxxxxxxx</p>
      */

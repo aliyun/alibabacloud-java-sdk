@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SourceDTSParameters extends TeaModel {
     /**
+     * <p>The network address and port number of the change tracking instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>dts-cn-shanghai-vpc.com:18003</p>
      */
@@ -12,6 +14,8 @@ public class SourceDTSParameters extends TeaModel {
     public String brokerUrl;
 
     /**
+     * <p>The UNIX timestamp that is generated when the SDK client consumes the first data record.</p>
+     * 
      * <strong>example:</strong>
      * <p>1677340805</p>
      */
@@ -19,6 +23,8 @@ public class SourceDTSParameters extends TeaModel {
     public Integer initCheckPoint;
 
     /**
+     * <p>The consumer group password.</p>
+     * 
      * <strong>example:</strong>
      * <p>dtsTest123</p>
      */
@@ -26,6 +32,8 @@ public class SourceDTSParameters extends TeaModel {
     public String password;
 
     /**
+     * <p>The region of the DTS instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +41,8 @@ public class SourceDTSParameters extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The consumer group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dtse34j22j025a****</p>
      */
@@ -40,6 +50,8 @@ public class SourceDTSParameters extends TeaModel {
     public String sid;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e34z2gm325q****</p>
      */
@@ -47,6 +59,8 @@ public class SourceDTSParameters extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The name of the tracked topic of the change tracking instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn_shanghai_vpc_rm_uf6398ykj0218****_dts_trigger_upgrade_from_old_version2</p>
      */
@@ -54,6 +68,8 @@ public class SourceDTSParameters extends TeaModel {
     public String topic;
 
     /**
+     * <p>The account of the consumer group.</p>
+     * 
      * <strong>example:</strong>
      * <p>dts_trigger</p>
      */

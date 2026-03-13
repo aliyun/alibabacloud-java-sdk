@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SourceRabbitMQParameters extends TeaModel {
     /**
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>amqp-cn-nif22u74****</p>
      */
@@ -12,6 +14,8 @@ public class SourceRabbitMQParameters extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The queue name of the ApsaraMQ for RabbitMQ instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -19,6 +23,8 @@ public class SourceRabbitMQParameters extends TeaModel {
     public String queueName;
 
     /**
+     * <p>The region in which the ApsaraMQ for RabbitMQ instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -26,6 +32,8 @@ public class SourceRabbitMQParameters extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The vhost name of the ApsaraMQ for RabbitMQ instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>eb-connect</p>
      */

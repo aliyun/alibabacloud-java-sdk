@@ -4,36 +4,72 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ScalingConfigStatus extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>image not found</p>
+     */
     @NameInMap("currentError")
     public String currentError;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentInstances")
     public Long currentInstances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("enableMixMode")
     public Boolean enableMixMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("enableOnDemandScaling")
     public Boolean enableOnDemandScaling;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-shanghai:124:functions/myFunction/prod</p>
+     */
     @NameInMap("functionArn")
     public String functionArn;
 
     @NameInMap("horizontalScalingPolicies")
     public java.util.List<ScalingPolicy> horizontalScalingPolicies;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("minInstances")
     public Long minInstances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Balanced</p>
+     */
     @NameInMap("requestDispatchPolicy")
     public String requestDispatchPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fc-pool-a2b664c1f87171j4******</p>
+     */
     @NameInMap("residentPoolId")
     public String residentPoolId;
 
     @NameInMap("scheduledPolicies")
     public java.util.List<ScheduledPolicy> scheduledPolicies;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("targetInstances")
     public Long targetInstances;
 

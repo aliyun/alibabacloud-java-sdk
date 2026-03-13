@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AuthConfig extends TeaModel {
     /**
+     * <p>The authentication information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,8 +14,10 @@ public class AuthConfig extends TeaModel {
     public String authInfo;
 
     /**
+     * <p>The authentication type. Valid values: anonymous, function, and jwt.</p>
+     * 
      * <strong>example:</strong>
-     * <p>anonymous, function, jwt</p>
+     * <p>anonymous</p>
      */
     @NameInMap("authType")
     public String authType;

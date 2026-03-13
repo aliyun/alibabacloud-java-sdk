@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class DeadLetterQueue extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</p>
+     */
     @NameInMap("Arn")
     public String arn;
 

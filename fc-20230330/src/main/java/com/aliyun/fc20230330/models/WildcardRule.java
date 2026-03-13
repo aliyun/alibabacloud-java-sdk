@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class WildcardRule extends TeaModel {
     /**
+     * <p>The matching rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class WildcardRule extends TeaModel {
     public String match;
 
     /**
+     * <p>The replacement rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

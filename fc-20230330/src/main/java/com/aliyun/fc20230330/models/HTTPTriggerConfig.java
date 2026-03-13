@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HTTPTriggerConfig extends TeaModel {
     /**
+     * <p>The authentication configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;JWKS&quot;:{&quot;foo&quot;:&quot;bar&quot;},&quot;TokenLookup&quot;:&quot;header:Authorization:Bearer,cookie:AuthorizationCookie&quot;,&quot;ClaimPassBy&quot;:&quot;query:uid:uid,header:name:name&quot;}</p>
      */
@@ -12,6 +14,15 @@ public class HTTPTriggerConfig extends TeaModel {
     public String authConfig;
 
     /**
+     * <p>The authentication type. Valid values:</p>
+     * <ul>
+     * <li><strong>function</strong>: requires authentication.</li>
+     * <li><strong>anonymous</strong>: does not require authentication.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The default value is <strong>function</strong></p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>anonymous</p>
      */
@@ -22,12 +33,17 @@ public class HTTPTriggerConfig extends TeaModel {
     public CORSConfig corsConfig;
 
     /**
+     * <p>Specifies whether to disable access to the default Internet domain. If you set this parameter to true, a 403 error is returned if you access the default public URL provided by the function. A value of false does not have affect the running of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("disableURLInternet")
     public Boolean disableURLInternet;
 
+    /**
+     * <p>The list of request methods. Multiple methods are supported.</p>
+     */
     @NameInMap("methods")
     public java.util.List<String> methods;
 

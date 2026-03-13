@@ -4,26 +4,59 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class EventBridgeTriggerConfig extends TeaModel {
+    /**
+     * <p>Whether to invoke the function in asynchronous mode. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> The default value is <strong>false</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("asyncInvocationType")
     public Boolean asyncInvocationType;
 
     /**
+     * <p>The event pattern. The value is in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/181432.html">Event patterns</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("eventRuleFilterPattern")
     public String eventRuleFilterPattern;
 
+    /**
+     * <p>The event destination configurations.</p>
+     */
     @NameInMap("eventSinkConfig")
     public EventSinkConfig eventSinkConfig;
 
+    /**
+     * <p>The event source configurations.</p>
+     */
     @NameInMap("eventSourceConfig")
     public EventSourceConfig eventSourceConfig;
 
+    /**
+     * <p>The runtime configurations.</p>
+     */
     @NameInMap("runOptions")
     public RunOptions runOptions;
 
     /**
+     * <p>Whether to enable the trigger. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> The default value is <strong>true</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

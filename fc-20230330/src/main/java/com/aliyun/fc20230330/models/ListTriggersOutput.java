@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListTriggersOutput extends TeaModel {
     /**
+     * <p>The name of the next trigger. The pagination token that is used in the next request to retrieve a new page of results. If this parameter is not returned, all the layers are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>next_token</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The triggers.</p>
+     */
     @NameInMap("triggers")
     public java.util.List<Trigger> triggers;
 

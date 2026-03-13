@@ -7,12 +7,24 @@ public class CookieSessionAffinityConfig extends TeaModel {
     @NameInMap("disableSessionIdReuse")
     public Boolean disableSessionIdReuse;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("sessionConcurrencyPerInstance")
     public Long sessionConcurrencyPerInstance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1800</p>
+     */
     @NameInMap("sessionIdleTimeoutInSeconds")
     public Long sessionIdleTimeoutInSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21600</p>
+     */
     @NameInMap("sessionTTLInSeconds")
     public Long sessionTTLInSeconds;
 

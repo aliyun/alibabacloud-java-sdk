@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListLayerVersionOutput extends TeaModel {
+    /**
+     * <p>The list of layer versions.</p>
+     */
     @NameInMap("layers")
     public java.util.List<Layer> layers;
 
     /**
+     * <p>The next version, which is used to return more results.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

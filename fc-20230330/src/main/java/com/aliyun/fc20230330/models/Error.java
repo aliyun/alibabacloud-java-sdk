@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Error extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>FunctionNotFound</p>
      */
@@ -12,6 +14,8 @@ public class Error extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>function not found</p>
      */
@@ -19,6 +23,8 @@ public class Error extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1-64e70cf1-5cbef92ea8fc8c42899cf5d1</p>
      */

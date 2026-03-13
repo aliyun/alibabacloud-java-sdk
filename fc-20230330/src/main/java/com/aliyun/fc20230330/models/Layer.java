@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class Layer extends TeaModel {
     /**
+     * <p>The permission of the layer. Valid value: 0 and 1. 0 specifies that the layer is private, and 1 specifies that the layer is public. By default, public layers are public. Custom layers can be set to private or public.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("acl")
     public String acl;
 
+    /**
+     * <p>The information about the code package of the layer.</p>
+     */
     @NameInMap("code")
     public OutputCodeLocation code;
 
     /**
+     * <p>The crc64 verification code of the layer code package, which is calculated based on ECMA-182.</p>
+     * 
      * <strong>example:</strong>
      * <p>2825179536350****</p>
      */
@@ -22,16 +29,23 @@ public class Layer extends TeaModel {
     public String codeChecksum;
 
     /**
+     * <p>The size of the layer code package. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>421</p>
      */
     @NameInMap("codeSize")
     public Long codeSize;
 
+    /**
+     * <p>The runtimes that are supported by the layer.</p>
+     */
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
 
     /**
+     * <p>The time when the layer version was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-30T11:08:00Z</p>
      */
@@ -39,6 +53,8 @@ public class Layer extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The description of the layer version.</p>
+     * 
      * <strong>example:</strong>
      * <p>My first layer</p>
      */
@@ -46,6 +62,7 @@ public class Layer extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the layer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +72,8 @@ public class Layer extends TeaModel {
     public String layerName;
 
     /**
+     * <p>The name of the resource in the layer version. The name is in the acs:fc:{region}:{accountID}:layers/{layerName}/versions/{layerVersion} format.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-beijing:186824xxxxxx:layers/fc_layer/versions/1</p>
      */
@@ -62,6 +81,8 @@ public class Layer extends TeaModel {
     public String layerVersionArn;
 
     /**
+     * <p>The license agreement.</p>
+     * 
      * <strong>example:</strong>
      * <p>Apache</p>
      */
@@ -69,6 +90,8 @@ public class Layer extends TeaModel {
     public String license;
 
     /**
+     * <p>The layer version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

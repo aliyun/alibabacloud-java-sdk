@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CertConfig extends TeaModel {
     /**
+     * <p>The name of the certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CertConfig extends TeaModel {
     public String certName;
 
     /**
+     * <p>The certificate in the .pem format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CertConfig extends TeaModel {
     public String certificate;
 
     /**
+     * <p>The private key in the .pem format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

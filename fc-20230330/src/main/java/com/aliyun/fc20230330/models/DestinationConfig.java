@@ -4,9 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class DestinationConfig extends TeaModel {
+    /**
+     * <p>The destination struct of a failed callback.</p>
+     */
     @NameInMap("onFailure")
     public Destination onFailure;
 
+    /**
+     * <p>The destination struct of a successful callback.</p>
+     */
     @NameInMap("onSuccess")
     public Destination onSuccess;
 

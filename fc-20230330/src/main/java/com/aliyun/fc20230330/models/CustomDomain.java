@@ -4,19 +4,33 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CustomDomain extends TeaModel {
+    /**
+     * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>186851234023****</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
     /**
+     * <p>The version of the Function Compute API.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-30</p>
      */
     @NameInMap("apiVersion")
     public String apiVersion;
 
+    /**
+     * <p>The configuration of permission authentication.</p>
+     */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
+    /**
+     * <p>The configuration of the HTTPS certificate.</p>
+     */
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
@@ -24,6 +38,8 @@ public class CustomDomain extends TeaModel {
     public CORSConfig corsConfig;
 
     /**
+     * <p>The time when the custom domain name was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-30T08:02:19Z</p>
      */
@@ -31,6 +47,8 @@ public class CustomDomain extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -38,6 +56,8 @@ public class CustomDomain extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The time when the custom domain name was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-30T08:02:19Z</p>
      */
@@ -45,25 +65,38 @@ public class CustomDomain extends TeaModel {
     public String lastModifiedTime;
 
     /**
+     * <p>The protocol type that is supported by the custom domain name. Valid values: HTTP HTTPS HTTP,HTTPS</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <p>The route table that maps paths to functions when the function is invoked by using the custom domain name.</p>
+     */
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
     /**
+     * <p>The number of added subdomains.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("subdomainCount")
     public String subdomainCount;
 
+    /**
+     * <p>The Transport Layer Security (TLS) configuration.</p>
+     */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
+    /**
+     * <p>The Web Application Firewall (WAF) configuration.</p>
+     */
     @NameInMap("wafConfig")
     public WAFConfig wafConfig;
 

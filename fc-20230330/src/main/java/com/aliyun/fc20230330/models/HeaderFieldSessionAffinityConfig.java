@@ -4,18 +4,34 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class HeaderFieldSessionAffinityConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test-session-header1</p>
+     */
     @NameInMap("affinityHeaderFieldName")
     public String affinityHeaderFieldName;
 
     @NameInMap("disableSessionIdReuse")
     public Boolean disableSessionIdReuse;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("sessionConcurrencyPerInstance")
     public Long sessionConcurrencyPerInstance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1800</p>
+     */
     @NameInMap("sessionIdleTimeoutInSeconds")
     public Long sessionIdleTimeoutInSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21600</p>
+     */
     @NameInMap("sessionTTLInSeconds")
     public Long sessionTTLInSeconds;
 

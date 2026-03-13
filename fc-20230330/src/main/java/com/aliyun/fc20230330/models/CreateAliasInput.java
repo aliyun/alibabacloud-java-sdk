@@ -4,10 +4,14 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateAliasInput extends TeaModel {
+    /**
+     * <p>The weight of the canary release version.</p>
+     */
     @NameInMap("additionalVersionWeight")
     public java.util.Map<String, Float> additionalVersionWeight;
 
     /**
+     * <p>The alias.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,8 @@ public class CreateAliasInput extends TeaModel {
     public String aliasName;
 
     /**
+     * <p>The description of the alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>my alias</p>
      */
@@ -24,6 +30,7 @@ public class CreateAliasInput extends TeaModel {
     public String description;
 
     /**
+     * <p>The version to which the alias points.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
