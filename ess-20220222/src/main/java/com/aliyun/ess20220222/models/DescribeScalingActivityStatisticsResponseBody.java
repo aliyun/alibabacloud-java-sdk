@@ -13,15 +13,9 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The error message statistics of the scaling activity.</p>
-     */
     @NameInMap("ScalingActivityErrorCodeStatistics")
     public DescribeScalingActivityStatisticsResponseBodyScalingActivityErrorCodeStatistics scalingActivityErrorCodeStatistics;
 
-    /**
-     * <p>The statistical metrics of the scaling activity status.</p>
-     */
     @NameInMap("ScalingActivityStatusStatistics")
     public DescribeScalingActivityStatisticsResponseBodyScalingActivityStatusStatistics scalingActivityStatusStatistics;
 
@@ -55,30 +49,12 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingActivityStatisticsResponseBodyScalingActivityErrorCodeStatisticsErrorStatistic extends TeaModel {
-        /**
-         * <p>The number of failed scaling activities.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>Scaling Activity Error Codes</p>
-         * 
-         * <strong>example:</strong>
-         * <p>QuotaExceeded.PrivateIpAddress</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>The time when the statistics are generated. The time is in UTC. Format: yyyyMMddHH.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025121623</p>
-         */
         @NameInMap("Time")
         public String time;
 
@@ -133,39 +109,15 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingActivityStatisticsResponseBodyScalingActivityStatusStatisticsStatistic extends TeaModel {
-        /**
-         * <p>The number of failed scaling activities.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("FailedActivityCount")
         public Integer failedActivityCount;
 
-        /**
-         * <p>The number of successful scaling activities.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("SuccessActivityCount")
         public Integer successActivityCount;
 
-        /**
-         * <p>The time when the statistics are generated. The time is in UTC. Format: yyyyMMddHH.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025121623</p>
-         */
         @NameInMap("Time")
         public String time;
 
-        /**
-         * <p>The number of partially executed scaling activities.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("WarningActivityCount")
         public Integer warningActivityCount;
 

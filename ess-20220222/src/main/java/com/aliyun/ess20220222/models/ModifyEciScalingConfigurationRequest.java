@@ -990,6 +990,9 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestContainersLivenessProbeExec extends TeaModel {
+        /**
+         * <p>The command executed in the container when using the command line to perform the health check.</p>
+         */
         @NameInMap("Commands")
         public java.util.List<String> commands;
 
@@ -1009,12 +1012,34 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestContainersLivenessProbeHttpGet extends TeaModel {
+        /**
+         * <p>The path to which you want to send the HTTP GET request to perform a liveness probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/healthyz</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The port over which you want to send the HTTP GET request to perform a liveness probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The protocol type of the HTTP GET request that you use to perform a liveness probe. Valid values:</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("Scheme")
         public String scheme;
 
@@ -1050,6 +1075,12 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestContainersLivenessProbeTcpSocket extends TeaModel {
+        /**
+         * <p>The port detected by the TCP socket when you perform a liveness probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
@@ -1072,24 +1103,55 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         @NameInMap("Exec")
         public ModifyEciScalingConfigurationRequestContainersLivenessProbeExec exec;
 
+        /**
+         * <p>The minimum number of consecutive failures that must occur for a liveness probe to be considered failed.</p>
+         * <p>Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FailureThreshold")
         public Integer failureThreshold;
 
         @NameInMap("HttpGet")
         public ModifyEciScalingConfigurationRequestContainersLivenessProbeHttpGet httpGet;
 
+        /**
+         * <p>The interval between the launch of the container and the onset of a liveness probe. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("InitialDelaySeconds")
         public Integer initialDelaySeconds;
 
+        /**
+         * <p>The interval between consecutive liveness probes. Unit: seconds. Default value: 10. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("PeriodSeconds")
         public Integer periodSeconds;
 
+        /**
+         * <p>The minimum number of consecutive successes that must occur to consider a failed liveness probe successful. Default value: 1. Set the value to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SuccessThreshold")
         public Integer successThreshold;
 
         @NameInMap("TcpSocket")
         public ModifyEciScalingConfigurationRequestContainersLivenessProbeTcpSocket tcpSocket;
 
+        /**
+         * <p>The timeout limit for a liveness probe to be complete. Unit: seconds. Default value: 1. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TimeoutSeconds")
         public Integer timeoutSeconds;
 
@@ -1165,6 +1227,9 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestContainersReadinessProbeExec extends TeaModel {
+        /**
+         * <p>The commands executed in the container when using the command line to perform the health check.</p>
+         */
         @NameInMap("Commands")
         public java.util.List<String> commands;
 
@@ -1184,12 +1249,34 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestContainersReadinessProbeHttpGet extends TeaModel {
+        /**
+         * <p>The path to which you want to send the HTTP GET request to perform a readiness probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/healthz</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The port over which you want to send the HTTP GET request to perform a readiness probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The protocol type of the HTTP GET request that you use to perform a readiness probe. Valid values:</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("Scheme")
         public String scheme;
 
@@ -1225,6 +1312,12 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestContainersReadinessProbeTcpSocket extends TeaModel {
+        /**
+         * <p>The port detected by the TCP socket when you perform a readiness probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
@@ -1247,24 +1340,55 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         @NameInMap("Exec")
         public ModifyEciScalingConfigurationRequestContainersReadinessProbeExec exec;
 
+        /**
+         * <p>The minimum number of consecutive failures that must occur for a readiness probe to be considered failed.</p>
+         * <p>Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FailureThreshold")
         public Integer failureThreshold;
 
         @NameInMap("HttpGet")
         public ModifyEciScalingConfigurationRequestContainersReadinessProbeHttpGet httpGet;
 
+        /**
+         * <p>The interval between the launch of the container and the onset of a readiness probe. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("InitialDelaySeconds")
         public Integer initialDelaySeconds;
 
+        /**
+         * <p>The interval between consecutive readiness probes. Unit: seconds. Default value: 10. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("PeriodSeconds")
         public Integer periodSeconds;
 
+        /**
+         * <p>The minimum number of consecutive successes that must occur for a failed readiness probe to be considered successful. Default value: 1. Set the value to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SuccessThreshold")
         public Integer successThreshold;
 
         @NameInMap("TcpSocket")
         public ModifyEciScalingConfigurationRequestContainersReadinessProbeTcpSocket tcpSocket;
 
+        /**
+         * <p>The timeout limit for a readiness probe to be complete. Unit: seconds. Default value: 1. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TimeoutSeconds")
         public Integer timeoutSeconds;
 
@@ -1340,6 +1464,12 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestContainersSecurityContextCapability extends TeaModel {
+        /**
+         * <p>The permissions that you want to grant to the processes in the container. Valid values: NET_ADMIN and NET_RAW.</p>
+         * <blockquote>
+         * <p> To use NET_RAW, submit a ticket.</p>
+         * </blockquote>
+         */
         @NameInMap("Adds")
         public java.util.List<String> adds;
 
@@ -1362,9 +1492,21 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         @NameInMap("Capability")
         public ModifyEciScalingConfigurationRequestContainersSecurityContextCapability capability;
 
+        /**
+         * <p>Specifies whether the root file system is read-only. Set the value to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ReadOnlyRootFilesystem")
         public Boolean readOnlyRootFilesystem;
 
+        /**
+         * <p>The ID of the user that runs the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("RunAsUser")
         public Long runAsUser;
 
@@ -1400,6 +1542,14 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestContainersEnvironmentVarsFieldRef extends TeaModel {
+        /**
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>path</p>
+         */
         @NameInMap("FieldPath")
         public String fieldPath;
 
@@ -2289,6 +2439,12 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestInitContainersSecurityContextCapability extends TeaModel {
+        /**
+         * <p>The permissions that you want to grant to the processes in the init container. Valid values: NET_ADMIN and NET_RAW.</p>
+         * <blockquote>
+         * <p> To use NET_RAW, submit a ticket.</p>
+         * </blockquote>
+         */
         @NameInMap("Adds")
         public java.util.List<String> adds;
 
@@ -2311,9 +2467,23 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         @NameInMap("Capability")
         public ModifyEciScalingConfigurationRequestInitContainersSecurityContextCapability capability;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ReadOnlyRootFilesystem")
         public Boolean readOnlyRootFilesystem;
 
+        /**
+         * <p>The ID of the user who runs the init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>587</p>
+         */
         @NameInMap("RunAsUser")
         public Long runAsUser;
 
@@ -2349,6 +2519,14 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestInitContainersInitContainerEnvironmentVarsFieldRef extends TeaModel {
+        /**
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>path</p>
+         */
         @NameInMap("FieldPath")
         public String fieldPath;
 
@@ -2867,12 +3045,30 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestVolumesDiskVolume extends TeaModel {
+        /**
+         * <p>The ID of the disk volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-xx</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <p>The volume size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        /**
+         * <p>We recommend that you specify <code>FlexVolume.FsType</code> instead of DiskVolume.FsType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xfs</p>
+         */
         @NameInMap("FsType")
         public String fsType;
 
@@ -2908,9 +3104,21 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestVolumesEmptyDirVolume extends TeaModel {
+        /**
+         * <p>The storage medium of the emptyDir volume. If you do not specify a storage medium for the emptyDir volume, the emptyDir volume stores data in the file system of a node. A value of memory specifies that the emptyDir volume stores data in the memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memory</p>
+         */
         @NameInMap("Medium")
         public String medium;
 
+        /**
+         * <p>The size of the emptyDir volume. The value contains a unit. We recommend that you use Gi or Mi as the unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256Mi</p>
+         */
         @NameInMap("SizeLimit")
         public String sizeLimit;
 
@@ -2938,12 +3146,31 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestVolumesFlexVolume extends TeaModel {
+        /**
+         * <p>The name of the FlexVolume driver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flexvolume</p>
+         */
         @NameInMap("Driver")
         public String driver;
 
+        /**
+         * <p>The type of the mounted file system. The default value is determined by the script of FlexVolume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ext4</p>
+         */
         @NameInMap("FsType")
         public String fsType;
 
+        /**
+         * <p>The FlexVolume options. Each option is a key-value pair in a JSON string.</p>
+         * <p>For example, if you use FlexVolume to mount a disk, the format of Options is <code>{&quot;volumeId&quot;:&quot;d-2zehdahrwoa7srg****&quot;,&quot;performanceLevel&quot;: &quot;PL2&quot;}</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;volumeId&quot;:&quot;d-2zehdahrwoa7srg****&quot;,&quot;performanceLevel&quot;: &quot;PL2&quot;}</p>
+         */
         @NameInMap("Options")
         public String options;
 
@@ -2979,9 +3206,21 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestVolumesHostPathVolume extends TeaModel {
+        /**
+         * <p>The absolute path on the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/xx/xx/name</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The type of host directory. For example: File, Directory, Socket, etc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Directory</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -3009,12 +3248,31 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyEciScalingConfigurationRequestVolumesNFSVolume extends TeaModel {
+        /**
+         * <p>The path to the Network File System (NFS) volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/share</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>Specifies whether the permissions on the NFS volume are read-only.</p>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
+        /**
+         * <p>The endpoint of the NFS server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3f9cd4a596-naw76.cn-shanghai.nas.aliyuncs.com</p>
+         */
         @NameInMap("Server")
         public String server;
 

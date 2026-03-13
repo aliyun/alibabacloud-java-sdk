@@ -844,6 +844,69 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions extends TeaModel {
+        @NameInMap("AllowCidrBlocks")
+        public java.util.List<String> allowCidrBlocks;
+
+        @NameInMap("AllowCrossAz")
+        public Boolean allowCrossAz;
+
+        @NameInMap("AllowDifferentGeneration")
+        public Boolean allowDifferentGeneration;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxPrice")
+        public Float maxPrice;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions setAllowCidrBlocks(java.util.List<String> allowCidrBlocks) {
+            this.allowCidrBlocks = allowCidrBlocks;
+            return this;
+        }
+        public java.util.List<String> getAllowCidrBlocks() {
+            return this.allowCidrBlocks;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions setAllowCrossAz(Boolean allowCrossAz) {
+            this.allowCrossAz = allowCrossAz;
+            return this;
+        }
+        public Boolean getAllowCrossAz() {
+            return this.allowCrossAz;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions setAllowDifferentGeneration(Boolean allowDifferentGeneration) {
+            this.allowDifferentGeneration = allowDifferentGeneration;
+            return this;
+        }
+        public Boolean getAllowDifferentGeneration() {
+            return this.allowDifferentGeneration;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions setMaxPrice(Float maxPrice) {
+            this.maxPrice = maxPrice;
+            return this;
+        }
+        public Float getMaxPrice() {
+            return this.maxPrice;
+        }
+
+    }
+
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces extends TeaModel {
         /**
          * <p>The ENI type. Valid values:</p>
@@ -1372,6 +1435,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
+        @NameInMap("InstanceTypeCandidateOptions")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions instanceTypeCandidateOptions;
+
         /**
          * <p>The ECS instance types.</p>
          */
@@ -1499,9 +1565,26 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("PasswordSetted")
         public Boolean passwordSetted;
 
+        /**
+         * <p>The ID of the private pool, which is the same as the ID of the elasticity assurance or capacity reservation for which the private pool is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-bp67acfmxazb4****</p>
+         */
         @NameInMap("PrivatePoolOptions.Id")
         public String privatePoolOptions_id;
 
+        /**
+         * <p>The type of the private pool. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can specify a private pool for Auto Scaling to start instances. Valid values:</p>
+         * <ul>
+         * <li>Open: open private pool. Auto Scaling selects a matching open private pool to start instances. If no matching open private pools exist, Auto Scaling uses the resources in the public pool to start instances.</li>
+         * <li>Target: specified private pool. Auto Scaling uses the resources in the specified private pool to start instances. If the resources in the specified private pool are insufficient, instances cannot be started.</li>
+         * <li>None: no private pool. Auto Scaling does not use the resources in private pools to start instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
+         */
         @NameInMap("PrivatePoolOptions.MatchCriteria")
         public String privatePoolOptions_matchCriteria;
 
@@ -2030,6 +2113,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setInstanceTypeCandidateOptions(DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions instanceTypeCandidateOptions) {
+            this.instanceTypeCandidateOptions = instanceTypeCandidateOptions;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions getInstanceTypeCandidateOptions() {
+            return this.instanceTypeCandidateOptions;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setInstanceTypes(java.util.List<String> instanceTypes) {

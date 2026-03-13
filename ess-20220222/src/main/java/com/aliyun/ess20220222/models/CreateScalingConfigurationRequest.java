@@ -237,6 +237,9 @@ public class CreateScalingConfigurationRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("InstanceTypeCandidateOptions")
+    public CreateScalingConfigurationRequestInstanceTypeCandidateOptions instanceTypeCandidateOptions;
+
     /**
      * <p>The information about instance types.</p>
      */
@@ -786,6 +789,14 @@ public class CreateScalingConfigurationRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public CreateScalingConfigurationRequest setInstanceTypeCandidateOptions(CreateScalingConfigurationRequestInstanceTypeCandidateOptions instanceTypeCandidateOptions) {
+        this.instanceTypeCandidateOptions = instanceTypeCandidateOptions;
+        return this;
+    }
+    public CreateScalingConfigurationRequestInstanceTypeCandidateOptions getInstanceTypeCandidateOptions() {
+        return this.instanceTypeCandidateOptions;
     }
 
     public CreateScalingConfigurationRequest setInstanceTypeOverrides(java.util.List<CreateScalingConfigurationRequestInstanceTypeOverrides> instanceTypeOverrides) {
@@ -2200,6 +2211,69 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         }
         public java.util.List<String> getPhysicalProcessorModels() {
             return this.physicalProcessorModels;
+        }
+
+    }
+
+    public static class CreateScalingConfigurationRequestInstanceTypeCandidateOptions extends TeaModel {
+        @NameInMap("AllowCidrBlocks")
+        public java.util.List<String> allowCidrBlocks;
+
+        @NameInMap("AllowCrossAz")
+        public Boolean allowCrossAz;
+
+        @NameInMap("AllowDifferentGeneration")
+        public Boolean allowDifferentGeneration;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxPrice")
+        public Float maxPrice;
+
+        public static CreateScalingConfigurationRequestInstanceTypeCandidateOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingConfigurationRequestInstanceTypeCandidateOptions self = new CreateScalingConfigurationRequestInstanceTypeCandidateOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingConfigurationRequestInstanceTypeCandidateOptions setAllowCidrBlocks(java.util.List<String> allowCidrBlocks) {
+            this.allowCidrBlocks = allowCidrBlocks;
+            return this;
+        }
+        public java.util.List<String> getAllowCidrBlocks() {
+            return this.allowCidrBlocks;
+        }
+
+        public CreateScalingConfigurationRequestInstanceTypeCandidateOptions setAllowCrossAz(Boolean allowCrossAz) {
+            this.allowCrossAz = allowCrossAz;
+            return this;
+        }
+        public Boolean getAllowCrossAz() {
+            return this.allowCrossAz;
+        }
+
+        public CreateScalingConfigurationRequestInstanceTypeCandidateOptions setAllowDifferentGeneration(Boolean allowDifferentGeneration) {
+            this.allowDifferentGeneration = allowDifferentGeneration;
+            return this;
+        }
+        public Boolean getAllowDifferentGeneration() {
+            return this.allowDifferentGeneration;
+        }
+
+        public CreateScalingConfigurationRequestInstanceTypeCandidateOptions setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateScalingConfigurationRequestInstanceTypeCandidateOptions setMaxPrice(Float maxPrice) {
+            this.maxPrice = maxPrice;
+            return this;
+        }
+        public Float getMaxPrice() {
+            return this.maxPrice;
         }
 
     }

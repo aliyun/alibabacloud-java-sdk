@@ -229,6 +229,9 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("InstancePatternInfos")
     public java.util.List<ModifyScalingConfigurationShrinkRequestInstancePatternInfos> instancePatternInfos;
 
+    @NameInMap("InstanceTypeCandidateOptions")
+    public ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions instanceTypeCandidateOptions;
+
     /**
      * <p>Details of the instance types.</p>
      */
@@ -759,6 +762,14 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
     public java.util.List<ModifyScalingConfigurationShrinkRequestInstancePatternInfos> getInstancePatternInfos() {
         return this.instancePatternInfos;
+    }
+
+    public ModifyScalingConfigurationShrinkRequest setInstanceTypeCandidateOptions(ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions instanceTypeCandidateOptions) {
+        this.instanceTypeCandidateOptions = instanceTypeCandidateOptions;
+        return this;
+    }
+    public ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions getInstanceTypeCandidateOptions() {
+        return this.instanceTypeCandidateOptions;
     }
 
     public ModifyScalingConfigurationShrinkRequest setInstanceTypeOverrides(java.util.List<ModifyScalingConfigurationShrinkRequestInstanceTypeOverrides> instanceTypeOverrides) {
@@ -2162,6 +2173,69 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         }
         public java.util.List<String> getPhysicalProcessorModels() {
             return this.physicalProcessorModels;
+        }
+
+    }
+
+    public static class ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions extends TeaModel {
+        @NameInMap("AllowCidrBlocks")
+        public java.util.List<String> allowCidrBlocks;
+
+        @NameInMap("AllowCrossAz")
+        public Boolean allowCrossAz;
+
+        @NameInMap("AllowDifferentGeneration")
+        public Boolean allowDifferentGeneration;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxPrice")
+        public Float maxPrice;
+
+        public static ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions self = new ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions setAllowCidrBlocks(java.util.List<String> allowCidrBlocks) {
+            this.allowCidrBlocks = allowCidrBlocks;
+            return this;
+        }
+        public java.util.List<String> getAllowCidrBlocks() {
+            return this.allowCidrBlocks;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions setAllowCrossAz(Boolean allowCrossAz) {
+            this.allowCrossAz = allowCrossAz;
+            return this;
+        }
+        public Boolean getAllowCrossAz() {
+            return this.allowCrossAz;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions setAllowDifferentGeneration(Boolean allowDifferentGeneration) {
+            this.allowDifferentGeneration = allowDifferentGeneration;
+            return this;
+        }
+        public Boolean getAllowDifferentGeneration() {
+            return this.allowDifferentGeneration;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestInstanceTypeCandidateOptions setMaxPrice(Float maxPrice) {
+            this.maxPrice = maxPrice;
+            return this;
+        }
+        public Float getMaxPrice() {
+            return this.maxPrice;
         }
 
     }

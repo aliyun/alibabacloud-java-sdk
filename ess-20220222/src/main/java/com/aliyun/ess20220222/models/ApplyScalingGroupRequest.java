@@ -37,12 +37,6 @@ public class ApplyScalingGroupRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
-    /**
-     * <p>Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>YAML</p>
-     */
     @NameInMap("Format")
     public String format;
 

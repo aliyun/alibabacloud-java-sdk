@@ -4,9 +4,6 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class QueryPredictiveValueResponseBody extends TeaModel {
-    /**
-     * <p>The number of predicted instances in the scaling group.</p>
-     */
     @NameInMap("PredictiveValues")
     public QueryPredictiveValueResponseBodyPredictiveValues predictiveValues;
 
@@ -41,21 +38,9 @@ public class QueryPredictiveValueResponseBody extends TeaModel {
     }
 
     public static class QueryPredictiveValueResponseBodyPredictiveValuesPredictiveValue extends TeaModel {
-        /**
-         * <p>The point in time, in the ISO 8601 standard, in the yyyy-MM-ddTHH:mmZ format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025-12-17T10:00Z</p>
-         */
         @NameInMap("Time")
         public String time;
 
-        /**
-         * <p>The number of instances.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Value")
         public Integer value;
 

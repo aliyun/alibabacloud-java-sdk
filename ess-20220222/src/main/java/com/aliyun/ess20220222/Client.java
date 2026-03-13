@@ -1974,6 +1974,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceType", request.instanceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeCandidateOptions)) {
+            query.put("InstanceTypeCandidateOptions", request.instanceTypeCandidateOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeOverrides)) {
             query.put("InstanceTypeOverrides", request.instanceTypeOverrides);
         }
@@ -7261,6 +7265,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstancePatternInfos", request.instancePatternInfos);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeCandidateOptions)) {
+            query.put("InstanceTypeCandidateOptions", request.instanceTypeCandidateOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeOverrides)) {
             query.put("InstanceTypeOverrides", request.instanceTypeOverrides);
         }
@@ -8911,7 +8919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from their scaling groups. To prevent a specific instance from being removed, you can put it in either the Standby or Protected state. For more information, see <a href="https://help.aliyun.com/document_detail/459345.html">EnterStandby</a> and <a href="https://help.aliyun.com/document_detail/459342.html">SetInstancesProtection</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\&amp;M hurdles efficiently.</p>
+     * <p>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\\\&amp;M hurdles efficiently.</p>
      * 
      * @param request SetInstanceHealthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8958,7 +8966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from their scaling groups. To prevent a specific instance from being removed, you can put it in either the Standby or Protected state. For more information, see <a href="https://help.aliyun.com/document_detail/459345.html">EnterStandby</a> and <a href="https://help.aliyun.com/document_detail/459342.html">SetInstancesProtection</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\&amp;M hurdles efficiently.</p>
+     * <p>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\\\&amp;M hurdles efficiently.</p>
      * 
      * @param request SetInstanceHealthRequest
      * @return SetInstanceHealthResponse

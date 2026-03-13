@@ -4,9 +4,6 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class QueryHistoricalMetricResponseBody extends TeaModel {
-    /**
-     * <p>The monitoring metrics of the prediction rule.</p>
-     */
     @NameInMap("HistoricalMetrics")
     public QueryHistoricalMetricResponseBodyHistoricalMetrics historicalMetrics;
 
@@ -41,21 +38,9 @@ public class QueryHistoricalMetricResponseBody extends TeaModel {
     }
 
     public static class QueryHistoricalMetricResponseBodyHistoricalMetricsHistoricalMetric extends TeaModel {
-        /**
-         * <p>The value of the metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.0</p>
-         */
         @NameInMap("MetricValue")
         public String metricValue;
 
-        /**
-         * <p>The point in time of the monitoring metric. The value must be in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025-12-17T16:00Z</p>
-         */
         @NameInMap("Time")
         public String time;
 
