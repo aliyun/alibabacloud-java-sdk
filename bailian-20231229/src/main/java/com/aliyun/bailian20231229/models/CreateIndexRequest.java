@@ -23,6 +23,11 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("ChunkSize")
     public Integer chunkSize;
 
+    /**
+     * <blockquote>
+     * <p>This parameter is not available. Do not specify this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("Columns")
     public java.util.List<CreateIndexRequestColumns> columns;
 
@@ -224,6 +229,13 @@ public class CreateIndexRequest extends TeaModel {
     public java.util.List<String> tableIds;
 
     /**
+     * <strong>example:</strong>
+     * <p>connector</p>
+     */
+    @NameInMap("channelType")
+    public String channelType;
+
+    /**
      * <blockquote>
      * <p>This parameter is not available. Do not specify this parameter.</p>
      * </blockquote>
@@ -234,6 +246,10 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("chunkMode")
     public String chunkMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>conn_mysql_xxx_xxx</p>
+     */
     @NameInMap("connectId")
     public String connectId;
 
@@ -459,6 +475,14 @@ public class CreateIndexRequest extends TeaModel {
         return this.tableIds;
     }
 
+    public CreateIndexRequest setChannelType(String channelType) {
+        this.channelType = channelType;
+        return this;
+    }
+    public String getChannelType() {
+        return this.channelType;
+    }
+
     public CreateIndexRequest setChunkMode(String chunkMode) {
         this.chunkMode = chunkMode;
         return this;
@@ -548,18 +572,58 @@ public class CreateIndexRequest extends TeaModel {
     }
 
     public static class CreateIndexRequestColumns extends TeaModel {
+        /**
+         * <blockquote>
+         * <p>This parameter is not available. Do not specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>source_column_name1</p>
+         */
         @NameInMap("Column")
         public String column;
 
+        /**
+         * <blockquote>
+         * <p>This parameter is not available. Do not specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsRecall")
         public Boolean isRecall;
 
+        /**
+         * <blockquote>
+         * <p>This parameter is not available. Do not specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSearch")
         public Boolean isSearch;
 
+        /**
+         * <blockquote>
+         * <p>This parameter is not available. Do not specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>index_column_name1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <blockquote>
+         * <p>This parameter is not available. Do not specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
+         */
         @NameInMap("Type")
         public String type;
 

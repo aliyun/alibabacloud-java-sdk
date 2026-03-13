@@ -285,7 +285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Applies for a document upload lease to upload a document.</p>
+     * <p>Applies for a document upload lease to upload a document. You cannot use the API to upload structured documents. Use the console instead.</p>
      * 
      * @param request ApplyFileUploadLeaseRequest
      * @param headers map
@@ -343,7 +343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Applies for a document upload lease to upload a document.</p>
+     * <p>Applies for a document upload lease to upload a document. You cannot use the API to upload structured documents. Use the console instead.</p>
      * 
      * @param request ApplyFileUploadLeaseRequest
      * @return ApplyFileUploadLeaseResponse
@@ -681,6 +681,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TableIds", request.tableIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.channelType)) {
+            query.put("channelType", request.channelType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.chunkMode)) {
             query.put("chunkMode", request.chunkMode);
         }
@@ -954,7 +958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除类目</p>
+     * <p>Deletes a specified category permanently.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -980,7 +984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除类目</p>
+     * <p>Deletes a specified category permanently.</p>
      * @return DeleteCategoryResponse
      */
     public DeleteCategoryResponse deleteCategory(String CategoryId, String WorkspaceId) throws Exception {
@@ -1076,7 +1080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除文档</p>
+     * <p>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1102,7 +1106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除文档</p>
+     * <p>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</p>
      * @return DeleteFileResponse
      */
     public DeleteFileResponse deleteFile(String FileId, String WorkspaceId) throws Exception {
@@ -1187,7 +1191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more documents from a specified unstructured knowledge base permanently.</p>
+     * <p>Deletes one or more documents from a specified unstructured knowledge base permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</p>
      * 
      * @param tmpReq DeleteIndexDocumentRequest
      * @param headers map
@@ -1240,7 +1244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more documents from a specified unstructured knowledge base permanently.</p>
+     * <p>Deletes one or more documents from a specified unstructured knowledge base permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</p>
      * 
      * @param request DeleteIndexDocumentRequest
      * @return DeleteIndexDocumentResponse
@@ -1372,7 +1376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an unstructured document.</p>
+     * <p>Obtains the basic information of a document, including the document name, type, and status.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1406,7 +1410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an unstructured document.</p>
+     * <p>Obtains the basic information of a document, including the document name, type, and status.</p>
      * @return DescribeFileResponse
      */
     public DescribeFileResponse describeFile(String WorkspaceId, String FileId) throws Exception {
@@ -1639,7 +1643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取索引监控情况</p>
+     * <p>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</p>
      * 
      * @param request GetIndexMonitorRequest
      * @param headers map
@@ -1681,7 +1685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取索引监控情况</p>
+     * <p>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</p>
      * 
      * @param request GetIndexMonitorRequest
      * @return GetIndexMonitorResponse
@@ -1956,7 +1960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListCategory</p>
+     * <p>Lists the details about the next or multiple categories in a specified workspace.</p>
      * 
      * @param request ListCategoryRequest
      * @param headers map
@@ -2006,7 +2010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListCategory</p>
+     * <p>Lists the details about the next or multiple categories in a specified workspace.</p>
      * 
      * @param request ListCategoryRequest
      * @return ListCategoryResponse
@@ -2322,7 +2326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This interface is idempotent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists knowledge bases in a specified workspace.</p>
+     * <p>Lists the details about the next or multiple knowledge bases in a specified workspace.</p>
      * 
      * @param request ListIndicesRequest
      * @param headers map
@@ -2367,7 +2371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This interface is idempotent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists knowledge bases in a specified workspace.</p>
+     * <p>Lists the details about the next or multiple knowledge bases in a specified workspace.</p>
      * 
      * @param request ListIndicesRequest
      * @return ListIndicesResponse
@@ -2735,7 +2739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds parsed documents to an unstructured knowledge base.</p>
+     * <p>Adds parsed documents to an unstructured knowledge base. You cannot use the API to add knowledge to structured knowledge bases, see the Usage notes section of this topic.</p>
      * 
      * @param tmpReq SubmitIndexAddDocumentsJobRequest
      * @param headers map
@@ -2819,7 +2823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds parsed documents to an unstructured knowledge base.</p>
+     * <p>Adds parsed documents to an unstructured knowledge base. You cannot use the API to add knowledge to structured knowledge bases, see the Usage notes section of this topic.</p>
      * 
      * @param request SubmitIndexAddDocumentsJobRequest
      * @return SubmitIndexAddDocumentsJobResponse
@@ -3136,7 +3140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新文档Tag</p>
+     * <p>Updates the tags of a specified document.</p>
      * 
      * @param tmpReq UpdateFileTagRequest
      * @param headers map
@@ -3176,7 +3180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新文档Tag</p>
+     * <p>Updates the tags of a specified document.</p>
      * 
      * @param request UpdateFileTagRequest
      * @return UpdateFileTagResponse
@@ -3189,7 +3193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新索引任务</p>
+     * <p>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</p>
      * 
      * @param request UpdateIndexRequest
      * @param headers map
@@ -3251,7 +3255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新索引任务</p>
+     * <p>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</p>
      * 
      * @param request UpdateIndexRequest
      * @return UpdateIndexResponse

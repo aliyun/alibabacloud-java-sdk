@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class HighCodeDeployResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
+     * <p>{\&quot;key\&quot;: \&quot;value\&quot;}</p>
      */
     @NameInMap("data")
     public String data;

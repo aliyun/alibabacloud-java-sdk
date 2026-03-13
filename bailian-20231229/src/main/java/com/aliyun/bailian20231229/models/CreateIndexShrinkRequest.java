@@ -23,6 +23,11 @@ public class CreateIndexShrinkRequest extends TeaModel {
     @NameInMap("ChunkSize")
     public Integer chunkSize;
 
+    /**
+     * <blockquote>
+     * <p>This parameter is not available. Do not specify this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("Columns")
     public String columnsShrink;
 
@@ -224,6 +229,13 @@ public class CreateIndexShrinkRequest extends TeaModel {
     public String tableIdsShrink;
 
     /**
+     * <strong>example:</strong>
+     * <p>connector</p>
+     */
+    @NameInMap("channelType")
+    public String channelType;
+
+    /**
      * <blockquote>
      * <p>This parameter is not available. Do not specify this parameter.</p>
      * </blockquote>
@@ -234,6 +246,10 @@ public class CreateIndexShrinkRequest extends TeaModel {
     @NameInMap("chunkMode")
     public String chunkMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>conn_mysql_xxx_xxx</p>
+     */
     @NameInMap("connectId")
     public String connectId;
 
@@ -457,6 +473,14 @@ public class CreateIndexShrinkRequest extends TeaModel {
     }
     public String getTableIdsShrink() {
         return this.tableIdsShrink;
+    }
+
+    public CreateIndexShrinkRequest setChannelType(String channelType) {
+        this.channelType = channelType;
+        return this;
+    }
+    public String getChannelType() {
+        return this.channelType;
     }
 
     public CreateIndexShrinkRequest setChunkMode(String chunkMode) {
