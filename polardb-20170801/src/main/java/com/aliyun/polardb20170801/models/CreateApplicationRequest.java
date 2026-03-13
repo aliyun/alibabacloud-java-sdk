@@ -516,6 +516,12 @@ public class CreateApplicationRequest extends TeaModel {
         @NameInMap("EmbedderModel")
         public String embedderModel;
 
+        @NameInMap("EmbedderModelDimension")
+        public Integer embedderModelDimension;
+
+        @NameInMap("GraphLlmModel")
+        public String graphLlmModel;
+
         @NameInMap("LlmModel")
         public String llmModel;
 
@@ -524,6 +530,9 @@ public class CreateApplicationRequest extends TeaModel {
 
         @NameInMap("RerankerModel")
         public String rerankerModel;
+
+        @NameInMap("Shard")
+        public Integer shard;
 
         public static CreateApplicationRequestMemApplicationSpec build(java.util.Map<String, ?> map) throws Exception {
             CreateApplicationRequestMemApplicationSpec self = new CreateApplicationRequestMemApplicationSpec();
@@ -562,6 +571,22 @@ public class CreateApplicationRequest extends TeaModel {
             return this.embedderModel;
         }
 
+        public CreateApplicationRequestMemApplicationSpec setEmbedderModelDimension(Integer embedderModelDimension) {
+            this.embedderModelDimension = embedderModelDimension;
+            return this;
+        }
+        public Integer getEmbedderModelDimension() {
+            return this.embedderModelDimension;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setGraphLlmModel(String graphLlmModel) {
+            this.graphLlmModel = graphLlmModel;
+            return this;
+        }
+        public String getGraphLlmModel() {
+            return this.graphLlmModel;
+        }
+
         public CreateApplicationRequestMemApplicationSpec setLlmModel(String llmModel) {
             this.llmModel = llmModel;
             return this;
@@ -584,6 +609,14 @@ public class CreateApplicationRequest extends TeaModel {
         }
         public String getRerankerModel() {
             return this.rerankerModel;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setShard(Integer shard) {
+            this.shard = shard;
+            return this;
+        }
+        public Integer getShard() {
+            return this.shard;
         }
 
     }
