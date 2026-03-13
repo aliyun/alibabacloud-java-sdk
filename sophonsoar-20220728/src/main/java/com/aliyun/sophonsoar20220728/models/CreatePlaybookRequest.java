@@ -25,7 +25,7 @@ public class CreatePlaybookRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
+     * <p>{\&quot;key1\&quot;: \&quot;value1\&quot;, \&quot;key2\&quot;: \&quot;value2\&quot;}</p>
      */
     @NameInMap("InputParams")
     public String inputParams;
@@ -45,7 +45,7 @@ public class CreatePlaybookRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>{&quot;result&quot;: &quot;success&quot;}</p>
+     * <p>{\&quot;result\&quot;: \&quot;success\&quot;}</p>
      */
     @NameInMap("OutputParams")
     public String outputParams;

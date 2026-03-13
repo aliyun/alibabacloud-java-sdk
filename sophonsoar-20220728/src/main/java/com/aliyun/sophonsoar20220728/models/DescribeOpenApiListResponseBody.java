@@ -72,6 +72,9 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
+        @NameInMap("Versions")
+        public Object versions;
+
         public static DescribeOpenApiListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeOpenApiListResponseBodyData self = new DescribeOpenApiListResponseBodyData();
             return TeaModel.build(map, self);
@@ -99,6 +102,14 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public DescribeOpenApiListResponseBodyData setVersions(Object versions) {
+            this.versions = versions;
+            return this;
+        }
+        public Object getVersions() {
+            return this.versions;
         }
 
     }

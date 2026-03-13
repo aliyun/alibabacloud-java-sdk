@@ -1358,7 +1358,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DescribePopApiResponse describePopApiWithOptions(DescribePopApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiName)) {
+            query.put("ApiName", request.apiName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiVersion)) {
+            query.put("ApiVersion", request.apiVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.popCode)) {
+            query.put("PopCode", request.popCode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1367,7 +1379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2022-07-28"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -1817,7 +1829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., threat analysis and response log access traffic) before using this interface.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query OpenApi List of Cloud Vendors.</p>
+     * <p>Queries the API operations of a cloud service provider.</p>
      * 
      * @param request DescribeVendorApiListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1872,7 +1884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., threat analysis and response log access traffic) before using this interface.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query OpenApi List of Cloud Vendors.</p>
+     * <p>Queries the API operations of a cloud service provider.</p>
      * 
      * @param request DescribeVendorApiListRequest
      * @return DescribeVendorApiListResponse
