@@ -7,6 +7,9 @@ public class ListCredentialsRequest extends TeaModel {
     @NameInMap("CredentialIds")
     public java.util.List<String> credentialIds;
 
+    @NameInMap("CredentialTypes")
+    public java.util.List<String> credentialTypes;
+
     @NameInMap("Filter")
     public java.util.List<ListCredentialsRequestFilter> filter;
 
@@ -52,6 +55,14 @@ public class ListCredentialsRequest extends TeaModel {
     }
     public java.util.List<String> getCredentialIds() {
         return this.credentialIds;
+    }
+
+    public ListCredentialsRequest setCredentialTypes(java.util.List<String> credentialTypes) {
+        this.credentialTypes = credentialTypes;
+        return this;
+    }
+    public java.util.List<String> getCredentialTypes() {
+        return this.credentialTypes;
     }
 
     public ListCredentialsRequest setFilter(java.util.List<ListCredentialsRequestFilter> filter) {

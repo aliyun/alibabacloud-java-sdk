@@ -7246,6 +7246,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>生成WebAuthn认证器注册URL</p>
+     * 
+     * @param request GenerateWebAuthnAuthenticatorRegistrationUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateWebAuthnAuthenticatorRegistrationUrlResponse
+     */
+    public GenerateWebAuthnAuthenticatorRegistrationUrlResponse generateWebAuthnAuthenticatorRegistrationUrlWithOptions(GenerateWebAuthnAuthenticatorRegistrationUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainId)) {
+            query.put("DomainId", request.domainId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateWebAuthnAuthenticatorRegistrationUrl"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateWebAuthnAuthenticatorRegistrationUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成WebAuthn认证器注册URL</p>
+     * 
+     * @param request GenerateWebAuthnAuthenticatorRegistrationUrlRequest
+     * @return GenerateWebAuthnAuthenticatorRegistrationUrlResponse
+     */
+    public GenerateWebAuthnAuthenticatorRegistrationUrlResponse generateWebAuthnAuthenticatorRegistrationUrl(GenerateWebAuthnAuthenticatorRegistrationUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateWebAuthnAuthenticatorRegistrationUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of an Employee Identity and Access Management (EIAM) application.</p>
      * 
      * @param request GetApplicationRequest
@@ -11319,6 +11371,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.credentialIds)) {
             query.put("CredentialIds", request.credentialIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialTypes)) {
+            query.put("CredentialTypes", request.credentialTypes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
