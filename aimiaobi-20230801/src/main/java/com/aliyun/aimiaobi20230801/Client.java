@@ -308,12 +308,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>智能剪辑timeline</p>
      * 
-     * @param request AsyncCreateClipsTimeLineRequest
+     * @param tmpReq AsyncCreateClipsTimeLineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AsyncCreateClipsTimeLineResponse
      */
-    public AsyncCreateClipsTimeLineResponse asyncCreateClipsTimeLineWithOptions(AsyncCreateClipsTimeLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public AsyncCreateClipsTimeLineResponse asyncCreateClipsTimeLineWithOptions(AsyncCreateClipsTimeLineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AsyncCreateClipsTimeLineShrinkRequest request = new AsyncCreateClipsTimeLineShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.highLightConfig)) {
+            request.highLightConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.highLightConfig, "HighLightConfig", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.additionalContent)) {
             body.put("AdditionalContent", request.additionalContent);
@@ -321,6 +327,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.customContent)) {
             body.put("CustomContent", request.customContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.highLightConfigShrink)) {
+            body.put("HighLightConfig", request.highLightConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.noRefVideo)) {
@@ -331,8 +341,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ProcessPrompt", request.processPrompt);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recommendAudio)) {
+            body.put("RecommendAudio", request.recommendAudio);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timelineScene)) {
+            body.put("TimelineScene", request.timelineScene);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {

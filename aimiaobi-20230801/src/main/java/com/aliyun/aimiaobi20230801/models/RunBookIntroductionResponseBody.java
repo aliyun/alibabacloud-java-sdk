@@ -70,6 +70,10 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
@@ -157,16 +161,73 @@ public class RunBookIntroductionResponseBody extends TeaModel {
 
     }
 
+    public static class RunBookIntroductionResponseBodyPayloadOutputIntroductions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>本段摘要内容</p>
+         */
+        @NameInMap("Summary")
+        public String summary;
+
+        /**
+         * <strong>example:</strong>
+         * <p>本段标题内容</p>
+         */
+        @NameInMap("Title")
+        public String title;
+
+        public static RunBookIntroductionResponseBodyPayloadOutputIntroductions build(java.util.Map<String, ?> map) throws Exception {
+            RunBookIntroductionResponseBodyPayloadOutputIntroductions self = new RunBookIntroductionResponseBodyPayloadOutputIntroductions();
+            return TeaModel.build(map, self);
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutputIntroductions setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutputIntroductions setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
     public static class RunBookIntroductionResponseBodyPayloadOutput extends TeaModel {
+        @NameInMap("Introductions")
+        public java.util.List<RunBookIntroductionResponseBodyPayloadOutputIntroductions> introductions;
+
+        /**
+         * <strong>example:</strong>
+         * <p>卖点内容</p>
+         */
         @NameInMap("KeyPoint")
         public String keyPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>简介内容</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
         public static RunBookIntroductionResponseBodyPayloadOutput build(java.util.Map<String, ?> map) throws Exception {
             RunBookIntroductionResponseBodyPayloadOutput self = new RunBookIntroductionResponseBodyPayloadOutput();
             return TeaModel.build(map, self);
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutput setIntroductions(java.util.List<RunBookIntroductionResponseBodyPayloadOutputIntroductions> introductions) {
+            this.introductions = introductions;
+            return this;
+        }
+        public java.util.List<RunBookIntroductionResponseBodyPayloadOutputIntroductions> getIntroductions() {
+            return this.introductions;
         }
 
         public RunBookIntroductionResponseBodyPayloadOutput setKeyPoint(String keyPoint) {
