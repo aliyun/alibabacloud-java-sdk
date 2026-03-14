@@ -17,15 +17,31 @@ public class NetworkConfig extends TeaModel {
     @NameInMap("loadBalanceType")
     public String loadBalanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-bp1xk0naij7jx4ph1****</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
+     */
     @NameInMap("vsArea")
     public String vsArea;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp1ogpdintii5qvyx****</p>
+     */
     @NameInMap("vswitchId")
     public String vswitchId;
 

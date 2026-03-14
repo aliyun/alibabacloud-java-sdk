@@ -4,12 +4,24 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ReadWritePolicy extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoGeneratePk")
     public Boolean autoGeneratePk;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("writeHa")
     public Boolean writeHa;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sync</p>
+     */
     @NameInMap("writePolicy")
     public String writePolicy;
 

@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class WhiteIpGroup extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PRIVATE_ES</p>
+     */
     @NameInMap("WhiteIpType")
     public String whiteIpType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_group</p>
+     */
     @NameInMap("groupName")
     public String groupName;
 

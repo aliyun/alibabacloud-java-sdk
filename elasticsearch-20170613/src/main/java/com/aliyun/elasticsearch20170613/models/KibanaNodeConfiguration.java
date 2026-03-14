@@ -4,14 +4,25 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class KibanaNodeConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("amount")
     public Long amount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("disk")
     public Long disk;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>elasticsearch.sn2ne.large</p>
      */
     @NameInMap("spec")
     public String spec;

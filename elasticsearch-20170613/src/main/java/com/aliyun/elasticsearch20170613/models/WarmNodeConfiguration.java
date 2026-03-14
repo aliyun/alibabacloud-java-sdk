@@ -4,23 +4,46 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class WarmNodeConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("amount")
     public Long amount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("disk")
     public Long disk;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("diskEncryption")
     public Boolean diskEncryption;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_efficiency</p>
+     */
     @NameInMap("diskType")
     public String diskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PL1</p>
+     */
     @NameInMap("performanceLevel")
     public String performanceLevel;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>elasticsearch.sn2ne.large</p>
      */
     @NameInMap("spec")
     public String spec;

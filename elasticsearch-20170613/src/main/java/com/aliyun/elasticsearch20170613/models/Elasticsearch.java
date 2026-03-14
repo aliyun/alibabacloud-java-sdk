@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class Elasticsearch extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("advancedDedicateMaster")
     public Boolean advancedDedicateMaster;
 
@@ -16,36 +20,72 @@ public class Elasticsearch extends TeaModel {
     @NameInMap("clientNodeConfiguration")
     public ClientNodeConfiguration clientNodeConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-07-13T03:58:07.253Z</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("dataNode")
     public Boolean dataNode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("dedicateMaster")
     public Boolean dedicateMaster;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-abc</p>
+     */
     @NameInMap("description")
     public String description;
 
     @NameInMap("dictList")
     public java.util.List<DictInfo> dictList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-3h4k3axh33th9****.elasticsearch.aliyuncs.com</p>
+     */
     @NameInMap("domain")
     public String domain;
 
     @NameInMap("elasticDataNodeConfiguration")
     public ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enableKibanaPrivateNetwork")
     public Boolean enableKibanaPrivateNetwork;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableKibanaPublicNetwork")
     public Boolean enableKibanaPublicNetwork;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enablePublic")
     public Boolean enablePublic;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
@@ -55,48 +95,88 @@ public class Elasticsearch extends TeaModel {
     @NameInMap("esIPWhitelist")
     public java.util.List<String> esIPWhitelist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6.3.2_with_X-Pack</p>
+     */
     @NameInMap("esVersion")
     public String esVersion;
 
     @NameInMap("extendConfigs")
     public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("haveClientNode")
     public Boolean haveClientNode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("haveElasticDataNode")
     public Boolean haveElasticDataNode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("haveKibana")
     public Boolean haveKibana;
 
     @NameInMap("ikHotDicts")
     public java.util.List<DictInfo> ikHotDicts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-3h4k3axh33th9****</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
     @NameInMap("kibanaConfiguration")
     public KibanaNodeConfiguration kibanaConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-3h4k3axh33th9****.kibana.elasticsearch.aliyuncs.com</p>
+     */
     @NameInMap("kibanaDomain")
     public String kibanaDomain;
 
     @NameInMap("kibanaIPWhitelist")
     public java.util.List<String> kibanaIPWhitelist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5601</p>
+     */
     @NameInMap("kibanaPort")
     public Long kibanaPort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-tl329rbpc0001****-kibana.internal.elasticsearch.aliyuncs.com</p>
+     */
     @NameInMap("kibanaPrivateDomain")
     public String kibanaPrivateDomain;
 
     @NameInMap("kibanaPrivateIPWhitelist")
     public java.util.List<String> kibanaPrivateIPWhitelist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5601</p>
+     */
     @NameInMap("kibanaPrivatePort")
     public Long kibanaPrivatePort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HTTPS</p>
+     */
     @NameInMap("kibanaProtocol")
     public String kibanaProtocol;
 
@@ -106,45 +186,85 @@ public class Elasticsearch extends TeaModel {
     @NameInMap("networkConfig")
     public NetworkConfig networkConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("nodeAmount")
     public Long nodeAmount;
 
     @NameInMap("nodeSpec")
     public NodeSpec nodeSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>prepaid</p>
+     */
     @NameInMap("paymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9200</p>
+     */
     @NameInMap("port")
     public Long port;
 
     @NameInMap("privateNetworkIpWhiteList")
     public java.util.List<String> privateNetworkIpWhiteList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>generalBusiness</p>
+     */
     @NameInMap("productType")
     public String productType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-3h4k3axh33th9****.elasticsearch.aliyuncs.com</p>
+     */
     @NameInMap("publicDomain")
     public String publicDomain;
 
     @NameInMap("publicIpWhitelist")
     public java.util.List<String> publicIpWhitelist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9200</p>
+     */
     @NameInMap("publicPort")
     public Long publicPort;
 
     @NameInMap("readWritePolicy")
     public ReadWritePolicy readWritePolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aekzvowej3i****</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("serviceVpc")
     public Boolean serviceVpc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("status")
     public String status;
 
@@ -154,15 +274,27 @@ public class Elasticsearch extends TeaModel {
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-07-13T03:58:07.253Z</p>
+     */
     @NameInMap("updatedAt")
     public String updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("warmNode")
     public Boolean warmNode;
 
     @NameInMap("warmNodeConfiguration")
     public WarmNodeConfiguration warmNodeConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("zoneCount")
     public Long zoneCount;
 
@@ -615,6 +747,10 @@ public class Elasticsearch extends TeaModel {
     }
 
     public static class ElasticsearchAdvancedSetting extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CMS</p>
+         */
         @NameInMap("gcName")
         public String gcName;
 

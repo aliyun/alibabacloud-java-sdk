@@ -4,15 +4,31 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class NodeInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>172.16.xx.xx</p>
+     */
     @NameInMap("host")
     public String host;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-tl32vdghe0005cd99-data-b-2</p>
+     */
     @NameInMap("hostName")
     public String hostName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9200</p>
+     */
     @NameInMap("port")
     public Long port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
+     */
     @NameInMap("zoneId")
     public String zoneId;
 

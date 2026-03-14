@@ -7,54 +7,106 @@ public class Logstash extends TeaModel {
     @NameInMap("config")
     public java.util.Map<String, String> config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-07-13T03:58:07.253Z</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("dataNode")
     public Boolean dataNode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ls-cn-abc</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4749897600000</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
     @NameInMap("endpointList")
     public java.util.List<LogstashEndpointList> endpointList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ls-cn-n6w1o5jq****</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
     @NameInMap("networkConfig")
     public LogstashNetworkConfig networkConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("nodeAmount")
     public Long nodeAmount;
 
     @NameInMap("nodeSpec")
     public LogstashNodeSpec nodeSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>postpaid</p>
+     */
     @NameInMap("paymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfm2h5vbzd****</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("status")
     public String status;
 
     @NameInMap("tags")
     public java.util.List<LogstashTags> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-07-18T10:10:04.484Z</p>
+     */
     @NameInMap("updatedAt")
     public String updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6.7.0_with_X-Pack</p>
+     */
     @NameInMap("version")
     public String version;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("zoneCount")
     public Long zoneCount;
 
@@ -219,12 +271,24 @@ public class Logstash extends TeaModel {
     }
 
     public static class LogstashEndpointList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>172.16.xx.xx</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9200</p>
+         */
         @NameInMap("port")
         public Long port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 
@@ -260,15 +324,31 @@ public class Logstash extends TeaModel {
     }
 
     public static class LogstashNetworkConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vpc</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-abc</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-*</p>
+         */
         @NameInMap("vsArea")
         public String vsArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-def</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
@@ -312,12 +392,24 @@ public class Logstash extends TeaModel {
     }
 
     public static class LogstashNodeSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("disk")
         public Long disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>logstash.n4.small</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -353,9 +445,17 @@ public class Logstash extends TeaModel {
     }
 
     public static class LogstashTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dev</p>
+         */
         @NameInMap("tagValue")
         public String tagValue;
 
@@ -383,9 +483,17 @@ public class Logstash extends TeaModel {
     }
 
     public static class LogstashZoneInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 

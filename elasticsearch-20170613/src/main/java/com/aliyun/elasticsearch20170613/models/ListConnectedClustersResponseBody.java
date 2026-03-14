@@ -13,9 +13,6 @@ public class ListConnectedClustersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The return results.</p>
-     */
     @NameInMap("Result")
     public ListConnectedClustersResponseBodyResult result;
 
@@ -41,21 +38,9 @@ public class ListConnectedClustersResponseBody extends TeaModel {
     }
 
     public static class ListConnectedClustersResponseBodyResultResult extends TeaModel {
-        /**
-         * <p>The ID of the remote instance that is connected to the network of the current instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>es-cn-09k1rocex0006****</p>
-         */
         @NameInMap("instances")
         public String instances;
 
-        /**
-         * <p>The network type of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc</p>
-         */
         @NameInMap("networkType")
         public String networkType;
 

@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class Tag extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>env</p>
+     */
     @NameInMap("tagKey")
     public String tagKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dev</p>
+     */
     @NameInMap("tagValue")
     public String tagValue;
 

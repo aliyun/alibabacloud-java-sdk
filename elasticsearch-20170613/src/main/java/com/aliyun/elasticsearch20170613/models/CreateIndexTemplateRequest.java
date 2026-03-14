@@ -13,6 +13,9 @@ public class CreateIndexTemplateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("dataStream")
     public Boolean dataStream;
@@ -41,7 +44,7 @@ public class CreateIndexTemplateRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>30</p>
      */
     @NameInMap("priority")
     public Integer priority;
@@ -113,21 +116,21 @@ public class CreateIndexTemplateRequest extends TeaModel {
     public static class CreateIndexTemplateRequestTemplate extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>{&quot;mydata&quot;: {}}</p>
+         * <p>{\&quot;mydata\&quot;:{}}</p>
          */
         @NameInMap("aliases")
         public String aliases;
 
         /**
          * <strong>example:</strong>
-         * <p>{&quot;properties&quot;: {&quot;created_at&quot;: {&quot;type&quot;: &quot;date&quot;,&quot;format&quot;: &quot;EEE MMM dd HH:mm:ss Z yyyy&quot;},&quot;host_name&quot;: {&quot;type&quot;: &quot;keyword&quot;}}}</p>
+         * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
          */
         @NameInMap("mappings")
         public String mappings;
 
         /**
          * <strong>example:</strong>
-         * <p>{&quot;index.refresh_interval&quot;:&quot;1s&quot;}</p>
+         * <p>{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}</p>
          */
         @NameInMap("settings")
         public String settings;

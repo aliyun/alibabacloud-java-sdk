@@ -4,23 +4,42 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class NodeSpec extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("disk")
     public Integer disk;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("diskEncryption")
     public Boolean diskEncryption;
 
     @NameInMap("diskPreference")
     public String diskPreference;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
+     */
     @NameInMap("diskType")
     public String diskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PL1</p>
+     */
     @NameInMap("performanceLevel")
     public String performanceLevel;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>elasticsearch.sn2ne.large</p>
      */
     @NameInMap("spec")
     public String spec;

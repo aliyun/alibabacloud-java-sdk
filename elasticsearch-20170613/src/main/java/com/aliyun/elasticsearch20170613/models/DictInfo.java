@@ -4,15 +4,31 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DictInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2782602</p>
+     */
     @NameInMap("fileSize")
     public Long fileSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aliws_ext_dict.txt</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("sourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALI_WS</p>
+     */
     @NameInMap("type")
     public String type;
 
