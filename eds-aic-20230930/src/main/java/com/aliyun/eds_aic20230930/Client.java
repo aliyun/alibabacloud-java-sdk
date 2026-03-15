@@ -387,6 +387,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceTasks", request.instanceTasks);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ports)) {
+            query.put("Ports", request.ports);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -658,6 +662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
             query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paidCallBackUrl)) {
+            query.put("PaidCallBackUrl", request.paidCallBackUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
@@ -2223,6 +2231,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

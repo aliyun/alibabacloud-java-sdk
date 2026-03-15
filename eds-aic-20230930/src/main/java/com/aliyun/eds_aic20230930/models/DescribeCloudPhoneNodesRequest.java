@@ -92,6 +92,9 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribeCloudPhoneNodesRequestTags> tags;
+
     public static DescribeCloudPhoneNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudPhoneNodesRequest self = new DescribeCloudPhoneNodesRequest();
         return TeaModel.build(map, self);
@@ -175,6 +178,44 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeCloudPhoneNodesRequest setTags(java.util.List<DescribeCloudPhoneNodesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeCloudPhoneNodesRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class DescribeCloudPhoneNodesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCloudPhoneNodesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudPhoneNodesRequestTags self = new DescribeCloudPhoneNodesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudPhoneNodesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCloudPhoneNodesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -204,6 +204,13 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <strong>example:</strong>
+     * <p>wya.wuying.aliyun.com/instanceGroup</p>
+     */
+    @NameInMap("PaidCallBackUrl")
+    public String paidCallBackUrl;
+
+    /**
      * <p>The subscription duration. The unit is specified by PeriodUnit.</p>
      * 
      * <strong>example:</strong>
@@ -416,6 +423,14 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     }
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    public CreateAndroidInstanceGroupRequest setPaidCallBackUrl(String paidCallBackUrl) {
+        this.paidCallBackUrl = paidCallBackUrl;
+        return this;
+    }
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
     }
 
     public CreateAndroidInstanceGroupRequest setPeriod(Integer period) {

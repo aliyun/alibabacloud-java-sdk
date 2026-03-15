@@ -37,6 +37,9 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
     @NameInMap("InstanceTasks")
     public java.util.List<BatchGetAcpConnectionTicketRequestInstanceTasks> instanceTasks;
 
+    @NameInMap("Ports")
+    public java.util.List<String> ports;
+
     public static BatchGetAcpConnectionTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetAcpConnectionTicketRequest self = new BatchGetAcpConnectionTicketRequest();
         return TeaModel.build(map, self);
@@ -80,6 +83,14 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
     }
     public java.util.List<BatchGetAcpConnectionTicketRequestInstanceTasks> getInstanceTasks() {
         return this.instanceTasks;
+    }
+
+    public BatchGetAcpConnectionTicketRequest setPorts(java.util.List<String> ports) {
+        this.ports = ports;
+        return this;
+    }
+    public java.util.List<String> getPorts() {
+        return this.ports;
     }
 
     public static class BatchGetAcpConnectionTicketRequestInstanceTasks extends TeaModel {

@@ -218,6 +218,36 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCloudPhoneNodesResponseBodyNodeModelTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCloudPhoneNodesResponseBodyNodeModelTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudPhoneNodesResponseBodyNodeModelTags self = new DescribeCloudPhoneNodesResponseBodyNodeModelTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModelTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModelTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeCloudPhoneNodesResponseBodyNodeModel extends TeaModel {
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
@@ -389,6 +419,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
         @NameInMap("SwapSize")
         public Integer swapSize;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelTags> tags;
 
         /**
          * <p>The vSwitch ID.</p>
@@ -602,6 +635,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
         public Integer getSwapSize() {
             return this.swapSize;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setTags(java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelTags> getTags() {
+            return this.tags;
         }
 
         public DescribeCloudPhoneNodesResponseBodyNodeModel setVSwitchId(String vSwitchId) {
