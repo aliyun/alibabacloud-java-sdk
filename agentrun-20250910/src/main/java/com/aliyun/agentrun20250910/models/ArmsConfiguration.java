@@ -13,6 +13,9 @@ public class ArmsConfiguration extends TeaModel {
     @NameInMap("armsLicenseKey")
     public String armsLicenseKey;
 
+    @NameInMap("cmsWorkspace")
+    public String cmsWorkspace;
+
     /**
      * <p>是否启用应用实时监控服务（ARMS）</p>
      * 
@@ -33,6 +36,14 @@ public class ArmsConfiguration extends TeaModel {
     }
     public String getArmsLicenseKey() {
         return this.armsLicenseKey;
+    }
+
+    public ArmsConfiguration setCmsWorkspace(String cmsWorkspace) {
+        this.cmsWorkspace = cmsWorkspace;
+        return this;
+    }
+    public String getCmsWorkspace() {
+        return this.cmsWorkspace;
     }
 
     public ArmsConfiguration setEnableArms(Boolean enableArms) {

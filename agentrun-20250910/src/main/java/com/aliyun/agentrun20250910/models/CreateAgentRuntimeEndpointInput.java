@@ -19,6 +19,12 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
     public String description;
 
     /**
+     * <p>是否禁用该端点的公网访问</p>
+     */
+    @NameInMap("disablePublicNetworkAccess")
+    public Boolean disablePublicNetworkAccess;
+
+    /**
      * <p>智能体运行时端点的路由配置，支持多版本权重分配</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +61,14 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAgentRuntimeEndpointInput setDisablePublicNetworkAccess(Boolean disablePublicNetworkAccess) {
+        this.disablePublicNetworkAccess = disablePublicNetworkAccess;
+        return this;
+    }
+    public Boolean getDisablePublicNetworkAccess() {
+        return this.disablePublicNetworkAccess;
     }
 
     public CreateAgentRuntimeEndpointInput setRoutingConfiguration(RoutingConfiguration routingConfiguration) {

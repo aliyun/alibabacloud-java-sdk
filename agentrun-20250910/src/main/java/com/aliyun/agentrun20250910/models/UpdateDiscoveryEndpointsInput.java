@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDiscoveryEndpointsInput extends TeaModel {
     @NameInMap("credentialName")
+    @Deprecated
     public String credentialName;
 
     @NameInMap("discoveryEndpoints")
@@ -15,6 +16,7 @@ public class UpdateDiscoveryEndpointsInput extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public UpdateDiscoveryEndpointsInput setCredentialName(String credentialName) {
         this.credentialName = credentialName;
         return this;

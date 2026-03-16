@@ -10,6 +10,12 @@ public class AgentEndpointConfig extends TeaModel {
     @NameInMap("customDomainUrl")
     public String customDomainUrl;
 
+    /**
+     * <p>端点名称</p>
+     */
+    @NameInMap("endpointName")
+    public String endpointName;
+
     @NameInMap("endpointUrl")
     public String endpointUrl;
 
@@ -32,6 +38,14 @@ public class AgentEndpointConfig extends TeaModel {
     }
     public String getCustomDomainUrl() {
         return this.customDomainUrl;
+    }
+
+    public AgentEndpointConfig setEndpointName(String endpointName) {
+        this.endpointName = endpointName;
+        return this;
+    }
+    public String getEndpointName() {
+        return this.endpointName;
     }
 
     public AgentEndpointConfig setEndpointUrl(String endpointUrl) {

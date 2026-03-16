@@ -72,6 +72,9 @@ public class UpdateTemplateInput extends TeaModel {
     @Deprecated
     public Integer sandboxTTLInSeconds;
 
+    @NameInMap("scalingConfig")
+    public ScalingConfig scalingConfig;
+
     /**
      * <p>模板配置（灵活的对象结构，根据 templateType 不同而不同）</p>
      */
@@ -213,6 +216,14 @@ public class UpdateTemplateInput extends TeaModel {
     }
     public Integer getSandboxTTLInSeconds() {
         return this.sandboxTTLInSeconds;
+    }
+
+    public UpdateTemplateInput setScalingConfig(ScalingConfig scalingConfig) {
+        this.scalingConfig = scalingConfig;
+        return this;
+    }
+    public ScalingConfig getScalingConfig() {
+        return this.scalingConfig;
     }
 
     public UpdateTemplateInput setTemplateConfiguration(java.util.Map<String, ?> templateConfiguration) {

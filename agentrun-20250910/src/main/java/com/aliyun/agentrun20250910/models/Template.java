@@ -74,6 +74,9 @@ public class Template extends TeaModel {
     @Deprecated
     public String sandboxTTLInSeconds;
 
+    @NameInMap("scalingStatus")
+    public ScalingStatus scalingStatus;
+
     @NameInMap("status")
     public String status;
 
@@ -279,6 +282,14 @@ public class Template extends TeaModel {
     }
     public String getSandboxTTLInSeconds() {
         return this.sandboxTTLInSeconds;
+    }
+
+    public Template setScalingStatus(ScalingStatus scalingStatus) {
+        this.scalingStatus = scalingStatus;
+        return this;
+    }
+    public ScalingStatus getScalingStatus() {
+        return this.scalingStatus;
     }
 
     public Template setStatus(String status) {

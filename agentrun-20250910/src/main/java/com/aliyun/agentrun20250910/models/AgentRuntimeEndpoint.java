@@ -40,6 +40,12 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public String description;
 
     /**
+     * <p>是否禁用该端点的公网访问</p>
+     */
+    @NameInMap("disablePublicNetworkAccess")
+    public Boolean disablePublicNetworkAccess;
+
+    /**
      * <p>智能体运行时端点的公网访问地址</p>
      * 
      * <strong>example:</strong>
@@ -118,6 +124,14 @@ public class AgentRuntimeEndpoint extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public AgentRuntimeEndpoint setDisablePublicNetworkAccess(Boolean disablePublicNetworkAccess) {
+        this.disablePublicNetworkAccess = disablePublicNetworkAccess;
+        return this;
+    }
+    public Boolean getDisablePublicNetworkAccess() {
+        return this.disablePublicNetworkAccess;
     }
 
     public AgentRuntimeEndpoint setEndpointPublicUrl(String endpointPublicUrl) {
