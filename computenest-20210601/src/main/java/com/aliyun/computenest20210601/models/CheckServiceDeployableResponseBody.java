@@ -50,6 +50,9 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("Skippable")
+        public Boolean skippable;
+
         /**
          * <p>Check type, invalid values:</p>
          * <ul>
@@ -85,6 +88,14 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public CheckServiceDeployableResponseBodyCheckResults setSkippable(Boolean skippable) {
+            this.skippable = skippable;
+            return this;
+        }
+        public Boolean getSkippable() {
+            return this.skippable;
         }
 
         public CheckServiceDeployableResponseBodyCheckResults setType(String type) {
