@@ -407,6 +407,36 @@ public class CreateTaskRequest extends TeaModel {
 
     }
 
+    public static class CreateTaskRequestParametersExtraParamsTranslationHotwordMap extends TeaModel {
+        @NameInMap("bizType")
+        public String bizType;
+
+        @NameInMap("bizUserId")
+        public String bizUserId;
+
+        public static CreateTaskRequestParametersExtraParamsTranslationHotwordMap build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersExtraParamsTranslationHotwordMap self = new CreateTaskRequestParametersExtraParamsTranslationHotwordMap();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersExtraParamsTranslationHotwordMap setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
+        }
+
+        public CreateTaskRequestParametersExtraParamsTranslationHotwordMap setBizUserId(String bizUserId) {
+            this.bizUserId = bizUserId;
+            return this;
+        }
+        public String getBizUserId() {
+            return this.bizUserId;
+        }
+
+    }
+
     public static class CreateTaskRequestParametersExtraParams extends TeaModel {
         @NameInMap("DomainEducationEnabled")
         public Boolean domainEducationEnabled;
@@ -425,6 +455,9 @@ public class CreateTaskRequest extends TeaModel {
 
         @NameInMap("TranslateLlmSceneEnabled")
         public Boolean translateLlmSceneEnabled;
+
+        @NameInMap("TranslationHotwordMap")
+        public CreateTaskRequestParametersExtraParamsTranslationHotwordMap translationHotwordMap;
 
         public static CreateTaskRequestParametersExtraParams build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersExtraParams self = new CreateTaskRequestParametersExtraParams();
@@ -477,6 +510,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getTranslateLlmSceneEnabled() {
             return this.translateLlmSceneEnabled;
+        }
+
+        public CreateTaskRequestParametersExtraParams setTranslationHotwordMap(CreateTaskRequestParametersExtraParamsTranslationHotwordMap translationHotwordMap) {
+            this.translationHotwordMap = translationHotwordMap;
+            return this;
+        }
+        public CreateTaskRequestParametersExtraParamsTranslationHotwordMap getTranslationHotwordMap() {
+            return this.translationHotwordMap;
         }
 
     }
