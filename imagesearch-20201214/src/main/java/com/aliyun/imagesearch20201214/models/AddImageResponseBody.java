@@ -98,7 +98,59 @@ public class AddImageResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class AddImageResponseBodyPicInfoAllCategories extends TeaModel {
+        @NameInMap("Id")
+        public Integer id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static AddImageResponseBodyPicInfoAllCategories build(java.util.Map<String, ?> map) throws Exception {
+            AddImageResponseBodyPicInfoAllCategories self = new AddImageResponseBodyPicInfoAllCategories();
+            return TeaModel.build(map, self);
+        }
+
+        public AddImageResponseBodyPicInfoAllCategories setId(Integer id) {
+            this.id = id;
+            return this;
+        }
+        public Integer getId() {
+            return this.id;
+        }
+
+        public AddImageResponseBodyPicInfoAllCategories setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class AddImageResponseBodyPicInfoMultiRegion extends TeaModel {
+        @NameInMap("Region")
+        public String region;
+
+        public static AddImageResponseBodyPicInfoMultiRegion build(java.util.Map<String, ?> map) throws Exception {
+            AddImageResponseBodyPicInfoMultiRegion self = new AddImageResponseBodyPicInfoMultiRegion();
+            return TeaModel.build(map, self);
+        }
+
+        public AddImageResponseBodyPicInfoMultiRegion setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+    }
+
     public static class AddImageResponseBodyPicInfo extends TeaModel {
+        @NameInMap("AllCategories")
+        public java.util.List<AddImageResponseBodyPicInfoAllCategories> allCategories;
+
         /**
          * <p>The result of category prediction. If a category is specified in the request, the specified category prevails.</p>
          * 
@@ -107,6 +159,9 @@ public class AddImageResponseBody extends TeaModel {
          */
         @NameInMap("CategoryId")
         public Integer categoryId;
+
+        @NameInMap("MultiRegion")
+        public java.util.List<AddImageResponseBodyPicInfoMultiRegion> multiRegion;
 
         /**
          * <p>The result of subject identification. The subject area of the image is in the format of <code>x1,x2,y1,y2</code>. <code>x1 and y1</code> represent the position in the upper-left corner, in pixels. <code>x2 and y2</code> represent the position in the lower-right corner, in pixels. If a subject area is specified in the request, the specified subject area prevails.</p>
@@ -122,12 +177,28 @@ public class AddImageResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public AddImageResponseBodyPicInfo setAllCategories(java.util.List<AddImageResponseBodyPicInfoAllCategories> allCategories) {
+            this.allCategories = allCategories;
+            return this;
+        }
+        public java.util.List<AddImageResponseBodyPicInfoAllCategories> getAllCategories() {
+            return this.allCategories;
+        }
+
         public AddImageResponseBodyPicInfo setCategoryId(Integer categoryId) {
             this.categoryId = categoryId;
             return this;
         }
         public Integer getCategoryId() {
             return this.categoryId;
+        }
+
+        public AddImageResponseBodyPicInfo setMultiRegion(java.util.List<AddImageResponseBodyPicInfoMultiRegion> multiRegion) {
+            this.multiRegion = multiRegion;
+            return this;
+        }
+        public java.util.List<AddImageResponseBodyPicInfoMultiRegion> getMultiRegion() {
+            return this.multiRegion;
         }
 
         public AddImageResponseBodyPicInfo setRegion(String region) {

@@ -340,6 +340,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>CheckImageExists</p>
+     * 
+     * @param request CheckImageExistsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckImageExistsResponse
+     */
+    public CheckImageExistsResponse checkImageExistsWithOptions(CheckImageExistsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.picName)) {
+            body.put("PicName", request.picName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
+            body.put("ProductId", request.productId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckImageExists"),
+            new TeaPair("version", "2020-12-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckImageExistsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>CheckImageExists</p>
+     * 
+     * @param request CheckImageExistsRequest
+     * @return CheckImageExistsResponse
+     */
+    public CheckImageExistsResponse checkImageExists(CheckImageExistsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkImageExistsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>对比图片相似值</p>
      * 
      * @param request CompareSimilarByImageRequest
