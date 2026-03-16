@@ -6977,8 +6977,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceName", request.DBInstanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dstMainConnectString)) {
+            query.put("DstMainConnectString", request.dstMainConnectString);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstMainPort)) {
+            query.put("DstMainPort", request.dstMainPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isModifyEndpoint)) {
+            query.put("IsModifyEndpoint", request.isModifyEndpoint);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcMainConnectString)) {
+            query.put("SrcMainConnectString", request.srcMainConnectString);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcMainPort)) {
+            query.put("SrcMainPort", request.srcMainPort);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.switchMode)) {
