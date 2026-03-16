@@ -22,6 +22,13 @@ public class ListFlowsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-xxx</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ListFlowsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFlowsRequest self = new ListFlowsRequest();
         return TeaModel.build(map, self);
@@ -41,6 +48,14 @@ public class ListFlowsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListFlowsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteScheduleRequest extends TeaModel {
     /**
+     * <p>The name of the workflow with which the scheduling task that you want to delete is associated.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testFlowName</p>
      */
     @NameInMap("FlowName")
     public String flowName;
 
     /**
+     * <p>The name of the scheduling task that you want to delete.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testScheduleName</p>
      */
     @NameInMap("ScheduleName")
     public String scheduleName;

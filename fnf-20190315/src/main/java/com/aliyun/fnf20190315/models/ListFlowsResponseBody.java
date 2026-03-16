@@ -197,6 +197,13 @@ public class ListFlowsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <strong>example:</strong>
+         * <p>rg-xxx</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the flow is executed.</p>
          * 
          * <strong>example:</strong>
@@ -281,6 +288,14 @@ public class ListFlowsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListFlowsResponseBodyFlows setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListFlowsResponseBodyFlows setRoleArn(String roleArn) {

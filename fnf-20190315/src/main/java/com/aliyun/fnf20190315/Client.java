@@ -81,6 +81,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.roleArn)) {
             body.put("RoleArn", request.roleArn);
         }
@@ -615,7 +619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询地域信息列表</p>
+     * <p>Queries the regions where CloudFlow is available.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -647,7 +651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询地域信息列表</p>
+     * <p>Queries the regions where CloudFlow is available.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse

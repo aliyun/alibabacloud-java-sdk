@@ -80,6 +80,13 @@ public class CreateFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <strong>example:</strong>
+     * <p>rg-xxx</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
      * <p>The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.</p>
      * 
      * <strong>example:</strong>
@@ -181,6 +188,14 @@ public class CreateFlowResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateFlowResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateFlowResponseBody setRoleArn(String roleArn) {
