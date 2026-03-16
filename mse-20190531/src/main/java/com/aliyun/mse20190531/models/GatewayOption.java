@@ -4,18 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GatewayOption extends TeaModel {
+    /**
+     * <p>Specifies whether to disable the HTTP/2 protocol.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DisableHttp2Alpn")
     public Boolean disableHttp2Alpn;
 
+    /**
+     * <p>Specifies whether to enable hardware acceleration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableHardwareAcceleration")
     public Boolean enableHardwareAcceleration;
 
+    /**
+     * <p>Specifies whether to enable Web Application Firewall (WAF).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
+    /**
+     * <p>The description of Simple Log Service.</p>
+     */
     @NameInMap("LogConfigDetails")
     public GatewayOptionLogConfigDetails logConfigDetails;
 
+    /**
+     * <p>The data structure.</p>
+     */
     @NameInMap("TraceDetails")
     public GatewayOptionTraceDetails traceDetails;
 
@@ -66,14 +90,46 @@ public class GatewayOption extends TeaModel {
 
     public static class GatewayOptionLogConfigDetails extends TeaModel {
         /**
+         * <p>Specifies whether to activate Simple Log Service.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("LogEnabled")
         public Boolean logEnabled;
 
+        /**
+         * <p>The name of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
+        /**
+         * <p>The name of the destination Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
@@ -109,22 +165,62 @@ public class GatewayOption extends TeaModel {
     }
 
     public static class GatewayOptionTraceDetails extends TeaModel {
+        /**
+         * <p>The sampling rate of Tracing Analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Sample")
         public Long sample;
 
+        /**
+         * <p>The ID of the SkyWalking service. This parameter is required if TraceType is set to SKYWALKING.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10458</p>
+         */
         @NameInMap("ServiceId")
         public Long serviceId;
 
+        /**
+         * <p>The port of the SkyWalking service. This parameter is required if TraceType is set to SKYWALKING.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("ServicePort")
         public String servicePort;
 
         /**
+         * <p>Specifies whether to activate Tracing Analysis.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TraceEnabled")
         public Boolean traceEnabled;
 
         /**
+         * <p>The type of Tracing Analysis. Valid values: XTRACE and SKYWALKING.</p>
+         * 
          * <strong>example:</strong>
          * <p>XTRACE</p>
          */

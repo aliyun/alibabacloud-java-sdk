@@ -4,27 +4,51 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GatewayService extends TeaModel {
+    /**
+     * <p>The traffic policy of the service.</p>
+     */
     @NameInMap("GatewayTrafficPolicy")
     public TrafficPolicy gatewayTrafficPolicy;
 
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>The name of the group to which the service belongs.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The ID of the service.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The metadata of the service.</p>
+     */
     @NameInMap("MetaInfo")
     public String metaInfo;
 
+    /**
+     * <p>The name of the service.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The namespace to which the service belongs.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The source type of the service.</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 

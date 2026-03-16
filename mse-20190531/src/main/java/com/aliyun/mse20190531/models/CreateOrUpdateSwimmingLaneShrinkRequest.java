@@ -41,6 +41,9 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     @Deprecated
     public String entryRule;
 
+    /**
+     * <p>The lane.</p>
+     */
     @NameInMap("EntryRules")
     public java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRules> entryRules;
 
@@ -224,33 +227,90 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems extends TeaModel {
+        /**
+         * <p>The matching character.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
+         */
         @NameInMap("Cond")
         public String cond;
 
+        /**
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.params[0]</p>
+         */
         @NameInMap("Datum")
         public String datum;
 
+        /**
+         * <p>The divisor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Divisor")
         public Integer divisor;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The matching list.</p>
+         */
         @NameInMap("NameList")
         public java.util.List<String> nameList;
 
+        /**
+         * <p>The operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mod</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Rate")
         public Integer rate;
 
+        /**
+         * <p>The remainder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Remainder")
         public Integer remainder;
 
+        /**
+         * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>header</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -343,18 +403,32 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneShrinkRequestEntryRules extends TeaModel {
         /**
+         * <p>Specifies how RESTful items are combined into the final condition.</p>
+         * 
          * <strong>example:</strong>
-         * <p>AND</p>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Condition")
         public String condition;
 
+        /**
+         * <p>The paths.</p>
+         */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
+        /**
+         * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The matching list.</p>
+         */
         @NameInMap("RestItems")
         public java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems> restItems;
 

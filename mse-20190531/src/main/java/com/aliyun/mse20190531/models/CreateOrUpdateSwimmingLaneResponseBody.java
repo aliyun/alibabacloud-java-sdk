@@ -133,33 +133,90 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneResponseBodyDataEntryRulesRestItems extends TeaModel {
+        /**
+         * <p>The matching character.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>==</p>
+         */
         @NameInMap("cond")
         public String cond;
 
+        /**
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x</p>
+         */
         @NameInMap("datum")
         public String datum;
 
+        /**
+         * <p>The divisor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("divisor")
         public Integer divisor;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The names.</p>
+         */
         @NameInMap("nameList")
         public java.util.List<String> nameList;
 
+        /**
+         * <p>The operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rawvalue</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>The percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("rate")
         public Integer rate;
 
+        /**
+         * <p>The remainder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("remainder")
         public Integer remainder;
 
+        /**
+         * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cookie</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -251,15 +308,33 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneResponseBodyDataEntryRules extends TeaModel {
+        /**
+         * <p>The condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("condition")
         public String condition;
 
+        /**
+         * <p>The path of the code group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/adump/wxb/prod</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <p>The paths.</p>
+         */
         @NameInMap("paths")
         public java.util.List<String> paths;
 
+        /**
+         * <p>The conditions to be met.</p>
+         */
         @NameInMap("restItems")
         public java.util.List<CreateOrUpdateSwimmingLaneResponseBodyDataEntryRulesRestItems> restItems;
 
@@ -303,45 +378,120 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the lane was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>Indicates whether the rule is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableRules")
         public Boolean enableRules;
 
+        /**
+         * <p>The rule for the ingress application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("entryRule")
         public String entryRule;
 
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("entryRules")
         public java.util.List<CreateOrUpdateSwimmingLaneResponseBodyDataEntryRules> entryRules;
 
+        /**
+         * <p>The routing rule for the MSE gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("gatewaySwimmingLaneRouteJson")
         public String gatewaySwimmingLaneRouteJson;
 
+        /**
+         * <p>The time when the lane was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545726028000</p>
+         */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the lane was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72586</p>
+         */
         @NameInMap("groupId")
         public Long groupId;
 
+        /**
+         * <p>The ID of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94765</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The name of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("pathIndependentPercentageEnable")
         public Boolean pathIndependentPercentageEnable;
 
+        /**
+         * <p>The ID of the region where the application is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>The status of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <p>The tag of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release</p>
+         */
         @NameInMap("tag")
         public String tag;
 

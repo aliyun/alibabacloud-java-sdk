@@ -155,6 +155,8 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
 
     public static class QueryAllSwimmingLaneGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The application IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>abcde@abcde,abcde@abcde</p>
          */
@@ -165,6 +167,8 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         public Integer canaryModel;
 
         /**
+         * <p>The type and ID of the ingress application.</p>
+         * 
          * <strong>example:</strong>
          * <p>mse:abcde@abcde</p>
          */
@@ -172,6 +176,8 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         public String entryApp;
 
         /**
+         * <p>The ID of the lane group.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -179,16 +185,26 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The side at which canary release for messaging was enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>Client</p>
          */
         @NameInMap("MessageQueueFilterSide")
         public String messageQueueFilterSide;
 
+        /**
+         * <p>Indicates whether canary release for messaging is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MessageQueueGrayEnable")
         public Boolean messageQueueGrayEnable;
 
         /**
+         * <p>The name of the lane group.</p>
+         * 
          * <strong>example:</strong>
          * <p>swimmingGroup</p>
          */
@@ -196,6 +212,8 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The MSE namespace to which the lane belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -205,10 +223,18 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Paths")
         public String paths;
 
+        /**
+         * <p>Indicates whether the request details (metrics of end-to-end canary release) were recorded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("RecordCanaryDetail")
         public Boolean recordCanaryDetail;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -219,6 +245,8 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         public Integer swimVersion;
 
         /**
+         * <p>The ID of the user to which the lane belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */

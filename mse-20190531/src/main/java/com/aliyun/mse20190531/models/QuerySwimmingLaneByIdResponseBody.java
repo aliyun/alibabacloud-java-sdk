@@ -99,33 +99,90 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     }
 
     public static class QuerySwimmingLaneByIdResponseBodyDataEntryRulesRestItems extends TeaModel {
+        /**
+         * <p>匹配符</p>
+         * 
+         * <strong>example:</strong>
+         * <p>==</p>
+         */
         @NameInMap("cond")
         public String cond;
 
+        /**
+         * <p>数值</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x</p>
+         */
         @NameInMap("datum")
         public String datum;
 
+        /**
+         * <p>除数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("divisor")
         public Integer divisor;
 
+        /**
+         * <p>名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>名称列表</p>
+         */
         @NameInMap("nameList")
         public java.util.List<String> nameList;
 
+        /**
+         * <p>操作符</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rawvalue</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>百分比</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("rate")
         public Integer rate;
 
+        /**
+         * <p>余数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("remainder")
         public Integer remainder;
 
+        /**
+         * <p>匹配类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cookie</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>值</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -217,15 +274,33 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     }
 
     public static class QuerySwimmingLaneByIdResponseBodyDataEntryRules extends TeaModel {
+        /**
+         * <p>条件</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("condition")
         public String condition;
 
+        /**
+         * <p>路径</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <p>路径列表</p>
+         */
         @NameInMap("paths")
         public java.util.List<String> paths;
 
+        /**
+         * <p>Rest匹配规则列表</p>
+         */
         @NameInMap("restItems")
         public java.util.List<QuerySwimmingLaneByIdResponseBodyDataEntryRulesRestItems> restItems;
 
@@ -269,45 +344,124 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     }
 
     public static class QuerySwimmingLaneByIdResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("PathIndependentPercentageEnable")
         public Boolean pathIndependentPercentageEnable;
 
+        /**
+         * <p>泳道开关</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>是否开启规则。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableRules")
         public Boolean enableRules;
 
+        /**
+         * <p>入口应用规则</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("entryRule")
         public String entryRule;
 
+        /**
+         * <p>入口应用规则详情</p>
+         */
         @NameInMap("entryRules")
         public java.util.List<QuerySwimmingLaneByIdResponseBodyDataEntryRules> entryRules;
 
+        /**
+         * <p>MSE网关路由规则</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("gatewaySwimmingLaneRouteJson")
         public String gatewaySwimmingLaneRouteJson;
 
+        /**
+         * <p>规则创建时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683598484000</p>
+         */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>规则修改时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683598484000</p>
+         */
         @NameInMap("gmtModified")
         public String gmtModified;
 
+        /**
+         * <p>泳道组Id。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("groupId")
         public Long groupId;
 
+        /**
+         * <p>泳道ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>泳道名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>区域ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>泳道状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <p>泳道对应的标签。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
+         */
         @NameInMap("tag")
         public String tag;
 

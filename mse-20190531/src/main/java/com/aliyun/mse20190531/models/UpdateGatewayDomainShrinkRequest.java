@@ -17,6 +17,9 @@ public class UpdateGatewayDomainShrinkRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("CaCertIdentifier")
+    public String caCertIdentifier;
+
     /**
      * <p>The ID of the certificate.</p>
      * 
@@ -57,6 +60,9 @@ public class UpdateGatewayDomainShrinkRequest extends TeaModel {
      */
     @NameInMap("Id")
     public Long id;
+
+    @NameInMap("MtlsEnabled")
+    public Boolean mtlsEnabled;
 
     /**
      * <p>Specifies whether to forcibly use HTTPS.</p>
@@ -114,6 +120,14 @@ public class UpdateGatewayDomainShrinkRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
+    public UpdateGatewayDomainShrinkRequest setCaCertIdentifier(String caCertIdentifier) {
+        this.caCertIdentifier = caCertIdentifier;
+        return this;
+    }
+    public String getCaCertIdentifier() {
+        return this.caCertIdentifier;
+    }
+
     public UpdateGatewayDomainShrinkRequest setCertIdentifier(String certIdentifier) {
         this.certIdentifier = certIdentifier;
         return this;
@@ -144,6 +158,14 @@ public class UpdateGatewayDomainShrinkRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public UpdateGatewayDomainShrinkRequest setMtlsEnabled(Boolean mtlsEnabled) {
+        this.mtlsEnabled = mtlsEnabled;
+        return this;
+    }
+    public Boolean getMtlsEnabled() {
+        return this.mtlsEnabled;
     }
 
     public UpdateGatewayDomainShrinkRequest setMustHttps(Boolean mustHttps) {

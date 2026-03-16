@@ -97,6 +97,8 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The list of application IDs that are separated by commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>abcd1@abcde123,abcd1@abcde124</p>
          */
@@ -114,22 +116,38 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         public String dbGrayEnable;
 
         /**
+         * <p>The ingress application.</p>
+         * 
          * <strong>example:</strong>
          * <p>mse:abcd1@a2345</p>
          */
         @NameInMap("EntryApp")
         public String entryApp;
 
+        /**
+         * <p>The ID of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2047</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         /**
+         * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>Client</p>
          */
         @NameInMap("MessageQueueFilterSide")
         public String messageQueueFilterSide;
 
+        /**
+         * <p>Specifies whether to enable canary release for messaging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MessageQueueGrayEnable")
         public Boolean messageQueueGrayEnable;
 
@@ -141,6 +159,8 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The name of the MSE namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod</p>
          */
@@ -150,10 +170,18 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Paths")
         public String paths;
 
+        /**
+         * <p>Specifies whether to record request details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("RecordCanaryDetail")
         public Boolean recordCanaryDetail;
 
         /**
+         * <p>The region where the application resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -161,6 +189,8 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The ID of the user to which the application belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */

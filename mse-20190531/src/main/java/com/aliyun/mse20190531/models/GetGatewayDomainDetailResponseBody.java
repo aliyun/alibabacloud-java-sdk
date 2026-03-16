@@ -170,6 +170,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
+        @NameInMap("CaCertIdentifier")
+        public String caCertIdentifier;
+
         /**
          * <p>The ID of the certificate.</p>
          * 
@@ -286,6 +289,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @NameInMap("Issuer")
         public String issuer;
 
+        @NameInMap("MtlsEnabled")
+        public Boolean mtlsEnabled;
+
         /**
          * <p>Indicates whether HTTPS is forcibly used.</p>
          * 
@@ -370,6 +376,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
         public Long getBeforeDate() {
             return this.beforeDate;
+        }
+
+        public GetGatewayDomainDetailResponseBodyData setCaCertIdentifier(String caCertIdentifier) {
+            this.caCertIdentifier = caCertIdentifier;
+            return this;
+        }
+        public String getCaCertIdentifier() {
+            return this.caCertIdentifier;
         }
 
         public GetGatewayDomainDetailResponseBodyData setCertIdentifier(String certIdentifier) {
@@ -474,6 +488,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
         public String getIssuer() {
             return this.issuer;
+        }
+
+        public GetGatewayDomainDetailResponseBodyData setMtlsEnabled(Boolean mtlsEnabled) {
+            this.mtlsEnabled = mtlsEnabled;
+            return this;
+        }
+        public Boolean getMtlsEnabled() {
+            return this.mtlsEnabled;
         }
 
         public GetGatewayDomainDetailResponseBodyData setMustHttps(Boolean mustHttps) {

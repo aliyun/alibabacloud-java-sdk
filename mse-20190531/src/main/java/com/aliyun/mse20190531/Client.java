@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增服务鉴权规则</p>
+     * <p>Creates a service authentication rule.</p>
      * 
      * @param request AddAuthPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -100,7 +100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增服务鉴权规则</p>
+     * <p>Creates a service authentication rule.</p>
      * 
      * @param request AddAuthPolicyRequest
      * @return AddAuthPolicyResponse
@@ -112,7 +112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates authorization information for a gateway.</p>
+     * <p>Adds authorization information for a gateway.</p>
      * 
      * @param tmpReq AddAuthResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -178,7 +178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates authorization information for a gateway.</p>
+     * <p>Adds authorization information for a gateway.</p>
      * 
      * @param request AddAuthResourceRequest
      * @return AddAuthResourceResponse
@@ -669,6 +669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.caCertIdentifier)) {
+            query.put("CaCertIdentifier", request.caCertIdentifier);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.certIdentifier)) {
             query.put("CertIdentifier", request.certIdentifier);
         }
@@ -679,6 +683,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.http2)) {
             query.put("Http2", request.http2);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mtlsEnabled)) {
+            query.put("MtlsEnabled", request.mtlsEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mustHttps)) {
@@ -870,7 +878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a service version.</p>
+     * <p>Adds a service version for a gateway.</p>
      * 
      * @param request AddGatewayServiceVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -914,7 +922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a service version.</p>
+     * <p>Adds a service version for a gateway.</p>
      * 
      * @param request AddGatewayServiceVersionRequest
      * @return AddGatewayServiceVersionResponse
@@ -1096,7 +1104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a mock rule.</p>
+     * <p>Creates a service mocking rule.</p>
      * 
      * @param request AddMockRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1172,7 +1180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a mock rule.</p>
+     * <p>Creates a service mocking rule.</p>
      * 
      * @param request AddMockRuleRequest
      * @return AddMockRuleResponse
@@ -2270,7 +2278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网关路由熔断规则</p>
+     * <p>Creates a gateway circuit breaking rule.</p>
      * 
      * @param request CreateGatewayCircuitBreakerRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2366,7 +2374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网关路由熔断规则</p>
+     * <p>Creates a gateway circuit breaking rule.</p>
      * 
      * @param request CreateGatewayCircuitBreakerRuleRequest
      * @return CreateGatewayCircuitBreakerRuleResponse
@@ -2466,7 +2474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网关路由隔离规则</p>
+     * <p>Creates a concurrency rule for a gateway.</p>
      * 
      * @param request CreateGatewayIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2542,7 +2550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网关路由隔离规则</p>
+     * <p>Creates a concurrency rule for a gateway.</p>
      * 
      * @param request CreateGatewayIsolationRuleRequest
      * @return CreateGatewayIsolationRuleResponse
@@ -2554,7 +2562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建隔离规则</p>
+     * <p>Creates an isolation rule.</p>
      * 
      * @param request CreateIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2618,7 +2626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建隔离规则</p>
+     * <p>Creates an isolation rule.</p>
      * 
      * @param request CreateIsolationRuleRequest
      * @return CreateIsolationRuleResponse
@@ -3070,7 +3078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CreateNamespace</p>
+     * <p>Creates a namespace for Microservices Governance.</p>
      * 
      * @param tmpReq CreateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3120,7 +3128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CreateNamespace</p>
+     * <p>Creates a namespace for Microservices Governance.</p>
      * 
      * @param request CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -3506,7 +3514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建热点参数防护规则（HTTP 请求）</p>
+     * <p>Creates a hot parameter protection rule for HTTP requests.</p>
      * 
      * @param request CreateWebFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3598,7 +3606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建热点参数防护规则（HTTP 请求）</p>
+     * <p>Creates a hot parameter protection rule for HTTP requests.</p>
      * 
      * @param request CreateWebFlowRuleRequest
      * @return CreateWebFlowRuleResponse
@@ -4214,7 +4222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网关路由熔断规则</p>
+     * <p>Deletes a gateway circuit breaking rule.</p>
      * 
      * @param request DeleteGatewayCircuitBreakerRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4258,7 +4266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网关路由熔断规则</p>
+     * <p>Deletes a gateway circuit breaking rule.</p>
      * 
      * @param request DeleteGatewayCircuitBreakerRuleRequest
      * @return DeleteGatewayCircuitBreakerRuleResponse
@@ -4270,7 +4278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a domain name from a gateway.</p>
+     * <p>Deletes a domain name that is associated with a gateway.</p>
      * 
      * @param request DeleteGatewayDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4310,7 +4318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a domain name from a gateway.</p>
+     * <p>Deletes a domain name that is associated with a gateway.</p>
      * 
      * @param request DeleteGatewayDomainRequest
      * @return DeleteGatewayDomainResponse
@@ -4322,7 +4330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网关路由流控规则</p>
+     * <p>Deletes a throttling rule for a gateway.</p>
      * 
      * @param request DeleteGatewayFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4366,7 +4374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网关路由流控规则</p>
+     * <p>Deletes a throttling rule for a gateway.</p>
      * 
      * @param request DeleteGatewayFlowRuleRequest
      * @return DeleteGatewayFlowRuleResponse
@@ -4378,7 +4386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网关路由隔离规则</p>
+     * <p>Deletes the gateway concurrency rule.</p>
      * 
      * @param request DeleteGatewayIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4422,7 +4430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网关路由隔离规则</p>
+     * <p>Deletes the gateway concurrency rule.</p>
      * 
      * @param request DeleteGatewayIsolationRuleRequest
      * @return DeleteGatewayIsolationRuleResponse
@@ -4486,7 +4494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a service from a gateway.</p>
+     * <p>Deletes a service from a gateway</p>
      * 
      * @param request DeleteGatewayServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4530,7 +4538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a service from a gateway.</p>
+     * <p>Deletes a service from a gateway</p>
      * 
      * @param request DeleteGatewayServiceRequest
      * @return DeleteGatewayServiceResponse
@@ -4658,7 +4666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除隔离规则</p>
+     * <p>Deletes isolation rules.</p>
      * 
      * @param tmpReq DeleteIsolationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4708,7 +4716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除隔离规则</p>
+     * <p>Deletes isolation rules.</p>
      * 
      * @param request DeleteIsolationRulesRequest
      * @return DeleteIsolationRulesResponse
@@ -5444,7 +5452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除热点参数防护规则（HTTP 请求）</p>
+     * <p>Deletes a hot parameter protection rule for HTTP requests.</p>
      * 
      * @param request DeleteWebFlowRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5488,7 +5496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除热点参数防护规则（HTTP 请求）</p>
+     * <p>Deletes a hot parameter protection rule for HTTP requests.</p>
      * 
      * @param request DeleteWebFlowRulesRequest
      * @return DeleteWebFlowRulesResponse
@@ -6402,7 +6410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网关认证详情</p>
+     * <p>Obtains the authentication details of a gateway.</p>
      * 
      * @param request GetGatewayAuthDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6446,7 +6454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网关认证详情</p>
+     * <p>Obtains the authentication details of a gateway.</p>
      * 
      * @param request GetGatewayAuthDetailRequest
      * @return GetGatewayAuthDetailResponse
@@ -6458,7 +6466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取网关全局配置</p>
+     * <p>Obtains the parameter configurations of a gateway.</p>
      * 
      * @param request GetGatewayConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6494,7 +6502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取网关全局配置</p>
+     * <p>Obtains the parameter configurations of a gateway.</p>
      * 
      * @param request GetGatewayConfigRequest
      * @return GetGatewayConfigResponse
@@ -6936,7 +6944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取同AZ路由规则</p>
+     * <p>Obtains the Intra-zone Provider First rules.</p>
      * 
      * @param request GetLocalityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6988,7 +6996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取同AZ路由规则</p>
+     * <p>Obtains the Intra-zone Provider First rules.</p>
      * 
      * @param request GetLocalityRuleRequest
      * @return GetLocalityRuleResponse
@@ -7381,7 +7389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query overview information about service governance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about service governance.</p>
+     * <p>Queries overview information about Microservices Governance.</p>
      * 
      * @param request GetOverviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7424,7 +7432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query overview information about service governance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about service governance.</p>
+     * <p>Queries overview information about Microservices Governance.</p>
      * 
      * @param request GetOverviewRequest
      * @return GetOverviewResponse
@@ -7780,7 +7788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务接口列表</p>
+     * <p>Queries a list of service interfaces.</p>
      * 
      * @param request GetServiceMethodPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7868,7 +7876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务接口列表</p>
+     * <p>Queries a list of service interfaces.</p>
      * 
      * @param request GetServiceMethodPageRequest
      * @return GetServiceMethodPageResponse
@@ -8206,7 +8214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户授权mseSLR</p>
+     * <p>Creates a Microservices Engine (MSE) service-linked role.</p>
      * 
      * @param request InitializeServiceLinkRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8246,7 +8254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户授权mseSLR</p>
+     * <p>Creates a Microservices Engine (MSE) service-linked role.</p>
      * 
      * @param request InitializeServiceLinkRoleRequest
      * @return InitializeServiceLinkRoleResponse
@@ -9762,7 +9770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看网关路由熔断规则</p>
+     * <p>Queries a gateway circuit breaking rule.</p>
      * 
      * @param request ListGatewayCircuitBreakerRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9798,7 +9806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看网关路由熔断规则</p>
+     * <p>Queries a gateway circuit breaking rule.</p>
      * 
      * @param request ListGatewayCircuitBreakerRuleRequest
      * @return ListGatewayCircuitBreakerRuleResponse
@@ -9866,7 +9874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看网关路由流控规则</p>
+     * <p>Queries throttling rules of a gateway.</p>
      * 
      * @param request ListGatewayFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9902,7 +9910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看网关路由流控规则</p>
+     * <p>Queries throttling rules of a gateway.</p>
      * 
      * @param request ListGatewayFlowRuleRequest
      * @return ListGatewayFlowRuleResponse
@@ -9914,7 +9922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看网关路由隔离规则</p>
+     * <p>Queries the concurrency rule of a gateway.</p>
      * 
      * @param request ListGatewayIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9950,7 +9958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看网关路由隔离规则</p>
+     * <p>Queries the concurrency rule of a gateway.</p>
      * 
      * @param request ListGatewayIsolationRuleRequest
      * @return ListGatewayIsolationRuleResponse
@@ -10084,7 +10092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of services that are subscribed with a gateway.</p>
+     * <p>Queries a list of services that are subscribed to by a gateway.</p>
      * 
      * @param tmpReq ListGatewayServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10142,7 +10150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of services that are subscribed with a gateway.</p>
+     * <p>Queries a list of services that are subscribed to by a gateway.</p>
      * 
      * @param request ListGatewayServiceRequest
      * @return ListGatewayServiceResponse
@@ -10306,7 +10314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询隔离规则</p>
+     * <p>Queries isolation rules.</p>
      * 
      * @param request ListIsolationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10366,7 +10374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询隔离规则</p>
+     * <p>Queries isolation rules.</p>
      * 
      * @param request ListIsolationRulesRequest
      * @return ListIsolationRulesResponse
@@ -10840,7 +10848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>展示命名空间列表</p>
+     * <p>Displays the list of namespaces, the number of online nodes in each namespace, and the total number of applications in each namespace. You can also call this operation to perform fuzzy queries based on the namespace name.</p>
      * 
      * @param tmpReq ListNamespacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10898,7 +10906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>展示命名空间列表</p>
+     * <p>Displays the list of namespaces, the number of online nodes in each namespace, and the total number of applications in each namespace. You can also call this operation to perform fuzzy queries based on the namespace name.</p>
      * 
      * @param request ListNamespacesRequest
      * @return ListNamespacesResponse
@@ -11276,7 +11284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询热点参数防护规则（HTTP 请求）</p>
+     * <p>Queries hot parameter protection rules for HTTP requests.</p>
      * 
      * @param request ListWebFlowRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11336,7 +11344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询热点参数防护规则（HTTP 请求）</p>
+     * <p>Queries hot parameter protection rules for HTTP requests.</p>
      * 
      * @param request ListWebFlowRulesRequest
      * @return ListWebFlowRulesResponse
@@ -11636,7 +11644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unpublishes a route for a gateway.</p>
+     * <p>Disables a route for a gateway.</p>
      * 
      * @param request OfflineGatewayRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11676,7 +11684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unpublishes a route for a gateway.</p>
+     * <p>Disables a route for a gateway.</p>
      * 
      * @param request OfflineGatewayRouteRequest
      * @return OfflineGatewayRouteResponse
@@ -12624,7 +12632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询nacos灰度配置</p>
+     * <p>Queries canary configurations of a Nacos instance.</p>
      * 
      * @param request QueryNacosGrayConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12684,7 +12692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询nacos灰度配置</p>
+     * <p>Queries canary configurations of a Nacos instance.</p>
      * 
      * @param request QueryNacosGrayConfigRequest
      * @return QueryNacosGrayConfigResponse
@@ -12900,7 +12908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除单个应用</p>
+     * <p>Deletes a single application.</p>
      * 
      * @param request RemoveApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12948,7 +12956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除单个应用</p>
+     * <p>Deletes a single application.</p>
      * 
      * @param request RemoveApplicationRequest
      * @return RemoveApplicationResponse
@@ -12959,6 +12967,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a service authentication rule.</p>
+     * 
      * @param request RemoveAuthPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveAuthPolicyResponse
@@ -12992,6 +13003,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a service authentication rule.</p>
+     * 
      * @param request RemoveAuthPolicyRequest
      * @return RemoveAuthPolicyResponse
      */
@@ -14478,7 +14492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新网关路由熔断规则</p>
+     * <p>Updates a gateway circuit breaking rule.</p>
      * 
      * @param request UpdateGatewayCircuitBreakerRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14578,7 +14592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新网关路由熔断规则</p>
+     * <p>Updates a gateway circuit breaking rule.</p>
      * 
      * @param request UpdateGatewayCircuitBreakerRuleRequest
      * @return UpdateGatewayCircuitBreakerRuleResponse
@@ -14590,7 +14604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新网关配置</p>
+     * <p>Updates gateway configurations.</p>
      * 
      * @param request UpdateGatewayConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14634,7 +14648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新网关配置</p>
+     * <p>Updates gateway configurations.</p>
      * 
      * @param request UpdateGatewayConfigRequest
      * @return UpdateGatewayConfigResponse
@@ -14665,6 +14679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.caCertIdentifier)) {
+            query.put("CaCertIdentifier", request.caCertIdentifier);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.certIdentifier)) {
             query.put("CertIdentifier", request.certIdentifier);
         }
@@ -14679,6 +14697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mtlsEnabled)) {
+            query.put("MtlsEnabled", request.mtlsEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mustHttps)) {
@@ -14732,7 +14754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新网关路由流控规则</p>
+     * <p>Queries throttling rules of a gateway.</p>
      * 
      * @param request UpdateGatewayFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14812,7 +14834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新网关路由流控规则</p>
+     * <p>Queries throttling rules of a gateway.</p>
      * 
      * @param request UpdateGatewayFlowRuleRequest
      * @return UpdateGatewayFlowRuleResponse
@@ -14824,7 +14846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新网关路由隔离规则</p>
+     * <p>Updates the concurrency rule of a gateway.</p>
      * 
      * @param request UpdateGatewayIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14904,7 +14926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新网关路由隔离规则</p>
+     * <p>Updates the concurrency rule of a gateway.</p>
      * 
      * @param request UpdateGatewayIsolationRuleRequest
      * @return UpdateGatewayIsolationRuleResponse
@@ -14916,7 +14938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renames a gateway.</p>
+     * <p>Updates the name of a gateway.</p>
      * 
      * @param request UpdateGatewayNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14956,7 +14978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renames a gateway.</p>
+     * <p>Updates the name of a gateway.</p>
      * 
      * @param request UpdateGatewayNameRequest
      * @return UpdateGatewayNameResponse
@@ -15596,7 +15618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新服务</p>
+     * <p>Updates gateways for fixed address services or DNS services.</p>
      * 
      * @param tmpReq UpdateGatewayServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15674,7 +15696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新服务</p>
+     * <p>Updates gateways for fixed address services or DNS services.</p>
      * 
      * @param request UpdateGatewayServiceRequest
      * @return UpdateGatewayServiceResponse
@@ -15846,7 +15868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the version of a service.</p>
+     * <p>Updates the service version of a gateway.</p>
      * 
      * @param request UpdateGatewayServiceVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15890,7 +15912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the version of a service.</p>
+     * <p>Updates the service version of a gateway.</p>
      * 
      * @param request UpdateGatewayServiceVersionRequest
      * @return UpdateGatewayServiceVersionResponse
@@ -16016,7 +16038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新隔离规则</p>
+     * <p>Updates an isolation rule.</p>
      * 
      * @param request UpdateIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16076,7 +16098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新隔离规则</p>
+     * <p>Updates an isolation rule.</p>
      * 
      * @param request UpdateIsolationRuleRequest
      * @return UpdateIsolationRuleResponse
@@ -16088,7 +16110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新同AZ路由规则</p>
+     * <p>Updates the Intra-zone Provider First rules.</p>
      * 
      * @param request UpdateLocalityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16152,7 +16174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新同AZ路由规则</p>
+     * <p>Updates the Intra-zone Provider First rules.</p>
      * 
      * @param request UpdateLocalityRuleRequest
      * @return UpdateLocalityRuleResponse
@@ -16518,7 +16540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新nacos灰度配置</p>
+     * <p>Updates the canary release settings, which include beta release and tag-based canary release.</p>
      * 
      * @param request UpdateNacosGrayConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16606,7 +16628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新nacos灰度配置</p>
+     * <p>Updates the canary release settings, which include beta release and tag-based canary release.</p>
      * 
      * @param request UpdateNacosGrayConfigRequest
      * @return UpdateNacosGrayConfigResponse
@@ -16796,7 +16818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a plug-in.</p>
+     * <p>Updates plug-in configurations.</p>
      * 
      * @param tmpReq UpdatePluginConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16876,7 +16898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a plug-in.</p>
+     * <p>Updates plug-in configurations.</p>
      * 
      * @param request UpdatePluginConfigRequest
      * @return UpdatePluginConfigResponse
@@ -17034,7 +17056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新热点参数防护规则（HTTP 请求）</p>
+     * <p>Updates a hot parameter protection rule for HTTP requests.</p>
      * 
      * @param request UpdateWebFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17122,7 +17144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新热点参数防护规则（HTTP 请求）</p>
+     * <p>Updates a hot parameter protection rule for HTTP requests.</p>
      * 
      * @param request UpdateWebFlowRuleRequest
      * @return UpdateWebFlowRuleResponse
