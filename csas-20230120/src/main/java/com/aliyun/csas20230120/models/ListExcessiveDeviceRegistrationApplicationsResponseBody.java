@@ -85,6 +85,9 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
         @NameInMap("DeviceType")
         public String deviceType;
 
+        @NameInMap("FullDepartment")
+        public java.util.List<String> fullDepartment;
+
         /**
          * <strong>example:</strong>
          * <p>win10-64bit</p>
@@ -174,6 +177,14 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
         }
         public String getDeviceType() {
             return this.deviceType;
+        }
+
+        public ListExcessiveDeviceRegistrationApplicationsResponseBodyApplications setFullDepartment(java.util.List<String> fullDepartment) {
+            this.fullDepartment = fullDepartment;
+            return this;
+        }
+        public java.util.List<String> getFullDepartment() {
+            return this.fullDepartment;
         }
 
         public ListExcessiveDeviceRegistrationApplicationsResponseBodyApplications setHostname(String hostname) {

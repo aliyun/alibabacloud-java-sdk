@@ -105,6 +105,15 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @NameInMap("CPU")
         public String CPU;
 
+        @NameInMap("City")
+        public String city;
+
+        @NameInMap("Continent")
+        public String continent;
+
+        @NameInMap("Country")
+        public String country;
+
         /**
          * <strong>example:</strong>
          * <p>2023-07-17 18:46:55</p>
@@ -174,6 +183,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @NameInMap("EdrStatus")
         public String edrStatus;
 
+        @NameInMap("FullDepartment")
+        public java.util.List<String> fullDepartment;
+
         /**
          * <strong>example:</strong>
          * <p>win10-64bit</p>
@@ -194,6 +206,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
          */
         @NameInMap("InnerIP")
         public String innerIP;
+
+        @NameInMap("JoinAdDomain")
+        public Boolean joinAdDomain;
 
         /**
          * <strong>example:</strong>
@@ -228,6 +243,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
          */
         @NameInMap("PaStatus")
         public String paStatus;
+
+        @NameInMap("Province")
+        public String province;
 
         /**
          * <strong>example:</strong>
@@ -313,6 +331,30 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
         public String getCPU() {
             return this.CPU;
+        }
+
+        public ListUserDevicesResponseBodyDevices setCity(String city) {
+            this.city = city;
+            return this;
+        }
+        public String getCity() {
+            return this.city;
+        }
+
+        public ListUserDevicesResponseBodyDevices setContinent(String continent) {
+            this.continent = continent;
+            return this;
+        }
+        public String getContinent() {
+            return this.continent;
+        }
+
+        public ListUserDevicesResponseBodyDevices setCountry(String country) {
+            this.country = country;
+            return this;
+        }
+        public String getCountry() {
+            return this.country;
         }
 
         public ListUserDevicesResponseBodyDevices setCreateTime(String createTime) {
@@ -403,6 +445,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
             return this.edrStatus;
         }
 
+        public ListUserDevicesResponseBodyDevices setFullDepartment(java.util.List<String> fullDepartment) {
+            this.fullDepartment = fullDepartment;
+            return this;
+        }
+        public java.util.List<String> getFullDepartment() {
+            return this.fullDepartment;
+        }
+
         public ListUserDevicesResponseBodyDevices setHostname(String hostname) {
             this.hostname = hostname;
             return this;
@@ -425,6 +475,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
         public String getInnerIP() {
             return this.innerIP;
+        }
+
+        public ListUserDevicesResponseBodyDevices setJoinAdDomain(Boolean joinAdDomain) {
+            this.joinAdDomain = joinAdDomain;
+            return this;
+        }
+        public Boolean getJoinAdDomain() {
+            return this.joinAdDomain;
         }
 
         public ListUserDevicesResponseBodyDevices setMac(String mac) {
@@ -473,6 +531,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
         public String getPaStatus() {
             return this.paStatus;
+        }
+
+        public ListUserDevicesResponseBodyDevices setProvince(String province) {
+            this.province = province;
+            return this;
+        }
+        public String getProvince() {
+            return this.province;
         }
 
         public ListUserDevicesResponseBodyDevices setSaseUserId(String saseUserId) {

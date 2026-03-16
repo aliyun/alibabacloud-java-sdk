@@ -82,6 +82,9 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         @NameInMap("DevType")
         public String devType;
 
+        @NameInMap("FullDepartment")
+        public java.util.List<String> fullDepartment;
+
         /**
          * <strong>example:</strong>
          * <p>win10-64bit</p>
@@ -169,6 +172,14 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         }
         public String getDevType() {
             return this.devType;
+        }
+
+        public ListUninstallApplicationsResponseBodyApplications setFullDepartment(java.util.List<String> fullDepartment) {
+            this.fullDepartment = fullDepartment;
+            return this;
+        }
+        public java.util.List<String> getFullDepartment() {
+            return this.fullDepartment;
         }
 
         public ListUninstallApplicationsResponseBodyApplications setHostname(String hostname) {

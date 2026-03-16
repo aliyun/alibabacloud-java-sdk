@@ -99,6 +99,58 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
     }
 
+    public static class GetUserDeviceResponseBodyDeviceProcesses extends TeaModel {
+        @NameInMap("Cpu")
+        public Double cpu;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Memory")
+        public Integer memory;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static GetUserDeviceResponseBodyDeviceProcesses build(java.util.Map<String, ?> map) throws Exception {
+            GetUserDeviceResponseBodyDeviceProcesses self = new GetUserDeviceResponseBodyDeviceProcesses();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserDeviceResponseBodyDeviceProcesses setCpu(Double cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Double getCpu() {
+            return this.cpu;
+        }
+
+        public GetUserDeviceResponseBodyDeviceProcesses setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetUserDeviceResponseBodyDeviceProcesses setMemory(Integer memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Integer getMemory() {
+            return this.memory;
+        }
+
+        public GetUserDeviceResponseBodyDeviceProcesses setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetUserDeviceResponseBodyDevice extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -117,12 +169,27 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @NameInMap("AutoLoginStatus")
         public String autoLoginStatus;
 
+        @NameInMap("BatteryHealthPercentage")
+        public Integer batteryHealthPercentage;
+
+        @NameInMap("BatteryRemainingPercentage")
+        public Integer batteryRemainingPercentage;
+
         /**
          * <strong>example:</strong>
          * <p>Apple M1</p>
          */
         @NameInMap("CPU")
         public String CPU;
+
+        @NameInMap("City")
+        public String city;
+
+        @NameInMap("Continent")
+        public String continent;
+
+        @NameInMap("Country")
+        public String country;
 
         /**
          * <strong>example:</strong>
@@ -183,6 +250,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @NameInMap("Disk")
         public String disk;
 
+        @NameInMap("DiskAvailable")
+        public Integer diskAvailable;
+
+        @NameInMap("DiskUsed")
+        public Integer diskUsed;
+
         /**
          * <strong>example:</strong>
          * <p>Unauthorized</p>
@@ -217,6 +290,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @NameInMap("InnerIP")
         public String innerIP;
 
+        @NameInMap("JoinAdDomain")
+        public Boolean joinAdDomain;
+
         /**
          * <strong>example:</strong>
          * <p>48:9e:XX:XX:02:80</p>
@@ -250,6 +326,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
          */
         @NameInMap("PaStatus")
         public String paStatus;
+
+        @NameInMap("Processes")
+        public java.util.List<GetUserDeviceResponseBodyDeviceProcesses> processes;
+
+        @NameInMap("Province")
+        public String province;
 
         /**
          * <strong>example:</strong>
@@ -286,6 +368,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
          */
         @NameInMap("SrcIP")
         public String srcIP;
+
+        @NameInMap("TerminalInfoCollectTime")
+        public Long terminalInfoCollectTime;
 
         /**
          * <strong>example:</strong>
@@ -329,12 +414,52 @@ public class GetUserDeviceResponseBody extends TeaModel {
             return this.autoLoginStatus;
         }
 
+        public GetUserDeviceResponseBodyDevice setBatteryHealthPercentage(Integer batteryHealthPercentage) {
+            this.batteryHealthPercentage = batteryHealthPercentage;
+            return this;
+        }
+        public Integer getBatteryHealthPercentage() {
+            return this.batteryHealthPercentage;
+        }
+
+        public GetUserDeviceResponseBodyDevice setBatteryRemainingPercentage(Integer batteryRemainingPercentage) {
+            this.batteryRemainingPercentage = batteryRemainingPercentage;
+            return this;
+        }
+        public Integer getBatteryRemainingPercentage() {
+            return this.batteryRemainingPercentage;
+        }
+
         public GetUserDeviceResponseBodyDevice setCPU(String CPU) {
             this.CPU = CPU;
             return this;
         }
         public String getCPU() {
             return this.CPU;
+        }
+
+        public GetUserDeviceResponseBodyDevice setCity(String city) {
+            this.city = city;
+            return this;
+        }
+        public String getCity() {
+            return this.city;
+        }
+
+        public GetUserDeviceResponseBodyDevice setContinent(String continent) {
+            this.continent = continent;
+            return this;
+        }
+        public String getContinent() {
+            return this.continent;
+        }
+
+        public GetUserDeviceResponseBodyDevice setCountry(String country) {
+            this.country = country;
+            return this;
+        }
+        public String getCountry() {
+            return this.country;
         }
 
         public GetUserDeviceResponseBodyDevice setCreateTime(String createTime) {
@@ -409,6 +534,22 @@ public class GetUserDeviceResponseBody extends TeaModel {
             return this.disk;
         }
 
+        public GetUserDeviceResponseBodyDevice setDiskAvailable(Integer diskAvailable) {
+            this.diskAvailable = diskAvailable;
+            return this;
+        }
+        public Integer getDiskAvailable() {
+            return this.diskAvailable;
+        }
+
+        public GetUserDeviceResponseBodyDevice setDiskUsed(Integer diskUsed) {
+            this.diskUsed = diskUsed;
+            return this;
+        }
+        public Integer getDiskUsed() {
+            return this.diskUsed;
+        }
+
         public GetUserDeviceResponseBodyDevice setDlpStatus(String dlpStatus) {
             this.dlpStatus = dlpStatus;
             return this;
@@ -457,6 +598,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
             return this.innerIP;
         }
 
+        public GetUserDeviceResponseBodyDevice setJoinAdDomain(Boolean joinAdDomain) {
+            this.joinAdDomain = joinAdDomain;
+            return this;
+        }
+        public Boolean getJoinAdDomain() {
+            return this.joinAdDomain;
+        }
+
         public GetUserDeviceResponseBodyDevice setMac(String mac) {
             this.mac = mac;
             return this;
@@ -503,6 +652,22 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
         public String getPaStatus() {
             return this.paStatus;
+        }
+
+        public GetUserDeviceResponseBodyDevice setProcesses(java.util.List<GetUserDeviceResponseBodyDeviceProcesses> processes) {
+            this.processes = processes;
+            return this;
+        }
+        public java.util.List<GetUserDeviceResponseBodyDeviceProcesses> getProcesses() {
+            return this.processes;
+        }
+
+        public GetUserDeviceResponseBodyDevice setProvince(String province) {
+            this.province = province;
+            return this;
+        }
+        public String getProvince() {
+            return this.province;
         }
 
         public GetUserDeviceResponseBodyDevice setSaseUserId(String saseUserId) {
@@ -567,6 +732,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
         public String getSrcIP() {
             return this.srcIP;
+        }
+
+        public GetUserDeviceResponseBodyDevice setTerminalInfoCollectTime(Long terminalInfoCollectTime) {
+            this.terminalInfoCollectTime = terminalInfoCollectTime;
+            return this;
+        }
+        public Long getTerminalInfoCollectTime() {
+            return this.terminalInfoCollectTime;
         }
 
         public GetUserDeviceResponseBodyDevice setUpdateTime(String updateTime) {

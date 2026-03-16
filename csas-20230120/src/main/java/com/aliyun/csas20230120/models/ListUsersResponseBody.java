@@ -61,6 +61,9 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        @NameInMap("FullDepartment")
+        public java.util.List<String> fullDepartment;
+
         @NameInMap("IdpName")
         public String idpName;
 
@@ -107,6 +110,14 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public ListUsersResponseBodyUsers setFullDepartment(java.util.List<String> fullDepartment) {
+            this.fullDepartment = fullDepartment;
+            return this;
+        }
+        public java.util.List<String> getFullDepartment() {
+            return this.fullDepartment;
         }
 
         public ListUsersResponseBodyUsers setIdpName(String idpName) {
