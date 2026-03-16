@@ -13,6 +13,9 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("DBSecurityIpList")
+    public String DBSecurityIpList;
+
     /**
      * <p>The Supabase Dashboard password (Not Used)</p>
      * 
@@ -216,6 +219,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public GetSupabaseProjectResponseBody setDBSecurityIpList(String DBSecurityIpList) {
+        this.DBSecurityIpList = DBSecurityIpList;
+        return this;
+    }
+    public String getDBSecurityIpList() {
+        return this.DBSecurityIpList;
     }
 
     public GetSupabaseProjectResponseBody setDashboardPassword(String dashboardPassword) {

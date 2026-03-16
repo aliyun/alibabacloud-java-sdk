@@ -13939,6 +13939,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityIPList", request.securityIPList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.updateDb)) {
+            query.put("UpdateDb", request.updateDb);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateWeb)) {
+            query.put("UpdateWeb", request.updateWeb);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));

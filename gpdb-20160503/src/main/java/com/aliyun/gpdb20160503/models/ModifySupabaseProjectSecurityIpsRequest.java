@@ -40,6 +40,12 @@ public class ModifySupabaseProjectSecurityIpsRequest extends TeaModel {
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
+    @NameInMap("UpdateDb")
+    public Boolean updateDb;
+
+    @NameInMap("UpdateWeb")
+    public Boolean updateWeb;
+
     public static ModifySupabaseProjectSecurityIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySupabaseProjectSecurityIpsRequest self = new ModifySupabaseProjectSecurityIpsRequest();
         return TeaModel.build(map, self);
@@ -67,6 +73,22 @@ public class ModifySupabaseProjectSecurityIpsRequest extends TeaModel {
     }
     public String getSecurityIPList() {
         return this.securityIPList;
+    }
+
+    public ModifySupabaseProjectSecurityIpsRequest setUpdateDb(Boolean updateDb) {
+        this.updateDb = updateDb;
+        return this;
+    }
+    public Boolean getUpdateDb() {
+        return this.updateDb;
+    }
+
+    public ModifySupabaseProjectSecurityIpsRequest setUpdateWeb(Boolean updateWeb) {
+        this.updateWeb = updateWeb;
+        return this;
+    }
+    public Boolean getUpdateWeb() {
+        return this.updateWeb;
     }
 
 }
