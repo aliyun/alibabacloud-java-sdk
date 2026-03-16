@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeOrgByLayerRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The name of the organization.</p>
      */
     @NameInMap("OrgName")
@@ -22,6 +29,14 @@ public class DescribeOrgByLayerRequest extends TeaModel {
     public static DescribeOrgByLayerRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOrgByLayerRequest self = new DescribeOrgByLayerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeOrgByLayerRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribeOrgByLayerRequest setOrgName(String orgName) {

@@ -13,6 +13,13 @@ public class CreateUsersRequest extends TeaModel {
     @NameInMap("AutoLockTime")
     public String autoLockTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
     @NameInMap("IsLocalAdmin")
     public Boolean isLocalAdmin;
 
@@ -49,6 +56,14 @@ public class CreateUsersRequest extends TeaModel {
     }
     public String getAutoLockTime() {
         return this.autoLockTime;
+    }
+
+    public CreateUsersRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public CreateUsersRequest setIsLocalAdmin(Boolean isLocalAdmin) {

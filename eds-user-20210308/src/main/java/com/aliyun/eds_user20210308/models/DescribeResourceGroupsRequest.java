@@ -4,6 +4,16 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceGroupsRequest extends TeaModel {
+    @NameInMap("AliyunResourceGroupIds")
+    public java.util.List<String> aliyunResourceGroupIds;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
     /**
      * <blockquote>
      * <p> This parameter is not publicly available.</p>
@@ -62,6 +72,22 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public static DescribeResourceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceGroupsRequest self = new DescribeResourceGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeResourceGroupsRequest setAliyunResourceGroupIds(java.util.List<String> aliyunResourceGroupIds) {
+        this.aliyunResourceGroupIds = aliyunResourceGroupIds;
+        return this;
+    }
+    public java.util.List<String> getAliyunResourceGroupIds() {
+        return this.aliyunResourceGroupIds;
+    }
+
+    public DescribeResourceGroupsRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribeResourceGroupsRequest setNeedContainResourceGroupWithOfficeSite(Long needContainResourceGroupWithOfficeSite) {

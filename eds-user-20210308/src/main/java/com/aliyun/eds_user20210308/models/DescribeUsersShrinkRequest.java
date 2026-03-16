@@ -12,6 +12,13 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The usernames that must be exactly matched.</p>
      */
     @NameInMap("EndUserIds")
@@ -34,6 +41,9 @@ public class DescribeUsersShrinkRequest extends TeaModel {
      */
     @NameInMap("Filter")
     public String filter;
+
+    @NameInMap("FilterMap")
+    public String filterMapShrink;
 
     @NameInMap("FilterWithAssignedResource")
     public String filterWithAssignedResourceShrink;
@@ -118,6 +128,14 @@ public class DescribeUsersShrinkRequest extends TeaModel {
         return this.bizType;
     }
 
+    public DescribeUsersShrinkRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
     public DescribeUsersShrinkRequest setEndUserIds(java.util.List<String> endUserIds) {
         this.endUserIds = endUserIds;
         return this;
@@ -148,6 +166,14 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public DescribeUsersShrinkRequest setFilterMapShrink(String filterMapShrink) {
+        this.filterMapShrink = filterMapShrink;
+        return this;
+    }
+    public String getFilterMapShrink() {
+        return this.filterMapShrink;
     }
 
     public DescribeUsersShrinkRequest setFilterWithAssignedResourceShrink(String filterWithAssignedResourceShrink) {

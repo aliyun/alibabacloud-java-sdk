@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOrgRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The name of the organization.</p>
      * <p>This parameter is required.</p>
      */
@@ -24,6 +31,14 @@ public class CreateOrgRequest extends TeaModel {
     public static CreateOrgRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrgRequest self = new CreateOrgRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateOrgRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public CreateOrgRequest setOrgName(String orgName) {

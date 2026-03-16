@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchSetDesktopManagerRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>Whether the convenience account has the local administrator permissions on cloud computers.</p>
      * <p>Valid values:</p>
      * <ul>
@@ -28,6 +35,14 @@ public class BatchSetDesktopManagerRequest extends TeaModel {
     public static BatchSetDesktopManagerRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchSetDesktopManagerRequest self = new BatchSetDesktopManagerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchSetDesktopManagerRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public BatchSetDesktopManagerRequest setIsDesktopManager(String isDesktopManager) {

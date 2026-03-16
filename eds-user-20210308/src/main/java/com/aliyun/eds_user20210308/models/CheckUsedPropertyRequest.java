@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CheckUsedPropertyRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The ID of the property. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -17,6 +24,14 @@ public class CheckUsedPropertyRequest extends TeaModel {
     public static CheckUsedPropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckUsedPropertyRequest self = new CheckUsedPropertyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CheckUsedPropertyRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public CheckUsedPropertyRequest setPropertyId(Long propertyId) {

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class FilterUsersRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The list of usernames to be precisely excluded.</p>
      */
     @NameInMap("ExcludeEndUserIds")
@@ -18,6 +25,9 @@ public class FilterUsersRequest extends TeaModel {
      */
     @NameInMap("Filter")
     public String filter;
+
+    @NameInMap("FilterMap")
+    public java.util.Map<String, String> filterMap;
 
     /**
      * <p>Specifies whether to return the number of cloud desktops that are assigned to the convenience user.</p>
@@ -68,6 +78,9 @@ public class FilterUsersRequest extends TeaModel {
      */
     @NameInMap("IncludeDesktopGroupCount")
     public Boolean includeDesktopGroupCount;
+
+    @NameInMap("IncludeEndUserIds")
+    public java.util.List<String> includeEndUserIds;
 
     /**
      * <p>Specifies whether to return the organization information.</p>
@@ -160,6 +173,14 @@ public class FilterUsersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public FilterUsersRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
     public FilterUsersRequest setExcludeEndUserIds(java.util.List<String> excludeEndUserIds) {
         this.excludeEndUserIds = excludeEndUserIds;
         return this;
@@ -176,6 +197,14 @@ public class FilterUsersRequest extends TeaModel {
         return this.filter;
     }
 
+    public FilterUsersRequest setFilterMap(java.util.Map<String, String> filterMap) {
+        this.filterMap = filterMap;
+        return this;
+    }
+    public java.util.Map<String, String> getFilterMap() {
+        return this.filterMap;
+    }
+
     public FilterUsersRequest setIncludeDesktopCount(Boolean includeDesktopCount) {
         this.includeDesktopCount = includeDesktopCount;
         return this;
@@ -190,6 +219,14 @@ public class FilterUsersRequest extends TeaModel {
     }
     public Boolean getIncludeDesktopGroupCount() {
         return this.includeDesktopGroupCount;
+    }
+
+    public FilterUsersRequest setIncludeEndUserIds(java.util.List<String> includeEndUserIds) {
+        this.includeEndUserIds = includeEndUserIds;
+        return this;
+    }
+    public java.util.List<String> getIncludeEndUserIds() {
+        return this.includeEndUserIds;
     }
 
     public FilterUsersRequest setIncludeOrgInfo(Boolean includeOrgInfo) {

@@ -14,6 +14,13 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public String adDomain;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The usernames of the convenience accounts.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +71,14 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     }
     public String getAdDomain() {
         return this.adDomain;
+    }
+
+    public DescribeMfaDevicesRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribeMfaDevicesRequest setEndUserIds(java.util.List<String> endUserIds) {

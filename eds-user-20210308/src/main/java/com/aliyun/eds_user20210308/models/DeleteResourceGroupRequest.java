@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceGroupRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <blockquote>
      * <p> The ID of the resource group that you want to delete.</p>
      * </blockquote>
@@ -32,6 +39,14 @@ public class DeleteResourceGroupRequest extends TeaModel {
     public static DeleteResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteResourceGroupRequest self = new DeleteResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteResourceGroupRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DeleteResourceGroupRequest setResourceGroupId(String resourceGroupId) {

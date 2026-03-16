@@ -16,6 +16,13 @@ public class DescribeGroupUserRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The fuzzy search string that matches the username (EndUserId) and email address (Email) of the regular user.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +80,14 @@ public class DescribeGroupUserRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public DescribeGroupUserRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribeGroupUserRequest setFilter(String filter) {

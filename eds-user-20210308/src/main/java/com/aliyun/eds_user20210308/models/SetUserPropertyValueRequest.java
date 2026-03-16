@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetUserPropertyValueRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the property ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -47,6 +54,14 @@ public class SetUserPropertyValueRequest extends TeaModel {
     public static SetUserPropertyValueRequest build(java.util.Map<String, ?> map) throws Exception {
         SetUserPropertyValueRequest self = new SetUserPropertyValueRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetUserPropertyValueRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public SetUserPropertyValueRequest setPropertyId(Long propertyId) {

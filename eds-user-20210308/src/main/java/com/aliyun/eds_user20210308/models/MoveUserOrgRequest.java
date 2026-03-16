@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class MoveUserOrgRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The user IDs.</p>
      * <p>This parameter is required.</p>
      */
@@ -24,6 +31,14 @@ public class MoveUserOrgRequest extends TeaModel {
     public static MoveUserOrgRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveUserOrgRequest self = new MoveUserOrgRequest();
         return TeaModel.build(map, self);
+    }
+
+    public MoveUserOrgRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public MoveUserOrgRequest setEndUserIds(java.util.List<String> endUserIds) {

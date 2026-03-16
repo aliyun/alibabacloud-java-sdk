@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class UserBatchQuitGroupRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The user IDs.</p>
      */
     @NameInMap("EndUserIds")
@@ -22,6 +29,14 @@ public class UserBatchQuitGroupRequest extends TeaModel {
     public static UserBatchQuitGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UserBatchQuitGroupRequest self = new UserBatchQuitGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UserBatchQuitGroupRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public UserBatchQuitGroupRequest setEndUserIds(java.util.List<String> endUserIds) {

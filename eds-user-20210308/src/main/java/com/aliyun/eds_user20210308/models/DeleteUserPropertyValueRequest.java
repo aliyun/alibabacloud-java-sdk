@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteUserPropertyValueRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the property ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -37,6 +44,14 @@ public class DeleteUserPropertyValueRequest extends TeaModel {
     public static DeleteUserPropertyValueRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteUserPropertyValueRequest self = new DeleteUserPropertyValueRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteUserPropertyValueRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DeleteUserPropertyValueRequest setPropertyId(Long propertyId) {

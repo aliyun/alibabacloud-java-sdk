@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ResetUserPasswordRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The method to notify the user after the password is reset.</p>
      * <blockquote>
      * <p>Alibaba Cloud accounts of the international site do not support sending notification through text messages.</p>
@@ -29,6 +36,14 @@ public class ResetUserPasswordRequest extends TeaModel {
     public static ResetUserPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetUserPasswordRequest self = new ResetUserPasswordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ResetUserPasswordRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public ResetUserPasswordRequest setNotifyType(Integer notifyType) {

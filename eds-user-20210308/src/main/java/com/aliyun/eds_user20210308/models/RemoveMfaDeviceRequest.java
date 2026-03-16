@@ -14,6 +14,13 @@ public class RemoveMfaDeviceRequest extends TeaModel {
     public String adDomain;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The serial number of the virtual MFA device. You can call the <a href="~~DescribeMfaDevices~~">DescribeMfaDevices</a> operation to get this information.</p>
      * <p>This parameter is required.</p>
      * 
@@ -34,6 +41,14 @@ public class RemoveMfaDeviceRequest extends TeaModel {
     }
     public String getAdDomain() {
         return this.adDomain;
+    }
+
+    public RemoveMfaDeviceRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public RemoveMfaDeviceRequest setSerialNumber(String serialNumber) {

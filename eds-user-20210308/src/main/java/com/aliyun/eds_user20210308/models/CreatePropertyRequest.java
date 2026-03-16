@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreatePropertyRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The property name.</p>
      * <p>This parameter is required.</p>
      * 
@@ -23,6 +30,14 @@ public class CreatePropertyRequest extends TeaModel {
     public static CreatePropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePropertyRequest self = new CreatePropertyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePropertyRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public CreatePropertyRequest setPropertyKey(String propertyKey) {

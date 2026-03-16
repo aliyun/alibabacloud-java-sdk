@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeOrgsShrinkRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The maximum number of entries to return. Valid values: 1 to 100.\
      * Default value: 100.</p>
      * 
@@ -47,6 +54,14 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     public static DescribeOrgsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOrgsShrinkRequest self = new DescribeOrgsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeOrgsShrinkRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribeOrgsShrinkRequest setMaxResults(Long maxResults) {

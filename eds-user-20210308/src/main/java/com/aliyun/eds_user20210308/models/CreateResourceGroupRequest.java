@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <blockquote>
      * <p> This parameter is not publicly available.</p>
      * </blockquote>
@@ -38,6 +45,14 @@ public class CreateResourceGroupRequest extends TeaModel {
     public static CreateResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResourceGroupRequest self = new CreateResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateResourceGroupRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public CreateResourceGroupRequest setIsResourceGroupWithOfficeSite(Long isResourceGroupWithOfficeSite) {

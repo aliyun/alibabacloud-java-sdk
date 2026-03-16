@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdatePropertyRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The ID of the property that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +40,14 @@ public class UpdatePropertyRequest extends TeaModel {
     public static UpdatePropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePropertyRequest self = new UpdatePropertyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdatePropertyRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public UpdatePropertyRequest setPropertyId(Long propertyId) {

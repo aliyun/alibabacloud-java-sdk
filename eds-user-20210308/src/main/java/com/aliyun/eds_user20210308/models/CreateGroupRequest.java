@@ -12,6 +12,13 @@ public class CreateGroupRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The description of the user group.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +63,14 @@ public class CreateGroupRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public CreateGroupRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public CreateGroupRequest setDescription(String description) {

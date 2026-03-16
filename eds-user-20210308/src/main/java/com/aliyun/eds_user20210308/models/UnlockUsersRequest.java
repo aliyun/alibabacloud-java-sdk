@@ -14,6 +14,13 @@ public class UnlockUsersRequest extends TeaModel {
     public String autoLockTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The usernames of the convenience users that you want to unlock.</p>
      * <p>This parameter is required.</p>
      * 
@@ -34,6 +41,14 @@ public class UnlockUsersRequest extends TeaModel {
     }
     public String getAutoLockTime() {
         return this.autoLockTime;
+    }
+
+    public UnlockUsersRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public UnlockUsersRequest setUsers(java.util.List<String> users) {

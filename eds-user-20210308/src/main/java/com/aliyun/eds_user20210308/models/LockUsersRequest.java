@@ -4,6 +4,13 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class LockUsersRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
     @NameInMap("LogoutSession")
     public Boolean logoutSession;
 
@@ -20,6 +27,14 @@ public class LockUsersRequest extends TeaModel {
     public static LockUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         LockUsersRequest self = new LockUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public LockUsersRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public LockUsersRequest setLogoutSession(Boolean logoutSession) {

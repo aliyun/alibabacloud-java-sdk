@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class FilterUsersShrinkRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The list of usernames to be precisely excluded.</p>
      */
     @NameInMap("ExcludeEndUserIds")
@@ -18,6 +25,9 @@ public class FilterUsersShrinkRequest extends TeaModel {
      */
     @NameInMap("Filter")
     public String filter;
+
+    @NameInMap("FilterMap")
+    public String filterMapShrink;
 
     /**
      * <p>Specifies whether to return the number of cloud desktops that are assigned to the convenience user.</p>
@@ -68,6 +78,9 @@ public class FilterUsersShrinkRequest extends TeaModel {
      */
     @NameInMap("IncludeDesktopGroupCount")
     public Boolean includeDesktopGroupCount;
+
+    @NameInMap("IncludeEndUserIds")
+    public java.util.List<String> includeEndUserIds;
 
     /**
      * <p>Specifies whether to return the organization information.</p>
@@ -160,6 +173,14 @@ public class FilterUsersShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public FilterUsersShrinkRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
     public FilterUsersShrinkRequest setExcludeEndUserIds(java.util.List<String> excludeEndUserIds) {
         this.excludeEndUserIds = excludeEndUserIds;
         return this;
@@ -176,6 +197,14 @@ public class FilterUsersShrinkRequest extends TeaModel {
         return this.filter;
     }
 
+    public FilterUsersShrinkRequest setFilterMapShrink(String filterMapShrink) {
+        this.filterMapShrink = filterMapShrink;
+        return this;
+    }
+    public String getFilterMapShrink() {
+        return this.filterMapShrink;
+    }
+
     public FilterUsersShrinkRequest setIncludeDesktopCount(Boolean includeDesktopCount) {
         this.includeDesktopCount = includeDesktopCount;
         return this;
@@ -190,6 +219,14 @@ public class FilterUsersShrinkRequest extends TeaModel {
     }
     public Boolean getIncludeDesktopGroupCount() {
         return this.includeDesktopGroupCount;
+    }
+
+    public FilterUsersShrinkRequest setIncludeEndUserIds(java.util.List<String> includeEndUserIds) {
+        this.includeEndUserIds = includeEndUserIds;
+        return this;
+    }
+    public java.util.List<String> getIncludeEndUserIds() {
+        return this.includeEndUserIds;
     }
 
     public FilterUsersShrinkRequest setIncludeOrgInfo(Boolean includeOrgInfo) {

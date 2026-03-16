@@ -12,6 +12,13 @@ public class DescribeUsersRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The usernames that must be exactly matched.</p>
      */
     @NameInMap("EndUserIds")
@@ -34,6 +41,9 @@ public class DescribeUsersRequest extends TeaModel {
      */
     @NameInMap("Filter")
     public String filter;
+
+    @NameInMap("FilterMap")
+    public java.util.Map<String, String> filterMap;
 
     @NameInMap("FilterWithAssignedResource")
     public java.util.Map<String, String> filterWithAssignedResource;
@@ -118,6 +128,14 @@ public class DescribeUsersRequest extends TeaModel {
         return this.bizType;
     }
 
+    public DescribeUsersRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
+    }
+
     public DescribeUsersRequest setEndUserIds(java.util.List<String> endUserIds) {
         this.endUserIds = endUserIds;
         return this;
@@ -148,6 +166,14 @@ public class DescribeUsersRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public DescribeUsersRequest setFilterMap(java.util.Map<String, String> filterMap) {
+        this.filterMap = filterMap;
+        return this;
+    }
+    public java.util.Map<String, String> getFilterMap() {
+        return this.filterMap;
     }
 
     public DescribeUsersRequest setFilterWithAssignedResource(java.util.Map<String, String> filterWithAssignedResource) {

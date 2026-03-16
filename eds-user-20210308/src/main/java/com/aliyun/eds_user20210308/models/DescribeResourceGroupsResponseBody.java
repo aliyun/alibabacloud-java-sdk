@@ -216,6 +216,13 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceGroupsResponseBodyResourceGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rg-123456</p>
+         */
+        @NameInMap("AliyunResourceGroupId")
+        public String aliyunResourceGroupId;
+
         @NameInMap("AppRules")
         public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupAppRules> appRules;
 
@@ -289,6 +296,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public static DescribeResourceGroupsResponseBodyResourceGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceGroupsResponseBodyResourceGroup self = new DescribeResourceGroupsResponseBodyResourceGroup();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourceGroupsResponseBodyResourceGroup setAliyunResourceGroupId(String aliyunResourceGroupId) {
+            this.aliyunResourceGroupId = aliyunResourceGroupId;
+            return this;
+        }
+        public String getAliyunResourceGroupId() {
+            return this.aliyunResourceGroupId;
         }
 
         public DescribeResourceGroupsResponseBodyResourceGroup setAppRules(java.util.List<DescribeResourceGroupsResponseBodyResourceGroupAppRules> appRules) {

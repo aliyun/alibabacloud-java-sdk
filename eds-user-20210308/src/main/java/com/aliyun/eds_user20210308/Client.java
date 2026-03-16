@@ -40,6 +40,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchSetDesktopManagerResponse batchSetDesktopManagerWithOptions(BatchSetDesktopManagerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isDesktopManager)) {
             body.put("IsDesktopManager", request.isDesktopManager);
         }
@@ -82,7 +86,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>管理员修改用户密码</p>
+     * <p>If the user is in administrator-activated mode, you can change the user logon password through this operation.</p>
      * 
      * @param request ChangeUserPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -91,6 +95,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChangeUserPasswordResponse changeUserPasswordWithOptions(ChangeUserPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
             body.put("EndUserId", request.endUserId);
         }
@@ -118,7 +126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>管理员修改用户密码</p>
+     * <p>If the user is in administrator-activated mode, you can change the user logon password through this operation.</p>
      * 
      * @param request ChangeUserPasswordRequest
      * @return ChangeUserPasswordResponse
@@ -139,6 +147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckUsedPropertyResponse checkUsedPropertyWithOptions(CheckUsedPropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.propertyId)) {
             query.put("PropertyId", request.propertyId);
         }
@@ -186,6 +198,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckUsedPropertyValueResponse checkUsedPropertyValueWithOptions(CheckUsedPropertyValueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.propertyId)) {
             query.put("PropertyId", request.propertyId);
         }
@@ -239,6 +255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
             query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -297,6 +317,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOrgResponse createOrgWithOptions(CreateOrgRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
             query.put("OrgName", request.orgName);
         }
@@ -345,6 +369,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatePropertyResponse createPropertyWithOptions(CreatePropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.propertyKey)) {
             body.put("PropertyKey", request.propertyKey);
         }
@@ -393,6 +421,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateResourceGroupResponse createResourceGroupWithOptions(CreateResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isResourceGroupWithOfficeSite)) {
             query.put("IsResourceGroupWithOfficeSite", request.isResourceGroupWithOfficeSite);
         }
@@ -450,6 +482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoLockTime)) {
             query.put("AutoLockTime", request.autoLockTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isLocalAdmin)) {
@@ -513,6 +549,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteResourceGroupResponse deleteResourceGroupWithOptions(DeleteResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -564,6 +604,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteUserPropertyValueResponse deleteUserPropertyValueWithOptions(DeleteUserPropertyValueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.propertyId)) {
             body.put("PropertyId", request.propertyId);
         }
@@ -621,6 +665,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
             query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
@@ -685,6 +733,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
             query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.excludeAttachedLoginPolicyGroups)) {
@@ -767,6 +819,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AdDomain", request.adDomain);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endUserIds)) {
             query.put("EndUserIds", request.endUserIds);
         }
@@ -827,6 +883,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeOrgByLayerResponse describeOrgByLayerWithOptions(DescribeOrgByLayerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
             body.put("OrgName", request.orgName);
         }
@@ -884,6 +944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -947,6 +1011,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeResourceGroupsResponse describeResourceGroupsWithOptions(DescribeResourceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunResourceGroupIds)) {
+            query.put("AliyunResourceGroupIds", request.aliyunResourceGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.needContainResourceGroupWithOfficeSite)) {
             query.put("NeedContainResourceGroupWithOfficeSite", request.needContainResourceGroupWithOfficeSite);
         }
@@ -1012,6 +1084,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DescribeUsersShrinkRequest request = new DescribeUsersShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterMap)) {
+            request.filterMapShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterMap, "FilterMap", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterWithAssignedResource)) {
             request.filterWithAssignedResourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterWithAssignedResource, "FilterWithAssignedResource", "json");
         }
@@ -1025,8 +1101,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterMapShrink)) {
+            query.put("FilterMap", request.filterMapShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -1128,11 +1212,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         FilterUsersShrinkRequest request = new FilterUsersShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterMap)) {
+            request.filterMapShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterMap, "FilterMap", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.orderParam)) {
             request.orderParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.orderParam, "OrderParam", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeEndUserIds)) {
             query.put("ExcludeEndUserIds", request.excludeEndUserIds);
         }
@@ -1141,12 +1233,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Filter", request.filter);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.filterMapShrink)) {
+            query.put("FilterMap", request.filterMapShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.includeDesktopCount)) {
             query.put("IncludeDesktopCount", request.includeDesktopCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeDesktopGroupCount)) {
             query.put("IncludeDesktopGroupCount", request.includeDesktopGroupCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeEndUserIds)) {
+            query.put("IncludeEndUserIds", request.includeEndUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeOrgInfo)) {
@@ -1274,8 +1374,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return InitTenantAliasResponse
      */
-    public InitTenantAliasResponse initTenantAliasWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public InitTenantAliasResponse initTenantAliasWithOptions(InitTenantAliasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "InitTenantAlias"),
             new TeaPair("version", "2021-03-08"),
@@ -1293,11 +1401,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Initializes an organization ID.</p>
+     * 
+     * @param request InitTenantAliasRequest
      * @return InitTenantAliasResponse
      */
-    public InitTenantAliasResponse initTenantAlias() throws Exception {
+    public InitTenantAliasResponse initTenantAlias(InitTenantAliasRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.initTenantAliasWithOptions(runtime);
+        return this.initTenantAliasWithOptions(request, runtime);
     }
 
     /**
@@ -1308,8 +1418,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPropertyResponse
      */
-    public ListPropertyResponse listPropertyWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public ListPropertyResponse listPropertyWithOptions(ListPropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListProperty"),
             new TeaPair("version", "2021-03-08"),
@@ -1327,11 +1445,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Queries all user properties within an Alibaba Cloud account.</p>
+     * 
+     * @param request ListPropertyRequest
      * @return ListPropertyResponse
      */
-    public ListPropertyResponse listProperty() throws Exception {
+    public ListPropertyResponse listProperty(ListPropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listPropertyWithOptions(runtime);
+        return this.listPropertyWithOptions(request, runtime);
     }
 
     /**
@@ -1345,6 +1465,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPropertyValueResponse listPropertyValueWithOptions(ListPropertyValueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.propertyId)) {
             query.put("PropertyId", request.propertyId);
         }
@@ -1396,6 +1520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AdDomain", request.adDomain);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serialNumber)) {
             query.put("SerialNumber", request.serialNumber);
         }
@@ -1443,6 +1571,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public LockUsersResponse lockUsersWithOptions(LockUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.logoutSession)) {
             query.put("LogoutSession", request.logoutSession);
         }
@@ -1493,6 +1625,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyGroupResponse modifyGroupWithOptions(ModifyGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -1545,6 +1681,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyOrgResponse modifyOrgWithOptions(ModifyOrgRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
             query.put("OrgId", request.orgId);
         }
@@ -1584,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies user information.</p>
+     * <p>Updates the contact information of a convenience account.</p>
      * 
      * @param request ModifyUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1593,6 +1733,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyUserResponse modifyUserWithOptions(ModifyUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.email)) {
             query.put("Email", request.email);
         }
@@ -1624,7 +1768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies user information.</p>
+     * <p>Updates the contact information of a convenience account.</p>
      * 
      * @param request ModifyUserRequest
      * @return ModifyUserResponse
@@ -1645,6 +1789,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MoveOrgResponse moveOrgWithOptions(MoveOrgRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.newParentOrgId)) {
             body.put("NewParentOrgId", request.newParentOrgId);
         }
@@ -1693,6 +1841,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MoveUserOrgResponse moveUserOrgWithOptions(MoveUserOrgRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endUserIds)) {
             body.put("EndUserIds", request.endUserIds);
         }
@@ -1732,14 +1884,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询edu同步信息</p>
+     * <p>Queries user synchronization status.</p>
      * 
      * @param request QuerySyncStatusByAliUidRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QuerySyncStatusByAliUidResponse
      */
-    public QuerySyncStatusByAliUidResponse querySyncStatusByAliUidWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public QuerySyncStatusByAliUidResponse querySyncStatusByAliUidWithOptions(QuerySyncStatusByAliUidRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QuerySyncStatusByAliUid"),
             new TeaPair("version", "2021-03-08"),
@@ -1756,12 +1916,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询edu同步信息</p>
+     * <p>Queries user synchronization status.</p>
+     * 
+     * @param request QuerySyncStatusByAliUidRequest
      * @return QuerySyncStatusByAliUidResponse
      */
-    public QuerySyncStatusByAliUidResponse querySyncStatusByAliUid() throws Exception {
+    public QuerySyncStatusByAliUidResponse querySyncStatusByAliUid(QuerySyncStatusByAliUidRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.querySyncStatusByAliUidWithOptions(runtime);
+        return this.querySyncStatusByAliUidWithOptions(request, runtime);
     }
 
     /**
@@ -1775,6 +1937,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveGroupResponse removeGroupWithOptions(RemoveGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
         }
@@ -1830,6 +1996,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AdDomain", request.adDomain);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serialNumber)) {
             query.put("SerialNumber", request.serialNumber);
         }
@@ -1877,6 +2047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveOrgResponse removeOrgWithOptions(RemoveOrgRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
             body.put("OrgId", request.orgId);
         }
@@ -1920,12 +2094,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public RemovePropertyResponse removePropertyWithOptions(RemovePropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.propertyId)) {
             body.put("PropertyId", request.propertyId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1965,6 +2145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveUsersResponse removeUsersWithOptions(RemoveUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.users)) {
             body.put("Users", request.users);
         }
@@ -2009,6 +2193,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResetUserPasswordResponse resetUserPasswordWithOptions(ResetUserPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.notifyType)) {
             body.put("NotifyType", request.notifyType);
         }
@@ -2057,6 +2245,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetUserPropertyValueResponse setUserPropertyValueWithOptions(SetUserPropertyValueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.propertyId)) {
             body.put("PropertyId", request.propertyId);
         }
@@ -2104,7 +2296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从钉钉手动同步老师学生信息</p>
+     * <p>Synchronizes all education information.</p>
      * 
      * @param request SyncAllEduInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2128,7 +2320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从钉钉手动同步老师学生信息</p>
+     * <p>Synchronizes all education information.</p>
      * @return SyncAllEduInfoResponse
      */
     public SyncAllEduInfoResponse syncAllEduInfo() throws Exception {
@@ -2149,6 +2341,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.adDomain)) {
             query.put("AdDomain", request.adDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serialNumber)) {
@@ -2199,6 +2395,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoLockTime", request.autoLockTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.users)) {
             body.put("Users", request.users);
@@ -2244,6 +2444,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdatePropertyResponse updatePropertyWithOptions(UpdatePropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.propertyId)) {
             body.put("PropertyId", request.propertyId);
@@ -2258,6 +2463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2297,6 +2503,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UserBatchJoinGroupResponse userBatchJoinGroupWithOptions(UserBatchJoinGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endUserIds)) {
             body.put("EndUserIds", request.endUserIds);
         }
@@ -2345,6 +2555,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UserBatchQuitGroupResponse userBatchQuitGroupWithOptions(UserBatchQuitGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            body.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endUserIds)) {
             body.put("EndUserIds", request.endUserIds);
         }

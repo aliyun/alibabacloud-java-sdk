@@ -14,6 +14,13 @@ public class LockMfaDeviceRequest extends TeaModel {
     public String adDomain;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The serial number of the virtual MFA device. The serial number is unique for each device.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +40,14 @@ public class LockMfaDeviceRequest extends TeaModel {
     }
     public String getAdDomain() {
         return this.adDomain;
+    }
+
+    public LockMfaDeviceRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public LockMfaDeviceRequest setSerialNumber(String serialNumber) {

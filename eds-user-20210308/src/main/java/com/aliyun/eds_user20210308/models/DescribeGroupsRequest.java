@@ -15,6 +15,9 @@ public class DescribeGroupsRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
     /**
      * <p>是否排除已关联登录策略的用户组。</p>
      */
@@ -97,6 +100,14 @@ public class DescribeGroupsRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public DescribeGroupsRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribeGroupsRequest setExcludeAttachedLoginPolicyGroups(Boolean excludeAttachedLoginPolicyGroups) {

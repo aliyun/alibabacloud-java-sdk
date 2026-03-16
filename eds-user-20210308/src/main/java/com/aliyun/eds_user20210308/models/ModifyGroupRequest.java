@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyGroupRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The new description of the user group.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +40,14 @@ public class ModifyGroupRequest extends TeaModel {
     public static ModifyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyGroupRequest self = new ModifyGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyGroupRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public ModifyGroupRequest setDescription(String description) {

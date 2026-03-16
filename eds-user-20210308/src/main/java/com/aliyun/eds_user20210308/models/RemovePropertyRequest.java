@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class RemovePropertyRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The ID of the property. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -17,6 +24,14 @@ public class RemovePropertyRequest extends TeaModel {
     public static RemovePropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         RemovePropertyRequest self = new RemovePropertyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RemovePropertyRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public RemovePropertyRequest setPropertyId(Long propertyId) {

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class UserBatchJoinGroupRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
+    /**
      * <p>The list of user IDs.</p>
      */
     @NameInMap("EndUserIds")
@@ -23,6 +30,14 @@ public class UserBatchJoinGroupRequest extends TeaModel {
     public static UserBatchJoinGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UserBatchJoinGroupRequest self = new UserBatchJoinGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UserBatchJoinGroupRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public UserBatchJoinGroupRequest setEndUserIds(java.util.List<String> endUserIds) {
