@@ -20,6 +20,15 @@ public class QuickAddTaskRequest extends TeaModel {
     public java.util.List<QuickAddTaskRequestCallTimeList> callTimeList;
 
     /**
+     * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+     */
+    @NameInMap("CallTimeStrList")
+    public java.util.List<QuickAddTaskRequestCallTimeStrList> callTimeStrList;
+
+    /**
      * <p>任务名称</p>
      * <p>This parameter is required.</p>
      * 
@@ -29,6 +38,10 @@ public class QuickAddTaskRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>555555555555</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -42,9 +55,17 @@ public class QuickAddTaskRequest extends TeaModel {
     @NameInMap("ReferenceTaskId")
     public Long referenceTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>curl 2W7xHcIl.popscan.xaliyun.com</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1708643153842856</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -103,6 +124,14 @@ public class QuickAddTaskRequest extends TeaModel {
     }
     public java.util.List<QuickAddTaskRequestCallTimeList> getCallTimeList() {
         return this.callTimeList;
+    }
+
+    public QuickAddTaskRequest setCallTimeStrList(java.util.List<QuickAddTaskRequestCallTimeStrList> callTimeStrList) {
+        this.callTimeStrList = callTimeStrList;
+        return this;
+    }
+    public java.util.List<QuickAddTaskRequestCallTimeStrList> getCallTimeStrList() {
+        return this.callTimeStrList;
     }
 
     public QuickAddTaskRequest setName(String name) {
@@ -190,6 +219,29 @@ public class QuickAddTaskRequest extends TeaModel {
         }
 
         public QuickAddTaskRequestCallTimeList setCallTime(java.util.List<String> callTime) {
+            this.callTime = callTime;
+            return this;
+        }
+        public java.util.List<String> getCallTime() {
+            return this.callTime;
+        }
+
+    }
+
+    public static class QuickAddTaskRequestCallTimeStrList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;08:00&quot;,&quot;20:00&quot;]</p>
+         */
+        @NameInMap("CallTime")
+        public java.util.List<String> callTime;
+
+        public static QuickAddTaskRequestCallTimeStrList build(java.util.Map<String, ?> map) throws Exception {
+            QuickAddTaskRequestCallTimeStrList self = new QuickAddTaskRequestCallTimeStrList();
+            return TeaModel.build(map, self);
+        }
+
+        public QuickAddTaskRequestCallTimeStrList setCallTime(java.util.List<String> callTime) {
             this.callTime = callTime;
             return this;
         }

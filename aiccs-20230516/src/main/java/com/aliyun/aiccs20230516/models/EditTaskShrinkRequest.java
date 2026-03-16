@@ -6,9 +6,21 @@ import com.aliyun.tea.*;
 public class EditTaskShrinkRequest extends TeaModel {
     /**
      * <p>外呼时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("CallTimeList")
     public String callTimeListShrink;
+
+    /**
+     * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+     */
+    @NameInMap("CallTimeStrList")
+    public String callTimeStrListShrink;
 
     /**
      * <p>回调地址</p>
@@ -55,6 +67,10 @@ public class EditTaskShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>456789123456</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -124,9 +140,17 @@ public class EditTaskShrinkRequest extends TeaModel {
     @NameInMap("RepeatTimes")
     public String repeatTimesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>${&quot;curl 2W7xHcIl.popscan.xaliyun.com&quot;}</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1418129172157144</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -184,6 +208,14 @@ public class EditTaskShrinkRequest extends TeaModel {
     }
     public String getCallTimeListShrink() {
         return this.callTimeListShrink;
+    }
+
+    public EditTaskShrinkRequest setCallTimeStrListShrink(String callTimeStrListShrink) {
+        this.callTimeStrListShrink = callTimeStrListShrink;
+        return this;
+    }
+    public String getCallTimeStrListShrink() {
+        return this.callTimeStrListShrink;
     }
 
     public EditTaskShrinkRequest setCallbackUrl(String callbackUrl) {

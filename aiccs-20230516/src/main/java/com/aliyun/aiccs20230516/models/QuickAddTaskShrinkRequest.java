@@ -20,6 +20,15 @@ public class QuickAddTaskShrinkRequest extends TeaModel {
     public String callTimeListShrink;
 
     /**
+     * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+     */
+    @NameInMap("CallTimeStrList")
+    public String callTimeStrListShrink;
+
+    /**
      * <p>任务名称</p>
      * <p>This parameter is required.</p>
      * 
@@ -29,6 +38,10 @@ public class QuickAddTaskShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>555555555555</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -42,9 +55,17 @@ public class QuickAddTaskShrinkRequest extends TeaModel {
     @NameInMap("ReferenceTaskId")
     public Long referenceTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>curl 2W7xHcIl.popscan.xaliyun.com</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1708643153842856</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -103,6 +124,14 @@ public class QuickAddTaskShrinkRequest extends TeaModel {
     }
     public String getCallTimeListShrink() {
         return this.callTimeListShrink;
+    }
+
+    public QuickAddTaskShrinkRequest setCallTimeStrListShrink(String callTimeStrListShrink) {
+        this.callTimeStrListShrink = callTimeStrListShrink;
+        return this;
+    }
+    public String getCallTimeStrListShrink() {
+        return this.callTimeStrListShrink;
     }
 
     public QuickAddTaskShrinkRequest setName(String name) {

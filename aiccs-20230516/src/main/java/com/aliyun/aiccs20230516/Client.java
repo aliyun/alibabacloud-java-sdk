@@ -240,6 +240,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.callTimeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callTimeList, "CallTimeList", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.callTimeStrList)) {
+            request.callTimeStrListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callTimeStrList, "CallTimeStrList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.repeatReason)) {
             request.repeatReasonShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.repeatReason, "RepeatReason", "json");
         }
@@ -255,6 +259,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callTimeListShrink)) {
             query.put("CallTimeList", request.callTimeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callTimeStrListShrink)) {
+            query.put("CallTimeStrList", request.callTimeStrListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.callbackUrl)) {
@@ -1012,6 +1020,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.callTimeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callTimeList, "CallTimeList", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.callTimeStrList)) {
+            request.callTimeStrListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callTimeStrList, "CallTimeStrList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.repeatReason)) {
             request.repeatReasonShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.repeatReason, "RepeatReason", "json");
         }
@@ -1027,6 +1039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callTimeListShrink)) {
             query.put("CallTimeList", request.callTimeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callTimeStrListShrink)) {
+            query.put("CallTimeStrList", request.callTimeStrListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.callbackUrl)) {
@@ -1504,6 +1520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.callTimeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callTimeList, "CallTimeList", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.callTimeStrList)) {
+            request.callTimeStrListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callTimeStrList, "CallTimeStrList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentGroupId)) {
             query.put("AgentGroupId", request.agentGroupId);
@@ -1511,6 +1531,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.callTimeListShrink)) {
             query.put("CallTimeList", request.callTimeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callTimeStrListShrink)) {
+            query.put("CallTimeStrList", request.callTimeStrListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {

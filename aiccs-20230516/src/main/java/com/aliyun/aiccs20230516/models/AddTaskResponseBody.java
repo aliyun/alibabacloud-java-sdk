@@ -4,6 +4,10 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class AddTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 

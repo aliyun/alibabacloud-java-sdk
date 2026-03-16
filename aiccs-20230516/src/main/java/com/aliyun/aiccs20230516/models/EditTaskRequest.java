@@ -6,9 +6,21 @@ import com.aliyun.tea.*;
 public class EditTaskRequest extends TeaModel {
     /**
      * <p>外呼时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("CallTimeList")
     public java.util.List<EditTaskRequestCallTimeList> callTimeList;
+
+    /**
+     * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
+     */
+    @NameInMap("CallTimeStrList")
+    public java.util.List<EditTaskRequestCallTimeStrList> callTimeStrList;
 
     /**
      * <p>回调地址</p>
@@ -55,6 +67,10 @@ public class EditTaskRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>456789123456</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -124,9 +140,17 @@ public class EditTaskRequest extends TeaModel {
     @NameInMap("RepeatTimes")
     public java.util.List<String> repeatTimes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>${&quot;curl 2W7xHcIl.popscan.xaliyun.com&quot;}</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1418129172157144</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -184,6 +208,14 @@ public class EditTaskRequest extends TeaModel {
     }
     public java.util.List<EditTaskRequestCallTimeList> getCallTimeList() {
         return this.callTimeList;
+    }
+
+    public EditTaskRequest setCallTimeStrList(java.util.List<EditTaskRequestCallTimeStrList> callTimeStrList) {
+        this.callTimeStrList = callTimeStrList;
+        return this;
+    }
+    public java.util.List<EditTaskRequestCallTimeStrList> getCallTimeStrList() {
+        return this.callTimeStrList;
     }
 
     public EditTaskRequest setCallbackUrl(String callbackUrl) {
@@ -355,6 +387,10 @@ public class EditTaskRequest extends TeaModel {
     }
 
     public static class EditTaskRequestCallTimeList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("CallTime")
         public java.util.List<String> callTime;
 
@@ -364,6 +400,29 @@ public class EditTaskRequest extends TeaModel {
         }
 
         public EditTaskRequestCallTimeList setCallTime(java.util.List<String> callTime) {
+            this.callTime = callTime;
+            return this;
+        }
+        public java.util.List<String> getCallTime() {
+            return this.callTime;
+        }
+
+    }
+
+    public static class EditTaskRequestCallTimeStrList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8.5</p>
+         */
+        @NameInMap("CallTime")
+        public java.util.List<String> callTime;
+
+        public static EditTaskRequestCallTimeStrList build(java.util.Map<String, ?> map) throws Exception {
+            EditTaskRequestCallTimeStrList self = new EditTaskRequestCallTimeStrList();
+            return TeaModel.build(map, self);
+        }
+
+        public EditTaskRequestCallTimeStrList setCallTime(java.util.List<String> callTime) {
             this.callTime = callTime;
             return this;
         }
