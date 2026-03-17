@@ -332,6 +332,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建边缘函数</p>
+     * 
+     * @param tmpReq CreateEdgeFunctionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEdgeFunctionResponse
+     */
+    public CreateEdgeFunctionResponse createEdgeFunctionWithOptions(CreateEdgeFunctionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateEdgeFunctionShrinkRequest request = new CreateEdgeFunctionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.code)) {
+            request.codeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.code, "Code", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customConfig)) {
+            request.customConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customConfig, "CustomConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.envs)) {
+            request.envsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.envs, "Envs", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeShrink)) {
+            query.put("Code", request.codeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customConfigShrink)) {
+            query.put("CustomConfig", request.customConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edgeFunctionName)) {
+            query.put("EdgeFunctionName", request.edgeFunctionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envsShrink)) {
+            query.put("Envs", request.envsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEdgeFunction"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeFunctionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建边缘函数</p>
+     * 
+     * @param request CreateEdgeFunctionRequest
+     * @return CreateEdgeFunctionResponse
+     */
+    public CreateEdgeFunctionResponse createEdgeFunction(CreateEdgeFunctionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEdgeFunctionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates an inspection task for multiple instances.</p>
      * 
      * @param request CreateInspectionTaskRequest
@@ -353,8 +435,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceIds", request.instanceIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
             query.put("ReportLanguage", request.reportLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportType)) {
+            query.put("ReportType", request.reportType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -417,8 +507,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
             query.put("ReportLanguage", request.reportLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportType)) {
+            query.put("ReportType", request.reportType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -642,6 +740,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除边缘函数</p>
+     * 
+     * @param request DeleteEdgeFunctionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEdgeFunctionResponse
+     */
+    public DeleteEdgeFunctionResponse deleteEdgeFunctionWithOptions(DeleteEdgeFunctionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edgeFunctionName)) {
+            query.put("EdgeFunctionName", request.edgeFunctionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEdgeFunction"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEdgeFunctionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除边缘函数</p>
+     * 
+     * @param request DeleteEdgeFunctionRequest
+     * @return DeleteEdgeFunctionResponse
+     */
+    public DeleteEdgeFunctionResponse deleteEdgeFunction(DeleteEdgeFunctionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEdgeFunctionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a specified inspection configuration.</p>
      * 
      * @param request DeleteScheduledTaskRequest
@@ -858,6 +1012,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAppInstancesResponse describeAppInstances(DescribeAppInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAppInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询边缘函数列表</p>
+     * 
+     * @param request DescribeEdgeFunctionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeEdgeFunctionsResponse
+     */
+    public DescribeEdgeFunctionsResponse describeEdgeFunctionsWithOptions(DescribeEdgeFunctionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edgeFunctionName)) {
+            query.put("EdgeFunctionName", request.edgeFunctionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeEdgeFunctions"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEdgeFunctionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询边缘函数列表</p>
+     * 
+     * @param request DescribeEdgeFunctionsRequest
+     * @return DescribeEdgeFunctionsResponse
+     */
+    public DescribeEdgeFunctionsResponse describeEdgeFunctions(DescribeEdgeFunctionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeEdgeFunctionsWithOptions(request, runtime);
     }
 
     /**
@@ -1397,6 +1607,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.reportType)) {
+            query.put("ReportType", request.reportType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("TaskId", request.taskId);
         }
@@ -1667,6 +1881,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportType)) {
+            query.put("ReportType", request.reportType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -2848,6 +3066,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCustomAgentResponse updateCustomAgent(UpdateCustomAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCustomAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新边缘函数</p>
+     * 
+     * @param tmpReq UpdateEdgeFunctionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEdgeFunctionResponse
+     */
+    public UpdateEdgeFunctionResponse updateEdgeFunctionWithOptions(UpdateEdgeFunctionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateEdgeFunctionShrinkRequest request = new UpdateEdgeFunctionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.code)) {
+            request.codeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.code, "Code", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customConfig)) {
+            request.customConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customConfig, "CustomConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.envs)) {
+            request.envsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.envs, "Envs", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeShrink)) {
+            query.put("Code", request.codeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customConfigShrink)) {
+            query.put("CustomConfig", request.customConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edgeFunctionName)) {
+            query.put("EdgeFunctionName", request.edgeFunctionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envsShrink)) {
+            query.put("Envs", request.envsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateEdgeFunction"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEdgeFunctionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新边缘函数</p>
+     * 
+     * @param request UpdateEdgeFunctionRequest
+     * @return UpdateEdgeFunctionResponse
+     */
+    public UpdateEdgeFunctionResponse updateEdgeFunction(UpdateEdgeFunctionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateEdgeFunctionWithOptions(request, runtime);
     }
 
     /**

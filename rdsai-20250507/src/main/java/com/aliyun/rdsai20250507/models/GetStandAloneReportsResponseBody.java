@@ -141,8 +141,14 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("ReportLanguage")
         public String reportLanguage;
+
+        @NameInMap("ReportType")
+        public String reportType;
 
         /**
          * <p>The start time of the inspection. The time is in the YYYY-MM-DDTHH:mm:ssZ format.</p>
@@ -192,12 +198,28 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public GetStandAloneReportsResponseBodyReports setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public GetStandAloneReportsResponseBodyReports setReportLanguage(String reportLanguage) {
             this.reportLanguage = reportLanguage;
             return this;
         }
         public String getReportLanguage() {
             return this.reportLanguage;
+        }
+
+        public GetStandAloneReportsResponseBodyReports setReportType(String reportType) {
+            this.reportType = reportType;
+            return this;
+        }
+        public String getReportType() {
+            return this.reportType;
         }
 
         public GetStandAloneReportsResponseBodyReports setStartTime(String startTime) {

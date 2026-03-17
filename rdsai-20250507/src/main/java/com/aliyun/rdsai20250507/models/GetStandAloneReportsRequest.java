@@ -31,6 +31,9 @@ public class GetStandAloneReportsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("ReportType")
+    public String reportType;
+
     /**
      * <p>The task start time based on which the reports are filtered. If you do not specify this parameter, all reports are returned.</p>
      * 
@@ -67,6 +70,14 @@ public class GetStandAloneReportsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public GetStandAloneReportsRequest setReportType(String reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    public String getReportType() {
+        return this.reportType;
     }
 
     public GetStandAloneReportsRequest setStartTime(String startTime) {

@@ -13,6 +13,9 @@ public class GetInspectionReportRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ReportType")
+    public String reportType;
+
     /**
      * <p>The ID of the inspection report.</p>
      * <p>This parameter is required.</p>
@@ -34,6 +37,14 @@ public class GetInspectionReportRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetInspectionReportRequest setReportType(String reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    public String getReportType() {
+        return this.reportType;
     }
 
     public GetInspectionReportRequest setTaskId(String taskId) {

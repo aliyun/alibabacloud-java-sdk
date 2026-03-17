@@ -39,7 +39,6 @@ public class CreateInspectionTaskRequest extends TeaModel {
 
     /**
      * <p>The instances covered by the task. Separates multiple instance IDs with commas (,).</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze6mk259v322****,rm-2zef3b65430j0****</p>
@@ -47,8 +46,14 @@ public class CreateInspectionTaskRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ReportLanguage")
     public String reportLanguage;
+
+    @NameInMap("ReportType")
+    public String reportType;
 
     /**
      * <p>The start time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. By default, the time range of the task is the latest 24 hours.</p>
@@ -88,12 +93,28 @@ public class CreateInspectionTaskRequest extends TeaModel {
         return this.instanceIds;
     }
 
+    public CreateInspectionTaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public CreateInspectionTaskRequest setReportLanguage(String reportLanguage) {
         this.reportLanguage = reportLanguage;
         return this;
     }
     public String getReportLanguage() {
         return this.reportLanguage;
+    }
+
+    public CreateInspectionTaskRequest setReportType(String reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    public String getReportType() {
+        return this.reportType;
     }
 
     public CreateInspectionTaskRequest setStartTime(String startTime) {

@@ -173,8 +173,14 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("ReportLanguage")
         public String reportLanguage;
+
+        @NameInMap("ReportType")
+        public String reportType;
 
         /**
          * <p>The ID of the scheduled inspection configuration.</p>
@@ -245,12 +251,28 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListScheduledTasksResponseBodySchedules setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public ListScheduledTasksResponseBodySchedules setReportLanguage(String reportLanguage) {
             this.reportLanguage = reportLanguage;
             return this;
         }
         public String getReportLanguage() {
             return this.reportLanguage;
+        }
+
+        public ListScheduledTasksResponseBodySchedules setReportType(String reportType) {
+            this.reportType = reportType;
+            return this;
+        }
+        public String getReportType() {
+            return this.reportType;
         }
 
         public ListScheduledTasksResponseBodySchedules setScheduledId(String scheduledId) {

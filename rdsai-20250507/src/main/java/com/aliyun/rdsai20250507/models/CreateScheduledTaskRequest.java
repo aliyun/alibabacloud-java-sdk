@@ -31,7 +31,6 @@ public class CreateScheduledTaskRequest extends TeaModel {
 
     /**
      * <p>The IDs of the related instances. Separate multiple IDs with commas (,).</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze6mk259v322****,rm-2zef3b65430j0****</p>
@@ -46,8 +45,14 @@ public class CreateScheduledTaskRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ReportLanguage")
     public String reportLanguage;
+
+    @NameInMap("ReportType")
+    public String reportType;
 
     /**
      * <p>The time when the inspection task is executed. Specify the time in the ISO 8601 standard in the HH:mm:ssZ format. The time must be in UTC. Default value: 02:00 AM.</p>
@@ -104,12 +109,28 @@ public class CreateScheduledTaskRequest extends TeaModel {
         return this.name;
     }
 
+    public CreateScheduledTaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public CreateScheduledTaskRequest setReportLanguage(String reportLanguage) {
         this.reportLanguage = reportLanguage;
         return this;
     }
     public String getReportLanguage() {
         return this.reportLanguage;
+    }
+
+    public CreateScheduledTaskRequest setReportType(String reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    public String getReportType() {
+        return this.reportType;
     }
 
     public CreateScheduledTaskRequest setStartTime(String startTime) {
