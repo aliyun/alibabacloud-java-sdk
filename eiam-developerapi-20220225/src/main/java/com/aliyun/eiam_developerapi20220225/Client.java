@@ -745,6 +745,113 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>实例级授权服务器 Token 端点</p>
+     * 
+     * @param request GenerateTokenByAuthorizationServerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateTokenByAuthorizationServerResponse
+     */
+    public GenerateTokenByAuthorizationServerResponse generateTokenByAuthorizationServerWithOptions(String instanceId, String authorizationServerId, GenerateTokenByAuthorizationServerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationFederatedCredentialName)) {
+            query.put("application_federated_credential_name", request.applicationFederatedCredentialName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientAssertion)) {
+            query.put("client_assertion", request.clientAssertion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientAssertionType)) {
+            query.put("client_assertion_type", request.clientAssertionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("client_id", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientSecret)) {
+            query.put("client_secret", request.clientSecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientX509)) {
+            query.put("client_x509", request.clientX509);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientX509Chain)) {
+            query.put("client_x509_chain", request.clientX509Chain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            query.put("code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeVerifier)) {
+            query.put("code_verifier", request.codeVerifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceCode)) {
+            query.put("device_code", request.deviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grantType)) {
+            query.put("grant_type", request.grantType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.redirectUri)) {
+            query.put("redirect_uri", request.redirectUri);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refreshToken)) {
+            query.put("refresh_token", request.refreshToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateTokenByAuthorizationServer"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authorizationServer/" + com.aliyun.openapiutil.Client.getEncodeParam(authorizationServerId) + "/oauth2/token"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new GenerateTokenByAuthorizationServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>实例级授权服务器 Token 端点</p>
+     * 
+     * @param request GenerateTokenByAuthorizationServerRequest
+     * @return GenerateTokenByAuthorizationServerResponse
+     */
+    public GenerateTokenByAuthorizationServerResponse generateTokenByAuthorizationServer(String instanceId, String authorizationServerId, GenerateTokenByAuthorizationServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.generateTokenByAuthorizationServerWithOptions(instanceId, authorizationServerId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * </blockquote>
