@@ -4,9 +4,33 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UpgradeSmartAccessGatewaySoftwareRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-payment for the instance.</p>
+     * <ul>
+     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: yes</li>
+     * </ul>
+     * <blockquote>
+     * <p> If the parameter is set to false, you must complete the payment in the SAG console after you call this operation.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The data transfer plan for each client account. Unit: GB.</p>
+     * <blockquote>
+     * <p> Each client account has a data transfer plan of 5 GB that is free of charge each month.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("DataPlan")
     public Long dataPlan;
 
@@ -16,6 +40,13 @@ public class UpgradeSmartAccessGatewaySoftwareRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG app instance is created.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,9 +56,24 @@ public class UpgradeSmartAccessGatewaySoftwareRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG app instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-8biez7habqwmx6****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The maximum number of client accounts supported by the SAG app instance.</p>
+     * <p>After you complete the payment, you can create a client account for each employee who needs to use the SAG app.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("UserCount")
     public Integer userCount;
 

@@ -4,63 +4,183 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The maximum bandwidth value for application acceleration. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AccelerateBandwidth")
     public Long accelerateBandwidth;
 
+    /**
+     * <p>The ID of the access point for the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>238</p>
+     */
     @NameInMap("AccessPointId")
     public String accessPointId;
 
     @NameInMap("AclIds")
     public DescribeSmartAccessGatewayAttributeResponseBodyAclIds aclIds;
 
+    /**
+     * <p>The status of the bandwidth plan for application acceleration. Valid value:</p>
+     * <ul>
+     * <li><strong>Abnormal</strong>: abnormal</li>
+     * <li><strong>Normal</strong>: normal</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("ApplicationBandwidthPackageBussinessStatus")
     public String applicationBandwidthPackageBussinessStatus;
 
+    /**
+     * <p>The ID of the bandwidth plan for application acceleration that is associated with the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abwp-7963l7iqnquyj3****</p>
+     */
     @NameInMap("ApplicationBandwidthPackageId")
     public String applicationBandwidthPackageId;
 
+    /**
+     * <p>The name of the bandwidth plan for application acceleration that is associated with the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testname</p>
+     */
     @NameInMap("ApplicationBandwidthPackageName")
     public String applicationBandwidthPackageName;
 
+    /**
+     * <p>Indicates whether the bandwidth plan is locked.</p>
+     */
     @NameInMap("ApplicationBandwidthPackageOperationLocks")
     public DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks applicationBandwidthPackageOperationLocks;
 
+    /**
+     * <p>The ID of the Cloud Connect Network (CCN) instance with which the SAG instance is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccn-iz26o9zye6lhoo****</p>
+     */
     @NameInMap("AssociatedCcnId")
     public String associatedCcnId;
 
+    /**
+     * <p>The ID of the Cloud Connect Network (CCN) instance with which the SAG instance is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testname</p>
+     */
     @NameInMap("AssociatedCcnName")
     public String associatedCcnName;
 
+    /**
+     * <p>The public IP address of the standby SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>112.XX.XX.27</p>
+     */
     @NameInMap("BackupBoxControllerIp")
     public String backupBoxControllerIp;
 
+    /**
+     * <p>The public IP address of the active SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>112.XX.XX.25</p>
+     */
     @NameInMap("BoxControllerIp")
     public String boxControllerIp;
 
+    /**
+     * <p>The private CIDR block of the destination network with which the on-premises network or client needs to communicate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.9.0/24</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    /**
+     * <p>The ID of the city where the SAG device is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <p>The timestamp when the SAG instance was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1622617250000</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The data transfer plan of the SAG instance. Unit: GB.</p>
+     * <blockquote>
+     * <p> Each client account has a data transfer plan free of charge for 5 GB each month.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("DataPlan")
     public Long dataPlan;
 
+    /**
+     * <p>The description of the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdesc</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("Devices")
     public DescribeSmartAccessGatewayAttributeResponseBodyDevices devices;
 
+    /**
+     * <p>Indicates whether the transmission optimization feature is enabled.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableOptimization")
     public Boolean enableOptimization;
 
+    /**
+     * <p>Indicates whether the audit log for connections to the SAG app instance is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enabled</li>
+     * <li><strong>false</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableSoftwareConnectionAudit")
     public Boolean enableSoftwareConnectionAudit;
 
+    /**
+     * <p>The timestamp when the SAG instance expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1628265600000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -70,69 +190,214 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("IRIds")
     public DescribeSmartAccessGatewayAttributeResponseBodyIRIds IRIds;
 
+    /**
+     * <p>The type of the SAG instance. Valid values:</p>
+     * <ul>
+     * <li><strong>sag-1000</strong>: indicates an SAG CPE instance and the instance is associated with an SAG-1000 device.</li>
+     * <li><strong>sag-10wm</strong>: indicates an SAG CPE instance and the instance is associated with an SAG-100WM device.</li>
+     * <li><strong>sag-software</strong>: indicates an SAG app instance.</li>
+     * <li><strong>sag-vcpe</strong>: an SAG vCPE instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-vcpe</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The status of the IPsec-VPN connection. Valid values:</p>
+     * <ul>
+     * <li><strong>up</strong>: normal</li>
+     * <li><strong>down</strong>: abnormal</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>up</p>
+     */
     @NameInMap("IpsecStatus")
     public String ipsecStatus;
 
     @NameInMap("Links")
     public DescribeSmartAccessGatewayAttributeResponseBodyLinks links;
 
+    /**
+     * <p>The maximum bandwidth value of the SAG instance. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50 M</p>
+     */
     @NameInMap("MaxBandwidth")
     public String maxBandwidth;
 
+    /**
+     * <p>The name of the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testname</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The transmission optimization type of the SAG instance. If transmission optimization is enabled, the default value is <strong>fec</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fec</p>
+     */
     @NameInMap("OptimizationType")
     public Boolean optimizationType;
 
+    /**
+     * <p>The location of the SAG instance.</p>
+     */
     @NameInMap("Position")
     public String position;
 
     @NameInMap("QosIds")
     public DescribeSmartAccessGatewayAttributeResponseBodyQosIds qosIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F02D092B-A0B7-4BA1-BCA7-014B953C5DC7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the instance provided by the third-party reseller.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-v0fkpk4akfz5******</p>
+     */
     @NameInMap("ResellerInstanceId")
     public String resellerInstanceId;
 
+    /**
+     * <p>The ID of the third-party reseller.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1210123456123456</p>
+     */
     @NameInMap("ResellerUid")
     public String resellerUid;
 
+    /**
+     * <p>The ID of the resource group to which the SAG instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2iu4fnc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The method that the SAG instance uses to advertise routes to Alibaba Cloud.</p>
+     * <ul>
+     * <li><strong>static</strong>: static routing</li>
+     * <li><strong>dynamic</strong>: dynamic routing</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>static</p>
+     */
     @NameInMap("RoutingStrategy")
     public String routingStrategy;
 
+    /**
+     * <p>The time threshold. If the SAG device remains disconnected for the specified period of time, the SAG device is locked.</p>
+     * <p>Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("SecurityLockThreshold")
     public Integer securityLockThreshold;
 
+    /**
+     * <p>The serial number of the SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sage6gsdllbidl****,sage6nniq3d****</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-6z21oj0vjjrx6s****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The status of the SAG instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Ordered</strong>: The order is to be shipped.</li>
+     * <li><strong>Delivered</strong>: The SAG instance is shipped.</li>
+     * <li><strong>Received</strong>: The SAG instance is activated.</li>
+     * <li><strong>Unconfirmed</strong>: The SAG instance is to be confirmed.</li>
+     * <li><strong>Active</strong>: The SAG instance is available.</li>
+     * <li><strong>Offline</strong>: The SAG instance is disconnected.</li>
+     * <li><strong>Arrearage</strong>: The SAG device is locked due to overdue payments.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The serial number of the active SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sage6nniq3d****</p>
+     */
     @NameInMap("TrafficMasterSn")
     public String trafficMasterSn;
 
+    /**
+     * <p>The maximum upstream bandwidth of 4G network connections established by the SAG device. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("UpBandwidth4G")
     public Integer upBandwidth4G;
 
+    /**
+     * <p>The maximum upstream bandwidth of network connections established on the WAN port of the SAG device. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("UpBandwidthWan")
     public Integer upBandwidthWan;
 
+    /**
+     * <p>The number of client accounts on the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("UserCount")
     public Integer userCount;
 
+    /**
+     * <p>The status of the VPN connection. Valid values:</p>
+     * <ul>
+     * <li><strong>up</strong>: normal</li>
+     * <li><strong>down</strong>: abnormal</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>down</p>
+     */
     @NameInMap("VpnStatus")
     public String vpnStatus;
 
@@ -513,9 +778,21 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks extends TeaModel {
+        /**
+         * <p>The reason why the instance was locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Message</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <p>The lock mode of the instance. The value is set to <strong>FinancialLocked</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinancialLocked</p>
+         */
         @NameInMap("LockType")
         public String lockType;
 

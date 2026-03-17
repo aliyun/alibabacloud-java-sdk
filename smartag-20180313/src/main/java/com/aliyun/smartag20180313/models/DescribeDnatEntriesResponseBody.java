@@ -7,15 +7,39 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
     @NameInMap("DnatEntries")
     public DescribeDnatEntriesResponseBodyDnatEntries dnatEntries;
 
+    /**
+     * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>635640CA-2335-4856-A9CB-1CB5C444DC5A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

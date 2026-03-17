@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteACLRequest extends TeaModel {
+    /**
+     * <p>The ID of the ACL.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-ohlexqptfhy*******</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
@@ -13,6 +20,13 @@ public class DeleteACLRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,9 +4,22 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteSmartAccessGatewayRequest extends TeaModel {
+    /**
+     * <p>The ID of the SAG instance that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-far8v6owtdxlua****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

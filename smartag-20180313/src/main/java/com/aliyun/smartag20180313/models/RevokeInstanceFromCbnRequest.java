@@ -4,9 +4,23 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class RevokeInstanceFromCbnRequest extends TeaModel {
+    /**
+     * <p>The ID of the CCN instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccn-n2935s1mnwv8i*****</p>
+     */
     @NameInMap("CcnInstanceId")
     public String ccnInstanceId;
 
+    /**
+     * <p>The ID of the CEN instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jm*****</p>
+     */
     @NameInMap("CenInstanceId")
     public String cenInstanceId;
 
@@ -16,6 +30,13 @@ public class RevokeInstanceFromCbnRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the CCN instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

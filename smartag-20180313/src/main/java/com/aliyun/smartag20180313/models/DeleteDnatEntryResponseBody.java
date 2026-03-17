@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteDnatEntryResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68CE10C0-2EFF-4B82-9907-10AB7E2B0A6C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

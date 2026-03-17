@@ -4,9 +4,22 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeHealthChecksRequest extends TeaModel {
+    /**
+     * <p>The ID of the health check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hc-ifflm5ygj3diwiu****</p>
+     */
     @NameInMap("HcInstanceId")
     public String hcInstanceId;
 
+    /**
+     * <p>The name of the health check.</p>
+     * <p>The name must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddd3333</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -16,12 +29,31 @@ public class DescribeHealthChecksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +63,13 @@ public class DescribeHealthChecksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-qi0p07ld5q86k3****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

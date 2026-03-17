@@ -10,12 +10,31 @@ public class DescribeGrantSagVbrRulesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value:<strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,9 +44,21 @@ public class DescribeGrantSagVbrRulesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-0nnteglltw6z4b****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The ID of the VBR.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-bp13gtbhdp0pfqg6s****</p>
+     */
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
 

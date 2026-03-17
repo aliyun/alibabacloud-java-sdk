@@ -4,24 +4,66 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListProbeTaskResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the probe task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>probe-xxx</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListProbeTaskResponseBodyData> data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>324223F3-93D3-4CE4-B26F-66C0C3809922</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,42 +129,136 @@ public class ListProbeTaskResponseBody extends TeaModel {
     }
 
     public static class ListProbeTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The domain name that is probed by the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Indicates whether the probe task is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The time when the probe task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-23 14:09</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the probe task was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-23 14:09</p>
+         */
         @NameInMap("GmtModify")
         public String gmtModify;
 
+        /**
+         * <p>The number of probe packets transmitted by the probe task per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PacketNumber")
         public Integer packetNumber;
 
+        /**
+         * <p>The port that is probed by the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the probe task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>probe-****</p>
+         */
         @NameInMap("ProbeTaskId")
         public String probeTaskId;
 
+        /**
+         * <p>The source address of the probe task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
+         */
         @NameInMap("ProbeTaskSourceAddress")
         public String probeTaskSourceAddress;
 
+        /**
+         * <p>The protocol of the probe task. Valid values:</p>
+         * <ul>
+         * <li><strong>ICMP</strong></li>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>HTTP</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>Tasks that probe private networks support only ICMP and TCP.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ICMP</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The ID of the SAG instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sag-asdfz6ac74oj5v****</p>
+         */
         @NameInMap("SagId")
         public String sagId;
 
+        /**
+         * <p>The serial number of the SAG device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sag****</p>
+         */
         @NameInMap("Sn")
         public String sn;
 
+        /**
+         * <p>The name of the probe task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-ping</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The type of the probe task. Valid values:</p>
+         * <ul>
+         * <li><strong>Internet</strong>: probes a public network.</li>
+         * <li><strong>Intranet</strong>: probes a private network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet</p>
+         */
         @NameInMap("Type")
         public String type;
 

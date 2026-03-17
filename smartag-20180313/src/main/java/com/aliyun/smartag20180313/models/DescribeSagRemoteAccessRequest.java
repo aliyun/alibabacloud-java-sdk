@@ -10,6 +10,13 @@ public class DescribeSagRemoteAccessRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,9 +26,22 @@ public class DescribeSagRemoteAccessRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The serial number of the SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sage62x022502****</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-1um5x5nwhilymw****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

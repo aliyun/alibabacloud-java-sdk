@@ -4,18 +4,46 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListDpiSignaturesRequest extends TeaModel {
+    /**
+     * <p>The ID of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("DpiGroupId")
     public String dpiGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>235</p>
+     */
     @NameInMap("DpiSignatureIds")
     public java.util.List<String> dpiSignatureIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EdgeCast</p>
+     */
     @NameInMap("DpiSignatureNames")
     public java.util.List<String> dpiSignatureNames;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token used to query the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -25,6 +53,14 @@ public class ListDpiSignaturesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the application or application group belongs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

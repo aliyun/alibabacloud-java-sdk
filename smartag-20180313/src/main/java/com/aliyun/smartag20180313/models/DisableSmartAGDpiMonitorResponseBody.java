@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DisableSmartAGDpiMonitorResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64966488-B3E3-41E2-9570-4596117EC12E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

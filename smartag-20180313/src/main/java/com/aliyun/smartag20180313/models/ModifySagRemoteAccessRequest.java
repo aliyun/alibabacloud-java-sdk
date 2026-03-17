@@ -10,6 +10,12 @@ public class ModifySagRemoteAccessRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The remote access IP address of the SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.10.10.2</p>
+     */
     @NameInMap("RemoteAccessIp")
     public String remoteAccessIp;
 
@@ -19,9 +25,23 @@ public class ModifySagRemoteAccessRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The serial number (SN) of the SAG device.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-100-v1p7-9</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The ID of the corresponding SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-r79m060r6oy55******</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

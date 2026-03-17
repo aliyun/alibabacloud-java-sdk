@@ -4,15 +4,43 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UpdateSmartAccessGatewayAdminPasswordResponseBody extends TeaModel {
+    /**
+     * <p>The response code. A value of 200 indicates that the task is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response message. A value of Successful indicates that the task is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC8487CD-9338-5FCF-896A-B6D1BB1646A7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

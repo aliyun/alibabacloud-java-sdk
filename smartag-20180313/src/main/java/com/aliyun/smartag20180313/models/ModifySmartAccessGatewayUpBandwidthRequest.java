@@ -10,6 +10,12 @@ public class ModifySmartAccessGatewayUpBandwidthRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,12 +25,31 @@ public class ModifySmartAccessGatewayUpBandwidthRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-jsy******************</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The maximum upstream bandwidth of 4G network connections established by the SAG device. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("UpBandwidth4G")
     public Integer upBandwidth4G;
 
+    /**
+     * <p>The maximum upstream bandwidth of network connections established on the WAN port of the SAG device. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("UpBandwidthWan")
     public Integer upBandwidthWan;
 

@@ -4,19 +4,48 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0BAAF2B9-88B8-4574-BDBE-102A90EE3FEE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 

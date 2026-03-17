@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6668829E-B261-4038-9EC6-0A2C57A14916</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

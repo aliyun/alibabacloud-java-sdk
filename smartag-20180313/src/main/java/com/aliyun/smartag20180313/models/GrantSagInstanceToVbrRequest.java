@@ -10,6 +10,13 @@ public class GrantSagInstanceToVbrRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,15 +26,43 @@ public class GrantSagInstanceToVbrRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-0nnteglltw6z4b****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The ID of the VBR.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-bp13gtbhdp0pfqg6s****</p>
+     */
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("VbrRegionId")
     public String vbrRegionId;
 
+    /**
+     * <p>The user ID (UID) of the account to which the VBR belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1231212121121212112</p>
+     */
     @NameInMap("VbrUid")
     public Long vbrUid;
 

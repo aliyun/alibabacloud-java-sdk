@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListSmartAGByAccessPointRequest extends TeaModel {
+    /**
+     * <p>The ID of the access point.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>238</p>
+     */
     @NameInMap("AccessPointId")
     public Integer accessPointId;
 
@@ -13,12 +20,32 @@ public class ListSmartAGByAccessPointRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>50</strong> .</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>A region contains one or more access points. You can call the <a href="https://help.aliyun.com/document_detail/183876.html">ListAccessPoints</a> operation to query access points in a specific region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +55,16 @@ public class ListSmartAGByAccessPointRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the SAG instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Active</strong>: The SAG device is connected to Alibaba Cloud.</li>
+     * <li><strong>offline</strong>: The SAG device is disconnected from Alibaba Cloud.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
+     */
     @NameInMap("SmartAGStatus")
     public String smartAGStatus;
 

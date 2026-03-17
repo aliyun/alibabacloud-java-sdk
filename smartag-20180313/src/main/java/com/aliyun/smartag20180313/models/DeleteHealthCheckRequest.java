@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteHealthCheckRequest extends TeaModel {
+    /**
+     * <p>The ID of the health check instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hc-vfgyz7dv07lthr****</p>
+     */
     @NameInMap("HcInstanceId")
     public String hcInstanceId;
 
@@ -13,6 +20,13 @@ public class DeleteHealthCheckRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the health check instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

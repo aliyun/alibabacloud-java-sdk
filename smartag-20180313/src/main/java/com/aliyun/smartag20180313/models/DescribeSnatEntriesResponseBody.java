@@ -4,18 +4,42 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnatEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>674BC3B2-5828-41D5-830E-148EE6CF86C2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SnatEntries")
     public DescribeSnatEntriesResponseBodySnatEntries snatEntries;
 
+    /**
+     * <p>The total number of SNAT entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

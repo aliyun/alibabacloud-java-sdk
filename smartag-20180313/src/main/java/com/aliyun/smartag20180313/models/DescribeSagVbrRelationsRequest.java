@@ -10,6 +10,13 @@ public class DescribeSagVbrRelationsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,9 +26,24 @@ public class DescribeSagVbrRelationsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The IDs of the VBRs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-bp15ihkk93ezxppkd****</p>
+     */
     @NameInMap("VbrInstanceIds")
     public java.util.List<String> vbrInstanceIds;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("VbrRegionId")
     public String vbrRegionId;
 

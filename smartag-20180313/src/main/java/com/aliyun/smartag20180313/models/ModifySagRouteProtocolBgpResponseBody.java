@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagRouteProtocolBgpResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48868976-45A2-4E87-B3AA-25089B8B7E49</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,21 +4,65 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifyHealthCheckRequest extends TeaModel {
+    /**
+     * <p>The description of the health check.</p>
+     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The destination IP address of the health check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.1</p>
+     */
     @NameInMap("DstIpAddr")
     public String dstIpAddr;
 
+    /**
+     * <p>The destination port of the health check.</p>
+     * <blockquote>
+     * <p> This parameter is not supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2233</p>
+     */
     @NameInMap("DstPort")
     public Integer dstPort;
 
+    /**
+     * <p>The number of failed probes before a health check is declared failed.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>15</strong>.</p>
+     * <p>Default value: <strong>3</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("FailCountThreshold")
     public Integer failCountThreshold;
 
+    /**
+     * <p>The ID of the health check.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hc-k9id4loo3lup57****</p>
+     */
     @NameInMap("HcInstanceId")
     public String hcInstanceId;
 
+    /**
+     * <p>The name of the health check.</p>
+     * <p>The name must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sss333</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -28,15 +72,48 @@ public class ModifyHealthCheckRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of probes that are performed per health check.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>20</strong>.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ProbeCount")
     public Integer probeCount;
 
+    /**
+     * <p>The time interval at which probes are performed. The next probe does not start before the current one is complete.</p>
+     * <p>Valid values: <strong>1000</strong> to <strong>60000</strong>.</p>
+     * <p>Default value: <strong>2000</strong>.</p>
+     * <p>Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
+     */
     @NameInMap("ProbeInterval")
     public Integer probeInterval;
 
+    /**
+     * <p>The timeout period of the probe.</p>
+     * <p>Valid values: <strong>10</strong> to <strong>30000</strong>.</p>
+     * <p>Default value: <strong>3000</strong>.</p>
+     * <p>Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
+     */
     @NameInMap("ProbeTimeout")
     public Integer probeTimeout;
 
+    /**
+     * <p>The region ID of the Smart Access Gateway (SAG) instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -46,21 +123,66 @@ public class ModifyHealthCheckRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The number of times that the maximum RTT is exceeded before an alert is triggered.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>15</strong>.</p>
+     * <p>Default value: <strong>3</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("RttFailThreshold")
     public Integer rttFailThreshold;
 
+    /**
+     * <p>The maximum round-trip time (RTT).</p>
+     * <p>Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>5000</strong>.</p>
+     * <p>Default value: <strong>-1</strong>. This value indicates that the RTT threshold is not specified.</p>
+     * <p>Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("RttThreshold")
     public Integer rttThreshold;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-i0e85k06v1mzpo****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The source IP address of the health check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.1</p>
+     */
     @NameInMap("SrcIpAddr")
     public String srcIpAddr;
 
+    /**
+     * <p>The source port of the health check.</p>
+     * <blockquote>
+     * <p> This parameter is not supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3333</p>
+     */
     @NameInMap("SrcPort")
     public Integer srcPort;
 
+    /**
+     * <p>The type of packet used in the health check. Only <strong>ICMP_ECHO</strong> is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ICMP_ECHO</p>
+     */
     @NameInMap("Type")
     public String type;
 

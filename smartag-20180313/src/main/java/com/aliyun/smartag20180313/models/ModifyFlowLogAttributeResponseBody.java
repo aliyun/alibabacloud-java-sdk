@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifyFlowLogAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAC70A63-1A2E-4857-9CA3-5DE5B4041D1E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

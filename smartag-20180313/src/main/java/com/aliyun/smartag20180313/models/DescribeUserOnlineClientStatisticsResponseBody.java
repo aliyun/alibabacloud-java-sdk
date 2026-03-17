@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserOnlineClientStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14846A6A-2192-4F6A-B272-B8BD68EBC89B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

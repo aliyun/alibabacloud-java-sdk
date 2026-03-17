@@ -10,9 +10,23 @@ public class DisassociateQosRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The instance ID of the QoS policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-1lcl9gv5ew7x****</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>The ID of the region to which the QoS policy belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +36,13 @@ public class DisassociateQosRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance to be disassociated.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-c3m3n1khz58l****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

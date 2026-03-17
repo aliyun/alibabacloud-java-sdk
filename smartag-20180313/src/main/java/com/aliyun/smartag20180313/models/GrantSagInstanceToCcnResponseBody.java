@@ -4,9 +4,21 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GrantSagInstanceToCcnResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the permission policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sgc-6z21oj0vjjrx6s****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6E1674AC-083C-4031-B047-7A66E418E0C6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

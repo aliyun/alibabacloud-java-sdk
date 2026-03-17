@@ -10,6 +10,13 @@ public class ModifySagGlobalRouteProtocolRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,12 +26,38 @@ public class ModifySagGlobalRouteProtocolRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The routing protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>STATIC</strong>: static routing protocol</li>
+     * <li><strong>OSPF</strong>: Open Shortest Path First protocol (OSPF)</li>
+     * <li><strong>BGP</strong>: Border Gateway Protocol (BGP)</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSPF</p>
+     */
     @NameInMap("RouteProtocol")
     public String routeProtocol;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-whfn****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The serial number of the SAG device that is associated with the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag32a30****</p>
+     */
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 

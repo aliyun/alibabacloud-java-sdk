@@ -10,6 +10,13 @@ public class BindVbrRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,15 +26,42 @@ public class BindVbrRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-eoqbp1fmrsgbrn****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the SAG instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1250123456123456</p>
+     */
     @NameInMap("SmartAGUid")
     public Long smartAGUid;
 
+    /**
+     * <p>The ID of the VBR that you want to associate with the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-gc7ccdvtp3l4fec0j****</p>
+     */
     @NameInMap("VbrId")
     public String vbrId;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("VbrRegionId")
     public String vbrRegionId;
 

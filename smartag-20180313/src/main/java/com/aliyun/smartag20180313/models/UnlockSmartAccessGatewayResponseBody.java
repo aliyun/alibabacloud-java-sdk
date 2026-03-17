@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UnlockSmartAccessGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05DC546B-DBF9-4028-88CD-1742AB4E014C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

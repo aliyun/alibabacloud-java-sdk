@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowLogRequest extends TeaModel {
+    /**
+     * <p>The instance ID of the flow log.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fl-7a56mar1kfw9vj****</p>
+     */
     @NameInMap("FlowLogId")
     public String flowLogId;
 
@@ -13,6 +20,13 @@ public class DeleteFlowLogRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the flow log belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

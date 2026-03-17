@@ -4,18 +4,42 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowLogSagsResponseBody extends TeaModel {
+    /**
+     * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D945945-85F2-4BD7-A144-7DC0E8B5A0DC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Sags")
     public DescribeFlowLogSagsResponseBodySags sags;
 
+    /**
+     * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>35</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

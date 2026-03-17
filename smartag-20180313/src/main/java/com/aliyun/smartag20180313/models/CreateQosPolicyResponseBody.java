@@ -4,12 +4,30 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateQosPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The description of the traffic classification rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desctest</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The destination CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.10.10.0/24</p>
+     */
     @NameInMap("DestCidr")
     public String destCidr;
 
+    /**
+     * <p>The destination port range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80/80</p>
+     */
     @NameInMap("DestPortRange")
     public String destPortRange;
 
@@ -19,33 +37,93 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     @NameInMap("DpiSignatureIds")
     public CreateQosPolicyResponseBodyDpiSignatureIds dpiSignatureIds;
 
+    /**
+     * <p>The time when the traffic classification rule expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-14T16:41:33+0800</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The protocol that applies to the traffic classification rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TCP</p>
+     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
+    /**
+     * <p>The name of the traffic classification rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nametest</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The priority of the traffic throttling policy to which the traffic classification rule belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ID of the QoS policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-xitd8690ucu8ro****</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>The ID of the traffic classification rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qospy-xhwhyuo43l********</p>
+     */
     @NameInMap("QosPolicyId")
     public String qosPolicyId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97862812-2C7E-4D25-B0D5-B26DAC7FA293</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The source CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.10.10.0/24</p>
+     */
     @NameInMap("SourceCidr")
     public String sourceCidr;
 
+    /**
+     * <p>The source port range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80/80</p>
+     */
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 
+    /**
+     * <p>The time when the traffic classification rule takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-14T16:41:33+0800</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

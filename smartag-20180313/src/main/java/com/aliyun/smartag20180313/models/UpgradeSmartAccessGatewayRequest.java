@@ -4,9 +4,27 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UpgradeSmartAccessGatewayRequest extends TeaModel {
+    /**
+     * <p>Indicates whether to automatically pay the bill for a subscription instance.</p>
+     * <p>Valid values: <strong>true | false</strong>. Default value: false</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The bandwidth of the SAG instance.</p>
+     * <ul>
+     * <li>Value range for an SAG-100WM device: 2 to 50. Unit: Mbit/s</li>
+     * <li>Value range for an SAG-1000 device: 10 to 500. Unit: Mbit/s</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("BandWidthSpec")
     public Long bandWidthSpec;
 
@@ -16,6 +34,13 @@ public class UpgradeSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the SAG instance belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +50,13 @@ public class UpgradeSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-d3m51apgw4po******</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

@@ -10,6 +10,13 @@ public class DescribeDeviceAutoUpgradePolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,12 +26,36 @@ public class DescribeDeviceAutoUpgradePolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The serial number of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sage62x022502****</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-kxe2cv7hot7qrv****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The type of the software for which you want to query the automatic upgrade policy. Valid values:</p>
+     * <ul>
+     * <li><strong>Device</strong>: The operating system that is run by the SAG instance.</li>
+     * <li><strong>Dpi</strong>: The signature database that is used by the SAG instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Device</p>
+     */
     @NameInMap("VersionType")
     public String versionType;
 

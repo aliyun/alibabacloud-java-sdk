@@ -4,12 +4,27 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListAccessPointsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the access point.</p>
+     */
     @NameInMap("AccessPoints")
     public java.util.List<ListAccessPointsResponseBodyAccessPoints> accessPoints;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E26DBAAE-A796-4A48-98B4-B45AFCD1F299</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of access points.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,18 +58,48 @@ public class ListAccessPointsResponseBody extends TeaModel {
     }
 
     public static class ListAccessPointsResponseBodyAccessPoints extends TeaModel {
+        /**
+         * <p>The ID of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>401</p>
+         */
         @NameInMap("AccessPointId")
         public Integer accessPointId;
 
+        /**
+         * <p>The number of available SAG instances in the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ActiveSmartAGCount")
         public Integer activeSmartAGCount;
 
+        /**
+         * <p>The number of offline SAG instances in the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("InactiveSmartAGCount")
         public Integer inactiveSmartAGCount;
 
+        /**
+         * <p>The latitude of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103.81****</p>
+         */
         @NameInMap("Latitude")
         public String latitude;
 
+        /**
+         * <p>The longitude of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.35****</p>
+         */
         @NameInMap("Longitude")
         public String longitude;
 

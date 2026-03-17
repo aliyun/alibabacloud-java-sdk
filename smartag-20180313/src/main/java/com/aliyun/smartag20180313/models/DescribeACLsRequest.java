@@ -4,12 +4,39 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeACLsRequest extends TeaModel {
+    /**
+     * <p>The ID of the ACL.</p>
+     * <ul>
+     * <li>If you want to query multiple ACLs at the same time, separate the ACL IDs with commas (,).</li>
+     * <li>If you do not set this parameter, all ACLs in the specified region are queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-xhwhyuo43l*******</p>
+     */
     @NameInMap("AclIds")
     public String aclIds;
 
+    /**
+     * <p>The type of the SAG instance associated with the ACL. Valid values:</p>
+     * <ul>
+     * <li><strong>acl-hardware</strong>: SAG CPE instance</li>
+     * <li><strong>acl-software</strong>: SAG app instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-hardware</p>
+     */
     @NameInMap("AclType")
     public String aclType;
 
+    /**
+     * <p>The name of the ACL.</p>
+     * <p>The name must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -19,12 +46,31 @@ public class DescribeACLsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the ACL is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

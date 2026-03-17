@@ -4,9 +4,22 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySmartAccessGatewayClientUserRequest extends TeaModel {
+    /**
+     * <p>The maximum bandwidth allocated to the client account. Unit: Kbit/s.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>20000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The email address of the client account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
@@ -16,6 +29,13 @@ public class ModifySmartAccessGatewayClientUserRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG app instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,9 +45,23 @@ public class ModifySmartAccessGatewayClientUserRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG app instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-rz2e23c0e78ema****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The username of the client account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

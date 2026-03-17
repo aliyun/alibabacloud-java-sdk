@@ -4,9 +4,21 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DowngradeSmartAccessGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20337777855****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A6B9EB0F-57DB-4843-A372-04678ABF490E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

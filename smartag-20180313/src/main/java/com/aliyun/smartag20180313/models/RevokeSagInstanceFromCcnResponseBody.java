@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class RevokeSagInstanceFromCcnResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BCB97739-0CB5-4C94-9A5C-13051FFAB0E9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

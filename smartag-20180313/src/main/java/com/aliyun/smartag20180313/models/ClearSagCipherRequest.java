@@ -10,6 +10,13 @@ public class ClearSagCipherRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,9 +26,23 @@ public class ClearSagCipherRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-0nnteglltw6z4b****</p>
+     */
     @NameInMap("SagId")
     public String sagId;
 
+    /**
+     * <p>The serial number of the SAG vCPE device.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag42c3****</p>
+     */
     @NameInMap("SnNumber")
     public String snNumber;
 

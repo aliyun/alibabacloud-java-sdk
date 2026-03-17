@@ -10,6 +10,13 @@ public class UnbindSerialNumberRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the SAG instance belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,9 +26,23 @@ public class UnbindSerialNumberRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The serial number of the SAG device to be disassociated.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-sh-0-0927-16****</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-0phdojgu5tqr1p****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

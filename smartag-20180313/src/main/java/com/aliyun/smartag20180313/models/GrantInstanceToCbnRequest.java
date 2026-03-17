@@ -4,15 +4,49 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GrantInstanceToCbnRequest extends TeaModel {
+    /**
+     * <p>The ID of the CCN instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccn-n2935s1mnwv8i*****</p>
+     */
     @NameInMap("CcnInstanceId")
     public String ccnInstanceId;
 
+    /**
+     * <p>The ID of the CEN instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jm*****</p>
+     */
     @NameInMap("CenInstanceId")
     public String cenInstanceId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1250123456123456</p>
+     */
     @NameInMap("CenUid")
     public Long cenUid;
 
+    /**
+     * <p>Specifies whether to grant the CEN instance permissions to manage network traffic from the CCN instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: grants permissions.</li>
+     * <li><strong>false</strong>: does not grant permissions. This is the default value.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set the value to true and the SAG instance connected to the CCN instance has the secure rerouting feature enabled, you cannot revoke the permissions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("GrantTrafficService")
     public Boolean grantTrafficService;
 
@@ -22,6 +56,14 @@ public class GrantInstanceToCbnRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the CCN instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.htmll">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -10,6 +10,13 @@ public class DescribeUserFlowStatisticsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region where the SAG APP instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,12 +26,33 @@ public class DescribeUserFlowStatisticsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG APP instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-mfkg*****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The month during which the data transfer statistics are collected.</p>
+     * <p>If you do not specify a month, the current month is queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>201905</p>
+     */
     @NameInMap("StatisticsDate")
     public String statisticsDate;
 
+    /**
+     * <p>The list of usernames of client accounts. Maximum value of N: 50.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("UserNames")
     public java.util.List<String> userNames;
 

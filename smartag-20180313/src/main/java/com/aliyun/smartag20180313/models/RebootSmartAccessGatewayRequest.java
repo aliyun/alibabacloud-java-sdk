@@ -10,6 +10,13 @@ public class RebootSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the SAG instance belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,9 +26,22 @@ public class RebootSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The serial number of the SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1b2c3d4e5f6g7h8f9</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-w9unmktmupcde*****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

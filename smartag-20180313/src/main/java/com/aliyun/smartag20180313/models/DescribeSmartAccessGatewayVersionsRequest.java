@@ -10,6 +10,13 @@ public class DescribeSmartAccessGatewayVersionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,12 +26,35 @@ public class DescribeSmartAccessGatewayVersionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-d3m51apgw4po5*****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The serial number of the SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sage62x022502****</p>
+     */
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 
+    /**
+     * <p>The type of software run by the SAG device. Valid values:</p>
+     * <ul>
+     * <li><strong>Device</strong>: The operating system run by the SAG device. This is the default value.</li>
+     * <li><strong>Dpi</strong>: The signature database used by the SAG device.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Device</p>
+     */
     @NameInMap("VersionType")
     public String versionType;
 

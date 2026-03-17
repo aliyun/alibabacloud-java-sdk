@@ -4,6 +4,10 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifyClientUserDNSRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100.XX.XX.100</p>
+     */
     @NameInMap("AppDNS")
     public java.util.List<String> appDNS;
 
@@ -13,9 +17,20 @@ public class ModifyClientUserDNSRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100.XX.XX.110</p>
+     */
     @NameInMap("RecoveredDNS")
     public java.util.List<String> recoveredDNS;
 
+    /**
+     * <p>The ID of the region where the SAG app instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +40,13 @@ public class ModifyClientUserDNSRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG app instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-9uyg53s6juhpxv****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

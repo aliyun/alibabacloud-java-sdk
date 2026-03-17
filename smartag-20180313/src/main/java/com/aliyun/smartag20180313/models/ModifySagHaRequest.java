@@ -4,6 +4,18 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagHaRequest extends TeaModel {
+    /**
+     * <p>The HA mode. Valid values:</p>
+     * <ul>
+     * <li><strong>NONE</strong>: disables HA.</li>
+     * <li><strong>STATIC</strong>: enables static HA.</li>
+     * <li><strong>DYNAMIC</strong>: enables dynamic HA.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NONE</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
@@ -13,9 +25,25 @@ public class ModifySagHaRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The port name.</p>
+     * <blockquote>
+     * <p> If Mode is set to STATIC, you must specify a port name.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PortName")
     public String portName;
 
+    /**
+     * <p>The region ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,12 +53,35 @@ public class ModifySagHaRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The SAG instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-whfn****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The serial number of the SAG device associated with the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag32a30****</p>
+     */
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 
+    /**
+     * <p>The virtual IP address.</p>
+     * <blockquote>
+     * <p> If Mode is set to STATIC, you must specify a virtual IP address.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.5</p>
+     */
     @NameInMap("VirtualIp")
     public String virtualIp;
 

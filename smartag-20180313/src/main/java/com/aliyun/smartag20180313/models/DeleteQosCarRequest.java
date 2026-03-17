@@ -10,12 +10,33 @@ public class DeleteQosCarRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The instance ID of the QoS speed limiting rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qoscar-n5k8g97lihlph****</p>
+     */
     @NameInMap("QosCarId")
     public String qosCarId;
 
+    /**
+     * <p>The instance ID of the QoS policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-awfxl1adxeqyk****</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>The ID of the region to which the QoS policy belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

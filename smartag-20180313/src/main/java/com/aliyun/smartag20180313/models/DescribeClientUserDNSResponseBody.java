@@ -4,12 +4,24 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientUserDNSResponseBody extends TeaModel {
+    /**
+     * <p>The active and standby DNS servers that the SAG app instance uses when it connects to private networks.</p>
+     */
     @NameInMap("AppDNS")
     public java.util.List<String> appDNS;
 
+    /**
+     * <p>The active and standby DNS servers that the SAG app instance uses when it disconnects from private networks.</p>
+     */
     @NameInMap("RecoveredDNS")
     public java.util.List<String> recoveredDNS;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>894AA8BD-0627-45B1-AA18-9CE1D50DA9D0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

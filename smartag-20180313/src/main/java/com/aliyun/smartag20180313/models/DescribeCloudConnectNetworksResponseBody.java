@@ -7,15 +7,39 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
     @NameInMap("CloudConnectNetworks")
     public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworks cloudConnectNetworks;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F2A0B80-D6D1-4764-8D77-38067DBBA345</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of the CCN instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -144,11 +168,17 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("NewAgw")
+        public Boolean newAgw;
+
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         @NameInMap("SnatCidrBlock")
         public String snatCidrBlock;
+
+        @NameInMap("Subnet")
+        public String subnet;
 
         @NameInMap("Tags")
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTags tags;
@@ -238,6 +268,14 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setNewAgw(Boolean newAgw) {
+            this.newAgw = newAgw;
+            return this;
+        }
+        public Boolean getNewAgw() {
+            return this.newAgw;
+        }
+
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
@@ -252,6 +290,14 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
         public String getSnatCidrBlock() {
             return this.snatCidrBlock;
+        }
+
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setSubnet(String subnet) {
+            this.subnet = subnet;
+            return this;
+        }
+        public String getSubnet() {
+            return this.subnet;
         }
 
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setTags(DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTags tags) {

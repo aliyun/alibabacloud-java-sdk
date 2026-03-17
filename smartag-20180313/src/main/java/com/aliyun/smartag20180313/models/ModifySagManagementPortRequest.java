@@ -4,12 +4,32 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagManagementPortRequest extends TeaModel {
+    /**
+     * <p>The IP address of the management port gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.254</p>
+     */
     @NameInMap("Gateway")
     public String gateway;
 
+    /**
+     * <p>The IP address of the management port.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.1</p>
+     */
     @NameInMap("IP")
     public String IP;
 
+    /**
+     * <p>The subnet mask for the IP address of the management port.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>255.255.255.0</p>
+     */
     @NameInMap("Mask")
     public String mask;
 
@@ -19,6 +39,13 @@ public class ModifySagManagementPortRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,9 +55,23 @@ public class ModifySagManagementPortRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-whfn****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The serial number of the SAG device associated with the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag32a30****</p>
+     */
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 

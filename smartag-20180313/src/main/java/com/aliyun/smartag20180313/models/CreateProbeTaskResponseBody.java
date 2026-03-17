@@ -4,15 +4,39 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateProbeTaskResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the probe task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>probe-****</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>324223F3-93D3-4CE4-B26F-66C0C3809922</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

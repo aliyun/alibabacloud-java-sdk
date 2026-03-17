@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeQosPoliciesRequest extends TeaModel {
+    /**
+     * <p>The description of the 5-tuple.</p>
+     * <p>The description must be 1 to 512 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>docdesc</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -13,21 +20,64 @@ public class DescribeQosPoliciesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <p>Default value: <strong>10</strong>. A maximum of <strong>50</strong> entries can be returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The priority of the traffic throttling rule that is applied to the 5-tuple.</p>
+     * <p>Valid values: <strong>1 to 3</strong>. A smaller value indicates a higher priority.</p>
+     * <blockquote>
+     * <p> If you have submitted a ticket and created a QoS policy with the priority value 4 by calling the <a href="https://help.aliyun.com/document_detail/131575.html">CreateQosPolicy</a> operation, you can set the value to 4.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ID of the QoS policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-xitd8690ucu8ro****</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>The ID of the 5-tuple.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qospy-427m9fo6wkh****</p>
+     */
     @NameInMap("QosPolicyId")
     public String qosPolicyId;
 
+    /**
+     * <p>The ID of the region to which the QoS policy belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

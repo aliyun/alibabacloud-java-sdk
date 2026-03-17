@@ -4,18 +4,48 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySmartAccessGatewayClientUserResponseBody extends TeaModel {
+    /**
+     * <p>The maximum bandwidth allocated to the client account. Unit: Kbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.10.10.1</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5F0078B5-8AAD-4B53-8351-4C91B8EA528A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The email address of the client account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
+     */
     @NameInMap("UserMail")
     public String userMail;
 
+    /**
+     * <p>The username of the client account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

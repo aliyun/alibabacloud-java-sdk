@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouteDistributionStrategyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24C58BD0-1679-4942-9D42-00B635DAAADB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

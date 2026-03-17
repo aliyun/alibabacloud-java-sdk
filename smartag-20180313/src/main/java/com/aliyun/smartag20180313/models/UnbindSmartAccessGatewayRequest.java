@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UnbindSmartAccessGatewayRequest extends TeaModel {
+    /**
+     * <p>The ID of the CCN instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccn-kygbldwikz********</p>
+     */
     @NameInMap("CcnId")
     public String ccnId;
 
@@ -13,6 +20,13 @@ public class UnbindSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,9 +36,22 @@ public class UnbindSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-0ovhf732a********</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the SAG instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1688401595963306</p>
+     */
     @NameInMap("SmartAGUid")
     public Long smartAGUid;
 

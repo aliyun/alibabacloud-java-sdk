@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UpdateSmartAGAccessPointRequest extends TeaModel {
+    /**
+     * <p>The ID of the access point to which you want to switch.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("AccessPointId")
     public Integer accessPointId;
 
@@ -13,6 +20,13 @@ public class UpdateSmartAGAccessPointRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +36,13 @@ public class UpdateSmartAGAccessPointRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-far8v6owtdxlua****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

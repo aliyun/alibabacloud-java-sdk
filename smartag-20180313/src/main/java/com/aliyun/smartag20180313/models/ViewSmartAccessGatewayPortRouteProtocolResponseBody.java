@@ -7,6 +7,10 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
     @NameInMap("Ports")
     public java.util.List<ViewSmartAccessGatewayPortRouteProtocolResponseBodyPorts> ports;
 
+    /**
+     * <strong>example:</strong>
+     * <p>877F5673-FFD1-5168-99D1-1E8009FBFF7B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,21 +50,45 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
         @NameInMap("NeighborIp")
         public String neighborIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("PortName")
         public String portName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65535</p>
+         */
         @NameInMap("RemoteAs")
         public String remoteAs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.XX.XX.1</p>
+         */
         @NameInMap("RemoteIp")
         public String remoteIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BGP</p>
+         */
         @NameInMap("RouteProtocol")
         public String routeProtocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UP</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Vlan")
         public String vlan;
 
@@ -128,15 +156,31 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
     }
 
     public static class ViewSmartAccessGatewayPortRouteProtocolResponseBodyTaskStates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1586765938000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Successful</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Succeed</p>
+         */
         @NameInMap("State")
         public String state;
 

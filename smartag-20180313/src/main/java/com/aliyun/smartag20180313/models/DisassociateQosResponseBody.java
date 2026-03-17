@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DisassociateQosResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>551CD836-9E46-4F2C-A167-B4363180A647</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,18 +4,44 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ViewSmartAccessGatewayPortRouteProtocolRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CrossAccount")
     public Boolean crossAccount;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>109790620697****</p>
+     */
     @NameInMap("ResourceUid")
     public String resourceUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-sv487b7lno6go5****</p>
+     */
     @NameInMap("SagInsId")
     public String sagInsId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sagf4dk****</p>
+     */
     @NameInMap("SagSn")
     public String sagSn;
 

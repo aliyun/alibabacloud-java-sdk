@@ -10,12 +10,33 @@ public class DeleteQosPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The instance ID of the QoS policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-xitd8690ucu8ro****</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>The ID of the quintuple rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qospy-xhwhyuo43l****</p>
+     */
     @NameInMap("QosPolicyId")
     public String qosPolicyId;
 
+    /**
+     * <p>The ID of the region to which the QoS policy belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

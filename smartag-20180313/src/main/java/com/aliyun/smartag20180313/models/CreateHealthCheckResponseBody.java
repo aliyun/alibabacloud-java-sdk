@@ -4,9 +4,21 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateHealthCheckResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the health check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hc-rrqoucina3gmpn****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E38E950D-28A4-4C41-9428-A8908EC6AE5C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

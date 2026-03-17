@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class BindSmartAccessGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8A3FF8DD-B27D-4ED2-B032-5EF90B38195D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

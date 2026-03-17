@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9552AD68-18EA-4074-B27D-40040FBA9683</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,6 +41,9 @@ public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
         @NameInMap("TotalBytes")
         public String totalBytes;
 
+        @NameInMap("TotalLeaveBytes")
+        public String totalLeaveBytes;
+
         @NameInMap("UserName")
         public String userName;
 
@@ -49,6 +58,14 @@ public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
         }
         public String getTotalBytes() {
             return this.totalBytes;
+        }
+
+        public DescribeUserFlowStatisticsResponseBodySagStatisticsStatistics setTotalLeaveBytes(String totalLeaveBytes) {
+            this.totalLeaveBytes = totalLeaveBytes;
+            return this;
+        }
+        public String getTotalLeaveBytes() {
+            return this.totalLeaveBytes;
         }
 
         public DescribeUserFlowStatisticsResponseBodySagStatisticsStatistics setUserName(String userName) {

@@ -4,9 +4,23 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class RoamClientUserRequest extends TeaModel {
+    /**
+     * <p>The region ID of the SAG app instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-southeast-1</p>
+     */
     @NameInMap("OriginRegionId")
     public String originRegionId;
 
+    /**
+     * <p>The ID of the source SAG app instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-m9uhqekwnqcnyy****</p>
+     */
     @NameInMap("OriginSmartAGId")
     public String originSmartAGId;
 
@@ -16,6 +30,13 @@ public class RoamClientUserRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the SAG app instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,9 +46,23 @@ public class RoamClientUserRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the destination SAG app instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-ghwa10ko6ndwug****</p>
+     */
     @NameInMap("TargetSmartAGId")
     public String targetSmartAGId;
 
+    /**
+     * <p>The usernames of the client for which you want to enable roaming.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nametest</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

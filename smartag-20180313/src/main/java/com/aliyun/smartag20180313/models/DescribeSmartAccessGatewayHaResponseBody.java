@@ -4,24 +4,69 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
+    /**
+     * <p>The serial number of the standby SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag11axxxx</p>
+     */
     @NameInMap("BackupDeviceId")
     public String backupDeviceId;
 
+    /**
+     * <p>Indicates whether device-based HA is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>ON</strong>: enabled</li>
+     * <li><strong>OFF</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OFF</p>
+     */
     @NameInMap("DeviceLevelBackupState")
     public String deviceLevelBackupState;
 
+    /**
+     * <p>The deployment mode of the SAG devices that have HA enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>warm_backup</strong>: active-active mode.</li>
+     * <li><strong>cold_backup</strong>: active-standby mode.</li>
+     * <li><strong>no_backup</strong>: HA is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cold_backup</p>
+     */
     @NameInMap("DeviceLevelBackupType")
     public String deviceLevelBackupType;
 
     @NameInMap("LinkBackupInfoList")
     public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoList linkBackupInfoList;
 
+    /**
+     * <p>The serial number of the active SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag11axxxx</p>
+     */
     @NameInMap("MainDeviceId")
     public String mainDeviceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>582FE511-FEFE-42BC-BBF4-4F8ECF92Exxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-i8mogwi9kisigc3xxxx</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

@@ -4,15 +4,44 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowLogsRequest extends TeaModel {
+    /**
+     * <p>The description of the flow log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of a flow log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fl-7a56mar1kfw9vj****</p>
+     */
     @NameInMap("FlowLogId")
     public String flowLogId;
 
+    /**
+     * <p>The name of the flow log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DDE</p>
+     */
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    /**
+     * <p>The location where the flow log is stored. Valid values:</p>
+     * <ul>
+     * <li><strong>sls</strong>: The flow log is stored in Log Service.</li>
+     * <li><strong>netflow</strong>: The flow log is stored on a NetFlow collector.</li>
+     * <li><strong>all</strong>: The flow log is stored both in Log Service and on a NetFlow collector.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("OutputType")
     public String outputType;
 
@@ -22,12 +51,31 @@ public class DescribeFlowLogsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region that the flow logs are stored.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -37,6 +85,16 @@ public class DescribeFlowLogsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the flow log. Valid values:</p>
+     * <ul>
+     * <li><strong>Active</strong>: The flow log is enabled.</li>
+     * <li><strong>Inactive</strong>: The flow log is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
+     */
     @NameInMap("Status")
     public String status;
 

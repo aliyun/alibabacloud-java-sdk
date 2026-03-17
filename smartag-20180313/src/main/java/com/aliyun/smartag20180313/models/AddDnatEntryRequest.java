@@ -4,18 +4,62 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class AddDnatEntryRequest extends TeaModel {
+    /**
+     * <p>The public IP address.</p>
+     * <blockquote>
+     * <p> If the DNAT entry is used to forward packets transmitted over the Internet, the DNAT entry automatically recognizes the current public IP address.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10.10.1.xx</p>
+     */
     @NameInMap("ExternalIp")
     public String externalIp;
 
+    /**
+     * <p>The public port.</p>
+     * <p>Valid values: <strong>1 to 65535</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("ExternalPort")
     public String externalPort;
 
+    /**
+     * <p>The destination private IP address.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.1</p>
+     */
     @NameInMap("InternalIp")
     public String internalIp;
 
+    /**
+     * <p>The destination private port.</p>
+     * <p>Valid values: <strong>1 to 65535</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("InternalPort")
     public String internalPort;
 
+    /**
+     * <p>The protocol used in DNAT. Valid values:</p>
+     * <ul>
+     * <li><strong>TCP</strong>: forwards TCP packets.</li>
+     * <li><strong>UDP</strong>: The NAT gateway forwards UDP packets.</li>
+     * <li><strong>Any</strong>: forwards packets of all protocols.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TCP</p>
+     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
@@ -25,6 +69,13 @@ public class AddDnatEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,9 +85,29 @@ public class AddDnatEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <blockquote>
+     * <p> Only SAG instances used to manage SAG devices support DNAT.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-kdhg*******</p>
+     */
     @NameInMap("SagId")
     public String sagId;
 
+    /**
+     * <p>The type of the DNAT entry. Valid values:</p>
+     * <ul>
+     * <li><strong>Intranet</strong>: translates the destination IP address to a specific internal IP address. This is the default value.</li>
+     * <li><strong>Internet</strong>: translates the destination IP address to a specific public IP address.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Intranet</p>
+     */
     @NameInMap("Type")
     public String type;
 

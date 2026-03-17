@@ -10,6 +10,13 @@ public class UpdateSmartAccessGatewayVersionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,15 +26,45 @@ public class UpdateSmartAccessGatewayVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The serial number of the SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag233****</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-0ovhf732a9j*******</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The version to which you want to upgrade the SAG device.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.1</p>
+     */
     @NameInMap("VersionCode")
     public String versionCode;
 
+    /**
+     * <p>The type of software that you want to upgrade. Valid values:</p>
+     * <ul>
+     * <li><strong>Device</strong>: The operating system run by the SAG device.</li>
+     * <li><strong>Dpi</strong>: The signature database used by the SAG device.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Device</p>
+     */
     @NameInMap("VersionType")
     public String versionType;
 

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DiagnoseSmartAccessGatewayResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DiagnoseSmartAccessGatewayResponseBody body;
 
     public static DiagnoseSmartAccessGatewayResponse build(java.util.Map<String, ?> map) throws Exception {

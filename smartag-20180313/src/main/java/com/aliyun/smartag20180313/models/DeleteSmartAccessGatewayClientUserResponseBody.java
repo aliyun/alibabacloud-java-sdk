@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteSmartAccessGatewayClientUserResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09AD82DC-FE26-4B66-B526-2FA6BE82A4D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

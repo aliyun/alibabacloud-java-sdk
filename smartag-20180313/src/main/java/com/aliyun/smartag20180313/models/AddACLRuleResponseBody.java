@@ -4,21 +4,62 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class AddACLRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-xhwhyuo43l0*******</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The ID of the ACL rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acr-c1hkd054qywi******</p>
+     */
     @NameInMap("AcrId")
     public String acrId;
 
+    /**
+     * <p>The description of the ACL rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The destination CIDR block.</p>
+     * <p>The value of this parameter is specified in CIDR notation. Example: 192.168.10.0/24.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.10.0/24</p>
+     */
     @NameInMap("DestCidr")
     public String destCidr;
 
+    /**
+     * <p>The destination port range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1/65535</p>
+     */
     @NameInMap("DestPortRange")
     public String destPortRange;
 
+    /**
+     * <p>The direction of traffic in which the ACL rule is applied. Valid values:</p>
+     * <ul>
+     * <li><strong>in</strong>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the SAG instance.</li>
+     * <li><strong>out</strong>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>out</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
@@ -28,30 +69,95 @@ public class AddACLRuleResponseBody extends TeaModel {
     @NameInMap("DpiSignatureIds")
     public AddACLRuleResponseBodyDpiSignatureIds dpiSignatureIds;
 
+    /**
+     * <p>The timestamp when the ACL rule was created.</p>
+     * <p>The timestamp is of the Long data type. If multiple ACL rules have the same priority, the rule with the earliest timestamp takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1553766882689</p>
+     */
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
+    /**
+     * <p>The protocol used by the ACL rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TCP</p>
+     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
+    /**
+     * <p>The name of the ACL rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The action policy of the ACL rule.</p>
+     * <ul>
+     * <li><strong>accept</strong>: allows the network traffic.</li>
+     * <li><strong>drop</strong>: blocks the network traffic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>drop</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <p>The priority of the ACL rule.</p>
+     * <p>A smaller value indicates a higher priority. If rules have the same priority, whichever applied to the SAG devices earlier takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>880F84CB-9B54-4413-A8A3-8832C82D1BC4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The source CIDR block.</p>
+     * <p>The value of this parameter is specified in CIDR notation. Example: 192.168.1.0/24.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.20.0/24</p>
+     */
     @NameInMap("SourceCidr")
     public String sourceCidr;
 
+    /**
+     * <p>The source port range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1/65535</p>
+     */
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 
+    /**
+     * <p>The type of the ACL rule:</p>
+     * <ul>
+     * <li><strong>LAN</strong>: The ACL rule controls network traffic transmitted through private IP addresses.</li>
+     * <li><strong>WAN</strong>: The ACL rule controls network traffic transmitted through public IP addresses.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LAN</p>
+     */
     @NameInMap("Type")
     public String type;
 

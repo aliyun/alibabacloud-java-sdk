@@ -10,18 +10,54 @@ public class DescribeQosesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the QoS policy.</p>
+     * <ul>
+     * <li>Separate multiple QoS polices with commas (,).</li>
+     * <li>If you do not specify this parameter, all QoS policies in the region are queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-oek3r2cmvk7m8q****</p>
+     */
     @NameInMap("QosIds")
     public String qosIds;
 
+    /**
+     * <p>The name of the QoS policy.</p>
+     * <p>The name must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_),and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zxtest</p>
+     */
     @NameInMap("QosName")
     public String qosName;
 
+    /**
+     * <p>The ID of the region where the QoS policy is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeviceAutoUpgradePolicyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F03C6897-2284-4BC8-94B4-1467BD992A2D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

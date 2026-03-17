@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySAGAdminPasswordResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DB0A026C-A8E5-40AB-977E-3A87DD78F694</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

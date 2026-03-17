@@ -4,9 +4,21 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GrantSagInstanceToVbrResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the authorization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sgv-3x8djyem7vqh70****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49CEBB2B-9E5C-4789-8A29-3255A56A67B1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

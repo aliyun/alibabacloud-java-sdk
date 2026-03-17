@@ -4,18 +4,42 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>944C2533-1BB7-4578-B6EB-DA05BB61C02A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Strategies")
     public DescribeRouteDistributionStrategiesResponseBodyStrategies strategies;
 
+    /**
+     * <p>The total number of routes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

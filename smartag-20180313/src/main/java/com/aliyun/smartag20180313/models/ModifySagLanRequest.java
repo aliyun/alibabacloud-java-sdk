@@ -4,18 +4,56 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagLanRequest extends TeaModel {
+    /**
+     * <p>The last IP address of the DHCP pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.254</p>
+     */
     @NameInMap("EndIp")
     public String endIp;
 
+    /**
+     * <p>The IP address of the LAN port.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.1</p>
+     */
     @NameInMap("IP")
     public String IP;
 
+    /**
+     * <p>The connection type of the LAN port. Valid values:</p>
+     * <ul>
+     * <li><strong>DHCP</strong>: a dynamic IP address. Uses the Dynamic Host Configuration Protocol (DHCP) to dynamically assign an IP address to a connected device.</li>
+     * <li><strong>STATIC</strong>: a static IP address. Specifies a static IP address for the LAN port.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STATIC</p>
+     */
     @NameInMap("IPType")
     public String IPType;
 
+    /**
+     * <p>The time duration that the IP address is retained after it is assigned through DHCP. Unit: minute.</p>
+     * <p>Valid values: <strong>1 to 43200</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("Lease")
     public String lease;
 
+    /**
+     * <p>The subnet mask of the LAN port IP address.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>255.255.255.0</p>
+     */
     @NameInMap("Mask")
     public String mask;
 
@@ -25,9 +63,23 @@ public class ModifySagLanRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The name of the LAN port.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PortName")
     public String portName;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -37,12 +89,32 @@ public class ModifySagLanRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-whfn****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The serial number of the SAG device that is associated with the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag32a30****</p>
+     */
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 
+    /**
+     * <p>The first IP address of the DHCP pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.2</p>
+     */
     @NameInMap("StartIp")
     public String startIp;
 

@@ -4,21 +4,57 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateSmartAccessGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The description of the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdesc</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testname</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20337777****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A6B9EB0F-57DB-4843-A372-04678ABF490E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the SAG instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2iu4fnc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-nylv14tghsk26c*****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

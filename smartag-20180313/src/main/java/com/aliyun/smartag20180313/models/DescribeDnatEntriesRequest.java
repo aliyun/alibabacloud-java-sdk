@@ -10,12 +10,31 @@ public class DescribeDnatEntriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,9 +44,29 @@ public class DescribeDnatEntriesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <blockquote>
+     * <p> Only SAG customer-premises equipment (CPE) instances are supported.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-djgd*************</p>
+     */
     @NameInMap("SagId")
     public String sagId;
 
+    /**
+     * <p>The type of the DNAT entry. Valid values:</p>
+     * <ul>
+     * <li><strong>Intranet</strong>: translates the IP address to a specific internal IP address. This is the default value.</li>
+     * <li><strong>Internet</strong>: translates the IP address to a specific public IP address.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Intranet</p>
+     */
     @NameInMap("Type")
     public String type;
 

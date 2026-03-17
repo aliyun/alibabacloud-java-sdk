@@ -10,15 +10,41 @@ public class ModifyQosRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The description of the QoS policy. The description must be 1 to 512 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter or Chinese character.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qosdes</p>
+     */
     @NameInMap("QosDescription")
     public String qosDescription;
 
+    /**
+     * <p>The ID of the QoS policy that you want to modify.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-awfxl1adxeqyk****</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>The name of the QoS policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest</p>
+     */
     @NameInMap("QosName")
     public String qosName;
 
+    /**
+     * <p>The region where the QoS policy is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

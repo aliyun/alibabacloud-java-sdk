@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeHealthCheckAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the health check instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hc-1k4ucuq77b56x4****</p>
+     */
     @NameInMap("HcInstanceId")
     public String hcInstanceId;
 
@@ -13,6 +20,13 @@ public class DescribeHealthCheckAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the Smart Access Gateway (SAG) instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +36,13 @@ public class DescribeHealthCheckAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-1um5x5nwhilymw****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

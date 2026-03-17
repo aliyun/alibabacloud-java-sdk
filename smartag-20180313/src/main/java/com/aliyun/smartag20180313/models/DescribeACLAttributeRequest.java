@@ -4,15 +4,48 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeACLAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the ACL.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-ohlexqptfhyaq****</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The direction of traffic in which the ACL rule is applied. Valid values:</p>
+     * <ul>
+     * <li><strong>in</strong>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the Smart Access Gateway (SAG) instance.</li>
+     * <li><strong>out</strong>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>out</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>The name of the ACL.</p>
+     * <p>The name must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <blockquote>
+     * <p> This parameter supports fuzzy match.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1255444444</p>
+     */
     @NameInMap("Order")
     public String order;
 
@@ -22,12 +55,33 @@ public class DescribeACLAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the ACL is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

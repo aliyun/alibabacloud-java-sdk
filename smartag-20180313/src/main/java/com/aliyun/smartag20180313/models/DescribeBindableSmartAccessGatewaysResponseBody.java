@@ -4,18 +4,42 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeBindableSmartAccessGatewaysResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9731C2F5-B9A4-42FD-AFD2-361A403E6E85</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SmartAccessGateways")
     public DescribeBindableSmartAccessGatewaysResponseBodySmartAccessGateways smartAccessGateways;
 
+    /**
+     * <p>The total number of SAG instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

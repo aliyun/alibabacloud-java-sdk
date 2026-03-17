@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteDnatEntryRequest extends TeaModel {
+    /**
+     * <p>The ID of the DNAT entry.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fwd-kxe4fq3xuzczze****</p>
+     */
     @NameInMap("DnatEntryId")
     public String dnatEntryId;
 
@@ -13,6 +20,14 @@ public class DeleteDnatEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +37,16 @@ public class DeleteDnatEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <blockquote>
+     * <p> Only SAG instances used to manage SAG devices support DNAT.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-jfh*********</p>
+     */
     @NameInMap("SagId")
     public String sagId;
 

@@ -4,9 +4,18 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagDropTopNResponseBody extends TeaModel {
+    /**
+     * <p>The information about packets dropped by the SAG instance.</p>
+     */
     @NameInMap("DropTopN")
     public java.util.List<DescribeSagDropTopNResponseBodyDropTopN> dropTopN;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AFF7E5A6-6897-4FDC-A5A8-1978B5B3E545</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +41,39 @@ public class DescribeSagDropTopNResponseBody extends TeaModel {
     }
 
     public static class DescribeSagDropTopNResponseBodyDropTopN extends TeaModel {
+        /**
+         * <p>The packet loss rate of the SAG instance. Unit: packets per second (PPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("DropRate")
         public String dropRate;
 
+        /**
+         * <p>The ID of the SAG instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sag-whfn****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the SAG instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

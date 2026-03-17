@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteCloudConnectNetworkRequest extends TeaModel {
+    /**
+     * <p>The ID of the CCN instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccn-bxuau4ezctts2*****</p>
+     */
     @NameInMap("CcnId")
     public String ccnId;
 
@@ -13,6 +20,12 @@ public class DeleteCloudConnectNetworkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the CCN instance is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

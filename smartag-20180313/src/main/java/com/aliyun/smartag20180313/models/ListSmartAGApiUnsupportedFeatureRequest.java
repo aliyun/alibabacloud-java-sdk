@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListSmartAGApiUnsupportedFeatureRequest extends TeaModel {
+    /**
+     * <p>The API operation for the unsupported feature.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ModifySagWan</p>
+     */
     @NameInMap("OpenApiName")
     public String openApiName;
 
@@ -13,6 +20,13 @@ public class ListSmartAGApiUnsupportedFeatureRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,9 +36,23 @@ public class ListSmartAGApiUnsupportedFeatureRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The serial number of the SAG device.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sage62x052614****</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The ID of the SAG instance with which the SAG device is associated.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-4d6i45zess8nj4****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

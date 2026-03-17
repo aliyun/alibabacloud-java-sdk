@@ -4,9 +4,18 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListAccessPointNetworkQualitiesResponseBody extends TeaModel {
+    /**
+     * <p>The network quality of the endpoint.</p>
+     */
     @NameInMap("AccessPointNetworkQualities")
     public java.util.List<ListAccessPointNetworkQualitiesResponseBodyAccessPointNetworkQualities> accessPointNetworkQualities;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8E8E8C86-1404-122A-A1BB-84BBC2E9A4B1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class ListAccessPointNetworkQualitiesResponseBody extends TeaModel {
     }
 
     public static class ListAccessPointNetworkQualitiesResponseBodyAccessPointNetworkQualities extends TeaModel {
+        /**
+         * <p>The ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>115</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The packet loss rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.00%</p>
+         */
         @NameInMap("Loss")
         public String loss;
 
+        /**
+         * <p>The network latency. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.98</p>
+         */
         @NameInMap("Rtt")
         public String rtt;
 

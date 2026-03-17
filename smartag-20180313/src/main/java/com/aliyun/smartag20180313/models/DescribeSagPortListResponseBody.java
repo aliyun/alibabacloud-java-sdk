@@ -4,12 +4,24 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagPortListResponseBody extends TeaModel {
+    /**
+     * <p>The list of the port information.</p>
+     */
     @NameInMap("Ports")
     public java.util.List<DescribeSagPortListResponseBodyPorts> ports;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE6642D4-21EB-4168-9BF9-F217953F9892</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The state of the query task.</p>
+     */
     @NameInMap("TaskStates")
     public java.util.List<DescribeSagPortListResponseBodyTaskStates> taskStates;
 
@@ -43,15 +55,51 @@ public class DescribeSagPortListResponseBody extends TeaModel {
     }
 
     public static class DescribeSagPortListResponseBodyPorts extends TeaModel {
+        /**
+         * <p>The Mac address of the port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c4:00:ad:a2:f5:****</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <p>The name of the port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("PortName")
         public String portName;
 
+        /**
+         * <p>Port role:</p>
+         * <ul>
+         * <li><strong>NONE</strong>: No role is assigned to the port.</li>
+         * <li><strong>WAN</strong>: The port is used as a WAN port. The WAN port supports a Dynamic Host Configuration Protocol (DHCP) client, PPPoE, or a static IP address to access the Internet.</li>
+         * <li><strong>LAN</strong>: The port is used as a LAN port. The LAN port supports a DHCP server or a static IP address to connect to a local terminal or switch.</li>
+         * <li><strong>ECC</strong>: The port is used as a leased line port to connect to a leased line.</li>
+         * <li><strong>MGT</strong>: The port is used as the management port.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>Port states:</p>
+         * <ul>
+         * <li><strong>Up</strong>: The port is enabled.</li>
+         * <li><strong>Down</strong>: The port is disabled.</li>
+         * <li><strong>Unavailable</strong>: The SAG device is disconnected from Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Down</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -95,15 +143,50 @@ public class DescribeSagPortListResponseBody extends TeaModel {
     }
 
     public static class DescribeSagPortListResponseBodyTaskStates extends TeaModel {
+        /**
+         * <p>The time when the query task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1586762479000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The error code. 200 indicates that the query task is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message. Successful indicates that the query task is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Asynchronous task states:</p>
+         * <ul>
+         * <li><strong>Initialized</strong>: The query task is initialized.</li>
+         * <li><strong>Offline</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud continues to assign the query task to the SAG device.</li>
+         * <li><strong>Succeed</strong>: Alibaba Cloud has assigned the query task to the SAG device.</li>
+         * <li><strong>Processing</strong>: Alibaba Cloud is assigning the query task to the SAG device.</li>
+         * <li><strong>VersionNotSupport</strong>: not supported by the current version of the SAG device.</li>
+         * <li><strong>BuildRequestError</strong>: not supported by the control and management center in the cloud.</li>
+         * <li><strong>HardwareError</strong>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</li>
+         * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
+         * <li><strong>OfflineNotConfiged</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud does not assign the query task to the SAG device.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed</p>
+         */
         @NameInMap("State")
         public String state;
 

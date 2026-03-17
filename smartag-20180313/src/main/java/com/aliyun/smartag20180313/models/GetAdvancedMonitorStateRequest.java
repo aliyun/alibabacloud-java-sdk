@@ -4,9 +4,24 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GetAdvancedMonitorStateRequest extends TeaModel {
+    /**
+     * <p>The region ID of the SAG instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-asdfz6ac74oj5v****</p>
+     */
     @NameInMap("SagId")
     public String sagId;
 

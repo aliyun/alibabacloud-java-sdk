@@ -4,27 +4,63 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UpdateSmartAccessGatewayOspfRouteRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AreaId")
     public Integer areaId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MD5</p>
+     */
     @NameInMap("AuthenticationType")
     public String authenticationType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CrossAccount")
     public Boolean crossAccount;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
+     */
     @NameInMap("DeadTime")
     public Integer deadTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("HelloTime")
     public Integer helloTime;
 
     @NameInMap("InterfaceName")
     public String interfaceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("Md5Key")
     public String md5Key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("Md5KeyId")
     public Integer md5KeyId;
 
@@ -37,24 +73,56 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends TeaModel {
     @NameInMap("OspfNetworkType")
     public String ospfNetworkType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>duuf****</p>
+     */
     @NameInMap("Password")
     public String password;
 
     @NameInMap("RedistributeProtocol")
     public String redistributeProtocol;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>109790620697****</p>
+     */
     @NameInMap("ResourceUid")
     public String resourceUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.1</p>
+     */
     @NameInMap("RouterId")
     public String routerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-3manef62evrfr6****</p>
+     */
     @NameInMap("SagInsId")
     public String sagInsId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sagf4dk****</p>
+     */
     @NameInMap("SagSn")
     public String sagSn;
 

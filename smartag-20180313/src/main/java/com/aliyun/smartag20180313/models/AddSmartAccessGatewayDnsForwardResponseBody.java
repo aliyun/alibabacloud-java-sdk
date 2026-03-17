@@ -4,22 +4,54 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class AddSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
+    /**
+     * <p>The error code. A value of 200 indicates that the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information returned for the request.</p>
+     */
     @NameInMap("Data")
     public AddSmartAccessGatewayDnsForwardResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E93884AC-6C21-4FEA-8E3A-7377D33B194F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -77,27 +109,75 @@ public class AddSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
     }
 
     public static class AddSmartAccessGatewayDnsForwardResponseBodyData extends TeaModel {
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yfiy.cn</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sagv3dnsforward-nc7qabskj17werc7su</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The primary DNS server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14.104.81.13</p>
+         */
         @NameInMap("MasterIp")
         public String masterIp;
 
+        /**
+         * <p>The forwarding mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>first</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The number of the egress port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OutboundPortIndex")
         public Integer outboundPortIndex;
 
+        /**
+         * <p>The egress port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eth0</p>
+         */
         @NameInMap("OutboundPortName")
         public String outboundPortName;
 
+        /**
+         * <p>The type of the egress port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PhysicalPort</p>
+         */
         @NameInMap("OutboundPortType")
         public String outboundPortType;
 
+        /**
+         * <p>The secondary DNS server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.14</p>
+         */
         @NameInMap("SlaveIp")
         public String slaveIp;
 

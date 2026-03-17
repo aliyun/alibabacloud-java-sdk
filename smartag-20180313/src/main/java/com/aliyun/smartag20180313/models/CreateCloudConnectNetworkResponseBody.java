@@ -4,27 +4,79 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudConnectNetworkResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the CCN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccn-l9340rlu5ens*****</p>
+     */
     @NameInMap("CcnId")
     public String ccnId;
 
+    /**
+     * <p>The private CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.XX.XX.0/24</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    /**
+     * <p>The description about the CCN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccndesc</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the CCN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccnname</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C48E8EB2-37A4-495B-A95C-29CA1FD26C82</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the CCN instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2iu4fnc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The private CIDR block used for SNAT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.XX.XX.0/25</p>
+     */
     @NameInMap("SnatCidrBlock")
     public String snatCidrBlock;
 
+    /**
+     * <p>The status of the CCN instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Active</strong>: indicates the CNN instance running as expected.</li>
+     * <li><strong>Pending</strong>: indicates the CCN instance is to be created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
+     */
     @NameInMap("Status")
     public String status;
 

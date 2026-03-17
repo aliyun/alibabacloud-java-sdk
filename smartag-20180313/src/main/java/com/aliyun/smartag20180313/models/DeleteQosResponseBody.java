@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteQosResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F77B3F0E-CAA2-41CF-A752-4F2893C5F7F0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -10,6 +10,13 @@ public class DescribeSagOnlineClientStatisticsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG app instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +26,10 @@ public class DescribeSagOnlineClientStatisticsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sag-va03wf4l4idaj*****</p>
+     */
     @NameInMap("SmartAGIds")
     public java.util.List<String> smartAGIds;
 

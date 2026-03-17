@@ -4,21 +4,55 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagRemoteAccessResponseBody extends TeaModel {
+    /**
+     * <p>The error code. The 200 error code indicates that the query task is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message. The Successful error message indicates that the query task is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RemoteAccesses")
     public DescribeSagRemoteAccessResponseBodyRemoteAccesses remoteAccesses;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E38E950D-28A4-4C41-9428-A8908EC6AE5C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-1um5x5nwhilymw****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>Indicates whether the query task is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The query task is successful.</li>
+     * <li><strong>false</strong>: The query task failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

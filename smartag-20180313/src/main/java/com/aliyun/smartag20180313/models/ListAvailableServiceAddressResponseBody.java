@@ -4,15 +4,33 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListAvailableServiceAddressResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListAvailableServiceAddressResponseBodyData> data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>324223F3-93D3-4CE4-B26F-66C0C3809922</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +72,21 @@ public class ListAvailableServiceAddressResponseBody extends TeaModel {
     }
 
     public static class ListAvailableServiceAddressResponseBodyData extends TeaModel {
+        /**
+         * <p>The service address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The type of service address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProbeTask</p>
+         */
         @NameInMap("AddressType")
         public String addressType;
 

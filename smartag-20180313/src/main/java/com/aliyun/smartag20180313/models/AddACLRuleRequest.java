@@ -4,30 +4,95 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class AddACLRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the ACL.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-xhwhyuo43l0n*****</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The description of the ACL rule.</p>
+     * <p>The description must be <strong>1 to 512</strong> characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desctest</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The range of the destination IP addresses.</p>
+     * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.10.0/24</p>
+     */
     @NameInMap("DestCidr")
     public String destCidr;
 
+    /**
+     * <p>The destination port range.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
+     * <p>Set the destination port range in one of the following formats: 1/200 or 80/80. A value of -1/-1 indicates all ports.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1/200</p>
+     */
     @NameInMap("DestPortRange")
     public String destPortRange;
 
+    /**
+     * <p>The direction of traffic in which the ACL rule is applied. Valid values:</p>
+     * <ul>
+     * <li><strong>in</strong>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the Smart Access Gateway (SAG) instance.</li>
+     * <li><strong>out</strong>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("DpiGroupIds")
     public java.util.List<String> dpiGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DpiSignatureIds")
     public java.util.List<String> dpiSignatureIds;
 
+    /**
+     * <p>The protocol used by the ACL rule.</p>
+     * <p>The protocols that are provided in this topic are for reference only. The protocols available in the SAG console may vary. The value of the parameter is not case-sensitive.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
+     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
+    /**
+     * <p>The name of the ACL rule.</p>
+     * <p>The name must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -37,12 +102,39 @@ public class AddACLRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The action policy of the ACL rule. Valid values:</p>
+     * <ul>
+     * <li><strong>accept</strong>: allows network traffic.</li>
+     * <li><strong>drop</strong>: blocks the network traffic.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>accept</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <p>The priority of the ACL rule.</p>
+     * <p>A smaller value indicates a higher priority. If rules have the same priority, whichever applied to the SAG devices earlier takes effect.</p>
+     * <p>Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ID of the region where the ACL is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -52,12 +144,39 @@ public class AddACLRuleRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The range of the source IP addresses.</p>
+     * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.1.0/24.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.20.0/24</p>
+     */
     @NameInMap("SourceCidr")
     public String sourceCidr;
 
+    /**
+     * <p>The source port range.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
+     * <p>Set the source port range in one of the following formats: 1/200 or 80/80. A value of -1/-1 indicates all ports.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1/200</p>
+     */
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 
+    /**
+     * <p>The type of the ACL rule: Valid values:</p>
+     * <ul>
+     * <li><strong>LAN</strong>: The ACL rule controls network traffic transmitted through private IP addresses.</li>
+     * <li><strong>WAN</strong>: The ACL rule controls network traffic transmitted through public IP addresses.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LAN</p>
+     */
     @NameInMap("Type")
     public String type;
 

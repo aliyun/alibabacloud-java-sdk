@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnatEntryRequest extends TeaModel {
+    /**
+     * <p>The ID of the SNAT entry.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>snat-djngdheb*******</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +20,13 @@ public class DeleteSnatEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the SAG instance belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +36,13 @@ public class DeleteSnatEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-hfbd*******</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

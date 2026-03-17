@@ -4,9 +4,18 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagTrafficTopNResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AFF7E5A6-6897-4FDC-A5A8-1978B5B3E545</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the data transfer rate of the SAG instance.</p>
+     */
     @NameInMap("TrafficTopN")
     public java.util.List<DescribeSagTrafficTopNResponseBodyTrafficTopN> trafficTopN;
 
@@ -32,15 +41,39 @@ public class DescribeSagTrafficTopNResponseBody extends TeaModel {
     }
 
     public static class DescribeSagTrafficTopNResponseBodyTrafficTopN extends TeaModel {
+        /**
+         * <p>The ID of the SAG instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sag-whfn****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the SAG instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The data transfer rate of the SAG instance. Unit: bit/s</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3866.6666666666665</p>
+         */
         @NameInMap("TrafficRate")
         public String trafficRate;
 

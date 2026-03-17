@@ -4,9 +4,26 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeQosCarsRequest extends TeaModel {
+    /**
+     * <p>The description of the traffic throttling rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdesc</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The sorting method of the traffic throttling rules. Valid values:</p>
+     * <ul>
+     * <li><strong>asc</strong>: sorted in ascending order. This is the default value.</li>
+     * <li><strong>desc</strong>: sorted in descending order.</li>
+     * </ul>
+     * <p>By default, traffic throttling rules are sorted in ascending order of priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
@@ -16,18 +33,51 @@ public class DescribeQosCarsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the traffic throttling rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qoscar-n5k8g97lihlph****</p>
+     */
     @NameInMap("QosCarId")
     public String qosCarId;
 
+    /**
+     * <p>The ID of the QoS policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-awfxl1adxeqyk****</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>The ID of the region where the QoS policy is created.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

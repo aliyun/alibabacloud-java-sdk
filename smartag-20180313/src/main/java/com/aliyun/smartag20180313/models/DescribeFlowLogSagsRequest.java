@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowLogSagsRequest extends TeaModel {
+    /**
+     * <p>The instance ID of the flow log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fl-l934tsa5504yuc****</p>
+     */
     @NameInMap("FlowLogId")
     public String flowLogId;
 
@@ -13,12 +19,31 @@ public class DescribeFlowLogSagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number of the SAG instance list. Minimum value: <strong>1</strong>. Default value: <strong>1</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page in the case of a paged query result. Maximum value: <strong>50</strong>. Default value: <strong>10</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region to which the flow log belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghahi</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

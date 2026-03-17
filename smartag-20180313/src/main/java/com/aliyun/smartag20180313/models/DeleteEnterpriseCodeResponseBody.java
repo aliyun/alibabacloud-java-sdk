@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DeleteEnterpriseCodeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DD3DFB2-A9BF-4BEE-9542-661411A9851E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,18 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaModel {
+    /**
+     * <p>The diagnosis report of the SAG device.</p>
+     */
     @NameInMap("DiagnoseResult")
     public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResult diagnoseResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7D6E3AB-D41A-42E3-8D4E-97B145F4B7C3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +41,43 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
     }
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsCN extends TeaModel {
+        /**
+         * <p>The suggestion for the diagnosis.</p>
+         */
         @NameInMap("Advice")
         public java.util.List<String> advice;
 
+        /**
+         * <p>The diagnosis.</p>
+         */
         @NameInMap("Details")
         public java.util.List<String> details;
 
+        /**
+         * <p>The diagnosis level of the item. Valid values:</p>
+         * <ul>
+         * <li><strong>ERROR</strong>: indicates that the item has an issue that may affect your services. We recommend that you handle the issue at the earliest opportunity.</li>
+         * <li><strong>WARNING</strong>: indicates that the item has an issue. You can handle the issue based on your business requirements.</li>
+         * <li><strong>INFO</strong>: indicates that the item is working as expected. No additional operation is required.</li>
+         * </ul>
+         */
         @NameInMap("ItemLevel")
         public String itemLevel;
 
+        /**
+         * <p>The name of the item.</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
+        /**
+         * <p>The type of the item. Valid values:</p>
+         * <ul>
+         * <li><strong>Config</strong>: <strong>SAG configuration</strong></li>
+         * <li><strong>Service</strong>: <strong>service quality</strong></li>
+         * <li><strong>Internet</strong>: <strong>quality of connections to the Internet</strong></li>
+         * </ul>
+         */
         @NameInMap("ItemType")
         public String itemType;
 
@@ -95,18 +129,52 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
     }
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsEN extends TeaModel {
+        /**
+         * <p>The suggestion for the diagnosis.</p>
+         */
         @NameInMap("Advice")
         public java.util.List<String> advice;
 
+        /**
+         * <p>The diagnosis.</p>
+         */
         @NameInMap("Details")
         public java.util.List<String> details;
 
+        /**
+         * <p>The diagnosis level of the item. Valid values:</p>
+         * <ul>
+         * <li><strong>ERROR</strong>: indicates that the item has an issue that may affect your services. We recommend that you handle the issue at the earliest opportunity.</li>
+         * <li><strong>WARNING</strong>: indicates that the item has an issue. You can handle the issue based on your business requirements.</li>
+         * <li><strong>INFO</strong>: indicates that the item is working as expected. No additional operation is required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR</p>
+         */
         @NameInMap("ItemLevel")
         public String itemLevel;
 
+        /**
+         * <p>The name of the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Express Connect Port Configuration</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
+        /**
+         * <p>The type of the item. Valid values:</p>
+         * <ul>
+         * <li><strong>Config</strong>: <strong>SAG configuration</strong></li>
+         * <li><strong>Service</strong>: <strong>service quality</strong></li>
+         * <li><strong>Internet</strong>: <strong>quality of connections to the Internet</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Config</p>
+         */
         @NameInMap("ItemType")
         public String itemType;
 
@@ -158,24 +226,70 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
     }
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItems extends TeaModel {
+        /**
+         * <p>The diagnosis report in Chinese.</p>
+         */
         @NameInMap("CN")
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsCN CN;
 
+        /**
+         * <p>The diagnosis report in English.</p>
+         */
         @NameInMap("EN")
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsEN EN;
 
+        /**
+         * <p>The timestamp when the system finishes diagnosing the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1602741570596</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The name of the item, which is the unique identifier of the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eccConfigCheck</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
+        /**
+         * <p>The diagnosis level of the item. Valid values:</p>
+         * <ul>
+         * <li><strong>error</strong>: severe</li>
+         * <li><strong>warning</strong>: warning</li>
+         * <li><strong>info</strong>: normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>error</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The timestamp when the system starts to diagnose the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1602741570567</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The type of the item. Valid values:</p>
+         * <ul>
+         * <li><strong>config</strong>: SAG configuration</li>
+         * <li><strong>internet</strong>: quality of connections to the Internet</li>
+         * <li><strong>biz</strong>: service quality</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>config</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -243,15 +357,39 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
     }
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsStatistics extends TeaModel {
+        /**
+         * <p>The number of items of the <strong>ERROR</strong> level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Error")
         public Integer error;
 
+        /**
+         * <p>The number of items of the <strong>INFO</strong> level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Info")
         public Integer info;
 
+        /**
+         * <p>The total number of items for the current diagnosis type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <p>The number of items of the <strong>WARNING</strong> level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Warning")
         public Integer warning;
 
@@ -295,12 +433,29 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
     }
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetails extends TeaModel {
+        /**
+         * <p>The list of items diagnosed.</p>
+         */
         @NameInMap("Items")
         public java.util.List<DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItems> items;
 
+        /**
+         * <p>The information about items of each diagnosis level for the current diagnosis type.</p>
+         */
         @NameInMap("Statistics")
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsStatistics statistics;
 
+        /**
+         * <p>The type of the diagnosis. Valid values:</p>
+         * <ul>
+         * <li><strong>config</strong>: SAG configuration</li>
+         * <li><strong>internet</strong>: quality of connections to the Internet</li>
+         * <li><strong>biz</strong>: service quality</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>config</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -336,12 +491,35 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
     }
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultLevel extends TeaModel {
+        /**
+         * <p>The diagnosis level of the service quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warning</p>
+         */
         @NameInMap("Biz")
         public String biz;
 
+        /**
+         * <p>The diagnosis level of the SAG configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
+         */
         @NameInMap("Configuration")
         public String configuration;
 
+        /**
+         * <p>The overall diagnosis level.</p>
+         * <ul>
+         * <li><strong>error</strong>: severe</li>
+         * <li><strong>warning</strong>: warning</li>
+         * <li><strong>info</strong>: normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>error</p>
+         */
         @NameInMap("Total")
         public String total;
 
@@ -377,15 +555,39 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
     }
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultStatistics extends TeaModel {
+        /**
+         * <p>The number of items of the <strong>ERROR</strong> level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Error")
         public Integer error;
 
+        /**
+         * <p>The number of items of the <strong>INFO</strong> level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Info")
         public Integer info;
 
+        /**
+         * <p>The total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <p>The number of items of the <strong>WARNING</strong> level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Warning")
         public Integer warning;
 
@@ -429,60 +631,181 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
     }
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResult extends TeaModel {
+        /**
+         * <p>The model of the SAG device.</p>
+         * <ul>
+         * <li><strong>sag-1000</strong></li>
+         * <li><strong>sag-100WM</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sag-1000</p>
+         */
         @NameInMap("BoxType")
         public String boxType;
 
+        /**
+         * <p>The version of the SAG device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1.0</p>
+         */
         @NameInMap("BoxVersion")
         public String boxVersion;
 
+        /**
+         * <p>The list of diagnoses that are returned.</p>
+         */
         @NameInMap("Details")
         public java.util.List<DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetails> details;
 
+        /**
+         * <p>The ID of the diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dia-sag42c3t703trh02olv5rf****</p>
+         */
         @NameInMap("DiagnoseId")
         public String diagnoseId;
 
+        /**
+         * <p>The timestamp when the system finishes diagnosing the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160274157</p>
+         */
         @NameInMap("EndTime")
         public Integer endTime;
 
+        /**
+         * <p>The number of items that are diagnosed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("FinishedNumber")
         public Integer finishedNumber;
 
+        /**
+         * <p>The ID of the SAG instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sag-0nnteglltw6z4b***</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The diagnosis level.</p>
+         */
         @NameInMap("Level")
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultLevel level;
 
+        /**
+         * <p>The version of the monitoring feature that is used by the SAG device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.2.9</p>
+         */
         @NameInMap("MonitorVersion")
         public String monitorVersion;
 
+        /**
+         * <p>The completion percentage of the diagnosis report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Percent")
         public Integer percent;
 
+        /**
+         * <p>The status of the diagnosis report to be uploaded to Log Service.</p>
+         * <ul>
+         * <li><strong>0</strong>: The system failed to upload the report.</li>
+         * <li><strong>1</strong>: The system has uploaded the report to Log Service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReportSLSSuccess")
         public Integer reportSLSSuccess;
 
+        /**
+         * <p>The serial number of the SAG device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sag42c3****</p>
+         */
         @NameInMap("SN")
         public String SN;
 
+        /**
+         * <p>The timestamp when the system starts to diagnose the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160274157</p>
+         */
         @NameInMap("StartTime")
         public Integer startTime;
 
+        /**
+         * <p>The diagnosis status. Valid values:</p>
+         * <ul>
+         * <li><strong>processing</strong>: The SAG device is being diagnosed.</li>
+         * <li><strong>finished</strong>: The SAG device is diagnosed.</li>
+         * <li><strong>failed</strong>: The system failed to diagnose the SAG device.</li>
+         * <li><strong>error</strong>: A diagnostic error occurred.</li>
+         * <li><strong>upload_to_sls_fail</strong>: The system failed to upload the diagnosis report.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finished</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The overall diagnosis level.</p>
+         */
         @NameInMap("Statistics")
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultStatistics statistics;
 
+        /**
+         * <p>The storage type.</p>
+         * <p>The value is set to <strong>both</strong>, which indicates that the data is stored in the SAG device and Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>both</p>
+         */
         @NameInMap("StoreType")
         public String storeType;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("TotalNumber")
         public Integer totalNumber;
 
+        /**
+         * <p>The user ID (UID) of the Alibaba Cloud account to which the SAG instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1688000000000000</p>
+         */
         @NameInMap("UId")
         public String UId;
 
+        /**
+         * <p>The type of user that initiated the diagnostics. The value is set to <strong>user</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("UserLevel")
         public String userLevel;
 

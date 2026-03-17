@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ClearSagRouteableAddressResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AEEC8A5A-360E-4865-82D4-38CDE46445FB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

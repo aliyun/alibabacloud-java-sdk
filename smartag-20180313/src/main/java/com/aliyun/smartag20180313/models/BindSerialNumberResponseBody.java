@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class BindSerialNumberResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61C33444-D8C5-4018-A06C-BA8C8812BEF6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

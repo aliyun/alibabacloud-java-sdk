@@ -4,33 +4,114 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagWifiResponseBody extends TeaModel {
+    /**
+     * <p>The authentication type. Valid values:</p>
+     * <ul>
+     * <li><strong>NONE</strong>: authentication is disabled.</li>
+     * <li><strong>WPA-PSK</strong>: WPA-PSK authentication is enabled.</li>
+     * <li><strong>WPA2-PSK</strong>: WPA2-PSK authentication is enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>WPA2-PSK</p>
+     */
     @NameInMap("AuthenticationType")
     public String authenticationType;
 
+    /**
+     * <p>The bandwidth of the Wi-Fi channel. Valid values:</p>
+     * <ul>
+     * <li><strong>Automatic</strong></li>
+     * <li><strong>20 HMz</strong></li>
+     * <li><strong>40 MHz</strong></li>
+     * </ul>
+     */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
+    /**
+     * <p>The Wi-Fi channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Channel")
     public String channel;
 
+    /**
+     * <p>The encryption algorithm.</p>
+     * <ul>
+     * <li><strong>AUTO</strong>: automatically selects the encryption algorithm.</li>
+     * <li><strong>TKIP</strong>: uses the Temporal Key Integrity Protocol (TKIP).</li>
+     * <li><strong>AES</strong>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AES</p>
+     */
     @NameInMap("EncryptAlgorithm")
     public String encryptAlgorithm;
 
+    /**
+     * <p>Indicates whether wireless security is enabled.</p>
+     * <ul>
+     * <li><strong>True</strong>: wireless security is enabled.</li>
+     * <li><strong>False</strong>: wireless security is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("IsAuth")
     public String isAuth;
 
+    /**
+     * <p>Indicates whether broadcast over Wi-Fi is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>True</strong>: broadcast is enabled.</li>
+     * <li><strong>False</strong>: broadcast is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("IsBroadcast")
     public String isBroadcast;
 
+    /**
+     * <p>Indicates whether wireless connections are enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>True</strong>: wireless connections are enabled.</li>
+     * <li><strong>False</strong>: wireless connections are disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("IsEnable")
     public String isEnable;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E93884AC-6C21-4FEA-8E3A-7377D33B194F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The service set identifier (SSID) of the Wi-Fi network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun_sag_123456***</p>
+     */
     @NameInMap("Ssid")
     public String ssid;
 
+    /**
+     * <p>The information about the query task.</p>
+     */
     @NameInMap("TaskStates")
     public java.util.List<DescribeSagWifiResponseBodyTaskStates> taskStates;
 
@@ -120,15 +201,50 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     }
 
     public static class DescribeSagWifiResponseBodyTaskStates extends TeaModel {
+        /**
+         * <p>The time when the query task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1586843621000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The error code returned for a query task. The 200 error code indicates that the query task is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned for a query task. The Successful error message indicates that the query task is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The status of the query task. Valid values:</p>
+         * <ul>
+         * <li><strong>Initialized</strong>: The query task has been initialized.</li>
+         * <li><strong>Offline</strong>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will be dispatched after the SAG device is connected to Alibaba Cloud.</li>
+         * <li><strong>Succeed</strong>: The query task has been dispatched.</li>
+         * <li><strong>Processing</strong>: The query task is being dispatched.</li>
+         * <li><strong>VersionNotSupport</strong>: The current version of the SAG device does not support query tasks.</li>
+         * <li><strong>BuildRequestError</strong>: The SAG control system does not support query tasks.</li>
+         * <li><strong>HardwareError</strong>: The query task failed to be dispatched due to device errors.</li>
+         * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
+         * <li><strong>OfflineNotConfiged</strong>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will not be dispatched after the device is connected to Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed</p>
+         */
         @NameInMap("State")
         public String state;
 

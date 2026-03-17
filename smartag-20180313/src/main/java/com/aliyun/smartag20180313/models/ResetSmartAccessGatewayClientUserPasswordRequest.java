@@ -10,9 +10,30 @@ public class ResetSmartAccessGatewayClientUserPasswordRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The new password.</p>
+     * <ul>
+     * <li><p>If you do not specify a new password, the system generates a random password.</p>
+     * </li>
+     * <li><p>If you specify a new password, the password is reset to the specified new password.</p>
+     * <p>The password must be 8 to 32 characters in length, and can contain letters, digits, underscores (_), at signs (@), periods (.), and hyphens (-). It must start with a letter or a digit.</p>
+     * </li>
+     * </ul>
+     * <p>After the password is reset, an email that contains the new password is sent to the email address of the client account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Password****</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The ID of the region where the SAG app instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,9 +43,23 @@ public class ResetSmartAccessGatewayClientUserPasswordRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG app instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-kzo5dvms3dqii3****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The username of the client account for which you want to reset the password.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

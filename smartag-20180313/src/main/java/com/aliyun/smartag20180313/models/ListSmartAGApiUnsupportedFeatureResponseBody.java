@@ -4,9 +4,18 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListSmartAGApiUnsupportedFeatureResponseBody extends TeaModel {
+    /**
+     * <p>A list of unsupported features.</p>
+     */
     @NameInMap("Features")
     public java.util.List<ListSmartAGApiUnsupportedFeatureResponseBodyFeatures> features;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7459545D-2F0D-43E6-9957-CB7E0223332B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +41,13 @@ public class ListSmartAGApiUnsupportedFeatureResponseBody extends TeaModel {
     }
 
     public static class ListSmartAGApiUnsupportedFeatureResponseBodyFeatures extends TeaModel {
+        /**
+         * <p>The unsupported feature.</p>
+         * <p>For more information about the description of each feature, see the related API reference.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ISP</p>
+         */
         @NameInMap("Feature")
         public String feature;
 

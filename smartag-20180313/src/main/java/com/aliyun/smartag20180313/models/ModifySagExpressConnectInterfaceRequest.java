@@ -4,9 +4,23 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagExpressConnectInterfaceRequest extends TeaModel {
+    /**
+     * <p>The IP address.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.1</p>
+     */
     @NameInMap("IP")
     public String IP;
 
+    /**
+     * <p>The subnet mask of the IP address.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>255.255.255.252</p>
+     */
     @NameInMap("Mask")
     public String mask;
 
@@ -16,9 +30,24 @@ public class ModifySagExpressConnectInterfaceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The name of the Express Connect port.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PortName")
     public String portName;
 
+    /**
+     * <p>The ID of the region where the Smart Access Gateway (SAG) instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,12 +57,39 @@ public class ModifySagExpressConnectInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-whfn****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The serial number of the SAG device associated with the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag32a30****</p>
+     */
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 
+    /**
+     * <p>The VLAN ID of the subinterface.</p>
+     * <p>Valid values: <strong>0 to 4094</strong>.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>If the VLAN ID is 0, this port is a physical port and does not support VLAN subinterfaces.</li>
+     * <li>If the VLAN ID is 1 to 4094, this port supports VLAN subinterfaces based on the Layer 3 protocols.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Vlan")
     public String vlan;
 

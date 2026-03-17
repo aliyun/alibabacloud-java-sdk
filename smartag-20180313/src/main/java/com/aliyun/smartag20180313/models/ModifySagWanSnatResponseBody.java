@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagWanSnatResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96AF7326-B6DE-4188-8638-56A6164F62D9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

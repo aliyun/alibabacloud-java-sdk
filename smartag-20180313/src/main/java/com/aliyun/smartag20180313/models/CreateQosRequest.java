@@ -10,12 +10,34 @@ public class CreateQosRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The description of the QoS policy.</p>
+     * <p>The description must be 1 to 512 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdesc</p>
+     */
     @NameInMap("QosDescription")
     public String qosDescription;
 
+    /**
+     * <p>The name of the QoS policy.</p>
+     * <p>The name must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest</p>
+     */
     @NameInMap("QosName")
     public String qosName;
 
+    /**
+     * <p>The ID of the region where the QoS policy is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

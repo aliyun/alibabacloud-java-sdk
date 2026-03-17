@@ -4,15 +4,33 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GetAdvancedMonitorStateResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<GetAdvancedMonitorStateResponseBodyData> data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>324223F3-93D3-4CE4-B26F-66C0C3809922</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +72,16 @@ public class GetAdvancedMonitorStateResponseBody extends TeaModel {
     }
 
     public static class GetAdvancedMonitorStateResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the DPI feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 

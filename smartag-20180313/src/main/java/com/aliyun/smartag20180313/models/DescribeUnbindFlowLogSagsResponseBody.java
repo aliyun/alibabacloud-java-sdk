@@ -4,9 +4,21 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
+    /**
+     * <p>The total number of the SAG instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C850C10E-9856-45FF-8640-80288BA467DF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

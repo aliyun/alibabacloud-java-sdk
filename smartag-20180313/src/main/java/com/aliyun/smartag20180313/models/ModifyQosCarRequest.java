@@ -4,24 +4,81 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifyQosCarRequest extends TeaModel {
+    /**
+     * <p>The description of the traffic throttling rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Qostest</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The type of the traffic throttling rule. Valid values:</p>
+     * <ul>
+     * <li><strong>Absolute</strong>: throttles traffic based on a specific range of bandwidth.</li>
+     * <li><strong>Percent</strong>: throttles traffic based on a specific range of bandwidth percentage.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Absolute</p>
+     */
     @NameInMap("LimitType")
     public String limitType;
 
+    /**
+     * <p>The maximum bandwidth value. The value must be an integer. Unit: Mbit /s.</p>
+     * <p>This parameter is required when you set <strong>LimitType</strong> to <strong>Absolute</strong>.</p>
+     * <blockquote>
+     * <p> The maximum bandwidth value must be greater than the minimum bandwidth value.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("MaxBandwidthAbs")
     public Integer maxBandwidthAbs;
 
+    /**
+     * <p>The maximum bandwidth percentage. Unit: percent (%). Valid values: <strong>1 to 100</strong>.</p>
+     * <p>This parameter is required when you set <strong>LimitType</strong> to <strong>Percent</strong>.</p>
+     * <blockquote>
+     * <p> The maximum bandwidth percentage must be greater than the minimum bandwidth percentage.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
     @NameInMap("MaxBandwidthPercent")
     public Integer maxBandwidthPercent;
 
+    /**
+     * <p>The minimum bandwidth value. The value must be an integer. Unit: Mbit/s.</p>
+     * <p>This parameter is required when you set <strong>LimitType</strong> to <strong>Absolute</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MinBandwidthAbs")
     public Integer minBandwidthAbs;
 
+    /**
+     * <p>The minimum bandwidth percentage. Unit: percent (%). Valid values: <strong>1 to 100</strong>.</p>
+     * <p>This parameter is required when you set <strong>LimitType</strong> to <strong>Percent</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MinBandwidthPercent")
     public Integer minBandwidthPercent;
 
+    /**
+     * <p>The name of the traffic throttling rule.</p>
+     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nametest</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -31,18 +88,55 @@ public class ModifyQosCarRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The type of bandwidth when traffic is throttled based on bandwidth percentage. Valid values:</p>
+     * <ul>
+     * <li><strong>CcnBandwidth</strong>: Cloud Connect Network (CCN) bandwidth</li>
+     * <li><strong>InternetUpBandwidth</strong>: total Internet bandwidth</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CcnBandwidth</p>
+     */
     @NameInMap("PercentSourceType")
     public String percentSourceType;
 
+    /**
+     * <p>The priority value of the traffic throttling rule. A smaller value specifies a higher priority. If multiple rules have the same priority, the rule that is applied first takes effect. Valid values: <strong>1 to 7</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ID of the traffic throttling rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qoscar-n5k8g97lihlph****</p>
+     */
     @NameInMap("QosCarId")
     public String qosCarId;
 
+    /**
+     * <p>The ID of the QoS policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-awfxl1adxeqyk****</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>The ID of the region to which the QoS policy belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

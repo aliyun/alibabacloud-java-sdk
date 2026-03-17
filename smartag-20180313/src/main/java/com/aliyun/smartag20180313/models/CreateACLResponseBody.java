@@ -4,15 +4,39 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateACLResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-o6yol7zowii5n2****</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The type of SAG instance to be associated with the ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-hardware</p>
+     */
     @NameInMap("AclType")
     public String aclType;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE837E9F-BD50-4C2B-9E47-260F9D848480</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the ACL belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2iu4fnc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

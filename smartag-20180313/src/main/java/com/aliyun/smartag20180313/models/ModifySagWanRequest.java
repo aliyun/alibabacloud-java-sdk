@@ -4,21 +4,81 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagWanRequest extends TeaModel {
+    /**
+     * <p>The maximum bandwidth of the WAN port. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The IP address of the gateway.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>If the WAN port uses a static IP address, you must set this parameter.</li>
+     * <li>After this parameter is set, the SAG device generates a default route.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.254</p>
+     */
     @NameInMap("Gateway")
     public String gateway;
 
+    /**
+     * <p>The IP address of the WAN port.</p>
+     * <blockquote>
+     * <p> If the WAN port uses a static IP address, you must set this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.1</p>
+     */
     @NameInMap("IP")
     public String IP;
 
+    /**
+     * <p>The connection type of the WAN port: Valid values:</p>
+     * <ul>
+     * <li><strong>DHCP</strong>: The WAN port connects to the Internet through an IP address that is dynamically assigned by the Dynamic Host Configuration Protocol (DHCP) server.</li>
+     * <li><strong>STATIC</strong>: The WAN port connects to the Internet through a static IP address. If you set this value, you must configure a static IP address, a subnet mask, and a gateway IP address for the WAN port.</li>
+     * <li><strong>PPPOE</strong>: The WAN port connects to the Internet through dial-up connections. If you set this value, you must enter the username and password of the PPPoE account provided by the Internet service provider (ISP).</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DHCP</p>
+     */
     @NameInMap("IPType")
     public String IPType;
 
+    /**
+     * <p>The ISP used by the WAN port. Valid values:</p>
+     * <ul>
+     * <li><strong>CT</strong>: China Telecom</li>
+     * <li><strong>CM</strong>: China Mobile</li>
+     * <li><strong>CU</strong>: China Unicom</li>
+     * <li><strong>Other</strong>: Other ISPs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CT</p>
+     */
     @NameInMap("ISP")
     public String ISP;
 
+    /**
+     * <p>The subnet mask of the WAN port IP address.</p>
+     * <blockquote>
+     * <p> If the WAN port uses a static IP address, you must set this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>255.255.255.0</p>
+     */
     @NameInMap("Mask")
     public String mask;
 
@@ -28,15 +88,48 @@ public class ModifySagWanRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The password of the PPPoE account.</p>
+     * <p>The username must be 6 to 30 characters in length, and can contain digits and letters.</p>
+     * <blockquote>
+     * <p> If the connection type of the WAN port is PPPoE, you must set this parameter. If you do not need to modify the password, you can ignore this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>P12ppq***</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The number of the WAN port.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PortName")
     public String portName;
 
+    /**
+     * <p>The priority of the WAN port.</p>
+     * <p>Valid values: <strong>-1</strong> and <strong>1 to 50</strong>.</p>
+     * <p>A smaller value indicates a higher priority. A value of <strong>-1</strong> indicates that traffic forwarding is disabled on the WAN port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -46,15 +139,46 @@ public class ModifySagWanRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-whfn****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The serial number of the SAG device.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag32a30****</p>
+     */
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 
+    /**
+     * <p>The username of the PPPoE account.</p>
+     * <p>The username must be 6 to 30 characters in length, and can contain digits and letters.</p>
+     * <blockquote>
+     * <p> If the connection type of the WAN port is PPPoE, you must set this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>P12ppp***</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The weight of the WAN port.</p>
+     * <p>Valid values: <strong>1 to 100</strong>. Default value: <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Weight")
     public Integer weight;
 

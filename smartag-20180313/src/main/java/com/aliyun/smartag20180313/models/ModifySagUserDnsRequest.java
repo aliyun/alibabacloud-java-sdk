@@ -4,6 +4,15 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagUserDnsRequest extends TeaModel {
+    /**
+     * <p>The IP address of the primary DNS server.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, the IP address of the existing DNS server will be cleared.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.1</p>
+     */
     @NameInMap("MasterDns")
     public String masterDns;
 
@@ -13,6 +22,13 @@ public class ModifySagUserDnsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,12 +38,35 @@ public class ModifySagUserDnsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The IP address of the secondary DNS server.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, the IP address of the existing DNS server will be cleared.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.2</p>
+     */
     @NameInMap("SlaveDns")
     public String slaveDns;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-whfn****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    /**
+     * <p>The serial number of the SAG device associated with the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag32a30****</p>
+     */
     @NameInMap("SmartAGSn")
     public String smartAGSn;
 

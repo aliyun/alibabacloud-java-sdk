@@ -4,6 +4,13 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class RevokeSagInstanceFromCcnRequest extends TeaModel {
+    /**
+     * <p>The ID of the CCN instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccn-jf********</p>
+     */
     @NameInMap("CcnInstanceId")
     public String ccnInstanceId;
 
@@ -13,6 +20,13 @@ public class RevokeSagInstanceFromCcnRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +36,13 @@ public class RevokeSagInstanceFromCcnRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-hd**************</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

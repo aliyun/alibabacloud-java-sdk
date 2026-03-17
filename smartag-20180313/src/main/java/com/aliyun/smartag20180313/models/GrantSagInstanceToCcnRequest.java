@@ -4,12 +4,40 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GrantSagInstanceToCcnRequest extends TeaModel {
+    /**
+     * <p>The ID of the CCN instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccn-n2935s1mnwv8i*****</p>
+     */
     @NameInMap("CcnInstanceId")
     public String ccnInstanceId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the CCN instance belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1210123456123456</p>
+     */
     @NameInMap("CcnUid")
     public Long ccnUid;
 
+    /**
+     * <p>Specifies whether to grant the CCN instance permissions to manage network traffic from the SAG instance.</p>
+     * <p>After the CCN instance is granted the permissions, the CCN instance can redirect the network traffic sent from the SAG instance to the Internet to Cloud Security Access Service (CSAS) for security audit.</p>
+     * <ul>
+     * <li><strong>true</strong>: grants permissions.</li>
+     * <li><strong>false</strong>: does not grant permissions.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set the value to true and the SAG instance connected to the CCN instance has the secure rerouting feature enabled, you cannot revoke the permissions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("GrantTrafficService")
     public Boolean grantTrafficService;
 
@@ -19,6 +47,13 @@ public class GrantSagInstanceToCcnRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +63,13 @@ public class GrantSagInstanceToCcnRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SAG instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-tzirqx07bvcngm****</p>
+     */
     @NameInMap("SmartAGId")
     public String smartAGId;
 

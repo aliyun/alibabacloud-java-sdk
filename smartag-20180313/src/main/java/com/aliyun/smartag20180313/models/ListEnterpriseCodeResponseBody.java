@@ -4,18 +4,45 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ListEnterpriseCodeResponseBody extends TeaModel {
+    /**
+     * <p>The information about enterprise codes.</p>
+     */
     @NameInMap("EnterpriseCodes")
     public java.util.List<ListEnterpriseCodeResponseBodyEnterpriseCodes> enterpriseCodes;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token for returning the next page when the data is returned in more than one page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0*****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A57EF84-D587-4CF9-B0C8-307488BF52C9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +92,25 @@ public class ListEnterpriseCodeResponseBody extends TeaModel {
     }
 
     public static class ListEnterpriseCodeResponseBodyEnterpriseCodes extends TeaModel {
+        /**
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12P**</p>
+         */
         @NameInMap("EnterpriseCode")
         public String enterpriseCode;
 
+        /**
+         * <p>Indicates whether the enterprise code is the default one.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 

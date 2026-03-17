@@ -4,9 +4,18 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeSagRouteListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE6642D4-21EB-4168-9BF9-F217953F9892</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The routes.</p>
+     */
     @NameInMap("Routes")
     public java.util.List<DescribeSagRouteListResponseBodyRoutes> routes;
 
@@ -32,21 +41,61 @@ public class DescribeSagRouteListResponseBody extends TeaModel {
     }
 
     public static class DescribeSagRouteListResponseBodyRoutes extends TeaModel {
+        /**
+         * <p>The list of CIDR blocks that overlap with each other.</p>
+         */
         @NameInMap("ConflictCidrs")
         public java.util.List<String> conflictCidrs;
 
+        /**
+         * <p>The cost of the route.</p>
+         * <p>The number on the left side of the forward slash (/) indicates the administrative distance (AD) of the routing protocol.</p>
+         * <p>The number on the right side of the forward slash (/) indicates the metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[110/11]</p>
+         */
         @NameInMap("Cost")
         public String cost;
 
+        /**
+         * <p>The destination CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.XX.XX.6/32</p>
+         */
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
+        /**
+         * <p>The next hop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.1</p>
+         */
         @NameInMap("NextHop")
         public String nextHop;
 
+        /**
+         * <p>The name of the port. If the port name is -1, data is transferred through a VPN tunnel to Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PortName")
         public String portName;
 
+        /**
+         * <p>The routing protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>STATIC</strong>: a static routing protocol.</li>
+         * <li><strong>OSPF</strong>: the Open Shortest Path First (OSPF) dynamic routing protocol.</li>
+         * <li><strong>BGP</strong>: the Border Gateway Protocol (BGP) dynamic routing protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STATIC</p>
+         */
         @NameInMap("RouteProtocol")
         public String routeProtocol;
 

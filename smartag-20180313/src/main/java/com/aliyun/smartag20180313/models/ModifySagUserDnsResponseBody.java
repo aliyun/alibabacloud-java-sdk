@@ -4,6 +4,12 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ModifySagUserDnsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1120228A-E5E1-4E9C-B56D-96887E1A2B2F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

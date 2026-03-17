@@ -4,15 +4,36 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class ViewSmartAccessGatewayDnsResponseBody extends TeaModel {
+    /**
+     * <p>The IP address of the primary DNS server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>114.114.XXX.XXX</p>
+     */
     @NameInMap("MasterDns")
     public String masterDns;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>571AC2E7-8119-58E9-8BFA-1D580CBD1E56</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The IP address of the secondary DNS server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.8.XX.XX</p>
+     */
     @NameInMap("SlaveDns")
     public String slaveDns;
 
+    /**
+     * <p>The status of the task.</p>
+     */
     @NameInMap("TaskStates")
     public java.util.List<ViewSmartAccessGatewayDnsResponseBodyTaskStates> taskStates;
 
@@ -54,15 +75,51 @@ public class ViewSmartAccessGatewayDnsResponseBody extends TeaModel {
     }
 
     public static class ViewSmartAccessGatewayDnsResponseBodyTaskStates extends TeaModel {
+        /**
+         * <p>The time when the query task was created.</p>
+         * <p>The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1586857309000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The error code. A value of 200 indicates that the task is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message. A value of Successful indicates that the task is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The status of the asynchronous task. Valid values:</p>
+         * <ul>
+         * <li><strong>Initialized</strong>: The query task is initialized.</li>
+         * <li><strong>Offline</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. After the SAG device is connected to Alibaba Cloud, Alibaba Cloud assigns the query task to the SAG device.</li>
+         * <li><strong>Succeed</strong>: Alibaba Cloud has assigned the query task to the SAG device.</li>
+         * <li><strong>Processing</strong>: Alibaba Cloud is assigning the query task to the SAG device.</li>
+         * <li><strong>VersionNotSupport</strong>: The query task is not supported by the current version of the SAG device.</li>
+         * <li><strong>BuildRequestError</strong>: The query task is not supported by the controller of the SAG device.</li>
+         * <li><strong>HardwareError</strong>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</li>
+         * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
+         * <li><strong>OfflineNotConfiged</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. Alibaba Cloud does not assign the query task to the SAG device even after the SAG device is connected to Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed</p>
+         */
         @NameInMap("State")
         public String state;
 

@@ -4,6 +4,14 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the new resource group.</p>
+     * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> to view resource group IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2iu4fnc****</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
@@ -13,9 +21,24 @@ public class MoveResourceGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fl-g5w9ty0z36****</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -25,6 +48,22 @@ public class MoveResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li><strong>smartag</strong>: an SAG CPE or SAG vCPE instance</li>
+     * <li><strong>smartag_s</strong>: an SAG app instance</li>
+     * <li><strong>acl</strong>: an access control list (ACL)</li>
+     * <li><strong>flowlog</strong>: a flow log</li>
+     * <li><strong>qos</strong>: a quality of service (QoS) policy</li>
+     * <li><strong>ccn</strong>: a Cloud Connect Network (CCN) instance</li>
+     * <li><strong>abwp</strong>: a bandwidth plan for application acceleration</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flowlog</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

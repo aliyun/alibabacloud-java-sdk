@@ -4,12 +4,41 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateSmartAccessGatewaySoftwareRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically complete the payment of the order. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong> (default): no</li>
+     * </ul>
+     * <p>If you set the parameter to false, go to Billing Management to complete the payment after you call this operation. The instance is created only after you complete the payment.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The billing method of the SAG app instance. Set the value to <strong>PREPAY</strong>. This value indicates that the SAG app instance is a subscription resource.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The size of the free data plan that is allocated to each client account per month. Unit: GB. Valid value: <strong>5</strong>.</p>
+     * <blockquote>
+     * <p> This value specifies that a free data plan of 5 GB is allocated to each client account per month.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("DataPlan")
     public Long dataPlan;
 
@@ -19,9 +48,24 @@ public class CreateSmartAccessGatewaySoftwareRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The subscription duration of the SAG app instance. Unit: months.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The ID of the region where you want to create the SAG app instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +75,13 @@ public class CreateSmartAccessGatewaySoftwareRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The maximum number of client accounts that can be created on the SAG app instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("UserCount")
     public Integer userCount;
 

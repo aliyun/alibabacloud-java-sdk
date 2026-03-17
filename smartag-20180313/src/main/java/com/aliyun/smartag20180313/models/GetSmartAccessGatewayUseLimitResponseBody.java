@@ -4,12 +4,30 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class GetSmartAccessGatewayUseLimitResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2265DB11-F5CC-496E-ADE7-D043AC37926A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of SAG instances that you can purchase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("TotalAmount")
     public Integer totalAmount;
 
+    /**
+     * <p>The number of SAG instances that you have purchased.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47</p>
+     */
     @NameInMap("UsedAmount")
     public Integer usedAmount;
 
