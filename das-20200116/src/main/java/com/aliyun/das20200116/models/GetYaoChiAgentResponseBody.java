@@ -14,6 +14,9 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
     @NameInMap("FunctionCall")
     public java.util.List<GetYaoChiAgentResponseBodyFunctionCall> functionCall;
 
+    @NameInMap("ParentId")
+    public String parentId;
+
     /**
      * <strong>example:</strong>
      * <p>polardb</p>
@@ -49,6 +52,9 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    @NameInMap("SubAgentCall")
+    public java.util.List<GetYaoChiAgentResponseBodySubAgentCall> subAgentCall;
+
     @NameInMap("UiFunctionCall")
     public java.util.List<GetYaoChiAgentResponseBodyUiFunctionCall> uiFunctionCall;
 
@@ -71,6 +77,14 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
     }
     public java.util.List<GetYaoChiAgentResponseBodyFunctionCall> getFunctionCall() {
         return this.functionCall;
+    }
+
+    public GetYaoChiAgentResponseBody setParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    public String getParentId() {
+        return this.parentId;
     }
 
     public GetYaoChiAgentResponseBody setProduct(String product) {
@@ -111,6 +125,14 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public GetYaoChiAgentResponseBody setSubAgentCall(java.util.List<GetYaoChiAgentResponseBodySubAgentCall> subAgentCall) {
+        this.subAgentCall = subAgentCall;
+        return this;
+    }
+    public java.util.List<GetYaoChiAgentResponseBodySubAgentCall> getSubAgentCall() {
+        return this.subAgentCall;
     }
 
     public GetYaoChiAgentResponseBody setUiFunctionCall(java.util.List<GetYaoChiAgentResponseBodyUiFunctionCall> uiFunctionCall) {
@@ -185,6 +207,47 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class GetYaoChiAgentResponseBodySubAgentCall extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("SubAgentId")
+        public String subAgentId;
+
+        @NameInMap("SubAgentName")
+        public String subAgentName;
+
+        public static GetYaoChiAgentResponseBodySubAgentCall build(java.util.Map<String, ?> map) throws Exception {
+            GetYaoChiAgentResponseBodySubAgentCall self = new GetYaoChiAgentResponseBodySubAgentCall();
+            return TeaModel.build(map, self);
+        }
+
+        public GetYaoChiAgentResponseBodySubAgentCall setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetYaoChiAgentResponseBodySubAgentCall setSubAgentId(String subAgentId) {
+            this.subAgentId = subAgentId;
+            return this;
+        }
+        public String getSubAgentId() {
+            return this.subAgentId;
+        }
+
+        public GetYaoChiAgentResponseBodySubAgentCall setSubAgentName(String subAgentName) {
+            this.subAgentName = subAgentName;
+            return this;
+        }
+        public String getSubAgentName() {
+            return this.subAgentName;
         }
 
     }
