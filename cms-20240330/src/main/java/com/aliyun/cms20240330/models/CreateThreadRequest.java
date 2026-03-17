@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class CreateThreadRequest extends TeaModel {
+    @NameInMap("attributes")
+    public java.util.Map<String, String> attributes;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -17,6 +20,14 @@ public class CreateThreadRequest extends TeaModel {
     public static CreateThreadRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateThreadRequest self = new CreateThreadRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateThreadRequest setAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
     }
 
     public CreateThreadRequest setTitle(String title) {

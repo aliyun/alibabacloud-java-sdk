@@ -7,9 +7,6 @@ public class Evaluator extends TeaModel {
     @NameInMap("config")
     public java.util.Map<String, ?> config;
 
-    @NameInMap("dataScope")
-    public String dataScope;
-
     @NameInMap("filters")
     public java.util.Map<String, String> filters;
 
@@ -36,14 +33,6 @@ public class Evaluator extends TeaModel {
     }
     public java.util.Map<String, ?> getConfig() {
         return this.config;
-    }
-
-    public Evaluator setDataScope(String dataScope) {
-        this.dataScope = dataScope;
-        return this;
-    }
-    public String getDataScope() {
-        return this.dataScope;
     }
 
     public Evaluator setFilters(java.util.Map<String, String> filters) {

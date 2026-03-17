@@ -138,6 +138,9 @@ public class ListThreadsResponseBody extends TeaModel {
     }
 
     public static class ListThreadsResponseBodyThreads extends TeaModel {
+        @NameInMap("attributes")
+        public java.util.Map<String, String> attributes;
+
         /**
          * <strong>example:</strong>
          * <p>2025-04-22T12:46:34Z</p>
@@ -195,6 +198,14 @@ public class ListThreadsResponseBody extends TeaModel {
         public static ListThreadsResponseBodyThreads build(java.util.Map<String, ?> map) throws Exception {
             ListThreadsResponseBodyThreads self = new ListThreadsResponseBodyThreads();
             return TeaModel.build(map, self);
+        }
+
+        public ListThreadsResponseBodyThreads setAttributes(java.util.Map<String, String> attributes) {
+            this.attributes = attributes;
+            return this;
+        }
+        public java.util.Map<String, String> getAttributes() {
+            return this.attributes;
         }
 
         public ListThreadsResponseBodyThreads setCreateTime(String createTime) {

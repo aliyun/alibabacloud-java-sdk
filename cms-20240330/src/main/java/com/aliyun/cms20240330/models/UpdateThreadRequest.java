@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class UpdateThreadRequest extends TeaModel {
+    @NameInMap("attributes")
+    public java.util.Map<String, String> attributes;
+
     /**
      * <strong>example:</strong>
      * <p>active</p>
@@ -21,6 +24,14 @@ public class UpdateThreadRequest extends TeaModel {
     public static UpdateThreadRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateThreadRequest self = new UpdateThreadRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateThreadRequest setAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
     }
 
     public UpdateThreadRequest setStatus(String status) {

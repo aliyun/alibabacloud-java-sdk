@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetThreadResponseBody extends TeaModel {
+    @NameInMap("attributes")
+    public java.util.Map<String, String> attributes;
+
     /**
      * <strong>example:</strong>
      * <p>2025-12-19T15:19:55.040403272+08:00</p>
@@ -68,6 +71,14 @@ public class GetThreadResponseBody extends TeaModel {
     public static GetThreadResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetThreadResponseBody self = new GetThreadResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetThreadResponseBody setAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
     }
 
     public GetThreadResponseBody setCreateTime(String createTime) {

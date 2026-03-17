@@ -1272,6 +1272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateThreadResponse createThreadWithOptions(String name, CreateThreadRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
+            body.put("attributes", request.attributes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {
             body.put("title", request.title);
         }
@@ -6649,6 +6653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateThreadResponse updateThreadWithOptions(String name, String threadId, UpdateThreadRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
+            body.put("attributes", request.attributes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             body.put("status", request.status);
         }
