@@ -4,9 +4,6 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPlansResponseBody extends TeaModel {
-    /**
-     * <p>The queried backup plans.</p>
-     */
     @NameInMap("BackupPlans")
     public DescribeBackupPlansResponseBodyBackupPlans backupPlans;
 
@@ -147,34 +144,12 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>type</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag-based matching rule. Valid values:</p>
-         * <ul>
-         * <li><strong>EQUAL</strong>: Both the tag key and tag value are matched.</li>
-         * <li><strong>NOT</strong>: The tag key is matched and the tag value is not matched.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>EQUAL</p>
-         */
         @NameInMap("Operator")
         public String operator;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -248,9 +223,6 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlanOtsDetail extends TeaModel {
-        /**
-         * <p>The names of the tables in the Tablestore instance.</p>
-         */
         @NameInMap("TableNames")
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanOtsDetailTableNames tableNames;
 
@@ -289,30 +261,12 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlanResourcesResource extends TeaModel {
-        /**
-         * <p>Additional information about the data source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;doBackup\&quot;:false,\&quot;diskName\&quot;:\&quot;data_disk\&quot;,\&quot;size\&quot;:100,\&quot;type\&quot;:\&quot;data\&quot;,\&quot;category\&quot;:\&quot;cloud_essd\&quot;,\&quot;imageId\&quot;:\&quot;\&quot;,\&quot;device\&quot;:\&quot;/dev/xvdb\&quot;,\&quot;encrypted\&quot;:false}</p>
-         */
         @NameInMap("Extra")
         public String extra;
 
-        /**
-         * <p>The ID of the data source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d-j6cgioir6m******lu4</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the data source. Valid value: <strong>UDM_DISK</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>UDMDISK</p>
-         */
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -367,88 +321,30 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlanRulesRule extends TeaModel {
-        /**
-         * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLETE</p>
-         */
         @NameInMap("BackupType")
         public String backupType;
 
-        /**
-         * <p>The ID of the region in which the remote backup vault resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("DestinationRegionId")
         public String destinationRegionId;
 
-        /**
-         * <p>The retention period of the backup data in remote backup mode. Unit: days.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90</p>
-         */
         @NameInMap("DestinationRetention")
         public Long destinationRetention;
 
-        /**
-         * <p>Indicates whether the policy is disabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Disabled")
         public Boolean disabled;
 
-        /**
-         * <p>Indicates whether the snapshot data is backed up to the backup vault.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("DoCopy")
         public Boolean doCopy;
 
-        /**
-         * <p>The retention period of the backup data. Unit: days.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90</p>
-         */
         @NameInMap("Retention")
         public Long retention;
 
-        /**
-         * <p>The policy ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rule-0008i52rf0ulpni6kn6m</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 
-        /**
-         * <p>The policy name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Disk Golden Rule</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
-        /**
-         * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified by <code>{startTime}</code> and the subsequent backup jobs at an interval that is specified by <code>{interval}</code>. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
-         * <ul>
-         * <li><code>startTime</code>: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
-         * <li><code>interval</code>: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>I|1631685600|P1D</p>
-         */
         @NameInMap("Schedule")
         public String schedule;
 
@@ -551,39 +447,15 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlanTrialInfo extends TeaModel {
-        /**
-         * <p>Indicates whether you are billed based on the pay-as-you-go method after the free trial ends.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("KeepAfterTrialExpiration")
         public Boolean keepAfterTrialExpiration;
 
-        /**
-         * <p>The expiration time of the free trial.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1584597600</p>
-         */
         @NameInMap("TrialExpireTime")
         public Long trialExpireTime;
 
-        /**
-         * <p>The start time of the free trial.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1579413159</p>
-         */
         @NameInMap("TrialStartTime")
         public Long trialStartTime;
 
-        /**
-         * <p>The time when the free-trial backup vault is released.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1594965600</p>
-         */
         @NameInMap("TrialVaultReleaseTime")
         public Long trialVaultReleaseTime;
 
@@ -627,258 +499,87 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlan extends TeaModel {
-        /**
-         * <p>The ID of the data source group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>System-Database</p>
-         */
         @NameInMap("BackupSourceGroupId")
         public String backupSourceGroupId;
 
-        /**
-         * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLETE</p>
-         */
         @NameInMap("BackupType")
         public String backupType;
 
-        /**
-         * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>OSS</strong>. This parameter indicates the name of the OSS bucket.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hbr-backup-oss</p>
-         */
         @NameInMap("Bucket")
         public String bucket;
 
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
-        /**
-         * <p>The configurations of the incremental file synchronization. This parameter is returned only for data synchronization.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</p>
-         */
         @NameInMap("ChangeListPath")
         public String changeListPath;
 
-        /**
-         * <p>The ID of the backup client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c-000ge4w*****1qb</p>
-         */
         @NameInMap("ClientId")
         public String clientId;
 
-        /**
-         * <p>The ID of the client group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cl-000ht6o9******h</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>NAS</strong>. This parameter indicates the time when the file system was created. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>Indicates whether a backup plan is automatically created based on tags.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("CreatedByTag")
         public Boolean createdByTag;
 
-        /**
-         * <p>The time when the backup plan was created. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        /**
-         * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BackupRole</p>
-         */
         @NameInMap("CrossAccountRoleName")
         public String crossAccountRoleName;
 
-        /**
-         * <p>Indicates whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-         * <ul>
-         * <li>SELF_ACCOUNT</li>
-         * <li>CROSS_ACCOUNT</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>CROSS_ACCOUNT</p>
-         */
         @NameInMap("CrossAccountType")
         public String crossAccountType;
 
-        /**
-         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1841642xxxxx9795</p>
-         */
         @NameInMap("CrossAccountUserId")
         public Long crossAccountUserId;
 
-        /**
-         * <p>The ID of the data source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ds-000ht6o9*****w61</p>
-         */
         @NameInMap("DataSourceId")
         public String dataSourceId;
 
-        /**
-         * <p>The data source details at the destination. This parameter is returned only for data synchronization.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;prefix\&quot;:\&quot;/\&quot;}</p>
-         */
         @NameInMap("DestDataSourceDetail")
         public String destDataSourceDetail;
 
-        /**
-         * <p>The data source ID at the destination. This parameter is returned only for data synchronization.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ds-*********************</p>
-         */
         @NameInMap("DestDataSourceId")
         public String destDataSourceId;
 
-        /**
-         * <p>The data source type at the destination. This parameter is returned only for data synchronization.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSS</p>
-         */
         @NameInMap("DestSourceType")
         public String destSourceType;
 
-        /**
-         * <p>The details about ECS instance backup.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;doCopy\&quot;:true,\&quot;doBackup\&quot;:false,\&quot;instanceName\&quot;:\&quot;instance example\&quot;,\&quot;appConsistent\&quot;:false,\&quot;destinationRegionId\&quot;:\&quot;cn-shanghai\&quot;,\&quot;enableFsFreeze\&quot;:true,\&quot;osNameEn\&quot;:\&quot;Windows Server  2019 Data Center Edition 64bit Chinese Edition\&quot;,\&quot;osName\&quot;:\&quot;Windows Server  2019 Data Center Edition 64bit Chinese Edition\&quot;,\&quot;diskIdList\&quot;:[],\&quot;backupVaultId\&quot;:\&quot;\&quot;,\&quot;snapshotGroup\&quot;:true,\&quot;destinationRetention\&quot;:35,\&quot;platform\&quot;:\&quot;Windows Server 2012\&quot;,\&quot;timeoutInSeconds\&quot;:60,\&quot;backupRetention\&quot;:1,\&quot;osType\&quot;:\&quot;windows\&quot;,\&quot;preScriptPath\&quot;:\&quot;\&quot;,\&quot;postScriptPath\&quot;:\&quot;\&quot;,\&quot;enableWriters\&quot;:true,\&quot;ecsDeleted\&quot;:false}</p>
-         */
         @NameInMap("Detail")
         public String detail;
 
-        /**
-         * <p>Indicates whether the backup plan is disabled. Valid values:</p>
-         * <ul>
-         * <li>true: The backup plan is disabled.</li>
-         * <li>false: The backup plan is enabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Disabled")
         public Boolean disabled;
 
-        /**
-         * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates the paths to the files that are excluded from the backup job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
-         */
         @NameInMap("Exclude")
         public String exclude;
 
-        /**
-         * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>NAS</strong>. This parameter indicates the ID of the NAS file system.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>00594</p>
-         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
-        /**
-         * <p>The matched tag rules.</p>
-         */
         @NameInMap("HitTags")
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags hitTags;
 
-        /**
-         * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates the paths to the files that are backed up.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
-         */
         @NameInMap("Include")
         public String include;
 
-        /**
-         * <p>The ID of the instance group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-**</p>
-         */
         @NameInMap("InstanceGroupId")
         public String instanceGroupId;
 
-        /**
-         * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates the ID of the ECS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-*********************</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the Tablestore instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instancename</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>Indicates whether the feature of keeping at least one backup version is enabled. Valid values:</p>
-         * <ul>
-         * <li>0: The feature is disabled.</li>
-         * <li>1: The feature is enabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("KeepLatestSnapshots")
         public Long keepLatestSnapshots;
 
-        /**
-         * <p>The latest execution job id of plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>job-12345678</p>
-         */
         @NameInMap("LatestExecuteJobId")
         public String latestExecuteJobId;
 
@@ -889,140 +590,48 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         @NameInMap("LatestFinishJobId")
         public String latestFinishJobId;
 
-        /**
-         * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;UseVSS&quot;:false}</p>
-         */
         @NameInMap("Options")
         public String options;
 
-        /**
-         * <p>The details about the Tablestore instance.</p>
-         */
         @NameInMap("OtsDetail")
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanOtsDetail otsDetail;
 
-        /**
-         * <p>The source paths. This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>.</p>
-         */
         @NameInMap("Paths")
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanPaths paths;
 
-        /**
-         * <p>The ID of the backup plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>plan-*********************</p>
-         */
         @NameInMap("PlanId")
         public String planId;
 
-        /**
-         * <p>The name of the backup plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>planname</p>
-         */
         @NameInMap("PlanName")
         public String planName;
 
-        /**
-         * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>OSS</strong>. This parameter indicates the prefix of the objects that are backed up.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss-prefix</p>
-         */
         @NameInMap("Prefix")
         public String prefix;
 
-        /**
-         * <p>The backup resources. This parameter is valid only for disk backup.</p>
-         */
         @NameInMap("Resources")
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanResources resources;
 
-        /**
-         * <p>The retention period of the backup data. Unit: days.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7</p>
-         */
         @NameInMap("Retention")
         public Long retention;
 
-        /**
-         * <p>The backup policies. This parameter is valid only for disk backup.</p>
-         */
         @NameInMap("Rules")
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanRules rules;
 
-        /**
-         * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified by <code>{startTime}</code> and the subsequent backup jobs at an interval that is specified by <code>{interval}</code>. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
-         * <ul>
-         * <li><strong>startTime</strong>: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
-         * <li><strong>interval</strong>: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>I|1602673264|P1D</p>
-         */
         @NameInMap("Schedule")
         public String schedule;
 
-        /**
-         * <p>The type of the data source. Valid values:</p>
-         * <ul>
-         * <li><strong>ECS_FILE</strong>: ECS files</li>
-         * <li><strong>OSS</strong>: OSS buckets</li>
-         * <li><strong>NAS</strong>: NAS file systems</li>
-         * <li><strong>OTS</strong>: Tablestore instances</li>
-         * <li><strong>UDM_ECS</strong>: ECS instances</li>
-         * <li><strong>SYNC</strong>: data synchronization</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS_FILE</p>
-         */
         @NameInMap("SourceType")
         public String sourceType;
 
-        /**
-         * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates the throttling rules. Format: <code>{start}|{end}|{bandwidth}</code>. Multiple throttling rules are separated with vertical bars (<code>|</code>). A time range cannot overlap with another one.</p>
-         * <ul>
-         * <li>start: the start hour.</li>
-         * <li>end: the end hour.</li>
-         * <li>bandwidth: the bandwidth. Unit: KB.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0:24:5120</p>
-         */
         @NameInMap("SpeedLimit")
         public String speedLimit;
 
-        /**
-         * <p>The free trial information.</p>
-         */
         @NameInMap("TrialInfo")
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanTrialInfo trialInfo;
 
-        /**
-         * <p>The time when the backup plan was updated. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
-        /**
-         * <p>The ID of the backup vault.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v-*********************</p>
-         */
         @NameInMap("VaultId")
         public String vaultId;
 

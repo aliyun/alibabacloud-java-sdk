@@ -49,12 +49,6 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The queried restore jobs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{\&quot;RestoreJob\&quot;: []}</p>
-     */
     @NameInMap("RestoreJobs")
     public DescribeRestoreJobs2ResponseBodyRestoreJobs restoreJobs;
 
@@ -150,21 +144,9 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreJobs2ResponseBodyRestoreJobsRestoreJobOtsDetail extends TeaModel {
-        /**
-         * <p>The number of channels processed by each Tablestore restore job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("BatchChannelCount")
         public Integer batchChannelCount;
 
-        /**
-         * <p>Indicates whether the existing Tablestore restore job was overwritten.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("OverwriteExisting")
         public Boolean overwriteExisting;
 
@@ -192,48 +174,18 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreJobs2ResponseBodyRestoreJobsRestoreJobReport extends TeaModel {
-        /**
-         * <p>The files that failed to be executed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_failed.zip</p>
-         */
         @NameInMap("FailedFiles")
         public String failedFiles;
 
-        /**
-         * <p>The status of the report generation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLETE</p>
-         */
         @NameInMap("ReportTaskStatus")
         public String reportTaskStatus;
 
-        /**
-         * <p>The skipped files.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_skipped.zip</p>
-         */
         @NameInMap("SkippedFiles")
         public String skippedFiles;
 
-        /**
-         * <p>The files that are successfully executed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_success.zip</p>
-         */
         @NameInMap("SuccessFiles")
         public String successFiles;
 
-        /**
-         * <p>The full files that are restored based on the file list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/temp/report/158975xxxxxx4625/job-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_total.csv</p>
-         */
         @NameInMap("TotalFiles")
         public String totalFiles;
 
@@ -285,457 +237,150 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreJobs2ResponseBodyRestoreJobsRestoreJob extends TeaModel {
-        /**
-         * <p>The actual amount of data that is restored after duplicates are removed. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>600</p>
-         */
         @NameInMap("ActualBytes")
         public Long actualBytes;
 
-        /**
-         * <p>This parameter is valid only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the actual number of objects that are restored by the restore job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("ActualItems")
         public Long actualItems;
 
-        /**
-         * <p>The amount of data that was restored. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>800</p>
-         */
         @NameInMap("BytesDone")
         public Long bytesDone;
 
-        /**
-         * <p>The total amount of data that was backed up from the data source. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("BytesTotal")
         public Long bytesTotal;
 
-        /**
-         * <p>The ID of the client group used for restoration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cl-000******hp6</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The time when the restore job was completed. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("CompleteTime")
         public Long completeTime;
 
-        /**
-         * <p>The time when the restore job was created. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        /**
-         * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BackupRole</p>
-         */
         @NameInMap("CrossAccountRoleName")
         public String crossAccountRoleName;
 
-        /**
-         * <p>Indicates whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-         * <ul>
-         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
-         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SELF_ACCOUNT</p>
-         */
         @NameInMap("CrossAccountType")
         public String crossAccountType;
 
-        /**
-         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>158975xxxxxx4625</p>
-         */
         @NameInMap("CrossAccountUserId")
         public Long crossAccountUserId;
 
-        /**
-         * <p>The files that failed to be restored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;test.csv&quot;</p>
-         */
         @NameInMap("ErrorFile")
         public String errorFile;
 
-        /**
-         * <p>The error message that is returned for the restore job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PARTIAL_COMPLETE</p>
-         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        /**
-         * <p>This parameter is valid only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the paths to the files that are excluded from the restore job. The value can be up to 255 characters in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
-         */
         @NameInMap("Exclude")
         public String exclude;
 
-        /**
-         * <p>The time when the restore job expires.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1634714531</p>
-         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
-        /**
-         * <p>The details about the VMware failback task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;cpu&quot;:4,&quot;extra&quot;:&quot;{\&quot;restoreVMNamePrefix\&quot;:\&quot;627-\&quot;,\&quot;dataCenterName\&quot;:\&quot;SDDC-Datacenter\&quot;,\&quot;dataStoreId\&quot;:\&quot;datastore-50\&quot;,\&quot;folderId\&quot;:\&quot;group-v49\&quot;,\&quot;resourcePoolId\&quot;:\&quot;resgroup-46\&quot;,\&quot;locationName\&quot;:\&quot;vcenter.pc-uf600arcwi9td3eyj641.acvs.aliyuncs.com/SDDC-Datacenter/Workloads\&quot;,\&quot;computeResourceName\&quot;:\&quot;SDDC-Datacenter/Default_c-uf600arcwi9td3eyj640\&quot;,\&quot;dataStoreName\&quot;:\&quot;Default_c-uf600arcwi9td3eyj640/WorkloadDatastore\&quot;,\&quot;networkMoReference\&quot;:\&quot;DistributedVirtualPortgroup:dvportgroup-1001\&quot;,\&quot;useHotAdd\&quot;:false}&quot;,&quot;instanceId&quot;:&quot;i-2vc357i2eannmmotcagz&quot;,&quot;memoryInMB&quot;:8192,&quot;serverId&quot;:&quot;0fdc0c86-eb92-4e05-91ab-eeaf9fb6ad01&quot;,&quot;uefiBoot&quot;:false}</p>
-         */
         @NameInMap("FailbackDetail")
         public String failbackDetail;
 
-        /**
-         * <p>The paths to the files that are included in the restore job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
-         */
         @NameInMap("Include")
         public String include;
 
-        /**
-         * <p>This parameter is valid only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the number of restored objects.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("ItemsDone")
         public Long itemsDone;
 
-        /**
-         * <p>This parameter is valid only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the total number of objects in the data source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("ItemsTotal")
         public Long itemsTotal;
 
-        /**
-         * <p>The amount of data that was restored. Unit: bytes. This parameter is valid only if the StorageClass parameter is set to ARCHIVE. The minimum billable size of the data stored at the Archive tier is 1 MB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1048576</p>
-         */
         @NameInMap("MeteringBytesDone")
         public Long meteringBytesDone;
 
-        /**
-         * <p>The total amount of data that was backed up from the data source. Unit: bytes. This parameter is valid only if the StorageClass parameter is set to ARCHIVE. The minimum billable size of the data stored at the Archive tier is 1 MB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1048576</p>
-         */
         @NameInMap("MeteringBytesTotal")
         public Long meteringBytesTotal;
 
-        /**
-         * <p>This parameter is valid only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a restoration path.</p>
-         * <ul>
-         * <li>This parameter is available only for Windows ECS instances.</li>
-         * <li>If data changes occur in the backup source, the source data must be the same as the data to be backed up before you can set this parameter to <code>[&quot;UseVSS&quot;:true]</code>.</li>
-         * <li>If you use VSS, you cannot restore data from multiple directories.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;UseVSS&quot;:false}</p>
-         */
         @NameInMap("Options")
         public String options;
 
-        /**
-         * <p>The details about the Tablestore instance.</p>
-         */
         @NameInMap("OtsDetail")
         public DescribeRestoreJobs2ResponseBodyRestoreJobsRestoreJobOtsDetail otsDetail;
 
-        /**
-         * <p>The ID of the parent job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-0003hd2an3x4dyv0l18b</p>
-         */
         @NameInMap("ParentId")
         public String parentId;
 
-        /**
-         * <p>The progress of the restore job. Valid values: [0,10000]. For example, 10000 indicates that the progress is 100%.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10000</p>
-         */
         @NameInMap("Progress")
         public Integer progress;
 
-        /**
-         * <p>The report of the restore job.</p>
-         */
         @NameInMap("Report")
         public DescribeRestoreJobs2ResponseBodyRestoreJobsRestoreJobReport report;
 
-        /**
-         * <p>The ID of the restore job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-0003*****8a</p>
-         */
         @NameInMap("RestoreId")
         public String restoreId;
 
-        /**
-         * <p>The type of the restore job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS_FILE</p>
-         */
         @NameInMap("RestoreType")
         public String restoreType;
 
-        /**
-         * <p>The hash value of the backup snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>f2fe...</p>
-         */
         @NameInMap("SnapshotHash")
         public String snapshotHash;
 
-        /**
-         * <p>The ID of the snapshot used for restoration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-0002******ga88</p>
-         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
-        /**
-         * <p>The type of the data source. Valid values:</p>
-         * <ul>
-         * <li><strong>ECS_FILE</strong>: ECS files</li>
-         * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
-         * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS) file systems</li>
-         * <li><strong>OTS_TABLE</strong>: Tablestore instances</li>
-         * <li><strong>UDM_ECS</strong>: ECS instances</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS_FILE</p>
-         */
         @NameInMap("SourceType")
         public String sourceType;
 
-        /**
-         * <p>The average speed at which data is backed up. Unit: KB/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("Speed")
         public Long speed;
 
-        /**
-         * <p>The time when the restore job started. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("StartTime")
         public Long startTime;
 
-        /**
-         * <p>The status of the restore job. Valid values:</p>
-         * <ul>
-         * <li><strong>COMPLETE</strong>: The job is completed.</li>
-         * <li><strong>PARTIAL_COMPLETE</strong>: The job is partially completed.</li>
-         * <li><strong>FAILED</strong>: The job failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLETE</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The storage class of the backup data. Valid values:</p>
-         * <ul>
-         * <li><strong>STANDARD</strong></li>
-         * <li><strong>ARCHIVE</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>STANDARD</p>
-         */
         @NameInMap("StorageClass")
         public String storageClass;
 
-        /**
-         * <p>The name of the destination OSS bucket. This parameter is returned only for OSS buckets.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>target-bucket</p>
-         */
         @NameInMap("TargetBucket")
         public String targetBucket;
 
-        /**
-         * <p>The ID of the destination client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c-000e*****397</p>
-         */
         @NameInMap("TargetClientId")
         public String targetClientId;
 
-        /**
-         * <p>The time when the file system was created. This parameter is returned only for NAS file systems.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1634714531</p>
-         */
         @NameInMap("TargetCreateTime")
         public Long targetCreateTime;
 
-        /**
-         * <p>The ID of the destination data source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ds-000*****997</p>
-         */
         @NameInMap("TargetDataSourceId")
         public String targetDataSourceId;
 
-        /**
-         * <p>The ID of the destination NAS file system. This parameter is returned only for NAS file systems.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0be9****9c9</p>
-         */
         @NameInMap("TargetFileSystemId")
         public String targetFileSystemId;
 
-        /**
-         * <p>The ID of the destination instance for the restore job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-2ze3m7ktcgw******cs</p>
-         */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
-        /**
-         * <p>The name of the destination Tablestore instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instancename</p>
-         */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
-        /**
-         * <p>The destination file path of the restore job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;D:\\rebk&quot;</p>
-         */
         @NameInMap("TargetPath")
         public String targetPath;
 
-        /**
-         * <p>The prefix of the objects that are restored. This parameter is returned only for OSS buckets.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;/target&quot;</p>
-         */
         @NameInMap("TargetPrefix")
         public String targetPrefix;
 
-        /**
-         * <p>The name of the destination table in the Tablestore instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tablename</p>
-         */
         @NameInMap("TargetTableName")
         public String targetTableName;
 
-        /**
-         * <p>The time when the Tablestore instance was backed up. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1642560261</p>
-         */
         @NameInMap("TargetTime")
         public Long targetTime;
 
-        /**
-         * <p>The details about Elastic Compute Service (ECS) instance backup.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;doCopy\&quot;:true,\&quot;doBackup\&quot;:false,\&quot;instanceName\&quot;:\&quot;instance example\&quot;,\&quot;appConsistent\&quot;:false,\&quot;destinationRegionId\&quot;:\&quot;cn-shanghai\&quot;,\&quot;enableFsFreeze\&quot;:true,\&quot;osNameEn\&quot;:\&quot;Windows Server  2019 Data Center Edition 64bit Chinese Edition\&quot;,\&quot;osName\&quot;:\&quot;Windows Server  2019 Data Center Edition 64bit Chinese Edition\&quot;,\&quot;diskIdList\&quot;:[],\&quot;backupVaultId\&quot;:\&quot;\&quot;,\&quot;snapshotGroup\&quot;:true,\&quot;destinationRetention\&quot;:35,\&quot;platform\&quot;:\&quot;Windows Server 2012\&quot;,\&quot;timeoutInSeconds\&quot;:60,\&quot;backupRetention\&quot;:1,\&quot;osType\&quot;:\&quot;windows\&quot;,\&quot;preScriptPath\&quot;:\&quot;\&quot;,\&quot;postScriptPath\&quot;:\&quot;\&quot;,\&quot;enableWriters\&quot;:true,\&quot;ecsDeleted\&quot;:false}</p>
-         */
         @NameInMap("UdmDetail")
         public String udmDetail;
 
-        /**
-         * <p>The time when the restore job was updated. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
-        /**
-         * <p>The ID of the backup vault.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v-0006******q</p>
-         */
         @NameInMap("VaultId")
         public String vaultId;
 

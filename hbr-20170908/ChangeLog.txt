@@ -1,3 +1,8 @@
+2026-03-17 Version: 2.5.0
+- Support API DeleteContainerCluster.
+- Support API DescribeContainerResource.
+
+
 2026-01-29 Version: 2.4.0
 - Support API AddCrossAccount.
 - Support API DeleteCrossAccount.

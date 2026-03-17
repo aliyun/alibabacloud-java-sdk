@@ -22,9 +22,6 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The regions that support cross-region replication.</p>
-     */
     @NameInMap("Regions")
     public DescribeVaultReplicationRegionsResponseBodyRegions regions;
 

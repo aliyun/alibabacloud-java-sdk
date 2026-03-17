@@ -13,9 +13,6 @@ public class CreateClientsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The status of the ECS instance. If you specify more than one instance IDs in the request and the status of an ECS instance does not meet the requirements to install an HBR client, an error message is returned based on the value of this parameter.</p>
-     */
     @NameInMap("InstanceStatuses")
     public CreateClientsResponseBodyInstanceStatuses instanceStatuses;
 
@@ -113,25 +110,9 @@ public class CreateClientsResponseBody extends TeaModel {
     }
 
     public static class CreateClientsResponseBodyInstanceStatusesInstanceStatus extends TeaModel {
-        /**
-         * <p>The ID of the ECS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-2zegp3cdu******uj9i</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>Indicates whether an HBR client can be installed on the ECS instance. Valid values:</p>
-         * <ul>
-         * <li>true: An HBR client can be installed on the ECS instance.</li>
-         * <li>false: An HBR client cannot be installed on the ECS instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ValidInstance")
         public Boolean validInstance;
 

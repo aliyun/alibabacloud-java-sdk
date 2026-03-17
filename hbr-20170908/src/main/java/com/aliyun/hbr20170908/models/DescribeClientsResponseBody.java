@@ -4,9 +4,6 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientsResponseBody extends TeaModel {
-    /**
-     * <p>The Cloud Backup clients.</p>
-     */
     @NameInMap("Clients")
     public DescribeClientsResponseBodyClients clients;
 
@@ -147,178 +144,54 @@ public class DescribeClientsResponseBody extends TeaModel {
     }
 
     public static class DescribeClientsResponseBodyClientsClient extends TeaModel {
-        /**
-         * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>INHERITED</p>
-         */
         @NameInMap("AlertSetting")
         public String alertSetting;
 
-        /**
-         * <p>The ID of the Cloud Backup client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c-00062uu******2fgj</p>
-         */
         @NameInMap("ClientId")
         public String clientId;
 
-        /**
-         * <p>The client name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>client-20211224-101226</p>
-         */
         @NameInMap("ClientName")
         public String clientName;
 
-        /**
-         * <p>The type of the Cloud Backup client. Valid value: <strong>ECS_AGENT</strong>, which indicates an SAP HANA backup client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS_AGENT</p>
-         */
         @NameInMap("ClientType")
         public String clientType;
 
-        /**
-         * <p>The version number of the Cloud Backup client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.11.16</p>
-         */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
-        /**
-         * <p>The ID of the SAP HANA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cl-0008c48frr******ncpk</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The time when the Cloud Backup client was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        /**
-         * <p>The latest heartbeat time of the Cloud Backup client. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("HeartBeatTime")
         public Long heartBeatTime;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-wz9b6wya******n8yo</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the ECS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>swh-hbr</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The maximum version number of the Cloud Backup client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.11.23</p>
-         */
         @NameInMap("MaxVersion")
         public String maxVersion;
 
-        /**
-         * <p>The network type. Valid values:</p>
-         * <ul>
-         * <li><strong>CLASSIC</strong>: the classic network</li>
-         * <li><strong>VPC</strong>: the virtual private cloud (VPC)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        /**
-         * <p>The status of the Cloud Backup client. Valid values:</p>
-         * <ul>
-         * <li><strong>REGISTERED</strong>: The backup client is registered.</li>
-         * <li><strong>ACTIVATED</strong>: The backup client is activated.</li>
-         * <li><strong>DEACTIVATED</strong>: The backup client fails to be activated.</li>
-         * <li><strong>INSTALLING</strong>: The backup client is being installed.</li>
-         * <li><strong>INSTALL_FAILED</strong>: The backup client fails to be installed.</li>
-         * <li><strong>NOT_INSTALLED</strong>: The backup client is not installed.</li>
-         * <li><strong>UPGRADING</strong>: The backup client is being upgraded.</li>
-         * <li><strong>UPGRADE_FAILED</strong>: The backup client fails to be upgraded.</li>
-         * <li><strong>UNINSTALLING</strong>: The backup client is being uninstalled.</li>
-         * <li><strong>UNINSTALL_FAILED</strong>: The backup client fails to be uninstalled.</li>
-         * <li><strong>STOPPED</strong>: The backup client is out of service.</li>
-         * <li><strong>UNKNOWN</strong>: The backup client is disconnected.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ACTIVATED</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The status information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HANA_NOT_SUPPORT</p>
-         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
-        /**
-         * <p>The time when the Cloud Backup client was updated. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
-        /**
-         * <p>Indicates whether data is transmitted over HTTPS. Valid values:</p>
-         * <ul>
-         * <li>true: Data is transmitted over HTTPS.</li>
-         * <li>false: Data is transmitted over HTTP.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("UseHttps")
         public Boolean useHttps;
 
-        /**
-         * <p>The ID of the backup vault.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v-00029mx6o******n85lg</p>
-         */
         @NameInMap("VaultId")
         public String vaultId;
 

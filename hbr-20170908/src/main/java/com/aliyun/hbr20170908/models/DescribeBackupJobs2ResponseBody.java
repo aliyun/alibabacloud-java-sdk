@@ -4,9 +4,6 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupJobs2ResponseBody extends TeaModel {
-    /**
-     * <p>The returned backup jobs that meet the specified conditions.</p>
-     */
     @NameInMap("BackupJobs")
     public DescribeBackupJobs2ResponseBodyBackupJobs backupJobs;
 
@@ -166,104 +163,33 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupJobs2ResponseBodyBackupJobsBackupJobDetail extends TeaModel {
-        /**
-         * <p>The information about the remote replication failure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS.CreatingSnapshot</p>
-         */
         @NameInMap("DestinationNativeSnapshotErrorMessage")
         public String destinationNativeSnapshotErrorMessage;
 
-        /**
-         * <p>The ID of the remote replication snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-******************</p>
-         */
         @NameInMap("DestinationNativeSnapshotId")
         public String destinationNativeSnapshotId;
 
-        /**
-         * <p>The progress of the remote replication.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>85</p>
-         */
         @NameInMap("DestinationNativeSnapshotProgress")
         public Integer destinationNativeSnapshotProgress;
 
-        /**
-         * <p>The state of the remote replication.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLETE</p>
-         */
         @NameInMap("DestinationNativeSnapshotStatus")
         public String destinationNativeSnapshotStatus;
 
-        /**
-         * <p>The retention period of the remote replication backup.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("DestinationRetention")
         public Long destinationRetention;
 
-        /**
-         * <p>The ID of the remote replication backup.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-******************</p>
-         */
         @NameInMap("DestinationSnapshotId")
         public String destinationSnapshotId;
 
-        /**
-         * <p>The mapping between snapshots and disks.</p>
-         */
         @NameInMap("DiskNativeSnapshotIdList")
         public DescribeBackupJobs2ResponseBodyBackupJobsBackupJobDetailDiskNativeSnapshotIdList diskNativeSnapshotIdList;
 
-        /**
-         * <p>Indicates whether remote replication is enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DoCopy")
         public Boolean doCopy;
 
-        /**
-         * <p>The ecs instance infos.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{
-         *   &quot;i-xxxxxxxx&quot;: {
-         *     &quot;hostName&quot;: &quot;test&quot;,
-         *     &quot;instanceName&quot;: &quot;test&quot;,
-         *     &quot;instanceType&quot;: &quot;ecs.c7.xlarge&quot;,
-         *     &quot;osType&quot;: &quot;linux&quot;,
-         *     &quot;diskIds&quot;: [
-         *       &quot;d-xxxxxxxx01&quot;,
-         *       &quot;d-xxxxxxxx02&quot;
-         *     ],
-         *     &quot;osNameEn&quot;: &quot;Rocky Linux 8.8 64 bit&quot;,
-         *     &quot;osName&quot;: &quot;Rocky Linux 8.8 64位&quot;,
-         *     &quot;platform&quot;: &quot;Rocky Linux&quot;
-         *   }
-         * }</p>
-         */
         @NameInMap("InstanceInfos")
         public java.util.Map<String, ?> instanceInfos;
 
-        /**
-         * <p>The ID of the backup snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-******************</p>
-         */
         @NameInMap("NativeSnapshotId")
         public String nativeSnapshotId;
 
@@ -374,9 +300,6 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupJobs2ResponseBodyBackupJobsBackupJobOtsDetail extends TeaModel {
-        /**
-         * <p>The names of the destination tables in the Tablestore instance.</p>
-         */
         @NameInMap("TableNames")
         public DescribeBackupJobs2ResponseBodyBackupJobsBackupJobOtsDetailTableNames tableNames;
 
@@ -415,48 +338,18 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupJobs2ResponseBodyBackupJobsBackupJobReport extends TeaModel {
-        /**
-         * <p>List of failed files</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_failed.zip</p>
-         */
         @NameInMap("FailedFiles")
         public String failedFiles;
 
-        /**
-         * <p>Report generation status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLETE</p>
-         */
         @NameInMap("ReportTaskStatus")
         public String reportTaskStatus;
 
-        /**
-         * <p>List of skipped files</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_skipped.zip</p>
-         */
         @NameInMap("SkippedFiles")
         public String skippedFiles;
 
-        /**
-         * <p>List of successful files.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_success.zip</p>
-         */
         @NameInMap("SuccessFiles")
         public String successFiles;
 
-        /**
-         * <p>List of all files. (This field is not returned for data synchronization)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/temp/report/158975xxxxxx4625/job-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_total.csv</p>
-         */
         @NameInMap("TotalFiles")
         public String totalFiles;
 
@@ -508,438 +401,144 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupJobs2ResponseBodyBackupJobsBackupJob extends TeaModel {
-        /**
-         * <p>The actual amount of data that is backed up after duplicates are removed. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>600</p>
-         */
         @NameInMap("ActualBytes")
         public Long actualBytes;
 
-        /**
-         * <p>The number of files that are actually processed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("ActualFiles")
         public Long actualFiles;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the actual number of objects that are backed up by the backup job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("ActualItems")
         public Long actualItems;
 
-        /**
-         * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLETE</p>
-         */
         @NameInMap("BackupType")
         public String backupType;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>OSS</strong>. This parameter indicates the name of the OSS bucket that is backed up.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hbr-backup-oss</p>
-         */
         @NameInMap("Bucket")
         public String bucket;
 
-        /**
-         * <p>The actual amount of data that is generated by incremental backups. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>800</p>
-         */
         @NameInMap("BytesDone")
         public Long bytesDone;
 
-        /**
-         * <p>The total amount of data that is backed up from the data source. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("BytesTotal")
         public Long bytesTotal;
 
-        /**
-         * <p>The data source details at the destination. Thisparameter is returned only for data synchronization.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</p>
-         */
         @NameInMap("ChangeListPath")
         public String changeListPath;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the ID of the backup client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c-*********************</p>
-         */
         @NameInMap("ClientId")
         public String clientId;
 
-        /**
-         * <p>The time when the backup job was completed. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("CompleteTime")
         public Long completeTime;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>NAS</strong>. This parameter indicates the time when the file system was created. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1607436917</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The time when the backup job was created. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        /**
-         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BackupRole</p>
-         */
         @NameInMap("CrossAccountRoleName")
         public String crossAccountRoleName;
 
-        /**
-         * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-         * <ul>
-         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
-         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SELF_ACCOUNT</p>
-         */
         @NameInMap("CrossAccountType")
         public String crossAccountType;
 
-        /**
-         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>158975xxxxx4625</p>
-         */
         @NameInMap("CrossAccountUserId")
         public Long crossAccountUserId;
 
-        /**
-         * <p>Destination data source details. (Required only for synchronization)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;prefix\&quot;:\&quot;/\&quot;}</p>
-         */
         @NameInMap("DestDataSourceDetail")
         public String destDataSourceDetail;
 
-        /**
-         * <p>Destination data source ID. (Required only for synchronization)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ds-000cov4ufudxklj24zdk</p>
-         */
         @NameInMap("DestDataSourceId")
         public String destDataSourceId;
 
-        /**
-         * <p>Destination data source type. (Required only for synchronization)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSS</p>
-         */
         @NameInMap("DestSourceType")
         public String destSourceType;
 
-        /**
-         * <p>The udm backup job detail.</p>
-         */
         @NameInMap("Detail")
         public DescribeBackupJobs2ResponseBodyBackupJobsBackupJobDetail detail;
 
-        /**
-         * <p>The error message that is returned for the backup job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PARTIAL_COMPLETE</p>
-         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
-         */
         @NameInMap("Exclude")
         public String exclude;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>NAS</strong>. This parameter indicates the ID of the NAS file system.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>005494</p>
-         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
-        /**
-         * <p>The number of files that have been processed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9</p>
-         */
         @NameInMap("FilesDone")
         public Long filesDone;
 
-        /**
-         * <p>The total number of files to be processed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("FilesTotal")
         public Long filesTotal;
 
-        /**
-         * <p>The identifier of the container cluster. For a Container Service for Kubernetes (ACK) cluster, specify the cluster ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c83**************************b76</p>
-         */
         @NameInMap("Identifier")
         public String identifier;
 
-        /**
-         * <p>The paths to the files that are included in the backup job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
-         */
         @NameInMap("Include")
         public String include;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>NAS</strong>. This parameter indicates the ID of the ECS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-*********************</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the Tablestore instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instancename</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the number of objects that are backed up.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("ItemsDone")
         public Long itemsDone;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the total number of objects in the data source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("ItemsTotal")
         public Long itemsTotal;
 
-        /**
-         * <p>The ID of the backup job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>job-000g********w7</p>
-         */
         @NameInMap("JobId")
         public String jobId;
 
-        /**
-         * <p>The name of the backup job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>jobname</p>
-         */
         @NameInMap("JobName")
         public String jobName;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates whether Windows VSS is used to define a backup path.</p>
-         * <ul>
-         * <li>This parameter is available only for Windows ECS instances.</li>
-         * <li>If data changes occur in the backup source, the source data must be the same as the data to be backed up before the system sets this parameter to <code>[&quot;UseVSS&quot;:true]</code>.</li>
-         * <li>If you use VSS, you cannot back up data from multiple directories.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;UseVSS&quot;:false}</p>
-         */
         @NameInMap("Options")
         public String options;
 
-        /**
-         * <p>The details about the Tablestore instance.</p>
-         */
         @NameInMap("OtsDetail")
         public DescribeBackupJobs2ResponseBodyBackupJobsBackupJobOtsDetail otsDetail;
 
-        /**
-         * <p>The backup paths.</p>
-         */
         @NameInMap("Paths")
         public DescribeBackupJobs2ResponseBodyBackupJobsBackupJobPaths paths;
 
-        /**
-         * <p>The ID of the backup plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>plan-20********35</p>
-         */
         @NameInMap("PlanId")
         public String planId;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>OSS</strong>. This parameter indicates the prefix of objects that are backed up.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example/</p>
-         */
         @NameInMap("Prefix")
         public String prefix;
 
-        /**
-         * <p>The backup progress. For example, 10000 indicates that the progress is 100%.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10000</p>
-         */
         @NameInMap("Progress")
         public Integer progress;
 
-        /**
-         * <p>Task Report</p>
-         */
         @NameInMap("Report")
         public DescribeBackupJobs2ResponseBodyBackupJobsBackupJobReport report;
 
-        /**
-         * <p>The type of the data source. Valid values:</p>
-         * <ul>
-         * <li><strong>ECS_FILE</strong>: ECS files</li>
-         * <li><strong>OSS</strong>: OSS buckets</li>
-         * <li><strong>NAS</strong>: NAS file systems</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS_FILE</p>
-         */
         @NameInMap("SourceType")
         public String sourceType;
 
-        /**
-         * <p>The average speed at which data is backed up. Unit: KB/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("Speed")
         public Long speed;
 
-        /**
-         * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the throttling rules. Format: <code>{start}{end}{bandwidth}</code>. Multiple throttling rules are separated with vertical bars (<code>{start}|{end}|{bandwidth}</code>). A specified time range cannot overlap with another one.</p>
-         * <ul>
-         * <li><strong>start</strong>: the start hour</li>
-         * <li><strong>end</strong>: the end hour</li>
-         * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0:24:5120</p>
-         */
         @NameInMap("SpeedLimit")
         public String speedLimit;
 
-        /**
-         * <p>The time when the backup job started. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("StartTime")
         public Long startTime;
 
-        /**
-         * <p>The status of the backup job. Valid values:</p>
-         * <ul>
-         * <li><strong>COMPLETE</strong>: The backup job is completed.</li>
-         * <li><strong>PARTIAL_COMPLETE</strong>: The backup job is partially completed.</li>
-         * <li><strong>FAILED</strong>: The restore job has failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLETE</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The name of a destination table in the Tablestore instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>table1</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The time when the backup job was updated. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554347313</p>
-         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
-        /**
-         * <p>The ID of the backup vault.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v-0006******q</p>
-         */
         @NameInMap("VaultId")
         public String vaultId;
 

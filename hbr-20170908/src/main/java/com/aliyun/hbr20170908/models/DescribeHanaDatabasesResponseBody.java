@@ -13,9 +13,6 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The information about SAP HANA databases.</p>
-     */
     @NameInMap("HanaDatabases")
     public DescribeHanaDatabasesResponseBodyHanaDatabases hanaDatabases;
 
@@ -147,61 +144,21 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeHanaDatabasesResponseBodyHanaDatabasesHanaDatabase extends TeaModel {
-        /**
-         * <p>Indicates whether the database is started. Valid values:</p>
-         * <ul>
-         * <li><strong>YES</strong>: The database is started.</li>
-         * <li><strong>NO</strong>: The database is not started.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>YES</p>
-         */
         @NameInMap("ActiveStatus")
         public String activeStatus;
 
-        /**
-         * <p>The database name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SYSTEMDB</p>
-         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        /**
-         * <p>The detailed information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>master</p>
-         */
         @NameInMap("Detail")
         public String detail;
 
-        /**
-         * <p>The hostname.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>izbp1jbf3zy******antqmz</p>
-         */
         @NameInMap("Host")
         public String host;
 
-        /**
-         * <p>The service name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>indexserver</p>
-         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        /**
-         * <p>The port number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30013</p>
-         */
         @NameInMap("SqlPort")
         public Integer sqlPort;
 

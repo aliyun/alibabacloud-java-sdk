@@ -22,9 +22,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The regions returned.</p>
-     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
@@ -96,21 +93,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        /**
-         * <p>The region name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

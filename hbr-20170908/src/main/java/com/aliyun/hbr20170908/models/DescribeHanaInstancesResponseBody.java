@@ -13,9 +13,6 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The information about the SAP HANA instances.</p>
-     */
     @NameInMap("Hanas")
     public DescribeHanaInstancesResponseBodyHanas hanas;
 
@@ -147,21 +144,9 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeHanaInstancesResponseBodyHanasHanaTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ace:rm:rgld</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmwutpyat2kwy</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -208,158 +193,51 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeHanaInstancesResponseBodyHanasHana extends TeaModel {
-        /**
-         * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>INHERITED</p>
-         */
         @NameInMap("AlertSetting")
         public String alertSetting;
 
-        /**
-         * <p>The ID of the SAP HANA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cl-0004cf6g6******0yd7y</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hbrcrossrole</p>
-         */
         @NameInMap("CrossAccountRoleName")
         public String crossAccountRoleName;
 
-        /**
-         * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-         * <ul>
-         * <li><strong>SELF_ACCOUNT</strong>: Data is backed up within the same Alibaba Cloud account.</li>
-         * <li><strong>CROSS_ACCOUNT</strong>: Data is backed up across Alibaba Cloud accounts.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>CROSS_ACCOUNT</p>
-         */
         @NameInMap("CrossAccountType")
         public String crossAccountType;
 
-        /**
-         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>158975xxxxx4625</p>
-         */
         @NameInMap("CrossAccountUserId")
         public Long crossAccountUserId;
 
-        /**
-         * <p>The name of the SAP HANA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HANA-DEV</p>
-         */
         @NameInMap("HanaName")
         public String hanaName;
 
-        /**
-         * <p>The private or internal IP address of the host where the primary node of the SAP HANA instance resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>47.100.XX.XX</p>
-         */
         @NameInMap("Host")
         public String host;
 
-        /**
-         * <p>The instance number of the SAP HANA system.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>00</p>
-         */
         @NameInMap("InstanceNumber")
         public Integer instanceNumber;
 
-        /**
-         * <p>The resource group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmvnf22m7itha</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The status of the SAP HANA instance. Valid values:</p>
-         * <ul>
-         * <li>INITIALIZING: The instance is being initialized.</li>
-         * <li>INITIALIZED: The instance is registered.</li>
-         * <li>INVALID_HANA_NODE: The instance is invalid.</li>
-         * <li>INITIALIZE_FAILED: The client fails to be installed on the instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>INITIALIZED</p>
-         */
         @NameInMap("Status")
         public Long status;
 
-        /**
-         * <p>The status information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>INSTALL_CLIENT_FAILED</p>
-         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
-        /**
-         * <p>The tags of the SAP HANA instance.</p>
-         */
         @NameInMap("Tags")
         public DescribeHanaInstancesResponseBodyHanasHanaTags tags;
 
-        /**
-         * <p>Indicates whether the SAP HANA instance is connected over Secure Sockets Layer (SSL). Valid values:</p>
-         * <ul>
-         * <li>true: The SAP HANA instance is connected over SSL.</li>
-         * <li>false: The SAP HANA instance is not connected over SSL.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("UseSsl")
         public Boolean useSsl;
 
-        /**
-         * <p>The username of the SYSTEMDB database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>admin</p>
-         */
         @NameInMap("UserName")
         public String userName;
 
-        /**
-         * <p>Indicates whether the SSL certificate of the SAP HANA instance is verified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("ValidateCertificate")
         public Boolean validateCertificate;
 
-        /**
-         * <p>The ID of the backup vault.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v-0000s974******1hl</p>
-         */
         @NameInMap("VaultId")
         public String vaultId;
 

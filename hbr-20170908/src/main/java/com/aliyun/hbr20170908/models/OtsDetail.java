@@ -4,6 +4,9 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class OtsDetail extends TeaModel {
+    /**
+     * <p>public</p>
+     */
     @NameInMap("TableNames")
     public java.util.List<String> tableNames;
 

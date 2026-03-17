@@ -13,9 +13,6 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The details of the backup plan.</p>
-     */
     @NameInMap("HanaBackupPlans")
     public DescribeHanaBackupPlansResponseBodyHanaBackupPlans hanaBackupPlans;
 
@@ -147,100 +144,33 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
     }
 
     public static class DescribeHanaBackupPlansResponseBodyHanaBackupPlansHanaBackupPlan extends TeaModel {
-        /**
-         * <p>The backup prefix.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLETE_DATA_BACKUP</p>
-         */
         @NameInMap("BackupPrefix")
         public String backupPrefix;
 
-        /**
-         * <p>The backup type. Valid values:</p>
-         * <ul>
-         * <li>COMPLETE: full backup</li>
-         * <li>INCREMENTAL: incremental backup</li>
-         * <li>DIFFERENTIAL: differential backup</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>COMPLETE</p>
-         */
         @NameInMap("BackupType")
         public String backupType;
 
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
-        /**
-         * <p>The ID of the SAP HANA instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cl-0002scknka*****</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The database name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SYSTEMDB</p>
-         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        /**
-         * <p>Indicates whether the backup plan is disabled. Valid values:</p>
-         * <ul>
-         * <li>true: The backup plan is disabled.</li>
-         * <li>false: The backup plan is enabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Disabled")
         public Boolean disabled;
 
-        /**
-         * <p>The ID of the backup plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pl-0000tnyndg3ne5m4ubeu</p>
-         */
         @NameInMap("PlanId")
         public String planId;
 
-        /**
-         * <p>The name of the backup plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>plan-20220118-141153</p>
-         */
         @NameInMap("PlanName")
         public String planName;
 
-        /**
-         * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
-         * <ul>
-         * <li>startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
-         * <li>interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>I|1602673264|P1D</p>
-         */
         @NameInMap("Schedule")
         public String schedule;
 
-        /**
-         * <p>The ID of the backup vault.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v-000csihw82pqkd7hcjws</p>
-         */
         @NameInMap("VaultId")
         public String vaultId;
 

@@ -13,9 +13,6 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The information about the accounts used in cross-account backup.</p>
-     */
     @NameInMap("CrossAccounts")
     public DescribeCrossAccountsResponseBodyCrossAccounts crossAccounts;
 
@@ -147,30 +144,12 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeCrossAccountsResponseBodyCrossAccountsCrossAccount extends TeaModel {
-        /**
-         * <p>The account alias. The value can be up to 32 bits in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>content</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>The time when the account was created. This value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1654570439</p>
-         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        /**
-         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BackupRole</p>
-         */
         @NameInMap("CrossAccountRoleName")
         public String crossAccountRoleName;
 
@@ -181,39 +160,15 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         @NameInMap("CrossAccountType")
         public String crossAccountType;
 
-        /**
-         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15897534xxxxx625</p>
-         */
         @NameInMap("CrossAccountUserId")
         public Long crossAccountUserId;
 
-        /**
-         * <p>The ID of the backup type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The ID of the current account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>184164xxxxx49795</p>
-         */
         @NameInMap("OwnerId")
         public Long ownerId;
 
-        /**
-         * <p>The time when the account information was updated. The value is a UNIX timestamp. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1640157098</p>
-         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Report extends TeaModel {
     /**
+     * <p>The report path of failed files.</p>
+     * 
      * <strong>example:</strong>
      * <p>temp/report/r-0000dnz7p4pk31u6madf_failed.csv</p>
      */
@@ -12,6 +14,8 @@ public class Report extends TeaModel {
     public String failedFiles;
 
     /**
+     * <p>The report path of skipped files.</p>
+     * 
      * <strong>example:</strong>
      * <p>temp/report/r-0000dnz7p4pk31u6madf_skipped.csv</p>
      */
@@ -19,6 +23,8 @@ public class Report extends TeaModel {
     public String skippedFiles;
 
     /**
+     * <p>The report path of success files.</p>
+     * 
      * <strong>example:</strong>
      * <p>temp/report/r-0000dnz7p4pk31u6madf_success.csv</p>
      */
@@ -26,6 +32,8 @@ public class Report extends TeaModel {
     public String successFiles;
 
     /**
+     * <p>The report path of total files.</p>
+     * 
      * <strong>example:</strong>
      * <p>temp/report/r-0000dnz7p4pk31u6madf_total.csv</p>
      */
