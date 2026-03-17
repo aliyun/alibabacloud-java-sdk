@@ -67,6 +67,13 @@ public class ListDatasetDocumentsShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>xxx</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("PageNumber")
@@ -234,6 +241,14 @@ public class ListDatasetDocumentsShrinkRequest extends TeaModel {
     }
     public String getIncludeFieldsShrink() {
         return this.includeFieldsShrink;
+    }
+
+    public ListDatasetDocumentsShrinkRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListDatasetDocumentsShrinkRequest setPageNumber(Integer pageNumber) {

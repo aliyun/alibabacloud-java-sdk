@@ -30,6 +30,13 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>xxx</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("PageNumber")
@@ -98,6 +105,14 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ListDatasetDocumentsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListDatasetDocumentsResponseBody setPageNumber(Integer pageNumber) {

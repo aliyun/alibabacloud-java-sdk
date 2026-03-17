@@ -6111,6 +6111,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IncludeFields", request.includeFieldsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             body.put("PageNumber", request.pageNumber);
         }
@@ -10984,6 +10988,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveMaterialDocumentResponse saveMaterialDocument(SaveMaterialDocumentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.saveMaterialDocumentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置oss访问参数</p>
+     * 
+     * @param request SaveOrUpdateOssConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveOrUpdateOssConfigResponse
+     */
+    public SaveOrUpdateOssConfigResponse saveOrUpdateOssConfigWithOptions(SaveOrUpdateOssConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketName)) {
+            body.put("BucketName", request.bucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endPoint)) {
+            body.put("EndPoint", request.endPoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveOrUpdateOssConfig"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveOrUpdateOssConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置oss访问参数</p>
+     * 
+     * @param request SaveOrUpdateOssConfigRequest
+     * @return SaveOrUpdateOssConfigResponse
+     */
+    public SaveOrUpdateOssConfigResponse saveOrUpdateOssConfig(SaveOrUpdateOssConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.saveOrUpdateOssConfigWithOptions(request, runtime);
     }
 
     /**

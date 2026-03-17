@@ -67,6 +67,13 @@ public class ListDatasetDocumentsRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>xxx</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("PageNumber")
@@ -234,6 +241,14 @@ public class ListDatasetDocumentsRequest extends TeaModel {
     }
     public java.util.List<String> getIncludeFields() {
         return this.includeFields;
+    }
+
+    public ListDatasetDocumentsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListDatasetDocumentsRequest setPageNumber(Integer pageNumber) {
