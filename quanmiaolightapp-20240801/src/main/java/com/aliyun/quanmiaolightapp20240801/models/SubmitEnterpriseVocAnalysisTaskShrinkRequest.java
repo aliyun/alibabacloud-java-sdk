@@ -7,6 +7,9 @@ public class SubmitEnterpriseVocAnalysisTaskShrinkRequest extends TeaModel {
     @NameInMap("apiKey")
     public String apiKey;
 
+    @NameInMap("batchTask")
+    public Boolean batchTask;
+
     @NameInMap("contents")
     public String contentsShrink;
 
@@ -32,6 +35,9 @@ public class SubmitEnterpriseVocAnalysisTaskShrinkRequest extends TeaModel {
 
     @NameInMap("outputFormat")
     public String outputFormat;
+
+    @NameInMap("positiveFilter")
+    public Boolean positiveFilter;
 
     @NameInMap("sourceTrace")
     public Boolean sourceTrace;
@@ -60,6 +66,14 @@ public class SubmitEnterpriseVocAnalysisTaskShrinkRequest extends TeaModel {
     }
     public String getApiKey() {
         return this.apiKey;
+    }
+
+    public SubmitEnterpriseVocAnalysisTaskShrinkRequest setBatchTask(Boolean batchTask) {
+        this.batchTask = batchTask;
+        return this;
+    }
+    public Boolean getBatchTask() {
+        return this.batchTask;
     }
 
     public SubmitEnterpriseVocAnalysisTaskShrinkRequest setContentsShrink(String contentsShrink) {
@@ -108,6 +122,14 @@ public class SubmitEnterpriseVocAnalysisTaskShrinkRequest extends TeaModel {
     }
     public String getOutputFormat() {
         return this.outputFormat;
+    }
+
+    public SubmitEnterpriseVocAnalysisTaskShrinkRequest setPositiveFilter(Boolean positiveFilter) {
+        this.positiveFilter = positiveFilter;
+        return this;
+    }
+    public Boolean getPositiveFilter() {
+        return this.positiveFilter;
     }
 
     public SubmitEnterpriseVocAnalysisTaskShrinkRequest setSourceTrace(Boolean sourceTrace) {

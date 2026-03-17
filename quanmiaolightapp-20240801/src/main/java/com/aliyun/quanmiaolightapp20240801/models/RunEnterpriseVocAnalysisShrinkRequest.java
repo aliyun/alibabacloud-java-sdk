@@ -44,6 +44,9 @@ public class RunEnterpriseVocAnalysisShrinkRequest extends TeaModel {
     @NameInMap("outputFormat")
     public String outputFormat;
 
+    @NameInMap("positiveFilter")
+    public Boolean positiveFilter;
+
     @NameInMap("sourceTrace")
     public Boolean sourceTrace;
 
@@ -125,6 +128,14 @@ public class RunEnterpriseVocAnalysisShrinkRequest extends TeaModel {
     }
     public String getOutputFormat() {
         return this.outputFormat;
+    }
+
+    public RunEnterpriseVocAnalysisShrinkRequest setPositiveFilter(Boolean positiveFilter) {
+        this.positiveFilter = positiveFilter;
+        return this;
+    }
+    public Boolean getPositiveFilter() {
+        return this.positiveFilter;
     }
 
     public RunEnterpriseVocAnalysisShrinkRequest setSourceTrace(Boolean sourceTrace) {

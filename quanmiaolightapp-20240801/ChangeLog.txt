@@ -1,3 +1,10 @@
+2026-03-17 Version: 2.12.8
+- Update API RunEnterpriseVocAnalysis: add request parameters positiveFilter.
+- Update API SubmitEnterpriseVocAnalysisTask: add request parameters batchTask.
+- Update API SubmitEnterpriseVocAnalysisTask: add request parameters positiveFilter.
+- Update API SubmitTagMiningAnalysisTask: add request parameters batchTask.
+
+
 2026-02-03 Version: 2.12.7
 - Update API RunVideoAnalysis: add request parameters addDocumentParam.document.categoryUuid.
 - Update API RunVideoAnalysis: add request parameters addDocumentParam.document.extend1.

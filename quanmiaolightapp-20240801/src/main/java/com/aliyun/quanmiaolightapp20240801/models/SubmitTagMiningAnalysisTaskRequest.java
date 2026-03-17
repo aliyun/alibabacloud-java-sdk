@@ -7,6 +7,9 @@ public class SubmitTagMiningAnalysisTaskRequest extends TeaModel {
     @NameInMap("apiKey")
     public String apiKey;
 
+    @NameInMap("batchTask")
+    public Boolean batchTask;
+
     /**
      * <strong>example:</strong>
      * <p>clueMining</p>
@@ -66,6 +69,14 @@ public class SubmitTagMiningAnalysisTaskRequest extends TeaModel {
     }
     public String getApiKey() {
         return this.apiKey;
+    }
+
+    public SubmitTagMiningAnalysisTaskRequest setBatchTask(Boolean batchTask) {
+        this.batchTask = batchTask;
+        return this;
+    }
+    public Boolean getBatchTask() {
+        return this.batchTask;
     }
 
     public SubmitTagMiningAnalysisTaskRequest setBusinessType(String businessType) {

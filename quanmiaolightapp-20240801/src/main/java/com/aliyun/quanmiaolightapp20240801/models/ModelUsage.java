@@ -4,12 +4,24 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class ModelUsage extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>951</p>
+     */
     @NameInMap("inputTokens")
     public Long inputTokens;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13</p>
+     */
     @NameInMap("outputTokens")
     public Long outputTokens;
 
+    /**
+     * <strong>example:</strong>
+     * <p>964</p>
+     */
     @NameInMap("totalTokens")
     public Long totalTokens;
 

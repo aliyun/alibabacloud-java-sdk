@@ -44,6 +44,9 @@ public class RunEnterpriseVocAnalysisRequest extends TeaModel {
     @NameInMap("outputFormat")
     public String outputFormat;
 
+    @NameInMap("positiveFilter")
+    public Boolean positiveFilter;
+
     @NameInMap("sourceTrace")
     public Boolean sourceTrace;
 
@@ -125,6 +128,14 @@ public class RunEnterpriseVocAnalysisRequest extends TeaModel {
     }
     public String getOutputFormat() {
         return this.outputFormat;
+    }
+
+    public RunEnterpriseVocAnalysisRequest setPositiveFilter(Boolean positiveFilter) {
+        this.positiveFilter = positiveFilter;
+        return this;
+    }
+    public Boolean getPositiveFilter() {
+        return this.positiveFilter;
     }
 
     public RunEnterpriseVocAnalysisRequest setSourceTrace(Boolean sourceTrace) {

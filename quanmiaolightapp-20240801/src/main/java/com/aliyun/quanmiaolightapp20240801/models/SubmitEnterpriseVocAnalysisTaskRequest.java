@@ -7,6 +7,9 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends TeaModel {
     @NameInMap("apiKey")
     public String apiKey;
 
+    @NameInMap("batchTask")
+    public Boolean batchTask;
+
     @NameInMap("contents")
     public java.util.List<SubmitEnterpriseVocAnalysisTaskRequestContents> contents;
 
@@ -32,6 +35,9 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends TeaModel {
 
     @NameInMap("outputFormat")
     public String outputFormat;
+
+    @NameInMap("positiveFilter")
+    public Boolean positiveFilter;
 
     @NameInMap("sourceTrace")
     public Boolean sourceTrace;
@@ -60,6 +66,14 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends TeaModel {
     }
     public String getApiKey() {
         return this.apiKey;
+    }
+
+    public SubmitEnterpriseVocAnalysisTaskRequest setBatchTask(Boolean batchTask) {
+        this.batchTask = batchTask;
+        return this;
+    }
+    public Boolean getBatchTask() {
+        return this.batchTask;
     }
 
     public SubmitEnterpriseVocAnalysisTaskRequest setContents(java.util.List<SubmitEnterpriseVocAnalysisTaskRequestContents> contents) {
@@ -108,6 +122,14 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends TeaModel {
     }
     public String getOutputFormat() {
         return this.outputFormat;
+    }
+
+    public SubmitEnterpriseVocAnalysisTaskRequest setPositiveFilter(Boolean positiveFilter) {
+        this.positiveFilter = positiveFilter;
+        return this;
+    }
+    public Boolean getPositiveFilter() {
+        return this.positiveFilter;
     }
 
     public SubmitEnterpriseVocAnalysisTaskRequest setSourceTrace(Boolean sourceTrace) {
