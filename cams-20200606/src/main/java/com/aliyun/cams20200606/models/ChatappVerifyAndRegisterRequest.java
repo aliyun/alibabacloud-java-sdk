@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatappVerifyAndRegisterRequest extends TeaModel {
     /**
+     * <p>The space ID of the RAM user within the ISV account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,10 +18,11 @@ public class ChatappVerifyAndRegisterRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>86138000000</p>
+     * <p>8613800001234</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
@@ -32,10 +34,11 @@ public class ChatappVerifyAndRegisterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The verification code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123466</p>
+     * <p>223222</p>
      */
     @NameInMap("VerifyCode")
     public String verifyCode;

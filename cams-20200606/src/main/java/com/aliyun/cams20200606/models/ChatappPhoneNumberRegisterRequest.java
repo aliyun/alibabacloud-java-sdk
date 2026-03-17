@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class ChatappPhoneNumberRegisterRequest extends TeaModel {
     /**
+     * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>939283893939</p>
+     * <p>939283893939***</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -17,10 +18,11 @@ public class ChatappPhoneNumberRegisterRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8613800000000</p>
+     * <p>8613800001234</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

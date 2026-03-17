@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneMessageQrdlRequest extends TeaModel {
     /**
+     * <p>SpaceId/instance ID of ISV sub customer.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>9383884</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>Produce QR code image format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>PNG</p>
      */
     @NameInMap("GenerateQrImage")
     public String generateQrImage;
@@ -24,28 +27,31 @@ public class UpdatePhoneMessageQrdlRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Number, enter the country/region code+number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>861380000</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
+     * <p>Message content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Hello</p>
      */
     @NameInMap("PrefilledMessage")
     public String prefilledMessage;
 
     /**
+     * <p>QR code encoding.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>29338838</p>
      */
     @NameInMap("QrdlCode")
     public String qrdlCode;

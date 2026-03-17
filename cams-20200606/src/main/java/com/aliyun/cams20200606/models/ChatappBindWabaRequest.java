@@ -14,10 +14,11 @@ public class ChatappBindWabaRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the WhatsApp Business account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>33993***</p>
+     * <p>2293938222343****</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

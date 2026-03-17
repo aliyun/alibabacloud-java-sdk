@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetFlowJSONAssestRequest extends TeaModel {
     /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>83883873</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The Flow ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>flow_001</p>
      */
     @NameInMap("FlowId")
     public String flowId;

@@ -5,17 +5,28 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneEncryptionPublicKeyRequest extends TeaModel {
     /**
+     * <p>SpaceId/instanceId of ISV sub clients.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>399382882</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>Encrypt the public key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>-----BEGIN PUBLIC KEY-----
+     * AAA
+     * BBB
+     * CCC
+     * DDD
+     * EEE
+     * FFF
+     * GGG
+     * -----END PUBLIC KEY-----</p>
      */
     @NameInMap("EncryptionPublicKey")
     public String encryptionPublicKey;
@@ -24,10 +35,11 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>86138000</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

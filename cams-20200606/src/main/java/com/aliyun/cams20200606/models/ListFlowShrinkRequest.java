@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListFlowShrinkRequest extends TeaModel {
     /**
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>99948484</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>flow_001</p>
      */
     @NameInMap("FlowName")
     public String flowName;
@@ -21,6 +25,9 @@ public class ListFlowShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The returned pages.</p>
+     */
     @NameInMap("Page")
     public String pageShrink;
 

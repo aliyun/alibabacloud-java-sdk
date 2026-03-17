@@ -157,14 +157,14 @@ public class AddCustomAudienceUserRequest extends TeaModel {
     public static class AddCustomAudienceUserRequestUsers extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p><a href="mailto:a@test.com">a@test.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>86138***</p>
          */
         @NameInMap("Phone")
         public String phone;

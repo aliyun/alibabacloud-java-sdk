@@ -7372,7 +7372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListFlowNodeGroup</p>
+     * <p>列举流程组件分组</p>
      * 
      * @param request ListFlowNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7420,7 +7420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListFlowNodeGroup</p>
+     * <p>列举流程组件分组</p>
      * 
      * @param request ListFlowNodeGroupRequest
      * @return ListFlowNodeGroupResponse
@@ -10038,6 +10038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.adAccountId)) {
             query.put("AdAccountId", request.adAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.channelType)) {
