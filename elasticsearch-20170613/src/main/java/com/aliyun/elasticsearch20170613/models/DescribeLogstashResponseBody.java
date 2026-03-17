@@ -406,6 +406,9 @@ public class DescribeLogstashResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("endTime")
+        public Long endTime;
+
         /**
          * <p>The ID of the zone where the node resides.</p>
          */
@@ -546,6 +549,14 @@ public class DescribeLogstashResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeLogstashResponseBodyResult setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         public DescribeLogstashResponseBodyResult setEndpointList(java.util.List<DescribeLogstashResponseBodyResultEndpointList> endpointList) {

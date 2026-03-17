@@ -293,6 +293,13 @@ public class ListLogstashResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <strong>example:</strong>
+         * <p>4928745600000</p>
+         */
+        @NameInMap("endTime")
+        public Long endTime;
+
+        /**
          * <p>The tag value of the cloud disk.</p>
          * 
          * <strong>example:</strong>
@@ -392,6 +399,14 @@ public class ListLogstashResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListLogstashResponseBodyResult setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         public ListLogstashResponseBodyResult setInstanceId(String instanceId) {
