@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateMessageRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>assistantId1</p>
      */
@@ -33,15 +31,21 @@ public class CreateMessageRequest extends TeaModel {
      * <strong>example:</strong>
      * <p>agentKey1</p>
      */
-    @NameInMap("sourceIdOfOriginalAssistantId")
-    public String sourceIdOfOriginalAssistantId;
+    @NameInMap("sourceIdOfAssistantId")
+    public String sourceIdOfAssistantId;
 
     /**
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>agentKey1</p>
      */
+    @NameInMap("sourceIdOfOriginalAssistantId")
+    public String sourceIdOfOriginalAssistantId;
+
+    @NameInMap("sourceTypeOfAssistantId")
+    public Integer sourceTypeOfAssistantId;
+
     @NameInMap("sourceTypeOfOriginalAssistantId")
-    public String sourceTypeOfOriginalAssistantId;
+    public Integer sourceTypeOfOriginalAssistantId;
 
     /**
      * <p>This parameter is required.</p>
@@ -89,6 +93,14 @@ public class CreateMessageRequest extends TeaModel {
         return this.originalAssistantId;
     }
 
+    public CreateMessageRequest setSourceIdOfAssistantId(String sourceIdOfAssistantId) {
+        this.sourceIdOfAssistantId = sourceIdOfAssistantId;
+        return this;
+    }
+    public String getSourceIdOfAssistantId() {
+        return this.sourceIdOfAssistantId;
+    }
+
     public CreateMessageRequest setSourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
         this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
         return this;
@@ -97,11 +109,19 @@ public class CreateMessageRequest extends TeaModel {
         return this.sourceIdOfOriginalAssistantId;
     }
 
-    public CreateMessageRequest setSourceTypeOfOriginalAssistantId(String sourceTypeOfOriginalAssistantId) {
+    public CreateMessageRequest setSourceTypeOfAssistantId(Integer sourceTypeOfAssistantId) {
+        this.sourceTypeOfAssistantId = sourceTypeOfAssistantId;
+        return this;
+    }
+    public Integer getSourceTypeOfAssistantId() {
+        return this.sourceTypeOfAssistantId;
+    }
+
+    public CreateMessageRequest setSourceTypeOfOriginalAssistantId(Integer sourceTypeOfOriginalAssistantId) {
         this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
         return this;
     }
-    public String getSourceTypeOfOriginalAssistantId() {
+    public Integer getSourceTypeOfOriginalAssistantId() {
         return this.sourceTypeOfOriginalAssistantId;
     }
 

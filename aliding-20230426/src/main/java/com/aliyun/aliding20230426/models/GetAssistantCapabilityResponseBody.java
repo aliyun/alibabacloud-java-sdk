@@ -32,6 +32,9 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("thread")
+    public GetAssistantCapabilityResponseBodyThread thread;
+
     public static GetAssistantCapabilityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAssistantCapabilityResponseBody self = new GetAssistantCapabilityResponseBody();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetAssistantCapabilityResponseBody setThread(GetAssistantCapabilityResponseBodyThread thread) {
+        this.thread = thread;
+        return this;
+    }
+    public GetAssistantCapabilityResponseBodyThread getThread() {
+        return this.thread;
     }
 
     public static class GetAssistantCapabilityResponseBodyCapabilityAssessmentCapabilityList extends TeaModel {
@@ -156,6 +167,47 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
         }
         public java.util.List<GetAssistantCapabilityResponseBodyCapabilityAssessmentCapabilityList> getCapabilityList() {
             return this.capabilityList;
+        }
+
+    }
+
+    public static class GetAssistantCapabilityResponseBodyThread extends TeaModel {
+        @NameInMap("createAt")
+        public Long createAt;
+
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("status")
+        public String status;
+
+        public static GetAssistantCapabilityResponseBodyThread build(java.util.Map<String, ?> map) throws Exception {
+            GetAssistantCapabilityResponseBodyThread self = new GetAssistantCapabilityResponseBodyThread();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAssistantCapabilityResponseBodyThread setCreateAt(Long createAt) {
+            this.createAt = createAt;
+            return this;
+        }
+        public Long getCreateAt() {
+            return this.createAt;
+        }
+
+        public GetAssistantCapabilityResponseBodyThread setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public GetAssistantCapabilityResponseBodyThread setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

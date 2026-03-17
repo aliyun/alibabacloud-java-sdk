@@ -3284,8 +3284,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("originalAssistantId", request.originalAssistantId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfAssistantId)) {
+            body.put("sourceIdOfAssistantId", request.sourceIdOfAssistantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfOriginalAssistantId)) {
             body.put("sourceIdOfOriginalAssistantId", request.sourceIdOfOriginalAssistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTypeOfAssistantId)) {
+            body.put("sourceTypeOfAssistantId", request.sourceTypeOfAssistantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceTypeOfOriginalAssistantId)) {
@@ -3850,8 +3858,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("originalAssistantId", request.originalAssistantId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfAssistantId)) {
+            body.put("sourceIdOfAssistantId", request.sourceIdOfAssistantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfOriginalAssistantId)) {
             body.put("sourceIdOfOriginalAssistantId", request.sourceIdOfOriginalAssistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTypeOfAssistantId)) {
+            body.put("sourceTypeOfAssistantId", request.sourceTypeOfAssistantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceTypeOfOriginalAssistantId)) {
@@ -4504,8 +4520,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("originalAssistantId", request.originalAssistantId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfAssistantId)) {
+            body.put("sourceIdOfAssistantId", request.sourceIdOfAssistantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfOriginalAssistantId)) {
             body.put("sourceIdOfOriginalAssistantId", request.sourceIdOfOriginalAssistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTypeOfAssistantId)) {
+            body.put("sourceTypeOfAssistantId", request.sourceTypeOfAssistantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceTypeOfOriginalAssistantId)) {
@@ -7603,6 +7627,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(headers.accountId)) {
             realHeaders.put("accountId", com.aliyun.teautil.Common.toJSONString(headers.accountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.aiLogContextJson)) {
+            realHeaders.put("aiLogContextJson", com.aliyun.teautil.Common.toJSONString(headers.aiLogContextJson));
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -13850,6 +13878,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InvokeAssistantResponse invokeAssistantWithOptions(InvokeAssistantRequest request, InvokeAssistantHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowStructViewContent)) {
+            body.put("allowStructViewContent", request.allowStructViewContent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.assistantId)) {
             body.put("assistantId", request.assistantId);
         }
@@ -13874,8 +13906,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("sessionId", request.sessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfAssistantId)) {
+            body.put("sourceIdOfAssistantId", request.sourceIdOfAssistantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIdOfOriginalAssistantId)) {
             body.put("sourceIdOfOriginalAssistantId", request.sourceIdOfOriginalAssistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTypeOfAssistantId)) {
+            body.put("sourceTypeOfAssistantId", request.sourceTypeOfAssistantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceTypeOfOriginalAssistantId)) {
@@ -13893,6 +13933,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(headers.accountId)) {
             realHeaders.put("accountId", com.aliyun.teautil.Common.toJSONString(headers.accountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.aiLogContextJson)) {
+            realHeaders.put("aiLogContextJson", com.aliyun.teautil.Common.toJSONString(headers.aiLogContextJson));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.alidingSsoTicket)) {

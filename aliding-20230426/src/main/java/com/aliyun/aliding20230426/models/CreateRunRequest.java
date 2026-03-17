@@ -8,8 +8,6 @@ public class CreateRunRequest extends TeaModel {
     public Boolean allowStructViewContent;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>assistantId1</p>
      */
@@ -30,15 +28,21 @@ public class CreateRunRequest extends TeaModel {
      * <strong>example:</strong>
      * <p>agentKey1</p>
      */
-    @NameInMap("sourceIdOfOriginalAssistantId")
-    public String sourceIdOfOriginalAssistantId;
+    @NameInMap("sourceIdOfAssistantId")
+    public String sourceIdOfAssistantId;
 
     /**
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>agentKey1</p>
      */
+    @NameInMap("sourceIdOfOriginalAssistantId")
+    public String sourceIdOfOriginalAssistantId;
+
+    @NameInMap("sourceTypeOfAssistantId")
+    public Integer sourceTypeOfAssistantId;
+
     @NameInMap("sourceTypeOfOriginalAssistantId")
-    public String sourceTypeOfOriginalAssistantId;
+    public Integer sourceTypeOfOriginalAssistantId;
 
     /**
      * <strong>example:</strong>
@@ -93,6 +97,14 @@ public class CreateRunRequest extends TeaModel {
         return this.originalAssistantId;
     }
 
+    public CreateRunRequest setSourceIdOfAssistantId(String sourceIdOfAssistantId) {
+        this.sourceIdOfAssistantId = sourceIdOfAssistantId;
+        return this;
+    }
+    public String getSourceIdOfAssistantId() {
+        return this.sourceIdOfAssistantId;
+    }
+
     public CreateRunRequest setSourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
         this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
         return this;
@@ -101,11 +113,19 @@ public class CreateRunRequest extends TeaModel {
         return this.sourceIdOfOriginalAssistantId;
     }
 
-    public CreateRunRequest setSourceTypeOfOriginalAssistantId(String sourceTypeOfOriginalAssistantId) {
+    public CreateRunRequest setSourceTypeOfAssistantId(Integer sourceTypeOfAssistantId) {
+        this.sourceTypeOfAssistantId = sourceTypeOfAssistantId;
+        return this;
+    }
+    public Integer getSourceTypeOfAssistantId() {
+        return this.sourceTypeOfAssistantId;
+    }
+
+    public CreateRunRequest setSourceTypeOfOriginalAssistantId(Integer sourceTypeOfOriginalAssistantId) {
         this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
         return this;
     }
-    public String getSourceTypeOfOriginalAssistantId() {
+    public Integer getSourceTypeOfOriginalAssistantId() {
         return this.sourceTypeOfOriginalAssistantId;
     }
 

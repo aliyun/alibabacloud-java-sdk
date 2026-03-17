@@ -998,6 +998,47 @@ public class CreateRunResponseBody extends TeaModel {
 
     }
 
+    public static class CreateRunResponseBodyMessagesContentStructPartsInfoPart extends TeaModel {
+        @NameInMap("cateIdList")
+        public java.util.List<String> cateIdList;
+
+        @NameInMap("needFeedback")
+        public Boolean needFeedback;
+
+        @NameInMap("origin")
+        public String origin;
+
+        public static CreateRunResponseBodyMessagesContentStructPartsInfoPart build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyMessagesContentStructPartsInfoPart self = new CreateRunResponseBodyMessagesContentStructPartsInfoPart();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsInfoPart setCateIdList(java.util.List<String> cateIdList) {
+            this.cateIdList = cateIdList;
+            return this;
+        }
+        public java.util.List<String> getCateIdList() {
+            return this.cateIdList;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsInfoPart setNeedFeedback(Boolean needFeedback) {
+            this.needFeedback = needFeedback;
+            return this;
+        }
+        public Boolean getNeedFeedback() {
+            return this.needFeedback;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsInfoPart setOrigin(String origin) {
+            this.origin = origin;
+            return this;
+        }
+        public String getOrigin() {
+            return this.origin;
+        }
+
+    }
+
     public static class CreateRunResponseBodyMessagesContentStructPartsReasonPart extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -1248,6 +1289,13 @@ public class CreateRunResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("infoPart")
+        public CreateRunResponseBodyMessagesContentStructPartsInfoPart infoPart;
+
+        /**
+         * <strong>example:</strong>
          * <p>这是正文内容部分</p>
          */
         @NameInMap("partDesc")
@@ -1324,6 +1372,14 @@ public class CreateRunResponseBody extends TeaModel {
         }
         public Boolean getFinish() {
             return this.finish;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setInfoPart(CreateRunResponseBodyMessagesContentStructPartsInfoPart infoPart) {
+            this.infoPart = infoPart;
+            return this;
+        }
+        public CreateRunResponseBodyMessagesContentStructPartsInfoPart getInfoPart() {
+            return this.infoPart;
         }
 
         public CreateRunResponseBodyMessagesContentStructParts setPartDesc(String partDesc) {

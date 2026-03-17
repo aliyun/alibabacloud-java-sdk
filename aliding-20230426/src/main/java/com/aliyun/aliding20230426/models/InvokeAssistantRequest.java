@@ -4,9 +4,10 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class InvokeAssistantRequest extends TeaModel {
+    @NameInMap("allowStructViewContent")
+    public Boolean allowStructViewContent;
+
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>assistantId1</p>
      */
@@ -43,15 +44,21 @@ public class InvokeAssistantRequest extends TeaModel {
      * <strong>example:</strong>
      * <p>agentKey1</p>
      */
-    @NameInMap("sourceIdOfOriginalAssistantId")
-    public String sourceIdOfOriginalAssistantId;
+    @NameInMap("sourceIdOfAssistantId")
+    public String sourceIdOfAssistantId;
 
     /**
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>agentKey1</p>
      */
+    @NameInMap("sourceIdOfOriginalAssistantId")
+    public String sourceIdOfOriginalAssistantId;
+
+    @NameInMap("sourceTypeOfAssistantId")
+    public Integer sourceTypeOfAssistantId;
+
     @NameInMap("sourceTypeOfOriginalAssistantId")
-    public String sourceTypeOfOriginalAssistantId;
+    public Integer sourceTypeOfOriginalAssistantId;
 
     /**
      * <strong>example:</strong>
@@ -63,6 +70,14 @@ public class InvokeAssistantRequest extends TeaModel {
     public static InvokeAssistantRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeAssistantRequest self = new InvokeAssistantRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InvokeAssistantRequest setAllowStructViewContent(Boolean allowStructViewContent) {
+        this.allowStructViewContent = allowStructViewContent;
+        return this;
+    }
+    public Boolean getAllowStructViewContent() {
+        return this.allowStructViewContent;
     }
 
     public InvokeAssistantRequest setAssistantId(String assistantId) {
@@ -113,6 +128,14 @@ public class InvokeAssistantRequest extends TeaModel {
         return this.sessionId;
     }
 
+    public InvokeAssistantRequest setSourceIdOfAssistantId(String sourceIdOfAssistantId) {
+        this.sourceIdOfAssistantId = sourceIdOfAssistantId;
+        return this;
+    }
+    public String getSourceIdOfAssistantId() {
+        return this.sourceIdOfAssistantId;
+    }
+
     public InvokeAssistantRequest setSourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
         this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
         return this;
@@ -121,11 +144,19 @@ public class InvokeAssistantRequest extends TeaModel {
         return this.sourceIdOfOriginalAssistantId;
     }
 
-    public InvokeAssistantRequest setSourceTypeOfOriginalAssistantId(String sourceTypeOfOriginalAssistantId) {
+    public InvokeAssistantRequest setSourceTypeOfAssistantId(Integer sourceTypeOfAssistantId) {
+        this.sourceTypeOfAssistantId = sourceTypeOfAssistantId;
+        return this;
+    }
+    public Integer getSourceTypeOfAssistantId() {
+        return this.sourceTypeOfAssistantId;
+    }
+
+    public InvokeAssistantRequest setSourceTypeOfOriginalAssistantId(Integer sourceTypeOfOriginalAssistantId) {
         this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
         return this;
     }
-    public String getSourceTypeOfOriginalAssistantId() {
+    public Integer getSourceTypeOfOriginalAssistantId() {
         return this.sourceTypeOfOriginalAssistantId;
     }
 

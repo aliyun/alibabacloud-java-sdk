@@ -14,6 +14,9 @@ public class InvokeAssistantHeaders extends TeaModel {
     @NameInMap("accountId")
     public String accountId;
 
+    @NameInMap("aiLogContextJson")
+    public String aiLogContextJson;
+
     @NameInMap("alidingSsoTicket")
     public String alidingSsoTicket;
 
@@ -36,6 +39,14 @@ public class InvokeAssistantHeaders extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public InvokeAssistantHeaders setAiLogContextJson(String aiLogContextJson) {
+        this.aiLogContextJson = aiLogContextJson;
+        return this;
+    }
+    public String getAiLogContextJson() {
+        return this.aiLogContextJson;
     }
 
     public InvokeAssistantHeaders setAlidingSsoTicket(String alidingSsoTicket) {

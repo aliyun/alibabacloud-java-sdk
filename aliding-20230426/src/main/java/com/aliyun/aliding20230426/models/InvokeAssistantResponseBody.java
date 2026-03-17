@@ -1002,6 +1002,486 @@ public class InvokeAssistantResponseBody extends TeaModel {
 
     }
 
+    public static class InvokeAssistantResponseBodyMessagesContentStructPartsDataPart extends TeaModel {
+        @NameInMap("data")
+        public Object data;
+
+        public static InvokeAssistantResponseBodyMessagesContentStructPartsDataPart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentStructPartsDataPart self = new InvokeAssistantResponseBodyMessagesContentStructPartsDataPart();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsDataPart setData(Object data) {
+            this.data = data;
+            return this;
+        }
+        public Object getData() {
+            return this.data;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentStructPartsInfoPart extends TeaModel {
+        @NameInMap("cateIdList")
+        public java.util.List<String> cateIdList;
+
+        @NameInMap("needFeedback")
+        public Boolean needFeedback;
+
+        @NameInMap("origin")
+        public String origin;
+
+        public static InvokeAssistantResponseBodyMessagesContentStructPartsInfoPart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentStructPartsInfoPart self = new InvokeAssistantResponseBodyMessagesContentStructPartsInfoPart();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsInfoPart setCateIdList(java.util.List<String> cateIdList) {
+            this.cateIdList = cateIdList;
+            return this;
+        }
+        public java.util.List<String> getCateIdList() {
+            return this.cateIdList;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsInfoPart setNeedFeedback(Boolean needFeedback) {
+            this.needFeedback = needFeedback;
+            return this;
+        }
+        public Boolean getNeedFeedback() {
+            return this.needFeedback;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsInfoPart setOrigin(String origin) {
+            this.origin = origin;
+            return this;
+        }
+        public String getOrigin() {
+            return this.origin;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentStructPartsReasonPart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
+        @NameInMap("reason")
+        public String reason;
+
+        public static InvokeAssistantResponseBodyMessagesContentStructPartsReasonPart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentStructPartsReasonPart self = new InvokeAssistantResponseBodyMessagesContentStructPartsReasonPart();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReasonPart setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPartRecommends extends TeaModel {
+        @NameInMap("mobileUrl")
+        public String mobileUrl;
+
+        @NameInMap("text")
+        public String text;
+
+        @NameInMap("url")
+        public String url;
+
+        public static InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPartRecommends build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPartRecommends self = new InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPartRecommends();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPartRecommends setMobileUrl(String mobileUrl) {
+            this.mobileUrl = mobileUrl;
+            return this;
+        }
+        public String getMobileUrl() {
+            return this.mobileUrl;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPartRecommends setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPartRecommends setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPart extends TeaModel {
+        @NameInMap("recommends")
+        public java.util.List<InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPartRecommends> recommends;
+
+        public static InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPart self = new InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPart();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPart setRecommends(java.util.List<InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPartRecommends> recommends) {
+            this.recommends = recommends;
+            return this;
+        }
+        public java.util.List<InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPartRecommends> getRecommends() {
+            return this.recommends;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("index")
+        public String index;
+
+        /**
+         * <strong>example:</strong>
+         * <p>mcp是....</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ata</p>
+         */
+        @NameInMap("sourceCode")
+        public String sourceCode;
+
+        @NameInMap("sourceIcon")
+        public String sourceIcon;
+
+        /**
+         * <strong>example:</strong>
+         * <p>摘要</p>
+         */
+        @NameInMap("summary")
+        public String summary;
+
+        /**
+         * <strong>example:</strong>
+         * <p>《mcp原理介绍》</p>
+         */
+        @NameInMap("title")
+        public String title;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://taobao.com">https://taobao.com</a></p>
+         */
+        @NameInMap("url")
+        public String url;
+
+        public static InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences self = new InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences setSourceCode(String sourceCode) {
+            this.sourceCode = sourceCode;
+            return this;
+        }
+        public String getSourceCode() {
+            return this.sourceCode;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences setSourceIcon(String sourceIcon) {
+            this.sourceIcon = sourceIcon;
+            return this;
+        }
+        public String getSourceIcon() {
+            return this.sourceIcon;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentStructPartsReferencePart extends TeaModel {
+        @NameInMap("references")
+        public java.util.List<InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences> references;
+
+        public static InvokeAssistantResponseBodyMessagesContentStructPartsReferencePart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentStructPartsReferencePart self = new InvokeAssistantResponseBodyMessagesContentStructPartsReferencePart();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReferencePart setReferences(java.util.List<InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences> references) {
+            this.references = references;
+            return this;
+        }
+        public java.util.List<InvokeAssistantResponseBodyMessagesContentStructPartsReferencePartReferences> getReferences() {
+            return this.references;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentStructPartsTextPart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
+        @NameInMap("text")
+        public String text;
+
+        public static InvokeAssistantResponseBodyMessagesContentStructPartsTextPart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentStructPartsTextPart self = new InvokeAssistantResponseBodyMessagesContentStructPartsTextPart();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructPartsTextPart setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentStructParts extends TeaModel {
+        @NameInMap("append")
+        public Boolean append;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("dataPart")
+        public InvokeAssistantResponseBodyMessagesContentStructPartsDataPart dataPart;
+
+        @NameInMap("finish")
+        public Boolean finish;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("infoPart")
+        public InvokeAssistantResponseBodyMessagesContentStructPartsInfoPart infoPart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>这是正文内容部分</p>
+         */
+        @NameInMap("partDesc")
+        public String partDesc;
+
+        /**
+         * <strong>example:</strong>
+         * <p>artifactId123</p>
+         */
+        @NameInMap("partId")
+        public String partId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("reasonPart")
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReasonPart reasonPart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("recommendPart")
+        public InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPart recommendPart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("referencePart")
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReferencePart referencePart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("textPart")
+        public InvokeAssistantResponseBodyMessagesContentStructPartsTextPart textPart;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>textPart</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static InvokeAssistantResponseBodyMessagesContentStructParts build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentStructParts self = new InvokeAssistantResponseBodyMessagesContentStructParts();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setAppend(Boolean append) {
+            this.append = append;
+            return this;
+        }
+        public Boolean getAppend() {
+            return this.append;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setDataPart(InvokeAssistantResponseBodyMessagesContentStructPartsDataPart dataPart) {
+            this.dataPart = dataPart;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentStructPartsDataPart getDataPart() {
+            return this.dataPart;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setFinish(Boolean finish) {
+            this.finish = finish;
+            return this;
+        }
+        public Boolean getFinish() {
+            return this.finish;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setInfoPart(InvokeAssistantResponseBodyMessagesContentStructPartsInfoPart infoPart) {
+            this.infoPart = infoPart;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentStructPartsInfoPart getInfoPart() {
+            return this.infoPart;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setPartDesc(String partDesc) {
+            this.partDesc = partDesc;
+            return this;
+        }
+        public String getPartDesc() {
+            return this.partDesc;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setPartId(String partId) {
+            this.partId = partId;
+            return this;
+        }
+        public String getPartId() {
+            return this.partId;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setReasonPart(InvokeAssistantResponseBodyMessagesContentStructPartsReasonPart reasonPart) {
+            this.reasonPart = reasonPart;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReasonPart getReasonPart() {
+            return this.reasonPart;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setRecommendPart(InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPart recommendPart) {
+            this.recommendPart = recommendPart;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentStructPartsRecommendPart getRecommendPart() {
+            return this.recommendPart;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setReferencePart(InvokeAssistantResponseBodyMessagesContentStructPartsReferencePart referencePart) {
+            this.referencePart = referencePart;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentStructPartsReferencePart getReferencePart() {
+            return this.referencePart;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setTextPart(InvokeAssistantResponseBodyMessagesContentStructPartsTextPart textPart) {
+            this.textPart = textPart;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentStructPartsTextPart getTextPart() {
+            return this.textPart;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStructParts setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentStruct extends TeaModel {
+        @NameInMap("parts")
+        public java.util.List<InvokeAssistantResponseBodyMessagesContentStructParts> parts;
+
+        public static InvokeAssistantResponseBodyMessagesContentStruct build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentStruct self = new InvokeAssistantResponseBodyMessagesContentStruct();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentStruct setParts(java.util.List<InvokeAssistantResponseBodyMessagesContentStructParts> parts) {
+            this.parts = parts;
+            return this;
+        }
+        public java.util.List<InvokeAssistantResponseBodyMessagesContentStructParts> getParts() {
+            return this.parts;
+        }
+
+    }
+
     public static class InvokeAssistantResponseBodyMessages extends TeaModel {
         @NameInMap("content")
         public InvokeAssistantResponseBodyMessagesContent content;
@@ -1013,12 +1493,18 @@ public class InvokeAssistantResponseBody extends TeaModel {
         @NameInMap("contentDesc")
         public String contentDesc;
 
+        @NameInMap("contentStruct")
+        public InvokeAssistantResponseBodyMessagesContentStruct contentStruct;
+
         /**
          * <strong>example:</strong>
          * <p>1642448000000</p>
          */
         @NameInMap("createAt")
         public Long createAt;
+
+        @NameInMap("id")
+        public String id;
 
         /**
          * <strong>example:</strong>
@@ -1048,12 +1534,28 @@ public class InvokeAssistantResponseBody extends TeaModel {
             return this.contentDesc;
         }
 
+        public InvokeAssistantResponseBodyMessages setContentStruct(InvokeAssistantResponseBodyMessagesContentStruct contentStruct) {
+            this.contentStruct = contentStruct;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentStruct getContentStruct() {
+            return this.contentStruct;
+        }
+
         public InvokeAssistantResponseBodyMessages setCreateAt(Long createAt) {
             this.createAt = createAt;
             return this;
         }
         public Long getCreateAt() {
             return this.createAt;
+        }
+
+        public InvokeAssistantResponseBodyMessages setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public InvokeAssistantResponseBodyMessages setRole(String role) {

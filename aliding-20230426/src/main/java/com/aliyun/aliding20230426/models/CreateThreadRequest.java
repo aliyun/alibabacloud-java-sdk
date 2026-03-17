@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateThreadRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>assistantId1</p>
      */
@@ -30,8 +28,18 @@ public class CreateThreadRequest extends TeaModel {
      * <strong>example:</strong>
      * <p>agentKey1</p>
      */
+    @NameInMap("sourceIdOfAssistantId")
+    public String sourceIdOfAssistantId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>agentKey1</p>
+     */
     @NameInMap("sourceIdOfOriginalAssistantId")
     public String sourceIdOfOriginalAssistantId;
+
+    @NameInMap("sourceTypeOfAssistantId")
+    public Integer sourceTypeOfAssistantId;
 
     @NameInMap("sourceTypeOfOriginalAssistantId")
     public Integer sourceTypeOfOriginalAssistantId;
@@ -73,12 +81,28 @@ public class CreateThreadRequest extends TeaModel {
         return this.originalAssistantId;
     }
 
+    public CreateThreadRequest setSourceIdOfAssistantId(String sourceIdOfAssistantId) {
+        this.sourceIdOfAssistantId = sourceIdOfAssistantId;
+        return this;
+    }
+    public String getSourceIdOfAssistantId() {
+        return this.sourceIdOfAssistantId;
+    }
+
     public CreateThreadRequest setSourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
         this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
         return this;
     }
     public String getSourceIdOfOriginalAssistantId() {
         return this.sourceIdOfOriginalAssistantId;
+    }
+
+    public CreateThreadRequest setSourceTypeOfAssistantId(Integer sourceTypeOfAssistantId) {
+        this.sourceTypeOfAssistantId = sourceTypeOfAssistantId;
+        return this;
+    }
+    public Integer getSourceTypeOfAssistantId() {
+        return this.sourceTypeOfAssistantId;
     }
 
     public CreateThreadRequest setSourceTypeOfOriginalAssistantId(Integer sourceTypeOfOriginalAssistantId) {

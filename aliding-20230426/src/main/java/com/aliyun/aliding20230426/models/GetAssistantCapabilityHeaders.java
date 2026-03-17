@@ -14,6 +14,9 @@ public class GetAssistantCapabilityHeaders extends TeaModel {
     @NameInMap("accountId")
     public String accountId;
 
+    @NameInMap("aiLogContextJson")
+    public String aiLogContextJson;
+
     public static GetAssistantCapabilityHeaders build(java.util.Map<String, ?> map) throws Exception {
         GetAssistantCapabilityHeaders self = new GetAssistantCapabilityHeaders();
         return TeaModel.build(map, self);
@@ -33,6 +36,14 @@ public class GetAssistantCapabilityHeaders extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public GetAssistantCapabilityHeaders setAiLogContextJson(String aiLogContextJson) {
+        this.aiLogContextJson = aiLogContextJson;
+        return this;
+    }
+    public String getAiLogContextJson() {
+        return this.aiLogContextJson;
     }
 
 }
