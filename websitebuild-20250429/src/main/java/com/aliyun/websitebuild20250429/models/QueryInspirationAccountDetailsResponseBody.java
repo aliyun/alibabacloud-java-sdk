@@ -214,6 +214,9 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         @NameInMap("SourceTypeName")
         public String sourceTypeName;
 
+        @NameInMap("Status")
+        public String status;
+
         public static QueryInspirationAccountDetailsResponseBodyModuleData build(java.util.Map<String, ?> map) throws Exception {
             QueryInspirationAccountDetailsResponseBodyModuleData self = new QueryInspirationAccountDetailsResponseBodyModuleData();
             return TeaModel.build(map, self);
@@ -273,6 +276,14 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
         public String getSourceTypeName() {
             return this.sourceTypeName;
+        }
+
+        public QueryInspirationAccountDetailsResponseBodyModuleData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
