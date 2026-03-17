@@ -5,46 +5,80 @@ import com.aliyun.tea.*;
 
 public class Category extends TeaModel {
     /**
+     * <p>The folder ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>w-d8********</p>
      */
     @NameInMap("bizId")
     public String bizId;
 
     /**
+     * <p>The ID of the user who creates the folder.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150978934701****</p>
      */
     @NameInMap("creator")
     public Long creator;
 
     /**
+     * <p>The time when the folder was created.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-10T02:02:41.000+00:00</p>
      */
     @NameInMap("gmtCreated")
     public String gmtCreated;
 
     /**
+     * <p>The time when the folder was last updated.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-10T02:02:41.000+00:00</p>
      */
     @NameInMap("gmtModified")
     public String gmtModified;
 
     /**
+     * <p>The ID of the user who last modifies the folder.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150978934701****</p>
      */
     @NameInMap("modifier")
     public Long modifier;
 
     /**
+     * <p>The name of the folder.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The parent folder ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>w-d6********</p>
+     */
     @NameInMap("parentBizId")
     public String parentBizId;
 
     /**
+     * <p>The type of the folder.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TASK</p>
      */
     @NameInMap("type")
     public String type;

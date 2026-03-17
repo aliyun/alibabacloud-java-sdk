@@ -4,6 +4,9 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class JobDriver extends TeaModel {
+    /**
+     * <p>The configurations of SparkSubmit.</p>
+     */
     @NameInMap("sparkSubmit")
     public JobDriverSparkSubmit sparkSubmit;
 
@@ -21,12 +24,27 @@ public class JobDriver extends TeaModel {
     }
 
     public static class JobDriverSparkSubmit extends TeaModel {
+        /**
+         * <p>The main program of Spark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/entrypoint.jar</p>
+         */
         @NameInMap("entryPoint")
         public String entryPoint;
 
+        /**
+         * <p>The parameters related to the main program of Spark.</p>
+         */
         @NameInMap("entryPointArguments")
         public java.util.List<String> entryPointArguments;
 
+        /**
+         * <p>The command-line parameter of SparkSubmit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--conf spark.app.name=test</p>
+         */
         @NameInMap("sparkSubmitParameters")
         public String sparkSubmitParameters;
 

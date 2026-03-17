@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TimeRange extends TeaModel {
     /**
-     * <p>时间范围结束时间。</p>
+     * <p>The end time of the time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1688370894339</p>
@@ -14,7 +14,7 @@ public class TimeRange extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>时间范围开始时间。</p>
+     * <p>The start time of the time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1688370894339</p>

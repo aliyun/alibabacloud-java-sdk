@@ -4,27 +4,72 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class TaskInstance extends TeaModel {
+    /**
+     * <p>The ID of the folder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>w-d8********</p>
+     */
     @NameInMap("bizId")
     public String bizId;
 
+    /**
+     * <p>The ID of the user who creates the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150978934701****</p>
+     */
     @NameInMap("creator")
     public Long creator;
 
+    /**
+     * <p>The job run ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jr-93d98d2f7061****</p>
+     */
     @NameInMap("fenixRunId")
     public String fenixRunId;
 
+    /**
+     * <p>The time when the job was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-09-05T02:03:19Z</p>
+     */
     @NameInMap("gmtCreated")
     public String gmtCreated;
 
+    /**
+     * <p>The ID of the data development job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TSK-d87******************</p>
+     */
     @NameInMap("taskBizId")
     public String taskBizId;
 
+    /**
+     * <p>The details of the job.</p>
+     */
     @NameInMap("taskInfo")
     public Task taskInfo;
 
+    /**
+     * <p>The job run ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("taskStatus")
     public String taskStatus;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>w-d2d82aa09151****</p>
+     */
     @NameInMap("workspaceBizId")
     public String workspaceBizId;
 

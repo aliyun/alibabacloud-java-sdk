@@ -126,6 +126,13 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String releaseType;
 
     /**
+     * <strong>example:</strong>
+     * <p>rg-xxxxxxx</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    /**
      * <p>The resource specifications.</p>
      */
     @NameInMap("resourceSpec")
@@ -263,6 +270,14 @@ public class CreateWorkspaceRequest extends TeaModel {
     }
     public String getReleaseType() {
         return this.releaseType;
+    }
+
+    public CreateWorkspaceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateWorkspaceRequest setResourceSpec(CreateWorkspaceRequestResourceSpec resourceSpec) {

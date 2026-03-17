@@ -4,15 +4,39 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class RunLog extends TeaModel {
+    /**
+     * <p>The path of the startup file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://bucket/path/to/startup</p>
+     */
     @NameInMap("driverStartup")
     public String driverStartup;
 
+    /**
+     * <p>The path of the stderr file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://bucket/path/to/stderr</p>
+     */
     @NameInMap("driverStdError")
     public String driverStdError;
 
+    /**
+     * <p>The path of the stdout file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://bucket/path/to/stdout</p>
+     */
     @NameInMap("driverStdOut")
     public String driverStdOut;
 
+    /**
+     * <p>The path of the syslog file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://bucket/path/to/syslog</p>
+     */
     @NameInMap("driverSyslog")
     public String driverSyslog;
 

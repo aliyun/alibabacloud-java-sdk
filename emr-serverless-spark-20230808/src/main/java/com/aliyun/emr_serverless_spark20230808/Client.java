@@ -934,6 +934,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("releaseType", request.releaseType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceSpec)) {
             body.put("resourceSpec", request.resourceSpec);
         }
@@ -2175,7 +2179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListKyuubiServices</p>
+     * <p>Gets the list of KyuubiServers</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2201,7 +2205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListKyuubiServices</p>
+     * <p>Gets the list of KyuubiServers</p>
      * @return ListKyuubiServicesResponse
      */
     public ListKyuubiServicesResponse listKyuubiServices(String workspaceId) throws Exception {
@@ -2348,7 +2352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出livy compute</p>
+     * <p>List the Livy Gateway.</p>
      * 
      * @param request ListLivyComputeRequest
      * @param headers map
@@ -2386,7 +2390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出livy compute</p>
+     * <p>List the Livy Gateway.</p>
      * 
      * @param request ListLivyComputeRequest
      * @return ListLivyComputeResponse
@@ -2983,6 +2987,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.state)) {

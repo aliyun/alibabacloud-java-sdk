@@ -41,6 +41,13 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <strong>example:</strong>
+     * <p>rg-aek2thxggoqhmhq</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    /**
      * <p>The state of the workspace.</p>
      * 
      * <strong>example:</strong>
@@ -87,6 +94,14 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListWorkspacesShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListWorkspacesShrinkRequest setState(String state) {

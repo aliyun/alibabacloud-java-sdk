@@ -465,6 +465,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String releaseType;
 
         /**
+         * <strong>example:</strong>
+         * <p>rg-xxxxxxxxxx</p>
+         */
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>The resource specifications.</p>
          * 
          * <strong>example:</strong>
@@ -641,6 +648,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
         public String getReleaseType() {
             return this.releaseType;
+        }
+
+        public ListWorkspacesResponseBodyWorkspaces setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListWorkspacesResponseBodyWorkspaces setResourceSpec(String resourceSpec) {

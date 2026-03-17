@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class SparkConf extends TeaModel {
     /**
+     * <p>The key of the SparkConf object.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spark.app.name</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
+     * <p>The value of the SparkConf object.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_application</p>
      */
     @NameInMap("value")
     public String value;

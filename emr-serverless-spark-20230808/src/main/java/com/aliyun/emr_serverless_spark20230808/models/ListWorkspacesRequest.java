@@ -41,6 +41,13 @@ public class ListWorkspacesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <strong>example:</strong>
+     * <p>rg-aek2thxggoqhmhq</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    /**
      * <p>The state of the workspace.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +96,14 @@ public class ListWorkspacesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListWorkspacesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public ListWorkspacesRequest setState(String state) {
         this.state = state;
         return this;
@@ -106,9 +121,17 @@ public class ListWorkspacesRequest extends TeaModel {
     }
 
     public static class ListWorkspacesRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-finance.edas.config.server</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iphone磁盘空间剩余率</p>
+         */
         @NameInMap("value")
         public String value;
 

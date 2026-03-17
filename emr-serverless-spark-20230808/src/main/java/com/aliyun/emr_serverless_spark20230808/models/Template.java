@@ -8,25 +8,49 @@ public class Template extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The user ID of the job creator.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150978934701****</p>
      */
     @NameInMap("creator")
     public Long creator;
 
+    /**
+     * <p>The displayed version of the Spark engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esr-4.1.1</p>
+     */
     @NameInMap("displaySparkVersion")
     public String displaySparkVersion;
 
+    /**
+     * <p>Indicates whether Fusion engine is enabled for acceleration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("fusion")
     public Boolean fusion;
 
     /**
+     * <p>The creation time.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-10T02:02:41.000+00:00</p>
      */
     @NameInMap("gmtCreated")
     public String gmtCreated;
 
     /**
+     * <p>The time when the job was last modified.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-10T02:02:41.000+00:00</p>
      */
     @NameInMap("gmtModified")
     public String gmtModified;
@@ -35,7 +59,11 @@ public class Template extends TeaModel {
     public Boolean isDefault;
 
     /**
+     * <p>The ID of the user who last modified the job.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150978934701****</p>
      */
     @NameInMap("modifier")
     public Long modifier;
@@ -43,51 +71,88 @@ public class Template extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The SparkConf objects.</p>
+     */
     @NameInMap("sparkConf")
     public java.util.List<SparkConf> sparkConf;
 
     /**
+     * <p>The number of driver cores of the Spark job.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("sparkDriverCores")
     public Integer sparkDriverCores;
 
     /**
+     * <p>The size of driver memory of the Spark job.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1073741824</p>
      */
     @NameInMap("sparkDriverMemory")
     public Long sparkDriverMemory;
 
     /**
+     * <p>The number of executor cores of the Spark job.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("sparkExecutorCores")
     public Integer sparkExecutorCores;
 
     /**
+     * <p>The size of executor memory of the Spark job.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1073741824</p>
      */
     @NameInMap("sparkExecutorMemory")
     public Long sparkExecutorMemory;
 
     /**
+     * <p>The level of the Spark log.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INFO</p>
      */
     @NameInMap("sparkLogLevel")
     public String sparkLogLevel;
 
     /**
+     * <p>The path where the operational logs of the Spark job are stored.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://your_bucket/path/to/your/log</p>
      */
     @NameInMap("sparkLogPath")
     public String sparkLogPath;
 
     /**
+     * <p>The engine version of Spark.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esr-4.1.1</p>
      */
     @NameInMap("sparkVersion")
     public String sparkVersion;
 
+    /**
+     * <p>The template type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TASK</p>
+     */
     @NameInMap("templateType")
     public String templateType;
 
