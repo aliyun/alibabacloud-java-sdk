@@ -1,3 +1,8 @@
+2026-03-17 Version: 4.1.0
+- Support API PauseSupabaseProject.
+- Support API ResumeSupabaseProject.
+
+
 2026-03-16 Version: 4.0.3
 - Update API GetSupabaseProject: add response parameters Body.DBSecurityIpList.
 - Update API ModifySupabaseProjectSecurityIps: add request parameters UpdateDb.
