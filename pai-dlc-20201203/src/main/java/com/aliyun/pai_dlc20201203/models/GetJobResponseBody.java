@@ -257,6 +257,9 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("RestartTimes")
     public String restartTimes;
 
+    @NameInMap("RoleSystemEnvs")
+    public java.util.Map<String, java.util.Map<String, ?>> roleSystemEnvs;
+
     /**
      * <p>The additional parameter configurations of the job.</p>
      */
@@ -627,6 +630,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public String getRestartTimes() {
         return this.restartTimes;
+    }
+
+    public GetJobResponseBody setRoleSystemEnvs(java.util.Map<String, java.util.Map<String, ?>> roleSystemEnvs) {
+        this.roleSystemEnvs = roleSystemEnvs;
+        return this;
+    }
+    public java.util.Map<String, java.util.Map<String, ?>> getRoleSystemEnvs() {
+        return this.roleSystemEnvs;
     }
 
     public GetJobResponseBody setSettings(JobSettings settings) {

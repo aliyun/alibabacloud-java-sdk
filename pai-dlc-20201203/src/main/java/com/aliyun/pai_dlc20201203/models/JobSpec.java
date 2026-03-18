@@ -77,6 +77,9 @@ public class JobSpec extends TeaModel {
     @NameInMap("PodCount")
     public Long podCount;
 
+    @NameInMap("QuotaId")
+    public String quotaId;
+
     /**
      * <p>The resource configurations.</p>
      */
@@ -221,6 +224,14 @@ public class JobSpec extends TeaModel {
     }
     public Long getPodCount() {
         return this.podCount;
+    }
+
+    public JobSpec setQuotaId(String quotaId) {
+        this.quotaId = quotaId;
+        return this;
+    }
+    public String getQuotaId() {
+        return this.quotaId;
     }
 
     public JobSpec setResourceConfig(ResourceConfig resourceConfig) {

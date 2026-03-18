@@ -548,6 +548,9 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestDataSources extends TeaModel {
+        @NameInMap("AccessPointId")
+        public String accessPointId;
+
         /**
          * <p>The data source ID.</p>
          * 
@@ -588,6 +591,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("Options")
         public String options;
 
+        @NameInMap("RoleChain")
+        public String roleChain;
+
         /**
          * <p>The data source path.</p>
          * 
@@ -600,6 +606,14 @@ public class CreateJobRequest extends TeaModel {
         public static CreateJobRequestDataSources build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestDataSources self = new CreateJobRequestDataSources();
             return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestDataSources setAccessPointId(String accessPointId) {
+            this.accessPointId = accessPointId;
+            return this;
+        }
+        public String getAccessPointId() {
+            return this.accessPointId;
         }
 
         public CreateJobRequestDataSources setDataSourceId(String dataSourceId) {
@@ -648,6 +662,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getOptions() {
             return this.options;
+        }
+
+        public CreateJobRequestDataSources setRoleChain(String roleChain) {
+            this.roleChain = roleChain;
+            return this;
+        }
+        public String getRoleChain() {
+            return this.roleChain;
         }
 
         public CreateJobRequestDataSources setUri(String uri) {
