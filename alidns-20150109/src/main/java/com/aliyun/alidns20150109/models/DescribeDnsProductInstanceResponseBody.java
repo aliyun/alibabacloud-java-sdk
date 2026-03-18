@@ -94,9 +94,6 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     @NameInMap("DnsSecurity")
     public String dnsSecurity;
 
-    /**
-     * <p>The DNS servers configured for the domain names.</p>
-     */
     @NameInMap("DnsServers")
     public DescribeDnsProductInstanceResponseBodyDnsServers dnsServers;
 

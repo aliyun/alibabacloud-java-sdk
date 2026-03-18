@@ -250,17 +250,9 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     }
 
     public static class DescribeRecursionZoneResponseBodyEffectiveScopesEffectiveScope extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>account</p>
-         */
         @NameInMap("EffectiveType")
         public String effectiveType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>[20003]</p>
-         */
         @NameInMap("Scopes")
         public DescribeRecursionZoneResponseBodyEffectiveScopesEffectiveScopeScopes scopes;
 

@@ -31,9 +31,6 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The subdomains for which weighted round-robin is enabled.</p>
-     */
     @NameInMap("SlbSubDomains")
     public DescribeDNSSLBSubDomainsResponseBodySlbSubDomains slbSubDomains;
 
@@ -92,25 +89,9 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm extends TeaModel {
-        /**
-         * <p>The DNS resolution line. The line can be China Telecom, China Mobile, and China Unicom.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("Line")
         public String line;
 
-        /**
-         * <p>Indicates whether weighted round-robin is enabled for the line. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong> (default): Weighted round-robin is enabled.</li>
-         * <li><strong>false</strong>: Weighted round-robin is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Open")
         public Boolean open;
 
@@ -157,45 +138,18 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain extends TeaModel {
-        /**
-         * <p>The lines for which weighted round-robin is enabled.</p>
-         */
         @NameInMap("LineAlgorithms")
         public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms lineAlgorithms;
 
-        /**
-         * <p>Indicates whether weighted round-robin is enabled for the subdomain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Open")
         public Boolean open;
 
-        /**
-         * <p>The number of DNS records added for the subdomain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("RecordCount")
         public Long recordCount;
 
-        /**
-         * <p>The name of the subdomain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.example.com">www.example.com</a></p>
-         */
         @NameInMap("SubDomain")
         public String subDomain;
 
-        /**
-         * <p>The type of the Domain Name System (DNS) record that supports weighted round-robin. Valid values: A, AAAA, and CNAME.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>A</p>
-         */
         @NameInMap("Type")
         public String type;
 

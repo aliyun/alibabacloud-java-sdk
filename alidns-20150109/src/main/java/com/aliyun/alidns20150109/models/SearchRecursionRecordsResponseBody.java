@@ -126,133 +126,57 @@ public class SearchRecursionRecordsResponseBody extends TeaModel {
     }
 
     public static class SearchRecursionRecordsResponseBodyRecordsRecord extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2025-06-16T02:18Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1615182315000</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1521021611066866</p>
-         */
         @NameInMap("Creator")
         public Long creator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>custom</p>
-         */
         @NameInMap("CreatorSubType")
         public String creatorSubType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>user</p>
-         */
         @NameInMap("CreatorType")
         public String creatorType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>enable</p>
-         */
         @NameInMap("EnableStatus")
         public String enableStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Priority")
         public Integer priority;
 
-        /**
-         * <p>record ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1927184083990351872</p>
-         */
         @NameInMap("RecordId")
         public String recordId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vxwk</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("RequestSource")
         public String requestSource;
 
-        /**
-         * <strong>example:</strong>
-         * <p>wap</p>
-         */
         @NameInMap("Rr")
         public String rr;
 
-        /**
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("Ttl")
         public Integer ttl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>A</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-10-28T13:07Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1722107570000</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>14.19.85.71</p>
-         */
         @NameInMap("Value")
         public String value;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("Weight")
         public String weight;
 
-        /**
-         * <p>zone ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>169783221000012</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

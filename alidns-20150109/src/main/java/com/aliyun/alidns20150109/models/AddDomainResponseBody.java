@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDomainResponseBody extends TeaModel {
-    /**
-     * <p>The Domain Name System (DNS) servers configured for the domain name.</p>
-     */
     @NameInMap("DnsServers")
     public AddDomainResponseBodyDnsServers dnsServers;
 

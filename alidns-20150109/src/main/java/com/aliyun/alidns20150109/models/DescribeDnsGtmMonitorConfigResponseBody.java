@@ -40,9 +40,6 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     @NameInMap("Interval")
     public Integer interval;
 
-    /**
-     * <p>The health check nodes.</p>
-     */
     @NameInMap("IspCityNodes")
     public DescribeDnsGtmMonitorConfigResponseBodyIspCityNodes ispCityNodes;
 
@@ -275,57 +272,21 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmMonitorConfigResponseBodyIspCityNodesIspCityNode extends TeaModel {
-        /**
-         * <p>The city code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>572</p>
-         */
         @NameInMap("CityCode")
         public String cityCode;
 
-        /**
-         * <p>The display name of the city.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Qingdao</p>
-         */
         @NameInMap("CityName")
         public String cityName;
 
-        /**
-         * <p>The code of the country or region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>001</p>
-         */
         @NameInMap("CountryCode")
         public String countryCode;
 
-        /**
-         * <p>The display name of the country or region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China</p>
-         */
         @NameInMap("CountryName")
         public String countryName;
 
-        /**
-         * <p>The Internet service provider (ISP) code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("IspCode")
         public String ispCode;
 
-        /**
-         * <p>The display name of the ISP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alibaba</p>
-         */
         @NameInMap("IspName")
         public String ispName;
 

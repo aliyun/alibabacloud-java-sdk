@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransferDomainsResponseBody extends TeaModel {
-    /**
-     * <p>The domain names that were transferred between accounts.</p>
-     */
     @NameInMap("DomainTransfers")
     public DescribeTransferDomainsResponseBodyDomainTransfers domainTransfers;
 
@@ -92,57 +89,21 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer extends TeaModel {
-        /**
-         * <p>The time when the domain name was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-10-30T07:16Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1572419764000</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The user ID from which the domain name was transferred.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2222</p>
-         */
         @NameInMap("FromUserId")
         public Long fromUserId;
 
-        /**
-         * <p>The ID of the domain name that was transferred.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The user ID to which the domain name was transferred.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>111111</p>
-         */
         @NameInMap("TargetUserId")
         public Long targetUserId;
 

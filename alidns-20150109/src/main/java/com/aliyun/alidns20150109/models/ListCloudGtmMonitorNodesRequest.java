@@ -17,6 +17,9 @@ public class ListCloudGtmMonitorNodesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("ShowDisabledNodes")
+    public Boolean showDisabledNodes;
+
     public static ListCloudGtmMonitorNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCloudGtmMonitorNodesRequest self = new ListCloudGtmMonitorNodesRequest();
         return TeaModel.build(map, self);
@@ -28,6 +31,14 @@ public class ListCloudGtmMonitorNodesRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public ListCloudGtmMonitorNodesRequest setShowDisabledNodes(Boolean showDisabledNodes) {
+        this.showDisabledNodes = showDisabledNodes;
+        return this;
+    }
+    public Boolean getShowDisabledNodes() {
+        return this.showDisabledNodes;
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRecordsResponseBody extends TeaModel {
-    /**
-     * <p>The returned Domain Name System (DNS) records.</p>
-     */
     @NameInMap("DomainRecords")
     public DescribeDomainRecordsResponseBodyDomainRecords domainRecords;
 
@@ -92,132 +89,48 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRecordsResponseBodyDomainRecordsRecord extends TeaModel {
-        /**
-         * <p>The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1666501957000</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
         @NameInMap("LbaStatus")
         public Boolean lbaStatus;
 
-        /**
-         * <p>The resolution line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("Line")
         public String line;
 
-        /**
-         * <p>Indicates whether the DNS record is locked.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Locked")
         public Boolean locked;
 
-        /**
-         * <p>The priority of the mail exchanger (MX) record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("Priority")
         public Long priority;
 
-        /**
-         * <p>The hostname.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>www</p>
-         */
         @NameInMap("RR")
         public String RR;
 
-        /**
-         * <p>The ID of the DNS record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9999985</p>
-         */
         @NameInMap("RecordId")
         public String recordId;
 
-        /**
-         * <p>The description of the DNS record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The status of the DNS record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Enable</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The time-to-live (TTL) of the cached DNS record. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>600</p>
-         */
         @NameInMap("TTL")
         public Long TTL;
 
-        /**
-         * <p>The type of the DNS record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MX</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1676872961000</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
-        /**
-         * <p>The record value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mail1.hichina.com</p>
-         */
         @NameInMap("Value")
         public String value;
 
-        /**
-         * <p>The weight of the DNS record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 

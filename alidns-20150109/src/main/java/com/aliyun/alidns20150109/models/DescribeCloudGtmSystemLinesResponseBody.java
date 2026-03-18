@@ -13,9 +13,6 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The system lines.</p>
-     */
     @NameInMap("SystemLines")
     public DescribeCloudGtmSystemLinesResponseBodySystemLines systemLines;
 
@@ -58,52 +55,18 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmSystemLinesResponseBodySystemLinesSystemLine extends TeaModel {
-        /**
-         * <p>The line code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aliyun_r_ap-south-1</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The display name of the line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Default</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>Indicates whether the line can be selected as the source of a Domain Name System (DNS) request. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsAvailable")
         public Boolean isAvailable;
 
-        /**
-         * <p>The name of the line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Default</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The code of the parent line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>String	aliyun</p>
-         */
         @NameInMap("ParentCode")
         public String parentCode;
 

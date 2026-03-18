@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsResponseBody extends TeaModel {
-    /**
-     * <p>The domain names.</p>
-     */
     @NameInMap("Domains")
     public DescribeDomainsResponseBodyDomains domains;
 
@@ -111,15 +108,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomainsDomainTagsTag extends TeaModel {
-        /**
-         * <p>The key of tag N added to the resource.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of tag N added to the resource.</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -166,190 +157,69 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomainsDomain extends TeaModel {
-        /**
-         * <p>Indicates whether the domain name was registered with Alibaba Cloud.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("AliDomain")
         public Boolean aliDomain;
 
-        /**
-         * <p>The time when the domain name was added. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-01-30T05:25Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1660546144000</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The names of the DNS servers configured for the domain name assigned by Alibaba Cloud DNS.</p>
-         */
         @NameInMap("DnsServers")
         public DescribeDomainsResponseBodyDomainsDomainDnsServers dnsServers;
 
-        /**
-         * <p>The ID of the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
-         */
         @NameInMap("DomainId")
         public String domainId;
 
-        /**
-         * <p>Indicates whether the DNS traffic analysis feature is enabled for the domain name. Valid values:</p>
-         * <ul>
-         * <li>OPEN</li>
-         * <li>CLOSE</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OPEN</p>
-         */
         @NameInMap("DomainLoggingSwitchStatus")
         public String domainLoggingSwitchStatus;
 
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The ID of the domain name group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2223</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the domain name group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mygroup</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The time when the Alibaba Cloud DNS instance expires. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-03-14T16:00Z</p>
-         */
         @NameInMap("InstanceEndTime")
         public String instanceEndTime;
 
-        /**
-         * <p>Indicates whether the Alibaba Cloud DNS instance expires.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("InstanceExpired")
         public Boolean instanceExpired;
 
-        /**
-         * <p>The ID of the Alibaba Cloud DNS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-7bg</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc.com</p>
-         */
         @NameInMap("PunyCode")
         public String punyCode;
 
-        /**
-         * <p>The number of Domain Name System (DNS) records added for the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("RecordCount")
         public Long recordCount;
 
-        /**
-         * <p>The email address of the registrant.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@example.com">test@example.com</a></p>
-         */
         @NameInMap("RegistrantEmail")
         public String registrantEmail;
 
-        /**
-         * <p>The description of the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>remark</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The ID of the resource group to which the domain name belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acf</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         @NameInMap("SlaveDnsStatus")
         public String slaveDnsStatus;
 
-        /**
-         * <p>Indicates whether the domain name was added to favorites.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Starmark")
         public Boolean starmark;
 
-        /**
-         * <p>The tags added to the resource.</p>
-         */
         @NameInMap("Tags")
         public DescribeDomainsResponseBodyDomainsDomainTags tags;
 
-        /**
-         * <p>The edition code of Alibaba Cloud DNS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>version_enterprise_basic</p>
-         */
         @NameInMap("VersionCode")
         public String versionCode;
 
-        /**
-         * <p>The edition of Alibaba Cloud DNS.</p>
-         */
         @NameInMap("VersionName")
         public String versionName;
 

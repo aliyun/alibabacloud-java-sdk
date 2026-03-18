@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
-    /**
-     * <p>The returned address pools.</p>
-     */
     @NameInMap("AddrPools")
     public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPools addrPools;
 
@@ -109,116 +106,36 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool extends TeaModel {
-        /**
-         * <p>The number of addresses in the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
-        /**
-         * <p>The ID of the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pool-1</p>
-         */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
 
-        /**
-         * <p>The time when the address pool was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-28T13:08Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The timestamp that indicates when the address pool was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The load balancing policy of the address pool. Valid values:</p>
-         * <ul>
-         * <li>ALL_RR: returns all addresses.</li>
-         * <li>RATIO: returns addresses by weight.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>all_rr</p>
-         */
         @NameInMap("LbaStrategy")
         public String lbaStrategy;
 
-        /**
-         * <p>The ID of the health check task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc123</p>
-         */
         @NameInMap("MonitorConfigId")
         public String monitorConfigId;
 
-        /**
-         * <p>Indicates whether health checks are configured. Valid values:</p>
-         * <ul>
-         * <li>OPEN: enabled</li>
-         * <li>CLOSE: disabled</li>
-         * <li>UNCONFIGURED: not configured</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>open</p>
-         */
         @NameInMap("MonitorStatus")
         public String monitorStatus;
 
-        /**
-         * <p>The name of the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testpool</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The type of the address pool. Valid values:</p>
-         * <ul>
-         * <li>IPV4: IPv4 address</li>
-         * <li>IPV6: IPv6 address</li>
-         * <li>DOMAIN: domain name</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ipv4</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The time when the address pool was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-28T13:08Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>The timestamp that indicates when the address pool was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 

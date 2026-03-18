@@ -31,9 +31,6 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     @NameInMap("FaultAddrPoolNum")
     public Integer faultAddrPoolNum;
 
-    /**
-     * <p>The faulty address pools.</p>
-     */
     @NameInMap("FaultAddrPools")
     public DescribeGtmRecoveryPlanResponseBodyFaultAddrPools faultAddrPools;
 
@@ -262,30 +259,12 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr extends TeaModel {
-        /**
-         * <p>The address ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>739</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The address mode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OFFLINE</p>
-         */
         @NameInMap("Mode")
         public String mode;
 
-        /**
-         * <p>The address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.1.1.1</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -340,30 +319,15 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool extends TeaModel {
-        /**
-         * <p>The address pool ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hra0oq</p>
-         */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
 
-        /**
-         * <p>The address pool name.</p>
-         */
         @NameInMap("AddrPoolName")
         public String addrPoolName;
 
         @NameInMap("Addrs")
         public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs addrs;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance-zwy-38</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 

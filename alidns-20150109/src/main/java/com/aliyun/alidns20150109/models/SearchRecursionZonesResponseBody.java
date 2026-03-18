@@ -145,17 +145,9 @@ public class SearchRecursionZonesResponseBody extends TeaModel {
     }
 
     public static class SearchRecursionZonesResponseBodyZonesZoneEffectiveScopesEffectiveScope extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>account</p>
-         */
         @NameInMap("EffectiveType")
         public String effectiveType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>[20003]</p>
-         */
         @NameInMap("Scopes")
         public SearchRecursionZonesResponseBodyZonesZoneEffectiveScopesEffectiveScopeScopes scopes;
 
@@ -202,90 +194,42 @@ public class SearchRecursionZonesResponseBody extends TeaModel {
     }
 
     public static class SearchRecursionZonesResponseBodyZonesZone extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2022-10-17T06:13Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1749694625000</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SUB</p>
-         */
         @NameInMap("CreatorSubType")
         public String creatorSubType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>USER</p>
-         */
         @NameInMap("CreatorType")
         public String creatorType;
 
         @NameInMap("EffectiveScopes")
         public SearchRecursionZonesResponseBodyZonesZoneEffectiveScopes effectiveScopes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>record</p>
-         */
         @NameInMap("ProxyPattern")
         public String proxyPattern;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("RecordCount")
         public Integer recordCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>107</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-08-13T01:44Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1639621006000</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>169439170000011</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ixiqiu.cn</p>
-         */
         @NameInMap("ZoneName")
         public String zoneName;
 

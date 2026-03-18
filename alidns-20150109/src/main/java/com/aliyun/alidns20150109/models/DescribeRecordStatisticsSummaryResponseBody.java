@@ -31,9 +31,6 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The DNS requests.</p>
-     */
     @NameInMap("Statistics")
     public DescribeRecordStatisticsSummaryResponseBodyStatistics statistics;
 
@@ -109,21 +106,9 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordStatisticsSummaryResponseBodyStatisticsStatistic extends TeaModel {
-        /**
-         * <p>The number of DNS requests.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>838711553</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The subdomain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>t1.alitest2.com</p>
-         */
         @NameInMap("SubDomain")
         public String subDomain;
 

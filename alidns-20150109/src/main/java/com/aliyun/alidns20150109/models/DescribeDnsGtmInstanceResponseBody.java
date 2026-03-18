@@ -231,46 +231,12 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         @NameInMap("DingtalkNotice")
         public Boolean dingtalkNotice;
 
-        /**
-         * <p>Indicates whether email notification is configured. Valid values:</p>
-         * <ul>
-         * <li>true: Email notification is configured.</li>
-         * <li>false: Email notification is not configured. null: Email notification is not configured.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("EmailNotice")
         public Boolean emailNotice;
 
-        /**
-         * <p>The type of the alert event. Valid values:</p>
-         * <ul>
-         * <li>ADDR_ALERT: The address is unavailable.</li>
-         * <li>ADDR_RESUME: The address is restored and becomes available.</li>
-         * <li>ADDR_POOL_GROUP_UNAVAILABLE: The address pool group is unavailable.</li>
-         * <li>ADDR_POOL_GROUP_AVAILABLE: The address pool group is restored and becomes available.</li>
-         * <li>ACCESS_STRATEGY_POOL_GROUP_SWITCH: Switchover is triggered between the primary and secondary address pools.</li>
-         * <li>MONITOR_NODE_IP_CHANGE: The IP address of the monitoring node has changed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ADDR_ALERT</p>
-         */
         @NameInMap("NoticeType")
         public String noticeType;
 
-        /**
-         * <p>Indicates whether SMS notification is configured. Valid values:</p>
-         * <ul>
-         * <li>true: SMS notification is configured.</li>
-         * <li>false: SMS notification is not configured. null: SMS notification is not configured.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("SmsNotice")
         public Boolean smsNotice;
 
@@ -333,9 +299,6 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmInstanceResponseBodyConfig extends TeaModel {
-        /**
-         * <p>The alert notification method.</p>
-         */
         @NameInMap("AlertConfig")
         public DescribeDnsGtmInstanceResponseBodyConfigAlertConfig alertConfig;
 

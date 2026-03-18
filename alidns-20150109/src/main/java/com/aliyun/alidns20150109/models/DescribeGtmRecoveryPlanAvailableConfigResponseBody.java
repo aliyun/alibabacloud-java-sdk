@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel {
-    /**
-     * <p>The instances.</p>
-     */
     @NameInMap("Instances")
     public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstances instances;
 
@@ -41,18 +38,9 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
     }
 
     public static class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPoolsAddrPool extends TeaModel {
-        /**
-         * <p>The address pool ID.</p>
-         */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
 
-        /**
-         * <p>The name of the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hra0i9</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -99,27 +87,12 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
     }
 
     public static class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance extends TeaModel {
-        /**
-         * <p>The address pools.</p>
-         */
         @NameInMap("AddrPools")
         public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPools addrPools;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance-example</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The instance name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance-name-example</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 

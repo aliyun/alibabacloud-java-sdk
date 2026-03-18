@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
-    /**
-     * <p>The alert contact groups.</p>
-     */
     @NameInMap("AlertGroups")
     public ListCloudGtmAvailableAlertGroupsResponseBodyAlertGroups alertGroups;
 
@@ -41,12 +38,6 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
     }
 
     public static class ListCloudGtmAvailableAlertGroupsResponseBodyAlertGroupsAlertGroup extends TeaModel {
-        /**
-         * <p>The name of the alert contact group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[\&quot;Default\&quot;]</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 

@@ -22,9 +22,6 @@ public class DescribeCloudGtmAddressPoolReferenceResponseBody extends TeaModel {
     @NameInMap("AddressPoolName")
     public String addressPoolName;
 
-    /**
-     * <p>The access domain names that reference the address pool.</p>
-     */
     @NameInMap("InstanceConfigs")
     public DescribeCloudGtmAddressPoolReferenceResponseBodyInstanceConfigs instanceConfigs;
 
@@ -75,170 +72,48 @@ public class DescribeCloudGtmAddressPoolReferenceResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmAddressPoolReferenceResponseBodyInstanceConfigsInstanceConfig extends TeaModel {
-        /**
-         * <p>The policy for load balancing between address pools. Valid values:</p>
-         * <ul>
-         * <li>round_robin: All address pools are returned for Domain Name System (DNS) requests from any source. All address pools are sorted in round-robin mode each time they are returned.</li>
-         * <li>sequence: The address pool with the smallest sequence number is preferentially returned for DNS requests from any source. The sequence number indicates the priority for returning the address pool. A smaller sequence number indicates a higher priority. If the address pool with the smallest sequence number is unavailable, the address pool with the second smallest sequence number is returned.</li>
-         * <li>weight: You can set a different weight value for each address pool. This way, address pools are returned based on the weight values.</li>
-         * <li>source_nearest: Different address pools are returned based on the sources of DNS requests. This way, users can access nearby address pools.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>round_robin</p>
-         */
         @NameInMap("AddressPoolLbStrategy")
         public String addressPoolLbStrategy;
 
-        /**
-         * <p>The availability state of the access domain name. Valid values:</p>
-         * <ul>
-         * <li>available: If the access domain name is <strong>enabled</strong> and the health state is <strong>normal</strong>, the access domain name is deemed <strong>available</strong>.</li>
-         * <li>unavailable: If the access domain name is <strong>disabled</strong> or the health state is <strong>abnormal</strong>, the access domain name is deemed <strong>unavailable</strong>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>available</p>
-         */
         @NameInMap("AvailableStatus")
         public String availableStatus;
 
-        /**
-         * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>config-000**1</p>
-         */
         @NameInMap("ConfigId")
         public String configId;
 
-        /**
-         * <p>The enabling state of the access domain name. Valid values:</p>
-         * <ul>
-         * <li>enable: The access domain name is enabled and the intelligent scheduling policy of the corresponding GTM instance takes effect.</li>
-         * <li>disable: The access domain name is disabled and the intelligent scheduling policy of the corresponding GTM instance does not take effect.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>enable</p>
-         */
         @NameInMap("EnableStatus")
         public String enableStatus;
 
-        /**
-         * <p>The health state of the access domain name. Valid values:</p>
-         * <ul>
-         * <li>ok: The health state of the access domain name is normal and all address pools that are referenced by the access domain name are available.</li>
-         * <li>ok_alert: The health state of the access domain name is warning and some of the address pools that are referenced by the access domain name are unavailable. In this case, only the available address pools are returned for DNS requests.</li>
-         * <li>exceptional: The health state of the access domain name is abnormal and all address pools that are referenced by the access domain name are unavailable. In this case, addresses in the non-empty address pool with the smallest sequence number are preferentially used for fallback resolution. This returns DNS results for clients as much as possible.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ok</p>
-         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
-        /**
-         * <p>The ID of the Global Traffic Manager (GTM) 3.0 instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gtm-cn-jmp3qnw**03</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>Instance name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>Remarks.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The access domain name. The value of this parameter is composed of the value of ScheduleHostname and the value of ScheduleZoneName.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.example.com">www.example.com</a></p>
-         */
         @NameInMap("ScheduleDomainName")
         public String scheduleDomainName;
 
-        /**
-         * <p>Host record of the domain accessed by GTM.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>www</p>
-         */
         @NameInMap("ScheduleHostname")
         public String scheduleHostname;
 
-        /**
-         * <p>DNS record types for scheduling domains:</p>
-         * <ul>
-         * <li>A: IPv4 address</li>
-         * <li>AAAA: IPv6 address</li>
-         * <li>CNAME: Domain name</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>A</p>
-         */
         @NameInMap("ScheduleRrType")
         public String scheduleRrType;
 
-        /**
-         * <p>The zone such as example.com or subzone such as a.example.com of the access domain name. In most cases, the zone or subzone is hosted by the Public Authoritative DNS module of Alibaba Cloud DNS. This zone belongs to the account to which the GTM instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("ScheduleZoneName")
         public String scheduleZoneName;
 
-        /**
-         * <p>The mode used if the address pool with the smallest sequence number is recovered. This parameter is returned when AddressPoolLbStrategy is set to sequence. Valid values:</p>
-         * <ul>
-         * <li>preemptive: The address pool with the smallest sequence number is preferentially used if this address pool is recovered.</li>
-         * <li>non_preemptive: The current address pool is still used even if the address pool with the smallest sequence number is recovered.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>preemptive</p>
-         */
         @NameInMap("SequenceLbStrategyMode")
         public String sequenceLbStrategyMode;
 
-        /**
-         * <p>Global TTL, the TTL value for resolving the accessed domain name to addresses in the address pool, which affects the caching time of DNS records in the operator\&quot;s LocalDNS. Supports custom TTL values.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("Ttl")
         public Integer ttl;
 
-        /**
-         * <p>Global Traffic Management version 3.0 instance types:</p>
-         * <ul>
-         * <li>standard: Standard Edition</li>
-         * <li>ultimate: Ultimate Edition</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ultimate</p>
-         */
         @NameInMap("VersionCode")
         public String versionCode;
 

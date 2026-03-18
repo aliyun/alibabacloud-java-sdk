@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SearchCloudGtmInstancesResponseBody extends TeaModel {
-    /**
-     * <p>The instances.</p>
-     */
     @NameInMap("Instances")
     public SearchCloudGtmInstancesResponseBodyInstances instances;
 
@@ -116,155 +113,51 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
-        /**
-         * <p>The commodity code. Valid values:</p>
-         * <ul>
-         * <li>dns_gtm_public_cn: commodity code on the China site (aliyun.com)</li>
-         * <li>dns_gtm_public_intl: commodity code on the international site (alibabacloud.com)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>dns_gtm_public_cn</p>
-         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        /**
-         * <p>Instance creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-15T01:46Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Instance creation time (timestamp).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1710467214858</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>Instance expiration time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-09-05T16:00Z</p>
-         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
-        /**
-         * <p>Instance expiration time (timestamp).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1725552000000</p>
-         */
         @NameInMap("ExpireTimestamp")
         public String expireTimestamp;
 
-        /**
-         * <p>The ID of the GTM 3.0 instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gtm-cn-wwo3a3hbz**</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>Schedule instance name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>Monitor probe task quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("MonitorTaskQuota")
         public Integer monitorTaskQuota;
 
-        /**
-         * <p>Monthly email sending volume.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("MonthlyEmailUsed")
         public Integer monthlyEmailUsed;
 
-        /**
-         * <p>SMS quota, only supported on the China site. International site does not support SMS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("MonthlySmsQuota")
         public Integer monthlySmsQuota;
 
-        /**
-         * <p>Monthly SMS sending volume, only supported by the China site as international sites do not support SMS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("MonthlySmsUsed")
         public Integer monthlySmsUsed;
 
-        /**
-         * <p>Monthly webhook dispatch volume.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("MonthlyWebhookUsed")
         public Integer monthlyWebhookUsed;
 
-        /**
-         * <p>The access domain name, which consists of a hostname and a zone or a subzone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.example.com">www.example.com</a></p>
-         */
         @NameInMap("ScheduleDomainName")
         public String scheduleDomainName;
 
-        /**
-         * <p>The last modified time of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-15T01:46Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>The last modified time of the instance (timestamp).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1710467214858</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
-        /**
-         * <p>Global Traffic Management version 3.0 instance types:</p>
-         * <ul>
-         * <li>standard: Standard Edition</li>
-         * <li>ultimate: Ultimate Edition</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ultimate</p>
-         */
         @NameInMap("VersionCode")
         public String versionCode;
 

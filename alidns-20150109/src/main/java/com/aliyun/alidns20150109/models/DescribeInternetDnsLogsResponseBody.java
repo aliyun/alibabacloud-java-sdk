@@ -22,9 +22,6 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     @NameInMap("CurPage")
     public Integer curPage;
 
-    /**
-     * <p>The queried logs.</p>
-     */
     @NameInMap("Logs")
     public DescribeInternetDnsLogsResponseBodyLogs logs;
 
@@ -145,124 +142,48 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeInternetDnsLogsResponseBodyLogsLog extends TeaModel {
-        /**
-         * <p>Parse log ID (can be duplicated).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3583</p>
-         */
         @NameInMap("DnsMsgId")
         public String dnsMsgId;
 
         @NameInMap("Flags")
         public String flags;
 
-        /**
-         * <p>Parse timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1709196249000</p>
-         */
         @NameInMap("LogTime")
         public Long logTime;
 
-        /**
-         * <p>The protocol type of the domain name resolution query request:</p>
-         * <ul>
-         * <li>UDP</li>
-         * <li>TCP</li>
-         * <li>HTTP</li>
-         * <li>HTTPS</li>
-         * <li>DOH</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>UDP</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
         @NameInMap("QueryFlags")
         public String queryFlags;
 
-        /**
-         * <p>The domain name for which you want to query Domain Name System (DNS) records.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("QueryName")
         public String queryName;
 
-        /**
-         * <p>Record type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>A</p>
-         */
         @NameInMap("QueryType")
         public String queryType;
 
         @NameInMap("ResponseTimestamp")
         public String responseTimestamp;
 
-        /**
-         * <p>Parse response time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Rt")
         public Integer rt;
 
-        /**
-         * <p>Parse server IP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>140.205.XX.XX</p>
-         */
         @NameInMap("ServerIp")
         public String serverIp;
 
-        /**
-         * <p>Source IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>59.82.XX.XX</p>
-         */
         @NameInMap("SourceIp")
         public String sourceIp;
 
-        /**
-         * <p>Response status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NOERROR</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The value set for the edns-client-subnet option.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>170.33.XX.XX</p>
-         */
         @NameInMap("SubnetIp")
         public String subnetIp;
 
-        /**
-         * <p>Array of parsing results.</p>
-         */
         @NameInMap("Value")
         public DescribeInternetDnsLogsResponseBodyLogsLogValue value;
 
-        /**
-         * <p>The zone name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("ZoneName")
         public String zoneName;
 

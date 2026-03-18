@@ -101,9 +101,6 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The returned lines of access regions.</p>
-     */
     @NameInMap("Lines")
     public DescribeGtmAccessStrategyResponseBodyLines lines;
 
@@ -274,39 +271,15 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmAccessStrategyResponseBodyLinesLine extends TeaModel {
-        /**
-         * <p>The code of the access region group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DEFAULT</p>
-         */
         @NameInMap("GroupCode")
         public String groupCode;
 
-        /**
-         * <p>The name of the access region group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Global</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The code for the line of the access region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("LineCode")
         public String lineCode;
 
-        /**
-         * <p>The name for the line of the access region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Global</p>
-         */
         @NameInMap("LineName")
         public String lineName;
 

@@ -4,15 +4,9 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaModel {
-    /**
-     * <p>The address pools.</p>
-     */
     @NameInMap("AddrPools")
     public DescribeGtmAccessStrategyAvailableConfigResponseBodyAddrPools addrPools;
 
-    /**
-     * <p>The Domain Name System (DNS) request sources.</p>
-     */
     @NameInMap("Lines")
     public DescribeGtmAccessStrategyAvailableConfigResponseBodyLines lines;
 
@@ -72,21 +66,9 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
     }
 
     public static class DescribeGtmAccessStrategyAvailableConfigResponseBodyAddrPoolsAddrPool extends TeaModel {
-        /**
-         * <p>The ID of the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hra0ix</p>
-         */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
 
-        /**
-         * <p>The name of the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("AddrPoolName")
         public String addrPoolName;
 
@@ -133,61 +115,21 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
     }
 
     public static class DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine extends TeaModel {
-        /**
-         * <p>The code of the parent line. No value is returned if no parent line exists.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>telecom</p>
-         */
         @NameInMap("FatherCode")
         public String fatherCode;
 
-        /**
-         * <p>The group number of the DNS request source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ISP</p>
-         */
         @NameInMap("GroupCode")
         public String groupCode;
 
-        /**
-         * <p>The group name of the DNS request source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Mainland China</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The code of the DNS request source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn_telecom_hubei</p>
-         */
         @NameInMap("LineCode")
         public String lineCode;
 
-        /**
-         * <p>The name of the DNS request source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>South China</p>
-         */
         @NameInMap("LineName")
         public String lineName;
 
-        /**
-         * <p>The state of the line. Valid values:</p>
-         * <ul>
-         * <li><strong>FORBIDDEN</strong>: The line is unavailable.</li>
-         * <li><strong>OPTIONAL</strong>: The line is available.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FORBIDDEN</p>
-         */
         @NameInMap("Status")
         public String status;
 

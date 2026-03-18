@@ -40,9 +40,6 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     @NameInMap("Interval")
     public Integer interval;
 
-    /**
-     * <p>The monitored nodes.</p>
-     */
     @NameInMap("IspCityNodes")
     public DescribeGtmMonitorConfigResponseBodyIspCityNodes ispCityNodes;
 
@@ -230,57 +227,21 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmMonitorConfigResponseBodyIspCityNodesIspCityNode extends TeaModel {
-        /**
-         * <p>The code of the city where the monitored node is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>503</p>
-         */
         @NameInMap("CityCode")
         public String cityCode;
 
-        /**
-         * <p>The display name of the city where the monitored node is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Zhangjiakou</p>
-         */
         @NameInMap("CityName")
         public String cityName;
 
-        /**
-         * <p>The code of the country where the monitored node is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>001</p>
-         */
         @NameInMap("CountryCode")
         public String countryCode;
 
-        /**
-         * <p>The display name of the country where the monitored node is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China</p>
-         */
         @NameInMap("CountryName")
         public String countryName;
 
-        /**
-         * <p>The code of the Internet service provider (ISP) to which the monitored node belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>465</p>
-         */
         @NameInMap("IspCode")
         public String ispCode;
 
-        /**
-         * <p>The display name of the ISP to which the monitored node belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alibaba</p>
-         */
         @NameInMap("IspName")
         public String ispName;
 

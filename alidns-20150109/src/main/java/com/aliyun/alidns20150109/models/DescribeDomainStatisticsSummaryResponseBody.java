@@ -31,9 +31,6 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The statistics on the Domain Name System (DNS) requests.</p>
-     */
     @NameInMap("Statistics")
     public DescribeDomainStatisticsSummaryResponseBodyStatistics statistics;
 
@@ -109,45 +106,15 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic extends TeaModel {
-        /**
-         * <p>The number of DNS requests.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>35509014</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ali-gslb.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
-         * <p>PUBLIC (default): hosted public domain name</p>
-         * <p>CACHE: cache-accelerated domain name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PUBLIC</p>
-         */
         @NameInMap("DomainType")
         public String domainType;
 
-        /**
-         * <p>Indicates whether the DNS traffic analysis feature is enabled for the domain name. Valid values:</p>
-         * <ul>
-         * <li>OPEN</li>
-         * <li>CLOSE</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OPEN</p>
-         */
         @NameInMap("resolveAnalysisStatus")
         public String resolveAnalysisStatus;
 

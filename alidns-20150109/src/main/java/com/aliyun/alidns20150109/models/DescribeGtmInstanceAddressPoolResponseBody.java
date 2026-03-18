@@ -22,9 +22,6 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
-    /**
-     * <p>The addresses in the address pool.</p>
-     */
     @NameInMap("Addrs")
     public DescribeGtmInstanceAddressPoolResponseBodyAddrs addrs;
 
@@ -253,91 +250,30 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmInstanceAddressPoolResponseBodyAddrsAddr extends TeaModel {
-        /**
-         * <p>The ID of the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("AddrId")
         public Long addrId;
 
-        /**
-         * <p>Indicates whether health check was enabled for the address. Valid values:</p>
-         * <ul>
-         * <li><strong>OK</strong>: Normal</li>
-         * <li><strong>ALERT</strong>: Alert</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("AlertStatus")
         public String alertStatus;
 
-        /**
-         * <p>The time when the address pool was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-28T13:08Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The weight of the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
-        /**
-         * <p>The mode of the address. Valid values:</p>
-         * <ul>
-         * <li><strong>SMART</strong>: Intelligent return</li>
-         * <li><strong>ONLINE</strong>: Always online</li>
-         * <li><strong>OFFLINE</strong>: Always offline</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SMART</p>
-         */
         @NameInMap("Mode")
         public String mode;
 
-        /**
-         * <p>The last time when the address was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-28T13:08Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>A timestamp that indicates the last time when the address was updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
-        /**
-         * <p>The address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.1.1.1</p>
-         */
         @NameInMap("Value")
         public String value;
 

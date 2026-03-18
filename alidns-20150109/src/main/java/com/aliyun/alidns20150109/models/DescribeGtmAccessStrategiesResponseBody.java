@@ -31,9 +31,6 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned list of access policies of the GTM instance.</p>
-     */
     @NameInMap("Strategies")
     public DescribeGtmAccessStrategiesResponseBodyStrategies strategies;
 
@@ -109,33 +106,15 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLinesLine extends TeaModel {
-        /**
-         * <p>The code of the access region group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DEFAULT</p>
-         */
         @NameInMap("GroupCode")
         public String groupCode;
 
-        /**
-         * <p>The name of the access region group.</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The code for the line of the access region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("LineCode")
         public String lineCode;
 
-        /**
-         * <p>The name for the line of the access region.</p>
-         */
         @NameInMap("LineName")
         public String lineName;
 
@@ -198,160 +177,54 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy extends TeaModel {
-        /**
-         * <p>The access policy. Valid values:</p>
-         * <ul>
-         * <li><strong>AUTO</strong>: Automatic switch</li>
-         * <li><strong>DEFAULT</strong>: Default address pool</li>
-         * <li><strong>FAILOVER</strong>: Failover address pool</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>DEFAULT</p>
-         */
         @NameInMap("AccessMode")
         public String accessMode;
 
-        /**
-         * <p>The access status. Valid values:</p>
-         * <ul>
-         * <li><strong>DEFAULT</strong>: The default address pool is currently accessed.</li>
-         * <li><strong>FAILOVER</strong>: The failover address pool is currently accessed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>DEFAULT</p>
-         */
         @NameInMap("AccessStatus")
         public String accessStatus;
 
-        /**
-         * <p>The time when the access policy was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-08-09T00:10Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1533773400000</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The ID of the default address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hra0i1</p>
-         */
         @NameInMap("DefaultAddrPoolId")
         public String defaultAddrPoolId;
 
-        /**
-         * <p>Indicates whether health check was enabled for the default address pool. Valid values:</p>
-         * <ul>
-         * <li><strong>OPEN</strong>: Enabled</li>
-         * <li><strong>CLOSE</strong>: Disabled</li>
-         * <li><strong>UNCONFIGURED</strong>: Not configured</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OPEN</p>
-         */
         @NameInMap("DefaultAddrPoolMonitorStatus")
         public String defaultAddrPoolMonitorStatus;
 
-        /**
-         * <p>The name of the default address pool.</p>
-         */
         @NameInMap("DefaultAddrPoolName")
         public String defaultAddrPoolName;
 
-        /**
-         * <p>The availability status of the default address pool. Valid values:</p>
-         * <ul>
-         * <li><strong>AVAILABLE</strong>: Available</li>
-         * <li><strong>NOT_AVAILABLE</strong>: Unavailable</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>AVAILABLE</p>
-         */
         @NameInMap("DefaultAddrPoolStatus")
         public String defaultAddrPoolStatus;
 
-        /**
-         * <p>The ID of the failover address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hra0i2</p>
-         */
         @NameInMap("FailoverAddrPoolId")
         public String failoverAddrPoolId;
 
-        /**
-         * <p>Indicates whether health check was enabled for the failover address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OPEN</p>
-         */
         @NameInMap("FailoverAddrPoolMonitorStatus")
         public String failoverAddrPoolMonitorStatus;
 
-        /**
-         * <p>The name of the failover address pool.</p>
-         */
         @NameInMap("FailoverAddrPoolName")
         public String failoverAddrPoolName;
 
-        /**
-         * <p>The availability status of the failover address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AVAILABLE</p>
-         */
         @NameInMap("FailoverAddrPoolStatus")
         public String failoverAddrPoolStatus;
 
-        /**
-         * <p>The ID of the GTM instance whose access policies you want to query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance1</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The returned lines of access regions.</p>
-         */
         @NameInMap("Lines")
         public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLines lines;
 
-        /**
-         * <p>The ID of the access policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hra0hs</p>
-         */
         @NameInMap("StrategyId")
         public String strategyId;
 
-        /**
-         * <p>The mode of the access policy. <strong>SELF_DEFINED</strong> indicates that the access policy is user-defined.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SELF_DEFINED</p>
-         */
         @NameInMap("StrategyMode")
         public String strategyMode;
 
-        /**
-         * <p>The name of the access policy.</p>
-         */
         @NameInMap("StrategyName")
         public String strategyName;
 

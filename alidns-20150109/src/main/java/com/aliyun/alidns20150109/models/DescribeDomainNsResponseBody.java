@@ -22,15 +22,9 @@ public class DescribeDomainNsResponseBody extends TeaModel {
     @NameInMap("DetectFailedReasonCode")
     public String detectFailedReasonCode;
 
-    /**
-     * <p>The DNS server names configured for the domain name.</p>
-     */
     @NameInMap("DnsServers")
     public DescribeDomainNsResponseBodyDnsServers dnsServers;
 
-    /**
-     * <p>The Domain Name System (DNS) server names assigned by Alibaba Cloud DNS.</p>
-     */
     @NameInMap("ExpectDnsServers")
     public DescribeDomainNsResponseBodyExpectDnsServers expectDnsServers;
 

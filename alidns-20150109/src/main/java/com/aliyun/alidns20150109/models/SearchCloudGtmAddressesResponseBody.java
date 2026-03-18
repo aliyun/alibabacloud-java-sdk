@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SearchCloudGtmAddressesResponseBody extends TeaModel {
-    /**
-     * <p>The addresses.</p>
-     */
     @NameInMap("Addresses")
     public SearchCloudGtmAddressesResponseBodyAddresses addresses;
 
@@ -109,44 +106,15 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
     }
 
     public static class SearchCloudGtmAddressesResponseBodyAddressesAddressHealthTasksHealthTask extends TeaModel {
-        /**
-         * <p>The state of the health check task. Valid values:</p>
-         * <ul>
-         * <li>ok: The task is normal.</li>
-         * <li>alert: The task has an alert.</li>
-         * <li>no_data: No data is available. In most cases, the health check task is newly created and no data is collected.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ok</p>
-         */
         @NameInMap("MonitorStatus")
         public String monitorStatus;
 
-        /**
-         * <p>The target service port for health check probes. When the health check protocol is set to Ping, configuration of the service port is not supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The ID of the health check template associated with the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mtp-895180524251002880</p>
-         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        /**
-         * <p>Health check template name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4-Ping</p>
-         */
         @NameInMap("TemplateName")
         public String templateName;
 
@@ -209,185 +177,54 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
     }
 
     public static class SearchCloudGtmAddressesResponseBodyAddressesAddress extends TeaModel {
-        /**
-         * <p>IP address or domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>223.5.XX.XX</p>
-         */
         @NameInMap("Address")
         public String address;
 
-        /**
-         * <p>ID of the address, unique identifier for the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>addr-89518218114368**92</p>
-         */
         @NameInMap("AddressId")
         public String addressId;
 
-        /**
-         * <p>Address ownership information, not supported in the current version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The parameter should be none.</p>
-         */
         @NameInMap("AttributeInfo")
         public String attributeInfo;
 
-        /**
-         * <p>The failover method that is used if the address fails health checks. Valid values:</p>
-         * <ul>
-         * <li>auto: the automatic mode. The system determines whether to return an address based on the health check results. If the address fails health checks, the system does not return the address. If the address passes health checks, the system returns the address.</li>
-         * <li>manual: the manual mode. If an address is in the unavailable state, the address is not returned for Domain Name System (DNS) requests even if the address passes health checks. If an address is in the available state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>auto</p>
-         */
         @NameInMap("AvailableMode")
         public String availableMode;
 
-        /**
-         * <p>The availability state of the address when AvailableMode is set to manual. Valid values:</p>
-         * <ul>
-         * <li>available: The address is normal. In this state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
-         * <li>unavailable: The address is abnormal. In this state, the address is not returned for DNS requests even if the address passes health checks.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>available</p>
-         */
         @NameInMap("AvailableStatus")
         public String availableStatus;
 
-        /**
-         * <p>Creation time of the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-23T13:09Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Creation time of the address (timestamp).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>Current activation status of the address:</p>
-         * <ul>
-         * <li>enable: Enabled status</li>
-         * <li>disable: Disabled status</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>enable</p>
-         */
         @NameInMap("EnableStatus")
         public String enableStatus;
 
-        /**
-         * <p>The condition for determining the health status of the address. Valid values:</p>
-         * <ul>
-         * <li>any_ok: The health check results of at least one health check template are normal.</li>
-         * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
-         * <li>p50_ok: The health check results of at least 50% of health check templates are normal.</li>
-         * <li>p70_ok: The health check results of at least 70% of health check templates are normal.</li>
-         * <li>all_ok: The health check results of all health check templates are normal.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>p50_ok</p>
-         */
         @NameInMap("HealthJudgement")
         public String healthJudgement;
 
-        /**
-         * <p>The health check state of the address. Valid values:</p>
-         * <ul>
-         * <li>ok: The address passes all health checks of the referenced health check templates.</li>
-         * <li>ok_alert: The address fails some health checks of the referenced health check templates, but the address is deemed available.</li>
-         * <li>ok_no_monitor: The address does not reference any health check template.</li>
-         * <li>exceptional: The address fails some or all health checks of the referenced health check templates, and the address is deemed unavailable.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ok</p>
-         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
-        /**
-         * <p>The health check tasks.</p>
-         */
         @NameInMap("HealthTasks")
         public SearchCloudGtmAddressesResponseBodyAddressesAddressHealthTasks healthTasks;
 
-        /**
-         * <p>The availability state of the address when AvailableMode is set to manual. Valid values:</p>
-         * <ul>
-         * <li>available: The address is normal. In this state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
-         * <li>unavailable: The address is abnormal. In this state, the address is not returned for DNS requests even if the address passes health checks.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>available</p>
-         */
         @NameInMap("ManualAvailableStatus")
         public String manualAvailableStatus;
 
-        /**
-         * <p>Address name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Address-1</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>Remarks.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>Address type:</p>
-         * <ul>
-         * <li>IPv4: ipv4 address - IPv6: ipv6 address - domain: domain name</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The last modification time of the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-29T13:20Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>The last modification time of the address (timestamp).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 

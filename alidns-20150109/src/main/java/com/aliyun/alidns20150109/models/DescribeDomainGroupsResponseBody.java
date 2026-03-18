@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainGroupsResponseBody extends TeaModel {
-    /**
-     * <p>The domain name groups.</p>
-     */
     @NameInMap("DomainGroups")
     public DescribeDomainGroupsResponseBodyDomainGroups domainGroups;
 
@@ -92,34 +89,12 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup extends TeaModel {
-        /**
-         * <p>The number of domain name groups.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("DomainCount")
         public Long domainCount;
 
-        /**
-         * <p>The ID of the domain name group. Valid values:</p>
-         * <ul>
-         * <li>defaultGroup: the default group</li>
-         * <li>If an empty string is returned, it indicates the group that contains all domain names.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2223</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the domain name group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MyGroup</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 

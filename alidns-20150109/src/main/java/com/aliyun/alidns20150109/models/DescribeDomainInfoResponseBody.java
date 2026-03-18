@@ -13,9 +13,6 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     @NameInMap("AliDomain")
     public Boolean aliDomain;
 
-    /**
-     * <p>The available time to live (TTL) values that can be configured for the domain name. Available TTL values are not returned by default. If you want to query such information, set NeedDetailAttributes to true.</p>
-     */
     @NameInMap("AvailableTtls")
     public DescribeDomainInfoResponseBodyAvailableTtls availableTtls;
 
@@ -28,9 +25,6 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
-    /**
-     * <p>The DNS servers that are used to resolve the domain name.</p>
-     */
     @NameInMap("DnsServers")
     public DescribeDomainInfoResponseBodyDnsServers dnsServers;
 
@@ -139,9 +133,6 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     @NameInMap("RecordLineTreeJson")
     public String recordLineTreeJson;
 
-    /**
-     * <p>The DNS request lines.</p>
-     */
     @NameInMap("RecordLines")
     public DescribeDomainInfoResponseBodyRecordLines recordLines;
 
@@ -462,33 +453,15 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainInfoResponseBodyRecordLinesRecordLine extends TeaModel {
-        /**
-         * <p>The code of the parent line. This parameter is not returned if the line has no parent line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>internal</p>
-         */
         @NameInMap("FatherCode")
         public String fatherCode;
 
-        /**
-         * <p>The code of the line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn_region_xibei</p>
-         */
         @NameInMap("LineCode")
         public String lineCode;
 
-        /**
-         * <p>The name of the parent line.</p>
-         */
         @NameInMap("LineDisplayName")
         public String lineDisplayName;
 
-        /**
-         * <p>The name of the line.</p>
-         */
         @NameInMap("LineName")
         public String lineName;
 

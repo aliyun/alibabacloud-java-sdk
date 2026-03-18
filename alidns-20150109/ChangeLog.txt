@@ -1,3 +1,9 @@
+2026-03-18 Version: 4.3.2
+- Update API ListCloudGtmMonitorNodes: add request parameters ShowDisabledNodes.
+- Update API ListCloudGtmMonitorNodes: add response parameters Body.Ipv4IspCityNodes.$.EnableStatus.
+- Update API ListCloudGtmMonitorNodes: add response parameters Body.Ipv6IspCityNodes.$.EnableStatus.
+
+
 2026-02-04 Version: 4.3.1
 - Update API DescribeInternetDnsLogs: add request parameters PreciseSort.
 

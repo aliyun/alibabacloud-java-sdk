@@ -22,9 +22,6 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    /**
-     * <p>The operation logs.</p>
-     */
     @NameInMap("RecordLogs")
     public DescribeRecordLogsResponseBodyRecordLogs recordLogs;
 
@@ -92,42 +89,18 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordLogsResponseBodyRecordLogsRecordLog extends TeaModel {
-        /**
-         * <p>The operation that you performed.</p>
-         */
         @NameInMap("Action")
         public String action;
 
-        /**
-         * <p>The time when you performed the operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-12T09:23Z</p>
-         */
         @NameInMap("ActionTime")
         public String actionTime;
 
-        /**
-         * <p>The time when you performed the operation. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>134514540000</p>
-         */
         @NameInMap("ActionTimestamp")
         public Long actionTimestamp;
 
-        /**
-         * <p>The IP address of the operator.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>182.92.253.XX</p>
-         */
         @NameInMap("ClientIp")
         public String clientIp;
 
-        /**
-         * <p>The operation message.</p>
-         */
         @NameInMap("Message")
         public String message;
 

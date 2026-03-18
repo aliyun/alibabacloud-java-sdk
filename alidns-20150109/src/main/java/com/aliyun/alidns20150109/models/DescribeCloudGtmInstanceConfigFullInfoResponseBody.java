@@ -19,9 +19,6 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     @NameInMap("AddressPoolLbStrategy")
     public String addressPoolLbStrategy;
 
-    /**
-     * <p>The address pools.</p>
-     */
     @NameInMap("AddressPools")
     public DescribeCloudGtmInstanceConfigFullInfoResponseBodyAddressPools addressPools;
 
@@ -491,218 +488,63 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     }
 
     public static class DescribeCloudGtmInstanceConfigFullInfoResponseBodyAddressPoolsAddressPoolAddressesAddress extends TeaModel {
-        /**
-         * <p>IP address or domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>223.5.XX.XX</p>
-         */
         @NameInMap("Address")
         public String address;
 
-        /**
-         * <p>The address ID. This ID uniquely identifies the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>addr-89564712295703**96</p>
-         */
         @NameInMap("AddressId")
         public String addressId;
 
-        /**
-         * <p>Address ownership information, not supported in the current version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The current version does not support returning this parameter.</p>
-         */
         @NameInMap("AttributeInfo")
         public String attributeInfo;
 
-        /**
-         * <p>The failover mode that is used when address exceptions are identified. Valid values:</p>
-         * <ul>
-         * <li>auto: the automatic mode. The system determines whether to return an address based on the health check results. If the address fails health checks, the system does not return the address. If the address passes health checks, the system returns the address.</li>
-         * <li>manual: the manual mode. If an address is in the unavailable state, the address is not returned for DNS requests even if the address passes health checks. If an address is in the available state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>auto</p>
-         */
         @NameInMap("AvailableMode")
         public String availableMode;
 
-        /**
-         * <p>The availability state of the address. Valid values:</p>
-         * <ul>
-         * <li>available</li>
-         * <li>unavailable</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>available</p>
-         */
         @NameInMap("AvailableStatus")
         public String availableStatus;
 
-        /**
-         * <p>Address creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-15T01:46Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Address creation time (timestamp).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The enabling state of the address. Valid values:</p>
-         * <ul>
-         * <li>enable</li>
-         * <li>disable</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>enable</p>
-         */
         @NameInMap("EnableStatus")
         public String enableStatus;
 
-        /**
-         * <p>The condition for determining the health state of the address. Valid values:</p>
-         * <ul>
-         * <li>any_ok: The health check results of at least one health check template are normal.</li>
-         * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
-         * <li>p50_ok: The health check results of at least 50% of health check templates are normal.</li>
-         * <li>p70_ok: The health check results of at least 70% of health check templates are normal.</li>
-         * <li>all_ok: The health check results of all health check templates are normal.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>any_ok</p>
-         */
         @NameInMap("HealthJudgement")
         public String healthJudgement;
 
-        /**
-         * <p>The health check state of the address. Valid values:</p>
-         * <ul>
-         * <li>ok: The address passes all health checks of the referenced health check templates.</li>
-         * <li>ok_alert: The address fails some health checks of the referenced health check templates but the address is deemed normal.</li>
-         * <li>ok_no_monitor: The address does not reference any health check template and is normal.</li>
-         * <li>exceptional: The address fails some or all health checks of the referenced health check templates and the address is deemed abnormal.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ok</p>
-         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
-        /**
-         * <p>The availability state of the address when AvailableMode is set to manual. Valid values:</p>
-         * <ul>
-         * <li>available: The address is normal. In this state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
-         * <li>unavailable: The address is abnormal. In this state, the address is not returned for DNS requests even if the address passes health checks.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>available</p>
-         */
         @NameInMap("ManualAvailableStatus")
         public String manualAvailableStatus;
 
-        /**
-         * <p>Address name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Address-1</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The remark of the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>Request source list.</p>
-         */
         @NameInMap("RequestSource")
         public DescribeCloudGtmInstanceConfigFullInfoResponseBodyAddressPoolsAddressPoolAddressesAddressRequestSource requestSource;
 
-        /**
-         * <p>Indicates whether it is a sequential (non-preemptive) mode scheduling object, applicable to hybrid cloud management scenarios: </p>
-         * <ul>
-         * <li>true: yes</li>
-         * <li>false: no</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("SeqNonPreemptiveSchedule")
         public Boolean seqNonPreemptiveSchedule;
 
-        /**
-         * <p>Sequence number, indicating the priority of address return, where smaller numbers have higher priority.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("SerialNumber")
         public Integer serialNumber;
 
-        /**
-         * <p>The type of the address. Valid values:</p>
-         * <ul>
-         * <li>IPV4: the IPv4 address</li>
-         * <li>IPv6: the IPv6 address</li>
-         * <li>domain: the domain name</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>Last modified time of the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-15T01:46Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>The last modification time of the address (timestamp).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
-        /**
-         * <p>Weight value (an integer between 1 and 100, inclusive), allowing different weight values to be set for each address, enabling resolution queries to return addresses in proportion to their weights.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("WeightValue")
         public Integer weightValue;
 
@@ -912,198 +754,57 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     }
 
     public static class DescribeCloudGtmInstanceConfigFullInfoResponseBodyAddressPoolsAddressPool extends TeaModel {
-        /**
-         * <p>Load balancing policy among addresses in the address pool:</p>
-         * <ul>
-         * <li>round_robin: Round-robin, for any source of DNS resolution requests, returns all addresses and rotates their order for each request.</li>
-         * <li>sequence: Sequential, for any source of DNS resolution requests, returns the address with the smaller sequence number (the sequence number indicates the priority of the address return, with smaller numbers having higher priority). If the address with the smaller sequence number is unavailable, the next address with a smaller sequence number is returned.</li>
-         * <li>weight: Weighted, supports setting different weight values for each address to realize returning addresses according to the weight ratio for resolution queries.</li>
-         * <li>source_nearest: Source-nearest, i.e., intelligent resolution function, where GTM can return different addresses based on the source of different DNS resolution requests, achieving the effect of users accessing nearby.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>round_robin</p>
-         */
         @NameInMap("AddressLbStrategy")
         public String addressLbStrategy;
 
-        /**
-         * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pool-89528023225442**16</p>
-         */
         @NameInMap("AddressPoolId")
         public String addressPoolId;
 
-        /**
-         * <p>Address pool name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AddressPool-1</p>
-         */
         @NameInMap("AddressPoolName")
         public String addressPoolName;
 
-        /**
-         * <p>Address pool type:</p>
-         * <ul>
-         * <li>IPv4</li>
-         * <li>IPv6</li>
-         * <li>domain</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("AddressPoolType")
         public String addressPoolType;
 
-        /**
-         * <p>The addresses.</p>
-         */
         @NameInMap("Addresses")
         public DescribeCloudGtmInstanceConfigFullInfoResponseBodyAddressPoolsAddressPoolAddresses addresses;
 
-        /**
-         * <p>The availability state of the address pool. Valid values:</p>
-         * <ul>
-         * <li>Available</li>
-         * <li>unavailable</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>available</p>
-         */
         @NameInMap("AvailableStatus")
         public String availableStatus;
 
-        /**
-         * <p>Address pool creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-15T01:46Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Address pool creation time (timestamp).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The enabling state of the address pool. Valid values:</p>
-         * <ul>
-         * <li>enable</li>
-         * <li>disable</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>enable</p>
-         */
         @NameInMap("EnableStatus")
         public String enableStatus;
 
-        /**
-         * <p>The condition for determining the health state of the address pool. Valid values:</p>
-         * <ul>
-         * <li>any_ok: At least one address in the address pool is available.</li>
-         * <li>p30_ok: At least 30% of the addresses in the address pool are available.</li>
-         * <li>p50_ok: At least 50% of the addresses in the address pool are available.</li>
-         * <li>p70_ok: At least 70% of the addresses in the address pool are available.</li>
-         * <li>all_ok: All addresses in the address pool are available.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>any_ok</p>
-         */
         @NameInMap("HealthJudgement")
         public String healthJudgement;
 
-        /**
-         * <p>Address pool health status:</p>
-         * <ul>
-         * <li>ok: Normal, all addresses referenced by the address pool are available.</li>
-         * <li>ok_alert: Warning, some addresses referenced by the address pool are unavailable, but the address pool status is deemed normal. In the warning state, available address pools are resolved normally, while unavailable ones stop resolving.</li>
-         * <li>exceptional: Abnormal, some or all of the addresses referenced by the address pool are unavailable, and the address pool status is determined to be abnormal.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ok</p>
-         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
-        /**
-         * <p>Parse the list of request sources.</p>
-         */
         @NameInMap("RequestSource")
         public DescribeCloudGtmInstanceConfigFullInfoResponseBodyAddressPoolsAddressPoolRequestSource requestSource;
 
-        /**
-         * <p>Indicates whether it is a sequential (non-preemptive) scheduling object for hybrid cloud management scenarios: </p>
-         * <ul>
-         * <li>true: yes </li>
-         * <li>false: no</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("SeqNonPreemptiveSchedule")
         public Boolean seqNonPreemptiveSchedule;
 
-        /**
-         * <p>The mode used if the address with the smallest sequence number is recovered. This parameter is required only when AddressLbStrategy is set to sequence. Valid values:</p>
-         * <ul>
-         * <li>preemptive: The address with the smallest sequence number is preferentially used if this address is recovered.</li>
-         * <li>non_preemptive: The current address is still used even if the address with the smallest sequence number is recovered.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>preemptive</p>
-         */
         @NameInMap("SequenceLbStrategyMode")
         public String sequenceLbStrategyMode;
 
-        /**
-         * <p>Sequence number. For any parsing request from any source, the address pool with the smaller sequence number is returned (the sequence number indicates the priority of the address pool returned, with smaller numbers having higher priority).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("SerialNumber")
         public Integer serialNumber;
 
-        /**
-         * <p>Last modification time of the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-15T01:46Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>Last modification time of the address pool (timestamp).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
-        /**
-         * <p>Weight value (an integer between 1 and 100, inclusive), allowing different weight values to be set for each address pool, enabling resolution queries to return address pools according to the weighted ratio.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("WeightValue")
         public Integer weightValue;
 

@@ -22,9 +22,6 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The returned preview information of the disaster recovery plan.</p>
-     */
     @NameInMap("Previews")
     public PreviewGtmRecoveryPlanResponseBodyPreviews previews;
 
@@ -109,18 +106,9 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     }
 
     public static class PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfosSwitchInfo extends TeaModel {
-        /**
-         * <p>The formatted message content.</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The name of the switching policy for address pools.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>strategy-name-example-1</p>
-         */
         @NameInMap("StrategyName")
         public String strategyName;
 
@@ -167,36 +155,15 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     }
 
     public static class PreviewGtmRecoveryPlanResponseBodyPreviewsPreview extends TeaModel {
-        /**
-         * <p>The ID of the GTM instance to which the previewed disaster recovery plan belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance-example</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the GTM instance to which the previewed disaster recovery plan belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>name-example</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The returned information of the switching policies for address pools.</p>
-         */
         @NameInMap("SwitchInfos")
         public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos switchInfos;
 
-        /**
-         * <p>The user\&quot;s domain name or domain name list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30.yyy.com</p>
-         */
         @NameInMap("UserDomainName")
         public String userDomainName;
 

@@ -117,9 +117,6 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     @NameInMap("HealthStatus")
     public String healthStatus;
 
-    /**
-     * <p>The health check tasks referenced by the address.</p>
-     */
     @NameInMap("HealthTasks")
     public DescribeCloudGtmAddressResponseBodyHealthTasks healthTasks;
 
@@ -345,44 +342,15 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmAddressResponseBodyHealthTasksHealthTask extends TeaModel {
-        /**
-         * <p>The state of the health check task. Valid values:</p>
-         * <ul>
-         * <li>ok: The task is normal.</li>
-         * <li>alert: An alert is triggered.</li>
-         * <li>no_data: No data is available. In most cases, the health check task is newly created and no data is collected.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ok</p>
-         */
         @NameInMap("MonitorStatus")
         public String monitorStatus;
 
-        /**
-         * <p>The target service port for health checks. When the Ping protocol is selected for health checks, configuration of the service port is not supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The ID of the health check template associated with the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mtp-89518052425100**80</p>
-         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        /**
-         * <p>The name of the health check template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Ping-IPv4</p>
-         */
         @NameInMap("TemplateName")
         public String templateName;
 

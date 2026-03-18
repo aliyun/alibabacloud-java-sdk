@@ -4,27 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
-    /**
-     * <p>The nodes that perform health checks on domain names that use public IPv4 addresses.</p>
-     */
     @NameInMap("DomainIpv4IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodes domainIpv4IspCityNodes;
 
-    /**
-     * <p>The nodes that perform health checks on domain names that use public IPv6 addresses.</p>
-     */
     @NameInMap("DomainIpv6IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodes domainIpv6IspCityNodes;
 
-    /**
-     * <p>The nodes that perform health checks on public IPv4 addresses.</p>
-     */
     @NameInMap("Ipv4IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes ipv4IspCityNodes;
 
-    /**
-     * <p>The nodes that perform health checks on public IPv6 addresses.</p>
-     */
     @NameInMap("Ipv6IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodes ipv6IspCityNodes;
 
@@ -102,77 +90,27 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode extends TeaModel {
-        /**
-         * <p>The city code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>503</p>
-         */
         @NameInMap("CityCode")
         public String cityCode;
 
-        /**
-         * <p>The display name of the city.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Zhangjiakou</p>
-         */
         @NameInMap("CityName")
         public String cityName;
 
-        /**
-         * <p>Indicates whether the health check node is selected by default.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
-        /**
-         * <p>The name of the node group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP Nodes</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The type of the node group. Valid values:</p>
-         * <ul>
-         * <li>BGP: BGP node</li>
-         * <li>OVERSEAS: node outside the Chinese mainland</li>
-         * <li>ISP: ISP node</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP</p>
-         */
         @NameInMap("GroupType")
         public String groupType;
 
-        /**
-         * <p>The IP addresses of the health check nodes.</p>
-         */
         @NameInMap("Ips")
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps ips;
 
-        /**
-         * <p>The ISP code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>465</p>
-         */
         @NameInMap("IspCode")
         public String ispCode;
 
-        /**
-         * <p>The display name of the ISP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alibaba</p>
-         */
         @NameInMap("IspName")
         public String ispName;
 
@@ -286,77 +224,27 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode extends TeaModel {
-        /**
-         * <p>The city code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>503</p>
-         */
         @NameInMap("CityCode")
         public String cityCode;
 
-        /**
-         * <p>The display name of the city.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Zhangjiakou</p>
-         */
         @NameInMap("CityName")
         public String cityName;
 
-        /**
-         * <p>Indicates whether the health check node is selected by default.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
-        /**
-         * <p>The name of the node group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP Nodes</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The type of the node group. Valid values:</p>
-         * <ul>
-         * <li>BGP: BGP node</li>
-         * <li>OVERSEAS: node outside the Chinese mainland</li>
-         * <li>ISP: ISP node</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP</p>
-         */
         @NameInMap("GroupType")
         public String groupType;
 
-        /**
-         * <p>This parameter is not returned.</p>
-         */
         @NameInMap("Ips")
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps ips;
 
-        /**
-         * <p>The ISP code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>465</p>
-         */
         @NameInMap("IspCode")
         public String ispCode;
 
-        /**
-         * <p>The display name of the ISP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alibaba</p>
-         */
         @NameInMap("IspName")
         public String ispName;
 
@@ -470,77 +358,27 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode extends TeaModel {
-        /**
-         * <p>The city code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>503</p>
-         */
         @NameInMap("CityCode")
         public String cityCode;
 
-        /**
-         * <p>The display name of the city.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Zhangjiakou</p>
-         */
         @NameInMap("CityName")
         public String cityName;
 
-        /**
-         * <p>Indicates whether the health check node is selected by default.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
-        /**
-         * <p>The name of the node group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP Nodes</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The type of the node group. Valid values:</p>
-         * <ul>
-         * <li>BGP: Border Gateway Protocol (BGP) node</li>
-         * <li>OVERSEAS: node outside the Chinese mainland</li>
-         * <li>ISP: ISP node</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP</p>
-         */
         @NameInMap("GroupType")
         public String groupType;
 
-        /**
-         * <p>The IP addresses of the health check nodes.</p>
-         */
         @NameInMap("Ips")
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps ips;
 
-        /**
-         * <p>The Internet service provider (ISP) code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>465</p>
-         */
         @NameInMap("IspCode")
         public String ispCode;
 
-        /**
-         * <p>The display name of the ISP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alibaba</p>
-         */
         @NameInMap("IspName")
         public String ispName;
 
@@ -654,77 +492,27 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode extends TeaModel {
-        /**
-         * <p>The city code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>503</p>
-         */
         @NameInMap("CityCode")
         public String cityCode;
 
-        /**
-         * <p>The display name of the city.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Zhangjiakou</p>
-         */
         @NameInMap("CityName")
         public String cityName;
 
-        /**
-         * <p>Indicates whether the health check node is selected by default.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
-        /**
-         * <p>The name of the node group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP Nodes</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The type of the node group. Valid values:</p>
-         * <ul>
-         * <li>BGP: BGP node</li>
-         * <li>OVERSEAS: node outside the Chinese mainland</li>
-         * <li>ISP: ISP node</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP</p>
-         */
         @NameInMap("GroupType")
         public String groupType;
 
-        /**
-         * <p>This parameter is not returned.</p>
-         */
         @NameInMap("Ips")
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps ips;
 
-        /**
-         * <p>The ISP code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>465</p>
-         */
         @NameInMap("IspCode")
         public String ispCode;
 
-        /**
-         * <p>The display name of the ISP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alibaba</p>
-         */
         @NameInMap("IspName")
         public String ispName;
 

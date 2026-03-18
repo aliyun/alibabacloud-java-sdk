@@ -107,9 +107,6 @@ public class DescribeCloudGtmMonitorTemplateResponseBody extends TeaModel {
     @NameInMap("IpVersion")
     public String ipVersion;
 
-    /**
-     * <p>Probe node list, detailed information can be obtained by calling ListCloudGtmMonitorNodes.</p>
-     */
     @NameInMap("IspCityNodes")
     public DescribeCloudGtmMonitorTemplateResponseBodyIspCityNodes ispCityNodes;
 
@@ -331,80 +328,27 @@ public class DescribeCloudGtmMonitorTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmMonitorTemplateResponseBodyIspCityNodesIspCityNode extends TeaModel {
-        /**
-         * <p>City code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>357</p>
-         */
         @NameInMap("CityCode")
         public String cityCode;
 
-        /**
-         * <p>City name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Shanghai</p>
-         */
         @NameInMap("CityName")
         public String cityName;
 
-        /**
-         * <p>Country Code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>629</p>
-         */
         @NameInMap("CountryCode")
         public String countryCode;
 
-        /**
-         * <p>Country Name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China</p>
-         */
         @NameInMap("CountryName")
         public String countryName;
 
-        /**
-         * <p>Probe node group type name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP Nodes</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>Probe node group types:</p>
-         * <ul>
-         * <li>BGP: BGP nodes</li>
-         * <li>OVERSEAS: International nodes</li>
-         * <li>ISP: Carrier nodes</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP</p>
-         */
         @NameInMap("GroupType")
         public String groupType;
 
-        /**
-         * <p>Operator Code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>465</p>
-         */
         @NameInMap("IspCode")
         public String ispCode;
 
-        /**
-         * <p>Operator Name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alibaba</p>
-         */
         @NameInMap("IspName")
         public String ispName;
 

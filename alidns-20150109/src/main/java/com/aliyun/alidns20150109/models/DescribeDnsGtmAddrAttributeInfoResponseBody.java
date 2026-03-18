@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
-    /**
-     * <p>The address in the address pool.</p>
-     */
     @NameInMap("Addr")
     public DescribeDnsGtmAddrAttributeInfoResponseBodyAddr addr;
 
@@ -41,48 +38,18 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo extends TeaModel {
-        /**
-         * <p>The parent line code of the source region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>telecom</p>
-         */
         @NameInMap("FatherCode")
         public String fatherCode;
 
-        /**
-         * <p>The code of the source region group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DEFAULT</p>
-         */
         @NameInMap("GroupCode")
         public String groupCode;
 
-        /**
-         * <p>The name of the source region group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Global</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The line code of the source region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("LineCode")
         public String lineCode;
 
-        /**
-         * <p>The line name of the source region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Global</p>
-         */
         @NameInMap("LineName")
         public String lineName;
 
@@ -134,18 +101,9 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr extends TeaModel {
-        /**
-         * <p>The address in the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.1.1.1</p>
-         */
         @NameInMap("Addr")
         public String addr;
 
-        /**
-         * <p>The information about the source region of the address.</p>
-         */
         @NameInMap("AttributeInfo")
         public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo attributeInfo;
 

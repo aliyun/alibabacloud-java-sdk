@@ -22,9 +22,6 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
-    /**
-     * <p>The addresses in the address pool.</p>
-     */
     @NameInMap("Addrs")
     public DescribeDnsGtmInstanceAddressPoolResponseBodyAddrs addrs;
 
@@ -242,107 +239,33 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmInstanceAddressPoolResponseBodyAddrsAddr extends TeaModel {
-        /**
-         * <p>The address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.1.1.1</p>
-         */
         @NameInMap("Addr")
         public String addr;
 
-        /**
-         * <p>The status of the last health check on the address. Valid values:</p>
-         * <ul>
-         * <li>OK: No active alerts are triggered.</li>
-         * <li>ALERT: Alerts are triggered based on the alert rules.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ok</p>
-         */
         @NameInMap("AlertStatus")
         public String alertStatus;
 
-        /**
-         * <p>The source region of the address.</p>
-         * <ul>
-         * <li>lineCode: the line code of the source region of the address. This parameter is deprecated, and lineCodes prevails.</li>
-         * <li>lineName: the line name of the source region of the address. This parameter is deprecated.</li>
-         * <li>lineCodes: the line codes of the source regions of the address.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;lineCode&quot;:&quot;aliyun_r_cn-zhangjiakou&quot;, &quot;lineName&quot;: &quot;Alibaba Cloud_China (Zhangjiakou)&quot;, &quot;lineCodes&quot;: [&quot;aliyun_r_cn-zhangjiakou&quot;]</p>
-         */
         @NameInMap("AttributeInfo")
         public String attributeInfo;
 
-        /**
-         * <p>The time when the address was added into the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-28T13:08Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The timestamp that indicates the time when the address was added into the address pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The weight of the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
-        /**
-         * <p>The mode of the address. Valid values:</p>
-         * <ul>
-         * <li>SMART: smart return</li>
-         * <li>ONLINE: always online</li>
-         * <li>OFFLINE: always offline</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>online</p>
-         */
         @NameInMap("Mode")
         public String mode;
 
-        /**
-         * <p>The description of the address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The time when the address was last updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-28T13:08Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>The timestamp that indicates the time when the address was last updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1527690629357</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 

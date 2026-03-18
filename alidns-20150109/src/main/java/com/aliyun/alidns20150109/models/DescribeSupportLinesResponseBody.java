@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeSupportLinesResponseBody extends TeaModel {
-    /**
-     * <p>The Alibaba Cloud DNS lines.</p>
-     */
     @NameInMap("RecordLines")
     public DescribeSupportLinesResponseBodyRecordLines recordLines;
 
@@ -39,39 +36,15 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
     }
 
     public static class DescribeSupportLinesResponseBodyRecordLinesRecordLine extends TeaModel {
-        /**
-         * <p>The code of the parent line. Currently, no data is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>unicom</p>
-         */
         @NameInMap("FatherCode")
         public String fatherCode;
 
-        /**
-         * <p>The code of the child line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn_unicom_shanxi</p>
-         */
         @NameInMap("LineCode")
         public String lineCode;
 
-        /**
-         * <p>The display name of the line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China Unicom</p>
-         */
         @NameInMap("LineDisplayName")
         public String lineDisplayName;
 
-        /**
-         * <p>The name of the child line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China Unicom_Shanxi</p>
-         */
         @NameInMap("LineName")
         public String lineName;
 

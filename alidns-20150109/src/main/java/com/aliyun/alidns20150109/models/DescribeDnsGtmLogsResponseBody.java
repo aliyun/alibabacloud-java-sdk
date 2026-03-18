@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmLogsResponseBody extends TeaModel {
-    /**
-     * <p>The returned logs.</p>
-     */
     @NameInMap("Logs")
     public DescribeDnsGtmLogsResponseBodyLogs logs;
 
@@ -109,69 +106,27 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmLogsResponseBodyLogsLog extends TeaModel {
-        /**
-         * <p>The formatted message content.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>addtest-pool-1</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The ID of the object on which the operation was performed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>121212</p>
-         */
         @NameInMap("EntityId")
         public String entityId;
 
-        /**
-         * <p>The name of the object on which the operation was performed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-pool-1</p>
-         */
         @NameInMap("EntityName")
         public String entityName;
 
-        /**
-         * <p>The type of the object on which the operation was performed.</p>
-         */
         @NameInMap("EntityType")
         public String entityType;
 
-        /**
-         * <p>The ID of the record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6726</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The operation performed.</p>
-         */
         @NameInMap("OperAction")
         public String operAction;
 
-        /**
-         * <p>The time when the operation was performed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-01-24T07:35Z</p>
-         */
         @NameInMap("OperTime")
         public String operTime;
 
-        /**
-         * <p>The timestamp of the operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1516779348000</p>
-         */
         @NameInMap("OperTimestamp")
         public Long operTimestamp;
 
