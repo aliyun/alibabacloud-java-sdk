@@ -1,3 +1,8 @@
+2026-03-18 Version: 2.3.1
+- Update API CreateApp: add request parameters body.quotaInfo.elastic.
+- Update API CreateApp: add request parameters body.quotaInfo.minCu.
+
+
 2026-01-08 Version: 2.3.0
 - Support API UpdatePrivateNetwrok.
 

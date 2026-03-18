@@ -407,6 +407,16 @@ public class CreateAppRequest extends TeaModel {
         @NameInMap("cu")
         public Integer cu;
 
+        @NameInMap("elastic")
+        public Boolean elastic;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("minCu")
+        public Integer minCu;
+
         @NameInMap("storage")
         public Integer storage;
 
@@ -429,6 +439,22 @@ public class CreateAppRequest extends TeaModel {
         }
         public Integer getCu() {
             return this.cu;
+        }
+
+        public CreateAppRequestQuotaInfo setElastic(Boolean elastic) {
+            this.elastic = elastic;
+            return this;
+        }
+        public Boolean getElastic() {
+            return this.elastic;
+        }
+
+        public CreateAppRequestQuotaInfo setMinCu(Integer minCu) {
+            this.minCu = minCu;
+            return this;
+        }
+        public Integer getMinCu() {
+            return this.minCu;
         }
 
         public CreateAppRequestQuotaInfo setStorage(Integer storage) {
