@@ -602,6 +602,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>拉取一个有效的OAuth认证令牌。</p>
+     * 
+     * @param request FetchOAuthAuthenticationTokenRequest
+     * @param headers FetchOAuthAuthenticationTokenHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FetchOAuthAuthenticationTokenResponse
+     */
+    public FetchOAuthAuthenticationTokenResponse fetchOAuthAuthenticationTokenWithOptions(String instanceId, FetchOAuthAuthenticationTokenRequest request, FetchOAuthAuthenticationTokenHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderIdentifier)) {
+            body.put("credentialProviderIdentifier", request.credentialProviderIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            body.put("scope", request.scope);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FetchOAuthAuthenticationToken"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authenticationTokens/_/actions/fetchOAuthAccessToken"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new FetchOAuthAuthenticationTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>拉取一个有效的OAuth认证令牌。</p>
+     * 
+     * @param request FetchOAuthAuthenticationTokenRequest
+     * @return FetchOAuthAuthenticationTokenResponse
+     */
+    public FetchOAuthAuthenticationTokenResponse fetchOAuthAuthenticationToken(String instanceId, FetchOAuthAuthenticationTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FetchOAuthAuthenticationTokenHeaders headers = new FetchOAuthAuthenticationTokenHeaders();
+        return this.fetchOAuthAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Generates a device code.</p>
      * 
      * @param request GenerateDeviceCodeRequest
@@ -645,6 +705,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.generateDeviceCodeWithOptions(instanceId, applicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成一个有效的JWT认证令牌。</p>
+     * 
+     * @param request GenerateJwtAuthenticationTokenRequest
+     * @param headers GenerateJwtAuthenticationTokenHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateJwtAuthenticationTokenResponse
+     */
+    public GenerateJwtAuthenticationTokenResponse generateJwtAuthenticationTokenWithOptions(String instanceId, GenerateJwtAuthenticationTokenRequest request, GenerateJwtAuthenticationTokenHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audiences)) {
+            body.put("audiences", request.audiences);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderIdentifier)) {
+            body.put("credentialProviderIdentifier", request.credentialProviderIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customClaims)) {
+            body.put("customClaims", request.customClaims);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
+            body.put("expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeDerivedShortToken)) {
+            body.put("includeDerivedShortToken", request.includeDerivedShortToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.issuer)) {
+            body.put("issuer", request.issuer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subject)) {
+            body.put("subject", request.subject);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateJwtAuthenticationToken"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authenticationTokens/_/actions/generateJwt"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new GenerateJwtAuthenticationTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成一个有效的JWT认证令牌。</p>
+     * 
+     * @param request GenerateJwtAuthenticationTokenRequest
+     * @return GenerateJwtAuthenticationTokenResponse
+     */
+    public GenerateJwtAuthenticationTokenResponse generateJwtAuthenticationToken(String instanceId, GenerateJwtAuthenticationTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GenerateJwtAuthenticationTokenHeaders headers = new GenerateJwtAuthenticationTokenHeaders();
+        return this.generateJwtAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
     }
 
     /**
@@ -1393,6 +1533,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列举认证令牌。</p>
+     * 
+     * @param request ListAuthenticationTokensRequest
+     * @param headers ListAuthenticationTokensHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthenticationTokensResponse
+     */
+    public ListAuthenticationTokensResponse listAuthenticationTokensWithOptions(String instanceId, ListAuthenticationTokensRequest request, ListAuthenticationTokensHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerId)) {
+            query.put("consumerId", request.consumerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderIdentifier)) {
+            query.put("credentialProviderIdentifier", request.credentialProviderIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expired)) {
+            query.put("expired", request.expired);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revoked)) {
+            query.put("revoked", request.revoked);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthenticationTokens"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authenticationTokens"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new ListAuthenticationTokensResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举认证令牌。</p>
+     * 
+     * @param request ListAuthenticationTokensRequest
+     * @return ListAuthenticationTokensResponse
+     */
+    public ListAuthenticationTokensResponse listAuthenticationTokens(String instanceId, ListAuthenticationTokensRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListAuthenticationTokensHeaders headers = new ListAuthenticationTokensHeaders();
+        return this.listAuthenticationTokensWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries information about Employee Identity and Access Management (EIAM) groups by page.</p>
      * 
      * @param request ListGroupsRequest
@@ -1863,6 +2079,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>使用派生短令牌查询对应的JWT认证令牌详情。</p>
+     * 
+     * @param request ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ObtainJwtAuthenticationTokenByDerivedShortTokenResponse
+     */
+    public ObtainJwtAuthenticationTokenByDerivedShortTokenResponse obtainJwtAuthenticationTokenByDerivedShortTokenWithOptions(String instanceId, ObtainJwtAuthenticationTokenByDerivedShortTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.derivedShortToken)) {
+            body.put("derivedShortToken", request.derivedShortToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ObtainJwtAuthenticationTokenByDerivedShortToken"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authenticationTokens/_/actions/obtainJwtByDerivedShortToken"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new ObtainJwtAuthenticationTokenByDerivedShortTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>使用派生短令牌查询对应的JWT认证令牌详情。</p>
+     * 
+     * @param request ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
+     * @return ObtainJwtAuthenticationTokenByDerivedShortTokenResponse
+     */
+    public ObtainJwtAuthenticationTokenByDerivedShortTokenResponse obtainJwtAuthenticationTokenByDerivedShortToken(String instanceId, ObtainJwtAuthenticationTokenByDerivedShortTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.obtainJwtAuthenticationTokenByDerivedShortTokenWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies information about an Employee Identity and Access Management (EIAM) group.</p>
      * 
      * @param request PatchGroupRequest
@@ -2075,6 +2338,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>恢复一个认证令牌。</p>
+     * 
+     * @param request ReinstateAuthenticationTokenRequest
+     * @param headers ReinstateAuthenticationTokenHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReinstateAuthenticationTokenResponse
+     */
+    public ReinstateAuthenticationTokenResponse reinstateAuthenticationTokenWithOptions(String instanceId, ReinstateAuthenticationTokenRequest request, ReinstateAuthenticationTokenHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            body.put("token", request.token);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tokenTypeHint)) {
+            body.put("token_type_hint", request.tokenTypeHint);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReinstateAuthenticationToken"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authenticationTokens/_/actions/reinstate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new ReinstateAuthenticationTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复一个认证令牌。</p>
+     * 
+     * @param request ReinstateAuthenticationTokenRequest
+     * @return ReinstateAuthenticationTokenResponse
+     */
+    public ReinstateAuthenticationTokenResponse reinstateAuthenticationToken(String instanceId, ReinstateAuthenticationTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ReinstateAuthenticationTokenHeaders headers = new ReinstateAuthenticationTokenHeaders();
+        return this.reinstateAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于使用者吊销认证令牌。</p>
+     * 
+     * @param request ReinstateAuthenticationTokenByConsumerRequest
+     * @param headers ReinstateAuthenticationTokenByConsumerHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReinstateAuthenticationTokenByConsumerResponse
+     */
+    public ReinstateAuthenticationTokenByConsumerResponse reinstateAuthenticationTokenByConsumerWithOptions(String instanceId, ReinstateAuthenticationTokenByConsumerRequest request, ReinstateAuthenticationTokenByConsumerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerId)) {
+            body.put("consumerId", request.consumerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderIdentifier)) {
+            body.put("credentialProviderIdentifier", request.credentialProviderIdentifier);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReinstateAuthenticationTokenByConsumer"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authenticationTokens/_/actions/reinstateByConsumer"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new ReinstateAuthenticationTokenByConsumerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于使用者吊销认证令牌。</p>
+     * 
+     * @param request ReinstateAuthenticationTokenByConsumerRequest
+     * @return ReinstateAuthenticationTokenByConsumerResponse
+     */
+    public ReinstateAuthenticationTokenByConsumerResponse reinstateAuthenticationTokenByConsumer(String instanceId, ReinstateAuthenticationTokenByConsumerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ReinstateAuthenticationTokenByConsumerHeaders headers = new ReinstateAuthenticationTokenByConsumerHeaders();
+        return this.reinstateAuthenticationTokenByConsumerWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>将账户从多个组织移除【不支持移除主组织】</p>
      * 
      * @param request RemoveUserFromOrganizationalUnitsRequest
@@ -2183,6 +2566,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         RemoveUsersFromGroupHeaders headers = new RemoveUsersFromGroupHeaders();
         return this.removeUsersFromGroupWithOptions(instanceId, applicationId, groupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>吊销一个认证令牌。</p>
+     * 
+     * @param request RevokeAuthenticationTokenRequest
+     * @param headers RevokeAuthenticationTokenHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeAuthenticationTokenResponse
+     */
+    public RevokeAuthenticationTokenResponse revokeAuthenticationTokenWithOptions(String instanceId, RevokeAuthenticationTokenRequest request, RevokeAuthenticationTokenHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            body.put("token", request.token);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tokenTypeHint)) {
+            body.put("token_type_hint", request.tokenTypeHint);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeAuthenticationToken"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authenticationTokens/_/actions/revoke"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new RevokeAuthenticationTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>吊销一个认证令牌。</p>
+     * 
+     * @param request RevokeAuthenticationTokenRequest
+     * @return RevokeAuthenticationTokenResponse
+     */
+    public RevokeAuthenticationTokenResponse revokeAuthenticationToken(String instanceId, RevokeAuthenticationTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RevokeAuthenticationTokenHeaders headers = new RevokeAuthenticationTokenHeaders();
+        return this.revokeAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于使用者吊销认证令牌。</p>
+     * 
+     * @param request RevokeAuthenticationTokenByConsumerRequest
+     * @param headers RevokeAuthenticationTokenByConsumerHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeAuthenticationTokenByConsumerResponse
+     */
+    public RevokeAuthenticationTokenByConsumerResponse revokeAuthenticationTokenByConsumerWithOptions(String instanceId, RevokeAuthenticationTokenByConsumerRequest request, RevokeAuthenticationTokenByConsumerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerId)) {
+            body.put("consumerId", request.consumerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderIdentifier)) {
+            body.put("credentialProviderIdentifier", request.credentialProviderIdentifier);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeAuthenticationTokenByConsumer"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authenticationTokens/_/actions/revokeByConsumer"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new RevokeAuthenticationTokenByConsumerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于使用者吊销认证令牌。</p>
+     * 
+     * @param request RevokeAuthenticationTokenByConsumerRequest
+     * @return RevokeAuthenticationTokenByConsumerResponse
+     */
+    public RevokeAuthenticationTokenByConsumerResponse revokeAuthenticationTokenByConsumer(String instanceId, RevokeAuthenticationTokenByConsumerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RevokeAuthenticationTokenByConsumerHeaders headers = new RevokeAuthenticationTokenByConsumerHeaders();
+        return this.revokeAuthenticationTokenByConsumerWithOptions(instanceId, request, headers, runtime);
     }
 
     /**
@@ -2354,5 +2857,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         UpdateUserPasswordHeaders headers = new UpdateUserPasswordHeaders();
         return this.updateUserPasswordWithOptions(instanceId, applicationId, userId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验认证令牌是否有效。</p>
+     * 
+     * @param request ValidateAuthenticationTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ValidateAuthenticationTokenResponse
+     */
+    public ValidateAuthenticationTokenResponse validateAuthenticationTokenWithOptions(String instanceId, ValidateAuthenticationTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            body.put("token", request.token);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tokenTypeHint)) {
+            body.put("token_type_hint", request.tokenTypeHint);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ValidateAuthenticationToken"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authenticationTokens/_/actions/validate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new ValidateAuthenticationTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验认证令牌是否有效。</p>
+     * 
+     * @param request ValidateAuthenticationTokenRequest
+     * @return ValidateAuthenticationTokenResponse
+     */
+    public ValidateAuthenticationTokenResponse validateAuthenticationToken(String instanceId, ValidateAuthenticationTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.validateAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
     }
 }
