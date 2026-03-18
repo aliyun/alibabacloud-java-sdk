@@ -241,7 +241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates commands for the Alibaba Cloud command-line interface (CLI).</p>
+     * <p>Generates an Alibaba Cloud CLI command dynamically.</p>
      * 
      * @param tmpReq GenerateCLICommandRequest
      * @param headers map
@@ -305,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates commands for the Alibaba Cloud command-line interface (CLI).</p>
+     * <p>Generates an Alibaba Cloud CLI command dynamically.</p>
      * 
      * @param request GenerateCLICommandRequest
      * @return GenerateCLICommandResponse

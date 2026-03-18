@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class GenerateCLICommandShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable aggregation. If you enable this feature, the CLI automatically reads full data by page and aggregates the results.</p>
+     * <p>Enable aggregation. If enabled, the CLI automatically reads full data using pagination and aggregates the results.</p>
      * <blockquote>
      * <p>Warning: </p>
      * </blockquote>
-     * <p>Only List operations that support paging can use this switch.</p>
+     * <p>You can use this option only with List operations that support pagination.</p>
      * <ul>
-     * <li><p>true: enables aggregation.</p>
+     * <li><p>true: Enable</p>
      * </li>
-     * <li><p>false: disables aggregation.</p>
+     * <li><p>false: Disable</p>
      * </li>
      * </ul>
      * 
@@ -24,7 +24,7 @@ public class GenerateCLICommandShrinkRequest extends TeaModel {
     public Boolean aggregatePagination;
 
     /**
-     * <p>The name of the API.</p>
+     * <p>API name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,14 +34,14 @@ public class GenerateCLICommandShrinkRequest extends TeaModel {
     public String api;
 
     /**
-     * <p>The request parameters.</p>
+     * <p>Request parameters.</p>
      */
     @NameInMap("apiParams")
     @Deprecated
     public String apiParamsShrink;
 
     /**
-     * <p>The version of the API.</p>
+     * <p>API version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class GenerateCLICommandShrinkRequest extends TeaModel {
     public String apiVersion;
 
     /**
-     * <p>The request parameters for the API in JSON format. This parameter has a lower priority than \<code>apiParams\\</code>. If \<code>apiParams\\</code> is set, this parameter is ignored.</p>
+     * <p>API input parameters in JSON format. This parameter has lower priority than apiParams. If you set apiParams, this parameter is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -64,12 +64,11 @@ public class GenerateCLICommandShrinkRequest extends TeaModel {
     public String jsonApiParams;
 
     /**
-     * <p>The product code.</p>
+     * <p>Product code.</p>
      * <ul>
-     * <li><p>Call the GetRequestLog operation to obtain the product code from the response.</p>
+     * <li><p>Call the GetRequestLog operation and get the product code from the response.</p>
      * </li>
-     * <li><p>Find the product code in the URL of the product in OpenAPI Portal. For example, &lt;props=&quot;china&quot;&gt;the OpenAPI Portal URL for Short Message Service is https\://api.aliyun.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi.
-     * &lt;props=&quot;intl&quot;&gt;the OpenAPI Portal URL for Short Message Service is https\://api.alibabacloud.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi.</p>
+     * <li><p>Find the product code in the OpenAPI portal URL. For example, the OpenAPI portal URL for Short Message Service is https\://api.aliyun.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi. In international regions, the URL is https\://api.alibabacloud.com/product/Dysmsapi. The product code remains Dysmsapi.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -81,7 +80,7 @@ public class GenerateCLICommandShrinkRequest extends TeaModel {
     public String product;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>Region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

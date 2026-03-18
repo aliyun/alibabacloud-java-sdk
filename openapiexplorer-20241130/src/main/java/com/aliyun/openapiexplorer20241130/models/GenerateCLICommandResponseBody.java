@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateCLICommandResponseBody extends TeaModel {
     /**
-     * <p>The CLI instruction.</p>
+     * <p>CLI command.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun ecs DescribeRegions --ResourceType instance</p>
@@ -14,13 +14,16 @@ public class GenerateCLICommandResponseBody extends TeaModel {
     public String cli;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A707AFA8-1A4C-5B2A-A165-8436C1EA38DB</p>
      */
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("unifiedCli")
+    public String unifiedCli;
 
     public static GenerateCLICommandResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateCLICommandResponseBody self = new GenerateCLICommandResponseBody();
@@ -41,6 +44,14 @@ public class GenerateCLICommandResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GenerateCLICommandResponseBody setUnifiedCli(String unifiedCli) {
+        this.unifiedCli = unifiedCli;
+        return this;
+    }
+    public String getUnifiedCli() {
+        return this.unifiedCli;
     }
 
 }
