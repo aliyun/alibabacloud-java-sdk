@@ -81,6 +81,9 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         @NameInMap("BackupCreateTime")
         public String backupCreateTime;
 
+        @NameInMap("BackupInnerInputUrl")
+        public String backupInnerInputUrl;
+
         @NameInMap("BackupInputName")
         public String backupInputName;
 
@@ -119,6 +122,9 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("InnerInputUrl")
+        public String innerInputUrl;
 
         /**
          * <p>The source name.</p>
@@ -240,6 +246,14 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             return this.backupCreateTime;
         }
 
+        public GetMediaConnectFlowInputResponseBodyContent setBackupInnerInputUrl(String backupInnerInputUrl) {
+            this.backupInnerInputUrl = backupInnerInputUrl;
+            return this;
+        }
+        public String getBackupInnerInputUrl() {
+            return this.backupInnerInputUrl;
+        }
+
         public GetMediaConnectFlowInputResponseBodyContent setBackupInputName(String backupInputName) {
             this.backupInputName = backupInputName;
             return this;
@@ -310,6 +324,14 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetMediaConnectFlowInputResponseBodyContent setInnerInputUrl(String innerInputUrl) {
+            this.innerInputUrl = innerInputUrl;
+            return this;
+        }
+        public String getInnerInputUrl() {
+            return this.innerInputUrl;
         }
 
         public GetMediaConnectFlowInputResponseBodyContent setInputName(String inputName) {

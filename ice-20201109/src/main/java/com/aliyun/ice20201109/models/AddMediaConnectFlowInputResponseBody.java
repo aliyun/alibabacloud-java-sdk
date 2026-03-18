@@ -75,6 +75,9 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
     }
 
     public static class AddMediaConnectFlowInputResponseBodyContent extends TeaModel {
+        @NameInMap("InnerInputUrl")
+        public String innerInputUrl;
+
         /**
          * <p>The source URL.</p>
          * 
@@ -87,6 +90,14 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         public static AddMediaConnectFlowInputResponseBodyContent build(java.util.Map<String, ?> map) throws Exception {
             AddMediaConnectFlowInputResponseBodyContent self = new AddMediaConnectFlowInputResponseBodyContent();
             return TeaModel.build(map, self);
+        }
+
+        public AddMediaConnectFlowInputResponseBodyContent setInnerInputUrl(String innerInputUrl) {
+            this.innerInputUrl = innerInputUrl;
+            return this;
+        }
+        public String getInnerInputUrl() {
+            return this.innerInputUrl;
         }
 
         public AddMediaConnectFlowInputResponseBodyContent setInputUrl(String inputUrl) {

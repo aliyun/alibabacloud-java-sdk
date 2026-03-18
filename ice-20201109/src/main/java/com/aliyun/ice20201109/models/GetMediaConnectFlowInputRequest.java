@@ -14,6 +14,9 @@ public class GetMediaConnectFlowInputRequest extends TeaModel {
     @NameInMap("FlowId")
     public String flowId;
 
+    @NameInMap("WithInternalVip")
+    public String withInternalVip;
+
     public static GetMediaConnectFlowInputRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMediaConnectFlowInputRequest self = new GetMediaConnectFlowInputRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class GetMediaConnectFlowInputRequest extends TeaModel {
     }
     public String getFlowId() {
         return this.flowId;
+    }
+
+    public GetMediaConnectFlowInputRequest setWithInternalVip(String withInternalVip) {
+        this.withInternalVip = withInternalVip;
+        return this;
+    }
+    public String getWithInternalVip() {
+        return this.withInternalVip;
     }
 
 }

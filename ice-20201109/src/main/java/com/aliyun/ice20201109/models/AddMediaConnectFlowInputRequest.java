@@ -121,6 +121,9 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     @NameInMap("SrtPbkeyLen")
     public String srtPbkeyLen;
 
+    @NameInMap("WithInternalVip")
+    public String withInternalVip;
+
     public static AddMediaConnectFlowInputRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMediaConnectFlowInputRequest self = new AddMediaConnectFlowInputRequest();
         return TeaModel.build(map, self);
@@ -212,6 +215,14 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     }
     public String getSrtPbkeyLen() {
         return this.srtPbkeyLen;
+    }
+
+    public AddMediaConnectFlowInputRequest setWithInternalVip(String withInternalVip) {
+        this.withInternalVip = withInternalVip;
+        return this;
+    }
+    public String getWithInternalVip() {
+        return this.withInternalVip;
     }
 
 }
