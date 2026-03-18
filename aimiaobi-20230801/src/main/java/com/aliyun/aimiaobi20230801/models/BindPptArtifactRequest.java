@@ -13,6 +13,9 @@ public class BindPptArtifactRequest extends TeaModel {
     @NameInMap("ArtifactId")
     public Integer artifactId;
 
+    @NameInMap("ExternalUserId")
+    public String externalUserId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -43,6 +46,14 @@ public class BindPptArtifactRequest extends TeaModel {
     }
     public Integer getArtifactId() {
         return this.artifactId;
+    }
+
+    public BindPptArtifactRequest setExternalUserId(String externalUserId) {
+        this.externalUserId = externalUserId;
+        return this;
+    }
+    public String getExternalUserId() {
+        return this.externalUserId;
     }
 
     public BindPptArtifactRequest setTaskId(String taskId) {

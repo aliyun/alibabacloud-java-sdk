@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GetPptArtifactRequest extends TeaModel {
+    @NameInMap("ExternalUserId")
+    public String externalUserId;
+
     /**
      * <strong>example:</strong>
      * <p>5232136</p>
@@ -21,6 +24,14 @@ public class GetPptArtifactRequest extends TeaModel {
     public static GetPptArtifactRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPptArtifactRequest self = new GetPptArtifactRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetPptArtifactRequest setExternalUserId(String externalUserId) {
+        this.externalUserId = externalUserId;
+        return this;
+    }
+    public String getExternalUserId() {
+        return this.externalUserId;
     }
 
     public GetPptArtifactRequest setPptArtifactId(Integer pptArtifactId) {

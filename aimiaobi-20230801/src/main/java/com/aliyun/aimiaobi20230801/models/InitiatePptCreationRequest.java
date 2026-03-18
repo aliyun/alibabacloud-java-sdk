@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class InitiatePptCreationRequest extends TeaModel {
+    @NameInMap("ExternalUserId")
+    public String externalUserId;
+
     @NameInMap("Outline")
     public String outline;
 
@@ -26,6 +29,14 @@ public class InitiatePptCreationRequest extends TeaModel {
     public static InitiatePptCreationRequest build(java.util.Map<String, ?> map) throws Exception {
         InitiatePptCreationRequest self = new InitiatePptCreationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InitiatePptCreationRequest setExternalUserId(String externalUserId) {
+        this.externalUserId = externalUserId;
+        return this;
+    }
+    public String getExternalUserId() {
+        return this.externalUserId;
     }
 
     public InitiatePptCreationRequest setOutline(String outline) {

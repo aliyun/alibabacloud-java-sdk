@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunPptOutlineGenerationRequest extends TeaModel {
+    @NameInMap("ExternalUserId")
+    public String externalUserId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -22,6 +25,14 @@ public class RunPptOutlineGenerationRequest extends TeaModel {
     public static RunPptOutlineGenerationRequest build(java.util.Map<String, ?> map) throws Exception {
         RunPptOutlineGenerationRequest self = new RunPptOutlineGenerationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunPptOutlineGenerationRequest setExternalUserId(String externalUserId) {
+        this.externalUserId = externalUserId;
+        return this;
+    }
+    public String getExternalUserId() {
+        return this.externalUserId;
     }
 
     public RunPptOutlineGenerationRequest setPrompt(String prompt) {

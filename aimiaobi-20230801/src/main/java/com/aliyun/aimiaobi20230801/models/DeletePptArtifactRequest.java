@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class DeletePptArtifactRequest extends TeaModel {
+    @NameInMap("ExternalUserId")
+    public String externalUserId;
+
     @NameInMap("PptArtifactId")
     public String pptArtifactId;
 
@@ -17,6 +20,14 @@ public class DeletePptArtifactRequest extends TeaModel {
     public static DeletePptArtifactRequest build(java.util.Map<String, ?> map) throws Exception {
         DeletePptArtifactRequest self = new DeletePptArtifactRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeletePptArtifactRequest setExternalUserId(String externalUserId) {
+        this.externalUserId = externalUserId;
+        return this;
+    }
+    public String getExternalUserId() {
+        return this.externalUserId;
     }
 
     public DeletePptArtifactRequest setPptArtifactId(String pptArtifactId) {

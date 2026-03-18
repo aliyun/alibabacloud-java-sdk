@@ -673,6 +673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ArtifactId", request.artifactId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
         }
@@ -1893,6 +1897,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePptArtifactResponse deletePptArtifactWithOptions(DeletePptArtifactRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pptArtifactId)) {
             body.put("PptArtifactId", request.pptArtifactId);
         }
@@ -4729,6 +4737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPptArtifactResponse getPptArtifactWithOptions(GetPptArtifactRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pptArtifactId)) {
             body.put("PptArtifactId", request.pptArtifactId);
         }
@@ -4777,6 +4789,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPptConfigResponse getPptConfigWithOptions(GetPptConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -5227,6 +5243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InitiatePptCreationResponse initiatePptCreationWithOptions(InitiatePptCreationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outline)) {
             body.put("Outline", request.outline);
         }
@@ -7420,6 +7440,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             body.put("NextToken", request.nextToken);
         }
@@ -9701,6 +9725,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RunPptOutlineGenerationResponse runPptOutlineGenerationWithOptions(RunPptOutlineGenerationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
             body.put("Prompt", request.prompt);
         }
