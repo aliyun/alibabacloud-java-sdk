@@ -9,6 +9,9 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("projectId")
     public String projectId;
@@ -37,12 +40,18 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
     public static class OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataDataData extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>230</p>
          */
         @NameInMap("count")
         public Integer count;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-02</p>
          */
         @NameInMap("name")
         public String name;
@@ -74,9 +83,17 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
         @NameInMap("Data")
         public java.util.List<OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataDataData> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>51000</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>start the core unsuccessfull.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -116,7 +133,11 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
         public java.util.List<OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataData> data;
 
         /**
+         * <p>appId,appkey</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t000797</p>
          */
         @NameInMap("applicationAccessId")
         public String applicationAccessId;
@@ -150,6 +171,9 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("applicationInternalId")
         public String applicationInternalId;

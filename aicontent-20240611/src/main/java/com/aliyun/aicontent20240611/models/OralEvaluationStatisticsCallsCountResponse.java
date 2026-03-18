@@ -12,6 +12,9 @@ public class OralEvaluationStatisticsCallsCountResponse extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("projectId")
     public String projectId;
@@ -40,12 +43,18 @@ public class OralEvaluationStatisticsCallsCountResponse extends TeaModel {
     public static class OralEvaluationStatisticsCallsCountResponseProjectDataApplicationDataData extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("count")
         public Integer count;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01</p>
          */
         @NameInMap("name")
         public String name;
@@ -78,7 +87,11 @@ public class OralEvaluationStatisticsCallsCountResponse extends TeaModel {
         public java.util.List<OralEvaluationStatisticsCallsCountResponseProjectDataApplicationDataData> data;
 
         /**
+         * <p>appkey</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a0007g7</p>
          */
         @NameInMap("applicationAccessId")
         public String applicationAccessId;
@@ -112,6 +125,9 @@ public class OralEvaluationStatisticsCallsCountResponse extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("applicationInternalId")
         public String applicationInternalId;

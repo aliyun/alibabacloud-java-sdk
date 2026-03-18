@@ -12,6 +12,9 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("projectId")
     public String projectId;
@@ -46,6 +49,9 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01</p>
          */
         @NameInMap("name")
         public String name;
@@ -78,7 +84,11 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
         public java.util.List<OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationDataData> data;
 
         /**
+         * <p>appkey</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a0007g7</p>
          */
         @NameInMap("applicationAccessId")
         public String applicationAccessId;
@@ -112,6 +122,9 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("applicationInternalId")
         public String applicationInternalId;

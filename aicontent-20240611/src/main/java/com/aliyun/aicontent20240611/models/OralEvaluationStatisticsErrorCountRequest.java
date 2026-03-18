@@ -4,21 +4,43 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class OralEvaluationStatisticsErrorCountRequest extends TeaModel {
+    /**
+     * <p>appId,appkey</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a0007g7</p>
+     */
     @NameInMap("applicationAccessId")
     public String applicationAccessId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-08-22 06:24:53</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
     @NameInMap("errorCode")
     public java.util.List<String> errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DAY</p>
+     */
     @NameInMap("granularity")
     public String granularity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("projectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-09-27 09:32:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

@@ -39,10 +39,6 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
     @NameInMap("serviceCode")
     public String serviceCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AI算法模型-个性化文生图-在线按量调用</p>
-     */
     @NameInMap("serviceName")
     public String serviceName;
 

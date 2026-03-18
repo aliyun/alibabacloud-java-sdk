@@ -4,18 +4,40 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class OralEvaluationStatisticsCallsCountRequest extends TeaModel {
+    /**
+     * <p>appId,appkey</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a0007g7</p>
+     */
     @NameInMap("applicationAccessId")
     public String applicationAccessId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-10-15 07:40:01</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DAY</p>
+     */
     @NameInMap("granularity")
     public String granularity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("projectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-10-14 07:40:01</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
