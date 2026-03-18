@@ -125,6 +125,9 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("PortRange")
+        public String portRange;
+
         /**
          * <p>The protocol type of the protected object. Valid values:</p>
          * <ul>
@@ -206,6 +209,14 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public ListPolicyAttachmentResponseBodyAttachmentList setPortRange(String portRange) {
+            this.portRange = portRange;
+            return this;
+        }
+        public String getPortRange() {
+            return this.portRange;
         }
 
         public ListPolicyAttachmentResponseBodyAttachmentList setProtocol(String protocol) {

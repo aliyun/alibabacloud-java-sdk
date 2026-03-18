@@ -26,6 +26,9 @@ public class DetachFromPolicyRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    @NameInMap("PortVersion")
+    public String portVersion;
+
     public static DetachFromPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DetachFromPolicyRequest self = new DetachFromPolicyRequest();
         return TeaModel.build(map, self);
@@ -47,6 +50,14 @@ public class DetachFromPolicyRequest extends TeaModel {
         return this.policyType;
     }
 
+    public DetachFromPolicyRequest setPortVersion(String portVersion) {
+        this.portVersion = portVersion;
+        return this;
+    }
+    public String getPortVersion() {
+        return this.portVersion;
+    }
+
     public static class DetachFromPolicyRequestIpPortProtocolList extends TeaModel {
         /**
          * <p>The IP address of the protected object.</p>
@@ -66,6 +77,9 @@ public class DetachFromPolicyRequest extends TeaModel {
          */
         @NameInMap("Port")
         public Integer port;
+
+        @NameInMap("PortRange")
+        public String portRange;
 
         /**
          * <p>The protocol type of the protected object. Valid values:</p>
@@ -99,6 +113,14 @@ public class DetachFromPolicyRequest extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public DetachFromPolicyRequestIpPortProtocolList setPortRange(String portRange) {
+            this.portRange = portRange;
+            return this;
+        }
+        public String getPortRange() {
+            return this.portRange;
         }
 
         public DetachFromPolicyRequestIpPortProtocolList setProtocol(String protocol) {

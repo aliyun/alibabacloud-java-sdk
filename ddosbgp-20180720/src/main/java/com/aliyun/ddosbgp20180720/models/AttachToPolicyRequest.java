@@ -21,6 +21,9 @@ public class AttachToPolicyRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    @NameInMap("PortVersion")
+    public String portVersion;
+
     public static AttachToPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachToPolicyRequest self = new AttachToPolicyRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class AttachToPolicyRequest extends TeaModel {
     }
     public String getPolicyId() {
         return this.policyId;
+    }
+
+    public AttachToPolicyRequest setPortVersion(String portVersion) {
+        this.portVersion = portVersion;
+        return this;
+    }
+    public String getPortVersion() {
+        return this.portVersion;
     }
 
     public static class AttachToPolicyRequestIpPortProtocolList extends TeaModel {
@@ -64,6 +75,9 @@ public class AttachToPolicyRequest extends TeaModel {
          */
         @NameInMap("Port")
         public Integer port;
+
+        @NameInMap("PortRange")
+        public String portRange;
 
         /**
          * <p>The protocol type of the protected object. Valid values:</p>
@@ -100,6 +114,14 @@ public class AttachToPolicyRequest extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public AttachToPolicyRequestIpPortProtocolList setPortRange(String portRange) {
+            this.portRange = portRange;
+            return this;
+        }
+        public String getPortRange() {
+            return this.portRange;
         }
 
         public AttachToPolicyRequestIpPortProtocolList setProtocol(String protocol) {

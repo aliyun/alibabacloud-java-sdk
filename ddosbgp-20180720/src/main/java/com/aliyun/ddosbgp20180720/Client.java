@@ -243,6 +243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyId", request.policyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.portVersion)) {
+            query.put("PortVersion", request.portVersion);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -372,94 +376,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a scheduling rule of an on-demand instance.</p>
-     * 
-     * @param request ConfigSchedruleOnDemandRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ConfigSchedruleOnDemandResponse
-     */
-    public ConfigSchedruleOnDemandResponse configSchedruleOnDemandWithOptions(ConfigSchedruleOnDemandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleAction)) {
-            query.put("RuleAction", request.ruleAction);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleConditionCnt)) {
-            query.put("RuleConditionCnt", request.ruleConditionCnt);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleConditionKpps)) {
-            query.put("RuleConditionKpps", request.ruleConditionKpps);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleConditionMbps)) {
-            query.put("RuleConditionMbps", request.ruleConditionMbps);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
-            query.put("RuleName", request.ruleName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleSwitch)) {
-            query.put("RuleSwitch", request.ruleSwitch);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleUndoBeginTime)) {
-            query.put("RuleUndoBeginTime", request.ruleUndoBeginTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleUndoEndTime)) {
-            query.put("RuleUndoEndTime", request.ruleUndoEndTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleUndoMode)) {
-            query.put("RuleUndoMode", request.ruleUndoMode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.timeZone)) {
-            query.put("TimeZone", request.timeZone);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ConfigSchedruleOnDemand"),
-            new TeaPair("version", "2018-07-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigSchedruleOnDemandResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Modifies a scheduling rule of an on-demand instance.</p>
-     * 
-     * @param request ConfigSchedruleOnDemandRequest
-     * @return ConfigSchedruleOnDemandResponse
-     */
-    public ConfigSchedruleOnDemandResponse configSchedruleOnDemand(ConfigSchedruleOnDemandRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.configSchedruleOnDemandWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Creates a mitigation policy.</p>
      * 
      * @param request CreatePolicyRequest
@@ -471,6 +387,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portVersion)) {
+            query.put("PortVersion", request.portVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -504,94 +424,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatePolicyResponse createPolicy(CreatePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPolicyWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Creates a scheduling rule for an on-demand instance.</p>
-     * 
-     * @param request CreateSchedruleOnDemandRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateSchedruleOnDemandResponse
-     */
-    public CreateSchedruleOnDemandResponse createSchedruleOnDemandWithOptions(CreateSchedruleOnDemandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleAction)) {
-            query.put("RuleAction", request.ruleAction);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleConditionCnt)) {
-            query.put("RuleConditionCnt", request.ruleConditionCnt);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleConditionKpps)) {
-            query.put("RuleConditionKpps", request.ruleConditionKpps);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleConditionMbps)) {
-            query.put("RuleConditionMbps", request.ruleConditionMbps);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
-            query.put("RuleName", request.ruleName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleSwitch)) {
-            query.put("RuleSwitch", request.ruleSwitch);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleUndoBeginTime)) {
-            query.put("RuleUndoBeginTime", request.ruleUndoBeginTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleUndoEndTime)) {
-            query.put("RuleUndoEndTime", request.ruleUndoEndTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleUndoMode)) {
-            query.put("RuleUndoMode", request.ruleUndoMode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.timeZone)) {
-            query.put("TimeZone", request.timeZone);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateSchedruleOnDemand"),
-            new TeaPair("version", "2018-07-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSchedruleOnDemandResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Creates a scheduling rule for an on-demand instance.</p>
-     * 
-     * @param request CreateSchedruleOnDemandRequest
-     * @return CreateSchedruleOnDemandResponse
-     */
-    public CreateSchedruleOnDemandResponse createSchedruleOnDemand(CreateSchedruleOnDemandRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createSchedruleOnDemandWithOptions(request, runtime);
     }
 
     /**
@@ -828,58 +660,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteRdMemberListResponse deleteRdMemberList(DeleteRdMemberListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRdMemberListWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Deletes a scheduling rule of an anti-DDoS diversion instance.</p>
-     * 
-     * @param request DeleteSchedruleOnDemandRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteSchedruleOnDemandResponse
-     */
-    public DeleteSchedruleOnDemandResponse deleteSchedruleOnDemandWithOptions(DeleteSchedruleOnDemandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
-            query.put("RuleName", request.ruleName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteSchedruleOnDemand"),
-            new TeaPair("version", "2018-07-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSchedruleOnDemandResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Deletes a scheduling rule of an anti-DDoS diversion instance.</p>
-     * 
-     * @param request DeleteSchedruleOnDemandRequest
-     * @return DeleteSchedruleOnDemandResponse
-     */
-    public DeleteSchedruleOnDemandResponse deleteSchedruleOnDemand(DeleteSchedruleOnDemandRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteSchedruleOnDemandWithOptions(request, runtime);
     }
 
     /**
@@ -1198,9 +978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  </p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Queries the details of all Anti-DDoS Origin instances.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of all Anti-DDoS Origin instances.</p>
@@ -1283,9 +1061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  </p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Queries the details of all Anti-DDoS Origin instances.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of all Anti-DDoS Origin instances.</p>
@@ -1348,136 +1124,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInstanceSpecsResponse describeInstanceSpecs(DescribeInstanceSpecsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceSpecsWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.</p>
-     * <h3><a href="#qps-"></a>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.</p>
-     * 
-     * @param request DescribeOnDemandDdosEventRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeOnDemandDdosEventResponse
-     */
-    public DescribeOnDemandDdosEventResponse describeOnDemandDdosEventWithOptions(DescribeOnDemandDdosEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
-            query.put("EndTime", request.endTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
-            query.put("Ip", request.ip);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
-            query.put("PageNo", request.pageNo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
-            query.put("StartTime", request.startTime);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeOnDemandDdosEvent"),
-            new TeaPair("version", "2018-07-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOnDemandDdosEventResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.</p>
-     * <h3><a href="#qps-"></a>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.</p>
-     * 
-     * @param request DescribeOnDemandDdosEventRequest
-     * @return DescribeOnDemandDdosEventResponse
-     */
-    public DescribeOnDemandDdosEventResponse describeOnDemandDdosEvent(DescribeOnDemandDdosEventRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeOnDemandDdosEventWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the details of anti-DDoS diversion instances.</p>
-     * 
-     * @param request DescribeOnDemandInstanceStatusRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeOnDemandInstanceStatusResponse
-     */
-    public DescribeOnDemandInstanceStatusResponse describeOnDemandInstanceStatusWithOptions(DescribeOnDemandInstanceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
-            query.put("InstanceIdList", request.instanceIdList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeOnDemandInstanceStatus"),
-            new TeaPair("version", "2018-07-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOnDemandInstanceStatusResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the details of anti-DDoS diversion instances.</p>
-     * 
-     * @param request DescribeOnDemandInstanceStatusRequest
-     * @return DescribeOnDemandInstanceStatusResponse
-     */
-    public DescribeOnDemandInstanceStatusResponse describeOnDemandInstanceStatus(DescribeOnDemandInstanceStatusRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeOnDemandInstanceStatusWithOptions(request, runtime);
     }
 
     /**
@@ -1654,7 +1300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries members that are managed by using the multi-account management feature.</p>
+     * <p>Queries members in a resource directory.</p>
      * 
      * @param request DescribeRdMemberListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1694,7 +1340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries members that are managed by using the multi-account management feature.</p>
+     * <p>Queries members in a resource directory.</p>
      * 
      * @param request DescribeRdMemberListRequest
      * @return DescribeRdMemberListResponse
@@ -1901,6 +1547,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
             query.put("PolicyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portVersion)) {
+            query.put("PortVersion", request.portVersion);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2187,6 +1837,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyType", request.policyType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.portVersion)) {
+            query.put("PortVersion", request.portVersion);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2351,6 +2005,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies a mitigation policy.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies a mitigation policy.</p>
      * 
@@ -2383,6 +2040,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.portVersion)) {
+            query.put("PortVersion", request.portVersion);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2401,6 +2062,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies a mitigation policy.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies a mitigation policy.</p>
      * 
@@ -2442,6 +2106,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portVersion)) {
+            query.put("PortVersion", request.portVersion);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2544,7 +2212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动资源组</p>
+     * <p>Changes the resource group to which a cloud resource belongs.</p>
      * 
      * @param request MoveResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2588,7 +2256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动资源组</p>
+     * <p>Changes the resource group to which a cloud resource belongs.</p>
      * 
      * @param request MoveResourceGroupRequest
      * @return MoveResourceGroupResponse
@@ -2596,54 +2264,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MoveResourceGroupResponse moveResourceGroup(MoveResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.moveResourceGroupWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the scheduling rule of an on-demand instance.</p>
-     * 
-     * @param request QuerySchedruleOnDemandRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return QuerySchedruleOnDemandResponse
-     */
-    public QuerySchedruleOnDemandResponse querySchedruleOnDemandWithOptions(QuerySchedruleOnDemandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QuerySchedruleOnDemand"),
-            new TeaPair("version", "2018-07-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySchedruleOnDemandResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the scheduling rule of an on-demand instance.</p>
-     * 
-     * @param request QuerySchedruleOnDemandRequest
-     * @return QuerySchedruleOnDemandResponse
-     */
-    public QuerySchedruleOnDemandResponse querySchedruleOnDemand(QuerySchedruleOnDemandRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.querySchedruleOnDemandWithOptions(request, runtime);
     }
 
     /**
@@ -2688,58 +2308,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReleaseDdosOriginInstanceResponse releaseDdosOriginInstance(ReleaseDdosOriginInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseDdosOriginInstanceWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Specifies the scheduling mode for on-demand instances.</p>
-     * 
-     * @param request SetInstanceModeOnDemandRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return SetInstanceModeOnDemandResponse
-     */
-    public SetInstanceModeOnDemandResponse setInstanceModeOnDemandWithOptions(SetInstanceModeOnDemandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
-            query.put("InstanceIdList", request.instanceIdList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
-            query.put("Mode", request.mode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SetInstanceModeOnDemand"),
-            new TeaPair("version", "2018-07-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetInstanceModeOnDemandResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Specifies the scheduling mode for on-demand instances.</p>
-     * 
-     * @param request SetInstanceModeOnDemandRequest
-     * @return SetInstanceModeOnDemandResponse
-     */
-    public SetInstanceModeOnDemandResponse setInstanceModeOnDemand(SetInstanceModeOnDemandRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.setInstanceModeOnDemandWithOptions(request, runtime);
     }
 
     /**

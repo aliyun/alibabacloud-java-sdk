@@ -350,6 +350,15 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>The total IP traffic of regular Alibaba Cloud services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6302081067</p>
+         */
+        @NameInMap("TotalBillFlow")
+        public Long totalBillFlow;
+
+        /**
          * <p>The traffic of EIPs with Anti-DDoS (Enhanced) enabled. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
@@ -385,6 +394,14 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         }
         public Long getTime() {
             return this.time;
+        }
+
+        public DescribeDdosOriginInstanceBillResponseBodyFlowList setTotalBillFlow(Long totalBillFlow) {
+            this.totalBillFlow = totalBillFlow;
+            return this;
+        }
+        public Long getTotalBillFlow() {
+            return this.totalBillFlow;
         }
 
         public DescribeDdosOriginInstanceBillResponseBodyFlowList setTotalFlow(Long totalFlow) {

@@ -53,6 +53,7 @@ public class DeleteIpRequest extends TeaModel {
      * <p>rg-acfm2pz25js****</p>
      */
     @NameInMap("ResourceGroupId")
+    @Deprecated
     public String resourceGroupId;
 
     public static DeleteIpRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -84,6 +85,7 @@ public class DeleteIpRequest extends TeaModel {
         return this.regionId;
     }
 
+    @Deprecated
     public DeleteIpRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;

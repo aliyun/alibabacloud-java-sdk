@@ -63,6 +63,9 @@ public class ModifyPolicyRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PortVersion")
+    public String portVersion;
+
     public static ModifyPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPolicyRequest self = new ModifyPolicyRequest();
         return TeaModel.build(map, self);
@@ -98,6 +101,14 @@ public class ModifyPolicyRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyPolicyRequest setPortVersion(String portVersion) {
+        this.portVersion = portVersion;
+        return this;
+    }
+    public String getPortVersion() {
+        return this.portVersion;
     }
 
     public static class ModifyPolicyRequestContentFingerPrintRuleList extends TeaModel {
@@ -354,13 +365,42 @@ public class ModifyPolicyRequest extends TeaModel {
 
     }
 
+    public static class ModifyPolicyRequestContentL4RuleListConditionListOffset extends TeaModel {
+        @NameInMap("End")
+        public Integer end;
+
+        @NameInMap("Start")
+        public Integer start;
+
+        public static ModifyPolicyRequestContentL4RuleListConditionListOffset build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPolicyRequestContentL4RuleListConditionListOffset self = new ModifyPolicyRequestContentL4RuleListConditionListOffset();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyRequestContentL4RuleListConditionListOffset setEnd(Integer end) {
+            this.end = end;
+            return this;
+        }
+        public Integer getEnd() {
+            return this.end;
+        }
+
+        public ModifyPolicyRequestContentL4RuleListConditionListOffset setStart(Integer start) {
+            this.start = start;
+            return this;
+        }
+        public Integer getStart() {
+            return this.start;
+        }
+
+    }
+
     public static class ModifyPolicyRequestContentL4RuleListConditionList extends TeaModel {
         /**
          * <p>The term that is used for matching.</p>
          * <blockquote>
          * <p> If Method is set to <strong>char</strong>, the value of this parameter must be ASCII strings. If Method is set to <strong>hex</strong>, the value of this parameter must be hexadecimal strings. Maximum length: 2,048.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -368,9 +408,11 @@ public class ModifyPolicyRequest extends TeaModel {
         @NameInMap("Arg")
         public String arg;
 
+        @NameInMap("Content")
+        public String content;
+
         /**
          * <p>The number of bytes from the start position for matching. Valid values: <strong>1</strong> to <strong>2048</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -378,9 +420,17 @@ public class ModifyPolicyRequest extends TeaModel {
         @NameInMap("Depth")
         public Integer depth;
 
+        @NameInMap("Encode")
+        public String encode;
+
+        @NameInMap("Offset")
+        public ModifyPolicyRequestContentL4RuleListConditionListOffset offset;
+
+        @NameInMap("Pattern")
+        public String pattern;
+
         /**
          * <p>The start position for matching. Valid values: <strong>0</strong> to <strong>2047</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -401,12 +451,44 @@ public class ModifyPolicyRequest extends TeaModel {
             return this.arg;
         }
 
+        public ModifyPolicyRequestContentL4RuleListConditionList setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
         public ModifyPolicyRequestContentL4RuleListConditionList setDepth(Integer depth) {
             this.depth = depth;
             return this;
         }
         public Integer getDepth() {
             return this.depth;
+        }
+
+        public ModifyPolicyRequestContentL4RuleListConditionList setEncode(String encode) {
+            this.encode = encode;
+            return this;
+        }
+        public String getEncode() {
+            return this.encode;
+        }
+
+        public ModifyPolicyRequestContentL4RuleListConditionList setOffset(ModifyPolicyRequestContentL4RuleListConditionListOffset offset) {
+            this.offset = offset;
+            return this;
+        }
+        public ModifyPolicyRequestContentL4RuleListConditionListOffset getOffset() {
+            return this.offset;
+        }
+
+        public ModifyPolicyRequestContentL4RuleListConditionList setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
         }
 
         public ModifyPolicyRequestContentL4RuleListConditionList setPosition(Integer position) {
@@ -425,7 +507,6 @@ public class ModifyPolicyRequest extends TeaModel {
          * <ul>
          * <li><strong>2</strong>: The traffic is discarded.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -435,14 +516,12 @@ public class ModifyPolicyRequest extends TeaModel {
 
         /**
          * <p>The match conditions.</p>
-         * <p>This parameter is required.</p>
          */
         @NameInMap("ConditionList")
         public java.util.List<ModifyPolicyRequestContentL4RuleListConditionList> conditionList;
 
         /**
          * <p>The minimum number of bytes in a session to trigger matching. Valid values: <strong>0</strong> to <strong>2048</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -456,7 +535,6 @@ public class ModifyPolicyRequest extends TeaModel {
          * <li><strong>0</strong>: If the rule is matched, the action specified in the rule is performed.</li>
          * <li><strong>1</strong>: If the rule is not matched, the action specified in the rule is performed.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -470,7 +548,6 @@ public class ModifyPolicyRequest extends TeaModel {
          * <li><strong>char</strong>: string match.</li>
          * <li><strong>hex</strong>: hexadecimal string match.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>char</p>
@@ -493,7 +570,6 @@ public class ModifyPolicyRequest extends TeaModel {
          * <blockquote>
          * <p> A smaller value indicates a higher priority.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -923,6 +999,9 @@ public class ModifyPolicyRequest extends TeaModel {
 
         /**
          * <p>Specifies whether to enable port-specific mitigation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableL4Defense")
         public Boolean enableL4Defense;

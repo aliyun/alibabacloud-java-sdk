@@ -51,6 +51,9 @@ public class ListPolicyAttachmentRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    @NameInMap("PortVersion")
+    public String portVersion;
+
     public static ListPolicyAttachmentRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPolicyAttachmentRequest self = new ListPolicyAttachmentRequest();
         return TeaModel.build(map, self);
@@ -96,6 +99,14 @@ public class ListPolicyAttachmentRequest extends TeaModel {
         return this.policyType;
     }
 
+    public ListPolicyAttachmentRequest setPortVersion(String portVersion) {
+        this.portVersion = portVersion;
+        return this;
+    }
+    public String getPortVersion() {
+        return this.portVersion;
+    }
+
     public static class ListPolicyAttachmentRequestIpPortProtocolList extends TeaModel {
         /**
          * <p>The IP address of the protected object.</p>
@@ -115,6 +126,9 @@ public class ListPolicyAttachmentRequest extends TeaModel {
          */
         @NameInMap("Port")
         public Integer port;
+
+        @NameInMap("PortRange")
+        public String portRange;
 
         /**
          * <p>The protocol type of the protected object. Valid values:</p>
@@ -148,6 +162,14 @@ public class ListPolicyAttachmentRequest extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public ListPolicyAttachmentRequestIpPortProtocolList setPortRange(String portRange) {
+            this.portRange = portRange;
+            return this;
+        }
+        public String getPortRange() {
+            return this.portRange;
         }
 
         public ListPolicyAttachmentRequestIpPortProtocolList setProtocol(String protocol) {

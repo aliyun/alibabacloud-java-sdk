@@ -299,6 +299,36 @@ public class ListPolicyResponseBody extends TeaModel {
 
     }
 
+    public static class ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset extends TeaModel {
+        @NameInMap("End")
+        public Integer end;
+
+        @NameInMap("Start")
+        public Integer start;
+
+        public static ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset build(java.util.Map<String, ?> map) throws Exception {
+            ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset self = new ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset setEnd(Integer end) {
+            this.end = end;
+            return this;
+        }
+        public Integer getEnd() {
+            return this.end;
+        }
+
+        public ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset setStart(Integer start) {
+            this.start = start;
+            return this;
+        }
+        public Integer getStart() {
+            return this.start;
+        }
+
+    }
+
     public static class ListPolicyResponseBodyPolicyListContentL4RuleListConditionList extends TeaModel {
         /**
          * <p>The term that is used for matching.</p>
@@ -312,6 +342,9 @@ public class ListPolicyResponseBody extends TeaModel {
         @NameInMap("Arg")
         public String arg;
 
+        @NameInMap("Content")
+        public String content;
+
         /**
          * <p>The number of bytes from the start position for matching. Valid values: <strong>1</strong> to <strong>2048</strong>.</p>
          * 
@@ -320,6 +353,15 @@ public class ListPolicyResponseBody extends TeaModel {
          */
         @NameInMap("Depth")
         public Integer depth;
+
+        @NameInMap("Encode")
+        public String encode;
+
+        @NameInMap("Offset")
+        public ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset offset;
+
+        @NameInMap("Pattern")
+        public String pattern;
 
         /**
          * <p>The start position for matching. Valid values: <strong>0</strong> to <strong>2047</strong>.</p>
@@ -343,12 +385,44 @@ public class ListPolicyResponseBody extends TeaModel {
             return this.arg;
         }
 
+        public ListPolicyResponseBodyPolicyListContentL4RuleListConditionList setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
         public ListPolicyResponseBodyPolicyListContentL4RuleListConditionList setDepth(Integer depth) {
             this.depth = depth;
             return this;
         }
         public Integer getDepth() {
             return this.depth;
+        }
+
+        public ListPolicyResponseBodyPolicyListContentL4RuleListConditionList setEncode(String encode) {
+            this.encode = encode;
+            return this;
+        }
+        public String getEncode() {
+            return this.encode;
+        }
+
+        public ListPolicyResponseBodyPolicyListContentL4RuleListConditionList setOffset(ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset offset) {
+            this.offset = offset;
+            return this;
+        }
+        public ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset getOffset() {
+            return this.offset;
+        }
+
+        public ListPolicyResponseBodyPolicyListContentL4RuleListConditionList setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
         }
 
         public ListPolicyResponseBodyPolicyListContentL4RuleListConditionList setPosition(Integer position) {
@@ -874,6 +948,9 @@ public class ListPolicyResponseBody extends TeaModel {
         @NameInMap("PortRuleList")
         public java.util.List<ListPolicyResponseBodyPolicyListContentPortRuleList> portRuleList;
 
+        @NameInMap("PortVersion")
+        public String portVersion;
+
         /**
          * <p>The ports whose traffic is filtered out by the filtering policies for UDP reflection attacks.</p>
          */
@@ -980,6 +1057,14 @@ public class ListPolicyResponseBody extends TeaModel {
         }
         public java.util.List<ListPolicyResponseBodyPolicyListContentPortRuleList> getPortRuleList() {
             return this.portRuleList;
+        }
+
+        public ListPolicyResponseBodyPolicyListContent setPortVersion(String portVersion) {
+            this.portVersion = portVersion;
+            return this;
+        }
+        public String getPortVersion() {
+            return this.portVersion;
         }
 
         public ListPolicyResponseBodyPolicyListContent setReflectBlockUdpPortList(java.util.List<Integer> reflectBlockUdpPortList) {

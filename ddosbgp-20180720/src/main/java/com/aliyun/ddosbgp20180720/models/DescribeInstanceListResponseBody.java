@@ -11,7 +11,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
     public java.util.List<DescribeInstanceListResponseBodyInstanceList> instanceList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The details about the Anti-DDoS Origin instance.</p>
      * 
      * <strong>example:</strong>
      * <p>381D5D33-BB8F-395F-8EE4-AE3BB4B523C4</p>
@@ -20,7 +20,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of Anti-DDoS Origin instances.</p>
+     * <p>The details about the Anti-DDoS Origin instances.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
     public static class DescribeInstanceListResponseBodyInstanceListAutoProtectCondition extends TeaModel {
         /**
-         * <p>The events that trigger automatic association.</p>
+         * <p>Events which result in auto binding.</p>
          */
         @NameInMap("Events")
         public java.util.List<String> events;
@@ -81,35 +81,24 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
     public static class DescribeInstanceListResponseBodyInstanceList extends TeaModel {
         /**
-         * <p>The condition that triggers automatic association of the instance with an object.</p>
+         * <p>The event that triggers automatic association. Valid values:</p>
+         * <ul>
+         * <li><strong>any</strong>: The instance is automatically associated with an object based on traffic scrubbing events or blackhole filtering events.</li>
+         * <li><strong>clean</strong>: The instance is automatically associated with an object based on traffic scrubbing events.</li>
+         * <li><strong>blackhole</strong>: The instance is automatically associated with an object based on blackhole filtering events.</li>
+         * </ul>
          */
         @NameInMap("AutoProtectCondition")
         public DescribeInstanceListResponseBodyInstanceListAutoProtectCondition autoProtectCondition;
 
         /**
-         * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
+         * <p>The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("AutoRenewal")
         public Boolean autoRenewal;
-
-        /**
-         * <p>The number of protected public IP addresses for which blackhole filtering is triggered.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118692.html">DeleteBlackhole</a> operation to deactivate blackhole filtering for a protected IP address.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
-        @NameInMap("BlackholdingCount")
-        public String blackholdingCount;
 
         /**
          * <p>The type of the instance.</p>
@@ -119,10 +108,75 @@ public class DescribeInstanceListResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("BlackholdingCount")
+        public String blackholdingCount;
+
+        /**
+         * <p>The condition that triggers automatic association of the instance with an object.</p>
+         * 
+         * <strong>example:</strong>
          * <p>ddos_ddosorigin_public_cn</p>
          */
         @NameInMap("CommodityType")
         public String commodityType;
+
+        /**
+         * <p>Indicates whether overdue payments exist. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Overdue payments do not exist.</li>
+         * <li><strong>1</strong>: Overdue payments exist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("CoverageType")
+        public Integer coverageType;
+
+        /**
+         * <p>The events that trigger automatic association.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("DebtStatus")
+        public Long debtStatus;
+
+        /**
+         * <p>The time when the instance was purchased. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640275200000</p>
+         */
+        @NameInMap("ExpireTime")
+        public Long expireTime;
+
+        /**
+         * <p>The mitigation plan of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the Professional mitigation plan</li>
+         * <li><strong>1</strong>: the Enterprise mitigation plan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1592886047000</p>
+         */
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
+        /**
+         * <p>The number of protected public IP addresses for which blackhole filtering is triggered.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118692.html">DeleteBlackhole</a> operation to deactivate blackhole filtering for a protected IP address.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-oew1pjrk****</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         /**
          * <p>The application scope of the instance.</p>
@@ -136,64 +190,26 @@ public class DescribeInstanceListResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        @NameInMap("CoverageType")
-        public Integer coverageType;
-
-        @NameInMap("DebtStatus")
-        public Long debtStatus;
-
-        /**
-         * <p>The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1640275200000</p>
-         */
-        @NameInMap("ExpireTime")
-        public Long expireTime;
-
-        /**
-         * <p>The time when the instance was purchased. The value is a UNIX timestamp. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1592886047000</p>
-         */
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
-
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ddosbgp-cn-oew1pjrk****</p>
-         */
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        /**
-         * <p>The mitigation plan of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: the Professional mitigation plan</li>
-         * <li><strong>1</strong>: the Enterprise mitigation plan</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The protocol type of the IP address asset that is protected by the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>Ipv4</strong></li>
-         * <li><strong>Ipv6</strong></li>
-         * </ul>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
          */
         @NameInMap("IpType")
         public String ipType;
+
+        /**
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gamebox</p>
+         */
+        @NameInMap("Product")
+        public String product;
 
         /**
          * <p>The type of the cloud service that is associated with the Anti-DDoS Origin instance By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.</p>
@@ -204,26 +220,25 @@ public class DescribeInstanceListResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>gamebox</p>
-         */
-        @NameInMap("Product")
-        public String product;
-
-        /**
-         * <p>The description of the instance.</p>
-         * 
-         * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek3ccjxxxxx</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: normal</li>
-         * <li><strong>2</strong>: expired</li>
-         * <li><strong>3</strong>: released</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,6 +354,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public DescribeInstanceListResponseBodyInstanceList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeInstanceListResponseBodyInstanceList setStatus(String status) {

@@ -14,7 +14,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The configuration of log analysis for the Anti-DDoS Origin instance.</p>
+     * <p>The configuration of log analysis for the Anti-DDoS Origin instances.</p>
      */
     @NameInMap("SlsConfigStatus")
     public java.util.List<ListOpenedAccessLogInstancesResponseBodySlsConfigStatus> slsConfigStatus;

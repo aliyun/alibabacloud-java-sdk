@@ -36,6 +36,29 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the operation. Valid values:</p>
+     * <ul>
+     * <li><strong>3</strong>: Add an IP address to the instance.</li>
+     * <li><strong>4</strong>: Remove an IP address from the instance.</li>
+     * <li><strong>5</strong>: Downgrade the instance.</li>
+     * <li><strong>6</strong>: Deactivate blackhole filtering.</li>
+     * <li><strong>7</strong>: Reset the number of times that you can deactivate blackhole filtering.</li>
+     * <li><strong>8</strong>: Restore the mitigation capability.</li>
+     * <li><strong>9</strong>: Add an asset group.</li>
+     * <li><strong>10</strong>: Remove an asset group.</li>
+     * <li><strong>11</strong>: Enable the metering method of daily 95th percentile for the burstable clean bandwidth feature.</li>
+     * <li><strong>12</strong>: Enable the metering method of monthly 95th percentile for the burstable clean bandwidth feature.</li>
+     * <li><strong>13</strong>: Periodically switch between the metering methods of daily 95th percentile and monthly 95th percentile for the burstable clean bandwidth feature.</li>
+     * <li><strong>14</strong>: Disable the metering method of daily 95th percentile for the burstable clean bandwidth feature.</li>
+     * <li><strong>15</strong>: Disable the metering method of monthly 95th percentile for the burstable clean bandwidth feature.</li>
+     * <li><strong>16</strong>: Disable burstable clean bandwidth due to overdue payments.</li>
+     * <li><strong>17</strong>: Disable burstable clean bandwidth due to instance expiration.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("OpAction")
     public Integer opAction;
 

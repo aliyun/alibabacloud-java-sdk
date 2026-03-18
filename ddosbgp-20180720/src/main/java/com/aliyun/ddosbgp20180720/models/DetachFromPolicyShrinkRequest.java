@@ -26,6 +26,9 @@ public class DetachFromPolicyShrinkRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    @NameInMap("PortVersion")
+    public String portVersion;
+
     public static DetachFromPolicyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DetachFromPolicyShrinkRequest self = new DetachFromPolicyShrinkRequest();
         return TeaModel.build(map, self);
@@ -45,6 +48,14 @@ public class DetachFromPolicyShrinkRequest extends TeaModel {
     }
     public String getPolicyType() {
         return this.policyType;
+    }
+
+    public DetachFromPolicyShrinkRequest setPortVersion(String portVersion) {
+        this.portVersion = portVersion;
+        return this;
+    }
+    public String getPortVersion() {
+        return this.portVersion;
     }
 
 }

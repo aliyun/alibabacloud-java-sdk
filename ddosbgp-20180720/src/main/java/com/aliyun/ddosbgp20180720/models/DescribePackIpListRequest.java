@@ -90,6 +90,7 @@ public class DescribePackIpListRequest extends TeaModel {
      * <p>rg-acfm2pz25js****</p>
      */
     @NameInMap("ResourceGroupId")
+    @Deprecated
     public String resourceGroupId;
 
     public static DescribePackIpListRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -153,6 +154,7 @@ public class DescribePackIpListRequest extends TeaModel {
         return this.regionId;
     }
 
+    @Deprecated
     public DescribePackIpListRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;

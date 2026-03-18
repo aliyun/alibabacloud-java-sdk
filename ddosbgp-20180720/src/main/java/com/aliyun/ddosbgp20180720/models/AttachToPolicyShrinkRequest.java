@@ -21,6 +21,9 @@ public class AttachToPolicyShrinkRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    @NameInMap("PortVersion")
+    public String portVersion;
+
     public static AttachToPolicyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachToPolicyShrinkRequest self = new AttachToPolicyShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class AttachToPolicyShrinkRequest extends TeaModel {
     }
     public String getPolicyId() {
         return this.policyId;
+    }
+
+    public AttachToPolicyShrinkRequest setPortVersion(String portVersion) {
+        this.portVersion = portVersion;
+        return this;
+    }
+    public String getPortVersion() {
+        return this.portVersion;
     }
 
 }

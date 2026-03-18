@@ -22,9 +22,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The tags that are added to the Anti-DDoS Origin instance.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -58,39 +55,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The ID of the Anti-DDoS Origin instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ddosbgp-cn-n6w1r7nz****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource. The value is set to <strong>INSTANCE</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>INSTANCE</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The key of the tag that is added to the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testKey1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of the tag that is added to the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testValue1</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

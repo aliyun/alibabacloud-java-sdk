@@ -14,6 +14,9 @@ public class CreatePolicyRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PortVersion")
+    public String portVersion;
+
     /**
      * <p>The type of the policy. Valid values:</p>
      * <ul>
@@ -39,6 +42,14 @@ public class CreatePolicyRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreatePolicyRequest setPortVersion(String portVersion) {
+        this.portVersion = portVersion;
+        return this;
+    }
+    public String getPortVersion() {
+        return this.portVersion;
     }
 
     public CreatePolicyRequest setType(String type) {

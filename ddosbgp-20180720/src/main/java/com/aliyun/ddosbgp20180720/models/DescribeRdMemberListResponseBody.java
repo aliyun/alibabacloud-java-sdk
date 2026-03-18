@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRdMemberListResponseBody extends TeaModel {
     /**
-     * <p>The list of the members.</p>
+     * <p>The information about the members.</p>
      */
     @NameInMap("MemberList")
     public java.util.List<DescribeRdMemberListResponseBodyMemberList> memberList;

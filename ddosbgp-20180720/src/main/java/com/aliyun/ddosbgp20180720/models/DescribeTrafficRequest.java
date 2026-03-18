@@ -17,8 +17,14 @@ public class DescribeTrafficRequest extends TeaModel {
     /**
      * <p>The type of the traffic statistics to query. Valid values:</p>
      * <ul>
-     * <li><strong>max</strong>: the peak traffic within the specified interval</li>
-     * <li><strong>avg</strong>: the average traffic within the specified interval</li>
+     * <li><strong>max</strong>: the peak traffic within the specified interval.</li>
+     * <li><strong>avg</strong>: the average traffic within the specified interval.</li>
+     * </ul>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>all</li>
+     * <li>avg</li>
+     * <li>max</li>
      * </ul>
      * 
      * <strong>example:</strong>

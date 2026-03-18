@@ -63,6 +63,9 @@ public class ModifyPolicyShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PortVersion")
+    public String portVersion;
+
     public static ModifyPolicyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPolicyShrinkRequest self = new ModifyPolicyShrinkRequest();
         return TeaModel.build(map, self);
@@ -98,6 +101,14 @@ public class ModifyPolicyShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyPolicyShrinkRequest setPortVersion(String portVersion) {
+        this.portVersion = portVersion;
+        return this;
+    }
+    public String getPortVersion() {
+        return this.portVersion;
     }
 
 }
