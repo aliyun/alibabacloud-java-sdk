@@ -11,6 +11,9 @@ public class UploadModuleResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("version")
+    public String version;
+
     public static UploadModuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UploadModuleResponseBody self = new UploadModuleResponseBody();
         return TeaModel.build(map, self);
@@ -22,6 +25,14 @@ public class UploadModuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UploadModuleResponseBody setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

@@ -2337,6 +2337,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取资源栈部署结果</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetStackExecutionResultResponse
+     */
+    public GetStackExecutionResultResponse getStackExecutionResultWithOptions(String triggerId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetStackExecutionResult"),
+            new TeaPair("version", "2021-08-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/stacks/trigger/" + com.aliyun.openapiutil.Client.getEncodeParam(triggerId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStackExecutionResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取资源栈部署结果</p>
+     * @return GetStackExecutionResultResponse
+     */
+    public GetStackExecutionResultResponse getStackExecutionResult(String triggerId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getStackExecutionResultWithOptions(triggerId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询任务详情</p>
      * 
      * @param headers map
@@ -3922,6 +3959,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeSharedAccountsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>触发资源栈部署</p>
+     * 
+     * @param request TriggerStackExecutionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TriggerStackExecutionResponse
+     */
+    public TriggerStackExecutionResponse triggerStackExecutionWithOptions(TriggerStackExecutionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
+            body.put("action", request.action);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.changedFolders)) {
+            body.put("changedFolders", request.changedFolders);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codePackagePath)) {
+            body.put("codePackagePath", request.codePackagePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeVersionId)) {
+            body.put("codeVersionId", request.codeVersionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TriggerStackExecution"),
+            new TeaPair("version", "2021-08-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/stacks/trigger"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TriggerStackExecutionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>触发资源栈部署</p>
+     * 
+     * @param request TriggerStackExecutionRequest
+     * @return TriggerStackExecutionResponse
+     */
+    public TriggerStackExecutionResponse triggerStackExecution(TriggerStackExecutionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.triggerStackExecutionWithOptions(request, headers, runtime);
     }
 
     /**
