@@ -4,18 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionsResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("data")
     public ListFunctionsResponseBodyData data;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0be3e0b716671885050924814e3623</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -41,66 +32,24 @@ public class ListFunctionsResponseBody extends TeaModel {
     }
 
     public static class ListFunctionsResponseBodyDataFunctions extends TeaModel {
-        /**
-         * <p>The class in which the function was defined.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc</p>
-         */
         @NameInMap("class")
         public String _class;
 
-        /**
-         * <p>The time when the function was created. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1664505167000</p>
-         */
         @NameInMap("creationTime")
         public Long creationTime;
 
-        /**
-         * <p>The display name of the function.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>getdate</p>
-         */
         @NameInMap("displayName")
         public String displayName;
 
-        /**
-         * <p>The name of the function.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>getdate</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The owner of the function.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>odpsowner</p>
-         */
         @NameInMap("owner")
         public String owner;
 
-        /**
-         * <p>The name of the resource that was associated with the function.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc</p>
-         */
         @NameInMap("resources")
         public String resources;
 
-        /**
-         * <p>The schema of the function.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abc</p>
-         */
         @NameInMap("schema")
         public String schema;
 
@@ -168,27 +117,12 @@ public class ListFunctionsResponseBody extends TeaModel {
     }
 
     public static class ListFunctionsResponseBodyData extends TeaModel {
-        /**
-         * <p>The information about each function.</p>
-         */
         @NameInMap("functions")
         public java.util.List<ListFunctionsResponseBodyDataFunctions> functions;
 
-        /**
-         * <p>Indicates the marker after which the returned list begins.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
-         */
         @NameInMap("marker")
         public String marker;
 
-        /**
-         * <p>The maximum number of entries returned per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("maxItem")
         public Integer maxItem;
 

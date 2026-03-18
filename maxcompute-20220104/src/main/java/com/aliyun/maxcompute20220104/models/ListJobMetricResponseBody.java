@@ -4,52 +4,18 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListJobMetricResponseBody extends TeaModel {
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("data")
     public ListJobMetricResponseBodyData data;
 
-    /**
-     * <p>The error code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>OBJECT_NOT_EXIST</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>This object does not exist.</p>
-     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    /**
-     * <p>HTTP status code.</p>
-     * <ul>
-     * <li>1xx: Informational response - Request received, processing continues.</li>
-     * <li>2xx: Success - The request has been successfully received, understood, and accepted by the server.</li>
-     * <li>3xx: Redirection - Further action must be taken to complete the request.</li>
-     * <li>4xx: Client error - The request contains bad syntax or cannot be fulfilled.</li>
-     * <li>5xx: Server error - The server failed to fulfill an apparently valid request.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0be3e0aa16667684362147582e038f</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -99,15 +65,9 @@ public class ListJobMetricResponseBody extends TeaModel {
     }
 
     public static class ListJobMetricResponseBodyDataMetrics extends TeaModel {
-        /**
-         * <p>Metric related information.</p>
-         */
         @NameInMap("metric")
         public java.util.Map<String, String> metric;
 
-        /**
-         * <p>Metric values information.</p>
-         */
         @NameInMap("values")
         public java.util.List<java.util.List<Double>> values;
 
@@ -135,36 +95,15 @@ public class ListJobMetricResponseBody extends TeaModel {
     }
 
     public static class ListJobMetricResponseBodyData extends TeaModel {
-        /**
-         * <p>The category of the metrics.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>job</p>
-         */
         @NameInMap("category")
         public String category;
 
-        /**
-         * <p>Metric details.</p>
-         */
         @NameInMap("metrics")
         public java.util.List<ListJobMetricResponseBodyDataMetrics> metrics;
 
-        /**
-         * <p>The name of observation metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>num</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The monitoring statistical period.Unit:Second(s).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3600</p>
-         */
         @NameInMap("period")
         public Long period;
 

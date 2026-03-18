@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteMmsJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the deleted job.</p>
+     * 
      * <strong>example:</strong>
      * <p>88</p>
      */
@@ -12,6 +14,8 @@ public class DeleteMmsJobResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>31BE216F-AEF7-581E-B9C9-DECEB5424AC4</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobInfosRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort query results in ascending or descending order.</p>
+     * <p>Specifies whether to sort the results in ascending or descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class ListJobInfosRequest extends TeaModel {
     public Boolean ascOrder;
 
     /**
-     * <p>The ancestor node IDs.</p>
+     * <p>The upstream node ID.</p>
      */
     @NameInMap("extNodeIdList")
     public java.util.List<String> extNodeIdList;
@@ -23,7 +23,7 @@ public class ListJobInfosRequest extends TeaModel {
     public java.util.List<String> extNodeNameList;
 
     /**
-     * <p>The start timestamp.</p>
+     * <p>The start UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,31 +33,31 @@ public class ListJobInfosRequest extends TeaModel {
     public Long from;
 
     /**
-     * <p>The job instance IDs.</p>
+     * <p>The job instance ID.</p>
      */
     @NameInMap("instanceIdList")
     public java.util.List<String> instanceIdList;
 
     /**
-     * <p>The job owners.</p>
+     * <p>The job owner.</p>
      */
     @NameInMap("jobOwnerList")
     public java.util.List<String> jobOwnerList;
 
     /**
-     * <p>The job priorities.</p>
+     * <p>The job priority.</p>
      */
     @NameInMap("priorityList")
     public java.util.List<Long> priorityList;
 
     /**
-     * <p>The project names.</p>
+     * <p>The project name.</p>
      */
     @NameInMap("projectList")
     public java.util.List<String> projectList;
 
     /**
-     * <p>The quota nickname.</p>
+     * <p>The nickname of the quota.</p>
      * 
      * <strong>example:</strong>
      * <p>quota_nickname</p>
@@ -66,31 +66,31 @@ public class ListJobInfosRequest extends TeaModel {
     public String quotaNickname;
 
     /**
-     * <p>The intelligent diagnostics tags.</p>
+     * <p>The smart diagnosis tag.</p>
      */
     @NameInMap("sceneTagList")
     public java.util.List<String> sceneTagList;
 
     /**
-     * <p>The job signatures.</p>
+     * <p>The job signature.</p>
      */
     @NameInMap("signatureList")
     public java.util.List<String> signatureList;
 
     /**
-     * <p>The sorting columns.</p>
+     * <p>The fields for multi-column sorting.</p>
      */
     @NameInMap("sortByList")
     public java.util.List<String> sortByList;
 
     /**
-     * <p>The orders for the sorting columns.</p>
+     * <p>The sort orders for multi-column sorting.</p>
      */
     @NameInMap("sortOrderList")
     public java.util.List<String> sortOrderList;
 
     /**
-     * <p>The job states.</p>
+     * <p>The job status.</p>
      */
     @NameInMap("statusList")
     public java.util.List<String> statusList;
@@ -99,7 +99,7 @@ public class ListJobInfosRequest extends TeaModel {
     public java.util.List<String> taskNameList;
 
     /**
-     * <p>The end timestamp.</p>
+     * <p>The end UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,13 +109,13 @@ public class ListJobInfosRequest extends TeaModel {
     public Long to;
 
     /**
-     * <p>The job types.</p>
+     * <p>The job type.</p>
      */
     @NameInMap("typeList")
     public java.util.List<String> typeList;
 
     /**
-     * <p>The column based on which you want to sort query results.</p>
+     * <p>The column to use for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>cuUsage</p>
@@ -133,7 +133,7 @@ public class ListJobInfosRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

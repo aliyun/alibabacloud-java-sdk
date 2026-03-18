@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMmsDbsRequest extends TeaModel {
     /**
+     * <p>Data source name</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -12,6 +14,8 @@ public class ListMmsDbsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +23,23 @@ public class ListMmsDbsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Number of records per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Sorting conditions</p>
+     */
     @NameInMap("sorter")
     public ListMmsDbsRequestSorter sorter;
 
     /**
+     * <p>Data source status</p>
+     * 
      * <strong>example:</strong>
      * <p>STARTED</p>
      */
@@ -82,6 +93,8 @@ public class ListMmsDbsRequest extends TeaModel {
 
     public static class ListMmsDbsRequestSorter extends TeaModel {
         /**
+         * <p>Number of data rows in the database</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -89,6 +102,8 @@ public class ListMmsDbsRequest extends TeaModel {
         public String numRows;
 
         /**
+         * <p>Size of data in the database</p>
+         * 
          * <strong>example:</strong>
          * <p>asc</p>
          */
@@ -96,6 +111,8 @@ public class ListMmsDbsRequest extends TeaModel {
         public String size;
 
         /**
+         * <p>Update time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:17</p>
          */

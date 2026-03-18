@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateProjectBasicMetaResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The result of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -34,9 +34,16 @@ public class UpdateProjectBasicMetaResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <ul>
-     * <li>1xx: informational response. The request is received and is being processed.</li>
-     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
-     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+     * <li><p>1xx: Informational response - The request has been received and is being processed.</p>
+     * </li>
+     * <li><p>2xx: Success - The request was successfully received, understood, and accepted.</p>
+     * </li>
+     * <li><p>3xx: Redirection - The request was redirected. Further action is needed to complete the request.</p>
+     * </li>
+     * <li><p>4xx: Client error - The request contains incorrect request parameters or syntax, or cannot be fulfilled.</p>
+     * </li>
+     * <li><p>5xx: Server error - The server failed to fulfill the request for other reasons.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

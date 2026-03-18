@@ -4,16 +4,27 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class QueryTunnelMetricRequest extends TeaModel {
+    /**
+     * <p>A list of HTTP status codes for requests.</p>
+     */
     @NameInMap("codeList")
     public java.util.List<Integer> codeList;
 
+    /**
+     * <p>A list of grouping criteria.</p>
+     */
     @NameInMap("groupList")
     public java.util.List<String> groupList;
 
+    /**
+     * <p>A list of operation types.</p>
+     */
     @NameInMap("operationList")
     public java.util.List<String> operationList;
 
     /**
+     * <p>The name of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>project_a</p>
      */
@@ -21,16 +32,28 @@ public class QueryTunnelMetricRequest extends TeaModel {
     public String project;
 
     /**
+     * <p>The nickname of the level-2 Tunnel quota.</p>
+     * <p>The nickname of a shared quota is <code>default</code>.</p>
+     * <p>The format of a dedicated quota nickname is <code>quotaNickname#subQuotaNickname</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
     @NameInMap("quotaNickname")
     public String quotaNickname;
 
+    /**
+     * <p>A list of table names.</p>
+     * <p>The tables belong to a project. Therefore, if <code>tableList</code> is not empty, <code>project</code> cannot be empty.</p>
+     */
     @NameInMap("tableList")
     public java.util.List<String> tableList;
 
     /**
+     * <p>The maximum number of data entries to return.</p>
+     * <p>This parameter takes effect when the grouping criterion includes <code>table</code> or <code>ip</code>.</p>
+     * <p>The default value is 10. The maximum value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -38,6 +61,7 @@ public class QueryTunnelMetricRequest extends TeaModel {
     public Integer topN;
 
     /**
+     * <p>The end of the time range for the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +71,7 @@ public class QueryTunnelMetricRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The start of the time range for the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +81,9 @@ public class QueryTunnelMetricRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The data aggregation policy. The default value is <code>max</code>.</p>
+     * <p>Data is collected at a frequency of 1 minute. If you query data over a long time range, the automatic step size for data display may exceed 1 minute. In this case, metrics are aggregated. This parameter specifies the aggregation logic.</p>
+     * 
      * <strong>example:</strong>
      * <p>max</p>
      */

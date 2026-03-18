@@ -4,12 +4,6 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectDefaultQuotaRequest extends TeaModel {
-    /**
-     * <p>The default computing quota that is used to allocate computing resources, the jobs that are initiated by this project consume the computing resources in the default quota.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>os_PayAsYouGoQuota</p>
-     */
     @NameInMap("quota")
     public String quota;
 

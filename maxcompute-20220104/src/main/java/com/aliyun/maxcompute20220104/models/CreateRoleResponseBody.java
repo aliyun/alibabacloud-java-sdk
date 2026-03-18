@@ -4,21 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreateRoleResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("data")
     public String data;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0b87b7e716665825896565060e87a4</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 

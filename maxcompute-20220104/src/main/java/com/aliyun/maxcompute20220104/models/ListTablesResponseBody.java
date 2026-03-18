@@ -4,18 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListTablesResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("data")
     public ListTablesResponseBodyData data;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0a06dd4516687375802853481ec9fd</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -41,57 +32,21 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyDataTables extends TeaModel {
-        /**
-         * <p>The time when the table was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-01-17T07:07:47Z</p>
-         */
         @NameInMap("creationTime")
         public Long creationTime;
 
-        /**
-         * <p>The display name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sale_detail</p>
-         */
         @NameInMap("displayName")
         public String displayName;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dim_odps</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The owner of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1887853961230110</p>
-         */
         @NameInMap("owner")
         public String owner;
 
-        /**
-         * <p>The schema to which the table belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("schema")
         public String schema;
 
-        /**
-         * <p>The type of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>internal</p>
-         */
         @NameInMap("type")
         public String type;
 
@@ -151,27 +106,12 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyData extends TeaModel {
-        /**
-         * <p>Indicates the marker after which the returned list begins.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
-         */
         @NameInMap("marker")
         public String marker;
 
-        /**
-         * <p>The maximum number of entries returned per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("maxItem")
         public Integer maxItem;
 
-        /**
-         * <p>The information about tables.</p>
-         */
         @NameInMap("tables")
         public java.util.List<ListTablesResponseBodyDataTables> tables;
 

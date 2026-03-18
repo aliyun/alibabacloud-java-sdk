@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetMmsTaskResponseBody extends TeaModel {
+    /**
+     * <p>The migration task object.</p>
+     */
     @NameInMap("data")
     public GetMmsTaskResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>73207140-0FD5-588A-B11A-3CE093924196</p>
      */
@@ -37,6 +42,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
 
     public static class GetMmsTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-25 04:21:01</p>
          */
@@ -44,6 +51,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The source database ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -51,6 +60,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public Long dbId;
 
         /**
+         * <p>The destination MaxCompute project.</p>
+         * 
          * <strong>example:</strong>
          * <p>mms_target</p>
          */
@@ -58,6 +69,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String dstDbName;
 
         /**
+         * <p>The destination MaxCompute schema.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -65,6 +78,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String dstSchemaName;
 
         /**
+         * <p>The destination MaxCompute table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table_1</p>
          */
@@ -72,6 +87,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String dstTableName;
 
         /**
+         * <p>The end time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-25 07:21:01</p>
          */
@@ -79,6 +96,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The migration task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7680</p>
          */
@@ -86,6 +105,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The migration job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>87</p>
          */
@@ -93,6 +114,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public Long jobId;
 
         /**
+         * <p>The migration job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_odps_spark</p>
          */
@@ -100,6 +123,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The number of times the task has been retried.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -107,6 +132,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public Integer retriedTimes;
 
         /**
+         * <p>Indicates if the task is running.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -114,6 +141,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public Boolean running;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000015</p>
          */
@@ -121,6 +150,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
+         * <p>The data source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -128,6 +159,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String sourceName;
 
         /**
+         * <p>The source database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>mms_test</p>
          */
@@ -135,6 +168,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String srcDbName;
 
         /**
+         * <p>The name of the source schema. This refers to the schema in a Layer 3 namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -142,6 +177,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String srcSchemaName;
 
         /**
+         * <p>The source table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>table_1</p>
          */
@@ -149,6 +186,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String srcTableName;
 
         /**
+         * <p>The start time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-25 06:21:01</p>
          */
@@ -156,6 +195,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The migration task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATA_DOING</p>
          */
@@ -163,6 +204,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Indicates if the task is stopped.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -170,6 +213,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public Boolean stopped;
 
         /**
+         * <p>The source table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2323</p>
          */
@@ -177,6 +222,8 @@ public class GetMmsTaskResponseBody extends TeaModel {
         public Long tableId;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BIGQUERY</p>
          */

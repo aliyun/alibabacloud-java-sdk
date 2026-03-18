@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMmsDataSourcesRequest extends TeaModel {
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -12,6 +14,8 @@ public class ListMmsDataSourcesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number. If you leave this parameter empty, all data sources are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListMmsDataSourcesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries to return on each page. If you leave this parameter empty, all data sources are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListMmsDataSourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -33,6 +41,8 @@ public class ListMmsDataSourcesRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The type of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>BIGQUERY</p>
      */

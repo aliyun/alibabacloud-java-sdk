@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetMmsAsyncTaskResponseBody extends TeaModel {
+    /**
+     * <p>The asynchronous task object.</p>
+     */
     @NameInMap("data")
     public GetMmsAsyncTaskResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>688003E1-D1B4-5468-957E-2FFB3AC8D79B</p>
      */
@@ -37,6 +42,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
 
     public static class GetMmsAsyncTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:00</p>
          */
@@ -44,6 +51,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the task stopped running.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-17 17:44:17</p>
          */
@@ -51,6 +60,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -58,6 +69,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>The asynchronous task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2523</p>
          */
@@ -65,6 +78,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The ID of the object associated with the asynchronous task.</p>
+         * 
          * <strong>example:</strong>
          * <p>232</p>
          */
@@ -72,6 +87,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public Long objectId;
 
         /**
+         * <p>The progress of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -79,6 +96,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public Integer progress;
 
         /**
+         * <p>The result of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -86,6 +105,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public String result;
 
         /**
+         * <p>Indicates whether the task is running.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -93,6 +114,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public Boolean running;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000017</p>
          */
@@ -100,6 +123,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
+         * <p>The time when the task started to run.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:17</p>
          */
@@ -107,6 +132,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the asynchronous task.</p>
+         * 
          * <strong>example:</strong>
          * <p>DONE</p>
          */
@@ -114,6 +141,8 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the asynchronous task.</p>
+         * 
          * <strong>example:</strong>
          * <p>TASK_CREATE</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListComputeQuotaPlanResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public ListComputeQuotaPlanResponseBodyData data;
@@ -29,14 +29,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <ul>
-     * <li>1xx: informational response. The request is received and is being processed.</li>
-     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
-     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
-     * <li>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</li>
-     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
-     * </ul>
+     * <p>The HTTP status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -182,7 +175,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
 
     public static class ListComputeQuotaPlanResponseBodyDataPlanListQuotaSubQuotaInfoList extends TeaModel {
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AT-120N</p>
@@ -191,7 +184,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String cluster;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the quota was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1730946421757</p>
@@ -200,7 +193,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to create the resource.</p>
+         * <p>The creator of the resource. This is the UID of an Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>672863518</p>
@@ -236,7 +229,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String nickName;
 
         /**
-         * <p>The description of the level-2 quota.</p>
+         * <p>The quota configuration parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -253,7 +246,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public ListComputeQuotaPlanResponseBodyDataPlanListQuotaSubQuotaInfoListParameter parameter;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -262,7 +255,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Resource status.</p>
+         * <p>The resource status.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -271,7 +264,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>478403690625249</p>
@@ -280,7 +273,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The type of quota.</p>
+         * <p>The quota type.</p>
          * 
          * <strong>example:</strong>
          * <p>FUXI_ONLINE</p>
@@ -402,7 +395,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
 
     public static class ListComputeQuotaPlanResponseBodyDataPlanListQuota extends TeaModel {
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AT-120N</p>
@@ -411,7 +404,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String cluster;
 
         /**
-         * <p>The time when the level-1 quota was created.</p>
+         * <p>The time when the quota was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1730247361356</p>
@@ -420,7 +413,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to create the resource.</p>
+         * <p>The creator of the resource. This is the UID of an Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>672863518</p>
@@ -456,7 +449,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String nickName;
 
         /**
-         * <p>The description of the level-1 quota.</p>
+         * <p>The quota configuration parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -473,7 +466,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public ListComputeQuotaPlanResponseBodyDataPlanListQuotaParameter parameter;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -482,7 +475,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Resource status.</p>
+         * <p>The resource status.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -491,13 +484,13 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of subquotas.</p>
+         * <p>The list of level-2 quotas.</p>
          */
         @NameInMap("subQuotaInfoList")
         public java.util.List<ListComputeQuotaPlanResponseBodyDataPlanListQuotaSubQuotaInfoList> subQuotaInfoList;
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>478403690625249</p>
@@ -506,7 +499,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The type of quota.</p>
+         * <p>This corresponds to the resourceSystemType field of the control cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>FUXI_ONLINE</p>
@@ -515,7 +508,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The version number.</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>2056</p>
@@ -636,7 +629,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
 
     public static class ListComputeQuotaPlanResponseBodyDataPlanList extends TeaModel {
         /**
-         * <p>The time when the quota plan was created.</p>
+         * <p>The time when the plan was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1731394621890</p>
@@ -654,7 +647,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The details of the quota.</p>
+         * <p>The quota properties.</p>
          */
         @NameInMap("quota")
         public ListComputeQuotaPlanResponseBodyDataPlanListQuota quota;
@@ -692,7 +685,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
 
     public static class ListComputeQuotaPlanResponseBodyData extends TeaModel {
         /**
-         * <p>The list of quota plan.</p>
+         * <p>The list of quota plans.</p>
          */
         @NameInMap("planList")
         public java.util.List<ListComputeQuotaPlanResponseBodyDataPlanList> planList;

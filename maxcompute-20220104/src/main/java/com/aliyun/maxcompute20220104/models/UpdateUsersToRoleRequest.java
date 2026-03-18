@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateUsersToRoleRequest extends TeaModel {
     /**
-     * <p>The accounts.</p>
+     * <p>The action to add users to the project role.</p>
      */
     @NameInMap("add")
     public java.util.List<String> add;
 
     /**
-     * <p>The accounts.</p>
+     * <p>The action to remove users from the project role.</p>
      */
     @NameInMap("remove")
     public java.util.List<String> remove;

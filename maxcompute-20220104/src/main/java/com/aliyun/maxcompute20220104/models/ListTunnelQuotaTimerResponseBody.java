@@ -4,52 +4,18 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListTunnelQuotaTimerResponseBody extends TeaModel {
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("data")
     public java.util.List<ListTunnelQuotaTimerResponseBodyData> data;
 
-    /**
-     * <p>The error code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>OBJECT_NOT_EXIST</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>This object does not exist.</p>
-     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    /**
-     * <p>The HTTP status code.</p>
-     * <ul>
-     * <li>1xx: informational response. The request is received and is being processed.</li>
-     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
-     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
-     * <li>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</li>
-     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0be3e0b716671885050924814e3623</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -99,21 +65,9 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
     }
 
     public static class ListTunnelQuotaTimerResponseBodyDataTunnelQuotaParameter extends TeaModel {
-        /**
-         * <p>The number of elastically reserved slots.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("elasticReservedSlotNum")
         public Long elasticReservedSlotNum;
 
-        /**
-         * <p>The number of reserved slots.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("slotNum")
         public Long slotNum;
 
@@ -141,36 +95,15 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
     }
 
     public static class ListTunnelQuotaTimerResponseBodyData extends TeaModel {
-        /**
-         * <p>The start time of the time-specific configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>00:00</p>
-         */
         @NameInMap("beginTime")
         public String beginTime;
 
-        /**
-         * <p>The end time of the time-specific configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>08:00</p>
-         */
         @NameInMap("endTime")
         public String endTime;
 
-        /**
-         * <p>The time zone property for the time-specific configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Asia/Shanghai</p>
-         */
         @NameInMap("timezone")
         public String timezone;
 
-        /**
-         * <p>The parameters for the time-specific configuration.</p>
-         */
         @NameInMap("tunnelQuotaParameter")
         public ListTunnelQuotaTimerResponseBodyDataTunnelQuotaParameter tunnelQuotaParameter;
 

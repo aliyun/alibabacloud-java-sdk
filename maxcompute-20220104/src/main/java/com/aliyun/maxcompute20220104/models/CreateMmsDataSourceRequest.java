@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreateMmsDataSourceRequest extends TeaModel {
+    /**
+     * <p>The configurations of the data source.</p>
+     */
     @NameInMap("config")
     public java.util.Map<String, ?> config;
 
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -15,6 +20,8 @@ public class CreateMmsDataSourceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the MaxCompute network connectivity.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-uf6pc2vordian33gobzfr:cn-shanghai</p>
      */
@@ -22,6 +29,8 @@ public class CreateMmsDataSourceRequest extends TeaModel {
     public String networklink;
 
     /**
+     * <p>The type of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>BIGQUERY</p>
      */

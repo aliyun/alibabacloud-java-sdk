@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class QueryStorageMetricResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public QueryStorageMetricResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class QueryStorageMetricResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>0A3B1FD2006A24C8D8BE65CDAC028298</p>
      */
@@ -22,6 +29,20 @@ public class QueryStorageMetricResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li><p>1xx: Informational - The request was received and is being processed.</p>
+     * </li>
+     * <li><p>2xx: Success - The request was successfully received, understood, and accepted by the server.</p>
+     * </li>
+     * <li><p>3xx: Redirection - The request was redirected. Further action is needed to complete the request.</p>
+     * </li>
+     * <li><p>4xx: Client error - The request contains incorrect parameters or syntax, or cannot be fulfilled.</p>
+     * </li>
+     * <li><p>5xx: Server error - The server failed to fulfill the request for other reasons.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +50,8 @@ public class QueryStorageMetricResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0be3e0bb16654558425251398e27a9</p>
      */
@@ -81,9 +104,15 @@ public class QueryStorageMetricResponseBody extends TeaModel {
     }
 
     public static class QueryStorageMetricResponseBodyDataMetrics extends TeaModel {
+        /**
+         * <p>The metadata of the metric.</p>
+         */
         @NameInMap("metric")
         public java.util.Map<String, String> metric;
 
+        /**
+         * <p>The time series data.</p>
+         */
         @NameInMap("values")
         public java.util.List<java.util.List<Double>> values;
 
@@ -112,16 +141,23 @@ public class QueryStorageMetricResponseBody extends TeaModel {
 
     public static class QueryStorageMetricResponseBodyData extends TeaModel {
         /**
+         * <p>The category of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>storage</p>
          */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <p>The metric values.</p>
+         */
         @NameInMap("metrics")
         public java.util.List<QueryStorageMetricResponseBodyDataMetrics> metrics;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>summary</p>
          */
@@ -129,6 +165,8 @@ public class QueryStorageMetricResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The step size of the monitoring data.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */

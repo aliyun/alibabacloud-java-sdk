@@ -4,18 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListRolesResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("data")
     public ListRolesResponseBodyData data;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0a06dfe716686526652451361e80ae</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -41,18 +32,9 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyDataRolesAclFunction extends TeaModel {
-        /**
-         * <p>The operations that were performed on the function.</p>
-         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
-        /**
-         * <p>The name of the function.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>functionA</p>
-         */
         @NameInMap("name")
         public String name;
 
@@ -80,18 +62,9 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyDataRolesAclInstance extends TeaModel {
-        /**
-         * <p>The operations that were performed on the instance.</p>
-         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
-        /**
-         * <p>The name of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instanceA</p>
-         */
         @NameInMap("name")
         public String name;
 
@@ -119,18 +92,9 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyDataRolesAclPackage extends TeaModel {
-        /**
-         * <p>The operations that were performed on the package.</p>
-         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
-        /**
-         * <p>The name of the package.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>packageA</p>
-         */
         @NameInMap("name")
         public String name;
 
@@ -158,18 +122,9 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyDataRolesAclProject extends TeaModel {
-        /**
-         * <p>The operations that were performed on the project.</p>
-         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
-        /**
-         * <p>The name of the MaxCompute project.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>projectA</p>
-         */
         @NameInMap("name")
         public String name;
 
@@ -197,18 +152,9 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyDataRolesAclResource extends TeaModel {
-        /**
-         * <p>The operations that were performed on the resource.</p>
-         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
-        /**
-         * <p>The name of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>resourceA</p>
-         */
         @NameInMap("name")
         public String name;
 
@@ -236,18 +182,9 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyDataRolesAclTable extends TeaModel {
-        /**
-         * <p>The operations that were performed on the table.</p>
-         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tableA</p>
-         */
         @NameInMap("name")
         public String name;
 
@@ -275,39 +212,21 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyDataRolesAcl extends TeaModel {
-        /**
-         * <p>The function.</p>
-         */
         @NameInMap("function")
         public java.util.List<ListRolesResponseBodyDataRolesAclFunction> function;
 
-        /**
-         * <p>The instance.</p>
-         */
         @NameInMap("instance")
         public java.util.List<ListRolesResponseBodyDataRolesAclInstance> instance;
 
-        /**
-         * <p>The package.</p>
-         */
         @NameInMap("package")
         public java.util.List<ListRolesResponseBodyDataRolesAclPackage> _package;
 
-        /**
-         * <p>The project.</p>
-         */
         @NameInMap("project")
         public java.util.List<ListRolesResponseBodyDataRolesAclProject> project;
 
-        /**
-         * <p>The resource.</p>
-         */
         @NameInMap("resource")
         public java.util.List<ListRolesResponseBodyDataRolesAclResource> resource;
 
-        /**
-         * <p>The table.</p>
-         */
         @NameInMap("table")
         public java.util.List<ListRolesResponseBodyDataRolesAclTable> table;
 
@@ -367,49 +286,15 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyDataRoles extends TeaModel {
-        /**
-         * <p>The ACL-based permissions that are granted to the role.</p>
-         */
         @NameInMap("acl")
         public ListRolesResponseBodyDataRolesAcl acl;
 
-        /**
-         * <p>The name of the role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>roleA</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The policy that is attached to the role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{
-         *       &quot;Statement&quot;: [
-         *             {
-         *                   &quot;Action&quot;: [
-         *                         &quot;odps:<em>&quot;
-         *                   ],
-         *                   &quot;Effect&quot;: &quot;Allow&quot;,
-         *                   &quot;Resource&quot;: [
-         *                         &quot;acs:odps:</em>:projects/{projectname}/authorization/packages&quot;
-         *                   ]
-         *             }
-         *       ],
-         *       &quot;Version&quot;: &quot;1&quot;
-         * }</p>
-         */
         @NameInMap("policy")
         public String policy;
 
-        /**
-         * <p>The type of the role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>admin</p>
-         */
         @NameInMap("type")
         public String type;
 
@@ -453,9 +338,6 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyData extends TeaModel {
-        /**
-         * <p>The MaxCompute project-level roles.</p>
-         */
         @NameInMap("roles")
         public java.util.List<ListRolesResponseBodyDataRoles> roles;
 

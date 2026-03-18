@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteProjectResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class DeleteProjectResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0be3e0aa16667684362147582e038f</p>

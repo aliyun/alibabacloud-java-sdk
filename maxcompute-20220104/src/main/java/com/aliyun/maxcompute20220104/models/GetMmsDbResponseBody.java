@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetMmsDbResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public GetMmsDbResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>90D64EB6-2962-5B1C-A039-BC41C8176C7F</p>
      */
@@ -37,6 +42,8 @@ public class GetMmsDbResponseBody extends TeaModel {
 
     public static class GetMmsDbResponseBodyData extends TeaModel {
         /**
+         * <p>The database description.</p>
+         * 
          * <strong>example:</strong>
          * <p>for mms_test</p>
          */
@@ -44,6 +51,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The MaxCompute schema corresponding to the source database. If the destination MaxCompute project does not enable the schema layer, this value is null. By default, this value matches the source database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -51,6 +60,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public String dstName;
 
         /**
+         * <p>The name of the destination MaxCompute project.</p>
+         * 
          * <strong>example:</strong>
          * <p>mma_test</p>
          */
@@ -58,6 +69,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public String dstProjectName;
 
         /**
+         * <p>Other information stored in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -65,6 +78,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public String extra;
 
         /**
+         * <p>The database ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>63</p>
          */
@@ -72,7 +87,7 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>last ddl time</p>
+         * <p>The last DDL time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:42</p>
@@ -81,6 +96,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public String lastDdlTime;
 
         /**
+         * <p>The storage location of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>hdfs://master-1-1.c-6fc187819ed6bae0.cn-shanghai.emr.aliyuncs.com:9000/user/hive/warehouse</p>
          */
@@ -88,6 +105,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public String location;
 
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>mms_test</p>
          */
@@ -95,6 +114,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The number of rows in the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>2323</p>
          */
@@ -102,6 +123,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Long numRows;
 
         /**
+         * <p>The database owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>System user</p>
          */
@@ -109,6 +132,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The number of partitions.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -116,6 +141,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Integer partitions;
 
         /**
+         * <p>The partitions that are being migrated.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -123,6 +150,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Integer partitionsDoing;
 
         /**
+         * <p>The number of partitions whose migration is complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>1400</p>
          */
@@ -130,6 +159,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Integer partitionsDone;
 
         /**
+         * <p>The partitions that failed during migration.</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
@@ -137,6 +168,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Integer partitionsFailed;
 
         /**
+         * <p>The size of the database in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>323232332</p>
          */
@@ -144,6 +177,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The ID of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000017</p>
          */
@@ -151,6 +186,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -158,6 +195,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public String sourceName;
 
         /**
+         * <p>The migration status. Valid values: INIT, DOING, FAILED, DONE, and PART_DONE.</p>
+         * 
          * <strong>example:</strong>
          * <p>DOING</p>
          */
@@ -165,6 +204,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The number of tables.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -172,6 +213,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Integer tables;
 
         /**
+         * <p>The tables that are being migrated.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -179,6 +222,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Integer tablesDoing;
 
         /**
+         * <p>Tables for which migration has completed</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -186,6 +231,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Integer tablesDone;
 
         /**
+         * <p>The tables that failed to migrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -193,6 +240,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Integer tablesFailed;
 
         /**
+         * <p>The tables whose migration is partially complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -200,6 +249,8 @@ public class GetMmsDbResponseBody extends TeaModel {
         public Integer tablesPartDone;
 
         /**
+         * <p>Indicates whether the metadata is updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

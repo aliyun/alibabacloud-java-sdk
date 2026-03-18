@@ -4,52 +4,18 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetComputeQuotaPlanResponseBody extends TeaModel {
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("data")
     public GetComputeQuotaPlanResponseBodyData data;
 
-    /**
-     * <p>The error code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>QUOTA_PLAN_NOT_FOUND</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>plan \&quot;***\&quot; does not exist</p>
-     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    /**
-     * <p>The HTTP status code.</p>
-     * <ul>
-     * <li>1xx: informational response. The request is received and is being processed.</li>
-     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
-     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
-     * <li>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</li>
-     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>EA1320AB-7766-5EC7-B0F6-8B20E2298567</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -99,30 +65,12 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
     }
 
     public static class GetComputeQuotaPlanResponseBodyDataQuotaParameter extends TeaModel {
-        /**
-         * <p>The value of elastic Reserved CUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("elasticReservedCU")
         public Long elasticReservedCU;
 
-        /**
-         * <p>The value of maxCU in Reserved CUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("maxCU")
         public Long maxCU;
 
-        /**
-         * <p>The value of minCU in Reserved CUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("minCU")
         public Long minCU;
 
@@ -158,66 +106,24 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
     }
 
     public static class GetComputeQuotaPlanResponseBodyDataQuotaSubQuotaInfoListParameter extends TeaModel {
-        /**
-         * <p>The value of elastic Reserved CUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("elasticReservedCU")
         public Long elasticReservedCU;
 
-        /**
-         * <p>whether to enable the priority feature.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true/false</p>
-         */
         @NameInMap("enablePriority")
         public Boolean enablePriority;
 
-        /**
-         * <p>Whether it is exclusive.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true/false</p>
-         */
         @NameInMap("forceReservedMin")
         public Boolean forceReservedMin;
 
-        /**
-         * <p>The value of maxCU in Reserved CUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("maxCU")
         public Long maxCU;
 
-        /**
-         * <p>The value of minCU in Reserved CUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("minCU")
         public Long minCU;
 
-        /**
-         * <p>Scheduling policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Fifo/Fair</p>
-         */
         @NameInMap("schedulerType")
         public String schedulerType;
 
-        /**
-         * <p>The upper limit for CUs that can be concurrently used by a job scheduled to the quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("singleJobCULimit")
         public Long singleJobCULimit;
 
@@ -285,108 +191,39 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
     }
 
     public static class GetComputeQuotaPlanResponseBodyDataQuotaSubQuotaInfoList extends TeaModel {
-        /**
-         * <p>Cluster ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AT-120N</p>
-         */
         @NameInMap("cluster")
         public String cluster;
 
-        /**
-         * <p>Creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1718155201628</p>
-         */
         @NameInMap("createTime")
         public Long createTime;
 
-        /**
-         * <p>Creator cloud account UID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>672863518</p>
-         */
         @NameInMap("creatorId")
         public String creatorId;
 
-        /**
-         * <p>The ID of the level-2 quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10940</p>
-         */
         @NameInMap("id")
         public String id;
 
-        /**
-         * <p>The name of the level-2 quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dp_cn_shanghai_1696659792_p</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The nickname of the level-2 quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>subquotaA</p>
-         */
         @NameInMap("nickName")
         public String nickName;
 
-        /**
-         * <p>The parameters of the level-2 quota.</p>
-         */
         @NameInMap("parameter")
         public GetComputeQuotaPlanResponseBodyDataQuotaSubQuotaInfoListParameter parameter;
 
-        /**
-         * <p>Region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("regionId")
         public String regionId;
 
-        /**
-         * <p>Resource status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ON</p>
-         */
         @NameInMap("status")
         public String status;
 
-        /**
-         * <p>Tenant ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>478403690625249</p>
-         */
         @NameInMap("tenantId")
         public String tenantId;
 
-        /**
-         * <p>The type of quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FUXI_ONLINE</p>
-         */
         @NameInMap("type")
         public String type;
 
-        /**
-         * <p>Version number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1386</p>
-         */
         @NameInMap("version")
         public String version;
 
@@ -494,114 +331,42 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
     }
 
     public static class GetComputeQuotaPlanResponseBodyDataQuota extends TeaModel {
-        /**
-         * <p>Cluster ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AT-120N</p>
-         */
         @NameInMap("cluster")
         public String cluster;
 
-        /**
-         * <p>Creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1719886322347</p>
-         */
         @NameInMap("createTime")
         public Long createTime;
 
-        /**
-         * <p>Creator\&quot;s cloud account UID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>672863518</p>
-         */
         @NameInMap("creatorId")
         public String creatorId;
 
-        /**
-         * <p>The ID of the level-1 quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2413</p>
-         */
         @NameInMap("id")
         public String id;
 
-        /**
-         * <p>The name of the level-1 quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>quota_a</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The nickname of the level-1 quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>quota_nickname</p>
-         */
         @NameInMap("nickName")
         public String nickName;
 
-        /**
-         * <p>CU value parameters for the level-1 quota.</p>
-         */
         @NameInMap("parameter")
         public GetComputeQuotaPlanResponseBodyDataQuotaParameter parameter;
 
-        /**
-         * <p>Region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("regionId")
         public String regionId;
 
-        /**
-         * <p>Resource status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ON</p>
-         */
         @NameInMap("status")
         public String status;
 
-        /**
-         * <p>The list of level-2 quotas.</p>
-         */
         @NameInMap("subQuotaInfoList")
         public java.util.List<GetComputeQuotaPlanResponseBodyDataQuotaSubQuotaInfoList> subQuotaInfoList;
 
-        /**
-         * <p>Tenant ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>478403690625249</p>
-         */
         @NameInMap("tenantId")
         public String tenantId;
 
-        /**
-         * <p>Corresponds to the <code>resourceSystemType</code> field of the control cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FUXI_ONLINE</p>
-         */
         @NameInMap("type")
         public String type;
 
-        /**
-         * <p>Version number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1964</p>
-         */
         @NameInMap("version")
         public String version;
 
@@ -717,41 +482,15 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
     }
 
     public static class GetComputeQuotaPlanResponseBodyData extends TeaModel {
-        /**
-         * <p>The time when the quota plan was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1730946421757</p>
-         */
         @NameInMap("createTime")
         public String createTime;
 
-        /**
-         * <p>Whether it is currently effective.</p>
-         * <blockquote>
-         * <ul>
-         * <li>A Quota plan that has taken effect cannot be deleted, i.e., isEffective=true</li>
-         * </ul>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>true/false</p>
-         */
         @NameInMap("isEffective")
         public Boolean isEffective;
 
-        /**
-         * <p>The name of the quota plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>planA</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The details of the quota.</p>
-         */
         @NameInMap("quota")
         public GetComputeQuotaPlanResponseBodyDataQuota quota;
 

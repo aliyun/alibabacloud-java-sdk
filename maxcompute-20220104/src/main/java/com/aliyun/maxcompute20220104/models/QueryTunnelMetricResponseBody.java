@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class QueryTunnelMetricResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public QueryTunnelMetricResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>0A3B1E82006A23A918C70905BF08AEC7</p>
      */
@@ -22,6 +29,8 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>Indicates whether the operation was successful. If this parameter is not empty and the value is not 200, the operation failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc3b4b016674434996033675e71ee</p>
      */
@@ -81,9 +92,15 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
     }
 
     public static class QueryTunnelMetricResponseBodyDataMetrics extends TeaModel {
+        /**
+         * <p>The metadata of the metric.</p>
+         */
         @NameInMap("metric")
         public java.util.Map<String, String> metric;
 
+        /**
+         * <p>A list of metric values.</p>
+         */
         @NameInMap("values")
         public java.util.List<java.util.List<Double>> values;
 
@@ -112,16 +129,23 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
 
     public static class QueryTunnelMetricResponseBodyData extends TeaModel {
         /**
+         * <p>The category of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>tunnel</p>
          */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <p>The metric values.</p>
+         */
         @NameInMap("metrics")
         public java.util.List<QueryTunnelMetricResponseBodyDataMetrics> metrics;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>slot_usage</p>
          */
@@ -129,6 +153,8 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The step size of the monitoring data.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */

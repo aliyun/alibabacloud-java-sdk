@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class QueryQuotaMetricResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public QueryQuotaMetricResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>plan \&quot;***\&quot; does not exist</p>
      */
@@ -22,6 +29,20 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li><p>1xx: informational response. The request was received and is being processed.</p>
+     * </li>
+     * <li><p>2xx: success. The request was successfully received, understood, and accepted by the server.</p>
+     * </li>
+     * <li><p>3xx: redirection. The request was redirected. Further action needs to be taken to complete the request.</p>
+     * </li>
+     * <li><p>4xx: client error. The request contains incorrect request parameters or syntax, or specific request conditions cannot be met.</p>
+     * </li>
+     * <li><p>5xx: server error. The server failed to fulfill the request for other reasons.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +50,8 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0b87b7b316643495896551555e855b</p>
      */
@@ -81,9 +104,15 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
     }
 
     public static class QueryQuotaMetricResponseBodyDataMetrics extends TeaModel {
+        /**
+         * <p>The metadata of the metric.</p>
+         */
         @NameInMap("metric")
         public java.util.Map<String, String> metric;
 
+        /**
+         * <p>The time series data.</p>
+         */
         @NameInMap("values")
         public java.util.List<java.util.List<Double>> values;
 
@@ -111,13 +140,24 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
     }
 
     public static class QueryQuotaMetricResponseBodyData extends TeaModel {
+        /**
+         * <p>This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>不支持。</p>
+         */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <p>The metric values.</p>
+         */
         @NameInMap("metrics")
         public java.util.List<QueryQuotaMetricResponseBodyDataMetrics> metrics;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>cpu</p>
          */
@@ -125,6 +165,8 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The step size of the monitoring data.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */

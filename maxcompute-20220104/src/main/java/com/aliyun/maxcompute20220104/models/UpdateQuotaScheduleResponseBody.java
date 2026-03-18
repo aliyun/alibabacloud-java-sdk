@@ -4,21 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class UpdateQuotaScheduleResponseBody extends TeaModel {
-    /**
-     * <p>The returned result.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("data")
     public String data;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0a06dfe516691014920015940e1c9d</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateProjectModelTierResponseBody extends TeaModel {
     /**
+     * <p>The data returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;data&quot;:{
      *         &quot;data&quot;:&quot;success&quot;,
@@ -15,6 +17,13 @@ public class UpdateProjectModelTierResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <ul>
+     * <li><p>If the request fails, an error code is returned.</p>
+     * </li>
+     * <li><p>If the request is successful, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OBJECT_NOT_EXIST</p>
      */
@@ -22,6 +31,8 @@ public class UpdateProjectModelTierResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>this project is not exist.</p>
      */
@@ -29,6 +40,8 @@ public class UpdateProjectModelTierResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>Indicates whether the operation was successful. A value other than 200 indicates that the operation failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +49,8 @@ public class UpdateProjectModelTierResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>73207140-0FD5-588A-B11A-3CE093924196</p>
      */

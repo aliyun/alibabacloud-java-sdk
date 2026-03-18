@@ -4,52 +4,18 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetComputeQuotaScheduleResponseBody extends TeaModel {
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("data")
     public java.util.List<GetComputeQuotaScheduleResponseBodyData> data;
 
-    /**
-     * <p>The error code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>QUOTA_UNKNOWN_NICKNAME</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Cannot found quota **</p>
-     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    /**
-     * <p>The HTTP status code.</p>
-     * <ul>
-     * <li>1xx: informational response. The request is received and is being processed.</li>
-     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
-     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
-     * <li>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</li>
-     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>B42CA730-8187-50F1-9FE0-6733297036DB</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -99,12 +65,6 @@ public class GetComputeQuotaScheduleResponseBody extends TeaModel {
     }
 
     public static class GetComputeQuotaScheduleResponseBodyDataCondition extends TeaModel {
-        /**
-         * <p>The start time when the quota plan takes effect.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>09:00</p>
-         */
         @NameInMap("at")
         public String at;
 
@@ -124,45 +84,18 @@ public class GetComputeQuotaScheduleResponseBody extends TeaModel {
     }
 
     public static class GetComputeQuotaScheduleResponseBodyData extends TeaModel {
-        /**
-         * <p>The value of effective condition.</p>
-         */
         @NameInMap("condition")
         public GetComputeQuotaScheduleResponseBodyDataCondition condition;
 
-        /**
-         * <p>The ID of the quota plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>89b54db44d384f26964951ea457f64a5</p>
-         */
         @NameInMap("id")
         public String id;
 
-        /**
-         * <p>The name of the quota plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>planA</p>
-         */
         @NameInMap("plan")
         public String plan;
 
-        /**
-         * <p>The time zone property.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>UTC+8</p>
-         */
         @NameInMap("timezone")
         public String timezone;
 
-        /**
-         * <p>The type of the quota plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>daily</p>
-         */
         @NameInMap("type")
         public String type;
 

@@ -10,6 +10,12 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
     @NameInMap("body")
     public java.util.List<UpdateTunnelQuotaTimerRequestBody> body;
 
+    /**
+     * <p>The time zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
+     */
     @NameInMap("timezone")
     public String timezone;
 
@@ -36,7 +42,7 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
 
     public static class UpdateTunnelQuotaTimerRequestBodyTunnelQuotaParameter extends TeaModel {
         /**
-         * <p>The number of elastically reserved slots.</p>
+         * <p>The number of elastic reserved concurrent slots.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -45,7 +51,7 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
         public Long elasticReservedSlotNum;
 
         /**
-         * <p>The number of reserved slots.</p>
+         * <p>The number of reserved concurrent slots.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -78,7 +84,7 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
 
     public static class UpdateTunnelQuotaTimerRequestBody extends TeaModel {
         /**
-         * <p>The start time of the time-specific configuration.</p>
+         * <p>The start time of the time-based configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00</p>
@@ -87,7 +93,7 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
         public String beginTime;
 
         /**
-         * <p>The end time of the time-specific configuration.</p>
+         * <p>The end time of the time-based configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>08:00</p>
@@ -96,7 +102,7 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The parameters for the time-specific configuration.</p>
+         * <p>The parameters of the time-based configuration.</p>
          */
         @NameInMap("tunnelQuotaParameter")
         public UpdateTunnelQuotaTimerRequestBodyTunnelQuotaParameter tunnelQuotaParameter;
