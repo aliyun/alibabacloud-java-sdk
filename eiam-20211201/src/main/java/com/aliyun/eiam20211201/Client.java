@@ -1954,6 +1954,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建凭据提供商</p>
+     * 
+     * @param request CreateCredentialProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCredentialProviderResponse
+     */
+    public CreateCredentialProviderResponse createCredentialProviderWithOptions(CreateCredentialProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderConfig)) {
+            query.put("CredentialProviderConfig", request.credentialProviderConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderIdentifier)) {
+            query.put("CredentialProviderIdentifier", request.credentialProviderIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderName)) {
+            query.put("CredentialProviderName", request.credentialProviderName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderType)) {
+            query.put("CredentialProviderType", request.credentialProviderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCredentialProvider"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCredentialProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建凭据提供商</p>
+     * 
+     * @param request CreateCredentialProviderRequest
+     * @return CreateCredentialProviderResponse
+     */
+    public CreateCredentialProviderResponse createCredentialProvider(CreateCredentialProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCredentialProviderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建扩展字段</p>
      * 
      * @param request CreateCustomFieldRequest
@@ -3614,6 +3682,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>启用凭据提供商</p>
+     * 
+     * @param request DeleteCredentialProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCredentialProviderResponse
+     */
+    public DeleteCredentialProviderResponse deleteCredentialProviderWithOptions(DeleteCredentialProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderId)) {
+            query.put("CredentialProviderId", request.credentialProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCredentialProvider"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCredentialProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用凭据提供商</p>
+     * 
+     * @param request DeleteCredentialProviderRequest
+     * @return DeleteCredentialProviderResponse
+     */
+    public DeleteCredentialProviderResponse deleteCredentialProvider(DeleteCredentialProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCredentialProviderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除扩展字段</p>
      * 
      * @param request DeleteCustomFieldRequest
@@ -5166,6 +5282,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>禁用凭据提供商</p>
+     * 
+     * @param request DisableCredentialProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableCredentialProviderResponse
+     */
+    public DisableCredentialProviderResponse disableCredentialProviderWithOptions(DisableCredentialProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderId)) {
+            query.put("CredentialProviderId", request.credentialProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableCredentialProvider"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableCredentialProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用凭据提供商</p>
+     * 
+     * @param request DisableCredentialProviderRequest
+     * @return DisableCredentialProviderResponse
+     */
+    public DisableCredentialProviderResponse disableCredentialProvider(DisableCredentialProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableCredentialProviderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>禁用字段</p>
      * 
      * @param request DisableCustomFieldRequest
@@ -6454,6 +6618,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnableCredentialResponse enableCredential(EnableCredentialRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableCredentialWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用凭据提供商</p>
+     * 
+     * @param request EnableCredentialProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableCredentialProviderResponse
+     */
+    public EnableCredentialProviderResponse enableCredentialProviderWithOptions(EnableCredentialProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderId)) {
+            query.put("CredentialProviderId", request.credentialProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableCredentialProvider"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableCredentialProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用凭据提供商</p>
+     * 
+     * @param request EnableCredentialProviderRequest
+     * @return EnableCredentialProviderResponse
+     */
+    public EnableCredentialProviderResponse enableCredentialProvider(EnableCredentialProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableCredentialProviderWithOptions(request, runtime);
     }
 
     /**
@@ -8180,6 +8392,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCredentialResponse getCredential(GetCredentialRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCredentialWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询凭据提供商详情</p>
+     * 
+     * @param request GetCredentialProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCredentialProviderResponse
+     */
+    public GetCredentialProviderResponse getCredentialProviderWithOptions(GetCredentialProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderId)) {
+            query.put("CredentialProviderId", request.credentialProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCredentialProvider"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCredentialProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询凭据提供商详情</p>
+     * 
+     * @param request GetCredentialProviderRequest
+     * @return GetCredentialProviderResponse
+     */
+    public GetCredentialProviderResponse getCredentialProvider(GetCredentialProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCredentialProviderWithOptions(request, runtime);
     }
 
     /**
@@ -11356,6 +11616,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListConditionalAccessPoliciesForUserResponse listConditionalAccessPoliciesForUser(ListConditionalAccessPoliciesForUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listConditionalAccessPoliciesForUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举凭据提供商</p>
+     * 
+     * @param request ListCredentialProvidersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCredentialProvidersResponse
+     */
+    public ListCredentialProvidersResponse listCredentialProvidersWithOptions(ListCredentialProvidersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderIds)) {
+            query.put("CredentialProviderIds", request.credentialProviderIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderTypes)) {
+            query.put("CredentialProviderTypes", request.credentialProviderTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statuses)) {
+            query.put("Statuses", request.statuses);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCredentialProviders"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCredentialProvidersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举凭据提供商</p>
+     * 
+     * @param request ListCredentialProvidersRequest
+     * @return ListCredentialProvidersResponse
+     */
+    public ListCredentialProvidersResponse listCredentialProviders(ListCredentialProvidersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCredentialProvidersWithOptions(request, runtime);
     }
 
     /**
@@ -17330,6 +17658,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCredentialDescriptionResponse updateCredentialDescription(UpdateCredentialDescriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCredentialDescriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新凭据提供商</p>
+     * 
+     * @param request UpdateCredentialProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCredentialProviderResponse
+     */
+    public UpdateCredentialProviderResponse updateCredentialProviderWithOptions(UpdateCredentialProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderConfig)) {
+            query.put("CredentialProviderConfig", request.credentialProviderConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderId)) {
+            query.put("CredentialProviderId", request.credentialProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderName)) {
+            query.put("CredentialProviderName", request.credentialProviderName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCredentialProvider"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCredentialProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新凭据提供商</p>
+     * 
+     * @param request UpdateCredentialProviderRequest
+     * @return UpdateCredentialProviderResponse
+     */
+    public UpdateCredentialProviderResponse updateCredentialProvider(UpdateCredentialProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCredentialProviderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新凭据提供商描述</p>
+     * 
+     * @param request UpdateCredentialProviderDescriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCredentialProviderDescriptionResponse
+     */
+    public UpdateCredentialProviderDescriptionResponse updateCredentialProviderDescriptionWithOptions(UpdateCredentialProviderDescriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderId)) {
+            query.put("CredentialProviderId", request.credentialProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCredentialProviderDescription"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCredentialProviderDescriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新凭据提供商描述</p>
+     * 
+     * @param request UpdateCredentialProviderDescriptionRequest
+     * @return UpdateCredentialProviderDescriptionResponse
+     */
+    public UpdateCredentialProviderDescriptionResponse updateCredentialProviderDescription(UpdateCredentialProviderDescriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCredentialProviderDescriptionWithOptions(request, runtime);
     }
 
     /**
