@@ -1,3 +1,6 @@
+2026-03-18 Version: 2.12.9
+- Generated java 2024-08-01 for QuanMiaoLightApp.
+
 2026-03-17 Version: 2.12.8
 - Update API RunEnterpriseVocAnalysis: add request parameters positiveFilter.
 - Update API SubmitEnterpriseVocAnalysisTask: add request parameters batchTask.
