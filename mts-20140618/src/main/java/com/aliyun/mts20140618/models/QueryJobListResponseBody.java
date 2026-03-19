@@ -1771,6 +1771,13 @@ public class QueryJobListResponseBody extends TeaModel {
         @NameInMap("FileFormat")
         public String fileFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ad195fd1317a761d4425232867759d1e</p>
+         */
+        @NameInMap("FileMd5")
+        public String fileMd5;
+
         @NameInMap("FileSize")
         public String fileSize;
 
@@ -1819,6 +1826,14 @@ public class QueryJobListResponseBody extends TeaModel {
         }
         public String getFileFormat() {
             return this.fileFormat;
+        }
+
+        public QueryJobListResponseBodyJobListJobOutputProperties setFileMd5(String fileMd5) {
+            this.fileMd5 = fileMd5;
+            return this;
+        }
+        public String getFileMd5() {
+            return this.fileMd5;
         }
 
         public QueryJobListResponseBodyJobListJobOutputProperties setFileSize(String fileSize) {
