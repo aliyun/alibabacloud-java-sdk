@@ -4808,6 +4808,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取事件列表</p>
+     * 
+     * @param request ListEventRecordsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEventRecordsResponse
+     */
+    public ListEventRecordsResponse listEventRecordsWithOptions(String eventType, ListEventRecordsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            query.put("beginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.termContent)) {
+            query.put("termContent", request.termContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.termType)) {
+            query.put("termType", request.termType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEventRecords"),
+            new TeaPair("version", "2017-06-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/" + com.aliyun.openapiutil.Client.getEncodeParam(eventType) + "/listEventRecords"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取事件列表</p>
+     * 
+     * @param request ListEventRecordsRequest
+     * @return ListEventRecordsResponse
+     */
+    public ListEventRecordsResponse listEventRecords(String eventType, ListEventRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listEventRecordsWithOptions(eventType, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the extended file configuration of a Logstash instance.</p>
      * 
      * @param headers map
@@ -5868,6 +5935,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>统计事件记录</p>
+     * 
+     * @param request ListStatsEventRecordsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListStatsEventRecordsResponse
+     */
+    public ListStatsEventRecordsResponse listStatsEventRecordsWithOptions(ListStatsEventRecordsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventType)) {
+            query.put("eventType", request.eventType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.level)) {
+            query.put("level", request.level);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListStatsEventRecords"),
+            new TeaPair("version", "2017-06-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/event/statsEventRecords"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStatsEventRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>统计事件记录</p>
+     * 
+     * @param request ListStatsEventRecordsRequest
+     * @return ListStatsEventRecordsResponse
+     */
+    public ListStatsEventRecordsResponse listStatsEventRecords(ListStatsEventRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listStatsEventRecordsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the tags that are added to one or more resources.</p>
      * 
      * @param request ListTagResourcesRequest
@@ -6237,6 +6359,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modifyInstanceMaintainTimeWithOptions(InstanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改计划执行时间</p>
+     * 
+     * @param request ModifyScheduleExecuteTimeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyScheduleExecuteTimeResponse
+     */
+    public ModifyScheduleExecuteTimeResponse modifyScheduleExecuteTimeWithOptions(String instanceId, ModifyScheduleExecuteTimeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("eventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleExecuteTime)) {
+            query.put("scheduleExecuteTime", request.scheduleExecuteTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyScheduleExecuteTime"),
+            new TeaPair("version", "2017-06-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/event/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/actions/modify-execute-time"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyScheduleExecuteTimeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改计划执行时间</p>
+     * 
+     * @param request ModifyScheduleExecuteTimeRequest
+     * @return ModifyScheduleExecuteTimeResponse
+     */
+    public ModifyScheduleExecuteTimeResponse modifyScheduleExecuteTime(String instanceId, ModifyScheduleExecuteTimeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyScheduleExecuteTimeWithOptions(instanceId, request, headers, runtime);
     }
 
     /**
