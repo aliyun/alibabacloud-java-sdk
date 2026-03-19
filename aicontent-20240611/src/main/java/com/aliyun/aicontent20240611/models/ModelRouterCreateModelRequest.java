@@ -31,6 +31,20 @@ public class ModelRouterCreateModelRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>32K</p>
+     */
+    @NameInMap("maxInputLength")
+    public String maxInputLength;
+
+    /**
+     * <strong>example:</strong>
+     * <p>8K</p>
+     */
+    @NameInMap("maxOutputLength")
+    public String maxOutputLength;
+
+    /**
+     * <strong>example:</strong>
      * <p>qwen-turbo</p>
      */
     @NameInMap("modelId")
@@ -91,6 +105,22 @@ public class ModelRouterCreateModelRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModelRouterCreateModelRequest setMaxInputLength(String maxInputLength) {
+        this.maxInputLength = maxInputLength;
+        return this;
+    }
+    public String getMaxInputLength() {
+        return this.maxInputLength;
+    }
+
+    public ModelRouterCreateModelRequest setMaxOutputLength(String maxOutputLength) {
+        this.maxOutputLength = maxOutputLength;
+        return this;
+    }
+    public String getMaxOutputLength() {
+        return this.maxOutputLength;
     }
 
     public ModelRouterCreateModelRequest setModelId(String modelId) {

@@ -2421,7 +2421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/创建对话</p>
+     * <p>对话管理/新建对话</p>
      * 
      * @param request ModelRouterCreateConversationRequest
      * @param headers map
@@ -2463,7 +2463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/创建对话</p>
+     * <p>对话管理/新建对话</p>
      * 
      * @param request ModelRouterCreateConversationRequest
      * @return ModelRouterCreateConversationResponse
@@ -2496,6 +2496,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxInputLength)) {
+            body.put("maxInputLength", request.maxInputLength);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxOutputLength)) {
+            body.put("maxOutputLength", request.maxOutputLength);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
@@ -3142,43 +3150,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterQueryModelListWithOptions(request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>模型管理/获取模型及API密钥详情</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ModelRouterQueryModelWithApiKeyResponse
-     */
-    public ModelRouterQueryModelWithApiKeyResponse modelRouterQueryModelWithApiKeyWithOptions(String id, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModelRouterQueryModelWithApiKey"),
-            new TeaPair("version", "20240611"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/modelRouter/open/models/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/with-api-key"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryModelWithApiKeyResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>模型管理/获取模型及API密钥详情</p>
-     * @return ModelRouterQueryModelWithApiKeyResponse
-     */
-    public ModelRouterQueryModelWithApiKeyResponse modelRouterQueryModelWithApiKey(String id) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.modelRouterQueryModelWithApiKeyWithOptions(id, headers, runtime);
     }
 
     /**
