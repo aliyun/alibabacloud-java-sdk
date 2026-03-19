@@ -59,6 +59,9 @@ public class UnifiedPageItem extends TeaModel {
     @NameInMap("summary")
     public String summary;
 
+    @NameInMap("tags")
+    public java.util.Map<String, ?> tags;
+
     @NameInMap("title")
     public String title;
 
@@ -172,6 +175,14 @@ public class UnifiedPageItem extends TeaModel {
     }
     public String getSummary() {
         return this.summary;
+    }
+
+    public UnifiedPageItem setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
     }
 
     public UnifiedPageItem setTitle(String title) {
