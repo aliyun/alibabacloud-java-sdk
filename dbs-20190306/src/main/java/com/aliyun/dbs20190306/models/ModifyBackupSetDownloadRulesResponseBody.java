@@ -8,7 +8,7 @@ public class ModifyBackupSetDownloadRulesResponseBody extends TeaModel {
      * <p>The ID of the backup schedule.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01e****</p>
+     * <p>dbstooi01exxxx</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;

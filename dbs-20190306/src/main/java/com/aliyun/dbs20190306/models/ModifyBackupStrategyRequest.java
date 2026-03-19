@@ -19,18 +19,25 @@ public class ModifyBackupStrategyRequest extends TeaModel {
     /**
      * <p>The day of each week when the full backup task runs. Valid values:</p>
      * <ul>
-     * <li>Monday</li>
-     * <li>Tuesday</li>
-     * <li>Wednesday</li>
-     * <li>Thursday</li>
-     * <li>Friday</li>
-     * <li>Saturday</li>
-     * <li>Sunday</li>
+     * <li><p>Monday</p>
+     * </li>
+     * <li><p>Tuesday</p>
+     * </li>
+     * <li><p>Wednesday</p>
+     * </li>
+     * <li><p>Thursday</p>
+     * </li>
+     * <li><p>Friday</p>
+     * </li>
+     * <li><p>Saturday</p>
+     * </li>
+     * <li><p>Sunday</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Monday</p>
+     * <p>Monday,Tuesday,Wednesday</p>
      */
     @NameInMap("BackupPeriod")
     public String backupPeriod;
@@ -57,8 +64,10 @@ public class ModifyBackupStrategyRequest extends TeaModel {
     /**
      * <p>The backup method that you want to use for full backups. Valid values:</p>
      * <ul>
-     * <li><strong>simple</strong>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</li>
-     * <li><strong>Manual</strong>: manual backup.</li>
+     * <li><p><strong>simple</strong>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</p>
+     * </li>
+     * <li><p><strong>Manual</strong>: manual backup.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>simple</strong>.</p>

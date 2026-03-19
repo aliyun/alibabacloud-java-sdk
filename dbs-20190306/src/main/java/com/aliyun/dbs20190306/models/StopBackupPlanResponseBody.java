@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopBackupPlanResponseBody extends TeaModel {
     /**
-     * <p>The ID of the backup schedule.</p>
+     * <p>The ID of the backup plan.</p>
      * 
      * <strong>example:</strong>
      * <p>dbs1h****usfa</p>
@@ -41,7 +41,7 @@ public class StopBackupPlanResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
@@ -50,7 +50,7 @@ public class StopBackupPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

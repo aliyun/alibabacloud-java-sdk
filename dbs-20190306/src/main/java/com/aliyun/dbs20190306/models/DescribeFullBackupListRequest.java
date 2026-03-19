@@ -5,26 +5,33 @@ import com.aliyun.tea.*;
 
 public class DescribeFullBackupListRequest extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The ID of the backup plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The total number of full backup tasks.</p>
+     * <p>dbsr179qz******</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
     /**
-     * <p>The end time of the backup task, such as 1554560477000.</p>
+     * <p>The ID of the backup set.</p>
      * 
      * <strong>example:</strong>
-     * <p>The point in time when the backup set expires, such as 1554560477000.</p>
+     * <p>1iukx5h******</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <strong>example:</strong>
+     * <p>finish</p>
+     */
+    @NameInMap("BackupSetStatus")
+    public String backupSetStatus;
+
+    /**
+     * <p>A token that ensures idempotence and prevents duplicate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -32,6 +39,12 @@ public class DescribeFullBackupListRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The end time of the backup, in UNIX timestamp format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1676887128</p>
+     */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
@@ -39,7 +52,7 @@ public class DescribeFullBackupListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The page number. Valid values: integers from 0 to the maximum integer value. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +61,16 @@ public class DescribeFullBackupListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The error message.</p>
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><p>30</p>
+     * </li>
+     * <li><p>50</p>
+     * </li>
+     * <li><p>100</p>
+     * </li>
+     * </ul>
+     * <p>Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -57,7 +79,14 @@ public class DescribeFullBackupListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("ShowProgress")
+    public String showProgress;
+
+    /**
+     * <p>Specifies whether to return the storage class.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -66,7 +95,10 @@ public class DescribeFullBackupListRequest extends TeaModel {
     public Boolean showStorageType;
 
     /**
-     * <p>Queries full backup tasks.</p>
+     * <p>The start time of the backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1676887100</p>
      */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
@@ -90,6 +122,14 @@ public class DescribeFullBackupListRequest extends TeaModel {
     }
     public String getBackupSetId() {
         return this.backupSetId;
+    }
+
+    public DescribeFullBackupListRequest setBackupSetStatus(String backupSetStatus) {
+        this.backupSetStatus = backupSetStatus;
+        return this;
+    }
+    public String getBackupSetStatus() {
+        return this.backupSetStatus;
     }
 
     public DescribeFullBackupListRequest setClientToken(String clientToken) {
@@ -130,6 +170,14 @@ public class DescribeFullBackupListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeFullBackupListRequest setShowProgress(String showProgress) {
+        this.showProgress = showProgress;
+        return this;
+    }
+    public String getShowProgress() {
+        return this.showProgress;
     }
 
     public DescribeFullBackupListRequest setShowStorageType(Boolean showStorageType) {

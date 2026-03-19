@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFullBackupListResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Param.NotFound</p>
      */
@@ -12,6 +14,8 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified parameter %s value is not valid.</p>
      */
@@ -19,6 +23,8 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +35,8 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public DescribeFullBackupListResponseBodyItems items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +44,8 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +53,8 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>636BC118-6080-4119-A6B5-C199CEC1037D</p>
      */
@@ -50,6 +62,14 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The operation succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +77,8 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of full backup jobs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -64,6 +86,8 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public Integer totalElements;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -158,8 +182,11 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public static class DescribeFullBackupListResponseBodyItemsFullBackupFile extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>[{\&quot;DBName\&quot;:\&quot;test\&quot;}]</p>
+         * <p>TESTGATEWAY</p>
          */
+        @NameInMap("BackupGatewayIdentifier")
+        public String backupGatewayIdentifier;
+
         @NameInMap("BackupObjects")
         public String backupObjects;
 
@@ -172,45 +199,125 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         @NameInMap("BackupSize")
         public Long backupSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>finish</p>
-         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("EndTime")
-        public Long endTime;
+        /**
+         * <strong>example:</strong>
+         * <p>2xxx7778xxxxxxxxxx</p>
+         */
+        @NameInMap("CrossAliyunId")
+        public String crossAliyunId;
 
         /**
          * <strong>example:</strong>
-         * <p>NULL</p>
+         * <p>ram-for-dbs</p>
          */
+        @NameInMap("CrossRoleName")
+        public String crossRoleName;
+
+        @NameInMap("EndTime")
+        public Long endTime;
+
         @NameInMap("ErrMessage")
         public String errMessage;
 
         @NameInMap("FinishTime")
         public Long finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("LogicalFullBackupProgress")
+        public Integer logicalFullBackupProgress;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("LogicalStructureBackupProgress")
+        public Integer logicalStructureBackupProgress;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("SourceEndpointEnableSsl")
+        public String sourceEndpointEnableSsl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
+        @NameInMap("SourceEndpointHost")
+        public String sourceEndpointHost;
+
+        /**
+         * <strong>example:</strong>
+         * <p>rm-testxx</p>
+         */
+        @NameInMap("SourceEndpointInstanceId")
+        public String sourceEndpointInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
+        @NameInMap("SourceEndpointInstanceType")
+        public String sourceEndpointInstanceType;
+
         @NameInMap("SourceEndpointIpPort")
         public String sourceEndpointIpPort;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
+        @NameInMap("SourceEndpointPort")
+        public String sourceEndpointPort;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
+        @NameInMap("SourceEndpointRegion")
+        public String sourceEndpointRegion;
+
+        /**
+         * <strong>example:</strong>
+         * <p>dbs_backup</p>
+         */
+        @NameInMap("SourceEndpointUserName")
+        public String sourceEndpointUserName;
 
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <strong>example:</strong>
-         * <p>Standard</p>
+         * <p>encrypted</p>
          */
+        @NameInMap("StorageEncryptMethod")
+        public String storageEncryptMethod;
+
         @NameInMap("StorageMethod")
         public String storageMethod;
 
         public static DescribeFullBackupListResponseBodyItemsFullBackupFile build(java.util.Map<String, ?> map) throws Exception {
             DescribeFullBackupListResponseBodyItemsFullBackupFile self = new DescribeFullBackupListResponseBodyItemsFullBackupFile();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupGatewayIdentifier(String backupGatewayIdentifier) {
+            this.backupGatewayIdentifier = backupGatewayIdentifier;
+            return this;
+        }
+        public String getBackupGatewayIdentifier() {
+            return this.backupGatewayIdentifier;
         }
 
         public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupObjects(String backupObjects) {
@@ -261,6 +368,22 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setCrossAliyunId(String crossAliyunId) {
+            this.crossAliyunId = crossAliyunId;
+            return this;
+        }
+        public String getCrossAliyunId() {
+            return this.crossAliyunId;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setCrossRoleName(String crossRoleName) {
+            this.crossRoleName = crossRoleName;
+            return this;
+        }
+        public String getCrossRoleName() {
+            return this.crossRoleName;
+        }
+
         public DescribeFullBackupListResponseBodyItemsFullBackupFile setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
@@ -285,6 +408,54 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
             return this.finishTime;
         }
 
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setLogicalFullBackupProgress(Integer logicalFullBackupProgress) {
+            this.logicalFullBackupProgress = logicalFullBackupProgress;
+            return this;
+        }
+        public Integer getLogicalFullBackupProgress() {
+            return this.logicalFullBackupProgress;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setLogicalStructureBackupProgress(Integer logicalStructureBackupProgress) {
+            this.logicalStructureBackupProgress = logicalStructureBackupProgress;
+            return this;
+        }
+        public Integer getLogicalStructureBackupProgress() {
+            return this.logicalStructureBackupProgress;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setSourceEndpointEnableSsl(String sourceEndpointEnableSsl) {
+            this.sourceEndpointEnableSsl = sourceEndpointEnableSsl;
+            return this;
+        }
+        public String getSourceEndpointEnableSsl() {
+            return this.sourceEndpointEnableSsl;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setSourceEndpointHost(String sourceEndpointHost) {
+            this.sourceEndpointHost = sourceEndpointHost;
+            return this;
+        }
+        public String getSourceEndpointHost() {
+            return this.sourceEndpointHost;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setSourceEndpointInstanceId(String sourceEndpointInstanceId) {
+            this.sourceEndpointInstanceId = sourceEndpointInstanceId;
+            return this;
+        }
+        public String getSourceEndpointInstanceId() {
+            return this.sourceEndpointInstanceId;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setSourceEndpointInstanceType(String sourceEndpointInstanceType) {
+            this.sourceEndpointInstanceType = sourceEndpointInstanceType;
+            return this;
+        }
+        public String getSourceEndpointInstanceType() {
+            return this.sourceEndpointInstanceType;
+        }
+
         public DescribeFullBackupListResponseBodyItemsFullBackupFile setSourceEndpointIpPort(String sourceEndpointIpPort) {
             this.sourceEndpointIpPort = sourceEndpointIpPort;
             return this;
@@ -293,12 +464,44 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
             return this.sourceEndpointIpPort;
         }
 
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setSourceEndpointPort(String sourceEndpointPort) {
+            this.sourceEndpointPort = sourceEndpointPort;
+            return this;
+        }
+        public String getSourceEndpointPort() {
+            return this.sourceEndpointPort;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setSourceEndpointRegion(String sourceEndpointRegion) {
+            this.sourceEndpointRegion = sourceEndpointRegion;
+            return this;
+        }
+        public String getSourceEndpointRegion() {
+            return this.sourceEndpointRegion;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setSourceEndpointUserName(String sourceEndpointUserName) {
+            this.sourceEndpointUserName = sourceEndpointUserName;
+            return this;
+        }
+        public String getSourceEndpointUserName() {
+            return this.sourceEndpointUserName;
+        }
+
         public DescribeFullBackupListResponseBodyItemsFullBackupFile setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setStorageEncryptMethod(String storageEncryptMethod) {
+            this.storageEncryptMethod = storageEncryptMethod;
+            return this;
+        }
+        public String getStorageEncryptMethod() {
+            return this.storageEncryptMethod;
         }
 
         public DescribeFullBackupListResponseBodyItemsFullBackupFile setStorageMethod(String storageMethod) {

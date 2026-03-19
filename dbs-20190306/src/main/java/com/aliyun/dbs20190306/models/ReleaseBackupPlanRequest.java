@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class ReleaseBackupPlanRequest extends TeaModel {
     /**
-     * <p>The backup schedule ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</p>
+     * <p>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01****</p>
+     * <p>dbstooi01xxxx</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>An arbitrary string.</p>
      * 
      * <strong>example:</strong>
      * <p>dbs</p>

@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class StopBackupPlanRequest extends TeaModel {
     /**
-     * <p>The ID of the backup schedule.</p>
+     * <p>The ID of the backup plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01****</p>
+     * <p>dbstooi01XXXX</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token to ensure the idempotence of the request. This prevents the same request from being sent repeatedly.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCz****</p>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -27,10 +27,12 @@ public class StopBackupPlanRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The method that is used to stop the backup schedule. Valid values:</p>
+     * <p>The method used to pause the backup plan. Valid values:</p>
      * <ul>
-     * <li>ALL: stops the backup schedule, full data backup tasks, incremental log backup tasks, and restore tasks</li>
-     * <li>PLAN: stops only the backup schedule.</li>
+     * <li><p>ALL: Pauses the backup schedule, full data backup jobs, incremental log backup jobs, and restore jobs.</p>
+     * </li>
+     * <li><p>PLAN: Pauses only the backup schedule.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

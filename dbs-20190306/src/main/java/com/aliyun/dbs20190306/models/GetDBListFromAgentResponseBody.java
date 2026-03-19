@@ -4,9 +4,6 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class GetDBListFromAgentResponseBody extends TeaModel {
-    /**
-     * <p>The details of the databases.</p>
-     */
     @NameInMap("DbList")
     public GetDBListFromAgentResponseBodyDbList dbList;
 

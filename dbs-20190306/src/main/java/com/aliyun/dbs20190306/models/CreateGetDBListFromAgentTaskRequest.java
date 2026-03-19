@@ -7,7 +7,7 @@ public class CreateGetDBListFromAgentTaskRequest extends TeaModel {
     /**
      * <p>The ID of the backup gateway. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</p>
      * <blockquote>
-     * <p> This parameter is required.</p>
+     * <p>This parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,14 +28,22 @@ public class CreateGetDBListFromAgentTaskRequest extends TeaModel {
     /**
      * <p>The type of the database. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>MSSQL</strong></li>
-     * <li><strong>Oracle</strong></li>
-     * <li><strong>MariaDB</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>DRDS</strong></li>
-     * <li><strong>MongoDB</strong></li>
-     * <li><strong>Redis</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>MSSQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * <li><p><strong>MariaDB</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>DRDS</strong></p>
+     * </li>
+     * <li><p><strong>MongoDB</strong></p>
+     * </li>
+     * <li><p><strong>Redis</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +59,7 @@ public class CreateGetDBListFromAgentTaskRequest extends TeaModel {
      * <p>The URL that is used to access the database.</p>
      * 
      * <strong>example:</strong>
-     * <p>123.0.0.1</p>
+     * <p>123.0.XX.XX</p>
      */
     @NameInMap("SourceEndpointIP")
     public String sourceEndpointIP;

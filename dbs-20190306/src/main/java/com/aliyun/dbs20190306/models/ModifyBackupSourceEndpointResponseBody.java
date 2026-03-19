@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupSourceEndpointResponseBody extends TeaModel {
     /**
-     * <p>The ID of the backup schedule.</p>
+     * <p>The backup plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dbs1h****usfa</p>
@@ -41,7 +41,7 @@ public class ModifyBackupSourceEndpointResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Indicates whether a precheck is triggered. If the value of this parameter is true, you must start the backup schedule by calling the StartBackupPlan operation.</p>
+     * <p>Indicates whether this change triggers a precheck. If this value is true, call StartBackupPlan to restart the backup plan.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -50,7 +50,7 @@ public class ModifyBackupSourceEndpointResponseBody extends TeaModel {
     public Boolean needPrecheck;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D6E068C3-25BC-455A-85FE-45F0B22E****</p>
@@ -59,10 +59,12 @@ public class ModifyBackupSourceEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false</strong>: The request fails.</li>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigureBackupPlanResponseBody extends TeaModel {
     /**
-     * <p>The ID of the backup schedule.</p>
+     * <p>The backup plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dbstooi01ex****</p>
@@ -41,7 +41,7 @@ public class ConfigureBackupPlanResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F1FB49D4-B504-47F1-9F43-D7EAB33F****</p>
@@ -50,10 +50,12 @@ public class ConfigureBackupPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false</strong>: The request fails.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

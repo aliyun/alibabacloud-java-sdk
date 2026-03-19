@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartBackupPlanRequest extends TeaModel {
     /**
-     * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+     * <p>The ID of the backup plan. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class StartBackupPlanRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>

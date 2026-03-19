@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPlanListRequest extends TeaModel {
     /**
-     * <p>The ID of the backup schedule. You can query multiple backup schedule IDs. Separate multiple IDs with commas (,).</p>
+     * <strong>example:</strong>
+     * <p>logical</p>
+     */
+    @NameInMap("BackupMethod")
+    public String backupMethod;
+
+    /**
+     * <p>Backup plan ID. To list multiple backup plans, separate IDs with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>dbstooi01exXXXX</p>
@@ -23,15 +30,22 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public String backupPlanName;
 
     /**
-     * <p>Backup plan status, the values are as follows:</p>
+     * <p>Backup plan status. Valid values:</p>
      * <ul>
-     * <li><strong>wait</strong>: Not configured</li>
-     * <li><strong>init</strong>: Not started (pre-check failed)</li>
-     * <li><strong>running</strong>: Running</li>
-     * <li><strong>stop</strong>: Failed</li>
-     * <li><strong>pause</strong>: Paused</li>
-     * <li><strong>locked</strong>: Locked</li>
-     * <li><strong>check_pass</strong>: Pre-check passed</li>
+     * <li><p><strong>wait</strong>: Not configured.</p>
+     * </li>
+     * <li><p><strong>init</strong>: Not started (precheck failed).</p>
+     * </li>
+     * <li><p><strong>running</strong>: Running.</p>
+     * </li>
+     * <li><p><strong>stop</strong>: Failed.</p>
+     * </li>
+     * <li><p><strong>pause</strong>: Paused.</p>
+     * </li>
+     * <li><p><strong>locked</strong>: Locked.</p>
+     * </li>
+     * <li><p><strong>check_pass</strong>: Precheck passed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +55,7 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public String backupPlanStatus;
 
     /**
-     * <p>Used to ensure the idempotence of the request, preventing duplicate submissions.</p>
+     * <p>A client token used to ensure idempotence and prevent duplicate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>ASDASDASDSADASFCZXVZ</p>
@@ -53,7 +67,7 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>Page number, must be greater than or equal to 0 and not exceed the maximum value of Integer. The default value is 0.</p>
+     * <p>Page number. Valid values: integers greater than or equal to 0 and less than or equal to the maximum integer value. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,9 +76,9 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Number of records per page, the value should be between 1 and 100.</p>
+     * <p>Number of records per page. Valid values: 1 to 100.</p>
      * <blockquote>
-     * <p>The default is <strong>30</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,7 +88,7 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>DBS region, you can view the supported DBS regions by calling the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> interface.</p>
+     * <p>DBS region. Call <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> to view supported regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -91,9 +105,26 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("ShowBackupStrategyInfo")
+    public Boolean showBackupStrategyInfo;
+
+    @NameInMap("ShowRecoverTimeRange")
+    public Boolean showRecoverTimeRange;
+
+    @NameInMap("ShowStorageStrategyInfo")
+    public Boolean showStorageStrategyInfo;
+
     public static DescribeBackupPlanListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPlanListRequest self = new DescribeBackupPlanListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBackupPlanListRequest setBackupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
+        return this;
+    }
+    public String getBackupMethod() {
+        return this.backupMethod;
     }
 
     public DescribeBackupPlanListRequest setBackupPlanId(String backupPlanId) {
@@ -166,6 +197,30 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeBackupPlanListRequest setShowBackupStrategyInfo(Boolean showBackupStrategyInfo) {
+        this.showBackupStrategyInfo = showBackupStrategyInfo;
+        return this;
+    }
+    public Boolean getShowBackupStrategyInfo() {
+        return this.showBackupStrategyInfo;
+    }
+
+    public DescribeBackupPlanListRequest setShowRecoverTimeRange(Boolean showRecoverTimeRange) {
+        this.showRecoverTimeRange = showRecoverTimeRange;
+        return this;
+    }
+    public Boolean getShowRecoverTimeRange() {
+        return this.showRecoverTimeRange;
+    }
+
+    public DescribeBackupPlanListRequest setShowStorageStrategyInfo(Boolean showStorageStrategyInfo) {
+        this.showStorageStrategyInfo = showStorageStrategyInfo;
+        return this;
+    }
+    public Boolean getShowStorageStrategyInfo() {
+        return this.showStorageStrategyInfo;
     }
 
 }

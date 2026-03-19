@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupGatewayListRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token used to ensure the idempotence of the request. This prevents duplicate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -14,7 +14,7 @@ public class DescribeBackupGatewayListRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The unique identifier of the backup gateway. You can query multiple backup gateways. Separate multiple identifiers with commas (,).</p>
+     * <p>The unique identifier of the backup gateway. You can query multiple gateways by separating the identifiers with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>7213527653217</p>
@@ -26,7 +26,7 @@ public class DescribeBackupGatewayListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be a positive integer. Default value: 0.</p>
+     * <p>The page number. The value must be greater than or equal to 0 and cannot exceed the maximum value of an integer. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,14 +35,17 @@ public class DescribeBackupGatewayListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of records on each page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong></li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Default value: 30.</p>
+     * <p>The default value is 30.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,18 +55,28 @@ public class DescribeBackupGatewayListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which Database Backup (DBS) is activated. Valid values:</p>
+     * <p>The region of the DBS instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
-     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
-     * <li><strong>cn-qingdao</strong>: China (Qingdao)</li>
-     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
-     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore (Singapore)</li>
-     * <li><strong>cn-hangzhou-finance</strong>: China East 1 Finance</li>
-     * <li><strong>cn-shanghai-finance</strong>: China East 2 Finance</li>
-     * <li><strong>cn-shenzhen-finance</strong>: China South 1 Finance</li>
+     * <li><p><strong>cn-hangzhou</strong>: China (Hangzhou)</p>
+     * </li>
+     * <li><p><strong>cn-shanghai</strong>: China (Shanghai)</p>
+     * </li>
+     * <li><p><strong>cn-qingdao</strong>: China (Qingdao)</p>
+     * </li>
+     * <li><p><strong>cn-beijing</strong>: China (Beijing)</p>
+     * </li>
+     * <li><p><strong>cn-shenzhen</strong>: China (Shenzhen)</p>
+     * </li>
+     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong)</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: Singapore</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou-finance</strong>: Hangzhou Finance Cloud</p>
+     * </li>
+     * <li><p><strong>cn-shanghai-finance</strong>: Shanghai Finance Cloud</p>
+     * </li>
+     * <li><p><strong>cn-shenzhen-finance</strong>: Shenzhen Finance Cloud</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

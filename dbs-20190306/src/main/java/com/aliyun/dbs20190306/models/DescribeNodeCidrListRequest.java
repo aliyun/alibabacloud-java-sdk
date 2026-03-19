@@ -19,16 +19,26 @@ public class DescribeNodeCidrListRequest extends TeaModel {
     /**
      * <p>The region in which DBS is activated. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
-     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
-     * <li><strong>cn-qingdao</strong>: China (Qingdao)</li>
-     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
-     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore (Singapore)</li>
-     * <li><strong>cn-hangzhou-finance</strong>: China East 1 Finance</li>
-     * <li><strong>cn-shanghai-finance</strong>: China East 2 Finance</li>
-     * <li><strong>cn-shenzhen-finance</strong>: China South 1 Finance</li>
+     * <li><p><strong>cn-hangzhou</strong>: China (Hangzhou)</p>
+     * </li>
+     * <li><p><strong>cn-shanghai</strong>: China (Shanghai)</p>
+     * </li>
+     * <li><p><strong>cn-qingdao</strong>: China (Qingdao)</p>
+     * </li>
+     * <li><p><strong>cn-beijing</strong>: China (Beijing)</p>
+     * </li>
+     * <li><p><strong>cn-shenzhen</strong>: China (Shenzhen)</p>
+     * </li>
+     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong)</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: Singapore (Singapore)</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou-finance</strong>: China East 1 Finance</p>
+     * </li>
+     * <li><p><strong>cn-shanghai-finance</strong>: China East 2 Finance</p>
+     * </li>
+     * <li><p><strong>cn-shenzhen-finance</strong>: China South 1 Finance</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

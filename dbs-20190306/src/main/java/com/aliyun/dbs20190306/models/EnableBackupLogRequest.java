@@ -5,23 +5,30 @@ import com.aliyun.tea.*;
 
 public class EnableBackupLogRequest extends TeaModel {
     /**
-     * <p>The backup schedule ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+     * <p>The ID of the backup plan. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01xxxx</p>
+     * <p>dbstooi******</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>Any string value.</p>
      * 
      * <strong>example:</strong>
      * <p>dbs</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableMysqlPhysicalBackupBinlog")
+    public String enableMysqlPhysicalBackupBinlog;
 
     @NameInMap("OwnerId")
     public String ownerId;
@@ -45,6 +52,14 @@ public class EnableBackupLogRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public EnableBackupLogRequest setEnableMysqlPhysicalBackupBinlog(String enableMysqlPhysicalBackupBinlog) {
+        this.enableMysqlPhysicalBackupBinlog = enableMysqlPhysicalBackupBinlog;
+        return this;
+    }
+    public String getEnableMysqlPhysicalBackupBinlog() {
+        return this.enableMysqlPhysicalBackupBinlog;
     }
 
     public EnableBackupLogRequest setOwnerId(String ownerId) {

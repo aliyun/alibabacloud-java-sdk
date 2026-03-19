@@ -31,14 +31,11 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The information about the time ranges to which you can restore data.</p>
-     */
     @NameInMap("Items")
     public DescribeRestoreRangeInfoResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E2BD9DFC-6760-5F49-97C5-DA739E29****</p>
@@ -47,10 +44,12 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false</strong>: The request fails.</li>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,30 +112,12 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupListFullBackupDetail extends TeaModel {
-        /**
-         * <p>The ID of the backup set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>qecnsxkd****</p>
-         */
         @NameInMap("BackupSetId")
         public String backupSetId;
 
-        /**
-         * <p>The end time of the full backup task. Example: 1646760308000.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1646760308000</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <p>The start time of the full backup task. Example: 1646760282000.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1646760282000</p>
-         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -192,63 +173,86 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
 
     public static class DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange extends TeaModel {
         /**
-         * <p>The beginning of the time range to which you can restore data.</p>
-         * 
          * <strong>example:</strong>
-         * <p>1646760282000</p>
+         * <p>127.0.0.1</p>
          */
-        @NameInMap("BeginTimestampForRestore")
-        public Long beginTimestampForRestore;
+        @NameInMap("BackupSourceHost")
+        public String backupSourceHost;
 
         /**
-         * <p>The end of the time range to which you can restore data.</p>
-         * 
          * <strong>example:</strong>
-         * <p>1646760308000</p>
+         * <p>rm-testxx</p>
          */
-        @NameInMap("EndTimestampForRestore")
-        public Long endTimestampForRestore;
+        @NameInMap("BackupSourceInstanceId")
+        public String backupSourceInstanceId;
 
         /**
-         * <p>If the value of the RangeType parameter is point, this parameter is returned. The value of this parameter describes information about all backup points in the time range.</p>
-         */
-        @NameInMap("FullBackupList")
-        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupList fullBackupList;
-
-        /**
-         * <p>The type of the time range to which you can restore data.</p>
-         * <ul>
-         * <li><strong>point</strong>: The time range contains discrete points in time at which full backups were performed.</li>
-         * <li><strong>range</strong>: The time range is a period of time for which continuous backup is performed. You can specify a random point in time in the time range to restore data.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>point</p>
-         */
-        @NameInMap("RangeType")
-        public String rangeType;
-
-        /**
-         * <p>The ID of the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-bp106x9tk2c91****</p>
-         */
-        @NameInMap("SourceEndpointInstanceID")
-        public String sourceEndpointInstanceID;
-
-        /**
-         * <p>The location of the database.</p>
-         * 
          * <strong>example:</strong>
          * <p>rds</p>
          */
+        @NameInMap("BackupSourceInstanceType")
+        public String backupSourceInstanceType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
+        @NameInMap("BackupSourcePort")
+        public String backupSourcePort;
+
+        @NameInMap("BeginTimestampForRestore")
+        public Long beginTimestampForRestore;
+
+        @NameInMap("EndTimestampForRestore")
+        public Long endTimestampForRestore;
+
+        @NameInMap("FullBackupList")
+        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupList fullBackupList;
+
+        @NameInMap("RangeType")
+        public String rangeType;
+
+        @NameInMap("SourceEndpointInstanceID")
+        public String sourceEndpointInstanceID;
+
         @NameInMap("SourceEndpointInstanceType")
         public String sourceEndpointInstanceType;
 
         public static DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange build(java.util.Map<String, ?> map) throws Exception {
             DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange self = new DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setBackupSourceHost(String backupSourceHost) {
+            this.backupSourceHost = backupSourceHost;
+            return this;
+        }
+        public String getBackupSourceHost() {
+            return this.backupSourceHost;
+        }
+
+        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setBackupSourceInstanceId(String backupSourceInstanceId) {
+            this.backupSourceInstanceId = backupSourceInstanceId;
+            return this;
+        }
+        public String getBackupSourceInstanceId() {
+            return this.backupSourceInstanceId;
+        }
+
+        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setBackupSourceInstanceType(String backupSourceInstanceType) {
+            this.backupSourceInstanceType = backupSourceInstanceType;
+            return this;
+        }
+        public String getBackupSourceInstanceType() {
+            return this.backupSourceInstanceType;
+        }
+
+        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setBackupSourcePort(String backupSourcePort) {
+            this.backupSourcePort = backupSourcePort;
+            return this;
+        }
+        public String getBackupSourcePort() {
+            return this.backupSourcePort;
         }
 
         public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setBeginTimestampForRestore(Long beginTimestampForRestore) {

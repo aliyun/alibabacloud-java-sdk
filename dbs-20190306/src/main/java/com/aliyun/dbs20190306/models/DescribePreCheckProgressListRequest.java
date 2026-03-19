@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePreCheckProgressListRequest extends TeaModel {
     /**
-     * <p>The backup schedule ID.</p>
+     * <p>The ID of the backup plan.</p>
      * <blockquote>
-     * <p> You must specify one of BackupPlanId and RestoreTaskId.</p>
+     * <p>Specify either BackupPlanId or RestoreTaskId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01XXXX</p>
+     * <p>dbsr1l3ro21****</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
@@ -20,7 +20,7 @@ public class DescribePreCheckProgressListRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,10 +29,10 @@ public class DescribePreCheckProgressListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The restoration task ID.</p>
+     * <p>The ID of the restore job.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbasdsaXXXX</p>
+     * <p>dbasdsa****</p>
      */
     @NameInMap("RestoreTaskId")
     public String restoreTaskId;

@@ -41,7 +41,7 @@ public class StartRestoreTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the restore task.</p>
+     * <p>The ID of the restore job.</p>
      * 
      * <strong>example:</strong>
      * <p>s102h7rfXXXX</p>
@@ -50,7 +50,7 @@ public class StartRestoreTaskResponseBody extends TeaModel {
     public String restoreTaskId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

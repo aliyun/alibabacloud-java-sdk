@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
     /**
-     * <p>The value is null.</p>
+     * <p>An empty value.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -14,7 +14,7 @@ public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>EntityAlreadyExists.Role : The role already exists:AliyunServiceRoleForDBS\r\nRequestId : 73******-3B4D-501A-9505-FA8B9******</p>
@@ -23,7 +23,7 @@ public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>EntityAlreadyExists.Role</p>
@@ -43,8 +43,10 @@ public class InitializeDbsServiceLinkedRoleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

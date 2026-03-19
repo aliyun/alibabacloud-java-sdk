@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupSourceEndpointRequest extends TeaModel {
     /**
-     * <p>The backup gateway ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+     * <p>The backup gateway ID. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
      * <blockquote>
-     * <p> If you set <strong>SourceEndpointInstanceType</strong> to Agent, this parameter is required.</p>
+     * <p>You must specify this parameter when <strong>SourceEndpointInstanceType</strong> is Agent.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,16 +17,16 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public Long backupGatewayId;
 
     /**
-     * <p>The backup object. If you set SourceEndpointInstanceType to Agent, this parameter is optional. Otherwise, it is required. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the backup object.</p>
+     * <p>The backup objects. This parameter is optional when SourceEndpointInstanceType is Agent. For all other cases, you must specify it. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{ &quot;DBName&quot;:&quot;Name of the database to be backed up&quot;, &quot;SchemaName&quot;:&quot;Name of the schema to be backed up&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table to be backed up&quot; }], &quot;TableExcludes&quot;:[{&quot;TableName&quot;:&quot;Name of the table to be excluded during the backup&quot; }] } ]</p>
+     * <p>[{  &quot;DBName&quot;:&quot;待备份库名&quot;, &quot;SchemaName&quot;:&quot;待备份 Schema 名&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;待备份表表名&quot; }],  &quot;TableExcludes&quot;:[{&quot;TableName&quot;:&quot;待备份库名不需要备份表的表名&quot; }] } ]</p>
      */
     @NameInMap("BackupObjects")
     public String backupObjects;
 
     /**
-     * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+     * <p>The backup plan ID. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A unique string that ensures idempotence and prevents duplicate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -45,7 +45,7 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The unique ID (UID) of the Alibaba Cloud account to which the backup schedule belongs. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to obtain the UID.</p>
+     * <p>The UID of the Alibaba Cloud account used for cross-account backup. Call <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> to get this value.</p>
      * 
      * <strong>example:</strong>
      * <p>2xxx7778xxxxxxxxxx</p>
@@ -54,7 +54,7 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public String crossAliyunId;
 
     /**
-     * <p>The name of the RAM role that is used to perform backups across Alibaba Cloud accounts. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to obtain the RAM role.</p>
+     * <p>The RAM role name used for cross-account backup. Call <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> to get this value.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -62,14 +62,23 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     @NameInMap("CrossRoleName")
     public String crossRoleName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableSourceEndpointSsl")
+    public String enableSourceEndpointSsl;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * <ul>
-     * <li>This parameter is required if the database is a PostgreSQL or MongoDB database.</li>
-     * <li>This parameter is required if the database is an SQL Server database that is connected to DBS over a DBS backup gateway.</li>
+     * <li><p>You must specify this parameter for PostgreSQL or MongoDB databases.</p>
+     * </li>
+     * <li><p>You must specify this parameter for Microsoft SQL Server databases connected through a backup gateway.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,9 +88,9 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public String sourceEndpointDatabaseName;
 
     /**
-     * <p>The endpoint of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the endpoint.</p>
+     * <p>The database endpoint. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
      * <blockquote>
-     * <p> If you set <strong>SourceEndpointInstanceType</strong> to Express, Agent, or Other, this parameter is required.</p>
+     * <p>You must specify this parameter when <strong>SourceEndpointInstanceType</strong> is Express, Agent, or Other.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -91,9 +100,9 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public String sourceEndpointIP;
 
     /**
-     * <p>The database instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+     * <p>The database instance ID. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
      * <blockquote>
-     * <p> If you set <strong>SourceEndpointInstanceType</strong> to RDS, ECS, DDS, or Express, this parameter is required.</p>
+     * <p>You must specify this parameter when <strong>SourceEndpointInstanceType</strong> is RDS, ECS, DDS, or Express.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -103,14 +112,20 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public String sourceEndpointInstanceID;
 
     /**
-     * <p>The location of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it. Valid values:</p>
+     * <p>The location of the database. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value. Valid values:</p>
      * <ul>
-     * <li><strong>RDS</strong></li>
-     * <li><strong>ECS</strong></li>
-     * <li><strong>Express</strong>: The database is connected to DBS via Express Connect, VPN Gateway, or Smart Access Gateway.</li>
-     * <li><strong>Agent</strong>: The database is connected to DBS over a DBS backup gateway.</li>
-     * <li><strong>DDS</strong>: The database is an ApsaraDB for MongoDB database.</li>
-     * <li><strong>Other</strong>: The database is connected to DBS using the IP address and port of the database.</li>
+     * <li><p><strong>RDS</strong></p>
+     * </li>
+     * <li><p><strong>ECS</strong></p>
+     * </li>
+     * <li><p><strong>Express</strong>: A database connected through a leased line, VPN Gateway, or Smart Access Gateway</p>
+     * </li>
+     * <li><p><strong>Agent</strong>: A database connected through a backup gateway</p>
+     * </li>
+     * <li><p><strong>DDS</strong>: A MongoDB instance on Alibaba Cloud</p>
+     * </li>
+     * <li><p><strong>Other</strong>: A database connected directly using an IP address and port</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -121,7 +136,14 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public String sourceEndpointInstanceType;
 
     /**
-     * <p>The SID of the Oracle source database. If the database is an Oracle database, this parameter is required.</p>
+     * <strong>example:</strong>
+     * <p>/home/test</p>
+     */
+    @NameInMap("SourceEndpointOracleHome")
+    public String sourceEndpointOracleHome;
+
+    /**
+     * <p>The Oracle system ID (SID). You must specify this parameter for Oracle databases.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -130,8 +152,8 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public String sourceEndpointOracleSID;
 
     /**
-     * <p>The password of the account that is used to connect to the database.</p>
-     * <p>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</p>
+     * <p>The password.</p>
+     * <p>This parameter is optional for Redis databases or for Microsoft SQL Server databases connected through a backup gateway. For all other cases, you must specify it.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -140,9 +162,9 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public String sourceEndpointPassword;
 
     /**
-     * <p>The port that is used to connect to the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the port.</p>
+     * <p>The database port. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
      * <blockquote>
-     * <p> If you set <strong>SourceEndpointInstanceType</strong> to Express, Agent, Other, or ECS, this parameter is required.</p>
+     * <p>You must specify this parameter when <strong>SourceEndpointInstanceType</strong> is Express, Agent, Other, or ECS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -152,9 +174,9 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public Integer sourceEndpointPort;
 
     /**
-     * <p>The region in which the database you want to back up resides. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the region.</p>
+     * <p>The region where the database is located. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
      * <blockquote>
-     * <p> If you set <strong>SourceEndpointInstanceType</strong> to RDS, ECS, DDS, Express, or Agent, this parameter is required.</p>
+     * <p>You must specify this parameter when <strong>SourceEndpointInstanceType</strong> is RDS, ECS, DDS, Express, or Agent.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -164,14 +186,21 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     public String sourceEndpointRegion;
 
     /**
-     * <p>The account that is used to log on to the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the account.</p>
-     * <p>If the database is an SQL Server database connected to DBS over a DBS backup gateway or a Redis database, this parameter is optional. Otherwise, it is required.</p>
+     * <p>The database account. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
+     * <p>This parameter is optional for Redis databases or for Microsoft SQL Server databases connected through a backup gateway. For all other cases, you must specify it.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("SourceEndpointUserName")
     public String sourceEndpointUserName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----</p>
+     */
+    @NameInMap("SslCaPem")
+    public String sslCaPem;
 
     public static ModifyBackupSourceEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupSourceEndpointRequest self = new ModifyBackupSourceEndpointRequest();
@@ -226,6 +255,14 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
         return this.crossRoleName;
     }
 
+    public ModifyBackupSourceEndpointRequest setEnableSourceEndpointSsl(String enableSourceEndpointSsl) {
+        this.enableSourceEndpointSsl = enableSourceEndpointSsl;
+        return this;
+    }
+    public String getEnableSourceEndpointSsl() {
+        return this.enableSourceEndpointSsl;
+    }
+
     public ModifyBackupSourceEndpointRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -266,6 +303,14 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
         return this.sourceEndpointInstanceType;
     }
 
+    public ModifyBackupSourceEndpointRequest setSourceEndpointOracleHome(String sourceEndpointOracleHome) {
+        this.sourceEndpointOracleHome = sourceEndpointOracleHome;
+        return this;
+    }
+    public String getSourceEndpointOracleHome() {
+        return this.sourceEndpointOracleHome;
+    }
+
     public ModifyBackupSourceEndpointRequest setSourceEndpointOracleSID(String sourceEndpointOracleSID) {
         this.sourceEndpointOracleSID = sourceEndpointOracleSID;
         return this;
@@ -304,6 +349,14 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     }
     public String getSourceEndpointUserName() {
         return this.sourceEndpointUserName;
+    }
+
+    public ModifyBackupSourceEndpointRequest setSslCaPem(String sslCaPem) {
+        this.sslCaPem = sslCaPem;
+        return this;
+    }
+    public String getSslCaPem() {
+        return this.sslCaPem;
     }
 
 }

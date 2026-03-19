@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyStorageStrategyRequest extends TeaModel {
     /**
-     * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+     * <p>Backup plan ID. Obtain this parameter\&quot;s value by calling the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The number of days for which the backup data is retained. Valid values: 0 to 1825.</p>
+     * <p>Backup data retention period, in days. Valid values: 0 to 1825.</p>
      * <blockquote>
-     * <p>Default value: 730.</p>
+     * <p>Default value: 730 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,14 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public Integer backupRetentionPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <strong>example:</strong>
+     * <p>encrypted</p>
+     */
+    @NameInMap("BackupStorageEncryptMethod")
+    public String backupStorageEncryptMethod;
+
+    /**
+     * <p>An arbitrary string used to ensure the idempotence of the request and prevent duplicate submissions.</p>
      * 
      * <strong>example:</strong>
      * <p>dbstest</p>
@@ -37,9 +44,9 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The number of days after which the storage class of the backup data is changed to Archive. The value of this parameter must be smaller than the value of the BackupRetentionPeriod parameter. For more information about the Archive storage class, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage class overview</a>.</p>
+     * <p>Time to convert to Archive Storage. This value must be less than the backup data retention period (BackupRetentionPeriod parameter). For more information about Archive Storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage Type Overview</a>.</p>
      * <blockquote>
-     * <p>Default value: 365.</p>
+     * <p>Default value: 365 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -50,9 +57,9 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public Integer duplicationArchivePeriod;
 
     /**
-     * <p>The number of days after which the storage class of the backup data is changed to Infrequent Access (IA). The value of this parameter must be smaller than the value of the DuplicationArchivePeriod parameter. For more information about the IA storage class, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage class overview</a>.</p>
+     * <p>Time to convert to Infrequent Access storage. This value must be less than the Archive Storage period (DuplicationArchivePeriod parameter). For more information about Infrequent Access storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage Type Overview</a>.</p>
      * <blockquote>
-     * <p>Default value: 180.</p>
+     * <p>Default value: 180 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -61,6 +68,48 @@ public class ModifyStorageStrategyRequest extends TeaModel {
      */
     @NameInMap("DuplicationInfrequentAccessPeriod")
     public Integer duplicationInfrequentAccessPeriod;
+
+    /**
+     * <strong>example:</strong>
+     * <p>365</p>
+     */
+    @NameInMap("IncrementBackupRetentionPeriod")
+    public String incrementBackupRetentionPeriod;
+
+    /**
+     * <strong>example:</strong>
+     * <p>365</p>
+     */
+    @NameInMap("IncrementDuplicationArchivePeriod")
+    public String incrementDuplicationArchivePeriod;
+
+    /**
+     * <strong>example:</strong>
+     * <p>365</p>
+     */
+    @NameInMap("IncrementDuplicationInfrequentAccessPeriod")
+    public String incrementDuplicationInfrequentAccessPeriod;
+
+    /**
+     * <strong>example:</strong>
+     * <p>365</p>
+     */
+    @NameInMap("LogBackupRetentionPeriod")
+    public String logBackupRetentionPeriod;
+
+    /**
+     * <strong>example:</strong>
+     * <p>365</p>
+     */
+    @NameInMap("LogDuplicationArchivePeriod")
+    public String logDuplicationArchivePeriod;
+
+    /**
+     * <strong>example:</strong>
+     * <p>365</p>
+     */
+    @NameInMap("LogDuplicationInfrequentAccessPeriod")
+    public String logDuplicationInfrequentAccessPeriod;
 
     @NameInMap("OwnerId")
     public String ownerId;
@@ -86,6 +135,14 @@ public class ModifyStorageStrategyRequest extends TeaModel {
         return this.backupRetentionPeriod;
     }
 
+    public ModifyStorageStrategyRequest setBackupStorageEncryptMethod(String backupStorageEncryptMethod) {
+        this.backupStorageEncryptMethod = backupStorageEncryptMethod;
+        return this;
+    }
+    public String getBackupStorageEncryptMethod() {
+        return this.backupStorageEncryptMethod;
+    }
+
     public ModifyStorageStrategyRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -108,6 +165,54 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     }
     public Integer getDuplicationInfrequentAccessPeriod() {
         return this.duplicationInfrequentAccessPeriod;
+    }
+
+    public ModifyStorageStrategyRequest setIncrementBackupRetentionPeriod(String incrementBackupRetentionPeriod) {
+        this.incrementBackupRetentionPeriod = incrementBackupRetentionPeriod;
+        return this;
+    }
+    public String getIncrementBackupRetentionPeriod() {
+        return this.incrementBackupRetentionPeriod;
+    }
+
+    public ModifyStorageStrategyRequest setIncrementDuplicationArchivePeriod(String incrementDuplicationArchivePeriod) {
+        this.incrementDuplicationArchivePeriod = incrementDuplicationArchivePeriod;
+        return this;
+    }
+    public String getIncrementDuplicationArchivePeriod() {
+        return this.incrementDuplicationArchivePeriod;
+    }
+
+    public ModifyStorageStrategyRequest setIncrementDuplicationInfrequentAccessPeriod(String incrementDuplicationInfrequentAccessPeriod) {
+        this.incrementDuplicationInfrequentAccessPeriod = incrementDuplicationInfrequentAccessPeriod;
+        return this;
+    }
+    public String getIncrementDuplicationInfrequentAccessPeriod() {
+        return this.incrementDuplicationInfrequentAccessPeriod;
+    }
+
+    public ModifyStorageStrategyRequest setLogBackupRetentionPeriod(String logBackupRetentionPeriod) {
+        this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+        return this;
+    }
+    public String getLogBackupRetentionPeriod() {
+        return this.logBackupRetentionPeriod;
+    }
+
+    public ModifyStorageStrategyRequest setLogDuplicationArchivePeriod(String logDuplicationArchivePeriod) {
+        this.logDuplicationArchivePeriod = logDuplicationArchivePeriod;
+        return this;
+    }
+    public String getLogDuplicationArchivePeriod() {
+        return this.logDuplicationArchivePeriod;
+    }
+
+    public ModifyStorageStrategyRequest setLogDuplicationInfrequentAccessPeriod(String logDuplicationInfrequentAccessPeriod) {
+        this.logDuplicationInfrequentAccessPeriod = logDuplicationInfrequentAccessPeriod;
+        return this;
+    }
+    public String getLogDuplicationInfrequentAccessPeriod() {
+        return this.logDuplicationInfrequentAccessPeriod;
     }
 
     public ModifyStorageStrategyRequest setOwnerId(String ownerId) {

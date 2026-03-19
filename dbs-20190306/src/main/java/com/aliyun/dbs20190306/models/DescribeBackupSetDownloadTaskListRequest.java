@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     /**
-     * <p>The backup schedule ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+     * <p>The ID of the backup plan. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</p>
      * <blockquote>
-     * <p> You must configure the <strong>BackupPlanId</strong> or <strong>BackupSetDownloadTaskId</strong> parameter.</p>
+     * <p>You must specify either <strong>BackupPlanId</strong> or <strong>BackupSetDownloadTaskId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,8 +19,10 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     /**
      * <p>The ID of the backup set download task.</p>
      * <ul>
-     * <li>Full backup set download task: You can call the <a href="https://help.aliyun.com/document_detail/2869842.html">CreateFullBackupSetDownload</a> operation to create a full backup set download task and obtain the task ID.</li>
-     * <li>Incremental backup set download task: You can call the <a href="https://help.aliyun.com/document_detail/2869843.html">CreateIncrementBackupSetDownload</a> operation to create an incremental backup set download task and obtain the task ID.</li>
+     * <li><p>For a full backup, call the <a href="https://help.aliyun.com/document_detail/2869842.html">CreateFullBackupSetDownload</a> operation to obtain the value of this parameter.</p>
+     * </li>
+     * <li><p>For an incremental backup, call the <a href="https://help.aliyun.com/document_detail/2869843.html">CreateIncrementBackupSetDownload</a> operation to obtain the value of this parameter.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +32,7 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     public String backupSetDownloadTaskId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. This prevents duplicate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzXXXXXX</p>
@@ -42,7 +44,7 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be a positive integer. Default value: 0.</p>
+     * <p>The page number. The value must be a non-negative integer that does not exceed the maximum value of the integer type. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,7 +55,7 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Valid values: 30, 50, and 100.</p>
      * <blockquote>
-     * <p>Default value: 30.</p>
+     * <p>The default value is 30.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

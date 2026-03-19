@@ -7,8 +7,10 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
     /**
      * <p>Specifies whether to enable the feature of automatically adding incremental data to a data lake. If this feature is enabled, DBS adds the backup sets that are newly generated to the data lake that is created for the backup schedule. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the feature.</li>
-     * <li><strong>false</strong>: disables the feature.</li>
+     * <li><p><strong>true</strong>: enables the feature.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables the feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +40,10 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether a failed DLA task exists in the return result. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: A failed DLA task exists.</li>
-     * <li><strong>false</strong>: No failed DLA task exists.</li>
+     * <li><p><strong>true</strong>: A failed DLA task exists.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No failed DLA task exists.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,9 +73,12 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
     /**
      * <p>The status of the DLA service for the backup schedule. Valid values:</p>
      * <ul>
-     * <li><strong>Running</strong>: DLA is running.</li>
-     * <li><strong>Closing</strong>: DLA is being disabled.</li>
-     * <li><strong>Closed</strong>: DLA is disabled.</li>
+     * <li><p><strong>Running</strong>: DLA is running.</p>
+     * </li>
+     * <li><p><strong>Closing</strong>: DLA is being disabled.</p>
+     * </li>
+     * <li><p><strong>Closed</strong>: DLA is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

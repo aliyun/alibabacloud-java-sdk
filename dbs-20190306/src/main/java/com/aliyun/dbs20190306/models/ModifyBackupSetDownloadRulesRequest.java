@@ -8,7 +8,7 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
      * <p>The ID of the backup gateway that is used to download the backup set.</p>
      * 
      * <strong>example:</strong>
-     * <p>2331****</p>
+     * <p>23312323</p>
      */
     @NameInMap("BackupGatewayId")
     public Long backupGatewayId;
@@ -18,7 +18,7 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01****</p>
+     * <p>dbstooi01xxxx</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
@@ -47,10 +47,14 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     /**
      * <p>The type of the destination directory to which the backup set is downloaded. This parameter is required if the automatic download feature is enabled. Valid values:</p>
      * <ul>
-     * <li>local</li>
-     * <li>nas</li>
-     * <li>ftp</li>
-     * <li>minio</li>
+     * <li><p>local</p>
+     * </li>
+     * <li><p>nas</p>
+     * </li>
+     * <li><p>ftp</p>
+     * </li>
+     * <li><p>minio</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>Default value: local.</p>
@@ -66,7 +70,7 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzx****</p>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -74,10 +78,14 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     /**
      * <p>The format in which the full backup set is downloaded. Valid values:</p>
      * <ul>
-     * <li>Native</li>
-     * <li>SQL</li>
-     * <li>CSV</li>
-     * <li>JSON</li>
+     * <li><p>Native</p>
+     * </li>
+     * <li><p>SQL</p>
+     * </li>
+     * <li><p>CSV</p>
+     * </li>
+     * <li><p>JSON</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>Default value: CSV.</p>
@@ -92,10 +100,14 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     /**
      * <p>The format in which the incremental backup set is downloaded. Valid values:</p>
      * <ul>
-     * <li>Native</li>
-     * <li>SQL</li>
-     * <li>CSV</li>
-     * <li>JSON</li>
+     * <li><p>Native</p>
+     * </li>
+     * <li><p>SQL</p>
+     * </li>
+     * <li><p>CSV</p>
+     * </li>
+     * <li><p>JSON</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>Default value: Native.</p>

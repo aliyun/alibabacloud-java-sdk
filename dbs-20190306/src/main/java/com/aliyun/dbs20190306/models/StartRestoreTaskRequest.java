@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartRestoreTaskRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token. It ensures the idempotence of the request and prevents the same request from being submitted multiple times.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -17,7 +17,7 @@ public class StartRestoreTaskRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the restore task.</p>
+     * <p>The ID of the restore job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
      * <p>The ID of the backup schedule.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01****</p>
+     * <p>dbstooi01XXXX</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;

@@ -8,7 +8,7 @@ public class CreateIncrementBackupSetDownloadResponseBody extends TeaModel {
      * <p>The ID of the backup set download task.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01e****</p>
+     * <p>1jydacm******</p>
      */
     @NameInMap("BackupSetDownloadTaskId")
     public String backupSetDownloadTaskId;

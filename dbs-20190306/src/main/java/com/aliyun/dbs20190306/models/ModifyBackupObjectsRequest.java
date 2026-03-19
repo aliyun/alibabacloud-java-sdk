@@ -5,36 +5,44 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupObjectsRequest extends TeaModel {
     /**
-     * <p>The backup objects that are defined in a JSON string in the following format:</p>
+     * <p>The backup objects, specified as a JSON string. The structure is as follows:</p>
      * <pre><code>[
      *     {
-     *         &quot;DBName&quot;:&quot;The name of the database that you want to back up&quot;,
-     *         &quot;SchemaName&quot;:&quot;The name of the schema that you want to back up&quot;,
+     *         &quot;DBName&quot;:&quot;The name of the database to back up&quot;,
+     *         &quot;SchemaName&quot;:&quot;The name of the schema to back up&quot;,
      *         &quot;TableIncludes&quot;:[{
-     *             &quot;TableName&quot;:&quot;The name of the table that you want to back up&quot;
+     *             &quot;TableName&quot;:&quot;The name of the table to back up&quot;
      *         }],
      *         &quot;TableExcludes&quot;:[{
-     *             &quot;TableName&quot;:&quot;The name of the table that you want to exclude during the backup&quot;
+     *             &quot;TableName&quot;:&quot;The name of a table in the database that you do not want to back up&quot;
      *         }]
      *     }
      * ]
      * </code></pre>
      * <ul>
-     * <li><p>If you specify only <code>DBName</code> and do not specify objects of lower levels, all objects in the database are backed up.</p>
+     * <li><p>If you specify only <code>DBName</code> without configuring rules for sub-objects, all objects in the database are backed up.</p>
      * </li>
-     * <li><p>If you specify <code>DBName</code> and some objects of lower levels, only the specified objects are backed up by default. You can use the following regular expressions to define object names:</p>
+     * <li><p>If you specify <code>DBName</code> and configure rules for some objects, any objects without configured rules are not backed up by default. The following regular expressions are supported for defining object names:</p>
      * <ul>
-     * <li>A period <code>.</code> matches any single character except <code>\\r\\n</code>.</li>
-     * <li>An asterisk <code>*</code> matches zero or more occurrences of a preceding subexpression. For example, <code>h.*llo</code> matches strings such as <code>hllo</code> and <code>heeeello</code>.</li>
-     * <li>A question mark <code>?</code> matches zero or one occurrence of a preceding subexpression. For example, <code>h.?llo</code> matches strings such as <code>hllo</code> and <code>hello</code>, but not <code>haello</code>.</li>
-     * <li>Character set <code>[Characters]</code> matches a character included in the brackets ([ ]). For example, <code>h[ae]llo</code> matches <code>hallo</code> and <code>hello</code>.</li>
-     * <li>Negative character set <code>[^Characters]</code> does not match a character in the brackets ([ ]). For example, <code>h[^ae]llo</code> matches <code>hcllo</code> and <code>hdllo</code>, but not <code>hallo</code> or <code>hello</code>.</li>
-     * <li>Character range <code>[character1-character2]</code> matches any character included in the range from <code>character1 to character2</code>, such as <code>[0-9]</code> and <code>[a-z]</code>.</li>
+     * <li>A period (<code>.</code>) matches any single character except `</li>
      * </ul>
+     * </li>
+     * </ul>
+     * <p>`.</p>
+     * <ul>
+     * <li><p>An asterisk (<code>*</code>) matches the preceding subexpression zero or more times. For example, <code>h*llo</code> matches <code>hllo</code> and <code>heeeello</code>.</p>
+     * </li>
+     * <li><p>A question mark (<code>?</code>) matches the preceding subexpression zero or one time. For example, <code>h.?llo</code> matches <code>hllo</code> and <code>hello</code>, but not <code>haello</code>.</p>
+     * </li>
+     * <li><p>A character set <code>[characters]</code> matches any single character within the brackets. For example, <code>h[aello]</code> matches <code>hallo</code> and <code>hello</code>.</p>
+     * </li>
+     * <li><p>A negated character set <code>[^characters]</code> matches any single character not within the brackets. For example, <code>h[^ae]llo</code> matches <code>hcllo</code> and <code>hdllo</code>, but not <code>hallo</code> or <code>hello</code>.</p>
+     * </li>
+     * <li><p>A character range <code>[character1-character2]</code> matches any character within the specified range, such as <code>[0-9]</code> or <code>[a-z]</code>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p> <code>SchemaName</code> and <code>NewSchemaName</code> apply only to SQL Server databases. Use <code>DBName</code> and <code>NewDBName</code> to specify the names of other databases.</p>
+     * <p><code>SchemaName</code> and <code>NewSchemaName</code> are used only for SQL Server. For other database engines, use <code>DBName</code> and <code>NewDBName</code> to specify database names.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -45,7 +53,7 @@ public class ModifyBackupObjectsRequest extends TeaModel {
     public String backupObjects;
 
     /**
-     * <p>The ID of the backup schedule.</p>
+     * <p>The ID of the backup plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +63,7 @@ public class ModifyBackupObjectsRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token to ensure the request is idempotent. This prevents the same request from being submitted multiple times.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>

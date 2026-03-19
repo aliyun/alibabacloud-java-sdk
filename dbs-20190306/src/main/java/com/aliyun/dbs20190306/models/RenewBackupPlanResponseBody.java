@@ -8,7 +8,7 @@ public class RenewBackupPlanResponseBody extends TeaModel {
      * <p>The ID of the backup schedule.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01e****</p>
+     * <p>dbstooi01exxx</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
@@ -44,7 +44,7 @@ public class RenewBackupPlanResponseBody extends TeaModel {
      * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
-     * <p>20202****</p>
+     * <p>202020202020</p>
      */
     @NameInMap("OrderId")
     public String orderId;

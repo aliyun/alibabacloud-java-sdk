@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ConfigureBackupPlanRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the automatic backup feature.</p>
+     * <p>Enable automatic backup. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the automatic backup feature.</li>
-     * <li><strong>false</strong>: disables the automatic backup feature.</li>
+     * <li><p><strong>true</strong>: Enable</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disable</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public Boolean autoStartBackup;
 
     /**
-     * <p>The backup gateway ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+     * <p>The backup gateway ID. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value.</p>
      * <blockquote>
-     * <p> If you set <strong>SourceEndpointInstanceType</strong> to <strong>Agent</strong>, this parameter is required.</p>
+     * <p>This parameter is required when <strong>SourceEndpointInstanceType</strong> is <strong>agent</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,9 +32,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public Long backupGatewayId;
 
     /**
-     * <p>The interval at which you want to perform incremental log backups. Unit: seconds.</p>
+     * <p>The incremental interval in seconds (s).</p>
      * <blockquote>
-     * <p> Only physical backup supports this parameter.</p>
+     * <p>Only physical backup is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,24 +44,31 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public Integer backupLogIntervalSeconds;
 
     /**
-     * <p>The objects to be backed up. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the objects.</p>
+     * <p>The backup objects. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value.</p>
      * 
      * <strong>example:</strong>
-     * <p>[ { &quot;DBName&quot;:&quot;Name of the database to be backed up&quot;, &quot;SchemaName&quot;:&quot;Name of the schema to be backed up&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table to be backed up&quot; }], &quot;TableExcludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table to be excluded during the backup&quot; }] } ]</p>
+     * <p>[     {         &quot;DBName&quot;:&quot;待备份库名&quot;,         &quot;SchemaName&quot;:&quot;待备份 Schema 名&quot;,         &quot;TableIncludes&quot;:[{             &quot;TableName&quot;:&quot;待备份表表名&quot;         }],         &quot;TableExcludes&quot;:[{             &quot;TableName&quot;:&quot;待备份库名不需要备份表的表名&quot;         }]     } ]</p>
      */
     @NameInMap("BackupObjects")
     public String backupObjects;
 
     /**
-     * <p>The day of each week when the full backup task runs. Valid values:</p>
+     * <p>The full backup period. Valid values:</p>
      * <ul>
-     * <li><strong>Monday</strong></li>
-     * <li><strong>Tuesday</strong></li>
-     * <li><strong>Wednesday</strong></li>
-     * <li><strong>Thursday</strong></li>
-     * <li><strong>Friday</strong></li>
-     * <li><strong>Saturday</strong></li>
-     * <li><strong>Sunday</strong></li>
+     * <li><p><strong>Monday</strong>: Monday</p>
+     * </li>
+     * <li><p><strong>Tuesday</strong>: Tuesday</p>
+     * </li>
+     * <li><p><strong>Wednesday</strong>: Wednesday</p>
+     * </li>
+     * <li><p><strong>Thursday</strong>: Thursday</p>
+     * </li>
+     * <li><p><strong>Friday</strong>: Friday</p>
+     * </li>
+     * <li><p><strong>Saturday</strong>: Saturday</p>
+     * </li>
+     * <li><p><strong>Sunday</strong>: Sunday</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +78,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String backupPeriod;
 
     /**
-     * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+     * <p>The backup plan ID. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +88,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The name of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the name.</p>
+     * <p>The custom backup plan name. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,9 +98,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String backupPlanName;
 
     /**
-     * <p>The network bandwidth throttling. Unit: KB/s. DBS allows a maximum bandwidth of 10 GB/s.</p>
+     * <p>The network bandwidth throttling in KB/s. The maximum value is 10 GB.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when physical backups for MySQL databases are performed.</p>
+     * <p>This parameter is valid only for MySQL physical backup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,7 +110,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public Long backupRateLimit;
 
     /**
-     * <p>The number of days for which the backup data is retained. Valid values: 0 to 1825. Default value: 730.</p>
+     * <p>The retention period for backup data. Valid values: 0 to 1825. Default value: 730 days.</p>
      * 
      * <strong>example:</strong>
      * <p>730</p>
@@ -110,9 +119,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public Integer backupRetentionPeriod;
 
     /**
-     * <p>The disk I/O limit. Unit: KB/s.</p>
+     * <p>The disk I/O limit in KB/s.</p>
      * <blockquote>
-     * <p> This parameter takes effect only during the physical backup of a MySQL database.</p>
+     * <p>This parameter is valid only for MySQL physical backup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,7 +131,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public Long backupSpeedLimit;
 
     /**
-     * <p>The start time of the full backup. Specify the time in the <em>HH:mm</em>Z format. The time must be in UTC. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the start time of full backup tasks.</p>
+     * <p>The full backup start time in <em>HH:mm</em>Z (UTC) format. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value.</p>
      * 
      * <strong>example:</strong>
      * <p>14:22</p>
@@ -131,23 +140,34 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String backupStartTime;
 
     /**
-     * <p>The storage type. Valid values:</p>
+     * <strong>example:</strong>
+     * <p>encrypted</p>
+     */
+    @NameInMap("BackupStorageEncryptMethod")
+    public String backupStorageEncryptMethod;
+
+    /**
+     * <p>The built-in storage type:</p>
      * <ul>
-     * <li>Empty: If you do not specify this parameter, the system stores backup data in your OSS bucket.</li>
-     * <li>system: The system stores backup data in the built-in OSS bucket of DBS.</li>
+     * <li><p>Empty (default): Backup data is stored on your OSS.</p>
+     * </li>
+     * <li><p>system: Backup data is stored on the built-in OSS of DBS.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("BackupStorageType")
     public String backupStorageType;
 
     /**
-     * <p>The backup method that you want to use for full backups. Valid values:</p>
+     * <p>The full backup period. Valid values:</p>
      * <ul>
-     * <li><strong>simple</strong>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</li>
-     * <li><strong>Manual</strong>: manual backup.</li>
+     * <li><p><strong>simple</strong>: Periodic backup. Use this value with BackupPeriod and BackupStartTime.</p>
+     * </li>
+     * <li><p><strong>manual</strong>: Manual backup.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>simple</strong>.</p>
@@ -160,7 +180,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String backupStrategyType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Ensure the idempotence of the request to prevent duplicate submissions. The client generates this parameter value. Ensure its uniqueness across different requests. The maximum length is 64 ASCII characters, and the value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -169,7 +189,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The unique ID (UID) of the Alibaba Cloud account to which the backup schedule belongs. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to obtain the UID.</p>
+     * <p>The UID for cross-Alibaba Cloud account backup. Call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> API to get this parameter\&quot;s value.</p>
      * 
      * <strong>example:</strong>
      * <p>2xxx7778xxxxxxxxxx</p>
@@ -178,7 +198,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String crossAliyunId;
 
     /**
-     * <p>The name of the RAM role that is used to perform backup across Alibaba Cloud accounts. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to obtain the RAM role.</p>
+     * <p>The RAM role name for cross-Alibaba Cloud account backup. Call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> API to get this parameter\&quot;s value.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -187,7 +207,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String crossRoleName;
 
     /**
-     * <p>The number of days after which the storage class of the backup data is changed to Archive. Default value: 365.</p>
+     * <p>The period after which data is converted to archive cold storage. Default value: 365 days.</p>
      * 
      * <strong>example:</strong>
      * <p>365</p>
@@ -196,7 +216,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public Integer duplicationArchivePeriod;
 
     /**
-     * <p>The number of days after which the storage class of the backup data is changed to Infrequent Access (IA). Default value: 180.</p>
+     * <p>The period after which data is converted to Infrequent Access storage. Default value: 180 days.</p>
      * 
      * <strong>example:</strong>
      * <p>180</p>
@@ -205,10 +225,12 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public Integer duplicationInfrequentAccessPeriod;
 
     /**
-     * <p>Specifies whether to enable the incremental log backup feature. Valid values:</p>
+     * <p>Enable incremental log backup. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the incremental log backup feature.</li>
-     * <li><strong>false</strong>: disables the incremental log backup feature.</li>
+     * <li><p><strong>true</strong>: Enable</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disable</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -218,9 +240,23 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public Boolean enableBackupLog;
 
     /**
-     * <p>The name of the OSS bucket.</p>
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableMysqlPhysicalBackupBinlog")
+    public String enableMysqlPhysicalBackupBinlog;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableSourceEndpointSsl")
+    public String enableSourceEndpointSsl;
+
+    /**
+     * <p>The OSS bucket name.</p>
      * <blockquote>
-     * <p> By default, the system automatically generates an OSS bucket name.</p>
+     * <p>The system automatically generates a new name by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -242,9 +278,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The source database name. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+     * <p>The database name. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value.</p>
      * <blockquote>
-     * <p> If the source database runs the <strong>PostgreSQL</strong> database engine or <strong>MongoDB</strong> database engine, this parameter is required.</p>
+     * <p>This parameter is required when the database type is <strong>PostgreSQL</strong> or <strong>MongoDB</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -254,9 +290,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String sourceEndpointDatabaseName;
 
     /**
-     * <p>The source database endpoint. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+     * <p>The database endpoint. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value.</p>
      * <blockquote>
-     * <p> If you set <strong>SourceEndpointInstanceType</strong> to <strong>Express</strong>, <strong>Agent</strong>, or <strong>Other</strong>, this parameter is required.</p>
+     * <p>This parameter is required when <strong>SourceEndpointInstanceType</strong> is <strong>express</strong>, <strong>agent</strong>, or <strong>other</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -266,9 +302,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String sourceEndpointIP;
 
     /**
-     * <p>The database instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+     * <p>The database instance ID. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value.</p>
      * <blockquote>
-     * <p> If you set <strong>SourceEndpoint****InstanceType</strong> to <strong>RDS</strong>, <strong>ECS</strong>, <strong>DDS</strong>, or <strong>Express</strong>, this parameter is required.</p>
+     * <p>This parameter is required when <strong>SourceEndpoint</strong>.<strong>InstanceType</strong> is <strong>RDS</strong>, <strong>ECS</strong>, <strong>DDS</strong>, or <strong>Express</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -278,14 +314,20 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String sourceEndpointInstanceID;
 
     /**
-     * <p>The location of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the location. Valid values:</p>
+     * <p>The location of the database. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value. Valid values:</p>
      * <ul>
-     * <li><strong>RDS</strong></li>
-     * <li><strong>ECS</strong></li>
-     * <li><strong>Express</strong>: The database is connected to Database Backup (DBS) via Express Connect, VPN Gateway, or Smart Access Gateway.</li>
-     * <li><strong>Agent</strong>: The database is connected over a DBS backup gateway.</li>
-     * <li><strong>DDS</strong>: The database is an ApsaraDB for MongoDB database.</li>
-     * <li><strong>Other</strong>: The database is connected to DBS by using the IP address and port of the database.</li>
+     * <li><p><strong>RDS</strong></p>
+     * </li>
+     * <li><p><strong>ECS</strong></p>
+     * </li>
+     * <li><p><strong>Express</strong>: A database connected through a leased line, VPN Gateway, or Smart Gateway.</p>
+     * </li>
+     * <li><p><strong>Agent</strong>: A database connected through a backup gateway.</p>
+     * </li>
+     * <li><p><strong>DDS</strong>: Cloud MongoDB.</p>
+     * </li>
+     * <li><p><strong>Other</strong>: A database directly connected through IP:Port.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -296,9 +338,16 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String sourceEndpointInstanceType;
 
     /**
-     * <p>The system ID (SID) of the Oracle database.</p>
+     * <strong>example:</strong>
+     * <p>/home/test</p>
+     */
+    @NameInMap("SourceEndpointOracleHome")
+    public String sourceEndpointOracleHome;
+
+    /**
+     * <p>The Oracle SID name.</p>
      * <blockquote>
-     * <p>This parameter is required if the database is an Oracle database.</p>
+     * <p>This parameter is required when the database type is Oracle.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -308,9 +357,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String sourceEndpointOracleSID;
 
     /**
-     * <p>The password of the account that is used to connect to the database.</p>
+     * <p>The password.</p>
      * <blockquote>
-     * <p>This parameter is required except that the database is an <strong>SQL Server</strong> database that is connected to DBS over a DBS backup gateway or a <strong>Redis</strong> database.</p>
+     * <p>This parameter is optional when the database type is <strong>Redis</strong>, or when the database location is <strong>agent</strong> and the database type is <strong>SQL Server</strong>. It is required in other scenarios.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -320,9 +369,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String sourceEndpointPassword;
 
     /**
-     * <p>The port that is used to connect to the source database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the port.</p>
+     * <p>The database port. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value.</p>
      * <blockquote>
-     * <p> If you set <strong>SourceEndpoint****InstanceType</strong> to <strong>Express</strong>, <strong>Agent</strong>, <strong>Other</strong>, or <strong>ECS</strong>, this parameter is required.</p>
+     * <p>This parameter is required when <strong>SourceEndpoint</strong>.<strong>InstanceType</strong> is <strong>express</strong>, <strong>agent</strong>, <strong>other</strong>, or <strong>ECS</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -332,9 +381,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public Integer sourceEndpointPort;
 
     /**
-     * <p>The region in which the source database resides. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the region.</p>
+     * <p>The region of the database. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API to get this parameter\&quot;s value.</p>
      * <blockquote>
-     * <p> If you set <strong>SourceEndpointInstanceType</strong> to RDS, ECS, DDS, Express, or Agent, this parameter is required.</p>
+     * <p>This parameter is required when <strong>SourceEndpointInstanceType</strong> is RDS, ECS, DDS, Express, or Agent.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -344,9 +393,9 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     public String sourceEndpointRegion;
 
     /**
-     * <p>The username of the account that is used to connect to the database.</p>
+     * <p>The database account.</p>
      * <blockquote>
-     * <p>This parameter is required except that the database is an <strong>SQL Server</strong> database that is connected to DBS over a DBS backup gateway or a <strong>Redis</strong> database.</p>
+     * <p>This parameter is optional when the database type is <strong>Redis</strong>, or when the database location is <strong>agent</strong> and the database type is <strong>SQL Server</strong>. It is required in other scenarios.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -354,6 +403,13 @@ public class ConfigureBackupPlanRequest extends TeaModel {
      */
     @NameInMap("SourceEndpointUserName")
     public String sourceEndpointUserName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----</p>
+     */
+    @NameInMap("SslCaPem")
+    public String sslCaPem;
 
     public static ConfigureBackupPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigureBackupPlanRequest self = new ConfigureBackupPlanRequest();
@@ -448,6 +504,14 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupStartTime;
     }
 
+    public ConfigureBackupPlanRequest setBackupStorageEncryptMethod(String backupStorageEncryptMethod) {
+        this.backupStorageEncryptMethod = backupStorageEncryptMethod;
+        return this;
+    }
+    public String getBackupStorageEncryptMethod() {
+        return this.backupStorageEncryptMethod;
+    }
+
     public ConfigureBackupPlanRequest setBackupStorageType(String backupStorageType) {
         this.backupStorageType = backupStorageType;
         return this;
@@ -512,6 +576,22 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.enableBackupLog;
     }
 
+    public ConfigureBackupPlanRequest setEnableMysqlPhysicalBackupBinlog(String enableMysqlPhysicalBackupBinlog) {
+        this.enableMysqlPhysicalBackupBinlog = enableMysqlPhysicalBackupBinlog;
+        return this;
+    }
+    public String getEnableMysqlPhysicalBackupBinlog() {
+        return this.enableMysqlPhysicalBackupBinlog;
+    }
+
+    public ConfigureBackupPlanRequest setEnableSourceEndpointSsl(String enableSourceEndpointSsl) {
+        this.enableSourceEndpointSsl = enableSourceEndpointSsl;
+        return this;
+    }
+    public String getEnableSourceEndpointSsl() {
+        return this.enableSourceEndpointSsl;
+    }
+
     public ConfigureBackupPlanRequest setOSSBucketName(String OSSBucketName) {
         this.OSSBucketName = OSSBucketName;
         return this;
@@ -568,6 +648,14 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.sourceEndpointInstanceType;
     }
 
+    public ConfigureBackupPlanRequest setSourceEndpointOracleHome(String sourceEndpointOracleHome) {
+        this.sourceEndpointOracleHome = sourceEndpointOracleHome;
+        return this;
+    }
+    public String getSourceEndpointOracleHome() {
+        return this.sourceEndpointOracleHome;
+    }
+
     public ConfigureBackupPlanRequest setSourceEndpointOracleSID(String sourceEndpointOracleSID) {
         this.sourceEndpointOracleSID = sourceEndpointOracleSID;
         return this;
@@ -606,6 +694,14 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     }
     public String getSourceEndpointUserName() {
         return this.sourceEndpointUserName;
+    }
+
+    public ConfigureBackupPlanRequest setSslCaPem(String sslCaPem) {
+        this.sslCaPem = sslCaPem;
+        return this;
+    }
+    public String getSslCaPem() {
+        return this.sslCaPem;
     }
 
 }

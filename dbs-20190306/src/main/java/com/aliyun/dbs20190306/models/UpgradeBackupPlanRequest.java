@@ -9,7 +9,7 @@ public class UpgradeBackupPlanRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01e****</p>
+     * <p>dbstooi01eXXXX</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
@@ -18,7 +18,7 @@ public class UpgradeBackupPlanRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCz****</p>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -26,11 +26,16 @@ public class UpgradeBackupPlanRequest extends TeaModel {
     /**
      * <p>The specifications of the instance. Valid values:</p>
      * <ul>
-     * <li>micro</li>
-     * <li>small</li>
-     * <li>medium</li>
-     * <li>large</li>
-     * <li>xlarge</li>
+     * <li><p>micro</p>
+     * </li>
+     * <li><p>small</p>
+     * </li>
+     * <li><p>medium</p>
+     * </li>
+     * <li><p>large</p>
+     * </li>
+     * <li><p>xlarge</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -9,7 +9,7 @@ public class DescribeDLAServiceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01ex****</p>
+     * <p>dbstooi01exXXXX</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;

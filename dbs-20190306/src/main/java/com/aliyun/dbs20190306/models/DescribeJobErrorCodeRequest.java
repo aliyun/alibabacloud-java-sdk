@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeJobErrorCodeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token. It is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -16,8 +16,10 @@ public class DescribeJobErrorCodeRequest extends TeaModel {
     /**
      * <p>The language of the error message. Valid values:</p>
      * <ul>
-     * <li><strong>en</strong> (default): English</li>
-     * <li><strong>cn</strong>: Chinese</li>
+     * <li><p><strong>en</strong>: English (Default)</p>
+     * </li>
+     * <li><p><strong>cn</strong>: Chinese</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,11 +32,11 @@ public class DescribeJobErrorCodeRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the full backup or restore task.</p>
+     * <p>The ID of the full backup or restore job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi0****</p>
+     * <p>r1iv62ud****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

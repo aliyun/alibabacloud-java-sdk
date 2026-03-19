@@ -31,15 +31,9 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The public CIDR blocks.</p>
-     */
     @NameInMap("InternetIPs")
     public DescribeNodeCidrListResponseBodyInternetIPs internetIPs;
 
-    /**
-     * <p>The internal CIDR blocks.</p>
-     */
     @NameInMap("IntranetIPs")
     public DescribeNodeCidrListResponseBodyIntranetIPs intranetIPs;
 

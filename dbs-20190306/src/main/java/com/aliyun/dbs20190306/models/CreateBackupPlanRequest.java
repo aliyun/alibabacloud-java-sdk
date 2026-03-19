@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateBackupPlanRequest extends TeaModel {
     /**
-     * <p>The backup method of the backup schedule. Valid values:</p>
+     * <p>The backup method. Valid values:</p>
      * <ul>
-     * <li><strong>logical</strong>: logical backup</li>
-     * <li><strong>physical</strong>: physical backup</li>
-     * <li><strong>duplication</strong>: dump backup</li>
+     * <li><p><strong>logical</strong>: logical backup</p>
+     * </li>
+     * <li><p><strong>physical</strong>: physical backup</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +21,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String backupMethod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>KJSAHKJFHKJSHFKASHFKJADFHKDXXXX</p>
@@ -29,10 +30,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The region in which the database you want to back up resides.</p>
-     * <blockquote>
-     * <p>This parameter is required if the <strong>PayType</strong> parameter is set to <strong>postpay</strong>.</p>
-     * </blockquote>
+     * <p>The region of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -41,16 +39,24 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String databaseRegion;
 
     /**
-     * <p>The type of the source database. Valid values:</p>
+     * <p>The database type. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>MSSQL</strong></li>
-     * <li><strong>Oracle</strong></li>
-     * <li><strong>MariaDB</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>DRDS</strong></li>
-     * <li><strong>MongoDB</strong></li>
-     * <li><strong>Redis</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>MSSQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * <li><p><strong>MariaDB</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>DRDS</strong></p>
+     * </li>
+     * <li><p><strong>MongoDB</strong></p>
+     * </li>
+     * <li><p><strong>Redis</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,7 +67,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String databaseType;
 
     /**
-     * <p>The source of the request. The default value is OpenAPI and cannot be changed.</p>
+     * <p>The source of the request. The default value is OpenAPI. You do not need to set this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI</p>
@@ -70,16 +76,21 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String fromApp;
 
     /**
-     * <p>The type of the backup schedule. Valid values:</p>
+     * <p>The instance class. Valid values:</p>
      * <ul>
-     * <li><strong>micro</strong></li>
-     * <li><strong>small</strong></li>
-     * <li><strong>medium</strong></li>
-     * <li><strong>large</strong></li>
-     * <li><strong>xlarge</strong></li>
+     * <li><p><strong>micro</strong>: Entry</p>
+     * </li>
+     * <li><p><strong>small</strong>: Basic</p>
+     * </li>
+     * <li><p><strong>medium</strong>: Standard</p>
+     * </li>
+     * <li><p><strong>large</strong>: Enhanced</p>
+     * </li>
+     * <li><p><strong>xlarge</strong>: Enhanced (no traffic limit)</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> A backup schedule type with higher specifications offers higher backup and restoration performance. For more information, see <a href="https://help.aliyun.com/document_detail/84372.html">Select a backup schedule type</a>.</p>
+     * <p>The higher the instance class, the better the performance of backup and recovery. For more information, see <a href="https://help.aliyun.com/document_detail/84372.html">Specifications</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -90,18 +101,21 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The type of the source database instance. Valid values:</p>
+     * <p>The database instance type. Valid values:</p>
      * <ul>
-     * <li><strong>RDS</strong>: ApsaraDB RDS.</li>
-     * <li><strong>PolarDB</strong>: PolarDB.</li>
-     * <li><strong>DDS</strong>: ApsaraDB for MongoDB.</li>
-     * <li><strong>Kvstore</strong>: ApsaraDB for Redis.</li>
-     * <li><strong>Other</strong>: Database connected by using an IP address and a port number.</li>
-     * <li><strong>dg</strong>: Self-managed database that has no public IP address or port number and is connected over Database Gateway.</li>
+     * <li><p><strong>RDS</strong></p>
+     * </li>
+     * <li><p><strong>PolarDB</strong></p>
+     * </li>
+     * <li><p><strong>DDS</strong>: Alibaba Cloud MongoDB</p>
+     * </li>
+     * <li><p><strong>Kvstore</strong>: Alibaba Cloud Redis</p>
+     * </li>
+     * <li><p><strong>Other</strong>: A database that is connected over the Internet.</p>
+     * </li>
+     * <li><p><strong>dg</strong>: A self-managed database without a public IP address and port that is connected through Database Gateway (DG).</p>
+     * </li>
      * </ul>
-     * <blockquote>
-     * <p> If <strong>PayType</strong> is set to <strong>postpay</strong>, this parameter is required.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -113,14 +127,8 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The billing method of the backup schedule. Valid values:</p>
-     * <ul>
-     * <li><strong>postpay</strong>: pay-as-you-go</li>
-     * <li><strong>prepay</strong>: subscription</li>
-     * </ul>
-     * <blockquote>
-     * <p>The default value is <strong>prepay</strong>. If the <strong>BackupMethod</strong> parameter is set to <strong>duplication</strong>, <strong>postpay</strong> is supported.</p>
-     * </blockquote>
+     * <p>The payment method. Valid value:</p>
+     * <p><strong>prepay</strong>: subscription</p>
      * 
      * <strong>example:</strong>
      * <p>prepay</p>
@@ -129,10 +137,12 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription period. Valid values:</p>
+     * <p>The billing cycle of the subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: yearly subscription</li>
-     * <li><strong>Month</strong>: monthly subscription</li>
+     * <li><p><strong>Year</strong></p>
+     * </li>
+     * <li><p><strong>Month</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -142,9 +152,9 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The ID of the region in which you can activate Data Disaster Recovery. You can call the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> operation to query the regions supported by Data Disaster Recovery.</p>
+     * <p>The region ID of the DBS instance. This parameter is required. Call the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> operation to view the regions that DBS supports.</p>
      * <blockquote>
-     * <p> For more information, see <a href="https://help.aliyun.com/document_detail/2869810.html">Endpoints</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2869810.html">Endpoints</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -163,10 +173,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The region in which you want to store the backup data.</p>
-     * <blockquote>
-     * <p>This parameter is required if the <strong>PayType</strong> parameter is set to <strong>postpay</strong>.</p>
-     * </blockquote>
+     * <p>The storage region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -175,19 +182,21 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String storageRegion;
 
     /**
-     * <p>This parameter is unavailable.</p>
+     * <p>This parameter is not used.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("StorageType")
     public String storageType;
 
     /**
-     * <p>The subscription period. Valid values:</p>
+     * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values of <strong>UsedTime</strong> range from 1 to 5.</li>
-     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values of <strong>UsedTime</strong> range from 1 to 11.</li>
+     * <li><p>If you set the <strong>Period</strong> parameter to <strong>Year</strong>, the value of <strong>UsedTime</strong> can be 1 to 5.</p>
+     * </li>
+     * <li><p>If you set the <strong>Period</strong> parameter to <strong>Month</strong>, the value of <strong>UsedTime</strong> can be 1 to 11.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

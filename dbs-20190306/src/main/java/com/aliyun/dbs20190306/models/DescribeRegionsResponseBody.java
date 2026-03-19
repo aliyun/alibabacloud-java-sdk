@@ -14,7 +14,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>This backupPlan can\&quot;t support this action</p>
@@ -23,7 +23,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -31,14 +31,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The regions that DBS supports.</p>
-     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EB4DFD5E-3618-498D-BE35-4DBEA0072122</p>
@@ -47,7 +44,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the request.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

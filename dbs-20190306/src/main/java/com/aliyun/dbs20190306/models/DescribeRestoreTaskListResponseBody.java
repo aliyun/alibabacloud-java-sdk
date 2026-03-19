@@ -31,14 +31,11 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The details of the backup schedule.</p>
-     */
     @NameInMap("Items")
     public DescribeRestoreTaskListResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +44,7 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -56,7 +53,7 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9C397502-B4F2-4E22-AD97-C81F0049F3F3</p>
@@ -65,7 +62,7 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -74,7 +71,7 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of restore tasks.</p>
+     * <p>The total number of restore jobs.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -83,7 +80,7 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
     public Integer totalElements;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -177,243 +174,135 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail extends TeaModel {
-        /**
-         * <p>The ID of the backup gateway.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>324234332</p>
-         */
         @NameInMap("BackupGatewayId")
         public Long backupGatewayId;
 
         /**
-         * <p>The ID of the backup schedule.</p>
-         * 
          * <strong>example:</strong>
-         * <p>dbs1hvb0wXXXX</p>
+         * <p>TESTGATEWAY</p>
          */
+        @NameInMap("BackupGatewayIdentifier")
+        public String backupGatewayIdentifier;
+
         @NameInMap("BackupPlanId")
         public String backupPlanId;
 
-        /**
-         * <p>The ID of the full backup set that is used in the restore task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1ibh2f5uXXX</p>
-         */
         @NameInMap("BackupSetId")
         public String backupSetId;
 
         /**
-         * <p>The restore progress of the incremental log files.</p>
-         * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>cn-beijing</p>
          */
+        @NameInMap("BackupSourceOssRegion")
+        public String backupSourceOssRegion;
+
         @NameInMap("ContinuousRestoreProgress")
         public Integer continuousRestoreProgress;
 
-        /**
-         * <p>The unique ID (UID) of the Alibaba Cloud account to which the backup schedule belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2xxx7778xxxxxxxxxx</p>
-         */
         @NameInMap("CrossAliyunId")
         public String crossAliyunId;
 
-        /**
-         * <p>The name of the RAM role that can be used to perform backups across Alibaba Cloud accounts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test123</p>
-         */
         @NameInMap("CrossRoleName")
         public String crossRoleName;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DestinationEndpointDatabaseName")
         public String destinationEndpointDatabaseName;
 
         /**
-         * <p>The ID of the database instance.</p>
-         * 
          * <strong>example:</strong>
-         * <p>rm-bp1p8c2947XXX</p>
+         * <p>true</p>
          */
+        @NameInMap("DestinationEndpointEnableSsl")
+        public String destinationEndpointEnableSsl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
+        @NameInMap("DestinationEndpointHost")
+        public String destinationEndpointHost;
+
         @NameInMap("DestinationEndpointInstanceID")
         public String destinationEndpointInstanceID;
 
-        /**
-         * <p>The location of the database. Valid values:</p>
-         * <ul>
-         * <li>RDS</li>
-         * <li>ECS</li>
-         * <li>Express: The database is connected to DBS by using Express Connect, VPN Gateway, or Smart Access Gateway.</li>
-         * <li>Agent: The database is connected to DBS over a DBS backup gateway.</li>
-         * <li>DDS: The database is an ApsaraDB for MongoDB database.</li>
-         * <li>Other: The database is connected to DBS by using the IP address and port of the database.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>RDS</p>
-         */
         @NameInMap("DestinationEndpointInstanceType")
         public String destinationEndpointInstanceType;
 
-        /**
-         * <p>The endpoint that is used to connect to the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100.X.X.10:33204</p>
-         */
         @NameInMap("DestinationEndpointIpPort")
         public String destinationEndpointIpPort;
 
-        /**
-         * <p>The SID of the Oracle database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DestinationEndpointOracleSID")
         public String destinationEndpointOracleSID;
 
         /**
-         * <p>The region in which the database is deployed.</p>
-         * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>3306</p>
          */
+        @NameInMap("DestinationEndpointPort")
+        public String destinationEndpointPort;
+
         @NameInMap("DestinationEndpointRegion")
         public String destinationEndpointRegion;
 
-        /**
-         * <p>The username of the account that is used to connect to the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DestinationEndpointUserName")
         public String destinationEndpointUserName;
 
-        /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NULL</p>
-         */
         @NameInMap("ErrMessage")
         public String errMessage;
 
-        /**
-         * <p>The restore progress of the full backup data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("FullDataRestoreProgress")
         public Integer fullDataRestoreProgress;
 
-        /**
-         * <p>The progress of schema restore after full data restore.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("FullStruAfterRestoreProgress")
         public Integer fullStruAfterRestoreProgress;
 
-        /**
-         * <p>The progress of schema restore before full data restore.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("FullStruforeRestoreProgress")
         public Integer fullStruforeRestoreProgress;
 
+        @NameInMap("PhysicalBackupRecoverProgress")
+        public Integer physicalBackupRecoverProgress;
+
+        @NameInMap("PhysicalDatabaseOnlineProgress")
+        public Integer physicalDatabaseOnlineProgress;
+
+        @NameInMap("PhysicalFullAndIncrementBackupRecoverProgress")
+        public Integer physicalFullAndIncrementBackupRecoverProgress;
+
+        @NameInMap("PhysicalFullBackupRecoverProgress")
+        public Integer physicalFullBackupRecoverProgress;
+
+        @NameInMap("PhysicalIncrementBackupRecoverProgress")
+        public Integer physicalIncrementBackupRecoverProgress;
+
         /**
-         * <p>The directory of the destination database to which the objects were restored.</p>
-         * 
          * <strong>example:</strong>
-         * <p>100.X.X.10:33204</p>
+         * <p>EXIST_INSTANCE</p>
          */
+        @NameInMap("RestoreDestinationMode")
+        public String restoreDestinationMode;
+
         @NameInMap("RestoreDir")
         public String restoreDir;
 
-        /**
-         * <p>The objects to be restored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[     {         \&quot;DBName\&quot;:\&quot;test\&quot;       } ]</p>
-         */
         @NameInMap("RestoreObjects")
         public String restoreObjects;
 
-        /**
-         * <p>The status of the restore task. Valid values:</p>
-         * <ul>
-         * <li>init: The restore task is not started or does not pass the precheck.</li>
-         * <li>running: The restore task is running.</li>
-         * <li>stop: The restore task failed.</li>
-         * <li>pause: The restore task is stopped.</li>
-         * <li>check_pass: The restore task passed the precheck.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>running</p>
-         */
         @NameInMap("RestoreStatus")
         public String restoreStatus;
 
-        /**
-         * <p>The time when the restore task was created, such as 1554560477000.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554560477000</p>
-         */
         @NameInMap("RestoreTaskCreateTime")
         public Long restoreTaskCreateTime;
 
-        /**
-         * <p>The time when the restore task was complete, such as 1554560477000.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554560477000</p>
-         */
         @NameInMap("RestoreTaskFinishTime")
         public Long restoreTaskFinishTime;
 
-        /**
-         * <p>The ID of the restore task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s1XXXXXX</p>
-         */
         @NameInMap("RestoreTaskId")
         public String restoreTaskId;
 
-        /**
-         * <p>The name of the restore task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("RestoreTaskName")
         public String restoreTaskName;
 
-        /**
-         * <p>The time to run the restore task, such as 1554560477000.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1554560477000</p>
-         */
         @NameInMap("RestoreTime")
         public Long restoreTime;
 
@@ -430,6 +319,14 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             return this.backupGatewayId;
         }
 
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setBackupGatewayIdentifier(String backupGatewayIdentifier) {
+            this.backupGatewayIdentifier = backupGatewayIdentifier;
+            return this;
+        }
+        public String getBackupGatewayIdentifier() {
+            return this.backupGatewayIdentifier;
+        }
+
         public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setBackupPlanId(String backupPlanId) {
             this.backupPlanId = backupPlanId;
             return this;
@@ -444,6 +341,14 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
         public String getBackupSetId() {
             return this.backupSetId;
+        }
+
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setBackupSourceOssRegion(String backupSourceOssRegion) {
+            this.backupSourceOssRegion = backupSourceOssRegion;
+            return this;
+        }
+        public String getBackupSourceOssRegion() {
+            return this.backupSourceOssRegion;
         }
 
         public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setContinuousRestoreProgress(Integer continuousRestoreProgress) {
@@ -478,6 +383,22 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
             return this.destinationEndpointDatabaseName;
         }
 
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setDestinationEndpointEnableSsl(String destinationEndpointEnableSsl) {
+            this.destinationEndpointEnableSsl = destinationEndpointEnableSsl;
+            return this;
+        }
+        public String getDestinationEndpointEnableSsl() {
+            return this.destinationEndpointEnableSsl;
+        }
+
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setDestinationEndpointHost(String destinationEndpointHost) {
+            this.destinationEndpointHost = destinationEndpointHost;
+            return this;
+        }
+        public String getDestinationEndpointHost() {
+            return this.destinationEndpointHost;
+        }
+
         public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setDestinationEndpointInstanceID(String destinationEndpointInstanceID) {
             this.destinationEndpointInstanceID = destinationEndpointInstanceID;
             return this;
@@ -508,6 +429,14 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
         public String getDestinationEndpointOracleSID() {
             return this.destinationEndpointOracleSID;
+        }
+
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setDestinationEndpointPort(String destinationEndpointPort) {
+            this.destinationEndpointPort = destinationEndpointPort;
+            return this;
+        }
+        public String getDestinationEndpointPort() {
+            return this.destinationEndpointPort;
         }
 
         public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setDestinationEndpointRegion(String destinationEndpointRegion) {
@@ -556,6 +485,54 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
         }
         public Integer getFullStruforeRestoreProgress() {
             return this.fullStruforeRestoreProgress;
+        }
+
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setPhysicalBackupRecoverProgress(Integer physicalBackupRecoverProgress) {
+            this.physicalBackupRecoverProgress = physicalBackupRecoverProgress;
+            return this;
+        }
+        public Integer getPhysicalBackupRecoverProgress() {
+            return this.physicalBackupRecoverProgress;
+        }
+
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setPhysicalDatabaseOnlineProgress(Integer physicalDatabaseOnlineProgress) {
+            this.physicalDatabaseOnlineProgress = physicalDatabaseOnlineProgress;
+            return this;
+        }
+        public Integer getPhysicalDatabaseOnlineProgress() {
+            return this.physicalDatabaseOnlineProgress;
+        }
+
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setPhysicalFullAndIncrementBackupRecoverProgress(Integer physicalFullAndIncrementBackupRecoverProgress) {
+            this.physicalFullAndIncrementBackupRecoverProgress = physicalFullAndIncrementBackupRecoverProgress;
+            return this;
+        }
+        public Integer getPhysicalFullAndIncrementBackupRecoverProgress() {
+            return this.physicalFullAndIncrementBackupRecoverProgress;
+        }
+
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setPhysicalFullBackupRecoverProgress(Integer physicalFullBackupRecoverProgress) {
+            this.physicalFullBackupRecoverProgress = physicalFullBackupRecoverProgress;
+            return this;
+        }
+        public Integer getPhysicalFullBackupRecoverProgress() {
+            return this.physicalFullBackupRecoverProgress;
+        }
+
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setPhysicalIncrementBackupRecoverProgress(Integer physicalIncrementBackupRecoverProgress) {
+            this.physicalIncrementBackupRecoverProgress = physicalIncrementBackupRecoverProgress;
+            return this;
+        }
+        public Integer getPhysicalIncrementBackupRecoverProgress() {
+            return this.physicalIncrementBackupRecoverProgress;
+        }
+
+        public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setRestoreDestinationMode(String restoreDestinationMode) {
+            this.restoreDestinationMode = restoreDestinationMode;
+            return this;
+        }
+        public String getRestoreDestinationMode() {
+            return this.restoreDestinationMode;
         }
 
         public DescribeRestoreTaskListResponseBodyItemsRestoreTaskDetail setRestoreDir(String restoreDir) {

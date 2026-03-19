@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateAndStartBackupPlanRequest extends TeaModel {
     /**
-     * <p>The backup gateway ID.</p>
+     * <p>The ID of the backup gateway.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If <strong>SourceEndpointInstanceType</strong> is set to <strong>Agent</strong>, this parameter is required.****</p>
+     * <li><p>This parameter is required if <strong>SourceEndpoint</strong>.<strong>InstanceType</strong> is set to <strong>agent</strong>.</p>
      * </li>
-     * <li><p>For more information about how to install a backup gateway, see <a href="https://help.aliyun.com/document_detail/93250.html">Install a backup gateway</a>.</p>
+     * <li><p>For more information about how to create a backup gateway, see <a href="https://help.aliyun.com/document_detail/93250.html">Add a backup gateway</a>.</p>
      * </li>
-     * <li><p>You can query a list of existing backup gateways by calling the <a href="https://help.aliyun.com/document_detail/2869840.html">DescribeBackupGatewayList</a> operation.</p>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/2869840.html">DescribeBackupGatewayList</a> operation to view the list of existing backup gateways.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>23313123312</p>
@@ -24,9 +24,9 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public Long backupGatewayId;
 
     /**
-     * <p>The interval at which you want to perform incremental log backups. Unit: seconds.</p>
+     * <p>The interval for incremental backups, in seconds.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set BackupMethod to <strong>physical</strong>.</p>
+     * <p>This parameter is required only for <strong>physical backups</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,11 +36,12 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public Integer backupLogIntervalSeconds;
 
     /**
-     * <p>The method that is used to generate the backup file. Valid values:</p>
+     * <p>The backup method. Valid values:</p>
      * <ul>
-     * <li><strong>logical</strong>: logical backup</li>
-     * <li><strong>physical</strong>: physical backup</li>
-     * <li><strong>duplication</strong>: dump backup</li>
+     * <li><p><strong>logical</strong>: logical backup</p>
+     * </li>
+     * <li><p><strong>physical</strong>: physical backup</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,27 +52,34 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String backupMethod;
 
     /**
-     * <p>The object to be backed up.</p>
+     * <p>The backup objects.</p>
      * 
      * <strong>example:</strong>
-     * <p>[ { &quot;DBName&quot;:&quot;Name of the database to be backed up&quot;, &quot;SchemaName&quot;:&quot;Name of the schema to be backed up&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table to be backed up&quot; }], &quot;TableExcludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table that you do not want to back up&quot; }] } ]</p>
+     * <p>[     {         &quot;DBName&quot;:&quot;待备份库名&quot;,         &quot;SchemaName&quot;:&quot;待备份 Schema 名&quot;,         &quot;TableIncludes&quot;:[{             &quot;TableName&quot;:&quot;待备份表表名&quot;         }],         &quot;TableExcludes&quot;:[{             &quot;TableName&quot;:&quot;待备份库名不需要备份表的表名&quot;         }]     } ]</p>
      */
     @NameInMap("BackupObjects")
     public String backupObjects;
 
     /**
-     * <p>The day of the week on which you want to perform full backup. Valid values:</p>
+     * <p>The full backup cycle. Valid values:</p>
      * <ul>
-     * <li><strong>Monday</strong></li>
-     * <li><strong>Tuesday</strong></li>
-     * <li><strong>Wednesday</strong></li>
-     * <li><strong>Thursday</strong></li>
-     * <li><strong>Friday</strong></li>
-     * <li><strong>Saturday</strong></li>
-     * <li><strong>Sunday</strong></li>
+     * <li><p><strong>Monday</strong></p>
+     * </li>
+     * <li><p><strong>Tuesday</strong></p>
+     * </li>
+     * <li><p><strong>Wednesday</strong></p>
+     * </li>
+     * <li><p><strong>Thursday</strong></p>
+     * </li>
+     * <li><p><strong>Friday</strong></p>
+     * </li>
+     * <li><p><strong>Saturday</strong></p>
+     * </li>
+     * <li><p><strong>Sunday</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can specify multiple values. Separate multiple values with commas (,).</p>
+     * <p>You can select multiple values. Separate them with commas (,).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,7 +89,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String backupPeriod;
 
     /**
-     * <p>The ID of the backup schedule.</p>
+     * <p>The ID of the backup plan.</p>
      * 
      * <strong>example:</strong>
      * <p>dbstooi0*******</p>
@@ -90,7 +98,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The name of the backup schedule.</p>
+     * <p>The custom name of the backup plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,9 +108,9 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String backupPlanName;
 
     /**
-     * <p>The network bandwidth throttling. Unit: KB/s. DBS allows a maximum bandwidth of 10 GB/s.</p>
+     * <p>The network bandwidth throttling limit, in KB/s. The maximum allowed value is 10 GB.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when physical backups for MySQL databases are performed.</p>
+     * <p>This parameter is valid only for MySQL physical backups.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,7 +120,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public Long backupRateLimit;
 
     /**
-     * <p>The number of days for which the backup data is retained. Valid values: 0 to 1825. Default value: 730.</p>
+     * <p>The retention period for backup data, in days. Valid values: 0 to 1825. Default value: 730.</p>
      * 
      * <strong>example:</strong>
      * <p>730</p>
@@ -121,9 +129,9 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public Integer backupRetentionPeriod;
 
     /**
-     * <p>The I/O limit for the disk. Unit: KB/s.</p>
+     * <p>The disk I/O limit, in KB/s.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when physical backups for MySQL databases are performed.</p>
+     * <p>This parameter is valid only for MySQL physical backups.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -133,7 +141,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public Long backupSpeedLimit;
 
     /**
-     * <p>The start time of full backup tasks. Specify the value in the <em>HH:mm</em> format. The time must be in UTC.</p>
+     * <p>The start time for the full backup. The time is in the <em>HH:mm</em> format and is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>14:22</p>
@@ -142,26 +150,30 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String backupStartTime;
 
     /**
-     * <p>The storage type. Valid values:</p>
+     * <p>The built-in storage type:</p>
      * <ul>
-     * <li>Empty: If you do not specify this parameter, the system stores backup data in your OSS bucket.</li>
-     * <li>system : The system stores backup data in the built-in OSS bucket of DBS.</li>
+     * <li><p>Empty (default): Backup data is stored in your OSS bucket.</p>
+     * </li>
+     * <li><p>system: Backup data is stored in the built-in OSS bucket of DBS.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("BackupStorageType")
     public String backupStorageType;
 
     /**
-     * <p>The backup method that you want to use for full backups. Valid values:</p>
+     * <p>The full backup strategy. Valid values:</p>
      * <ul>
-     * <li><strong>simple</strong>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</li>
-     * <li><strong>Manual</strong>: manual backup.</li>
+     * <li><p><strong>simple</strong>: periodic backup. Use this value with BackupPeriod and BackupStartTime.</p>
+     * </li>
+     * <li><p><strong>manual</strong>: manual backup.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Default value: <strong>simple</strong>.</p>
+     * <p>The default value is <strong>simple</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -171,25 +183,25 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String backupStrategyType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token used to ensure the idempotence of the request. This prevents duplicate requests.</p>
      * 
      * <strong>example:</strong>
-     * <p>DBS</p>
+     * <p>ASDASDASDSADASFCZXVZ</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The unique ID (UID) of the Alibaba Cloud account to which the source database belongs.</p>
+     * <p>The UID of the Alibaba Cloud account for cross-account backup.</p>
      * 
      * <strong>example:</strong>
-     * <p>2xxx7778xxxxxxxxxx</p>
+     * <p>1648821913******</p>
      */
     @NameInMap("CrossAliyunId")
     public String crossAliyunId;
 
     /**
-     * <p>The name of the RAM role that is used to perform backups across Alibaba Cloud accounts.</p>
+     * <p>The name of the RAM role for cross-account backup.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -198,10 +210,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String crossRoleName;
 
     /**
-     * <p>The region in which the database that you want to back up resides.</p>
-     * <blockquote>
-     * <p>This parameter is required if the <strong>PayType</strong> parameter is set to <strong>postpay</strong>.</p>
-     * </blockquote>
+     * <p>The region where the database is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -210,16 +219,24 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String databaseRegion;
 
     /**
-     * <p>The type of the source database. Valid values:</p>
+     * <p>The database type. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>MSSQL</strong></li>
-     * <li><strong>Oracle</strong></li>
-     * <li><strong>MariaDB</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>DRDS</strong></li>
-     * <li><strong>MongoDB</strong></li>
-     * <li><strong>Redis</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>MSSQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * <li><p><strong>MariaDB</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>DRDS</strong></p>
+     * </li>
+     * <li><p><strong>MongoDB</strong></p>
+     * </li>
+     * <li><p><strong>Redis</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -230,7 +247,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String databaseType;
 
     /**
-     * <p>The number of days after which the storage class of the backup data is changed to Archive. Default value: 365.</p>
+     * <p>The time after which backup data is converted to archive storage, in days. Default value: 365.</p>
      * 
      * <strong>example:</strong>
      * <p>365</p>
@@ -239,7 +256,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public Integer duplicationArchivePeriod;
 
     /**
-     * <p>The number of days after which the storage class of the backup data is changed to Infrequent Access (IA). Default value: 180.</p>
+     * <p>The time after which backup data is converted to Infrequent Access (IA) storage, in days. Default value: 180.</p>
      * 
      * <strong>example:</strong>
      * <p>180</p>
@@ -248,10 +265,12 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public Integer duplicationInfrequentAccessPeriod;
 
     /**
-     * <p>Specifies whether to enable the incremental log backup feature. Valid values:</p>
+     * <p>Specifies whether to enable incremental log backup. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the incremental log backup feature.</li>
-     * <li><strong>false</strong>: disables the incremental log backup feature.</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -261,7 +280,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public Boolean enableBackupLog;
 
     /**
-     * <p>The request source. Default value: OpenApi. You do not need to set this parameter.</p>
+     * <p>The source of the request. The default value is OpenApi. You do not need to set this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenApi</p>
@@ -270,16 +289,21 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String fromApp;
 
     /**
-     * <p>The type of the backup schedule. Valid values:</p>
+     * <p>The specification of the backup plan. Valid values:</p>
      * <ul>
-     * <li><strong>micro</strong></li>
-     * <li><strong>small</strong></li>
-     * <li><strong>medium</strong></li>
-     * <li><strong>large</strong></li>
-     * <li><strong>xlarge</strong></li>
+     * <li><p><strong>micro</strong></p>
+     * </li>
+     * <li><p><strong>small</strong></p>
+     * </li>
+     * <li><p><strong>medium</strong></p>
+     * </li>
+     * <li><p><strong>large</strong></p>
+     * </li>
+     * <li><p><strong>xlarge</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> A backup schedule type with higher specifications offers higher backup and restoration performance. For more information, see <a href="https://help.aliyun.com/document_detail/84372.html">Select a backup schedule type</a>.</p>
+     * <p>Higher specifications provide better backup and recovery performance. For more information, see <a href="https://help.aliyun.com/document_detail/84372.html">Specifications</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -290,18 +314,21 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The type of the source database instance. Valid values:</p>
+     * <p>The database instance type. Valid values:</p>
      * <ul>
-     * <li><strong>RDS</strong>: ApsaraDB RDS.</li>
-     * <li><strong>PolarDB</strong>: PolarDB.</li>
-     * <li><strong>DDS</strong>: ApsaraDB for MongoDB.</li>
-     * <li><strong>Kvstore</strong>: ApsaraDB for Redis.</li>
-     * <li><strong>Other</strong>: Database connected by using an IP address and a port number.</li>
-     * <li><strong>dg</strong>: Self-managed database that has no public IP address or port number and is connected over Database Gateway.</li>
+     * <li><p><strong>RDS</strong></p>
+     * </li>
+     * <li><p><strong>PolarDB</strong></p>
+     * </li>
+     * <li><p><strong>DDS</strong>: Alibaba Cloud MongoDB</p>
+     * </li>
+     * <li><p><strong>Kvstore</strong>: Alibaba Cloud Redis</p>
+     * </li>
+     * <li><p><strong>Other</strong>: A database connected over an IP address and port.</p>
+     * </li>
+     * <li><p><strong>dg</strong>: A self-managed database without a public IP address or port, connected through Database Gateway (DG).</p>
+     * </li>
      * </ul>
-     * <blockquote>
-     * <p> If <strong>PayType</strong> is set to <strong>postpay</strong>, this parameter is required.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -310,7 +337,8 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The name of the Object Storage Service (OSS) bucket used to store backup files. By default, the system automatically generates a name for the OSS bucket.</p>
+     * <p>The name of the Object Storage Service (OSS) bucket.
+     * Default: The system automatically generates a new name.</p>
      * 
      * <strong>example:</strong>
      * <p>TestOssBucket</p>
@@ -322,26 +350,22 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The billing method. Valid values:</p>
-     * <ul>
-     * <li><strong>postpay</strong>: pay-as-you-go.</li>
-     * <li><strong>prepay</strong>: subscription.</li>
-     * </ul>
-     * <blockquote>
-     * <p> The default value is <strong>prepay</strong>. You can set this parameter to <strong>postpay</strong> only if you set <strong>BackupMethod</strong> to <strong>duplication</strong>.</p>
-     * </blockquote>
+     * <p>The payment method. Valid value:</p>
+     * <p><strong>prepay</strong>: subscription</p>
      * 
      * <strong>example:</strong>
-     * <p>Postpaid</p>
+     * <p>prepay</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
-     * <p>Specifies whether to use yearly subscription or monthly subscription for the instance. Valid values:</p>
+     * <p>The billing cycle of the subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: yearly subscription</li>
-     * <li><strong>Month</strong>: monthly subscription</li>
+     * <li><p><strong>Year</strong></p>
+     * </li>
+     * <li><p><strong>Month</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -351,7 +375,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The ID of the region in which you want to store the backup data. You can query the supported regions of DBS by calling the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> operation.</p>
+     * <p>The region where DBS is available. To view the available regions, call the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -369,9 +393,9 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * <blockquote>
-     * <p>This parameter is required if the DatabaseType parameter is set to <strong>PostgreSQL</strong> or <strong>MongoDB</strong>.</p>
+     * <p>This parameter is required if the database type is <strong>PostgreSQL</strong> or <strong>MongoDB</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -381,9 +405,9 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String sourceEndpointDatabaseName;
 
     /**
-     * <p>The endpoint of the database.</p>
+     * <p>The database endpoint.</p>
      * <blockquote>
-     * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>Express</strong>, <strong>Agent</strong>, or <strong>Other</strong>.</p>
+     * <p>This parameter is required if <strong>SourceEndpoint</strong>.<strong>InstanceType</strong> is set to <strong>express</strong>, <strong>agent</strong>, or <strong>other</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -395,7 +419,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     /**
      * <p>The ID of the database instance.</p>
      * <blockquote>
-     * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>DDS</strong>, or <strong>Express</strong>.</p>
+     * <p>This parameter is required if <strong>SourceEndpoint</strong>.<strong>InstanceType</strong> is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>DDS</strong>, or <strong>Express</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -405,15 +429,22 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String sourceEndpointInstanceID;
 
     /**
-     * <p>The location of the source database. Valid values:</p>
+     * <p>The location of the database. Valid values:</p>
      * <ul>
-     * <li><strong>RDS</strong>: The database is on an ApsaraDB RDS instance.</li>
-     * <li><strong>ECS</strong>: The database is on an Elastic Compute Service (ECS) instance.</li>
-     * <li><strong>Express</strong>: The database is connected to DBS by using Express Connect, VPN Gateway, or Smart Access Gateway.</li>
-     * <li><strong>Agent</strong>: The database is connected to DBS over a DBS backup gateway.</li>
-     * <li><strong>DDS</strong>: The database is on an ApsaraDB for MongoDB instance.</li>
-     * <li><strong>Other</strong>: The database is connected to DBS by using an IP address and a port number.</li>
-     * <li><strong>dg</strong>: The database is a self-managed database that has no public IP address or port number and is connected to DBS over Database Gateway.</li>
+     * <li><p><strong>RDS</strong></p>
+     * </li>
+     * <li><p><strong>ECS</strong></p>
+     * </li>
+     * <li><p><strong>Express</strong>: A database connected through a leased line, VPN Gateway, or Smart Access Gateway.</p>
+     * </li>
+     * <li><p><strong>Agent</strong>: A database connected through a backup gateway.</p>
+     * </li>
+     * <li><p><strong>DDS</strong>: Alibaba Cloud MongoDB</p>
+     * </li>
+     * <li><p><strong>Other</strong>: A database connected directly over an IP address and port.</p>
+     * </li>
+     * <li><p><strong>dg</strong>: A self-managed database without a public IP address or port, connected through Database Gateway (DG).</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -424,7 +455,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String sourceEndpointInstanceType;
 
     /**
-     * <p>The system ID (SID) of the Oracle database. This parameter is required if the source database is an Oracle database.</p>
+     * <p>The Oracle system ID (SID). This parameter is required if the database type is Oracle.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -433,9 +464,9 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String sourceEndpointOracleSID;
 
     /**
-     * <p>The password of the account that is used to connect to the database.</p>
+     * <p>The password for the database account.</p>
      * <blockquote>
-     * <p>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</p>
+     * <p>This parameter is optional if the database type is <strong>Redis</strong>, or if the database location is <strong>agent</strong> and the database type is <strong>MSSQL</strong>. In all other cases, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -445,9 +476,9 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String sourceEndpointPassword;
 
     /**
-     * <p>The port of the database.</p>
+     * <p>The database port.</p>
      * <blockquote>
-     * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>Express</strong>, <strong>Agent</strong>, <strong>Other</strong>, or <strong>ECS</strong>.</p>
+     * <p>This parameter is required if <strong>SourceEndpoint</strong>.<strong>InstanceType</strong> is set to <strong>express</strong>, <strong>agent</strong>, <strong>other</strong>, or <strong>ECS</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -457,9 +488,9 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public Integer sourceEndpointPort;
 
     /**
-     * <p>The region in which the database that you want to back up resides.</p>
+     * <p>The region where the database is located.</p>
      * <blockquote>
-     * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>DDS</strong>, <strong>Express</strong>, or <strong>Agent</strong>.</p>
+     * <p>This parameter is required if <strong>SourceEndpoint</strong>.<strong>InstanceType</strong> is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>DDS</strong>, <strong>Express</strong>, or <strong>Agent</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -469,9 +500,9 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String sourceEndpointRegion;
 
     /**
-     * <p>The username of the account that is used to connect to the database.</p>
+     * <p>The database account.</p>
      * <blockquote>
-     * <p>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</p>
+     * <p>This parameter is optional if the database type is <strong>Redis</strong>, or if the database location is <strong>agent</strong> and the database type is <strong>MSSQL</strong>. In all other cases, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -481,10 +512,7 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String sourceEndpointUserName;
 
     /**
-     * <p>The region in which you want to store the backup data.</p>
-     * <blockquote>
-     * <p>This parameter is required if the <strong>PayType</strong> parameter is set to <strong>postpay</strong>.</p>
-     * </blockquote>
+     * <p>The storage region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -493,10 +521,10 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     public String storageRegion;
 
     /**
-     * <p>This parameter is unavailable.</p>
+     * <p>This parameter is not yet available.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("StorageType")
     public String storageType;
@@ -504,8 +532,10 @@ public class CreateAndStartBackupPlanRequest extends TeaModel {
     /**
      * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values of <strong>UsedTime</strong> range from 1 to 5.</li>
-     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values of <strong>UsedTime</strong> range from 1 to 11.</li>
+     * <li><p>If <strong>Period</strong> is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> can be 1 to 5.</p>
+     * </li>
+     * <li><p>If <strong>Period</strong> is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> can be 1 to 11.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

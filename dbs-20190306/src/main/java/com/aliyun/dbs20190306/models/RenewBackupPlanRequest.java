@@ -9,7 +9,7 @@ public class RenewBackupPlanRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dbstooi01e****</p>
+     * <p>dbstooi01exxx</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
@@ -18,7 +18,7 @@ public class RenewBackupPlanRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>HKAJHFIUEQWBFIJSNFO****</p>
+     * <p>HKAJHFIUEQWBFIJSNFOIWHN</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,8 +29,10 @@ public class RenewBackupPlanRequest extends TeaModel {
     /**
      * <p>Specifies whether to use yearly subscription or monthly subscription for the instance. Valid values:</p>
      * <ul>
-     * <li>Year</li>
-     * <li>Month</li>
+     * <li><p>Year</p>
+     * </li>
+     * <li><p>Month</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -43,8 +45,10 @@ public class RenewBackupPlanRequest extends TeaModel {
     /**
      * <p>The subscription duration of the instance. Valid values:</p>
      * <ul>
-     * <li>If the Period parameter is set to Year, the value of the UsedTime parameter ranges from 1 to 9.</li>
-     * <li>If the Period parameter is set to Month, the value of the UsedTime parameter ranges from 1 to 11.</li>
+     * <li><p>If the Period parameter is set to Year, the value of the UsedTime parameter ranges from 1 to 9.</p>
+     * </li>
+     * <li><p>If the Period parameter is set to Month, the value of the UsedTime parameter ranges from 1 to 11.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

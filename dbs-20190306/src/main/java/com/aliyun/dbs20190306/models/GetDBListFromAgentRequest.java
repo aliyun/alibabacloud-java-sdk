@@ -8,7 +8,7 @@ public class GetDBListFromAgentRequest extends TeaModel {
      * <p>The ID of the backup gateway.</p>
      * 
      * <strong>example:</strong>
-     * <p>160813</p>
+     * <p>160***</p>
      */
     @NameInMap("BackupGatewayId")
     public Long backupGatewayId;

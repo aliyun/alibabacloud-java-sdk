@@ -31,14 +31,11 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The details of incremental backup tasks.</p>
-     */
     @NameInMap("Items")
     public DescribeIncrementBackupListResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -47,7 +44,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -56,7 +53,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A5D52069-E8AA-5056-8C5C-654C3610****</p>
@@ -65,10 +62,12 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false</strong>: The request fails.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +86,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
     public Integer totalElements;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -181,96 +180,65 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
     }
 
     public static class DescribeIncrementBackupListResponseBodyItemsIncrementBackupFile extends TeaModel {
-        /**
-         * <p>The point in time when the backup set expires.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1711506719000</p>
-         */
         @NameInMap("BackupSetExpiredTime")
         public Long backupSetExpiredTime;
 
-        /**
-         * <p>The ID of the backup set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mysql-bin.00****</p>
-         */
         @NameInMap("BackupSetId")
         public String backupSetId;
 
-        /**
-         * <p>The ID of the incremental backup task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1hv5g9wk4****</p>
-         */
         @NameInMap("BackupSetJobId")
         public String backupSetJobId;
 
-        /**
-         * <p>The size of the backup set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18535</p>
-         */
         @NameInMap("BackupSize")
         public Long backupSize;
 
-        /**
-         * <p>The status of the incremental backup task. Valid values:</p>
-         * <ul>
-         * <li><strong>INIT</strong>: The incremental backup task is not started.</li>
-         * <li><strong>FILLING</strong>: The incremental backup task is in progress.</li>
-         * <li><strong>COMPLETED</strong>: The incremental backup task is complete.</li>
-         * <li><strong>UNCOMPLETED</strong>: The incremental backup task is not complete.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FILLING</p>
-         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
-        /**
-         * <p>The end time of the incremental backup task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1648434713000</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
-         * <p>The endpoint that is used to connect to the database.</p>
-         * 
          * <strong>example:</strong>
-         * <p>172.1XX.103.1:4XXX</p>
+         * <p>127.0.0.1</p>
          */
+        @NameInMap("SourceEndpointHost")
+        public String sourceEndpointHost;
+
+        /**
+         * <strong>example:</strong>
+         * <p>rm-testxx</p>
+         */
+        @NameInMap("SourceEndpointInstanceId")
+        public String sourceEndpointInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
+        @NameInMap("SourceEndpointInstanceType")
+        public String sourceEndpointInstanceType;
+
         @NameInMap("SourceEndpointIpPort")
         public String sourceEndpointIpPort;
 
         /**
-         * <p>The start time of the incremental backup task.</p>
-         * 
          * <strong>example:</strong>
-         * <p>1648433764000</p>
+         * <p>3306</p>
          */
+        @NameInMap("SourceEndpointPort")
+        public String sourceEndpointPort;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
+        @NameInMap("SourceEndpointRegion")
+        public String sourceEndpointRegion;
+
         @NameInMap("StartTime")
         public Long startTime;
 
-        /**
-         * <p>The storage class of the backup data. Valid values:</p>
-         * <ul>
-         * <li><strong>Standard</strong>: The storage class is Standard.</li>
-         * <li><strong>IA</strong>: The storage class is Infrequent Access (IA).</li>
-         * <li><strong>Archive</strong>: The storage class is Archive.</li>
-         * <li><strong>UNKNOWN</strong>: The storage class is unknown. This value is returned because the task is not complete.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Standard</p>
-         */
         @NameInMap("StorageMethod")
         public String storageMethod;
 
@@ -327,12 +295,52 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public DescribeIncrementBackupListResponseBodyItemsIncrementBackupFile setSourceEndpointHost(String sourceEndpointHost) {
+            this.sourceEndpointHost = sourceEndpointHost;
+            return this;
+        }
+        public String getSourceEndpointHost() {
+            return this.sourceEndpointHost;
+        }
+
+        public DescribeIncrementBackupListResponseBodyItemsIncrementBackupFile setSourceEndpointInstanceId(String sourceEndpointInstanceId) {
+            this.sourceEndpointInstanceId = sourceEndpointInstanceId;
+            return this;
+        }
+        public String getSourceEndpointInstanceId() {
+            return this.sourceEndpointInstanceId;
+        }
+
+        public DescribeIncrementBackupListResponseBodyItemsIncrementBackupFile setSourceEndpointInstanceType(String sourceEndpointInstanceType) {
+            this.sourceEndpointInstanceType = sourceEndpointInstanceType;
+            return this;
+        }
+        public String getSourceEndpointInstanceType() {
+            return this.sourceEndpointInstanceType;
+        }
+
         public DescribeIncrementBackupListResponseBodyItemsIncrementBackupFile setSourceEndpointIpPort(String sourceEndpointIpPort) {
             this.sourceEndpointIpPort = sourceEndpointIpPort;
             return this;
         }
         public String getSourceEndpointIpPort() {
             return this.sourceEndpointIpPort;
+        }
+
+        public DescribeIncrementBackupListResponseBodyItemsIncrementBackupFile setSourceEndpointPort(String sourceEndpointPort) {
+            this.sourceEndpointPort = sourceEndpointPort;
+            return this;
+        }
+        public String getSourceEndpointPort() {
+            return this.sourceEndpointPort;
+        }
+
+        public DescribeIncrementBackupListResponseBodyItemsIncrementBackupFile setSourceEndpointRegion(String sourceEndpointRegion) {
+            this.sourceEndpointRegion = sourceEndpointRegion;
+            return this;
+        }
+        public String getSourceEndpointRegion() {
+            return this.sourceEndpointRegion;
         }
 
         public DescribeIncrementBackupListResponseBodyItemsIncrementBackupFile setStartTime(Long startTime) {

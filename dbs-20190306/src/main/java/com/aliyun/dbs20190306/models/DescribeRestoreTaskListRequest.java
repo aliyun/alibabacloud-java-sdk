@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreTaskListRequest extends TeaModel {
     /**
-     * <p>The ID of the backup schedule.</p>
+     * <p>The ID of the backup plan.</p>
+     * <blockquote>
+     * <p>Specify either BackupPlanId or RestoreTaskId.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>dbs1hvb0wwwXXXXX</p>
@@ -14,7 +17,7 @@ public class DescribeRestoreTaskListRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. This prevents duplicate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -23,7 +26,7 @@ public class DescribeRestoreTaskListRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time of the backup.</p>
      * 
      * <strong>example:</strong>
      * <p>1570701361528</p>
@@ -35,7 +38,7 @@ public class DescribeRestoreTaskListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be a positive integer. Default value: 0.</p>
+     * <p>The page number. The value must be greater than or equal to 0 and not exceed the maximum value of the integer data type. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,12 +47,7 @@ public class DescribeRestoreTaskListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
-     * <ul>
-     * <li>30</li>
-     * <li>50</li>
-     * <li>100</li>
-     * </ul>
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
      * <blockquote>
      * <p>Default value: 30.</p>
      * </blockquote>
@@ -61,9 +59,9 @@ public class DescribeRestoreTaskListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The restoration task ID. Separate multiple IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2869836.html">CreateRestoreTask</a> operation to obtain the ID.</p>
+     * <p>The ID of the restore job. You can specify multiple IDs. Separate them with commas (,). Call the <a href="https://help.aliyun.com/document_detail/2869836.html">CreateRestoreTask</a> operation to obtain this parameter.</p>
      * <blockquote>
-     * <p> Configure the BackupPlanId or RestoreTaskId parameter. If you configure the two parameters, an error is returned.</p>
+     * <p>Specify either RestoreTaskId or BackupPlanId. An error occurs if you specify both parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,7 +71,7 @@ public class DescribeRestoreTaskListRequest extends TeaModel {
     public String restoreTaskId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time of the backup.</p>
      * 
      * <strong>example:</strong>
      * <p>1570701361528</p>
