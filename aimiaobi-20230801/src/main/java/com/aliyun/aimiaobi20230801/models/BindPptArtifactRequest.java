@@ -13,6 +13,10 @@ public class BindPptArtifactRequest extends TeaModel {
     @NameInMap("ArtifactId")
     public Integer artifactId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("ExternalUserId")
     public String externalUserId;
 

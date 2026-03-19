@@ -4,6 +4,10 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunPptOutlineGenerationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("ExternalUserId")
     public String externalUserId;
 
