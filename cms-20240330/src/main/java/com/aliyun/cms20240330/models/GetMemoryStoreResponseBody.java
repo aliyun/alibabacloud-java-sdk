@@ -47,6 +47,9 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("shortTermStorage")
+    public GetMemoryStoreResponseBodyShortTermStorage shortTermStorage;
+
     /**
      * <strong>example:</strong>
      * <p>10</p>
@@ -131,6 +134,14 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetMemoryStoreResponseBody setShortTermStorage(GetMemoryStoreResponseBodyShortTermStorage shortTermStorage) {
+        this.shortTermStorage = shortTermStorage;
+        return this;
+    }
+    public GetMemoryStoreResponseBodyShortTermStorage getShortTermStorage() {
+        return this.shortTermStorage;
+    }
+
     public GetMemoryStoreResponseBody setShortTermTtl(Integer shortTermTtl) {
         this.shortTermTtl = shortTermTtl;
         return this;
@@ -153,6 +164,36 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     }
     public String getWorkspace() {
         return this.workspace;
+    }
+
+    public static class GetMemoryStoreResponseBodyShortTermStorage extends TeaModel {
+        @NameInMap("logstore")
+        public String logstore;
+
+        @NameInMap("project")
+        public String project;
+
+        public static GetMemoryStoreResponseBodyShortTermStorage build(java.util.Map<String, ?> map) throws Exception {
+            GetMemoryStoreResponseBodyShortTermStorage self = new GetMemoryStoreResponseBodyShortTermStorage();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMemoryStoreResponseBodyShortTermStorage setLogstore(String logstore) {
+            this.logstore = logstore;
+            return this;
+        }
+        public String getLogstore() {
+            return this.logstore;
+        }
+
+        public GetMemoryStoreResponseBodyShortTermStorage setProject(String project) {
+            this.project = project;
+            return this;
+        }
+        public String getProject() {
+            return this.project;
+        }
+
     }
 
 }

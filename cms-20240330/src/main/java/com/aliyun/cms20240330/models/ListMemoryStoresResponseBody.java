@@ -28,6 +28,9 @@ public class ListMemoryStoresResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("total")
+    public Integer total;
+
     public static ListMemoryStoresResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMemoryStoresResponseBody self = new ListMemoryStoresResponseBody();
         return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class ListMemoryStoresResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListMemoryStoresResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
     }
 
     public static class ListMemoryStoresResponseBodyMemoryStores extends TeaModel {
