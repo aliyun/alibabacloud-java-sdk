@@ -11,6 +11,9 @@ public class CreateResourceGroupRequest extends TeaModel {
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
+    @NameInMap("EnableAliyunResourceGroup")
+    public Boolean enableAliyunResourceGroup;
+
     /**
      * <blockquote>
      * <p> This parameter is not publicly available.</p>
@@ -53,6 +56,14 @@ public class CreateResourceGroupRequest extends TeaModel {
     }
     public String getBusinessChannel() {
         return this.businessChannel;
+    }
+
+    public CreateResourceGroupRequest setEnableAliyunResourceGroup(Boolean enableAliyunResourceGroup) {
+        this.enableAliyunResourceGroup = enableAliyunResourceGroup;
+        return this;
+    }
+    public Boolean getEnableAliyunResourceGroup() {
+        return this.enableAliyunResourceGroup;
     }
 
     public CreateResourceGroupRequest setIsResourceGroupWithOfficeSite(Long isResourceGroupWithOfficeSite) {

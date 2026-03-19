@@ -425,6 +425,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BusinessChannel", request.businessChannel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAliyunResourceGroup)) {
+            query.put("EnableAliyunResourceGroup", request.enableAliyunResourceGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isResourceGroupWithOfficeSite)) {
             query.put("IsResourceGroupWithOfficeSite", request.isResourceGroupWithOfficeSite);
         }
@@ -1724,7 +1728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the contact information of a convenience account.</p>
+     * <p>Modifies user information.</p>
      * 
      * @param request ModifyUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1768,7 +1772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the contact information of a convenience account.</p>
+     * <p>Modifies user information.</p>
      * 
      * @param request ModifyUserRequest
      * @return ModifyUserResponse
