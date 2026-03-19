@@ -51,31 +51,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ddoscoo-cn-o4017n9q9004</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>INSTANCE</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>testKey1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <strong>example:</strong>
-         * <p>testValue1</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

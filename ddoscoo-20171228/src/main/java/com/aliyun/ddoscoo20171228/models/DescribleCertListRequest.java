@@ -11,6 +11,9 @@ public class DescribleCertListRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("DomainList")
+    public String domainList;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -36,6 +39,14 @@ public class DescribleCertListRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public DescribleCertListRequest setDomainList(String domainList) {
+        this.domainList = domainList;
+        return this;
+    }
+    public String getDomainList() {
+        return this.domainList;
     }
 
     public DescribleCertListRequest setResourceGroupId(String resourceGroupId) {
