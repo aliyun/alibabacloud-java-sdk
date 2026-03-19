@@ -25,6 +25,9 @@ public class GetAIOrderApprovalCommentSSEResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("Output")
+    public GetAIOrderApprovalCommentSSEResponseBodyOutput output;
+
     /**
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
@@ -68,6 +71,14 @@ public class GetAIOrderApprovalCommentSSEResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public GetAIOrderApprovalCommentSSEResponseBody setOutput(GetAIOrderApprovalCommentSSEResponseBodyOutput output) {
+        this.output = output;
+        return this;
+    }
+    public GetAIOrderApprovalCommentSSEResponseBodyOutput getOutput() {
+        return this.output;
+    }
+
     public GetAIOrderApprovalCommentSSEResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -82,6 +93,29 @@ public class GetAIOrderApprovalCommentSSEResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class GetAIOrderApprovalCommentSSEResponseBodyOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;approvalStatus&quot;:&quot;建议拒绝&quot;,&quot;approvalSuggestion&quot;:&quot;xxx&quot;,&quot;sessionId&quot;:&quot;xxx&quot;}</p>
+         */
+        @NameInMap("Content")
+        public String content;
+
+        public static GetAIOrderApprovalCommentSSEResponseBodyOutput build(java.util.Map<String, ?> map) throws Exception {
+            GetAIOrderApprovalCommentSSEResponseBodyOutput self = new GetAIOrderApprovalCommentSSEResponseBodyOutput();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIOrderApprovalCommentSSEResponseBodyOutput setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
     }
 
 }
