@@ -1,3 +1,9 @@
+2026-03-19 Version: 2.6.0
+- Support API BrowseFiles.
+- Support API GetBasicStatistics.
+- Update API CreateBackupPlan: add request parameters Edition.
+
+
 2026-03-17 Version: 2.5.0
 - Support API DeleteContainerCluster.
 - Support API DescribeContainerResource.

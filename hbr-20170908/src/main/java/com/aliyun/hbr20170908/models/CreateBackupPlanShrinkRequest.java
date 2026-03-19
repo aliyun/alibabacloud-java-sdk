@@ -140,6 +140,9 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
     @NameInMap("Disabled")
     public Boolean disabled;
 
+    @NameInMap("Edition")
+    public String edition;
+
     /**
      * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. It specifies the path that should not be backed up, meaning all files under this path will not be included in the backup. The maximum length is 255 characters.</p>
      * 
@@ -435,6 +438,14 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
     }
     public Boolean getDisabled() {
         return this.disabled;
+    }
+
+    public CreateBackupPlanShrinkRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public CreateBackupPlanShrinkRequest setExclude(String exclude) {

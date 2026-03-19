@@ -177,6 +177,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>浏览备份文件</p>
+     * 
+     * @param request BrowseFilesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BrowseFilesResponse
+     */
+    public BrowseFilesResponse browseFilesWithOptions(BrowseFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.absolutePath)) {
+            query.put("AbsolutePath", request.absolutePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.restoreId)) {
+            query.put("RestoreId", request.restoreId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotHash)) {
+            query.put("SnapshotHash", request.snapshotHash);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageClass)) {
+            query.put("StorageClass", request.storageClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vaultId)) {
+            query.put("VaultId", request.vaultId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BrowseFiles"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BrowseFilesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>浏览备份文件</p>
+     * 
+     * @param request BrowseFilesRequest
+     * @return BrowseFilesResponse
+     */
+    public BrowseFilesResponse browseFiles(BrowseFilesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.browseFilesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Cancels a backup job.</p>
      * 
      * @param request CancelBackupJobRequest
@@ -598,6 +694,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.disabled)) {
             query.put("Disabled", request.disabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
@@ -4690,6 +4790,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateRamPolicyResponse generateRamPolicy(GenerateRamPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateRamPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains basic backup statistics.</p>
+     * 
+     * @param request GetBasicStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBasicStatisticsResponse
+     */
+    public GetBasicStatisticsResponse getBasicStatisticsWithOptions(GetBasicStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBasicStatistics"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBasicStatisticsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains basic backup statistics.</p>
+     * 
+     * @param request GetBasicStatisticsRequest
+     * @return GetBasicStatisticsResponse
+     */
+    public GetBasicStatisticsResponse getBasicStatistics(GetBasicStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getBasicStatisticsWithOptions(request, runtime);
     }
 
     /**
