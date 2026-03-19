@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
-    /**
-     * <p>The users that are involved in the task flow.</p>
-     */
     @NameInMap("CooperatorList")
     public ListTaskFlowCooperatorsResponseBodyCooperatorList cooperatorList;
 
@@ -96,39 +93,15 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowCooperatorsResponseBodyCooperatorListCooperator extends TeaModel {
-        /**
-         * <p>The email address of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@XX.com">test@XX.com</a></p>
-         */
         @NameInMap("Email")
         public String email;
 
-        /**
-         * <p>The username.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("LoginName")
         public String loginName;
 
-        /**
-         * <p>The alias of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("NickName")
         public String nickName;
 
-        /**
-         * <p>userId.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("UserId")
         public String userId;
 

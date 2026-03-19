@@ -267,15 +267,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("ParentUid")
         public Long parentUid;
 
-        /**
-         * <p>The list of role IDs.</p>
-         */
         @NameInMap("RoleIdList")
         public GetUserResponseBodyUserRoleIdList roleIdList;
 
-        /**
-         * <p>The list of role names.</p>
-         */
         @NameInMap("RoleNameList")
         public GetUserResponseBodyUserRoleNameList roleNameList;
 

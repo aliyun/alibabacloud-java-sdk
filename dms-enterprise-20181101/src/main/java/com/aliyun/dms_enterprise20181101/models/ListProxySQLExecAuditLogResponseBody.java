@@ -22,9 +22,6 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The audit information about the database instance that is provided by the secure access proxy feature.</p>
-     */
     @NameInMap("ProxySQLExecAuditLogList")
     public ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogList proxySQLExecAuditLogList;
 
@@ -113,125 +110,39 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
     }
 
     public static class ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogListProxySQLExecAuditLog extends TeaModel {
-        /**
-         * <p>Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AffectRows")
         public Long affectRows;
 
-        /**
-         * <p>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1324</p>
-         */
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
-        /**
-         * <p>The execution status of the SQL statement. Valid values:</p>
-         * <ul>
-         * <li><strong>FAIL</strong>: The execution of the SQL statement fails.</li>
-         * <li><strong>CANCEL</strong>: The execution of the SQL statement is canceled.</li>
-         * <li><strong>SUCCESS</strong>: The SQL statement is executed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SUCCESS</p>
-         */
         @NameInMap("ExecState")
         public String execState;
 
-        /**
-         * <p>The ID of the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4***</p>
-         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        /**
-         * <p>The name of the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pc-uf662nrg017c6****.mysql.polardb.rds.aliyuncs.com:3306【test】</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The time at which the user executes the SQL statement on the database instance. The value of this parameter must be a timestamp that follows the UNIX time format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1636876446000</p>
-         */
         @NameInMap("OpTime")
         public String opTime;
 
-        /**
-         * <p>The description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The SQL statement that was executed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>select 1;</p>
-         */
         @NameInMap("SQL")
         public String SQL;
 
-        /**
-         * <p>The type of the SQL statement. Valid values:</p>
-         * <ul>
-         * <li><strong>SELECT</strong></li>
-         * <li><strong>INSERT</strong></li>
-         * <li><strong>DELETE</strong></li>
-         * <li><strong>CREATE_TABLE</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p> You can choose Operation Audit &gt; Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>SELECT</p>
-         */
         @NameInMap("SQLType")
         public String SQLType;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_db</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The ID of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4****</p>
-         */
         @NameInMap("UserId")
         public Long userId;
 
-        /**
-         * <p>The nickname of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testNickName</p>
-         */
         @NameInMap("UserName")
         public String userName;
 

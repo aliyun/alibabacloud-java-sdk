@@ -96,21 +96,9 @@ public class GetApprovalDetailResponseBody extends TeaModel {
     }
 
     public static class GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler extends TeaModel {
-        /**
-         * <p>The ID of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The nickname of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nickName</p>
-         */
         @NameInMap("NickName")
         public String nickName;
 
@@ -195,62 +183,21 @@ public class GetApprovalDetailResponseBody extends TeaModel {
     }
 
     public static class GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode extends TeaModel {
-        /**
-         * <p>The IDs of the approvers.</p>
-         */
         @NameInMap("AuditUserIdList")
         public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList auditUserIdList;
 
-        /**
-         * <p>The name of the approval node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DBA</p>
-         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        /**
-         * <p>The remarks of the approval.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Reason: Approved</p>
-         */
         @NameInMap("OperateComment")
         public String operateComment;
 
-        /**
-         * <p>The time when the ticket was submitted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-10-15 13:47:54</p>
-         */
         @NameInMap("OperateTime")
         public String operateTime;
 
-        /**
-         * <p>The ID of the user who submitted the ticket.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1****</p>
-         */
         @NameInMap("OperatorId")
         public Long operatorId;
 
-        /**
-         * <p>The approval status of the ticket. Valid values:</p>
-         * <ul>
-         * <li><strong>START</strong>: The ticket was submitted.</li>
-         * <li><strong>ERROR</strong>: An error occurred.</li>
-         * <li><strong>AUDITING</strong>: The ticket is being reviewed.</li>
-         * <li><strong>REJECT</strong>: The ticket was rejected.</li>
-         * <li><strong>CANCEL</strong>: The ticket was revoked.</li>
-         * <li><strong>APPROVED</strong>: The ticket was approved.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>APPROVED</p>
-         */
         @NameInMap("WorkflowInsCode")
         public String workflowInsCode;
 
@@ -347,9 +294,6 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The information about the approver.</p>
-         */
         @NameInMap("CurrentHandlers")
         public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlers currentHandlers;
 
@@ -390,9 +334,6 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         @NameInMap("OrderType")
         public String orderType;
 
-        /**
-         * <p>The reasons for the approval.</p>
-         */
         @NameInMap("ReasonList")
         public GetApprovalDetailResponseBodyApprovalDetailReasonList reasonList;
 
@@ -450,9 +391,6 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         @NameInMap("WorkflowInsCode")
         public String workflowInsCode;
 
-        /**
-         * <p>The details of approval nodes.</p>
-         */
         @NameInMap("WorkflowNodes")
         public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes workflowNodes;
 

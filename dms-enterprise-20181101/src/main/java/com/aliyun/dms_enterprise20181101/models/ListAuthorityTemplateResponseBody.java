@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorityTemplateResponseBody extends TeaModel {
-    /**
-     * <p>The permission templates.</p>
-     */
     @NameInMap("AuthorityTemplateViewList")
     public ListAuthorityTemplateResponseBodyAuthorityTemplateViewList authorityTemplateViewList;
 
@@ -130,42 +127,18 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
     }
 
     public static class ListAuthorityTemplateResponseBodyAuthorityTemplateViewListAuthorityTemplateView extends TeaModel {
-        /**
-         * <p>The time when the permission template was created. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-10-26 11:37:47</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The ID of the user who created the permission template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>522****</p>
-         */
         @NameInMap("CreatorId")
         public Long creatorId;
 
-        /**
-         * <p>The description of the permission template.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the permission template.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The ID of the permission template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2592</p>
-         */
         @NameInMap("TemplateId")
         public Long templateId;
 

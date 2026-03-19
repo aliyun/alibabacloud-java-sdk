@@ -44,9 +44,6 @@ public class ListTablesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The details of the tables.</p>
-     */
     @NameInMap("TableList")
     public ListTablesResponseBodyTableList tableList;
 
@@ -151,114 +148,42 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyTableListTable extends TeaModel {
-        /**
-         * <p>The ID of the physical database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1860****</p>
-         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
-        /**
-         * <p>The description of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The encoding format of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>utf8</p>
-         */
         @NameInMap("Encoding")
         public String encoding;
 
-        /**
-         * <p>The engine of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InnoDB</p>
-         */
         @NameInMap("Engine")
         public String engine;
 
-        /**
-         * <p>The number of rows in the table. This is a statistical value and does not indicate the actual number of rows.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10085</p>
-         */
         @NameInMap("NumRows")
         public Long numRows;
 
-        /**
-         * <p>The ID list of the table owners.</p>
-         */
         @NameInMap("OwnerIdList")
         public ListTablesResponseBodyTableListTableOwnerIdList ownerIdList;
 
-        /**
-         * <p>The nickname list of the table owners.</p>
-         */
         @NameInMap("OwnerNameList")
         public ListTablesResponseBodyTableListTableOwnerNameList ownerNameList;
 
-        /**
-         * <p>The storage space that is occupied by the table. This is a statistical value and does not indicate the accurate storage space. Unit: MB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1024</p>
-         */
         @NameInMap("StoreCapacity")
         public Long storeCapacity;
 
-        /**
-         * <p>The GUID of the table in DMS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>IDB_44743****.qntest.consumption_records</p>
-         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
-        /**
-         * <p>The ID of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>44743****</p>
-         */
         @NameInMap("TableId")
         public String tableId;
 
-        /**
-         * <p>The table name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>consumption_records</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The database in which the table resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>qntest</p>
-         */
         @NameInMap("TableSchemaName")
         public String tableSchemaName;
 
-        /**
-         * <p>The type of the table. Default value: NORMAL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NORMAL</p>
-         */
         @NameInMap("TableType")
         public String tableType;
 

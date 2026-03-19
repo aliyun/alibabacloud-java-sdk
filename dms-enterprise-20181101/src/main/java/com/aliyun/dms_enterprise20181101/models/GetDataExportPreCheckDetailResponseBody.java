@@ -96,21 +96,9 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataExportPreCheckDetailResponseBodyPreCheckResultPreCheckDetailListPreCheckDetailList extends TeaModel {
-        /**
-         * <p>The estimated number of data rows to be affected.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AffectRows")
         public Long affectRows;
 
-        /**
-         * <p>The SQL statement.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SELECT * FROM tmp_table LIMIT 1</p>
-         */
         @NameInMap("SQL")
         public String SQL;
 
@@ -170,9 +158,6 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         @NameInMap("IgnoreAffectRows")
         public Boolean ignoreAffectRows;
 
-        /**
-         * <p>The list of pre-check details.</p>
-         */
         @NameInMap("PreCheckDetailList")
         public GetDataExportPreCheckDetailResponseBodyPreCheckResultPreCheckDetailList preCheckDetailList;
 

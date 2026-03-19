@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTableColumnsResponseBody extends TeaModel {
-    /**
-     * <p>The details about fields in the table.</p>
-     */
     @NameInMap("ColumnList")
     public ListTableColumnsResponseBodyColumnList columnList;
 
@@ -96,143 +93,42 @@ public class ListTableColumnsResponseBody extends TeaModel {
     }
 
     public static class ListTableColumnsResponseBodyColumnListColumn extends TeaModel {
-        /**
-         * <p>Indicates whether the field is an auto-increment field. Valid values:</p>
-         * <ul>
-         * <li>true: The field is an auto-increment field.</li>
-         * <li>false: The field is not an auto-increment field.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("AutoIncrement")
         public Boolean autoIncrement;
 
-        /**
-         * <p>The ID of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
-         */
         @NameInMap("ColumnId")
         public String columnId;
 
-        /**
-         * <p>The field name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c1</p>
-         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        /**
-         * <p>The data type of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>varchar</p>
-         */
         @NameInMap("ColumnType")
         public String columnType;
 
-        /**
-         * <p>The length of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>32</p>
-         */
         @NameInMap("DataLength")
         public Long dataLength;
 
-        /**
-         * <p>The number of valid digits for the column.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
-        /**
-         * <p>The number of decimal places of the field data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DataScale")
         public Integer dataScale;
 
-        /**
-         * <p>The default value of the column.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aaa</p>
-         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        /**
-         * <p>The description of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>column desc</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The type of the masking algorithm that is used for the field. Valid values:</p>
-         * <ul>
-         * <li>null: No masking algorithm is used.</li>
-         * <li>DEFAULT: A full masking algorithm is used.</li>
-         * <li>FIX_POS: The fixed position is masked.</li>
-         * <li>FIX_CHAR: The fixed characters are replaced.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>NULL</p>
-         */
         @NameInMap("FunctionType")
         public String functionType;
 
-        /**
-         * <p>Indicates whether the field can be empty. Valid values:</p>
-         * <ul>
-         * <li>true: The field can be empty.</li>
-         * <li>false: The field cannot be empty.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Nullable")
         public Boolean nullable;
 
-        /**
-         * <p>The security level of the field. Valid values:</p>
-         * <ul>
-         * <li>INNER: The field is an internal field but not sensitive.</li>
-         * <li>SENSITIVE: The field is sensitive.</li>
-         * <li>CONFIDENTIAL: The field is a confidential column.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>INNER</p>
-         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
-        /**
-         * <p>Indicates whether the field is a sensitive column. Valid values:</p>
-         * <ul>
-         * <li>true: The field is a sensitive field.</li>
-         * <li>false: The field is not a sensitive field.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 

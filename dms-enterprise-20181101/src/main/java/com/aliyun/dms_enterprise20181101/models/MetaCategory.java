@@ -4,18 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class MetaCategory extends TeaModel {
+    /**
+     * <p>The category ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000181325</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-08-13 10:02:02</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The level of the category. This parameter is set to 1 for a root category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Depth")
     public Integer depth;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -25,6 +49,12 @@ public class MetaCategory extends TeaModel {
     @NameInMap("OwnerNickNames")
     public java.util.List<String> ownerNickNames;
 
+    /**
+     * <p>The ID of the parent category. This parameter is left empty for a root category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000322682</p>
+     */
     @NameInMap("ParentCategoryId")
     public Long parentCategoryId;
 

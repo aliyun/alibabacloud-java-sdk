@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDAGVersionsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the published versions.</p>
-     */
     @NameInMap("DagVersionList")
     public ListDAGVersionsResponseBodyDagVersionList dagVersionList;
 
@@ -113,57 +110,21 @@ public class ListDAGVersionsResponseBody extends TeaModel {
     }
 
     public static class ListDAGVersionsResponseBodyDagVersionListDagVersion extends TeaModel {
-        /**
-         * <p>The name of the task flow.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Spark SQL</p>
-         */
         @NameInMap("DagName")
         public String dagName;
 
-        /**
-         * <p>The ID of the task flow owner.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51****</p>
-         */
         @NameInMap("DagOwnerId")
         public String dagOwnerId;
 
-        /**
-         * <p>The name of the task flow owner.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
-        /**
-         * <p>The ID of the previously published version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2****</p>
-         */
         @NameInMap("LastVersionId")
         public Long lastVersionId;
 
-        /**
-         * <p>The description of the version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_OSS</p>
-         */
         @NameInMap("VersionComments")
         public String versionComments;
 
-        /**
-         * <p>The ID of the version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2****</p>
-         */
         @NameInMap("VersionId")
         public Long versionId;
 

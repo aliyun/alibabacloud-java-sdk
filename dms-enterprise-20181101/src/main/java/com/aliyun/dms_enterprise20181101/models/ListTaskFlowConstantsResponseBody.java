@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowConstantsResponseBody extends TeaModel {
-    /**
-     * <p>A list of constant key-value pairs for the task flow.</p>
-     */
     @NameInMap("DagConstants")
     public ListTaskFlowConstantsResponseBodyDagConstants dagConstants;
 
@@ -96,21 +93,9 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowConstantsResponseBodyDagConstantsDagConstant extends TeaModel {
-        /**
-         * <p>The constant key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The constant value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Value")
         public String value;
 

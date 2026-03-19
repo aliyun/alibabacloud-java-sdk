@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
-    /**
-     * <p>The download URL of the backup file for the ticket.</p>
-     */
     @NameInMap("DataCorrectBackupFiles")
     public GetDataCorrectBackupFilesResponseBodyDataCorrectBackupFiles dataCorrectBackupFiles;
 

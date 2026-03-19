@@ -171,9 +171,6 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         @NameInMap("DatabaseId")
         public String databaseId;
 
-        /**
-         * <p>The IDs of database shards of the logical database.</p>
-         */
         @NameInMap("DatabaseIds")
         public GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds databaseIds;
 
@@ -214,15 +211,9 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         @NameInMap("Logic")
         public Boolean logic;
 
-        /**
-         * <p>The IDs of the owners of the logical database.</p>
-         */
         @NameInMap("OwnerIdList")
         public GetLogicDatabaseResponseBodyLogicDatabaseOwnerIdList ownerIdList;
 
-        /**
-         * <p>The names of the owners of the logical database.</p>
-         */
         @NameInMap("OwnerNameList")
         public GetLogicDatabaseResponseBodyLogicDatabaseOwnerNameList ownerNameList;
 

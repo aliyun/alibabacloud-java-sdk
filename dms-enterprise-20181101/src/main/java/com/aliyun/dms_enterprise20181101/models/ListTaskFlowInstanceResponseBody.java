@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowInstanceResponseBody extends TeaModel {
-    /**
-     * <p>The information about the execution records returned.</p>
-     */
     @NameInMap("DAGInstanceList")
     public ListTaskFlowInstanceResponseBodyDAGInstanceList DAGInstanceList;
 
@@ -113,123 +110,39 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowInstanceResponseBodyDAGInstanceListDAGInstance extends TeaModel {
-        /**
-         * <p>The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-11-10 14:37:26</p>
-         */
         @NameInMap("BusinessTime")
         public String businessTime;
 
-        /**
-         * <p>The ID of the task flow.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7***</p>
-         */
         @NameInMap("DagId")
         public String dagId;
 
-        /**
-         * <p>The name of the task flow.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Spark_SQL_test</p>
-         */
         @NameInMap("DagName")
         public String dagName;
 
-        /**
-         * <p>The version of the task flow.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[]</p>
-         */
         @NameInMap("DagVersion")
         public String dagVersion;
 
-        /**
-         * <p>The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-11-11 14:38:57</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The ID of the previously published version of the task flow.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2****</p>
-         */
         @NameInMap("HistoryDagId")
         public Long historyDagId;
 
-        /**
-         * <p>The ID of the execution record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9234</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The description of the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The name of the task flow owner.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_name</p>
-         */
         @NameInMap("OwnerName")
         public String ownerName;
 
-        /**
-         * <p>The status of the task flow. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: The task flow is waiting to be scheduled.</li>
-         * <li><strong>1</strong>: The task flow is being executed.</li>
-         * <li><strong>2</strong>: The task flow is paused.</li>
-         * <li><strong>3</strong>: The task flow failed.</li>
-         * <li><strong>4</strong>: The task flow is executed.</li>
-         * <li><strong>5</strong>: The task flow is complete.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The mode in which the task flow is triggered. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: The task flow is automatically triggered based on periodic scheduling.</li>
-         * <li><strong>1</strong>: The task flow is manually triggered.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TriggerType")
         public Integer triggerType;
 
-        /**
-         * <p>The time when the execution of the task flow was start. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-11-11 14:35:57</p>
-         */
         @NameInMap("startTime")
         public String startTime;
 

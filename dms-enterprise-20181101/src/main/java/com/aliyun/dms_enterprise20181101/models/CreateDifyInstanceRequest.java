@@ -4,54 +4,120 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDifyInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("AdbpgInstanceMode")
     public String adbpgInstanceMode;
 
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-j6cq3nmsk8qcamo2rc6yc</p>
+     */
     @NameInMap("BackupVSwitchId")
     public String backupVSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("DataRegion")
     public String dataRegion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateNewInstance</p>
+     */
     @NameInMap("DatabaseOption")
     public String databaseOption;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PostgreSQL</p>
+     */
     @NameInMap("DbEngineType")
     public String dbEngineType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14.0</p>
+     */
     @NameInMap("DbEngineVersion")
     public String dbEngineVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dify_user</p>
+     */
     @NameInMap("DbInstanceAccount")
     public String dbInstanceAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1c4g</p>
+     */
     @NameInMap("DbInstanceCategory")
     public String dbInstanceCategory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pg.n2.2c.1m</p>
+     */
     @NameInMap("DbInstanceClass")
     public String dbInstanceClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>password</p>
+     */
     @NameInMap("DbInstancePassword")
     public String dbInstancePassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2764278</p>
+     */
     @NameInMap("DbResourceId")
     public Integer dbResourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("DbStorageSize")
     public String dbStorageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>general_essd</p>
+     */
     @NameInMap("DbStorageType")
     public String dbStorageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Dify Instance</p>
+     */
+    @NameInMap("DifyInstanceName")
+    public String difyInstanceName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -62,39 +128,87 @@ public class CreateDifyInstanceRequest extends TeaModel {
     @NameInMap("Edition")
     public String edition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableExtraEndpoint")
     public Boolean enableExtraEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16C62G.1T4</p>
+     */
     @NameInMap("GpuNodeSpec")
     public String gpuNodeSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dify_user</p>
+     */
     @NameInMap("KvStoreAccount")
     public String kvStoreAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6.0</p>
+     */
     @NameInMap("KvStoreEngineVersion")
     public String kvStoreEngineVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>redis.master.stand.default</p>
+     */
     @NameInMap("KvStoreInstanceClass")
     public String kvStoreInstanceClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MASTER_SLAVE</p>
+     */
     @NameInMap("KvStoreNodeType")
     public String kvStoreNodeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateNewInstance</p>
+     */
     @NameInMap("KvStoreOption")
     public String kvStoreOption;
 
+    /**
+     * <strong>example:</strong>
+     * <p>password</p>
+     */
     @NameInMap("KvStorePassword")
     public String kvStorePassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2829493</p>
+     */
     @NameInMap("KvStoreResourceId")
     public Integer kvStoreResourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>REDIS</p>
+     */
     @NameInMap("KvStoreType")
     public String kvStoreType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.6.x</p>
+     */
     @NameInMap("MajorVersion")
     public String majorVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Qwen3-4B</p>
+     */
     @NameInMap("ModelId")
     public String modelId;
 
@@ -105,107 +219,227 @@ public class CreateDifyInstanceRequest extends TeaModel {
     @NameInMap("ModelOption")
     public String modelOption;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enable</p>
+     */
     @NameInMap("NatGatewayOption")
     public String natGatewayOption;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OnlyIntranet")
     public Boolean onlyIntranet;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("OssPath")
     public String ossPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2764233</p>
+     */
     @NameInMap("OssResourceId")
     public Integer ossResourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PayPeriod")
     public Integer payPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Year</p>
+     */
     @NameInMap("PayPeriodType")
     public String payPeriodType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Replicas")
     public Integer replicas;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4CU</p>
      */
     @NameInMap("ResourceQuota")
     public String resourceQuota;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-2ze6dig8uby0a3zt4a0h</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pl0</p>
+     */
     @NameInMap("SegDiskPerformanceLevel")
     public String segDiskPerformanceLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SegNodeNum")
     public Integer segNodeNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
     /**
+     * <strong>example:</strong>
+     * <p>[{key:,value:}]</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<CreateDifyInstanceRequestTag> tag;
+
+    /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1i05wremlxcy8z5e2im</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dify_user</p>
+     */
     @NameInMap("VectordbAccount")
     public String vectordbAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>adbpg</p>
+     */
     @NameInMap("VectordbCategory")
     public String vectordbCategory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6.0</p>
+     */
     @NameInMap("VectordbEngineVersion")
     public String vectordbEngineVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4C16G</p>
+     */
     @NameInMap("VectordbInstanceSpec")
     public String vectordbInstanceSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateNewInstance</p>
+     */
     @NameInMap("VectordbOption")
     public String vectordbOption;
 
+    /**
+     * <strong>example:</strong>
+     * <p>password</p>
+     */
     @NameInMap("VectordbPassword")
     public String vectordbPassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2798885</p>
+     */
     @NameInMap("VectordbResourceId")
     public Integer vectordbResourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("VectordbStorageSize")
     public String vectordbStorageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
+     */
     @NameInMap("VectordbStorageType")
     public String vectordbStorageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>createnew</p>
+     */
     @NameInMap("VectordbType")
     public String vectordbType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-k1a8ha7m1atealnysybeu</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>this is my workspace</p>
+     */
     @NameInMap("WorkspaceDescription")
     public String workspaceDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8640136033018977</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dify_default</p>
+     */
     @NameInMap("WorkspaceName")
     public String workspaceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UseExistingInstance</p>
+     */
     @NameInMap("WorkspaceOption")
     public String workspaceOption;
 
     /**
-     * <p>This parameter is required.</p>
+     * <strong>example:</strong>
+     * <p>cn-beijing-f</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -333,6 +567,14 @@ public class CreateDifyInstanceRequest extends TeaModel {
     }
     public String getDbStorageType() {
         return this.dbStorageType;
+    }
+
+    public CreateDifyInstanceRequest setDifyInstanceName(String difyInstanceName) {
+        this.difyInstanceName = difyInstanceName;
+        return this;
+    }
+    public String getDifyInstanceName() {
+        return this.difyInstanceName;
     }
 
     public CreateDifyInstanceRequest setDryRun(Boolean dryRun) {
@@ -559,6 +801,14 @@ public class CreateDifyInstanceRequest extends TeaModel {
         return this.storageType;
     }
 
+    public CreateDifyInstanceRequest setTag(java.util.List<CreateDifyInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateDifyInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateDifyInstanceRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -693,6 +943,44 @@ public class CreateDifyInstanceRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateDifyInstanceRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateDifyInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateDifyInstanceRequestTag self = new CreateDifyInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDifyInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDifyInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

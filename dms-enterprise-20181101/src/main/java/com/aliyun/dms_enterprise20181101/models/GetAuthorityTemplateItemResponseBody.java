@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetAuthorityTemplateItemResponseBody extends TeaModel {
-    /**
-     * <p>The permission templates.</p>
-     */
     @NameInMap("AuthorityTemplateItemList")
     public GetAuthorityTemplateItemResponseBodyAuthorityTemplateItemList authorityTemplateItemList;
 
@@ -113,84 +110,27 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
     }
 
     public static class GetAuthorityTemplateItemResponseBodyAuthorityTemplateItemListAuthorityTemplateItem extends TeaModel {
-        /**
-         * <p>The additional information. For example, permissions to log on to an instance are added to the permission template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;permissionTypes&quot;: [
-         *             &quot;LOGIN&quot;
-         *           ]</p>
-         */
         @NameInMap("Attribute")
         public String attribute;
 
-        /**
-         * <p>The ID of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>43***</p>
-         */
         @NameInMap("DbId")
         public Long dbId;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>188****</p>
-         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        /**
-         * <p>The ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12***</p>
-         */
         @NameInMap("ItemId")
         public Long itemId;
 
-        /**
-         * <p>The ID of the user who modifies the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51***</p>
-         */
         @NameInMap("ModifierId")
         public Long modifierId;
 
-        /**
-         * <p>The type of the resource. Valid values:</p>
-         * <ul>
-         * <li><strong>INSTANCE</strong>: instance</li>
-         * <li><strong>LOGIC_DB</strong>: logical database</li>
-         * <li><strong>META_DB</strong>: physical database</li>
-         * <li><strong>LOGIC_TABLE</strong>: logical table</li>
-         * <li><strong>LOGIC_TABLE</strong>: physical table</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>INSTANCE</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ExampleTable</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The ID of the permission template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1563</p>
-         */
         @NameInMap("TemplateId")
         public Long templateId;
 

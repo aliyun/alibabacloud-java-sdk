@@ -22,9 +22,6 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The information about the database instances that are returned.</p>
-     */
     @NameInMap("InstanceList")
     public ListInstancesResponseBodyInstanceList instanceList;
 
@@ -151,26 +148,9 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstanceListInstanceStandardGroup extends TeaModel {
-        /**
-         * <p>The type of the control mode. Valid values:</p>
-         * <ul>
-         * <li><strong>COMMON</strong>: Security Collaboration</li>
-         * <li><strong>NONE_CONTROL</strong>: Flexible Management</li>
-         * <li><strong>STABLE</strong>: Stable Change</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>COMMON</p>
-         */
         @NameInMap("GroupMode")
         public String groupMode;
 
-        /**
-         * <p>The name of the security rule corresponding to the control mode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -198,249 +178,84 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstanceListInstance extends TeaModel {
-        /**
-         * <p>The name of the database link for the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dblink_test</p>
-         */
         @NameInMap("DataLinkName")
         public String dataLinkName;
 
-        /**
-         * <p>The password that is used to log on to the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("DatabasePassword")
         public String databasePassword;
 
-        /**
-         * <p>The account that is used to log on to the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dbUser</p>
-         */
         @NameInMap("DatabaseUser")
         public String databaseUser;
 
-        /**
-         * <p>The ID of the database administrator (DBA) of the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>31****</p>
-         */
         @NameInMap("DbaId")
         public String dbaId;
 
-        /**
-         * <p>The nickname of the DBA of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dbaName</p>
-         */
         @NameInMap("DbaNickName")
         public String dbaNickName;
 
-        /**
-         * <p>Indicates whether the lock-free schema change feature is enabled for the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("DdlOnline")
         public Integer ddlOnline;
 
-        /**
-         * <p>The ID of the ECS instance on which the database instance is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>150****</p>
-         */
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
-        /**
-         * <p>The ID of the region in which the database instance resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("EcsRegion")
         public String ecsRegion;
 
-        /**
-         * <p>The type of the environment to which the database instance belongs. Valid values:</p>
-         * <ul>
-         * <li><strong>product:</strong> production environment</li>
-         * <li><strong>dev</strong>: development environment</li>
-         * <li><strong>pre</strong>: pre-release environment</li>
-         * <li><strong>test</strong>: test environment</li>
-         * <li><strong>sit</strong>: SIT environment</li>
-         * <li><strong>uat</strong>: UAT environment</li>
-         * <li><strong>pet</strong>: stress testing environment</li>
-         * <li><strong>stag:</strong> staging environment</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>product</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>The timeout period for exporting data from the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>86400</p>
-         */
         @NameInMap("ExportTimeout")
         public Integer exportTimeout;
 
-        /**
-         * <p>The host address that is used to connect to the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>****.mysql.rds.aliyuncs.com</p>
-         */
         @NameInMap("Host")
         public String host;
 
-        /**
-         * <p>The alias of the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("InstanceAlias")
         public String instanceAlias;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>150***</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The source of the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RDS</p>
-         */
         @NameInMap("InstanceSource")
         public String instanceSource;
 
-        /**
-         * <p>The type of the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mysql</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The IDs of the owners of the database instance.</p>
-         */
         @NameInMap("OwnerIdList")
         public ListInstancesResponseBodyInstanceListInstanceOwnerIdList ownerIdList;
 
-        /**
-         * <p>The nicknames of the owners of the database instance.</p>
-         */
         @NameInMap("OwnerNameList")
         public ListInstancesResponseBodyInstanceListInstanceOwnerNameList ownerNameList;
 
-        /**
-         * <p>The port number that is used to connect to the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3306</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The timeout period for querying data in the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("QueryTimeout")
         public Integer queryTimeout;
 
-        /**
-         * <p>The ID of the security rule set of the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("SafeRuleId")
         public String safeRuleId;
 
-        /**
-         * <p>Indicates whether the sensitive data protection feature is enabled. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("SellSitd")
         public Boolean sellSitd;
 
         @NameInMap("SellTrust")
         public String sellTrust;
 
-        /**
-         * <p>The system ID (SID) of the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Sid")
         public String sid;
 
-        /**
-         * <p>The control mode of the database instance.</p>
-         */
         @NameInMap("StandardGroup")
         public ListInstancesResponseBodyInstanceListInstanceStandardGroup standardGroup;
 
-        /**
-         * <p>The status of the database instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NORMAL</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <p>Indicates whether the cross-database query feature is enabled for the database instance. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: disabled</li>
-         * <li><strong>1:</strong>: enabled</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("UseDsql")
         public Integer useDsql;
 
-        /**
-         * <p>The ID of the VPC to which the database instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-o6wrloqsdqc9io3mg****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 

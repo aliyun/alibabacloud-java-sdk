@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the ticket.</p>
-     */
     @NameInMap("CreateOrderResult")
     public CreateOrderResponseBodyCreateOrderResult createOrderResult;
 

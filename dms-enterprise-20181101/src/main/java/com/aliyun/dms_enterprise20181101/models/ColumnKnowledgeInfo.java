@@ -4,21 +4,39 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ColumnKnowledgeInfo extends TeaModel {
+    /**
+     * <p>User-edited business knowledge content, which can be modified via the EditMetaKnowledgeAsset API.</p>
+     */
     @NameInMap("AssetDescription")
     public String assetDescription;
 
+    /**
+     * <p>The last modified time of the field.</p>
+     */
     @NameInMap("AssetModifiedGmt")
     public String assetModifiedGmt;
 
+    /**
+     * <p>The name of the field.</p>
+     */
     @NameInMap("ColumnName")
     public String columnName;
 
+    /**
+     * <p>The data type of the field.</p>
+     */
     @NameInMap("ColumnType")
     public String columnType;
 
+    /**
+     * <p>Field description in the CREATE TABLE statement.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The field order in the CREATE TABLE statement.</p>
+     */
     @NameInMap("Position")
     public Integer position;
 

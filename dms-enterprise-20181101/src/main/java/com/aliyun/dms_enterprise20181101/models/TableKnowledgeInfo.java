@@ -4,21 +4,39 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class TableKnowledgeInfo extends TeaModel {
+    /**
+     * <p>Table usage instructions, which are not editable in OpenAPI.</p>
+     */
     @NameInMap("AssetDescription")
     public String assetDescription;
 
+    /**
+     * <p>Last modified time.</p>
+     */
     @NameInMap("AssetModifiedGmt")
     public String assetModifiedGmt;
 
+    /**
+     * <p>The columns of the table.</p>
+     */
     @NameInMap("ColumnList")
     public java.util.List<ColumnKnowledgeInfo> columnList;
 
+    /**
+     * <p>Table description in the CREAT TABLE statement.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Table business description, which can be edited via EditMetaKnowledgeAsset.</p>
+     */
     @NameInMap("Summary")
     public String summary;
 
+    /**
+     * <p>The table name.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

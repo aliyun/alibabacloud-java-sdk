@@ -40,9 +40,6 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The approval templates.</p>
-     */
     @NameInMap("WorkFlowTemplates")
     public ListWorkFlowTemplatesResponseBodyWorkFlowTemplates workFlowTemplates;
 
@@ -92,70 +89,24 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode extends TeaModel {
-        /**
-         * <p>The description of the approval node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <p>The ID of the creator.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234</p>
-         */
         @NameInMap("CreateUserId")
         public Long createUserId;
 
-        /**
-         * <p>The ID of the approval node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("NodeId")
         public Long nodeId;
 
-        /**
-         * <p>The name of the approval node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        /**
-         * <p>The type of the approval node. Valid values:</p>
-         * <ul>
-         * <li>SYS: The approval node is predefined by the system.</li>
-         * <li>USER_LIST: The approval node is created by a user.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SYS</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        /**
-         * <p>The position of the approval node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Position")
         public Integer position;
 
-        /**
-         * <p>The ID of the template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
-         */
         @NameInMap("TemplateId")
         public Long templateId;
 
@@ -242,71 +193,24 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate extends TeaModel {
-        /**
-         * <p>The description of the approval template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <p>The ID of the creator.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234</p>
-         */
         @NameInMap("CreateUserId")
         public Long createUserId;
 
-        /**
-         * <p>Indicates whether the approval template is enabled. Valid values:</p>
-         * <ul>
-         * <li>Y: The approval template is enabled.</li>
-         * <li>N: The approval template is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("Enabled")
         public String enabled;
 
-        /**
-         * <p>Indicates whether the approval template is predefined by the system. Valid values:</p>
-         * <ul>
-         * <li>1: The approval template is predefined by the system.</li>
-         * <li>0: The approval template is not predefined by the system.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("IsSystem")
         public Integer isSystem;
 
-        /**
-         * <p>The ID of the approval template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
-         */
         @NameInMap("TemplateId")
         public Long templateId;
 
-        /**
-         * <p>The name of the approval template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Admin</p>
-         */
         @NameInMap("TemplateName")
         public String templateName;
 
-        /**
-         * <p>The details of approval nodes.</p>
-         */
         @NameInMap("WorkflowNodes")
         public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes workflowNodes;
 

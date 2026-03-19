@@ -4,24 +4,67 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DLSerdeInfo extends TeaModel {
+    /**
+     * <p>The description of serialization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;serialize&quot;</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the class used for deserialization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.hive.serde2.OpenCSVSerde</p>
+     */
     @NameInMap("DeserializerClass")
     public String deserializerClass;
 
+    /**
+     * <p>The name of serialization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Serialization-related parameters in key-value pairs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{          &quot;serialization.format&quot;: &quot;1&quot;
+     *         }</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <p>The type of serialization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SerdeType")
     public Integer serdeType;
 
+    /**
+     * <p>The class name of the serialization library.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</p>
+     */
     @NameInMap("SerializationLib")
     public String serializationLib;
 
+    /**
+     * <p>The name of class used for serialization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</p>
+     */
     @NameInMap("SerializerClass")
     public String serializerClass;
 

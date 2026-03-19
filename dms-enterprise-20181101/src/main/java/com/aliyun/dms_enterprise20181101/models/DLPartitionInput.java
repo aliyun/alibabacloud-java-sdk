@@ -4,18 +4,39 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DLPartitionInput extends TeaModel {
+    /**
+     * <p>The time when the partition was created. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1735109884</p>
+     */
     @NameInMap("CreateTime")
     public Integer createTime;
 
+    /**
+     * <p>The time when the partition was last accessed. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1731586286</p>
+     */
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 
+    /**
+     * <p>The key-value pair of the partition.</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
+    /**
+     * <p>The description of the data storage.</p>
+     */
     @NameInMap("StorageDescriptor")
     public DLStorageDescriptor storageDescriptor;
 
+    /**
+     * <p>The values of the partition key columns.</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 

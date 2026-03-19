@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListMetaCategoryResponseBody extends TeaModel {
-    /**
-     * <p>The list of categories.</p>
-     */
     @NameInMap("CategoryList")
     public ListMetaCategoryResponseBodyCategoryList categoryList;
 

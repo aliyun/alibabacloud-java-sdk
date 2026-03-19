@@ -4,12 +4,24 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DLSkewedInfo extends TeaModel {
+    /**
+     * <p>The list of skewed column names.</p>
+     */
     @NameInMap("SkewedColNames")
     public java.util.List<String> skewedColNames;
 
+    /**
+     * <p>The mappings between skewed values and columns.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{“col1”:&quot;val1&quot;}</p>
+     */
     @NameInMap("SkewedColValueLocationMaps")
     public java.util.Map<String, ?> skewedColValueLocationMaps;
 
+    /**
+     * <p>The lists of skewed column values. Each list provides a set of associated values.</p>
+     */
     @NameInMap("SkewedColValues")
     public java.util.List<java.util.List<String>> skewedColValues;
 

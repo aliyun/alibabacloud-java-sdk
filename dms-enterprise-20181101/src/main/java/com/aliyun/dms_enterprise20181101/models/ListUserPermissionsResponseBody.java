@@ -53,9 +53,6 @@ public class ListUserPermissionsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    /**
-     * <p>The details of the permissions that the user has.</p>
-     */
     @NameInMap("UserPermissions")
     public ListUserPermissionsResponseBodyUserPermissions userPermissions;
 
@@ -113,62 +110,21 @@ public class ListUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail extends TeaModel {
-        /**
-         * <p>The time when the permissions were granted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-12 00:00:00</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The time when the permissions expire.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-12-12 00:00:00</p>
-         */
         @NameInMap("ExpireDate")
         public String expireDate;
 
-        /**
-         * <p>This parameter is reserved.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("ExtraData")
         public String extraData;
 
-        /**
-         * <p>The user who grants the permissions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx authorization</p>
-         */
         @NameInMap("OriginFrom")
         public String originFrom;
 
-        /**
-         * <p>The type of the permissions. Valid values:</p>
-         * <ul>
-         * <li>QUERY: the query permissions</li>
-         * <li>EXPORT: the export permissions</li>
-         * <li>CORRECT: the change permissions</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>QUERY</p>
-         */
         @NameInMap("PermType")
         public String permType;
 
-        /**
-         * <p>The ID of the authorization record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>758****</p>
-         */
         @NameInMap("UserAccessId")
         public String userAccessId;
 
@@ -247,173 +203,54 @@ public class ListUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListUserPermissionsResponseBodyUserPermissionsUserPermission extends TeaModel {
-        /**
-         * <p>The alias of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance_alias</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>The name of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>column_name</p>
-         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        /**
-         * <p>The ID of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1860****</p>
-         */
         @NameInMap("DbId")
         public String dbId;
 
-        /**
-         * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter">DbType parameter</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>polardb</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The permissions on a specific type of objects that are granted to the user. Valid values: </p>
-         * <ul>
-         * <li>DATABASE: permissions on physical databases</li>
-         * <li>LOGIC_DATABASE: permissions on logical databases</li>
-         * <li>TABLE: permissions on physical tables</li>
-         * <li>LOGIC_TABLE: permissions on logical tables</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>DATABASE</p>
-         */
         @NameInMap("DsType")
         public String dsType;
 
-        /**
-         * <p>The type of the environment to which the database belongs. Valid values:</p>
-         * <ul>
-         * <li>product: production environment</li>
-         * <li>dev: development environment</li>
-         * <li>pre: staging environment</li>
-         * <li>test: test environment</li>
-         * <li>sit: SIT environment</li>
-         * <li>uat: UAT environment</li>
-         * <li>pet: stress testing environment</li>
-         * <li>stag: STAG environment</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>dev</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>The endpoint that is used to connect the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-bp144d5ky4l4r****</p>
-         */
         @NameInMap("Host")
         public String host;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>174****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <ul>
-         * <li>true: The database is a logical database.</li>
-         * <li>false: The database is a physical database.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        /**
-         * <p>The details of permissions.</p>
-         */
         @NameInMap("PermDetails")
         public ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails;
 
-        /**
-         * <p>The port that is used to connect to the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3306</p>
-         */
         @NameInMap("Port")
         public Long port;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_db</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The name that is used to search for the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_db@xxx:3306</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 
-        /**
-         * <p>The ID of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>13434</p>
-         */
         @NameInMap("TableId")
         public String tableId;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_table</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The ID of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The nickname of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nick_name</p>
-         */
         @NameInMap("UserNickName")
         public String userNickName;
 

@@ -176,21 +176,12 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         @NameInMap("ExportContent")
         public String exportContent;
 
-        /**
-         * <p>The type of schema that was exported.</p>
-         */
         @NameInMap("ExportTypes")
         public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfigExportTypes exportTypes;
 
-        /**
-         * <p>The extension options of the SQL script.</p>
-         */
         @NameInMap("SQLExtOption")
         public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfigSQLExtOption SQLExtOption;
 
-        /**
-         * <p>The tables that were exported from the database.</p>
-         */
         @NameInMap("SelectedTables")
         public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfigSelectedTables selectedTables;
 

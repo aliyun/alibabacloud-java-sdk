@@ -49,6 +49,9 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribeDifyAttributeResponseBodyTags> tags;
+
     public static DescribeDifyAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDifyAttributeResponseBody self = new DescribeDifyAttributeResponseBody();
         return TeaModel.build(map, self);
@@ -110,7 +113,22 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         return this.success;
     }
 
+    public DescribeDifyAttributeResponseBody setTags(java.util.List<DescribeDifyAttributeResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeDifyAttributeResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public static class DescribeDifyAttributeResponseBodyRoot extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DIFY</p>
+         */
+        @NameInMap("AppType")
+        public String appType;
+
         /**
          * <strong>example:</strong>
          * <p>92748163-af62-4ca4-ad85-1****</p>
@@ -118,14 +136,47 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         @NameInMap("AppUuid")
         public String appUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ABCD</p>
+         */
         @NameInMap("BillingInstanceId")
         public String billingInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc1-def2-ghi3-jkl4</p>
+         */
+        @NameInMap("DifyInstanceId")
+        public String difyInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>This is dify instance</p>
+         */
+        @NameInMap("DifyInstanceName")
+        public String difyInstanceName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>20251201</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
 
         /**
          * <strong>example:</strong>
@@ -155,6 +206,10 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ESSD</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -191,6 +246,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDifyAttributeResponseBodyRoot setAppType(String appType) {
+            this.appType = appType;
+            return this;
+        }
+        public String getAppType() {
+            return this.appType;
+        }
+
         public DescribeDifyAttributeResponseBodyRoot setAppUuid(String appUuid) {
             this.appUuid = appUuid;
             return this;
@@ -215,12 +278,36 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
             return this.chargeType;
         }
 
+        public DescribeDifyAttributeResponseBodyRoot setDifyInstanceId(String difyInstanceId) {
+            this.difyInstanceId = difyInstanceId;
+            return this;
+        }
+        public String getDifyInstanceId() {
+            return this.difyInstanceId;
+        }
+
+        public DescribeDifyAttributeResponseBodyRoot setDifyInstanceName(String difyInstanceName) {
+            this.difyInstanceName = difyInstanceName;
+            return this;
+        }
+        public String getDifyInstanceName() {
+            return this.difyInstanceName;
+        }
+
         public DescribeDifyAttributeResponseBodyRoot setExpireTime(Long expireTime) {
             this.expireTime = expireTime;
             return this;
         }
         public Long getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeDifyAttributeResponseBodyRoot setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeDifyAttributeResponseBodyRoot setReplicas(String replicas) {
@@ -293,6 +380,44 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+    }
+
+    public static class DescribeDifyAttributeResponseBodyTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Key</p>
+         */
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Value</p>
+         */
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeDifyAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDifyAttributeResponseBodyTags self = new DescribeDifyAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDifyAttributeResponseBodyTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeDifyAttributeResponseBodyTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

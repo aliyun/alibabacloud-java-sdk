@@ -113,84 +113,27 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
     }
 
     public static class GetAuthorityTemplateResponseBodyAuthorityTemplateViewAuthorityTemplateItemListAuthorityTemplateItem extends TeaModel {
-        /**
-         * <p>Other information. For example, you can add the logon permission on an instance to the permission template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;permissionTypes&quot;: [
-         *             &quot;LOGIN&quot;
-         *           ]</p>
-         */
         @NameInMap("Attribute")
         public String attribute;
 
-        /**
-         * <p>The ID of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>43***</p>
-         */
         @NameInMap("DbId")
         public Long dbId;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>188****</p>
-         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        /**
-         * <p>The ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12***</p>
-         */
         @NameInMap("ItemId")
         public Long itemId;
 
-        /**
-         * <p>The ID of the user who modified the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51***</p>
-         */
         @NameInMap("ModifierId")
         public Long modifierId;
 
-        /**
-         * <p>The type of the resource. Valid values:</p>
-         * <ul>
-         * <li><strong>INSTANCE</strong>: instance</li>
-         * <li><strong>LOGIC_DB</strong>: logical database</li>
-         * <li><strong>META_DB</strong>: physical database</li>
-         * <li><strong>LOGIC_TABLE</strong>: logical table</li>
-         * <li><strong>SINGLE_TABLE</strong>: physical table</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>INSTANCE</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ExampleTable</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The ID of the permission template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1563</p>
-         */
         @NameInMap("TemplateId")
         public Long templateId;
 
@@ -285,9 +228,6 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
     }
 
     public static class GetAuthorityTemplateResponseBodyAuthorityTemplateView extends TeaModel {
-        /**
-         * <p>The resource information in the permission template.</p>
-         */
         @NameInMap("AuthorityTemplateItemList")
         public GetAuthorityTemplateResponseBodyAuthorityTemplateViewAuthorityTemplateItemList authorityTemplateItemList;
 

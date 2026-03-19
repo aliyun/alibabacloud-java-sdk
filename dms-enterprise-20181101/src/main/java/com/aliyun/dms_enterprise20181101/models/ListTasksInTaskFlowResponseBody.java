@@ -44,9 +44,6 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The tasks in the task flow.</p>
-     */
     @NameInMap("Tasks")
     public ListTasksInTaskFlowResponseBodyTasks tasks;
 
@@ -96,75 +93,27 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
     }
 
     public static class ListTasksInTaskFlowResponseBodyTasksTask extends TeaModel {
-        /**
-         * <p>The position of the node on the Directed Acyclic Graph (DAG).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;x\&quot;:435,\&quot;y\&quot;:192,\&quot;layoutType\&quot;:\&quot;Horizontal\&quot;}</p>
-         */
         @NameInMap("GraphParam")
         public String graphParam;
 
-        /**
-         * <p>The advanced configuration for the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{     &quot;rerun&quot;:{    &quot;rerunEnable&quot;:true,      &quot;rerunCount&quot;:1,   &quot;rerunInterval&quot;:10 //  }}</p>
-         */
         @NameInMap("NodeConfig")
         public String nodeConfig;
 
-        /**
-         * <p>The configuration for the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{     &quot;dbId&quot;:123***,  &quot;sql&quot;:&quot;&quot;,    &quot;dbType&quot;:&quot;polardb&quot; }</p>
-         */
         @NameInMap("NodeContent")
         public String nodeContent;
 
-        /**
-         * <p>The ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>92***</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The name of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Cross-Database Spark SQL-1</p>
-         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        /**
-         * <p>The output variables for the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{  &quot;outputs&quot;:[{ { &quot;row&quot;:0, &quot;column&quot;:-1,                  &quot;combiner&quot;:&quot;,&quot; }            &quot;extractMethod&quot;:&quot;{\&quot;row\&quot;:0,\&quot;column\&quot;:-1,\&quot;combiner\&quot;:\&quot;,\&quot;}&quot;,         &quot;variableName&quot;:&quot;var&quot;,    &quot;description&quot;:&quot;For demo&quot;} ] }</p>
-         */
         @NameInMap("NodeOutput")
         public String nodeOutput;
 
-        /**
-         * <p>The type of the node. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SPARK_SQL</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        /**
-         * <p>The time variables configured for the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;variables\&quot;:[{\&quot;name\&quot;:\&quot;test1\&quot;,\&quot;pattern\&quot;:\&quot;yyyy-MM-dd</p>
-         */
         @NameInMap("TimeVariables")
         public String timeVariables;
 

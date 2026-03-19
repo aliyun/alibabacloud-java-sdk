@@ -4,21 +4,57 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DLDatabase extends TeaModel {
+    /**
+     * <p>The name of the catalog.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hive</p>
+     */
     @NameInMap("CatalogName")
     public String catalogName;
 
+    /**
+     * <p>The database ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("DbId")
     public Long dbId;
 
+    /**
+     * <p>The description of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default database for catalog hive</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The storage path of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://xxx</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The parameters related to the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key/value</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 

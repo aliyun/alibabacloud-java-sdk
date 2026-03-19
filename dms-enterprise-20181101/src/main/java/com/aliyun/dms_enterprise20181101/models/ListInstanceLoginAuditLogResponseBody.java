@@ -22,9 +22,6 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The logon records of the instance.</p>
-     */
     @NameInMap("InstanceLoginAuditLogList")
     public ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogList instanceLoginAuditLogList;
 
@@ -113,66 +110,24 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
     }
 
     public static class ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogListInstanceLoginAuditLog extends TeaModel {
-        /**
-         * <p>The database account that is used to log on to the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_User</p>
-         */
         @NameInMap("DbUser")
         public String dbUser;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>177****</p>
-         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        /**
-         * <p>The name of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-bp144d5ky4l4rli0417****.mysql.rds.aliyuncs.com:3306[rm-bp144d5ky4l4r****]</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The time when the user performed an operation on the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-11-18 11:13:26</p>
-         */
         @NameInMap("OpTime")
         public String opTime;
 
-        /**
-         * <p>The source IP address of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>117.36.XX.XX,100.104.XX.XX</p>
-         */
         @NameInMap("RequestIp")
         public String requestIp;
 
-        /**
-         * <p>The ID of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12****</p>
-         */
         @NameInMap("UserId")
         public Long userId;
 
-        /**
-         * <p>The alias of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_UserName</p>
-         */
         @NameInMap("UserName")
         public String userName;
 

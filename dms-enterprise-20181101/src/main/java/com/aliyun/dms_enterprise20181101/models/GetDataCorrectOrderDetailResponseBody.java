@@ -505,62 +505,18 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseListDatabase extends TeaModel {
-        /**
-         * <p>The database ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1860****</p>
-         */
         @NameInMap("DbId")
         public Integer dbId;
 
-        /**
-         * <p>The engine of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mysql</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The type of the environment to which the database belongs. Valid values:</p>
-         * <ul>
-         * <li>product: production environment.</li>
-         * <li>dev: development environment.</li>
-         * <li>pre: pre-release environment.</li>
-         * <li>test: test environment.</li>
-         * <li>sit: system integration testing (SIT) environment</li>
-         * <li>uat: user acceptance testing (UAT) environment.</li>
-         * <li>pet: stress testing environment.</li>
-         * <li>stag: staging environment.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>product</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <ul>
-         * <li><strong>true.</strong>: The database is a logical database.</li>
-         * <li><strong>false</strong>: The database is a physical database.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        /**
-         * <p>The name that is used to search for the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx@xxx:3306</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 
@@ -838,42 +794,12 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetailTaskCheckDO extends TeaModel {
-        /**
-         * <p>The state of the precheck. Valid values:</p>
-         * <ul>
-         * <li><strong>WAITING</strong>: The ticket is pending precheck.</li>
-         * <li><strong>RUNNING</strong>: The ticket is being prechecked.</li>
-         * <li><strong>SUCCESS</strong>: The ticket passes the precheck.</li>
-         * <li><strong>FAIL</strong>: The ticket fails the precheck.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SUCCESS</p>
-         */
         @NameInMap("CheckStatus")
         public String checkStatus;
 
-        /**
-         * <p>The check step of the precheck. Valid values:</p>
-         * <ul>
-         * <li><strong>SQL_PARSE</strong>: The system checks the syntax of the SQL statement.</li>
-         * <li><strong>SQL_TYPE_CHECK</strong>: The system checks the type of the SQL statement.</li>
-         * <li><strong>PERMISSION_CHECK</strong>: The system checks the permissions required for the data change.</li>
-         * <li><strong>ROW_CHECK</strong>: The system checks the number of affected rows.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PERMISSION_CHECK</p>
-         */
         @NameInMap("CheckStep")
         public String checkStep;
 
-        /**
-         * <p>The message that appears when a check step is executed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tip messsage</p>
-         */
         @NameInMap("UserTip")
         public String userTip;
 
@@ -934,9 +860,6 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         @NameInMap("ConfigDetail")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail configDetail;
 
-        /**
-         * <p>The information about the database in which data is changed.</p>
-         */
         @NameInMap("DatabaseList")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseList databaseList;
 
@@ -960,9 +883,6 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         @NameInMap("OrderDetail")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailOrderDetail orderDetail;
 
-        /**
-         * <p>The precheck details of the ticket.</p>
-         */
         @NameInMap("PreCheckDetail")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetail preCheckDetail;
 

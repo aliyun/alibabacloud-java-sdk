@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTablesInCategoryResponseBody extends TeaModel {
-    /**
-     * <p>List of table information associated with the asset category.</p>
-     */
     @NameInMap("EntityList")
     public ListTablesInCategoryResponseBodyEntityList entityList;
 

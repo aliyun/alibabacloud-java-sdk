@@ -4,39 +4,93 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DLStorageDescriptor extends TeaModel {
+    /**
+     * <p>The list of bucket column names, which determines the distribution of stored data based on hashes.</p>
+     */
     @NameInMap("BucketCols")
     public java.util.List<String> bucketCols;
 
+    /**
+     * <p>The description of the data columns.</p>
+     */
     @NameInMap("Columns")
     public java.util.List<DLColumn> columns;
 
+    /**
+     * <p>The name of the input format class that is used to read data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.mapred.SequenceFileInputFormat</p>
+     */
     @NameInMap("InputFormat")
     public String inputFormat;
 
+    /**
+     * <p>Specifies whether the stored data is compressed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsCompressed")
     public Boolean isCompressed;
 
+    /**
+     * <p>The location where the data is stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://xxx</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>The number of buckets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("NumBuckets")
     public Integer numBuckets;
 
+    /**
+     * <p>The description of the original column.</p>
+     */
     @NameInMap("OriginalColumns")
     public java.util.List<DLColumn> originalColumns;
 
+    /**
+     * <p>The name of the output format class that is used to write data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat</p>
+     */
     @NameInMap("OutputFormat")
     public String outputFormat;
 
+    /**
+     * <p>Other parameter mappings of data storage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key/value</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <p>The information about how to perform data serialization and deserialization.</p>
+     */
     @NameInMap("SerdeInfo")
     public DLSerdeInfo serdeInfo;
 
+    /**
+     * <p>The information about the skewed column.</p>
+     */
     @NameInMap("SkewedInfo")
     public DLSkewedInfo skewedInfo;
 
+    /**
+     * <p>The description of the column based on which you want to sort query results.</p>
+     */
     @NameInMap("SortCols")
     public java.util.List<DLOrder> sortCols;
 

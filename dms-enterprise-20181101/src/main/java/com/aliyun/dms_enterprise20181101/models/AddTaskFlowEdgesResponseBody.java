@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class AddTaskFlowEdgesResponseBody extends TeaModel {
-    /**
-     * <p>The list of task flow edge IDs.</p>
-     */
     @NameInMap("EdgeIds")
     public AddTaskFlowEdgesResponseBodyEdgeIds edgeIds;
 

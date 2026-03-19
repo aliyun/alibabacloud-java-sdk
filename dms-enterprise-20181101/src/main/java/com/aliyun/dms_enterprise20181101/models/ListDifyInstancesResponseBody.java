@@ -4,32 +4,67 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDifyInstancesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NesLoKLEdIZrKhDT7I2gS****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Root")
     public ListDifyInstancesResponseBodyRoot root;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Tags")
+    public java.util.List<ListDifyInstancesResponseBodyTags> tags;
 
     public static ListDifyInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDifyInstancesResponseBody self = new ListDifyInstancesResponseBody();
@@ -108,10 +143,26 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListDifyInstancesResponseBody setTags(java.util.List<ListDifyInstancesResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListDifyInstancesResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public static class ListDifyInstancesResponseBodyRootData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("AppUuid")
         public String appUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-04-20T00:14:38Z</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
@@ -122,27 +173,73 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
+        @NameInMap("DifyInstanceId")
+        public String difyInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>this is a dify instance</p>
+         */
+        @NameInMap("DifyInstanceName")
+        public String difyInstanceName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Community</p>
+         */
         @NameInMap("Edition")
         public String edition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0.0.0</p>
+         */
         @NameInMap("EnterpriseInternetUrl")
         public String enterpriseInternetUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("EnterpriseIntranetUrl")
         public String enterpriseIntranetUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2818729</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>public_lts_zb_10</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0.0.0</p>
+         */
         @NameInMap("InternetUrl")
         public String internetUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("IntranetUrl")
         public String intranetUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4.x</p>
+         */
         @NameInMap("MajorVersion")
         public String majorVersion;
 
@@ -153,6 +250,17 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @NameInMap("RegionCode")
         public String regionCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>sg-2ze2aigcxhjohtldnyml</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -163,15 +271,31 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-bp1ig49b0bbbx33aiqbgu</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-2ze5ar1uh249xpqrfgfbj</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8609287469406252</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing-f</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -202,6 +326,22 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setDifyInstanceId(String difyInstanceId) {
+            this.difyInstanceId = difyInstanceId;
+            return this;
+        }
+        public String getDifyInstanceId() {
+            return this.difyInstanceId;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setDifyInstanceName(String difyInstanceName) {
+            this.difyInstanceName = difyInstanceName;
+            return this;
+        }
+        public String getDifyInstanceName() {
+            return this.difyInstanceName;
         }
 
         public ListDifyInstancesResponseBodyRootData setEdition(String edition) {
@@ -276,6 +416,14 @@ public class ListDifyInstancesResponseBody extends TeaModel {
             return this.regionCode;
         }
 
+        public ListDifyInstancesResponseBodyRootData setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public ListDifyInstancesResponseBodyRootData setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
@@ -341,6 +489,44 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         }
         public java.util.List<ListDifyInstancesResponseBodyRootData> getData() {
             return this.data;
+        }
+
+    }
+
+    public static class ListDifyInstancesResponseBodyTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>opt_measure_group</p>
+         */
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListDifyInstancesResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            ListDifyInstancesResponseBodyTags self = new ListDifyInstancesResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDifyInstancesResponseBodyTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListDifyInstancesResponseBodyTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

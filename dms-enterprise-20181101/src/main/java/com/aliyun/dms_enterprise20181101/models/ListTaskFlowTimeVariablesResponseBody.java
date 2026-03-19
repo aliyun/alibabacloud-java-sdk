@@ -44,9 +44,6 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The time variables for the task flow.</p>
-     */
     @NameInMap("TimeVariables")
     public ListTaskFlowTimeVariablesResponseBodyTimeVariables timeVariables;
 
@@ -96,21 +93,9 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowTimeVariablesResponseBodyTimeVariablesTimeVariable extends TeaModel {
-        /**
-         * <p>The name of the time variable.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>time_test</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The format of the time variable.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-09-26|+7h</p>
-         */
         @NameInMap("Pattern")
         public String pattern;
 

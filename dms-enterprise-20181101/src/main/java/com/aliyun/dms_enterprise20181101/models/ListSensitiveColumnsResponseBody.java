@@ -31,9 +31,6 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The sensitive fields.</p>
-     */
     @NameInMap("SensitiveColumnList")
     public ListSensitiveColumnsResponseBodySensitiveColumnList sensitiveColumnList;
 
@@ -113,66 +110,21 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnsResponseBodySensitiveColumnListSensitiveColumn extends TeaModel {
-        /**
-         * <p>The number of sensitive fields.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ColumnCount")
         public Long columnCount;
 
-        /**
-         * <p>The name of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_column</p>
-         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        /**
-         * <p>The type of the de-identification algorithm. Valid values:</p>
-         * <ul>
-         * <li>DEFAULT: All characters are masked. This is the default value.</li>
-         * <li>FIX_POS: The characters at specific positions are masked.</li>
-         * <li>FIX_CHAR: Specific characters are masked.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>DEFAULT</p>
-         */
         @NameInMap("FunctionType")
         public String functionType;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_schema</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The sensitivity level of the field. Valid values:</p>
-         * <ul>
-         * <li>SENSITIVE</li>
-         * <li>CONFIDENTIAL</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SENSITIVE</p>
-         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_table</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 

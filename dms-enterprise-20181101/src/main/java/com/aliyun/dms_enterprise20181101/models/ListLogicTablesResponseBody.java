@@ -22,9 +22,6 @@ public class ListLogicTablesResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The details of the logical tables.</p>
-     */
     @NameInMap("LogicTableList")
     public ListLogicTablesResponseBodyLogicTableList logicTableList;
 
@@ -147,87 +144,33 @@ public class ListLogicTablesResponseBody extends TeaModel {
     }
 
     public static class ListLogicTablesResponseBodyLogicTableListLogicTable extends TeaModel {
-        /**
-         * <p>The ID of the logical database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
-        /**
-         * <p>Indicates whether the table is a logical table. The value is fixed to true.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        /**
-         * <p>The IDs of the owners of the logical tables.</p>
-         */
         @NameInMap("OwnerIdList")
         public ListLogicTablesResponseBodyLogicTableListLogicTableOwnerIdList ownerIdList;
 
-        /**
-         * <p>The nicknames of the owners of the logical tables.</p>
-         */
         @NameInMap("OwnerNameList")
         public ListLogicTablesResponseBodyLogicTableListLogicTableOwnerNameList ownerNameList;
 
-        /**
-         * <p>The logical database to which the logical table belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>yuyang_test</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The number of logical tables.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("TableCount")
         public String tableCount;
 
-        /**
-         * <p>The expression of the logical table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test[1-4]</p>
-         */
         @NameInMap("TableExpr")
         public String tableExpr;
 
-        /**
-         * <p>The GUID of the logical table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>IDB_L_308302.yuyang_test.test_ch</p>
-         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
-        /**
-         * <p>The ID of the logical table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TableId")
         public String tableId;
 
-        /**
-         * <p>The name of the logical table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 

@@ -223,15 +223,9 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The user IDs of the database owners.</p>
-         */
         @NameInMap("OwnerIdList")
         public GetPhysicalDatabaseResponseBodyDatabaseOwnerIdList ownerIdList;
 
-        /**
-         * <p>The nicknames of the database owners.</p>
-         */
         @NameInMap("OwnerNameList")
         public GetPhysicalDatabaseResponseBodyDatabaseOwnerNameList ownerNameList;
 

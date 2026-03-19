@@ -4,12 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DLColumn extends TeaModel {
+    /**
+     * <p>The comment of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>from deserializer</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The name of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>col</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The data type of the column, including array, bigint, binary, boolean, char, date, decimal, double, float, int, interval, map, set, smallint, string, struct, timestamp, tinyint, union, varchar.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>string</p>
+     */
     @NameInMap("Type")
     public String type;
 

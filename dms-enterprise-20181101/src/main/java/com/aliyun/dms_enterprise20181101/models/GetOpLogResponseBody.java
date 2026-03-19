@@ -22,9 +22,6 @@ public class GetOpLogResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The details of the operation log.</p>
-     */
     @NameInMap("OpLogDetails")
     public GetOpLogResponseBodyOpLogDetails opLogDetails;
 
@@ -113,86 +110,27 @@ public class GetOpLogResponseBody extends TeaModel {
     }
 
     public static class GetOpLogResponseBodyOpLogDetailsOpLogDetail extends TeaModel {
-        /**
-         * <p>The endpoint of the database instance.</p>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li><p>This parameter is valid only for database instances of the LocalInstance type.</p>
-         * </li>
-         * <li><p>This parameter is valid only for operations on the functional modules related to tasks.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:dmstest_prod_database@dmstest.rds">dmstest_prod_database@dmstest.rds</a>... [Test instance]</p>
-         */
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <p>The functional module for which the operation log is queried.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SECURITY_RULE</p>
-         */
         @NameInMap("Module")
         public String module;
 
-        /**
-         * <p>The details of the operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SELECT * FROM <code>orders</code> \n LIMIT 20</p>
-         */
         @NameInMap("OpContent")
         public String opContent;
 
-        /**
-         * <p>The time when the operation was performed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-03-28 16:45:19</p>
-         */
         @NameInMap("OpTime")
         public String opTime;
 
-        /**
-         * <p>The ID of the user who performed the operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51****</p>
-         */
         @NameInMap("OpUserId")
         public Long opUserId;
 
-        /**
-         * <p>The ID of the ticket or task.</p>
-         * <blockquote>
-         * <p> This parameter is valid only for operations on the functional modules related to tasks and the task management module in system management.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>509****</p>
-         */
         @NameInMap("OrderId")
         public Long orderId;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>22275482072787****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The display name of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_name</p>
-         */
         @NameInMap("UserNick")
         public String userNick;
 

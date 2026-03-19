@@ -22,9 +22,6 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The details of logical databases.</p>
-     */
     @NameInMap("LogicDatabaseList")
     public ListLogicDatabasesResponseBodyLogicDatabaseList logicDatabaseList;
 
@@ -170,97 +167,33 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase extends TeaModel {
-        /**
-         * <p>The alias of the logical database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>logic_db_alias</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>The ID of the logical database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1***</p>
-         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
-        /**
-         * <p>Logical database sub-ID list.</p>
-         */
         @NameInMap("DatabaseIds")
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds databaseIds;
 
-        /**
-         * <p>The type of the logical database. For more information about the valid values of this parameter, see <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter">DbType parameter</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>polardb</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The type of the environment to which the logical database belongs. Valid values:</p>
-         * <ul>
-         * <li><strong>product</strong>: production environment</li>
-         * <li><strong>dev</strong>: development environment</li>
-         * <li><strong>pre</strong>: staging environment</li>
-         * <li><strong>test</strong>: test environment</li>
-         * <li><strong>sit</strong>: system integration testing (SIT) environment</li>
-         * <li><strong>uat</strong>: user acceptance testing (UAT) environment</li>
-         * <li><strong>pet</strong>: stress testing environment</li>
-         * <li><strong>stag</strong>: STAG environment</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>Indicates whether the database is a logical database. The return value is true.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        /**
-         * <p>The IDs of the owners of the logical database.</p>
-         */
         @NameInMap("OwnerIdList")
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList ownerIdList;
 
-        /**
-         * <p>The names of the owners of the logical database.</p>
-         */
         @NameInMap("OwnerNameList")
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList ownerNameList;
 
-        /**
-         * <p>The name of the logical database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>logic_db</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The name that is used to search for the logical database.</p>
-         * <blockquote>
-         * <p>We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>logic_db[logic_db_alias]</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 

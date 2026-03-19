@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
-    /**
-     * <p>The list of task flow edges.</p>
-     */
     @NameInMap("Edges")
     public ListTaskFlowEdgesByConditionResponseBodyEdges edges;
 
@@ -96,30 +93,12 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowEdgesByConditionResponseBodyEdgesEdge extends TeaModel {
-        /**
-         * <p>The ID of the task flow edge.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>24***</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The ID of the end node on the edge.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>44***</p>
-         */
         @NameInMap("NodeEnd")
         public Long nodeEnd;
 
-        /**
-         * <p>The ID of the start node on the edge.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>44***</p>
-         */
         @NameInMap("NodeFrom")
         public Long nodeFrom;
 

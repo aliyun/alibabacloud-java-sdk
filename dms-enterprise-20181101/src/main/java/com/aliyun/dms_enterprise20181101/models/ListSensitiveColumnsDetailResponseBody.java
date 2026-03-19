@@ -31,9 +31,6 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details of the sensitive field.</p>
-     */
     @NameInMap("SensitiveColumnsDetailList")
     public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailList sensitiveColumnsDetailList;
 
@@ -96,97 +93,33 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail extends TeaModel {
-        /**
-         * <p>The description of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("ColumnDescription")
         public String columnDescription;
 
-        /**
-         * <p>The name of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ColumnName_test</p>
-         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        /**
-         * <p>The data type of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>varchar(32)</p>
-         */
         @NameInMap("ColumnType")
         public String columnType;
 
-        /**
-         * <p>The ID of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1860****</p>
-         */
         @NameInMap("DbId")
         public Long dbId;
 
-        /**
-         * <p>The type of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mysql</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The type of the environment to which the database belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>product</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The database is a logical database.</li>
-         * <li><strong>false</strong>: The database is not a logical database.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SchemaName_test</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The name that is used to search for the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test@xxx:3306</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 

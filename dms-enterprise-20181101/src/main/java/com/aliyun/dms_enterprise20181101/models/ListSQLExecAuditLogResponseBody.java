@@ -31,9 +31,6 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The entries returned.</p>
-     */
     @NameInMap("SQLExecAuditLogList")
     public ListSQLExecAuditLogResponseBodySQLExecAuditLogList SQLExecAuditLogList;
 
@@ -113,152 +110,45 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
     }
 
     public static class ListSQLExecAuditLogResponseBodySQLExecAuditLogListSQLExecAuditLog extends TeaModel {
-        /**
-         * <p>The number of rows affected by the SQL statement. For example, if you execute an SQL statement to query data, the number of retrieved rows is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("AffectRows")
         public Long affectRows;
 
-        /**
-         * <p>The ID of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2157****</p>
-         */
         @NameInMap("DbId")
         public Long dbId;
 
-        /**
-         * <p>The amount of time consumed by the execution of the SQL statement. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18</p>
-         */
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
-        /**
-         * <p>The execution status of the SQL statement. Valid values:</p>
-         * <ul>
-         * <li><strong>FAIL</strong>: The SQL statement fails to be executed.</li>
-         * <li><strong>NOEXE</strong>: The SQL statement has not been executed.</li>
-         * <li><strong>RUNNING</strong>: The SQL statement is being executed.</li>
-         * <li><strong>CANCEL</strong>: The execution of the SQL statement is canceled.</li>
-         * <li><strong>SUCCESS</strong>: The SQL statement is executed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SUCCESS</p>
-         */
         @NameInMap("ExecState")
         public String execState;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>185***</p>
-         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        /**
-         * <p>The name of the database.</p>
-         * <blockquote>
-         * <p> If the SQL statement takes effect on an instance, the name of the instance is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>polar123@pc-bp1h9tgq4st9g****.mysql.polardb.rds.aliyuncs.com:3306[polar_qw_test]</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The database is a logical database.</li>
-         * <li><strong>false</strong>: The database is a physical database.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        /**
-         * <p>The time when the operation specified by the SQL statement was performed on the instance or database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-11-08 11:04:27</p>
-         */
         @NameInMap("OpTime")
         public String opTime;
 
-        /**
-         * <p>The comment on the SQL statement.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The SQL statement that was written.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SELECT * FROM <code>polar123</code>.<code>p_qw</code> ORDER BY <code>id</code> DESC</p>
-         */
         @NameInMap("SQL")
         public String SQL;
 
-        /**
-         * <p>The type of the SQL statement. Valid values:</p>
-         * <ul>
-         * <li><strong>SELECT</strong>: the SQL statement that is used to query data.</li>
-         * <li><strong>INSERT</strong>: the SQL statement that is used to insert data.</li>
-         * <li><strong>DELETE</strong>: the SQL statement that is used to delete data.</li>
-         * <li><strong>CREATE_TABLE</strong>: the SQL statement that is used to create tables.</li>
-         * </ul>
-         * <blockquote>
-         * <p> To view more types of SQL statements, log on to the DMS console and click Security and Specifications. In the left-side navigation pane, click <strong>Operation Audit</strong>. Then, you can view all supported types of SQL statements from the <strong>SQL type</strong> drop-down list.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>SELECT</p>
-         */
         @NameInMap("SQLType")
         public String SQLType;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>polar123</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The ID of the user who wrote the SQL statement.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12****</p>
-         */
         @NameInMap("UserId")
         public Long userId;
 
-        /**
-         * <p>The nickname of the user who wrote the SQL statement.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_UserName</p>
-         */
         @NameInMap("UserName")
         public String userName;
 

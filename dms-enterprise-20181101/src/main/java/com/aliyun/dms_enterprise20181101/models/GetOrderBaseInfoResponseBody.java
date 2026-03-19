@@ -211,15 +211,9 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         @NameInMap("PluginType")
         public String pluginType;
 
-        /**
-         * <p>The IDs of the operators that are related to the ticket.</p>
-         */
         @NameInMap("RelatedUserList")
         public GetOrderBaseInfoResponseBodyOrderBaseInfoRelatedUserList relatedUserList;
 
-        /**
-         * <p>The nicknames of the operators that are related to the ticket.</p>
-         */
         @NameInMap("RelatedUserNickList")
         public GetOrderBaseInfoResponseBodyOrderBaseInfoRelatedUserNickList relatedUserNickList;
 

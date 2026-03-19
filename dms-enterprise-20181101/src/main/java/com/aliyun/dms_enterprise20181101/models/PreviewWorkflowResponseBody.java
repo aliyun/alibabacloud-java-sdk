@@ -96,30 +96,12 @@ public class PreviewWorkflowResponseBody extends TeaModel {
     }
 
     public static class PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNodeAuditUserListAuditUser extends TeaModel {
-        /**
-         * <p>The nickname of the approver.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Owner</p>
-         */
         @NameInMap("NickName")
         public String nickName;
 
-        /**
-         * <p>The name of the approver.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>db_test</p>
-         */
         @NameInMap("RealName")
         public String realName;
 
-        /**
-         * <p>The ID of the approver.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16***</p>
-         */
         @NameInMap("UserId")
         public Long userId;
 
@@ -174,39 +156,15 @@ public class PreviewWorkflowResponseBody extends TeaModel {
     }
 
     public static class PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNode extends TeaModel {
-        /**
-         * <p>The approvers.</p>
-         */
         @NameInMap("AuditUserList")
         public PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNodeAuditUserList auditUserList;
 
-        /**
-         * <p>The remarks of the approval node.</p>
-         */
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <p>The name of the approval node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Owner</p>
-         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        /**
-         * <p>The type of the approval node.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>USER_LIST: The approval node is created by a user.</li>
-         * <li>UNKNOWN: The source of the approval node is unknown.</li>
-         * <li>SYS: The approval node is predefined by the system.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SYS</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
@@ -281,9 +239,6 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         @NameInMap("WfCateName")
         public String wfCateName;
 
-        /**
-         * <p>The approval nodes.</p>
-         */
         @NameInMap("WorkflowNodeList")
         public PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeList workflowNodeList;
 

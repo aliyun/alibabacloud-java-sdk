@@ -53,9 +53,6 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    /**
-     * <p>The permissions of the user on the instance.</p>
-     */
     @NameInMap("UserPermissions")
     public ListInstanceUserPermissionsResponseBodyUserPermissions userPermissions;
 
@@ -113,61 +110,21 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail extends TeaModel {
-        /**
-         * <p>The time when the permissions were granted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-12 00:00:00</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The time when the permissions expire.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-12-12 00:00:00</p>
-         */
         @NameInMap("ExpireDate")
         public String expireDate;
 
-        /**
-         * <p>This parameter is reserved.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>XXX</p>
-         */
         @NameInMap("ExtraData")
         public String extraData;
 
-        /**
-         * <p>The user who grants the permissions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx authorization</p>
-         */
         @NameInMap("OriginFrom")
         public String originFrom;
 
-        /**
-         * <p>The type of the permissions. Valid values:</p>
-         * <ul>
-         * <li>LOGIN: the logon permissions</li>
-         * <li>PERF: the query permissions on the instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>LOGIN</p>
-         */
         @NameInMap("PermType")
         public String permType;
 
-        /**
-         * <p>The ID of the authorization record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>773****</p>
-         */
         @NameInMap("UserAccessId")
         public String userAccessId;
 
@@ -246,36 +203,15 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission extends TeaModel {
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>174****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The details of permissions.</p>
-         */
         @NameInMap("PermDetails")
         public ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails;
 
-        /**
-         * <p>The ID of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The nickname of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_nick_name</p>
-         */
         @NameInMap("UserNickName")
         public String userNickName;
 

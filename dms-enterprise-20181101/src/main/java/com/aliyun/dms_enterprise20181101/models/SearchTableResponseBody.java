@@ -31,9 +31,6 @@ public class SearchTableResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details of the tables.</p>
-     */
     @NameInMap("SearchTableList")
     public SearchTableResponseBodySearchTableList searchTableList;
 
@@ -147,146 +144,48 @@ public class SearchTableResponseBody extends TeaModel {
     }
 
     public static class SearchTableResponseBodySearchTableListSearchTable extends TeaModel {
-        /**
-         * <p>The name that is used to search for the database to which the table belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DBSearchName")
         public String DBSearchName;
 
-        /**
-         * <p>The ID of the database to which the table belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("DbName")
         public String dbName;
 
-        /**
-         * <p>The type of the database. Valid values:</p>
-         * <ul>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>SQLServer</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * <li><strong>Oracle</strong></li>
-         * <li><strong>DRDS</strong></li>
-         * <li><strong>OceanBase</strong></li>
-         * <li><strong>Mongo</strong></li>
-         * <li><strong>Redis</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>mysql</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The description of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The encoding format of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>utf8</p>
-         */
         @NameInMap("Encoding")
         public String encoding;
 
-        /**
-         * <p>The engine of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>innodb</p>
-         */
         @NameInMap("Engine")
         public String engine;
 
-        /**
-         * <p>The type of the environment to which the database belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>Indicates whether the table is a logical table. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The table is a logical table.</li>
-         * <li><strong>false</strong>: The table is not a logical table.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        /**
-         * <p>The IDs of the table owners.</p>
-         */
         @NameInMap("OwnerIdList")
         public SearchTableResponseBodySearchTableListSearchTableOwnerIdList ownerIdList;
 
-        /**
-         * <p>The nicknames of the table owners.</p>
-         */
         @NameInMap("OwnerNameList")
         public SearchTableResponseBodySearchTableListSearchTableOwnerNameList ownerNameList;
 
-        /**
-         * <p>The GUID of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>IDB_L_9032.db-test.yuyang_test</p>
-         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
-        /**
-         * <p>The ID of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TableId")
         public String tableId;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_table</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The name of the database to which the table belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</p>
-         */
         @NameInMap("TableSchemaName")
         public String tableSchemaName;
 

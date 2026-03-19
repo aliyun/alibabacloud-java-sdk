@@ -4,6 +4,10 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class PartitionError extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>auth failed</p>
+     */
     @NameInMap("ErrorDetail")
     public String errorDetail;
 

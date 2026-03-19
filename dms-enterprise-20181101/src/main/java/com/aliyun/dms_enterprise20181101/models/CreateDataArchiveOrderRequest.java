@@ -151,9 +151,32 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
     }
 
     public static class CreateDataArchiveOrderRequestParamVariables extends TeaModel {
+        /**
+         * <p>The name of the time variable. If the time variable is used as a filter condition for archiving data, the variable name must be the same as the one that is specified in <strong>TableWhere</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The format of the time variable. The format is used to define the value of the time variable. For more information, see <a href="https://help.aliyun.com/document_detail/209323.html">Configure variables</a>. The following examples show the formats of a time variable:</p>
+         * <ul>
+         * <li><strong>yyyy-MM-dd|-3d</strong>: three days before the point in time when the task is run.</li>
+         * <li><strong>yyyy-MM-dd|-1w</strong>: seven days before the point in time when the task is run.</li>
+         * <li><strong>yyyy-MM-dd|-4M</strong>: four months before the point in time when the task is run.</li>
+         * <li><strong>yyyy-MM-dd|-2y</strong>: two years before the point in time when the task is run.</li>
+         * <li><strong>yyyy-MM-dd|-3h</strong>: 3 hours before the point in time when the task is run.</li>
+         * <li><strong>yyyy-MM-dd|+5m</strong>: 5 minutes after the point in time when the task is run.</li>
+         * </ul>
+         * <blockquote>
+         * <p> In these examples, yyyy-MM-dd| indicates a fixed value. For the remaining part, a hyphen (-) indicates that the time is before that when the task is run, and a plus sign (+) indicates that the time is after that when the task is run.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>yyyy-MM-dd|-3d</p>
+         */
         @NameInMap("Pattern")
         public String pattern;
 

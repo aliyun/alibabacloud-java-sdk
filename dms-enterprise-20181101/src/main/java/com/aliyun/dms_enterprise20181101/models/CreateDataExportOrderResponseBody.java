@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataExportOrderResponseBody extends TeaModel {
-    /**
-     * <p>The content of the ticket.</p>
-     */
     @NameInMap("CreateOrderResult")
     public CreateDataExportOrderResponseBodyCreateOrderResult createOrderResult;
 

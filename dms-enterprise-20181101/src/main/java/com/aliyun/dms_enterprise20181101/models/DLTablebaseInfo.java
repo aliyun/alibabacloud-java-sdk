@@ -4,57 +4,162 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DLTablebaseInfo extends TeaModel {
+    /**
+     * <p>The catalog to which the table belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hive</p>
+     */
     @NameInMap("CatalogName")
     public String catalogName;
 
+    /**
+     * <p>The time when the table was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1731586286</p>
+     */
     @NameInMap("CreateTime")
     public Integer createTime;
 
+    /**
+     * <p>The ID of the user who created the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>141****</p>
+     */
     @NameInMap("CreatorId")
     public Long creatorId;
 
+    /**
+     * <p>The ID of the database in which the table is stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("DbId")
     public Long dbId;
 
+    /**
+     * <p>The name of the database in which the table is stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100g_customer</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The comment of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;table&quot;</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The time when the table was last accessed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1608707407</p>
+     */
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 
+    /**
+     * <p>The storage path of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://xxx</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>The time when the table was modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1410769</p>
+     */
     @NameInMap("ModifierId")
     public Long modifierId;
 
+    /**
+     * <p>The name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100g_customer</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The owner of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>The type of the table owner. Valid values: USER, ROLE, and GROUP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ROLE</p>
+     */
     @NameInMap("OwnerType")
     public String ownerType;
 
+    /**
+     * <p>Additional parameters for the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;EXTERNAL&quot;: &quot;TRUE&quot;</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <p>The column attributes of the table.</p>
+     */
     @NameInMap("PartitionKeys")
     public java.util.List<DLColumn> partitionKeys;
 
+    /**
+     * <p>The retention period of the table. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000</p>
+     */
     @NameInMap("Retention")
     public Integer retention;
 
+    /**
+     * <p>The type of the table. Valid values: MANAGED_TABLE, EXTERNAL_TABLE, VIRTUAL_VIEW, INDEX_TABLE, and MATERIALIZED_VIEW.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXTERNAL_TABLE</p>
+     */
     @NameInMap("TableType")
     public String tableType;
 
+    /**
+     * <p>The expanded text of the view if the table type is view.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ViewExpandedText")
     public String viewExpandedText;
 
+    /**
+     * <p>The original text of the view if the table type is view.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ViewOriginalText")
     public String viewOriginalText;
 

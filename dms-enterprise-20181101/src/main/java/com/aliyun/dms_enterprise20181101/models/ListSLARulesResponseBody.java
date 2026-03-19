@@ -31,9 +31,6 @@ public class ListSLARulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of SLA rules.</p>
-     */
     @NameInMap("SLARuleList")
     public ListSLARulesResponseBodySLARuleList SLARuleList;
 
@@ -96,52 +93,18 @@ public class ListSLARulesResponseBody extends TeaModel {
     }
 
     public static class ListSLARulesResponseBodySLARuleListSLARule extends TeaModel {
-        /**
-         * <p>The ID of the task flow.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11****</p>
-         */
         @NameInMap("DagId")
         public Long dagId;
 
-        /**
-         * <p>The ID of the SLA rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The timeout period. Unit: minutes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1080</p>
-         */
         @NameInMap("IntervalMinutes")
         public Integer intervalMinutes;
 
-        /**
-         * <p>The ID of the task node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("NodeId")
         public Long nodeId;
 
-        /**
-         * <p>The type of the rule. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: an SLA rule for a task flow</li>
-         * <li><strong>1</strong>: an SLA rule for a task node</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RuleType")
         public Integer ruleType;
 

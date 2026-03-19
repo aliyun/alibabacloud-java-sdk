@@ -22,9 +22,6 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The information about the nodes in the execution record of the task flow.</p>
-     */
     @NameInMap("NodeList")
     public GetTaskInstanceRelationResponseBodyNodeList nodeList;
 
@@ -96,92 +93,30 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
     }
 
     public static class GetTaskInstanceRelationResponseBodyNodeListNode extends TeaModel {
-        /**
-         * <p>The business time of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-11-09 14:37:26</p>
-         */
         @NameInMap("BusinessTime")
         public String businessTime;
 
-        /**
-         * <p>The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-11-11 14:38:57</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The amount of time consumed for running the node. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>170655</p>
-         */
         @NameInMap("ExecuteTime")
         public Long executeTime;
 
-        /**
-         * <p>The ID of the execution record of the task flow.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>14059</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The description of the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>14059</p>
-         */
         @NameInMap("NodeId")
         public Long nodeId;
 
-        /**
-         * <p>The name of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Spark SQL-1</p>
-         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        /**
-         * <p>The type of the node. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>36</p>
-         */
         @NameInMap("NodeType")
         public Integer nodeType;
 
-        /**
-         * <p>The status of the node. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: The node is waiting to be scheduled.</li>
-         * <li><strong>1</strong>: The node is running.</li>
-         * <li><strong>2</strong>: The node is suspended.</li>
-         * <li><strong>3</strong>: The node failed to run.</li>
-         * <li><strong>4</strong>: The node is run.</li>
-         * <li><strong>5</strong>: The node is complete.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("Status")
         public Integer status;
 

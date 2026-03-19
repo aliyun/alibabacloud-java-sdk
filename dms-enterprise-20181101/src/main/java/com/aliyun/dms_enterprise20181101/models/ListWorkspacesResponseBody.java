@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
-    /**
-     * <p>The dataset.</p>
-     */
     @NameInMap("Data")
     public ListWorkspacesResponseBodyData data;
 
@@ -147,174 +144,60 @@ public class ListWorkspacesResponseBody extends TeaModel {
     }
 
     public static class ListWorkspacesResponseBodyDataBaseWorkspaces extends TeaModel {
-        /**
-         * <p>Whether the current user has joined the workspace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("AlreadyJoined")
         public Boolean alreadyJoined;
 
-        /**
-         * <p>The ID of the creator.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("CreatorId")
         public Long creatorId;
 
-        /**
-         * <p>The nickname of the creator.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>work*****</p>
-         */
         @NameInMap("CreatorNickName")
         public String creatorNickName;
 
-        /**
-         * <p>The Alibaba Cloud account UID of the creator.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1344****</p>
-         */
         @NameInMap("CreatorUid")
         public String creatorUid;
 
-        /**
-         * <p>The description of the workspace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025-01-01 00:00:00</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <p>The update time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025-01-01 00:00:00</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The name of the workspace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>workspace-xxxx</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The owner ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123****</p>
-         */
         @NameInMap("OwnerId")
         public Long ownerId;
 
-        /**
-         * <p>The nickname of the owner.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hel****</p>
-         */
         @NameInMap("OwnerNickName")
         public String ownerNickName;
 
-        /**
-         * <p>The Alibaba Cloud UID of the owner.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15608564799****</p>
-         */
         @NameInMap("OwnerUid")
         public String ownerUid;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The ID of the service account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
-         */
         @NameInMap("ServiceAccountId")
         public Long serviceAccountId;
 
-        /**
-         * <p>The nickname of the service account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testname</p>
-         */
         @NameInMap("ServiceAccountNickName")
         public String serviceAccountNickName;
 
-        /**
-         * <p>The Alibaba Cloud account UID of the service account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1422****</p>
-         */
         @NameInMap("ServiceAccountUid")
         public String serviceAccountUid;
 
-        /**
-         * <p>The ID of the tenant to which the workspace belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>23456</p>
-         */
         @NameInMap("TenantId")
         public Long tenantId;
 
-        /**
-         * <p>The VPC ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-25fl3qjqb****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The workspace ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8652340494****</p>
-         */
         @NameInMap("WorkspaceId")
         public Long workspaceId;
 
-        /**
-         * <p>The name of the workspace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-workspace</p>
-         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 

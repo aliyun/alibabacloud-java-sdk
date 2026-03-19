@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListUserOwnedResourcesResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     */
     @NameInMap("Data")
     public ListUserOwnedResourcesResponseBodyData data;
 
@@ -109,124 +106,42 @@ public class ListUserOwnedResourcesResponseBody extends TeaModel {
     }
 
     public static class ListUserOwnedResourcesResponseBodyDataResourceList extends TeaModel {
-        /**
-         * <p>The alias of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DMS_GYX_TESTupdata</p>
-         */
         @NameInMap("Alias")
         public String alias;
 
-        /**
-         * <p>The ID of the database in DMS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>29697059</p>
-         */
         @NameInMap("DbId")
         public String dbId;
 
-        /**
-         * <p>The ID of the instance to which the database belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>876XXX</p>
-         */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
-        /**
-         * <p>The database engine type. For more information about the valid values of the DbType parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MySQL</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 
-        /**
-         * <p>The type of the environment to which the database instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>product</p>
-         */
         @NameInMap("EnvType")
         public String envType;
 
-        /**
-         * <p>The endpoint of the instance to which the database belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-wz98bw60x1i1303c5.mysql.rds.aliyuncs.com</p>
-         */
         @NameInMap("Host")
         public String host;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>291594</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The database is a logical database</li>
-         * <li><strong>false</strong>: The database is a physical database.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        /**
-         * <p>The connection port of the instance to which the database belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6379</p>
-         */
         @NameInMap("Port")
         public Long port;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>as_task_engine</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The query name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtstest [dtstest_dms]</p>
-         */
         @NameInMap("SearchName")
         public String searchName;
 
-        /**
-         * <p>The table ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1760934555</p>
-         */
         @NameInMap("TableId")
         public String tableId;
 
-        /**
-         * <p>The table name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>addepmap</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 

@@ -326,15 +326,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The IDs of the owners for the database instance.</p>
-         */
         @NameInMap("OwnerIdList")
         public GetInstanceResponseBodyInstanceOwnerIdList ownerIdList;
 
-        /**
-         * <p>The nicknames of the owners for the database instance.</p>
-         */
         @NameInMap("OwnerNameList")
         public GetInstanceResponseBodyInstanceOwnerNameList ownerNameList;
 

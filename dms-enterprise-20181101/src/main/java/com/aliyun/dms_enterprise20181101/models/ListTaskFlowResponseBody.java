@@ -44,9 +44,6 @@ public class ListTaskFlowResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The information about the task flows returned.</p>
-     */
     @NameInMap("TaskFlowList")
     public ListTaskFlowResponseBodyTaskFlowList taskFlowList;
 
@@ -96,85 +93,27 @@ public class ListTaskFlowResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowResponseBodyTaskFlowListTaskFlow extends TeaModel {
-        /**
-         * <p>The ID of the user who creates the task flow.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51****</p>
-         */
         @NameInMap("CreatorId")
         public String creatorId;
 
-        /**
-         * <p>The name of the user who creates the task flow.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Creator_NickName</p>
-         */
         @NameInMap("CreatorNickName")
         public String creatorNickName;
 
-        /**
-         * <p>The name of the task flow owner.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Owner_NickName</p>
-         */
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
-        /**
-         * <p>The ID of the latest deployment record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12**</p>
-         */
         @NameInMap("DeployId")
         public Long deployId;
 
-        /**
-         * <p>The ID of the task flow.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>134137****</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The status of the latest execution. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: invalid.</li>
-         * <li><strong>1</strong>: scheduling disabled.</li>
-         * <li><strong>2</strong>: waiting to be scheduled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("LatestInstanceStatus")
         public Integer latestInstanceStatus;
 
-        /**
-         * <p>The time when the latest execution record was generated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-04-13</p>
-         */
         @NameInMap("LatestInstanceTime")
         public String latestInstanceTime;
 
-        /**
-         * <p>The status of the task flow. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: The task flow is invalid.</li>
-         * <li><strong>1</strong>: Scheduling is disabled for the task flow.</li>
-         * <li><strong>2</strong>: The task flow is waiting to be scheduled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Status")
         public Integer status;
 

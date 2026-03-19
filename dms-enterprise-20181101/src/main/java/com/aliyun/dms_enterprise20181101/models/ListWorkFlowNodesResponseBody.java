@@ -40,9 +40,6 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The details of approval nodes.</p>
-     */
     @NameInMap("WorkflowNodes")
     public ListWorkFlowNodesResponseBodyWorkflowNodes workflowNodes;
 
@@ -92,30 +89,12 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
     }
 
     public static class ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser extends TeaModel {
-        /**
-         * <p>The nickname of the approver.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("NickName")
         public String nickName;
 
-        /**
-         * <p>The real name of the approver.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("RealName")
         public String realName;
 
-        /**
-         * <p>The ID of the approver. The ID is different from the ID of the Alibaba Cloud account of the approver.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("UserId")
         public Long userId;
 
@@ -170,67 +149,24 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
     }
 
     public static class ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode extends TeaModel {
-        /**
-         * <p>The details about approvers.</p>
-         */
         @NameInMap("AuditUsers")
         public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsers auditUsers;
 
-        /**
-         * <p>The description of the approval template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <p>The ID of the creator. This ID is different from the ID of the Alibaba Cloud account of the creator.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("CreateUserId")
         public Long createUserId;
 
-        /**
-         * <p>The name of the user who creates the approval node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("CreateUserNickName")
         public String createUserNickName;
 
-        /**
-         * <p>The ID of the approval node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("NodeId")
         public Long nodeId;
 
-        /**
-         * <p>The name of the approval node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        /**
-         * <p>The type of the approval node. Valid values:</p>
-         * <ul>
-         * <li>SYS: The approval node is predefined by the system.</li>
-         * <li>USER_LIST: The approval node is created by a user.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SYS</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 

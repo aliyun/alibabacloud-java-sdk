@@ -31,9 +31,6 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details of the sensitive field.</p>
-     */
     @NameInMap("SensitiveColumnList")
     public ListSensitiveColumnInfoResponseBodySensitiveColumnList sensitiveColumnList;
 
@@ -113,21 +110,9 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnDefaultDesensitizationRule extends TeaModel {
-        /**
-         * <p>The masking algorithm ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>101**</p>
-         */
         @NameInMap("RuleId")
         public Long ruleId;
 
-        /**
-         * <p>The masking algorithm name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -155,21 +140,9 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnSemiDesensitizationRuleListSemiDesensitizationRule extends TeaModel {
-        /**
-         * <p>The ID of the partial masking algorithm.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10***</p>
-         */
         @NameInMap("RuleId")
         public Long ruleId;
 
-        /**
-         * <p>The partial masking algorithm name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test01</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -216,92 +189,36 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumn extends TeaModel {
-        /**
-         * <p>The name of the category.</p>
-         */
         @NameInMap("CategoryName")
         public String categoryName;
 
-        /**
-         * <p>The name of the sensitive field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_column</p>
-         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        /**
-         * <p>The information about the default masking algorithm.</p>
-         */
         @NameInMap("DefaultDesensitizationRule")
         public ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnDefaultDesensitizationRule defaultDesensitizationRule;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>183****</p>
-         */
         @NameInMap("InstanceId")
         public Integer instanceId;
 
-        /**
-         * <p>Indicates whether the sensitive field is displayed in plaintext.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>False</p>
-         */
         @NameInMap("IsPlain")
         public Boolean isPlain;
 
-        /**
-         * <p>The sample data.</p>
-         */
         @NameInMap("SampleData")
         public String sampleData;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_schema</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The sensitivity level of the field. Valid values:</p>
-         * <ul>
-         * <li>Low</li>
-         * <li>Medium</li>
-         * <li>High</li>
-         * </ul>
-         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
-        /**
-         * <p>The list of partial masking algorithms.</p>
-         */
         @NameInMap("SemiDesensitizationRuleList")
         public ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnSemiDesensitizationRuleList semiDesensitizationRuleList;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_table</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The user-defined sensitivity level.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>S1</p>
-         */
         @NameInMap("UserSensitivityLevel")
         public String userSensitivityLevel;
 

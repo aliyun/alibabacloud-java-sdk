@@ -22,9 +22,6 @@ public class ListIndexesResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The details of indexes.</p>
-     */
     @NameInMap("IndexList")
     public ListIndexesResponseBodyIndexList indexList;
 
@@ -92,55 +89,18 @@ public class ListIndexesResponseBody extends TeaModel {
     }
 
     public static class ListIndexesResponseBodyIndexListIndex extends TeaModel {
-        /**
-         * <p>The description of the index.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("IndexComment")
         public String indexComment;
 
-        /**
-         * <p>The ID of the index.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("IndexId")
         public String indexId;
 
-        /**
-         * <p>The name of the index.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>idx_test</p>
-         */
         @NameInMap("IndexName")
         public String indexName;
 
-        /**
-         * <p>The type of the index. Valid values:</p>
-         * <ul>
-         * <li>Primary</li>
-         * <li>Unique</li>
-         * <li>Normal</li>
-         * <li>FullText</li>
-         * <li>Spatial</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Primary</p>
-         */
         @NameInMap("IndexType")
         public String indexType;
 
-        /**
-         * <p>The ID of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TableId")
         public String tableId;
 

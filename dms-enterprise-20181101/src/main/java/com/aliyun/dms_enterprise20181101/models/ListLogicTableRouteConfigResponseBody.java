@@ -22,9 +22,6 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The routing algorithms.</p>
-     */
     @NameInMap("LogicTableRouteConfigList")
     public ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigList logicTableRouteConfigList;
 
@@ -96,30 +93,12 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
     }
 
     public static class ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigListLogicTableRouteConfig extends TeaModel {
-        /**
-         * <p>The routing algorithm expression.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>#id#%16\t</p>
-         */
         @NameInMap("RouteExpr")
         public String routeExpr;
 
-        /**
-         * <p>The unique key of the routing algorithm.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RouteKey")
         public String routeKey;
 
-        /**
-         * <p>The ID of the logical table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4****</p>
-         */
         @NameInMap("TableId")
         public Long tableId;
 
