@@ -75,6 +75,9 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
+        @NameInMap("JumboFrameSupport")
+        public Boolean jumboFrameSupport;
+
         /**
          * <p>The memory size of the instance type. Unit: GiB.</p>
          * 
@@ -119,6 +122,14 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         }
         public String getInstanceTypeId() {
             return this.instanceTypeId;
+        }
+
+        public DescribeRCInstanceTypesResponseBodyInstanceTypesInstanceType setJumboFrameSupport(Boolean jumboFrameSupport) {
+            this.jumboFrameSupport = jumboFrameSupport;
+            return this;
+        }
+        public Boolean getJumboFrameSupport() {
+            return this.jumboFrameSupport;
         }
 
         public DescribeRCInstanceTypesResponseBodyInstanceTypesInstanceType setMemorySize(Integer memorySize) {

@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
+    @NameInMap("AllocateStrategy")
+    public String allocateStrategy;
+
     /**
      * <p>Specifies whether to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance. For more information, see <a href="https://help.aliyun.com/document_detail/127458.html">Upgrade the major engine version</a>. Valid values:</p>
      * <ul>
@@ -393,6 +396,14 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public static ModifyDBInstanceSpecShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceSpecShrinkRequest self = new ModifyDBInstanceSpecShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceSpecShrinkRequest setAllocateStrategy(String allocateStrategy) {
+        this.allocateStrategy = allocateStrategy;
+        return this;
+    }
+    public String getAllocateStrategy() {
+        return this.allocateStrategy;
     }
 
     public ModifyDBInstanceSpecShrinkRequest setAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {

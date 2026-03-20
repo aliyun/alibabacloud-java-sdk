@@ -17,6 +17,9 @@ public class ModifyRCInstanceAttributeRequest extends TeaModel {
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
+    @NameInMap("EnableJumboFrame")
+    public Boolean enableJumboFrame;
+
     /**
      * <p>The hostname of the instance.</p>
      * 
@@ -103,6 +106,14 @@ public class ModifyRCInstanceAttributeRequest extends TeaModel {
     }
     public Boolean getDeletionProtection() {
         return this.deletionProtection;
+    }
+
+    public ModifyRCInstanceAttributeRequest setEnableJumboFrame(Boolean enableJumboFrame) {
+        this.enableJumboFrame = enableJumboFrame;
+        return this;
+    }
+    public Boolean getEnableJumboFrame() {
+        return this.enableJumboFrame;
     }
 
     public ModifyRCInstanceAttributeRequest setHostName(String hostName) {

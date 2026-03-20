@@ -7,6 +7,10 @@ public class DescribeRCResourcesModificationResponseBody extends TeaModel {
     @NameInMap("AvailableZones")
     public java.util.List<DescribeRCResourcesModificationResponseBodyAvailableZones> availableZones;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeRCResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeRCResourcesModificationResponseBodyAvailableZonesAvailableResourcesSupportedResources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WithStock</p>
+         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mysql.x4.4xlarge.7cm</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -76,6 +92,10 @@ public class DescribeRCResourcesModificationResponseBody extends TeaModel {
         @NameInMap("SupportedResources")
         public java.util.List<DescribeRCResourcesModificationResponseBodyAvailableZonesAvailableResourcesSupportedResources> supportedResources;
 
+        /**
+         * <strong>example:</strong>
+         * <p>InstanceType</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -106,15 +126,31 @@ public class DescribeRCResourcesModificationResponseBody extends TeaModel {
         @NameInMap("AvailableResources")
         public java.util.List<DescribeRCResourcesModificationResponseBodyAvailableZonesAvailableResources> availableResources;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WithStock</p>
+         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -7,6 +7,10 @@ public class DescribeRCResourcesModificationRequest extends TeaModel {
     @NameInMap("Conditionss")
     public java.util.List<String> conditionss;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Cores")
     public Integer cores;
 
@@ -21,13 +25,24 @@ public class DescribeRCResourcesModificationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rc-pd5c*******89u25ai</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mysql.x4.4xlarge.7cm</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8.0</p>
+     */
     @NameInMap("Memory")
     public Float memory;
 
@@ -40,10 +55,17 @@ public class DescribeRCResourcesModificationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

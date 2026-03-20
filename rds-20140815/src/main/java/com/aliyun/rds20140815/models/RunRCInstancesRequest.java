@@ -187,6 +187,9 @@ public class RunRCInstancesRequest extends TeaModel {
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    @NameInMap("NetworkOptions")
+    public RunRCInstancesRequestNetworkOptions networkOptions;
+
     /**
      * <p>The password of the account that is used to log on to the instance.</p>
      * 
@@ -510,6 +513,14 @@ public class RunRCInstancesRequest extends TeaModel {
         return this.keyPairName;
     }
 
+    public RunRCInstancesRequest setNetworkOptions(RunRCInstancesRequestNetworkOptions networkOptions) {
+        this.networkOptions = networkOptions;
+        return this;
+    }
+    public RunRCInstancesRequestNetworkOptions getNetworkOptions() {
+        return this.networkOptions;
+    }
+
     public RunRCInstancesRequest setPassword(String password) {
         this.password = password;
         return this;
@@ -815,6 +826,25 @@ public class RunRCInstancesRequest extends TeaModel {
         }
         public String getSnapshotId() {
             return this.snapshotId;
+        }
+
+    }
+
+    public static class RunRCInstancesRequestNetworkOptions extends TeaModel {
+        @NameInMap("EnableJumboFrame")
+        public Boolean enableJumboFrame;
+
+        public static RunRCInstancesRequestNetworkOptions build(java.util.Map<String, ?> map) throws Exception {
+            RunRCInstancesRequestNetworkOptions self = new RunRCInstancesRequestNetworkOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public RunRCInstancesRequestNetworkOptions setEnableJumboFrame(Boolean enableJumboFrame) {
+            this.enableJumboFrame = enableJumboFrame;
+            return this;
+        }
+        public Boolean getEnableJumboFrame() {
+            return this.enableJumboFrame;
         }
 
     }

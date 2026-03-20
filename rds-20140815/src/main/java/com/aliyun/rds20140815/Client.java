@@ -841,6 +841,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>检查备份加密信息</p>
+     * 
+     * @param request AuthorizeBackupEncryptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AuthorizeBackupEncryptionResponse
+     */
+    public AuthorizeBackupEncryptionResponse authorizeBackupEncryptionWithOptions(AuthorizeBackupEncryptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeBackupEncryption"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AuthorizeBackupEncryptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查备份加密信息</p>
+     * 
+     * @param request AuthorizeBackupEncryptionRequest
+     * @return AuthorizeBackupEncryptionResponse
+     */
+    public AuthorizeBackupEncryptionResponse authorizeBackupEncryption(AuthorizeBackupEncryptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.authorizeBackupEncryptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Adds rules to the specified security group.</p>
      * 
      * @param tmpReq AuthorizeRCSecurityGroupPermissionRequest
@@ -1185,6 +1233,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckAccountNameAvailableResponse checkAccountNameAvailable(CheckAccountNameAvailableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkAccountNameAvailableWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查备份加密授权</p>
+     * 
+     * @param request CheckBackupEncryptionAuthorizedRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckBackupEncryptionAuthorizedResponse
+     */
+    public CheckBackupEncryptionAuthorizedResponse checkBackupEncryptionAuthorizedWithOptions(CheckBackupEncryptionAuthorizedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckBackupEncryptionAuthorized"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckBackupEncryptionAuthorizedResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查备份加密授权</p>
+     * 
+     * @param request CheckBackupEncryptionAuthorizedRequest
+     * @return CheckBackupEncryptionAuthorizedResponse
+     */
+    public CheckBackupEncryptionAuthorizedResponse checkBackupEncryptionAuthorized(CheckBackupEncryptionAuthorizedRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkBackupEncryptionAuthorizedWithOptions(request, runtime);
     }
 
     /**
@@ -1609,6 +1705,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckRdsCustomInitResponse checkRdsCustomInit(CheckRdsCustomInitRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkRdsCustomInitWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查地域是否支持备份加密</p>
+     * 
+     * @param request CheckRegionSupportBackupEncryptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckRegionSupportBackupEncryptionResponse
+     */
+    public CheckRegionSupportBackupEncryptionResponse checkRegionSupportBackupEncryptionWithOptions(CheckRegionSupportBackupEncryptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceID)) {
+            query.put("DBInstanceID", request.DBInstanceID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckRegionSupportBackupEncryption"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckRegionSupportBackupEncryptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查地域是否支持备份加密</p>
+     * 
+     * @param request CheckRegionSupportBackupEncryptionRequest
+     * @return CheckRegionSupportBackupEncryptionResponse
+     */
+    public CheckRegionSupportBackupEncryptionResponse checkRegionSupportBackupEncryption(CheckRegionSupportBackupEncryptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkRegionSupportBackupEncryptionWithOptions(request, runtime);
     }
 
     /**
@@ -21512,6 +21660,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询VPC列表</p>
+     * 
+     * @param request DescribeVpcsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVpcsResponse
+     */
+    public DescribeVpcsResponse describeVpcsWithOptions(DescribeVpcsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("Product", request.product);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVpcs"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVpcsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询VPC列表</p>
+     * 
+     * @param request DescribeVpcsRequest
+     * @return DescribeVpcsResponse
+     */
+    public DescribeVpcsResponse describeVpcs(DescribeVpcsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVpcsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
@@ -21941,6 +22177,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DetachWhitelistTemplateToInstanceResponse detachWhitelistTemplateToInstance(DetachWhitelistTemplateToInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachWhitelistTemplateToInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启备份加密</p>
+     * 
+     * @param request EnableBackupEncryptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableBackupEncryptionResponse
+     */
+    public EnableBackupEncryptionResponse enableBackupEncryptionWithOptions(EnableBackupEncryptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionKey)) {
+            query.put("EncryptionKey", request.encryptionKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableBackupEncryption"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableBackupEncryptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启备份加密</p>
+     * 
+     * @param request EnableBackupEncryptionRequest
+     * @return EnableBackupEncryptionResponse
+     */
+    public EnableBackupEncryptionResponse enableBackupEncryption(EnableBackupEncryptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableBackupEncryptionWithOptions(request, runtime);
     }
 
     /**
@@ -26630,6 +26918,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allocateStrategy)) {
+            query.put("AllocateStrategy", request.allocateStrategy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.allowMajorVersionUpgrade)) {
             query.put("AllowMajorVersionUpgrade", request.allowMajorVersionUpgrade);
         }
@@ -29037,6 +29329,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改部署集的名称和描述信息</p>
+     * 
+     * @param request ModifyRCDeploymentSetAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyRCDeploymentSetAttributeResponse
+     */
+    public ModifyRCDeploymentSetAttributeResponse modifyRCDeploymentSetAttributeWithOptions(ModifyRCDeploymentSetAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentSetId)) {
+            query.put("DeploymentSetId", request.deploymentSetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentSetName)) {
+            query.put("DeploymentSetName", request.deploymentSetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyRCDeploymentSetAttribute"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRCDeploymentSetAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改部署集的名称和描述信息</p>
+     * 
+     * @param request ModifyRCDeploymentSetAttributeRequest
+     * @return ModifyRCDeploymentSetAttributeResponse
+     */
+    public ModifyRCDeploymentSetAttributeResponse modifyRCDeploymentSetAttribute(ModifyRCDeploymentSetAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyRCDeploymentSetAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>修改块存储属性</p>
      * 
      * @param request ModifyRCDiskAttributeRequest
@@ -29464,6 +29812,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
             query.put("DeletionProtection", request.deletionProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableJumboFrame)) {
+            query.put("EnableJumboFrame", request.enableJumboFrame);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hostName)) {
@@ -33622,6 +33974,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.dataDiskShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataDisk, "DataDisk", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.networkOptions)) {
+            request.networkOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.networkOptions, "NetworkOptions", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.securityGroupIds)) {
             request.securityGroupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.securityGroupIds, "SecurityGroupIds", "json");
         }
@@ -33721,6 +34077,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
             query.put("KeyPairName", request.keyPairName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkOptionsShrink)) {
+            query.put("NetworkOptions", request.networkOptionsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {

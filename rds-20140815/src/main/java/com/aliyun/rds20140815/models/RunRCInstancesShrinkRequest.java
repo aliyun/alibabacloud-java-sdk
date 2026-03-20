@@ -187,6 +187,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    @NameInMap("NetworkOptions")
+    public String networkOptionsShrink;
+
     /**
      * <p>The password of the account that is used to log on to the instance.</p>
      * 
@@ -508,6 +511,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public String getKeyPairName() {
         return this.keyPairName;
+    }
+
+    public RunRCInstancesShrinkRequest setNetworkOptionsShrink(String networkOptionsShrink) {
+        this.networkOptionsShrink = networkOptionsShrink;
+        return this;
+    }
+    public String getNetworkOptionsShrink() {
+        return this.networkOptionsShrink;
     }
 
     public RunRCInstancesShrinkRequest setPassword(String password) {
