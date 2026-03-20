@@ -699,6 +699,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         @NameInMap("InterruptWords")
         public java.util.List<String> interruptWords;
 
+        @NameInMap("KeepInterruptWordsForLLM")
+        public Boolean keepInterruptWordsForLLM;
+
         @NameInMap("NoInterruptMode")
         public String noInterruptMode;
 
@@ -730,6 +733,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
         public java.util.List<String> getInterruptWords() {
             return this.interruptWords;
+        }
+
+        public AIAgentOutboundCallConfigInterruptConfig setKeepInterruptWordsForLLM(Boolean keepInterruptWordsForLLM) {
+            this.keepInterruptWordsForLLM = keepInterruptWordsForLLM;
+            return this;
+        }
+        public Boolean getKeepInterruptWordsForLLM() {
+            return this.keepInterruptWordsForLLM;
         }
 
         public AIAgentOutboundCallConfigInterruptConfig setNoInterruptMode(String noInterruptMode) {
