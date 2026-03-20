@@ -39,6 +39,9 @@ public class DescribeDomainTopHttpMethodRequest extends TeaModel {
     @NameInMap("Limit")
     public Long limit;
 
+    @NameInMap("QueryType")
+    public String queryType;
+
     /**
      * <p>The region in which your service is deployed. Valid values:</p>
      * <ul>
@@ -93,6 +96,14 @@ public class DescribeDomainTopHttpMethodRequest extends TeaModel {
     }
     public Long getLimit() {
         return this.limit;
+    }
+
+    public DescribeDomainTopHttpMethodRequest setQueryType(String queryType) {
+        this.queryType = queryType;
+        return this;
+    }
+    public String getQueryType() {
+        return this.queryType;
     }
 
     public DescribeDomainTopHttpMethodRequest setRegion(String region) {

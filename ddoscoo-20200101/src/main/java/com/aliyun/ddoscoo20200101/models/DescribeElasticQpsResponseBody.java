@@ -104,6 +104,9 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
         @NameInMap("Status4")
         public Long status4;
 
+        @NameInMap("Status410Pv")
+        public Long status410Pv;
+
         /**
          * <p>The total number of HTTP 5xx status codes during the step size period.</p>
          * 
@@ -181,6 +184,14 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
         }
         public Long getStatus4() {
             return this.status4;
+        }
+
+        public DescribeElasticQpsResponseBodyElasticQps setStatus410Pv(Long status410Pv) {
+            this.status410Pv = status410Pv;
+            return this;
+        }
+        public Long getStatus410Pv() {
+            return this.status410Pv;
         }
 
         public DescribeElasticQpsResponseBodyElasticQps setStatus5(Long status5) {

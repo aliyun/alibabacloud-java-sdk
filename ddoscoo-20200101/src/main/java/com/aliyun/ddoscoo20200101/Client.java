@@ -27,6 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds IP addresses to the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * 
      * @param request AddAutoCcBlacklistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddAutoCcBlacklistResponse
@@ -64,6 +67,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds IP addresses to the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * 
      * @param request AddAutoCcBlacklistRequest
      * @return AddAutoCcBlacklistResponse
      */
@@ -310,7 +316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置全局模板规则</p>
+     * <p>Configures an Anti-DDoS global mitigation policy.</p>
      * 
      * @param request ConfigL7GlobalRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -346,7 +352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置全局模板规则</p>
+     * <p>Configures an Anti-DDoS global mitigation policy.</p>
      * 
      * @param request ConfigL7GlobalRuleRequest
      * @return ConfigL7GlobalRuleResponse
@@ -810,7 +816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置新版基于匹配条件的cc规则</p>
+     * <p>Creates or modifies the custom frequency control rule of a website.</p>
      * 
      * @param request ConfigWebCCRuleV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -850,7 +856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置新版基于匹配条件的cc规则</p>
+     * <p>Creates or modifies the custom frequency control rule of a website.</p>
      * 
      * @param request ConfigWebCCRuleV2Request
      * @return ConfigWebCCRuleV2Response
@@ -2839,6 +2845,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the CNAME reuse information about websites.</p>
+     * 
      * @param request DescribeCnameReusesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCnameReusesResponse
@@ -2872,6 +2881,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the CNAME reuse information about websites.</p>
+     * 
      * @param request DescribeCnameReusesRequest
      * @return DescribeCnameReusesResponse
      */
@@ -3713,6 +3725,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Limit", request.limit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -4181,6 +4197,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Limit", request.limit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("Region", request.region);
         }
@@ -4239,6 +4259,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
@@ -4301,6 +4325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Limit", request.limit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("Region", request.region);
         }
@@ -4359,6 +4387,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
@@ -5384,7 +5416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>展示全局模板规则</p>
+     * <p>Queries an Anti-DDoS global mitigation policy.</p>
      * 
      * @param request DescribeL7GlobalRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5420,7 +5452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>展示全局模板规则</p>
+     * <p>Queries an Anti-DDoS global mitigation policy.</p>
      * 
      * @param request DescribeL7GlobalRuleRequest
      * @return DescribeL7GlobalRuleResponse
@@ -6200,7 +6232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the traffic data of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
+     * <p>Queries the traffic data of one or more Anti-DDoS Proxy instances.</p>
      * 
      * @param request DescribePortFlowListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6248,7 +6280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the traffic data of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
+     * <p>Queries the traffic data of one or more Anti-DDoS Proxy instances.</p>
      * 
      * @param request DescribePortFlowListRequest
      * @return DescribePortFlowListResponse
@@ -6621,6 +6653,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the scheduling rules of Sec-Traffic Manager.</p>
+     * 
      * @param request DescribeSchedulerRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSchedulerRulesResponse
@@ -6662,6 +6697,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the scheduling rules of Sec-Traffic Manager.</p>
+     * 
      * @param request DescribeSchedulerRulesRequest
      * @return DescribeSchedulerRulesResponse
      */
@@ -10781,10 +10819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      * 
      * <b>summary</b> : 
-     * <p>The ID of the instance that you want to release.</p>
-     * <blockquote>
-     * <p>You can release only expired instances. You can call the <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> operation to query the IDs and expiration status of all instances.</p>
-     * </blockquote>
+     * <p>Releases an expired Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10819,10 +10854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      * 
      * <b>summary</b> : 
-     * <p>The ID of the instance that you want to release.</p>
-     * <blockquote>
-     * <p>You can release only expired instances. You can call the <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> operation to query the IDs and expiration status of all instances.</p>
-     * </blockquote>
+     * <p>Releases an expired Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @return ReleaseInstanceResponse

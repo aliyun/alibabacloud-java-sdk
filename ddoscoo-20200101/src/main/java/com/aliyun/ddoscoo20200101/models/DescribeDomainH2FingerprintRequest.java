@@ -38,6 +38,9 @@ public class DescribeDomainH2FingerprintRequest extends TeaModel {
     @NameInMap("Limit")
     public Long limit;
 
+    @NameInMap("QueryType")
+    public String queryType;
+
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <blockquote>
@@ -78,6 +81,14 @@ public class DescribeDomainH2FingerprintRequest extends TeaModel {
     }
     public Long getLimit() {
         return this.limit;
+    }
+
+    public DescribeDomainH2FingerprintRequest setQueryType(String queryType) {
+        this.queryType = queryType;
+        return this;
+    }
+    public String getQueryType() {
+        return this.queryType;
     }
 
     public DescribeDomainH2FingerprintRequest setStartTime(Long startTime) {

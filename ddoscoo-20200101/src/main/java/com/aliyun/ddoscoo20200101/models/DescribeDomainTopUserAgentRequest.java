@@ -39,6 +39,9 @@ public class DescribeDomainTopUserAgentRequest extends TeaModel {
     @NameInMap("Limit")
     public Long limit;
 
+    @NameInMap("QueryType")
+    public String queryType;
+
     /**
      * <p>The region in which your service is deployed. Valid values:</p>
      * <ul>
@@ -93,6 +96,14 @@ public class DescribeDomainTopUserAgentRequest extends TeaModel {
     }
     public Long getLimit() {
         return this.limit;
+    }
+
+    public DescribeDomainTopUserAgentRequest setQueryType(String queryType) {
+        this.queryType = queryType;
+        return this;
+    }
+    public String getQueryType() {
+        return this.queryType;
     }
 
     public DescribeDomainTopUserAgentRequest setRegion(String region) {
