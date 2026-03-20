@@ -42,6 +42,12 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     /**
      * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
@@ -100,6 +106,22 @@ public class ListJobsRequest extends TeaModel {
     }
     public String getNamespaceSource() {
         return this.namespaceSource;
+    }
+
+    public ListJobsRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListJobsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListJobsRequest setRegionId(String regionId) {

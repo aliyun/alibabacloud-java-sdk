@@ -834,6 +834,15 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("Jobs")
         public java.util.List<ListJobsResponseBodyDataJobs> jobs;
 
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("Total")
+        public Integer total;
+
         public static ListJobsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListJobsResponseBodyData self = new ListJobsResponseBodyData();
             return TeaModel.build(map, self);
@@ -845,6 +854,30 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public java.util.List<ListJobsResponseBodyDataJobs> getJobs() {
             return this.jobs;
+        }
+
+        public ListJobsResponseBodyData setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public ListJobsResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListJobsResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

@@ -114,7 +114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The additional information that is returned.</p>
+     * <p>Deletes multiple routing policies at a time.</p>
      * 
      * @param request BatchDeleteRouteStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -160,7 +160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The additional information that is returned.</p>
+     * <p>Deletes multiple routing policies at a time.</p>
      * 
      * @param request BatchDeleteRouteStrategyRequest
      * @return BatchDeleteRouteStrategyResponse
@@ -882,7 +882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The additional information that is returned.</p>
+     * <p>Deletes an application group.</p>
      * 
      * @param request DeleteAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -926,7 +926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The additional information that is returned.</p>
+     * <p>Deletes an application group.</p>
      * 
      * @param request DeleteAppGroupRequest
      * @return DeleteAppGroupResponse
@@ -1306,7 +1306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a job.</p>
+     * <p>Disables a specified task.</p>
      * 
      * @param request DisableJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1334,7 +1334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a job.</p>
+     * <p>Disables a specified task.</p>
      * 
      * @param request DisableJobRequest
      * @return DisableJobResponse
@@ -1556,7 +1556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The configuration of the alert. The value is a JSON string. For more information, see \\<em>\\<em>the additional information about response parameters below this table\\</em>\\</em>.</p>
+     * <p>The configuration of the alert. The value is a JSON string. For more information, see \\\\<em>\\\\<em>the additional information about response parameters below this table\\\\</em>\\\\</em>.</p>
      * 
      * @param request GetAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1596,7 +1596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The configuration of the alert. The value is a JSON string. For more information, see \\<em>\\<em>the additional information about response parameters below this table\\</em>\\</em>.</p>
+     * <p>The configuration of the alert. The value is a JSON string. For more information, see \\\\<em>\\\\<em>the additional information about response parameters below this table\\\\</em>\\\\</em>.</p>
      * 
      * @param request GetAppGroupRequest
      * @return GetAppGroupResponse
