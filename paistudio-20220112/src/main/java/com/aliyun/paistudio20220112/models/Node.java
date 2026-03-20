@@ -71,7 +71,11 @@ public class Node extends TeaModel {
      * <p>2024-07-10T11:49:47Z</p>
      */
     @NameInMap("GmtCreateTime")
+    @Deprecated
     public String gmtCreateTime;
+
+    @NameInMap("GmtCreatedTime")
+    public String gmtCreatedTime;
 
     /**
      * <strong>example:</strong>
@@ -355,12 +359,21 @@ public class Node extends TeaModel {
         return this.GPUType;
     }
 
+    @Deprecated
     public Node setGmtCreateTime(String gmtCreateTime) {
         this.gmtCreateTime = gmtCreateTime;
         return this;
     }
     public String getGmtCreateTime() {
         return this.gmtCreateTime;
+    }
+
+    public Node setGmtCreatedTime(String gmtCreatedTime) {
+        this.gmtCreatedTime = gmtCreatedTime;
+        return this;
+    }
+    public String getGmtCreatedTime() {
+        return this.gmtCreatedTime;
     }
 
     public Node setGmtExpiredTime(String gmtExpiredTime) {
