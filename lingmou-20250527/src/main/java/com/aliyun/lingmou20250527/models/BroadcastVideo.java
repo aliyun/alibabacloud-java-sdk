@@ -4,30 +4,62 @@ package com.aliyun.lingmou20250527.models;
 import com.aliyun.tea.*;
 
 public class BroadcastVideo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://online-avatar-property.oss-cn-beijing.aliyuncs.com/aigc_material/OUTPUT_BROADCAST_SHORT_VIDEO/Mt.CQEYXYQW4MQU2/alignment.json">https://online-avatar-property.oss-cn-beijing.aliyuncs.com/aigc_material/OUTPUT_BROADCAST_SHORT_VIDEO/Mt.CQEYXYQW4MQU2/alignment.json</a></p>
+     */
     @NameInMap("alignmentFileURL")
     public String alignmentFileURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://online-avatar-property.oss-cn-beijing.aliyuncs.com/aigc_material/OUTPUT_BROADCAST_SHORT_VIDEO/Mt.CQEYXYQW4MQU2/result.srt">https://online-avatar-property.oss-cn-beijing.aliyuncs.com/aigc_material/OUTPUT_BROADCAST_SHORT_VIDEO/Mt.CQEYXYQW4MQU2/result.srt</a></p>
+     */
     @NameInMap("captionURL")
     public String captionURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://online-avatar-property.oss-cn-beijing.aliyuncs.com/aigc_material/OUTPUT_BROADCAST_SHORT_VIDEO/Mt.CQEYXYQW4MQU2/cover.jpg">https://online-avatar-property.oss-cn-beijing.aliyuncs.com/aigc_material/OUTPUT_BROADCAST_SHORT_VIDEO/Mt.CQEYXYQW4MQU2/cover.jpg</a></p>
+     */
     @NameInMap("coverURL")
     public String coverURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-11-28T13:40:33</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>M1k3So6n9IlrDV69sr3jDa3g</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-11-28T13:41:31</p>
+     */
     @NameInMap("modifiedTime")
     public String modifiedTime;
 
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://online-avatar-property.oss-cn-beijing.aliyuncs.com/aigc_material/OUTPUT_BROADCAST_SHORT_VIDEO/Mt.CQEYXYQW4MQU2/result.mp4">https://online-avatar-property.oss-cn-beijing.aliyuncs.com/aigc_material/OUTPUT_BROADCAST_SHORT_VIDEO/Mt.CQEYXYQW4MQU2/result.mp4</a></p>
+     */
     @NameInMap("videoURL")
     public String videoURL;
 

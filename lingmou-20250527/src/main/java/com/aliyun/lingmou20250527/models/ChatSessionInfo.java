@@ -4,12 +4,24 @@ package com.aliyun.lingmou20250527.models;
 import com.aliyun.tea.*;
 
 public class ChatSessionInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1755680969</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567</p>
+     */
     @NameInMap("mainAccountId")
     public Long mainAccountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7239F9E5-A4DB-55BA-B701-0CE47DBDB0A8</p>
+     */
     @NameInMap("sessionId")
     public String sessionId;
 

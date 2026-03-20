@@ -4,21 +4,41 @@ package com.aliyun.lingmou20250527.models;
 import com.aliyun.tea.*;
 
 public class BroadcastAudio extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("audioLength")
     public Integer audioLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-01-22T01:59:03</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>M1Ju6XhHog_e-lSeb80Slp9g</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-01-22T01:59:03</p>
+     */
     @NameInMap("modifiedTime")
     public String modifiedTime;
 
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("status")
     public String status;
 

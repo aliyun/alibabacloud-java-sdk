@@ -4,12 +4,20 @@ package com.aliyun.lingmou20250527.models;
 import com.aliyun.tea.*;
 
 public class TemplateVariable extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("properties")
     public Object properties;
 
+    /**
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
     @NameInMap("type")
     public String type;
 

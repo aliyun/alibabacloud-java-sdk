@@ -4,12 +4,24 @@ package com.aliyun.lingmou20250527.models;
 import com.aliyun.tea.*;
 
 public class BroadcastTemplate extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2025-11-28T10:11:28</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BS1b2WNnRMu4ouRzT4clY9Jhg</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-11-28T11:11:28</p>
+     */
     @NameInMap("modifiedTime")
     public String modifiedTime;
 

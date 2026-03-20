@@ -65,6 +65,9 @@ public class CreateBroadcastVideoFromTemplateRequest extends TeaModel {
         @NameInMap("fps")
         public Integer fps;
 
+        @NameInMap("languageHints")
+        public java.util.List<String> languageHints;
+
         /**
          * <strong>example:</strong>
          * <p>720p</p>
@@ -90,6 +93,14 @@ public class CreateBroadcastVideoFromTemplateRequest extends TeaModel {
         }
         public Integer getFps() {
             return this.fps;
+        }
+
+        public CreateBroadcastVideoFromTemplateRequestVideoOptions setLanguageHints(java.util.List<String> languageHints) {
+            this.languageHints = languageHints;
+            return this;
+        }
+        public java.util.List<String> getLanguageHints() {
+            return this.languageHints;
         }
 
         public CreateBroadcastVideoFromTemplateRequestVideoOptions setResolution(String resolution) {
