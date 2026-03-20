@@ -4,30 +4,66 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class Resource extends TeaModel {
+    /**
+     * <p>The information about the clusters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The total number of CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64</p>
+     */
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
     @NameInMap("CpuUsed")
     public Integer cpuUsed;
 
+    /**
+     * <p>The time when the instance was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-02-26T17:52:49Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The additional information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtraData")
     public java.util.Map<String, ?> extraData;
 
     @NameInMap("Features")
     public java.util.List<String> features;
 
+    /**
+     * <p>The total number of GPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GpuCount")
     public Integer gpuCount;
 
     @NameInMap("GpuUsed")
     public Float gpuUsed;
 
+    /**
+     * <p>The total number of instances. It is equal to the number of subscription instances plus the number of pay-as-you-go instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
@@ -46,30 +82,93 @@ public class Resource extends TeaModel {
     @NameInMap("MemoryUsed")
     public Integer memoryUsed;
 
+    /**
+     * <p>The latest message about the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Resource is ready</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The number of pay-as-you-go instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PostPaidInstanceCount")
     public Integer postPaidInstanceCount;
 
+    /**
+     * <p>The number of subscription instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PrePaidInstanceCount")
     public Integer prePaidInstanceCount;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-r-asdasdasd</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <p>The type of the resource group. Valid values:</p>
+     * <ul>
+     * <li>Dedicated: the dedicated resource group.</li>
+     * <li>SelfManaged: the self-managed resource group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Dedicated</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The status of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ResouceReady</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The time when the instance was last updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-02-26T19:52:49Z</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The vendor of the resource group instances.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>ECS</li>
+     * <li>BareMetal</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("Vendor")
     public String vendor;
 

@@ -4,69 +4,198 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ResourceInstance extends TeaModel {
+    /**
+     * <p>The system architecture of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arm64</p>
+     */
     @NameInMap("Arch")
     public String arch;
 
+    /**
+     * <p>Indicates whether auto-renewal is enabled for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenewal")
     public Boolean autoRenewal;
 
+    /**
+     * <p>The billing method of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The time when the instance was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-07-05T22:51:32Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The time when the instance expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-08-05T22:51:32Z</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The number of CPU cores for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("InstanceCpuCount")
     public Integer instanceCpuCount;
 
+    /**
+     * <p>The number of GPUs for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("InstanceGpuCount")
     public Integer instanceGpuCount;
 
+    /**
+     * <p>The GPU memory size of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0G</p>
+     */
     @NameInMap("InstanceGpuMemory")
     public String instanceGpuMemory;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-i-1800z74n30kao****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IP address of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11.227.XX.XX</p>
+     */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
+    /**
+     * <p>The memory size of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8192M</p>
+     */
     @NameInMap("InstanceMemory")
     public String instanceMemory;
 
+    /**
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas01122713204*****</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     @NameInMap("InstancePhase")
     public String instancePhase;
 
+    /**
+     * <p>The instance status.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Ready-SchedulingDisabled</li>
+     * <li>Ready</li>
+     * <li>NotReady</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Ready</p>
+     */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    /**
+     * <p>The system disk size of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("InstanceSystemDiskSize")
     public Integer instanceSystemDiskSize;
 
+    /**
+     * <p>The IP address of the instance in the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.xx.xx</p>
+     */
     @NameInMap("InstanceTenantIp")
     public String instanceTenantIp;
 
+    /**
+     * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.s6-c1m2.xlarge</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The number of CPU cores used by the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.4</p>
+     */
     @NameInMap("InstanceUsedCpu")
     public Float instanceUsedCpu;
 
+    /**
+     * <p>The number of GPUs used by the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("InstanceUsedGpu")
     public Float instanceUsedGpu;
 
+    /**
+     * <p>The size of the GPU memory used by the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>470M</p>
+     */
     @NameInMap("InstanceUsedGpuMemory")
     public String instanceUsedGpuMemory;
 
+    /**
+     * <p>The size of the memory used by the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000M</p>
+     */
     @NameInMap("InstanceUsedMemory")
     public String instanceUsedMemory;
 
+    /**
+     * <p>The instance tags.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<ResourceInstanceLabels> labels;
 
@@ -76,12 +205,30 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("LastCordonReason")
     public String lastCordonReason;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-r-xxxxx</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The ID of the zone to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
+     */
     @NameInMap("Zone")
     public String zone;
 
@@ -307,9 +454,21 @@ public class ResourceInstance extends TeaModel {
     }
 
     public static class ResourceInstanceLabels extends TeaModel {
+        /**
+         * <p>The tag key of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("LabelKey")
         public String labelKey;
 
+        /**
+         * <p>The tag value of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("LabelValue")
         public String labelValue;
 

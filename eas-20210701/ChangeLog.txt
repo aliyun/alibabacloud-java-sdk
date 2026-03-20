@@ -1,3 +1,7 @@
+2026-03-20 Version: 7.5.0
+- Support API CreateServiceInstanceToken.
+
+
 2026-01-30 Version: 7.4.3
 - Update API UpdateResourceInstance: add request parameters body.Reason.
 

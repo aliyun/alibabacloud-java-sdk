@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Instance extends TeaModel {
     /**
+     * <p>The current hourly price of the spot instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.444</p>
      */
@@ -15,6 +17,8 @@ public class Instance extends TeaModel {
     public Boolean detached;
 
     /**
+     * <p>The IP address of the instance in the user-created VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.1.100</p>
      */
@@ -22,28 +26,62 @@ public class Instance extends TeaModel {
     public String externalIP;
 
     /**
+     * <p>The port number of the instance in the user-created VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>8080</p>
      */
     @NameInMap("ExternalInstancePort")
     public Integer externalInstancePort;
 
+    /**
+     * <p>The IP address of the host where the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11.0.XX.XX</p>
+     */
     @NameInMap("HostIP")
     public String hostIP;
 
+    /**
+     * <p>The name of the host where the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>smart-scene-cls-854dbdc99d-****</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
+    /**
+     * <p>The internal IP address of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.17.0.17</p>
+     */
     @NameInMap("InnerIP")
     public String innerIP;
 
+    /**
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo-5fc8946767-v****</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The network port of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
     @NameInMap("InstancePort")
     public Integer instancePort;
 
     /**
+     * <p>The instance specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.c7.large</p>
      */
@@ -57,6 +95,8 @@ public class Instance extends TeaModel {
     public Boolean isReplica;
 
     /**
+     * <p>Indicates whether the instance is a spot instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -64,28 +104,53 @@ public class Instance extends TeaModel {
     public Boolean isSpot;
 
     /**
+     * <p>Indicates whether the instance is isolated.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("Isolated")
     public Boolean isolated;
 
+    /**
+     * <p>The last state of the instance.</p>
+     */
     @NameInMap("LastState")
     public java.util.List<java.util.Map<String, ?>> lastState;
 
+    /**
+     * <p>The namespace of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
+     * <p>The original hourly price of the spot instance before a discount is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.2</p>
      */
     @NameInMap("OriginalAmount")
     public Float originalAmount;
 
+    /**
+     * <p>The number of processes that have started for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ReadyProcesses")
     public Integer readyProcesses;
 
+    /**
+     * <p>The reason for which the instance is in the current state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
@@ -93,50 +158,99 @@ public class Instance extends TeaModel {
     public String replicaName;
 
     /**
+     * <p>The type of the resource group to which the instance belongs. Valid values: PublicResource and PrivateResource.</p>
+     * 
      * <strong>example:</strong>
      * <p>PublicResource</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The number of times for which the instance is restarted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RestartCount")
     public Integer restartCount;
 
     /**
+     * <p>The service role of the instance. Valid values: Queue, DataLoader, and Standard.</p>
+     * 
      * <strong>example:</strong>
      * <p>Standard</p>
      */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>The time when the instance was started. This parameter is deprecated. StartTime is used instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-27T09:46:05Z</p>
+     */
     @NameInMap("StartAt")
     @Deprecated
     public String startAt;
 
+    /**
+     * <p>The time when the instance was started.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-27T09:46:05Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The current state of the instance.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Terminating</li>
+     * <li>Succeeded</li>
+     * <li>Unknown</li>
+     * <li>Failed</li>
+     * <li>Running</li>
+     * <li>Pending</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
     /**
+     * <p>The IP address of the host in the VPC.</p>
+     * 
      * <strong>example:</strong>
-     * <p>192.168.0.39</p>
+     * <p>192.168.xx.xx</p>
      */
     @NameInMap("TenantHostIP")
     public String tenantHostIP;
 
     /**
+     * <p>The IP address of the instance in the VPC.</p>
+     * 
      * <strong>example:</strong>
-     * <p>192.168.0.39</p>
+     * <p>192.168.xx.xx</p>
      */
     @NameInMap("TenantInstanceIP")
     public String tenantInstanceIP;
 
+    /**
+     * <p>The total number of processes that the instance contains.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalProcesses")
     public Integer totalProcesses;
 
     /**
+     * <p>The zone to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai-a</p>
      */

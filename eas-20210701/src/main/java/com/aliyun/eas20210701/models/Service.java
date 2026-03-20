@@ -4,39 +4,99 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class Service extends TeaModel {
+    /**
+     * <p>The token that is used to access the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MzJiMDI5MDliODc0MTlkYmI0ZDhlYmExYjczYTIyZTE3Zm********</p>
+     */
     @NameInMap("AccessToken")
     public String accessToken;
 
+    /**
+     * <p>The application service configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ModelStorage&quot;:&quot;oss&quot;}</p>
+     */
     @NameInMap("AppConfig")
     public String appConfig;
 
+    /**
+     * <p>The name of the application service specification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>llama_7b_fp16</p>
+     */
     @NameInMap("AppSpecName")
     public String appSpecName;
 
+    /**
+     * <p>The application service type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LLM</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <p>The application service version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
     @NameInMap("AutoscalerEnabled")
     public Boolean autoscalerEnabled;
 
+    /**
+     * <p>The user ID (UID) of the Alibaba Cloud account that is used to create the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20123*******</p>
+     */
     @NameInMap("CallerUid")
     public String callerUid;
 
+    /**
+     * <p>The number of CPU cores that you applied for each instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Cpu")
     public Integer cpu;
 
+    /**
+     * <p>The time when the service was created. The time is displayed in the UTC RFC3339 format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-29T11:13:20Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
     @NameInMap("CronscalerEnabled")
     public Boolean cronscalerEnabled;
 
+    /**
+     * <p>The version of the model that is running.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentVersion")
     public Integer currentVersion;
 
+    /**
+     * <p>The additional information about the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;blue_green_services\&quot;:[\&quot;test\&quot;,\&quot;testxxxx\&quot;]}</p>
+     */
     @NameInMap("ExtraData")
     public String extraData;
 
@@ -46,117 +106,358 @@ public class Service extends TeaModel {
     @NameInMap("GPUMemory")
     public Integer GPUMemory;
 
+    /**
+     * <p>The ID of the dedicated gateway for the service. This parameter is available only for services that are associated with dedicated gateways.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-xxxxxx</p>
+     */
     @NameInMap("Gateway")
     public String gateway;
 
+    /**
+     * <p>The number of GPUs that you applied for each instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Gpu")
     public Integer gpu;
 
+    /**
+     * <p>The data image of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-shanghai.aliyuncs.com/eas/echo_cn-shanghai:v0.0.1-20210129111320</p>
+     */
     @NameInMap("Image")
     public String image;
 
     @NameInMap("InstanceCountInResource")
     public ServiceInstanceCountInResource instanceCountInResource;
 
+    /**
+     * <p>The public endpoint of the service. This parameter is returned only in the DescribeService API operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
+     */
     @NameInMap("InternetEndpoint")
     public String internetEndpoint;
 
+    /**
+     * <p>The internal endpoint of the service. This parameter is returned only in the DescribeService API operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
+     */
     @NameInMap("IntranetEndpoint")
     public String intranetEndpoint;
 
+    /**
+     * <p>The labels.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<ServiceLabels> labels;
 
+    /**
+     * <p>The latest version of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LatestVersion")
     public Integer latestVersion;
 
+    /**
+     * <p>The memory size that you applied for each instance. Unit: MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>The service summary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Service start successfully</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The namespace in which the service resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>echo</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The UID of the Alibaba Cloud account that is used to create the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11234*******</p>
+     */
     @NameInMap("ParentUid")
     public String parentUid;
 
+    /**
+     * <p>The number of instances for the pending service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PendingInstance")
     public Integer pendingInstance;
 
+    /**
+     * <p>The quota ID for the service. This parameter is available only for services deployed by using Lingjun resource quotas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quotaxxxxx</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The reason for which the service is in the current state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The region in which the service resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource group to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-r-xxxxxxx</p>
+     */
     @NameInMap("Resource")
     public String resource;
 
+    /**
+     * <p>The alias of the resource group to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_resource</p>
+     */
     @NameInMap("ResourceAlias")
     public String resourceAlias;
 
     @NameInMap("ResourceBurstable")
     public Boolean resourceBurstable;
 
+    /**
+     * <p>The service role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Queue</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>The additional attributes of the service role. This parameter is returned only in the DescribeService API operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;{\&quot;ApproxMaxLength\&quot;:null,\&quot;Length\&quot;:null,\&quot;MaxPayloadBytes\&quot;:null}&quot;</p>
+     */
     @NameInMap("RoleAttrs")
     public String roleAttrs;
 
+    /**
+     * <p>The number of instances for the running service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RunningInstance")
     public Integer runningInstance;
 
+    /**
+     * <p>The security lock of the service.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>all: forbids all operations.</li>
+     * <li>dangerous: forbids the operation of deleting or stopping the service.</li>
+     * <li>none: forbids no operations.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>dangerous</p>
+     */
     @NameInMap("SafetyLock")
     public String safetyLock;
 
+    /**
+     * <p>The public endpoint that is used in the asynchronization request of the service. This parameter is returned only in the DescribeService API operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/async_path.echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/async_path.echo</a></p>
+     */
     @NameInMap("SecondaryInternetEndpoint")
     public String secondaryInternetEndpoint;
 
+    /**
+     * <p>The internal endpoint that is used in the asynchronization request of the service. This parameter is returned only in the DescribeService API operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/async_path.echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/async_path.echo</a></p>
+     */
     @NameInMap("SecondaryIntranetEndpoint")
     public String secondaryIntranetEndpoint;
 
+    /**
+     * <p>The service configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{        &quot;metadata&quot;: {             &quot;cpu&quot;:1,             &quot;instance&quot;:1,             &quot;memory&quot;:1024           },         &quot;name&quot;:&quot;echo&quot;,         &quot;processor_entry&quot;:&quot;libecho.so&quot;,         &quot;processor_path&quot;:&quot;<a href="http://oss-cn-hangzhou-zmf.aliyuncs.com/059247/echo_processor_release.tar.gz">http://oss-cn-hangzhou-zmf.aliyuncs.com/059247/echo_processor_release.tar.gz</a>&quot;,         &quot;processor_type&quot;:&quot;cpp&quot;     }</p>
+     */
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
+    /**
+     * <p>The group to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_group</p>
+     */
     @NameInMap("ServiceGroup")
     public String serviceGroup;
 
+    /**
+     * <p>The unique ID of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-m-xxasdat</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>echo</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The service ID. ServiceUid has the same meaning as ServiceId, and the values of the two parameters are the same.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-m-xxasdat</p>
+     */
     @NameInMap("ServiceUid")
     public String serviceUid;
 
+    /**
+     * <p>The source from which the service deployment request is initiated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dsw</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The service status.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Creating</li>
+     * <li>Deploying</li>
+     * <li>Stopped</li>
+     * <li>Failed</li>
+     * <li>Updating</li>
+     * <li>Stopping</li>
+     * <li>Waiting</li>
+     * <li>HotUpdate</li>
+     * <li>Starting</li>
+     * <li>DeleteFailed</li>
+     * <li>Running</li>
+     * <li>Scaling</li>
+     * <li>Pending</li>
+     * <li>Deleting</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The total number of instances for the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalInstance")
     public Integer totalInstance;
 
+    /**
+     * <p>The traffic state.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>standalone: independent traffic.</li>
+     * <li>grouping: grouped traffic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standalone</p>
+     */
     @NameInMap("TrafficState")
     public String trafficState;
 
+    /**
+     * <p>The time when the service was updated. The time is displayed in the UTC RFC3339 format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-29T11:13:20Z</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The weight of the service in canary release.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Weight")
     public Integer weight;
 
+    /**
+     * <p>The ID of the workspace to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123445</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -623,9 +924,21 @@ public class Service extends TeaModel {
     }
 
     public static class ServiceLabels extends TeaModel {
+        /**
+         * <p>The label key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("LabelKey")
         public String labelKey;
 
+        /**
+         * <p>The label value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("LabelValue")
         public String labelValue;
 

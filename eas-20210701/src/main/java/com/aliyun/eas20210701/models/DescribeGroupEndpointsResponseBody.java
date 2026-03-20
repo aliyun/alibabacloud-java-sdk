@@ -75,21 +75,66 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupEndpointsResponseBodyEndpoints extends TeaModel {
+        /**
+         * <p>The backend access ID, which varies based on the value of the EndpointType parameter.</p>
+         * <ul>
+         * <li>If you set EndpointType to DefaultGateway, the value of this parameter is default.</li>
+         * <li>If you set EndpointType to PrivateGateway, the value of this parameter is the ID of the dedicated gateway.</li>
+         * <li>If you set EndpointType to Nlb, the value of this parameter is the ID of the NLB instance.</li>
+         * <li>If you set EndpointType to Nacos, the value of this parameter is the ID of the Nacos instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-26340kjxjx8l3r****</p>
+         */
         @NameInMap("BackendId")
         public String backendId;
 
+        /**
+         * <p>The service endpoint type. Valid values:</p>
+         * <ul>
+         * <li>DefaultGateway: the shared gateway.</li>
+         * <li>PrivateGateway: the dedicated gateway.</li>
+         * <li>Nlb: Associate the service with the Network Load Balancer (NLB) instance.</li>
+         * <li>Nacos: Associate the service with the Nacos instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateGateway</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The full endpoint.</p>
+         */
         @NameInMap("InternetEndpoints")
         public java.util.List<String> internetEndpoints;
 
+        /**
+         * <p>The full endpoint.</p>
+         */
         @NameInMap("IntranetEndpoints")
         public java.util.List<String> intranetEndpoints;
 
+        /**
+         * <p>The path type. Valid values:</p>
+         * <ul>
+         * <li>Group: the path of the service group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Group</p>
+         */
         @NameInMap("PathType")
         public String pathType;
 
+        /**
+         * <p>The port number. This parameter takes effect only when you associate the service with an NLB or Nacos instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
         @NameInMap("Port")
         public Integer port;
 

@@ -75,9 +75,17 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceEndpointsResponseBodyEndpoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>nlb-5q4sp7u6oorkha****</p>
+         */
         @NameInMap("BackendId")
         public String backendId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Nlb</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
@@ -87,9 +95,17 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
         @NameInMap("IntranetEndpoints")
         public java.util.List<String> intranetEndpoints;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Service</p>
+         */
         @NameInMap("PathType")
         public String pathType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9090</p>
+         */
         @NameInMap("Port")
         public Integer port;
 

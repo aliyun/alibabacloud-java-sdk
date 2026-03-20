@@ -1006,6 +1006,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建连接服务的token</p>
+     * 
+     * @param request CreateServiceInstanceTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServiceInstanceTokenResponse
+     */
+    public CreateServiceInstanceTokenResponse createServiceInstanceTokenWithOptions(String ClusterId, String ServiceName, String InstanceName, CreateServiceInstanceTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actionType)) {
+            query.put("ActionType", request.actionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerName)) {
+            query.put("WorkerName", request.workerName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServiceInstanceToken"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceName) + "/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceName) + "/token"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceInstanceTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建连接服务的token</p>
+     * 
+     * @param request CreateServiceInstanceTokenRequest
+     * @return CreateServiceInstanceTokenResponse
+     */
+    public CreateServiceInstanceTokenResponse createServiceInstanceToken(String ClusterId, String ServiceName, String InstanceName, CreateServiceInstanceTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createServiceInstanceTokenWithOptions(ClusterId, ServiceName, InstanceName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Enables the traffic mirroring feature for a service. After the feature is enabled, requests received by the service can be mirrored to another service.</p>
      * 
      * @param request CreateServiceMirrorRequest
@@ -1280,7 +1331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网关内网访问端点</p>
+     * <p>Deletes an internal endpoint of a private gateway.</p>
      * 
      * @param request DeleteGatewayIntranetLinkedVpcRequest
      * @param headers map
@@ -1318,7 +1369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网关内网访问端点</p>
+     * <p>Deletes an internal endpoint of a private gateway.</p>
      * 
      * @param request DeleteGatewayIntranetLinkedVpcRequest
      * @return DeleteGatewayIntranetLinkedVpcResponse
