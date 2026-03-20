@@ -96,87 +96,39 @@ public class ListConnectorsResponseBody extends TeaModel {
     }
 
     public static class ListConnectorsResponseBodyListConnector extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>[\&quot;field1\&quot;,\&quot;field2\&quot;]</p>
-         */
         @NameInMap("ColumnFields")
         public String columnFields;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{\&quot;Table\&quot;:\&quot;r3\&quot;,\&quot;Endpoint\&quot;:\&quot;<a href="https://Device-data.cn-beijing.ots-internal.aliyuncs.com%5C%5C%22,%5C%5C%22Instance%5C%5C%22:%5C%5C%22Device-data%5C%5C%22,%5C%5C%22WriteMode%5C%5C%22:%5C%5C%22PUT%5C%5C%22,%5C%5C%22AuthMode%5C%5C%22:%5C%5C%22STS%5C%5C%22%7D">https://Device-data.cn-beijing.ots-internal.aliyuncs.com\\&quot;,\\&quot;Instance\\&quot;:\\&quot;Device-data\\&quot;,\\&quot;WriteMode\\&quot;:\\&quot;PUT\\&quot;,\\&quot;AuthMode\\&quot;:\\&quot;STS\\&quot;}</a></p>
-         */
         @NameInMap("Config")
         public String config;
 
-        /**
-         * <strong>example:</strong>
-         * <p>fa44384c-0ac5-4d3e-8acd-76e18636ab10</p>
-         */
         @NameInMap("ConnectorId")
         public String connectorId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1724041098000</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1696648921408952</p>
-         */
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-04 16:45:00</p>
-         */
         @NameInMap("DoneTime")
         public String doneTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test_project</p>
-         */
         @NameInMap("ProjectName")
         public String projectName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>RUNNING</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1745824636429WZ2EE</p>
-         */
         @NameInMap("SubscriptionId")
         public String subscriptionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test_topic</p>
-         */
         @NameInMap("TopicName")
         public String topicName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SINK_ODPS</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1708171905000</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

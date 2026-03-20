@@ -99,87 +99,39 @@ public class ListTopicsResponseBody extends TeaModel {
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1753346106000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>276887103073464052</p>
-         */
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("EnableSchemaRegistry")
         public String enableSchemaRegistry;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ExpandMode")
         public String expandMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Lifecycle")
         public Integer lifecycle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>poc_test</p>
-         */
         @NameInMap("ProjectName")
         public String projectName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>[{\&quot;Type\&quot;:\&quot;STRING\&quot;,\&quot;AllowNull\&quot;:true,\&quot;Name\&quot;:\&quot;str\&quot;},{\&quot;Type\&quot;:\&quot;STRING\&quot;,\&quot;AllowNull\&quot;:true,\&quot;Name\&quot;:\&quot;dt\&quot;}]</p>
-         */
         @NameInMap("RecordSchema")
         public String recordSchema;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TUPLE</p>
-         */
         @NameInMap("RecordType")
         public String recordType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ShardCount")
         public Integer shardCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10000</p>
-         */
         @NameInMap("Storage")
         public Long storage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ods_bio_safety_env_disinfection</p>
-         */
         @NameInMap("TopicName")
         public String topicName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1753346106000</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

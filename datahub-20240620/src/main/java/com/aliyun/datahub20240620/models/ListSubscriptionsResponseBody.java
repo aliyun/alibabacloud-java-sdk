@@ -96,73 +96,33 @@ public class ListSubscriptionsResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionsResponseBodyListSubscription extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>test_application_name</p>
-         */
         @NameInMap("Application")
         public String application;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test_comment</p>
-         */
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1708171905000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1048133943212399</p>
-         */
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test_project</p>
-         */
         @NameInMap("ProjectName")
         public String projectName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("State")
         public Integer state;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1745824636429WZ2EE</p>
-         */
         @NameInMap("SubscriptionId")
         public String subscriptionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test_topic</p>
-         */
         @NameInMap("TopicName")
         public String topicName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>USER</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1708171905000</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

@@ -99,31 +99,15 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1708171905000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1048133943212399</p>
-         */
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>poc_test</p>
-         */
         @NameInMap("ProjectName")
         public String projectName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1708171905000</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
