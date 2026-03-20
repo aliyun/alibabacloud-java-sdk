@@ -70,6 +70,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("runId", request.runId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.timestamp)) {
+            body.put("timestamp", request.timestamp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
             body.put("userId", request.userId);
         }

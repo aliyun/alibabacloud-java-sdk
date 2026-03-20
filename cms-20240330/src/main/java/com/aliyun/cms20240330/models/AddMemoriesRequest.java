@@ -58,6 +58,13 @@ public class AddMemoriesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>12312314214</p>
+     */
+    @NameInMap("timestamp")
+    public Long timestamp;
+
+    /**
+     * <strong>example:</strong>
      * <p>test_user_001</p>
      */
     @NameInMap("userId")
@@ -130,6 +137,14 @@ public class AddMemoriesRequest extends TeaModel {
     }
     public String getRunId() {
         return this.runId;
+    }
+
+    public AddMemoriesRequest setTimestamp(Long timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    public Long getTimestamp() {
+        return this.timestamp;
     }
 
     public AddMemoriesRequest setUserId(String userId) {

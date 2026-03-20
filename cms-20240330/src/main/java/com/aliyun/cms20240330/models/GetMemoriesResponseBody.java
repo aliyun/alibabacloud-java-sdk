@@ -116,6 +116,13 @@ public class GetMemoriesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>test_user_001</p>
+         */
+        @NameInMap("appId")
+        public String appId;
+
+        /**
+         * <strong>example:</strong>
          * <p>1747623093939</p>
          */
         @NameInMap("createdAt")
@@ -203,6 +210,14 @@ public class GetMemoriesResponseBody extends TeaModel {
         }
         public String getAgentId() {
             return this.agentId;
+        }
+
+        public GetMemoriesResponseBodyResults setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public GetMemoriesResponseBodyResults setCreatedAt(String createdAt) {

@@ -6,6 +6,20 @@ import com.aliyun.tea.*;
 public class GetMemoryResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>test_user_001</p>
+     */
+    @NameInMap("agentId")
+    public String agentId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>test_user_001</p>
+     */
+    @NameInMap("appId")
+    public String appId;
+
+    /**
+     * <strong>example:</strong>
      * <p>1751595283143</p>
      */
     @NameInMap("createdAt")
@@ -69,14 +83,44 @@ public class GetMemoryResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>test_user_001</p>
+     */
+    @NameInMap("runId")
+    public String runId;
+
+    /**
+     * <strong>example:</strong>
      * <p>1744428159434</p>
      */
     @NameInMap("updatedAt")
     public String updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_user_001</p>
+     */
+    @NameInMap("userId")
+    public String userId;
+
     public static GetMemoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMemoryResponseBody self = new GetMemoryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMemoryResponseBody setAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    public GetMemoryResponseBody setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
     public GetMemoryResponseBody setCreatedAt(String createdAt) {
@@ -151,12 +195,28 @@ public class GetMemoryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetMemoryResponseBody setRunId(String runId) {
+        this.runId = runId;
+        return this;
+    }
+    public String getRunId() {
+        return this.runId;
+    }
+
     public GetMemoryResponseBody setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     public String getUpdatedAt() {
         return this.updatedAt;
+    }
+
+    public GetMemoryResponseBody setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }
