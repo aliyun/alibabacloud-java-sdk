@@ -336,6 +336,9 @@ public class CreateServerGroupRequest extends TeaModel {
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
+        @NameInMap("HealthCheckExp")
+        public String healthCheckExp;
+
         /**
          * <p>The HTTP status codes that the system returns for health checks.</p>
          */
@@ -380,6 +383,9 @@ public class CreateServerGroupRequest extends TeaModel {
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
+
+        @NameInMap("HealthCheckReq")
+        public String healthCheckReq;
 
         /**
          * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
@@ -440,6 +446,14 @@ public class CreateServerGroupRequest extends TeaModel {
             return this.healthCheckEnabled;
         }
 
+        public CreateServerGroupRequestHealthCheckConfig setHealthCheckExp(String healthCheckExp) {
+            this.healthCheckExp = healthCheckExp;
+            return this;
+        }
+        public String getHealthCheckExp() {
+            return this.healthCheckExp;
+        }
+
         public CreateServerGroupRequestHealthCheckConfig setHealthCheckHttpCode(java.util.List<String> healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
             return this;
@@ -470,6 +484,14 @@ public class CreateServerGroupRequest extends TeaModel {
         }
         public String getHealthCheckProtocol() {
             return this.healthCheckProtocol;
+        }
+
+        public CreateServerGroupRequestHealthCheckConfig setHealthCheckReq(String healthCheckReq) {
+            this.healthCheckReq = healthCheckReq;
+            return this;
+        }
+        public String getHealthCheckReq() {
+            return this.healthCheckReq;
         }
 
         public CreateServerGroupRequestHealthCheckConfig setHealthyThreshold(Integer healthyThreshold) {

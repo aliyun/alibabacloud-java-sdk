@@ -195,6 +195,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
+        @NameInMap("HealthCheckExp")
+        public String healthCheckExp;
+
         /**
          * <p>The HTTP status codes that the system returns for health checks.</p>
          */
@@ -237,6 +240,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
+
+        @NameInMap("HealthCheckReq")
+        public String healthCheckReq;
 
         /**
          * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <strong>fail</strong> to <strong>success</strong>.</p>
@@ -295,6 +301,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             return this.healthCheckEnabled;
         }
 
+        public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig setHealthCheckExp(String healthCheckExp) {
+            this.healthCheckExp = healthCheckExp;
+            return this;
+        }
+        public String getHealthCheckExp() {
+            return this.healthCheckExp;
+        }
+
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig setHealthCheckHttpCode(java.util.List<String> healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
             return this;
@@ -325,6 +339,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public String getHealthCheckProtocol() {
             return this.healthCheckProtocol;
+        }
+
+        public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig setHealthCheckReq(String healthCheckReq) {
+            this.healthCheckReq = healthCheckReq;
+            return this;
+        }
+        public String getHealthCheckReq() {
+            return this.healthCheckReq;
         }
 
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig setHealthyThreshold(Integer healthyThreshold) {

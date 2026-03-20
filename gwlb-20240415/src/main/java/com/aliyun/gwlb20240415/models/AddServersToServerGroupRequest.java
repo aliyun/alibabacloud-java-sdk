@@ -43,7 +43,7 @@ public class AddServersToServerGroupRequest extends TeaModel {
     /**
      * <p>The backend servers that you want to add.</p>
      * <blockquote>
-     * <p>You can add at most 200 backend servers in each call.</p>
+     * <p> You can add up to 200 backend servers in each call.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -103,7 +103,7 @@ public class AddServersToServerGroupRequest extends TeaModel {
         /**
          * <p>The backend server ID.</p>
          * <ul>
-         * <li>If the server group is of the <strong>Instance</strong> type, set this parameter to the IDs of servers of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+         * <li>If the server group is of the <strong>Instance</strong> type, set this parameter to the IDs of resources of the <strong>Ecs</strong>, <strong>Eni</strong>, <strong>Eci</strong> type.</li>
          * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
          * </ul>
          * <p>This parameter is required.</p>
