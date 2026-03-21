@@ -41,6 +41,9 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     @NameInMap("TotalUsedTime")
     public Long totalUsedTime;
 
+    @NameInMap("TotalUsedTimeDecimal")
+    public String totalUsedTimeDecimal;
+
     public static DescribePackageDeductionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePackageDeductionsResponseBody self = new DescribePackageDeductionsResponseBody();
         return TeaModel.build(map, self);
@@ -100,6 +103,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     }
     public Long getTotalUsedTime() {
         return this.totalUsedTime;
+    }
+
+    public DescribePackageDeductionsResponseBody setTotalUsedTimeDecimal(String totalUsedTimeDecimal) {
+        this.totalUsedTimeDecimal = totalUsedTimeDecimal;
+        return this;
+    }
+    public String getTotalUsedTimeDecimal() {
+        return this.totalUsedTimeDecimal;
     }
 
     public static class DescribePackageDeductionsResponseBodyDeductions extends TeaModel {
@@ -201,6 +212,9 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
          */
         @NameInMap("UsedTime")
         public Long usedTime;
+
+        @NameInMap("UsedTimeDecimal")
+        public String usedTimeDecimal;
 
         @NameInMap("UsedTimeWithScale")
         public Long usedTimeWithScale;
@@ -344,6 +358,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         }
         public Long getUsedTime() {
             return this.usedTime;
+        }
+
+        public DescribePackageDeductionsResponseBodyDeductions setUsedTimeDecimal(String usedTimeDecimal) {
+            this.usedTimeDecimal = usedTimeDecimal;
+            return this;
+        }
+        public String getUsedTimeDecimal() {
+            return this.usedTimeDecimal;
         }
 
         public DescribePackageDeductionsResponseBodyDeductions setUsedTimeWithScale(Long usedTimeWithScale) {
