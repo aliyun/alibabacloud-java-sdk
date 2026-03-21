@@ -7,6 +7,15 @@ public class UpdateSessionInput extends TeaModel {
     @NameInMap("disableSessionIdReuse")
     public Boolean disableSessionIdReuse;
 
+    @NameInMap("nasConfig")
+    public NASConfig nasConfig;
+
+    @NameInMap("ossMountConfig")
+    public OSSMountConfig ossMountConfig;
+
+    @NameInMap("polarFsConfig")
+    public PolarFsConfig polarFsConfig;
+
     /**
      * <strong>example:</strong>
      * <p>1800</p>
@@ -32,6 +41,30 @@ public class UpdateSessionInput extends TeaModel {
     }
     public Boolean getDisableSessionIdReuse() {
         return this.disableSessionIdReuse;
+    }
+
+    public UpdateSessionInput setNasConfig(NASConfig nasConfig) {
+        this.nasConfig = nasConfig;
+        return this;
+    }
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
+    }
+
+    public UpdateSessionInput setOssMountConfig(OSSMountConfig ossMountConfig) {
+        this.ossMountConfig = ossMountConfig;
+        return this;
+    }
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
+    }
+
+    public UpdateSessionInput setPolarFsConfig(PolarFsConfig polarFsConfig) {
+        this.polarFsConfig = polarFsConfig;
+        return this;
+    }
+    public PolarFsConfig getPolarFsConfig() {
+        return this.polarFsConfig;
     }
 
     public UpdateSessionInput setSessionIdleTimeoutInSeconds(Long sessionIdleTimeoutInSeconds) {
