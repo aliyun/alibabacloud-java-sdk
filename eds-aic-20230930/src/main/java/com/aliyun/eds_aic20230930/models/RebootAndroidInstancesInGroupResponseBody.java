@@ -13,6 +13,9 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Tasks")
+    public RebootAndroidInstancesInGroupResponseBodyTasks tasks;
+
     public static RebootAndroidInstancesInGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RebootAndroidInstancesInGroupResponseBody self = new RebootAndroidInstancesInGroupResponseBody();
         return TeaModel.build(map, self);
@@ -24,6 +27,86 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RebootAndroidInstancesInGroupResponseBody setTasks(RebootAndroidInstancesInGroupResponseBodyTasks tasks) {
+        this.tasks = tasks;
+        return this;
+    }
+    public RebootAndroidInstancesInGroupResponseBodyTasks getTasks() {
+        return this.tasks;
+    }
+
+    public static class RebootAndroidInstancesInGroupResponseBodyTasksChildTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acp-xxxx</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>t-xxxx</p>
+         */
+        @NameInMap("TaskId")
+        public String taskId;
+
+        public static RebootAndroidInstancesInGroupResponseBodyTasksChildTasks build(java.util.Map<String, ?> map) throws Exception {
+            RebootAndroidInstancesInGroupResponseBodyTasksChildTasks self = new RebootAndroidInstancesInGroupResponseBodyTasksChildTasks();
+            return TeaModel.build(map, self);
+        }
+
+        public RebootAndroidInstancesInGroupResponseBodyTasksChildTasks setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public RebootAndroidInstancesInGroupResponseBodyTasksChildTasks setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+    }
+
+    public static class RebootAndroidInstancesInGroupResponseBodyTasks extends TeaModel {
+        @NameInMap("ChildTasks")
+        public java.util.List<RebootAndroidInstancesInGroupResponseBodyTasksChildTasks> childTasks;
+
+        /**
+         * <strong>example:</strong>
+         * <p>t-xxxx</p>
+         */
+        @NameInMap("ParentTaskId")
+        public String parentTaskId;
+
+        public static RebootAndroidInstancesInGroupResponseBodyTasks build(java.util.Map<String, ?> map) throws Exception {
+            RebootAndroidInstancesInGroupResponseBodyTasks self = new RebootAndroidInstancesInGroupResponseBodyTasks();
+            return TeaModel.build(map, self);
+        }
+
+        public RebootAndroidInstancesInGroupResponseBodyTasks setChildTasks(java.util.List<RebootAndroidInstancesInGroupResponseBodyTasksChildTasks> childTasks) {
+            this.childTasks = childTasks;
+            return this;
+        }
+        public java.util.List<RebootAndroidInstancesInGroupResponseBodyTasksChildTasks> getChildTasks() {
+            return this.childTasks;
+        }
+
+        public RebootAndroidInstancesInGroupResponseBodyTasks setParentTaskId(String parentTaskId) {
+            this.parentTaskId = parentTaskId;
+            return this;
+        }
+        public String getParentTaskId() {
+            return this.parentTaskId;
+        }
+
     }
 
 }
