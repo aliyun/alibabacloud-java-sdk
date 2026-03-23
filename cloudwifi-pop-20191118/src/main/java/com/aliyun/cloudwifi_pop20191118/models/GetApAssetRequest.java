@@ -4,12 +4,30 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetApAssetRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14:15:14:15:14:15</p>
+     */
     @NameInMap("ApMac")
     public String apMac;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XXXIIII</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ISV</p>
+     */
     @NameInMap("AppName")
     public String appName;
 

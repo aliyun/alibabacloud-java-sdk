@@ -10,9 +10,15 @@ public class DeleteNetDeviceInfoRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Ids")
     public String ids;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,12 +7,24 @@ public class GetApAssetResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 

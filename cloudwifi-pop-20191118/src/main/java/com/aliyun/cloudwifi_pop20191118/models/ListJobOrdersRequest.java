@@ -19,6 +19,9 @@ public class ListJobOrdersRequest extends TeaModel {
     @NameInMap("ClientUniqueId")
     public String clientUniqueId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Cursor")
     public Long cursor;
 
@@ -34,9 +37,15 @@ public class ListJobOrdersRequest extends TeaModel {
     @NameInMap("OrderStatus")
     public String orderStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

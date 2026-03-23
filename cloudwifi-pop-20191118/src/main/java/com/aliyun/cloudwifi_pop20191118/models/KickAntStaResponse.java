@@ -3,7 +3,7 @@ package com.aliyun.cloudwifi_pop20191118.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteApgroupConfigResponse extends TeaModel {
+public class KickAntStaResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteApgroupConfigResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteApgroupConfigResponseBody body;
+    public KickAntStaResponseBody body;
 
-    public static DeleteApgroupConfigResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteApgroupConfigResponse self = new DeleteApgroupConfigResponse();
+    public static KickAntStaResponse build(java.util.Map<String, ?> map) throws Exception {
+        KickAntStaResponse self = new KickAntStaResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteApgroupConfigResponse setHeaders(java.util.Map<String, String> headers) {
+    public KickAntStaResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteApgroupConfigResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteApgroupConfigResponse setStatusCode(Integer statusCode) {
+    public KickAntStaResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteApgroupConfigResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteApgroupConfigResponse setBody(DeleteApgroupConfigResponseBody body) {
+    public KickAntStaResponse setBody(KickAntStaResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteApgroupConfigResponseBody getBody() {
+    public KickAntStaResponseBody getBody() {
         return this.body;
     }
 

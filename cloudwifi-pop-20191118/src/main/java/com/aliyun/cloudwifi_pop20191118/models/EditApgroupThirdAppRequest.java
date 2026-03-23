@@ -4,15 +4,24 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class EditApgroupThirdAppRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApgroupId")
     public Long apgroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
     @NameInMap("AppData")
     public String appData;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 

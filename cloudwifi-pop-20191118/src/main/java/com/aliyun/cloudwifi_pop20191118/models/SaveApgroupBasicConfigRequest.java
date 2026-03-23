@@ -4,12 +4,21 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class SaveApgroupBasicConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Country")
     public String country;
 
@@ -19,18 +28,30 @@ public class SaveApgroupBasicConfigRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EchoInt")
     public Integer echoInt;
 
     @NameInMap("Failover")
     public Integer failover;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
     @NameInMap("InsecureAllowed")
     public Integer insecureAllowed;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsConfigStrongConsistency")
     public Boolean isConfigStrongConsistency;
 
@@ -49,6 +70,9 @@ public class SaveApgroupBasicConfigRequest extends TeaModel {
     @NameInMap("LogLevel")
     public Integer logLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

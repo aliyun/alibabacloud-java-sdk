@@ -13,27 +13,45 @@ public class NewJobOrderShrinkRequest extends TeaModel {
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChangeType")
     public String changeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientSystem")
     public String clientSystem;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientUniqueId")
     public String clientUniqueId;
 
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Params")
     public String paramsShrink;
 
     @NameInMap("ReferUrl")
     public String referUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 

@@ -43,6 +43,9 @@ public class GetNetDeviceInfoWithSizeRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

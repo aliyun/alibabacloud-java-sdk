@@ -19,15 +19,24 @@ public class SaveApSsidConfigRequest extends TeaModel {
     @NameInMap("ApAssetId")
     public Long apAssetId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("ArpProxyEnable")
     public Integer arpProxyEnable;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthCache")
     public String authCache;
 
@@ -64,21 +73,36 @@ public class SaveApSsidConfigRequest extends TeaModel {
     @NameInMap("DaeSecret")
     public String daeSecret;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Disabled")
     public String disabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DisassocLowAck")
     public String disassocLowAck;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DisassocWeakRssi")
     public Integer disassocWeakRssi;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DynamicVlan")
     public Integer dynamicVlan;
 
     @NameInMap("EncKey")
     public String encKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Encryption")
     public String encryption;
 
@@ -94,6 +118,9 @@ public class SaveApSsidConfigRequest extends TeaModel {
     @NameInMap("FtOverDs")
     public Integer ftOverDs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Hidden")
     public String hidden;
 
@@ -103,24 +130,39 @@ public class SaveApSsidConfigRequest extends TeaModel {
     @NameInMap("Ieee80211r")
     public Integer ieee80211r;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Ieee80211w")
     public String ieee80211w;
 
     @NameInMap("IgnoreWeakProbe")
     public Integer ignoreWeakProbe;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Isolate")
     public String isolate;
 
     @NameInMap("LiteEffect")
     public Boolean liteEffect;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mac")
     public String mac;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaxInactivity")
     public Integer maxInactivity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Maxassoc")
     public Integer maxassoc;
 
@@ -136,12 +178,18 @@ public class SaveApSsidConfigRequest extends TeaModel {
     @NameInMap("NdProxyWork")
     public Integer ndProxyWork;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Network")
     public Integer network;
 
     @NameInMap("Ownip")
     public String ownip;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RadioIndex")
     public String radioIndex;
 
@@ -166,12 +214,21 @@ public class SaveApSsidConfigRequest extends TeaModel {
     @NameInMap("SendConfigToAp")
     public Boolean sendConfigToAp;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ShortPreamble")
     public String shortPreamble;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Ssid")
     public String ssid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SsidLb")
     public Integer ssidLb;
 
@@ -187,9 +244,15 @@ public class SaveApSsidConfigRequest extends TeaModel {
     @NameInMap("Type")
     public Integer type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VlanDhcp")
     public Integer vlanDhcp;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Wmm")
     public String wmm;
 

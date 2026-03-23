@@ -7,15 +7,24 @@ public class DelApThirdAppRequest extends TeaModel {
     @NameInMap("ApAssetId")
     public Long apAssetId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mac")
     public String mac;
 

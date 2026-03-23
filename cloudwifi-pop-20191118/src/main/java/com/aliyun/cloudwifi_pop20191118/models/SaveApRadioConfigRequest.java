@@ -4,63 +4,120 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class SaveApRadioConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BcastRate")
     public Integer bcastRate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BeaconInt")
     public Integer beaconInt;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Channel")
     public String channel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Disabled")
     public String disabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Frag")
     public Integer frag;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Htmode")
     public String htmode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Hwmode")
     public String hwmode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("McastRate")
     public Integer mcastRate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MgmtRate")
     public Integer mgmtRate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Minrate")
     public Integer minrate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Noscan")
     public String noscan;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Probereq")
     public String probereq;
 
     @NameInMap("RequireMode")
     public String requireMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Rts")
     public Integer rts;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Shortgi")
     public String shortgi;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Txpower")
     public String txpower;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Uapsd")
     public Integer uapsd;
 

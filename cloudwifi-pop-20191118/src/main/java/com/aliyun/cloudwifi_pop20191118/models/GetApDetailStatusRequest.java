@@ -4,18 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetApDetailStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mac")
     public String mac;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NeedApgroupInfo")
     public Boolean needApgroupInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NeedRadioStatus")
     public Boolean needRadioStatus;
 

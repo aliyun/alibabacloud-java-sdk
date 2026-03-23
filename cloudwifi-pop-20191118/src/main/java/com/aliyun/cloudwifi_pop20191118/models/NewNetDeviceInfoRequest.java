@@ -10,9 +10,15 @@ public class NewNetDeviceInfoRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Devices")
     public java.util.List<NewNetDeviceInfoRequestDevices> devices;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +60,9 @@ public class NewNetDeviceInfoRequest extends TeaModel {
     }
 
     public static class NewNetDeviceInfoRequestDevices extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
@@ -66,6 +75,9 @@ public class NewNetDeviceInfoRequest extends TeaModel {
         @NameInMap("Manufacturer")
         public String manufacturer;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MgnIp")
         public String mgnIp;
 
@@ -81,6 +93,9 @@ public class NewNetDeviceInfoRequest extends TeaModel {
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ServiceTag")
         public String serviceTag;
 

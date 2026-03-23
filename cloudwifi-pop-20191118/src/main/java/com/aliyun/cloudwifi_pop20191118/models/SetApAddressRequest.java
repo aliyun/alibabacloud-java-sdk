@@ -37,15 +37,24 @@ public class SetApAddressRequest extends TeaModel {
     @NameInMap("ApUnitName")
     public String apUnitName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Language")
     public String language;
 
@@ -55,6 +64,9 @@ public class SetApAddressRequest extends TeaModel {
     @NameInMap("Lng")
     public String lng;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mac")
     public String mac;
 

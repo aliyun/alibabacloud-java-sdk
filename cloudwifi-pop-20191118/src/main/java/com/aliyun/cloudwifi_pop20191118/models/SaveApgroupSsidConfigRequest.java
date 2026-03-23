@@ -13,12 +13,21 @@ public class SaveApgroupSsidConfigRequest extends TeaModel {
     @NameInMap("AcctServer")
     public String acctServer;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApgroupId")
     public String apgroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
@@ -34,6 +43,9 @@ public class SaveApgroupSsidConfigRequest extends TeaModel {
     @NameInMap("AuthServer")
     public String authServer;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Binding")
     public String binding;
 
@@ -67,6 +79,9 @@ public class SaveApgroupSsidConfigRequest extends TeaModel {
     @NameInMap("EncKey")
     public String encKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Encryption")
     public String encryption;
 
@@ -100,9 +115,15 @@ public class SaveApgroupSsidConfigRequest extends TeaModel {
     @NameInMap("Nasid")
     public String nasid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Network")
     public Integer network;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NewSsid")
     public String newSsid;
 
@@ -130,6 +151,9 @@ public class SaveApgroupSsidConfigRequest extends TeaModel {
     @NameInMap("ShortPreamble")
     public String shortPreamble;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Ssid")
     public String ssid;
 

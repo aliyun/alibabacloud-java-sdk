@@ -10,9 +10,15 @@ public class QueryJobOrderRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

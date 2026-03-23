@@ -4,15 +4,27 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class AddApListToApgroupShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApGroupId")
     public String apGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApMacList")
     public String apMacListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 

@@ -4,18 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetGroupMiscAggTimeSerRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApgroupUuid")
     public String apgroupUuid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("End")
     public Long end;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Start")
     public Long start;
 
