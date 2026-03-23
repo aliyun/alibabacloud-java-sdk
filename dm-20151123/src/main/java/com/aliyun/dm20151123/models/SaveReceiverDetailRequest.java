@@ -5,17 +5,19 @@ import com.aliyun.tea.*;
 
 public class SaveReceiverDetailRequest extends TeaModel {
     /**
+     * <p>The recipient\&quot;s email address and template parameters, in an array format.</p>
+     * 
      * <strong>example:</strong>
-     * <p>[     {         &quot;Email&quot;: &quot;<a href="mailto:example@alimail.com">example@alimail.com</a>&quot;,         &quot;CustomData&quot;: {&quot;name&quot;:&quot;Tom&quot;,&quot;age&quot;:&quot;30&quot;}&quot;     } ]</p>
+     * <p>[{ &quot;Email&quot;: &quot;<a href="mailto:example@alimail.com">example@alimail.com</a>&quot;,&quot;CustomData&quot;: {&quot;name&quot;:&quot;Tom&quot;,&quot;age&quot;:&quot;30&quot;}}]</p>
      */
     @NameInMap("CustomDetail")
     public String customDetail;
 
     /**
-     * <p>Content, supports uploading multiple recipients at once, with a limit of 500 records per upload. Each record is separated by {} and commas, example:</p>
-     * <p>[{ },{ },{ }...], the format within {} is as follows:</p>
-     * <p>[{&quot;b&quot;:&quot;birthday&quot;,&quot;e&quot;:&quot;<a href="mailto:xxx@example.net">xxx@example.net</a>&quot;,&quot;g&quot;:&quot;gender&quot;,&quot;m&quot;:&quot;mobile&quot;,&quot;n&quot;:&quot;nickname&quot;,&quot;u&quot;:&quot;name&quot;}], when passing values, pass it as a string, not a list.</p>
-     * <p>If a duplicate recipient address is inserted, it will return &quot;ErrorCount&quot;: 1</p>
+     * <p>The recipient details. You can upload up to 500 recipients in a single request. The value is a string in a JSON array format. Each object in the array represents a recipient. For example: \<code>[{ },{ },{ }...]\\</code>. The format for each recipient object is \<code>[{&quot;b&quot;:&quot;birthday&quot;,&quot;e&quot;:&quot;xxx\\@example.net&quot;,&quot;g&quot;:&quot;gender&quot;,&quot;m&quot;:&quot;mobile&quot;,&quot;n&quot;:&quot;nickname&quot;,&quot;u&quot;:&quot;name&quot;}]\\</code>. If you add a duplicate recipient address, the system returns \<code>&quot;ErrorCount&quot;: 1\\</code>.</p>
+     * <p>The format is \<code>[{ },{ },{ }...]\\</code>. The format of the content within each \<code>{}\\</code> is as follows:</p>
+     * <p>[{&quot;b&quot;:&quot;birthday&quot;,&quot;e&quot;:&quot;xxx\@example.net&quot;,&quot;g&quot;:&quot;gender&quot;,&quot;m&quot;:&quot;mobile&quot;,&quot;n&quot;:&quot;nickname&quot;,&quot;u&quot;:&quot;name&quot;}]. Pass the value as a string, not a list.</p>
+     * <p>Inserting a duplicate recipient address returns &quot;ErrorCount&quot;: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;b&quot;:&quot;birthday&quot;,&quot;e&quot;:&quot;<a href="mailto:xxx@alibaba-inc.com">xxx@alibaba-inc.com</a>&quot;,&quot;g&quot;:&quot;gender&quot;,&quot;m&quot;:&quot;mobile&quot;,&quot;n&quot;:&quot;nickname&quot;,&quot;u&quot;:&quot;name&quot;}]</p>
@@ -27,7 +29,7 @@ public class SaveReceiverDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Recipient list ID</p>
+     * <p>The ID of the recipient list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

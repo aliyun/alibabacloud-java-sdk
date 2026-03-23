@@ -8,7 +8,7 @@ public class CreateReceiverRequest extends TeaModel {
      * <p>List description.</p>
      * 
      * <strong>example:</strong>
-     * <p>the description</p>
+     * <p>描述</p>
      */
     @NameInMap("Desc")
     public String desc;

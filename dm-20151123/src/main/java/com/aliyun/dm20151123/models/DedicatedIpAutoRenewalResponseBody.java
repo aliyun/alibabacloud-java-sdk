@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpAutoRenewalResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -14,7 +14,7 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count</p>
+     * <p>The total count of data records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Data records</p>
+     * <p>Contains the statistical data.</p>
      */
     @NameInMap("data")
     public SenderStatisticsByTagNameAndBatchIDResponseBodyData data;
@@ -58,66 +58,24 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     }
 
     public static class SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat extends TeaModel {
-        /**
-         * <p>Creation time</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-07-02</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Failure count</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("faildCount")
         public String faildCount;
 
-        /**
-         * <p>Request count</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("requestCount")
         public String requestCount;
 
-        /**
-         * <p>Success rate</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100.00%</p>
-         */
         @NameInMap("succeededPercent")
         public String succeededPercent;
 
-        /**
-         * <p>Success count</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("successCount")
         public String successCount;
 
-        /**
-         * <p>Invalid count</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("unavailableCount")
         public String unavailableCount;
 
-        /**
-         * <p>Unavailability rate</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0%</p>
-         */
         @NameInMap("unavailablePercent")
         public String unavailablePercent;
 

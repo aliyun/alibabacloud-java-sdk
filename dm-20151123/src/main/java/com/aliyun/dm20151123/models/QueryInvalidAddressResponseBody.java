@@ -31,9 +31,6 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>Records.</p>
-     */
     @NameInMap("data")
     public QueryInvalidAddressResponseBodyData data;
 
@@ -75,30 +72,12 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
     }
 
     public static class QueryInvalidAddressResponseBodyDataMailDetail extends TeaModel {
-        /**
-         * <p>Update time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-04-28T17:11Z</p>
-         */
         @NameInMap("LastUpdateTime")
         public String lastUpdateTime;
 
-        /**
-         * <p>Recipient address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:toaddress@example.com">toaddress@example.com</a></p>
-         */
         @NameInMap("ToAddress")
         public String toAddress;
 
-        /**
-         * <p>Update time (in timestamp format).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1619601108</p>
-         */
         @NameInMap("UtcLastUpdateTime")
         public Long utcLastUpdateTime;
 

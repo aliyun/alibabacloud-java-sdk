@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SenderStatisticsDetailByParamRequest extends TeaModel {
     /**
-     * <p>Sending address. If not filled, it represents all addresses.</p>
+     * <p>The sender address. If you leave this parameter empty, emails from all sender addresses are queried.</p>
      * <blockquote>
-     * <p><strong>AccountName</strong>, <strong>TagName</strong>, and <strong>ToAddress</strong> can all be left unfilled. If any are filled, only one of these parameters can be passed; you cannot pass a combination of two or more.</p>
+     * <p>You can leave <strong>AccountName</strong>, <strong>TagName</strong>, and <strong>ToAddress</strong> empty. You can specify a value for only one of these parameters at a time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,6 +17,11 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The ID of the configuration set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95437e39-5433-4c6c-8b66-0c4eac2f4d97</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -24,7 +29,7 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     public String configSetId;
 
     /**
-     * <p>End time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm.</p>
+     * <p>The end time. The time range between the start time and the end time cannot exceed 30 days. The format is yyyy-MM-dd HH:mm.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-04-29 00:00</p>
@@ -33,6 +38,11 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The ID of the independent IP address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e42a4d8e-66e0-4ea3-88aa-74c66c661cef</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -40,7 +50,7 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     public String ipPoolId;
 
     /**
-     * <p>Specifies the number of results to return in this request. Range is 1~100.</p>
+     * <p>The number of results to return. The value can range from 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -49,7 +59,7 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     public Integer length;
 
     /**
-     * <p>Used for pagination. Specifies the offset for this request. If there are more results, set this returned value to the NextStart in the next request.</p>
+     * <p>The offset for this request, used for paging. If more results are available, set the \<code>NextStart\\</code> parameter in your next request to this return value.</p>
      * 
      * <strong>example:</strong>
      * <p>90f0243616#203#a***@example.net-1658817837#a***@example.net.247475288187</p>
@@ -67,7 +77,7 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Start time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm</p>
+     * <p>The start time. The time range between the start time and the end time cannot exceed 30 days. The format is yyyy-MM-dd HH:mm.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-04-28 00:00</p>
@@ -76,12 +86,16 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>Delivery result. If not filled, it represents all statuses. Values:</p>
+     * <p>The delivery status. If you leave this parameter empty, emails in all delivery statuses are queried. Valid values:</p>
      * <ul>
-     * <li>0: Success</li>
-     * <li>2: Invalid Address</li>
-     * <li>3: Spam</li>
-     * <li>4: Failure</li>
+     * <li><p>0: delivered successfully</p>
+     * </li>
+     * <li><p>2: invalid address</p>
+     * </li>
+     * <li><p>3: spam</p>
+     * </li>
+     * <li><p>4: failed</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +105,8 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>Email tag. If not filled, it represents all tags.</p>
+     * <p>The email tag. If you leave this parameter empty, emails with all tags are queried.
+     * When you send an email using SMTP, specify the \<code>TagName\\</code> and its value for the \<code>X-AliDM-Trace\\</code> field. For more information, see the examples for email tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>EmailQuestionnaireHelioscam</p>
@@ -100,7 +115,7 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     public String tagName;
 
     /**
-     * <p>Recipient address. If not filled, it represents all recipient addresses.</p>
+     * <p>The recipient address. If you leave this parameter empty, emails sent to all recipient addresses are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>b***@example.net</p>

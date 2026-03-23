@@ -4,11 +4,17 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DedicatedIpPoolListRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return all entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
     /**
-     * <p>Search keyword for the name</p>
+     * <p>The keyword to search for IP pools by name.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -17,7 +23,7 @@ public class DedicatedIpPoolListRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>Page index, starting from 1</p>
+     * <p>The page number to return, starting from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,13 +32,20 @@ public class DedicatedIpPoolListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>Number of items per page</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    /**
+     * <strong>example:</strong>
+     * <p>44fb3ec8-1f87-42e4-866d-e23dad9e7c9a</p>
+     */
+    @NameInMap("PoolId")
+    public String poolId;
 
     public static DedicatedIpPoolListRequest build(java.util.Map<String, ?> map) throws Exception {
         DedicatedIpPoolListRequest self = new DedicatedIpPoolListRequest();
@@ -69,6 +82,14 @@ public class DedicatedIpPoolListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DedicatedIpPoolListRequest setPoolId(String poolId) {
+        this.poolId = poolId;
+        return this;
+    }
+    public String getPoolId() {
+        return this.poolId;
     }
 
 }

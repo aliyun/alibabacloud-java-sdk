@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SendValidateFileResponseBody extends TeaModel {
     /**
+     * <p>The ID of the file. Use this ID to query the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>yyyy-yyyy-yyyy-yyyy</p>
      */
@@ -12,6 +14,8 @@ public class SendValidateFileResponseBody extends TeaModel {
     public String fileId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxx</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetValidateFileStatusRequest extends TeaModel {
     /**
+     * <p>The file ID returned after the task is submitted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

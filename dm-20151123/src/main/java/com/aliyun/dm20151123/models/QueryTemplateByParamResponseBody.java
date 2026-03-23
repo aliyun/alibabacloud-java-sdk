@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTemplateByParamResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class QueryTemplateByParamResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class QueryTemplateByParamResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10Axxxxxxxxxxxx37</p>
      */
@@ -26,6 +32,8 @@ public class QueryTemplateByParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>21</p>
      */
@@ -81,10 +89,6 @@ public class QueryTemplateByParamResponseBody extends TeaModel {
     }
 
     public static class QueryTemplateByParamResponseBodyDataTemplate extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2019-09-29T13:28Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -100,34 +104,18 @@ public class QueryTemplateByParamResponseBody extends TeaModel {
         @NameInMap("TemplateComment")
         public String templateComment;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3xxxx8</p>
-         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TemplateName")
         public String templateName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("TemplateStatus")
         public String templateStatus;
 
         @NameInMap("TemplateType")
         public Integer templateType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1661830382</p>
-         */
         @NameInMap("UtcCreatetime")
         public Long utcCreatetime;
 

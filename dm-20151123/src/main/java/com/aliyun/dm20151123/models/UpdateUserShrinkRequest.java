@@ -4,9 +4,6 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserShrinkRequest extends TeaModel {
-    /**
-     * <p>User Information</p>
-     */
     @NameInMap("User")
     public String userShrink;
 

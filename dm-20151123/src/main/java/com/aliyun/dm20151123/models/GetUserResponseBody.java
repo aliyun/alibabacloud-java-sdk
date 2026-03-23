@@ -4,18 +4,9 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
-    /**
-     * <p>Returned Content</p>
-     */
     @NameInMap("Data")
     public GetUserResponseBodyData data;
 
-    /**
-     * <p>Request ID</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,12 +32,6 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyData extends TeaModel {
-        /**
-         * <p>Whether EventBridge is enabled</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("EnableEventbridge")
         public Boolean enableEventbridge;
 

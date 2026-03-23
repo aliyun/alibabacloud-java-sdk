@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConfigSetRelationFromAddressResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class ConfigSetRelationFromAddressResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

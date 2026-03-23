@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTaskByParamResponseBody extends TeaModel {
     /**
-     * <p>Current page number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -14,7 +14,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -32,7 +32,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -40,9 +40,6 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>Returned results</p>
-     */
     @NameInMap("data")
     public QueryTaskByParamResponseBodyData data;
 
@@ -92,12 +89,6 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     }
 
     public static class QueryTaskByParamResponseBodyDataTask extends TeaModel {
-        /**
-         * <p>Address type, sending address: 1; random address: 0;</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AddressType")
         public String addressType;
 
@@ -107,93 +98,33 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         @NameInMap("ConfigSetName")
         public String configSetName;
 
-        /**
-         * <p>Creation time</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-04-18T10:36Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>dedicated IP pool ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("IpPoolId")
         public String ipPoolId;
 
-        /**
-         * <p>dedicated IP pool name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("IpPoolName")
         public String ipPoolName;
 
-        /**
-         * <p>Receiver\&quot;s name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TKP000442-333</p>
-         */
         @NameInMap("ReceiversName")
         public String receiversName;
 
-        /**
-         * <p>Request count</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RequestCount")
         public String requestCount;
 
-        /**
-         * <p>Tag</p>
-         * 
-         * <strong>example:</strong>
-         * <p>202201</p>
-         */
         @NameInMap("TagName")
         public String tagName;
 
-        /**
-         * <p>Task ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1054296</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 
-        /**
-         * <p>Task status, sent successfully: 1</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
-        /**
-         * <p>Template name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Short Simple</p>
-         */
         @NameInMap("TemplateName")
         public String templateName;
 
-        /**
-         * <p>Creation time in UTC format</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1569734892</p>
-         */
         @NameInMap("UtcCreateTime")
         public Long utcCreateTime;
 

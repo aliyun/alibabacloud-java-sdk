@@ -4,9 +4,6 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ListUserSuppressionResponseBody extends TeaModel {
-    /**
-     * <p>Returned results.</p>
-     */
     @NameInMap("Data")
     public ListUserSuppressionResponseBodyData data;
 
@@ -92,52 +89,18 @@ public class ListUserSuppressionResponseBody extends TeaModel {
     }
 
     public static class ListUserSuppressionResponseBodyDataUserSuppressions extends TeaModel {
-        /**
-         * <p>Email address or domain name</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@example.net">test@example.net</a></p>
-         */
         @NameInMap("Address")
         public String address;
 
-        /**
-         * <p>Creation time, timestamp, accurate to the second.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1715667435</p>
-         */
         @NameInMap("CreateTime")
         public Integer createTime;
 
-        /**
-         * <p>Last bounce hit time, timestamp, accurate to the second.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1715667451</p>
-         */
         @NameInMap("LastBounceTime")
         public Integer lastBounceTime;
 
-        /**
-         * <p>Invalid address ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>59511</p>
-         */
         @NameInMap("SuppressionId")
         public Integer suppressionId;
 
-        /**
-         * <p>Source of entry, invalid address type</p>
-         * <ul>
-         * <li>system</li>
-         * <li>user</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>user</p>
-         */
         @NameInMap("Type")
         public String type;
 

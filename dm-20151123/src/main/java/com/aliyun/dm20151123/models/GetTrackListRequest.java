@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetTrackListRequest extends TeaModel {
     /**
-     * <p>Sender address.</p>
+     * <p>The sender address.</p>
      * <blockquote>
-     * <p>If not filled, it represents all addresses; if TagName is provided, this parameter must not be empty.</p>
+     * <p>If you omit this parameter, the query returns data for all sender addresses. This parameter is required if you specify the <code>TagName</code> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,17 +16,44 @@ public class GetTrackListRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The ID of the configuration set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("ConfigSetId")
     public String configSetId;
 
+    /**
+     * <p>The dedicated IP address to query.</p>
+     * <p>If this parameter is omitted, data for all dedicated IPs is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx.xxx.xxx.xxx</p>
+     */
     @NameInMap("DedicatedIp")
     public String dedicatedIp;
 
+    /**
+     * <p>The ID of the dedicated IP pool to query.</p>
+     * <p>If this parameter is omitted, data for all IP pools is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("DedicatedIpPoolId")
     public String dedicatedIpPoolId;
 
     /**
-     * <p>End time, the span between start and end time cannot exceed 7 days. Format: yyyy-MM-dd.</p>
+     * <strong>example:</strong>
+     * <p>dmdomain.com</p>
+     */
+    @NameInMap("Domain")
+    public String domain;
+
+    /**
+     * <p>The end date of the query. The duration between the StartTime and EndTime cannot exceed 7 days. The format is <code>yyyy-MM-dd</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,23 +62,42 @@ public class GetTrackListRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The Email Service Provider (ESP) to query. Valid values are:</p>
+     * <ul>
+     * <li><p>gmail.com</p>
+     * </li>
+     * <li><p>yahoo.com</p>
+     * </li>
+     * <li><p>outlook.com</p>
+     * </li>
+     * <li><p>icloud.com</p>
+     * </li>
+     * <li><p>Others: Any ESP not listed above.</p>
+     * </li>
+     * </ul>
+     * <p>If you omit this parameter, the query returns data for all ESPs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gmail.com</p>
+     */
     @NameInMap("Esp")
     public String esp;
 
     /**
-     * <p>For the first query, set to 0; for subsequent queries, fixed at 1. 1 indicates pagination in ascending order by time. (This field is deprecated)</p>
+     * <p>Set this to 0 for the first query. For subsequent queries, set it to 1 to perform a paged query in chronological order. (This field is deprecated)</p>
      * 
      * <strong>example:</strong>
-     * <p>(This field is deprecated)</p>
+     * <p>（本字段已废弃）</p>
      */
     @NameInMap("Offset")
     public String offset;
 
     /**
-     * <p>Used for pagination. Not set for the first query, but for subsequent queries, it should be set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</p>
+     * <p>Used for pagination. Do not set this parameter for the first query. For subsequent queries, set this parameter to the <code>OffsetCreateTime</code> value returned in the previous response. (This field is deprecated)</p>
      * 
      * <strong>example:</strong>
-     * <p>(This field is deprecated)</p>
+     * <p>（本字段已废弃）</p>
      */
     @NameInMap("OffsetCreateTime")
     public String offsetCreateTime;
@@ -60,7 +106,7 @@ public class GetTrackListRequest extends TeaModel {
      * <p>(This field is deprecated)</p>
      * 
      * <strong>example:</strong>
-     * <p>(This field is deprecated)</p>
+     * <p>（本字段已废弃）</p>
      */
     @NameInMap("OffsetCreateTimeDesc")
     public String offsetCreateTimeDesc;
@@ -69,7 +115,7 @@ public class GetTrackListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,7 +124,7 @@ public class GetTrackListRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +139,7 @@ public class GetTrackListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Start time, which cannot be earlier than 30 days. Format: yyyy-MM-dd.</p>
+     * <p>The start date of the query. The date must be within the last 30 days. The format is <code>yyyy-MM-dd</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,7 +149,7 @@ public class GetTrackListRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>Tag name</p>
+     * <p>The tag name.</p>
      * 
      * <strong>example:</strong>
      * <p>tagname</p>
@@ -115,7 +161,7 @@ public class GetTrackListRequest extends TeaModel {
      * <p>(This field is deprecated)</p>
      * 
      * <strong>example:</strong>
-     * <p>(This field is deprecated)</p>
+     * <p>（本字段已废弃）</p>
      */
     @NameInMap("Total")
     public String total;
@@ -155,6 +201,14 @@ public class GetTrackListRequest extends TeaModel {
     }
     public String getDedicatedIpPoolId() {
         return this.dedicatedIpPoolId;
+    }
+
+    public GetTrackListRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
     }
 
     public GetTrackListRequest setEndTime(String endTime) {

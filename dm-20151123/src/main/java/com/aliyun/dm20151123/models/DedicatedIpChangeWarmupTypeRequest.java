@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpChangeWarmupTypeRequest extends TeaModel {
     /**
-     * <p>Dedicated IP ID</p>
+     * <p>The ID of the dedicated IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -14,7 +14,7 @@ public class DedicatedIpChangeWarmupTypeRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Warmup method</p>
+     * <p>The prefetch method.</p>
      * 
      * <strong>example:</strong>
      * <p>sysCusStream</p>

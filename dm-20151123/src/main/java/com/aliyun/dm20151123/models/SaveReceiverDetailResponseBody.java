@@ -4,14 +4,11 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SaveReceiverDetailResponseBody extends TeaModel {
-    /**
-     * <p>List of recipient addresses that failed to upload.</p>
-     */
     @NameInMap("Data")
     public SaveReceiverDetailResponseBodyData data;
 
     /**
-     * <p>Number of errors.</p>
+     * <p>The number of errors.</p>
      * 
      * <strong>example:</strong>
      * <p>638</p>
@@ -20,7 +17,7 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     public Integer errorCount;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -29,7 +26,7 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Number of successes.</p>
+     * <p>The number of successful records.</p>
      * 
      * <strong>example:</strong>
      * <p>274</p>
@@ -75,12 +72,6 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     }
 
     public static class SaveReceiverDetailResponseBodyDataDetail extends TeaModel {
-        /**
-         * <p>Recipient address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@example.com">test@example.com</a></p>
-         */
         @NameInMap("Email")
         public String email;
 

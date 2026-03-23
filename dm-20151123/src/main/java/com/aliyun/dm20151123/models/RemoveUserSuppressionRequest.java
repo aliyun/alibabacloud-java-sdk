@@ -14,6 +14,10 @@ public class RemoveUserSuppressionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the suppressed address. To specify multiple IDs, separate them with commas (,). Call the ListUserSuppression operation to obtain the suppression ID.</p>
+     * <p>You can enter multiple values, separated by a comma &quot;,&quot;.</p>
+     * <p>You can call ListUserSuppression to obtain the SuppressionId.</p>
+     * 
      * <strong>example:</strong>
      * <p>59511</p>
      */

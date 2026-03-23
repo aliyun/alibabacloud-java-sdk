@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListBlockSendingRequest extends TeaModel {
     /**
+     * <p>The start of the time range to query blocked emails.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1731463398242</p>
+     * <p>1763973206</p>
      */
     @NameInMap("BeginTime")
     public Integer beginTime;
 
     /**
+     * <p>The recipient email address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:xxxx@rcpt.com">xxxx@rcpt.com</a></p>
      */
@@ -19,6 +23,13 @@ public class ListBlockSendingRequest extends TeaModel {
     public String blockEmail;
 
     /**
+     * <p>The type of block.</p>
+     * <ul>
+     * <li><p>UNSUB: Unsubscribe</p>
+     * </li>
+     * <li><p>REPORT: Spam report</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,13 +39,18 @@ public class ListBlockSendingRequest extends TeaModel {
     public String blockType;
 
     /**
+     * <p>The end of the time range to query blocked emails.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1732463398242</p>
+     * <p>1764146006</p>
      */
     @NameInMap("EndTime")
     public Integer endTime;
 
     /**
+     * <p>The maximum number of entries to return.<br>
+     * Valid values: 1 to 500.<br></p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -42,6 +58,8 @@ public class ListBlockSendingRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token used to start the query. If you do not specify this parameter, the query starts from the beginning of the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxyyyyyy</p>
      */
@@ -49,6 +67,8 @@ public class ListBlockSendingRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sender email address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:xxxx@sender.com">xxxx@sender.com</a></p>
      */

@@ -40,9 +40,6 @@ public class QueryDomainByParamResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>List of domains</p>
-     */
     @NameInMap("data")
     public QueryDomainByParamResponseBodyData data;
 
@@ -92,110 +89,36 @@ public class QueryDomainByParamResponseBody extends TeaModel {
     }
 
     public static class QueryDomainByParamResponseBodyDataDomain extends TeaModel {
-        /**
-         * <p>Track verification</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("CnameAuthStatus")
         public String cnameAuthStatus;
 
-        /**
-         * <p>CName verification status, success: 0; failure: 1</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ConfirmStatus")
         public String confirmStatus;
 
-        /**
-         * <p>Creation time</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-09-29T13:28Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Domain ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>158923</p>
-         */
         @NameInMap("DomainId")
         public String domainId;
 
-        /**
-         * <p>Domain name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>Domain record</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6bd86901b9fe4618a046</p>
-         */
         @NameInMap("DomainRecord")
         public String domainRecord;
 
-        /**
-         * <p>Domain status.</p>
-         * <ul>
-         * <li>0: Available, verified</li>
-         * <li>1: Unavailable, verification failed</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
-        /**
-         * <p>ICP filing status.</p>
-         * <ul>
-         * <li>1 indicates filed</li>
-         * <li>0 indicates not filed</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("IcpStatus")
         public String icpStatus;
 
-        /**
-         * <p>MX authentication status, success: 0, failure: 1.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MxAuthStatus")
         public String mxAuthStatus;
 
-        /**
-         * <p>SPF authentication status, success: 0, failure: 1.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("SpfAuthStatus")
         public String spfAuthStatus;
 
-        /**
-         * <p>Creation time in UTC format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1569734892</p>
-         */
         @NameInMap("UtcCreateTime")
         public Long utcCreateTime;
 

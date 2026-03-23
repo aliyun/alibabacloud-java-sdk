@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetValidateFileResponseBody extends TeaModel {
     /**
+     * <p>The download URL of the result file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxx/yyy">https://xxxxxx/yyy</a></p>
      */
@@ -12,6 +14,8 @@ public class GetValidateFileResponseBody extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>yyyy-yyyy-yyyy-yyyy</p>
      */

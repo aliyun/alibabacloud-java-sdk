@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetTrackListResponseBody extends TeaModel {
     /**
-     * <p>Used for pagination. Not set for the first query, but for subsequent queries, it should be set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</p>
+     * <p>Used for pagination. Do not set this parameter for the first request. For subsequent requests, set this parameter to the OffsetCreateTime value from the previous response. (This field is deprecated.)</p>
      * 
      * <strong>example:</strong>
-     * <p>(This field is deprecated)</p>
+     * <p>（本字段已废弃）</p>
      */
     @NameInMap("OffsetCreateTime")
     public String offsetCreateTime;
 
     /**
-     * <p>(This field is deprecated)</p>
+     * <p>(This field is deprecated.)</p>
      * 
      * <strong>example:</strong>
-     * <p>(This field is deprecated)</p>
+     * <p>（本字段已废弃）</p>
      */
     @NameInMap("OffsetCreateTimeDesc")
     public String offsetCreateTimeDesc;
 
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class GetTrackListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Number of items per page</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class GetTrackListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -50,7 +50,7 @@ public class GetTrackListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of matching records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -58,12 +58,15 @@ public class GetTrackListResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
+    /**
+     * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
-    /**
-     * <p>Tracking data records</p>
-     */
     @NameInMap("data")
     public GetTrackListResponseBodyData data;
 
@@ -137,93 +140,33 @@ public class GetTrackListResponseBody extends TeaModel {
     }
 
     public static class GetTrackListResponseBodyDataStat extends TeaModel {
-        /**
-         * <p>Creation time</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-09-29T13:28Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Click count</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RcptClickCount")
         public String rcptClickCount;
 
-        /**
-         * <p>Click rate</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RcptClickRate")
         public String rcptClickRate;
 
-        /**
-         * <p>Number of Opens</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RcptOpenCount")
         public String rcptOpenCount;
 
-        /**
-         * <p>Open rate</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RcptOpenRate")
         public String rcptOpenRate;
 
-        /**
-         * <p>Unique click count</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RcptUniqueClickCount")
         public String rcptUniqueClickCount;
 
-        /**
-         * <p>Unique click rate</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RcptUniqueClickRate")
         public String rcptUniqueClickRate;
 
-        /**
-         * <p>Unique open count</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RcptUniqueOpenCount")
         public String rcptUniqueOpenCount;
 
-        /**
-         * <p>Unique open rate</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RcptUniqueOpenRate")
         public String rcptUniqueOpenRate;
 
-        /**
-         * <p>Total number</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("TotalNumber")
         public String totalNumber;
 

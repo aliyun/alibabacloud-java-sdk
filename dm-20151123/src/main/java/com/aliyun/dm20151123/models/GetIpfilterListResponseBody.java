@@ -40,9 +40,6 @@ public class GetIpfilterListResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>Data records</p>
-     */
     @NameInMap("data")
     public GetIpfilterListResponseBodyData data;
 
@@ -92,32 +89,12 @@ public class GetIpfilterListResponseBody extends TeaModel {
     }
 
     public static class GetIpfilterListResponseBodyDataIpfilters extends TeaModel {
-        /**
-         * <p>timestamp</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1653547140</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Record ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10083</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>IP address/IP range/IP segment</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx.xxx.xxx.xxx
-         * xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
-         * xxx.xxx.xxx.xxx/xxx</p>
-         */
         @NameInMap("IpAddress")
         public String ipAddress;
 

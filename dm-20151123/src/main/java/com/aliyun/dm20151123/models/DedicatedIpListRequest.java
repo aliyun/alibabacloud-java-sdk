@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpListRequest extends TeaModel {
     /**
-     * <p>IP search keyword</p>
+     * <p>The keyword for searching IP addresses.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -14,7 +14,7 @@ public class DedicatedIpListRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>Pagination index, starting from 1</p>
+     * <p>The page number. The value starts from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DedicatedIpListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

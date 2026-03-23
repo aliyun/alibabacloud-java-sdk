@@ -40,9 +40,6 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>Detailed information</p>
-     */
     @NameInMap("data")
     public QueryReceiverDetailResponseBodyData data;
 
@@ -92,39 +89,15 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
     }
 
     public static class QueryReceiverDetailResponseBodyDataDetail extends TeaModel {
-        /**
-         * <p>Creation Time</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-09-29T13:28Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Content</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;Domains\&quot;: [\&quot;a.example.net\&quot;, \&quot;b.example.net\&quot;, \&quot;c.example.net\&quot;, \&quot;d.example.net\&quot;]}</p>
-         */
         @NameInMap("Data")
         public String data;
 
-        /**
-         * <p>Recipient address</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a***@example.net</p>
-         */
         @NameInMap("Email")
         public String email;
 
-        /**
-         * <p>Creation time in UTC format</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1569734892</p>
-         */
         @NameInMap("UtcCreateTime")
         public Long utcCreateTime;
 

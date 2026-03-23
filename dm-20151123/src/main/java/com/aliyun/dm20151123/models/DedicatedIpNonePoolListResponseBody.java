@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpNonePoolListResponseBody extends TeaModel {
     /**
-     * <p>Information on IPs not added to the IP pool</p>
+     * <p>The IP addresses that are not added to an IP pool.</p>
      */
     @NameInMap("Ips")
     public java.util.List<DedicatedIpNonePoolListResponseBodyIps> ips;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -42,7 +42,7 @@ public class DedicatedIpNonePoolListResponseBody extends TeaModel {
 
     public static class DedicatedIpNonePoolListResponseBodyIps extends TeaModel {
         /**
-         * <p>Purchased instance ID</p>
+         * <p>The ID of the purchased instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -51,7 +51,7 @@ public class DedicatedIpNonePoolListResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>IP address</p>
+         * <p>The IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -59,6 +59,12 @@ public class DedicatedIpNonePoolListResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

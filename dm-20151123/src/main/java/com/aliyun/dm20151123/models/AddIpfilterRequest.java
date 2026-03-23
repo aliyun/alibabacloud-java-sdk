@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddIpfilterRequest extends TeaModel {
     /**
-     * <p>IP Address/IP Range/IP Segment</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx.xxx.xxx.xxx
-     * xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
-     * xxx.xxx.xxx.xxx/xxx</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;

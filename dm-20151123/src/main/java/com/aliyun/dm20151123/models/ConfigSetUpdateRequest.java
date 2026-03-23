@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConfigSetUpdateRequest extends TeaModel {
     /**
+     * <p>The description. The description can be up to 50 characters long.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */
@@ -12,6 +14,8 @@ public class ConfigSetUpdateRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the configuration set. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */
@@ -19,6 +23,8 @@ public class ConfigSetUpdateRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The ID of the associated IP pool. This parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */
@@ -26,6 +32,8 @@ public class ConfigSetUpdateRequest extends TeaModel {
     public String ipPoolId;
 
     /**
+     * <p>The name of the configuration. This parameter is required. The name must be unique and can be up to 50 characters long.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */
