@@ -7,39 +7,15 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeSQLLogReportListResponseBodyItems items;
 
-    /**
-     * <p>The page number.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of SQL log reports on the current page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>60</p>
-     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 

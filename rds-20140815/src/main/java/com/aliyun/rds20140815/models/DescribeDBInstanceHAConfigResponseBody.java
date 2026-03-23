@@ -4,57 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
-    /**
-     * <p>The instance ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxx</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The high availability mode of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>RPO</strong>: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</li>
-     * <li><strong>RTO</strong>: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on instance availability, select this mode.</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter is returned only for instances that run MySQL.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>RPO</p>
-     */
     @NameInMap("HAMode")
     public String HAMode;
 
     @NameInMap("HostInstanceInfos")
     public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfos hostInstanceInfos;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The data replication mode of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>Sync</strong>: the synchronous mode</li>
-     * <li><strong>Semi-sync</strong>: the semi-synchronous replication mode</li>
-     * <li><strong>Async</strong>: the asynchronous mode</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter is returned only for instances that run MySQL.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>Sync</p>
-     */
     @NameInMap("SyncMode")
     public String syncMode;
 

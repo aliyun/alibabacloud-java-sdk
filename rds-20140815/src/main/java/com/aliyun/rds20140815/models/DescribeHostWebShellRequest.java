@@ -5,41 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeHostWebShellRequest extends TeaModel {
     /**
-     * <p>The username of the account that is used to log on to the host of the instance.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>testOsAccount1</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The password of the host account.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <hr>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
-     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The instance hostname. You can call the DescribeDBInstanceIpHostname operation to query the hostname.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>testHost1</p>
      */
     @NameInMap("HostName")
     public String hostName;
@@ -48,11 +32,7 @@ public class DescribeHostWebShellRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionID")
     public String regionID;

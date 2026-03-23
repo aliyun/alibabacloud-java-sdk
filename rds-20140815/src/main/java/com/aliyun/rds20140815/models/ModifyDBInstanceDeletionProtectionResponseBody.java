@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceDeletionProtectionResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>3C5CFDEE-F774-4DED-89A2-1D76EC63C575</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

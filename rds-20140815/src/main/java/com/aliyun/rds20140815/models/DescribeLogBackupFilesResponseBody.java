@@ -7,48 +7,18 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeLogBackupFilesResponseBodyItems items;
 
-    /**
-     * <p>The page number of the page returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of log files on the current page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>F8EC669C-FC85-43D7-AF06-C3641626B37E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total size of log files. Unit: bytes.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2300</p>
-     */
     @NameInMap("TotalFileSize")
     public Long totalFileSize;
 
-    /**
-     * <p>The total number of log files.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>17</p>
-     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 

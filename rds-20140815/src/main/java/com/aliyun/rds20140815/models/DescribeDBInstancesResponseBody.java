@@ -11,7 +11,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      * <p>The token that is used to display the next page. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with <strong>NextToken</strong> specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>o7PORW5o2TJg**********</p>
+     * <p>o7PORW5o2TJg****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

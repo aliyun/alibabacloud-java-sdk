@@ -4,24 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
-    /**
-     * <p>The instance ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxx</p>
-     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     @NameInMap("Items")
     public ModifySecurityGroupConfigurationResponseBodyItems items;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>8585861B-8F0D-4D17-9460-C42255EB10C0</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

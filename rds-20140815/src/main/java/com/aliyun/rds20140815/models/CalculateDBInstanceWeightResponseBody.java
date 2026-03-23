@@ -7,12 +7,6 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
     @NameInMap("Items")
     public CalculateDBInstanceWeightResponseBodyItems items;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

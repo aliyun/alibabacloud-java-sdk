@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DetachRCDiskResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>C8E88DED-533F-4B3C-9207-731FBF394CCA</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

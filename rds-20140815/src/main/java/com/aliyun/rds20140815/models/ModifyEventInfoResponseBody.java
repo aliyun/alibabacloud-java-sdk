@@ -4,48 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyEventInfoResponseBody extends TeaModel {
-    /**
-     * <p>The error code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mst.errorcode.success.errormessage</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>12343</p>
-     */
     @NameInMap("ErrorEventId")
     public String errorEventId;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>224DB9F7-3100-4899-AB9C-C938BCCB43E7</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The number of successful records.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
-    /**
-     * <p>The ID of the successful event.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>234221</p>
-     */
     @NameInMap("SuccessEventId")
     public String successEventId;
 

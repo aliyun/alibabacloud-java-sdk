@@ -14,6 +14,8 @@ public class CreateImportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Import job ID</p>
+     * 
      * <strong>example:</strong>
      * <p>3384382</p>
      */

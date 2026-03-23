@@ -9,7 +9,7 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-t4n3axxxxx</p>
+     * <p>rm-t4n3a****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -31,7 +31,7 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>DedicatedProxy</p>
+     * <p>exclusive</p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
@@ -40,7 +40,9 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
      * <p>Dimension.</p>
      * 
      * <strong>example:</strong>
-     * <p>service</p>
+     * <p>service,node
+     * server,node
+     * service</p>
      */
     @NameInMap("Dimension")
     public String dimension;

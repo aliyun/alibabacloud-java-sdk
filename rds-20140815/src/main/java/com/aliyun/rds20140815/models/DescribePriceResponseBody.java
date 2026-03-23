@@ -4,66 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
-    /**
-     * <p>The order parameters.</p>
-     * <blockquote>
-     * <p> If the <strong>OrderParamOut</strong> parameter is set to <strong>true</strong>, the value of the OrderParams parameter is returned.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>{\&quot;autoPay\&quot;:false}&quot;</p>
-     */
     @NameInMap("OrderParams")
     public String orderParams;
 
-    /**
-     * <p>The price information.</p>
-     */
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>CA0ADDDC-0BEB-4381-A3ED-73B4C79B8CC6</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Rules")
     public DescribePriceResponseBodyRules rules;
 
-    /**
-     * <p>The pricing information about a serverless RDS instance.</p>
-     */
     @NameInMap("ServerlessPrice")
     public DescribePriceResponseBodyServerlessPrice serverlessPrice;
 
-    /**
-     * <p>Indicates whether discounts can be used.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("ShowDiscount")
     public Boolean showDiscount;
 
-    /**
-     * <p>The estimated hourly fee that is calculated based on the maximum number of RCUs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2**</p>
-     */
     @NameInMap("TradeMaxRCUAmount")
     public Float tradeMaxRCUAmount;
 
-    /**
-     * <p>The estimated hourly fee that is calculated based on the minimum number of RCUs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1**</p>
-     */
     @NameInMap("TradeMinRCUAmount")
     public Float tradeMinRCUAmount;
 
@@ -137,30 +98,12 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoActivityInfo extends TeaModel {
-        /**
-         * <p>The returned message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Error description</p>
-         */
         @NameInMap("CheckErrMsg")
         public String checkErrMsg;
 
-        /**
-         * <p>The error code that is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>Indicates whether the request was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("Success")
         public String success;
 
@@ -286,78 +229,33 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfo extends TeaModel {
-        /**
-         * <p>The information about the promotion.</p>
-         */
         @NameInMap("ActivityInfo")
         public DescribePriceResponseBodyPriceInfoActivityInfo activityInfo;
 
         @NameInMap("Coupons")
         public DescribePriceResponseBodyPriceInfoCoupons coupons;
 
-        /**
-         * <p>The currency unit.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <p>The discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        /**
-         * <p>The order information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Order Information</p>
-         */
         @NameInMap("OrderLines")
         public Object orderLines;
 
-        /**
-         * <p>The original price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2504</p>
-         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyPriceInfoRuleIds ruleIds;
 
-        /**
-         * <p>The estimated hourly cost that is calculated based on the maximum number of RCUs you specify.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1**</p>
-         */
         @NameInMap("TradeMaxRCUAmount")
         public Float tradeMaxRCUAmount;
 
-        /**
-         * <p>The estimated hourly cost that is calculated based on the minimum number of RCUs you specify.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2**</p>
-         */
         @NameInMap("TradeMinRCUAmount")
         public Float tradeMinRCUAmount;
 
-        /**
-         * <p>The transaction price, which is equal to the original price minus the discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2504</p>
-         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -509,93 +407,33 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyServerlessPrice extends TeaModel {
-        /**
-         * <p>The discount amount of the maximum number of RCUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1**.*</p>
-         */
         @NameInMap("RCUDiscountMaxAmount")
         public Float RCUDiscountMaxAmount;
 
-        /**
-         * <p>The discount amount of the minimum number of RCUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1*.*</p>
-         */
         @NameInMap("RCUDiscountMinAmount")
         public Float RCUDiscountMinAmount;
 
-        /**
-         * <p>The price of the maximum number of RCUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2**.*</p>
-         */
         @NameInMap("RCUOriginalMaxAmount")
         public Float RCUOriginalMaxAmount;
 
-        /**
-         * <p>The price of the minimum number of RCUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3*.*</p>
-         */
         @NameInMap("RCUOriginalMinAmount")
         public Float RCUOriginalMinAmount;
 
-        /**
-         * <p>The original price of the disk capacity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1*</p>
-         */
         @NameInMap("StorageOriginalAmount")
         public Float storageOriginalAmount;
 
-        /**
-         * <p>The maximum total price before the discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2**.*</p>
-         */
         @NameInMap("TotalOriginalMaxAmount")
         public Float totalOriginalMaxAmount;
 
-        /**
-         * <p>The minimum total price before the discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2*.*</p>
-         */
         @NameInMap("TotalOriginalMinAmount")
         public Float totalOriginalMinAmount;
 
-        /**
-         * <p>The transaction price of the maximum number of RCUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1**.*</p>
-         */
         @NameInMap("TradeMaxRCUAmount")
         public Float tradeMaxRCUAmount;
 
-        /**
-         * <p>The transaction price of the minimum number of RCUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2*.*</p>
-         */
         @NameInMap("TradeMinRCUAmount")
         public Float tradeMinRCUAmount;
 
-        /**
-         * <p>The discounted price of the disk capacity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2.*</p>
-         */
         @NameInMap("storageDiscountAmount")
         public Float storageDiscountAmount;
 

@@ -4,41 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DetachRCDiskRequest extends TeaModel {
-    /**
-     * <p>The reserved parameter. This parameter is not supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("DeleteWithInstance")
     public Boolean deleteWithInstance;
 
     /**
-     * <p>The ID of the disk that you want to detach.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rcd-f8zh55g5gbk1byjr****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rc-dh2jf9n6j4s14926****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

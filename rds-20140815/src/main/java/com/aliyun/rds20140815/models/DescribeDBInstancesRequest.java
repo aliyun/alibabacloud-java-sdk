@@ -23,7 +23,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -46,7 +46,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The endpoint of the instance. You must specify this parameter only when you want to query a single instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</p>
+     * <p>rm-uf6wjk5****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
@@ -64,7 +64,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -98,7 +98,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The dedicated cluster ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>dhg-7a9xxxxxxxx</p>
+     * <p>dhg-7a9****</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -107,7 +107,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The host ID of the instance in the dedicated cluster.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-bpxxxxxxx</p>
+     * <p>i-bp****</p>
      */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
@@ -132,7 +132,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The database engine version.</p>
      * 
      * <strong>example:</strong>
-     * <p>5.7</p>
+     * <p>8.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -203,7 +203,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The token that is used to display the next page. You must set this parameter to the value that is returned from the most recent call of the <strong>DescribeDBInstances</strong> operation for <strong>NextToken</strong>. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with this parameter specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>o7PORW5o2TJg**********</p>
+     * <p>o7PORW5o2TJg****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -247,6 +247,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>Reserved parameter. No configuration is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("QueryAutoRenewal")
     public Boolean queryAutoRenewal;
 
@@ -264,7 +270,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmyxxxxx</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -297,7 +303,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-uf6adz52c2pxxxxxxxxxx</p>
+     * <p>vsw-uf6adz52c2p****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -306,7 +312,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-uf6f7l4fg90xxxxxxxxxx</p>
+     * <p>vpc-uf6f7l4fg90****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

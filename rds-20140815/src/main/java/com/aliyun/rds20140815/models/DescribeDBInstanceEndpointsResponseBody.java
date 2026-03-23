@@ -4,18 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("Data")
     public DescribeDBInstanceEndpointsResponseBodyData data;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>777C4593-8053-427B-****105593277CAB</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -279,25 +270,9 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         @NameInMap("DBInstanceEndpoints")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpoints DBInstanceEndpoints;
 
-        /**
-         * <p>The name of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-u****</p>
-         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
-        /**
-         * <p>The version of the IP protocol. Valid values:</p>
-         * <ul>
-         * <li><strong>ipv4</strong></li>
-         * <li><strong>ipv6</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ipv4</p>
-         */
         @NameInMap("IpVersion")
         public String ipVersion;
 

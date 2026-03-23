@@ -5,22 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeBinlogFilesRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time.</p>
-     * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2011-06-20T15:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -31,24 +22,9 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The page number. Pages start from 1.</p>
-     * <p>Default value: <strong>1</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: <strong>30</strong> to <strong>100</strong>.</p>
-     * <p>Default value: <strong>30</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -59,12 +35,7 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
-     * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2011-06-01T15:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

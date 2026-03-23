@@ -4,21 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeWhitelistTemplateRequest extends TeaModel {
-    /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The resource group ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -29,11 +17,7 @@ public class DescribeWhitelistTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the whitelist template. You can call the <a href="https://help.aliyun.com/document_detail/2412075.html">DescribeAllWhitelistTemplate</a> operation to obtain the ID of the whitelist template.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1012</p>
      */
     @NameInMap("TemplateId")
     public Integer templateId;

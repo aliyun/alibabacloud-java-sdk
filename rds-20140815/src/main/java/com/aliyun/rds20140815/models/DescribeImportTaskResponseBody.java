@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeImportTaskResponseBody extends TeaModel {
     /**
+     * <p>Account name.</p>
+     * 
      * <strong>example:</strong>
      * <p>myadmin</p>
      */
@@ -12,6 +14,8 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String account;
 
     /**
+     * <p>Milvus version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>5.7</p>
      */
@@ -19,6 +23,8 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String dbVersion;
 
     /**
+     * <p>Detailed information about the job</p>
+     * 
      * <strong>example:</strong>
      * <p>Error Message</p>
      */
@@ -26,6 +32,8 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String detail;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A103039D-B1B2-4C57-B989-7D7C0DA95426</p>
      */
@@ -33,6 +41,12 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Source instance category.  </p>
+     * <ul>
+     * <li><strong>ECS</strong>: Alibaba Cloud ECS.  </li>
+     * <li><strong>other</strong>: Other.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>aliyunRDS</p>
      */
@@ -40,6 +54,8 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String sourceCategory;
 
     /**
+     * <p>Source IP address for access.</p>
+     * 
      * <strong>example:</strong>
      * <p>59.172.25.122</p>
      */
@@ -47,6 +63,8 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>Source MySQL port</p>
+     * 
      * <strong>example:</strong>
      * <p>3306</p>
      */
@@ -54,6 +72,8 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String sourcePort;
 
     /**
+     * <p>Task Status</p>
+     * 
      * <strong>example:</strong>
      * <p>Importing</p>
      */
@@ -61,6 +81,8 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Name of the target disaster recovery instance to switch to.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-t4neh0q12v1******</p>
      */
@@ -68,6 +90,8 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String targetInstanceName;
 
     /**
+     * <p>Job ID</p>
+     * 
      * <strong>example:</strong>
      * <p>416980000</p>
      */
@@ -75,6 +99,8 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>Task Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test01</p>
      */
@@ -82,6 +108,8 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String taskName;
 
     /**
+     * <p>Task Type, used to query jobs of specific types. Separate multiple types with commas. A maximum of 30 types are supported. The default value is empty, indicating no restriction.</p>
+     * 
      * <strong>example:</strong>
      * <p>import</p>
      */

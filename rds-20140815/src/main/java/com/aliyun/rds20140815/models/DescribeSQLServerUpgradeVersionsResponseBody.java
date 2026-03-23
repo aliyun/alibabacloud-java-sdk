@@ -8,6 +8,8 @@ public class DescribeSQLServerUpgradeVersionsResponseBody extends TeaModel {
     public DescribeSQLServerUpgradeVersionsResponseBodyItems items;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>866F5EB8-4650-4061-87F0-379F6F******</p>
      */
@@ -36,18 +38,48 @@ public class DescribeSQLServerUpgradeVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLServerUpgradeVersionsResponseBodyItemsItemSQLServerUpgradeVersionsSQLServerUpgradeVersionDBInstanceClassItemsDBInstanceClassItem extends TeaModel {
+        /**
+         * <p>可升级的版本规格的CPU大小</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CPU")
         public String CPU;
 
+        /**
+         * <p>可升级的版本规格</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mssql.x4.medium.s2</p>
+         */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
+        /**
+         * <p>可升级的版本规格的类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>独享型</p>
+         */
         @NameInMap("DBInstanceClassType")
         public String DBInstanceClassType;
 
+        /**
+         * <p>组类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>可升级的版本规格的内存大小</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8GB</p>
+         */
         @NameInMap("Memory")
         public String memory;
 
@@ -118,12 +150,27 @@ public class DescribeSQLServerUpgradeVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLServerUpgradeVersionsResponseBodyItemsItemSQLServerUpgradeVersionsSQLServerUpgradeVersion extends TeaModel {
+        /**
+         * <p>一个列表，描述了每个版本是否可以成为升级目标</p>
+         */
         @NameInMap("DBInstanceClassItems")
         public DescribeSQLServerUpgradeVersionsResponseBodyItemsItemSQLServerUpgradeVersionsSQLServerUpgradeVersionDBInstanceClassItems DBInstanceClassItems;
 
+        /**
+         * <p>是否支持升级到该版本</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NO/YES</p>
+         */
         @NameInMap("EnableUpgrade")
         public String enableUpgrade;
 
+        /**
+         * <p>版本值</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016_std</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -178,9 +225,18 @@ public class DescribeSQLServerUpgradeVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLServerUpgradeVersionsResponseBodyItemsItem extends TeaModel {
+        /**
+         * <p>当前的版本。若传DBInstanceId，则返回实例版本。若未传DBInstanceId，但传了EngineVersion，则返回EngineVersion。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016_web</p>
+         */
         @NameInMap("CurrentVersion")
         public String currentVersion;
 
+        /**
+         * <p>一个列表，显示是否支持升级到目标版本</p>
+         */
         @NameInMap("SQLServerUpgradeVersions")
         public DescribeSQLServerUpgradeVersionsResponseBodyItemsItemSQLServerUpgradeVersions SQLServerUpgradeVersions;
 

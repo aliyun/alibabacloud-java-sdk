@@ -7,51 +7,27 @@ public class CloneParameterGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The description of the parameter template in the destination region.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>CloneGroup1</p>
-     */
     @NameInMap("ParameterGroupDesc")
     public String parameterGroupDesc;
 
     /**
-     * <p>The ID of the parameter template. You can call the DescribeParameterGroups operation to query the parameter template ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rpg-13ppdh****</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
     /**
-     * <p>The name of the parameter template in the destination region.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>tartestgroup</p>
      */
     @NameInMap("ParameterGroupName")
     public String parameterGroupName;
 
     /**
-     * <p>The ID of the source region to which the parameter template belongs. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the resource group. You can leave this parameter empty.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -62,11 +38,7 @@ public class CloneParameterGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the destination region. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-qingdao</p>
      */
     @NameInMap("TargetRegionId")
     public String targetRegionId;

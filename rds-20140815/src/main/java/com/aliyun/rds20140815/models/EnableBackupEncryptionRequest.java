@@ -6,17 +6,10 @@ import com.aliyun.tea.*;
 public class EnableBackupEncryptionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-wz951f7f******</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>564cf6c4-d2ee-495b-b265-5724******</p>
-     */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 

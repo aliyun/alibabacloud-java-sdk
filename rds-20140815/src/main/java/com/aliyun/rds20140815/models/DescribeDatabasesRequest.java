@@ -5,35 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeDatabasesRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The name of the database.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>testDB01</p>
-     */
     @NameInMap("DBName")
     public String DBName;
 
-    /**
-     * <p>The status of the database. Valid values:</p>
-     * <ul>
-     * <li><strong>Creating</strong></li>
-     * <li><strong>Running</strong></li>
-     * <li><strong>Deleting</strong></li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Creating</p>
-     */
     @NameInMap("DBStatus")
     public String DBStatus;
 
@@ -43,28 +22,9 @@ public class DescribeDatabasesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The page number. Pages start from 1.</p>
-     * <p>Default value: <strong>1</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return per page. Valid values:</p>
-     * <ul>
-     * <li><strong>30</strong></li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
-     * </ul>
-     * <p>Default value: 30.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

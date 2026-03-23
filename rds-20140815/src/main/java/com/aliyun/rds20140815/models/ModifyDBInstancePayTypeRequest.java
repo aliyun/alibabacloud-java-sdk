@@ -5,35 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstancePayTypeRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-bp1842vmucoa5w874</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The billing method of the instance. The value is fixed as <strong>Prepaid</strong>, which indicates the subscription billing method.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Prepaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
-     * <p>The renewal cycle of the instance.</p>
-     * <ul>
-     * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong></li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Year</p>
      */
     @NameInMap("Period")
     public String period;
@@ -41,16 +25,6 @@ public class ModifyDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The subscription duration of the instance. Valid values:</p>
-     * <ul>
-     * <li>If you set the <strong>Period</strong> parameter to <strong>Year</strong>, the value of the <strong>UsedTime</strong> parameter ranges from 1 to 5.</li>
-     * <li>If you set the <strong>Period</strong> parameter to <strong>Month</strong>, the value of the <strong>UsedTime</strong> parameter ranges from 1 to 11.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("UsedTime")
     public Integer usedTime;
 

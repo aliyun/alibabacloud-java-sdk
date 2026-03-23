@@ -7,12 +7,6 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeDBInstancesAsCsvResponseBodyItems items;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1AD222E9-E606-4A42-BF6D-8A444291****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,70 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaModel {
-    /**
-     * <p>The response code returned. Valid values:</p>
-     * <ul>
-     * <li><strong>200</strong>: success</li>
-     * <li><strong>400</strong>: client error</li>
-     * <li><strong>401</strong>: identity authentication failed</li>
-     * <li><strong>404</strong>: request page not found</li>
-     * <li><strong>500</strong>: server error</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("Data")
     public DescribeInstanceLinkedWhitelistTemplateResponseBodyData data;
 
-    /**
-     * <p>The HTTP status code returned. Valid values:</p>
-     * <ul>
-     * <li><strong>200</strong>: success</li>
-     * <li><strong>400</strong>: client error</li>
-     * <li><strong>500</strong>: server error</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The returned message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Successful</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -125,48 +76,18 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
     }
 
     public static class DescribeInstanceLinkedWhitelistTemplateResponseBodyDataTemplates extends TeaModel {
-        /**
-         * <p>The primary key of the data table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1884</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
-        /**
-         * <p>The IP addresses.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12.0.X.X,10.2.X.X</p>
-         */
         @NameInMap("Ips")
         public String ips;
 
-        /**
-         * <p>The whitelist template ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>412</p>
-         */
         @NameInMap("TemplateId")
         public Integer templateId;
 
-        /**
-         * <p>The whitelist template name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>template_123</p>
-         */
         @NameInMap("TemplateName")
         public String templateName;
 
-        /**
-         * <p>The user ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16****</p>
-         */
         @NameInMap("UserId")
         public Integer userId;
 
@@ -218,18 +139,9 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
     }
 
     public static class DescribeInstanceLinkedWhitelistTemplateResponseBodyData extends TeaModel {
-        /**
-         * <p>The instance name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-bp191w771kd3****</p>
-         */
         @NameInMap("InsName")
         public String insName;
 
-        /**
-         * <p>The information about whitelists that are returned by page.</p>
-         */
         @NameInMap("Templates")
         public java.util.List<DescribeInstanceLinkedWhitelistTemplateResponseBodyDataTemplates> templates;
 

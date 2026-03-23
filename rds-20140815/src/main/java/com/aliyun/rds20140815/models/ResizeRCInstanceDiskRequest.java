@@ -20,6 +20,12 @@ public class ResizeRCInstanceDiskRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The disk ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rcd-x4462840nwinu6rr61m5o</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 

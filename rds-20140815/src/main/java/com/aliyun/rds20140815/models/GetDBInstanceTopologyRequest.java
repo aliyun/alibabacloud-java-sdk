@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDBInstanceTopologyRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5*******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

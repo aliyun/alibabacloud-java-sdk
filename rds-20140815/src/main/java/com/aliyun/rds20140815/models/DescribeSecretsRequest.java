@@ -4,49 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecretsRequest extends TeaModel {
-    /**
-     * <p>The language of the text within the response. Valid values:</p>
-     * <ul>
-     * <li><strong>zh-CN</strong>: Chinese</li>
-     * <li><strong>en-US</strong>: English</li>
-     * </ul>
-     * <blockquote>
-     * <p>The default value is <strong>en-US</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>en-US</p>
-     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCz*****</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-xjkljjxxxxx</p>
-     */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
     /**
-     * <p>The database engine of the database.</p>
-     * <blockquote>
-     * <p>Only MySQL is supported.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -58,44 +26,23 @@ public class DescribeSecretsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
-     * <blockquote>
-     * <p>The default value is 1.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmxypivk***</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

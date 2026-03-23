@@ -4,78 +4,30 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogsResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The end date of the query.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2011-05-30Z</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The database engine of the instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>MySQL</p>
-     */
     @NameInMap("Engine")
     public String engine;
 
     @NameInMap("Items")
     public DescribeSlowLogsResponseBodyItems items;
 
-    /**
-     * <p>The number of the page returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of SQL statements that are returned on the current page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2553A660-E4EB-4AF4-A402-8AFF70A49143</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The start date of the query.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2011-05-30Z</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The total number of entries that are returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>5</p>
-     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 

@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccountResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>91E855E5-7E80-4955-929B-C74EE1D38C66</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

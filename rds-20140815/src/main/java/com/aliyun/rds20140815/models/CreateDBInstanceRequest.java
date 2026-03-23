@@ -109,7 +109,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>A deprecated parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>0</p>
      */
     @NameInMap("BpeEnabled")
     public String bpeEnabled;
@@ -173,7 +173,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCz*****</p>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -215,7 +215,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The internal endpoint that is used to connect to the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5*****.mysql.rds.aliyuncs.com</p>
+     * <p>rm-uf6wjk5****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
@@ -249,7 +249,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rds.mysql.s1.small</p>
+     * <p>mysql.n2.medium.2c</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
@@ -261,7 +261,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Test database</p>
+     * <p>testInstance</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
@@ -271,7 +271,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Internet</p>
+     * <p>Intranet</p>
      */
     @NameInMap("DBInstanceNetType")
     public String DBInstanceNetType;
@@ -306,7 +306,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>cloud_essd</p>
+     * <p>general_essd</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -331,7 +331,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>rpg-sys-*****</p>
+     * <p>rpg-sys-****</p>
      */
     @NameInMap("DBParamGroupId")
     public String DBParamGroupId;
@@ -374,7 +374,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>dhg-4n*****</p>
+     * <p>dhg-4n****</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -474,11 +474,21 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>5.6</p>
+     * <p>8.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>Enable or disable <a href="https://help.aliyun.com/document_detail/2856526.html">RDS MySQL native replication</a>. Valid values:</p>
+     * <ul>
+     * <li><strong>ON</strong>: Enabled.</li>
+     * <li><strong>OFF</strong>: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ON</p>
+     */
     @NameInMap("ExternalReplication")
     public Boolean externalReplication;
 
@@ -500,7 +510,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Classic</p>
+     * <p>VPC</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -616,7 +626,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -631,7 +641,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::1406xxxxxx:role/aliyunrdsinstanceencryptiondefaultrole</p>
+     * <p>acs:ram::1406****:role/aliyunrdsinstanceencryptiondefaultrole</p>
      */
     @NameInMap("RoleARN")
     public String roleARN;
@@ -733,7 +743,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>i-bp*****3</p>
+     * <p>i-bp****</p>
      */
     @NameInMap("TargetDedicatedHostIdForLog")
     public String targetDedicatedHostIdForLog;
@@ -747,7 +757,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>i-bp*****1</p>
+     * <p>i-bp****</p>
      */
     @NameInMap("TargetDedicatedHostIdForMaster")
     public String targetDedicatedHostIdForMaster;
@@ -761,7 +771,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>i-bp*****2</p>
+     * <p>i-bp****</p>
      */
     @NameInMap("TargetDedicatedHostIdForSlave")
     public String targetDedicatedHostIdForSlave;
@@ -823,7 +833,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>67798*****</p>
+     * <p>67798****</p>
      */
     @NameInMap("UserBackupId")
     public String userBackupId;
@@ -835,7 +845,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>vpc-*****</p>
+     * <p>vpc-****</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
@@ -850,7 +860,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>vsw-*****</p>
+     * <p>vsw-****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -859,7 +869,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The entries in the whitelist. If you enter multiple IP addresses or CIDR blocks, you must separate the IP addresses or CIDR blocks with commas (,). Do not add spaces preceding or following the commas. Example: <code>192.168.0.1,172.16.213.9</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.XXX.XX.1,172.XXX.XX.9</p>
+     * <p>192.168.0.1,172.16.213.9</p>
      */
     @NameInMap("WhitelistTemplateList")
     public String whitelistTemplateList;

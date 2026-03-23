@@ -34,7 +34,7 @@ public class QueryRecommendByCodeResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

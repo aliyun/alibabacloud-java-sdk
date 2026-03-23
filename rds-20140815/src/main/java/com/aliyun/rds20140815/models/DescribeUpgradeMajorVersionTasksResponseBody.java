@@ -236,18 +236,64 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         @NameInMap("UpgradeMode")
         public String upgradeMode;
 
+        /**
+         * <p>Indicates whether a switch is performed.</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("cutOver")
         public Boolean cutOver;
 
+        /**
+         * <p>Estimated synchronization time for logical replication delay, in seconds.  </p>
+         * <blockquote>
+         * <p>This is used only for <strong>zero-downtime</strong> major version upgrades.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("totalLogicRepDelayTime")
         public Integer totalLogicRepDelayTime;
 
+        /**
+         * <p>Logical replication delay size, in MB.</p>
+         * <blockquote>
+         * <p>Applies only to <strong>zero-downtime</strong> major version upgrades.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("totalLogicRepLatencyMB")
         public Integer totalLogicRepLatencyMB;
 
+        /**
+         * <p>Temporary internal endpoint for zero-downtime major version upgrade, in the format <code>****.pg.rds.aliyuncs.com</code>.  </p>
+         * <blockquote>
+         * <p>Applies only to <strong>zero-downtime</strong> major version upgrades.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>****.pg.rds.aliyuncs.com</p>
+         */
         @NameInMap("zeroDownTimeConnectionString")
         public String zeroDownTimeConnectionString;
 
+        /**
+         * <p>Port of the higher-version instance, which is the same as the source instance port.  </p>
+         * <blockquote>
+         * <p>Applies only to <strong>zero-downtime</strong> major version upgrades.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
+         */
         @NameInMap("zeroDownTimePort")
         public Integer zeroDownTimePort;
 

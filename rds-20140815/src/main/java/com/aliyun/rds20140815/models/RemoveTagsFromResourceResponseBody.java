@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RemoveTagsFromResourceResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>AE00ACCD-1CF9-4920-9BB9-0175EFF43405</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

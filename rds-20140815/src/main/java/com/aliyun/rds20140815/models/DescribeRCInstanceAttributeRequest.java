@@ -14,15 +14,34 @@ public class DescribeRCInstanceAttributeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The instance name</p>
+     * 
      * <strong>example:</strong>
      * <p>k8s-node</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>Set the upper limit for the number of instance disks in the return result. The valid range is 10 to 500.  </p>
+     * <ul>
+     * <li>If no value is set, the default value is 20.  </li>
+     * <li>If the set value is less than 10, it is fixed to 10.  </li>
+     * <li>If the set value is greater than or equal to 10 and less than or equal to 500, the set value is used.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxDisksResults")
     public Long maxDisksResults;
 
+    /**
+     * <p>The VPC network IP address of the instance, that is, the private IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XXX.XXX</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 

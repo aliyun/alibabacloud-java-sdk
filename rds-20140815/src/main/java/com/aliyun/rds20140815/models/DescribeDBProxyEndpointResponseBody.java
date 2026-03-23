@@ -4,192 +4,60 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyEndpointResponseBody extends TeaModel {
-    /**
-     * <p>The timeout period for consistency reads. Unit: milliseconds. Default value: <strong>10</strong>. Valid values: <strong>0</strong> to <strong>60000</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("CausalConsistReadTimeout")
     public String causalConsistReadTimeout;
 
-    /**
-     * <p>The proxy endpoint queried.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>testproxy****.rwlb.rds.aliyuncs.com</p>
-     */
     @NameInMap("DBProxyConnectString")
     public String DBProxyConnectString;
 
-    /**
-     * <p>The network type of the proxy endpoint. Valid values:</p>
-     * <ul>
-     * <li><strong>InnerString</strong>: internal network</li>
-     * <li><strong>OuterString</strong>: Internet</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>InnerString</p>
-     */
     @NameInMap("DBProxyConnectStringNetType")
     public String DBProxyConnectStringNetType;
 
-    /**
-     * <p>The port number that is associated with the proxy endpoint.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>3306</p>
-     */
     @NameInMap("DBProxyConnectStringPort")
     public String DBProxyConnectStringPort;
 
-    /**
-     * <p>The ID of the proxy endpoint.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>keaxncrjluwu0gue****</p>
-     */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
-    /**
-     * <p>The minimum number of reserved instances.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("DBProxyEndpointMinSlaveCount")
     public String DBProxyEndpointMinSlaveCount;
 
-    /**
-     * <p>An internal parameter. You can ignore this parameter.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>normal</p>
-     */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
-    /**
-     * <p>The configuration of the proxy terminal. The value of this parameter is a JSON string that consists of the following parameters:</p>
-     * <ul>
-     * <li><strong>TransactionReadSqlRouteOptimizeStatus</strong>: the status of the transaction splitting feature. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
-     * <li><strong>ConnectionPersist</strong>: the status of the connection pooling feature. Valid values: <strong>0</strong>, <strong>1</strong>, and <strong>2</strong>. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session-level connection pooling feature is enabled. The value 2 indicates that the transaction-level connection pooling feature is enabled.</li>
-     * <li><strong>ReadWriteSpliting</strong>: the status of the read/write splitting feature. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
-     * <li><strong>AZProximityAccess</strong>: the status of the nearest access feature. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
-     * <li><strong>CausalConsistRead</strong>: the read consistency settings. Valid values: <strong>0</strong>, <strong>1</strong>, and <strong>2</strong>. The value 0 indicates eventual consistency. The value 1 indicates session consistency. The value 2 indicates global consistency.</li>
-     * <li><strong>PinPreparedStmt</strong>: an internal parameter that is available only for ApsaraDB RDS for PostgrSQL instances.</li>
-     * </ul>
-     * <blockquote>
-     * <p> If the instance runs PostgreSQL, you can change only the value of the <strong>ReadWriteSpliting</strong> field. The <strong>TransactionReadSqlRouteOptimizeStatus</strong> and <strong>PinPreparedStmt</strong> fields are set to their default values 1.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>TransactionReadSqlRouteOptimizeStatus:1;ConnectionPersist:0;ReadWriteSpliting:1</p>
-     */
     @NameInMap("DBProxyFeatures")
     public String DBProxyFeatures;
 
     @NameInMap("DBProxyNodes")
     public DescribeDBProxyEndpointResponseBodyDBProxyNodes DBProxyNodes;
 
-    /**
-     * <p>The description of the proxy terminal.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>proxyterminal-test</p>
-     */
     @NameInMap("DbProxyEndpointAliases")
     public String dbProxyEndpointAliases;
 
-    /**
-     * <p>The read and write attributes of the proxy terminal. Valid values:</p>
-     * <ul>
-     * <li><strong>ReadWrite</strong>: The proxy terminal supports read and write requests.</li>
-     * <li><strong>ReadOnly</strong>: The proxy terminal supports only read requests.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>ReadWrite</p>
-     */
     @NameInMap("DbProxyEndpointReadWriteMode")
     public String dbProxyEndpointReadWriteMode;
 
-    /**
-     * <p>The virtual private cloud (VPC) ID of the proxy.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>vpc-****</p>
-     */
     @NameInMap("DbProxyEndpointVpcId")
     public String dbProxyEndpointVpcId;
 
-    /**
-     * <p>The vSwitch ID of the proxy terminal.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>vsw-****</p>
-     */
     @NameInMap("DbProxyEndpointVswitchId")
     public String dbProxyEndpointVswitchId;
 
-    /**
-     * <p>The zone ID of the proxy terminal.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou-c</p>
-     */
     @NameInMap("DbProxyEndpointZoneId")
     public String dbProxyEndpointZoneId;
 
     @NameInMap("EndpointConnectItems")
     public DescribeDBProxyEndpointResponseBodyEndpointConnectItems endpointConnectItems;
 
-    /**
-     * <p>The method that is used to assign read weights. For more information, see <a href="https://help.aliyun.com/document_detail/96076.html">Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances</a>. Valid values:</p>
-     * <ul>
-     * <li><strong>Standard</strong>: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.</li>
-     * <li><strong>Custom</strong>: You must manually assign read weights to the instance and its read-only instances.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Standard</p>
-     */
     @NameInMap("ReadOnlyInstanceDistributionType")
     public String readOnlyInstanceDistributionType;
 
-    /**
-     * <p>The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS no longer forwards read requests to the read-only instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("ReadOnlyInstanceMaxDelayTime")
     public String readOnlyInstanceMaxDelayTime;
 
-    /**
-     * <p>The read weights of the instance and its read-only instances. The value of this parameter is a JSON string that consists of the following parameters:</p>
-     * <ul>
-     * <li><strong>DBInstanceId</strong>: the ID of the instance.</li>
-     * <li><strong>DBInstanceType</strong>: the role of the instance. Valid values: <strong>Master</strong> and <strong>ReadOnly</strong>.</li>
-     * <li><strong>NodeID</strong>: The IDs of the primary and secondary nodes of the cluster. An instance that runs RDS Cluster Edition refers to a cluster.</li>
-     * <li><strong>NodeType</strong>: The node type. Valid values: <strong>Primary</strong> and <strong>Secondary</strong>.</li>
-     * <li><strong>Weight</strong>: the read weight of the instance. The read weight increases in increments of <strong>100</strong> and cannot exceed <strong>10000</strong>.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>[{\&quot;Availability\&quot;:\&quot;Available\&quot;,\&quot;DBInstanceId\&quot;:\&quot;rr-bp176984qewd8****\&quot;,\&quot;DBInstanceType\&quot;:\&quot;ReadOnly\&quot;,\&quot;Weight\&quot;:400},{\&quot;Availability\&quot;:\&quot;Available\&quot;,\&quot;DBInstanceId\&quot;:\&quot;rm-bp1ja4f56s7us****\&quot;,\&quot;DBInstanceType\&quot;:\&quot;Master\&quot;,\&quot;Weight\&quot;:0}]</p>
-     */
     @NameInMap("ReadOnlyInstanceWeight")
     public String readOnlyInstanceWeight;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

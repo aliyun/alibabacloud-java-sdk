@@ -8,7 +8,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
      * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5*******</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -27,7 +27,7 @@ public class CreateRCSnapshotRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>none</p>
+     * <p>None</p>
      */
     @NameInMap("InstantAccess")
     public Boolean instantAccess;
@@ -36,7 +36,7 @@ public class CreateRCSnapshotRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>none</p>
+     * <p>None</p>
      */
     @NameInMap("InstantAccessRetentionDays")
     public Integer instantAccessRetentionDays;
@@ -51,8 +51,10 @@ public class CreateRCSnapshotRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>rc-t8q22a87745hf8****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -67,6 +69,9 @@ public class CreateRCSnapshotRequest extends TeaModel {
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 
+    /**
+     * <p>Tag Details.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateRCSnapshotRequestTag> tag;
 
@@ -74,7 +79,7 @@ public class CreateRCSnapshotRequest extends TeaModel {
      * <p>This parameter has been deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou-b</p>
+     * <p>None</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -158,15 +163,19 @@ public class CreateRCSnapshotRequest extends TeaModel {
 
     public static class CreateRCSnapshotRequestTag extends TeaModel {
         /**
+         * <p>tag key.</p>
+         * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>testRC</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
+         * <p>tag value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>test01</p>
          */
         @NameInMap("Value")
         public String value;

@@ -4,96 +4,30 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBNodeShrinkRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
-     * <ol>
-     * <li><strong>true</strong>: automatically completes the payment. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
-     * </ol>
-     * <blockquote>
-     * <p> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-bp1k8s41l2o52****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The new storage capacity of the instance. Unit: GB For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("DBInstanceStorage")
     public String DBInstanceStorage;
 
-    /**
-     * <p>The storage type of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>cloud_essd</strong>: performance level 1 (PL1) enhanced SSD (ESSD)</li>
-     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
-     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>cloud_essd</p>
-     */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
-    /**
-     * <p>The information about the node.</p>
-     * <blockquote>
-     * <p> This parameter is used for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</p>
-     * </blockquote>
-     */
     @NameInMap("DBNode")
     public String DBNodeShrink;
 
-    /**
-     * <p>Specifies whether to perform a dry run. Valid values: Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: performs a dry run and does not perform the actual request. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    /**
-     * <p>The time when you want the change to take effect. Valid values:</p>
-     * <ul>
-     * <li><strong>Immediate</strong> (default): The change immediately takes effect.</li>
-     * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Immediate</p>
-     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
@@ -103,19 +37,6 @@ public class ModifyDBNodeShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>Specifies whether to asynchronously perform the operation. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong> (default): sends only the order. The operation is asynchronously performed.</li>
-     * <li><strong>false</strong>: sends the request. After the request passes the check, the operation is directly performed.</li>
-     * </ul>
-     * <blockquote>
-     * <p> The default value is true, which indicates that the change operation is asynchronously performed. If you set this parameter to false, the change operation is simultaneously performed. This prolongs the response time of the operation.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("ProduceAsync")
     public Boolean produceAsync;
 

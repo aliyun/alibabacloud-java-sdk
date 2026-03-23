@@ -4,33 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
-    /**
-     * <p>The instance ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>pgm-bp1lymyn1v3i****</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("HbaLogItems")
     public DescribeModifyPGHbaConfigLogResponseBodyHbaLogItems hbaLogItems;
 
-    /**
-     * <p>The number of modification records.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("LogItemCount")
     public Integer logItemCount;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6D797E6B-E157-510C-A27F-6F9E6DA40633</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

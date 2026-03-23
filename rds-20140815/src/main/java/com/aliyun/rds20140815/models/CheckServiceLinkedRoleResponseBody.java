@@ -4,30 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether an SLR is created.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("HasServiceLinkedRole")
     public String hasServiceLinkedRole;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>AB44DC0A-7E77-442A-97A9-C6418694CB22</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the service-linked role is required. Default value: true.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("RequireServiceLinkedRole")
     public String requireServiceLinkedRole;
 

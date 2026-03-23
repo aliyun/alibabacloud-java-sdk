@@ -4,30 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesAsCsvRequest extends TeaModel {
-    /**
-     * <p>A deprecated parameter. You do not need to configure this parameter.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>API</p>
-     */
     @NameInMap("CachedAsync")
     public Boolean cachedAsync;
 
-    /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>A deprecated parameter. You do not need to configure this parameter.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>API</p>
-     */
     @NameInMap("ExportKey")
     public String exportKey;
 
@@ -35,21 +17,11 @@ public class DescribeDBInstancesAsCsvRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the resource group.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

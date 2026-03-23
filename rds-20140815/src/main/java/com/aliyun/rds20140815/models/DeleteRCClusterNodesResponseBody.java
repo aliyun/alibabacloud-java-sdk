@@ -4,21 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteRCClusterNodesResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>7E0970A1-0434-5C83-B560-613EBA11B525</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The task ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>238028563</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -8,7 +8,7 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
      * <p>The ID of the full backup file.</p>
      * 
      * <strong>example:</strong>
-     * <p>b-n8tpg24c6i0v********</p>
+     * <p>b-n8tpg24c6i0v****</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

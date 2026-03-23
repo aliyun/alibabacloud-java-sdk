@@ -7,38 +7,12 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     @NameInMap("DBInstanceNetInfos")
     public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos DBInstanceNetInfos;
 
-    /**
-     * <p>The network type of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>Classic</strong>: classic network</li>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>VPC</p>
-     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>777C4593-8053-427B-99E2-105593277CAB</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The whitelist mode of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>normal</strong>: standard whitelist mode</li>
-     * <li><strong>safety</strong>: enhanced whitelist mode</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>safety</p>
-     */
     @NameInMap("SecurityIPMode")
     public String securityIPMode;
 

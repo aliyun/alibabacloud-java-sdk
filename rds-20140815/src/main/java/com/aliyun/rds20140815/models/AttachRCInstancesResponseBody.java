@@ -4,27 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class AttachRCInstancesResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The response parameters.</p>
-     */
     @NameInMap("Responses")
     public java.util.List<AttachRCInstancesResponseBodyResponses> responses;
 
-    /**
-     * <p>The task ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>178968983</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 
@@ -58,33 +43,12 @@ public class AttachRCInstancesResponseBody extends TeaModel {
     }
 
     public static class AttachRCInstancesResponseBodyResponses extends TeaModel {
-        /**
-         * <p>The HTTP status code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The node ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rc-e2g521l55k038cr8****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The message returned.</p>
-         * <blockquote>
-         * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Successful</p>
-         */
         @NameInMap("Message")
         public String message;
 

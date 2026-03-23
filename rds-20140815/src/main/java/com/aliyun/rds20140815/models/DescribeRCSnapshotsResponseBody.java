@@ -92,9 +92,21 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeRCSnapshotsResponseBodySnapshotsTag extends TeaModel {
+        /**
+         * <p>tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRC</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -210,6 +222,12 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-t8q22a87745hf8****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -226,7 +244,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
          * <p>The snapshot name.</p>
          * 
          * <strong>example:</strong>
-         * <p>s-2ze8klip00xcogcwer76</p>
+         * <p>csw-37-系统盘</p>
          */
         @NameInMap("SnapshotName")
         public String snapshotName;
@@ -302,6 +320,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Tag Details.</p>
+         */
         @NameInMap("Tag")
         public java.util.List<DescribeRCSnapshotsResponseBodySnapshotsTag> tag;
 

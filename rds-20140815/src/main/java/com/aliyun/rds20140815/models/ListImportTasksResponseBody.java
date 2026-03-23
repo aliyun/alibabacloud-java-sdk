@@ -4,10 +4,19 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ListImportTasksResponseBody extends TeaModel {
+    /**
+     * <p>None</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListImportTasksResponseBodyItems> items;
 
     /**
+     * <p>Number of records per page. Valid values: <strong>1–100</strong>.</p>
+     * <p>Default value: <strong>30</strong>.  </p>
+     * <blockquote>
+     * <p>If this parameter is specified, the <strong>PageSize</strong> and <strong>PageNumber</strong> parameters are unavailable.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -15,6 +24,8 @@ public class ListImportTasksResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Paging cursor identity.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -69,6 +80,8 @@ public class ListImportTasksResponseBody extends TeaModel {
 
     public static class ListImportTasksResponseBodyItems extends TeaModel {
         /**
+         * <p>Creation time in UTC, formatted as YYYY-MM-DDTHH:mm:ssZ.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
          */
@@ -76,6 +89,8 @@ public class ListImportTasksResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>Milvus version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.7</p>
          */
@@ -83,6 +98,8 @@ public class ListImportTasksResponseBody extends TeaModel {
         public String dbVersion;
 
         /**
+         * <p>Job status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Importing</p>
          */
@@ -90,6 +107,8 @@ public class ListImportTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Target instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-bp*****</p>
          */
@@ -97,6 +116,8 @@ public class ListImportTasksResponseBody extends TeaModel {
         public String targetInstanceName;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>342900000</p>
          */
@@ -104,6 +125,8 @@ public class ListImportTasksResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>Job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>
          */
@@ -111,6 +134,8 @@ public class ListImportTasksResponseBody extends TeaModel {
         public String taskName;
 
         /**
+         * <p>Job type.</p>
+         * 
          * <strong>example:</strong>
          * <p>import</p>
          */

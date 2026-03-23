@@ -4,38 +4,22 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInvocationResultsRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>c-7d2a745b412b4601b2d47f6a768d****</p>
-     */
     @NameInMap("CommandId")
     public String commandId;
 
     /**
      * <strong>example:</strong>
-     * <p>Base64</p>
+     * <p>PlainText</p>
      */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("IncludeHistory")
     public Boolean includeHistory;
 
-    /**
-     * <strong>example:</strong>
-     * <p>rc-i322y2t562oh7o******</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>t-7d2a745b412b4601b2d47f6a768d****</p>
-     */
     @NameInMap("InvokeId")
     public String invokeId;
 
@@ -46,47 +30,32 @@ public class DescribeRCInvocationResultsRequest extends TeaModel {
     @NameInMap("InvokeRecordStatus")
     public String invokeRecordStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAdDWBF2</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>rg-acfmx****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -203,17 +172,9 @@ public class DescribeRCInvocationResultsRequest extends TeaModel {
     }
 
     public static class DescribeRCInvocationResultsRequestTag extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("Value")
         public String value;
 

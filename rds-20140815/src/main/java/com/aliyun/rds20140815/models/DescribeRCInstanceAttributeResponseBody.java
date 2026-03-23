@@ -4,6 +4,16 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes</li>
+     * <li><strong>false</strong>: No</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
@@ -28,6 +38,16 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Cpu")
     public Integer cpu;
 
+    /**
+     * <p>Indicates whether the instance is added to an ACK cluster. Valid values:  </p>
+     * <ul>
+     * <li><strong>1</strong>: Yes  </li>
+     * <li><strong>0</strong>: No</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CreateMode")
     public Integer createMode;
 
@@ -52,6 +72,16 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DataDisks")
     public DescribeRCInstanceAttributeResponseBodyDataDisks dataDisks;
 
+    /**
+     * <p>The database type. Valid values:</p>
+     * <ul>
+     * <li><strong>mssql</strong>: SQL Server</li>
+     * <li><strong>mysql</strong>: MySQL</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
+     */
     @NameInMap("DbType")
     public String dbType;
 
@@ -64,6 +94,16 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DedicatedHostAttribute")
     public DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute dedicatedHostAttribute;
 
+    /**
+     * <p>Whether deletion protection is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Enabled</li>
+     * <li><strong>false</strong>: Disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
@@ -131,9 +171,21 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>Number of GPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Gpu")
     public Integer gpu;
 
+    /**
+     * <p>The GPU type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NVIDIA V100</p>
+     */
     @NameInMap("GpuTypes")
     public String gpuTypes;
 
@@ -171,6 +223,16 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("InnerIpAddress")
     public DescribeRCInstanceAttributeResponseBodyInnerIpAddress innerIpAddress;
 
+    /**
+     * <p>Billing method. Valid values:</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
@@ -279,6 +341,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>The File Type. When the value is <strong>rds_vnode</strong>, it indicates that the node is a container node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds_vnode</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
@@ -306,6 +374,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aeky6z354ks****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -321,6 +395,16 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The spot strategy for pay-as-you-go instances. Valid values:</p>
+     * <ul>
+     * <li><strong>NoSpot</strong>: Normal pay-as-you-go instance.</li>
+     * <li><strong>SpotAsPriceGo</strong>: The system automatically bids based on the current marketplace price.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
+     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
@@ -354,12 +438,24 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("StoppedMode")
     public String stoppedMode;
 
+    /**
+     * <p>System disk specifications.</p>
+     */
     @NameInMap("SystemDisk")
     public DescribeRCInstanceAttributeResponseBodySystemDisk systemDisk;
 
     @NameInMap("Tags")
     public DescribeRCInstanceAttributeResponseBodyTags tags;
 
+    /**
+     * <p>The custom data of the instance, formatted as a base64-encoded string.</p>
+     * <blockquote>
+     * <p>If the instance does not have custom data, an empty string is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>IyEvYmluL3NoCmVjaG8gXCJIZWxsbyBXb3JsZC4gVGhlIHRpbWUgaXMgbm93ICQoZGF0ZSAtUikhXCIgfCB0ZWUgL3Jvb3QvdXNlcmRhdGFfdGVzdDA2MjB0d28udHh0</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -1139,18 +1235,64 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceAttributeResponseBodySystemDisk extends TeaModel {
+        /**
+         * <p>A backup parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
+        /**
+         * <p>Specifies whether to encrypt the disk. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes</li>
+         * <li><strong>false</strong>: No</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Encrypted")
         public String encrypted;
 
+        /**
+         * <p>The system disk category. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * <li><strong>cloud_essd</strong>: enterprise SSD (ESSD).</li>
+         * <li><strong>cloud_auto</strong>: premium performance disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
+        /**
+         * <p>Performance level of the system disk when it is an enterprise SSD (ESSD). Valid values:</p>
+         * <ul>
+         * <li><strong>PL0</strong></li>
+         * <li><strong>PL1</strong></li>
+         * <li><strong>PL2</strong></li>
+         * <li><strong>PL3</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("SystemDiskPerformanceLevel")
         public String systemDiskPerformanceLevel;
 
+        /**
+         * <p>System disk size, in GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("SystemDiskSize")
         public Long systemDiskSize;
 

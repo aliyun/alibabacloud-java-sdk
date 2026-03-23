@@ -7,10 +7,6 @@ public class DescribeRCAvailableResourceResponseBody extends TeaModel {
     @NameInMap("AvailableZones")
     public java.util.List<DescribeRCAvailableResourceResponseBodyAvailableZones> availableZones;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0041D94C-FB92-4C49-B115-259DA1C*****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,52 +32,24 @@ public class DescribeRCAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeRCAvailableResourceResponseBodyAvailableZonesAvailableResourcesSupportedResources extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2048</p>
-         */
         @NameInMap("Max")
         public Integer max;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Min")
         public Integer min;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("QuotaStatus")
         public String quotaStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>WithStock</p>
-         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        /**
-         * <strong>example:</strong>
-         * <p>GiB</p>
-         */
         @NameInMap("Unit")
         public String unit;
 
-        /**
-         * <strong>example:</strong>
-         * <p>mysql.x4.4xlarge.7cm</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -152,10 +120,6 @@ public class DescribeRCAvailableResourceResponseBody extends TeaModel {
         @NameInMap("SupportedResources")
         public java.util.List<DescribeRCAvailableResourceResponseBodyAvailableZonesAvailableResourcesSupportedResources> supportedResources;
 
-        /**
-         * <strong>example:</strong>
-         * <p>InstanceType</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -186,31 +150,15 @@ public class DescribeRCAvailableResourceResponseBody extends TeaModel {
         @NameInMap("AvailableResources")
         public java.util.List<DescribeRCAvailableResourceResponseBodyAvailableZonesAvailableResources> availableResources;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0041D94C-FB92-4C49-B115-259DA1C*****</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>WithStock</p>
-         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-e</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

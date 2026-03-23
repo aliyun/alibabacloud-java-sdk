@@ -4,10 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateMaskingRulesResponseBody extends TeaModel {
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, String> data;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful create</p>
      */
@@ -15,6 +20,8 @@ public class CreateMaskingRulesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>792233B1-76B8-5A01-92B4-**********864</p>
      */
@@ -22,6 +29,12 @@ public class CreateMaskingRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Return values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded</li>
+     * <li><strong>false</strong>: Failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

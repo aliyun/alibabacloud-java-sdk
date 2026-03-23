@@ -5,33 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogsRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The name of the database.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>RDS_MySQL</p>
-     */
     @NameInMap("DBName")
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>Z format. The time must be in UTC.</p>
-     * <blockquote>
-     * <p> If the end date of the query is the same as the start date of the query, you can query the logs that are generated at 08:00 on the start date of the query. You can query the slow logs within a maximum time range of 24 hours.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2011-05-30Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -42,22 +25,9 @@ public class DescribeSlowLogsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The page number. Pages start from 1.</p>
-     * <p>Default value: <strong>1</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page. Valid values: <strong>30</strong> to <strong>100</strong>. Default value: <strong>30</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -67,30 +37,11 @@ public class DescribeSlowLogsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The dimension based on which the system sorts the entries to return. Valid values:</p>
-     * <ul>
-     * <li><strong>TotalExecutionCounts</strong>: The system sorts the entries to return based on the number of times that SQL statements are executed.</li>
-     * <li><strong>TotalQueryTimes</strong>: The system sorts the entries to return based on the total execution duration.</li>
-     * <li><strong>TotalLogicalReads</strong>: The system sorts the entries to return based on the total number of logical reads.</li>
-     * <li><strong>TotalPhysicalReads</strong>: The system sorts the entries to return based on the total number of physical reads.</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter is supported only for instances that run SQL Server 2008 R2.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>TotalExecutionCounts</p>
-     */
     @NameInMap("SortKey")
     public String sortKey;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2011-05-01Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

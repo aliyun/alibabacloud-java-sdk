@@ -5,21 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateUserBackupFileRequest extends TeaModel {
     /**
-     * <p>The backup ID. You can call the ListUserBackupFiles operation to query the backup ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>b-kwwvr7v8t7of********</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
-    /**
-     * <p>The new description of the full backup file.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>CommentTest</p>
-     */
     @NameInMap("Comment")
     public String comment;
 
@@ -27,21 +17,11 @@ public class UpdateUserBackupFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -51,12 +31,6 @@ public class UpdateUserBackupFileRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The new retention period of the full backup file. Unit: days. Valid values: any non-zero positive integer.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("Retention")
     public Integer retention;
 

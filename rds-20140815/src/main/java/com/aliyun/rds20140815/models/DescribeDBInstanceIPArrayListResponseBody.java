@@ -7,12 +7,6 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeDBInstanceIPArrayListResponseBodyItems items;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E2B6AF71-DC32-4055-B477-43B348798D10</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

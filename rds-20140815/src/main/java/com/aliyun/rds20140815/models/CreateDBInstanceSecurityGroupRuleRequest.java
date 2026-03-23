@@ -5,34 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceSecurityGroupRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the IDs of instances.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-bp15i4hn07r******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The description of the security group rule.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>zht_test</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The type of the transport layer protocol. Valid values:</p>
-     * <ul>
-     * <li>TCP</li>
-     * <li>UDP</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>TCP</p>
-     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
@@ -43,12 +23,7 @@ public class CreateDBInstanceSecurityGroupRuleRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The range of destination ports over which TCP and UDP traffic is allowed in the security group rule.</p>
-     * <p>Valid values: 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1/200</p>
      */
     @NameInMap("PortRange")
     public String portRange;
@@ -59,12 +34,6 @@ public class CreateDBInstanceSecurityGroupRuleRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The range of source IP addresses. CIDR blocks and IPv4 addresses are supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>192.XX.XX.100</p>
-     */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
 

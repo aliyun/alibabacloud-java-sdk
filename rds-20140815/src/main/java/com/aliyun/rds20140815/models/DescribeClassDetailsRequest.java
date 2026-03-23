@@ -5,56 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeClassDetailsRequest extends TeaModel {
     /**
-     * <p>The code of the instance type.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rds.mysql.s3.large</p>
      */
     @NameInMap("ClassCode")
     public String classCode;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCz*****</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The commodity code of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance.</li>
-     * <li><strong>rds_intl</strong>: The instance is a subscription primary instance.</li>
-     * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance.</li>
-     * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance.</li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rds</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
-     * <p>The type of the database engine.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>5.6</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -63,21 +35,11 @@ public class DescribeClassDetailsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -22,11 +22,22 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>12.0</p>
+     * <p>17.0</p>
      */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
+    /**
+     * <p>Upgrade mode. Valid values:  </p>
+     * <ul>
+     * <li><strong>zeroDownTimeUpgrade</strong>: Zero downtime.  </li>
+     * <li><strong>inPlaceUpgrade</strong>: In-place upgrade.  </li>
+     * <li><strong>greenBlueDeployment</strong>: Blue-green deployment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zeroDownTimeUpgrade</p>
+     */
     @NameInMap("UpgradeMode")
     public String upgradeMode;
 

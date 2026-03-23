@@ -4,143 +4,39 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesForCloneRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The connection mode of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>Standard</strong>: standard mode</li>
-     * <li><strong>Safe</strong>: database proxy mode</li>
-     * </ul>
-     * <p>By default, this operation queries the instances that use any of the supported connection modes.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Standard</p>
-     */
     @NameInMap("ConnectionMode")
     public String connectionMode;
 
-    /**
-     * <p>The ID of the current instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
-     */
     @NameInMap("CurrentInstanceId")
     public String currentInstanceId;
 
-    /**
-     * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mysql.n1.micro.1</p>
-     */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
-    /**
-     * <p>The ID of the instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxxxxx</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance state table</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Running</p>
-     */
     @NameInMap("DBInstanceStatus")
     public String DBInstanceStatus;
 
-    /**
-     * <p>The role of the instance that you want to query. Valid values:</p>
-     * <ul>
-     * <li><strong>Primary</strong>: primary instance</li>
-     * <li><strong>Readonly</strong>: read-only instance</li>
-     * <li><strong>Guard</strong>: disaster recovery instance</li>
-     * <li><strong>Temp</strong>: temporary instance</li>
-     * </ul>
-     * <p>By default, this operation queries the instances of all roles.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Primary</p>
-     */
     @NameInMap("DBInstanceType")
     public String DBInstanceType;
 
-    /**
-     * <p>The database engine of the instance. Valid values:</p>
-     * <ul>
-     * <li>MySQL</li>
-     * <li>SQLServer</li>
-     * <li>PostgreSQL</li>
-     * <li>PPAS</li>
-     * <li>MariaDB</li>
-     * </ul>
-     * <p>By default, this operation queries the instances that run any of the supported database engine types.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>MySQL</p>
-     */
     @NameInMap("Engine")
     public String engine;
 
-    /**
-     * <p>The version of the database engine.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>5.7</p>
-     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
-    /**
-     * <p>Specifies whether the instance expires. Valid values:</p>
-     * <ul>
-     * <li><strong>True</strong>: queries the instances that have expired.</li>
-     * <li><strong>False</strong>: does not query instances that have expired.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Expired")
     public String expired;
 
-    /**
-     * <p>The network type of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>Classic</strong></li>
-     * <li><strong>VPC</strong></li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Classic</p>
-     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
-    /**
-     * <p>The type of the database node. Valid values:</p>
-     * <ul>
-     * <li><strong>Master</strong>: the primary node</li>
-     * <li><strong>Slave</strong>: the secondary node</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Master</p>
-     */
     @NameInMap("NodeType")
     public String nodeType;
 
@@ -150,55 +46,21 @@ public class DescribeDBInstancesForCloneRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The number of the page to return.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1 to 100</strong>.</p>
-     * <p>Default value: <strong>30</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The billing method of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-     * <li><strong>Prepaid</strong>: subscription</li>
-     * </ul>
-     * <p>By default, this operation queries the instances that use any of the supported billing methods.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Postpaid</p>
-     */
     @NameInMap("PayType")
     public String payType;
 
     /**
-     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the resource group.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -208,48 +70,18 @@ public class DescribeDBInstancesForCloneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The keyword that is used for the search. The keyword can be part of an instance ID or an instance description.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6w</p>
-     */
     @NameInMap("SearchKey")
     public String searchKey;
 
-    /**
-     * <p>The ID of the vSwitch.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>vsw-j6csw46bgrgkxxxxxxxxxx</p>
-     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
-     * 
-     * <strong>example:</strong>
-     * <p>vpc-j6cjvqms29yxxxxxxxxxx</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 
-    /**
-     * <p>The zone ID of the instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou-h</p>
-     */
     @NameInMap("ZoneId")
     public String zoneId;
 
-    /**
-     * <p>The ID of the proxy mode.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>API</p>
-     */
     @NameInMap("proxyId")
     public String proxyId;
 

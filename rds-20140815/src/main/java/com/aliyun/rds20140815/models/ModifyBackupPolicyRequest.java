@@ -4,344 +4,75 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
-    /**
-     * <p>The number of archived backup files that are retained. Default value: <strong>1</strong>. Valid values:</p>
-     * <ul>
-     * <li>Valid values when <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>ByMonth</strong>: <strong>1</strong> to <strong>31</strong>.</li>
-     * <li>Valid values when <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>ByWeek</strong>: <strong>1</strong> to <strong>7</strong>.</li>
-     * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>You do not need to specify this parameter when <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>KeepAll</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
+    @NameInMap("AdvancedDataPolicies")
+    public java.util.List<ModifyBackupPolicyRequestAdvancedDataPolicies> advancedDataPolicies;
+
+    @NameInMap("AdvancedLogPolicies")
+    public java.util.List<ModifyBackupPolicyRequestAdvancedLogPolicies> advancedLogPolicies;
+
     @NameInMap("ArchiveBackupKeepCount")
     public Integer archiveBackupKeepCount;
 
-    /**
-     * <p>The retention period of archived backup files. The number of archived backup files that can be retained within the specified retention period is specified by <strong>ArchiveBackupKeepCount</strong>. Default value: <strong>0</strong>. Valid values:</p>
-     * <ul>
-     * <li><strong>ByMonth</strong></li>
-     * <li><strong>ByWeek</strong></li>
-     * <li><strong>KeepAll</strong></li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>ByMonth</p>
-     */
     @NameInMap("ArchiveBackupKeepPolicy")
     public String archiveBackupKeepPolicy;
 
-    /**
-     * <p>The number of days for which the archived backup is retained. The default value <strong>0</strong> specifies that the backup archiving feature is disabled. Valid values: <strong>30</strong> to <strong>1095</strong>.</p>
-     * <blockquote>
-     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>365</p>
-     */
     @NameInMap("ArchiveBackupRetentionPeriod")
     public String archiveBackupRetentionPeriod;
 
-    /**
-     * <p>The frequency at which you want to perform a snapshot backup on the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>-1</strong>: No backup frequencies are specified.</li>
-     * <li><strong>30</strong>: A snapshot backup is performed every 30 minutes.</li>
-     * <li><strong>60</strong>: A snapshot backup is performed every 60 minutes.</li>
-     * <li><strong>120</strong>: A snapshot backup is performed every 120 minutes.</li>
-     * <li><strong>240</strong>: A snapshot backup is performed every 240 minutes.</li>
-     * <li><strong>480</strong>: A snapshot backup is performed every 480 minutes.</li>
-     * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>You can configure a backup policy by using this parameter and the <strong>PreferredBackupPeriod</strong> parameter. For example, if you set <strong>PreferredBackupPeriod</strong> to Saturday,Sunday and BackupInterval to \<em>\</em>-1\<em>\</em>, a snapshot backup is performed on every Saturday and Sunday.</li>
-     * <li>If the instance runs PostgreSQL, BackupInterval is supported only when the instance is equipped with cloud disks.</li>
-     * <li>If the instance runs SQL Server, BackupInterval is supported only when the snapshot backup feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/211143.html">Enable snapshot backups for an ApsaraDB RDS for SQL Server instance</a>.</li>
-     * <li>If <strong>Category</strong> is set to <strong>Flash</strong>, BackupInterval is invalid.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("BackupInterval")
     public String backupInterval;
 
-    /**
-     * <p>Specifies whether to enable the log backup feature. Valid values:</p>
-     * <ul>
-     * <li><strong>Enable</strong>: enables the feature.</li>
-     * <li><strong>Disabled</strong>: disables the feature.</li>
-     * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>Enable</p>
-     */
     @NameInMap("BackupLog")
     public String backupLog;
 
-    /**
-     * <p>The backup method of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>Physical</strong>: physical backup</li>
-     * <li><strong>Snapshot</strong>: snapshot backup</li>
-     * </ul>
-     * <p>Default value: <strong>Physical</strong>.</p>
-     * <blockquote>
-     * <ul>
-     * <li>This parameter takes effect only on instances that run SQL Server with cloud disks.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>Physical</p>
-     */
     @NameInMap("BackupMethod")
     public String backupMethod;
 
-    /**
-     * <p>The type of the backup. Valid values:</p>
-     * <ul>
-     * <li><strong>DataBackupPolicy</strong>: data backup</li>
-     * <li><strong>LogBackupPolicy</strong>: log backup</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>DataBackupPolicy</p>
-     */
     @NameInMap("BackupPolicyMode")
     public String backupPolicyMode;
 
-    /**
-     * <p>Specifies whether the backup settings of a secondary instance are configured. Valid values:</p>
-     * <ul>
-     * <li><strong>1</strong>: secondary instance preferred</li>
-     * <li><strong>2</strong>: primary instance preferred</li>
-     * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>This parameter is suitable only for instances that run SQL Server on RDS Cluster Edition.</li>
-     * <li>This parameter takes effect only when <strong>BackupMethod</strong> is set to <strong>Physical</strong>. If <strong>BackupMethod</strong> is set to <strong>Snapshot</strong>, backups are forcefully performed on the primary instance that runs SQL Server on RDS Cluster Edition.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("BackupPriority")
     public Integer backupPriority;
 
-    /**
-     * <p>The number of days for which you want to retain data backup files. Valid values: <strong>7 to 730</strong>.</p>
-     * <blockquote>
-     * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>7</p>
-     */
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
-    /**
-     * <p>Specifies whether to enable the single-digit second backup feature. Valid values:</p>
-     * <ul>
-     * <li><strong>Flash</strong>: enables the feature.</li>
-     * <li><strong>Standard</strong>: disables the feature.</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>Standard</p>
-     */
     @NameInMap("Category")
     public String category;
 
-    /**
-     * <p>The format that is used to compress backup data. Valid values:</p>
-     * <ul>
-     * <li><strong>0</strong>: Backups are not compressed.</li>
-     * <li><strong>1</strong>: The zlib tool is used to compress backups into .tar.gz files.</li>
-     * <li><strong>2</strong>: The zlib tool is used to compress backups in parallel.</li>
-     * <li><strong>4</strong>: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported for instances that run MySQL 5.6 or MySQL 5.7. Backups in this compression format can be used to restore individual databases and tables. For more information, see <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables of an ApsaraDB RDS for MySQL instance</a>.</li>
-     * <li><strong>8</strong>: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported only for instances that run MySQL 8.0. Backups in this compression format cannot be used to restore individual databases and tables.</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>4</p>
-     */
     @NameInMap("CompressType")
     public String compressType;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>Specifies whether to enable the log backup feature. Valid values:</p>
-     * <ul>
-     * <li><strong>True</strong> or <strong>1</strong>: enables the log backup feature.</li>
-     * <li><strong>False</strong> or <strong>0</strong>: disables the log backup feature.</li>
-     * </ul>
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li><p>You must specify this parameter when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</p>
-     * </li>
-     * <li><p>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
+    @NameInMap("EnableAdvancedBackupPolicy")
+    public Integer enableAdvancedBackupPolicy;
+
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
-    /**
-     * <p>Specifies whether to enable incremental backup. Valid values:</p>
-     * <ul>
-     * <li><strong>false</strong> (default): disables the feature.</li>
-     * <li><strong>true</strong>: enables the feature.</li>
-     * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>This parameter takes effect only on instances that run SQL Server with cloud disks.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("EnableIncrementDataBackup")
     public Boolean enableIncrementDataBackup;
 
-    /**
-     * <p>Specifies whether to forcefully delete log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB. Valid values: <strong>Enable and Disable</strong>. You can retain the default value.</p>
-     * <blockquote>
-     * <ul>
-     * <li>You must specify this parameter when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>Enable</p>
-     */
     @NameInMap("HighSpaceUsageProtection")
     public String highSpaceUsageProtection;
 
-    /**
-     * <p>The number of hours for which you want to retain log backup files on the instance. Valid values: <strong>0 to 168</strong>. The value 0 specifies that log backup files are not retained on the instance. The value 168 is calculated based on the following formula: 7 × 24.</p>
-     * <blockquote>
-     * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>18</p>
-     */
     @NameInMap("LocalLogRetentionHours")
     public String localLogRetentionHours;
 
-    /**
-     * <p>The maximum storage usage that is allowed for log backup files on the instance. If the storage usage for log backup files on the instance exceeds the value of this parameter, the system deletes earlier log backup files until the storage usage falls below the value of this parameter. Valid values:<strong>0 to 50</strong>. You can retain the default value.</p>
-     * <blockquote>
-     * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("LocalLogRetentionSpace")
     public String localLogRetentionSpace;
 
-    /**
-     * <p>The frequency at which you want to back up the logs of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>LogInterval</strong>: A log backup is performed every 30 minutes.</li>
-     * <li>The default value is the same as the data backup frequency.</li>
-     * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>The value <strong>LogInterval</strong> is supported only for instances that run SQL Server.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>LogInterval</p>
-     */
     @NameInMap("LogBackupFrequency")
     public String logBackupFrequency;
 
-    /**
-     * <p>The number of binary log files that you want to retain on the instance. Default value: <strong>60</strong>. Valid values: <strong>6</strong> to <strong>100</strong>.</p>
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li><p>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</p>
-     * </li>
-     * <li><p>If the instance runs MySQL, you can set this parameter to \<em>\</em>-1\<em>\</em>. The value \<em>\</em>-1\<em>\</em> specifies that an unlimited number of binary log files can be retained on the instance.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>60</p>
-     */
     @NameInMap("LogBackupLocalRetentionNumber")
     public Integer logBackupLocalRetentionNumber;
 
-    /**
-     * <p>The number of days for which the log backup is retained. Valid values: <strong>7 to 730</strong>. The log backup retention period cannot be longer than the data backup retention period.</p>
-     * <blockquote>
-     * <ul>
-     * <li>If you enable the log backup feature, you can specify the log backup retention period. This parameter is supported for instances that run MySQL and PostgreSQL.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong> or <strong>LogBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>7</p>
-     */
     @NameInMap("LogBackupRetentionPeriod")
     public String logBackupRetentionPeriod;
 
@@ -351,63 +82,12 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The backup cycle. Specify at least two days of the week and separate the days with commas (,). Valid values:</p>
-     * <ul>
-     * <li><strong>Monday</strong></li>
-     * <li><strong>Tuesday</strong></li>
-     * <li><strong>Wednesday</strong></li>
-     * <li><strong>Thursday</strong></li>
-     * <li><strong>Friday</strong></li>
-     * <li><strong>Saturday</strong></li>
-     * <li><strong>Sunday</strong></li>
-     * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>You can configure a backup policy by using this parameter and the <strong>BackupInterval</strong> parameter. For example, if you set this parameter to Saturday,Sunday and the <strong>BackupInterval</strong> parameter to 30, a backup is performed every 30 minutes on every Saturday and Sunday.</li>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>Monday</p>
-     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
-    /**
-     * <p>The time at which you want to perform a backup. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time must be in UTC.</p>
-     * <blockquote>
-     * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>00:00Z-01:00Z</p>
-     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
-    /**
-     * <p>The policy that is used to retain archived backup files if the instance is released. Valid values:</p>
-     * <ul>
-     * <li><strong>None</strong>: No archived backup files are retained.</li>
-     * <li><strong>Lastest</strong>: Only the last archived backup file is retained.</li>
-     * <li><strong>All</strong>: All archived backup files are retained.</li>
-     * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>DataBackupPolicy</strong>.</li>
-     * <li>If the instance uses cloud disks and was created on or after February 1, 2024, this parameter is automatically set to <strong>Lastest</strong>. If the instance uses local disks in the same scenario, this parameter is automatically set to <strong>None</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/2836955.html">Backup for deleted instances</a>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("ReleasedKeepPolicy")
     public String releasedKeepPolicy;
 
@@ -420,6 +100,22 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public static ModifyBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupPolicyRequest self = new ModifyBackupPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyBackupPolicyRequest setAdvancedDataPolicies(java.util.List<ModifyBackupPolicyRequestAdvancedDataPolicies> advancedDataPolicies) {
+        this.advancedDataPolicies = advancedDataPolicies;
+        return this;
+    }
+    public java.util.List<ModifyBackupPolicyRequestAdvancedDataPolicies> getAdvancedDataPolicies() {
+        return this.advancedDataPolicies;
+    }
+
+    public ModifyBackupPolicyRequest setAdvancedLogPolicies(java.util.List<ModifyBackupPolicyRequestAdvancedLogPolicies> advancedLogPolicies) {
+        this.advancedLogPolicies = advancedLogPolicies;
+        return this;
+    }
+    public java.util.List<ModifyBackupPolicyRequestAdvancedLogPolicies> getAdvancedLogPolicies() {
+        return this.advancedLogPolicies;
     }
 
     public ModifyBackupPolicyRequest setArchiveBackupKeepCount(Integer archiveBackupKeepCount) {
@@ -516,6 +212,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyBackupPolicyRequest setEnableAdvancedBackupPolicy(Integer enableAdvancedBackupPolicy) {
+        this.enableAdvancedBackupPolicy = enableAdvancedBackupPolicy;
+        return this;
+    }
+    public Integer getEnableAdvancedBackupPolicy() {
+        return this.enableAdvancedBackupPolicy;
     }
 
     public ModifyBackupPolicyRequest setEnableBackupLog(String enableBackupLog) {
@@ -636,6 +340,297 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public static class ModifyBackupPolicyRequestAdvancedDataPolicies extends TeaModel {
+        @NameInMap("ActionType")
+        public String actionType;
+
+        @NameInMap("BakType")
+        public String bakType;
+
+        @NameInMap("DestRegion")
+        public String destRegion;
+
+        @NameInMap("DestType")
+        public String destType;
+
+        @NameInMap("FilterKey")
+        public String filterKey;
+
+        @NameInMap("FilterType")
+        public String filterType;
+
+        @NameInMap("FilterValue")
+        public String filterValue;
+
+        @NameInMap("OnlyPreserveOneEachDay")
+        public Boolean onlyPreserveOneEachDay;
+
+        @NameInMap("OnlyPreserveOneEachHour")
+        public Boolean onlyPreserveOneEachHour;
+
+        @NameInMap("RetentionType")
+        public String retentionType;
+
+        @NameInMap("RetentionValue")
+        public Integer retentionValue;
+
+        @NameInMap("SrcRegion")
+        public String srcRegion;
+
+        @NameInMap("SrcType")
+        public String srcType;
+
+        @NameInMap("StrategyId")
+        public String strategyId;
+
+        public static ModifyBackupPolicyRequestAdvancedDataPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ModifyBackupPolicyRequestAdvancedDataPolicies self = new ModifyBackupPolicyRequestAdvancedDataPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setActionType(String actionType) {
+            this.actionType = actionType;
+            return this;
+        }
+        public String getActionType() {
+            return this.actionType;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setBakType(String bakType) {
+            this.bakType = bakType;
+            return this;
+        }
+        public String getBakType() {
+            return this.bakType;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setDestRegion(String destRegion) {
+            this.destRegion = destRegion;
+            return this;
+        }
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setDestType(String destType) {
+            this.destType = destType;
+            return this;
+        }
+        public String getDestType() {
+            return this.destType;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setFilterKey(String filterKey) {
+            this.filterKey = filterKey;
+            return this;
+        }
+        public String getFilterKey() {
+            return this.filterKey;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setFilterType(String filterType) {
+            this.filterType = filterType;
+            return this;
+        }
+        public String getFilterType() {
+            return this.filterType;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setFilterValue(String filterValue) {
+            this.filterValue = filterValue;
+            return this;
+        }
+        public String getFilterValue() {
+            return this.filterValue;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setOnlyPreserveOneEachDay(Boolean onlyPreserveOneEachDay) {
+            this.onlyPreserveOneEachDay = onlyPreserveOneEachDay;
+            return this;
+        }
+        public Boolean getOnlyPreserveOneEachDay() {
+            return this.onlyPreserveOneEachDay;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setOnlyPreserveOneEachHour(Boolean onlyPreserveOneEachHour) {
+            this.onlyPreserveOneEachHour = onlyPreserveOneEachHour;
+            return this;
+        }
+        public Boolean getOnlyPreserveOneEachHour() {
+            return this.onlyPreserveOneEachHour;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setRetentionType(String retentionType) {
+            this.retentionType = retentionType;
+            return this;
+        }
+        public String getRetentionType() {
+            return this.retentionType;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setRetentionValue(Integer retentionValue) {
+            this.retentionValue = retentionValue;
+            return this;
+        }
+        public Integer getRetentionValue() {
+            return this.retentionValue;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setSrcRegion(String srcRegion) {
+            this.srcRegion = srcRegion;
+            return this;
+        }
+        public String getSrcRegion() {
+            return this.srcRegion;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setSrcType(String srcType) {
+            this.srcType = srcType;
+            return this;
+        }
+        public String getSrcType() {
+            return this.srcType;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedDataPolicies setStrategyId(String strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public String getStrategyId() {
+            return this.strategyId;
+        }
+
+    }
+
+    public static class ModifyBackupPolicyRequestAdvancedLogPolicies extends TeaModel {
+        @NameInMap("ActionType")
+        public String actionType;
+
+        @NameInMap("DestRegion")
+        public String destRegion;
+
+        @NameInMap("DestType")
+        public String destType;
+
+        @NameInMap("EnableLogBackup")
+        public Integer enableLogBackup;
+
+        @NameInMap("FilterKey")
+        public String filterKey;
+
+        @NameInMap("FilterValue")
+        public String filterValue;
+
+        @NameInMap("LogRetentionType")
+        public String logRetentionType;
+
+        @NameInMap("LogRetentionValue")
+        public Integer logRetentionValue;
+
+        @NameInMap("SrcRegion")
+        public String srcRegion;
+
+        @NameInMap("SrcType")
+        public String srcType;
+
+        @NameInMap("StrategyId")
+        public String strategyId;
+
+        public static ModifyBackupPolicyRequestAdvancedLogPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ModifyBackupPolicyRequestAdvancedLogPolicies self = new ModifyBackupPolicyRequestAdvancedLogPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setActionType(String actionType) {
+            this.actionType = actionType;
+            return this;
+        }
+        public String getActionType() {
+            return this.actionType;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setDestRegion(String destRegion) {
+            this.destRegion = destRegion;
+            return this;
+        }
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setDestType(String destType) {
+            this.destType = destType;
+            return this;
+        }
+        public String getDestType() {
+            return this.destType;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setEnableLogBackup(Integer enableLogBackup) {
+            this.enableLogBackup = enableLogBackup;
+            return this;
+        }
+        public Integer getEnableLogBackup() {
+            return this.enableLogBackup;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setFilterKey(String filterKey) {
+            this.filterKey = filterKey;
+            return this;
+        }
+        public String getFilterKey() {
+            return this.filterKey;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setFilterValue(String filterValue) {
+            this.filterValue = filterValue;
+            return this;
+        }
+        public String getFilterValue() {
+            return this.filterValue;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setLogRetentionType(String logRetentionType) {
+            this.logRetentionType = logRetentionType;
+            return this;
+        }
+        public String getLogRetentionType() {
+            return this.logRetentionType;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setLogRetentionValue(Integer logRetentionValue) {
+            this.logRetentionValue = logRetentionValue;
+            return this;
+        }
+        public Integer getLogRetentionValue() {
+            return this.logRetentionValue;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setSrcRegion(String srcRegion) {
+            this.srcRegion = srcRegion;
+            return this;
+        }
+        public String getSrcRegion() {
+            return this.srcRegion;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setSrcType(String srcType) {
+            this.srcType = srcType;
+            return this;
+        }
+        public String getSrcType() {
+            return this.srcType;
+        }
+
+        public ModifyBackupPolicyRequestAdvancedLogPolicies setStrategyId(String strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public String getStrategyId() {
+            return this.strategyId;
+        }
+
     }
 
 }

@@ -4,34 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstanceVncUrlRequest extends TeaModel {
-    /**
-     * <p>The database engine. Valid values:</p>
-     * <ul>
-     * <li><strong>mssql</strong>: SQL Server</li>
-     * <li><strong>mysql</strong>: MySQL</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>mysql</p>
-     */
     @NameInMap("DbType")
     public String dbType;
 
-    /**
-     * <p>The instance ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rc-e6e3757b8px27oa5****</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The region ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-chengdu</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

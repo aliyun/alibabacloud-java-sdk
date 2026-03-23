@@ -7,39 +7,15 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescibeImportsFromDatabaseResponseBodyItems items;
 
-    /**
-     * <p>The page number.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>B000AA91-393D-46F9-8D9B-098E28931A3A</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 

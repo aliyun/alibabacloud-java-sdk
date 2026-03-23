@@ -4,30 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RebuildDBInstanceResponseBody extends TeaModel {
-    /**
-     * <p>The serial number of the task in the rebuild task queue. When the serial number becomes 0, the system starts to rebuild the secondary instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>329****</p>
-     */
     @NameInMap("MigrationId")
     public Integer migrationId;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>355DA57C-8CC4-40AB-B3F8-B684BA32EB9E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The task ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20867****</p>
-     */
     @NameInMap("TaskId")
     public Integer taskId;
 

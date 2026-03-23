@@ -69,7 +69,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>0</p>
      */
     @NameInMap("BpeEnabled")
     public String bpeEnabled;
@@ -109,6 +109,12 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>A reserved parameter. No configuration is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("CustomExtraInfo")
     public String customExtraInfo;
 
@@ -117,7 +123,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rds.mys2.small</p>
+     * <p>mysqlro.n2.small.1c</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
@@ -129,7 +135,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Test read-only instance</p>
+     * <p>testReadOnly</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
@@ -220,7 +226,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>test</p>
      */
     @NameInMap("GdnInstanceName")
     public String gdnInstanceName;
@@ -246,7 +252,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>test</p>
      */
     @NameInMap("InstructionSetArch")
     public String instructionSetArch;
@@ -255,11 +261,21 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>0</p>
      */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
 
+    /**
+     * <p>Specifies whether to create a DuckDB analytic instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Enabled</li>
+     * <li><strong>false</strong>: Disabled</li>
+     * </ul>
+     * <blockquote>
+     * <p>Currently, only RDS MySQL and RDS PostgreSQL support creating DuckDB analytic instances.</p>
+     * </blockquote>
+     */
     @NameInMap("IsAnalyticReadOnlyIns")
     public Boolean isAnalyticReadOnlyIns;
 
@@ -319,7 +335,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>The coupon code.</p>
      * 
      * <strong>example:</strong>
-     * <p>717446260784</p>
+     * <p>71744626****</p>
      */
     @NameInMap("PromotionCode")
     public String promotionCode;
@@ -362,7 +378,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>test</p>
      */
     @NameInMap("TddlBizType")
     public String tddlBizType;
@@ -371,7 +387,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>test</p>
      */
     @NameInMap("TddlRegionConfig")
     public String tddlRegionConfig;

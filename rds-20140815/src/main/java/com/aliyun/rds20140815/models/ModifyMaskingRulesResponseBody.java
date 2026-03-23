@@ -4,10 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyMaskingRulesResponseBody extends TeaModel {
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, String> data;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -15,6 +20,8 @@ public class ModifyMaskingRulesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>8B1434A1-08A7-3E8C-A237-076A********</p>
      */
@@ -22,6 +29,8 @@ public class ModifyMaskingRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

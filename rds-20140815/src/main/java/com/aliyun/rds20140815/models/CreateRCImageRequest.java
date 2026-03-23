@@ -4,39 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateRCImageRequest extends TeaModel {
-    /**
-     * <p>The name of the custom image.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Created_from_rc-vma9w5z699x9********</p>
-     */
     @NameInMap("ImageName")
     public String imageName;
 
-    /**
-     * <p>The ID of the RDS Custom instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rc-vma9w5z699x93204****</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-beijing</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the snapshot from which to create the custom image. You can call the DescribeRCSnapshots operation to query the snapshot ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rcds-c9bjdl79vz5dx********</p>
-     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 

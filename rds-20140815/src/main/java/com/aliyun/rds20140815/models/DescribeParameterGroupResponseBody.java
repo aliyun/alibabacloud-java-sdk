@@ -10,12 +10,6 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     @NameInMap("RelatedCustinsInfo")
     public DescribeParameterGroupResponseBodyRelatedCustinsInfo relatedCustinsInfo;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>498AE8CA-8C81-4A01-AF37-2B902014ED30</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

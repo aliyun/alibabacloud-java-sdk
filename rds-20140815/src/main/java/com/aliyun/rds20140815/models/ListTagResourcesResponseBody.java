@@ -4,21 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    /**
-     * <p>You must specify the token that is obtained from the previous query as the value of NextToken.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>212db86sca4384811e0b5e8707ec21345</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>47A514A1-4B77-4E30-B4C5-2A880650B3FD</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,18 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CheckRegionSupportBackupEncryptionRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>rm-wz91q53f9*******</p>
-     */
     @NameInMap("DBInstanceID")
     public String DBInstanceID;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

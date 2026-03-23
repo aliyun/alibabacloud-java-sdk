@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ConfirmNotifyResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6919FA39-04CF-571F-A6B0-DCC7AECB4170</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

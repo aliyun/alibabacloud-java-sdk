@@ -7,28 +7,9 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
     @NameInMap("ParameterGroups")
     public DescribeParameterGroupsResponseBodyParameterGroups parameterGroups;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>D4A23265-C5B6-42E1-98A0-EFA1EB42E723</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether parameter templates exist in the specified region. Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false<blockquote>
-     * <p>Notice: This parameter is deprecated.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("SignalForOptimizeParams")
     public Boolean signalForOptimizeParams;
 

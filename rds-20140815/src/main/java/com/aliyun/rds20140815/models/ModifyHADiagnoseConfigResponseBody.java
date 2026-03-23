@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyHADiagnoseConfigResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>9EFA6DF3-5247-4D9D-80AA-68765BE6D5EA</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

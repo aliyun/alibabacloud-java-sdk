@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImportTaskRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateImportTaskRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
+     * <p>Estimated data space, in GB</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -21,6 +24,7 @@ public class CreateImportTaskRequest extends TeaModel {
     public Integer estimatedSize;
 
     /**
+     * <p>The source MySQL host IP address. RDS will access this IP address to retrieve the backup.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +37,7 @@ public class CreateImportTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The Password of the source MySQL Account, which must be Base64-encoded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +47,7 @@ public class CreateImportTaskRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>Source MySQL port</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +57,7 @@ public class CreateImportTaskRequest extends TeaModel {
     public Integer port;
 
     /**
+     * <p>The Region ID. You can invoke <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to obtain it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +67,8 @@ public class CreateImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The source cloud instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-bp1fe296n52ub3chezpg</p>
      */
@@ -67,6 +76,8 @@ public class CreateImportTaskRequest extends TeaModel {
     public String sourceInstanceId;
 
     /**
+     * <p>Source cloud instance type</p>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
@@ -74,6 +85,7 @@ public class CreateImportTaskRequest extends TeaModel {
     public String sourcePlatform;
 
     /**
+     * <p>Stream port used for backup transmission</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,6 +95,20 @@ public class CreateImportTaskRequest extends TeaModel {
     public Integer streamPort;
 
     /**
+     * <p>Source MySQL account, which must have permissions to create backups and set up replication. Refer to the following SQL for granting permissions:  </p>
+     * <pre><code>-- MySQL 5.7  
+     * mysql&gt; CREATE USER \\&quot;myadmin\\&quot;@\\&quot;%\\&quot; IDENTIFIED BY \\&quot;s3cret\\&quot;;  
+     * mysql&gt; GRANT RELOAD, LOCK TABLES, PROCESS, REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO  
+     *        \\&quot;myadmin\\&quot;@\\&quot;%\\&quot;;  
+     * mysql&gt; FLUSH PRIVILEGES;  
+     * -- MySQL 8.0  
+     * mysql&gt; CREATE USER \\&quot;myadmin\\&quot;@\\&quot;%\\&quot; IDENTIFIED BY \\&quot;Test123!\\&quot;;  
+     * mysql&gt; GRANT BACKUP_ADMIN, PROCESS, RELOAD, LOCK TABLES, REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO \\&quot;myadmin\\&quot;@\\&quot;%\\&quot;;  
+     * mysql&gt; GRANT SELECT ON performance_schema.log_status TO \\&quot;myadmin\\&quot;@\\&quot;%\\&quot;;  
+     * mysql&gt; GRANT SELECT ON performance_schema.keyring_component_status TO myadmin@\\&quot;%\\&quot;;  
+     * mysql&gt; GRANT SELECT ON performance_schema.replication_group_members TO myadmin@\\&quot;%\\&quot;;  
+     * mysql&gt; FLUSH PRIVILEGES;  
+     * </code></pre>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,6 +118,8 @@ public class CreateImportTaskRequest extends TeaModel {
     public String user;
 
     /**
+     * <p>Installation path of xtrabackup on the source</p>
+     * 
      * <strong>example:</strong>
      * <p>/usr/bin/xtrabackup</p>
      */

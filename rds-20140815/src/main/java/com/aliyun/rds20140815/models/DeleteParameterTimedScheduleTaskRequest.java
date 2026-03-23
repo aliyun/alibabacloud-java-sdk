@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteParameterTimedScheduleTaskRequest extends TeaModel {
     /**
+     * <p>The instance Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-uf6wjk5****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteParameterTimedScheduleTaskRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The ID of the scheduled task for parameter modification.</p>
+     * 
      * <strong>example:</strong>
      * <p>41698</p>
      */

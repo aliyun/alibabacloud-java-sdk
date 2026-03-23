@@ -4,69 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
-    /**
-     * <p>The instance ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxx</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The database engine of the instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mysql</p>
-     */
     @NameInMap("Engine")
     public String engine;
 
-    /**
-     * <p>The database engine version of the instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>5.6</p>
-     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     @NameInMap("Items")
     public DescribeModifyParameterLogResponseBodyItems items;
 
-    /**
-     * <p>The page number.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>C8E88DED-533F-4B3C-9207-731FBF394CCA</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 

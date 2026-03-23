@@ -9,7 +9,7 @@ public class DescribeSecurityGroupConfigurationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxx</p>
+     * <p>rm-uf6wjk****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

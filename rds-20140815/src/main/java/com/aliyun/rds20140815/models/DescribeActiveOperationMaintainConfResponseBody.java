@@ -4,10 +4,19 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
+    /**
+     * <p>Configuration Information</p>
+     */
     @NameInMap("Config")
     public DescribeActiveOperationMaintainConfResponseBodyConfig config;
 
     /**
+     * <p>Whether a configuration has been set; for the first access, hasConfig is 0  </p>
+     * <ul>
+     * <li>1: Yes  </li>
+     * <li>0: No</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +24,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     public Integer hasConfig;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>4438AC3E-ABE3-5943-9436-***********</p>
      */
@@ -52,6 +63,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationMaintainConfResponseBodyConfig extends TeaModel {
         /**
+         * <p>Creation Time, formatted as YYYY-MM-DDTHH:mm:ssZ</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
          */
@@ -59,6 +72,12 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>Cycle time, with multiple values concatenated by English commas  </p>
+         * <ul>
+         * <li>When cycleType is Week, values 1–7 represent Monday–Sunday  </li>
+         * <li>When cycleType is Month, values 1–28 are allowed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -66,6 +85,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleTime;
 
         /**
+         * <p>Cycle type, either Month or Week</p>
+         * 
          * <strong>example:</strong>
          * <p>Week</p>
          */
@@ -73,6 +94,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleType;
 
         /**
+         * <p>End time of the O&amp;M time window, in UTC<br>Default: 20:00:00Z</p>
+         * 
          * <strong>example:</strong>
          * <p>20:00:00Z</p>
          */
@@ -80,6 +103,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
+         * <p>Start time of the O&amp;M time window, in UTC<br>Default: 18:00:00Z</p>
+         * 
          * <strong>example:</strong>
          * <p>18:00:00Z</p>
          */
@@ -87,6 +112,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
+         * <p>Updated At, formatted as YYYY-MM-DDTHH:mm:ssZ, for example, 2018-05-30T14:30:00Z</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
          */
@@ -94,6 +121,12 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>Whether it is effective  </p>
+         * <ul>
+         * <li>1: Valid  </li>
+         * <li>2: Invalid</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

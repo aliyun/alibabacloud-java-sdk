@@ -18,6 +18,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     public String externalReplication;
 
     /**
+     * <p>The executed global transaction identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>bd2a34b9-8b8d-11ef-8917-00163e1298b9:1-20567</p>
      */
@@ -25,7 +27,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     public String gtidExecuted;
 
     /**
-     * <p>COMPLETED: 导入完成，INIT: 初始化，IMPORTING: 正在导入</p>
+     * <p>Indicates whether full data has been successfully imported.</p>
      * 
      * <strong>example:</strong>
      * <p>COMPLETED</p>
@@ -52,6 +54,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     public String replicationErrorMessage;
 
     /**
+     * <p>The replication IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.10.x</p>
      */
@@ -59,6 +63,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     public String replicationIp;
 
     /**
+     * <p>The replication port.</p>
+     * 
      * <strong>example:</strong>
      * <p>3306</p>
      */
@@ -69,7 +75,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
      * <p>The source of the native replication.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.x.x</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("ReplicationSource")
     public String replicationSource;
@@ -84,10 +90,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Running
-     * Connecting
-     * Stopped
-     * Error</p>
+     * <p>Stopped</p>
      */
     @NameInMap("ReplicationState")
     public String replicationState;

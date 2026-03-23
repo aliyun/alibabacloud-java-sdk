@@ -8,7 +8,7 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
      * <p>Indicates whether the instance is available. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("Available")
     public String available;
@@ -17,7 +17,7 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-bp1375i66nd******</p>
+     * <p>rm-wz9s06u4drm******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

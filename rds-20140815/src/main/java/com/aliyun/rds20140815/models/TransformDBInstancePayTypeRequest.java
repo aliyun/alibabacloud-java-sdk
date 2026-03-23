@@ -4,62 +4,20 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class TransformDBInstancePayTypeRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to enable the auto-renewal feature for the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
-     * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</li>
-     * <li>All strings except <strong>true</strong> are considered <strong>false</strong>.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
-    /**
-     * <p>Specifies whether to use vouchers to offset fees. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
-    /**
-     * <p>The additional business information about the instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-uf6wjk5xxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -71,41 +29,14 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The new billing method of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-     * <li><strong>Prepaid</strong>: subscription</li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Prepaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
-    /**
-     * <p>The renewal cycle of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong></li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter must be specified if you set <strong>PayType</strong> to <strong>Prepaid</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>Month</p>
-     */
     @NameInMap("Period")
     public String period;
 
-    /**
-     * <p>The coupon code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>726702810223</p>
-     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
@@ -115,19 +46,6 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The subscription duration of the instance. Valid values:</p>
-     * <ul>
-     * <li>If you set <strong>Period</strong> to <strong>Year</strong>, the value of UsedTime ranges from <strong>1 to 5</strong>.</li>
-     * <li>If you set <strong>Period</strong> to <strong>Month</strong>, the value of UsedTime ranges from <strong>1 to 11</strong>.</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter must be specified when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("UsedTime")
     public Integer usedTime;
 

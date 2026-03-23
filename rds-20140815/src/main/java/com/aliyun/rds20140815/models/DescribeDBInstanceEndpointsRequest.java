@@ -4,34 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEndpointsRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOC****</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The endpoint ID of the instance.</p>
-     * <blockquote>
-     * <p> If this parameter is not specified, the information about all endpoints is returned.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>ep-****-ro</p>
-     */
     @NameInMap("DBInstanceEndpointId")
     public String DBInstanceEndpointId;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-u****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

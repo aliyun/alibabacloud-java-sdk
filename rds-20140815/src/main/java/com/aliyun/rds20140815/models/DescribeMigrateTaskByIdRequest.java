@@ -5,21 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMigrateTaskByIdRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rm-bp11e1tzgxxxx4ox</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>235943</p>
      */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
@@ -27,12 +19,6 @@ public class DescribeMigrateTaskByIdRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the resource group.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
