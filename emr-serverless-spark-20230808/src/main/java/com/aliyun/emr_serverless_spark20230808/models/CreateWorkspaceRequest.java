@@ -76,6 +76,9 @@ public class CreateWorkspaceRequest extends TeaModel {
     @NameInMap("duration")
     public String duration;
 
+    @NameInMap("gpuSpec")
+    public java.util.List<String> gpuSpec;
+
     /**
      * <p>The name of the Object Storage Service (OSS) bucket.</p>
      * 
@@ -232,6 +235,14 @@ public class CreateWorkspaceRequest extends TeaModel {
         return this.duration;
     }
 
+    public CreateWorkspaceRequest setGpuSpec(java.util.List<String> gpuSpec) {
+        this.gpuSpec = gpuSpec;
+        return this;
+    }
+    public java.util.List<String> getGpuSpec() {
+        return this.gpuSpec;
+    }
+
     public CreateWorkspaceRequest setOssBucket(String ossBucket) {
         this.ossBucket = ossBucket;
         return this;
@@ -322,6 +333,13 @@ public class CreateWorkspaceRequest extends TeaModel {
         @NameInMap("cu")
         public String cu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("gpu")
+        public Integer gpu;
+
         public static CreateWorkspaceRequestResourceSpec build(java.util.Map<String, ?> map) throws Exception {
             CreateWorkspaceRequestResourceSpec self = new CreateWorkspaceRequestResourceSpec();
             return TeaModel.build(map, self);
@@ -333,6 +351,14 @@ public class CreateWorkspaceRequest extends TeaModel {
         }
         public String getCu() {
             return this.cu;
+        }
+
+        public CreateWorkspaceRequestResourceSpec setGpu(Integer gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+        public Integer getGpu() {
+            return this.gpu;
         }
 
     }

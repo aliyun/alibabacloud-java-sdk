@@ -208,6 +208,13 @@ public class GetJobRunResponseBody extends TeaModel {
         public String notebookAccessUrl;
 
         /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("priority")
+        public String priority;
+
+        /**
          * <p>The version of the Spark engine on which the job runs.</p>
          * 
          * <strong>example:</strong>
@@ -381,6 +388,14 @@ public class GetJobRunResponseBody extends TeaModel {
         }
         public String getNotebookAccessUrl() {
             return this.notebookAccessUrl;
+        }
+
+        public GetJobRunResponseBodyJobRun setPriority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+        public String getPriority() {
+            return this.priority;
         }
 
         public GetJobRunResponseBodyJobRun setReleaseVersion(String releaseVersion) {

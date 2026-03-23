@@ -42,6 +42,9 @@ public class CreateRayClusterRequest extends TeaModel {
     @NameInMap("networkServiceName")
     public String networkServiceName;
 
+    @NameInMap("volumeIds")
+    public java.util.List<String> volumeIds;
+
     @NameInMap("workerSpec")
     public java.util.List<CreateRayClusterRequestWorkerSpec> workerSpec;
 
@@ -98,6 +101,14 @@ public class CreateRayClusterRequest extends TeaModel {
         return this.networkServiceName;
     }
 
+    public CreateRayClusterRequest setVolumeIds(java.util.List<String> volumeIds) {
+        this.volumeIds = volumeIds;
+        return this;
+    }
+    public java.util.List<String> getVolumeIds() {
+        return this.volumeIds;
+    }
+
     public CreateRayClusterRequest setWorkerSpec(java.util.List<CreateRayClusterRequestWorkerSpec> workerSpec) {
         this.workerSpec = workerSpec;
         return this;
@@ -120,6 +131,13 @@ public class CreateRayClusterRequest extends TeaModel {
          */
         @NameInMap("enableAutoScaling")
         public Boolean enableAutoScaling;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.gn6i-c4g1.xlarge</p>
+         */
+        @NameInMap("gpuSpec")
+        public String gpuSpec;
 
         /**
          * <strong>example:</strong>
@@ -163,6 +181,14 @@ public class CreateRayClusterRequest extends TeaModel {
             return this.enableAutoScaling;
         }
 
+        public CreateRayClusterRequestHeadSpec setGpuSpec(String gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public String getGpuSpec() {
+            return this.gpuSpec;
+        }
+
         public CreateRayClusterRequestHeadSpec setIdleTimeoutSeconds(Integer idleTimeoutSeconds) {
             this.idleTimeoutSeconds = idleTimeoutSeconds;
             return this;
@@ -196,6 +222,13 @@ public class CreateRayClusterRequest extends TeaModel {
          */
         @NameInMap("cpu")
         public String cpu;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.gn6i-c4g1.xlarge</p>
+         */
+        @NameInMap("gpuSpec")
+        public String gpuSpec;
 
         /**
          * <strong>example:</strong>
@@ -257,6 +290,14 @@ public class CreateRayClusterRequest extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public CreateRayClusterRequestWorkerSpec setGpuSpec(String gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         public CreateRayClusterRequestWorkerSpec setGroupName(String groupName) {

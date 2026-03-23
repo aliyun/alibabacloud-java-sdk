@@ -409,6 +409,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @NameInMap("failReason")
         public String failReason;
 
+        @NameInMap("gpuSpec")
+        public java.util.List<String> gpuSpec;
+
         /**
          * <p>The unit of the subscription duration.</p>
          * 
@@ -600,6 +603,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
         public String getFailReason() {
             return this.failReason;
+        }
+
+        public ListWorkspacesResponseBodyWorkspaces setGpuSpec(java.util.List<String> gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public java.util.List<String> getGpuSpec() {
+            return this.gpuSpec;
         }
 
         public ListWorkspacesResponseBodyWorkspaces setPaymentDurationUnit(String paymentDurationUnit) {

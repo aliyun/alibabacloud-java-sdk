@@ -215,6 +215,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @NameInMap("environments")
         public java.util.List<String> environments;
 
+        @NameInMap("gpuSpec")
+        public java.util.List<String> gpuSpec;
+
         /**
          * <p>The maximum capacity of resources that can be used in the queue.</p>
          * 
@@ -257,6 +260,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
          */
         @NameInMap("properties")
         public String properties;
+
+        /**
+         * <strong>example:</strong>
+         * <p>CPU</p>
+         */
+        @NameInMap("queueCategory")
+        public String queueCategory;
 
         /**
          * <p>The name of the queue.</p>
@@ -362,6 +372,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             return this.environments;
         }
 
+        public ListWorkspaceQueuesResponseBodyQueues setGpuSpec(java.util.List<String> gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public java.util.List<String> getGpuSpec() {
+            return this.gpuSpec;
+        }
+
         public ListWorkspaceQueuesResponseBodyQueues setMaxResource(String maxResource) {
             this.maxResource = maxResource;
             return this;
@@ -400,6 +418,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
         public String getProperties() {
             return this.properties;
+        }
+
+        public ListWorkspaceQueuesResponseBodyQueues setQueueCategory(String queueCategory) {
+            this.queueCategory = queueCategory;
+            return this;
+        }
+        public String getQueueCategory() {
+            return this.queueCategory;
         }
 
         public ListWorkspaceQueuesResponseBodyQueues setQueueName(String queueName) {

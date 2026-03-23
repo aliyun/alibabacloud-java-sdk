@@ -22,6 +22,16 @@ public class ListKyuubiSparkApplicationsRequest extends TeaModel {
     @NameInMap("applicationName")
     public String applicationName;
 
+    @NameInMap("endTime")
+    public ListKyuubiSparkApplicationsRequestEndTime endTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;SUCCESS&quot;]</p>
+     */
+    @NameInMap("latestSqlStatementStatuses")
+    public String latestSqlStatementStatuses;
+
     /**
      * <p>The maximum number of entries to return.</p>
      * 
@@ -31,6 +41,10 @@ public class ListKyuubiSparkApplicationsRequest extends TeaModel {
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60000</p>
+     */
     @NameInMap("minDuration")
     public Long minDuration;
 
@@ -46,9 +60,17 @@ public class ListKyuubiSparkApplicationsRequest extends TeaModel {
     @NameInMap("orderBy")
     public java.util.List<String> orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>root_queue</p>
+     */
     @NameInMap("resourceQueueId")
     public String resourceQueueId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("sort")
     public String sort;
 
@@ -57,6 +79,13 @@ public class ListKyuubiSparkApplicationsRequest extends TeaModel {
      */
     @NameInMap("startTime")
     public ListKyuubiSparkApplicationsRequestStartTime startTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;ERROR&quot;]</p>
+     */
+    @NameInMap("states")
+    public String states;
 
     public static ListKyuubiSparkApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListKyuubiSparkApplicationsRequest self = new ListKyuubiSparkApplicationsRequest();
@@ -77,6 +106,22 @@ public class ListKyuubiSparkApplicationsRequest extends TeaModel {
     }
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    public ListKyuubiSparkApplicationsRequest setEndTime(ListKyuubiSparkApplicationsRequestEndTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public ListKyuubiSparkApplicationsRequestEndTime getEndTime() {
+        return this.endTime;
+    }
+
+    public ListKyuubiSparkApplicationsRequest setLatestSqlStatementStatuses(String latestSqlStatementStatuses) {
+        this.latestSqlStatementStatuses = latestSqlStatementStatuses;
+        return this;
+    }
+    public String getLatestSqlStatementStatuses() {
+        return this.latestSqlStatementStatuses;
     }
 
     public ListKyuubiSparkApplicationsRequest setMaxResults(Integer maxResults) {
@@ -133,6 +178,52 @@ public class ListKyuubiSparkApplicationsRequest extends TeaModel {
     }
     public ListKyuubiSparkApplicationsRequestStartTime getStartTime() {
         return this.startTime;
+    }
+
+    public ListKyuubiSparkApplicationsRequest setStates(String states) {
+        this.states = states;
+        return this;
+    }
+    public String getStates() {
+        return this.states;
+    }
+
+    public static class ListKyuubiSparkApplicationsRequestEndTime extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1774209636</p>
+         */
+        @NameInMap("endTime")
+        public Long endTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1774209636</p>
+         */
+        @NameInMap("startTime")
+        public Long startTime;
+
+        public static ListKyuubiSparkApplicationsRequestEndTime build(java.util.Map<String, ?> map) throws Exception {
+            ListKyuubiSparkApplicationsRequestEndTime self = new ListKyuubiSparkApplicationsRequestEndTime();
+            return TeaModel.build(map, self);
+        }
+
+        public ListKyuubiSparkApplicationsRequestEndTime setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public ListKyuubiSparkApplicationsRequestEndTime setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
     }
 
     public static class ListKyuubiSparkApplicationsRequestStartTime extends TeaModel {

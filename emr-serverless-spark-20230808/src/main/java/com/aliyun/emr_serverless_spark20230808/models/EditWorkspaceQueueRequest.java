@@ -7,6 +7,9 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     @NameInMap("environments")
     public java.util.List<String> environments;
 
+    @NameInMap("gpuSpec")
+    public java.util.List<String> gpuSpec;
+
     @NameInMap("resourceSpec")
     public EditWorkspaceQueueRequestResourceSpec resourceSpec;
 
@@ -42,6 +45,14 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     }
     public java.util.List<String> getEnvironments() {
         return this.environments;
+    }
+
+    public EditWorkspaceQueueRequest setGpuSpec(java.util.List<String> gpuSpec) {
+        this.gpuSpec = gpuSpec;
+        return this;
+    }
+    public java.util.List<String> getGpuSpec() {
+        return this.gpuSpec;
     }
 
     public EditWorkspaceQueueRequest setResourceSpec(EditWorkspaceQueueRequestResourceSpec resourceSpec) {
@@ -86,6 +97,13 @@ public class EditWorkspaceQueueRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("gpu")
+        public Integer gpu;
+
+        /**
+         * <strong>example:</strong>
          * <p>0.5</p>
          */
         @NameInMap("maxCu")
@@ -102,6 +120,14 @@ public class EditWorkspaceQueueRequest extends TeaModel {
         }
         public Long getCu() {
             return this.cu;
+        }
+
+        public EditWorkspaceQueueRequestResourceSpec setGpu(Integer gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+        public Integer getGpu() {
+            return this.gpu;
         }
 
         public EditWorkspaceQueueRequestResourceSpec setMaxCu(Long maxCu) {

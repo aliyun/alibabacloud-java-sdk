@@ -52,6 +52,13 @@ public class ListRayClusterResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>ecs.gn6i-c4g1.xlarge</p>
+         */
+        @NameInMap("gpuSpec")
+        public String gpuSpec;
+
+        /**
+         * <strong>example:</strong>
          * <p>60</p>
          */
         @NameInMap("idleTimeoutSeconds")
@@ -99,6 +106,14 @@ public class ListRayClusterResponseBody extends TeaModel {
             return this.enableAutoScaling;
         }
 
+        public ListRayClusterResponseBodyRayClustersHeadSpec setGpuSpec(String gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public String getGpuSpec() {
+            return this.gpuSpec;
+        }
+
         public ListRayClusterResponseBodyRayClustersHeadSpec setIdleTimeoutSeconds(Integer idleTimeoutSeconds) {
             this.idleTimeoutSeconds = idleTimeoutSeconds;
             return this;
@@ -140,6 +155,13 @@ public class ListRayClusterResponseBody extends TeaModel {
          */
         @NameInMap("cpu")
         public String cpu;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.gn6i-c4g1.xlarge</p>
+         */
+        @NameInMap("gpuSpec")
+        public String gpuSpec;
 
         /**
          * <strong>example:</strong>
@@ -201,6 +223,14 @@ public class ListRayClusterResponseBody extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public ListRayClusterResponseBodyRayClustersWorkerSpec setGpuSpec(String gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         public ListRayClusterResponseBodyRayClustersWorkerSpec setGroupName(String groupName) {

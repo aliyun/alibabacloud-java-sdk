@@ -159,6 +159,13 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public Long mbSeconds;
 
         /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("priority")
+        public String priority;
+
+        /**
          * <p>The name of the resource queue on which the Spark jobs run.</p>
          * 
          * <strong>example:</strong>
@@ -278,6 +285,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         }
         public Long getMbSeconds() {
             return this.mbSeconds;
+        }
+
+        public ListKyuubiSparkApplicationsResponseBodyApplications setPriority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+        public String getPriority() {
+            return this.priority;
         }
 
         public ListKyuubiSparkApplicationsResponseBodyApplications setResourceQueueId(String resourceQueueId) {

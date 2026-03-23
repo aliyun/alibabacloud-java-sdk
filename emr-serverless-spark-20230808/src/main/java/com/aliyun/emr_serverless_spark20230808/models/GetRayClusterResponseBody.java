@@ -89,6 +89,13 @@ public class GetRayClusterResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p><a href="http://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com">http://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com</a></p>
+     */
+    @NameInMap("jobUrlInner")
+    public String jobUrlInner;
+
+    /**
+     * <strong>example:</strong>
      * <p>ok</p>
      */
     @NameInMap("message")
@@ -170,6 +177,9 @@ public class GetRayClusterResponseBody extends TeaModel {
      */
     @NameInMap("userId")
     public String userId;
+
+    @NameInMap("volumeIds")
+    public java.util.List<String> volumeIds;
 
     @NameInMap("workerSpec")
     public java.util.List<GetRayClusterResponseBodyWorkerSpec> workerSpec;
@@ -283,6 +293,14 @@ public class GetRayClusterResponseBody extends TeaModel {
         return this.jobUrl;
     }
 
+    public GetRayClusterResponseBody setJobUrlInner(String jobUrlInner) {
+        this.jobUrlInner = jobUrlInner;
+        return this;
+    }
+    public String getJobUrlInner() {
+        return this.jobUrlInner;
+    }
+
     public GetRayClusterResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -379,6 +397,14 @@ public class GetRayClusterResponseBody extends TeaModel {
         return this.userId;
     }
 
+    public GetRayClusterResponseBody setVolumeIds(java.util.List<String> volumeIds) {
+        this.volumeIds = volumeIds;
+        return this;
+    }
+    public java.util.List<String> getVolumeIds() {
+        return this.volumeIds;
+    }
+
     public GetRayClusterResponseBody setWorkerSpec(java.util.List<GetRayClusterResponseBodyWorkerSpec> workerSpec) {
         this.workerSpec = workerSpec;
         return this;
@@ -401,6 +427,13 @@ public class GetRayClusterResponseBody extends TeaModel {
          */
         @NameInMap("enableAutoScaling")
         public Boolean enableAutoScaling;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.gn6i-c4g1.xlarge</p>
+         */
+        @NameInMap("gpuSpec")
+        public String gpuSpec;
 
         /**
          * <strong>example:</strong>
@@ -449,6 +482,14 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
         public Boolean getEnableAutoScaling() {
             return this.enableAutoScaling;
+        }
+
+        public GetRayClusterResponseBodyHeadSpec setGpuSpec(String gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         public GetRayClusterResponseBodyHeadSpec setIdleTimeoutSeconds(Integer idleTimeoutSeconds) {
@@ -668,6 +709,13 @@ public class GetRayClusterResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>ecs.gn6i-c4g1.xlarge</p>
+         */
+        @NameInMap("gpuSpec")
+        public String gpuSpec;
+
+        /**
+         * <strong>example:</strong>
          * <p>WorkerGroup1</p>
          */
         @NameInMap("groupName")
@@ -726,6 +774,14 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public GetRayClusterResponseBodyWorkerSpec setGpuSpec(String gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         public GetRayClusterResponseBodyWorkerSpec setGroupName(String groupName) {
