@@ -4,14 +4,32 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListS3IngestionsRequest extends TeaModel {
+    /**
+     * <p>The name of the Logstore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <p>The starting position of the results to return. The default value is 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("offset")
-    public String offset;
+    public Integer offset;
 
+    /**
+     * <p>The number of rows per page for a paged query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("size")
-    public String size;
+    public Integer size;
 
     public static ListS3IngestionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListS3IngestionsRequest self = new ListS3IngestionsRequest();
@@ -26,19 +44,19 @@ public class ListS3IngestionsRequest extends TeaModel {
         return this.logstore;
     }
 
-    public ListS3IngestionsRequest setOffset(String offset) {
+    public ListS3IngestionsRequest setOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
-    public String getOffset() {
+    public Integer getOffset() {
         return this.offset;
     }
 
-    public ListS3IngestionsRequest setSize(String size) {
+    public ListS3IngestionsRequest setSize(Integer size) {
         this.size = size;
         return this;
     }
-    public String getSize() {
+    public Integer getSize() {
         return this.size;
     }
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PullLogsRequest extends TeaModel {
     /**
+     * <p>The number of LogGroups to return. The value must be an integer from 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PullLogsRequest extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The cursor that specifies the start position from which to read data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class PullLogsRequest extends TeaModel {
     public String cursor;
 
     /**
+     * <p>The cursor that specifies the end position at which to stop reading data.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTU1NzA1NzQwMTEwMjEzMDkwCg</p>
      */
@@ -30,7 +34,7 @@ public class PullLogsRequest extends TeaModel {
     public String endCursor;
 
     /**
-     * <p>The SPL statement that is used to filter data. For more information, see <a href="https://help.aliyun.com/document_detail/2536530.html">SPL instructions</a>.</p>
+     * <p>The filter statement in the Structured Process Language (SPL) syntax. For more information, see <a href="https://help.aliyun.com/document_detail/2536530.html">SPL instructions</a>.</p>
      * 
      * <strong>example:</strong>
      * <ul>

@@ -9,7 +9,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aek2i7nhaxifxey</p>
+     * <p>rg-ae******ey</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;

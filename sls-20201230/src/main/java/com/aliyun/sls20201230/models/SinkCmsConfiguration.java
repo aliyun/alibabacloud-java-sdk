@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SinkCmsConfiguration extends TeaModel {
     /**
+     * <p>是否开启</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

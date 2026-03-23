@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectResponseBody extends TeaModel {
     /**
-     * <p>The number of returned projects on the current page.</p>
+     * <p>The number of projects returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,13 +14,16 @@ public class ListProjectResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The projects that meet the query conditions.</p>
+     * <p>The list of projects that meet the query criteria.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>不涉及</p>
      */
     @NameInMap("projects")
     public java.util.List<Project> projects;
 
     /**
-     * <p>The total number of projects that meet the query conditions.</p>
+     * <p>The total number of projects that meet the query criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>

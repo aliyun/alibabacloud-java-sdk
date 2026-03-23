@@ -4,16 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Dashboard extends TeaModel {
+    /**
+     * <p>仪表盘的属性值。</p>
+     */
     @NameInMap("attribute")
     public java.util.Map<String, String> attribute;
 
     /**
+     * <p>仪表盘包含的图表。</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("charts")
     public java.util.List<Chart> charts;
 
     /**
+     * <p>仪表盘的内部显示名称。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,8 @@ public class Dashboard extends TeaModel {
     public String dashboardName;
 
     /**
+     * <p>仪表盘的描述信息。</p>
+     * 
      * <strong>example:</strong>
      * <p>这是一个仪表盘。</p>
      */
@@ -30,6 +37,7 @@ public class Dashboard extends TeaModel {
     public String description;
 
     /**
+     * <p>仪表盘的展示名称。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

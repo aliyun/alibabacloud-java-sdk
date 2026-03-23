@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSqlInstanceRequest extends TeaModel {
     /**
+     * <p>The number of Compute Units (CUs). A CU is a compute core that can be used for parallel processing when Dedicated SQL is running.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateSqlInstanceRequest extends TeaModel {
     public Integer cu;
 
     /**
+     * <p>Specifies whether to enable Dedicated SQL for the project by default. If this parameter is set to true, all query and analysis operations in the project, such as alerts and dashboards, use Dedicated SQL.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("useAsDefault")

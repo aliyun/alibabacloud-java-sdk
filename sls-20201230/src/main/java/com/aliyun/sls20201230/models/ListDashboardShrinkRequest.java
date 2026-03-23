@@ -4,14 +4,26 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListDashboardShrinkRequest extends TeaModel {
+    /**
+     * <p>The dashboard name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dashboard-1609294922657-434834</p>
+     */
     @NameInMap("dashboardName")
     public String dashboardName;
 
+    /**
+     * <p>The display name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>The line from which the query starts. Default value: 0.</p>
+     * <p>The line from which the query starts. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -20,7 +32,7 @@ public class ListDashboardShrinkRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 500. The default value is 500.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -28,6 +40,9 @@ public class ListDashboardShrinkRequest extends TeaModel {
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>The tag information.</p>
+     */
     @NameInMap("tags")
     public String tagsShrink;
 

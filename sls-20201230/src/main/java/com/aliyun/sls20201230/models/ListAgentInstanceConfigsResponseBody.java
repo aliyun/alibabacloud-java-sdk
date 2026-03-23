@@ -4,12 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListAgentInstanceConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The process-level configurations.</p>
+     */
     @NameInMap("configs")
     public java.util.List<ListAgentInstanceConfigsResponseBodyConfigs> configs;
 
+    /**
+     * <p>The number of data entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("size")
     public Long size;
 
+    /**
+     * <p>The total number of data entries that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("total")
     public Long total;
 

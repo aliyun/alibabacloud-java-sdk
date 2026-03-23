@@ -5,18 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetLogsRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query. The value is the log time that is specified when log data is written.</p>
+     * <p>The start of the time range to query. This time is the log time that is specified when the log data is written.</p>
      * <ul>
-     * <li>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <strong>from</strong> parameter, but does not include the end time specified by the <strong>to</strong> parameter. If you specify the same value for the <strong>from</strong> and <strong>to</strong> parameters, the interval is invalid, and an error message is returned.</li>
-     * <li>The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
+     * <li><p>The time range that is specified by the <strong>from</strong> and <strong>to</strong> parameters is a left-closed, right-open interval. The interval includes the start time but not the end time. If the values of <strong>from</strong> and <strong>to</strong> are the same, the interval is invalid. The system returns an error.</p>
+     * </li>
+     * <li><p>The value is a UNIX timestamp. It represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>To ensure that full data can be queried, specify a query time range that is accurate to the minute. If you also specify a time range in an analytic statement, Simple Log Service uses the time range specified in the analytic statement for query and analysis.</p>
+     * <p>To make sure that no data is missed, snap the query time to the minute. If you specify a time range in an analytic statement, the time range in the analytic statement is used for the query and analysis.</p>
      * </blockquote>
-     * <p>If you want to specify a time range that is accurate to the second in your analytic statement, you must use the from_unixtime or to_unixtime function to convert the time format. For more information about the functions, see <a href="https://help.aliyun.com/document_detail/63451.html">from_unixtime function</a> and <a href="https://help.aliyun.com/document_detail/63451.html">to_unixtime function</a>. Examples:</p>
+     * <p>To specify a time in seconds, use the <a href="https://help.aliyun.com/document_detail/63451.html">from_unixtime function</a> or the <a href="https://help.aliyun.com/document_detail/63451.html">to_unixtime function</a> to convert the time format in the analytic statement. Examples:</p>
      * <ul>
-     * <li><code>* | SELECT * FROM log WHERE from_unixtime(__time__) &gt; from_unixtime(1664186624) AND from_unixtime(__time__) &lt; now()</code></li>
-     * <li><code>* | SELECT * FROM log WHERE __time__ &gt; to_unixtime(date_parse(\\&quot;2022-10-19 15:46:05\\&quot;, \\&quot;%Y-%m-%d %H:%i:%s\\&quot;)) AND __time__ &lt; to_unixtime(now())</code></li>
+     * <li><p><code>* | SELECT * FROM log WHERE from_unixtime(__time__) &gt; from_unixtime(1664186624) AND from_unixtime(__time__) &lt; now()</code></p>
+     * </li>
+     * <li><p><code>* | SELECT * FROM log WHERE __time__ &gt; to_unixtime(date_parse(\\&quot;2022-10-19 15:46:05\\&quot;, \\&quot;%Y-%m-%d %H:%i:%s\\&quot;)) AND __time__ &lt; to_unixtime(now())</code></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +31,7 @@ public class GetLogsRequest extends TeaModel {
     public Integer from;
 
     /**
-     * <p>The maximum number of logs to return for the request. This parameter takes effect only when the query parameter is set to a search statement. Minimum value: 0. Maximum value: 100. Default value: 100. For more information, see <a href="https://help.aliyun.com/document_detail/89994.html">Perform paged queries</a>.</p>
+     * <p>This parameter is valid only when the query parameter is a search statement. It specifies the maximum number of logs to return for the request. The value ranges from 0 to 100. The default value is 100. For more information about paged queries, see <a href="https://help.aliyun.com/document_detail/89994.html">Page through query and analysis results</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -36,7 +40,7 @@ public class GetLogsRequest extends TeaModel {
     public Long line;
 
     /**
-     * <p>The line from which the query starts. This parameter takes effect only when the query parameter is set to a search statement. Default value: 0. For more information, see <a href="https://help.aliyun.com/document_detail/89994.html">Perform paged queries</a>.</p>
+     * <p>This parameter is valid only when the query parameter is a search statement. It specifies the start line of the query. The default value is 0. For more information about paged queries, see <a href="https://help.aliyun.com/document_detail/89994.html">Page through query and analysis results</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -45,12 +49,14 @@ public class GetLogsRequest extends TeaModel {
     public Long offset;
 
     /**
-     * <p>Specifies whether to enable the Dedicated SQL feature. For more information, see <a href="https://help.aliyun.com/document_detail/223777.html">Enable Dedicated SQL</a>. Valid values:</p>
+     * <p>Specifies whether to use the Exclusive SQL feature. For more information, see <a href="https://help.aliyun.com/document_detail/223777.html">Enable the Exclusive SQL feature</a>.</p>
      * <ul>
-     * <li>true: enables the Dedicated SQL feature.</li>
-     * <li>false (default): enables the Standard SQL feature.</li>
+     * <li><p>true: Use the Exclusive SQL feature.</p>
+     * </li>
+     * <li><p>false (default): Use the standard SQL feature.</p>
+     * </li>
      * </ul>
-     * <p>You can use the powerSql or <strong>query</strong> parameter to configure Dedicated SQL.</p>
+     * <p>In addition to using the powerSql parameter, you can also use the <strong>query</strong> parameter to enable the Exclusive SQL feature.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -59,9 +65,10 @@ public class GetLogsRequest extends TeaModel {
     public Boolean powerSql;
 
     /**
-     * <p>The search statement or the query statement. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Log search overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Log analysis overview</a>. If you add <code>set session parallel_sql=true;</code> to the analytic statement in the query parameter, Dedicated SQL is used. For example, you can set the query parameter to <code>* | set session parallel_sql=true; select count(*) as pv</code>. For more information about common errors that may occur during log query and analysis, see <a href="https://help.aliyun.com/document_detail/61628.html">How do I resolve common errors that occur when I query and analyze logs?</a></p>
+     * <p>The search statement or analytic statement. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Query overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Analysis overview</a>.
+     * To use the Exclusive SQL feature, add <code>set session parallel_sql=true;</code> to the analytic statement in the query parameter. Example: <code>* | set session parallel_sql=true; select count(*) as pv</code>. For information about common query and analysis issues, see <a href="https://help.aliyun.com/document_detail/61628.html">Common errors that occur when you query and analyze logs</a>.</p>
      * <blockquote>
-     * <p>If you specify an analytic statement in the value of the query parameter, the line and offset parameters do not take effect. In this case, we recommend that you set the line and offset parameters to 0 and use the LIMIT clause to limit the number of logs to return on each page. For more information, see <a href="https://help.aliyun.com/document_detail/89994.html">Paged query</a>.</p>
+     * <p>If the query parameter contains an analytic statement (SQL statement), the line and offset parameters are invalid. We recommend that you set these parameters to 0. You must use the LIMIT clause in the SQL statement to turn pages. For more information, see <a href="https://help.aliyun.com/document_detail/89994.html">Page through query and analysis results</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,16 +78,21 @@ public class GetLogsRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>Specifies whether to return logs in reverse chronological order of log timestamps. The log timestamps are accurate to the minute. Valid values:</p>
+     * <p>Specifies whether to return logs in descending order of their timestamps. The precision is at the minute level.</p>
      * <ul>
-     * <li>true: returns logs in reverse chronological order of log timestamps.</li>
-     * <li>false (default): returns logs in chronological order of log timestamps.</li>
+     * <li><p>true: Returns logs in descending order of their timestamps.</p>
+     * </li>
+     * <li><p>false (default): Returns logs in ascending order of their timestamps.</p>
+     * </li>
      * </ul>
      * <blockquote>
+     * <p>Notice: </p>
      * </blockquote>
      * <ul>
-     * <li>The reverse parameter takes effect only when the query parameter is set to a search statement. The reverse parameter specifies the method used to sort returned logs.</li>
-     * <li>If the query parameter is set to a query statement, the reverse parameter does not take effect. The method used to sort returned logs is specified by the ORDER BY clause in the analytic statement. If you use the keyword asc in the ORDER BY clause, the logs are sorted in chronological order. If you use the keyword desc in the ORDER BY clause, the logs are sorted in reverse chronological order. By default, asc is used in the ORDER BY clause.</li>
+     * <li><p>If the query parameter is a search statement, the reverse parameter is valid and specifies the sorting order of the returned logs.</p>
+     * </li>
+     * <li><p>If the query parameter is a search and analytic statement, the reverse parameter is invalid. The sorting order is specified by the ORDER BY clause in the SQL analytic statement. If the ORDER BY clause specifies asc (default), the logs are sorted in ascending order. If the ORDER BY clause specifies desc, the logs are sorted in descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,18 +102,22 @@ public class GetLogsRequest extends TeaModel {
     public Boolean reverse;
 
     /**
-     * <p>The end of the time range to query. The value is the log time that is specified when log data is written.</p>
+     * <p>The end of the time range to query. This time is the log time that is specified when the log data is written.</p>
      * <ul>
-     * <li>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <strong>from</strong> parameter, but does not include the end time specified by the <strong>to</strong> parameter. If you specify the same value for the <strong>from</strong> and <strong>to</strong> parameters, the interval is invalid, and an error message is returned.</li>
-     * <li>The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
+     * <li><p>The time range that is specified by the <strong>from</strong> and <strong>to</strong> parameters is a left-closed, right-open interval. The interval includes the start time but not the end time. If the values of <strong>from</strong> and <strong>to</strong> are the same, the interval is invalid. The system returns an error.</p>
+     * </li>
+     * <li><p>The value is a UNIX timestamp. It represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>To ensure that full data can be queried, specify a query time range that is accurate to the minute. If you also specify a time range in an analytic statement, Simple Log Service uses the time range specified in the analytic statement for query and analysis.</p>
+     * <p>To make sure that no data is missed, snap the query time to the minute. If you specify a time range in an analytic statement, the time range in the analytic statement is used for the query and analysis.</p>
      * </blockquote>
-     * <p>If you want to specify a time range that is accurate to the second in your analytic statement, you must use the from_unixtime or to_unixtime function to convert the time format. For more information about the functions, see <a href="https://help.aliyun.com/document_detail/63451.html">from_unixtime function</a> and <a href="https://help.aliyun.com/document_detail/63451.html">to_unixtime function</a>. Examples:</p>
+     * <p>To specify a time in seconds, use the <a href="https://help.aliyun.com/document_detail/63451.html">from_unixtime function</a> or the <a href="https://help.aliyun.com/document_detail/63451.html">to_unixtime function</a> to convert the time format in the analytic statement. Examples:</p>
      * <ul>
-     * <li><code>* | SELECT * FROM log WHERE from_unixtime(__time__) &gt; from_unixtime(1664186624) AND from_unixtime(__time__) &lt; now()</code></li>
-     * <li><code>* | SELECT * FROM log WHERE __time__ &gt; to_unixtime(date_parse(\\&quot;2022-10-19 15:46:05\\&quot;, \\&quot;%Y-%m-%d %H:%i:%s\\&quot;)) AND __time__ &lt; to_unixtime(now())</code></li>
+     * <li><p><code>* | SELECT * FROM log WHERE from_unixtime(__time__) &gt; from_unixtime(1664186624) AND from_unixtime(__time__) &lt; now()</code></p>
+     * </li>
+     * <li><p><code>* | SELECT * FROM log WHERE __time__ &gt; to_unixtime(date_parse(\\&quot;2022-10-19 15:46:05\\&quot;, \\&quot;%Y-%m-%d %H:%i:%s\\&quot;)) AND __time__ &lt; to_unixtime(now())</code></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

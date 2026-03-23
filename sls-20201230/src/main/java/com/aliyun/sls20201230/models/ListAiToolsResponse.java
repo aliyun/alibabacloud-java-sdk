@@ -43,21 +43,39 @@ public class ListAiToolsResponse extends TeaModel {
     }
 
     public static class ListAiToolsResponseBodyFields extends TeaModel {
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The valid values for the field.</p>
+         */
         @NameInMap("option")
         public java.util.List<String> option;
 
+        /**
+         * <p>Indicates whether the field is required.</p>
+         */
         @NameInMap("required")
         public Boolean required;
 
+        /**
+         * <p>The type of the field.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>An example of the field.</p>
+         */
         @NameInMap("example")
         public String example;
 
+        /**
+         * <p>The description of the field.</p>
+         */
         @NameInMap("description")
         public String description;
 
@@ -117,12 +135,21 @@ public class ListAiToolsResponse extends TeaModel {
     }
 
     public static class ListAiToolsResponseBody extends TeaModel {
+        /**
+         * <p>The fields of the tool.</p>
+         */
         @NameInMap("fields")
         public java.util.List<ListAiToolsResponseBodyFields> fields;
 
+        /**
+         * <p>The name of the tool.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The description of the tool.</p>
+         */
         @NameInMap("description")
         public String description;
 

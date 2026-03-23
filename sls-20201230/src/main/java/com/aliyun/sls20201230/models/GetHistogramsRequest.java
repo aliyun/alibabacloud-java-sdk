@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHistogramsRequest extends TeaModel {
     /**
-     * <p>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The beginning of the time range for the subinterval. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 1970-01-01 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetHistogramsRequest extends TeaModel {
     public Long from;
 
     /**
-     * <p>The search statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax of search statements, see <a href="https://help.aliyun.com/document_detail/43772.html">Log search overview</a>.</p>
+     * <p>The search statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax of search statements, see <a href="https://help.aliyun.com/document_detail/43772.html">Search syntax</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>with_pack_meta</p>
@@ -24,7 +24,7 @@ public class GetHistogramsRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range for the subinterval. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 1970-01-01 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class GetHistogramsRequest extends TeaModel {
     public Long to;
 
     /**
-     * <p>The topic of the logs.</p>
+     * <p>The topic of the log.</p>
      * 
      * <strong>example:</strong>
      * <p>topic</p>

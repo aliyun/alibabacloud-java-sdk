@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLogsV2Request extends TeaModel {
     /**
-     * <p>Specifies whether to page forward or backward for the scan-based query or phrase search.</p>
+     * <p>For a scan or phrase query, specifies whether to page forward or backward.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,8 +14,8 @@ public class GetLogsV2Request extends TeaModel {
     public Boolean forward;
 
     /**
-     * <p>The beginning of the time range to query. The value is the log time that is specified when log data is written.</p>
-     * <p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned. The value is a timestamp that follows the UNIX time format. It is the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start of the time range to query. The value is the log time that was specified when the log was written.</p>
+     * <p>The time range is a left-closed right-open interval. This means the range includes the start time but not the end time. If the from and to values are the same, the interval is invalid and an error is returned. The value is a UNIX timestamp that represents the number of seconds since 00:00:00 UTC on January 1, 1970.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetLogsV2Request extends TeaModel {
     public Integer from;
 
     /**
-     * <p>Specifies whether to highlight the returned result.</p>
+     * <p>Specifies whether to highlight the results.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,7 +34,16 @@ public class GetLogsV2Request extends TeaModel {
     public Boolean highlight;
 
     /**
-     * <p>The maximum number of logs to return for the request. This parameter takes effect only when the query parameter is set to a search statement. Valid values: 0 to 100. Default value: 100.</p>
+     * <p>Specifies whether to enable nanosecond-level sorting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("isAccurate")
+    public Boolean isAccurate;
+
+    /**
+     * <p>The maximum number of logs to return. This parameter is valid only if the query parameter contains a query statement. The value must be an integer from 0 to 100. The default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -43,7 +52,7 @@ public class GetLogsV2Request extends TeaModel {
     public Long line;
 
     /**
-     * <p>The line from which the query starts. This parameter takes effect only when the query parameter is set to a search statement. Default value: 0.</p>
+     * <p>The line number from which to start the query. This parameter is valid only if the query parameter contains a query statement. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -52,7 +61,7 @@ public class GetLogsV2Request extends TeaModel {
     public Long offset;
 
     /**
-     * <p>Specifies whether to enable the SQL enhancement feature. By default, the feature is disabled.</p>
+     * <p>Specifies whether to enable enhanced SQL. The default value is false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -61,9 +70,9 @@ public class GetLogsV2Request extends TeaModel {
     public Boolean powerSql;
 
     /**
-     * <p>The search statement or query statement. For more information, see the &quot;Log search overview&quot; and &quot;Log analysis overview&quot; topics.</p>
-     * <p>If you add set session parallel_sql=true; to the analytic statement in the query parameter, Dedicated SQL is used. Example: \* | set session parallel_sql=true; select count(\*) as pv.</p>
-     * <p>Note: If you specify an analytic statement in the query parameter, the line and offset parameters do not take effect in this operation. In this case, we recommend that you set the line and offset parameters to 0 and use the LIMIT clause to specify the number of logs to return on each page. For more information, see the &quot;Perform paged queries&quot; topic.</p>
+     * <p>The query statement or analytic statement. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Query overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Analysis overview</a>.</p>
+     * <p>To use the Exclusive SQL feature, add set session parallel_sql=true; to the analytic statement in the query parameter. Example: \* | set session parallel_sql=true; select count(\*) as pv.</p>
+     * <p>Note: If the query parameter contains an analytic statement (SQL statement), the line and offset parameters are invalid. Set them to 0. Use the LIMIT clause in the SQL statement for paging. For more information, see Paginate query and analysis results.</p>
      * 
      * <strong>example:</strong>
      * <p>status: 401 | SELECT remote_addr,COUNT(*) as pv GROUP by remote_addr ORDER by pv desc limit 5</p>
@@ -72,8 +81,12 @@ public class GetLogsV2Request extends TeaModel {
     public String query;
 
     /**
-     * <p>Specifies whether to return logs in reverse chronological order of log timestamps. The log timestamps are accurate to minutes. Valid values:</p>
-     * <p>true: Logs are returned in reverse chronological order of log timestamps. false (default): Logs are returned in chronological order of log timestamps. Note: The reverse parameter takes effect only when the query parameter is set to a search statement. The reverse parameter specifies the method used to sort returned logs. If the query parameter is set to a query statement, the reverse parameter does not take effect. The method used to sort returned logs is specified by the ORDER BY clause in the analytic statement. If you use the keyword asc in the ORDER BY clause, the logs are sorted in chronological order. If you use the keyword desc in the ORDER BY clause, the logs are sorted in reverse chronological order. By default, asc is used in the ORDER BY clause.</p>
+     * <p>Specifies whether to return logs in descending order of their timestamps. The precision is at the minute level.</p>
+     * <p>true: Returns logs in descending order of their timestamps.
+     * false (default): Returns logs in ascending order of their timestamps.
+     * Note:
+     * If the query parameter contains a query statement, the reverse parameter is valid and specifies the sorting order.
+     * If the query parameter contains a query and analysis statement, the reverse parameter is invalid. The sorting order is specified by the ORDER BY clause in the analytic statement. If ORDER BY is asc (default), logs are sorted in ascending order. If ORDER BY is desc, logs are sorted in descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -82,7 +95,7 @@ public class GetLogsV2Request extends TeaModel {
     public Boolean reverse;
 
     /**
-     * <p>The parameter that is used to query data.</p>
+     * <p>The query parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>mode=scan</p>
@@ -91,8 +104,8 @@ public class GetLogsV2Request extends TeaModel {
     public String session;
 
     /**
-     * <p>The end of the time range to query. The value is the log time that is specified when log data is written.</p>
-     * <p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned. The value is a timestamp that follows the UNIX time format. It is the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. The value is the log time that was specified when the log was written.</p>
+     * <p>The time range is a left-closed right-open interval. This means the range includes the start time but not the end time. If the from and to values are the same, the interval is invalid and an error is returned. The value is a UNIX timestamp that represents the number of seconds since 00:00:00 UTC on January 1, 1970.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +115,7 @@ public class GetLogsV2Request extends TeaModel {
     public Integer to;
 
     /**
-     * <p>The topic of the logs. Default value: double quotation marks (&quot;&quot;).</p>
+     * <p>The log topic. The default value is double quotation marks (&quot;&quot;).</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -137,6 +150,14 @@ public class GetLogsV2Request extends TeaModel {
     }
     public Boolean getHighlight() {
         return this.highlight;
+    }
+
+    public GetLogsV2Request setIsAccurate(Boolean isAccurate) {
+        this.isAccurate = isAccurate;
+        return this;
+    }
+    public Boolean getIsAccurate() {
+        return this.isAccurate;
     }
 
     public GetLogsV2Request setLine(Long line) {

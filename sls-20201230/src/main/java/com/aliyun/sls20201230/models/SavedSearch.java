@@ -5,29 +5,51 @@ import com.aliyun.tea.*;
 
 public class SavedSearch extends TeaModel {
     /**
+     * <p>快速查询显示名称。</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Method统计</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
+     * <p>Logstore名称。</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun-test-logstore</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
     /**
+     * <p>快速查询名称。</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>savedsearch-name</p>
      */
     @NameInMap("savedsearchName")
     public String savedsearchName;
 
     /**
+     * <p>查询语句或者分析语句。</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>status: 401 | SELECT remote_addr,COUNT(*) as pv GROUP by remote_addr ORDER by pv desc limit 5</p>
      */
     @NameInMap("searchQuery")
     public String searchQuery;
 
+    /**
+     * <p>日志主题。默认值为空字符串（&quot;&quot;）。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>topic</p>
+     */
     @NameInMap("topic")
     public String topic;
 

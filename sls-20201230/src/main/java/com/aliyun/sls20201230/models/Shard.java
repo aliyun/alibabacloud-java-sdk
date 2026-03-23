@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class Shard extends TeaModel {
     /**
+     * <p>分区的创建时间。UNIX时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。</p>
+     * 
      * <strong>example:</strong>
-     * <p>1453949705</p>
+     * <p>1524222931</p>
      */
     @NameInMap("createTime")
     public Integer createTime;
 
     /**
+     * <p>分区结束的Key值。</p>
+     * 
      * <strong>example:</strong>
      * <p>8000000000000000000000000000000</p>
      */
@@ -19,6 +23,8 @@ public class Shard extends TeaModel {
     public String exclusiveEndKey;
 
     /**
+     * <p>Shard起始的Key值，在Shard MD5范围中包含该值。</p>
+     * 
      * <strong>example:</strong>
      * <p>00000000000000000000000000000000</p>
      */
@@ -26,6 +32,8 @@ public class Shard extends TeaModel {
     public String inclusiveBeginKey;
 
     /**
+     * <p>shard id</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +41,12 @@ public class Shard extends TeaModel {
     public Integer shardID;
 
     /**
+     * <p>Shard状态。创建Shard时，所有Shard状态均为readwrite状态。执行分裂或合并操作后，Shard状态变更为readonly，并生成新的readwrite状态的Shard。Shard状态不影响其数据读取的性能。readwrite状态的Shard可保证数据写入性能，readonly状态的Shard不提供数据写入服务。取值包括：</p>
+     * <ul>
+     * <li>readwrite（读写）</li>
+     * <li>readonly（只读）</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>readwrite</p>
      */

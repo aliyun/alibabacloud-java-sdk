@@ -54,6 +54,12 @@ public class S3IngestionConfigurationSource extends TeaModel {
     @NameInMap("bucket")
     public String bucket;
 
+    @NameInMap("cloudFrontEndpoint")
+    public String cloudFrontEndpoint;
+
+    @NameInMap("cloudFrontToken")
+    public String cloudFrontToken;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -152,7 +158,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>[0-9]{0,2}/[0-9a-zA-Z]+/[0-9:,]+</p>
+     * <p>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</p>
      */
     @NameInMap("timePattern")
     public String timePattern;
@@ -170,6 +176,9 @@ public class S3IngestionConfigurationSource extends TeaModel {
      */
     @NameInMap("useAwsSQSOnly")
     public Boolean useAwsSQSOnly;
+
+    @NameInMap("useCloudFront")
+    public Boolean useCloudFront;
 
     public static S3IngestionConfigurationSource build(java.util.Map<String, ?> map) throws Exception {
         S3IngestionConfigurationSource self = new S3IngestionConfigurationSource();
@@ -222,6 +231,22 @@ public class S3IngestionConfigurationSource extends TeaModel {
     }
     public String getBucket() {
         return this.bucket;
+    }
+
+    public S3IngestionConfigurationSource setCloudFrontEndpoint(String cloudFrontEndpoint) {
+        this.cloudFrontEndpoint = cloudFrontEndpoint;
+        return this;
+    }
+    public String getCloudFrontEndpoint() {
+        return this.cloudFrontEndpoint;
+    }
+
+    public S3IngestionConfigurationSource setCloudFrontToken(String cloudFrontToken) {
+        this.cloudFrontToken = cloudFrontToken;
+        return this;
+    }
+    public String getCloudFrontToken() {
+        return this.cloudFrontToken;
     }
 
     public S3IngestionConfigurationSource setCompressionCodec(String compressionCodec) {
@@ -350,6 +375,14 @@ public class S3IngestionConfigurationSource extends TeaModel {
     }
     public Boolean getUseAwsSQSOnly() {
         return this.useAwsSQSOnly;
+    }
+
+    public S3IngestionConfigurationSource setUseCloudFront(Boolean useCloudFront) {
+        this.useCloudFront = useCloudFront;
+        return this;
+    }
+    public Boolean getUseCloudFront() {
+        return this.useCloudFront;
     }
 
 }

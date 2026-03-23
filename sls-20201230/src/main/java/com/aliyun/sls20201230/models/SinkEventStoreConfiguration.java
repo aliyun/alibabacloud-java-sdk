@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SinkEventStoreConfiguration extends TeaModel {
     /**
+     * <p>是否开启</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class SinkEventStoreConfiguration extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>endpoint</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai-intranet.log.aliyuncs.com</p>
      */
@@ -19,6 +23,8 @@ public class SinkEventStoreConfiguration extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>事件库名称</p>
+     * 
      * <strong>example:</strong>
      * <p>exampleStore</p>
      */
@@ -26,6 +32,8 @@ public class SinkEventStoreConfiguration extends TeaModel {
     public String eventStore;
 
     /**
+     * <p>项目名称</p>
+     * 
      * <strong>example:</strong>
      * <p>exampleProject</p>
      */
@@ -33,6 +41,8 @@ public class SinkEventStoreConfiguration extends TeaModel {
     public String project;
 
     /**
+     * <p>角色</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789:role/aliyunlogetlrole</p>
      */

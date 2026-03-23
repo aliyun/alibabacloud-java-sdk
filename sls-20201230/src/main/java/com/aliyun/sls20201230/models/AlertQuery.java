@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AlertQuery extends TeaModel {
     /**
+     * <p>图表名称</p>
+     * 
      * <strong>example:</strong>
      * <p>chartExmaple</p>
      */
@@ -12,6 +14,8 @@ public class AlertQuery extends TeaModel {
     public String chartTitle;
 
     /**
+     * <p>仪表盘ID</p>
+     * 
      * <strong>example:</strong>
      * <p>dashboardExample</p>
      */
@@ -19,6 +23,7 @@ public class AlertQuery extends TeaModel {
     public String dashboardId;
 
     /**
+     * <p>结束时间</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class AlertQuery extends TeaModel {
     public String end;
 
     /**
+     * <p>是否开启独享SQL</p>
+     * 
      * <strong>example:</strong>
      * <p>auto</p>
      */
@@ -35,6 +42,7 @@ public class AlertQuery extends TeaModel {
     public String powerSqlMode;
 
     /**
+     * <p>项目名称</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,7 @@ public class AlertQuery extends TeaModel {
     public String project;
 
     /**
+     * <p>查询分析语句</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +64,7 @@ public class AlertQuery extends TeaModel {
     public String query;
 
     /**
+     * <p>区域</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,10 +73,14 @@ public class AlertQuery extends TeaModel {
     @NameInMap("region")
     public String region;
 
+    /**
+     * <p>角色ARN</p>
+     */
     @NameInMap("roleArn")
     public String roleArn;
 
     /**
+     * <p>开始时间</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,6 +90,7 @@ public class AlertQuery extends TeaModel {
     public String start;
 
     /**
+     * <p>store名称</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,6 +100,7 @@ public class AlertQuery extends TeaModel {
     public String store;
 
     /**
+     * <p>store类型</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,6 +110,7 @@ public class AlertQuery extends TeaModel {
     public String storeType;
 
     /**
+     * <p>时间片类型</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,6 +119,9 @@ public class AlertQuery extends TeaModel {
     @NameInMap("timeSpanType")
     public String timeSpanType;
 
+    /**
+     * <p>特定场景告警前端使用</p>
+     */
     @NameInMap("ui")
     public String ui;
 

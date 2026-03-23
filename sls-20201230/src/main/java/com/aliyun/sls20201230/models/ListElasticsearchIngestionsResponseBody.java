@@ -4,12 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListElasticsearchIngestionsResponseBody extends TeaModel {
+    /**
+     * <p>The number of Elasticsearch/OpenSearch import jobs returned in the current request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The list of Elasticsearch/OpenSearch import jobs.</p>
+     */
     @NameInMap("results")
     public java.util.List<ESIngestion> results;
 
+    /**
+     * <p>The total number of Elasticsearch/OpenSearch import jobs in the project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("total")
     public Integer total;
 

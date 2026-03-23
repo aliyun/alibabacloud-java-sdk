@@ -5,27 +5,33 @@ import com.aliyun.tea.*;
 
 public class UpdateOSSIngestionRequest extends TeaModel {
     /**
-     * <p>The configuration of the OSS data import job.</p>
+     * <p>The configuration of the OSS import task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public OSSIngestionConfiguration configuration;
 
     /**
-     * <p>The description of the Object Storage Service (OSS) data import job.</p>
+     * <p>The description of the OSS import task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS导入</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The display name of the OSS data import job.</p>
+     * <p>The display name of the OSS import task.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS导入</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>The scheduling type. By default, you do not need to specify this parameter. If you want to import data at regular intervals, such as importing data every Monday at 08: 00., you can specify a cron expression.</p>
+     * <p>The schedule of the task. This parameter is optional. To run the task at a fixed time, such as 08:00 every Monday, use a cron expression.</p>
      */
     @NameInMap("schedule")
     public Schedule schedule;

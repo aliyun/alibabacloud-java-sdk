@@ -14,6 +14,8 @@ public class ListScheduledSQLsRequest extends TeaModel {
     public String logstore;
 
     /**
+     * <p>The line from which to start the query. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -21,10 +23,10 @@ public class ListScheduledSQLsRequest extends TeaModel {
     public Long offset;
 
     /**
-     * <p>The number of entries to return. Default value: 10.</p>
+     * <p>The number of entries to return. The default value is 10.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Long size;

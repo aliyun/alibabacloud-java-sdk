@@ -1,3 +1,15 @@
+2026-03-23 Version: 5.13.0
+- Support API CreateGCSIngestion.
+- Support API GetGCSIngestion.
+- Support API ListGCSIngestions.
+- Support API PutLogStoreConfig.
+- Support API StartGCSIngestion.
+- Support API StopGCSIngestion.
+- Support API UpdateGCSIngestion.
+- Update API GetLogsV2: add request parameters body.isAccurate.
+- Update API GetMetricStore: add response parameters Body.processorId.
+
+
 2026-01-09 Version: 5.12.1
 - Update API CreateLogStore: add request parameters body.resourceGroupId.
 

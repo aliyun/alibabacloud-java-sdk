@@ -4,11 +4,23 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateMetricStoreRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to record the public IP address of the client. The default value is false.</p>
+     * <ul>
+     * <li><p>true: Records the public IP address.</p>
+     * </li>
+     * <li><p>false: Does not record the public IP address.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("appendMeta")
     public Boolean appendMeta;
 
     /**
-     * <p>Specifies whether to enable automatic sharding.</p>
+     * <p>Specifies whether to enable automatic shard splitting.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -16,14 +28,27 @@ public class CreateMetricStoreRequest extends TeaModel {
     @NameInMap("autoSplit")
     public Boolean autoSplit;
 
+    /**
+     * <p>The period for which data is stored in the hot tier. Unit: days. The value must be at least 7 and cannot be greater than the value of ttl. If you set this parameter to -1, all data is stored in the hot tier for the duration specified by ttl.</p>
+     * <p>When the hot storage period ends, the data is moved to the IA storage class. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Tiered Storage of Hot and Cold Data</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("hot_ttl")
     public Integer hotTtl;
 
+    /**
+     * <p>The retention period of data in the IA storage class. Unit: days. The minimum value is 30. After this period, data is moved to Archive Storage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("infrequentAccessTTL")
     public Integer infrequentAccessTTL;
 
     /**
-     * <p>The maximum number of shards into which existing shards can be automatically split. This parameter is valid only when you set the autoSplit parameter to true.</p>
+     * <p>The maximum number of shards into which a shard can be split. This parameter is valid only if autoSplit is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -32,7 +57,7 @@ public class CreateMetricStoreRequest extends TeaModel {
     public Integer maxSplitShard;
 
     /**
-     * <p>The type of the metric data. Example: prometheus.</p>
+     * <p>The type of the Metricstore. Only prometheus is supported. The default value is prometheus.</p>
      * 
      * <strong>example:</strong>
      * <p>prometheus</p>
@@ -41,7 +66,7 @@ public class CreateMetricStoreRequest extends TeaModel {
     public String metricType;
 
     /**
-     * <p>The type of the Metricstore. For example, you can set the parameter to standard to query Standard Metricstores.</p>
+     * <p>The type of the Metricstore. Only standard is supported. The default value is standard.</p>
      * 
      * <strong>example:</strong>
      * <p>standard</p>
@@ -50,7 +75,7 @@ public class CreateMetricStoreRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The name of the Metricstore.</p>
+     * <p>The name of the Metricstore to create.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +85,7 @@ public class CreateMetricStoreRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of shards in the Metricstore.</p>
+     * <p>The number of <a href="https://help.aliyun.com/document_detail/28976.html">shards</a> for the Metricstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,11 +94,14 @@ public class CreateMetricStoreRequest extends TeaModel {
     @NameInMap("shardCount")
     public Integer shardCount;
 
+    /**
+     * <p>The write hashing configuration.</p>
+     */
     @NameInMap("shardingPolicy")
     public ShardingPolicy shardingPolicy;
 
     /**
-     * <p>The retention period of the metric data in the Metricstore. Unit: days.</p>
+     * <p>The data retention period of the Metricstore. Unit: days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

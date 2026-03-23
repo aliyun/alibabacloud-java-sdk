@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetMLServiceResultsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<java.util.Map<String, String>> data;
 
+    /**
+     * <p>The status of the task.</p>
+     */
     @NameInMap("status")
     public java.util.Map<String, String> status;
 

@@ -4,10 +4,14 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GroupConfiguration extends TeaModel {
+    /**
+     * <p>分组评估字段</p>
+     */
     @NameInMap("fields")
     public java.util.List<String> fields;
 
     /**
+     * <p>分组评估类型</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

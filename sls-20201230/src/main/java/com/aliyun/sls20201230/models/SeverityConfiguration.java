@@ -4,10 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class SeverityConfiguration extends TeaModel {
+    /**
+     * <p>触发条件配置</p>
+     */
     @NameInMap("evalCondition")
     public ConditionConfiguration evalCondition;
 
     /**
+     * <p>告警严重度数值</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class LogContent extends TeaModel {
     /**
+     * <p>自定义Key名称。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class LogContent extends TeaModel {
     public String key;
 
     /**
+     * <p>自定义Key对应的值。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

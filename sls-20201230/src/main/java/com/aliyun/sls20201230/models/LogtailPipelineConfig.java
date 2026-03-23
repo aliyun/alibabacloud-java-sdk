@@ -4,10 +4,14 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class LogtailPipelineConfig extends TeaModel {
+    /**
+     * <p>聚合插件</p>
+     */
     @NameInMap("aggregators")
     public java.util.List<java.util.Map<String, ?>> aggregators;
 
     /**
+     * <p>配置名称</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,8 @@ public class LogtailPipelineConfig extends TeaModel {
     public String configName;
 
     /**
+     * <p>创建时间，UNIX时间戳</p>
+     * 
      * <strong>example:</strong>
      * <p>1655176807</p>
      */
@@ -24,21 +30,28 @@ public class LogtailPipelineConfig extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>输出插件</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("flushers")
     public java.util.List<java.util.Map<String, ?>> flushers;
 
+    /**
+     * <p>全局信息</p>
+     */
     @NameInMap("global")
     public java.util.Map<String, ?> global;
 
     /**
+     * <p>输入插件</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("inputs")
     public java.util.List<java.util.Map<String, ?>> inputs;
 
     /**
+     * <p>最后修改时间，UNIX时间戳</p>
+     * 
      * <strong>example:</strong>
      * <p>1655176807</p>
      */
@@ -46,16 +59,23 @@ public class LogtailPipelineConfig extends TeaModel {
     public Long lastModifyTime;
 
     /**
+     * <p>日志样例</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1 - - [10/Jun/2022:12:36:49 +0800] &quot;GET /index.html HTTP/1.1&quot; 200</p>
      */
     @NameInMap("logSample")
     public String logSample;
 
+    /**
+     * <p>处理插件</p>
+     */
     @NameInMap("processors")
     public java.util.List<java.util.Map<String, ?>> processors;
 
     /**
+     * <p>任务配置</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Type&quot;: &quot;task_example&quot;}</p>
      */

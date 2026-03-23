@@ -13,6 +13,9 @@ public class CreateMaxComputeExportRequest extends TeaModel {
 
     /**
      * <p>The description of the MaxCompute data shipping job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>创建一个MaxCompute投递任务</p>
      */
     @NameInMap("description")
     public String description;

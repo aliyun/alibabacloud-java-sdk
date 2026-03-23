@@ -4,12 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListS3IngestionsResponseBody extends TeaModel {
+    /**
+     * <p>The number of tasks returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The details of the task configurations.</p>
+     */
     @NameInMap("results")
     public java.util.List<S3Ingestion> results;
 
+    /**
+     * <p>The total number of entries that match the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("total")
     public Integer total;
 

@@ -5,51 +5,62 @@ import com.aliyun.tea.*;
 
 public class MaxComputeExport extends TeaModel {
     /**
+     * <p>MC投递配置</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public MaxComputeExportConfiguration configuration;
 
     /**
+     * <p>创建时间</p>
+     * 
      * <strong>example:</strong>
-     * <p>1714284115</p>
+     * <p>1718787534</p>
      */
     @NameInMap("createTime")
     public Long createTime;
 
     /**
+     * <p>job description</p>
+     * 
      * <strong>example:</strong>
-     * <p>odpsexport-demo</p>
+     * <p>MaxComputeExport</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>job displayName</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>odpsexport-test</p>
+     * <p>MaxComputeExport</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
+     * <p>最近一次修改时间</p>
+     * 
      * <strong>example:</strong>
-     * <p>1714284589</p>
+     * <p>1718787681</p>
      */
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
     /**
+     * <p>job name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>export-general-1714033191-584993-hcl</p>
+     * <p>MaxComputeExport</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>任务ID</p>
+     * 
      * <strong>example:</strong>
      * <p>c7f01719d9feb105fc9d8df92af62010</p>
      */
@@ -57,6 +68,8 @@ public class MaxComputeExport extends TeaModel {
     public String scheduleId;
 
     /**
+     * <p>投递任务状态</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

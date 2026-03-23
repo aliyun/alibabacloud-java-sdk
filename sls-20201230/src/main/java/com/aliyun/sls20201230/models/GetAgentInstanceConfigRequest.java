@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetAgentInstanceConfigRequest extends TeaModel {
+    /**
+     * <p>The owner of the process-level configuration.</p>
+     */
     @NameInMap("attributes")
     public java.util.Map<String, String> attributes;
 

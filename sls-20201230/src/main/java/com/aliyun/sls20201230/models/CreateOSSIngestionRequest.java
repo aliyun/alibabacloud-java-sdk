@@ -5,27 +5,42 @@ import com.aliyun.tea.*;
 
 public class CreateOSSIngestionRequest extends TeaModel {
     /**
-     * <p>The configuration of the OSS data import job.</p>
+     * <p>The OSS import configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public OSSIngestionConfiguration configuration;
 
     /**
-     * <p>The description of the job.</p>
+     * <p>The job description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>任务描述</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The display name of the job.</p>
+     * <p>The display name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS导入</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>The name of the OSS data import job.</p>
+     * <p>The job name. The naming conventions are as follows:</p>
+     * <p>The job name must be unique within the project.</p>
+     * <ul>
+     * <li><p>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>The name must start and end with a lowercase letter or a digit.</p>
+     * </li>
+     * <li><p>The name must be 2 to 64 characters in length.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +50,7 @@ public class CreateOSSIngestionRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The scheduling type. By default, you do not need to specify this parameter. If you want to import data at regular intervals, such as importing data every Monday at 08: 00., you can specify a cron expression.</p>
+     * <p>The scheduling configuration. This parameter is optional. To meet specific timing requirements, such as importing data at 8:00 AM every Monday, use a cron expression.</p>
      */
     @NameInMap("schedule")
     public Schedule schedule;

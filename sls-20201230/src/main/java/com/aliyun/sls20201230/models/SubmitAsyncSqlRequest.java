@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class SubmitAsyncSqlRequest extends TeaModel {
+    /**
+     * <p>The format of the response parameters. The value is \<code>protobuf\\</code>.</p>
+     */
     @NameInMap("body")
     public SubmitAsyncSqlParams body;
 

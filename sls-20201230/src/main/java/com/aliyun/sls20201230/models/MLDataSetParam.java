@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MLDataSetParam extends TeaModel {
     /**
+     * <p>创建的对象</p>
+     * 
      * <strong>example:</strong>
      * <p>sls-console</p>
      */
@@ -12,6 +14,8 @@ public class MLDataSetParam extends TeaModel {
     public String createBy;
 
     /**
+     * <p>创建时间</p>
+     * 
      * <strong>example:</strong>
      * <p>1695090077</p>
      */
@@ -19,6 +23,8 @@ public class MLDataSetParam extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>数据类型</p>
+     * 
      * <strong>example:</strong>
      * <p>Metric</p>
      */
@@ -26,6 +32,8 @@ public class MLDataSetParam extends TeaModel {
     public String dataType;
 
     /**
+     * <p>数据集的唯一标识</p>
+     * 
      * <strong>example:</strong>
      * <p>d9bd488f6dd42d294495fb780858e83d</p>
      */
@@ -33,6 +41,8 @@ public class MLDataSetParam extends TeaModel {
     public String datasetId;
 
     /**
+     * <p>数据集的描述</p>
+     * 
      * <strong>example:</strong>
      * <p>数据集A</p>
      */
@@ -40,6 +50,8 @@ public class MLDataSetParam extends TeaModel {
     public String description;
 
     /**
+     * <p>数据集对应的标签系统id</p>
+     * 
      * <strong>example:</strong>
      * <p>a191ae4ca615b0ccb93c211fc8a998af</p>
      */
@@ -47,6 +59,8 @@ public class MLDataSetParam extends TeaModel {
     public String labelId;
 
     /**
+     * <p>最终修改时间</p>
+     * 
      * <strong>example:</strong>
      * <p>1695090077</p>
      */
@@ -54,6 +68,8 @@ public class MLDataSetParam extends TeaModel {
     public Long lastModifyTime;
 
     /**
+     * <p>数据集的名称</p>
+     * 
      * <strong>example:</strong>
      * <p>sls_builtin_dataset_metric.shapeclassification.anomalydetection</p>
      */
@@ -61,6 +77,8 @@ public class MLDataSetParam extends TeaModel {
     public String name;
 
     /**
+     * <p>label表配置类型</p>
+     * 
      * <strong>example:</strong>
      * <p>Metric.ShapeClassification.AnomalyDetection</p>
      */

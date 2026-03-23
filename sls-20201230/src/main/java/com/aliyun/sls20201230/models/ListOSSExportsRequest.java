@@ -4,10 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListOSSExportsRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return. The default value is 10.</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
     /**
+     * <p>The line number from which to start the query. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,10 +20,10 @@ public class ListOSSExportsRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The number of entries to return. Default value: 10.</p>
+     * <p>The number of jobs to return. The default value is 10.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;

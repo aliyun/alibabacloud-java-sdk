@@ -8,7 +8,7 @@ public class PutLogsHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The compression format. lz4 and gzip are supported.</p>
+     * <p>The compression type of the logs. Valid values: lz4 and gzip.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

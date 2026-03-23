@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCollectionPolicyRequest extends TeaModel {
     /**
+     * <p>The code for the log type.</p>
+     * 
      * <strong>example:</strong>
      * <p>access_log</p>
      */
@@ -12,6 +14,8 @@ public class GetCollectionPolicyRequest extends TeaModel {
     public String dataCode;
 
     /**
+     * <p>The code of the product.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */

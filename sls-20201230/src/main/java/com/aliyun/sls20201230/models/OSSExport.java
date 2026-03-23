@@ -4,49 +4,62 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class OSSExport extends TeaModel {
+    /**
+     * <p>Oss Export Configuration</p>
+     */
     @NameInMap("configuration")
     public OSSExportConfiguration configuration;
 
     /**
+     * <p>创建时间</p>
+     * 
      * <strong>example:</strong>
-     * <p>1714284025</p>
+     * <p>1718787534</p>
      */
     @NameInMap("createTime")
     public Long createTime;
 
     /**
+     * <p>OSS投递描述</p>
+     * 
      * <strong>example:</strong>
-     * <p>job-test</p>
+     * <p>my-oss-job</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>OSS投递任务显示名称</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>job-demo</p>
+     * <p>my-oss-job</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
+     * <p>最后一次修改的时间</p>
+     * 
      * <strong>example:</strong>
-     * <p>1714284115</p>
+     * <p>1718787681</p>
      */
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
     /**
+     * <p>OSS投递名称</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>job-1714109458-123456</p>
+     * <p>export-oss-1234567890-123456</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>任务ID</p>
+     * 
      * <strong>example:</strong>
      * <p>c7f01719d9feb105fc9d8df92af62010</p>
      */
@@ -54,6 +67,8 @@ public class OSSExport extends TeaModel {
     public String scheduleId;
 
     /**
+     * <p>投递任务的状态</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

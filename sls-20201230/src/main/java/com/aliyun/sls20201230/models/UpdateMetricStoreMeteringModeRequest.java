@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMetricStoreMeteringModeRequest extends TeaModel {
     /**
-     * <p>The billing mode. Default value: ChargeByFunction. Valid values: ChargeByFunction and ChargeByDataIngest.</p>
+     * <p>The billing mode to which you want to switch. Valid values: ChargeByFunction and ChargeByDataIngest. ChargeByFunction specifies the <a href="https://help.aliyun.com/document_detail/48220.html">pay-by-feature</a> mode. ChargeByDataIngest specifies the <a href="https://help.aliyun.com/document_detail/2365756.html">pay-by-ingested-data</a> mode.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateLogStoreRequest extends TeaModel {
     /**
-     * <p>Specifies whether to record the <strong>public IP address</strong> and the <strong>log receiving time</strong>. Default value: false. Valid values:</p>
+     * <p>Specifies whether to record the client\&quot;s <strong>public IP address</strong> and the <strong>log reception time</strong>. The default value is false.</p>
      * <ul>
-     * <li>true: records the public IP address and the log receiving time. If you set this parameter to true, Simple Log Service automatically adds the public IP address of the device from which the log is collected and the time when Simple Log Service receives the log to the Tag field of the collected log.</li>
-     * <li>false: does not record the public IP address or log receiving time.</li>
+     * <li><p>true: records the public IP address of the client and the time when logs are received. If this feature is enabled, Simple Log Service automatically adds the public IP address of the log source and the server time of log reception to the tag field of the logs.</p>
+     * </li>
+     * <li><p>false: does not record the public IP address of the client or the time when logs are received.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class CreateLogStoreRequest extends TeaModel {
     public Boolean appendMeta;
 
     /**
-     * <p>Specifies whether to enable automatic sharding. Valid values:</p>
+     * <p>Specifies whether to automatically split shards.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: automatically splits shards.</p>
+     * </li>
+     * <li><p>false: does not automatically split shards.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +35,12 @@ public class CreateLogStoreRequest extends TeaModel {
     public Boolean autoSplit;
 
     /**
-     * <p>Specifies whether to enable the web tracking feature. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable web tracking. Default value: false.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: enables web tracking.</p>
+     * </li>
+     * <li><p>false: disables web tracking.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,14 +50,14 @@ public class CreateLogStoreRequest extends TeaModel {
     public Boolean enableTracking;
 
     /**
-     * <p>The data structure of the encryption configuration. The following parameters are included: <code>enable</code>, <code>encrypt_type</code>, and <code>user_cmk_info</code>. For more information, see <a href="https://help.aliyun.com/document_detail/409461.html">EncryptConf</a>.</p>
+     * <p>The data structure of the encryption configuration. The parameters include <code>enable</code>, <code>encrypt_type</code>, and <code>user_cmk_info</code>. For more information, see <a href="https://help.aliyun.com/document_detail/409461.html">EncryptConf</a>.</p>
      */
     @NameInMap("encrypt_conf")
     public EncryptConf encryptConf;
 
     /**
-     * <p>The data retention period for the hot storage tier. Unit: days. Minimum value: 7. The value of this parameter cannot exceed the value of ttl. If you set this parameter to -1, all data is stored in the hot storage tier.</p>
-     * <p>After the retention period that is specified for the hot storage tier elapses, the data is moved to the Infrequent Access (IA) storage tier. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Enable hot and cold-tiered storage for a Logstore</a>.</p>
+     * <p>The retention period of data in the hot storage tier of the Logstore, in days. The minimum value is 7. The value cannot be greater than the value of \<code>ttl\\</code>. If you set this parameter to -1, data is permanently stored in the hot tier.</p>
+     * <p>After the hot tier retention period expires, data is moved to the Infrequent Access (IA) storage class. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Automatic Storage Tiering</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -60,7 +66,7 @@ public class CreateLogStoreRequest extends TeaModel {
     public Integer hotTtl;
 
     /**
-     * <p>The data retention period for the IA storage tier. You must set this parameter to at least 30 days. After the data retention period that you specify for the IA storage tier elapses, the data is moved to the Archive storage tier.</p>
+     * <p>The retention period of data in the Infrequent Access (IA) storage class, in days. The value must be 30 or greater.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -71,10 +77,14 @@ public class CreateLogStoreRequest extends TeaModel {
     /**
      * <p>The name of the Logstore. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be unique in a project.</li>
-     * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The name must start and end with a lowercase letter or digit.</li>
-     * <li>The name must be 3 to 63 characters in length.</li>
+     * <li><p>The name must be unique within a project.</p>
+     * </li>
+     * <li><p>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>It must start and end with a lowercase letter or a digit.</p>
+     * </li>
+     * <li><p>It must be 2 to 63 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -85,9 +95,9 @@ public class CreateLogStoreRequest extends TeaModel {
     public String logstoreName;
 
     /**
-     * <p>The maximum number of shards into which existing shards can be automatically split. Valid values: 1 to 256.</p>
+     * <p>The maximum number of shards that can be created by an automatic split. The value must be between 1 and 256.</p>
      * <blockquote>
-     * <p> If you set autoSplit to true, you must specify this parameter.</p>
+     * <p>This parameter is required if you set the autoSplit parameter to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -97,10 +107,12 @@ public class CreateLogStoreRequest extends TeaModel {
     public Integer maxSplitShard;
 
     /**
-     * <p>The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores. Valid values:</p>
+     * <p>The Logstore mode. Simple Log Service provides two modes: Standard and Query.</p>
      * <ul>
-     * <li><strong>standard</strong>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can use this type of Logstore to build a comprehensive observability system.</li>
-     * <li><strong>query</strong>: Query Logstore. This type of Logstore supports high-performance query operations. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the data retention period is long, or log analysis is not required. Data retention periods of weeks or months are considered long.</li>
+     * <li><p><strong>standard</strong>: Supports comprehensive data analytics. This mode is suitable for use cases such as real-time monitoring, interactive analysis, and building a complete observability system.</p>
+     * </li>
+     * <li><p><strong>query</strong>: Supports high-performance queries. The index traffic cost for this mode is about half that of the Standard mode. This mode does not support SQL analysis. It is suitable for use cases that involve large amounts of data, long retention periods, and no log analysis requirements.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,18 +122,24 @@ public class CreateLogStoreRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>IngestProcessor ID</p>
+     * <p>The ID of the ingest processor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>processor-nginx-parser-001</p>
      */
     @NameInMap("processorId")
     public String processorId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The number of shards.</p>
      * <blockquote>
-     * <p> You cannot call the CreateLogStore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.</p>
+     * <p>You cannot change the number of shards with this operation. To change the number of shards, call the \<code>SplitShard\\</code> or \<code>MergeShards\\</code> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -131,14 +149,19 @@ public class CreateLogStoreRequest extends TeaModel {
     @NameInMap("shardCount")
     public Integer shardCount;
 
+    /**
+     * <p>The configuration for hash-based writes.</p>
+     */
     @NameInMap("shardingPolicy")
     public ShardingPolicy shardingPolicy;
 
     /**
-     * <p>The type of the observable data. Valid values:</p>
+     * <p>The type of observable data. Valid values:</p>
      * <ul>
-     * <li><strong>None</strong> (default): log data</li>
-     * <li><strong>Metrics</strong>: metric data</li>
+     * <li><p><strong>None</strong>: log data. This is the default value.</p>
+     * </li>
+     * <li><p><strong>Metrics</strong>: metrics.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -148,7 +171,7 @@ public class CreateLogStoreRequest extends TeaModel {
     public String telemetryType;
 
     /**
-     * <p>The data retention period. Unit: days. Valid values: 1 to 3650. If you set this parameter to 3650, data is permanently stored.</p>
+     * <p>The data retention period, in days. Valid values: 1 to 3650. If you set the value to 3650, data is stored permanently.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

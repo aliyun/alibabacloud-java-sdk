@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConditionConfiguration extends TeaModel {
     /**
+     * <p>评估表达式</p>
+     * 
      * <strong>example:</strong>
      * <p>cnt &gt; 100</p>
      */
@@ -12,6 +14,8 @@ public class ConditionConfiguration extends TeaModel {
     public String condition;
 
     /**
+     * <p>满足评估表达式的结果条数</p>
+     * 
      * <strong>example:</strong>
      * <p><strong>count</strong> &gt; 5</p>
      */

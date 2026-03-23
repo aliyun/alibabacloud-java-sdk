@@ -5,17 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetMLServiceResultsRequest extends TeaModel {
     /**
+     * <ul>
+     * <li><p>true: The request can use a built-in system service.</p>
+     * </li>
+     * <li><p>false: The request cannot use a built-in system service.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("allowBuiltin")
     public Boolean allowBuiltin;
 
+    /**
+     * <p>The request struct.</p>
+     */
     @NameInMap("body")
     public MLServiceAnalysisParam body;
 
     /**
-     * <p>The version of the algorithm. The algorithm varies based on the version.</p>
+     * <p>The version number of the algorithm. Different versions correspond to different algorithms.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>

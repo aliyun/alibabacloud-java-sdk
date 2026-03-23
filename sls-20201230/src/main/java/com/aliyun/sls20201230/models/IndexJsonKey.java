@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IndexJsonKey extends TeaModel {
     /**
+     * <p>别名</p>
+     * 
      * <strong>example:</strong>
      * <p>myAlias</p>
      */
@@ -12,6 +14,8 @@ public class IndexJsonKey extends TeaModel {
     public String alias;
 
     /**
+     * <p>大小写敏感</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class IndexJsonKey extends TeaModel {
     public Boolean caseSensitive;
 
     /**
+     * <p>是否包含中文</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,16 +32,22 @@ public class IndexJsonKey extends TeaModel {
     public Boolean chn;
 
     /**
+     * <p>开启统计</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("doc_value")
     public Boolean docValue;
 
+    /**
+     * <p>分词符</p>
+     */
     @NameInMap("token")
     public java.util.List<String> token;
 
     /**
+     * <p>字段类型</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

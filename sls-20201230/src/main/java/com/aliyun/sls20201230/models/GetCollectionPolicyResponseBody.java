@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetCollectionPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The details of the rule.</p>
+     */
     @NameInMap("collectionPolicy")
     public GetCollectionPolicyResponseBodyCollectionPolicy collectionPolicy;
 
@@ -22,6 +25,8 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
 
     public static class GetCollectionPolicyResponseBodyCollectionPolicyCentralizeConfig extends TeaModel {
         /**
+         * <p>The destination Logstore for centralized shipping.</p>
+         * 
          * <strong>example:</strong>
          * <p>your-sls-logstore-in-beijing</p>
          */
@@ -29,6 +34,8 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public String destLogstore;
 
         /**
+         * <p>The destination project for centralized shipping.</p>
+         * 
          * <strong>example:</strong>
          * <p>your-sls-project-in-beijing</p>
          */
@@ -36,6 +43,8 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public String destProject;
 
         /**
+         * <p>The destination region for centralized shipping.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -43,8 +52,10 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public String destRegion;
 
         /**
+         * <p>The retention period of the destination Logstore. Unit: days.</p>
+         * 
          * <strong>example:</strong>
-         * <p>your-sls-logstore-ttl</p>
+         * <p>0</p>
          */
         @NameInMap("destTTL")
         public Integer destTTL;
@@ -90,6 +101,8 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
 
     public static class GetCollectionPolicyResponseBodyCollectionPolicyDataConfig extends TeaModel {
         /**
+         * <p>This parameter is valid only for global log types, such as when \<code>productCode\\</code> is \<code>sls\\</code>. If this parameter is left empty, logs are collected to the default project of the account in the specified \<code>dataRegion\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -97,6 +110,8 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public String dataProject;
 
         /**
+         * <p>This parameter is supported only for global log types, such as when \<code>productCode\\</code> is \<code>sls\\</code>. This parameter specifies the region to which global logs are collected during the initial configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -127,13 +142,21 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
     }
 
     public static class GetCollectionPolicyResponseBodyCollectionPolicyPolicyConfig extends TeaModel {
+        /**
+         * <p>The instance IDs.</p>
+         */
         @NameInMap("instanceIds")
         public java.util.List<String> instanceIds;
 
+        /**
+         * <p>The regions where the instances reside. Wildcard characters are supported.</p>
+         */
         @NameInMap("regions")
         public java.util.List<String> regions;
 
         /**
+         * <p>The collection pattern for resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>all</p>
          */
@@ -141,6 +164,8 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public String resourceMode;
 
         /**
+         * <p>The resource tags.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;tag1&quot;:&quot;value1&quot;,&quot;tag2&quot;:&quot;value2&quot;}</p>
          */
@@ -188,12 +213,17 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
 
     public static class GetCollectionPolicyResponseBodyCollectionPolicyResourceDirectory extends TeaModel {
         /**
+         * <p>The mode for selecting accounts in the resource directory. Valid values: \<code>all\\</code> and \<code>custom\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>all,custom</p>
          */
         @NameInMap("accountGroupType")
         public String accountGroupType;
 
+        /**
+         * <p>The member accounts. This parameter is returned only when \<code>accountGroupType\\</code> is set to \<code>custom\\</code>.</p>
+         */
         @NameInMap("members")
         public java.util.List<String> members;
 
@@ -221,10 +251,15 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
     }
 
     public static class GetCollectionPolicyResponseBodyCollectionPolicy extends TeaModel {
+        /**
+         * <p>The configuration for centralized shipping.</p>
+         */
         @NameInMap("centralizeConfig")
         public GetCollectionPolicyResponseBodyCollectionPolicyCentralizeConfig centralizeConfig;
 
         /**
+         * <p>Indicates whether centralized storage is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -232,16 +267,23 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public Boolean centralizeEnabled;
 
         /**
+         * <p>The code for the log type.</p>
+         * 
          * <strong>example:</strong>
          * <p>access_log</p>
          */
         @NameInMap("dataCode")
         public String dataCode;
 
+        /**
+         * <p>The configuration that is supported only for global log types, such as when \<code>productCode\\</code> is \<code>sls\\</code>. Otherwise, this parameter is empty.</p>
+         */
         @NameInMap("dataConfig")
         public GetCollectionPolicyResponseBodyCollectionPolicyDataConfig dataConfig;
 
         /**
+         * <p>Indicates whether the rule is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -249,16 +291,23 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>Indicates whether the rule is a built-in rule. Built-in rules cannot be modified or deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("internalPolicy")
         public Boolean internalPolicy;
 
+        /**
+         * <p>The configuration of the collection rule.</p>
+         */
         @NameInMap("policyConfig")
         public GetCollectionPolicyResponseBodyCollectionPolicyPolicyConfig policyConfig;
 
         /**
+         * <p>The name of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>your_log_policy</p>
          */
@@ -266,6 +315,8 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public String policyName;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the rule belongs. If the rule is created by a resource directory administrator or a delegated administrator, this parameter specifies the ID of the administrator\&quot;s Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>148***********50</p>
          */
@@ -273,12 +324,17 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public String policyUid;
 
         /**
+         * <p>The code of the product.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
         @NameInMap("productCode")
         public String productCode;
 
+        /**
+         * <p>The configuration of the resource directory. This parameter is empty if no configuration is specified.</p>
+         */
         @NameInMap("resourceDirectory")
         public GetCollectionPolicyResponseBodyCollectionPolicyResourceDirectory resourceDirectory;
 

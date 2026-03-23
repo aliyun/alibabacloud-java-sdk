@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ServiceStatus extends TeaModel {
     /**
+     * <p>是否开通</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,14 @@ public class ServiceStatus extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>当前状态。</p>
+     * <ul>
+     * <li>Opened：已开通。</li>
+     * <li>NotExist：不存在。</li>
+     * <li>Opening：正在开通。</li>
+     * <li>Closed：已欠费禁用。</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NotExist</p>
      */

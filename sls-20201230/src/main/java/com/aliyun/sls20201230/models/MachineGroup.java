@@ -4,22 +4,37 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class MachineGroup extends TeaModel {
+    /**
+     * <p>机器组属性。</p>
+     */
     @NameInMap("groupAttribute")
     public MachineGroupGroupAttribute groupAttribute;
 
     /**
+     * <p>机器组名称。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-group</p>
+     * <p>machineGroup-1</p>
      */
     @NameInMap("groupName")
     public String groupName;
 
+    /**
+     * <p>机器组类型，目前固定为空字符串。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("groupType")
     public String groupType;
 
     /**
+     * <p>机器标识类型。</p>
+     * <ul>
+     * <li>ip：IP地址机器组。</li>
+     * <li>userdefined：用户自定义标识机器组。</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +44,7 @@ public class MachineGroup extends TeaModel {
     public String machineIdentifyType;
 
     /**
+     * <p>机器列表。</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("machineList")
@@ -81,15 +97,19 @@ public class MachineGroup extends TeaModel {
 
     public static class MachineGroupGroupAttribute extends TeaModel {
         /**
+         * <p>机器组所依赖的外部管理系统标识。</p>
+         * 
          * <strong>example:</strong>
-         * <p>test-group</p>
+         * <p>testgroup</p>
          */
         @NameInMap("externalName")
         public String externalName;
 
         /**
+         * <p>机器组的日志主题。</p>
+         * 
          * <strong>example:</strong>
-         * <p>test-topic</p>
+         * <p>testtopic</p>
          */
         @NameInMap("groupTopic")
         public String groupTopic;

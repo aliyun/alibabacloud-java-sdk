@@ -5,24 +5,31 @@ import com.aliyun.tea.*;
 
 public class Chart extends TeaModel {
     /**
+     * <p>action</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("action")
     public java.util.Map<String, ?> action;
 
     /**
+     * <p>图表的显示配置。</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("display")
     public java.util.Map<String, ?> display;
 
     /**
+     * <p>查询配置。</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>(*)| SELECT date_format(<strong>time</strong> - <strong>time</strong> % 60, \&quot;%H:%i:%s\&quot;) as time, count(1) as count GROUP BY time ORDER BY time</p>
      */
     @NameInMap("search")
     public java.util.Map<String, ?> search;
 
     /**
+     * <p>图表标题。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +39,7 @@ public class Chart extends TeaModel {
     public String title;
 
     /**
+     * <p>图表类型。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

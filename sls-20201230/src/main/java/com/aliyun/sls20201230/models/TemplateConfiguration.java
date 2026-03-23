@@ -4,10 +4,14 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class TemplateConfiguration extends TeaModel {
+    /**
+     * <p>模板标注</p>
+     */
     @NameInMap("aonotations")
     public java.util.Map<String, ?> aonotations;
 
     /**
+     * <p>模板ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,16 +21,22 @@ public class TemplateConfiguration extends TeaModel {
     public String id;
 
     /**
+     * <p>模板语言</p>
+     * 
      * <strong>example:</strong>
      * <p>cn</p>
      */
     @NameInMap("lang")
     public String lang;
 
+    /**
+     * <p>模板携带的token</p>
+     */
     @NameInMap("tokens")
     public java.util.Map<String, ?> tokens;
 
     /**
+     * <p>模板类型</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +46,8 @@ public class TemplateConfiguration extends TeaModel {
     public String type;
 
     /**
+     * <p>模板版本</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

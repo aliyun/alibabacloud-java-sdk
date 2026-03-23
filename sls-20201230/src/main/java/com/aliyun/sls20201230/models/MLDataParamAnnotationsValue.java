@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MLDataParamAnnotationsValue extends TeaModel {
     /**
+     * <p>标注人的aliuid</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -12,12 +14,17 @@ public class MLDataParamAnnotationsValue extends TeaModel {
     public String annotatedBy;
 
     /**
+     * <p>更新的时间戳</p>
+     * 
      * <strong>example:</strong>
      * <p>1694761550</p>
      */
     @NameInMap("updateTime")
     public Long updateTime;
 
+    /**
+     * <p>标注结果</p>
+     */
     @NameInMap("results")
     public java.util.List<java.util.Map<String, String>> results;
 

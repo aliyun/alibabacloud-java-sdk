@@ -5,26 +5,44 @@ import com.aliyun.tea.*;
 
 public class CreateElasticsearchIngestionRequest extends TeaModel {
     /**
+     * <p>The configuration for the ES or OpenSearch import job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public ESIngestionConfiguration configuration;
 
+    /**
+     * <p>The description of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es ingestion</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The display name of the job.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es ingestion</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
+     * <p>The unique identifier of the ES or OpenSearch import job.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ingest-elasticsearch- 123456-123</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The schedule structure.</p>
+     */
     @NameInMap("schedule")
     public Schedule schedule;
 

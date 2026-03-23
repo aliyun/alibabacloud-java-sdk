@@ -50,13 +50,6 @@ public class KafkaIngestion extends TeaModel {
     public String name;
 
     /**
-     * <strong>example:</strong>
-     * <p>ingest-processor-1756802123-953901</p>
-     */
-    @NameInMap("processorId")
-    public String processorId;
-
-    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
@@ -127,14 +120,6 @@ public class KafkaIngestion extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public KafkaIngestion setProcessorId(String processorId) {
-        this.processorId = processorId;
-        return this;
-    }
-    public String getProcessorId() {
-        return this.processorId;
     }
 
     public KafkaIngestion setSchedule(Schedule schedule) {

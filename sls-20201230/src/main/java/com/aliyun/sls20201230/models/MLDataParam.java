@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class MLDataParam extends TeaModel {
     /**
+     * <p>数据的唯一标识</p>
+     * 
      * <strong>example:</strong>
      * <p>dc74b0f569126bb310e1ba6454c351ac</p>
      */
     @NameInMap("annotationdataId")
     public String annotationdataId;
 
+    /**
+     * <p>标注信息</p>
+     */
     @NameInMap("annotations")
     public java.util.Map<String, MLDataParamAnnotationsValue> annotations;
 
+    /**
+     * <p>数据的配置信息</p>
+     */
     @NameInMap("config")
     public java.util.Map<String, String> config;
 
     /**
+     * <p>创建的时间</p>
+     * 
      * <strong>example:</strong>
      * <p>1695094335</p>
      */
@@ -25,6 +35,8 @@ public class MLDataParam extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>数据内容的hash值</p>
+     * 
      * <strong>example:</strong>
      * <p>59db060bd89468245d76416a68a510ac</p>
      */
@@ -32,23 +44,32 @@ public class MLDataParam extends TeaModel {
     public String dataHash;
 
     /**
+     * <p>关联的数据集的id</p>
+     * 
      * <strong>example:</strong>
-     * <p>a9bd488f6dd42d294495fb780858e83d</p>
+     * <p>cb8cc4eb51a85e823471cdb368fae9be</p>
      */
     @NameInMap("datasetId")
     public String datasetId;
 
     /**
+     * <p>最后一次修改的时间</p>
+     * 
      * <strong>example:</strong>
      * <p>1695094335</p>
      */
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
 
+    /**
+     * <p>模型预览结果信息</p>
+     */
     @NameInMap("predictions")
     public java.util.Map<String, MLDataParamPredictionsValue> predictions;
 
     /**
+     * <p>数据来源</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx/xxx/xxx/</p>
      */
@@ -56,6 +77,8 @@ public class MLDataParam extends TeaModel {
     public String value;
 
     /**
+     * <p>数据来源格式</p>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */

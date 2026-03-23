@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListETLsResponseBody extends TeaModel {
     /**
-     * <p>The number of data transformation jobs that are returned.</p>
+     * <p>The number of data transformation jobs returned in the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -13,6 +13,9 @@ public class ListETLsResponseBody extends TeaModel {
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>A list of data transformation results.</p>
+     */
     @NameInMap("results")
     public java.util.List<ETL> results;
 

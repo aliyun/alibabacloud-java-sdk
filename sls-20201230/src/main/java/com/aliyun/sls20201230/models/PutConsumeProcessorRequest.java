@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutConsumeProcessorRequest extends TeaModel {
     /**
-     * <p>Consumption processor configuration.</p>
+     * <p>The configuration of the consume processor.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
@@ -13,6 +13,9 @@ public class PutConsumeProcessorRequest extends TeaModel {
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>仅过滤Get请求</p>
      */
     @NameInMap("description")
     public String description;

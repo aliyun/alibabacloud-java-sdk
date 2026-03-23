@@ -8,6 +8,8 @@ public class PullLogsHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The compression format of the data that the server returns. Only the lz4 format is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>lz4</p>
      */

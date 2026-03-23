@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class StoreViewStore extends TeaModel {
     /**
+     * <p>Project 名称</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali-test-project</p>
      */
     @NameInMap("project")
     public String project;
 
+    /**
+     * <p>查询过滤语句</p>
+     */
     @NameInMap("query")
     public String query;
 
     /**
+     * <p>LogStore 或 MetricStore 名称</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-logstore</p>
      */
     @NameInMap("storeName")
     public String storeName;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MLLabelParam extends TeaModel {
     /**
+     * <p>创建时间</p>
+     * 
      * <strong>example:</strong>
      * <p>1695090077</p>
      */
@@ -12,6 +14,8 @@ public class MLLabelParam extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>标签表的描述信息</p>
+     * 
      * <strong>example:</strong>
      * <p>默认表</p>
      */
@@ -19,6 +23,8 @@ public class MLLabelParam extends TeaModel {
     public String description;
 
     /**
+     * <p>标签表的唯一标识</p>
+     * 
      * <strong>example:</strong>
      * <p>abbd488f6dd42d294495fb780858e83d</p>
      */
@@ -26,6 +32,8 @@ public class MLLabelParam extends TeaModel {
     public String labelId;
 
     /**
+     * <p>最后修改时间</p>
+     * 
      * <strong>example:</strong>
      * <p>1695090077</p>
      */
@@ -33,16 +41,23 @@ public class MLLabelParam extends TeaModel {
     public Long lastModifyTime;
 
     /**
+     * <p>标签表的名称</p>
+     * 
      * <strong>example:</strong>
      * <p>标签表</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>标签表的配置</p>
+     */
     @NameInMap("settings")
     public java.util.List<MLLabelParamSettings> settings;
 
     /**
+     * <p>标签表的类型</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -112,6 +127,8 @@ public class MLLabelParam extends TeaModel {
 
     public static class MLLabelParamSettings extends TeaModel {
         /**
+         * <p>配置的具体信息</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -119,6 +136,8 @@ public class MLLabelParam extends TeaModel {
         public String config;
 
         /**
+         * <p>配置的模式</p>
+         * 
          * <strong>example:</strong>
          * <p>builtin</p>
          */
@@ -126,6 +145,8 @@ public class MLLabelParam extends TeaModel {
         public String mode;
 
         /**
+         * <p>配置的任务类型</p>
+         * 
          * <strong>example:</strong>
          * <p>Trace.RCA</p>
          */
@@ -133,6 +154,8 @@ public class MLLabelParam extends TeaModel {
         public String type;
 
         /**
+         * <p>配置的版本号</p>
+         * 
          * <strong>example:</strong>
          * <p>0.01</p>
          */

@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class MLServiceAnalysisParam extends TeaModel {
+    /**
+     * <p>input</p>
+     */
     @NameInMap("input")
     public java.util.List<java.util.Map<String, String>> input;
 
+    /**
+     * <p>parameter</p>
+     */
     @NameInMap("parameter")
     public java.util.Map<String, String> parameter;
 

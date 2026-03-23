@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDashboardResponseBody extends TeaModel {
     /**
-     * <p>The details of the dashboard.</p>
+     * <p>The dashboards.</p>
      */
     @NameInMap("dashboardItems")
     public java.util.List<ListDashboardResponseBodyDashboardItems> dashboardItems;
 
     /**
-     * <p>The queried dashboards. Each dashboard in the array is specified by dashboardName.</p>
+     * <p>A list of dashboard names. This corresponds to dashboardName.</p>
      */
     @NameInMap("dashboards")
     public java.util.List<String> dashboards;
@@ -39,7 +39,7 @@ public class ListDashboardResponseBody extends TeaModel {
 
     public static class ListDashboardResponseBodyDashboardItems extends TeaModel {
         /**
-         * <p>The dashboard ID. The ID must be unique in a project. Fuzzy search is supported. For example, if you enter da, all dashboards whose IDs start with da are queried.</p>
+         * <p>The dashboard ID. The ID must be unique within a project. Fuzzy queries are supported. For example, if you enter da, all dashboards whose names start with da are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>dashboard-1609294922657-434834</p>
@@ -47,6 +47,12 @@ public class ListDashboardResponseBody extends TeaModel {
         @NameInMap("dashboardName")
         public String dashboardName;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tablet_ai</p>
+         */
         @NameInMap("description")
         public String description;
 

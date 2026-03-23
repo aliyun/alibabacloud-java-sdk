@@ -15,7 +15,7 @@ public class CreateAlertRequest extends TeaModel {
      * <p>The description of the alert rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>An alert rule</p>
+     * <p>一条告警规则</p>
      */
     @NameInMap("description")
     public String description;

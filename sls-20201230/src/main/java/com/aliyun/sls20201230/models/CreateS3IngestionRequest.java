@@ -4,10 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateS3IngestionRequest extends TeaModel {
+    /**
+     * <p>The configuration.</p>
+     */
     @NameInMap("configuration")
     public S3IngestionConfiguration configuration;
 
     /**
+     * <p>The description of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -15,6 +20,7 @@ public class CreateS3IngestionRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +30,16 @@ public class CreateS3IngestionRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The name of the job. Follow these naming rules:</p>
+     * <p>Each job in the same project must have a unique name.</p>
+     * <ul>
+     * <li><p>Use only lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>Start and end with a lowercase letter or digit.</p>
+     * </li>
+     * <li><p>Be 2 to 64 characters long.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

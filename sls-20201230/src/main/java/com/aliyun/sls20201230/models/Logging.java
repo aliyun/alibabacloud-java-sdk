@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class Logging extends TeaModel {
     /**
+     * <p>服务日志配置列表。</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("loggingDetails")
     public java.util.List<LoggingLoggingDetails> loggingDetails;
 
     /**
+     * <p>服务日志要保存到的Project名称。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class Logging extends TeaModel {
 
     public static class LoggingLoggingDetails extends TeaModel {
         /**
+         * <p>Logstore名称。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,17 @@ public class Logging extends TeaModel {
         public String logstore;
 
         /**
+         * <p>服务日志的种类。取值包括：</p>
+         * <ul>
+         * <li>consumergroup_log：消费组延迟日志</li>
+         * <li>logtail_alarm：Logtail告警日志</li>
+         * <li>operation_log：操作日志（此项服务收费）</li>
+         * <li>logtail_profile：Logtail采集日志</li>
+         * <li>metering：计量日志</li>
+         * <li>logtail_status：Logtail状态日志</li>
+         * <li>scheduledsqlalert：定时SQL任务运行日志</li>
+         * <li>etl_alert：数据加工任务的运行日志</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

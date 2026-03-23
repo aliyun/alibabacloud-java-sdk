@@ -5,20 +5,34 @@ import com.aliyun.tea.*;
 
 public class UpdateElasticsearchIngestionRequest extends TeaModel {
     /**
+     * <p>ES or OpenSearch ingestion configuration</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public ESIngestionConfiguration configuration;
 
+    /**
+     * <p>Description of the ES or OpenSearch ingestion task</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es ingestion test</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>Display name of the ES or OpenSearch ingestion task</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es-ingestion-test</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>Scheduling type. Leave this field empty unless you need strict scheduling. For example, to run the ingestion task every Monday at 8:00 a.m., use a cron expression</p>
+     */
     @NameInMap("schedule")
     public Schedule schedule;
 

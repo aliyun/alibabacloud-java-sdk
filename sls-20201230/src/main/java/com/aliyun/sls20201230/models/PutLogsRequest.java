@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutLogsRequest extends TeaModel {
     /**
-     * <p>The compressed Protobuf data.</p>
+     * <p>The compressed log data in protobuf format.</p>
      */
     @NameInMap("body")
     public LogGroup body;

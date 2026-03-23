@@ -4,24 +4,33 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ETLConfiguration extends TeaModel {
+    /**
+     * <p>授权读取源Logstore的AccessKey ID，必填。使用角色授权时，填入空字符串</p>
+     */
     @NameInMap("accessKeyId")
     @Deprecated
     public String accessKeyId;
 
+    /**
+     * <p>授权读取源Logstore的AccessKey Secret，必填。使用角色授权时，填入空字符串。</p>
+     */
     @NameInMap("accessKeySecret")
     @Deprecated
     public String accessKeySecret;
 
     /**
+     * <p>加工时间起点时间戳（精确到秒），必填。从源Logstore中最早接收到的第一条日志开始消费时，填入0</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1714274900</p>
+     * <p>0</p>
      */
     @NameInMap("fromTime")
     public Long fromTime;
 
     /**
+     * <p>数据加工语法类型</p>
+     * 
      * <strong>example:</strong>
      * <p>SPL</p>
      */
@@ -29,6 +38,7 @@ public class ETLConfiguration extends TeaModel {
     public String lang;
 
     /**
+     * <p>源Logstore名称</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,8 @@ public class ETLConfiguration extends TeaModel {
     public String logstore;
 
     /**
+     * <p>高级参数配置</p>
+     * 
      * <strong>example:</strong>
      * <p>config.vpc.vpc_id.test1：vpc-uf6mskb0b****n9yj</p>
      */
@@ -45,6 +57,7 @@ public class ETLConfiguration extends TeaModel {
     public java.util.Map<String, ?> parameters;
 
     /**
+     * <p>授权读取源Logstore的角色ARN</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,25 +67,30 @@ public class ETLConfiguration extends TeaModel {
     public String roleArn;
 
     /**
+     * <p>加工脚本</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>e_set(&quot;key&quot;,&quot;value&quot;)</p>
+     * <ul>
+     * <li>| extend key=\&quot;value\&quot;</li>
+     * </ul>
      */
     @NameInMap("script")
     public String script;
 
     /**
+     * <p>加工结果输出目标列表</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sinks")
     public java.util.List<ETLConfigurationSink> sinks;
 
     /**
+     * <p>加工时间结束时间戳（精确到秒），必填。持续消费至手动停止时，填入0</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1714274970</p>
+     * <p>0</p>
      */
     @NameInMap("toTime")
     public Long toTime;

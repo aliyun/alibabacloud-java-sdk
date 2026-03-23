@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogtailPipelineConfigRequest extends TeaModel {
     /**
-     * <p>The name of the Logtail pipeline configuration.</p>
+     * <p>The name of the pipeline configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>logtail-config-sample</p>
@@ -26,7 +26,7 @@ public class ListLogtailPipelineConfigRequest extends TeaModel {
     public String logstoreName;
 
     /**
-     * <p>The line from which the query starts.</p>
+     * <p>The line from which to start the query.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -35,7 +35,7 @@ public class ListLogtailPipelineConfigRequest extends TeaModel {
     public Long offset;
 
     /**
-     * <p>The number of Logtail pipeline configurations per page.</p>
+     * <p>The number of pipeline configurations to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

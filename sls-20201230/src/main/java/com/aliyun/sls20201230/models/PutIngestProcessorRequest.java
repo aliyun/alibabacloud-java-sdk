@@ -13,6 +13,9 @@ public class PutIngestProcessorRequest extends TeaModel {
 
     /**
      * <p>The description of the ingest processor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>将Nginx日志通过正则解析提取字段。</p>
      */
     @NameInMap("description")
     public String description;
@@ -20,6 +23,9 @@ public class PutIngestProcessorRequest extends TeaModel {
     /**
      * <p>The display name of the ingest processor.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Nginx日志解析</p>
      */
     @NameInMap("displayName")
     public String displayName;

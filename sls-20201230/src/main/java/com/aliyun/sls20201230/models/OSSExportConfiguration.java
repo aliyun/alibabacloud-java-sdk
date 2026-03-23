@@ -5,32 +5,43 @@ import com.aliyun.tea.*;
 
 public class OSSExportConfiguration extends TeaModel {
     /**
+     * <p>时间范围开始，值设为1则表示将从日志库中第一条数据开始</p>
+     * 
      * <strong>example:</strong>
-     * <p>1714123644</p>
+     * <p>1718380800</p>
      */
     @NameInMap("fromTime")
     public Long fromTime;
 
     /**
+     * <p>Logstore名称</p>
+     * 
      * <strong>example:</strong>
-     * <p>logstore-demo</p>
+     * <p>my-logstore</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
     /**
+     * <p>读SLS RAM角色roleArn，请填写您自己的角色roleArn</p>
+     * 
      * <strong>example:</strong>
-     * <p>acs:ram::123456789:role/aliyunlogdefaultrole</p>
+     * <p>acs:ram::1234567890:role/aliyunlogdefaultrole</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
 
+    /**
+     * <p>投递OSS配置</p>
+     */
     @NameInMap("sink")
     public OSSExportConfigurationSink sink;
 
     /**
+     * <p>时间范围结束，值设为0则表示任务会一直运行，除非任务被手动停止。</p>
+     * 
      * <strong>example:</strong>
-     * <p>1714357112</p>
+     * <p>1718380800</p>
      */
     @NameInMap("toTime")
     public Long toTime;
@@ -82,15 +93,18 @@ public class OSSExportConfiguration extends TeaModel {
 
     public static class OSSExportConfigurationSink extends TeaModel {
         /**
+         * <p>OSS Bucket</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-bucket</p>
+         * <p>my-bucket</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
         /**
+         * <p>投递时间，取值范围为300~900，单位为秒。</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -98,6 +112,8 @@ public class OSSExportConfiguration extends TeaModel {
         public Long bufferInterval;
 
         /**
+         * <p>投递的文件大小，取值范围为5~256，单位为MB。</p>
+         * 
          * <strong>example:</strong>
          * <p>256</p>
          */
@@ -105,31 +121,47 @@ public class OSSExportConfiguration extends TeaModel {
         public Long bufferSize;
 
         /**
+         * <p>支持4种压缩类型，如：snappy、gzip、zstd、none</p>
+         * 
          * <strong>example:</strong>
          * <p>snappy</p>
          */
         @NameInMap("compressionType")
         public String compressionType;
 
+        /**
+         * <p>OSS文件内容详情，注意：该参数值为JSON格式并且应受contentType参数值的不同进行更新。</p>
+         */
         @NameInMap("contentDetail")
         public java.util.Map<String, ?> contentDetail;
 
         /**
+         * <p>OSS文件存储支持4种格式，如：json、parquet、csv、orc</p>
+         * 
          * <strong>example:</strong>
-         * <p>json</p>
+         * <p>csv</p>
          */
         @NameInMap("contentType")
         public String contentType;
 
         /**
+         * <p>延迟投递时间</p>
+         * <blockquote>
+         * <ul>
+         * <li>该字段废弃使用。</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
-         * <p>900</p>
+         * <p>123</p>
          */
         @NameInMap("delaySec")
         @Deprecated
         public Long delaySec;
 
         /**
+         * <p>延迟投递时间，设置的时间不能超过目标Logstore的数据保存时间。</p>
+         * 
          * <strong>example:</strong>
          * <p>900</p>
          */
@@ -137,15 +169,20 @@ public class OSSExportConfiguration extends TeaModel {
         public Long delaySeconds;
 
         /**
+         * <ul>
+         * <li>OSS Endpoint，只能是OSS内网Endpoint，仅支持同地域。详情请参见<a href="https://help.aliyun.com/document_detail/31837.html">OSS访问域名和数据中心</a>，值为<code>http://+OSS Endpoint</code>。</li>
+         * <li>OSS-HDFS Endpoint，只能是OSS-HDFS内网Endpoint，仅支持同地域。</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://oss-cn-hangzhou-internal.aliyuncs.com">http://oss-cn-hangzhou-internal.aliyuncs.com</a></p>
+         * <p><a href="https://oss-cn-hangzhou-internal.aliyuncs.com">https://oss-cn-hangzhou-internal.aliyuncs.com</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
+         * <p>分区格式，详情参见<a href="https://help.aliyun.com/document_detail/371934.html">分区格式</a>。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +192,7 @@ public class OSSExportConfiguration extends TeaModel {
         public String pathFormat;
 
         /**
+         * <p>分区格式类型</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,22 +202,27 @@ public class OSSExportConfiguration extends TeaModel {
         public String pathFormatType;
 
         /**
+         * <p>OSS文件前缀</p>
+         * 
          * <strong>example:</strong>
-         * <p>demo/</p>
+         * <p>prefix-demo/</p>
          */
         @NameInMap("prefix")
         public String prefix;
 
         /**
+         * <p>写OSS RAM角色roleArn，请填写您自己的角色roleArn</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:ram::123456789:role/aliyunlogdefaultrole</p>
+         * <p>acs:ram::1234567890:role/aliyunlogdefaultrole</p>
          */
         @NameInMap("roleArn")
         public String roleArn;
 
         /**
+         * <p>OSS文件后缀</p>
+         * 
          * <strong>example:</strong>
          * <p>.json</p>
          */
@@ -187,6 +230,8 @@ public class OSSExportConfiguration extends TeaModel {
         public String suffix;
 
         /**
+         * <p>时区，详情参见<a href="https://help.aliyun.com/document_detail/375323.html">时区列表</a>。</p>
+         * 
          * <strong>example:</strong>
          * <p>+0800</p>
          */

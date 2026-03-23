@@ -4,21 +4,34 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ETLConfigurationSink extends TeaModel {
+    /**
+     * <p>授权写入目标Logstore的AccessKey ID</p>
+     */
     @NameInMap("accessKeyId")
     @Deprecated
     public String accessKeyId;
 
+    /**
+     * <p>授权写入目标Logstore的AccessKey Secret</p>
+     */
     @NameInMap("accessKeySecret")
     @Deprecated
     public String accessKeySecret;
 
+    /**
+     * <p>写入结果集</p>
+     */
     @NameInMap("datasets")
     public java.util.List<String> datasets;
 
+    /**
+     * <p>目标Project所在区域的endpoint</p>
+     */
     @NameInMap("endpoint")
     public String endpoint;
 
     /**
+     * <p>目标Logstore名称</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +41,7 @@ public class ETLConfigurationSink extends TeaModel {
     public String logstore;
 
     /**
+     * <p>输出目标名称</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +51,7 @@ public class ETLConfigurationSink extends TeaModel {
     public String name;
 
     /**
+     * <p>目标Project名称</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +61,7 @@ public class ETLConfigurationSink extends TeaModel {
     public String project;
 
     /**
+     * <p>授权写入目标Logstore的角色ARN</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

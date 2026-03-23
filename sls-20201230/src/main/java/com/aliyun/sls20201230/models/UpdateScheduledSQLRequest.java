@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateScheduledSQLRequest extends TeaModel {
     /**
+     * <p>The configuration of the task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public ScheduledSQLConfiguration configuration;
 
+    /**
+     * <p>The description of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>更新定时SQL任务</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The display name of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,7 @@ public class UpdateScheduledSQLRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The scheduling configuration of the task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")

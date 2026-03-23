@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ScheduledSQL extends TeaModel {
     /**
+     * <p>定时sql配置</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public ScheduledSQLConfiguration configuration;
 
     /**
+     * <p>创建时间</p>
+     * 
      * <strong>example:</strong>
      * <p>1714123644</p>
      */
@@ -18,22 +21,27 @@ public class ScheduledSQL extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>Job Description</p>
+     * 
      * <strong>example:</strong>
-     * <p>schedule-sql-test</p>
+     * <p>This is a scheduled sql job</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>Job DisplayName</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>scheduleSqlTest</p>
+     * <p>This is a scheduled sql job</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
+     * <p>最近修改时间</p>
+     * 
      * <strong>example:</strong>
      * <p>1714123644</p>
      */
@@ -41,21 +49,25 @@ public class ScheduledSQL extends TeaModel {
     public Long lastModifiedTime;
 
     /**
+     * <p>Scheduled SQL name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>sql-1714123463-225223</p>
+     * <p>test-scheduled-sql</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>调度配置</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
     public Schedule schedule;
 
     /**
+     * <p>调度ID</p>
+     * 
      * <strong>example:</strong>
      * <p>e73f43732852064ad5d091914e39342f</p>
      */
@@ -63,6 +75,8 @@ public class ScheduledSQL extends TeaModel {
     public String scheduleId;
 
     /**
+     * <p>定时SQL状态</p>
+     * 
      * <strong>example:</strong>
      * <p>ENABLED</p>
      */

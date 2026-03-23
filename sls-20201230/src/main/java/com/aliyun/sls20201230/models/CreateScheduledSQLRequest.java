@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledSQLRequest extends TeaModel {
     /**
+     * <p>The configuration of the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public ScheduledSQLConfiguration configuration;
 
+    /**
+     * <p>The description of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>创建一个定时SQL任务</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The display name of the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,16 @@ public class CreateScheduledSQLRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The job name. The name must be unique within a project.</p>
+     * <p>The naming convention is as follows:</p>
+     * <ul>
+     * <li><p>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>The name must start and end with a lowercase letter or a digit.</p>
+     * </li>
+     * <li><p>The name must be 2 to 64 characters in length.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +50,7 @@ public class CreateScheduledSQLRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The scheduling configuration for the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumeProcessorsRequest extends TeaModel {
     /**
-     * <p>The display name of the consumption processor.</p>
+     * <p>The display name of the consume processor.</p>
      * 
      * <strong>example:</strong>
      * <p>filter-get-request</p>
@@ -14,7 +14,7 @@ public class ListConsumeProcessorsRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The offset. Default value: 0.</p>
+     * <p>The offset of the query. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,7 +23,7 @@ public class ListConsumeProcessorsRequest extends TeaModel {
     public String offset;
 
     /**
-     * <p>The identifier of the consumption processor.</p>
+     * <p>The identity of the consume processor.</p>
      * 
      * <strong>example:</strong>
      * <p>consume-processor-1</p>
@@ -32,7 +32,7 @@ public class ListConsumeProcessorsRequest extends TeaModel {
     public String processorName;
 
     /**
-     * <p>The number of entries. Default value: 200.</p>
+     * <p>The number of entries to return. The default value is 200.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

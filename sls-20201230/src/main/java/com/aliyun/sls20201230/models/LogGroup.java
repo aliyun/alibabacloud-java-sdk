@@ -5,15 +5,21 @@ import com.aliyun.tea.*;
 
 public class LogGroup extends TeaModel {
     /**
+     * <p>日志列表</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LogItems")
     public java.util.List<LogItem> logItems;
 
+    /**
+     * <p>日志的标签列表</p>
+     */
     @NameInMap("LogTags")
     public java.util.List<LogTag> logTags;
 
     /**
+     * <p>日志的来源。例如产生该日志的机器的IP地址。</p>
+     * 
      * <strong>example:</strong>
      * <p>192.1.1.1</p>
      */
@@ -21,6 +27,8 @@ public class LogGroup extends TeaModel {
     public String source;
 
     /**
+     * <p>日志主题，用户自定义字段，用于区分不同特征的日志数据。</p>
+     * 
      * <strong>example:</strong>
      * <p>topic-test</p>
      */

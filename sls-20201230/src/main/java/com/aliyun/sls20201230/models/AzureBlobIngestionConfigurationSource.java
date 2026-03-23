@@ -56,6 +56,9 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     @NameInMap("endTime")
     public Long endTime;
 
+    @NameInMap("endpoint")
+    public String endpoint;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -122,7 +125,7 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>[0-9]{0,2}/[0-9a-zA-Z]+/[0-9:,]+</p>
+     * <p>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</p>
      */
     @NameInMap("timePattern")
     public String timePattern;
@@ -185,6 +188,14 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public AzureBlobIngestionConfigurationSource setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+        return this;
+    }
+    public String getEndpoint() {
+        return this.endpoint;
     }
 
     public AzureBlobIngestionConfigurationSource setFormat(java.util.Map<String, ?> format) {

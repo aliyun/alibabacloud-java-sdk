@@ -16,14 +16,20 @@ public class UpdateMetricStoreRequest extends TeaModel {
     @NameInMap("autoSplit")
     public Boolean autoSplit;
 
+    /**
+     * <p>The retention period of data in the hot storage layer. Unit: days.</p>
+     */
     @NameInMap("hot_ttl")
     public Integer hotTtl;
 
+    /**
+     * <p>The retention period for the IA storage class. Unit: days.</p>
+     */
     @NameInMap("infrequentAccessTTL")
     public Integer infrequentAccessTTL;
 
     /**
-     * <p>The maximum number of shards into which existing shards can be automatically split. This parameter is valid only when you set the autoSplit parameter to true.</p>
+     * <p>The maximum number of shards for automatic sharding. This parameter is valid only when autoSplit is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -44,7 +50,7 @@ public class UpdateMetricStoreRequest extends TeaModel {
     public ShardingPolicy shardingPolicy;
 
     /**
-     * <p>The retention period of the metric data. Unit: days.</p>
+     * <p>The data retention period. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>

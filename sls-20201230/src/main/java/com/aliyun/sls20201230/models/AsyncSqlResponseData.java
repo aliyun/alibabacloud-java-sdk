@@ -16,7 +16,7 @@ public class AsyncSqlResponseData extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>line 37:14: Column &quot;xyz&quot; cannot be resolved</p>
+     * <p>line 37:14: Column \&quot;xyz\&quot; cannot be resolved</p>
      */
     @NameInMap("error_message")
     public String errorMessage;

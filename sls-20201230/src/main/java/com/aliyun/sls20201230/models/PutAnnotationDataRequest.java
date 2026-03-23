@@ -14,7 +14,7 @@ public class PutAnnotationDataRequest extends TeaModel {
     public String annotationdataId;
 
     /**
-     * <p>The data structure of the request.</p>
+     * <p>The data struct.</p>
      */
     @NameInMap("mlDataParam")
     public MLDataParam mlDataParam;

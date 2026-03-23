@@ -4,11 +4,8 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class S3Ingestion extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("configuration")
-    public S3IngestionConfigurationSource configuration;
+    public S3IngestionConfiguration configuration;
 
     /**
      * <strong>example:</strong>
@@ -50,13 +47,6 @@ public class S3Ingestion extends TeaModel {
     public String name;
 
     /**
-     * <strong>example:</strong>
-     * <p>ingest-processor-1756802123-953901</p>
-     */
-    @NameInMap("processorId")
-    public String processorId;
-
-    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
@@ -81,11 +71,11 @@ public class S3Ingestion extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public S3Ingestion setConfiguration(S3IngestionConfigurationSource configuration) {
+    public S3Ingestion setConfiguration(S3IngestionConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
-    public S3IngestionConfigurationSource getConfiguration() {
+    public S3IngestionConfiguration getConfiguration() {
         return this.configuration;
     }
 
@@ -127,14 +117,6 @@ public class S3Ingestion extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public S3Ingestion setProcessorId(String processorId) {
-        this.processorId = processorId;
-        return this;
-    }
-    public String getProcessorId() {
-        return this.processorId;
     }
 
     public S3Ingestion setSchedule(Schedule schedule) {

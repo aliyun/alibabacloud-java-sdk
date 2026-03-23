@@ -50,13 +50,6 @@ public class OSSIngestion extends TeaModel {
     public String name;
 
     /**
-     * <strong>example:</strong>
-     * <p>ingest-processor-1756802123-953901</p>
-     */
-    @NameInMap("processorId")
-    public String processorId;
-
-    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
@@ -127,14 +120,6 @@ public class OSSIngestion extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public OSSIngestion setProcessorId(String processorId) {
-        this.processorId = processorId;
-        return this;
-    }
-    public String getProcessorId() {
-        return this.processorId;
     }
 
     public OSSIngestion setSchedule(Schedule schedule) {

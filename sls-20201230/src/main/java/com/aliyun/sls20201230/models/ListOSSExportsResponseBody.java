@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListOSSExportsResponseBody extends TeaModel {
     /**
+     * <p>The number of OSS shipping jobs returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The list of OSS shipping jobs.</p>
+     */
     @NameInMap("results")
     public java.util.List<OSSExport> results;
 
     /**
+     * <p>The total number of OSS shipping jobs in the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

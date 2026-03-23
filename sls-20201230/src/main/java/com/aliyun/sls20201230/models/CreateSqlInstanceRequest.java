@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSqlInstanceRequest extends TeaModel {
     /**
-     * <p>The number of compute units (CUs). When you use the Dedicated SQL feature, CUs are used in parallel.</p>
+     * <p>The number of compute units (CUs). CUs are the compute cores that can be used in parallel when Dedicated SQL is running.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateSqlInstanceRequest extends TeaModel {
     public Integer cu;
 
     /**
-     * <p>Specifies whether to enable the Dedicated SQL feature for the project. If you set this parameter to true, the Dedicated SQL feature is enabled for the specified project and takes effect for all query statements that you execute in the project, including the query statements for alerts and dashboards.</p>
+     * <p>Specifies whether to enable Dedicated SQL by default for the project. If you set this parameter to \<code>true\\</code>, all query and analysis operations in the project, such as alerting and dashboards, use Dedicated SQL.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("useAsDefault")

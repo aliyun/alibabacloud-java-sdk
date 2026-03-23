@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListScheduledSQLsResponseBody extends TeaModel {
     /**
+     * <p>The number of Scheduled SQL jobs returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The list of Scheduled SQL jobs.</p>
+     */
     @NameInMap("results")
     public java.util.List<ScheduledSQL> results;
 
     /**
+     * <p>The total number of Scheduled SQL jobs in the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */

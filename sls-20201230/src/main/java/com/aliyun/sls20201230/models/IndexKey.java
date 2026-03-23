@@ -32,6 +32,9 @@ public class IndexKey extends TeaModel {
     @NameInMap("doc_value")
     public Boolean docValue;
 
+    @NameInMap("embedding")
+    public String embedding;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,6 +59,9 @@ public class IndexKey extends TeaModel {
      */
     @NameInMap("type")
     public String type;
+
+    @NameInMap("vector_index")
+    public String vectorIndex;
 
     public static IndexKey build(java.util.Map<String, ?> map) throws Exception {
         IndexKey self = new IndexKey();
@@ -92,6 +98,14 @@ public class IndexKey extends TeaModel {
     }
     public Boolean getDocValue() {
         return this.docValue;
+    }
+
+    public IndexKey setEmbedding(String embedding) {
+        this.embedding = embedding;
+        return this;
+    }
+    public String getEmbedding() {
+        return this.embedding;
     }
 
     public IndexKey setIndexAll(Boolean indexAll) {
@@ -132,6 +146,14 @@ public class IndexKey extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public IndexKey setVectorIndex(String vectorIndex) {
+        this.vectorIndex = vectorIndex;
+        return this;
+    }
+    public String getVectorIndex() {
+        return this.vectorIndex;
     }
 
 }

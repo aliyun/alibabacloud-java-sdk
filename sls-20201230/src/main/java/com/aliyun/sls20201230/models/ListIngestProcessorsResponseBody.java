@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIngestProcessorsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The number of entries returned in the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -14,13 +14,13 @@ public class ListIngestProcessorsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The ingest processors that are returned.</p>
+     * <p>A list of ingest processors that meet the query conditions.</p>
      */
     @NameInMap("processors")
     public java.util.List<IngestProcessor> processors;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

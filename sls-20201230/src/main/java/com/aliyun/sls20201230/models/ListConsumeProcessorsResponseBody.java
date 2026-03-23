@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumeProcessorsResponseBody extends TeaModel {
     /**
-     * <p>The number of consumption processors for offset.</p>
+     * <p>The number of consume processors returned in the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,13 +14,13 @@ public class ListConsumeProcessorsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The list of consumption processor information.</p>
+     * <p>The list of consume processors.</p>
      */
     @NameInMap("processors")
     public java.util.List<ConsumeProcessor> processors;
 
     /**
-     * <p>The total number of consumption processors that meet the query conditions.</p>
+     * <p>The total number of consume processors that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

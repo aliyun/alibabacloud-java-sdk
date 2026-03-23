@@ -4,10 +4,18 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListOSSHDFSExportsRequest extends TeaModel {
+    /**
+     * <p>The name of the Logstore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali-test-logstore</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
     /**
+     * <p>The line from which to start the query. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -18,7 +26,7 @@ public class ListOSSHDFSExportsRequest extends TeaModel {
      * <p>The number of entries to return. Default value: 10.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;

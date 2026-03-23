@@ -4,12 +4,30 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListAgentInstanceConfigsRequest extends TeaModel {
+    /**
+     * <p>The type of the process-level configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apm_trace</p>
+     */
     @NameInMap("configType")
     public String configType;
 
+    /**
+     * <p>The number of entries to skip. The default value is 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("offset")
     public Long offset;
 
+    /**
+     * <p>The number of entries to return. The default value is 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("size")
     public Long size;
 
