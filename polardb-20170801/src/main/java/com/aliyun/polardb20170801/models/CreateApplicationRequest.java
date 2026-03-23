@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>pm-xxxxxx</p>
+     */
+    @NameInMap("AIDBClusterId")
+    public String AIDBClusterId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,9 @@ public class CreateApplicationRequest extends TeaModel {
      */
     @NameInMap("Architecture")
     public String architecture;
+
+    @NameInMap("AutoAllocatePublicEip")
+    public Boolean autoAllocatePublicEip;
 
     @NameInMap("AutoCreatePolarFs")
     public Boolean autoCreatePolarFs;
@@ -64,6 +74,41 @@ public class CreateApplicationRequest extends TeaModel {
 
     @NameInMap("MemApplicationSpec")
     public CreateApplicationRequestMemApplicationSpec memApplicationSpec;
+
+    /**
+     * <strong>example:</strong>
+     * <p>openai-completions</p>
+     */
+    @NameInMap("ModelApi")
+    public String modelApi;
+
+    /**
+     * <strong>example:</strong>
+     * <p>sk-xxxxxx</p>
+     */
+    @NameInMap("ModelApiKey")
+    public String modelApiKey;
+
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
+     */
+    @NameInMap("ModelBaseUrl")
+    public String modelBaseUrl;
+
+    /**
+     * <strong>example:</strong>
+     * <p>bailian</p>
+     */
+    @NameInMap("ModelFrom")
+    public String modelFrom;
+
+    /**
+     * <strong>example:</strong>
+     * <p>qwen3-max</p>
+     */
+    @NameInMap("ModelName")
+    public String modelName;
 
     /**
      * <strong>example:</strong>
@@ -139,6 +184,14 @@ public class CreateApplicationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateApplicationRequest setAIDBClusterId(String AIDBClusterId) {
+        this.AIDBClusterId = AIDBClusterId;
+        return this;
+    }
+    public String getAIDBClusterId() {
+        return this.AIDBClusterId;
+    }
+
     public CreateApplicationRequest setApplicationType(String applicationType) {
         this.applicationType = applicationType;
         return this;
@@ -153,6 +206,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    public CreateApplicationRequest setAutoAllocatePublicEip(Boolean autoAllocatePublicEip) {
+        this.autoAllocatePublicEip = autoAllocatePublicEip;
+        return this;
+    }
+    public Boolean getAutoAllocatePublicEip() {
+        return this.autoAllocatePublicEip;
     }
 
     public CreateApplicationRequest setAutoCreatePolarFs(Boolean autoCreatePolarFs) {
@@ -225,6 +286,46 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public CreateApplicationRequestMemApplicationSpec getMemApplicationSpec() {
         return this.memApplicationSpec;
+    }
+
+    public CreateApplicationRequest setModelApi(String modelApi) {
+        this.modelApi = modelApi;
+        return this;
+    }
+    public String getModelApi() {
+        return this.modelApi;
+    }
+
+    public CreateApplicationRequest setModelApiKey(String modelApiKey) {
+        this.modelApiKey = modelApiKey;
+        return this;
+    }
+    public String getModelApiKey() {
+        return this.modelApiKey;
+    }
+
+    public CreateApplicationRequest setModelBaseUrl(String modelBaseUrl) {
+        this.modelBaseUrl = modelBaseUrl;
+        return this;
+    }
+    public String getModelBaseUrl() {
+        return this.modelBaseUrl;
+    }
+
+    public CreateApplicationRequest setModelFrom(String modelFrom) {
+        this.modelFrom = modelFrom;
+        return this;
+    }
+    public String getModelFrom() {
+        return this.modelFrom;
+    }
+
+    public CreateApplicationRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public CreateApplicationRequest setPayType(String payType) {

@@ -1758,12 +1758,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AIDBClusterId)) {
+            query.put("AIDBClusterId", request.AIDBClusterId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
             query.put("ApplicationType", request.applicationType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.architecture)) {
             query.put("Architecture", request.architecture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoAllocatePublicEip)) {
+            query.put("AutoAllocatePublicEip", request.autoAllocatePublicEip);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoCreatePolarFs)) {
@@ -1800,6 +1808,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.memApplicationSpecShrink)) {
             query.put("MemApplicationSpec", request.memApplicationSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelApi)) {
+            query.put("ModelApi", request.modelApi);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelApiKey)) {
+            query.put("ModelApiKey", request.modelApiKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelBaseUrl)) {
+            query.put("ModelBaseUrl", request.modelBaseUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelFrom)) {
+            query.put("ModelFrom", request.modelFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            query.put("ModelName", request.modelName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {

@@ -66,6 +66,12 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @NameInMap("Expired")
     public Boolean expired;
 
+    @NameInMap("IsLatestVersion")
+    public Boolean isLatestVersion;
+
+    @NameInMap("LatestVersion")
+    public String latestVersion;
+
     /**
      * <strong>example:</strong>
      * <p>Unlock</p>
@@ -89,6 +95,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     @NameInMap("MemApplicationAttribute")
     public DescribeApplicationAttributeResponseBodyMemApplicationAttribute memApplicationAttribute;
+
+    @NameInMap("MinorVersion")
+    public String minorVersion;
 
     /**
      * <strong>example:</strong>
@@ -258,6 +267,22 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         return this.expired;
     }
 
+    public DescribeApplicationAttributeResponseBody setIsLatestVersion(Boolean isLatestVersion) {
+        this.isLatestVersion = isLatestVersion;
+        return this;
+    }
+    public Boolean getIsLatestVersion() {
+        return this.isLatestVersion;
+    }
+
+    public DescribeApplicationAttributeResponseBody setLatestVersion(String latestVersion) {
+        this.latestVersion = latestVersion;
+        return this;
+    }
+    public String getLatestVersion() {
+        return this.latestVersion;
+    }
+
     public DescribeApplicationAttributeResponseBody setLockMode(String lockMode) {
         this.lockMode = lockMode;
         return this;
@@ -288,6 +313,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
     public DescribeApplicationAttributeResponseBodyMemApplicationAttribute getMemApplicationAttribute() {
         return this.memApplicationAttribute;
+    }
+
+    public DescribeApplicationAttributeResponseBody setMinorVersion(String minorVersion) {
+        this.minorVersion = minorVersion;
+        return this;
+    }
+    public String getMinorVersion() {
+        return this.minorVersion;
     }
 
     public DescribeApplicationAttributeResponseBody setPayType(String payType) {
