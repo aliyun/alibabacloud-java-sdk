@@ -31,6 +31,9 @@ public class CredentialListItem extends TeaModel {
     @NameInMap("updatedAt")
     public String updatedAt;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static CredentialListItem build(java.util.Map<String, ?> map) throws Exception {
         CredentialListItem self = new CredentialListItem();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class CredentialListItem extends TeaModel {
     }
     public String getUpdatedAt() {
         return this.updatedAt;
+    }
+
+    public CredentialListItem setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

@@ -16,6 +16,9 @@ public class UpdateKnowledgeBaseInput extends TeaModel {
     @NameInMap("retrieveSettings")
     public java.util.Map<String, ?> retrieveSettings;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static UpdateKnowledgeBaseInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateKnowledgeBaseInput self = new UpdateKnowledgeBaseInput();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class UpdateKnowledgeBaseInput extends TeaModel {
     }
     public java.util.Map<String, ?> getRetrieveSettings() {
         return this.retrieveSettings;
+    }
+
+    public UpdateKnowledgeBaseInput setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

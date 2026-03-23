@@ -25,6 +25,20 @@ public class ListKnowledgeBasesRequest extends TeaModel {
     @NameInMap("provider")
     public String provider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1e546db8-bd93-5a52-9be1-5a1351cdac95</p>
+     */
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1e546db8-bd93-5a52-9be1-5a1351cdac95,1e546db8-bd93-5a52-9be1-5a1351caass4</p>
+     */
+    @NameInMap("workspaceIds")
+    public String workspaceIds;
+
     public static ListKnowledgeBasesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListKnowledgeBasesRequest self = new ListKnowledgeBasesRequest();
         return TeaModel.build(map, self);
@@ -52,6 +66,22 @@ public class ListKnowledgeBasesRequest extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
+    }
+
+    public ListKnowledgeBasesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public ListKnowledgeBasesRequest setWorkspaceIds(String workspaceIds) {
+        this.workspaceIds = workspaceIds;
+        return this;
+    }
+    public String getWorkspaceIds() {
+        return this.workspaceIds;
     }
 
 }

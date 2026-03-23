@@ -59,6 +59,12 @@ public class ListCredentialsRequest extends TeaModel {
     @NameInMap("provider")
     public String provider;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
+    @NameInMap("workspaceIds")
+    public String workspaceIds;
+
     public static ListCredentialsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCredentialsRequest self = new ListCredentialsRequest();
         return TeaModel.build(map, self);
@@ -118,6 +124,22 @@ public class ListCredentialsRequest extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
+    }
+
+    public ListCredentialsRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public ListCredentialsRequest setWorkspaceIds(String workspaceIds) {
+        this.workspaceIds = workspaceIds;
+        return this;
+    }
+    public String getWorkspaceIds() {
+        return this.workspaceIds;
     }
 
 }

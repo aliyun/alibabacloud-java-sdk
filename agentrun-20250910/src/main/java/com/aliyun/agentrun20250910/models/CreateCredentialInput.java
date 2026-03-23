@@ -34,6 +34,9 @@ public class CreateCredentialInput extends TeaModel {
     @NameInMap("enabled")
     public Boolean enabled;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static CreateCredentialInput build(java.util.Map<String, ?> map) throws Exception {
         CreateCredentialInput self = new CreateCredentialInput();
         return TeaModel.build(map, self);
@@ -93,6 +96,14 @@ public class CreateCredentialInput extends TeaModel {
     }
     public Boolean getEnabled() {
         return this.enabled;
+    }
+
+    public CreateCredentialInput setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

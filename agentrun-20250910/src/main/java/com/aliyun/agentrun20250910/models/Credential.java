@@ -37,6 +37,9 @@ public class Credential extends TeaModel {
     @NameInMap("updatedAt")
     public String updatedAt;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static Credential build(java.util.Map<String, ?> map) throws Exception {
         Credential self = new Credential();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class Credential extends TeaModel {
     }
     public String getUpdatedAt() {
         return this.updatedAt;
+    }
+
+    public Credential setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

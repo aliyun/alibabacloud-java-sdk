@@ -52,6 +52,9 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("workspaceId")
     public String workspaceId;
 
+    @NameInMap("workspaceIds")
+    public String workspaceIds;
+
     public static ListTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesRequest self = new ListTemplatesRequest();
         return TeaModel.build(map, self);
@@ -103,6 +106,14 @@ public class ListTemplatesRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public ListTemplatesRequest setWorkspaceIds(String workspaceIds) {
+        this.workspaceIds = workspaceIds;
+        return this;
+    }
+    public String getWorkspaceIds() {
+        return this.workspaceIds;
     }
 
 }

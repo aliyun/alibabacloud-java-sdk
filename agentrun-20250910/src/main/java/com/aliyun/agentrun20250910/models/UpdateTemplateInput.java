@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateTemplateInput extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -22,6 +25,9 @@ public class UpdateTemplateInput extends TeaModel {
 
     /**
      * <p>CPU资源配置（单位：核心）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("cpu")
     public Float cpu;
@@ -29,15 +35,27 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("credentialConfiguration")
     public CredentialConfiguration credentialConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo description</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableAgent")
     public Boolean enableAgent;
 
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>arn:acs:agentrun:cn-hangzhou:123456789:xxx/test</p>
+     */
     @NameInMap("executionRoleArn")
     public String executionRoleArn;
 
@@ -46,6 +64,9 @@ public class UpdateTemplateInput extends TeaModel {
 
     /**
      * <p>内存资源配置（单位：MB）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("memory")
     public Integer memory;
@@ -61,12 +82,18 @@ public class UpdateTemplateInput extends TeaModel {
 
     /**
      * <p>沙箱空闲超时时间（秒）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21600</p>
      */
     @NameInMap("sandboxIdleTimeoutInSeconds")
     public Integer sandboxIdleTimeoutInSeconds;
 
     /**
      * <p>沙箱存活时间（秒）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86400</p>
      */
     @NameInMap("sandboxTTLInSeconds")
     @Deprecated
@@ -81,6 +108,10 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("templateConfiguration")
     public java.util.Map<String, ?> templateConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ws-1234567890abcdef</p>
+     */
     @NameInMap("workspaceId")
     public String workspaceId;
 

@@ -31,6 +31,9 @@ public class KnowledgeBase extends TeaModel {
     @NameInMap("retrieveSettings")
     public java.util.Map<String, ?> retrieveSettings;
 
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
     public static KnowledgeBase build(java.util.Map<String, ?> map) throws Exception {
         KnowledgeBase self = new KnowledgeBase();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class KnowledgeBase extends TeaModel {
     }
     public java.util.Map<String, ?> getRetrieveSettings() {
         return this.retrieveSettings;
+    }
+
+    public KnowledgeBase setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
