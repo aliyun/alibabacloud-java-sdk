@@ -14,6 +14,8 @@ public class DeleteEdgeFunctionResponseBody extends TeaModel {
     public String edgeFunctionName;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba***</p>
      */

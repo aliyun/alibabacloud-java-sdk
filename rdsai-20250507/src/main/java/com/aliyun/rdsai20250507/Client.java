@@ -331,8 +331,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an edge function, compresses the code into a zip file, and uploads it to Supabase Storage.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建边缘函数</p>
+     * <p>Creates an edge function.</p>
      * 
      * @param tmpReq CreateEdgeFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -401,8 +404,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an edge function, compresses the code into a zip file, and uploads it to Supabase Storage.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建边缘函数</p>
+     * <p>Creates an edge function.</p>
      * 
      * @param request CreateEdgeFunctionRequest
      * @return CreateEdgeFunctionResponse
@@ -739,8 +745,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an edge function.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除边缘函数</p>
+     * <p>Deletes an edge function.</p>
      * 
      * @param request DeleteEdgeFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -783,8 +792,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an edge function.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除边缘函数</p>
+     * <p>Deletes an edge function.</p>
      * 
      * @param request DeleteEdgeFunctionRequest
      * @return DeleteEdgeFunctionResponse
@@ -1015,8 +1027,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of edge functions or a specified edge function.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询边缘函数列表</p>
+     * <p>Query the list of edge functions or a specified edge function.</p>
      * 
      * @param request DescribeEdgeFunctionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1059,8 +1074,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of edge functions or a specified edge function.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询边缘函数列表</p>
+     * <p>Query the list of edge functions or a specified edge function.</p>
      * 
      * @param request DescribeEdgeFunctionsRequest
      * @return DescribeEdgeFunctionsResponse
@@ -3069,8 +3087,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates an edge function, including updating code versions, adding environment variables, and modifying configurations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新边缘函数</p>
+     * <p>Updates an edge function</p>
      * 
      * @param tmpReq UpdateEdgeFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3139,8 +3160,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates an edge function, including updating code versions, adding environment variables, and modifying configurations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新边缘函数</p>
+     * <p>Updates an edge function</p>
      * 
      * @param request UpdateEdgeFunctionRequest
      * @return UpdateEdgeFunctionResponse

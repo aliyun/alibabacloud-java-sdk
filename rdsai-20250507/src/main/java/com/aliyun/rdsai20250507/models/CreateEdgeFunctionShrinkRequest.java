@@ -5,29 +5,43 @@ import com.aliyun.tea.*;
 
 public class CreateEdgeFunctionShrinkRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The code parameters.</p>
+     */
     @NameInMap("Code")
     public String codeShrink;
 
+    /**
+     * <p>The configuration parameters of the edge function.</p>
+     */
     @NameInMap("CustomConfig")
     public String customConfigShrink;
 
     /**
+     * <p>The name of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>ef-*****</p>
      */
     @NameInMap("EdgeFunctionName")
     public String edgeFunctionName;
 
+    /**
+     * <p>The environment variables.</p>
+     */
     @NameInMap("Envs")
     public String envsShrink;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +51,8 @@ public class CreateEdgeFunctionShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

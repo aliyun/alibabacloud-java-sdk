@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeEdgeFunctionsRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
@@ -21,6 +23,7 @@ public class DescribeEdgeFunctionsRequest extends TeaModel {
     public String edgeFunctionName;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +33,8 @@ public class DescribeEdgeFunctionsRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

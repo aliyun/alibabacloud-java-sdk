@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEdgeFunctionRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteEdgeFunctionRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The name of the edge function.</p>
+     * 
      * <strong>example:</strong>
      * <p>ef-****</p>
      */
@@ -19,6 +23,7 @@ public class DeleteEdgeFunctionRequest extends TeaModel {
     public String edgeFunctionName;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DeleteEdgeFunctionRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

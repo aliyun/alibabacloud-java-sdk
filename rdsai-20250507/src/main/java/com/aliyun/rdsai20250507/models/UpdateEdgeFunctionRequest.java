@@ -5,24 +5,31 @@ import com.aliyun.tea.*;
 
 public class UpdateEdgeFunctionRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The error code that is returned if the request failed. For more information, see the &quot;Error codes&quot; section of the topic.</p>
+     */
     @NameInMap("Code")
     public UpdateEdgeFunctionRequestCode code;
 
     /**
+     * <p>The configuration parameters of the edge function.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("CustomConfig")
-    public java.util.Map<String, ?> customConfig;
+    public java.util.Map<String, String> customConfig;
 
     /**
-     * <p>fc-xxxx。</p>
+     * <p>fc-xxxx</p>
      * 
      * <strong>example:</strong>
      * <p>ef-****</p>
@@ -30,10 +37,14 @@ public class UpdateEdgeFunctionRequest extends TeaModel {
     @NameInMap("EdgeFunctionName")
     public String edgeFunctionName;
 
+    /**
+     * <p>The environment variables of the edge function.</p>
+     */
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +54,8 @@ public class UpdateEdgeFunctionRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -70,11 +83,11 @@ public class UpdateEdgeFunctionRequest extends TeaModel {
         return this.code;
     }
 
-    public UpdateEdgeFunctionRequest setCustomConfig(java.util.Map<String, ?> customConfig) {
+    public UpdateEdgeFunctionRequest setCustomConfig(java.util.Map<String, String> customConfig) {
         this.customConfig = customConfig;
         return this;
     }
-    public java.util.Map<String, ?> getCustomConfig() {
+    public java.util.Map<String, String> getCustomConfig() {
         return this.customConfig;
     }
 
@@ -111,7 +124,12 @@ public class UpdateEdgeFunctionRequest extends TeaModel {
     }
 
     public static class UpdateEdgeFunctionRequestCode extends TeaModel {
+        @NameInMap("DownloadUrl")
+        public String downloadUrl;
+
         /**
+         * <p>The name of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>code</p>
          */
@@ -119,6 +137,8 @@ public class UpdateEdgeFunctionRequest extends TeaModel {
         public String ossBucketName;
 
         /**
+         * <p>The path of the code file.</p>
+         * 
          * <strong>example:</strong>
          * <p>example2.zip</p>
          */
@@ -126,6 +146,8 @@ public class UpdateEdgeFunctionRequest extends TeaModel {
         public String ossObjectName;
 
         /**
+         * <p>The storage class of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>supabase</p>
          */
@@ -135,6 +157,14 @@ public class UpdateEdgeFunctionRequest extends TeaModel {
         public static UpdateEdgeFunctionRequestCode build(java.util.Map<String, ?> map) throws Exception {
             UpdateEdgeFunctionRequestCode self = new UpdateEdgeFunctionRequestCode();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateEdgeFunctionRequestCode setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
+            return this;
+        }
+        public String getDownloadUrl() {
+            return this.downloadUrl;
         }
 
         public UpdateEdgeFunctionRequestCode setOssBucketName(String ossBucketName) {

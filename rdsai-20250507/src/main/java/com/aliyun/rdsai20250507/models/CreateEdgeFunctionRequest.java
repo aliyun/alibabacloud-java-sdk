@@ -5,29 +5,43 @@ import com.aliyun.tea.*;
 
 public class CreateEdgeFunctionRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The code parameters.</p>
+     */
     @NameInMap("Code")
     public CreateEdgeFunctionRequestCode code;
 
+    /**
+     * <p>The configuration parameters of the edge function.</p>
+     */
     @NameInMap("CustomConfig")
     public java.util.Map<String, Integer> customConfig;
 
     /**
+     * <p>The name of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>ef-*****</p>
      */
     @NameInMap("EdgeFunctionName")
     public String edgeFunctionName;
 
+    /**
+     * <p>The environment variables.</p>
+     */
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +51,8 @@ public class CreateEdgeFunctionRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -105,7 +121,12 @@ public class CreateEdgeFunctionRequest extends TeaModel {
     }
 
     public static class CreateEdgeFunctionRequestCode extends TeaModel {
+        @NameInMap("DownloadUrl")
+        public String downloadUrl;
+
         /**
+         * <p>The name of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>code</p>
          */
@@ -113,6 +134,8 @@ public class CreateEdgeFunctionRequest extends TeaModel {
         public String ossBucketName;
 
         /**
+         * <p>The OSS path of a code file.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.zip</p>
          */
@@ -120,6 +143,8 @@ public class CreateEdgeFunctionRequest extends TeaModel {
         public String ossObjectName;
 
         /**
+         * <p>The storage class of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>supabase</p>
          */
@@ -129,6 +154,14 @@ public class CreateEdgeFunctionRequest extends TeaModel {
         public static CreateEdgeFunctionRequestCode build(java.util.Map<String, ?> map) throws Exception {
             CreateEdgeFunctionRequestCode self = new CreateEdgeFunctionRequestCode();
             return TeaModel.build(map, self);
+        }
+
+        public CreateEdgeFunctionRequestCode setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
+            return this;
+        }
+        public String getDownloadUrl() {
+            return this.downloadUrl;
         }
 
         public CreateEdgeFunctionRequestCode setOssBucketName(String ossBucketName) {

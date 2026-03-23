@@ -1,3 +1,8 @@
+2026-03-23 Version: 2.4.1
+- Update API CreateEdgeFunction: add request parameters Code.DownloadUrl.
+- Update API UpdateEdgeFunction: add request parameters Code.DownloadUrl.
+
+
 2026-03-17 Version: 2.4.0
 - Support API CreateEdgeFunction.
 - Support API DeleteEdgeFunction.

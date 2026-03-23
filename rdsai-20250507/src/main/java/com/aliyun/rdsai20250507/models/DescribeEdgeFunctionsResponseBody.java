@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdgeFunctionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of edge functions.</p>
+     */
     @NameInMap("EdgeFunctions")
     public java.util.List<DescribeEdgeFunctionsResponseBodyEdgeFunctions> edgeFunctions;
 
     /**
+     * <p>The ID of the RDS Supabase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
@@ -54,6 +59,8 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
 
     public static class DescribeEdgeFunctionsResponseBodyEdgeFunctions extends TeaModel {
         /**
+         * <p>The number of vCPUs used by the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -61,6 +68,8 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         public String cpu;
 
         /**
+         * <p>The time when the function was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-11-12T21:35:03</p>
          */
@@ -68,6 +77,8 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The edge function name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ef-****</p>
          */
@@ -75,6 +86,8 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         public String edgeFunctionName;
 
         /**
+         * <p>The URL for accessing the function.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://fcnext.console.aliyun.com/cn-beijing/functions/fc">https://fcnext.console.aliyun.com/cn-beijing/functions/fc</a>****</p>
          */
@@ -82,6 +95,8 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         public String functionUrl;
 
         /**
+         * <p>The memory size. Unit: MiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>512</p>
          */
@@ -89,6 +104,8 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         public String memorySize;
 
         /**
+         * <p>The time when the function was last created. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-25 10:22:54 +0800</p>
          */
@@ -96,6 +113,8 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The runtime environment for the function, which includes the Linux environment and the Deno version.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom.debian12-deno-2.5.6</p>
          */
@@ -103,6 +122,8 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         public String runtime;
 
         /**
+         * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance state table</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -110,6 +131,8 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The public URL for accessing the application.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://fc-bfvmoi****.cn-beijing.fcapp.run">https://fc-bfvmoi****.cn-beijing.fcapp.run</a></p>
          */
@@ -117,6 +140,8 @@ public class DescribeEdgeFunctionsResponseBody extends TeaModel {
         public String urlInternet;
 
         /**
+         * <p>The internal URL for accessing the application.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://fc-bfvmoi****.cn-beijing-vpc.fcapp.run">https://fc-bfvmoi****.cn-beijing-vpc.fcapp.run</a></p>
          */
