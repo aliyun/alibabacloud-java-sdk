@@ -391,6 +391,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>应用提示词策略到实例</p>
+     * 
+     * @param tmpReq ApplyApplicationPromptsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ApplyApplicationPromptsResponse
+     */
+    public ApplyApplicationPromptsResponse applyApplicationPromptsWithOptions(ApplyApplicationPromptsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ApplyApplicationPromptsShrinkRequest request = new ApplyApplicationPromptsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.disabledPromptIds)) {
+            request.disabledPromptIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.disabledPromptIds, "DisabledPromptIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.enabledPromptIds)) {
+            request.enabledPromptIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.enabledPromptIds, "EnabledPromptIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disabledPromptIdsShrink)) {
+            query.put("DisabledPromptIds", request.disabledPromptIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabledPromptIdsShrink)) {
+            query.put("EnabledPromptIds", request.enabledPromptIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyApplicationPrompts"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyApplicationPromptsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用提示词策略到实例</p>
+     * 
+     * @param request ApplyApplicationPromptsRequest
+     * @return ApplyApplicationPromptsResponse
+     */
+    public ApplyApplicationPromptsResponse applyApplicationPrompts(ApplyApplicationPromptsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.applyApplicationPromptsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>挂载PolarFS到PolarDB应用</p>
      * 
      * @param request AttachApplicationPolarFSRequest
@@ -1953,6 +2015,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateApplicationEndpointAddressResponse createApplicationEndpointAddress(CreateApplicationEndpointAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createApplicationEndpointAddressWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建应用提示词策略</p>
+     * 
+     * @param request CreateApplicationPromptRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateApplicationPromptResponse
+     */
+    public CreateApplicationPromptResponse createApplicationPromptWithOptions(CreateApplicationPromptRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptName)) {
+            query.put("PromptName", request.promptName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptType)) {
+            query.put("PromptType", request.promptType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptValue)) {
+            query.put("PromptValue", request.promptValue);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateApplicationPrompt"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateApplicationPromptResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建应用提示词策略</p>
+     * 
+     * @param request CreateApplicationPromptRequest
+     * @return CreateApplicationPromptResponse
+     */
+    public CreateApplicationPromptResponse createApplicationPrompt(CreateApplicationPromptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createApplicationPromptWithOptions(request, runtime);
     }
 
     /**
@@ -4303,6 +4421,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteApplicationEndpointAddressResponse deleteApplicationEndpointAddress(DeleteApplicationEndpointAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteApplicationEndpointAddressWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除应用提示词策略</p>
+     * 
+     * @param request DeleteApplicationPromptRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteApplicationPromptResponse
+     */
+    public DeleteApplicationPromptResponse deleteApplicationPromptWithOptions(DeleteApplicationPromptRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptId)) {
+            query.put("PromptId", request.promptId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteApplicationPrompt"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteApplicationPromptResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除应用提示词策略</p>
+     * 
+     * @param request DeleteApplicationPromptRequest
+     * @return DeleteApplicationPromptResponse
+     */
+    public DeleteApplicationPromptResponse deleteApplicationPrompt(DeleteApplicationPromptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteApplicationPromptWithOptions(request, runtime);
     }
 
     /**
@@ -6661,6 +6827,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeApplicationParametersResponse describeApplicationParameters(DescribeApplicationParametersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeApplicationParametersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询当前应用下所有的应用提示词策略列表</p>
+     * 
+     * @param request DescribeApplicationPromptsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationPromptsResponse
+     */
+    public DescribeApplicationPromptsResponse describeApplicationPromptsWithOptions(DescribeApplicationPromptsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationPrompts"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationPromptsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询当前应用下所有的应用提示词策略列表</p>
+     * 
+     * @param request DescribeApplicationPromptsRequest
+     * @return DescribeApplicationPromptsResponse
+     */
+    public DescribeApplicationPromptsResponse describeApplicationPrompts(DescribeApplicationPromptsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationPromptsWithOptions(request, runtime);
     }
 
     /**
@@ -15809,6 +16027,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyApplicationParameterResponse modifyApplicationParameter(ModifyApplicationParameterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyApplicationParameterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改应用提示词策略</p>
+     * 
+     * @param request ModifyApplicationPromptRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyApplicationPromptResponse
+     */
+    public ModifyApplicationPromptResponse modifyApplicationPromptWithOptions(ModifyApplicationPromptRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptId)) {
+            query.put("PromptId", request.promptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptName)) {
+            query.put("PromptName", request.promptName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptValue)) {
+            query.put("PromptValue", request.promptValue);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyApplicationPrompt"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyApplicationPromptResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改应用提示词策略</p>
+     * 
+     * @param request ModifyApplicationPromptRequest
+     * @return ModifyApplicationPromptResponse
+     */
+    public ModifyApplicationPromptResponse modifyApplicationPrompt(ModifyApplicationPromptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyApplicationPromptWithOptions(request, runtime);
     }
 
     /**
