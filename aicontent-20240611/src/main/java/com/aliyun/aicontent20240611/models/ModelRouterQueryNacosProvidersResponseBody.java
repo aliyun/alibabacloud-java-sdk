@@ -9,7 +9,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
      * <p>[]</p>
      */
     @NameInMap("data")
-    public java.util.List<String> data;
+    public java.util.List<ModelRouterQueryNacosProvidersResponseBodyData> data;
 
     /**
      * <strong>example:</strong>
@@ -33,52 +33,11 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>maxResults</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("maxResults")
-    public Integer maxResults;
-
-    /**
-     * <p>nextToken</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxxx-xxx-xxxxx</p>
-     */
-    @NameInMap("nextToken")
-    public String nextToken;
-
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("pageIndex")
-    public Integer pageIndex;
-
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("pageSize")
-    public Integer pageSize;
-
-    /**
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
-
-    /**
-     * <p>skip</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("skip")
-    public Integer skip;
 
     /**
      * <strong>example:</strong>
@@ -87,23 +46,16 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
-    @NameInMap("totalCount")
-    public Integer totalCount;
-
     public static ModelRouterQueryNacosProvidersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModelRouterQueryNacosProvidersResponseBody self = new ModelRouterQueryNacosProvidersResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModelRouterQueryNacosProvidersResponseBody setData(java.util.List<String> data) {
+    public ModelRouterQueryNacosProvidersResponseBody setData(java.util.List<ModelRouterQueryNacosProvidersResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public java.util.List<String> getData() {
+    public java.util.List<ModelRouterQueryNacosProvidersResponseBodyData> getData() {
         return this.data;
     }
 
@@ -131,52 +83,12 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public ModelRouterQueryNacosProvidersResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ModelRouterQueryNacosProvidersResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ModelRouterQueryNacosProvidersResponseBody setPageIndex(Integer pageIndex) {
-        this.pageIndex = pageIndex;
-        return this;
-    }
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    public ModelRouterQueryNacosProvidersResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public ModelRouterQueryNacosProvidersResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ModelRouterQueryNacosProvidersResponseBody setSkip(Integer skip) {
-        this.skip = skip;
-        return this;
-    }
-    public Integer getSkip() {
-        return this.skip;
     }
 
     public ModelRouterQueryNacosProvidersResponseBody setSuccess(Boolean success) {
@@ -187,12 +99,97 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ModelRouterQueryNacosProvidersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
+    public static class ModelRouterQueryNacosProvidersResponseBodyDataModels extends TeaModel {
+        @NameInMap("identifier")
+        public String identifier;
+
+        @NameInMap("inputToken")
+        public String inputToken;
+
+        @NameInMap("outputToken")
+        public String outputToken;
+
+        public static ModelRouterQueryNacosProvidersResponseBodyDataModels build(java.util.Map<String, ?> map) throws Exception {
+            ModelRouterQueryNacosProvidersResponseBodyDataModels self = new ModelRouterQueryNacosProvidersResponseBodyDataModels();
+            return TeaModel.build(map, self);
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyDataModels setIdentifier(String identifier) {
+            this.identifier = identifier;
+            return this;
+        }
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyDataModels setInputToken(String inputToken) {
+            this.inputToken = inputToken;
+            return this;
+        }
+        public String getInputToken() {
+            return this.inputToken;
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyDataModels setOutputToken(String outputToken) {
+            this.outputToken = outputToken;
+            return this;
+        }
+        public String getOutputToken() {
+            return this.outputToken;
+        }
+
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+
+    public static class ModelRouterQueryNacosProvidersResponseBodyData extends TeaModel {
+        @NameInMap("baseUrl")
+        public String baseUrl;
+
+        @NameInMap("models")
+        public java.util.List<ModelRouterQueryNacosProvidersResponseBodyDataModels> models;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("symbol")
+        public String symbol;
+
+        public static ModelRouterQueryNacosProvidersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ModelRouterQueryNacosProvidersResponseBodyData self = new ModelRouterQueryNacosProvidersResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyData setBaseUrl(String baseUrl) {
+            this.baseUrl = baseUrl;
+            return this;
+        }
+        public String getBaseUrl() {
+            return this.baseUrl;
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyData setModels(java.util.List<ModelRouterQueryNacosProvidersResponseBodyDataModels> models) {
+            this.models = models;
+            return this;
+        }
+        public java.util.List<ModelRouterQueryNacosProvidersResponseBodyDataModels> getModels() {
+            return this.models;
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyData setSymbol(String symbol) {
+            this.symbol = symbol;
+            return this;
+        }
+        public String getSymbol() {
+            return this.symbol;
+        }
+
     }
 
 }

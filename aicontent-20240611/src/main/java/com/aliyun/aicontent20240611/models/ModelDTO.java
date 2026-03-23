@@ -12,6 +12,8 @@ public class ModelDTO extends TeaModel {
     public String apiKeyPreview;
 
     /**
+     * <p>Base URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
      */
@@ -25,10 +27,6 @@ public class ModelDTO extends TeaModel {
     @NameInMap("deleteTag")
     public Integer deleteTag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>通义千问大模型</p>
-     */
     @NameInMap("description")
     public String description;
 
@@ -47,6 +45,8 @@ public class ModelDTO extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -88,10 +88,6 @@ public class ModelDTO extends TeaModel {
     @NameInMap("modelType")
     public String modelType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>通义千问</p>
-     */
     @NameInMap("name")
     public String name;
 
@@ -102,10 +98,6 @@ public class ModelDTO extends TeaModel {
     @NameInMap("symbol")
     public String symbol;
 
-    /**
-     * <strong>example:</strong>
-     * <p>对话,自然语言处理</p>
-     */
     @NameInMap("tagNames")
     public String tagNames;
 
@@ -115,6 +107,13 @@ public class ModelDTO extends TeaModel {
      */
     @NameInMap("tags")
     public String tags;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("version")
+    public Integer version;
 
     public static ModelDTO build(java.util.Map<String, ?> map) throws Exception {
         ModelDTO self = new ModelDTO();
@@ -247,6 +246,14 @@ public class ModelDTO extends TeaModel {
     }
     public String getTags() {
         return this.tags;
+    }
+
+    public ModelDTO setVersion(Integer version) {
+        this.version = version;
+        return this;
+    }
+    public Integer getVersion() {
+        return this.version;
     }
 
 }

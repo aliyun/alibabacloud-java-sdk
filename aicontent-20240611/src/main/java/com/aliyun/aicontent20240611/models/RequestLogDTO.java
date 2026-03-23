@@ -20,6 +20,13 @@ public class RequestLogDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>mt_xxxxxMYTX9</p>
+     */
+    @NameInMap("clientUuid")
+    public String clientUuid;
+
+    /**
+     * <strong>example:</strong>
      * <p>50</p>
      */
     @NameInMap("completionTokens")
@@ -52,6 +59,13 @@ public class RequestLogDTO extends TeaModel {
      */
     @NameInMap("id")
     public Long id;
+
+    /**
+     * <strong>example:</strong>
+     * <p>qwen3-max</p>
+     */
+    @NameInMap("modelCode")
+    public String modelCode;
 
     /**
      * <strong>example:</strong>
@@ -111,10 +125,24 @@ public class RequestLogDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>success</p>
+     */
+    @NameInMap("status")
+    public String status;
+
+    /**
+     * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("statusCode")
     public Integer statusCode;
+
+    /**
+     * <strong>example:</strong>
+     * <p>qwen</p>
+     */
+    @NameInMap("symbol")
+    public String symbol;
 
     /**
      * <strong>example:</strong>
@@ -142,6 +170,14 @@ public class RequestLogDTO extends TeaModel {
     }
     public Long getClientId() {
         return this.clientId;
+    }
+
+    public RequestLogDTO setClientUuid(String clientUuid) {
+        this.clientUuid = clientUuid;
+        return this;
+    }
+    public String getClientUuid() {
+        return this.clientUuid;
     }
 
     public RequestLogDTO setCompletionTokens(Integer completionTokens) {
@@ -182,6 +218,14 @@ public class RequestLogDTO extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public RequestLogDTO setModelCode(String modelCode) {
+        this.modelCode = modelCode;
+        return this;
+    }
+    public String getModelCode() {
+        return this.modelCode;
     }
 
     public RequestLogDTO setModelId(Long modelId) {
@@ -248,12 +292,28 @@ public class RequestLogDTO extends TeaModel {
         return this.responseTimeMs;
     }
 
+    public RequestLogDTO setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
     public RequestLogDTO setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public RequestLogDTO setSymbol(String symbol) {
+        this.symbol = symbol;
+        return this;
+    }
+    public String getSymbol() {
+        return this.symbol;
     }
 
     public RequestLogDTO setTotalTokens(Integer totalTokens) {

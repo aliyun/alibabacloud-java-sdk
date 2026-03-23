@@ -9,7 +9,7 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
      * <p>[]</p>
      */
     @NameInMap("data")
-    public java.util.List<ClientDTO> data;
+    public ModelRouterQueryClientListResponseBodyData data;
 
     /**
      * <strong>example:</strong>
@@ -33,52 +33,11 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>maxResults</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("maxResults")
-    public Integer maxResults;
-
-    /**
-     * <p>nextToken</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxxx-xxx-xxxxx</p>
-     */
-    @NameInMap("nextToken")
-    public String nextToken;
-
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("pageIndex")
-    public Integer pageIndex;
-
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("pageSize")
-    public Integer pageSize;
-
-    /**
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
-
-    /**
-     * <p>skip</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("skip")
-    public Integer skip;
 
     /**
      * <strong>example:</strong>
@@ -87,23 +46,16 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
-    @NameInMap("totalCount")
-    public Integer totalCount;
-
     public static ModelRouterQueryClientListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModelRouterQueryClientListResponseBody self = new ModelRouterQueryClientListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModelRouterQueryClientListResponseBody setData(java.util.List<ClientDTO> data) {
+    public ModelRouterQueryClientListResponseBody setData(ModelRouterQueryClientListResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<ClientDTO> getData() {
+    public ModelRouterQueryClientListResponseBodyData getData() {
         return this.data;
     }
 
@@ -131,52 +83,12 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public ModelRouterQueryClientListResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ModelRouterQueryClientListResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ModelRouterQueryClientListResponseBody setPageIndex(Integer pageIndex) {
-        this.pageIndex = pageIndex;
-        return this;
-    }
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    public ModelRouterQueryClientListResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public ModelRouterQueryClientListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ModelRouterQueryClientListResponseBody setSkip(Integer skip) {
-        this.skip = skip;
-        return this;
-    }
-    public Integer getSkip() {
-        return this.skip;
     }
 
     public ModelRouterQueryClientListResponseBody setSuccess(Boolean success) {
@@ -187,12 +99,86 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ModelRouterQueryClientListResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public static class ModelRouterQueryClientListResponseBodyData extends TeaModel {
+        @NameInMap("list")
+        public java.util.List<ClientDTO> list;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("maxResults")
+        public String maxResults;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("nextToken")
+        public String nextToken;
+
+        @NameInMap("page")
+        public Integer page;
+
+        @NameInMap("pageSize")
+        public Integer pageSize;
+
+        @NameInMap("total")
+        public Integer total;
+
+        public static ModelRouterQueryClientListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ModelRouterQueryClientListResponseBodyData self = new ModelRouterQueryClientListResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ModelRouterQueryClientListResponseBodyData setList(java.util.List<ClientDTO> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ClientDTO> getList() {
+            return this.list;
+        }
+
+        public ModelRouterQueryClientListResponseBodyData setMaxResults(String maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+        public String getMaxResults() {
+            return this.maxResults;
+        }
+
+        public ModelRouterQueryClientListResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        public ModelRouterQueryClientListResponseBodyData setPage(Integer page) {
+            this.page = page;
+            return this;
+        }
+        public Integer getPage() {
+            return this.page;
+        }
+
+        public ModelRouterQueryClientListResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ModelRouterQueryClientListResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
     }
 
 }

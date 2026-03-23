@@ -17,7 +17,7 @@ public class ObservationChartsDTO extends TeaModel {
     public java.util.List<TimeSeriesPointDTO> responseTime;
 
     @NameInMap("successRate")
-    public java.util.List<TimeSeriesPointDTO> successRate;
+    public java.util.List<ObservationChartsDTOSuccessRate> successRate;
 
     @NameInMap("tpm")
     public java.util.List<TimeSeriesPointDTO> tpm;
@@ -59,11 +59,11 @@ public class ObservationChartsDTO extends TeaModel {
         return this.responseTime;
     }
 
-    public ObservationChartsDTO setSuccessRate(java.util.List<TimeSeriesPointDTO> successRate) {
+    public ObservationChartsDTO setSuccessRate(java.util.List<ObservationChartsDTOSuccessRate> successRate) {
         this.successRate = successRate;
         return this;
     }
-    public java.util.List<TimeSeriesPointDTO> getSuccessRate() {
+    public java.util.List<ObservationChartsDTOSuccessRate> getSuccessRate() {
         return this.successRate;
     }
 
@@ -73,6 +73,55 @@ public class ObservationChartsDTO extends TeaModel {
     }
     public java.util.List<TimeSeriesPointDTO> getTpm() {
         return this.tpm;
+    }
+
+    public static class ObservationChartsDTOSuccessRate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>series1</p>
+         */
+        @NameInMap("label")
+        public String label;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
+         */
+        @NameInMap("timestamp")
+        public String timestamp;
+
+        @NameInMap("value")
+        public Object value;
+
+        public static ObservationChartsDTOSuccessRate build(java.util.Map<String, ?> map) throws Exception {
+            ObservationChartsDTOSuccessRate self = new ObservationChartsDTOSuccessRate();
+            return TeaModel.build(map, self);
+        }
+
+        public ObservationChartsDTOSuccessRate setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public ObservationChartsDTOSuccessRate setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public ObservationChartsDTOSuccessRate setValue(Object value) {
+            this.value = value;
+            return this;
+        }
+        public Object getValue() {
+            return this.value;
+        }
+
     }
 
 }

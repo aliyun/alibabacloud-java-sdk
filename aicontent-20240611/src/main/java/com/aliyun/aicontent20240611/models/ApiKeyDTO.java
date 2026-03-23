@@ -16,6 +16,13 @@ public class ApiKeyDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("deleteTag")
+    public Integer deleteTag;
+
+    /**
+     * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
     @NameInMap("gmtCreate")
@@ -34,6 +41,13 @@ public class ApiKeyDTO extends TeaModel {
      */
     @NameInMap("id")
     public Long id;
+
+    /**
+     * <strong>example:</strong>
+     * <p>key</p>
+     */
+    @NameInMap("key")
+    public String key;
 
     /**
      * <strong>example:</strong>
@@ -70,6 +84,14 @@ public class ApiKeyDTO extends TeaModel {
         return this.clientId;
     }
 
+    public ApiKeyDTO setDeleteTag(Integer deleteTag) {
+        this.deleteTag = deleteTag;
+        return this;
+    }
+    public Integer getDeleteTag() {
+        return this.deleteTag;
+    }
+
     public ApiKeyDTO setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
@@ -92,6 +114,14 @@ public class ApiKeyDTO extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public ApiKeyDTO setKey(String key) {
+        this.key = key;
+        return this;
+    }
+    public String getKey() {
+        return this.key;
     }
 
     public ApiKeyDTO setKeyPreview(String keyPreview) {

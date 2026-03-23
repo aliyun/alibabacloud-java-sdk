@@ -9,7 +9,7 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
      * <p>[]</p>
      */
     @NameInMap("data")
-    public java.util.List<ConversationDTO> data;
+    public ModelRouterQueryConversationListResponseBodyData data;
 
     /**
      * <strong>example:</strong>
@@ -33,52 +33,11 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>maxResults</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("maxResults")
-    public Integer maxResults;
-
-    /**
-     * <p>nextToken</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxxx-xxx-xxxxx</p>
-     */
-    @NameInMap("nextToken")
-    public String nextToken;
-
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("pageIndex")
-    public Integer pageIndex;
-
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("pageSize")
-    public Integer pageSize;
-
-    /**
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
-
-    /**
-     * <p>skip</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("skip")
-    public Integer skip;
 
     /**
      * <strong>example:</strong>
@@ -87,23 +46,16 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
-    @NameInMap("totalCount")
-    public Integer totalCount;
-
     public static ModelRouterQueryConversationListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModelRouterQueryConversationListResponseBody self = new ModelRouterQueryConversationListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModelRouterQueryConversationListResponseBody setData(java.util.List<ConversationDTO> data) {
+    public ModelRouterQueryConversationListResponseBody setData(ModelRouterQueryConversationListResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<ConversationDTO> getData() {
+    public ModelRouterQueryConversationListResponseBodyData getData() {
         return this.data;
     }
 
@@ -131,52 +83,12 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public ModelRouterQueryConversationListResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ModelRouterQueryConversationListResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ModelRouterQueryConversationListResponseBody setPageIndex(Integer pageIndex) {
-        this.pageIndex = pageIndex;
-        return this;
-    }
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    public ModelRouterQueryConversationListResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public ModelRouterQueryConversationListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ModelRouterQueryConversationListResponseBody setSkip(Integer skip) {
-        this.skip = skip;
-        return this;
-    }
-    public Integer getSkip() {
-        return this.skip;
     }
 
     public ModelRouterQueryConversationListResponseBody setSuccess(Boolean success) {
@@ -187,12 +99,94 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ModelRouterQueryConversationListResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public static class ModelRouterQueryConversationListResponseBodyData extends TeaModel {
+        @NameInMap("list")
+        public java.util.List<ConversationDTO> list;
+
+        @NameInMap("maxResult")
+        public String maxResult;
+
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        @NameInMap("nextToken")
+        public String nextToken;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("page")
+        public Integer page;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("pageSize")
+        public Integer pageSize;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("total")
+        public Integer total;
+
+        public static ModelRouterQueryConversationListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ModelRouterQueryConversationListResponseBodyData self = new ModelRouterQueryConversationListResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ModelRouterQueryConversationListResponseBodyData setList(java.util.List<ConversationDTO> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ConversationDTO> getList() {
+            return this.list;
+        }
+
+        public ModelRouterQueryConversationListResponseBodyData setMaxResult(String maxResult) {
+            this.maxResult = maxResult;
+            return this;
+        }
+        public String getMaxResult() {
+            return this.maxResult;
+        }
+
+        public ModelRouterQueryConversationListResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        public ModelRouterQueryConversationListResponseBodyData setPage(Integer page) {
+            this.page = page;
+            return this;
+        }
+        public Integer getPage() {
+            return this.page;
+        }
+
+        public ModelRouterQueryConversationListResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ModelRouterQueryConversationListResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
     }
 
 }

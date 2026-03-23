@@ -9,7 +9,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
      * <p>[]</p>
      */
     @NameInMap("data")
-    public java.util.List<RequestLogDTO> data;
+    public ModelRouterQueryObservationLogsResponseBodyData data;
 
     /**
      * <strong>example:</strong>
@@ -52,33 +52,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("pageIndex")
-    public Integer pageIndex;
-
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("pageSize")
-    public Integer pageSize;
-
-    /**
-     * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
-
-    /**
-     * <p>skip</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("skip")
-    public Integer skip;
 
     /**
      * <strong>example:</strong>
@@ -87,23 +64,16 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
-    @NameInMap("totalCount")
-    public Integer totalCount;
-
     public static ModelRouterQueryObservationLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModelRouterQueryObservationLogsResponseBody self = new ModelRouterQueryObservationLogsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModelRouterQueryObservationLogsResponseBody setData(java.util.List<RequestLogDTO> data) {
+    public ModelRouterQueryObservationLogsResponseBody setData(ModelRouterQueryObservationLogsResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<RequestLogDTO> getData() {
+    public ModelRouterQueryObservationLogsResponseBodyData getData() {
         return this.data;
     }
 
@@ -147,36 +117,12 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ModelRouterQueryObservationLogsResponseBody setPageIndex(Integer pageIndex) {
-        this.pageIndex = pageIndex;
-        return this;
-    }
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    public ModelRouterQueryObservationLogsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public ModelRouterQueryObservationLogsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ModelRouterQueryObservationLogsResponseBody setSkip(Integer skip) {
-        this.skip = skip;
-        return this;
-    }
-    public Integer getSkip() {
-        return this.skip;
     }
 
     public ModelRouterQueryObservationLogsResponseBody setSuccess(Boolean success) {
@@ -187,12 +133,98 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ModelRouterQueryObservationLogsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public static class ModelRouterQueryObservationLogsResponseBodyData extends TeaModel {
+        @NameInMap("list")
+        public java.util.List<RequestLogDTO> list;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("maxResults")
+        public Integer maxResults;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("nextToken")
+        public Integer nextToken;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("page")
+        public Integer page;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("pageSize")
+        public Integer pageSize;
+
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        @NameInMap("total")
+        public Integer total;
+
+        public static ModelRouterQueryObservationLogsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ModelRouterQueryObservationLogsResponseBodyData self = new ModelRouterQueryObservationLogsResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ModelRouterQueryObservationLogsResponseBodyData setList(java.util.List<RequestLogDTO> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<RequestLogDTO> getList() {
+            return this.list;
+        }
+
+        public ModelRouterQueryObservationLogsResponseBodyData setMaxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+        public Integer getMaxResults() {
+            return this.maxResults;
+        }
+
+        public ModelRouterQueryObservationLogsResponseBodyData setNextToken(Integer nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public Integer getNextToken() {
+            return this.nextToken;
+        }
+
+        public ModelRouterQueryObservationLogsResponseBodyData setPage(Integer page) {
+            this.page = page;
+            return this;
+        }
+        public Integer getPage() {
+            return this.page;
+        }
+
+        public ModelRouterQueryObservationLogsResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ModelRouterQueryObservationLogsResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
     }
 
 }

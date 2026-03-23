@@ -33,6 +33,8 @@ public class ConversationDTO extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -53,10 +55,6 @@ public class ConversationDTO extends TeaModel {
     @NameInMap("modelIds")
     public String modelIds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>我的对话</p>
-     */
     @NameInMap("title")
     public String title;
 

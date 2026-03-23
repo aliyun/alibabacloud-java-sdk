@@ -9,7 +9,7 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
      * <p>[]</p>
      */
     @NameInMap("data")
-    public java.util.List<ModelMetricsDTO> data;
+    public ModelMetricsDTO data;
 
     /**
      * <strong>example:</strong>
@@ -33,52 +33,11 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>maxResults</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("maxResults")
-    public Integer maxResults;
-
-    /**
-     * <p>nextToken</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxxx-xxx-xxxxx</p>
-     */
-    @NameInMap("nextToken")
-    public String nextToken;
-
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("pageIndex")
-    public Integer pageIndex;
-
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("pageSize")
-    public Integer pageSize;
-
-    /**
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
-
-    /**
-     * <p>skip</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("skip")
-    public Integer skip;
 
     /**
      * <strong>example:</strong>
@@ -87,23 +46,16 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
-    @NameInMap("totalCount")
-    public Integer totalCount;
-
     public static ModelRouterQueryObservationMetricsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModelRouterQueryObservationMetricsResponseBody self = new ModelRouterQueryObservationMetricsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModelRouterQueryObservationMetricsResponseBody setData(java.util.List<ModelMetricsDTO> data) {
+    public ModelRouterQueryObservationMetricsResponseBody setData(ModelMetricsDTO data) {
         this.data = data;
         return this;
     }
-    public java.util.List<ModelMetricsDTO> getData() {
+    public ModelMetricsDTO getData() {
         return this.data;
     }
 
@@ -131,38 +83,6 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public ModelRouterQueryObservationMetricsResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ModelRouterQueryObservationMetricsResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ModelRouterQueryObservationMetricsResponseBody setPageIndex(Integer pageIndex) {
-        this.pageIndex = pageIndex;
-        return this;
-    }
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    public ModelRouterQueryObservationMetricsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public ModelRouterQueryObservationMetricsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -171,28 +91,12 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModelRouterQueryObservationMetricsResponseBody setSkip(Integer skip) {
-        this.skip = skip;
-        return this;
-    }
-    public Integer getSkip() {
-        return this.skip;
-    }
-
     public ModelRouterQueryObservationMetricsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ModelRouterQueryObservationMetricsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
 }
