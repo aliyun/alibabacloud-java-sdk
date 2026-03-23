@@ -23,6 +23,9 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
     @NameInMap("triggerId")
     public String triggerId;
 
+    @NameInMap("triggeredStatus")
+    public String triggeredStatus;
+
     public static GetStackExecutionResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetStackExecutionResultResponseBody self = new GetStackExecutionResultResponseBody();
         return TeaModel.build(map, self);
@@ -50,6 +53,14 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
     }
     public String getTriggerId() {
         return this.triggerId;
+    }
+
+    public GetStackExecutionResultResponseBody setTriggeredStatus(String triggeredStatus) {
+        this.triggeredStatus = triggeredStatus;
+        return this;
+    }
+    public String getTriggeredStatus() {
+        return this.triggeredStatus;
     }
 
     public static class GetStackExecutionResultResponseBodyStackResultsDeployments extends TeaModel {
