@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>申请流式网关AccessToken</p>
+     * <p>Apply for Streaming Gateway AccessToken</p>
      * 
      * @param request ApplyForStreamAccessTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -60,7 +60,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>申请流式网关AccessToken</p>
+     * <p>Apply for Streaming Gateway AccessToken</p>
      * 
      * @param request ApplyForStreamAccessTokenRequest
      * @return ApplyForStreamAccessTokenResponse
@@ -162,6 +162,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sandBox)) {
             body.put("SandBox", request.sandBox);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vendorParam)) {
@@ -316,7 +320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消发布任务</p>
+     * <p>Cancel Publishing Task</p>
      * 
      * @param request CancelPublishTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -352,7 +356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消发布任务</p>
+     * <p>Cancel Publishing Task</p>
      * 
      * @param request CancelPublishTaskRequest
      * @return CancelPublishTaskResponse
@@ -506,7 +510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增类目</p>
+     * <p>Create Category</p>
      * 
      * @param request CreateCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -556,7 +560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增类目</p>
+     * <p>Create Category</p>
      * 
      * @param request CreateCategoryRequest
      * @return CreateCategoryResponse
@@ -568,7 +572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建FAQ关联问</p>
+     * <p>Create FAQ Connection Question</p>
      * 
      * @param request CreateConnQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -610,7 +614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建FAQ关联问</p>
+     * <p>Create FAQ Connection Question</p>
      * 
      * @param request CreateConnQuestionRequest
      * @return CreateConnQuestionResponse
@@ -746,7 +750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建文档</p>
+     * <p>Create Document</p>
      * 
      * @param tmpReq CreateDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -828,7 +832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建文档</p>
+     * <p>Create Document</p>
      * 
      * @param request CreateDocRequest
      * @return CreateDocResponse
@@ -840,7 +844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建FAQ</p>
+     * <p>New FAQ</p>
      * 
      * @param tmpReq CreateFaqRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -908,7 +912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建FAQ</p>
+     * <p>New FAQ</p>
      * 
      * @param request CreateFaqRequest
      * @return CreateFaqResponse
@@ -1196,7 +1200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建发布任务</p>
+     * <p>Create Publishing Task</p>
      * 
      * @param tmpReq CreatePublishTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1242,7 +1246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建发布任务</p>
+     * <p>Create Publishing Task</p>
      * 
      * @param request CreatePublishTaskRequest
      * @return CreatePublishTaskResponse
@@ -1254,7 +1258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建FAQ相似问</p>
+     * <p>Create FAQ Similar Question</p>
      * 
      * @param request CreateSimQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1296,7 +1300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建FAQ相似问</p>
+     * <p>Create FAQ Similar Question</p>
      * 
      * @param request CreateSimQuestionRequest
      * @return CreateSimQuestionResponse
@@ -1308,7 +1312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建FAQ答案</p>
+     * <p>Create New FAQ Answer</p>
      * 
      * @param tmpReq CreateSolutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1368,7 +1372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建FAQ答案</p>
+     * <p>Create New FAQ Answer</p>
      * 
      * @param request CreateSolutionRequest
      * @return CreateSolutionResponse
@@ -1550,7 +1554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除类目</p>
+     * <p>Delete Category</p>
      * 
      * @param request DeleteCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1588,7 +1592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除类目</p>
+     * <p>Delete Category</p>
      * 
      * @param request DeleteCategoryRequest
      * @return DeleteCategoryResponse
@@ -1600,7 +1604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除FAQ关联问</p>
+     * <p>Delete FAQ Connection Question</p>
      * 
      * @param request DeleteConnQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1638,7 +1642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除FAQ关联问</p>
+     * <p>Delete FAQ Connection Question</p>
      * 
      * @param request DeleteConnQuestionRequest
      * @return DeleteConnQuestionResponse
@@ -1758,7 +1762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档删除</p>
+     * <p>Document Deletion</p>
      * 
      * @param request DeleteDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1794,7 +1798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档删除</p>
+     * <p>Document Deletion</p>
      * 
      * @param request DeleteDocRequest
      * @return DeleteDocResponse
@@ -1806,7 +1810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除FAQ，如果是已发布的知识，删除之后，变成已删除未发布，需要发布才能真正删除</p>
+     * <p>Delete FAQ. If it is published knowledge, after deletion, it becomes deleted but not published, and requires publishing to be truly deleted.</p>
      * 
      * @param request DeleteFaqRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1844,7 +1848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除FAQ，如果是已发布的知识，删除之后，变成已删除未发布，需要发布才能真正删除</p>
+     * <p>Delete FAQ. If it is published knowledge, after deletion, it becomes deleted but not published, and requires publishing to be truly deleted.</p>
      * 
      * @param request DeleteFaqRequest
      * @return DeleteFaqResponse
@@ -2060,7 +2064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除FAQ相似问</p>
+     * <p>Delete FAQ Similar Question</p>
      * 
      * @param request DeleteSimQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2098,7 +2102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除FAQ相似问</p>
+     * <p>Delete FAQ Similar Question</p>
      * 
      * @param request DeleteSimQuestionRequest
      * @return DeleteSimQuestionResponse
@@ -2110,7 +2114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除FAQ答案</p>
+     * <p>Delete FAQ Solution</p>
      * 
      * @param request DeleteSolutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2148,7 +2152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除FAQ答案</p>
+     * <p>Delete FAQ Solution</p>
      * 
      * @param request DeleteSolutionRequest
      * @return DeleteSolutionResponse
@@ -2328,7 +2332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看单个类目信息</p>
+     * <p>View Single Category Information</p>
      * 
      * @param request DescribeCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2366,7 +2370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看单个类目信息</p>
+     * <p>View Single Category Information</p>
      * 
      * @param request DescribeCategoryRequest
      * @return DescribeCategoryResponse
@@ -2430,7 +2434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档详情</p>
+     * <p>Document Details</p>
      * 
      * @param request DescribeDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2470,7 +2474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档详情</p>
+     * <p>Document Details</p>
      * 
      * @param request DescribeDocRequest
      * @return DescribeDocResponse
@@ -2482,7 +2486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>知识详情</p>
+     * <p>Knowledge Details</p>
      * 
      * @param request DescribeFaqRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2520,7 +2524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>知识详情</p>
+     * <p>Knowledge Details</p>
      * 
      * @param request DescribeFaqRequest
      * @return DescribeFaqResponse
@@ -3128,7 +3132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询发布进度</p>
+     * <p>Query Publishing Progress</p>
      * 
      * @param request GetPublishTaskStateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3164,7 +3168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询发布进度</p>
+     * <p>Query Publishing Progress</p>
      * 
      * @param request GetPublishTaskStateRequest
      * @return GetPublishTaskStateResponse
@@ -3344,7 +3348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>类目列表</p>
+     * <p>Category List</p>
      * 
      * @param request ListCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3386,7 +3390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>类目列表</p>
+     * <p>Category List</p>
      * 
      * @param request ListCategoryRequest
      * @return ListCategoryResponse
@@ -3398,7 +3402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询FAQ关联问列表</p>
+     * <p>Query FAQ Connection Questions List</p>
      * 
      * @param request ListConnQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3436,7 +3440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询FAQ关联问列表</p>
+     * <p>Query FAQ Connection Questions List</p>
      * 
      * @param request ListConnQuestionRequest
      * @return ListConnQuestionResponse
@@ -3609,6 +3613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.robotType)) {
             query.put("RobotType", request.robotType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sandbox)) {
+            query.put("Sandbox", request.sandbox);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3862,7 +3870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>FAQ相似问列表</p>
+     * <p>FAQ Similar Questions List</p>
      * 
      * @param request ListSimQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3900,7 +3908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>FAQ相似问列表</p>
+     * <p>FAQ Similar Questions List</p>
      * 
      * @param request ListSimQuestionRequest
      * @return ListSimQuestionResponse
@@ -3912,7 +3920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>FAQ答案列表</p>
+     * <p>FAQ Solution List</p>
      * 
      * @param request ListSolutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3950,7 +3958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>FAQ答案列表</p>
+     * <p>FAQ Solution List</p>
      * 
      * @param request ListSolutionRequest
      * @return ListSolutionResponse
@@ -4362,7 +4370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档重试</p>
+     * <p>Document Retry</p>
      * 
      * @param request RetryDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4398,7 +4406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档重试</p>
+     * <p>Document Retry</p>
      * 
      * @param request RetryDocRequest
      * @return RetryDocResponse
@@ -4410,7 +4418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档搜索</p>
+     * <p>Document Search</p>
      * 
      * @param tmpReq SearchDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4524,7 +4532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档搜索</p>
+     * <p>Document Search</p>
      * 
      * @param request SearchDocRequest
      * @return SearchDocResponse
@@ -4536,7 +4544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>知识搜索</p>
+     * <p>Knowledge Search</p>
      * 
      * @param tmpReq SearchFaqRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4640,7 +4648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>知识搜索</p>
+     * <p>Knowledge Search</p>
      * 
      * @param request SearchFaqRequest
      * @return SearchFaqResponse
@@ -4704,7 +4712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑类目</p>
+     * <p>Edit Category</p>
      * 
      * @param request UpdateCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4750,7 +4758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑类目</p>
+     * <p>Edit Category</p>
      * 
      * @param request UpdateCategoryRequest
      * @return UpdateCategoryResponse
@@ -4762,7 +4770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新FAQ关联问</p>
+     * <p>Update FAQ Connection Question</p>
      * 
      * @param request UpdateConnQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4804,7 +4812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新FAQ关联问</p>
+     * <p>Update FAQ Connection Question</p>
      * 
      * @param request UpdateConnQuestionRequest
      * @return UpdateConnQuestionResponse
@@ -4948,7 +4956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档变更</p>
+     * <p>Document Update</p>
      * 
      * @param tmpReq UpdateDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5034,7 +5042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档变更</p>
+     * <p>Document Update</p>
      * 
      * @param request UpdateDocRequest
      * @return UpdateDocResponse
@@ -5046,7 +5054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新FAQ</p>
+     * <p>Update FAQ</p>
      * 
      * @param tmpReq UpdateFaqRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5110,7 +5118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新FAQ</p>
+     * <p>Update FAQ</p>
      * 
      * @param request UpdateFaqRequest
      * @return UpdateFaqResponse
@@ -5354,7 +5362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新FAQ相似问</p>
+     * <p>Update FAQ Similar Questions</p>
      * 
      * @param request UpdateSimQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5396,7 +5404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新FAQ相似问</p>
+     * <p>Update FAQ Similar Questions</p>
      * 
      * @param request UpdateSimQuestionRequest
      * @return UpdateSimQuestionResponse
@@ -5408,7 +5416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新FAQ答案</p>
+     * <p>Update FAQ Answer</p>
      * 
      * @param tmpReq UpdateSolutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5468,7 +5476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新FAQ答案</p>
+     * <p>Update FAQ Answer</p>
      * 
      * @param request UpdateSolutionRequest
      * @return UpdateSolutionResponse

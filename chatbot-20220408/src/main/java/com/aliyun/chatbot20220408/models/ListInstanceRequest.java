@@ -39,6 +39,9 @@ public class ListInstanceRequest extends TeaModel {
     @NameInMap("RobotType")
     public String robotType;
 
+    @NameInMap("Sandbox")
+    public Boolean sandbox;
+
     public static ListInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceRequest self = new ListInstanceRequest();
         return TeaModel.build(map, self);
@@ -82,6 +85,14 @@ public class ListInstanceRequest extends TeaModel {
     }
     public String getRobotType() {
         return this.robotType;
+    }
+
+    public ListInstanceRequest setSandbox(Boolean sandbox) {
+        this.sandbox = sandbox;
+        return this;
+    }
+    public Boolean getSandbox() {
+        return this.sandbox;
     }
 
 }

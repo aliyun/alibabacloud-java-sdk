@@ -11,6 +11,10 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a***<a href="mailto:bcx@gmail.com">bcx@gmail.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
@@ -63,6 +67,10 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     @NameInMap("Nick")
     public String nick;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1381111****</p>
+     */
     @NameInMap("Telephone")
     public String telephone;
 

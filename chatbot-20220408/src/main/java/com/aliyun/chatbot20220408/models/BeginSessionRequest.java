@@ -11,11 +11,18 @@ public class BeginSessionRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>chatbot-cn-mp90s2lrk00050</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("SandBox")
     public Boolean sandBox;
+
+    @NameInMap("SessionId")
+    public String sessionId;
 
     @NameInMap("VendorParam")
     public String vendorParam;
@@ -47,6 +54,14 @@ public class BeginSessionRequest extends TeaModel {
     }
     public Boolean getSandBox() {
         return this.sandBox;
+    }
+
+    public BeginSessionRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public BeginSessionRequest setVendorParam(String vendorParam) {
