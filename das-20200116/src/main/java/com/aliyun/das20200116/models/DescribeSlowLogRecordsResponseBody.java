@@ -204,6 +204,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("DocsExamined")
         public String docsExamined;
 
+        @NameInMap("Fail")
+        public String fail;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -283,6 +286,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("OriginTime")
         public String originTime;
 
+        @NameInMap("Params")
+        public String params;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -324,6 +330,12 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          */
         @NameInMap("QueryTimeSeconds")
         public Double queryTimeSeconds;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        @NameInMap("ReqId")
+        public String reqId;
 
         @NameInMap("RequestSize")
         public Long requestSize;
@@ -549,6 +561,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             return this.docsExamined;
         }
 
+        public DescribeSlowLogRecordsResponseBodyDataLogs setFail(String fail) {
+            this.fail = fail;
+            return this;
+        }
+        public String getFail() {
+            return this.fail;
+        }
+
         public DescribeSlowLogRecordsResponseBodyDataLogs setFrows(Long frows) {
             this.frows = frows;
             return this;
@@ -653,6 +673,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             return this.originTime;
         }
 
+        public DescribeSlowLogRecordsResponseBodyDataLogs setParams(String params) {
+            this.params = params;
+            return this;
+        }
+        public String getParams() {
+            return this.params;
+        }
+
         public DescribeSlowLogRecordsResponseBodyDataLogs setPhysicalIOReads(Long physicalIOReads) {
             this.physicalIOReads = physicalIOReads;
             return this;
@@ -699,6 +727,22 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
         public Double getQueryTimeSeconds() {
             return this.queryTimeSeconds;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyDataLogs setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyDataLogs setReqId(String reqId) {
+            this.reqId = reqId;
+            return this;
+        }
+        public String getReqId() {
+            return this.reqId;
         }
 
         public DescribeSlowLogRecordsResponseBodyDataLogs setRequestSize(Long requestSize) {

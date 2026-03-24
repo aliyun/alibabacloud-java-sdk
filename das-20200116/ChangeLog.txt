@@ -1,3 +1,10 @@
+2026-03-24 Version: 2.13.3
+- Update API DescribeSlowLogRecords: add response parameters Body.Data.Logs.$.Fail.
+- Update API DescribeSlowLogRecords: add response parameters Body.Data.Logs.$.Params.
+- Update API DescribeSlowLogRecords: add response parameters Body.Data.Logs.$.Reason.
+- Update API DescribeSlowLogRecords: add response parameters Body.Data.Logs.$.ReqId.
+
+
 2026-03-17 Version: 2.13.2
 - Update API GetYaoChiAgent: add response parameters Body.ParentId.
 - Update API GetYaoChiAgent: add response parameters Body.SubAgentCall.
