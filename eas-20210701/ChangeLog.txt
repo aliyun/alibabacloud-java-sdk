@@ -1,3 +1,8 @@
+2026-03-24 Version: 7.6.0
+- Support API ScaleService.
+- Update API ListServices: add request parameters Accessibility.
+
+
 2026-03-20 Version: 7.5.0
 - Support API CreateServiceInstanceToken.
 

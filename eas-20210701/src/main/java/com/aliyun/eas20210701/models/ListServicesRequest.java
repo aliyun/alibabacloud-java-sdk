@@ -4,6 +4,13 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
+    @NameInMap("Accessibility")
+    public String accessibility;
+
     @NameInMap("AutoscalerEnabled")
     public Boolean autoscalerEnabled;
 
@@ -369,6 +376,14 @@ public class ListServicesRequest extends TeaModel {
     public static ListServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServicesRequest self = new ListServicesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListServicesRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     public ListServicesRequest setAutoscalerEnabled(Boolean autoscalerEnabled) {
