@@ -5819,6 +5819,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <code>Host</code> in the request syntax consists of the Project name and the Log Service endpoint.</li>
+     * <li>You have an AccessKey. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey</a>.
+     * The AccessKey of an Alibaba Cloud account has full permissions on all APIs, which poses a high security risk. We recommend using a RAM user to make API calls or perform routine operations. You must grant the RAM user the required permissions to access Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</li>
+     * <li>You have the Project name, region, and Logstore name. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage Project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</li>
+     * </ul>
+     * <h3>Authorization</h3>
+     * <p>To grant a RAM user or RAM role permission to call this API, add the following Action to a RAM permission policy.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:GetLogStoreConfig</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/{#LogstoreName}</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the configuration of a Logstore.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLogStoreConfigResponse
+     */
+    public GetLogStoreConfigResponse getLogStoreConfigWithOptions(String project, String logstore, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLogStoreConfig"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logstores/" + logstore + "/config"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "none"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetLogStoreConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <code>Host</code> in the request syntax consists of the Project name and the Log Service endpoint.</li>
+     * <li>You have an AccessKey. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey</a>.
+     * The AccessKey of an Alibaba Cloud account has full permissions on all APIs, which poses a high security risk. We recommend using a RAM user to make API calls or perform routine operations. You must grant the RAM user the required permissions to access Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</li>
+     * <li>You have the Project name, region, and Logstore name. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage Project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</li>
+     * </ul>
+     * <h3>Authorization</h3>
+     * <p>To grant a RAM user or RAM role permission to call this API, add the following Action to a RAM permission policy.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:GetLogStoreConfig</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/{#LogstoreName}</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the configuration of a Logstore.</p>
+     * @return GetLogStoreConfigResponse
+     */
+    public GetLogStoreConfigResponse getLogStoreConfig(String project, String logstore) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getLogStoreConfigWithOptions(project, logstore, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the billing mode of a Logstore.</p>
      * 
