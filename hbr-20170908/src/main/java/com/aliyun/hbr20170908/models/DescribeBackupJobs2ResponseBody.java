@@ -536,6 +536,9 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         @NameInMap("TableName")
         public String tableName;
 
+        @NameInMap("TriggerMode")
+        public String triggerMode;
+
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
@@ -905,6 +908,14 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
         public String getTableName() {
             return this.tableName;
+        }
+
+        public DescribeBackupJobs2ResponseBodyBackupJobsBackupJob setTriggerMode(String triggerMode) {
+            this.triggerMode = triggerMode;
+            return this;
+        }
+        public String getTriggerMode() {
+            return this.triggerMode;
         }
 
         public DescribeBackupJobs2ResponseBodyBackupJobsBackupJob setUpdatedTime(Long updatedTime) {
