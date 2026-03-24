@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAddonReleaseRequest extends TeaModel {
     /**
-     * <p>Addon version information.</p>
+     * <p>The version of the add-on.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.2</p>
@@ -14,7 +14,7 @@ public class UpdateAddonReleaseRequest extends TeaModel {
     public String addonVersion;
 
     /**
-     * <p>Whether to pre-check this request.</p>
+     * <p>Specifies whether to perform a dry run for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,13 +23,13 @@ public class UpdateAddonReleaseRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Entity discovery rules.</p>
+     * <p>The entity discovery rules.</p>
      */
     @NameInMap("entityRules")
     public EntityDiscoverRule entityRules;
 
     /**
-     * <p>Metadata information.</p>
+     * <p>The metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>

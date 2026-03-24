@@ -4,24 +4,12 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentEscalationPolicyForView extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>2025-03-11T08:21:58Z</p>
-     */
     @NameInMap("createTime")
     public String createTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>workspace api monitor update test</p>
-     */
     @NameInMap("description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("enable")
     public Boolean enable;
 
@@ -30,66 +18,31 @@ public class IncidentEscalationPolicyForView extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>&quot;Critical-Alert-Escalation&quot;</p>
      */
     @NameInMap("name")
     public String name;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;USER&quot;</p>
-     */
     @NameInMap("ownerType")
     public String ownerType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;cn-hangzhou&quot;</p>
-     */
     @NameInMap("regionId")
     public String regionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;MANUAL&quot;</p>
-     */
     @NameInMap("source")
     public String source;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;ARMS&quot;</p>
-     */
     @NameInMap("syncFromType")
     public String syncFromType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2025-04-15T02:02:50Z</p>
-     */
     @NameInMap("updateTime")
     public String updateTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;user-abc123&quot;</p>
-     */
     @NameInMap("userId")
     public String userId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
-     */
     @NameInMap("uuid")
     public String uuid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;ws-xyz789&quot;</p>
-     */
     @NameInMap("workspace")
     public String workspace;
 

@@ -19,6 +19,8 @@ public class GetMemoryResponseBody extends TeaModel {
     public String appId;
 
     /**
+     * <p>The time when the memory was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1751595283143</p>
      */
@@ -26,6 +28,8 @@ public class GetMemoryResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The expiration time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1751595283143</p>
      */
@@ -33,6 +37,8 @@ public class GetMemoryResponseBody extends TeaModel {
     public String expirationDate;
 
     /**
+     * <p>The memory ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>019ca1e5-7307-7d50-b943-5e628326a8ed</p>
      */
@@ -40,6 +46,8 @@ public class GetMemoryResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>This property is mutable.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -47,6 +55,8 @@ public class GetMemoryResponseBody extends TeaModel {
     public String immutable;
 
     /**
+     * <p>The memory content.</p>
+     * 
      * <strong>example:</strong>
      * <p>My name is Zhang San and I live in Hangzhou.</p>
      */
@@ -54,6 +64,8 @@ public class GetMemoryResponseBody extends TeaModel {
     public String memory;
 
     /**
+     * <p>The metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
      */
@@ -61,6 +73,8 @@ public class GetMemoryResponseBody extends TeaModel {
     public String metadata;
 
     /**
+     * <p>The organization.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -68,6 +82,8 @@ public class GetMemoryResponseBody extends TeaModel {
     public String organization;
 
     /**
+     * <p>The owner of the memory.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -75,6 +91,8 @@ public class GetMemoryResponseBody extends TeaModel {
     public String owner;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
      */
@@ -89,6 +107,8 @@ public class GetMemoryResponseBody extends TeaModel {
     public String runId;
 
     /**
+     * <p>The time when the memory was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744428159434</p>
      */

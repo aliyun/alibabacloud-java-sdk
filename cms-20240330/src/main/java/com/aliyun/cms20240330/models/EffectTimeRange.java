@@ -7,24 +7,12 @@ public class EffectTimeRange extends TeaModel {
     @NameInMap("dayInWeek")
     public java.util.List<Integer> dayInWeek;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1080</p>
-     */
     @NameInMap("endTimeInMinute")
     public Integer endTimeInMinute;
 
-    /**
-     * <strong>example:</strong>
-     * <p>360</p>
-     */
     @NameInMap("startTimeInMinute")
     public Integer startTimeInMinute;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;Asia/Shanghai&quot;</p>
-     */
     @NameInMap("timeZone")
     public String timeZone;
 

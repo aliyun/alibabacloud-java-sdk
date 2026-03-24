@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusInstanceResponseBody extends TeaModel {
     /**
-     * <p>Details of the Prometheus instance.</p>
+     * <p>The details of the Prometheus instance.</p>
      */
     @NameInMap("prometheusInstance")
     public GetPrometheusInstanceResponseBodyPrometheusInstance prometheusInstance;
 
     /**
-     * <p>Unique identifier for the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -42,7 +42,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     public static class GetPrometheusInstanceResponseBodyPrometheusInstanceTags extends TeaModel {
         /**
-         * <p>Tag key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>openStorage</p>
@@ -51,7 +51,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Matched value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>130303196111114281</p>
@@ -84,8 +84,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     public static class GetPrometheusInstanceResponseBodyPrometheusInstance extends TeaModel {
         /**
-         * <p>Access type:
-         * readWrite, readOnly, httpReadOnly</p>
+         * <p>The permission type. Valid values: \<code>readWrite\\</code>, \<code>readOnly\\</code>, and \<code>httpReadOnly\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>readOnly</p>
@@ -94,7 +93,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>Number of days to automatically archive and save after storage expiration. 0 means no archiving, 3650 means permanent saving.</p>
+         * <p>The number of days to archive data after the storage duration ends. A value of 0 means data is not archived. A value of 3650 means data is permanently archived.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -103,7 +102,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Integer archiveDuration;
 
         /**
-         * <p>Password-free read policy (supports IP segments and VpcId).</p>
+         * <p>The password-free read policy. IP address ranges and VPC IDs are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -121,7 +120,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String authFreeReadPolicy;
 
         /**
-         * <p>Password-free write policy (supports IP segments and VpcId).</p>
+         * <p>The password-free write policy. IP address ranges and VPC IDs are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -139,7 +138,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String authFreeWritePolicy;
 
         /**
-         * <p>authToken string.</p>
+         * <p>The authentication token.</p>
          * 
          * <strong>example:</strong>
          * <p>eJwixxxxx</p>
@@ -148,7 +147,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String authToken;
 
         /**
-         * <p>Instance creation time, using UTC+0, formatted as yyyy-MM-ddTHH:mmZ.</p>
+         * <p>The time when the instance was created. The time is in UTC and follows the yyyy-MM-ddTHH:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-10T02:07:53Z</p>
@@ -157,7 +156,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Whether to enable password-free reading.</p>
+         * <p>Indicates whether password-free read is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -166,7 +165,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Boolean enableAuthFreeRead;
 
         /**
-         * <p>Whether to enable password-free writing.</p>
+         * <p>Indicates whether password-free write is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -175,7 +174,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Boolean enableAuthFreeWrite;
 
         /**
-         * <p>Whether to enable authentication token.</p>
+         * <p>Indicates whether the authentication token is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -184,13 +183,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Boolean enableAuthToken;
 
         /**
-         * <p>Additional information.</p>
+         * <p>The extra information.</p>
          */
         @NameInMap("extraInfo")
         public java.util.Map<String, String> extraInfo;
 
         /**
-         * <p>URL of the visualization dashboard directory.</p>
+         * <p>The URL of the visualization dashboard folder.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://gnew.console.aliyun.com/dashboards/f/c49a80d2a551d4a20a8c4b996b0be4e52/xxxxxxx">https://gnew.console.aliyun.com/dashboards/f/c49a80d2a551d4a20a8c4b996b0be4e52/xxxxxxx</a></p>
@@ -199,7 +198,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String folderUrl;
 
         /**
-         * <p>ID of the managed Grafana instance that is bound.</p>
+         * <p>The ID of the attached Grafana instance.</p>
          * 
          * <strong>example:</strong>
          * <p>SHARED</p>
@@ -208,7 +207,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String grafanaInstanceId;
 
         /**
-         * <p>Name of the managed Grafana instance that is bound.</p>
+         * <p>The name of the attached Grafana instance.</p>
          * 
          * <strong>example:</strong>
          * <p>共享版</p>
@@ -217,7 +216,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String grafanaInstanceName;
 
         /**
-         * <p>HTTP public network address.</p>
+         * <p>The HTTP endpoint for the Internet.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -226,7 +225,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String httpApiInterUrl;
 
         /**
-         * <p>HTTP intranet address.</p>
+         * <p>The HTTP endpoint for the internal network.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -235,7 +234,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String httpApiIntraUrl;
 
         /**
-         * <p>Prometheus instance type.</p>
+         * <p>The type of the Prometheus instance.</p>
          * 
          * <strong>example:</strong>
          * <p>remote-write</p>
@@ -244,9 +243,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Billing method:
-         * POSTPAY: Pay-as-you-go based on metric reporting volume.
-         * POSTPAY_GB: Pay-as-you-go based on metric write volume.</p>
+         * <p>The billing method. Valid values:
+         * \<code>POSTPAY\\</code>: pay-as-you-go based on the number of reported metrics.
+         * \<code>POSTPAY_GB\\</code>: pay-as-you-go based on the volume of data written.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -255,7 +254,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>Time when the billing method of the instance was updated.</p>
+         * <p>The time when the billing method of the instance was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-10T02:07:53Z</p>
@@ -264,7 +263,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String paymentTypeUpdateTime;
 
         /**
-         * <p>The product to which the Prometheus instance belongs (arms or cms).</p>
+         * <p>The Alibaba Cloud service to which the instance belongs. Valid values: \<code>arms\\</code> and \<code>cms\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>cms</p>
@@ -273,7 +272,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-524ada714221af267c73122af2e1</p>
@@ -282,7 +281,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String prometheusInstanceId;
 
         /**
-         * <p>Instance name.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-prom-name</p>
@@ -291,7 +290,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String prometheusInstanceName;
 
         /**
-         * <p>Public network address of PushGateway.</p>
+         * <p>The Pushgateway endpoint for the Internet.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -300,7 +299,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String pushGatewayInterUrl;
 
         /**
-         * <p>Intranet address of PushGateway.</p>
+         * <p>The Pushgateway endpoint for the internal network.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -309,7 +308,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String pushGatewayIntraUrl;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -318,7 +317,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Public network read address.</p>
+         * <p>The read endpoint for the Internet.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -327,7 +326,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String remoteReadInterUrl;
 
         /**
-         * <p>Intranet read address.</p>
+         * <p>The read endpoint for the internal network.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://workspace-default-cms-1xxxxxxxxxx">https://workspace-default-cms-1xxxxxxxxxx</a></p>
@@ -336,7 +335,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String remoteReadIntraUrl;
 
         /**
-         * <p>Public network write address.</p>
+         * <p>The write endpoint for the Internet.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://workspace-default-cms-xxxxxxxxxx">https://workspace-default-cms-xxxxxxxxxx</a></p>
@@ -345,7 +344,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String remoteWriteInterUrl;
 
         /**
-         * <p>Intranet write address.</p>
+         * <p>The write endpoint for the internal network.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://workspace-default-cms-xxxxxxxxxx">https://workspace-default-cms-xxxxxxxxxx</a></p>
@@ -354,7 +353,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String remoteWriteIntraUrl;
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm3gn5i6bigbi</p>
@@ -363,7 +362,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Fixed value: PrometheusInstance.</p>
+         * <p>A static field. The value is \<code>PrometheusInstance\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Prometheus</p>
@@ -372,7 +371,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>Instance status.</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -381,7 +380,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Storage duration (in days).</p>
+         * <p>The storage duration in days.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -390,19 +389,19 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Integer storageDuration;
 
         /**
-         * <p>Supported authentication types.</p>
+         * <p>The supported authentication and authorization types.</p>
          */
         @NameInMap("supportAuthTypes")
         public java.util.List<String> supportAuthTypes;
 
         /**
-         * <p>List of tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<GetPrometheusInstanceResponseBodyPrometheusInstanceTags> tags;
 
         /**
-         * <p>User ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>170731234567</p>
@@ -411,7 +410,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>Version.</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>V1</p>

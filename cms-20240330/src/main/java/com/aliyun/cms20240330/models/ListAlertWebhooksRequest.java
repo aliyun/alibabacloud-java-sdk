@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAlertWebhooksRequest extends TeaModel {
     /**
+     * <p>The name of the webhook.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class ListAlertWebhooksRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,14 +23,22 @@ public class ListAlertWebhooksRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>The unique ID of the webhook.</p>
+     */
     @NameInMap("webhookIds")
     public java.util.List<String> webhookIds;
+
+    @NameInMap("workspace")
+    public String workspace;
 
     public static ListAlertWebhooksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlertWebhooksRequest self = new ListAlertWebhooksRequest();
@@ -63,6 +75,14 @@ public class ListAlertWebhooksRequest extends TeaModel {
     }
     public java.util.List<String> getWebhookIds() {
         return this.webhookIds;
+    }
+
+    public ListAlertWebhooksRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

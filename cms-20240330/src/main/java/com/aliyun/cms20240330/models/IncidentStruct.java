@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class IncidentStruct extends TeaModel {
     /**
-     * <p>Content.</p>
+     * <p>事件内容。</p>
      * 
      * <strong>example:</strong>
-     * <p>Detected that the connection count of RDS instance rds-bp1234567890abcdef has reached 1000, triggering an alert.</p>
+     * <p>检测到 RDS 实例 rds-bp1234567890abcdef 的连接数达到 1000，已触发告警。</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>List of escalation policies.</p>
+     * <p>升级策略列表。</p>
      */
     @NameInMap("escalations")
     public java.util.List<IncidentEscalationStruct> escalations;
 
     /**
-     * <p>Incident ID.</p>
+     * <p>事件唯一 ID。</p>
      * 
      * <strong>example:</strong>
      * <p>incident-001</p>
@@ -29,19 +29,19 @@ public class IncidentStruct extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>Associated incident contingency plan.</p>
+     * <p>关联的事件预案。</p>
      */
     @NameInMap("incidentPlan")
     public IncidentPlanStruct incidentPlan;
 
     /**
-     * <p>Associated resource details.</p>
+     * <p>关联的资源详情。</p>
      */
     @NameInMap("resource")
     public IncidentResourceDetail resource;
 
     /**
-     * <p>Incident severity level.</p>
+     * <p>事件严重等级。</p>
      * 
      * <strong>example:</strong>
      * <p>P1</p>
@@ -50,7 +50,7 @@ public class IncidentStruct extends TeaModel {
     public String severity;
 
     /**
-     * <p>Status.</p>
+     * <p>当前状态。</p>
      * 
      * <strong>example:</strong>
      * <p>OPEN</p>
@@ -59,7 +59,7 @@ public class IncidentStruct extends TeaModel {
     public String status;
 
     /**
-     * <p>Time.</p>
+     * <p>时间戳</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -68,16 +68,16 @@ public class IncidentStruct extends TeaModel {
     public Long time;
 
     /**
-     * <p>Title.</p>
+     * <p>事件标题。</p>
      * 
      * <strong>example:</strong>
-     * <p>Excessively high database connection count.</p>
+     * <p>数据库连接数过高</p>
      */
     @NameInMap("title")
     public String title;
 
     /**
-     * <p>User ID.</p>
+     * <p>用户 ID。</p>
      * 
      * <strong>example:</strong>
      * <p>user-12345</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDigitalEmployeeSkillResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>350779DC-980D-58FD-BECB-D2275D2487CA</p>
      */

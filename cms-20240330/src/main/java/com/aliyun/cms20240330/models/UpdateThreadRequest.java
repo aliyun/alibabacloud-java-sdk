@@ -8,6 +8,8 @@ public class UpdateThreadRequest extends TeaModel {
     public java.util.Map<String, String> attributes;
 
     /**
+     * <p>The status of the session.</p>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */
@@ -15,8 +17,10 @@ public class UpdateThreadRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The title of the session.</p>
+     * 
      * <strong>example:</strong>
-     * <p>MY ANTOM Tech Team Annual Dinner Performance Lucky Draw</p>
+     * <p>title</p>
      */
     @NameInMap("title")
     public String title;

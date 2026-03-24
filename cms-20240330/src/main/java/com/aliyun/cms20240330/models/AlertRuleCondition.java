@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class AlertRuleCondition extends TeaModel {
     /**
-     * <p>Applicable condition type: SLS_CONDITION.
-     * Number of times the condition must be met before triggering an alert, default is 1.</p>
+     * <p>适用条件类型：SLS_CONDITION</p>
+     * <p>满足条件几次后告警，默认为1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -15,33 +15,33 @@ public class AlertRuleCondition extends TeaModel {
     public Integer alertCount;
 
     /**
-     * <p>Applicable condition type: SLS_CONDITION.
-     * SLS alert condition list.</p>
+     * <p>适用条件类型： SLS_CONDITION。</p>
+     * <p>SLS告警条件列表</p>
      */
     @NameInMap("caseList")
     public java.util.List<AlertRuleConditionCaseList> caseList;
 
     /**
-     * <p>Applicable condition type: APM_CONDITION.
-     * APM alert comparison condition list.</p>
+     * <p>适用条件类型：APM_CONDITION。</p>
+     * <p>APM告警比较条件列表</p>
      */
     @NameInMap("compareList")
     public java.util.List<AlertRuleConditionCompareList> compareList;
 
     /**
-     * <p>Applicable condition type: CMS_BASIC_CONDITION.
-     * Valid only when escalationType=composite; composite metric alert condition.</p>
+     * <p>适用条件类型：CMS_BASIC_CONDITION</p>
+     * <p>escalationType=composite时有效，组合指标告警条件</p>
      */
     @NameInMap("compositeEscalation")
     public AlertRuleConditionCompositeEscalation compositeEscalation;
 
     /**
-     * <p>Applicable condition type: CMS_BASIC_CONDITION.
-     * Valid values:</p>
+     * <p>适用条件类型：CMS_BASIC_CONDITION</p>
+     * <p>取值范围: </p>
      * <ul>
-     * <li>simple: Simple metric condition,</li>
-     * <li>composite: Composite metric condition,</li>
-     * <li>express: Expression condition.</li>
+     * <li>simple: 简单指标条件</li>
+     * <li>composite: 组合指标条件</li>
+     * <li>express: 表达式条件</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,15 +51,15 @@ public class AlertRuleCondition extends TeaModel {
     public String escalationType;
 
     /**
-     * <p>Applicable condition type: CMS_BASIC_CONDITION.
-     * Valid only when escalationType=composite; multi-metric composite alert condition.</p>
+     * <p>适用条件类型：CMS_BASIC_CONDITION。</p>
+     * <p>escalationType=composite时有效，多指标组合告警条件。</p>
      */
     @NameInMap("expressEscalation")
     public AlertRuleConditionExpressEscalation expressEscalation;
 
     /**
-     * <p>Applicable condition type: APM_CONDITION.
-     * Alert severity level when no data is available; if not specified, no alert will be triggered for missing data.</p>
+     * <p>适用条件类型：APM_CONDITION。</p>
+     * <p>无数据时的告警级别，不指定则不对无数据报警</p>
      * 
      * <strong>example:</strong>
      * <p>INFO</p>
@@ -68,8 +68,8 @@ public class AlertRuleCondition extends TeaModel {
     public String noDataAlertLevel;
 
     /**
-     * <p>Applicable condition type: APM_CONDITION.
-     * Fallback value when no data is available.</p>
+     * <p>适用条件类型：APM_CONDITION。</p>
+     * <p>无数据时补偿的值。</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,12 +78,12 @@ public class AlertRuleCondition extends TeaModel {
     public String noDataAppendValue;
 
     /**
-     * <p>Applicable condition type: CMS_BASIC_CONDITION.
-     * Handling method when no monitoring data is available. Valid values:</p>
+     * <p>适用条件类型：CMS_BASIC_CONDITION。</p>
+     * <p>无监控数据时报警的处理方式。取值：</p>
      * <ul>
-     * <li>KEEP_LAST_STATE (default): No action is taken.</li>
-     * <li>INSUFFICIENT_DATA: Alert with &quot;insufficient data&quot; message.</li>
-     * <li>OK: Treat as normal.</li>
+     * <li>KEEP_LAST_STATE（默认值）：不做任何处理。</li>
+     * <li>INSUFFICIENT_DATA：报警内容为无数据。</li>
+     * <li>OK：正常。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,16 +93,16 @@ public class AlertRuleCondition extends TeaModel {
     public String noDataPolicy;
 
     /**
-     * <p>Comparison operations to determine whether it is year-over-year (YoY) or month-over-month (MoM):</p>
+     * <p>比较操作，判断是否是同比、环比</p>
      * <ul>
-     * <li>Greater than (GT),</li>
-     * <li>Greater than or equal to (GTE),</li>
-     * <li>Less than (LT),</li>
-     * <li>Less than or equal to (LTE),</li>
-     * <li>Equal to (EQ),</li>
-     * <li>Not equal to (NE),</li>
-     * <li>Year-over-year increase (YOY_UP),</li>
-     * <li>Year-over-year decrease (YOY_DOWN).</li>
+     * <li>大于 GT</li>
+     * <li>大于等于 GTE</li>
+     * <li>小于 LT</li>
+     * <li>小于等于 LTE</li>
+     * <li>等于 EQ</li>
+     * <li>不等于 NE</li>
+     * <li>同比增加 YOY_UP</li>
+     * <li>同比减少 YOY_DOWN</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,8 +112,12 @@ public class AlertRuleCondition extends TeaModel {
     public String oper;
 
     /**
-     * <p>Applicable condition type: APM_CONDITION.
-     * Logical relationship between multiple conditions. Valid values: and, or.</p>
+     * <p>适用条件类型：APM_CONDITION。</p>
+     * <p>多个条件之间的逻辑关系。 取值：</p>
+     * <ul>
+     * <li>and</li>
+     * <li>or</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>and</p>
@@ -122,17 +126,19 @@ public class AlertRuleCondition extends TeaModel {
     public String relation;
 
     /**
-     * <p>Applicable condition type: CMS_BASIC_CONDITION.
-     * Only valid when escalationType=simple; specifies the alert condition for a single metric.</p>
+     * <p>适用条件类型：CMS_BASIC_CONDITION。</p>
+     * <p>仅当escalationType=simple时有效，针对单一指标设置的告警条件</p>
      */
     @NameInMap("simpleEscalation")
     public AlertRuleConditionSimpleEscalation simpleEscalation;
 
     /**
-     * <p>Rule condition type, valid values:</p>
-     * <p>SLS_CONDITION (SLS alert condition),
-     * APM_CONDITION (APM alert condition),
-     * CMS_BASIC_CONDITION (Basic Cloud Monitoring alert condition).</p>
+     * <p>规则条件类型，取值范围：</p>
+     * <ul>
+     * <li>SLS_CONDITION(SLS告警条件)</li>
+     * <li>APM_CONDITION(APM告警条件)</li>
+     * <li>CMS_BASIC_CONDITION(基础云监控告警条件)</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -142,7 +148,7 @@ public class AlertRuleCondition extends TeaModel {
     public String type;
 
     /**
-     * <p>Alert triggering threshold.</p>
+     * <p>告警触发的阈值。</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -269,7 +275,7 @@ public class AlertRuleCondition extends TeaModel {
 
     public static class AlertRuleConditionCaseList extends TeaModel {
         /**
-         * <p>Matching expression, example: logLevel: error.</p>
+         * <p>匹配表达式，示例：  logLevel: error</p>
          * 
          * <strong>example:</strong>
          * <p>logLevel: error</p>
@@ -278,7 +284,9 @@ public class AlertRuleCondition extends TeaModel {
         public String condition;
 
         /**
-         * <p>Count matching expression, examples: range combination: count &gt;= 3 &amp;&amp; count &lt;= 10; single range: count &gt;= 3.</p>
+         * <p>数量匹配表达式，示例：
+         * 区间组合： <strong>count</strong> &gt;= 3 &amp;&amp; <strong>count</strong> &lt;= 10
+         * 单区间： __count__ &gt;= 3</p>
          * 
          * <strong>example:</strong>
          * <p>count &gt;= 3</p>
@@ -287,7 +295,7 @@ public class AlertRuleCondition extends TeaModel {
         public String countCondition;
 
         /**
-         * <p>Alert severity level after condition is met.</p>
+         * <p>满足条件后的告警级别</p>
          * 
          * <strong>example:</strong>
          * <p>INFO</p>
@@ -296,13 +304,13 @@ public class AlertRuleCondition extends TeaModel {
         public String level;
 
         /**
-         * <p>Matching type: Has data / Has a specific number of data entries / Has matching data / Has a specific number of matching entries.</p>
-         * <p>Valid values:</p>
+         * <p>匹配类型： 有数据/有特定条数据/有数据匹配/有特定条数匹配。</p>
+         * <p>取值范围：</p>
          * <ul>
-         * <li>HasData: Has data.</li>
-         * <li>HasDataCount: Has a specific number of data entries.</li>
-         * <li>HasDataMatch: Has matching data.</li>
-         * <li>HasDataMatchCount: Has a specific number of matching entries.</li>
+         * <li>HasData: 有数据</li>
+         * <li>HasDataCount:  有特定条数据</li>
+         * <li>HasDataMatch：有数据匹配</li>
+         * <li>HasDataMatchCount：有特定条数匹配</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -352,7 +360,7 @@ public class AlertRuleCondition extends TeaModel {
 
     public static class AlertRuleConditionCompareListValueLevelList extends TeaModel {
         /**
-         * <p>Severity level corresponding to the threshold.</p>
+         * <p>阈值对应的级别</p>
          * 
          * <strong>example:</strong>
          * <p>INFO</p>
@@ -361,7 +369,7 @@ public class AlertRuleCondition extends TeaModel {
         public String level;
 
         /**
-         * <p>Comparison threshold.</p>
+         * <p>对比的阈值</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -394,10 +402,10 @@ public class AlertRuleCondition extends TeaModel {
 
     public static class AlertRuleConditionCompareList extends TeaModel {
         /**
-         * <p>Time series post-aggregation functions:</p>
+         * <p>时间序列后聚合函数</p>
          * <ul>
          * <li>count</li>
-         * <li>sum </li>
+         * <li>sum</li>
          * <li>avg</li>
          * <li>min</li>
          * <li>max</li>
@@ -413,7 +421,7 @@ public class AlertRuleCondition extends TeaModel {
         public String aggregate;
 
         /**
-         * <p>Data unit.</p>
+         * <p>数据单位</p>
          * 
          * <strong>example:</strong>
          * <p>%</p>
@@ -422,7 +430,7 @@ public class AlertRuleCondition extends TeaModel {
         public String baseUnit;
 
         /**
-         * <p>Display unit.</p>
+         * <p>展示单位</p>
          * 
          * <strong>example:</strong>
          * <p>%</p>
@@ -431,16 +439,16 @@ public class AlertRuleCondition extends TeaModel {
         public String displayUnit;
 
         /**
-         * <p>Comparison operations to determine whether it is year-over-year (YoY) or month-over-month (MoM):</p>
+         * <p>比较操作，判断是否是同比、环比</p>
          * <ul>
-         * <li>Greater than (GT),</li>
-         * <li>Greater than or equal to (GTE),</li>
-         * <li>Less than (LT),</li>
-         * <li>Less than or equal to (LTE),</li>
-         * <li>Equal to (EQ),</li>
-         * <li>Not equal to (NE),</li>
-         * <li>Year-over-year increase (YOY_UP),</li>
-         * <li>Year-over-year decrease (YOY_DOWN).</li>
+         * <li>大于 GT</li>
+         * <li>大于等于 GTE</li>
+         * <li>小于 LT</li>
+         * <li>小于等于 LTE</li>
+         * <li>等于 EQ</li>
+         * <li>不等于 NE</li>
+         * <li>同比增加 YOY_UP</li>
+         * <li>同比减少 YOY_DOWN</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -450,7 +458,7 @@ public class AlertRuleCondition extends TeaModel {
         public String oper;
 
         /**
-         * <p>Comparison threshold.</p>
+         * <p>对比的阈值</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -459,13 +467,14 @@ public class AlertRuleCondition extends TeaModel {
         public Double value;
 
         /**
-         * <p>List of alert severity levels for different values.</p>
+         * <p>不同值的报警级别的列表。</p>
          */
         @NameInMap("valueLevelList")
         public java.util.List<AlertRuleConditionCompareListValueLevelList> valueLevelList;
 
         /**
-         * <p>Year-over-year time unit (only applicable when oper=YOY_UP/YOY_DOWN): minute, hour, day, week, month.</p>
+         * <p>同比时间单位（仅对oper=YOY_UP/YOY_DOWN生效）
+         *  minute、hour、day、week、month</p>
          * 
          * <strong>example:</strong>
          * <p>month</p>
@@ -474,7 +483,7 @@ public class AlertRuleCondition extends TeaModel {
         public String yoyTimeUnit;
 
         /**
-         * <p>Year-over-year time value, used in conjunction with yoyTimeUnit.</p>
+         * <p>同比时间的值，与yoyTimeUnit配合使用</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -555,20 +564,20 @@ public class AlertRuleCondition extends TeaModel {
 
     public static class AlertRuleConditionCompositeEscalationEscalations extends TeaModel {
         /**
-         * <p>Threshold comparison operator, valid values:</p>
+         * <p>阈值比较符，取值范围：</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to.</li>
-         * <li>GreaterThanThreshold: greater than.</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to.</li>
-         * <li>LessThanThreshold: less than.</li>
-         * <li>NotEqualToThreshold: not equal to.</li>
-         * <li>EqualToThreshold: equal to.</li>
-         * <li>GreaterThanYesterday: increased compared to the same time yesterday.</li>
-         * <li>LessThanYesterday: decreased compared to the same time yesterday.</li>
-         * <li>GreaterThanLastWeek: increased compared to the same time last week.</li>
-         * <li>LessThanLastWeek: decreased compared to the same time last week.</li>
-         * <li>GreaterThanLastPeriod: increased compared to the previous period (MoM).</li>
-         * <li>LessThanLastPeriod: decreased compared to the previous period (MoM).</li>
+         * <li>GreaterThanOrEqualToThreshold：大于等于。</li>
+         * <li>GreaterThanThreshold：大于。</li>
+         * <li>LessThanOrEqualToThreshold：小于等于。</li>
+         * <li>LessThanThreshold：小于。</li>
+         * <li>NotEqualToThreshold：不等于。</li>
+         * <li>EqualToThreshold：等于。</li>
+         * <li>GreaterThanYesterday：同比昨天时间上涨。</li>
+         * <li>LessThanYesterday：同比昨天时间下降。</li>
+         * <li>GreaterThanLastWeek：同比上周同一时间上涨。</li>
+         * <li>LessThanLastWeek：同比上周同一时间下降。</li>
+         * <li>GreaterThanLastPeriod：环比上周期上涨。</li>
+         * <li>LessThanLastPeriod：环比上周期下降。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -578,7 +587,7 @@ public class AlertRuleCondition extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>Metric name.</p>
+         * <p>指标名称</p>
          * 
          * <strong>example:</strong>
          * <p>cpu_total</p>
@@ -587,7 +596,7 @@ public class AlertRuleCondition extends TeaModel {
         public String metricName;
 
         /**
-         * <p>Metric time window.</p>
+         * <p>指标的时间窗口</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -596,14 +605,14 @@ public class AlertRuleCondition extends TeaModel {
         public Long period;
 
         /**
-         * <p>Statistical method; the value of this parameter is determined by the Statistics column corresponding to the specified cloud product\&quot;s MetricName. This represents the statistical method for the monitoring metric. Example values:</p>
+         * <p>统计方法，该参数的取值由指定云产品的MetricName对应的Statistics列决定。  监控项的统计方法。取值示例：</p>
          * <ul>
-         * <li>$Maximum: maximum value.</li>
-         * <li>$Minimum: minimum value.</li>
-         * <li>$Average: average value.</li>
-         * <li>$Availability: availability (typically used for site monitoring).
-         * Note: &quot;$&quot; is a unified prefix symbol for monitoring metrics.</li>
+         * <li>$Maximum：最大值。</li>
+         * <li>$Minimum：最小值。</li>
+         * <li>$Average：平均值。</li>
+         * <li>$Availability：可用率（通常用于站点监控）</li>
          * </ul>
+         * <p>说明 $为监控项的统一前缀符号。</p>
          * 
          * <strong>example:</strong>
          * <p>$Maximum</p>
@@ -612,7 +621,7 @@ public class AlertRuleCondition extends TeaModel {
         public String statistics;
 
         /**
-         * <p>Alert threshold.</p>
+         * <p>告警阈值</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -669,13 +678,13 @@ public class AlertRuleCondition extends TeaModel {
 
     public static class AlertRuleConditionCompositeEscalation extends TeaModel {
         /**
-         * <p>List of multi-metric composite conditions.</p>
+         * <p>多指标的组合条件列表</p>
          */
         @NameInMap("escalations")
         public java.util.List<AlertRuleConditionCompositeEscalationEscalations> escalations;
 
         /**
-         * <p>Alert severity level triggered when the condition is met (multi-metric composite alerts support only one level).</p>
+         * <p>满足条件时触发的告警级别(多指标组合告警仅支持一个级别)</p>
          * 
          * <strong>example:</strong>
          * <p>INFO</p>
@@ -684,7 +693,7 @@ public class AlertRuleCondition extends TeaModel {
         public String level;
 
         /**
-         * <p>Relationship between multiple metric conditions; valid values are &quot;and&quot; or &quot;or&quot;.</p>
+         * <p>多个指标条件之间的关系，取值为and或or</p>
          * 
          * <strong>example:</strong>
          * <p>and</p>
@@ -693,7 +702,7 @@ public class AlertRuleCondition extends TeaModel {
         public String relation;
 
         /**
-         * <p>Number of times the condition must be met to trigger an alert.</p>
+         * <p>触发告警需满足条件的次数</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -742,10 +751,10 @@ public class AlertRuleCondition extends TeaModel {
 
     public static class AlertRuleConditionExpressEscalation extends TeaModel {
         /**
-         * <p>Alert severity level triggered when the condition is met (expression-based alerts support only one level): </p>
+         * <p>满足条件时触发的告警级别(表达式告警仅支持一个级别)</p>
          * <ul>
-         * <li>CRITICAL </li>
-         * <li>WARNING </li>
+         * <li>CRITICAL</li>
+         * <li>WARNING</li>
          * <li>INFO</li>
          * </ul>
          * 
@@ -756,7 +765,7 @@ public class AlertRuleCondition extends TeaModel {
         public String level;
 
         /**
-         * <p>Alert condition expression.</p>
+         * <p>告警条件表达式</p>
          * 
          * <strong>example:</strong>
          * <p>@cpu_total[60].$Average &gt; 60</p>
@@ -765,7 +774,7 @@ public class AlertRuleCondition extends TeaModel {
         public String rawExpression;
 
         /**
-         * <p>Number of times the condition must be met to trigger an alert.</p>
+         * <p>触发告警需满足条件的次数</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -806,20 +815,20 @@ public class AlertRuleCondition extends TeaModel {
 
     public static class AlertRuleConditionSimpleEscalationEscalations extends TeaModel {
         /**
-         * <p>Threshold comparison operator, valid values:</p>
+         * <p>阈值比较符，取值范围：</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to.</li>
-         * <li>GreaterThanThreshold: greater than.</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to.</li>
-         * <li>LessThanThreshold: less than.</li>
-         * <li>NotEqualToThreshold: not equal to.</li>
-         * <li>EqualToThreshold: equal to.</li>
-         * <li>GreaterThanYesterday: increased compared to the same time yesterday.</li>
-         * <li>LessThanYesterday: decreased compared to the same time yesterday.</li>
-         * <li>GreaterThanLastWeek: increased compared to the same time last week.</li>
-         * <li>LessThanLastWeek: decreased compared to the same time last week.</li>
-         * <li>GreaterThanLastPeriod: increased compared to the previous period (MoM).</li>
-         * <li>LessThanLastPeriod: decreased compared to the previous period (MoM).</li>
+         * <li>GreaterThanOrEqualToThreshold：大于等于。</li>
+         * <li>GreaterThanThreshold：大于。</li>
+         * <li>LessThanOrEqualToThreshold：小于等于。</li>
+         * <li>LessThanThreshold：小于。</li>
+         * <li>NotEqualToThreshold：不等于。</li>
+         * <li>EqualToThreshold：等于。</li>
+         * <li>GreaterThanYesterday：同比昨天时间上涨。</li>
+         * <li>LessThanYesterday：同比昨天时间下降。</li>
+         * <li>GreaterThanLastWeek：同比上周同一时间上涨。</li>
+         * <li>LessThanLastWeek：同比上周同一时间下降。</li>
+         * <li>GreaterThanLastPeriod：环比上周期上涨。</li>
+         * <li>LessThanLastPeriod：环比上周期下降。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -829,10 +838,10 @@ public class AlertRuleCondition extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>Alert severity level triggered when the condition is met (expression-based alerts support only one level): </p>
+         * <p>满足条件时触发的告警级别(表达式告警仅支持一个级别)</p>
          * <ul>
-         * <li>CRITICAL </li>
-         * <li>WARNING </li>
+         * <li>CRITICAL</li>
+         * <li>WARNING</li>
          * <li>INFO</li>
          * </ul>
          * 
@@ -843,7 +852,7 @@ public class AlertRuleCondition extends TeaModel {
         public String level;
 
         /**
-         * <p>Statistical method; the value of this parameter is determined by the Statistics column corresponding to the specified cloud product\&quot;s MetricName, for example: Maximum, Minimum, and Average.</p>
+         * <p>统计方法，该参数的取值由指定云产品的MetricName对应的Statistics列决定，例如：Maximum、Minimum 和 Average</p>
          * 
          * <strong>example:</strong>
          * <p>Average</p>
@@ -852,7 +861,7 @@ public class AlertRuleCondition extends TeaModel {
         public String statistics;
 
         /**
-         * <p>Alert threshold.</p>
+         * <p>告警阈值</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -861,7 +870,7 @@ public class AlertRuleCondition extends TeaModel {
         public Double threshold;
 
         /**
-         * <p>Number of times the condition must be met to trigger an alert.</p>
+         * <p>触发告警需满足条件的次数</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -918,14 +927,14 @@ public class AlertRuleCondition extends TeaModel {
 
     public static class AlertRuleConditionSimpleEscalation extends TeaModel {
         /**
-         * <p>List of conditions; for an alert rule with multiple severity levels, each level corresponds to one condition object.</p>
+         * <p>条件列表，同一个告警规则对应多个级别的，每一个级别会有一个条件对象。</p>
          */
         @NameInMap("escalations")
         public java.util.List<AlertRuleConditionSimpleEscalationEscalations> escalations;
 
         /**
-         * <p>Applicable condition type: CMS_BASIC_CONDITION.
-         * Metric associated with the alert condition.</p>
+         * <p>适用条件类型：CMS_BASIC_CONDITION。</p>
+         * <p>告警条件关联的指标</p>
          * 
          * <strong>example:</strong>
          * <p>cpu_total</p>
@@ -934,7 +943,7 @@ public class AlertRuleCondition extends TeaModel {
         public String metricName;
 
         /**
-         * <p>Metric time window, in seconds.</p>
+         * <p>指标的时间窗口，单位秒</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

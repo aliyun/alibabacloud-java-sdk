@@ -4,24 +4,45 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleNotificationFilter extends TeaModel {
+    /**
+     * <p>联系人ID过滤</p>
+     */
     @NameInMap("contacts")
     public java.util.List<String> contacts;
 
+    /**
+     * <p>自定义webhook ID过滤</p>
+     */
     @NameInMap("customWebhooks")
     public java.util.List<String> customWebhooks;
 
+    /**
+     * <p>钉钉webhook ID过滤</p>
+     */
     @NameInMap("dingWebhooks")
     public java.util.List<String> dingWebhooks;
 
+    /**
+     * <p>飞书webhook ID过滤</p>
+     */
     @NameInMap("fsWebhooks")
     public java.util.List<String> fsWebhooks;
 
+    /**
+     * <p>联系人组过滤配置</p>
+     */
     @NameInMap("groups")
     public java.util.List<String> groups;
 
+    /**
+     * <p>slack webhook ID过滤列表</p>
+     */
     @NameInMap("slackWebhooks")
     public java.util.List<String> slackWebhooks;
 
+    /**
+     * <p>微信webhook ID过滤</p>
+     */
     @NameInMap("wxWebhooks")
     public java.util.List<String> wxWebhooks;
 

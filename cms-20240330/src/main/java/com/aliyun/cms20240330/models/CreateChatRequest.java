@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateChatRequest extends TeaModel {
     /**
+     * <p>Action type: create (default), reconnect, or stop</p>
+     * 
      * <strong>example:</strong>
      * <p>create</p>
      */
@@ -12,22 +14,45 @@ public class CreateChatRequest extends TeaModel {
     public String action;
 
     /**
+     * <p>Digital employee name</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("digitalEmployeeName")
     public String digitalEmployeeName;
 
+    /**
+     * <p>Messages list</p>
+     */
     @NameInMap("messages")
     public java.util.List<CreateChatRequestMessages> messages;
 
     /**
+     * <p>Session thread ID</p>
+     * 
      * <strong>example:</strong>
      * <p>thread_id01</p>
      */
     @NameInMap("threadId")
     public String threadId;
 
+    /**
+     * <p>Variables list</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;workspace&quot;: &quot;test&quot;,
+     *   &quot;region&quot;: &quot;cn-beijing&quot;,
+     *   &quot;project&quot;: &quot;test&quot;,
+     *   &quot;language&quot;: &quot;zh&quot;,
+     *   &quot;timeZone&quot;: &quot;Asia/Shanghai&quot;,
+     *   &quot;timeStamp&quot;: &quot;1768893948&quot;,
+     *   &quot;startTime&quot;: 1768887171,
+     *   &quot;endTime&quot;: 1768890771,
+     *   &quot;skill&quot;: &quot;trace&quot;
+     * }</p>
+     */
     @NameInMap("variables")
     public java.util.Map<String, ?> variables;
 
@@ -78,6 +103,8 @@ public class CreateChatRequest extends TeaModel {
 
     public static class CreateChatRequestMessagesContents extends TeaModel {
         /**
+         * <p>Content type</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -85,6 +112,8 @@ public class CreateChatRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>Value of the content</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -115,10 +144,15 @@ public class CreateChatRequest extends TeaModel {
     }
 
     public static class CreateChatRequestMessages extends TeaModel {
+        /**
+         * <p>Text or multimodal array</p>
+         */
         @NameInMap("contents")
         public java.util.List<CreateChatRequestMessagesContents> contents;
 
         /**
+         * <p>Unique identifier for the message</p>
+         * 
          * <strong>example:</strong>
          * <p>message_id02</p>
          */
@@ -126,12 +160,17 @@ public class CreateChatRequest extends TeaModel {
         public String messageId;
 
         /**
+         * <p>Role of the message</p>
+         * 
          * <strong>example:</strong>
          * <p>system</p>
          */
         @NameInMap("role")
         public String role;
 
+        /**
+         * <p>Tools calls list</p>
+         */
         @NameInMap("tools")
         public java.util.List<java.util.Map<String, ?>> tools;
 

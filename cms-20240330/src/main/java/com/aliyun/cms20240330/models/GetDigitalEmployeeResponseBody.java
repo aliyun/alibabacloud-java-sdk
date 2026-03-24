@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDigitalEmployeeResponseBody extends TeaModel {
     /**
+     * <p>The time when the digital employee was created.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The default rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -21,6 +24,8 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String defaultRule;
 
     /**
+     * <p>The description of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -28,19 +33,32 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>The type of the digital employee.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("employeeType")
     public String employeeType;
 
+    /**
+     * <p>A list of knowledge bases.</p>
+     */
     @NameInMap("knowledges")
     public GetDigitalEmployeeResponseBodyKnowledges knowledges;
 
     /**
+     * <p>The name of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -48,6 +66,8 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -55,6 +75,8 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
      */
@@ -62,6 +84,8 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-ae******ey</p>
      */
@@ -69,16 +93,22 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::12345678912:role/testrole</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
     /**
+     * <p>The time when the digital employee was last updated.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -198,6 +228,8 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
     public static class GetDigitalEmployeeResponseBodyKnowledgesBailian extends TeaModel {
         /**
+         * <p>The properties of the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -205,6 +237,8 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public String attributes;
 
         /**
+         * <p>The ID of the Bailian index.</p>
+         * 
          * <strong>example:</strong>
          * <p>index-xxxx</p>
          */
@@ -212,6 +246,8 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public String indexId;
 
         /**
+         * <p>The region of the Bailian knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -219,6 +255,8 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The ID of the Bailian workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>llm-xxxxx</p>
          */
@@ -265,9 +303,15 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     }
 
     public static class GetDigitalEmployeeResponseBodyKnowledges extends TeaModel {
+        /**
+         * <p>A list of Bailian knowledge bases.</p>
+         */
         @NameInMap("bailian")
         public java.util.List<GetDigitalEmployeeResponseBodyKnowledgesBailian> bailian;
 
+        /**
+         * <p>A list of Standard Operating Procedure (SOP) knowledge bases.</p>
+         */
         @NameInMap("sop")
         public java.util.List<java.util.Map<String, ?>> sop;
 

@@ -4,10 +4,6 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class NotifyChannel extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;DingTalk&quot;</p>
-     */
     @NameInMap("channelType")
     public String channelType;
 

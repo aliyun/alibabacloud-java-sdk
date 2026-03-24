@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDigitalEmployeeRequest extends TeaModel {
     /**
+     * <p>Default rule</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public String defaultRule;
 
     /**
+     * <p>Description</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,16 +23,23 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Digital employee display name</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>List of knowledge bases</p>
+     */
     @NameInMap("knowledges")
     public UpdateDigitalEmployeeRequestKnowledges knowledges;
 
     /**
+     * <p>Role ARN</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::12345678912:role/testrole</p>
      */
@@ -82,6 +93,8 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestKnowledgesBailian extends TeaModel {
         /**
+         * <p>Knowledge base attributes</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -89,6 +102,8 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String attributes;
 
         /**
+         * <p>Bailian index ID</p>
+         * 
          * <strong>example:</strong>
          * <p>index-xxxx</p>
          */
@@ -96,6 +111,8 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String indexId;
 
         /**
+         * <p>Region of the Bailian knowledge base</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -103,6 +120,8 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String region;
 
         /**
+         * <p>Bailian workspace ID</p>
+         * 
          * <strong>example:</strong>
          * <p>llm-xxxx</p>
          */
@@ -149,9 +168,15 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     }
 
     public static class UpdateDigitalEmployeeRequestKnowledges extends TeaModel {
+        /**
+         * <p>Bailian knowledge base list</p>
+         */
         @NameInMap("bailian")
         public java.util.List<UpdateDigitalEmployeeRequestKnowledgesBailian> bailian;
 
+        /**
+         * <p>SOP knowledge base list</p>
+         */
         @NameInMap("sop")
         public java.util.List<java.util.Map<String, ?>> sop;
 

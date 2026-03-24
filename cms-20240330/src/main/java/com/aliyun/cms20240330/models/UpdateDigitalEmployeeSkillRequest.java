@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
     /**
+     * <p>Description</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Display name</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,7 @@ public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Is enabled</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,12 +33,15 @@ public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>List of skill files</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("files")
     public java.util.List<UpdateDigitalEmployeeSkillRequestFiles> files;
 
     /**
+     * <p>Remark</p>
+     * 
      * <strong>example:</strong>
      * <p>remark</p>
      */
@@ -87,6 +95,8 @@ public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeSkillRequestFiles extends TeaModel {
         /**
+         * <p>File content</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          * <h2>name: skill
@@ -98,6 +108,8 @@ public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>File name</p>
+         * 
          * <strong>example:</strong>
          * <p>SKILL.md</p>
          */

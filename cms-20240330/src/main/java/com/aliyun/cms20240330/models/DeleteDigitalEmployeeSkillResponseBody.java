@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDigitalEmployeeSkillResponseBody extends TeaModel {
     /**
+     * <p>ID of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>0CEC5375-XXXX-XXXX-XXXX-9A629907C1F0</p>
      */

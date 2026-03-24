@@ -4,20 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class TransformAction extends TeaModel {
+    /**
+     * <p>筛选配置</p>
+     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
+     * <p>标签名</p>
+     * 
      * <strong>example:</strong>
      * <p>labelkey1</p>
      */
     @NameInMap("labelKey")
     public String labelKey;
 
+    /**
+     * <p>Mapping配置。</p>
+     */
     @NameInMap("mapping")
     public java.util.Map<String, String> mapping;
 
     /**
+     * <p>正则表达式</p>
+     * 
      * <strong>example:</strong>
      * <p>(.<em>):(.</em>)</p>
      */
@@ -25,6 +35,8 @@ public class TransformAction extends TeaModel {
     public String regExp;
 
     /**
+     * <p>引用路径</p>
+     * 
      * <strong>example:</strong>
      * <p>data.subject</p>
      */
@@ -32,6 +44,8 @@ public class TransformAction extends TeaModel {
     public String source;
 
     /**
+     * <p>目标位置</p>
+     * 
      * <strong>example:</strong>
      * <p>SUBJECT</p>
      */
@@ -39,6 +53,8 @@ public class TransformAction extends TeaModel {
     public String target;
 
     /**
+     * <p>转换类型</p>
+     * 
      * <strong>example:</strong>
      * <p>SET_FIELD</p>
      */
@@ -46,6 +62,8 @@ public class TransformAction extends TeaModel {
     public String type;
 
     /**
+     * <p>设置的值</p>
+     * 
      * <strong>example:</strong>
      * <p>value1</p>
      */
@@ -53,6 +71,8 @@ public class TransformAction extends TeaModel {
     public String value;
 
     /**
+     * <p>变量名</p>
+     * 
      * <strong>example:</strong>
      * <p>var1</p>
      */

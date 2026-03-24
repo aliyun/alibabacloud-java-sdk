@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class IncidentContactStruct extends TeaModel {
     /**
-     * <p>Channel list.</p>
+     * <p>通道列表</p>
      */
     @NameInMap("channel")
     public java.util.List<String> channel;
 
     /**
-     * <p>Contact ID.</p>
+     * <p>联系人id</p>
      * 
      * <strong>example:</strong>
      * <p>627415</p>
@@ -20,7 +20,7 @@ public class IncidentContactStruct extends TeaModel {
     public String contactId;
 
     /**
-     * <p>Contact type.</p>
+     * <p>联系类型。</p>
      * 
      * <strong>example:</strong>
      * <p>GROUP</p>

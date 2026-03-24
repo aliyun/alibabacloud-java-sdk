@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return. The maximum value is 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,16 +14,22 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to start the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>A list of resource IDs.</p>
+     */
     @NameInMap("resourceId")
     public String resourceIdShrink;
 
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,10 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags. These are used as filter conditions for the query.</p>
+     * <p>You can specify up to 20 tags.</p>
+     */
     @NameInMap("tag")
     public String tagShrink;
 

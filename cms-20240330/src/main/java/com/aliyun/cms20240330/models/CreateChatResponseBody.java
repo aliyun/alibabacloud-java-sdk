@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class CreateChatResponseBody extends TeaModel {
+    /**
+     * <p>Messages list</p>
+     */
     @NameInMap("messages")
     public java.util.List<CreateChatResponseBodyMessages> messages;
 
     /**
+     * <p>Unique identifier for the request</p>
+     * 
      * <strong>example:</strong>
      * <p>0CEC5375-XXXX-XXXX-XXXX-9A629907C1F0</p>
      */
@@ -15,6 +20,8 @@ public class CreateChatResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Global identifier for the request trace</p>
+     * 
      * <strong>example:</strong>
      * <p>21504600000008405622576e3b48</p>
      */
@@ -51,33 +58,51 @@ public class CreateChatResponseBody extends TeaModel {
     }
 
     public static class CreateChatResponseBodyMessages extends TeaModel {
+        /**
+         * <p>Agents list</p>
+         */
         @NameInMap("agents")
         public java.util.List<java.util.Map<String, ?>> agents;
 
+        /**
+         * <p>Artifacts information</p>
+         */
         @NameInMap("artifacts")
         public java.util.List<java.util.Map<String, ?>> artifacts;
 
         /**
+         * <p>Call ID of the current node</p>
+         * 
          * <strong>example:</strong>
          * <p>call_search_001</p>
          */
         @NameInMap("callId")
         public String callId;
 
+        /**
+         * <p>Messages contents array</p>
+         */
         @NameInMap("contents")
         public java.util.List<java.util.Map<String, ?>> contents;
 
         /**
+         * <p>Detailed information, such as tool progress description</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("detail")
         public String detail;
 
+        /**
+         * <p>Events list</p>
+         */
         @NameInMap("events")
         public java.util.List<java.util.Map<String, ?>> events;
 
         /**
+         * <p>Call ID of the parent node</p>
+         * 
          * <strong>example:</strong>
          * <p>sess_abc123</p>
          */
@@ -85,6 +110,8 @@ public class CreateChatResponseBody extends TeaModel {
         public String parentCallId;
 
         /**
+         * <p>Message role</p>
+         * 
          * <strong>example:</strong>
          * <p>tool</p>
          */
@@ -92,6 +119,8 @@ public class CreateChatResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>Event sequence number. This number increments to preserve event order.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -99,22 +128,35 @@ public class CreateChatResponseBody extends TeaModel {
         public Integer seq;
 
         /**
+         * <p>UNIX timestamp (seconds)</p>
+         * 
          * <strong>example:</strong>
          * <p>1765000005</p>
          */
         @NameInMap("timestamp")
         public String timestamp;
 
+        /**
+         * <p>Tools calls array</p>
+         */
         @NameInMap("tools")
         public java.util.List<java.util.Map<String, ?>> tools;
 
         /**
+         * <p>Special event type, such as done, error, or heartbeat</p>
+         * 
          * <strong>example:</strong>
          * <p>done</p>
          */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Message version number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v0.1.0</p>
+         */
         @NameInMap("version")
         public String version;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceRequest extends TeaModel {
     /**
-     * <p>Extended attributes.</p>
+     * <p>The extended properties.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;language&quot;:&quot;java&quot;}</p>
@@ -14,7 +14,7 @@ public class CreateServiceRequest extends TeaModel {
     public String attributes;
 
     /**
-     * <p>Service description, only valid when <code>serviceType=RUM</code>.</p>
+     * <p>The service description. This parameter is valid only when serviceType is set to RUM.</p>
      * 
      * <strong>example:</strong>
      * <p>mag测试应用</p>
@@ -23,7 +23,7 @@ public class CreateServiceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Display name, only valid when <code>serviceType=RUM</code>.</p>
+     * <p>The display name. This parameter is valid only when serviceType is set to RUM.</p>
      * 
      * <strong>example:</strong>
      * <p>mag测试应用</p>
@@ -32,7 +32,7 @@ public class CreateServiceRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Application ID, generally not required to be specified.</p>
+     * <p>The application ID. You do not typically need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>bx3udsi5ie@ed2ba6beebdb6de</p>
@@ -41,14 +41,16 @@ public class CreateServiceRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>rg-xxekxxzuad5zzzz</p>
+     * <p>rg-xxxxxxx</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>Service name</p>
+     * <p>The service name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +60,7 @@ public class CreateServiceRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>Service status, not required for service creation.</p>
+     * <p>The service status. Do not specify this parameter when you create a service.</p>
      * 
      * <strong>example:</strong>
      * <p>Created</p>
@@ -67,7 +69,7 @@ public class CreateServiceRequest extends TeaModel {
     public String serviceStatus;
 
     /**
-     * <p>Service type</p>
+     * <p>The service type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,6 +78,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("serviceType")
     public String serviceType;
 
+    /**
+     * <p>An array of tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<CreateServiceRequestTags> tags;
 
@@ -158,6 +163,8 @@ public class CreateServiceRequest extends TeaModel {
 
     public static class CreateServiceRequestTags extends TeaModel {
         /**
+         * <p>The <code>key</code> of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>env</p>
          */
@@ -165,6 +172,8 @@ public class CreateServiceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The <code>value</code> of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyDashboardsRequest extends TeaModel {
     /**
-     * <p>Addon Name.</p>
+     * <p>The add-on name.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-default</p>
@@ -14,7 +14,7 @@ public class ListIntegrationPolicyDashboardsRequest extends TeaModel {
     public String addonName;
 
     /**
-     * <p>Query Language</p>
+     * <p>The query language.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,7 +23,7 @@ public class ListIntegrationPolicyDashboardsRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>Component Scenario.</p>
+     * <p>The component scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>databse</p>

@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to remove all tags from the specified resources. Valid values:</p>
+     * <p>false (default): No
+     * true: Yes</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,12 +16,14 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>A list of resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("resourceId")
     public String resourceIdShrink;
 
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +32,10 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag key.</p>
+     * <p>You can detach tags with up to 20 tag keys.</p>
+     */
     @NameInMap("tagKey")
     public String tagKeyShrink;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateNotifyStrategyResponseBody extends TeaModel {
     /**
+     * <p>The UUID of the notification policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>12312-31-23-123-1-23123</p>
      */
@@ -12,7 +14,7 @@ public class UpdateNotifyStrategyResponseBody extends TeaModel {
     public String notifyStrategyId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request. This is a unique identifier for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>

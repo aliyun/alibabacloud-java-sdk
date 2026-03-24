@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
     /**
-     * <p>List of dashboards.</p>
+     * <p>The list of dashboards.</p>
      */
     @NameInMap("dashboards")
     public java.util.List<ListIntegrationPolicyDashboardsResponseBodyDashboards> dashboards;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
@@ -20,7 +20,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Number of components.</p>
+     * <p>The number of components.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,9 +59,9 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyDashboardsResponseBodyDashboards extends TeaModel {
         /**
-         * <p>Dashboard engine:
-         * grafana: shared grafana.
-         * cms: cms self-developed dashboard engine.</p>
+         * <p>The dashboard engine. Valid values:
+         * grafana: shared Grafana.
+         * cms: the self-developed dashboard engine of CloudMonitor.</p>
          * 
          * <strong>example:</strong>
          * <p>grafana</p>
@@ -70,7 +70,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>UID of the dashboard folder.</p>
+         * <p>The UID of the dashboard folder.</p>
          * 
          * <strong>example:</strong>
          * <p>Env-AAA</p>
@@ -79,7 +79,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         public String folderUid;
 
         /**
-         * <p>Dashboard name</p>
+         * <p>The dashboard name.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-pod</p>
@@ -88,7 +88,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Region</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hongkong</p>
@@ -97,13 +97,13 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>List of tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<String> tags;
 
         /**
-         * <p>Title of the UI module (not name)</p>
+         * <p>The title of the UI module. This is different from the name parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -112,7 +112,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>ID of the current Alibaba Cloud primary account, read-only</p>
+         * <p>The ID of the current Alibaba Cloud account. This parameter is read-only.</p>
          * 
          * <strong>example:</strong>
          * <p>1258199346721590</p>
@@ -121,7 +121,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         public String uid;
 
         /**
-         * <p>pagerDuty integration webhook. Supports V1 and V2 versions</p>
+         * <p>The webhook URL for PagerDuty integration. V1 and V2 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://agi.alicdn.com/user/0/0_0_5255362686.png?x-oss-process=image/quality,q_75/format,jpg&file=1734574878007.jpg">https://agi.alicdn.com/user/0/0_0_5255362686.png?x-oss-process=image/quality,q_75/format,jpg&amp;file=1734574878007.jpg</a></p>

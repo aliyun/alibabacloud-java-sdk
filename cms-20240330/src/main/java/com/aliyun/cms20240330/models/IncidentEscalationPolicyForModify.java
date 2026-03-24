@@ -4,17 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentEscalationPolicyForModify extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>workspace api monitor create test</p>
-     */
     @NameInMap("description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("enable")
     public Boolean enable;
 
@@ -23,9 +15,6 @@ public class IncidentEscalationPolicyForModify extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>&quot;Critical-Alert-Escalation&quot;</p>
      */
     @NameInMap("name")
     public String name;

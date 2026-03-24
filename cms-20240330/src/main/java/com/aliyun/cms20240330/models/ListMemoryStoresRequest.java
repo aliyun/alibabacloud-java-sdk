@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMemoryStoresRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return. The maximum value is 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListMemoryStoresRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The name of the memory store.</p>
+     * 
      * <strong>example:</strong>
      * <p>qianyi_test_1</p>
      */
@@ -19,6 +23,8 @@ public class ListMemoryStoresRequest extends TeaModel {
     public String memoryStoreName;
 
     /**
+     * <p>The token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx</p>
      */

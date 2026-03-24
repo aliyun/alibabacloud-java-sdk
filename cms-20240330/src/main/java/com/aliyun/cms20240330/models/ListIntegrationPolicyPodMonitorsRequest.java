@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyPodMonitorsRequest extends TeaModel {
     /**
-     * <p>Addon Release name.</p>
+     * <p>The name of the add-on release.</p>
      * 
      * <strong>example:</strong>
      * <p>release-123456789</p>
@@ -14,7 +14,7 @@ public class ListIntegrationPolicyPodMonitorsRequest extends TeaModel {
     public String addonReleaseName;
 
     /**
-     * <p>Whether to encrypt Yaml.</p>
+     * <p>Specifies whether to encrypt the YAML file.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ListIntegrationPolicyPodMonitorsRequest extends TeaModel {
     public Boolean encryptYaml;
 
     /**
-     * <p>Namespace.</p>
+     * <p>The namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

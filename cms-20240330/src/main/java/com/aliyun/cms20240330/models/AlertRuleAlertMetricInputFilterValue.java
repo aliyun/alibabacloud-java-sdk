@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlertRuleAlertMetricInputFilterValue extends TeaModel {
     /**
-     * <p>Dimension of the filter condition.</p>
+     * <p>过滤条件的维度</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AlertRuleAlertMetricInputFilterValue extends TeaModel {
     public String dim;
 
     /**
-     * <p>Filter Condition Operator.</p>
+     * <p>过滤条件操作符</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class AlertRuleAlertMetricInputFilterValue extends TeaModel {
     public String opt;
 
     /**
-     * <p>Filter Condition Value.</p>
+     * <p>过滤条件值</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class IncidentMemberStruct extends TeaModel {
     /**
-     * <p>Acknowledgement Information Structure.</p>
+     * <p>确认信息结构体。</p>
      */
     @NameInMap("acknowledge")
     public IncidentMemberStructAcknowledge acknowledge;
 
     /**
-     * <p>Contact ID.</p>
+     * <p>联系人ID。</p>
      * 
      * <strong>example:</strong>
      * <p>user-12345</p>
@@ -20,19 +20,19 @@ public class IncidentMemberStruct extends TeaModel {
     public String contactId;
 
     /**
-     * <p>Contact list.</p>
+     * <p>联系人列表。</p>
      */
     @NameInMap("contacts")
     public java.util.List<IncidentMemberStructContacts> contacts;
 
     /**
-     * <p>Escalation phase information.</p>
+     * <p>升级阶段信息。</p>
      */
     @NameInMap("escalation")
     public IncidentMemberStructEscalation escalation;
 
     /**
-     * <p>Incident ID.</p>
+     * <p>事件ID。</p>
      * 
      * <strong>example:</strong>
      * <p>incident-001</p>
@@ -41,7 +41,7 @@ public class IncidentMemberStruct extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>Event Member ID.</p>
+     * <p>事件成员ID。</p>
      * 
      * <strong>example:</strong>
      * <p>member-001</p>
@@ -50,13 +50,13 @@ public class IncidentMemberStruct extends TeaModel {
     public String incidentMemberId;
 
     /**
-     * <p>Schedule group.</p>
+     * <p>调度组。</p>
      */
     @NameInMap("scheduleGroup")
     public IncidentMemberStructScheduleGroup scheduleGroup;
 
     /**
-     * <p>Time.</p>
+     * <p>时间。</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-08 10:18:58</p>
@@ -65,7 +65,7 @@ public class IncidentMemberStruct extends TeaModel {
     public Long time;
 
     /**
-     * <p>User ID.</p>
+     * <p>用户ID。</p>
      * 
      * <strong>example:</strong>
      * <p>4123456</p>
@@ -152,7 +152,7 @@ public class IncidentMemberStruct extends TeaModel {
 
     public static class IncidentMemberStructAcknowledge extends TeaModel {
         /**
-         * <p>Acknowledgement level.</p>
+         * <p>确认级别。</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -161,7 +161,7 @@ public class IncidentMemberStruct extends TeaModel {
         public String breakLevel;
 
         /**
-         * <p>Verification time.</p>
+         * <p>验证时间。</p>
          * 
          * <strong>example:</strong>
          * <p>1741234567890</p>
@@ -194,7 +194,7 @@ public class IncidentMemberStruct extends TeaModel {
 
     public static class IncidentMemberStructContacts extends TeaModel {
         /**
-         * <p>Channel.</p>
+         * <p>通道。</p>
          * 
          * <strong>example:</strong>
          * <p>dingtalk</p>
@@ -203,7 +203,7 @@ public class IncidentMemberStruct extends TeaModel {
         public String channel;
 
         /**
-         * <p>Contact ID (masked).</p>
+         * <p>联系人 ID（脱敏）</p>
          * 
          * <strong>example:</strong>
          * <p>user-12345</p>
@@ -236,16 +236,16 @@ public class IncidentMemberStruct extends TeaModel {
 
     public static class IncidentMemberStructEscalation extends TeaModel {
         /**
-         * <p>Description.</p>
+         * <p>描述。</p>
          * 
          * <strong>example:</strong>
-         * <p>Notify the operations team.</p>
+         * <p>通知运维团队</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>Event Escalation ID.</p>
+         * <p>事件升级ID。</p>
          * 
          * <strong>example:</strong>
          * <p>escalation-001</p>
@@ -254,16 +254,16 @@ public class IncidentMemberStruct extends TeaModel {
         public String incidentEscalationId;
 
         /**
-         * <p>Name.</p>
+         * <p>名称。</p>
          * 
          * <strong>example:</strong>
-         * <p>Phase one.</p>
+         * <p>第一阶段</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>Escalation phase index.</p>
+         * <p>升级阶段索引。</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -272,10 +272,10 @@ public class IncidentMemberStruct extends TeaModel {
         public String stageIndex;
 
         /**
-         * <p>Title.</p>
+         * <p>标题。</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert escalated to the operations team.</p>
+         * <p>告警升级至运维团队</p>
          */
         @NameInMap("title")
         public String title;
@@ -329,7 +329,7 @@ public class IncidentMemberStruct extends TeaModel {
 
     public static class IncidentMemberStructScheduleGroup extends TeaModel {
         /**
-         * <p>Contact ID.</p>
+         * <p>联系人ID。</p>
          * 
          * <strong>example:</strong>
          * <p>group-001</p>
@@ -338,10 +338,10 @@ public class IncidentMemberStruct extends TeaModel {
         public String contactId;
 
         /**
-         * <p>Name.</p>
+         * <p>名称。</p>
          * 
          * <strong>example:</strong>
-         * <p>Night shift duty team.</p>
+         * <p>夜间值班组</p>
          */
         @NameInMap("name")
         public String name;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUmodelRequest extends TeaModel {
     /**
-     * <p>Umodel description</p>
+     * <p>The description of the Umodel.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>

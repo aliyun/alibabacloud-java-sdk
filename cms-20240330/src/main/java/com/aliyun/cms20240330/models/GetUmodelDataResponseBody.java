@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetUmodelDataResponseBody extends TeaModel {
     /**
-     * <p>Error information</p>
+     * <p>The error messages.</p>
      */
     @NameInMap("errors")
     public java.util.List<GetUmodelDataResponseBodyErrors> errors;
 
     /**
-     * <p>List of node link relationships</p>
+     * <p>The list of links between nodes.</p>
      */
     @NameInMap("links")
     public java.util.List<?> links;
 
     /**
-     * <p>List of nodes</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("nodes")
     public java.util.List<?> nodes;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123-123-234-345-123</p>
@@ -32,7 +32,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of node links</p>
+     * <p>The total number of links between nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -41,7 +41,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
     public Integer totalLinksCount;
 
     /**
-     * <p>Total number of nodes</p>
+     * <p>The total number of nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -104,7 +104,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
 
     public static class GetUmodelDataResponseBodyErrors extends TeaModel {
         /**
-         * <p>Details.</p>
+         * <p>The detailed information.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -113,7 +113,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Error type</p>
+         * <p>The type of the error.</p>
          * 
          * <strong>example:</strong>
          * <p>external</p>

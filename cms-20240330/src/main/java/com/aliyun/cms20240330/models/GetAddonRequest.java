@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAddonRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh and en. Default value: zh.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class GetAddonRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The version number of the add-on.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>

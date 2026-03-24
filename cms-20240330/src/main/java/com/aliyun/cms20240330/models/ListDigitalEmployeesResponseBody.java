@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListDigitalEmployeesResponseBody extends TeaModel {
+    /**
+     * <p>List of digital employees.</p>
+     */
     @NameInMap("digitalEmployees")
     public java.util.List<ListDigitalEmployeesResponseBodyDigitalEmployees> digitalEmployees;
 
     /**
+     * <p>Maximum number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,8 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
      */
@@ -22,6 +29,8 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
      */
@@ -29,6 +38,8 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>56</p>
      */
@@ -82,6 +93,8 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian extends TeaModel {
         /**
+         * <p>Knowledge base attributes.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -89,6 +102,8 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String attributes;
 
         /**
+         * <p>Bailian index ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>index-xxxx</p>
          */
@@ -96,6 +111,8 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String indexId;
 
         /**
+         * <p>Region of the Bailian knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -103,6 +120,8 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>Bailian workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>llm-xxxx</p>
          */
@@ -149,9 +168,15 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
     }
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges extends TeaModel {
+        /**
+         * <p>Bailian knowledge base list.</p>
+         */
         @NameInMap("bailian")
         public java.util.List<ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian> bailian;
 
+        /**
+         * <p>SOP knowledge base list.</p>
+         */
         @NameInMap("sop")
         public java.util.List<java.util.Map<String, ?>> sop;
 
@@ -180,6 +205,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployees extends TeaModel {
         /**
+         * <p>Creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +215,8 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Default rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -196,6 +224,8 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String defaultRule;
 
         /**
+         * <p>Description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -203,19 +233,32 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Digital employee display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <p>Digital employee type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
         @NameInMap("employeeType")
         public String employeeType;
 
+        /**
+         * <p>List of knowledge bases.</p>
+         */
         @NameInMap("knowledges")
         public ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges knowledges;
 
         /**
+         * <p>Digital employee name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -223,6 +266,8 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-ae******ey</p>
          */
@@ -230,16 +275,22 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>Role ARN.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:ram::12345678912:role/testrole</p>
          */
         @NameInMap("roleArn")
         public String roleArn;
 
+        /**
+         * <p>Tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
         /**
+         * <p>Update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

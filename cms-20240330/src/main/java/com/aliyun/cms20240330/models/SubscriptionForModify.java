@@ -4,42 +4,20 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SubscriptionForModify extends TeaModel {
-    /**
-     * <p>Description.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>workspace test</p>
-     */
     @NameInMap("description")
     public String description;
 
-    /**
-     * <p>Filtering settings.</p>
-     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
-    /**
-     * <p>Notification policy UUID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123123</p>
-     */
     @NameInMap("notifyStrategyId")
     public String notifyStrategyId;
 
-    /**
-     * <p>Push settings.</p>
-     */
     @NameInMap("pushingSetting")
     public SubscriptionForModifyPushingSetting pushingSetting;
 
     /**
-     * <p>Name.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Test subscription.</p>
      */
     @NameInMap("subscriptionName")
     public String subscriptionName;
@@ -101,33 +79,15 @@ public class SubscriptionForModify extends TeaModel {
     }
 
     public static class SubscriptionForModifyPushingSetting extends TeaModel {
-        /**
-         * <p>Alert push action plan ID list.</p>
-         */
         @NameInMap("alertActionIds")
         public java.util.List<String> alertActionIds;
 
-        /**
-         * <p>Action plan ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123123123</p>
-         */
         @NameInMap("responsePlanId")
         public String responsePlanId;
 
-        /**
-         * <p>Action integration plan ID list.</p>
-         */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;
 
-        /**
-         * <p>Template UUID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123123123</p>
-         */
         @NameInMap("templateUuid")
         public String templateUuid;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDigitalEmployeeSkillRequest extends TeaModel {
     /**
+     * <p>Historical version number</p>
+     * 
      * <strong>example:</strong>
      * <p>1770386951147366810</p>
      */

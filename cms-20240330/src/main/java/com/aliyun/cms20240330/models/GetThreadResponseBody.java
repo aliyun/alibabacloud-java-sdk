@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetThreadResponseBody extends TeaModel {
+    /**
+     * <p>The attributes.</p>
+     */
     @NameInMap("attributes")
     public java.util.Map<String, String> attributes;
 
     /**
+     * <p>The time when the session was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-19T15:19:55.040403272+08:00</p>
      */
@@ -15,6 +20,8 @@ public class GetThreadResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The name of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -22,7 +29,7 @@ public class GetThreadResponseBody extends TeaModel {
     public String digitalEmployeeName;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -31,6 +38,8 @@ public class GetThreadResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The session status.</p>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */
@@ -38,13 +47,17 @@ public class GetThreadResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>thread-t71rrw-1s7r7z9gu0v2s</p>
+     * <p>thread_id01</p>
      */
     @NameInMap("threadId")
     public String threadId;
 
     /**
+     * <p>The session title.</p>
+     * 
      * <strong>example:</strong>
      * <p>testLive</p>
      */
@@ -52,16 +65,23 @@ public class GetThreadResponseBody extends TeaModel {
     public String title;
 
     /**
+     * <p>The time when the thread was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-19T15:19:55.040403272+08:00</p>
      */
     @NameInMap("updateTime")
     public String updateTime;
 
+    /**
+     * <p>The session properties.</p>
+     */
     @NameInMap("variables")
     public GetThreadResponseBodyVariables variables;
 
     /**
+     * <p>The version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1231</p>
      */
@@ -155,15 +175,19 @@ public class GetThreadResponseBody extends TeaModel {
 
     public static class GetThreadResponseBodyVariables extends TeaModel {
         /**
+         * <p>The name of the SLS project.</p>
+         * 
          * <strong>example:</strong>
-         * <p>kubenest</p>
+         * <p>test</p>
          */
         @NameInMap("project")
         public String project;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
-         * <p>hd1</p>
+         * <p>test</p>
          */
         @NameInMap("workspace")
         public String workspace;

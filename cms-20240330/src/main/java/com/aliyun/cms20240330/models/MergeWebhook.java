@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MergeWebhook extends TeaModel {
     /**
+     * <p>内容类型。</p>
+     * 
      * <strong>example:</strong>
      * <p>application/json</p>
      */
@@ -12,6 +14,8 @@ public class MergeWebhook extends TeaModel {
     public String contentType;
 
     /**
+     * <p>扩展字段，用于存储额外配置。</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;timeout&quot;: 3000}</p>
      */
@@ -19,6 +23,8 @@ public class MergeWebhook extends TeaModel {
     public String extend;
 
     /**
+     * <p>创建时间。</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -26,6 +32,8 @@ public class MergeWebhook extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>最后修改时间。</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -33,6 +41,8 @@ public class MergeWebhook extends TeaModel {
     public java.util.Map<String, ?> gmtModified;
 
     /**
+     * <p>请求头信息。</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Authorization&quot;: &quot;Bearer abc123&quot;}</p>
      */
@@ -40,6 +50,8 @@ public class MergeWebhook extends TeaModel {
     public String headers;
 
     /**
+     * <p>Webhook 唯一标识符。</p>
+     * 
      * <strong>example:</strong>
      * <p>webhook-12345</p>
      */
@@ -47,6 +59,8 @@ public class MergeWebhook extends TeaModel {
     public String identifier;
 
     /**
+     * <p>语言偏好。</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -54,16 +68,26 @@ public class MergeWebhook extends TeaModel {
     public String lang;
 
     /**
+     * <p>HTTP 请求方法。</p>
+     * 
      * <strong>example:</strong>
      * <p>POST</p>
      */
     @NameInMap("method")
     public String method;
 
+    /**
+     * <p>Webhook 名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>运维告警通知</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>Webhook 来源系统。</p>
+     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */
@@ -71,6 +95,8 @@ public class MergeWebhook extends TeaModel {
     public String source;
 
     /**
+     * <p>Webhook 类型，表示其目标平台。</p>
+     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */
@@ -78,6 +104,8 @@ public class MergeWebhook extends TeaModel {
     public String type;
 
     /**
+     * <p>Webhook 地址，用于发送请求。</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMemoryStoreResponseBody extends TeaModel {
     /**
+     * <p>Creation time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -13,20 +14,30 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>Custom extraction strategies.</p>
+     */
     @NameInMap("customExtractionStrategies")
     public java.util.List<CustomExtractionStrategy> customExtractionStrategies;
 
     /**
+     * <p>Description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Supported values: Episodic, Summary, and Fact.</p>
+     */
     @NameInMap("extractionStrategies")
     public java.util.List<String> extractionStrategies;
 
     /**
+     * <p>Memory store name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-memory-store</p>
      */
@@ -34,6 +45,8 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String memoryStoreName;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -41,16 +54,23 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Short-term memory storage.</p>
+     */
     @NameInMap("shortTermStorage")
     public GetMemoryStoreResponseBodyShortTermStorage shortTermStorage;
 
     /**
+     * <p>Short-term memory retention time, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -58,6 +78,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public Integer shortTermTtl;
 
     /**
+     * <p>Update time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +88,8 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>Workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-cms-xxxxxx-cn-beijing</p>
      */
@@ -167,9 +190,21 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     }
 
     public static class GetMemoryStoreResponseBodyShortTermStorage extends TeaModel {
+        /**
+         * <p>Simple Log Service Logstore name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memory-store</p>
+         */
         @NameInMap("logstore")
         public String logstore;
 
+        /**
+         * <p>Simple Log Service Project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wk_cms_data_warehouse</p>
+         */
         @NameInMap("project")
         public String project;
 

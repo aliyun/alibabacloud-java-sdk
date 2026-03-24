@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesRequest extends TeaModel {
     /**
-     * <p>Specified list of regionIds to filter (comma-separated).</p>
+     * <p>A list of region IDs to filter by, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
@@ -17,7 +17,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String filterRegionIds;
 
     /**
-     * <p>Maximum number of records to return.</p>
+     * <p>The maximum number of records to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Query token.</p>
+     * <p>The query token.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
@@ -41,7 +41,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>List of instance IDs (comma-separated)</p>
+     * <p>A list of instance IDs, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>rw-00001,rw-00002,rw-00003</p>
@@ -53,7 +53,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String prometheusInstanceIds;
 
     /**
-     * <p>Instance name (partial match supported)</p>
+     * <p>The instance name. Partial match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -65,7 +65,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String prometheusInstanceName;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2bhocin5e2na</p>
@@ -74,7 +74,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Resource type of the instance.</p>
+     * <p>The resource type of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Prometheus</p>
@@ -86,13 +86,13 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>List of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("tag")
     public java.util.List<ListPrometheusInstancesRequestTag> tag;
 
     /**
-     * <p>Instance version: V1 or V2</p>
+     * <p>The instance version. Valid values: V1 and V2.</p>
      * 
      * <strong>example:</strong>
      * <p>V2</p>
@@ -197,7 +197,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
 
     public static class ListPrometheusInstancesRequestTag extends TeaModel {
         /**
-         * <p>Tag key</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>testKey</p>
@@ -206,7 +206,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Tag value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>testValue</p>

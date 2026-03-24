@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyServiceMonitorsRequest extends TeaModel {
     /**
+     * <p>The name of the add-on release.</p>
+     * 
      * <strong>example:</strong>
      * <p>release-12345678</p>
      */
@@ -12,6 +14,8 @@ public class ListIntegrationPolicyServiceMonitorsRequest extends TeaModel {
     public String addonReleaseName;
 
     /**
+     * <p>Specifies whether to encrypt the YAML file.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class ListIntegrationPolicyServiceMonitorsRequest extends TeaModel {
     public Boolean encryptYaml;
 
     /**
+     * <p>The namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>arms-prom</p>
      */

@@ -10,30 +10,18 @@ public class IncidentForView extends TeaModel {
     @NameInMap("escalations")
     public java.util.List<IncidentEscalationPolicyForView> escalations;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;group-123456&quot;</p>
-     */
     @NameInMap("groupUuid")
     public String groupUuid;
 
     @NameInMap("groupingKeys")
     public java.util.Map<String, String> groupingKeys;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;incident-abc123&quot;</p>
-     */
     @NameInMap("incidentId")
     public String incidentId;
 
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;notify-strategy-789&quot;</p>
-     */
     @NameInMap("notifyStrategyUuid")
     public String notifyStrategyUuid;
 
@@ -52,65 +40,33 @@ public class IncidentForView extends TeaModel {
     @NameInMap("relatedResources")
     public java.util.List<EventResourceForIncidentView> relatedResources;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;Network&quot;</p>
-     */
     @NameInMap("rootCauseCategory")
     public String rootCauseCategory;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;Critical&quot;</p>
-     */
     @NameInMap("severity")
     public String severity;
 
     @NameInMap("solution")
     public String solution;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;Open&quot;</p>
-     */
     @NameInMap("state")
     public String state;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;P1-Alert-Notification&quot;</p>
-     */
     @NameInMap("subscriptionName")
     public String subscriptionName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;subscription-abc&quot;</p>
-     */
     @NameInMap("subscriptionUuid")
     public String subscriptionUuid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1743876000000</p>
-     */
     @NameInMap("time")
     public Long time;
 
     @NameInMap("title")
     public String title;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;user-abc123&quot;</p>
-     */
     @NameInMap("userId")
     public String userId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;ws-xyz789&quot;</p>
-     */
     @NameInMap("workspace")
     public String workspace;
 

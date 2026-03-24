@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AlertRuleAlertMetricParamDef extends TeaModel {
     /**
+     * <p>输入框的最大宽度，仅对SELECT_PARAM、INPUT_PARAM生效</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     public Integer maxWidth;
 
     /**
+     * <p>输入框的最小宽度，仅对SELECT_PARAM、INPUT_PARAM生效</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,16 +23,26 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     public Integer minWidth;
 
     /**
+     * <p>名称</p>
+     * 
      * <strong>example:</strong>
      * <p>env</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>仅对INPUT_PARAM有效。用于前端展示的中文展位符</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请输入值</p>
+     */
     @NameInMap("placeholderCn")
     public String placeholderCn;
 
     /**
+     * <p>仅对INPUT_PARAM有效。用于前端展示的英文展位符</p>
+     * 
      * <strong>example:</strong>
      * <p>Enter value</p>
      */
@@ -36,6 +50,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     public String placeholderEn;
 
     /**
+     * <p>● TEXT_PARAM: 只读文本参数，由后台定义，前端不显示用户输入控件
+     * ● INPUT_PARAM：输入框参数
+     * ● SELECT_PARAM：选择框参数</p>
+     * 
      * <strong>example:</strong>
      * <p>TEXT_PARAM</p>
      */
@@ -43,12 +61,17 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     public String type;
 
     /**
+     * <p>值</p>
+     * 
      * <strong>example:</strong>
      * <p>staging</p>
      */
     @NameInMap("value")
     public String value;
 
+    /**
+     * <p>仅对SELECT_PARAM有效。  下拉列表的可选值列表。</p>
+     */
     @NameInMap("values")
     public java.util.List<AlertRuleAlertMetricParamDefValues> values;
 
@@ -122,10 +145,18 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     }
 
     public static class AlertRuleAlertMetricParamDefValues extends TeaModel {
+        /**
+         * <p>选项的中文显示名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试环境</p>
+         */
         @NameInMap("labelCn")
         public String labelCn;
 
         /**
+         * <p>选项的英文显示名称</p>
+         * 
          * <strong>example:</strong>
          * <p>Staging</p>
          */
@@ -133,6 +164,8 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         public String labelEn;
 
         /**
+         * <p>值</p>
+         * 
          * <strong>example:</strong>
          * <p>staging</p>
          */

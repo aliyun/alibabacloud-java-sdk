@@ -4,20 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class UpdateMemoryStoreRequest extends TeaModel {
+    /**
+     * <p>Custom extraction strategies.</p>
+     */
     @NameInMap("customExtractionStrategies")
     public java.util.List<CustomExtractionStrategy> customExtractionStrategies;
 
     /**
+     * <p>Description.</p>
+     * 
      * <strong>example:</strong>
      * <p>memoryStore test</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Extraction strategies. Supports &quot;Episodic&quot;, &quot;Summary&quot;, and &quot;Fact&quot;.</p>
+     */
     @NameInMap("extractionStrategies")
     public java.util.List<String> extractionStrategies;
 
     /**
+     * <p>Short-term memory retention time.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */

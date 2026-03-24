@@ -4,20 +4,29 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class CreateMemoryStoreRequest extends TeaModel {
+    /**
+     * <p>A list of custom extraction strategies.</p>
+     */
     @NameInMap("customExtractionStrategies")
     public java.util.List<CustomExtractionStrategy> customExtractionStrategies;
 
     /**
+     * <p>The description of the Memory Store.</p>
+     * 
      * <strong>example:</strong>
      * <p>Test memory store for demonstration.</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The extraction strategies to use. Valid values: <code>Episodic</code>, <code>Summary</code>, and <code>Fact</code>.</p>
+     */
     @NameInMap("extractionStrategies")
     public java.util.List<String> extractionStrategies;
 
     /**
+     * <p>The name of the Memory Store.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +36,7 @@ public class CreateMemoryStoreRequest extends TeaModel {
     public String memoryStoreName;
 
     /**
+     * <p>The time-to-live (TTL) for short-term memory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

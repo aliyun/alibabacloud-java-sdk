@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>et15prod-et15storage</p>
@@ -14,13 +14,13 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>PodMonitor list</p>
+     * <p>The list of PodMonitors.</p>
      */
     @NameInMap("podMonitors")
     public java.util.List<ListIntegrationPolicyPodMonitorsResponseBodyPodMonitors> podMonitors;
 
     /**
-     * <p>Policy ID.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-c9efed2b99c348d49e589c5f780fc074</p>
@@ -29,7 +29,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
     public String policyId;
 
     /**
-     * <p>ID of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
@@ -76,7 +76,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyPodMonitorsResponseBodyPodMonitorsEndpoints extends TeaModel {
         /**
-         * <p>Collection interval</p>
+         * <p>The collection interval.</p>
          * 
          * <strong>example:</strong>
          * <p>30s</p>
@@ -85,7 +85,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String interval;
 
         /**
-         * <p>Number of matched targets</p>
+         * <p>The number of matched targets.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -94,7 +94,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public Long matchedTargetCount;
 
         /**
-         * <p>Metric collection path</p>
+         * <p>The metric collection path.</p>
          * 
          * <strong>example:</strong>
          * <p>/metrics</p>
@@ -103,7 +103,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>Port number</p>
+         * <p>The port number.</p>
          * 
          * <strong>example:</strong>
          * <p>9100</p>
@@ -112,7 +112,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>Target port</p>
+         * <p>The target port.</p>
          * 
          * <strong>example:</strong>
          * <p>https</p>
@@ -169,7 +169,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyPodMonitorsResponseBodyPodMonitors extends TeaModel {
         /**
-         * <p>Addon name.</p>
+         * <p>The name of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud-ecs</p>
@@ -178,7 +178,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String addonName;
 
         /**
-         * <p>Addon Release name.</p>
+         * <p>The name of the add-on release.</p>
          * 
          * <strong>example:</strong>
          * <p>release-2345678</p>
@@ -187,7 +187,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String addonReleaseName;
 
         /**
-         * <p>Addon version.</p>
+         * <p>The version of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.1</p>
@@ -196,7 +196,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String addonVersion;
 
         /**
-         * <p>Configuration yaml.</p>
+         * <p>The YAML configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>apiVersion: xxxxx</p>
@@ -205,7 +205,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String configYaml;
 
         /**
-         * <p>Enable status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>run</p>
@@ -214,7 +214,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String enableStatus;
 
         /**
-         * <p>Encrypt yaml.</p>
+         * <p>Indicates whether the YAML file is encrypted.</p>
          * 
          * <strong>example:</strong>
          * <p>YXBpVmVyc2lvbjogeHh4eHgK</p>
@@ -223,13 +223,13 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public Boolean encryptYaml;
 
         /**
-         * <p>Instance endpoints.</p>
+         * <p>The endpoints of the instance.</p>
          */
         @NameInMap("endpoints")
         public java.util.List<ListIntegrationPolicyPodMonitorsResponseBodyPodMonitorsEndpoints> endpoints;
 
         /**
-         * <p>Number of matched pods</p>
+         * <p>The number of matched pods.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -238,7 +238,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public Long matchedPodCount;
 
         /**
-         * <p>Collection name.</p>
+         * <p>The collection name.</p>
          * 
          * <strong>example:</strong>
          * <p>znzmo_entity_test</p>
@@ -247,7 +247,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Namespace</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>sla-ns-d5aeb2b4f91b47</p>

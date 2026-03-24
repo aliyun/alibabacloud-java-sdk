@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMemoriesRequest extends TeaModel {
     /**
+     * <p>Agent ID of the application</p>
+     * 
      * <strong>example:</strong>
      * <p>952730652285943809</p>
      */
@@ -12,6 +14,8 @@ public class GetMemoriesRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>Application ID</p>
+     * 
      * <strong>example:</strong>
      * <p>150130323</p>
      */
@@ -19,6 +23,8 @@ public class GetMemoriesRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class GetMemoriesRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -33,6 +41,8 @@ public class GetMemoriesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Run ID</p>
+     * 
      * <strong>example:</strong>
      * <p>jr-80ded1d6953c64ea</p>
      */
@@ -40,6 +50,8 @@ public class GetMemoriesRequest extends TeaModel {
     public String runId;
 
     /**
+     * <p>User ID</p>
+     * 
      * <strong>example:</strong>
      * <p>test_user_001</p>
      */

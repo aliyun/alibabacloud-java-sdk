@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDigitalEmployeeSkillResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -14,6 +14,8 @@ public class CreateDigitalEmployeeSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The name of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>skill</p>
      */

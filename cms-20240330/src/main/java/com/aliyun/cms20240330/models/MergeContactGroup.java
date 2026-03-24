@@ -4,13 +4,24 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class MergeContactGroup extends TeaModel {
+    /**
+     * <p>组内成员的唯一标识符列表。</p>
+     */
     @NameInMap("contacts")
     public java.util.List<String> contacts;
 
+    /**
+     * <p>扩展字段，用于存储额外信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;department&quot;: &quot;运维部&quot;, &quot;role&quot;: &quot;工程师&quot; }</p>
+     */
     @NameInMap("extend")
     public java.util.Map<String, ?> extend;
 
     /**
+     * <p>创建时间。</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -18,6 +29,8 @@ public class MergeContactGroup extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>最后修改时间。</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -25,16 +38,26 @@ public class MergeContactGroup extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>联系人组唯一标识符。</p>
+     * 
      * <strong>example:</strong>
      * <p>group-12345</p>
      */
     @NameInMap("identifier")
     public String identifier;
 
+    /**
+     * <p>联系人组名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>运维团队</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>联系人组来源系统。</p>
+     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */

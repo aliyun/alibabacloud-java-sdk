@@ -5,23 +5,26 @@ import com.aliyun.tea.*;
 
 public class AlertRuleSlsQueryJoin extends TeaModel {
     /**
-     * <p>List of connection conditions.</p>
+     * <p>连接条件列表</p>
      */
     @NameInMap("conditions")
     public java.util.List<AlertRuleSlsQueryJoinConditions> conditions;
 
     /**
-     * <p>Set operation type.
-     * CrossJoin: Cartesian product
-     * FullJoin: Full outer join
-     * InnerJoin: Inner join
-     * LeftExclude: Left anti join
-     * RightExclude: Right anti join
-     * LeftJoin: Left outer join
-     * RightJoin: Right outer join
-     * NoJoin: No merge
-     * Concat: Concatenation</p>
-     * <p>See also: <a href="https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement">https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement</a></p>
+     * <p>集合操作类型。</p>
+     * <ul>
+     * <li>CrossJoin： 笛卡尔积</li>
+     * <li>FullJoin：全联</li>
+     * <li>InnerJoin：内联</li>
+     * <li>LeftExclude： 左斥</li>
+     * <li>RightExclude：右斥</li>
+     * <li>LeftJoin：左联</li>
+     * <li>RightJoin：右联</li>
+     * <li>NoJoin：不合并</li>
+     * <li>Concat： 拼接</li>
+     * </ul>
+     * <p>参见：
+     *   <a href="https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement">https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +56,7 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
 
     public static class AlertRuleSlsQueryJoinConditions extends TeaModel {
         /**
-         * <p>Left-hand operand of the condition, formatted as $<query_idx>.<result_set_field_name>.</p>
+         * <p>条件的左操作参数，格式为$<query_idx>.&lt;结果集字段名&gt;</p>
          * 
          * <strong>example:</strong>
          * <p>$0.<strong>topic</strong></p>
@@ -62,7 +65,7 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
         public String firstField;
 
         /**
-         * <p>Comparison operator; valid values: &lt;, &gt;, ==, !=, &lt;=, &gt;=.</p>
+         * <p>比较操作符，取值范围：&lt;, &gt;, ==, !=, &lt;=, &gt;=</p>
          * 
          * <strong>example:</strong>
          * <p>==</p>
@@ -71,7 +74,7 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
         public String oper;
 
         /**
-         * <p>Right-hand operand of the condition, formatted as $<query_idx>.<result_set_field_name>.</p>
+         * <p>条件的右操作参数，格式为$<query_idx>.&lt;结果集字段名&gt;</p>
          * 
          * <strong>example:</strong>
          * <p>$0.<strong>topic</strong></p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEntityStoreResponseBody extends TeaModel {
     /**
-     * <p>request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -14,7 +14,7 @@ public class CreateEntityStoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>workspace name</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>

@@ -4,153 +4,69 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class CmsEventForView extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{ &quot;description&quot;: &quot;High load detected on server&quot;, &quot;operator&quot;: &quot;auto&quot; }</p>
-     */
     @NameInMap("annotations")
     public java.util.Map<String, ?> annotations;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{ &quot;metricName&quot;: &quot;cpu_usage&quot;, &quot;value&quot;: 95.2, &quot;threshold&quot;: 80 }</p>
-     */
     @NameInMap("data")
     public Object data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;application/json&quot;</p>
-     */
     @NameInMap("datacontenttype")
     public String datacontenttype;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;<a href="https://schema.alibabacloud.com/cms/alert/v1">https://schema.alibabacloud.com/cms/alert/v1</a>&quot;</p>
-     */
     @NameInMap("dataschema")
     public String dataschema;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;dedup-abc123&quot;</p>
-     */
     @NameInMap("dedupId")
     public String dedupId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;event-1234567890&quot;</p>
-     */
     @NameInMap("id")
     public String id;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;integration-xyz&quot;</p>
-     */
     @NameInMap("integrationUuid")
     public String integrationUuid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{\&quot;source\&quot;: \&quot;system\&quot;}</p>
-     */
     @NameInMap("labels")
     public java.util.Map<String, ?> labels;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1743846610000</p>
-     */
     @NameInMap("receiveTime")
     public Long receiveTime;
 
     @NameInMap("resource")
     public EventResourceForEventView resource;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;CRITICAL&quot;</p>
-     */
     @NameInMap("severity")
     public String severity;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;ECS&quot;</p>
-     */
     @NameInMap("source")
     public String source;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;CloudMonitor&quot;</p>
-     */
     @NameInMap("sourcetype")
     public String sourcetype;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Running</p>
-     */
     @NameInMap("status")
     public String status;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;Instance cpu usage exceeds threshold&quot;</p>
-     */
     @NameInMap("subject")
     public String subject;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;HighCPUUsage&quot;</p>
-     */
     @NameInMap("subtype")
     public String subtype;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;sys-event-987654321&quot;</p>
-     */
     @NameInMap("sysId")
     public String sysId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;2025-04-05T10:30:00Z&quot;</p>
-     */
     @NameInMap("time")
     public String time;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1743846600000</p>
-     */
     @NameInMap("timestamp")
     public Long timestamp;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;Alert&quot;</p>
-     */
     @NameInMap("type")
     public String type;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;ws-abc123&quot;</p>
-     */
     @NameInMap("workspace")
     public String workspace;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{ &quot;department&quot;: &quot;finance&quot;, &quot;project&quot;: &quot;payment-gateway&quot; }</p>
-     */
     @NameInMap("workspaceTags")
     public java.util.Map<String, ?> workspaceTags;
 

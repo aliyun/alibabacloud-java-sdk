@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class MergeRobot extends TeaModel {
     /**
+     * <p>创建时间。</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>扩展字段。</p>
+     */
     @NameInMap("extend")
     public MergeRobotExtend extend;
 
     /**
+     * <p>最后修改时间。</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -22,6 +29,8 @@ public class MergeRobot extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>机器人唯一标识符。</p>
+     * 
      * <strong>example:</strong>
      * <p>robot-12345</p>
      */
@@ -29,16 +38,26 @@ public class MergeRobot extends TeaModel {
     public String identifier;
 
     /**
+     * <p>语言偏好。</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
     @NameInMap("lang")
     public String lang;
 
+    /**
+     * <p>机器人名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>运维告警机器人</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>机器人来源系统。</p>
+     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */
@@ -46,6 +65,8 @@ public class MergeRobot extends TeaModel {
     public String source;
 
     /**
+     * <p>机器人类型。</p>
+     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */
@@ -53,6 +74,8 @@ public class MergeRobot extends TeaModel {
     public String type;
 
     /**
+     * <p>Webhook 地址。</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></p>
      */
@@ -138,6 +161,8 @@ public class MergeRobot extends TeaModel {
 
     public static class MergeRobotExtend extends TeaModel {
         /**
+         * <p>卡片模板。</p>
+         * 
          * <strong>example:</strong>
          * <p>incident-card-template</p>
          */
@@ -145,6 +170,8 @@ public class MergeRobot extends TeaModel {
         public String cardTemplate;
 
         /**
+         * <p>是否启用每日值班报告。</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -152,6 +179,8 @@ public class MergeRobot extends TeaModel {
         public Boolean dailyNoc;
 
         /**
+         * <p>每日值班报告时间。</p>
+         * 
          * <strong>example:</strong>
          * <p>09:00</p>
          */
@@ -159,6 +188,8 @@ public class MergeRobot extends TeaModel {
         public String dailyNocTime;
 
         /**
+         * <p>钉钉签名密钥。</p>
+         * 
          * <strong>example:</strong>
          * <p>abc123</p>
          */
@@ -166,6 +197,8 @@ public class MergeRobot extends TeaModel {
         public String dingSignKey;
 
         /**
+         * <p>是否启用出站请求。</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -173,6 +206,8 @@ public class MergeRobot extends TeaModel {
         public Boolean enableOutgoing;
 
         /**
+         * <p>认证令牌。</p>
+         * 
          * <strong>example:</strong>
          * <p>token-abc123</p>
          */

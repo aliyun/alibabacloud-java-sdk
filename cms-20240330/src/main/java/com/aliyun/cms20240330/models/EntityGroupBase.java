@@ -4,26 +4,48 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class EntityGroupBase extends TeaModel {
+    /**
+     * <p>实体描述。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS 实例</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>实体ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>eg-1234567890</p>
      */
     @NameInMap("entityGroupId")
     public String entityGroupId;
 
+    /**
+     * <p>实体名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS 全部实体</p>
+     */
     @NameInMap("entityGroupName")
     public String entityGroupName;
 
+    /**
+     * <p>实体查询规则集合。</p>
+     */
     @NameInMap("entityQueries")
     public java.util.List<EntityGroupBaseEntityQueries> entityQueries;
 
+    /**
+     * <p>用于实体发现的规则。</p>
+     */
     @NameInMap("entityRules")
     public EntityDiscoverRule entityRules;
 
     /**
+     * <p>地域ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-heyuan</p>
      */
@@ -31,6 +53,8 @@ public class EntityGroupBase extends TeaModel {
     public String regionId;
 
     /**
+     * <p>用户ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>1654218***343050</p>
      */
@@ -38,6 +62,8 @@ public class EntityGroupBase extends TeaModel {
     public String userId;
 
     /**
+     * <p>工作空间。</p>
+     * 
      * <strong>example:</strong>
      * <p>default-cms-1654218***343050-cn-hangzhou</p>
      */
@@ -115,6 +141,8 @@ public class EntityGroupBase extends TeaModel {
 
     public static class EntityGroupBaseEntityQueries extends TeaModel {
         /**
+         * <p>实体类型。</p>
+         * 
          * <strong>example:</strong>
          * <p>acs.ecs.instance</p>
          */
@@ -122,6 +150,8 @@ public class EntityGroupBase extends TeaModel {
         public String entityType;
 
         /**
+         * <p>SPL查询语句。</p>
+         * 
          * <strong>example:</strong>
          * <p>.entity with(type=\&quot;acs.ecs.instance\&quot;) | where region_id in (\&quot;cn-beijing\&quot;)</p>
          */

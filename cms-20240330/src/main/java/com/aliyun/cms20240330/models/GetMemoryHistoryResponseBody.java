@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetMemoryHistoryResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3B311FD9-A60B-55E0-A896-A0C73*********</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Return value.</p>
+     */
     @NameInMap("results")
     public java.util.List<GetMemoryHistoryResponseBodyResults> results;
 
@@ -37,6 +42,8 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
 
     public static class GetMemoryHistoryResponseBodyResultsInput extends TeaModel {
         /**
+         * <p>Message content.</p>
+         * 
          * <strong>example:</strong>
          * <p>My name is Zhang San and I live in Hangzhou.</p>
          */
@@ -44,6 +51,8 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Message sender role.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -75,6 +84,8 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
 
     public static class GetMemoryHistoryResponseBodyResults extends TeaModel {
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1764556182850</p>
          */
@@ -82,6 +93,8 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>Event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADD</p>
          */
@@ -89,16 +102,23 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Memory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b25d6ad7-306f-4040-9890-4dddd2505a2e</p>
          */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>Original message.</p>
+         */
         @NameInMap("input")
         public java.util.List<GetMemoryHistoryResponseBodyResultsInput> input;
 
         /**
+         * <p>Memory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>019cacf6-7b39-7f61-8314-548f07ca449a</p>
          */
@@ -106,6 +126,8 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         public String memoryId;
 
         /**
+         * <p>Metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
          */
@@ -113,6 +135,8 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
+         * <p>New memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>I really like Python.</p>
          */
@@ -120,6 +144,8 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         public String newMemory;
 
         /**
+         * <p>Old memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>I really don\&quot;t like Python at all.</p>
          */
@@ -127,6 +153,8 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         public String oldMemory;
 
         /**
+         * <p>Update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1771036123785</p>
          */
@@ -134,6 +162,8 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_session_001</p>
          */

@@ -4,17 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class RepeatNotifySetting extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;Resolved&quot;</p>
-     */
     @NameInMap("endIncidentState")
     public String endIncidentState;
 
-    /**
-     * <strong>example:</strong>
-     * <p>5</p>
-     */
     @NameInMap("repeatInterval")
     public String repeatInterval;
 

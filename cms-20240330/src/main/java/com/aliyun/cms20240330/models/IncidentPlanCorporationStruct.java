@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentPlanCorporationStruct extends TeaModel {
     /**
-     * <p>Channel name.</p>
+     * <p>通道名</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -14,7 +14,7 @@ public class IncidentPlanCorporationStruct extends TeaModel {
     public String channel;
 
     /**
-     * <p>Robot ID.</p>
+     * <p>机器人唯一ID。</p>
      * 
      * <strong>example:</strong>
      * <p>robotId-cs-api-test</p>

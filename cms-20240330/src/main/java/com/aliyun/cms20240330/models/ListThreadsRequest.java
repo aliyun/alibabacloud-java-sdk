@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListThreadsRequest extends TeaModel {
+    /**
+     * <p>The filter conditions for the query. If you do not specify this parameter, all threads in the instance are queried.</p>
+     */
     @NameInMap("filter")
     public java.util.List<ListThreadsRequestFilter> filter;
 
     /**
+     * <p>The maximum number of results to return. The maximum value is 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListThreadsRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The paging token.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
      */
@@ -22,15 +29,19 @@ public class ListThreadsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The session status.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Running</p>
+     * <p>active</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>thread_id01</p>
+     * <p>thread-123123</p>
      */
     @NameInMap("threadId")
     public String threadId;
@@ -82,19 +93,21 @@ public class ListThreadsRequest extends TeaModel {
 
     public static class ListThreadsRequestFilter extends TeaModel {
         /**
+         * <p>The filter key. Supported values are title, workspace, and project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dukang-oxs-pre-obeqi</p>
+         * <p>title</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
+         * <p>The set value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;Type\&quot;: \&quot;primaryDoc\&quot;, \&quot;Id\&quot;: \&quot;01ZM8y7\&quot;, \&quot;Name\&quot;: \&quot;key\&quot;}, {\&quot;Type\&quot;: \&quot;text\&quot;, \&quot;Id\&quot;: \&quot;mHe1U1b\&quot;, \&quot;Name\&quot;: \&quot;value\&quot;}, {\&quot;Type\&quot;: \&quot;text\&quot;, \&quot;Id\&quot;: \&quot;rRIhpBs\&quot;, \&quot;Name\&quot;: u\&quot;\u4f5c\u7528\&quot;}]</p>
+         * <p>test</p>
          */
         @NameInMap("value")
         public String value;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentPlanStruct extends TeaModel {
     /**
-     * <p>Automatic recovery wait time.</p>
+     * <p>自动恢复等待时间。</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -14,7 +14,7 @@ public class IncidentPlanStruct extends TeaModel {
     public Integer autoRecoverSeconds;
 
     /**
-     * <p>Event closure timeout.</p>
+     * <p>事件关闭超时时间。</p>
      * 
      * <strong>example:</strong>
      * <p>86400000</p>
@@ -23,28 +23,28 @@ public class IncidentPlanStruct extends TeaModel {
     public Long closeExpire;
 
     /**
-     * <p>List of teams or roles involved in collaboration.</p>
+     * <p>参与协作的团队或角色列表。</p>
      */
     @NameInMap("corporation")
     public java.util.List<IncidentPlanCorporationStruct> corporation;
 
     /**
-     * <p>Contingency plan description.</p>
+     * <p>预案描述。</p>
      * 
      * <strong>example:</strong>
-     * <p>Emergency response plan for excessively high database connection count.</p>
+     * <p>针对数据库连接数过高的应急处理方案</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>List of escalation policy IDs.</p>
+     * <p>升级策略 ID的列表。</p>
      */
     @NameInMap("escalationId")
     public java.util.List<String> escalationId;
 
     /**
-     * <p>Creation time.</p>
+     * <p>创建时间。</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -53,7 +53,7 @@ public class IncidentPlanStruct extends TeaModel {
     public Long gmtCreate;
 
     /**
-     * <p>Last modification time.</p>
+     * <p>最后修改时间</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -62,13 +62,13 @@ public class IncidentPlanStruct extends TeaModel {
     public Long gmtModified;
 
     /**
-     * <p>Grouping field path.</p>
+     * <p>分组字段路径</p>
      */
     @NameInMap("groupBy")
     public java.util.List<IncidentPlanFieldPath> groupBy;
 
     /**
-     * <p>Event contingency plan ID.</p>
+     * <p>事件预案 ID。</p>
      * 
      * <strong>example:</strong>
      * <p>plan-001</p>
@@ -77,22 +77,22 @@ public class IncidentPlanStruct extends TeaModel {
     public String incidentPlanId;
 
     /**
-     * <p>Contingency plan name.</p>
+     * <p>预案名称。</p>
      * 
      * <strong>example:</strong>
-     * <p>Database connection count alert contingency plan.</p>
+     * <p>数据库连接数告警预案</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>List of resource field mapping paths.</p>
+     * <p>资源字段映射路径的列表。</p>
      */
     @NameInMap("resourceFiled")
     public java.util.List<IncidentPlanFieldPath> resourceFiled;
 
     /**
-     * <p>Status.</p>
+     * <p>状态。</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -101,7 +101,7 @@ public class IncidentPlanStruct extends TeaModel {
     public String status;
 
     /**
-     * <p>User ID.</p>
+     * <p>用户 ID。</p>
      * 
      * <strong>example:</strong>
      * <p>uesr-12345</p>
@@ -110,7 +110,7 @@ public class IncidentPlanStruct extends TeaModel {
     public Long userId;
 
     /**
-     * <p>Workspace name.</p>
+     * <p>工作空间名称</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

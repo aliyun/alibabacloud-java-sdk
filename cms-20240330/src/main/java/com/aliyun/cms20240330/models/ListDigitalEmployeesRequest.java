@@ -4,13 +4,27 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListDigitalEmployeesRequest extends TeaModel {
+    /**
+     * <p>Digital employee display name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>Digital employee type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("employeeType")
     public String employeeType;
 
     /**
+     * <p>The number of entries to return on each page. The default value is 20. The maximum value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -18,6 +32,8 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Digital employee name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -25,6 +41,8 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
      */
@@ -32,12 +50,17 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-ae******ey</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 

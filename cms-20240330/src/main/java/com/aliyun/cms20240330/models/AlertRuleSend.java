@@ -4,15 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleSend extends TeaModel {
-    /**
-     * <p>Alert Action Integration Configuration.</p>
-     */
     @NameInMap("action")
     public AlertRuleAction action;
 
-    /**
-     * <p>Alert Notification Configuration.</p>
-     */
     @NameInMap("notification")
     public AlertRuleNotification notification;
 
@@ -22,12 +16,6 @@ public class AlertRuleSend extends TeaModel {
     @NameInMap("rcaConfig")
     public AlertRuleRcaConfig rcaConfig;
 
-    /**
-     * <p>Whether to deliver alert events to ARMS Alert Management.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("sendToArms")
     public Boolean sendToArms;
 

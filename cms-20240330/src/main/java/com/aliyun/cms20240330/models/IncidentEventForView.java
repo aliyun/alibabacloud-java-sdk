@@ -4,123 +4,63 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentEventForView extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1743876600000</p>
-     */
     @NameInMap("autoRecoverTime")
     public Long autoRecoverTime;
 
     @NameInMap("content")
     public CmsEventForView content;
 
-    /**
-     * <strong>example:</strong>
-     * <p>3</p>
-     */
     @NameInMap("count")
     public Integer count;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{ &quot;env&quot;: &quot;prod&quot;, &quot;module&quot;: &quot;payment&quot; }</p>
-     */
     @NameInMap("dimension")
     public java.util.Map<String, ?> dimension;
 
     @NameInMap("eventResource")
     public EventResourceForIncidentView eventResource;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{ &quot;resourceId&quot;: &quot;i-bp123456&quot;, &quot;severity&quot;: &quot;Critical&quot; }</p>
-     */
     @NameInMap("groupBy")
     public java.util.Map<String, ?> groupBy;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;x1y2z3a4-b5c6-d7e8-f9g0-h1i2j3k4l5m6&quot;</p>
-     */
     @NameInMap("incidentEventUuid")
     public String incidentEventUuid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
-     */
     @NameInMap("incidentUuid")
     public String incidentUuid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{ &quot;project&quot;: &quot;payment-gateway&quot;, &quot;owner&quot;: &quot;ops-team&quot; }</p>
-     */
     @NameInMap("labels")
     public java.util.Map<String, ?> labels;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1743876000000</p>
-     */
     @NameInMap("lastTime")
     public Long lastTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1743876600000</p>
-     */
     @NameInMap("recoverTime")
     public Long recoverTime;
 
     @NameInMap("searchIndex")
     public java.util.List<String> searchIndex;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;Critical&quot;</p>
-     */
     @NameInMap("severity")
     public String severity;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{ &quot;Critical&quot;: 2, &quot;High&quot;: 1 }</p>
-     */
     @NameInMap("severityCountMap")
     public java.util.Map<String, ?> severityCountMap;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("state")
     public Integer state;
 
     @NameInMap("textIndex")
     public String textIndex;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1743876000000</p>
-     */
     @NameInMap("time")
     public Long time;
 
     @NameInMap("title")
     public String title;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;user-abc123&quot;</p>
-     */
     @NameInMap("userId")
     public String userId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;ws-xyz789&quot;</p>
-     */
     @NameInMap("workspace")
     public String workspace;
 
