@@ -684,7 +684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改备份策略</p>
+     * <p>Deletes the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request DeleteBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -720,7 +720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改备份策略</p>
+     * <p>Deletes the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request DeleteBackupPolicyRequest
      * @return DeleteBackupPolicyResponse
@@ -784,7 +784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
+     * <p>Releases an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -820,7 +820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
+     * <p>Releases an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
@@ -1056,7 +1056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建备份策略</p>
+     * <p>View the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1092,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建备份策略</p>
+     * <p>View the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
@@ -1104,7 +1104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询备份集</p>
+     * <p>Queries the backup sets of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1160,7 +1160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询备份集</p>
+     * <p>Queries the backup sets of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -1556,6 +1556,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeProcessListResponse describeProcessList(DescribeProcessListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeProcessListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云数据库ClickHouse所有地域和可用区的信息</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegionsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRegions"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云数据库ClickHouse所有地域和可用区的信息</p>
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegions() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRegionsWithOptions(runtime);
     }
 
     /**
@@ -2174,7 +2208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改备份策略</p>
+     * <p>Modifies the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2222,7 +2256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改备份策略</p>
+     * <p>Modifies the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
