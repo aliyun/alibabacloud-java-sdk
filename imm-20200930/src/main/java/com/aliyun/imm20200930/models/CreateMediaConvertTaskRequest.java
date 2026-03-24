@@ -52,9 +52,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    @NameInMap("TargetGroups")
+    public java.util.List<CreateMediaConvertTaskRequestTargetGroups> targetGroups;
+
     /**
      * <p>List of media processing tasks, supporting multiple task configurations.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("Targets")
     public java.util.List<CreateMediaConvertTaskRequestTargets> targets;
@@ -119,6 +121,14 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getTags() {
         return this.tags;
+    }
+
+    public CreateMediaConvertTaskRequest setTargetGroups(java.util.List<CreateMediaConvertTaskRequestTargetGroups> targetGroups) {
+        this.targetGroups = targetGroups;
+        return this;
+    }
+    public java.util.List<CreateMediaConvertTaskRequestTargetGroups> getTargetGroups() {
+        return this.targetGroups;
     }
 
     public CreateMediaConvertTaskRequest setTargets(java.util.List<CreateMediaConvertTaskRequestTargets> targets) {
@@ -365,6 +375,211 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
 
     }
 
+    public static class CreateMediaConvertTaskRequestTargetGroupsTargetsSegment extends TeaModel {
+        @NameInMap("Duration")
+        public Double duration;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("StartNumber")
+        public Integer startNumber;
+
+        public static CreateMediaConvertTaskRequestTargetGroupsTargetsSegment build(java.util.Map<String, ?> map) throws Exception {
+            CreateMediaConvertTaskRequestTargetGroupsTargetsSegment self = new CreateMediaConvertTaskRequestTargetGroupsTargetsSegment();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargetsSegment setDuration(Double duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Double getDuration() {
+            return this.duration;
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargetsSegment setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargetsSegment setStartNumber(Integer startNumber) {
+            this.startNumber = startNumber;
+            return this;
+        }
+        public Integer getStartNumber() {
+            return this.startNumber;
+        }
+
+    }
+
+    public static class CreateMediaConvertTaskRequestTargetGroupsTargets extends TeaModel {
+        @NameInMap("Audio")
+        public TargetAudio audio;
+
+        @NameInMap("Container")
+        public String container;
+
+        @NameInMap("Segment")
+        public CreateMediaConvertTaskRequestTargetGroupsTargetsSegment segment;
+
+        @NameInMap("Speed")
+        public Float speed;
+
+        @NameInMap("StripMetadata")
+        public Boolean stripMetadata;
+
+        @NameInMap("Subtitle")
+        public TargetSubtitle subtitle;
+
+        @NameInMap("URI")
+        public String URI;
+
+        @NameInMap("Video")
+        public TargetVideo video;
+
+        public static CreateMediaConvertTaskRequestTargetGroupsTargets build(java.util.Map<String, ?> map) throws Exception {
+            CreateMediaConvertTaskRequestTargetGroupsTargets self = new CreateMediaConvertTaskRequestTargetGroupsTargets();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargets setAudio(TargetAudio audio) {
+            this.audio = audio;
+            return this;
+        }
+        public TargetAudio getAudio() {
+            return this.audio;
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargets setContainer(String container) {
+            this.container = container;
+            return this;
+        }
+        public String getContainer() {
+            return this.container;
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargets setSegment(CreateMediaConvertTaskRequestTargetGroupsTargetsSegment segment) {
+            this.segment = segment;
+            return this;
+        }
+        public CreateMediaConvertTaskRequestTargetGroupsTargetsSegment getSegment() {
+            return this.segment;
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargets setSpeed(Float speed) {
+            this.speed = speed;
+            return this;
+        }
+        public Float getSpeed() {
+            return this.speed;
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargets setStripMetadata(Boolean stripMetadata) {
+            this.stripMetadata = stripMetadata;
+            return this;
+        }
+        public Boolean getStripMetadata() {
+            return this.stripMetadata;
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargets setSubtitle(TargetSubtitle subtitle) {
+            this.subtitle = subtitle;
+            return this;
+        }
+        public TargetSubtitle getSubtitle() {
+            return this.subtitle;
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargets setURI(String URI) {
+            this.URI = URI;
+            return this;
+        }
+        public String getURI() {
+            return this.URI;
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroupsTargets setVideo(TargetVideo video) {
+            this.video = video;
+            return this;
+        }
+        public TargetVideo getVideo() {
+            return this.video;
+        }
+
+    }
+
+    public static class CreateMediaConvertTaskRequestTargetGroups extends TeaModel {
+        @NameInMap("Targets")
+        public java.util.List<CreateMediaConvertTaskRequestTargetGroupsTargets> targets;
+
+        @NameInMap("URI")
+        public String URI;
+
+        public static CreateMediaConvertTaskRequestTargetGroups build(java.util.Map<String, ?> map) throws Exception {
+            CreateMediaConvertTaskRequestTargetGroups self = new CreateMediaConvertTaskRequestTargetGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroups setTargets(java.util.List<CreateMediaConvertTaskRequestTargetGroupsTargets> targets) {
+            this.targets = targets;
+            return this;
+        }
+        public java.util.List<CreateMediaConvertTaskRequestTargetGroupsTargets> getTargets() {
+            return this.targets;
+        }
+
+        public CreateMediaConvertTaskRequestTargetGroups setURI(String URI) {
+            this.URI = URI;
+            return this;
+        }
+        public String getURI() {
+            return this.URI;
+        }
+
+    }
+
+    public static class CreateMediaConvertTaskRequestTargetsAttachedPicture extends TeaModel {
+        @NameInMap("Stream")
+        public java.util.List<Integer> stream;
+
+        public static CreateMediaConvertTaskRequestTargetsAttachedPicture build(java.util.Map<String, ?> map) throws Exception {
+            CreateMediaConvertTaskRequestTargetsAttachedPicture self = new CreateMediaConvertTaskRequestTargetsAttachedPicture();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMediaConvertTaskRequestTargetsAttachedPicture setStream(java.util.List<Integer> stream) {
+            this.stream = stream;
+            return this;
+        }
+        public java.util.List<Integer> getStream() {
+            return this.stream;
+        }
+
+    }
+
+    public static class CreateMediaConvertTaskRequestTargetsData extends TeaModel {
+        @NameInMap("Stream")
+        public java.util.List<Integer> stream;
+
+        public static CreateMediaConvertTaskRequestTargetsData build(java.util.Map<String, ?> map) throws Exception {
+            CreateMediaConvertTaskRequestTargetsData self = new CreateMediaConvertTaskRequestTargetsData();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMediaConvertTaskRequestTargetsData setStream(java.util.List<Integer> stream) {
+            this.stream = stream;
+            return this;
+        }
+        public java.util.List<Integer> getStream() {
+            return this.stream;
+        }
+
+    }
+
     public static class CreateMediaConvertTaskRequestTargetsSegment extends TeaModel {
         /**
          * <p>Segment length. Unit: seconds.</p>
@@ -429,6 +644,9 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     }
 
     public static class CreateMediaConvertTaskRequestTargets extends TeaModel {
+        @NameInMap("AttachedPicture")
+        public CreateMediaConvertTaskRequestTargetsAttachedPicture attachedPicture;
+
         /**
          * <p>Audio processing parameter configuration.</p>
          * <blockquote>
@@ -453,6 +671,9 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
          */
         @NameInMap("Container")
         public String container;
+
+        @NameInMap("Data")
+        public CreateMediaConvertTaskRequestTargetsData data;
 
         /**
          * <p>Configuration for frame capture, sprite image capture, and media to animated image conversion.</p>
@@ -525,6 +746,14 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateMediaConvertTaskRequestTargets setAttachedPicture(CreateMediaConvertTaskRequestTargetsAttachedPicture attachedPicture) {
+            this.attachedPicture = attachedPicture;
+            return this;
+        }
+        public CreateMediaConvertTaskRequestTargetsAttachedPicture getAttachedPicture() {
+            return this.attachedPicture;
+        }
+
         public CreateMediaConvertTaskRequestTargets setAudio(TargetAudio audio) {
             this.audio = audio;
             return this;
@@ -539,6 +768,14 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         }
         public String getContainer() {
             return this.container;
+        }
+
+        public CreateMediaConvertTaskRequestTargets setData(CreateMediaConvertTaskRequestTargetsData data) {
+            this.data = data;
+            return this;
+        }
+        public CreateMediaConvertTaskRequestTargetsData getData() {
+            return this.data;
         }
 
         public CreateMediaConvertTaskRequestTargets setImage(TargetImage image) {

@@ -52,9 +52,11 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
     @NameInMap("Tags")
     public String tagsShrink;
 
+    @NameInMap("TargetGroups")
+    public String targetGroupsShrink;
+
     /**
      * <p>List of media processing tasks, supporting multiple task configurations.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("Targets")
     public String targetsShrink;
@@ -119,6 +121,14 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
     }
     public String getTagsShrink() {
         return this.tagsShrink;
+    }
+
+    public CreateMediaConvertTaskShrinkRequest setTargetGroupsShrink(String targetGroupsShrink) {
+        this.targetGroupsShrink = targetGroupsShrink;
+        return this;
+    }
+    public String getTargetGroupsShrink() {
+        return this.targetGroupsShrink;
     }
 
     public CreateMediaConvertTaskShrinkRequest setTargetsShrink(String targetsShrink) {
