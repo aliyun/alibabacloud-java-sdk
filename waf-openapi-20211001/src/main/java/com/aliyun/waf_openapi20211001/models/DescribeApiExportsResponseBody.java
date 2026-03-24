@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeApiExportsResponseBody extends TeaModel {
     /**
-     * <p>The returned data export tasks.</p>
+     * <p>The list of API security export tasks.</p>
      */
     @NameInMap("ApiExports")
     public java.util.List<DescribeApiExportsResponseBodyApiExports> apiExports;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D9532525-E885-54E7-A178-D5554D563AFB</p>
@@ -20,12 +20,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the data export task. Valid values:</p>
-     * <ul>
-     * <li><strong>expired</strong>: The file is expired.</li>
-     * <li><strong>exporting</strong>: Data is being exported.</li>
-     * <li><strong>completed</strong>: Data is exported.</li>
-     * </ul>
+     * <p>The total number of export tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -64,7 +59,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
 
     public static class DescribeApiExportsResponseBodyApiExports extends TeaModel {
         /**
-         * <p>The time when the data export task was created. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The time when the export task was created. This is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1725604852</p>
@@ -73,7 +68,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The name of the exported file.</p>
          * 
          * <strong>example:</strong>
          * <p>file_16109541456445334c0f01d9a7444e0e908***.csv</p>
@@ -91,7 +86,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
-         * <p>The format of the exported file.</p>
+         * <p>The format of the exported file, such as CSV.</p>
          * 
          * <strong>example:</strong>
          * <p>CSV</p>
@@ -100,13 +95,13 @@ public class DescribeApiExportsResponseBody extends TeaModel {
         public String format;
 
         /**
-         * <p>The status of the data export task. Valid values:</p>
+         * <p>The status of the export task. Valid values:</p>
          * <ul>
-         * <li><p><strong>expired</strong>: The file is expired.</p>
+         * <li><p><strong>expired</strong>: The file has expired.</p>
          * </li>
-         * <li><p><strong>exporting</strong>: Data is being exported.</p>
+         * <li><p><strong>exporting</strong>: The file is being exported.</p>
          * </li>
-         * <li><p><strong>completed</strong>: Data is exported.</p>
+         * <li><p><strong>completed</strong>: The export is successful.</p>
          * </li>
          * </ul>
          * 
@@ -117,13 +112,13 @@ public class DescribeApiExportsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the data export task. Valid values:</p>
+         * <p>The type of the export task. Valid values:</p>
          * <ul>
-         * <li><p><strong>apisec_api</strong>: API tasks</p>
+         * <li><p><strong>apisec_api</strong>: API asset task.</p>
          * </li>
-         * <li><p><strong>apisec_abnormal</strong>: API risk tasks</p>
+         * <li><p><strong>apisec_abnormal</strong>: API threat task.</p>
          * </li>
-         * <li><p><strong>apisec_event</strong>: API security event tasks</p>
+         * <li><p><strong>apisec_event</strong>: API security event task.</p>
          * </li>
          * </ul>
          * 

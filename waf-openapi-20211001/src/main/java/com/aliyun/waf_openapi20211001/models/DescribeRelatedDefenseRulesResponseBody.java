@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
     /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,11 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to query the next page of results. If more results are available, this parameter is returned.</p>
+     * <blockquote>
+     * <p>If this parameter is returned, more results are available. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat this process until the <strong>NextToken</strong> parameter is not returned. This indicates that all data has been retrieved.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
      */
@@ -19,16 +26,23 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F35F45B0-5D6B-4238-BE02-A62D****E840</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of associated rules.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeRelatedDefenseRulesResponseBodyRules> rules;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +96,8 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
 
     public static class DescribeRelatedDefenseRulesResponseBodyRules extends TeaModel {
         /**
+         * <p>The protection scenario of the rule. For more information, see the description of the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom_acl</p>
          */
@@ -89,6 +105,16 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
         public String defenseScene;
 
         /**
+         * <p>The type of the protection rule. Valid values:</p>
+         * <ul>
+         * <li><p><strong>template</strong> (default): a template rule.</p>
+         * </li>
+         * <li><p><strong>resource</strong>: a rule for a protected object.</p>
+         * </li>
+         * <li><p><strong>global</strong>: a global rule.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>template</p>
          */
@@ -96,6 +122,8 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
         public String defenseType;
 
         /**
+         * <p>The ID of the protection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>2456789</p>
          */
@@ -103,6 +131,8 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>The name of the protection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>ruleTest</p>
          */
@@ -110,6 +140,8 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The ID of the protection template.</p>
+         * 
          * <strong>example:</strong>
          * <p>81501</p>
          */

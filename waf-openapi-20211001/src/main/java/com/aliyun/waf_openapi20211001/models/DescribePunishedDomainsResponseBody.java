@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePunishedDomainsResponseBody extends TeaModel {
     /**
-     * <p>The domain names that are penalized for failing to obtain an ICP filing.</p>
+     * <p>The list of domain names penalized for not having an ICP filing.</p>
      */
     @NameInMap("PunishedDomains")
     public java.util.List<String> punishedDomains;

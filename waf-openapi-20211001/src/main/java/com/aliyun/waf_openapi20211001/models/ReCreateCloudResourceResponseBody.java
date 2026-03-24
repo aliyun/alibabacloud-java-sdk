@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReCreateCloudResourceResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseGroupValidResourcesRequest extends TeaModel {
     /**
+     * <p>The name of the defense group to query.</p>
+     * <blockquote>
+     * <p>Leave this parameter empty to query for protected objects that can be associated with a new defense group.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>group221</p>
      */
@@ -12,6 +17,10 @@ public class DescribeDefenseGroupValidResourcesRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <blockquote>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +30,8 @@ public class DescribeDefenseGroupValidResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +39,8 @@ public class DescribeDefenseGroupValidResourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +48,14 @@ public class DescribeDefenseGroupValidResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -42,6 +63,8 @@ public class DescribeDefenseGroupValidResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the protected object that you want to use as a filter for the query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyun-waf</p>
      */
@@ -49,6 +72,8 @@ public class DescribeDefenseGroupValidResourcesRequest extends TeaModel {
     public String resource;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2lrm****6pnq</p>
      */

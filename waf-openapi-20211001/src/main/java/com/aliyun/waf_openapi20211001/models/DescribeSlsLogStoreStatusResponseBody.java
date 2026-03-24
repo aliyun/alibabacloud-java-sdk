@@ -7,8 +7,10 @@ public class DescribeSlsLogStoreStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether a Logstore is created for WAF. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: A Logstore is created.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No Logstore is created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeSlsLogStoreStatusResponseBody extends TeaModel {
     public Boolean existStatus;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID</p>
      * 
      * <strong>example:</strong>
      * <p>184F538F-C115-5C89-A4EF-C79CD2E29AC7</p>

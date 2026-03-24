@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
     /**
-     * <p>The node groups.</p>
+     * <p>The list of hybrid cloud node groups.</p>
      */
     @NameInMap("Groups")
     public java.util.List<DescribeHybridCloudGroupsResponseBodyGroups> groups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>045660E7-C4C6-5CD7-8182-7B337D95****</p>
+     * <p>045660E7-C4C6-5CD7-8182-7B337D95ADF4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of hybrid cloud node groups returned.</p>
      * 
      * <strong>example:</strong>
      * <p>146</p>
@@ -59,21 +59,21 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudGroupsResponseBodyGroups extends TeaModel {
         /**
-         * <p>The back-to-origin mark of the protected cluster. The value is in the {ISP name}-{Continent name}-{City name}-{Back-to-origin identifier} format. The back-to-origin identifier is optional.</p>
+         * <p>The back-to-origin mark of the protection cluster. The value is in the <strong>{CarrierTag}-{ContinentTag}-{CityTag}-{Identifier}</strong> format. The identifier is optional.</p>
          * <blockquote>
-         * <p> For more information about ISP names, continent names, city names, and back-to-origin identifiers, see the following sections.</p>
+         * <p>For a list of valid values, see Additional information about response parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>aliyun-asiapacific-beijing-12345678</p>
+         * <p>aliyun-asiapacific-beijing-56477821</p>
          */
         @NameInMap("BackSourceMark")
         public String backSourceMark;
 
         /**
-         * <p>The continent code of the protected cluster.</p>
+         * <p>The continent code of the protection cluster.</p>
          * <blockquote>
-         * <p> For more information about continent codes, see Continent codes in this topic.</p>
+         * <p>For a list of valid codes, see Additional information about response parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         public Integer continentsValue;
 
         /**
-         * <p>The ID of the node group.</p>
+         * <p>The ID of the hybrid cloud node group.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -92,7 +92,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         public Integer groupId;
 
         /**
-         * <p>The name of the node group.</p>
+         * <p>The name of the hybrid cloud node group.</p>
          * 
          * <strong>example:</strong>
          * <p>StorageGroup</p>
@@ -101,12 +101,16 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The type of the node group. Valid values:</p>
+         * <p>The type of the hybrid cloud node group. Valid values:</p>
          * <ul>
-         * <li><strong>protect</strong></li>
-         * <li><strong>control</strong></li>
-         * <li><strong>storage</strong></li>
-         * <li><strong>controlStorage</strong></li>
+         * <li><p><strong>protect</strong>: protection node group.</p>
+         * </li>
+         * <li><p><strong>control</strong>: control node group.</p>
+         * </li>
+         * <li><p><strong>storage</strong>: storage node group.</p>
+         * </li>
+         * <li><p><strong>controlStorage</strong>: control and storage node group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +120,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         public String groupType;
 
         /**
-         * <p>The IP address of the server used for load balancing.</p>
+         * <p>The IP address of the load balancer that is associated with the hybrid cloud node group.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.XX.XX</p>
@@ -134,9 +138,9 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         public Long locationId;
 
         /**
-         * <p>The ISP code of the protected cluster.</p>
+         * <p>The carrier code of the protection cluster.</p>
          * <blockquote>
-         * <p> For more information about ISP codes, see ISP codes in this topic.</p>
+         * <p>For a list of valid codes, see Additional information about response parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +150,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         public Integer operatorValue;
 
         /**
-         * <p>The port that is used by the hybrid cloud cluster. The value of this parameter is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+         * <p>The ports that are used by the hybrid cloud cluster. Multiple ports are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>80,9200,20018</p>
@@ -155,9 +159,9 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         public String ports;
 
         /**
-         * <p>The city code of the protected cluster.</p>
+         * <p>The city code of the protection cluster.</p>
          * <blockquote>
-         * <p> For more information about city codes, see City codes in this topic.</p>
+         * <p>For a list of valid codes, see Additional information about response parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -167,7 +171,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         public Integer regionCodeValue;
 
         /**
-         * <p>The description of the node group.</p>
+         * <p>The description of the hybrid cloud node group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

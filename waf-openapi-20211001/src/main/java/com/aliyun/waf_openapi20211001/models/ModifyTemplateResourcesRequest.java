@@ -4,17 +4,20 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ModifyTemplateResourcesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the protected assets to attach. The value is in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+     */
     @NameInMap("BindAssets")
     public java.util.List<String> bindAssets;
 
     /**
-     * <p>The protected object groups that you want to associate with the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
+     * <p>The protected object groups to attach. The value is in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
      */
     @NameInMap("BindResourceGroups")
     public java.util.List<String> bindResourceGroups;
 
     /**
-     * <p>The protected objects that you want to associate with the template. Specify the value in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+     * <p>The protected objects to attach. The value is in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
      */
     @NameInMap("BindResources")
     public java.util.List<String> bindResources;
@@ -22,7 +25,7 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,10 +36,12 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +60,7 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the protection rule template.</p>
+     * <p>The ID of the protection template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,17 +69,20 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     @NameInMap("TemplateId")
     public Long templateId;
 
+    /**
+     * <p>The IDs of the protected assets to detach. The value is in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+     */
     @NameInMap("UnbindAssets")
     public java.util.List<String> unbindAssets;
 
     /**
-     * <p>The protected object groups that you want to disassociate from the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
+     * <p>The protected object groups to detach. The value is in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
      */
     @NameInMap("UnbindResourceGroups")
     public java.util.List<String> unbindResourceGroups;
 
     /**
-     * <p>The protected objects that you want to disassociate from the template. Specify the value in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+     * <p>The protected objects to detach. The value is in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
      */
     @NameInMap("UnbindResources")
     public java.util.List<String> unbindResources;

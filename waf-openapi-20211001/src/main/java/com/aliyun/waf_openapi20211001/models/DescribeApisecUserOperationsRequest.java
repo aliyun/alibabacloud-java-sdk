@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecUserOperationsRequest extends TeaModel {
     /**
-     * <p>The ID of the hybrid cloud cluster.</p>
+     * <p>The ID of the Hybrid Cloud WAF cluster.</p>
      * <blockquote>
-     * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+     * <p>This parameter is required only when WAF is deployed in hybrid cloud mode. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the IDs of Hybrid Cloud WAF clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeApisecUserOperationsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,7 +30,7 @@ public class DescribeApisecUserOperationsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The object ID of the operation record.</p>
+     * <p>The ID of the threat detection or security event for which you want to query operation records.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,10 +40,12 @@ public class DescribeApisecUserOperationsRequest extends TeaModel {
     public String objectId;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region in which the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +55,7 @@ public class DescribeApisecUserOperationsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group to which the WAF instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2ax2y5****pi</p>
@@ -64,8 +66,10 @@ public class DescribeApisecUserOperationsRequest extends TeaModel {
     /**
      * <p>The type of the operation record. Valid values:</p>
      * <ul>
-     * <li><strong>abnormal</strong>: risk detection</li>
-     * <li><strong>event</strong>: security event</li>
+     * <li><p><strong>abnormal</strong>: threat detection.</p>
+     * </li>
+     * <li><p><strong>event</strong>: security event.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

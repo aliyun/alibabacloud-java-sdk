@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,14 @@ public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Set the language property for rule names. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese rule names.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English rule names.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -21,6 +33,8 @@ public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>When performing a paged query, specify the page number to return. The default value is <strong>1</strong>, which means the first page of data is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +42,8 @@ public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>When performing a paged query, specify the number of results per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +51,14 @@ public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region to which the WAF instance belongs. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -42,6 +66,8 @@ public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The Alibaba Cloud resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */

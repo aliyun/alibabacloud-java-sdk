@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeMemberAccountsResponseBody extends TeaModel {
     /**
-     * <p>The information about the member.</p>
+     * <p>The information about the member accounts.</p>
      */
     @NameInMap("AccountInfos")
     public java.util.List<DescribeMemberAccountsResponseBodyAccountInfos> accountInfos;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>50C4A80D-D46C-57E0-9A7D-03C0****4852</p>
+     * <p>50C4A80D-D46C-57E0-9A7D-03C078474852</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,7 +42,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
 
     public static class DescribeMemberAccountsResponseBodyAccountInfos extends TeaModel {
         /**
-         * <p>The ID of the member.</p>
+         * <p>The ID of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>169************21</p>
@@ -51,7 +51,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the member.</p>
+         * <p>The name of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>ipflgmqqnbjg</p>
@@ -60,11 +60,14 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The status of the member.</p>
+         * <p>The status of the member account. Valid values:</p>
          * <ul>
-         * <li><strong>enabled</strong>: managed.</li>
-         * <li><strong>disabled</strong>: not managed.</li>
-         * <li><strong>disabling</strong>: being deleted.</li>
+         * <li><p><strong>enabled</strong>: The member account is being managed.</p>
+         * </li>
+         * <li><p><strong>disabled</strong>: The member account is not being managed.</p>
+         * </li>
+         * <li><p><strong>disabling</strong>: The member account is being removed from management.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,7 +77,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         public String accountStatus;
 
         /**
-         * <p>The description of the member.</p>
+         * <p>The description of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -83,7 +86,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the member was added.</p>
+         * <p>The time when the member account was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1683367751000</p>

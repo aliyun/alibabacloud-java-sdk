@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseResourceGroupRequest extends TeaModel {
     /**
-     * <p>The name of the protected object group whose information you want to query.</p>
+     * <p>The name of the protected object group that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeDefenseResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,10 +28,12 @@ public class DescribeDefenseResourceGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region of the WAF instance. The following fields are configured:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

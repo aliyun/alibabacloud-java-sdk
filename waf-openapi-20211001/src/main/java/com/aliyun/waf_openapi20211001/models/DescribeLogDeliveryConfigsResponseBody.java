@@ -5,19 +5,34 @@ import com.aliyun.tea.*;
 
 public class DescribeLogDeliveryConfigsResponseBody extends TeaModel {
     /**
-     * <p>The information about the log delivery configuration.</p>
+     * <p>The log delivery configurations.</p>
      */
     @NameInMap("DeliveryConfigs")
     public java.util.List<DescribeLogDeliveryConfigsResponseBodyDeliveryConfigs> deliveryConfigs;
 
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <blockquote>
+     * <p>If this parameter is not empty, more results are available. Use the value of <strong>NextToken</strong> in the next request to retrieve the next page of results. If the value is empty, all results have been returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2EFCFE18-78F8-5079-B312-07***48B</p>
@@ -25,6 +40,12 @@ public class DescribeLogDeliveryConfigsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of log delivery configurations returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -75,10 +96,22 @@ public class DescribeLogDeliveryConfigsResponseBody extends TeaModel {
 
     public static class DescribeLogDeliveryConfigsResponseBodyDeliveryConfigs extends TeaModel {
         /**
-         * <p>The content of the log delivery configuration. The value is a JSON string that contains multiple parameters.</p>
+         * <p>The details of the log delivery configuration, returned as a JSON string.</p>
          * <blockquote>
-         * <p> This parameter is the same as the <strong>DeliveryDetail</strong> parameter of the <strong>CreateLogDeliveryConfig</strong> operation. For more information, see <strong>Parameter description for log delivery configuration</strong> of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</p>
+         * <p>The structure of this parameter is the same as the <strong>DeliveryDetail</strong> request parameter of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;rfcVersion&quot;: &quot;rfc3164&quot;,
+         *   &quot;protocol&quot;: &quot;tcp&quot;,
+         *   &quot;servers&quot;: [
+         *     {
+         *       &quot;address&quot;: &quot;1.1.1.1&quot;,
+         *       &quot;port&quot;: 20
+         *     }
+         *   ]
+         * }</p>
          */
         @NameInMap("DeliveryDetail")
         public String deliveryDetail;
@@ -95,12 +128,14 @@ public class DescribeLogDeliveryConfigsResponseBody extends TeaModel {
         /**
          * <p>The type of the log delivery configuration. Valid values:</p>
          * <ul>
-         * <li><strong>syslog</strong>: Logs are delivered to a syslog service.</li>
-         * <li><strong>kafka</strong>: Logs are delivered to a Kafka service.</li>
+         * <li><p><strong>syslog</strong>: Log delivery to a syslog server.</p>
+         * </li>
+         * <li><p><strong>kafka</strong>: Log delivery to a Kafka cluster.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>kafka</p>
+         * <p>syslog</p>
          */
         @NameInMap("DeliveryType")
         public String deliveryType;

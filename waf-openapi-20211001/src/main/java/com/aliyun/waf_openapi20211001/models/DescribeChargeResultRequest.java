@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeChargeResultRequest extends TeaModel {
     /**
+     * <p>The billing cycle for the WAF instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Year</strong>: yearly billing cycle.</p>
+     * </li>
+     * <li><p><strong>Month</strong>: monthly billing cycle.</p>
+     * </li>
+     * <li><p><strong>Day</strong>: daily billing cycle.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Day</p>
      */
@@ -12,12 +22,17 @@ public class DescribeChargeResultRequest extends TeaModel {
     public String chargeCycle;
 
     /**
+     * <p>The billing modules to calculate.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChargeModules")
     public java.util.List<DescribeChargeResultRequestChargeModules> chargeModules;
 
     /**
+     * <p>The billing method of the WAF instance. Valid value:</p>
+     * <ul>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +42,14 @@ public class DescribeChargeResultRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -34,6 +57,8 @@ public class DescribeChargeResultRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -87,6 +112,8 @@ public class DescribeChargeResultRequest extends TeaModel {
 
     public static class DescribeChargeResultRequestChargeModules extends TeaModel {
         /**
+         * <p>The ID of the billing module.</p>
+         * 
          * <strong>example:</strong>
          * <p>domainCount</p>
          */
@@ -94,6 +121,8 @@ public class DescribeChargeResultRequest extends TeaModel {
         public String moduleCode;
 
         /**
+         * <p>The usage amount of the billing module.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

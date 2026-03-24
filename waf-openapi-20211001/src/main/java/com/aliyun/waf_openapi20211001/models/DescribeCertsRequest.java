@@ -7,8 +7,10 @@ public class DescribeCertsRequest extends TeaModel {
     /**
      * <p>The type of the encryption algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>NotSM2</strong>: The encryption algorithm is not the SM2 algorithm. This is the default value.</li>
-     * <li><strong>SM2</strong>: The encryption algorithm is the SM2 algorithm.</li>
+     * <li><p><strong>NotSM2 (default)</strong>: Specifies a non-ShangMi (SM) cryptographic algorithm.</p>
+     * </li>
+     * <li><p><strong>SM2</strong>: Specifies an SM cryptographic algorithm.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +31,7 @@ public class DescribeCertsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of your current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +42,7 @@ public class DescribeCertsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,7 +51,7 @@ public class DescribeCertsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -58,14 +60,16 @@ public class DescribeCertsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ap-southeast-1</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

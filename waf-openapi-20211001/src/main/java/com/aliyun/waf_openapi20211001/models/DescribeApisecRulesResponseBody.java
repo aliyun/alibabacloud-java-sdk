@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecRulesResponseBody extends TeaModel {
     /**
-     * <p>The policies.</p>
+     * <p>The list of rules.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecRulesResponseBodyData> data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
@@ -59,7 +59,7 @@ public class DescribeApisecRulesResponseBody extends TeaModel {
 
     public static class DescribeApisecRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>34933</p>
@@ -68,7 +68,7 @@ public class DescribeApisecRulesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The details of the policy. The value is a string that consists of multiple parameters in the JSON format.</p>
+         * <p>The details of the rule. The value is a string that is converted from a JSON object.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -84,10 +84,12 @@ public class DescribeApisecRulesResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The status of the policy. Valid values:</p>
+         * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enabled</li>
-         * <li><strong>0</strong>: disabled</li>
+         * <li><p><strong>1</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>0</strong>: disabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,17 +99,26 @@ public class DescribeApisecRulesResponseBody extends TeaModel {
         public Long status;
 
         /**
-         * <p>The type of the policy. Valid values:</p>
+         * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>risk</strong>: risk detection</li>
-         * <li><strong>event</strong>: security event</li>
-         * <li><strong>sensitive_word</strong>: sensitive data</li>
-         * <li><strong>auth_flag</strong>: authentication credential</li>
-         * <li><strong>api_tag</strong>: business purpose</li>
-         * <li><strong>desensitization</strong>: data masking</li>
-         * <li><strong>whitelist</strong>: whitelist</li>
-         * <li><strong>recognition</strong>: API recognition</li>
-         * <li><strong>offline_api</strong>: lifecycle management</li>
+         * <li><p><strong>risk</strong>: threat detection</p>
+         * </li>
+         * <li><p><strong>event</strong>: security event</p>
+         * </li>
+         * <li><p><strong>sensitive_word</strong>: sensitive data</p>
+         * </li>
+         * <li><p><strong>auth_flag</strong>: authentication credential</p>
+         * </li>
+         * <li><p><strong>api_tag</strong>: business purpose</p>
+         * </li>
+         * <li><p><strong>desensitization</strong>: data masking</p>
+         * </li>
+         * <li><p><strong>whitelist</strong>: whitelist</p>
+         * </li>
+         * <li><p><strong>recognition</strong>: API.</p>
+         * </li>
+         * <li><p><strong>offline_api</strong>: lifecycle management</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +128,7 @@ public class DescribeApisecRulesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the policy was updated. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The time when the rule was updated. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1721095301</p>

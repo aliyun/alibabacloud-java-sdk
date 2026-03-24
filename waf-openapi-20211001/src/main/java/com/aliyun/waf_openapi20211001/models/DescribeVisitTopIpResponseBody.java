@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVisitTopIpResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5D2B8DAE-A761-58CB-A68D-74989E4831DA</p>
@@ -14,7 +14,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The array of the top 10 IP addresses from which requests are sent.</p>
+     * <p>The top 10 IP addresses that initiate the most requests.</p>
      */
     @NameInMap("TopIp")
     public java.util.List<DescribeVisitTopIpResponseBodyTopIp> topIp;
@@ -42,7 +42,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
 
     public static class DescribeVisitTopIpResponseBodyTopIp extends TeaModel {
         /**
-         * <p>The ordinal number of the area to which the IP address belongs.</p>
+         * <p>The code of the geographical location.</p>
          * 
          * <strong>example:</strong>
          * <p>310000</p>
@@ -51,7 +51,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
         public String area;
 
         /**
-         * <p>The total number of requests that are sent from the IP address.</p>
+         * <p>The total number of requests that are initiated from the IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>2622</p>
@@ -69,7 +69,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The ISP.</p>
+         * <p>The Internet service provider (ISP).</p>
          * 
          * <strong>example:</strong>
          * <p>AAA</p>

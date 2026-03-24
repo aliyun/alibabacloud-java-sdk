@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseTemplateValidGroupsResponseBody extends TeaModel {
     /**
-     * <p>The names of the protected object groups.</p>
+     * <p>A list of protected object group names.</p>
      */
     @NameInMap("Groups")
     public java.util.List<String> groups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6EA4B39A-9C0C-5E57-993E-30B6****3AD0</p>

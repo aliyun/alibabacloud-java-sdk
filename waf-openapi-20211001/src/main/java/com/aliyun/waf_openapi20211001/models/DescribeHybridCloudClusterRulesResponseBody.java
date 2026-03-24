@@ -4,10 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeHybridCloudClusterRulesResponseBodyData> data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
      */
@@ -15,6 +20,8 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of cloud native mode entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudClusterRulesResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the hybrid cloud cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>1099</p>
          */
@@ -59,6 +68,8 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
         public Long clusterId;
 
         /**
+         * <p>The resource ID of the cluster rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>hdbc-clusterrule-*****khzre0ym0w</p>
          */
@@ -66,6 +77,30 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
         public String clusterRuleResourceId;
 
         /**
+         * <p>The configuration of the traffic redirection rule:</p>
+         * <ul>
+         * <li><p><strong>check_mode</strong></p>
+         * <p>: the mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>all</strong>: redirects all traffic.</p>
+         * </li>
+         * <li><p><strong>part</strong>: redirects a portion of traffic.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p><strong>type</strong></p>
+         * <p>: the match type of the rule. Valid values:</p>
+         * <ul>
+         * <li><p><strong>exact</strong>: exact match.</p>
+         * </li>
+         * <li><p><strong>regex</strong>: regular expression match.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p><strong>substance</strong>: the value of the rule.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;check_mode\&quot;: \&quot;all\&quot;, \&quot;type\&quot;: \&quot;exact\&quot;, \&quot;substance\&quot;: \&quot;122\&quot;}</p>
          */
@@ -73,6 +108,11 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
         public String ruleConfig;
 
         /**
+         * <p>The type of the rule. Valid value:</p>
+         * <ul>
+         * <li><strong>pullin</strong>: traffic redirection</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>pullin</p>
          */
@@ -80,6 +120,14 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
         public String ruleType;
 
         /**
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -87,6 +135,8 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudResourcesRequest extends TeaModel {
     /**
-     * <p>The back-to-origin IP address or domain name.</p>
+     * <p>The IP address or domain name of the origin server for back-to-origin.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
@@ -14,10 +14,12 @@ public class DescribeHybridCloudResourcesRequest extends TeaModel {
     public String backend;
 
     /**
-     * <p>Specifies whether the public cloud disaster recovery feature is enabled for the domain name. Valid values:</p>
+     * <p>Indicates whether public cloud disaster recovery is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +40,7 @@ public class DescribeHybridCloudResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +51,7 @@ public class DescribeHybridCloudResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -58,7 +60,7 @@ public class DescribeHybridCloudResourcesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -69,8 +71,10 @@ public class DescribeHybridCloudResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

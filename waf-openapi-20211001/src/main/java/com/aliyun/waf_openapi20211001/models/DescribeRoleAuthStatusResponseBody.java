@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeRoleAuthStatusResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the service-linked role for WAF is authorized.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The service-linked role is authorized.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The service-linked role is not authorized.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +20,8 @@ public class DescribeRoleAuthStatusResponseBody extends TeaModel {
     public Boolean authStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>79ECBB08-079C-57C5-A676-***</p>
      */

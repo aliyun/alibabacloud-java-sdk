@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
-     * <p>The API.</p>
+     * <p>The API endpoint path used to filter the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>/auth/login</p>
@@ -23,17 +23,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>The request method of the API. Valid values:</p>
-     * <ul>
-     * <li><strong>GET</strong></li>
-     * <li><strong>POST</strong></li>
-     * <li><strong>HEAD</strong></li>
-     * <li><strong>PUT</strong></li>
-     * <li><strong>DELETE</strong></li>
-     * <li><strong>CONNECT</strong></li>
-     * <li><strong>PATCH</strong></li>
-     * <li><strong>OPTIONS</strong></li>
-     * </ul>
+     * <p>The HTTP request method of the API. Valid values: <strong>GET</strong>, <strong>POST</strong>, <strong>HEAD</strong>, <strong>PUT</strong>, <strong>DELETE</strong>, <strong>CONNECT</strong>, <strong>PATCH</strong>, and <strong>OPTIONS</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>POST</p>
@@ -42,11 +32,14 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String apiMethod;
 
     /**
-     * <p>The API status. Valid values:</p>
+     * <p>The lifecycle status of the API. Valid values:</p>
      * <ul>
-     * <li><strong>NewbornInterface</strong>: The API is newly added.</li>
-     * <li><strong>OfflineInterface</strong>: The API is inactive.</li>
-     * <li><strong>normal</strong>: The API is normal.</li>
+     * <li><p><strong>NewbornInterface</strong>: newly discovered.</p>
+     * </li>
+     * <li><p><strong>OfflineInterface</strong>: inactive.</p>
+     * </li>
+     * <li><p><strong>normal</strong>: active.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +51,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>The business purpose of the API.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported business purposes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,11 +61,14 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String apiTag;
 
     /**
-     * <p>The service object. Valid values:</p>
+     * <p>The type of service that the API serves. Valid values:</p>
      * <ul>
-     * <li><strong>PublicAPI</strong>: public services</li>
-     * <li><strong>ThirdpartAPI</strong>: cooperation with third-party partners</li>
-     * <li><strong>InternalAPI</strong>: internal office</li>
+     * <li><p><strong>PublicAPI</strong>: public-facing service.</p>
+     * </li>
+     * <li><p><strong>ThirdpartAPI</strong>: third-party service.</p>
+     * </li>
+     * <li><p><strong>InternalAPI</strong>: internal service.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,10 +78,12 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String apiType;
 
     /**
-     * <p>Specifies whether authentication is required. Valid values:</p>
+     * <p>Indicates whether the API requires authentication. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Authentication is required.</li>
-     * <li><strong>1</strong>: Authentication is not required.</li>
+     * <li><p><strong>0</strong>: The API requires authentication.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The API does not require authentication.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,9 +93,9 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String authFlag;
 
     /**
-     * <p>The ID of the hybrid cloud cluster.</p>
+     * <p>The ID of the Hybrid Cloud WAF cluster.</p>
      * <blockquote>
-     * <p> This parameter is available only in hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud clusters.</p>
+     * <p>This parameter is available only for hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain information about Hybrid Cloud WAF clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,7 +105,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
+     * <p>The end of the time range to query. Specify a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1683388800</p>
@@ -116,10 +114,12 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to follow the API. Valid values:</p>
+     * <p>Indicates whether the API is followed. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: follows the API.</li>
-     * <li><strong>0</strong>: does not follow the API.</li>
+     * <li><p><strong>1</strong>: The API is followed.</p>
+     * </li>
+     * <li><p><strong>0</strong>: The API is not followed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,9 +129,9 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public Long follow;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -142,7 +142,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The domain name or IP address of the API.</p>
+     * <p>The domain name or IP address of the API used to filter the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>a.aliyun.com</p>
@@ -151,24 +151,31 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String matchedHost;
 
     /**
-     * <p>The remarks.</p>
+     * <p>The remarks of the API asset used to filter the query results.</p>
      * 
      * <strong>example:</strong>
-     * <p>API for logon</p>
+     * <p>loginApi</p>
      */
     @NameInMap("Note")
     public String note;
 
     /**
-     * <p>The name of the sorting field. Valid values:</p>
+     * <p>The field by which to sort the results. Valid values:</p>
      * <ul>
-     * <li><strong>allCnt</strong>: the total number of calls to the API in the previous 30 days</li>
-     * <li><strong>botCnt</strong>: the number of bot-initiated requests in the previous 30 days</li>
-     * <li><strong>crossBorderCnt</strong>: the number of cross-border requests in the previous 30 days</li>
-     * <li><strong>abnormalNum</strong>: the number of API-related risks</li>
-     * <li><strong>eventNum</strong>: the number of API-related security events</li>
-     * <li><strong>farthestTs</strong>: the time when the API was first detected</li>
-     * <li><strong>lastestTs</strong>: the time of the most recent access to the API</li>
+     * <li><p><strong>allCnt</strong>: sorts by the total number of requests in the last 30 days.</p>
+     * </li>
+     * <li><p><strong>botCnt</strong>: sorts by the number of bot requests in the last 30 days.</p>
+     * </li>
+     * <li><p><strong>crossBorderCnt</strong>: sorts by the number of cross-border requests in the last 30 days.</p>
+     * </li>
+     * <li><p><strong>abnormalNum</strong>: sorts by the number of threats associated with the API.</p>
+     * </li>
+     * <li><p><strong>eventNum</strong>: sorts by the number of security events associated with the API.</p>
+     * </li>
+     * <li><p><strong>farthestTs</strong>: sorts by the time when the API was first discovered.</p>
+     * </li>
+     * <li><p><strong>lastestTs</strong>: sorts by the time of the most recent access.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -178,10 +185,12 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String orderKey;
 
     /**
-     * <p>The sorting method. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>desc</strong> (default): descending order</li>
-     * <li><strong>asc</strong>: ascending order</li>
+     * <li><p><strong>desc</strong>: descending order (default).</p>
+     * </li>
+     * <li><p><strong>asc</strong>: ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -209,10 +218,12 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the WAF instance. Value:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -222,9 +233,9 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The sensitive data type in the request.</p>
+     * <p>The type of sensitive data in the request.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported sensitive data types.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -245,10 +256,14 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     /**
      * <p>The sensitivity level of the API. Valid values:</p>
      * <ul>
-     * <li><strong>L1</strong>: high sensitivity</li>
-     * <li><strong>L2</strong>: moderate sensitivity</li>
-     * <li><strong>L3</strong>: low sensitivity</li>
-     * <li><strong>N</strong>: non-sensitivity</li>
+     * <li><p><strong>L1</strong>: High.</p>
+     * </li>
+     * <li><p><strong>L2</strong>: Medium.</p>
+     * </li>
+     * <li><p><strong>L3</strong>: Low.</p>
+     * </li>
+     * <li><p><strong>N</strong>: Non-sensitive.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -258,9 +273,9 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String sensitiveLevel;
 
     /**
-     * <p>The sensitive data type in the response.</p>
+     * <p>The type of sensitive data in the response.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported sensitive data types.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -270,7 +285,7 @@ public class DescribeApisecApiResourcesRequest extends TeaModel {
     public String sensitiveType;
 
     /**
-     * <p>The beginning of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
+     * <p>The beginning of the time range to query. Specify a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1681833600</p>

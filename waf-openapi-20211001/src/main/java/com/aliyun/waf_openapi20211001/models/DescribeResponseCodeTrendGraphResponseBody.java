@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>7D46493E-84DD-58CE-80A7-8643****9ECC</p>
+     * <p>7D46493E-84DD-58CE-80A7-8643F2B09ECC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The array of the statistics of the error codes.</p>
+     * <p>The statistics of response codes.</p>
      */
     @NameInMap("ResponseCodes")
     public java.util.List<DescribeResponseCodeTrendGraphResponseBodyResponseCodes> responseCodes;
@@ -42,7 +42,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
 
     public static class DescribeResponseCodeTrendGraphResponseBodyResponseCodes extends TeaModel {
         /**
-         * <p>The number of 302 error codes that are returned.</p>
+         * <p>The number of 302 response codes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         public Long code302Pv;
 
         /**
-         * <p>The number of 405 error codes that are returned.</p>
+         * <p>The number of 405 response codes.</p>
          * 
          * <strong>example:</strong>
          * <p>121645464</p>
@@ -60,7 +60,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         public Long code405Pv;
 
         /**
-         * <p>The number of 444 error codes that are returned.</p>
+         * <p>The number of 444 response codes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -69,7 +69,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         public Long code444Pv;
 
         /**
-         * <p>The number of 499 error codes that are returned.</p>
+         * <p>The number of 499 response codes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -78,7 +78,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         public Long code499Pv;
 
         /**
-         * <p>The number of 5xx error codes that are returned.</p>
+         * <p>The number of 5xx response codes.</p>
          * 
          * <strong>example:</strong>
          * <p>2932</p>
@@ -87,7 +87,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         public Long code5xxPv;
 
         /**
-         * <p>The serial number of the time interval. The serial numbers are arranged in chronological order.</p>
+         * <p>The serial number of the time interval, sorted in chronological order.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

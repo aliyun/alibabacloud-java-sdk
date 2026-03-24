@@ -5,19 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseTemplateValidGroupsRequest extends TeaModel {
     /**
-     * <p>The scenario in which the protection template is used.</p>
-     * <ul>
-     * <li><strong>waf_group</strong>: basic protection.</li>
-     * <li><strong>antiscan</strong>: scan protection.</li>
-     * <li><strong>ip_blacklist</strong>: IP address blacklist.</li>
-     * <li><strong>custom_acl</strong>: custom rule.</li>
-     * <li><strong>whitelist</strong>: whitelist.</li>
-     * <li><strong>region_block</strong>: region blacklist.</li>
-     * <li><strong>custom_response</strong>: custom response.</li>
-     * <li><strong>cc</strong>: HTTP flood protection.</li>
-     * <li><strong>tamperproof</strong>: website tamper-proofing.</li>
-     * <li><strong>dlp</strong>: data leakage prevention.</li>
-     * </ul>
+     * <p>The protection scenario. For more information, see the valid values for the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> when <strong>DefenseType</strong> is set to <strong>template</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +15,7 @@ public class DescribeDefenseTemplateValidGroupsRequest extends TeaModel {
     public String defenseScene;
 
     /**
-     * <p>The name of the protected object group that you want to query.</p>
+     * <p>The name of the protected object group. Use this parameter to filter results by group name.</p>
      * 
      * <strong>example:</strong>
      * <p>group221</p>
@@ -38,7 +26,7 @@ public class DescribeDefenseTemplateValidGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +37,7 @@ public class DescribeDefenseTemplateValidGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -67,10 +55,12 @@ public class DescribeDefenseTemplateValidGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

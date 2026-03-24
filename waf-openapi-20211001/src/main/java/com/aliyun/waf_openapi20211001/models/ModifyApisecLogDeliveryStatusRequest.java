@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyApisecLogDeliveryStatusRequest extends TeaModel {
     /**
-     * <p>The type of the log subscription. Valid values:</p>
+     * <p>The type of the API security log delivery. Valid values:</p>
      * <ul>
-     * <li><strong>risk</strong>: risk information.</li>
-     * <li><strong>event</strong>: attack event information.</li>
-     * <li><strong>asset</strong>: asset information.</li>
+     * <li><p><strong>risk</strong>: threat information.</p>
+     * </li>
+     * <li><p><strong>event</strong>: attack event information.</p>
+     * </li>
+     * <li><p><strong>asset</strong>: asset information.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,9 +23,9 @@ public class ModifyApisecLogDeliveryStatusRequest extends TeaModel {
     public String assertKey;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,10 +36,12 @@ public class ModifyApisecLogDeliveryStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region in which the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +51,7 @@ public class ModifyApisecLogDeliveryStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -55,10 +60,12 @@ public class ModifyApisecLogDeliveryStatusRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The status of API security log subscription. Valid values:</p>
+     * <p>Indicates whether the API security log subscription is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled.</li>
-     * <li><strong>false</strong>: disabled.</li>
+     * <li><p><strong>true</strong>: The API security log subscription is enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The API security log subscription is disabled.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

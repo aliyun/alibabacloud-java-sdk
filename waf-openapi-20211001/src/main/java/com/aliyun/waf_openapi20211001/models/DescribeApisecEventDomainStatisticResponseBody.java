@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The API security event statistics grouped by domain name.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecEventDomainStatisticResponseBodyData> data;
 
     /**
-     * <p>Id of the request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>66A98669-*******-80A6-3014697B11AE</p>
@@ -20,7 +20,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of domain names that have API security events.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
 
     public static class DescribeApisecEventDomainStatisticResponseBodyData extends TeaModel {
         /**
-         * <p>The number of APIs.</p>
+         * <p>The total number of APIs that have security events for the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -68,7 +68,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
         public Long apiCount;
 
         /**
-         * <p>The domain name.</p>
+         * <p>The domain name that is protected by WAF.</p>
          * 
          * <strong>example:</strong>
          * <p>a.aliyun.com</p>
@@ -77,7 +77,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The number of high-risk security events.</p>
+         * <p>The number of high-risk security events for the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -86,7 +86,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
         public Long high;
 
         /**
-         * <p>The number of low-risk security events.</p>
+         * <p>The number of low-risk security events for the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -95,7 +95,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
         public Long low;
 
         /**
-         * <p>The number of medium-risk security events.</p>
+         * <p>The number of medium-risk security events for the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

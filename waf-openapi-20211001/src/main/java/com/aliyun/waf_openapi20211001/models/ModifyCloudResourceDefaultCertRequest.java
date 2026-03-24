@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudResourceDefaultCertRequest extends TeaModel {
     /**
+     * <p>The ID of the certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class ModifyCloudResourceDefaultCertRequest extends TeaModel {
     public String certId;
 
     /**
+     * <p>The ID of the connected cloud resource. WAF generates this ID automatically when you connect a cloud resource.</p>
+     * <blockquote>
+     * <p>After you connect a resource using <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a>, check the response to get the resource ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,10 @@ public class ModifyCloudResourceDefaultCertRequest extends TeaModel {
     public String cloudResourceId;
 
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +41,13 @@ public class ModifyCloudResourceDefaultCertRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +57,8 @@ public class ModifyCloudResourceDefaultCertRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */

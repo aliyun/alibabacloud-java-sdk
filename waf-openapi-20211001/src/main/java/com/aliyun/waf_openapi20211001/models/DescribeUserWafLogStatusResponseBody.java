@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class DescribeUserWafLogStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the region where WAF logs are stored. Valid values:</p>
+     * <p>The ID of the region where logs are stored. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
-     * <li><strong>cn-beijing</strong>: China (Beijing).</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore.</li>
-     * <li><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</li>
-     * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</li>
-     * <li><strong>ap-southeast-6</strong>: Philippines (Manila).</li>
-     * <li><strong>ap-southeast-7</strong>: Thailand (Bangkok).</li>
-     * <li><strong>me-east-1</strong>: UAE (Dubai).</li>
-     * <li><strong>eu-central-1</strong>: Germany (Frankfurt).</li>
-     * <li><strong>us-east-1</strong>: US (Virginia).</li>
-     * <li><strong>us-west-1</strong>: US (Silicon Valley).</li>
-     * <li><strong>ap-northeast-1</strong>: Japan (Tokyo).</li>
-     * <li><strong>ap-northeast-2</strong>: South Korea (Seoul).</li>
-     * <li><strong>eu-west-1</strong>: UK (London).</li>
-     * <li><strong>cn-hangzhou-finance</strong>: China East 1 Finance.</li>
-     * <li><strong>cn-shanghai-finance-1</strong>: China East 2 Finance.</li>
-     * <li><strong>cn-shenzhen-finance</strong>: China South 1 Finance.</li>
+     * <li><p><strong>cn-hangzhou</strong>: indicates China East 1 (Hangzhou).</p>
+     * </li>
+     * <li><p><strong>cn-beijing</strong>: indicates China North 2 (Beijing).</p>
+     * </li>
+     * <li><p><strong>cn-hongkong</strong>: indicates China (Hong Kong).</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: indicates Singapore.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-3</strong>: indicates Malaysia (Kuala Lumpur).</p>
+     * </li>
+     * <li><p><strong>ap-southeast-5</strong>: indicates Indonesia (Jakarta).</p>
+     * </li>
+     * <li><p><strong>ap-southeast-6</strong>: indicates Philippines (Manila).</p>
+     * </li>
+     * <li><p><strong>ap-southeast-7</strong>: indicates Thailand (Bangkok).</p>
+     * </li>
+     * <li><p><strong>me-east-1</strong>: indicates UAE (Dubai).</p>
+     * </li>
+     * <li><p><strong>eu-central-1</strong>: indicates Germany (Frankfurt).</p>
+     * </li>
+     * <li><p><strong>us-east-1</strong>: indicates US (Virginia).</p>
+     * </li>
+     * <li><p><strong>us-west-1</strong>: indicates US (Silicon Valley).</p>
+     * </li>
+     * <li><p><strong>ap-northeast-1</strong>: indicates Japan (Tokyo).</p>
+     * </li>
+     * <li><p><strong>ap-northeast-2</strong>: indicates South Korea (Seoul).</p>
+     * </li>
+     * <li><p><strong>eu-west-1</strong>: indicates UK (London).</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou-finance</strong>: indicates China East 1 Hangzhou Finance Cloud.</p>
+     * </li>
+     * <li><p><strong>cn-shanghai-finance-1</strong>: indicates China East 2 Shanghai Finance Cloud.</p>
+     * </li>
+     * <li><p><strong>cn-shenzhen-finance</strong>: indicates China South 1 Shenzhen Finance Cloud.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The China East 1 Finance, China East 2 Finance, and China South 1 Finance regions are available only for Alibaba Finance Cloud users. Alibaba Finance Cloud users are also limited to storing logs within these specific regions.</p>
+     * <p>The Finance Cloud regions are available only to Finance Cloud users, and Finance Cloud users can obtain only these regions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,11 +57,16 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
     /**
      * <p>The status of WAF logs.</p>
      * <ul>
-     * <li><strong>initializing</strong></li>
-     * <li><strong>initialize_failed</strong></li>
-     * <li><strong>normal</strong></li>
-     * <li><strong>releasing</strong></li>
-     * <li><strong>release_failed</strong></li>
+     * <li><p><strong>initializing</strong>: The logs are being initialized.</p>
+     * </li>
+     * <li><p><strong>initialize_failed</strong>: The initialization failed.</p>
+     * </li>
+     * <li><p><strong>normal</strong>: The logs are running properly.</p>
+     * </li>
+     * <li><p><strong>releasing</strong>: The logs are being released.</p>
+     * </li>
+     * <li><p><strong>release_failed</strong>: The release failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,10 +76,10 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
     public String logStatus;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
-     * <p>D7861F61-5B61-46CE-A47C-6B19160D****</p>
+     * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

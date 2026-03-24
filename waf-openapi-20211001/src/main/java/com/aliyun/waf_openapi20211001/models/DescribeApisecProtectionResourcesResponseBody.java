@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecProtectionResourcesResponseBody extends TeaModel {
     /**
-     * <p>The protected objects.</p>
+     * <p>The list of protected objects.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecProtectionResourcesResponseBodyData> data;
@@ -59,7 +59,13 @@ public class DescribeApisecProtectionResourcesResponseBody extends TeaModel {
 
     public static class DescribeApisecProtectionResourcesResponseBodyData extends TeaModel {
         /**
-         * <p>The switch of the API security module.</p>
+         * <p>Indicates whether the API security feature is enabled for the protected object. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -68,7 +74,13 @@ public class DescribeApisecProtectionResourcesResponseBody extends TeaModel {
         public Long apisecStatus;
 
         /**
-         * <p>The switch of the compliance check feature.</p>
+         * <p>Indicates whether the compliance check feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -77,7 +89,7 @@ public class DescribeApisecProtectionResourcesResponseBody extends TeaModel {
         public Long reportStatus;
 
         /**
-         * <p>The protected object.</p>
+         * <p>The name of the protected object.</p>
          * 
          * <strong>example:</strong>
          * <p>cwaf-***-waf</p>
@@ -86,7 +98,13 @@ public class DescribeApisecProtectionResourcesResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>The switch of the tracing and auditing feature.</p>
+         * <p>Indicates whether the source tracing feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>

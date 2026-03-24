@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecAssetTrendResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The API asset trend data.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecAssetTrendResponseBodyData> data;
 
     /**
-     * <p>Id of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>
@@ -42,7 +42,7 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
 
     public static class DescribeApisecAssetTrendResponseBodyData extends TeaModel {
         /**
-         * <p>The number of active assets.</p>
+         * <p>The number of active APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -51,7 +51,7 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
         public Long assetActive;
 
         /**
-         * <p>The total number of assets.</p>
+         * <p>The total number of API assets.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -60,7 +60,7 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
         public Long assetCount;
 
         /**
-         * <p>The number of deactivated assets.</p>
+         * <p>The number of inactive APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -69,7 +69,7 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
         public Long assetOffline;
 
         /**
-         * <p>The time for statistics. Specify a UNIX timestamp in UTC. Unit: seconds.</p>
+         * <p>The timestamp of the data point. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683600042</p>

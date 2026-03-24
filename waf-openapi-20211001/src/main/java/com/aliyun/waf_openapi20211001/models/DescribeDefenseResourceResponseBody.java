@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseResourceResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>439AADF2-368C-5E98-B14E-3086****0573</p>
@@ -14,7 +14,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The protected object.</p>
+     * <p>The details of the protected object.</p>
      */
     @NameInMap("Resource")
     public DescribeDefenseResourceResponseBodyResource resource;
@@ -42,7 +42,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
 
     public static class DescribeDefenseResourceResponseBodyResourceResponseHeaders extends TeaModel {
         /**
-         * <p>Specifies the key for a custom response header.</p>
+         * <p>The key of the custom response header.</p>
          * 
          * <strong>example:</strong>
          * <p>Header-Key</p>
@@ -51,7 +51,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Specifies the value for a custom response header.</p>
+         * <p>The value of the custom response header.</p>
          * 
          * <strong>example:</strong>
          * <p>Header-Value</p>
@@ -84,10 +84,12 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
 
     public static class DescribeDefenseResourceResponseBodyResource extends TeaModel {
         /**
-         * <p>The status of the tracking cookie.</p>
+         * <p>Indicates whether the tracking cookie feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disabled.</li>
-         * <li><strong>1</strong>: enabled.</li>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,10 +99,12 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public Integer acwCookieStatus;
 
         /**
-         * <p>The status of the secure attribute of the tracking cookie.</p>
+         * <p>Indicates whether the secure attribute of the tracking cookie is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disabled.</li>
-         * <li><strong>1</strong>: enabled.</li>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,10 +114,12 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public Integer acwSecureStatus;
 
         /**
-         * <p>The status of the secure attribute of the slider CAPTCHA cookie.</p>
+         * <p>Indicates whether the secure attribute of the slider CAPTCHA cookie is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disabled.</li>
-         * <li><strong>1</strong>: enabled.</li>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,9 +129,9 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public Integer acwV3SecureStatus;
 
         /**
-         * <p>The custom header fields.</p>
+         * <p>The list of custom header fields used to identify the actual client IP address.</p>
          * <blockquote>
-         * <p> If the value of XffStatus is 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent X-Forwarded-For (XFF) forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the XFF header field is used as the originating IP address of the client.</p>
+         * <p>This parameter takes effect only when XffStatus is set to 1. WAF uses the first IP address in the specified header fields as the client source IP address to prevent X-Forwarded-For (XFF) spoofing. If multiple headers are specified, WAF checks them in order. If the first header does not contain a source IP address, WAF checks the next header. If none of the specified headers contain a source IP address, WAF uses the first IP address in the X-Forwarded-For header.</p>
          * </blockquote>
          */
         @NameInMap("CustomHeaders")
@@ -141,7 +147,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The details of the protected object. Different key-value pairs indicate different attributes of the protected object.</p>
+         * <p>The details of the protected object. The fields vary based on the cloud service type.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -153,7 +159,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public java.util.Map<String, ?> detail;
 
         /**
-         * <p>The time when the protected object was created. Unit: milliseconds.</p>
+         * <p>The time when the protected object was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1607493144000</p>
@@ -162,7 +168,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The time when the protected object was modified. Unit: milliseconds.</p>
+         * <p>The time when the protected object was modified. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1691720010000</p>
@@ -170,11 +176,17 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The ID of the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-wwo****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The user ID (UID) of the Alibaba Cloud account to which the protected object belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the protected object belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>170457******9107</p>
@@ -183,7 +195,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
-         * <p>The pattern used for the protected object.</p>
+         * <p>The protection pattern of the protected object.</p>
          * 
          * <strong>example:</strong>
          * <p>domain</p>
@@ -192,7 +204,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public String pattern;
 
         /**
-         * <p>The name of the cloud service.</p>
+         * <p>The type of cloud service to which the protected object belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>alb</p>
@@ -230,8 +242,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         /**
          * <p>The origin of the protected object. Valid values:</p>
          * <ul>
-         * <li><strong>custom</strong></li>
-         * <li><strong>access</strong></li>
+         * <li><p><strong>custom</strong>: The protected object is created through provisioning.</p>
+         * </li>
+         * <li><p><strong>access</strong>: The protected object is user-defined.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,16 +255,18 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public String resourceOrigin;
 
         /**
-         * <p>The response header.</p>
+         * <p>The custom response headers configured for the protected object.</p>
          */
         @NameInMap("ResponseHeaders")
         public java.util.List<DescribeDefenseResourceResponseBodyResourceResponseHeaders> responseHeaders;
 
         /**
-         * <p>Indicates whether a Layer 7 proxy is deployed in front of WAF, such as Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</p>
+         * <p>Indicates whether a Layer 7 proxy such as Anti-DDoS or CDN is enabled in front of WAF. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No Layer 7 proxy is deployed.</li>
-         * <li><strong>1</strong>: A Layer 7 proxy is deployed.</li>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

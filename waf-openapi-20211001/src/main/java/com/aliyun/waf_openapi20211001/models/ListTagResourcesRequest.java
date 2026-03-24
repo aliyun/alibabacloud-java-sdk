@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>A pagination token for the next query</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -14,10 +14,12 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: indicates the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: indicates regions outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +36,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
+     * <p>The resource type. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,7 +98,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N that is added to the resource. Valid values of N: 1 to 20.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>Tagkey1</p>
@@ -105,7 +107,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the resource. Valid values of N: 1 to 20.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue1</p>

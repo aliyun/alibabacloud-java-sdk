@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayDailyBillsResponseBody extends TeaModel {
     /**
-     * <p>The bills of the burstable QPS (pay-as-you-go) feature.</p>
+     * <p>List of WAF burstable billing records.</p>
      */
     @NameInMap("Bills")
     public java.util.List<DescribePrepayDailyBillsResponseBodyBills> bills;
 
     /**
-     * <p>The request ID.</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EC10C9EA-A367-52D5-<em><strong>-</strong></em></p>
@@ -20,7 +20,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>Total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
 
     public static class DescribePrepayDailyBillsResponseBodyBills extends TeaModel {
         /**
-         * <p>The burstable QPS of the WAF instance.</p>
+         * <p>Elastic QPS specification for the WAF instance.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -68,7 +68,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long elasticQpsSetValue;
 
         /**
-         * <p>The billing end time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>End time of the billing period, in Unix timestamp format (UTC), measured in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687591200</p>
@@ -77,11 +77,14 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The status of QPS usage within the current period of time. Valid values:</p>
+         * <p>Overuse status for the current period. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: normal.</li>
-         * <li><strong>1</strong>: excess.</li>
-         * <li><strong>2</strong>: sandbox.</li>
+         * <li><p><strong>0</strong>: Normal.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Overused.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Sandbox.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +94,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Integer exceedStatus;
 
         /**
-         * <p>The peak QPS within the current period of time.</p>
+         * <p>Maximum QPS for the current period.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -100,7 +103,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long maxQps;
 
         /**
-         * <p>The unit price in the bill. The price is measured in CNY for bills at the China site (aliyun.com) and in USD for bills at the international site (alibabacloud.com).</p>
+         * <p>Unit price for burstable charges. Unit: CNY for the Alibaba Cloud China Website (www\.aliyun.com) and USD for the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -109,7 +112,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Float price;
 
         /**
-         * <p>The extended QPS of the WAF instance.</p>
+         * <p>QPS extension specification for the WAF instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -118,7 +121,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long qps;
 
         /**
-         * <p>The default QPS of the WAF instance.</p>
+         * <p>QPS specification within the version of the WAF instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -127,10 +130,12 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long qpsVersion;
 
         /**
-         * <p>Indicates whether risk identification is enabled. Valid values:</p>
+         * <p>Whether Fraud Detection is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Fraud Detection is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Fraud Detection is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +145,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Boolean riskControl;
 
         /**
-         * <p>The number of times that risk identification is performed.</p>
+         * <p>Number of Fraud Detection requests processed.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -149,7 +154,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long riskTraffic;
 
         /**
-         * <p>The billing start time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>Start time of the billing period, in Unix timestamp format (UTC), measured in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687822980</p>
@@ -158,7 +163,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The actual QPS in total.</p>
+         * <p>Total QPS subject to burstable billing.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -167,7 +172,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long total;
 
         /**
-         * <p>The billing types.</p>
+         * <p>The billing type.</p>
          */
         @NameInMap("Type")
         public java.util.List<String> type;

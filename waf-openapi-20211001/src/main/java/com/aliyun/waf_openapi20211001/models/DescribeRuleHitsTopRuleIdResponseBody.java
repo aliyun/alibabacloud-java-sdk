@@ -14,7 +14,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The array of the IDs of the top 10 rules that are matched by requests.</p>
+     * <p>The IDs of the top 10 rules that were hit most frequently.</p>
      */
     @NameInMap("RuleHitsTopRuleId")
     public java.util.List<DescribeRuleHitsTopRuleIdResponseBodyRuleHitsTopRuleId> ruleHitsTopRuleId;
@@ -42,7 +42,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
 
     public static class DescribeRuleHitsTopRuleIdResponseBodyRuleHitsTopRuleId extends TeaModel {
         /**
-         * <p>The number of requests that match the rule.</p>
+         * <p>The number of times the rule was hit.</p>
          * 
          * <strong>example:</strong>
          * <p>181174784</p>
@@ -51,7 +51,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The protected object.</p>
+         * <p>The protected object. This parameter is returned only if IsGroupResource is set to false.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>

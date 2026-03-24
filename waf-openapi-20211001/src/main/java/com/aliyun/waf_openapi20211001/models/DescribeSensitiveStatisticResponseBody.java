@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveStatisticResponseBody extends TeaModel {
     /**
-     * <p>The statistics of the sensitive data.</p>
+     * <p>The list of sensitive data statistics.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeSensitiveStatisticResponseBodyData> data;
@@ -59,7 +59,7 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
 
     public static class DescribeSensitiveStatisticResponseBodyData extends TeaModel {
         /**
-         * <p>The API.</p>
+         * <p>The API path.</p>
          * 
          * <strong>example:</strong>
          * <p>/api/login</p>
@@ -68,7 +68,7 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
         public String apiFormat;
 
         /**
-         * <p>The IP address.</p>
+         * <p>The client IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.50.11.**</p>
@@ -77,7 +77,7 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
         public String clientIP;
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The number of data entries.</p>
          * 
          * <strong>example:</strong>
          * <p>169</p>
@@ -86,7 +86,7 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The domain name.</p>
+         * <p>The matched domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>a.****.com</p>
@@ -95,9 +95,9 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
         public String matchedHost;
 
         /**
-         * <p>The type of the sensitive data.</p>
+         * <p>The sensitive data type.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported sensitive data types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

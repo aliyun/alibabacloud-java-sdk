@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9087ADDC-9047-4D02-82A7-33021B58083C</p>
@@ -14,7 +14,7 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The back-to-origin CIDR blocks that are used by the protection cluster.</p>
+     * <p>The list of WAF back-to-origin IP CIDR blocks used by the protection cluster.</p>
      */
     @NameInMap("WafSourceIp")
     public DescribeWafSourceIpSegmentResponseBodyWafSourceIp wafSourceIp;
@@ -42,13 +42,13 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
 
     public static class DescribeWafSourceIpSegmentResponseBodyWafSourceIp extends TeaModel {
         /**
-         * <p>An array of back-to-origin IPv4 CIDR blocks.</p>
+         * <p>The list of IPv4 back-to-origin CIDR blocks.</p>
          */
         @NameInMap("IPv4")
         public java.util.List<String> IPv4;
 
         /**
-         * <p>An array of back-to-origin IPv6 CIDR blocks.</p>
+         * <p>The list of IPv6 back-to-origin CIDR blocks.</p>
          */
         @NameInMap("IPv6")
         public java.util.List<String> IPv6;

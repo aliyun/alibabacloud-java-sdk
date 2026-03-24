@@ -7,8 +7,10 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the specified resource groups or members. Valid values:</p>
      * <ul>
-     * <li>false (default)</li>
-     * <li>true</li>
+     * <li><p>false (default)</p>
+     * </li>
+     * <li><p>true</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +22,10 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

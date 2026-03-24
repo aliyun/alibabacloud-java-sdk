@@ -7,7 +7,7 @@ public class ModifyPauseProtectionStatusRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,8 +20,10 @@ public class ModifyPauseProtectionStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to pause WAF protection.</p>
      * <ul>
-     * <li><strong>0</strong>: does not pause WAF protection. This is the default value.</li>
-     * <li><strong>1</strong>: pauses WAF protection.</li>
+     * <li><p><strong>0 (default)</strong>: WAF protection is not paused.</p>
+     * </li>
+     * <li><p><strong>1</strong>: WAF protection is paused.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,10 +34,12 @@ public class ModifyPauseProtectionStatusRequest extends TeaModel {
     public Integer pauseStatus;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

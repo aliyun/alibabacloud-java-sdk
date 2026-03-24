@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9178CB86-285F-5679-A30A-3B3F007E4206</p>
@@ -14,7 +14,7 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the ports that can be used by a hybrid cloud cluster.</p>
+     * <p>The information about the available HTTP and HTTPS port ranges for hybrid cloud access.</p>
      */
     @NameInMap("UserInfo")
     public DescribeHybridCloudUserResponseBodyUserInfo userInfo;
@@ -42,7 +42,7 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudUserResponseBodyUserInfo extends TeaModel {
         /**
-         * <p>The HTTP ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+         * <p>The available HTTP ports. The value is a string. If multiple ports are returned, they are separated by commas (,). Example: <strong>port1,port2,port3</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>80,8080</p>
@@ -51,7 +51,7 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
         public String httpPorts;
 
         /**
-         * <p>The HTTPS ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+         * <p>The available HTTPS ports. The value is a string. If multiple ports are returned, they are separated by commas (,). Example: <strong>port1,port2,port3</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>8443,443</p>

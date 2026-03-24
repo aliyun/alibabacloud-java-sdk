@@ -14,7 +14,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The trends of attacks.</p>
+     * <p>The list of attack trends.</p>
      */
     @NameInMap("Trend")
     public java.util.List<DescribeUserEventTrendResponseBodyTrend> trend;
@@ -42,7 +42,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
 
     public static class DescribeUserEventTrendResponseBodyTrend extends TeaModel {
         /**
-         * <p>The number of high-risk events.</p>
+         * <p>The number of important events.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -69,10 +69,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
         public Long eventMedium;
 
         /**
-         * <p>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
-         * <blockquote>
-         * <p>Notice: The parameter has been deprecated, it is recommended to use the Timestamp parameter.</p>
-         * </blockquote>
+         * <p>The time of the statistics. This is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1723435200</p>
@@ -82,7 +79,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
         public Long timeStamp;
 
         /**
-         * <p>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The time of the statistics. This is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1723435200</p>

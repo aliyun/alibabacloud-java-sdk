@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCnameCountResponseBody extends TeaModel {
     /**
-     * <p>The information about the number of domain names that are added to WAF in CNAME record mode and hybrid cloud reverse proxy mode.</p>
+     * <p>The number of CNAME records that are added.</p>
      */
     @NameInMap("CnameCount")
     public DescribeCnameCountResponseBodyCnameCount cnameCount;
@@ -42,7 +42,7 @@ public class DescribeCnameCountResponseBody extends TeaModel {
 
     public static class DescribeCnameCountResponseBodyCnameCount extends TeaModel {
         /**
-         * <p>The number of domain names that are added to WAF in CNAME record mode.</p>
+         * <p>The number of domain names that are added in CNAME mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -51,7 +51,7 @@ public class DescribeCnameCountResponseBody extends TeaModel {
         public Long cname;
 
         /**
-         * <p>The number of domain names that are added to WAF in hybrid cloud reverse proxy mode.</p>
+         * <p>The number of domain names that are added in hybrid cloud mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,7 +60,7 @@ public class DescribeCnameCountResponseBody extends TeaModel {
         public Long hybridCloudCname;
 
         /**
-         * <p>The total number of domain names that are added to WAF in CNAME record mode and hybrid cloud reverse proxy mode.</p>
+         * <p>The total number of domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateDomainResponseBody extends TeaModel {
     /**
-     * <p>The information about the domain name that is added.</p>
+     * <p>The details of the added domain name.</p>
      */
     @NameInMap("DomainInfo")
     public CreateDomainResponseBodyDomainInfo domainInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>D7861F61-5B61-46CE-A47C-6B19160D****</p>
+     * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,7 +42,7 @@ public class CreateDomainResponseBody extends TeaModel {
 
     public static class CreateDomainResponseBodyDomainInfo extends TeaModel {
         /**
-         * <p>The CNAME that is assigned by WAF to the domain name.</p>
+         * <p>The CNAME assigned by WAF to the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxwww.****.com</p>
@@ -51,7 +51,7 @@ public class CreateDomainResponseBody extends TeaModel {
         public String cname;
 
         /**
-         * <p>The domain name that you added to WAF.</p>
+         * <p>The domain name that is onboarded to WAF.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -60,7 +60,7 @@ public class CreateDomainResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The name of the protected object that is generated.</p>
+         * <p>The ID of the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>

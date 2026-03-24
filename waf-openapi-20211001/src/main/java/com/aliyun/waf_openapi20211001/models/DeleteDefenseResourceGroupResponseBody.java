@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDefenseResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25BE1169-9AE4-5D7D-8293-C33242ABB549</p>

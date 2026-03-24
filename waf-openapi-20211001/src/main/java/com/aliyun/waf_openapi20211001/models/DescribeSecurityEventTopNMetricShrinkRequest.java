@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventTopNMetricShrinkRequest extends TeaModel {
     /**
-     * <p>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</p>
+     * <p>The filter conditions for the query. A logical AND operator is used between multiple filter conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
     public String filterShrink;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,7 +25,7 @@ public class DescribeSecurityEventTopNMetricShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of data entries that can be returned. Data entries are sorted in descending order before they are returned. Maximum value: 10.</p>
+     * <p>The maximum number of entries to return. The entries are sorted in descending order. Maximum value: 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,26 +35,37 @@ public class DescribeSecurityEventTopNMetricShrinkRequest extends TeaModel {
     public Long limit;
 
     /**
-     * <p>The metric whose top N data entries you want to return. The following metrics are supported:</p>
+     * <p>Specifies the content of the returned data. Different metrics correspond to different data content. This operation supports the following metrics:</p>
      * <blockquote>
-     * <p> For more information about attack requests, see the &quot;Operation description&quot; section of this topic.</p>
+     * <p>For the definition of an attack request, see the Description section of this topic. The following descriptions use this definition.</p>
      * </blockquote>
      * <ul>
-     * <li>real_client_ip: The system aggregates the source IP addresses of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
-     * <li>http_user_agent: The system aggregates the User-Agent header field of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
-     * <li>matched_host: The system aggregates the protected objects that are matched by attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
-     * <li>remote_region_id: The system aggregates the countries to which the source IP addresses of attack requests belong to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
-     * <li>request_path: The system aggregates the URLs of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries. The URLs exclude query strings.</li>
-     * <li>block_defense_scene: The system aggregates the protection modules that block attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries. The requests match protection rules whose actions are not set to Monitor.</li>
-     * <li>defense_scene: The system aggregates the protection modules that are matched by attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
-     * <li>defense_scene_rule_id: The system returns the IDs of top N protection rules that are matched by attack requests and also the related protection modules. Only protection rules whose actions are not set to Monitor are counted. The system returns the value in the following format:\
-     * <code>{ &quot;Attribute&quot;: &quot;waf_base&quot;, &quot;Value&quot;: 140, &quot;Name&quot;: &quot;111034&quot; }</code></li>
-     * <li>defense_scene_with_rule_id: The system returns the IDs of top N protection rules that are matched by attack requests and also the related protection modules. The IDs and protection modules are connected by using hyphens (-). Protection rules whose actions are set to Monitor and Block are counted. The system returns the value in the following format:\
-     * <code>{ &quot;Attribute&quot;: &quot;&quot;, &quot;Value&quot;: 1, &quot;Name&quot;: &quot;120075-waf_base&quot; }</code></li>
-     * <li>defense_scene_top_rule_id: The system returns top N matched protection rules of a specific protection module. You can specify Conditions in Filter to configure filter conditions. For example, you can use the following condition to query top N matched protection rules of the custom rule module:\
-     * <code>{ &quot;Key&quot;: &quot;defense_scene_map&quot;, &quot;OpValue&quot;: &quot;contain&quot;, &quot;Values&quot;: &quot;custom_acl&quot; }</code></li>
-     * <li>defense_scene_rule_type: The system returns top N matched protection rules of the core web protection module. This metric is supported only by the core web protection module because only this module supports subtypes of protection rules. You must specify Conditions in Filter to configure filter conditions. Example:\
-     * <code>{ &quot;Key&quot;: &quot;defense_scene&quot;, &quot;OpValue&quot;: &quot;eq&quot;, &quot;Values&quot;: &quot;waf_base&quot; }</code></li>
+     * <li><p>real_client_ip: Aggregates the source IP addresses of attack requests, sorts them in descending order, and returns the top N results.</p>
+     * </li>
+     * <li><p>http_user_agent: Aggregates the User-Agent headers of attack requests, sorts them in descending order, and returns the top N results.</p>
+     * </li>
+     * <li><p>matched_host: Aggregates the protected objects that are hit by attack requests, sorts them in descending order, and returns the top N results.</p>
+     * </li>
+     * <li><p>remote_region_id: Aggregates the countries of origin for the source IP addresses of attack requests, sorts them in descending order, and returns the top N results.</p>
+     * </li>
+     * <li><p>request_path: Aggregates the URLs of attack requests, excluding query strings, sorts them in descending order, and returns the top N results.</p>
+     * </li>
+     * <li><p>block_defense_scene: Aggregates the final protection modules that handled blocked requests, sorts them in descending order, and returns the top N results. Blocked requests are requests whose action is not Monitor.</p>
+     * </li>
+     * <li><p>defense_scene: Aggregates all protection modules that are hit by attack requests, sorts them in descending order, and returns the top N results.</p>
+     * </li>
+     * <li><p>defense_scene_rule_id: Queries the top rule IDs of hit rules that are not in Monitor mode and their corresponding protection modules. This query returns statistics only for rules that are not in Monitor mode. The data is returned in the following format:<br>
+     * <code>{ &quot;Attribute&quot;: &quot;waf_base&quot;, &quot;Value&quot;: 140, &quot;Name&quot;: &quot;111034&quot; }</code><br></p>
+     * </li>
+     * <li><p>defense_scene_with_rule_id: Returns the top N rule IDs based on the number of hits and their corresponding protection modules. The rule ID and module are connected by a hyphen (-). This query includes rules in both Monitor and Block modes. The data is returned in the following format:<br>
+     * <code>{ &quot;Attribute&quot;: &quot;&quot;, &quot;Value&quot;: 1, &quot;Name&quot;: &quot;120075-waf_base&quot; }</code><br></p>
+     * </li>
+     * <li><p>defense_scene_top_rule_id: Queries the top rules that are hit in a specific protection module. Specify a filter condition in the Conditions field of the Filter parameter. For example, to query the top rules that are hit in the custom access control list (ACL) module, set the Conditions field as follows:<br>
+     * <code>{ &quot;Key&quot;: &quot;defense_scene_map&quot;, &quot;OpValue&quot;: &quot;contain&quot;, &quot;Values&quot;: &quot;custom_acl&quot; }</code><br></p>
+     * </li>
+     * <li><p>defense_scene_rule_type: Queries the top rule types that are hit in the core web protection module. Only the core web protection module supports this query because it is the only module that has rule subtypes. Specify a filter condition in the Conditions field of the Filter parameter as follows:<br>
+     * <code>{ &quot;Key&quot;: &quot;defense_scene&quot;, &quot;OpValue&quot;: &quot;eq&quot;, &quot;Values&quot;: &quot;waf_base&quot; }</code><br></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -65,20 +76,22 @@ public class DescribeSecurityEventTopNMetricShrinkRequest extends TeaModel {
     public String metric;
 
     /**
-     * <p>The region ID of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ap-southeast-1</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

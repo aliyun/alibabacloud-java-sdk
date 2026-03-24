@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudResourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the resource that is added to WAF.</p>
+     * <p>The ID of the cloud resource that is added to WAF.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-xxx-80-clb7</p>
@@ -14,7 +14,7 @@ public class ModifyCloudResourceResponseBody extends TeaModel {
     public String cloudResource;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-***</p>

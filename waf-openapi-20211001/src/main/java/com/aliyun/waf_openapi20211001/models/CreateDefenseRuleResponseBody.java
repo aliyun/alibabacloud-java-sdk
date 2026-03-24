@@ -8,13 +8,13 @@ public class CreateDefenseRuleResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>26E46541-7AAB-5565-801D-F14DBDC5F186</p>
+     * <p>26E46541-7AAB-5565-801D-F14DBDC5****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The IDs of the protection rules. Multiple IDs are separated by commas (,).</p>
+     * <p>The IDs of the created protection rules, separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>22215,23354,462165</p>

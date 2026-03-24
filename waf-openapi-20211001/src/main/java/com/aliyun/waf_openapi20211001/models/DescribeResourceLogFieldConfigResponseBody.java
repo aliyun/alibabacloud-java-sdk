@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceLogFieldConfigResponseBody extends TeaModel {
     /**
+     * <p>The extra log fields that are configured in addition to the default log fields. The fields are specified as a string of comma-separated values.</p>
+     * 
      * <strong>example:</strong>
      * <p>acl_test,acl_action,acl_rule_id,waf_test,acl_rule_type</p>
      */
@@ -12,6 +14,8 @@ public class DescribeResourceLogFieldConfigResponseBody extends TeaModel {
     public String addList;
 
     /**
+     * <p>The log fields that are removed from the default log fields. The fields are specified as a string of comma-separated values.</p>
+     * 
      * <strong>example:</strong>
      * <p>waf_rule_id,waf_rule_type</p>
      */
@@ -19,6 +23,16 @@ public class DescribeResourceLogFieldConfigResponseBody extends TeaModel {
     public String delList;
 
     /**
+     * <p>The log delivery type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>sls</strong>: Simple Log Service.</p>
+     * </li>
+     * <li><p><strong>kafka</strong>: Kafka.</p>
+     * </li>
+     * <li><p><strong>syslog</strong>: Syslog.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>sls</p>
      */
@@ -26,6 +40,11 @@ public class DescribeResourceLogFieldConfigResponseBody extends TeaModel {
     public String deliveryType;
 
     /**
+     * <p>The extended configuration for log delivery. The value is a string that is converted from a JSON object of parameters.</p>
+     * <blockquote>
+     * <p>For more information about the parameters, see the description of the <strong>ExtendConfig</strong> parameter in <a href="~~ModifyResourceLogFieldConfig~~">ModifyResourceLogFieldConfig</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;request_header\&quot;:\&quot;Ali-Cdn-Real-Ip\&quot;}</p>
      */
@@ -33,6 +52,8 @@ public class DescribeResourceLogFieldConfigResponseBody extends TeaModel {
     public String extendConfig;
 
     /**
+     * <p>The list of delivered log fields. The fields are specified as a string of comma-separated values.</p>
+     * 
      * <strong>example:</strong>
      * <p>account,acl_action,acl_rule_id,acl_rule_type,acl_test,antiscan_action,antiscan_rule_id,antiscan_rule_type,antiscan_test,body_bytes_sent,bypass_matched_ids</p>
      */
@@ -40,6 +61,11 @@ public class DescribeResourceLogFieldConfigResponseBody extends TeaModel {
     public String fieldList;
 
     /**
+     * <p>The log delivery policies. Multiple policies are supported. The value is a string that is converted from a JSON array of parameters.</p>
+     * <blockquote>
+     * <p>For more information about the parameters, see the description of the <strong>LogDeliveryStrategy</strong> parameter in <a href="~~ModifyResourceLogFieldConfig~~">ModifyResourceLogFieldConfig</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;logType\&quot;:\&quot;blockLog\&quot;,\&quot;rate\&quot;:100},{\&quot;logType\&quot;:\&quot;normalRequestLog\&quot;,\&quot;rate\&quot;:100},{\&quot;logType\&quot;:\&quot;checkLog\&quot;,\&quot;rate\&quot;:100}]</p>
      */
@@ -47,6 +73,8 @@ public class DescribeResourceLogFieldConfigResponseBody extends TeaModel {
     public String logDeliveryStrategy;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B53B47C-D368-5344-BB5E-79******</p>
      */

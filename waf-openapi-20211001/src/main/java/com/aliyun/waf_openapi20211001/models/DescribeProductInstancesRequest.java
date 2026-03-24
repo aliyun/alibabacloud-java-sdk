@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeProductInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The Web Application Firewall (WAF) instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     * <p>The ID of the Alibaba Cloud account to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>1704********9107</p>
@@ -27,7 +27,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String ownerUserId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,10 +45,12 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,11 +59,27 @@ public class DescribeProductInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The protection status of WAF. Valid values:</p>
+     * <ul>
+     * <li><p><strong>all</strong>: All protected.</p>
+     * </li>
+     * <li><p><strong>any</strong>: Protected.</p>
+     * </li>
+     * <li><p><strong>part</strong>: Partially protected.</p>
+     * </li>
+     * <li><p><strong>non</strong>: Not protected.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("ResourceInstanceAccessStatus")
     public String resourceInstanceAccessStatus;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID of the cloud service.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-2zeugkfj81jvo****4tqm</p>
@@ -70,7 +88,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String resourceInstanceId;
 
     /**
-     * <p>The IP address of the instance that is added to WAF.</p>
+     * <p>The IP address of the instance added to WAF.</p>
      * 
      * <strong>example:</strong>
      * <p>1.X.X.1</p>
@@ -79,7 +97,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String resourceInstanceIp;
 
     /**
-     * <p>The name of the instance that is added to WAF.</p>
+     * <p>The name of the instance added to WAF.</p>
      * 
      * <strong>example:</strong>
      * <p>demoInstanceName</p>
@@ -117,11 +135,16 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>The cloud service to which the instance belongs. Valid values:</p>
+     * <p>The type of the cloud service. Valid values:</p>
      * <ul>
-     * <li><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</li>
-     * <li><strong>clb7</strong>: Layer 7 CLB.</li>
-     * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
+     * <li><p><strong>clb4</strong>: Layer 4 CLB.</p>
+     * </li>
+     * <li><p><strong>clb7</strong>: Layer 7 CLB.</p>
+     * </li>
+     * <li><p><strong>ecs</strong>: Elastic Compute Service (ECS).</p>
+     * </li>
+     * <li><p><strong>nlb</strong>: Network Load Balancer (NLB).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,16 +156,26 @@ public class DescribeProductInstancesRequest extends TeaModel {
     /**
      * <p>The region ID of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-chengdu</strong>: China (Chengdu).</li>
-     * <li><strong>cn-beijing</strong>: China (Beijing).</li>
-     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</li>
-     * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
-     * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
-     * <li><strong>cn-shenzhen</strong>: China (Shenzhen).</li>
-     * <li><strong>cn-qingdao</strong>: China (Qingdao).</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
-     * <li><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</li>
-     * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</li>
+     * <li><p><strong>cn-chengdu</strong>: China (Chengdu).</p>
+     * </li>
+     * <li><p><strong>cn-beijing</strong>: China (Beijing).</p>
+     * </li>
+     * <li><p><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou</strong>: China (Hangzhou).</p>
+     * </li>
+     * <li><p><strong>cn-shanghai</strong>: China (Shanghai).</p>
+     * </li>
+     * <li><p><strong>cn-shenzhen</strong>: China (Shenzhen).</p>
+     * </li>
+     * <li><p><strong>cn-qingdao</strong>: China (Qingdao).</p>
+     * </li>
+     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong).</p>
+     * </li>
+     * <li><p><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</p>
+     * </li>
+     * <li><p><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

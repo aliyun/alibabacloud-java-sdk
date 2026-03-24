@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDefaultHttpsResponseBody extends TeaModel {
     /**
-     * <p>The default SSL and TLS settings.</p>
+     * <p>The default SSL/TLS settings.</p>
      */
     @NameInMap("DefaultHttps")
     public DescribeDefaultHttpsResponseBodyDefaultHttps defaultHttps;
@@ -42,7 +42,7 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
 
     public static class DescribeDefaultHttpsResponseBodyDefaultHttps extends TeaModel {
         /**
-         * <p>The certificate ID.</p>
+         * <p>The ID of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>123-cn-hangzhou</p>
@@ -51,11 +51,14 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
         public String certId;
 
         /**
-         * <p>The type of the cipher suites. Valid values:</p>
+         * <p>The type of the cipher suite. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: all cipher suites.</li>
-         * <li><strong>2</strong>: strong cipher suites.</li>
-         * <li><strong>99</strong>: custom cipher suites.</li>
+         * <li><p><strong>1</strong>: all cipher suites.</p>
+         * </li>
+         * <li><p><strong>2</strong>: strong cipher suites.</p>
+         * </li>
+         * <li><p><strong>99</strong>: custom cipher suites.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -65,7 +68,7 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
         public String cipherSuite;
 
         /**
-         * <p>The custom cipher suite.</p>
+         * <p>The custom cipher suites. This parameter is returned only when CipherSuite is set to 99.</p>
          * 
          * <strong>example:</strong>
          * <p>ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384</p>
@@ -76,8 +79,10 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: TLS 1.3 is supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,11 +92,14 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
         public Boolean enableTLSv3;
 
         /**
-         * <p>The version of the TLS protocol. Valid values:</p>
+         * <p>The minimum TLS version. Valid values:</p>
          * <ul>
-         * <li><strong>tlsv1</strong></li>
-         * <li><strong>tlsv1.1</strong></li>
-         * <li><strong>tlsv1.2</strong></li>
+         * <li><p><strong>tlsv1</strong></p>
+         * </li>
+         * <li><p><strong>tlsv1.1</strong></p>
+         * </li>
+         * <li><p><strong>tlsv1.2</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
