@@ -132,6 +132,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>复制播报方案（从模版）</p>
+     * 
+     * @param request CopyBroadcastSceneFromTemplateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CopyBroadcastSceneFromTemplateResponse
+     */
+    public CopyBroadcastSceneFromTemplateResponse copyBroadcastSceneFromTemplateWithOptions(CopyBroadcastSceneFromTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ratio)) {
+            body.put("ratio", request.ratio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("templateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CopyBroadcastSceneFromTemplate"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/customer/broadcast/template/scene/copyByTemplate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CopyBroadcastSceneFromTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>复制播报方案（从模版）</p>
+     * 
+     * @param request CopyBroadcastSceneFromTemplateRequest
+     * @return CopyBroadcastSceneFromTemplateResponse
+     */
+    public CopyBroadcastSceneFromTemplateResponse copyBroadcastSceneFromTemplate(CopyBroadcastSceneFromTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.copyBroadcastSceneFromTemplateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建背景素材</p>
      * 
      * @param request CreateBackgroundPicRequest
@@ -1067,6 +1122,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listPrivateTTSVoicesCustomWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举播报方案模板（公共的播报方案模板）</p>
+     * 
+     * @param request ListPublicBroadcastSceneTemplatesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPublicBroadcastSceneTemplatesResponse
+     */
+    public ListPublicBroadcastSceneTemplatesResponse listPublicBroadcastSceneTemplatesWithOptions(ListPublicBroadcastSceneTemplatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("tags", request.tags);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPublicBroadcastSceneTemplates"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/customer/broadcast/template/scene/listPublic"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPublicBroadcastSceneTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举播报方案模板（公共的播报方案模板）</p>
+     * 
+     * @param request ListPublicBroadcastSceneTemplatesRequest
+     * @return ListPublicBroadcastSceneTemplatesResponse
+     */
+    public ListPublicBroadcastSceneTemplatesResponse listPublicBroadcastSceneTemplates(ListPublicBroadcastSceneTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPublicBroadcastSceneTemplatesWithOptions(request, headers, runtime);
     }
 
     /**
