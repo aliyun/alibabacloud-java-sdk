@@ -10027,27 +10027,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>修改日志库的配置</p>
+     * <b>description</b> :
+     * <ul>
+     * <li>The <code>Host</code> in the request header must contain both the <code>Project</code> name and the Simple Log Service (SLS) endpoint.</li>
+     * <li>This operation requires an AccessKey. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">Access Key</a>.
+     * An AccessKey for an Alibaba Cloud account grants full access to all APIs and poses a high security risk. We strongly recommend that you create and use a RAM user for API access and daily operations. The RAM user must have the necessary permissions to operate SLS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</li>
+     * <li>Identify the names of the target <code>Project</code>, <code>Region</code>, and <code>Logstore</code>. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage Project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</li>
+     * </ul>
+     * <h3>Permissions</h3>
+     * <p>To grant a RAM user or RAM role permission to call this operation, add the Action and Resource in the following table to a permission policy in Resource Access Management (RAM).</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Actions</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:PutLogStoreConfig</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/{#LogstoreName}</code></td>
+     * </tr>
+     * </tbody></table>
      * 
-     * @param tmpReq PutLogStoreConfigRequest
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a Logstore.</p>
+     * 
+     * @param request PutLogStoreConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutLogStoreConfigResponse
      */
-    public PutLogStoreConfigResponse putLogStoreConfigWithOptions(String project, String logstore, PutLogStoreConfigRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
+    public PutLogStoreConfigResponse putLogStoreConfigWithOptions(String project, String logstore, PutLogStoreConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
-        PutLogStoreConfigShrinkRequest request = new PutLogStoreConfigShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
-            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
-            body.put("body", request.bodyShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIpHeaders)) {
+            body.put("clientIpHeaders", request.clientIpHeaders);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -10070,8 +10086,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <code>Host</code> in the request header must contain both the <code>Project</code> name and the Simple Log Service (SLS) endpoint.</li>
+     * <li>This operation requires an AccessKey. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">Access Key</a>.
+     * An AccessKey for an Alibaba Cloud account grants full access to all APIs and poses a high security risk. We strongly recommend that you create and use a RAM user for API access and daily operations. The RAM user must have the necessary permissions to operate SLS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</li>
+     * <li>Identify the names of the target <code>Project</code>, <code>Region</code>, and <code>Logstore</code>. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage Project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</li>
+     * </ul>
+     * <h3>Permissions</h3>
+     * <p>To grant a RAM user or RAM role permission to call this operation, add the Action and Resource in the following table to a permission policy in Resource Access Management (RAM).</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Actions</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:PutLogStoreConfig</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/{#LogstoreName}</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
      * <b>summary</b> : 
-     * <p>修改日志库的配置</p>
+     * <p>Updates the configuration of a Logstore.</p>
      * 
      * @param request PutLogStoreConfigRequest
      * @return PutLogStoreConfigResponse
