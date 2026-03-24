@@ -112,7 +112,7 @@ public class CheckResultResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
-         * <p>Extended information</p>
+         * <p>Extended information, in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -129,6 +129,25 @@ public class CheckResultResponseBody extends TeaModel {
         @NameInMap("ExtRiskInfo")
         public String extRiskInfo;
 
+        /**
+         * <p>Detailed verification results from the data source (example using Indonesian data sources):</p>
+         * <ul>
+         * <li><strong>govId, fullName, dob</strong>: A comparison score of 1.0 indicates complete consistency with the official data source; less than 1.0 indicates inconsistency. </li>
+         * <li><strong>selfiePhoto</strong>: A comparison score greater than 0.8 indicates consistency with the official data source; less than or equal to 0.8 indicates inconsistency. </li>
+         * <li><strong>liveness</strong>: A score higher than 0.95 indicates a risk of liveness detection. </li>
+         * <li><strong>imgManipulationScore</strong>: A score higher than 0.95 indicates a risk of image manipulation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;govId&quot;: 1.0,
+         *   &quot;fullName&quot;: 1.0,
+         *   &quot;dob&quot;: 0.9,
+         *   &quot;selfiePhoto&quot;: 0.8777,
+         *   &quot;liveness&quot;: 0.1152,
+         *   &quot;imgManipulationScore&quot;: 0.2253
+         * }</p>
+         */
         @NameInMap("ExtSourceInfo")
         public String extSourceInfo;
 

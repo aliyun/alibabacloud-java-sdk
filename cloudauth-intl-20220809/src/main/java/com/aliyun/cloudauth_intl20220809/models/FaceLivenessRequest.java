@@ -19,6 +19,12 @@ public class FaceLivenessRequest extends TeaModel {
     @NameInMap("Crop")
     public String crop;
 
+    /**
+     * <p>The Base64-encoded image. If you use this parameter to pass the facial image, check the image size. Do not pass an oversized image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dsjisaj***oekwodsm</p>
+     */
     @NameInMap("FacePictureBase64")
     public String facePictureBase64;
 

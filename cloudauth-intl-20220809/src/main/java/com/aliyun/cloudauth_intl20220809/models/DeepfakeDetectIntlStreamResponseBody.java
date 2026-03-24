@@ -110,6 +110,9 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
         @NameInMap("RiskTag")
         public String riskTag;
 
+        @NameInMap("TransactionId")
+        public String transactionId;
+
         public static DeepfakeDetectIntlStreamResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             DeepfakeDetectIntlStreamResponseBodyResultObject self = new DeepfakeDetectIntlStreamResponseBodyResultObject();
             return TeaModel.build(map, self);
@@ -137,6 +140,14 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
         }
         public String getRiskTag() {
             return this.riskTag;
+        }
+
+        public DeepfakeDetectIntlStreamResponseBodyResultObject setTransactionId(String transactionId) {
+            this.transactionId = transactionId;
+            return this;
+        }
+        public String getTransactionId() {
+            return this.transactionId;
         }
 
     }

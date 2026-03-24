@@ -22,6 +22,15 @@ public class FaceCompareRequest extends TeaModel {
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
+    /**
+     * <p>The Base64 encoding of the portrait photo.</p>
+     * <blockquote>
+     * <p>If you use this method to pass the image, check the image size. Do not pass an oversized image.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
+     */
     @NameInMap("SourceFacePicture")
     public String sourceFacePicture;
 
@@ -37,6 +46,15 @@ public class FaceCompareRequest extends TeaModel {
     @NameInMap("SourceFacePictureUrl")
     public String sourceFacePictureUrl;
 
+    /**
+     * <p>The Base64 encoding of the base photo.</p>
+     * <blockquote>
+     * <p>If you use this method to pass the image, check the image size. Do not pass an oversized image.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
+     */
     @NameInMap("TargetFacePicture")
     public String targetFacePicture;
 

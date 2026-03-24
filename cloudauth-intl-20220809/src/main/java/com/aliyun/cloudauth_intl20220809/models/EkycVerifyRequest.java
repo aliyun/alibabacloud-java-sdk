@@ -78,6 +78,15 @@ public class EkycVerifyRequest extends TeaModel {
     @NameInMap("DocType")
     public String docType;
 
+    /**
+     * <p>The Base64 encoding of the portrait image.</p>
+     * <blockquote>
+     * <p>If you use this method to pass the certificate image, check the image size. Do not pass an oversized image.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dsjisaj***oekwodsm</p>
+     */
     @NameInMap("FacePictureBase64")
     public String facePictureBase64;
 
@@ -90,6 +99,15 @@ public class EkycVerifyRequest extends TeaModel {
     @NameInMap("FacePictureUrl")
     public String facePictureUrl;
 
+    /**
+     * <p>The Base64 encoding of the certificate image.</p>
+     * <blockquote>
+     * <p>If you use this method to pass the certificate image, check the image size. Do not pass an oversized image.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dsjisaj***oekwodsm</p>
+     */
     @NameInMap("IdOcrPictureBase64")
     public String idOcrPictureBase64;
 

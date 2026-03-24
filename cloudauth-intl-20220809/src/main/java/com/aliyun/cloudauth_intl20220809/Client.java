@@ -2852,7 +2852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改人脸库</p>
+     * <p>Modify Face Group</p>
      * 
      * @param request ModifyFaceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2892,7 +2892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改人脸库</p>
+     * <p>Modify Face Group</p>
      * 
      * @param request ModifyFaceGroupRequest
      * @return ModifyFaceGroupResponse
@@ -2904,7 +2904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增人脸</p>
+     * <p>Add New Face</p>
      * 
      * @param request ModifyFaceRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2940,7 +2940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增人脸</p>
+     * <p>Add New Face</p>
      * 
      * @param request ModifyFaceRecordRequest
      * @return ModifyFaceRecordResponse
@@ -2952,7 +2952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询人脸库</p>
+     * <p>Query Face Group</p>
      * 
      * @param request QueryFaceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3004,7 +3004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询人脸库</p>
+     * <p>Query Face Group</p>
      * 
      * @param request QueryFaceGroupRequest
      * @return QueryFaceGroupResponse
