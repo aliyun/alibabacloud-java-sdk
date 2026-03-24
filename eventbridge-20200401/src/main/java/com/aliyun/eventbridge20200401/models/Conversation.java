@@ -10,6 +10,9 @@ public class Conversation extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("Title")
     public String title;
 
@@ -35,6 +38,14 @@ public class Conversation extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public Conversation setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public Conversation setTitle(String title) {

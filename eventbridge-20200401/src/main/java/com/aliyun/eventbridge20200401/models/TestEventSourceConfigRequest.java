@@ -95,6 +95,9 @@ public class TestEventSourceConfigRequest extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        @NameInMap("SnapshotMode")
+        public String snapshotMode;
+
         /**
          * <p>The table name. The name must be prefixed with the database name. ${DatabaseName}.${TableName}</p>
          * 
@@ -198,6 +201,14 @@ public class TestEventSourceConfigRequest extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public TestEventSourceConfigRequestSourceMySQLParameters setSnapshotMode(String snapshotMode) {
+            this.snapshotMode = snapshotMode;
+            return this;
+        }
+        public String getSnapshotMode() {
+            return this.snapshotMode;
         }
 
         public TestEventSourceConfigRequestSourceMySQLParameters setTableNames(String tableNames) {
