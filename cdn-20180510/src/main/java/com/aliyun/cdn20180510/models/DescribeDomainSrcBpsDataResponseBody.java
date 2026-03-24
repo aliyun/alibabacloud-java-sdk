@@ -40,9 +40,6 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The origin bandwidth data at each time interval. Unit: bit/s.</p>
-     */
     @NameInMap("SrcBpsDataPerInterval")
     public DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerInterval srcBpsDataPerInterval;
 
@@ -109,30 +106,12 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The bandwidth values of origin HTTPS requests.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The traffic value at each time interval.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("Value")
         public String value;
 

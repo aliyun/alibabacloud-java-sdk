@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserDomainsResponseBody extends TeaModel {
-    /**
-     * <p>The list of the accelerated domain names returned.</p>
-     */
     @NameInMap("Domains")
     public DescribeUserDomainsResponseBodyDomains domains;
 
@@ -92,48 +89,18 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
-        /**
-         * <p>The address of the origin server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>***.oss-cn-hangzhou.aliyuncs.com</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The port of the origin server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The priority.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Priority")
         public String priority;
 
-        /**
-         * <p>The type of the origin server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the origin server if multiple origin servers have been specified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15</p>
-         */
         @NameInMap("Weight")
         public String weight;
 
@@ -204,141 +171,42 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserDomainsResponseBodyDomainsPageData extends TeaModel {
-        /**
-         * <p>The type of the workload accelerated by Alibaba Cloud CDN. Valid values:</p>
-         * <ul>
-         * <li><strong>web</strong>: images and small files</li>
-         * <li><strong>download</strong>: large files</li>
-         * <li><strong>video</strong>: on-demand video and audio streaming</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>download</p>
-         */
         @NameInMap("CdnType")
         public String cdnType;
 
-        /**
-         * <p>The CNAME assigned to the accelerated domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com.w.alikunlun.net</p>
-         */
         @NameInMap("Cname")
         public String cname;
 
-        /**
-         * <p>The acceleration region. Valid values:</p>
-         * <ul>
-         * <li><strong>domestic</strong>: Chinese mainland</li>
-         * <li><strong>global</strong>: global</li>
-         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>domestic</p>
-         */
         @NameInMap("Coverage")
         public String coverage;
 
-        /**
-         * <p>The information about Internet Content Provider (ICP) filing.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>filing description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the accelerated domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11223344</p>
-         */
         @NameInMap("DomainId")
         public Long domainId;
 
-        /**
-         * <p>The accelerated domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The status of the accelerated domain name. Valid values:</p>
-         * <ul>
-         * <li><strong>online</strong></li>
-         * <li><strong>offline</strong></li>
-         * <li><strong>configuring</strong></li>
-         * <li><strong>configure_failed</strong></li>
-         * <li><strong>checking</strong></li>
-         * <li><strong>check_failed</strong></li>
-         * <li><strong>stopping</strong></li>
-         * <li><strong>deleting</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>configure_failed</p>
-         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
-        /**
-         * <p>The time when the accelerated domain name was added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-10-28T09:32:51Z</p>
-         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
-        /**
-         * <p>The time when the accelerated domain name was modified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-10-28T11:05:52Z</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>The ID of the resource group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abcd1234abcd1234</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>Indicates whether the accelerated domain name is in a sandbox.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Sandbox")
         public String sandbox;
 
-        /**
-         * <p>The information about the origin server.</p>
-         */
         @NameInMap("Sources")
         public DescribeUserDomainsResponseBodyDomainsPageDataSources sources;
 
-        /**
-         * <p>Indicates whether HTTPS is enabled. Valid values:</p>
-         * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>on</p>
-         */
         @NameInMap("SslProtocol")
         public String sslProtocol;
 

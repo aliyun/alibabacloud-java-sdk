@@ -41,39 +41,15 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnSMCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
-        /**
-         * <p>The ID of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>yourCertldentifier</p>
-         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
-        /**
-         * <p>The name of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>yourCertName</p>
-         */
         @NameInMap("CertName")
         public String certName;
 
-        /**
-         * <p>The common name of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>yourCertCommon</p>
-         */
         @NameInMap("Common")
         public String common;
 
-        /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>yourCertIssuer</p>
-         */
         @NameInMap("Issuer")
         public String issuer;
 
@@ -136,9 +112,6 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnSMCertificateListResponseBodyCertificateListModel extends TeaModel {
-        /**
-         * <p>The list of certificates.</p>
-         */
         @NameInMap("CertList")
         public DescribeCdnSMCertificateListResponseBodyCertificateListModelCertList certList;
 

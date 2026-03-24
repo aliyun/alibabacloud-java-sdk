@@ -31,9 +31,6 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The byte hit ratio at each time interval. The byte hit ratio is measured in percentage.</p>
-     */
     @NameInMap("HitRateInterval")
     public DescribeDomainHitRateDataResponseBodyHitRateInterval hitRateInterval;
 
@@ -109,30 +106,12 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainHitRateDataResponseBodyHitRateIntervalDataModule extends TeaModel {
-        /**
-         * <p>The byte hit ratio of HTTPS requests.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50.0</p>
-         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-30T08:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The byte hit ratio.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("Value")
         public String value;
 

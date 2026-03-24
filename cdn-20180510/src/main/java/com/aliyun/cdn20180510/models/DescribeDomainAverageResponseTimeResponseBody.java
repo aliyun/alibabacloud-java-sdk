@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
-    /**
-     * <p>The average response time data for time intervals.</p>
-     */
     @NameInMap("AvgRTPerInterval")
     public DescribeDomainAverageResponseTimeResponseBodyAvgRTPerInterval avgRTPerInterval;
 
@@ -109,21 +106,9 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainAverageResponseTimeResponseBodyAvgRTPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The average response time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Value")
         public String value;
 

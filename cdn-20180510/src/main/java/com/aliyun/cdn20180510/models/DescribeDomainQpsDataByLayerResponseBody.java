@@ -40,9 +40,6 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
     @NameInMap("Layer")
     public String layer;
 
-    /**
-     * <p>The number of queries per second at each interval.</p>
-     */
     @NameInMap("QpsDataInterval")
     public DescribeDomainQpsDataByLayerResponseBodyQpsDataInterval qpsDataInterval;
 
@@ -126,66 +123,24 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule extends TeaModel {
-        /**
-         * <p>The number of requests in the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("AccDomesticValue")
         public String accDomesticValue;
 
-        /**
-         * <p>The number of requests outside the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>44</p>
-         */
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
 
-        /**
-         * <p>The total number of requests.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>56</p>
-         */
         @NameInMap("AccValue")
         public String accValue;
 
-        /**
-         * <p>The number of queries per second in the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.12</p>
-         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        /**
-         * <p>The number of queries per second outside the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.44</p>
-         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T21:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total number of queries per second.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.56</p>
-         */
         @NameInMap("Value")
         public String value;
 

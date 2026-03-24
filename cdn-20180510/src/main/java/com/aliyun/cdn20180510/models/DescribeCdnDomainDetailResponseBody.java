@@ -41,63 +41,21 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel extends TeaModel {
-        /**
-         * <p>The address of the origin server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>online</p>
-         */
         @NameInMap("Enabled")
         public String enabled;
 
-        /**
-         * <p>The port over which requests are redirected to the origin server. Ports 443 and 80 are supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The priority.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Priority")
         public String priority;
 
-        /**
-         * <p>The type of the origin server. Valid values:</p>
-         * <ul>
-         * <li><strong>ipaddr</strong>: an origin IP address</li>
-         * <li><strong>domain</strong>: an origin domain name</li>
-         * <li><strong>oss</strong>: the domain name of an Object Storage Service (OSS) bucket</li>
-         * <li><strong>fc_domain:</strong> a Function Compute domain name</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>domain</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the origin server if multiple origin servers have been specified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Weight")
         public String weight;
 
@@ -294,9 +252,6 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         @NameInMap("ServerCertificateStatus")
         public String serverCertificateStatus;
 
-        /**
-         * <p>The information about the origin server.</p>
-         */
         @NameInMap("SourceModels")
         public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModels sourceModels;
 

@@ -14,7 +14,7 @@ public class DescribeDomainVerifyDataResponseBody extends TeaModel {
      *   }</p>
      */
     @NameInMap("Content")
-    public String content;
+    public DescribeDomainVerifyDataResponseBodyContent content;
 
     /**
      * <p>The ID of the request.</p>
@@ -30,11 +30,11 @@ public class DescribeDomainVerifyDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainVerifyDataResponseBody setContent(String content) {
+    public DescribeDomainVerifyDataResponseBody setContent(DescribeDomainVerifyDataResponseBodyContent content) {
         this.content = content;
         return this;
     }
-    public String getContent() {
+    public DescribeDomainVerifyDataResponseBodyContent getContent() {
         return this.content;
     }
 
@@ -44,6 +44,47 @@ public class DescribeDomainVerifyDataResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DescribeDomainVerifyDataResponseBodyContent extends TeaModel {
+        @NameInMap("RootDomain")
+        public String rootDomain;
+
+        @NameInMap("verifyCode")
+        public String verifyCode;
+
+        @NameInMap("verifyKey")
+        public String verifyKey;
+
+        public static DescribeDomainVerifyDataResponseBodyContent build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainVerifyDataResponseBodyContent self = new DescribeDomainVerifyDataResponseBodyContent();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainVerifyDataResponseBodyContent setRootDomain(String rootDomain) {
+            this.rootDomain = rootDomain;
+            return this;
+        }
+        public String getRootDomain() {
+            return this.rootDomain;
+        }
+
+        public DescribeDomainVerifyDataResponseBodyContent setVerifyCode(String verifyCode) {
+            this.verifyCode = verifyCode;
+            return this;
+        }
+        public String getVerifyCode() {
+            return this.verifyCode;
+        }
+
+        public DescribeDomainVerifyDataResponseBodyContent setVerifyKey(String verifyKey) {
+            this.verifyKey = verifyKey;
+            return this;
+        }
+        public String getVerifyKey() {
+            return this.verifyKey;
+        }
+
     }
 
 }

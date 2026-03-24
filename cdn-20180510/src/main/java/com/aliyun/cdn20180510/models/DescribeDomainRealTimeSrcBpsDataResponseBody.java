@@ -32,9 +32,6 @@ public class DescribeDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The origin bandwidth data at each interval.</p>
-     */
     @NameInMap("RealTimeSrcBpsDataPerInterval")
     public DescribeDomainRealTimeSrcBpsDataResponseBodyRealTimeSrcBpsDataPerInterval realTimeSrcBpsDataPerInterval;
 
@@ -110,21 +107,9 @@ public class DescribeDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeSrcBpsDataResponseBodyRealTimeSrcBpsDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-10T20:01:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The bandwidth during back-to-origin routing. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Value")
         public String value;
 

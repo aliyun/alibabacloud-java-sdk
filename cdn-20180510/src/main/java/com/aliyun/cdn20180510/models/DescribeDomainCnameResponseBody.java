@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCnameResponseBody extends TeaModel {
-    /**
-     * <p>Details about the CNAME detection results.</p>
-     */
     @NameInMap("CnameDatas")
     public DescribeDomainCnameResponseBodyCnameDatas cnameDatas;
 
@@ -41,21 +38,9 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainCnameResponseBodyCnameDatasData extends TeaModel {
-        /**
-         * <p>The CNAME assigned to the domain name by Alibaba Cloud CDN.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a.com.w.alikunlun.net</p>
-         */
         @NameInMap("Cname")
         public String cname;
 
-        /**
-         * <p>The accelerated domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a.com</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
@@ -65,16 +50,6 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
         @NameInMap("Passed")
         public String passed;
 
-        /**
-         * <p>The CNAME detection result. Valid values:</p>
-         * <ul>
-         * <li>0: The DNS can detect the CNAME assigned to the domain name.</li>
-         * <li>Value other than 0: The DNS cannot detect the CNAME assigned to the domain name.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Status")
         public Integer status;
 

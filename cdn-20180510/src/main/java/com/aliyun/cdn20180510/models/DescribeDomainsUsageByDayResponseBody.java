@@ -49,9 +49,6 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The monitoring data collected at each time interval.</p>
-     */
     @NameInMap("UsageByDays")
     public DescribeDomainsUsageByDayResponseBodyUsageByDays usageByDays;
 
@@ -123,93 +120,33 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsUsageByDayResponseBodyUsageByDaysUsageByDay extends TeaModel {
-        /**
-         * <p>The byte hit ratio. The byte hit ratio is measured in percentage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>97.46250599529726</p>
-         */
         @NameInMap("BytesHitRate")
         public String bytesHitRate;
 
-        /**
-         * <p>The peak bandwidth value. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>306747.76</p>
-         */
         @NameInMap("MaxBps")
         public String maxBps;
 
-        /**
-         * <p>The time when the bandwidth reached the peak value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-23 10:55:00</p>
-         */
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
-        /**
-         * <p>The peak bandwidth value during back-to-origin routing. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>72584.072</p>
-         */
         @NameInMap("MaxSrcBps")
         public String maxSrcBps;
 
-        /**
-         * <p>The time when the bandwidth during back-to-origin routing reached the peak value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-23 11:45:00</p>
-         */
         @NameInMap("MaxSrcBpsTime")
         public String maxSrcBpsTime;
 
-        /**
-         * <p>The number of queries per second (QPS).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7.466354166666667</p>
-         */
         @NameInMap("Qps")
         public String qps;
 
-        /**
-         * <p>The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>70.24770071912111</p>
-         */
         @NameInMap("RequestHitRate")
         public String requestHitRate;
 
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-22</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total amount of requests.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>645093</p>
-         */
         @NameInMap("TotalAccess")
         public String totalAccess;
 
-        /**
-         * <p>The total amount of network traffic. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>564300099309</p>
-         */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 

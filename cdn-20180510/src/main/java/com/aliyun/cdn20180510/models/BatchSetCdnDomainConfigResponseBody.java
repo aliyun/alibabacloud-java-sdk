@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
-    /**
-     * <p>The list of domain configurations.</p>
-     */
     @NameInMap("DomainConfigList")
     public BatchSetCdnDomainConfigResponseBodyDomainConfigList domainConfigList;
 
@@ -41,30 +38,12 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
     }
 
     public static class BatchSetCdnDomainConfigResponseBodyDomainConfigListDomainConfigModel extends TeaModel {
-        /**
-         * <p>The ID of the configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567</p>
-         */
         @NameInMap("ConfigId")
         public Long configId;
 
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.example.com">www.example.com</a></p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The name of the feature.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>set_resp_header</p>
-         */
         @NameInMap("FunctionName")
         public String functionName;
 

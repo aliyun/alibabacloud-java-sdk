@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
-    /**
-     * <p>The statistics about real-time log deliveries.</p>
-     */
     @NameInMap("ReatTimeDeliveryAccData")
     public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccData reatTimeDeliveryAccData;
 
@@ -41,30 +38,12 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
     }
 
     public static class DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData extends TeaModel {
-        /**
-         * <p>The number of failed attempts to deliver log data to Log Service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("FailedNum")
         public Integer failedNum;
 
-        /**
-         * <p>The number of successful deliveries of log data to Log Service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("SuccessNum")
         public Integer successNum;
 
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-09-03T06:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
-    /**
-     * <p>The domain names.</p>
-     */
     @NameInMap("Domains")
     public ListDomainsByLogConfigIdResponseBodyDomains domains;
 

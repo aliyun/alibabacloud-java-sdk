@@ -41,57 +41,21 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
-        /**
-         * <p>The ID of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CertId")
         public Long certId;
 
-        /**
-         * <p>The name of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Certificate1</p>
-         */
         @NameInMap("CertName")
         public String certName;
 
-        /**
-         * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("Common")
         public String common;
 
-        /**
-         * <p>The fingerprint of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2ED68FD33786C5B42950D40A6C50353575BB****</p>
-         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
-        /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CO****</p>
-         */
         @NameInMap("Issuer")
         public String issuer;
 
-        /**
-         * <p>The timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1512388610</p>
-         */
         @NameInMap("LastTime")
         public Long lastTime;
 
@@ -170,9 +134,6 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnCertificateListResponseBodyCertificateListModel extends TeaModel {
-        /**
-         * <p>The list of certificates.</p>
-         */
         @NameInMap("CertList")
         public DescribeCdnCertificateListResponseBodyCertificateListModelCertList certList;
 

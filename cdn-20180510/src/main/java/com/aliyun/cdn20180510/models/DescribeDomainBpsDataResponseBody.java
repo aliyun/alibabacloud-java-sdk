@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataResponseBody extends TeaModel {
-    /**
-     * <p>The list of bandwidth data entries returned at each interval.</p>
-     */
     @NameInMap("BpsDataPerInterval")
     public DescribeDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
@@ -143,66 +140,24 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The bandwidth value in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11286111</p>
-         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        /**
-         * <p>The bandwidth data for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11286111</p>
-         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
-        /**
-         * <p>The bandwidth data for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
-        /**
-         * <p>The bandwidth value for HTTPS requests. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11288111</p>
-         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        /**
-         * <p>The bandwidth data in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The bandwidth. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11288111</p>
-         */
         @NameInMap("Value")
         public String value;
 

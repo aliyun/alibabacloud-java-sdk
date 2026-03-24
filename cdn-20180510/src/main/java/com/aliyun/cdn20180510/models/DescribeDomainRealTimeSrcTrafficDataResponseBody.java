@@ -32,9 +32,6 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The amount of back-to-origin traffic returned at each interval.</p>
-     */
     @NameInMap("RealTimeSrcTrafficDataPerInterval")
     public DescribeDomainRealTimeSrcTrafficDataResponseBodyRealTimeSrcTrafficDataPerInterval realTimeSrcTrafficDataPerInterval;
 
@@ -110,21 +107,9 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeSrcTrafficDataResponseBodyRealTimeSrcTrafficDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-10T20:01:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The amount of traffic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Value")
         public String value;
 

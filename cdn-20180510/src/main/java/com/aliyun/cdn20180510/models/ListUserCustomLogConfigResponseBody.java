@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListUserCustomLogConfigResponseBody extends TeaModel {
-    /**
-     * <p>The list of log configuration IDs.</p>
-     */
     @NameInMap("ConfigIds")
     public ListUserCustomLogConfigResponseBodyConfigIds configIds;
 

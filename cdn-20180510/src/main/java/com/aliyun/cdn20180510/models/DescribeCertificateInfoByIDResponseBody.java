@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
-    /**
-     * <p>The information about the certificate.</p>
-     */
     @NameInMap("CertInfos")
     public DescribeCertificateInfoByIDResponseBodyCertInfos certInfos;
 
@@ -41,71 +38,24 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
     }
 
     public static class DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo extends TeaModel {
-        /**
-         * <p>The time at which the certificate expires.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2098-02-08 08:02:07 +0000 UTC</p>
-         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        /**
-         * <p>The ID of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1644xx</p>
-         */
         @NameInMap("CertId")
         public String certId;
 
-        /**
-         * <p>The name of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example_cert</p>
-         */
         @NameInMap("CertName")
         public String certName;
 
-        /**
-         * <p>The type of the certificate.</p>
-         * <ul>
-         * <li>free: a free certificate</li>
-         * <li>cas: a certificate purchased by using Certificate Management Service</li>
-         * <li>upload: a user-uploaded certificate</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cas</p>
-         */
         @NameInMap("CertType")
         public String certType;
 
-        /**
-         * <p>The time when the certificate became effective.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-21 08:02:07 +0000 UTC</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The domain names that use the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;example.com&quot;]</p>
-         */
         @NameInMap("DomainList")
         public String domainList;
 
-        /**
-         * <p>The content of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>-----BEGIN CERTIFICATE-----\nxxx-----END CERTIFICATE-----\n</p>
-         */
         @NameInMap("HttpsCrt")
         public String httpsCrt;
 

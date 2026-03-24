@@ -49,9 +49,6 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>A list of bandwidth values collected at each time interval.</p>
-     */
     @NameInMap("PathDataPerInterval")
     public DescribeDomainPathDataResponseBodyPathDataPerInterval pathDataPerInterval;
 
@@ -160,39 +157,15 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData extends TeaModel {
-        /**
-         * <p>The number of visits to the URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Acc")
         public Integer acc;
 
-        /**
-         * <p>The path.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/path/</p>
-         */
         @NameInMap("Path")
         public String path;
 
-        /**
-         * <p>The point in time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-09-30T16:00:00Z</p>
-         */
         @NameInMap("Time")
         public String time;
 
-        /**
-         * <p>The amount of network traffic. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>346</p>
-         */
         @NameInMap("Traffic")
         public Integer traffic;
 

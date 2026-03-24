@@ -36,38 +36,18 @@ public class DescribeCdnDomainLogsExTtlResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainLogsExTtlResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2023-09-23T14:00:00Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>demo.aliyundoc.com_2015_05_23_2100_2200.gz</p>
-         */
         @NameInMap("LogName")
         public String logName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>guide.aliyundoc.com-hangzhou.xxx</p>
-         */
         @NameInMap("LogPath")
         public String logPath;
 
-        /**
-         * <strong>example:</strong>
-         * <p>258</p>
-         */
         @NameInMap("LogSize")
         public Long logSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-09-23T13:00:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -138,24 +118,12 @@ public class DescribeCdnDomainLogsExTtlResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainLogsExTtlResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("PageSize")
         public Long pageSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Total")
         public Long total;
 
@@ -191,17 +159,9 @@ public class DescribeCdnDomainLogsExTtlResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainLogsExTtlResponseBodyDomainLogDetailsDomainLogDetail extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("LogCount")
         public Long logCount;
 

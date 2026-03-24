@@ -32,9 +32,6 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The proportions of HTTP status codes at each time interval.</p>
-     */
     @NameInMap("RealTimeHttpCodeData")
     public DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeData realTimeHttpCodeData;
 
@@ -110,30 +107,12 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData extends TeaModel {
-        /**
-         * <p>The HTTP status code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The total number of entries.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Count")
         public String count;
 
-        /**
-         * <p>The proportion of the HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>28.4496124031008</p>
-         */
         @NameInMap("Proportion")
         public String proportion;
 
@@ -188,18 +167,9 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData extends TeaModel {
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-11-29T05:39:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The proportions of the HTTP status codes.</p>
-         */
         @NameInMap("Value")
         public DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue value;
 

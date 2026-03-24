@@ -31,9 +31,6 @@ public class DescribeDomainPvDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The number of PVs at each interval.</p>
-     */
     @NameInMap("PvDataInterval")
     public DescribeDomainPvDataResponseBodyPvDataInterval pvDataInterval;
 
@@ -109,21 +106,9 @@ public class DescribeDomainPvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainPvDataResponseBodyPvDataIntervalUsageData extends TeaModel {
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-11-28T03:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The number of PVs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9292</p>
-         */
         @NameInMap("Value")
         public String value;
 

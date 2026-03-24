@@ -49,9 +49,6 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The amount of network traffic at each time interval. Unit: bytes.</p>
-     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -109,66 +106,24 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The amount of network traffic in the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        /**
-         * <p>The amount of HTTPS traffic on points of presence (POPs) in the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
-        /**
-         * <p>The amount of HTTPS traffic on POPs outside the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
-        /**
-         * <p>The total amount of HTTPS traffic on POPs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>423304182</p>
-         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        /**
-         * <p>The amount of network traffic outside the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total volume of traffic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>423304182</p>
-         */
         @NameInMap("Value")
         public String value;
 

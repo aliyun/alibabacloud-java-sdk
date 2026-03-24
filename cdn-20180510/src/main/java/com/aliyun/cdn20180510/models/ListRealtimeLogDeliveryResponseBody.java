@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListRealtimeLogDeliveryResponseBody extends TeaModel {
-    /**
-     * <p>The logging information.</p>
-     */
     @NameInMap("Content")
     public ListRealtimeLogDeliveryResponseBodyContent content;
 
@@ -41,57 +38,21 @@ public class ListRealtimeLogDeliveryResponseBody extends TeaModel {
     }
 
     public static class ListRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo extends TeaModel {
-        /**
-         * <p>The domain ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1001010</p>
-         */
         @NameInMap("DmId")
         public Integer dmId;
 
-        /**
-         * <p>The accelerated domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The name of the Logstore where log entries are stored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Logstore")
         public String logstore;
 
-        /**
-         * <p>The name of the Log Service project that is used for real-time log delivery.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Project")
         public String project;
 
-        /**
-         * <p>The ID of the region where the Log Service project is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-corp</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The status of real-time log delivery.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>online</p>
-         */
         @NameInMap("Status")
         public String status;
 

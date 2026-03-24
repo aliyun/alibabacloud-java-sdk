@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsBySourceResponseBody extends TeaModel {
-    /**
-     * <p>The domain names corresponding to each origin server.</p>
-     */
     @NameInMap("DomainsList")
     public DescribeDomainsBySourceResponseBodyDomainsList domainsList;
 
@@ -58,70 +55,21 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo extends TeaModel {
-        /**
-         * <p>The workload type of the accelerated domain name. Valid values:</p>
-         * <ul>
-         * <li><strong>web</strong>: images and small files</li>
-         * <li><strong>download</strong>: large files</li>
-         * <li><strong>video</strong>: on-demand video and audio streaming</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>web</p>
-         */
         @NameInMap("CdnType")
         public String cdnType;
 
-        /**
-         * <p>The creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-12T11:53:19+08:00</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The CNAME record assigned to the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>***.alikunlun.com</p>
-         */
         @NameInMap("DomainCname")
         public String domainCname;
 
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.org</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The status of the domain name. Valid values:</p>
-         * <ul>
-         * <li><strong>applying</strong>: The domain name is under review.</li>
-         * <li><strong>configuring</strong>: The domain name is being configured.</li>
-         * <li><strong>online</strong>: The domain name is working as expected.</li>
-         * <li><strong>stopping</strong>: The domain name is being stopped.</li>
-         * <li><strong>offline</strong>: The domain name is disabled.</li>
-         * <li><strong>disabling</strong>: The domain name is being removed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>online</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The update time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-03-31T04:49:00+08:00</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -219,24 +167,12 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsData extends TeaModel {
-        /**
-         * <p>Information about the domain name.</p>
-         */
         @NameInMap("DomainInfos")
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfos domainInfos;
 
-        /**
-         * <p>The domain names that correspond to each origin server.</p>
-         */
         @NameInMap("Domains")
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains domains;
 
-        /**
-         * <p>The origin server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("Source")
         public String source;
 

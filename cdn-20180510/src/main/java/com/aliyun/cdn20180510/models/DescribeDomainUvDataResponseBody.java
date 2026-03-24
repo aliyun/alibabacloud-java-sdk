@@ -49,9 +49,6 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The number of UVs at each interval.</p>
-     */
     @NameInMap("UvDataInterval")
     public DescribeDomainUvDataResponseBodyUvDataInterval uvDataInterval;
 
@@ -109,21 +106,9 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainUvDataResponseBodyUvDataIntervalUsageData extends TeaModel {
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-11-29T00:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The number of UVs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>318</p>
-         */
         @NameInMap("Value")
         public String value;
 

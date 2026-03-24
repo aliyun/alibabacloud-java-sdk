@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the accelerated domain names.</p>
-     */
     @NameInMap("Content")
     public ListRealtimeLogDeliveryDomainsResponseBodyContent content;
 
@@ -41,25 +38,9 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
     }
 
     public static class ListRealtimeLogDeliveryDomainsResponseBodyContentDomains extends TeaModel {
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The status. Valid values:</p>
-         * <ul>
-         * <li><strong>online</strong>: enabled</li>
-         * <li><strong>offline</strong>: disabled</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>online</p>
-         */
         @NameInMap("Status")
         public String status;
 

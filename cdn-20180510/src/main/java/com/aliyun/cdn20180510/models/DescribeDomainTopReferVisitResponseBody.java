@@ -31,9 +31,6 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The most frequently requested web pages.</p>
-     */
     @NameInMap("TopReferList")
     public DescribeDomainTopReferVisitResponseBodyTopReferList topReferList;
 
@@ -75,48 +72,18 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopReferVisitResponseBodyTopReferListReferList extends TeaModel {
-        /**
-         * <p>The amount of network traffic. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Flow")
         public String flow;
 
-        /**
-         * <p>The proportion of network traffic consumed to access the URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.5</p>
-         */
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
-        /**
-         * <p>The URLs to the most frequently requested web pages.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>learn.aliyundoc.com</p>
-         */
         @NameInMap("ReferDetail")
         public String referDetail;
 
-        /**
-         * <p>The number of visits to the URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("VisitData")
         public String visitData;
 
-        /**
-         * <p>The proportion of visits to the URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.5</p>
-         */
         @NameInMap("VisitProportion")
         public Float visitProportion;
 

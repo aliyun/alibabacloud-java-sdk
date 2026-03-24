@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
-    /**
-     * <p>The estimated bill data.</p>
-     */
     @NameInMap("BillPredictionData")
     public DescribeCdnUserBillPredictionResponseBodyBillPredictionData billPredictionData;
 
@@ -107,30 +104,12 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem extends TeaModel {
-        /**
-         * <p>The billable region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
         @NameInMap("Area")
         public String area;
 
-        /**
-         * <p>The time when the value used as the estimated value is generated. This parameter is returned only if the metering method is pay by 95th percentile, pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00, or pay by 4th peak bandwidth per month.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-10-15T16:00:00Z</p>
-         */
         @NameInMap("TimeStp")
         public String timeStp;
 
-        /**
-         * <p>The estimated value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10000</p>
-         */
         @NameInMap("Value")
         public Float value;
 

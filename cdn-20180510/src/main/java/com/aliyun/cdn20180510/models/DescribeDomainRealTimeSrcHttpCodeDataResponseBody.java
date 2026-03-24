@@ -31,9 +31,6 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The proportions of HTTP status codes at each time interval.</p>
-     */
     @NameInMap("RealTimeSrcHttpCodeData")
     public DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeData realTimeSrcHttpCodeData;
 
@@ -109,30 +106,12 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
     }
 
     public static class DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValueRealTimeSrcCodeProportionData extends TeaModel {
-        /**
-         * <p>The HTTP status code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The count of each HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Count")
         public String count;
 
-        /**
-         * <p>The proportion of the HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.62015503875969</p>
-         */
         @NameInMap("Proportion")
         public String proportion;
 
@@ -187,18 +166,9 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
     }
 
     public static class DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData extends TeaModel {
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-11-30T05:40:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The proportions of the HTTP status codes.</p>
-         */
         @NameInMap("Value")
         public DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValue value;
 

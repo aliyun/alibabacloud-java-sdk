@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
-    /**
-     * <p>The list of accelerated domain names and the time each domain name was last modified.</p>
-     */
     @NameInMap("Domains")
     public DescribeCdnDeletedDomainsResponseBodyDomains domains;
 
@@ -92,21 +89,9 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDeletedDomainsResponseBodyDomainsPageData extends TeaModel {
-        /**
-         * <p>The accelerated domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The time when the accelerated domain name was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-10-28T11:05:52Z</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 

@@ -40,9 +40,6 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The back-to-origin bandwidth information at each interval.</p>
-     */
     @NameInMap("SrcQpsDataPerInterval")
     public DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerInterval srcQpsDataPerInterval;
 
@@ -109,21 +106,9 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T21:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The QPS value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Value")
         public String value;
 

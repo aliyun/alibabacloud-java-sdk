@@ -22,9 +22,6 @@ public class DescribeL2VipsByDomainResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of VIPs.</p>
-     */
     @NameInMap("Vips")
     public DescribeL2VipsByDomainResponseBodyVips vips;
 

@@ -67,9 +67,6 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    /**
-     * <p>The resource usage that was collected at each interval.</p>
-     */
     @NameInMap("UsageDataPerInterval")
     public DescribeDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
 
@@ -143,45 +140,15 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The time of the peak bandwidth value if the <strong>Field</strong> parameter in the request is set to <strong>bps</strong>. Otherwise, this parameter returns the same value as the <strong>TimeStamp</strong> parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T21:30:00Z</p>
-         */
         @NameInMap("PeakTime")
         public String peakTime;
 
-        /**
-         * <p>The resource usage in a specific scenario.</p>
-         * <blockquote>
-         * <p>SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>423304182</p>
-         */
         @NameInMap("SpecialValue")
         public String specialValue;
 
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * <blockquote>
-         * <p><strong>TimeStamp</strong> indicates the timestamp of the data returned at each interval.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T21:30:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The amount of resource usage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>423304182</p>
-         */
         @NameInMap("Value")
         public String value;
 

@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
-    /**
-     * <p>The data entries returned.</p>
-     */
     @NameInMap("Data")
     public DescribeDomainRealTimeQpsDataResponseBodyData data;
 
@@ -41,21 +38,9 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeQpsDataResponseBodyDataQpsModel extends TeaModel {
-        /**
-         * <p>The number of queries per second.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1851.25</p>
-         */
         @NameInMap("Qps")
         public Float qps;
 
-        /**
-         * <p>The timestamp of the data returned. The time follows the yyyy-MM-ddTHH:mm:ssZ format in the ISO 8601 standard and is in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-02T11:25:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

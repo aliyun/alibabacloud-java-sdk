@@ -22,9 +22,6 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about requests collected every 5 minutes.</p>
-     */
     @NameInMap("RequestPerInterval")
     public DescribeDomainMultiUsageDataResponseBodyRequestPerInterval requestPerInterval;
 
@@ -37,9 +34,6 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The statistics of network traffic collected every 5 minutes.</p>
-     */
     @NameInMap("TrafficPerInterval")
     public DescribeDomainMultiUsageDataResponseBodyTrafficPerInterval trafficPerInterval;
 
@@ -89,42 +83,15 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule extends TeaModel {
-        /**
-         * <p>The accelerated domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The number of requests.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11288111</p>
-         */
         @NameInMap("Request")
         public Long request;
 
-        /**
-         * <p>The timestamp of the returned number of requests.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The type.</p>
-         * <blockquote>
-         * <p> The value is Simple for Alibaba Cloud CDN.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Simple</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -187,55 +154,18 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule extends TeaModel {
-        /**
-         * <p>The name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
         @NameInMap("Area")
         public String area;
 
-        /**
-         * <p>The bandwidth. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11288111.1</p>
-         */
         @NameInMap("Bps")
         public Float bps;
 
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The startstamp of the returned usage data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The type of requests. Valid values:</p>
-         * <ul>
-         * <li><strong>StaticHttps</strong>: static HTTPS requests</li>
-         * <li><strong>DynamicHttps</strong>: dynamic HTTPS requests</li>
-         * <li><strong>DynamicHttp</strong>: dynamic HTTP requests</li>
-         * <li><strong>StaticQuic</strong>: static QUIC requests</li>
-         * <li><strong>DynamicQuic</strong>: dynamic QUIC requests</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>DynamicHttp</p>
-         */
         @NameInMap("Type")
         public String type;
 

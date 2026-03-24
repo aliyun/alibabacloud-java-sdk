@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnTypesResponseBody extends TeaModel {
-    /**
-     * <p>The types of the domain names.</p>
-     */
     @NameInMap("CdnTypes")
     public DescribeCdnTypesResponseBodyCdnTypes cdnTypes;
 
@@ -41,21 +38,9 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnTypesResponseBodyCdnTypesCdnType extends TeaModel {
-        /**
-         * <p>The description of the domain name type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Download Acceleration</p>
-         */
         @NameInMap("Desc")
         public String desc;
 
-        /**
-         * <p>The type of the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>download</p>
-         */
         @NameInMap("Type")
         public String type;
 

@@ -63,9 +63,6 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     @NameInMap("OpeningTime")
     public String openingTime;
 
-    /**
-     * <p>The lock status.</p>
-     */
     @NameInMap("OperationLocks")
     public DescribeCdnServiceResponseBodyOperationLocks operationLocks;
 
@@ -156,12 +153,6 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnServiceResponseBodyOperationLocksLockReason extends TeaModel {
-        /**
-         * <p>The reason why the service is locked. A value of financial indicates that the service is locked due to overdue payments.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>financial</p>
-         */
         @NameInMap("LockReason")
         public String lockReason;
 

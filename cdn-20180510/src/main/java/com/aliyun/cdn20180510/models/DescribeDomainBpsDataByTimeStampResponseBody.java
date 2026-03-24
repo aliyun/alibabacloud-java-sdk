@@ -4,9 +4,6 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
-    /**
-     * <p>A list of bandwidth values by ISP and region.</p>
-     */
     @NameInMap("BpsDataList")
     public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList;
 
@@ -75,39 +72,15 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel extends TeaModel {
-        /**
-         * <p>The bandwidth value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>52119553</p>
-         */
         @NameInMap("Bps")
         public Long bps;
 
-        /**
-         * <p>The name of the ISP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>unicom</p>
-         */
         @NameInMap("IspName")
         public String ispName;
 
-        /**
-         * <p>The name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Liaoning</p>
-         */
         @NameInMap("LocationName")
         public String locationName;
 
-        /**
-         * <p>The timestamp of the data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-11-30T05:40:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
