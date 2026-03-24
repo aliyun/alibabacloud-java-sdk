@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>Set the page number from which to start displaying the query results. The starting value is <strong>1</strong>. The default value is <strong>1</strong>, indicating that the display starts from the <strong>1st</strong> page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end time. The value is a UNIX timestamp.</p>
+     * <p>End time, in timestamp format.</p>
      * 
      * <strong>example:</strong>
      * <p>1675058931215</p>
@@ -23,9 +23,9 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     public Long endTimeStamp;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Sets the language type for requests and received messages, default is <strong>zh</strong>. Values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>zh</strong>: Chinese </li>
      * <li><strong>en</strong>: English</li>
      * </ul>
      * 
@@ -36,7 +36,7 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.</p>
+     * <p>Specifies the maximum number of data entries displayed per page for paginated queries. The default number of entries displayed per page is 20. If the pagesize parameter is empty, 20 entries will be returned by default. It is recommended that the pagesize value should not be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,13 +45,13 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The risk levels.</p>
+     * <p>List of risk levels</p>
      */
     @NameInMap("RiskLevelList")
     public java.util.List<String> riskLevelList;
 
     /**
-     * <p>The source IP address of the attack.</p>
+     * <p>Attacker\&quot;s IP</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     public String srcIp;
 
     /**
-     * <p>The start time. The value is a UNIX timestamp.</p>
+     * <p>Start time, in timestamp format.</p>
      * 
      * <strong>example:</strong>
      * <p>1681624877761</p>
@@ -70,12 +70,12 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     public Long startTimeStamp;
 
     /**
-     * <p>The type of the attack source statistics. Valid values:</p>
+     * <p>The type of attack source statistics. Values:</p>
      * <ul>
-     * <li><strong>TOP_ATTACKED_AGENT</strong>: the top 5 probes that are attacked the most frequently</li>
-     * <li><strong>TOP_ATTACKED_IP</strong>: the top 5 IP addresses that are attacked the most frequently</li>
-     * <li><strong>ATTACK_EVENT_TYPE</strong>: the type of the intrusion event</li>
-     * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: the type of the attacked honeypot</li>
+     * <li><strong>TOP_ATTACKED_AGENT</strong>: Top 5 most attacked probes. </li>
+     * <li><strong>TOP_ATTACKED_IP</strong>: Top 5 most attacked IP addresses.</li>
+     * <li><strong>ATTACK_EVENT_TYPE</strong>: Type of intrusion event. </li>
+     * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: Type of compromised honeypot.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

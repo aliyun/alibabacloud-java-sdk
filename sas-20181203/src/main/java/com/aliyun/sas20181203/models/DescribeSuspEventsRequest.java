@@ -85,6 +85,12 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("Dealed")
     public String dealed;
 
+    /**
+     * <p>Source of discovery (invalid field)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>linux</p>
+     */
     @NameInMap("DetectSource")
     public String detectSource;
 
@@ -356,7 +362,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String strictMode;
 
     /**
-     * <p>告警支持的操作类型列表。</p>
+     * <p>List of supported alarm operation types</p>
      */
     @NameInMap("SupportOperateCodeList")
     public java.util.List<String> supportOperateCodeList;

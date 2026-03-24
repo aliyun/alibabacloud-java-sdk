@@ -378,6 +378,7 @@ public class ListCheckResultResponseBody extends TeaModel {
          * <li><strong>CHECKING</strong>: being checked</li>
          * <li><strong>NOT_CHECK</strong>: not checked</li>
          * <li><strong>WHITELIST</strong>: added to the whitelist</li>
+         * <li><strong>FAILED</strong>: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>

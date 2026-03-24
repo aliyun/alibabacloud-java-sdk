@@ -57,6 +57,19 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         public String module;
 
         /**
+         * <p>Module authorization switch indicator. Values: </p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled</li>
+         * <li><strong>false</strong>: Not enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ModuleAuth")
+        public Boolean moduleAuth;
+
+        /**
          * <p>The display name of the module.</p>
          * 
          * <strong>example:</strong>
@@ -76,6 +89,14 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         }
         public String getModule() {
             return this.module;
+        }
+
+        public GetSupportedModulesResponseBodySupportedModuleResponseSupportedModules setModuleAuth(Boolean moduleAuth) {
+            this.moduleAuth = moduleAuth;
+            return this;
+        }
+        public Boolean getModuleAuth() {
+            return this.moduleAuth;
         }
 
         public GetSupportedModulesResponseBodySupportedModuleResponseSupportedModules setModuleDisp(String moduleDisp) {

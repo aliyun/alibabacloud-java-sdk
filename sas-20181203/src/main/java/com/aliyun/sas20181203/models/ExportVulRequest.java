@@ -207,6 +207,9 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("VpcInstanceIds")
     public String vpcInstanceIds;
 
+    /**
+     * <p>漏洞组件信息列表</p>
+     */
     @NameInMap("VulEntityList")
     public java.util.List<ExportVulRequestVulEntityList> vulEntityList;
 
@@ -361,6 +364,8 @@ public class ExportVulRequest extends TeaModel {
 
     public static class ExportVulRequestVulEntityList extends TeaModel {
         /**
+         * <p>组件名称</p>
+         * 
          * <strong>example:</strong>
          * <p>Ollama</p>
          */
@@ -368,6 +373,8 @@ public class ExportVulRequest extends TeaModel {
         public String entityName;
 
         /**
+         * <p>组件版本</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */

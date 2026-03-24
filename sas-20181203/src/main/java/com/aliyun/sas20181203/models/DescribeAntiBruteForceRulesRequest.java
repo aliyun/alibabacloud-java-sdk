@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>Set which page of the returned results to start displaying the query results. The default value is <strong>1</strong>, indicating that the display starts from the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,9 +14,9 @@ public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The ID of the defense rule.</p>
+     * <p>The ID of the anti-brute force rule.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeAntiBruteForceRules~~">DescribeAntiBruteForceRules</a> operation to query the IDs of defense rules.</p>
+     * <p>You can obtain this parameter by calling the <a href="~~DescribeAntiBruteForceRules~~">DescribeAntiBruteForceRules</a> interface.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The name of the brute force rule.</p>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -35,7 +35,7 @@ public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of data entries displayed per page during a paginated query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>121.69.XX.XX</p>

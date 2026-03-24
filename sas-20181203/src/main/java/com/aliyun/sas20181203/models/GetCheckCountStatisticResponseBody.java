@@ -42,6 +42,8 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
 
     public static class GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems extends TeaModel {
         /**
+         * <p>检查项展示名称</p>
+         * 
          * <strong>example:</strong>
          * <p>开启公网访问</p>
          */
@@ -248,6 +250,8 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         public Integer vendor;
 
         /**
+         * <p>厂商名称</p>
+         * 
          * <strong>example:</strong>
          * <p>阿里云</p>
          */

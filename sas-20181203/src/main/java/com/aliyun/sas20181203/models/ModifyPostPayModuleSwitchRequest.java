@@ -143,6 +143,8 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
         public Integer agentless;
 
         /**
+         * <p>AI Digitization</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

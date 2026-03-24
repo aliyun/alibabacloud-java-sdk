@@ -66,6 +66,16 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     @NameInMap("SubAccountName")
     public String subAccountName;
 
+    /**
+     * <p>Cloud asset vendor. Values:</p>
+     * <ul>
+     * <li><strong>Tencent</strong>: Tencent Cloud </li>
+     * <li><strong>AWS</strong>: Amazon Web Services</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VOLCENGINE</p>
+     */
     @NameInMap("Vendor")
     public String vendor;
 

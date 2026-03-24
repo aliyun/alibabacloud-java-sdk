@@ -108,6 +108,9 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
         @NameInMap("PersistenceDay")
         public Long persistenceDay;
 
+        @NameInMap("Port")
+        public Integer port;
+
         /**
          * <p>The type of the protocol. Valid values:</p>
          * <ul>
@@ -280,6 +283,14 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
         }
         public Long getPersistenceDay() {
             return this.persistenceDay;
+        }
+
+        public ListPrivateRegistryListResponseBodyImageRegistryInfos setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
         }
 
         public ListPrivateRegistryListResponseBodyImageRegistryInfos setProtocolType(Long protocolType) {

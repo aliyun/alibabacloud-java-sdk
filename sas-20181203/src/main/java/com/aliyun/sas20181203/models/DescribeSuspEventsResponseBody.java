@@ -448,6 +448,12 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Details")
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsDetails> details;
 
+        /**
+         * <p>Source of discovery (invalid field)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
+         */
         @NameInMap("DetectSource")
         public String detectSource;
 

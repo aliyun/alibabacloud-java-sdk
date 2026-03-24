@@ -224,6 +224,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String errorFile;
 
         /**
+         * <p>Snapshot expiration timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1799132915000</p>
+         */
+        @NameInMap("ExpireTime")
+        public Long expireTime;
+
+        /**
          * <p>The ID of the ECS instance.</p>
          * 
          * <strong>example:</strong>
@@ -448,6 +457,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getErrorFile() {
             return this.errorFile;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setExpireTime(Long expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public Long getExpireTime() {
+            return this.expireTime;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setInstanceId(String instanceId) {

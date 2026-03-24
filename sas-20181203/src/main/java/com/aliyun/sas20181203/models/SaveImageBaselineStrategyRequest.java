@@ -17,6 +17,9 @@ public class SaveImageBaselineStrategyRequest extends TeaModel {
     @NameInMap("BaselineItemList")
     public String baselineItemList;
 
+    @NameInMap("ImageVulClean")
+    public Integer imageVulClean;
+
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
@@ -75,6 +78,14 @@ public class SaveImageBaselineStrategyRequest extends TeaModel {
     }
     public String getBaselineItemList() {
         return this.baselineItemList;
+    }
+
+    public SaveImageBaselineStrategyRequest setImageVulClean(Integer imageVulClean) {
+        this.imageVulClean = imageVulClean;
+        return this;
+    }
+    public Integer getImageVulClean() {
+        return this.imageVulClean;
     }
 
     public SaveImageBaselineStrategyRequest setLang(String lang) {

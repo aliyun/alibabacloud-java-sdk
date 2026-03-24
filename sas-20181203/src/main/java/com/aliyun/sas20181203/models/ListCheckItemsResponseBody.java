@@ -137,7 +137,7 @@ public class ListCheckItemsResponseBody extends TeaModel {
         public String sectionShowName;
 
         /**
-         * <p>检查项的标准ID。</p>
+         * <p>Standard ID of the inspection item.</p>
          * 
          * <strong>example:</strong>
          * <p>10000000001</p>
@@ -346,7 +346,7 @@ public class ListCheckItemsResponseBody extends TeaModel {
         public java.util.List<ListCheckItemsResponseBodyCheckItemsCheckPolicies> checkPolicies;
 
         /**
-         * <p>自定义检查项定义规则。</p>
+         * <p>Define rules for custom inspection items.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AssociatedData&quot;:{&quot;ToDataList&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Instance&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;FromPropertyPath&quot;:&quot;InstanceId&quot;}]},&quot;MatchProperty&quot;:{&quot;Operator&quot;:&quot;AND&quot;,&quot;MatchProperties&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Disk&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;MatchOperator&quot;:&quot;EQ&quot;,&quot;MatchPropertyValue&quot;:&quot;testId&quot;},{&quot;DataName&quot;:&quot;ACS_ECS_Instance&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;MatchOperator&quot;:&quot;EQ&quot;,&quot;MatchPropertyValue&quot;:&quot;testInstanceId&quot;}]}}</p>

@@ -115,6 +115,9 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         @NameInMap("BaselineItemList")
         public java.util.List<DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList> baselineItemList;
 
+        @NameInMap("ImageVulClean")
+        public Integer imageVulClean;
+
         /**
          * <p>The number of selected baseline check items.</p>
          * 
@@ -184,6 +187,14 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         }
         public java.util.List<DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList> getBaselineItemList() {
             return this.baselineItemList;
+        }
+
+        public DescribeImageBaselineStrategyResponseBodyStrategy setImageVulClean(Integer imageVulClean) {
+            this.imageVulClean = imageVulClean;
+            return this;
+        }
+        public Integer getImageVulClean() {
+            return this.imageVulClean;
         }
 
         public DescribeImageBaselineStrategyResponseBodyStrategy setSelectedItemCount(Integer selectedItemCount) {

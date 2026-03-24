@@ -56,7 +56,7 @@ public class ListCheckPoliciesResponseBody extends TeaModel {
 
     public static class ListCheckPoliciesResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>分页查询时，当前页显示的数据条数。</p>
+         * <p>The number of data entries displayed on the current page when performing a paginated query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -187,13 +187,13 @@ public class ListCheckPoliciesResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>关联的策略大类的名称（PolicyType取值为STANDARD时为必填）：</p>
+         * <p>Name of the associated major policy category (required when PolicyType is STANDARD): </p>
          * <ul>
-         * <li><strong>AISPM</strong>：AI配置管理（AI-SPM）</li>
-         * <li><strong>KISPM</strong>：Kubernetes配置管理(KSPM)</li>
-         * <li><strong>IDENTITY_PERMISSION</strong>：身份权限管理(CIEM)</li>
-         * <li><strong>RISK</strong>：安全风险</li>
-         * <li><strong>COMPLIANCE</strong>：合规风险</li>
+         * <li><strong>AISPM</strong>: AI Configuration Management (AI-SPM) </li>
+         * <li><strong>KISPM</strong>: Kubernetes Configuration Management (KSPM) </li>
+         * <li><strong>IDENTITY_PERMISSION</strong>: Identity and Permission Management (CIEM)</li>
+         * <li><strong>RISK</strong>: Security Risk</li>
+         * <li><strong>COMPLIANCE</strong>: Compliance Risk</li>
          * </ul>
          * 
          * <strong>example:</strong>

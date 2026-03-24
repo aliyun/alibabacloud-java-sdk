@@ -169,6 +169,9 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     @NameInMap("ScaVersion")
     public String scaVersion;
 
+    /**
+     * <p>搜索条件列表</p>
+     */
     @NameInMap("SearchCriteriaList")
     public java.util.List<DescribePropertyScaDetailRequestSearchCriteriaList> searchCriteriaList;
 
@@ -470,6 +473,8 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
 
     public static class DescribePropertyScaDetailRequestSearchCriteriaList extends TeaModel {
         /**
+         * <p>搜索条件名称</p>
+         * 
          * <strong>example:</strong>
          * <p>Name</p>
          */
@@ -477,6 +482,8 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>搜索条件过滤值</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

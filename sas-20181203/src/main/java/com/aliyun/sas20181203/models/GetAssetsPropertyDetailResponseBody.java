@@ -148,6 +148,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
     }
 
     public static class GetAssetsPropertyDetailResponseBodyPropertys extends TeaModel {
+        /**
+         * <p>Agent</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mozilla/5.0 (Windows NT 10.0%3B Win64%3B x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0</p>
+         */
         @NameInMap("Agent")
         public String agent;
 
@@ -169,6 +175,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>Asset description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Type\&quot;: \&quot;text\&quot;, \&quot;Value\&quot;: u\&quot;\u786e\u4fdd\u7f51\u5173\u5b89\u5168\u9632\u62a4\u3002\u8981\u6c42\uff1a\u5f00\u542fWAF\u9632\u706b\u5899\u9632\u62a4\u529f\u80fd\u3002\&quot;}</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -215,6 +227,8 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         public String filepath;
 
         /**
+         * <p>镜像Digest</p>
+         * 
          * <strong>example:</strong>
          * <p>ImageDigest</p>
          */
@@ -296,6 +310,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @NameInMap("ListenProtocol")
         public String listenProtocol;
 
+        /**
+         * <p>MCP name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@modelcontextprotocol/server-github</p>
+         */
         @NameInMap("McpName")
         public String mcpName;
 
@@ -409,6 +429,8 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>镜像的RepoName</p>
+         * 
          * <strong>example:</strong>
          * <p>ACR-Example</p>
          */
@@ -416,6 +438,8 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         public String repoName;
 
         /**
+         * <p>镜像Repo命名空间</p>
+         * 
          * <strong>example:</strong>
          * <p>Default</p>
          */
@@ -446,16 +470,30 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>Skill name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analytics and Data Analysis</p>
+         */
         @NameInMap("SkillsName")
         public String skillsName;
 
         /**
+         * <p>标签</p>
+         * 
          * <strong>example:</strong>
          * <p>AI</p>
          */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>Transmission name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TransportName")
         public String transportName;
 

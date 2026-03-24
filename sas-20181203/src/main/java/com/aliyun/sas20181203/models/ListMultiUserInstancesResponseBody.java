@@ -1677,7 +1677,7 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
 
     public static class ListMultiUserInstancesResponseBodySaleInstanceListVersionSummaryEcsCount extends TeaModel {
         /**
-         * <p>已分配已购授权台数。</p>
+         * <p>Number of purchased licenses allocated.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

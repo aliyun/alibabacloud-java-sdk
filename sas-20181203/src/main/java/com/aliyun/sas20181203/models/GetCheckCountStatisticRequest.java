@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCheckCountStatisticRequest extends TeaModel {
     /**
+     * <p>语言参数</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -28,6 +30,9 @@ public class GetCheckCountStatisticRequest extends TeaModel {
 
     /**
      * <p>Task source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
