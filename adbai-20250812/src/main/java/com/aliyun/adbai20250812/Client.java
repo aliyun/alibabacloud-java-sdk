@@ -452,6 +452,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改变配指标平台</p>
+     * 
+     * @param tmpReq ModifyAgentPlatformRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAgentPlatformResponse
+     */
+    public ModifyAgentPlatformResponse modifyAgentPlatformWithOptions(ModifyAgentPlatformRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyAgentPlatformShrinkRequest request = new ModifyAgentPlatformShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.aiPlatformConfig)) {
+            request.aiPlatformConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.aiPlatformConfig, "AiPlatformConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aiPlatformConfigShrink)) {
+            query.put("AiPlatformConfig", request.aiPlatformConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAgentPlatform"),
+            new TeaPair("version", "2025-08-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAgentPlatformResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改变配指标平台</p>
+     * 
+     * @param request ModifyAgentPlatformRequest
+     * @return ModifyAgentPlatformResponse
+     */
+    public ModifyAgentPlatformResponse modifyAgentPlatform(ModifyAgentPlatformRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAgentPlatformWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>变配具身智能平台</p>
+     * 
+     * @param tmpReq ModifyEmbodiedAIPlatformRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyEmbodiedAIPlatformResponse
+     */
+    public ModifyEmbodiedAIPlatformResponse modifyEmbodiedAIPlatformWithOptions(ModifyEmbodiedAIPlatformRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyEmbodiedAIPlatformShrinkRequest request = new ModifyEmbodiedAIPlatformShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rayConfig)) {
+            request.rayConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rayConfig, "RayConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platformName)) {
+            query.put("PlatformName", request.platformName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rayConfigShrink)) {
+            query.put("RayConfig", request.rayConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.webserverSpecName)) {
+            query.put("WebserverSpecName", request.webserverSpecName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyEmbodiedAIPlatform"),
+            new TeaPair("version", "2025-08-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyEmbodiedAIPlatformResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>变配具身智能平台</p>
+     * 
+     * @param request ModifyEmbodiedAIPlatformRequest
+     * @return ModifyEmbodiedAIPlatformResponse
+     */
+    public ModifyEmbodiedAIPlatformResponse modifyEmbodiedAIPlatform(ModifyEmbodiedAIPlatformRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyEmbodiedAIPlatformWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>重置具身智能平台密码</p>
      * 
      * @param request ResetEmbodiedAIPlatformPasswordRequest
