@@ -4,6 +4,10 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ValidationOptions extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("skipVerifyAIChatCompletion")
     public Boolean skipVerifyAIChatCompletion;
 

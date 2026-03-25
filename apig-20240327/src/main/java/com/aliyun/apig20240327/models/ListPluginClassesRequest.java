@@ -4,10 +4,20 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ListPluginClassesRequest extends TeaModel {
+    /**
+     * <p>The alias keyword for a fuzzy search.</p>
+     */
     @NameInMap("aliasLike")
     public String aliasLike;
 
     /**
+     * <p>The traffic direction. Valid values: </p>
+     * <ul>
+     * <li>OutBound</li>
+     * <li>InBound</li>
+     * <li>Both</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>InBound</p>
      */
@@ -15,6 +25,8 @@ public class ListPluginClassesRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>Specifies whether to exclude built-in plugins.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +34,8 @@ public class ListPluginClassesRequest extends TeaModel {
     public Boolean excludeBuiltinAiProxy;
 
     /**
+     * <p>The gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-d1j8tjum1hkhxxxxxxxx</p>
      */
@@ -29,6 +43,8 @@ public class ListPluginClassesRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The instance type. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>API</p>
      */
@@ -36,6 +52,8 @@ public class ListPluginClassesRequest extends TeaModel {
     public String gatewayType;
 
     /**
+     * <p>Indicates whether the plugin is installed.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -43,6 +61,8 @@ public class ListPluginClassesRequest extends TeaModel {
     public Boolean installed;
 
     /**
+     * <p>The plugin name for a fuzzy search.</p>
+     * 
      * <strong>example:</strong>
      * <p>oauth</p>
      */
@@ -50,6 +70,8 @@ public class ListPluginClassesRequest extends TeaModel {
     public String nameLike;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -57,6 +79,8 @@ public class ListPluginClassesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,6 +88,13 @@ public class ListPluginClassesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The plugin source. Valid values: </p>
+     * <ul>
+     * <li>HigressOfficial</li>
+     * <li>HigressCommunity</li>
+     * <li>Custom</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HigressOfficial</p>
      */
@@ -71,6 +102,8 @@ public class ListPluginClassesRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>The type of the plugin.</p>
+     * 
      * <strong>example:</strong>
      * <p>Auth</p>
      */

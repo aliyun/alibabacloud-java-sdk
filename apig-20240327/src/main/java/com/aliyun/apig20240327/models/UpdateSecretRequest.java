@@ -4,6 +4,12 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateSecretRequest extends TeaModel {
+    /**
+     * <p>The key value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apikey-xxxxxxxx</p>
+     */
     @NameInMap("secretData")
     public String secretData;
 

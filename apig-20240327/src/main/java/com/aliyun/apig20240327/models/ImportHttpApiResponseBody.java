@@ -326,6 +326,9 @@ public class ImportHttpApiResponseBody extends TeaModel {
         @NameInMap("failureOperations")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureOperations> failureOperations;
 
+        @NameInMap("mcpToolsDefinition")
+        public String mcpToolsDefinition;
+
         /**
          * <p>The data structs that pass the dry run.</p>
          */
@@ -379,6 +382,14 @@ public class ImportHttpApiResponseBody extends TeaModel {
         }
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureOperations> getFailureOperations() {
             return this.failureOperations;
+        }
+
+        public ImportHttpApiResponseBodyDataDryRunInfo setMcpToolsDefinition(String mcpToolsDefinition) {
+            this.mcpToolsDefinition = mcpToolsDefinition;
+            return this;
+        }
+        public String getMcpToolsDefinition() {
+            return this.mcpToolsDefinition;
         }
 
         public ImportHttpApiResponseBodyDataDryRunInfo setSuccessComponents(java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents> successComponents) {

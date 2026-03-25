@@ -4,14 +4,29 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateSecretResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ok</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B01CABA5-9AA1-51A2-A5A7-8BD83BA062F7</p>
      */
     @NameInMap("requestId")
     public String requestId;

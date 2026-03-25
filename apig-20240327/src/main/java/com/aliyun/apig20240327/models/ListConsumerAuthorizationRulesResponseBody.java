@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public ListConsumerAuthorizationRulesResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -68,10 +75,15 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
     }
 
     public static class ListConsumerAuthorizationRulesResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The API information.</p>
+         */
         @NameInMap("apiInfo")
         public HttpApiApiInfo apiInfo;
 
         /**
+         * <p>The ID of the consumer authorization rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>car-csgeka5lhtggrjcprok0</p>
          */
@@ -79,6 +91,8 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerAuthorizationRuleId;
 
         /**
+         * <p>The consumer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cs-csheiftlhtgmp0j0hp4g</p>
          */
@@ -86,6 +100,8 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerId;
 
         /**
+         * <p>The creation timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
          */
@@ -93,16 +109,23 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>The deployment status of the API in the current environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("deployStatus")
         public String deployStatus;
 
+        /**
+         * <p>The environment information.</p>
+         */
         @NameInMap("environmentInfo")
         public EnvironmentInfo environmentInfo;
 
         /**
+         * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+         * 
          * <strong>example:</strong>
          * <p>ShortTerm</p>
          */
@@ -110,6 +133,8 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String expireMode;
 
         /**
+         * <p>The rule status.</p>
+         * 
          * <strong>example:</strong>
          * <p>InEffect</p>
          */
@@ -117,16 +142,23 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String expireStatus;
 
         /**
+         * <p>The time when the rule expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>172086834548</p>
          */
         @NameInMap("expireTimestamp")
         public Long expireTimestamp;
 
+        /**
+         * <p>The gateway information.</p>
+         */
         @NameInMap("gatewayInfo")
         public GatewayInfo gatewayInfo;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2351944</p>
          */
@@ -134,6 +166,8 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>HttpApiRoute</p>
          */
@@ -141,6 +175,8 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The update timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1721116090326</p>
          */
@@ -259,10 +295,15 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
     }
 
     public static class ListConsumerAuthorizationRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of consumer authorization information.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListConsumerAuthorizationRulesResponseBodyDataItems> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -270,6 +311,8 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -277,6 +320,8 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */

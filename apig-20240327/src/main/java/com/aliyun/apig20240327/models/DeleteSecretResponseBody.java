@@ -4,14 +4,29 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecretResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ok</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD4F1D33-7267-5596-8F5D-C593xxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;

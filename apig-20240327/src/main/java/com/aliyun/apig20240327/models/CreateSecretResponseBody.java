@@ -4,17 +4,35 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ok</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public CreateSecretResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Failed to upload data. Please try again</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFF809D7-045D-502F-BF6C-947Exxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -57,6 +75,12 @@ public class CreateSecretResponseBody extends TeaModel {
     }
 
     public static class CreateSecretResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
+         */
         @NameInMap("secretId")
         public String secretId;
 

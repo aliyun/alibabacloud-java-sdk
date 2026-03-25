@@ -1241,7 +1241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建密钥</p>
+     * <p>Generates a key.</p>
      * 
      * @param request CreateSecretRequest
      * @param headers map
@@ -1295,7 +1295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建密钥</p>
+     * <p>Generates a key.</p>
      * 
      * @param request CreateSecretRequest
      * @return CreateSecretResponse
@@ -1992,7 +1992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除密钥</p>
+     * <p>Deletes a key value.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2018,7 +2018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除密钥</p>
+     * <p>Deletes a key value.</p>
      * @return DeleteSecretResponse
      */
     public DeleteSecretResponse deleteSecret(String secretId) throws Exception {
@@ -2882,8 +2882,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询密钥</p>
+     * <p>Obtains the key.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2908,8 +2911,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询密钥</p>
+     * <p>Obtains the key.</p>
      * @return GetSecretResponse
      */
     public GetSecretResponse getSecret(String secretId) throws Exception {
@@ -2920,7 +2926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询密钥值</p>
+     * <p>Gets the key value.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2946,7 +2952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询密钥值</p>
+     * <p>Gets the key value.</p>
      * @return GetSecretValueResponse
      */
     public GetSecretValueResponse getSecretValue(String name) throws Exception {
@@ -3224,7 +3230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者授权规则列表</p>
+     * <p>Obtains a list of consumer authentication rules.</p>
      * 
      * @param request ListConsumerAuthorizationRulesRequest
      * @param headers map
@@ -3266,7 +3272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者授权规则列表</p>
+     * <p>Obtains a list of consumer authentication rules.</p>
      * 
      * @param request ListConsumerAuthorizationRulesRequest
      * @return ListConsumerAuthorizationRulesResponse
@@ -4066,8 +4072,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>ListPluginClasses</p>
+     * <p>Obtains a plugin.</p>
      * 
      * @param request ListPluginClassesRequest
      * @param headers map
@@ -4140,8 +4149,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>ListPluginClasses</p>
+     * <p>Obtains a plugin.</p>
      * 
      * @param request ListPluginClassesRequest
      * @return ListPluginClassesResponse
@@ -4374,8 +4386,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询密钥的引用详情</p>
+     * <p>Lists key references.</p>
      * 
      * @param request ListSecretReferencesRequest
      * @param headers map
@@ -4412,8 +4427,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple services at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询密钥的引用详情</p>
+     * <p>Lists key references.</p>
      * 
      * @param request ListSecretReferencesRequest
      * @return ListSecretReferencesResponse
@@ -5867,8 +5885,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新消费者</p>
+     * <p>Updates the key.</p>
      * 
      * @param request UpdateSecretRequest
      * @param headers map
@@ -5901,8 +5922,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新消费者</p>
+     * <p>Updates the key.</p>
      * 
      * @param request UpdateSecretRequest
      * @return UpdateSecretResponse

@@ -4,17 +4,35 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ListSecretReferencesResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ok</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListSecretReferencesResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE857A85-251D-5018-8103-A38957D71***</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -57,12 +75,30 @@ public class ListSecretReferencesResponseBody extends TeaModel {
     }
 
     public static class ListSecretReferencesResponseBodyDataItemsPluginConfig extends TeaModel {
+        /**
+         * <p>The plug-in name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oauth</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The plug-in type ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pls-xxxxxxxx</p>
+         */
         @NameInMap("pluginClassId")
         public String pluginClassId;
 
+        /**
+         * <p>The plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-d4ijk56m1hkhxxxxxxxx</p>
+         */
         @NameInMap("pluginId")
         public String pluginId;
 
@@ -98,9 +134,21 @@ public class ListSecretReferencesResponseBody extends TeaModel {
     }
 
     public static class ListSecretReferencesResponseBodyDataItemsServiceConfig extends TeaModel {
+        /**
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myService</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-cvgbtcmm1hkmxxxxxxxx</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
@@ -128,9 +176,21 @@ public class ListSecretReferencesResponseBody extends TeaModel {
     }
 
     public static class ListSecretReferencesResponseBodyDataItemsConsumerConfig extends TeaModel {
+        /**
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-d0iltnem1hkhxxxxxxxx</p>
+         */
         @NameInMap("consumerId")
         public String consumerId;
 
+        /**
+         * <p>The consumer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myconsumer</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -158,12 +218,30 @@ public class ListSecretReferencesResponseBody extends TeaModel {
     }
 
     public static class ListSecretReferencesResponseBodyDataItemsMcpServerConfig extends TeaModel {
+        /**
+         * <p>The HTTP API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-d2vv43em201hxxxxxxxx</p>
+         */
         @NameInMap("httpApiId")
         public String httpApiId;
 
+        /**
+         * <p>The route name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr-cv0i5oum1hkhxxxxxxxx</p>
+         */
         @NameInMap("routeId")
         public String routeId;
 
@@ -199,21 +277,45 @@ public class ListSecretReferencesResponseBody extends TeaModel {
     }
 
     public static class ListSecretReferencesResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The information about the plug-in that references the current key.</p>
+         */
         @NameInMap("PluginConfig")
         public ListSecretReferencesResponseBodyDataItemsPluginConfig pluginConfig;
 
+        /**
+         * <p>The service information that references the current key.</p>
+         */
         @NameInMap("ServiceConfig")
         public ListSecretReferencesResponseBodyDataItemsServiceConfig serviceConfig;
 
+        /**
+         * <p>The consumer information that references the current key.</p>
+         */
         @NameInMap("consumerConfig")
         public ListSecretReferencesResponseBodyDataItemsConsumerConfig consumerConfig;
 
+        /**
+         * <p>The gateway instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
+         */
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        /**
+         * <p>MCP service information that references the current key.</p>
+         */
         @NameInMap("mcpServerConfig")
         public ListSecretReferencesResponseBodyDataItemsMcpServerConfig mcpServerConfig;
 
+        /**
+         * <p>The type of resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Plugin</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
@@ -273,15 +375,36 @@ public class ListSecretReferencesResponseBody extends TeaModel {
     }
 
     public static class ListSecretReferencesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of reference details.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListSecretReferencesResponseBodyDataItems> items;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("pageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("pageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("totalSize")
         public Integer totalSize;
 

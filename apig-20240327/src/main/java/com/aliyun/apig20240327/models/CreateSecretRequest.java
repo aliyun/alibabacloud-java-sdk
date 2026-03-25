@@ -4,21 +4,54 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretRequest extends TeaModel {
+    /**
+     * <p>The description of the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The type of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>API</p>
+     */
     @NameInMap("gatewayType")
     public String gatewayType;
 
+    /**
+     * <p>The key configuration information of KMS.</p>
+     */
     @NameInMap("kmsConfig")
     public KMSConfig kmsConfig;
 
+    /**
+     * <p>The key name. It can be up to 64 characters in length and can contain letters, digits, and underscores (_).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_secret</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The value of the KMS credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apikey-123456xxxxxxxx</p>
+     */
     @NameInMap("secretData")
     public String secretData;
 
+    /**
+     * <p>The source of the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KMS</p>
+     */
     @NameInMap("secretSource")
     public String secretSource;
 

@@ -4,17 +4,35 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class GetSecretResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ok</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The key information.</p>
+     */
     @NameInMap("data")
     public GetSecretResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE857A85-251D-5018-8103-A38957D71E20</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -57,30 +75,90 @@ public class GetSecretResponseBody extends TeaModel {
     }
 
     public static class GetSecretResponseBodyData extends TeaModel {
+        /**
+         * <p>The creation timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719386834548</p>
+         */
         @NameInMap("createTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The type of the gateway. Valid values:</p>
+         * <ul>
+         * <li>API</li>
+         * <li>AI</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
+         */
         @NameInMap("gatewayType")
         public String gatewayType;
 
+        /**
+         * <p>The KMS configuration information.</p>
+         */
         @NameInMap("kmsConfig")
         public KMSConfig kmsConfig;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysecret</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The number of resources that reference the current key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("referenceCount")
         public Integer referenceCount;
 
+        /**
+         * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
+         */
         @NameInMap("secretId")
         public String secretId;
 
+        /**
+         * <p>The source of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KMS</p>
+         */
         @NameInMap("secretSource")
         public String secretSource;
 
+        /**
+         * <p>The state of the key. Valid values:</p>
+         * <ul>
+         * <li>ENALBE</li>
+         * <li>DISABLE</li>
+         * <li>DELETED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENALBE</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The update timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725868548440</p>
+         */
         @NameInMap("updateTimestamp")
         public Long updateTimestamp;
 

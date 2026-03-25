@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListConsumerAuthorizationRulesRequest extends TeaModel {
     /**
+     * <p>API name for fuzzy search.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3</p>
      */
@@ -12,6 +14,8 @@ public class ListConsumerAuthorizationRulesRequest extends TeaModel {
     public String apiNameLike;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListConsumerAuthorizationRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned on each page. If you do not specify this parameter, the default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
