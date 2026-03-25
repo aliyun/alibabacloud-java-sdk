@@ -44,6 +44,9 @@ public class DescribeAddressBookRequest extends TeaModel {
     @NameInMap("GroupType")
     public String groupType;
 
+    @NameInMap("GroupUuid")
+    public String groupUuid;
+
     /**
      * <p>The language of the content within the request. Valid values:</p>
      * <ul>
@@ -103,6 +106,14 @@ public class DescribeAddressBookRequest extends TeaModel {
     }
     public String getGroupType() {
         return this.groupType;
+    }
+
+    public DescribeAddressBookRequest setGroupUuid(String groupUuid) {
+        this.groupUuid = groupUuid;
+        return this;
+    }
+    public String getGroupUuid() {
+        return this.groupUuid;
     }
 
     public DescribeAddressBookRequest setLang(String lang) {

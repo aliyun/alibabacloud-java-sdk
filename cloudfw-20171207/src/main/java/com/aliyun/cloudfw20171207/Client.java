@@ -4212,6 +4212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupType", request.groupType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupUuid)) {
+            query.put("GroupUuid", request.groupUuid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
