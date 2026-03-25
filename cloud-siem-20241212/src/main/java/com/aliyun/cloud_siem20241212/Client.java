@@ -2492,6 +2492,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.dataIngestionTemplateIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataIngestionTemplateIds, "DataIngestionTemplateIds", "simple");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.normalizationSchemaIds)) {
+            request.normalizationSchemaIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.normalizationSchemaIds, "NormalizationSchemaIds", "simple");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dataIngestionIdsShrink)) {
             body.put("DataIngestionIds", request.dataIngestionIdsShrink);
@@ -2507,6 +2511,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaIdsShrink)) {
+            body.put("NormalizationSchemaIds", request.normalizationSchemaIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productId)) {

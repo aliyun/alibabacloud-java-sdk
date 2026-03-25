@@ -24,6 +24,9 @@ public class ListDataIngestionsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("NormalizationSchemaIds")
+    public java.util.List<String> normalizationSchemaIds;
+
     /**
      * <strong>example:</strong>
      * <p>alibaba_cloud_sas。</p>
@@ -80,6 +83,14 @@ public class ListDataIngestionsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ListDataIngestionsRequest setNormalizationSchemaIds(java.util.List<String> normalizationSchemaIds) {
+        this.normalizationSchemaIds = normalizationSchemaIds;
+        return this;
+    }
+    public java.util.List<String> getNormalizationSchemaIds() {
+        return this.normalizationSchemaIds;
     }
 
     public ListDataIngestionsRequest setProductId(String productId) {

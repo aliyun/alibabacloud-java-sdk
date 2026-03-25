@@ -24,6 +24,9 @@ public class ListDataIngestionsShrinkRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("NormalizationSchemaIds")
+    public String normalizationSchemaIdsShrink;
+
     /**
      * <strong>example:</strong>
      * <p>alibaba_cloud_sas。</p>
@@ -80,6 +83,14 @@ public class ListDataIngestionsShrinkRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ListDataIngestionsShrinkRequest setNormalizationSchemaIdsShrink(String normalizationSchemaIdsShrink) {
+        this.normalizationSchemaIdsShrink = normalizationSchemaIdsShrink;
+        return this;
+    }
+    public String getNormalizationSchemaIdsShrink() {
+        return this.normalizationSchemaIdsShrink;
     }
 
     public ListDataIngestionsShrinkRequest setProductId(String productId) {
