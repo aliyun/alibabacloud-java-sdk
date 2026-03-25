@@ -93,7 +93,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an O\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
+     * <p>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
      * 
      * @param request AcceptApproveCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -137,7 +137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an O\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
+     * <p>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
      * 
      * @param request AcceptApproveCommandRequest
      * @return AcceptApproveCommandResponse
@@ -153,7 +153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Approves an O\\\\\\&amp;M application.</p>
+     * <p>Approves an O\\\\\\\\\\&amp;M application.</p>
      * 
      * @param request AcceptOperationTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -213,7 +213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Approves an O\\\\\\&amp;M application.</p>
+     * <p>Approves an O\\\\\\\\\\&amp;M application.</p>
      * 
      * @param request AcceptOperationTicketRequest
      * @return AcceptOperationTicketResponse
@@ -635,7 +635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes a user to manage the hosts and host accounts.</p>
+     * <p>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\&amp;M operations on the assets.</p>
      * 
      * @param request AttachHostAccountsToUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -679,7 +679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes a user to manage the hosts and host accounts.</p>
+     * <p>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\&amp;M operations on the assets.</p>
      * 
      * @param request AttachHostAccountsToUserRequest
      * @return AttachHostAccountsToUserResponse
@@ -1089,7 +1089,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After a database is created, you can create a database account for the database. After the account is created, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the database.</p>
+     * <p>After a database is created, you can create a database account for the database. After the account is created, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the database.</p>
      * 
      * @param request CreateDatabaseAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1145,7 +1145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After a database is created, you can create a database account for the database. After the account is created, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the database.</p>
+     * <p>After a database is created, you can create a database account for the database. After the account is created, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the database.</p>
      * 
      * @param request CreateDatabaseAccountRequest
      * @return CreateDatabaseAccountResponse
@@ -1157,7 +1157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建导出配置的任务</p>
+     * <p>Creates a configuration backup export task. You can run only one configuration backup export task on a bastion host at a time.</p>
      * 
      * @param request CreateExportConfigJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1193,7 +1193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建导出配置的任务</p>
+     * <p>Creates a configuration backup export task. You can run only one configuration backup export task on a bastion host at a time.</p>
      * 
      * @param request CreateExportConfigJobRequest
      * @return CreateExportConfigJobResponse
@@ -1205,7 +1205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Bastionhost allows you to perform O\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</p>
+     * <p>Bastionhost allows you to perform O\\\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\\\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</p>
      * 
      * @param request CreateHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1285,7 +1285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Bastionhost allows you to perform O\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</p>
+     * <p>Bastionhost allows you to perform O\\\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\\\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</p>
      * 
      * @param request CreateHostRequest
      * @return CreateHostResponse
@@ -1297,7 +1297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the host by using the bastion host.</p>
+     * <p>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the host by using the bastion host.</p>
      * 
      * @param request CreateHostAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1369,7 +1369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the host by using the bastion host.</p>
+     * <p>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the host by using the bastion host.</p>
      * 
      * @param request CreateHostAccountRequest
      * @return CreateHostAccountResponse
@@ -1497,7 +1497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a network domain.</p>
+     * <p>If you want to perform O\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\&amp;M operations on the assets by using the bastion host.</p>
      * 
      * @param request CreateNetworkDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1549,7 +1549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a network domain.</p>
+     * <p>If you want to perform O\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\&amp;M operations on the assets by using the bastion host.</p>
      * 
      * @param request CreateNetworkDomainRequest
      * @return CreateNetworkDomainResponse
@@ -1561,7 +1561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建运维审批工单</p>
+     * <p>If a Bastionhost administrator turns on O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</p>
      * 
      * @param request CreateOperationTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1625,7 +1625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建运维审批工单</p>
+     * <p>If a Bastionhost administrator turns on O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</p>
      * 
      * @param request CreateOperationTicketRequest
      * @return CreateOperationTicketResponse
@@ -1637,7 +1637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a command control, command approval, protocol control, or access control policy to manage O\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\&amp;M security.</p>
+     * <p>Configures a command control, command approval, protocol control, or access control policy to manage O\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\&amp;M security.</p>
      * 
      * @param request CreatePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1685,7 +1685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a command control, command approval, protocol control, or access control policy to manage O\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\&amp;M security.</p>
+     * <p>Configures a command control, command approval, protocol control, or access control policy to manage O\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\&amp;M security.</p>
      * 
      * @param request CreatePolicyRequest
      * @return CreatePolicyResponse
@@ -1905,7 +1905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a user group for the specified bastion host.</p>
+     * <p>Creates a user group for a bastion host.</p>
      * 
      * @param request CreateUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1953,7 +1953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a user group for the specified bastion host.</p>
+     * <p>Creates a user group for a bastion host.</p>
      * 
      * @param request CreateUserGroupRequest
      * @return CreateUserGroupResponse
@@ -1968,7 +1968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call the CreateUserPublicKey operation to create a public key for the specified user of a bastion host.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\&amp;M client.</p>
+     * <p>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\\\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\\\&amp;M client.</p>
      * 
      * @param request CreateUserPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2023,7 +2023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call the CreateUserPublicKey operation to create a public key for the specified user of a bastion host.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\&amp;M client.</p>
+     * <p>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\\\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\\\&amp;M client.</p>
      * 
      * @param request CreateUserPublicKeyRequest
      * @return CreateUserPublicKeyResponse
@@ -2139,7 +2139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified host.</p>
+     * <p>Deletes a host.</p>
      * 
      * @param request DeleteHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2179,7 +2179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified host.</p>
+     * <p>Deletes a host.</p>
      * 
      * @param request DeleteHostRequest
      * @return DeleteHostResponse
@@ -2583,7 +2583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified user group from a specified bastion host.</p>
+     * <p>Deletes a user group from a bastion host.</p>
      * 
      * @param request DeleteUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2623,7 +2623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified user group from a specified bastion host.</p>
+     * <p>Deletes a user group from a bastion host.</p>
      * 
      * @param request DeleteUserGroupRequest
      * @return DeleteUserGroupResponse
@@ -2747,7 +2747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>堡垒机实例列表</p>
+     * <p>Queries bastion hosts.</p>
      * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2807,7 +2807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>堡垒机实例列表</p>
+     * <p>Queries bastion hosts.</p>
      * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -3265,7 +3265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables Internet access for a bastion host.</p>
+     * <p>Disables Internet access to a bastion host.</p>
      * 
      * @param request DisableInstancePublicAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3301,7 +3301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables Internet access for a bastion host.</p>
+     * <p>Disables Internet access to a bastion host.</p>
      * 
      * @param request DisableInstancePublicAccessRequest
      * @return DisableInstancePublicAccessResponse
@@ -3365,7 +3365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables Internet access for a bastion host.</p>
+     * <p>Enables Internet access to a bastion host.</p>
      * 
      * @param request EnableInstancePublicAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3401,7 +3401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables Internet access for a bastion host.</p>
+     * <p>Enables Internet access to a bastion host.</p>
      * 
      * @param request EnableInstancePublicAccessRequest
      * @return EnableInstancePublicAccessResponse
@@ -3465,7 +3465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for an O\&amp;M token.</p>
+     * <p>Applies for an O\\\&amp;M token.</p>
      * 
      * @param request GenerateAssetOperationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3545,7 +3545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for an O\&amp;M token.</p>
+     * <p>Applies for an O\\\&amp;M token.</p>
      * 
      * @param request GenerateAssetOperationTokenRequest
      * @return GenerateAssetOperationTokenResponse
@@ -3661,7 +3661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取导出配置任务进度</p>
+     * <p>null</p>
      * 
      * @param request GetExportConfigJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3701,7 +3701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取导出配置任务进度</p>
+     * <p>null</p>
      * 
      * @param request GetExportConfigJobRequest
      * @return GetExportConfigJobResponse
@@ -4029,7 +4029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取堡垒机实例存储信息</p>
+     * <p>Queries the storage usage of a bastion host.</p>
      * 
      * @param request GetInstanceStoreInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4065,7 +4065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取堡垒机实例存储信息</p>
+     * <p>Queries the storage usage of a bastion host.</p>
      * 
      * @param request GetInstanceStoreInfoRequest
      * @return GetInstanceStoreInfoResponse
@@ -4499,6 +4499,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetUserGroupResponse getUserGroup(GetUserGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUserGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为当前主机导入 KMS 凭据</p>
+     * 
+     * @param tmpReq ImportKMSSecretsForHostRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportKMSSecretsForHostResponse
+     */
+    public ImportKMSSecretsForHostResponse importKMSSecretsForHostWithOptions(ImportKMSSecretsForHostRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ImportKMSSecretsForHostShrinkRequest request = new ImportKMSSecretsForHostShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.secrets)) {
+            request.secretsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.secrets, "Secrets", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostId)) {
+            query.put("HostId", request.hostId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secretsShrink)) {
+            query.put("Secrets", request.secretsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportKMSSecretsForHost"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportKMSSecretsForHostResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为当前主机导入 KMS 凭据</p>
+     * 
+     * @param request ImportKMSSecretsForHostRequest
+     * @return ImportKMSSecretsForHostResponse
+     */
+    public ImportKMSSecretsForHostResponse importKMSSecretsForHost(ImportKMSSecretsForHostRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importKMSSecretsForHostWithOptions(request, runtime);
     }
 
     /**
@@ -4991,7 +5053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries accounts of a specified host.</p>
+     * <p>Queries a list of host accounts.</p>
      * 
      * @param request ListHostAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5051,7 +5113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries accounts of a specified host.</p>
+     * <p>Queries a list of host accounts.</p>
      * 
      * @param request ListHostAccountsRequest
      * @return ListHostAccountsResponse
@@ -5123,7 +5185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the host accounts that the specified user is authorized to manage on the specified host.</p>
+     * <p>Queries the host accounts of a host and whether a user is authorized to manage each host account.</p>
      * 
      * @param request ListHostAccountsForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5179,7 +5241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the host accounts that the specified user is authorized to manage on the specified host.</p>
+     * <p>Queries the host accounts of a host and whether a user is authorized to manage each host account.</p>
      * 
      * @param request ListHostAccountsForUserRequest
      * @return ListHostAccountsForUserResponse
@@ -5191,7 +5253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the host accounts of the specified host that the specified user group is authorized to manage.</p>
+     * <p>Queries the host accounts of a host and whether a user group is authorized to manage each host account.</p>
      * 
      * @param request ListHostAccountsForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5247,7 +5309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the host accounts of the specified host that the specified user group is authorized to manage.</p>
+     * <p>Queries the host accounts of a host and whether a user group is authorized to manage each host account.</p>
      * 
      * @param request ListHostAccountsForUserGroupRequest
      * @return ListHostAccountsForUserGroupResponse
@@ -5855,6 +5917,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListHostsForUserGroupResponse listHostsForUserGroup(ListHostsForUserGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listHostsForUserGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出指定主机所有可导入的 KMS 凭据</p>
+     * 
+     * @param request ListImportableKMSSecretsForHostRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListImportableKMSSecretsForHostResponse
+     */
+    public ListImportableKMSSecretsForHostResponse listImportableKMSSecretsForHostWithOptions(ListImportableKMSSecretsForHostRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostId)) {
+            query.put("HostId", request.hostId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListImportableKMSSecretsForHost"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListImportableKMSSecretsForHostResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出指定主机所有可导入的 KMS 凭据</p>
+     * 
+     * @param request ListImportableKMSSecretsForHostRequest
+     * @return ListImportableKMSSecretsForHostResponse
+     */
+    public ListImportableKMSSecretsForHostResponse listImportableKMSSecretsForHost(ListImportableKMSSecretsForHostRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listImportableKMSSecretsForHostWithOptions(request, runtime);
     }
 
     /**
@@ -6519,7 +6645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags bound to one or more Bastionhost instances.</p>
+     * <p>Queries the tags that are added for one or more bastion hosts.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6571,7 +6697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags bound to one or more Bastionhost instances.</p>
+     * <p>Queries the tags that are added for one or more bastion hosts.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -7295,7 +7421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the portal type of one or more hosts for O\&amp;M.</p>
+     * <p>Changes the endpoint type of one or more hosts for O\\\&amp;M. Public and private IP addresses are supported.</p>
      * 
      * @param request ModifyHostsActiveAddressTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7339,7 +7465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the portal type of one or more hosts for O\&amp;M.</p>
+     * <p>Changes the endpoint type of one or more hosts for O\\\&amp;M. Public and private IP addresses are supported.</p>
      * 
      * @param request ModifyHostsActiveAddressTypeRequest
      * @return ModifyHostsActiveAddressTypeResponse
@@ -8057,7 +8183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about the specified user group.</p>
+     * <p>Modifies the information about a user group.</p>
      * 
      * @param request ModifyUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8105,7 +8231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about the specified user group.</p>
+     * <p>Modifies the information about a user group.</p>
      * 
      * @param request ModifyUserGroupRequest
      * @return ModifyUserGroupResponse
@@ -8353,7 +8479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an O\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
+     * <p>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
      * 
      * @param request RejectApproveCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8397,7 +8523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an O\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
+     * <p>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
      * 
      * @param request RejectApproveCommandRequest
      * @return RejectApproveCommandResponse
@@ -8713,7 +8839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews an O\&amp;M token for one hour.</p>
+     * <p>Renews an O\\\&amp;M token for one hour.</p>
      * 
      * @param request RenewAssetOperationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8753,7 +8879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews an O\&amp;M token for one hour.</p>
+     * <p>Renews an O\\\&amp;M token for one hour.</p>
      * 
      * @param request RenewAssetOperationTokenRequest
      * @return RenewAssetOperationTokenResponse
@@ -8883,7 +9009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the O&amp;M approval setting in a control policy.</p>
+     * <p>Configures the O\&amp;M approval setting in a control policy.</p>
      * 
      * @param tmpReq SetPolicyApprovalConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8933,7 +9059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the O&amp;M approval setting in a control policy.</p>
+     * <p>Configures the O\&amp;M approval setting in a control policy.</p>
      * 
      * @param request SetPolicyApprovalConfigRequest
      * @return SetPolicyApprovalConfigResponse
@@ -9075,7 +9201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures access control settings in a control policy.</p>
+     * <p>Specifies whether a source IP address can access the assets to which a control policy applies.</p>
      * 
      * @param tmpReq SetPolicyIPAclConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9125,7 +9251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures access control settings in a control policy.</p>
+     * <p>Specifies whether a source IP address can access the assets to which a control policy applies.</p>
      * 
      * @param request SetPolicyIPAclConfigRequest
      * @return SetPolicyIPAclConfigResponse
@@ -9137,7 +9263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the protocol control settings in a control policy.</p>
+     * <p>Configures the Remote Desktop Protocol (RDP) options, SSH options, and SSH Fine Transfer Protocol (SFTP) options for a control policy.</p>
      * 
      * @param tmpReq SetPolicyProtocolConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9187,7 +9313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the protocol control settings in a control policy.</p>
+     * <p>Configures the Remote Desktop Protocol (RDP) options, SSH options, and SSH Fine Transfer Protocol (SFTP) options for a control policy.</p>
      * 
      * @param request SetPolicyProtocolConfigRequest
      * @return SetPolicyProtocolConfigResponse
@@ -9263,7 +9389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the specified bastion host.</p>
+     * <p>Starts a bastion host.</p>
      * 
      * @param request StartInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9319,7 +9445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the specified bastion host.</p>
+     * <p>Starts a bastion host.</p>
      * 
      * @param request StartInstanceRequest
      * @return StartInstanceResponse
@@ -9509,7 +9635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证实例AD服务配置</p>
+     * <p>验证实例AD服务配置。</p>
      * 
      * @param request VerifyInstanceADAuthServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9581,7 +9707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证实例AD服务配置</p>
+     * <p>验证实例AD服务配置。</p>
      * 
      * @param request VerifyInstanceADAuthServerRequest
      * @return VerifyInstanceADAuthServerResponse
@@ -9593,7 +9719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证实例LDAP服务配置</p>
+     * <p>验证实例LDAP服务配置。</p>
      * 
      * @param request VerifyInstanceLDAPAuthServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9661,7 +9787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证实例LDAP服务配置</p>
+     * <p>验证实例LDAP服务配置。</p>
      * 
      * @param request VerifyInstanceLDAPAuthServerRequest
      * @return VerifyInstanceLDAPAuthServerResponse
