@@ -499,6 +499,9 @@ public class ExtendClusterRequest extends TeaModel {
         @NameInMap("LoginPassword")
         public String loginPassword;
 
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -540,6 +543,14 @@ public class ExtendClusterRequest extends TeaModel {
         }
         public String getLoginPassword() {
             return this.loginPassword;
+        }
+
+        public ExtendClusterRequestNodeGroupsHyperNodes setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         public ExtendClusterRequestNodeGroupsHyperNodes setVSwitchId(String vSwitchId) {
@@ -734,6 +745,9 @@ public class ExtendClusterRequest extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
         /**
          * <p>VSwitch ID</p>
          * 
@@ -787,6 +801,14 @@ public class ExtendClusterRequest extends TeaModel {
         }
         public String getNodeId() {
             return this.nodeId;
+        }
+
+        public ExtendClusterRequestNodeGroupsNodes setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         public ExtendClusterRequestNodeGroupsNodes setVSwitchId(String vSwitchId) {

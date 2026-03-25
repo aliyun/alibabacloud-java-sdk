@@ -531,6 +531,9 @@ public class DescribeNodeResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
         /**
          * <p>The subnet ID.</p>
          * 
@@ -539,6 +542,9 @@ public class DescribeNodeResponseBody extends TeaModel {
          */
         @NameInMap("SubnetId")
         public String subnetId;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         /**
          * <p>The ID of the cluster network.</p>
@@ -570,12 +576,28 @@ public class DescribeNodeResponseBody extends TeaModel {
             return this.ip;
         }
 
+        public DescribeNodeResponseBodyNetworks setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public DescribeNodeResponseBodyNetworks setSubnetId(String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
         public String getSubnetId() {
             return this.subnetId;
+        }
+
+        public DescribeNodeResponseBodyNetworks setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
         public DescribeNodeResponseBodyNetworks setVpdId(String vpdId) {

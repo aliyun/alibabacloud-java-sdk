@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approves an O\&amp;M operation.</p>
+     * <p>Approves an O\\\&amp;M operation.</p>
      * 
      * @param request ApproveOperationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -64,7 +64,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approves an O\&amp;M operation.</p>
+     * <p>Approves an O\\\&amp;M operation.</p>
      * 
      * @param request ApproveOperationRequest
      * @return ApproveOperationResponse
@@ -878,7 +878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除节点分组</p>
+     * <p>Delete Node Group</p>
      * 
      * @param request DeleteNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -914,7 +914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除节点分组</p>
+     * <p>Delete Node Group</p>
      * 
      * @param request DeleteNodeGroupRequest
      * @return DeleteNodeGroupResponse
@@ -1114,7 +1114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution list and status of O\&amp;M Assistant commands.</p>
+     * <p>Queries the execution list and status of O\\\&amp;M Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1158,7 +1158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution list and status of O\&amp;M Assistant commands.</p>
+     * <p>Queries the execution list and status of O\\\&amp;M Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
@@ -1302,7 +1302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Web Terminal会话</p>
+     * <p>查询节点规格详情</p>
      * 
      * @param request DescribeNodeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1334,7 +1334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Web Terminal会话</p>
+     * <p>查询节点规格详情</p>
      * 
      * @param request DescribeNodeTypeRequest
      * @return DescribeNodeTypeResponse
@@ -1390,7 +1390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the files that are sent by an O\&amp;M assistant and the status of the files.</p>
+     * <p>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</p>
      * 
      * @param request DescribeSendFileResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1426,7 +1426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the files that are sent by an O\&amp;M assistant and the status of the files.</p>
+     * <p>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</p>
      * 
      * @param request DescribeSendFileResultsRequest
      * @return DescribeSendFileResultsResponse
@@ -3086,7 +3086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops the O\&amp;M assistant command execution.</p>
+     * <p>Stops the O\\\&amp;M assistant command execution.</p>
      * 
      * @param tmpReq StopInvocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3128,7 +3128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops the O\&amp;M assistant command execution.</p>
+     * <p>Stops the O\\\&amp;M assistant command execution.</p>
      * 
      * @param request StopInvocationRequest
      * @return StopInvocationResponse
