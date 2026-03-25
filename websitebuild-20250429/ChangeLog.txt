@@ -1,3 +1,7 @@
+2026-03-25 Version: 2.19.0
+- Support API EditPluginConfig.
+
+
 2026-03-17 Version: 2.18.2
 - Update API QueryInspirationAccountDetails: add response parameters Body.Module.Data.$.Status.
 

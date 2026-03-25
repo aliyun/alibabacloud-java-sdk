@@ -882,6 +882,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>编辑插件配置</p>
+     * 
+     * @param request EditPluginConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EditPluginConfigResponse
+     */
+    public EditPluginConfigResponse editPluginConfigWithOptions(EditPluginConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginConfig)) {
+            query.put("PluginConfig", request.pluginConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginDesc)) {
+            query.put("PluginDesc", request.pluginDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
+            query.put("PluginId", request.pluginId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginName)) {
+            query.put("PluginName", request.pluginName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EditPluginConfig"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EditPluginConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑插件配置</p>
+     * 
+     * @param request EditPluginConfigRequest
+     * @return EditPluginConfigResponse
+     */
+    public EditPluginConfigResponse editPluginConfig(EditPluginConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.editPluginConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>导出素材文件</p>
      * 
      * @param tmpReq ExportMaterialFileRequest
