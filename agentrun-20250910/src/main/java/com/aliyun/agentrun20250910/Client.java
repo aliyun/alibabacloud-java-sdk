@@ -2626,6 +2626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("nextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sandboxId)) {
+            query.put("sandboxId", request.sandboxId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("status", request.status);
         }

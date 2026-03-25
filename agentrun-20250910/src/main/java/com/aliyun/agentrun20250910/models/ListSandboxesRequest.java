@@ -22,6 +22,13 @@ public class ListSandboxesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>01KMB33KCB3YRYE9C2AJCW5DQK</p>
+     */
+    @NameInMap("sandboxId")
+    public String sandboxId;
+
+    /**
+     * <strong>example:</strong>
      * <p>CREATING</p>
      */
     @NameInMap("status")
@@ -62,6 +69,14 @@ public class ListSandboxesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListSandboxesRequest setSandboxId(String sandboxId) {
+        this.sandboxId = sandboxId;
+        return this;
+    }
+    public String getSandboxId() {
+        return this.sandboxId;
     }
 
     public ListSandboxesRequest setStatus(String status) {
