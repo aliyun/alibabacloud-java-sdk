@@ -65,12 +65,18 @@ public class DescribeCouponRequest extends TeaModel {
     @NameInMap("ExpireStartDate")
     public Long expireStartDate;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     /**
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
     @NameInMap("Nbid")
     public String nbid;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
@@ -165,12 +171,28 @@ public class DescribeCouponRequest extends TeaModel {
         return this.expireStartDate;
     }
 
+    public DescribeCouponRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
     public DescribeCouponRequest setNbid(String nbid) {
         this.nbid = nbid;
         return this;
     }
     public String getNbid() {
         return this.nbid;
+    }
+
+    public DescribeCouponRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeCouponRequest setPageSize(Integer pageSize) {

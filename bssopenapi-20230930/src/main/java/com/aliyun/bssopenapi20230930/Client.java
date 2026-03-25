@@ -656,7 +656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建账单订阅</p>
+     * <p>Create a bill report subscription.</p>
      * 
      * @param request CreateReportDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -738,7 +738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建账单订阅</p>
+     * <p>Create a bill report subscription.</p>
      * 
      * @param request CreateReportDefinitionRequest
      * @return CreateReportDefinitionResponse
@@ -990,7 +990,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
         }
 
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.couponId)) {
+            query.put("CouponId", request.couponId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.couponNo)) {
+            query.put("CouponNo", request.couponNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.couponType)) {
+            query.put("CouponType", request.couponType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveEndTime)) {
+            query.put("EffectiveEndTime", request.effectiveEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveStartTime)) {
+            query.put("EffectiveStartTime", request.effectiveStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireEndDate)) {
+            query.put("ExpireEndDate", request.expireEndDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireStartDate)) {
+            query.put("ExpireStartDate", request.expireStartDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -999,7 +1055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -1036,7 +1092,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
         }
 
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.couponId)) {
+            query.put("CouponId", request.couponId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1045,7 +1125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
