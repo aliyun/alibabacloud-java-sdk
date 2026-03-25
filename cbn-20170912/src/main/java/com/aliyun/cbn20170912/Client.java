@@ -2880,7 +2880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Connects the virtual border routers (VBRs) among which you want to establish network communication to the transit router in the region. Then, the transit router can exchange data between the VBR and CEN instance over private connections.</p>
+     * <p>Connects a virtual border router (VBR) to an Enterprise Edition transit router.</p>
      * 
      * @param request CreateTransitRouterVbrAttachmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2986,7 +2986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Connects the virtual border routers (VBRs) among which you want to establish network communication to the transit router in the region. Then, the transit router can exchange data between the VBR and CEN instance over private connections.</p>
+     * <p>Connects a virtual border router (VBR) to an Enterprise Edition transit router.</p>
      * 
      * @param request CreateTransitRouterVbrAttachmentRequest
      * @return CreateTransitRouterVbrAttachmentResponse
@@ -3477,6 +3477,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a bandwidth plan.</p>
+     * 
      * @param request DeleteCenBandwidthPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCenBandwidthPackageResponse
@@ -3522,6 +3525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a bandwidth plan.</p>
+     * 
      * @param request DeleteCenBandwidthPackageRequest
      * @return DeleteCenBandwidthPackageResponse
      */
@@ -7010,7 +7016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries overlapping routes.</p>
+     * <p>Queries conflicting routes on a network instance.</p>
      * 
      * @param request DescribeRouteConflictRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7082,7 +7088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries overlapping routes.</p>
+     * <p>Queries conflicting routes on a network instance.</p>
      * 
      * @param request DescribeRouteConflictRequest
      * @return DescribeRouteConflictResponse
@@ -7094,7 +7100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of cloud services, such as the cloud service status and the ID of the associated VPC.</p>
+     * <p>Queries the cloud services that are configured on a Cloud Enterprise Network (CEN) instance.</p>
      * 
      * @param request DescribeRouteServicesInCenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7166,7 +7172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of cloud services, such as the cloud service status and the ID of the associated VPC.</p>
+     * <p>Queries the cloud services that are configured on a Cloud Enterprise Network (CEN) instance.</p>
      * 
      * @param request DescribeRouteServicesInCenRequest
      * @return DescribeRouteServicesInCenResponse
@@ -9235,6 +9241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about vSwitches that are associated with a multicast domain after the virtual private cloud (VPC) of the vSwitches is connected to an Enterprise Edition transit router.</p>
+     * 
      * @param request ListTransitRouterMulticastDomainVSwitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTransitRouterMulticastDomainVSwitchesResponse
@@ -9296,6 +9305,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about vSwitches that are associated with a multicast domain after the virtual private cloud (VPC) of the vSwitches is connected to an Enterprise Edition transit router.</p>
+     * 
      * @param request ListTransitRouterMulticastDomainVSwitchesRequest
      * @return ListTransitRouterMulticastDomainVSwitchesResponse
      */
@@ -12854,7 +12866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进行云企业网预付费带宽包临时升配</p>
+     * <p>Temporarily upgrades a subscription bandwidth plan of Cloud Enterprise Network (CEN).</p>
      * 
      * @param request TempUpgradeCenBandwidthPackageSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12910,7 +12922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进行云企业网预付费带宽包临时升配</p>
+     * <p>Temporarily upgrades a subscription bandwidth plan of Cloud Enterprise Network (CEN).</p>
      * 
      * @param request TempUpgradeCenBandwidthPackageSpecRequest
      * @return TempUpgradeCenBandwidthPackageSpecResponse
@@ -12992,7 +13004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除PrivateZone</p>
+     * <p>Disables access to PrivateZone.</p>
      * 
      * @param request UnroutePrivateZoneInCenToVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13044,7 +13056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除PrivateZone</p>
+     * <p>Disables access to PrivateZone.</p>
      * 
      * @param request UnroutePrivateZoneInCenToVpcRequest
      * @return UnroutePrivateZoneInCenToVpcResponse
@@ -13056,7 +13068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the request.</p>
+     * <p>Remove tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13120,7 +13132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the request.</p>
+     * <p>Remove tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -13495,6 +13507,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -13852,6 +13868,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -13950,6 +13970,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -14137,6 +14161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {

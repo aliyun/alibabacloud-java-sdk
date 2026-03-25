@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToCenResponseBody extends TeaModel {
-    /**
-     * <p>The permissions that are granted to the CEN instance.</p>
-     */
     @NameInMap("GrantRules")
     public DescribeGrantRulesToCenResponseBodyGrantRules grantRules;
 
@@ -99,83 +96,35 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     }
 
     public static class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule extends TeaModel {
-        /**
-         * <p>The ID of the CEN instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cen-nye53d7p3hzyu4****</p>
-         */
         @NameInMap("CenId")
         public String cenId;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1210123456123456</p>
-         */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
-        /**
-         * <p>The ID of the network instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp1rgeww9mdstuuar****</p>
-         */
         @NameInMap("ChildInstanceId")
         public String childInstanceId;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1250123456123456</p>
-         */
         @NameInMap("ChildInstanceOwnerId")
         public Long childInstanceOwnerId;
 
-        /**
-         * <p>The region ID of the network instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("ChildInstanceRegionId")
         public String childInstanceRegionId;
 
-        /**
-         * <p>The type of the network instance. Valid values:</p>
-         * <ul>
-         * <li><strong>VPC</strong>: VPC</li>
-         * <li><strong>VBR</strong>: VBR</li>
-         * <li><strong>CCN</strong>: CCN instance</li>
-         * <li><strong>VPN</strong>: IPsec-VPN connection</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
-        /**
-         * <p>The time when the permissions were granted to the CEN instance.</p>
-         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-01-24T16:27Z</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The entity that pays the fees of the network instance. Valid values:</p>
-         * <ul>
-         * <li><strong>PayByCenOwner</strong>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</li>
-         * <li><strong>PayByResourceOwner</strong>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.</li>
-         * </ul>
-         * 
+         * <strong>example:</strong>
+         * <p>PayByCenOwner</p>
+         */
+        @NameInMap("EffectiveOrderType")
+        public String effectiveOrderType;
+
+        /**
          * <strong>example:</strong>
          * <p>PayByCenOwner</p>
          */
@@ -241,6 +190,14 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setEffectiveOrderType(String effectiveOrderType) {
+            this.effectiveOrderType = effectiveOrderType;
+            return this;
+        }
+        public String getEffectiveOrderType() {
+            return this.effectiveOrderType;
         }
 
         public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setOrderType(String orderType) {

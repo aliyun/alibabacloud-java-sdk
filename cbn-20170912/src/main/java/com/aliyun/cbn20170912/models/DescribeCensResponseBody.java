@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCensResponseBody extends TeaModel {
-    /**
-     * <p>The information about the CEN instance.</p>
-     */
     @NameInMap("Cens")
     public DescribeCensResponseBodyCens cens;
 
@@ -111,21 +108,9 @@ public class DescribeCensResponseBody extends TeaModel {
     }
 
     public static class DescribeCensResponseBodyCensCenTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tagtest</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tagtest</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -172,98 +157,33 @@ public class DescribeCensResponseBody extends TeaModel {
     }
 
     public static class DescribeCensResponseBodyCensCen extends TeaModel {
-        /**
-         * <p>The IDs of the bandwidth plans that are associated with the CEN instance.</p>
-         */
         @NameInMap("CenBandwidthPackageIds")
         public DescribeCensResponseBodyCensCenCenBandwidthPackageIds cenBandwidthPackageIds;
 
-        /**
-         * <p>The CEN instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cen-0xyeagctz5sfg9****</p>
-         */
         @NameInMap("CenId")
         public String cenId;
 
-        /**
-         * <p>The time when the CEN instance was created.</p>
-         * <p>The time follows the ISO8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-10-22T07:44Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the CEN instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>desctest</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>Indicates whether IPv6 is enabled for the CEN instance.</p>
-         * <ul>
-         * <li><strong>ENABLE</strong></li>
-         * <li><strong>DISABLED</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>DISABLED</p>
-         */
         @NameInMap("Ipv6Level")
         public String ipv6Level;
 
-        /**
-         * <p>The CEN instance name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nametest</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The level of CIDR block overlapping.</p>
-         * <p><strong>REDUCED</strong>: Overlapped CIDR blocks are allowed. This value specifies that CIDR blocks can overlap but CIDR blocks cannot be duplicates.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>REDUCED</p>
-         */
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
 
-        /**
-         * <p>The ID of the resource group to which the CEN instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfm3unpnuw****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The status of the CEN instance.</p>
-         * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Active</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The IDs of the tags that are added to the CEN instance.</p>
-         */
         @NameInMap("Tags")
         public DescribeCensResponseBodyCensCenTags tags;
 

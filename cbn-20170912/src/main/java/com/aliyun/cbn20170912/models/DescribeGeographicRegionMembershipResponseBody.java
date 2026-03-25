@@ -22,9 +22,6 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The list of regions.</p>
-     */
     @NameInMap("RegionIds")
     public DescribeGeographicRegionMembershipResponseBodyRegionIds regionIds;
 
@@ -92,13 +89,6 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     }
 
     public static class DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId extends TeaModel {
-        /**
-         * <p>The ID of the region.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>us-west-1</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
-    /**
-     * <p>A list of regions.</p>
-     */
     @NameInMap("Regions")
     public DescribeChildInstanceRegionsResponseBodyRegions regions;
 
@@ -41,21 +38,9 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeChildInstanceRegionsResponseBodyRegionsRegion extends TeaModel {
-        /**
-         * <p>The name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

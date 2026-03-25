@@ -31,9 +31,6 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>A list of overlapping routes.</p>
-     */
     @NameInMap("RouteConflicts")
     public DescribeRouteConflictResponseBodyRouteConflicts routeConflicts;
 
@@ -92,57 +89,18 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteConflictResponseBodyRouteConflictsRouteConflict extends TeaModel {
-        /**
-         * <p>The destination CIDR block of the overlapping route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>172.16.0.0/16</p>
-         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
-        /**
-         * <p>The ID of the peer network instance on which the overlapping routes are found.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ccn-0q3b7oviikmm9h****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The type of the peer network instance on which the overlapping routes are found.</p>
-         * <ul>
-         * <li><strong>VPC</strong>: VPC</li>
-         * <li><strong>VBR</strong>: VBR</li>
-         * <li><strong>CCN</strong>: CCN instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>CCN</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The region ID of the peer network instance on which the overlapping routes are found is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ccn-cn-shanghai</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The cause of the route error. Valid values:</p>
-         * <ul>
-         * <li><strong>conflict</strong>: The routes have the same destination CIDR block.</li>
-         * <li><strong>overflow</strong>: The number of routes in the route table configured on another network instance has reached the upper limit.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>conflict</p>
-         */
         @NameInMap("Status")
         public String status;
 

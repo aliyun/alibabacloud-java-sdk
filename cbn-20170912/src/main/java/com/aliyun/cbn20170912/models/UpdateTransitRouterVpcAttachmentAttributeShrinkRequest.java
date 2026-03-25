@@ -43,6 +43,13 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PayByCenOwner</p>
+     */
+    @NameInMap("OrderType")
+    public String orderType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -118,6 +125,14 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    public String getOrderType() {
+        return this.orderType;
     }
 
     public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setOwnerAccount(String ownerAccount) {

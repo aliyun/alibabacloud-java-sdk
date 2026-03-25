@@ -40,9 +40,6 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     @NameInMap("PrivateZoneDnsServers")
     public String privateZoneDnsServers;
 
-    /**
-     * <p>The detailed configuration of PrivateZone.</p>
-     */
     @NameInMap("PrivateZoneInfos")
     public DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfos privateZoneInfos;
 
@@ -126,44 +123,15 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     }
 
     public static class DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo extends TeaModel {
-        /**
-         * <p>The ID of the region where PrivateZone is accessed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("AccessRegionId")
         public String accessRegionId;
 
-        /**
-         * <p>The ID of the region where PrivateZone is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("HostRegionId")
         public String hostRegionId;
 
-        /**
-         * <p>The ID of the VPC that is associated with PrivateZone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp18sth14qii3pnvo****</p>
-         */
         @NameInMap("HostVpcId")
         public String hostVpcId;
 
-        /**
-         * <p>The status of PrivateZone. Valid values:</p>
-         * <ul>
-         * <li><strong>Creating</strong>: being created</li>
-         * <li><strong>Active</strong>: available</li>
-         * <li><strong>Deleting</strong>: being deleted</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 

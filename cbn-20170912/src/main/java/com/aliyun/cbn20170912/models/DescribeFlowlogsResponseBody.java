@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowlogsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the flow log.</p>
-     */
     @NameInMap("FlowLogs")
     public DescribeFlowlogsResponseBodyFlowLogs flowLogs;
 
@@ -113,21 +110,9 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TagKey</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TagValue</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -174,142 +159,48 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowlogsResponseBodyFlowLogsFlowLog extends TeaModel {
-        /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cen-7qthudw0ll6jmc****</p>
-         */
         @NameInMap("CenId")
         public String cenId;
 
-        /**
-         * <p>The time when the flow log was created.</p>
-         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-07-24T13:00:52Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the flow log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>myFlowlog</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the flow log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>flowlog-m5evbtbpt****</p>
-         */
         @NameInMap("FlowLogId")
         public String flowLogId;
 
-        /**
-         * <p>The name of the flow log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>myFlowlog</p>
-         */
         @NameInMap("FlowLogName")
         public String flowLogName;
 
-        /**
-         * <p>The flow log version.</p>
-         * <p>Flow logs are automatically created in the latest version, which is <strong>3</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("FlowLogVersion")
         public String flowLogVersion;
 
-        /**
-         * <p>The time window for collecting log data. Unit: seconds. Valid values: <strong>60</strong> or <strong>600</strong> Default value: <strong>600</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("Interval")
         public Long interval;
 
-        /**
-         * <p>The string that defines the format of the flow log. Format:</p>
-         * <p><code>${Field 1}${Field 2}${Field 3}</code></p>
-         * 
-         * <strong>example:</strong>
-         * <p>${srcaddr}${dstaddr}${bytes}</p>
-         */
         @NameInMap("LogFormatString")
         public String logFormatString;
 
-        /**
-         * <p>The Logstore that stores the captured traffic data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FlowLogStore</p>
-         */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
-        /**
-         * <p>The name of the project that stores the captured traffic data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FlowLogProject</p>
-         */
         @NameInMap("ProjectName")
         public String projectName;
 
-        /**
-         * <p>The region ID of the flow log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The status of the flow log. Valid values:</p>
-         * <ul>
-         * <li><strong>Active</strong>: The flow log is enabled.</li>
-         * <li><strong>Inactive</strong>: The flow log is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags tags;
 
-        /**
-         * <p>The ID of the network instance connection</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tr-attach-5x4o4ynzuqbv6g****</p>
-         */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
-        /**
-         * <p>The ID of the transit router.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tr-bp1g9313sx675zr1lajmj</p>
-         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 

@@ -31,9 +31,6 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the cloud services.</p>
-     */
     @NameInMap("RouteServiceEntries")
     public DescribeRouteServicesInCenResponseBodyRouteServiceEntries routeServiceEntries;
 
@@ -111,77 +108,27 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry extends TeaModel {
-        /**
-         * <p>The ID of the region where the cloud service is accessed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("AccessRegionId")
         public String accessRegionId;
 
-        /**
-         * <p>The ID of the CEN instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cen-pfa6ugf3xl0qsd****</p>
-         */
         @NameInMap("CenId")
         public String cenId;
 
-        /**
-         * <p>The service addresses of the cloud service.</p>
-         */
         @NameInMap("Cidrs")
         public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs cidrs;
 
-        /**
-         * <p>The description of the cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>descname</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The service address of the cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100.118.28.0/24</p>
-         */
         @NameInMap("Host")
         public String host;
 
-        /**
-         * <p>The region ID of the cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("HostRegionId")
         public String hostRegionId;
 
-        /**
-         * <p>The ID of the VPC associated with the cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp1h8vbrbcgohcju5****</p>
-         */
         @NameInMap("HostVpcId")
         public String hostVpcId;
 
-        /**
-         * <p>The status of the cloud service. Valid values:</p>
-         * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Active</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 

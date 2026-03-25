@@ -26,9 +26,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>A list of resources and tags.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -62,49 +59,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The ID of the CEN instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cen-8z69wtwqel33lq****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource. Valid values:</p>
-         * <p><strong>Cen</strong>: CEN instance</p>
-         * <p><strong>BandwidthPackage</strong>: bandwidth plan</p>
-         * <p><strong>TransitRouter</strong>: transit router</p>
-         * <p><strong>TransitRouterVpcAttachment</strong>: virtual private cloud (VPC) connection</p>
-         * <p><strong>TransitRouterVbrAttachment</strong>: virtual border router (VBR) connection</p>
-         * <p><strong>TransitRouterPeerAttachment</strong>: inter-region connection</p>
-         * <p><strong>TransitRouterVpnAttachment</strong>: VPN connection</p>
-         * <p><strong>TransitRouterRouteTable</strong>: route table</p>
-         * <p><strong>Flowlog</strong>: flow log</p>
-         * <p><strong>TransitRouterMulticastDomain</strong>: multicast domain</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CEN</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Bp</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

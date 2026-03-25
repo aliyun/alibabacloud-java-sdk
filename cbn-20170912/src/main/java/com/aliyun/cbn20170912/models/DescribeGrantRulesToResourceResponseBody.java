@@ -127,6 +127,13 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <strong>example:</strong>
+         * <p>PayByCenOwner</p>
+         */
+        @NameInMap("EffectiveOrderType")
+        public String effectiveOrderType;
+
+        /**
          * <p>The entity that pays the fees of the network instance. Valid values: Valid values:</p>
          * <ul>
          * <li><strong>PayByCenOwner</strong>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</li>
@@ -166,6 +173,14 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeGrantRulesToResourceResponseBodyGrantRules setEffectiveOrderType(String effectiveOrderType) {
+            this.effectiveOrderType = effectiveOrderType;
+            return this;
+        }
+        public String getEffectiveOrderType() {
+            return this.effectiveOrderType;
         }
 
         public DescribeGrantRulesToResourceResponseBodyGrantRules setOrderType(String orderType) {

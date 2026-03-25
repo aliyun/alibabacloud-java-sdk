@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenGeographicSpansResponseBody extends TeaModel {
-    /**
-     * <p>A list of areas.</p>
-     */
     @NameInMap("GeographicSpanModels")
     public DescribeCenGeographicSpansResponseBodyGeographicSpanModels geographicSpanModels;
 
@@ -92,30 +89,12 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
     }
 
     public static class DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel extends TeaModel {
-        /**
-         * <p>The ID of the pair of connected areas.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>china_asia-pacific</p>
-         */
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;
 
-        /**
-         * <p>The ID of the local area.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>asia-pacific</p>
-         */
         @NameInMap("LocalGeoRegionId")
         public String localGeoRegionId;
 
-        /**
-         * <p>The ID of the peer area.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>china</p>
-         */
         @NameInMap("OppositeGeoRegionId")
         public String oppositeGeoRegionId;
 

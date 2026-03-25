@@ -30,6 +30,13 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PayByCenOwner</p>
+     */
+    @NameInMap("OrderType")
+    public String orderType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -91,6 +98,14 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public UpdateTransitRouterEcrAttachmentAttributeRequest setOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    public String getOrderType() {
+        return this.orderType;
     }
 
     public UpdateTransitRouterEcrAttachmentAttributeRequest setOwnerAccount(String ownerAccount) {

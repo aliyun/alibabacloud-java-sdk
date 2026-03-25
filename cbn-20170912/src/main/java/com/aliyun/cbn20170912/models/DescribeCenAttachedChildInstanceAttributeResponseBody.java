@@ -199,30 +199,9 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     }
 
     public static class DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesIpv6CidrBlocksIpv6CidrBlock extends TeaModel {
-        /**
-         * <p>The IPv6 CIDR block of the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2408:XXXX:0:6a::/56</p>
-         */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
 
-        /**
-         * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
-         * <ul>
-         * <li>BGP (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</li>
-         * <li>ChinaMobile: China Mobile (single line)</li>
-         * <li>ChinaUnicom: China Unicom (single line)</li>
-         * <li>ChinaTelecom: China Telecom (single line)</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you are on the whitelist of single-line bandwidth, you can set this parameter to ChinaTelecom, ChinaUnicom, or ChinaMobile.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>BGP</p>
-         */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
 
@@ -306,15 +285,9 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
 
-        /**
-         * <p>The IPv6 CIDR blocks of the VPC.</p>
-         */
         @NameInMap("Ipv6CidrBlocks")
         public DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesIpv6CidrBlocks ipv6CidrBlocks;
 
-        /**
-         * <p>The information about the VPC secondary CIDR block.</p>
-         */
         @NameInMap("SecondaryCidrBlocks")
         public DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesSecondaryCidrBlocks secondaryCidrBlocks;
 
