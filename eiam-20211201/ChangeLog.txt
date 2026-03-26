@@ -1,3 +1,7 @@
+2026-03-26 Version: 2.15.1
+- Update API GetInstanceLicense: add response parameters Body.License.InstanceLicenseDetail.
+
+
 2026-03-18 Version: 2.15.0
 - Support API CreateCredentialProvider.
 - Support API DeleteCredentialProvider.

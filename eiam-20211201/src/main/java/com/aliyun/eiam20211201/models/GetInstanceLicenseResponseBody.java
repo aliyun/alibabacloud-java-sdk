@@ -40,6 +40,69 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail extends TeaModel {
+        @NameInMap("ConditionalAccessPolicyLicenseStatus")
+        public String conditionalAccessPolicyLicenseStatus;
+
+        @NameInMap("M2mApplicationLicenseStatus")
+        public String m2mApplicationLicenseStatus;
+
+        @NameInMap("M2mApplicationQuota")
+        public Long m2mApplicationQuota;
+
+        @NameInMap("NetworkAccessEndpointQuota")
+        public Long networkAccessEndpointQuota;
+
+        @NameInMap("UserQuota")
+        public Long userQuota;
+
+        public static GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail self = new GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setConditionalAccessPolicyLicenseStatus(String conditionalAccessPolicyLicenseStatus) {
+            this.conditionalAccessPolicyLicenseStatus = conditionalAccessPolicyLicenseStatus;
+            return this;
+        }
+        public String getConditionalAccessPolicyLicenseStatus() {
+            return this.conditionalAccessPolicyLicenseStatus;
+        }
+
+        public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setM2mApplicationLicenseStatus(String m2mApplicationLicenseStatus) {
+            this.m2mApplicationLicenseStatus = m2mApplicationLicenseStatus;
+            return this;
+        }
+        public String getM2mApplicationLicenseStatus() {
+            return this.m2mApplicationLicenseStatus;
+        }
+
+        public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setM2mApplicationQuota(Long m2mApplicationQuota) {
+            this.m2mApplicationQuota = m2mApplicationQuota;
+            return this;
+        }
+        public Long getM2mApplicationQuota() {
+            return this.m2mApplicationQuota;
+        }
+
+        public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setNetworkAccessEndpointQuota(Long networkAccessEndpointQuota) {
+            this.networkAccessEndpointQuota = networkAccessEndpointQuota;
+            return this;
+        }
+        public Long getNetworkAccessEndpointQuota() {
+            return this.networkAccessEndpointQuota;
+        }
+
+        public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setUserQuota(Long userQuota) {
+            this.userQuota = userQuota;
+            return this;
+        }
+        public Long getUserQuota() {
+            return this.userQuota;
+        }
+
+    }
+
     public static class GetInstanceLicenseResponseBodyLicense extends TeaModel {
         /**
          * <p>Edition of the License</p>
@@ -58,6 +121,9 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
          */
         @NameInMap("EndTime")
         public Long endTime;
+
+        @NameInMap("InstanceLicenseDetail")
+        public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail instanceLicenseDetail;
 
         /**
          * <p>Payment type of the License</p>
@@ -159,6 +225,14 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public GetInstanceLicenseResponseBodyLicense setInstanceLicenseDetail(GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail instanceLicenseDetail) {
+            this.instanceLicenseDetail = instanceLicenseDetail;
+            return this;
+        }
+        public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail getInstanceLicenseDetail() {
+            return this.instanceLicenseDetail;
         }
 
         public GetInstanceLicenseResponseBodyLicense setLicenseChargeType(String licenseChargeType) {
