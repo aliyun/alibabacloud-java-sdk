@@ -1,3 +1,7 @@
+2026-03-26 Version: 2.13.0
+- Support API DescribeVSwitches.
+
+
 2026-03-05 Version: 2.12.5
 - Update API DescribeApplicationConfig: add response parameters Body.Data.SidecarContainersConfig.$.Liveness.
 - Update API DescribeApplicationConfig: add response parameters Body.Data.SidecarContainersConfig.$.Readiness.
