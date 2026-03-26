@@ -1,3 +1,7 @@
+2026-03-26 Version: 4.3.3
+- Update API SearchCloudGtmMonitorTemplates: add response parameters Body.Templates.$.CloudGtmMonitorTemplateId.
+
+
 2026-03-18 Version: 4.3.2
 - Update API ListCloudGtmMonitorNodes: add request parameters ShowDisabledNodes.
 - Update API ListCloudGtmMonitorNodes: add response parameters Body.Ipv4IspCityNodes.$.EnableStatus.

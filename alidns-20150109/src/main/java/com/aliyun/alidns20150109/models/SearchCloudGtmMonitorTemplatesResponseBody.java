@@ -96,27 +96,59 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     }
 
     public static class SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplateIspCityNodesIspCityNode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>718</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>南京市</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>629</p>
+         */
         @NameInMap("CountryCode")
         public String countryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国</p>
+         */
         @NameInMap("CountryName")
         public String countryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>运营商节点</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ISP</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>移动</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
@@ -211,6 +243,13 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     }
 
     public static class SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mtp-xxxx</p>
+         */
+        @NameInMap("CloudGtmMonitorTemplateId")
+        public String cloudGtmMonitorTemplateId;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -241,6 +280,10 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>remark content: xxxx</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
@@ -259,6 +302,14 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         public static SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplate build(java.util.Map<String, ?> map) throws Exception {
             SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplate self = new SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplate();
             return TeaModel.build(map, self);
+        }
+
+        public SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplate setCloudGtmMonitorTemplateId(String cloudGtmMonitorTemplateId) {
+            this.cloudGtmMonitorTemplateId = cloudGtmMonitorTemplateId;
+            return this;
+        }
+        public String getCloudGtmMonitorTemplateId() {
+            return this.cloudGtmMonitorTemplateId;
         }
 
         public SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplate setCreateTime(String createTime) {
