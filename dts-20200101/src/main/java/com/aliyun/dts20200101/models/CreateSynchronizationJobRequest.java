@@ -83,6 +83,12 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The ID of the region where the data synchronization instance resides. The region ID is the same as the value of the <strong>DestRegion</strong> parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

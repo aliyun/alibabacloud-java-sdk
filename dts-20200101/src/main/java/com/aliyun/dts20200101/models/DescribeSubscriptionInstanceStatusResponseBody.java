@@ -154,9 +154,6 @@ public class DescribeSubscriptionInstanceStatusResponseBody extends TeaModel {
     @NameInMap("SubscriptionInstanceName")
     public String subscriptionInstanceName;
 
-    /**
-     * <p>The objects for change tracking.</p>
-     */
     @NameInMap("SubscriptionObject")
     public DescribeSubscriptionInstanceStatusResponseBodySubscriptionObject subscriptionObject;
 
@@ -509,31 +506,12 @@ public class DescribeSubscriptionInstanceStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeSubscriptionInstanceStatusResponseBodySubscriptionObjectSynchronousObject extends TeaModel {
-        /**
-         * <p>The name of the database to which the object belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtstestdata</p>
-         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        /**
-         * <p>The table name.</p>
-         */
         @NameInMap("TableList")
         public DescribeSubscriptionInstanceStatusResponseBodySubscriptionObjectSynchronousObjectTableList tableList;
 
-        /**
-         * <p>Indicates whether the data of an entire database is tracked. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("WholeDatabase")
         public String wholeDatabase;
 

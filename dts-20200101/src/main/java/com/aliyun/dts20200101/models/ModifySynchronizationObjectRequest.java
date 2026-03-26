@@ -16,6 +16,12 @@ public class ModifySynchronizationObjectRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -58,7 +64,11 @@ public class ModifySynchronizationObjectRequest extends TeaModel {
     public String synchronizationJobId;
 
     /**
+     * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">SynchronizationObjects</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;DBName&quot;: &quot;dtstestdata&quot;}]</p>
      */
     @NameInMap("SynchronizationObjects")
     public String synchronizationObjects;

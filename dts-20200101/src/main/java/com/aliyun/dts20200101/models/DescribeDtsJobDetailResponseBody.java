@@ -16,6 +16,12 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("ApprovalProcessStatus")
+    public Long approvalProcessStatus;
+
+    @NameInMap("ApprovalProcessUrl")
+    public String approvalProcessUrl;
+
     /**
      * <p>The start of the time range for change tracking. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
      * 
@@ -594,6 +600,22 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public DescribeDtsJobDetailResponseBody setApprovalProcessStatus(Long approvalProcessStatus) {
+        this.approvalProcessStatus = approvalProcessStatus;
+        return this;
+    }
+    public Long getApprovalProcessStatus() {
+        return this.approvalProcessStatus;
+    }
+
+    public DescribeDtsJobDetailResponseBody setApprovalProcessUrl(String approvalProcessUrl) {
+        this.approvalProcessUrl = approvalProcessUrl;
+        return this;
+    }
+    public String getApprovalProcessUrl() {
+        return this.approvalProcessUrl;
     }
 
     public DescribeDtsJobDetailResponseBody setBeginTimestamp(String beginTimestamp) {

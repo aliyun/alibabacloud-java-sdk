@@ -52,9 +52,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The collection of tags.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -112,39 +109,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The ID of the DTS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtsntk10k6r12v****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The resource type. Valid value: <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIYUN::DTS::INSTANCE</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testkey1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value that corresponds to the tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testvalue1</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

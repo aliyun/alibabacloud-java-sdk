@@ -4,9 +4,6 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeConsumerGroupResponseBody extends TeaModel {
-    /**
-     * <p>The list of consumer groups.</p>
-     */
     @NameInMap("ConsumerChannels")
     public DescribeConsumerGroupResponseBodyConsumerChannels consumerChannels;
 
@@ -143,63 +140,21 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel extends TeaModel {
-        /**
-         * <p>The ID of the consumer group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtspis1110z232****</p>
-         */
         @NameInMap("ConsumerGroupID")
         public String consumerGroupID;
 
-        /**
-         * <p>The name of the consumer group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>consumergrouptest</p>
-         */
         @NameInMap("ConsumerGroupName")
         public String consumerGroupName;
 
-        /**
-         * <p>The username of the consumer group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("ConsumerGroupUserName")
         public String consumerGroupUserName;
 
-        /**
-         * <p>The consumption checkpoint, which is the time when the latest data record was consumed by the change tracking client. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-10-02T12:00:00Z</p>
-         */
         @NameInMap("ConsumptionCheckpoint")
         public String consumptionCheckpoint;
 
-        /**
-         * <p>The message delay, which is the current time minus the timestamp of the earliest unconsumed message in the change tracking instance. Unit: seconds.</p>
-         * <blockquote>
-         * <p> If the return value of this parameter is <strong>-1</strong>, no client is connected to the consumer group.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>172714</p>
-         */
         @NameInMap("MessageDelay")
         public Long messageDelay;
 
-        /**
-         * <p>The total number of unconsumed messages, which is the number of unconsumed data records plus the number of heartbeat messages.</p>
-         * <blockquote>
-         * <p> If the return value of this parameter is <strong>-1</strong>, no client is connected to the consumer group.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>186600</p>
-         */
         @NameInMap("UnconsumedData")
         public Long unconsumedData;
 

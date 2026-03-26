@@ -702,49 +702,15 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeMigrationJobStatusResponseBodyPrecheckStatusDetailCheckItem extends TeaModel {
-        /**
-         * <p>The precheck result. Valid values:</p>
-         * <ul>
-         * <li><strong>Success</strong>: The task passed the precheck.</li>
-         * <li><strong>Failed</strong>: The task failed to pass the precheck.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("CheckStatus")
         public String checkStatus;
 
-        /**
-         * <p>The error message returned if the task failed to pass the precheck.</p>
-         * <blockquote>
-         * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Original error: Access denied for user \&quot;dtstest\&quot;@\&quot;100.104.***.**\&quot; (using password: YES)</p>
-         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        /**
-         * <p>The name of the precheck item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CHECK_CONN_SRC</p>
-         */
         @NameInMap("ItemName")
         public String itemName;
 
-        /**
-         * <p>The method to fix the precheck failure.</p>
-         * <blockquote>
-         * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
-         */
         @NameInMap("RepairMethod")
         public String repairMethod;
 
@@ -807,9 +773,6 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeMigrationJobStatusResponseBodyPrecheckStatus extends TeaModel {
-        /**
-         * <p>The result of each precheck item.</p>
-         */
         @NameInMap("Detail")
         public DescribeMigrationJobStatusResponseBodyPrecheckStatusDetail detail;
 

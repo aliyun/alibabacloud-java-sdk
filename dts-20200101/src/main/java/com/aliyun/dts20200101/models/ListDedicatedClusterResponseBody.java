@@ -4,9 +4,6 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ListDedicatedClusterResponseBody extends TeaModel {
-    /**
-     * <p>The statuses of all clusters.</p>
-     */
     @NameInMap("DedicatedClusterStatusList")
     public ListDedicatedClusterResponseBodyDedicatedClusterStatusList dedicatedClusterStatusList;
 
@@ -160,193 +157,63 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     }
 
     public static class ListDedicatedClusterResponseBodyDedicatedClusterStatusListDedicatedClusterStatus extends TeaModel {
-        /**
-         * <p>The CPU utilization, in percentage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("CpuUtilization")
         public Long cpuUtilization;
 
-        /**
-         * <p>The ID of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtscluster*******</p>
-         */
         @NameInMap("DedicatedClusterId")
         public String dedicatedClusterId;
 
-        /**
-         * <p>The name of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>daily_test</p>
-         */
         @NameInMap("DedicatedClusterName")
         public String dedicatedClusterName;
 
-        /**
-         * <p>The disk usage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("DiskUtilization")
         public Long diskUtilization;
 
-        /**
-         * <p>The ID of the DTS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtsi03e3zty16i****</p>
-         */
         @NameInMap("DtsInstanceID")
         public String dtsInstanceID;
 
-        /**
-         * <p>The number of DTS units (DUs).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("Du")
         public Long du;
 
-        /**
-         * <p>The DU usage, in percentage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16.6667</p>
-         */
         @NameInMap("DuUtilization")
         public Long duUtilization;
 
-        /**
-         * <p>The time when the cluster was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1647424384606</p>
-         */
         @NameInMap("GmtCreated")
         public Long gmtCreated;
 
-        /**
-         * <p>The memory usage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("MemUtilization")
         public Long memUtilization;
 
-        /**
-         * <p>The number of nodes in the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("NodeCount")
         public Long nodeCount;
 
-        /**
-         * <p>The number of over-provisioned DUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("OversoldDu")
         public Long oversoldDu;
 
-        /**
-         * <p>The ID of the region in which the DTS instance resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The status of the cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>init</strong>: The cluster is being initialized.</li>
-         * <li><strong>schedule</strong>: The cluster is pending scheduling.</li>
-         * <li><strong>running</strong>: The cluster is running.</li>
-         * <li><strong>upgrade</strong>: The cluster is being upgraded.</li>
-         * <li><strong>downgrade</strong>: The cluster is being downgraded.</li>
-         * <li><strong>locked</strong>: The cluster is locked.</li>
-         * <li><strong>releasing</strong>: The cluster is being released.</li>
-         * <li><strong>released</strong>: The cluster is released.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>init</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <p>The total number of CPU cores.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("TotalCpuCore")
         public Long totalCpuCore;
 
-        /**
-         * <p>The total disk capacity. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2048</p>
-         */
         @NameInMap("TotalDiskGBSize")
         public Long totalDiskGBSize;
 
-        /**
-         * <p>The total memory capacity. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>256</p>
-         */
         @NameInMap("TotalMemGBSize")
         public Long totalMemGBSize;
 
-        /**
-         * <p>The number of used CPU cores.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("UsedCpuCore")
         public Long usedCpuCore;
 
-        /**
-         * <p>The used disk capacity. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1024</p>
-         */
         @NameInMap("UsedDiskGBSize")
         public Long usedDiskGBSize;
 
-        /**
-         * <p>The number of used DUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("UsedDu")
         public Long usedDu;
 
-        /**
-         * <p>The used memory capacity. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>128</p>
-         */
         @NameInMap("UsedMemGBSize")
         public Long usedMemGBSize;
 

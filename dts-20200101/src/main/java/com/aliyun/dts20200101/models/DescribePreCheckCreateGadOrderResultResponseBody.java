@@ -186,24 +186,12 @@ public class DescribePreCheckCreateGadOrderResultResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckCreateGadOrderResultResponseBodyPreCheckItemsPreCheckItems extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>CHECK_MASTER_DB_STATUS</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("Status")
         public String status;
 

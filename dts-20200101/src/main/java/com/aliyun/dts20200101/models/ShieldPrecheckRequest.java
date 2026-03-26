@@ -43,6 +43,12 @@ public class ShieldPrecheckRequest extends TeaModel {
     @NameInMap("PrecheckItems")
     public String precheckItems;
 
+    /**
+     * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

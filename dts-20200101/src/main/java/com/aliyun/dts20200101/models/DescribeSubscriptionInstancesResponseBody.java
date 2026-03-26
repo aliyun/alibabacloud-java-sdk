@@ -49,9 +49,6 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of change tracking instances and the details of each instance.</p>
-     */
     @NameInMap("SubscriptionInstances")
     public DescribeSubscriptionInstancesResponseBodySubscriptionInstances subscriptionInstances;
 
@@ -143,24 +140,9 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceSourceEndpoint extends TeaModel {
-        /**
-         * <p>The ID of the source instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-bp1162kryivb8****</p>
-         */
         @NameInMap("InstanceID")
         public String instanceID;
 
-        /**
-         * <p>The type of the source instance.</p>
-         * <blockquote>
-         * <p> This parameter is returned only for change tracking instances of the new version.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>RDS</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -188,29 +170,9 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceSubscriptionDataType extends TeaModel {
-        /**
-         * <p>Indicates whether data definition language (DDL) operations are tracked. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DDL")
         public Boolean DDL;
 
-        /**
-         * <p>Indicates whether data manipulation language (DML) operations are tracked. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DML")
         public Boolean DML;
 
@@ -238,30 +200,12 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceSubscriptionHost extends TeaModel {
-        /**
-         * <p>The private endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dts-cn-****-internal.aliyuncs.com:18002</p>
-         */
         @NameInMap("PrivateHost")
         public String privateHost;
 
-        /**
-         * <p>The public endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dts-cn-****.aliyuncs.com:18001</p>
-         */
         @NameInMap("PublicHost")
         public String publicHost;
 
-        /**
-         * <p>The virtual private cloud (VPC) endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dts-cn-****-vpc.aliyuncs.com:18003</p>
-         */
         @NameInMap("VPCHost")
         public String VPCHost;
 
@@ -316,31 +260,12 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceSubscriptionObjectSynchronousObject extends TeaModel {
-        /**
-         * <p>The name of the database to which the object belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtstestdata</p>
-         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        /**
-         * <p>The table name.</p>
-         */
         @NameInMap("TableList")
         public DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceSubscriptionObjectSynchronousObjectTableList tableList;
 
-        /**
-         * <p>Indicates whether the data of an entire database is tracked. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("WholeDatabase")
         public String wholeDatabase;
 
@@ -395,21 +320,9 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testkey1</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value that corresponds to the tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testvalue1</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -456,156 +369,54 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstance extends TeaModel {
-        /**
-         * <p>The start of the time range for change tracking. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-06-21T08:25:43Z</p>
-         */
         @NameInMap("BeginTimestamp")
         public String beginTimestamp;
 
-        /**
-         * <p>The consumption checkpoint of the change tracking instance. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-06-21T09:30:31Z</p>
-         */
         @NameInMap("ConsumptionCheckpoint")
         public String consumptionCheckpoint;
 
-        /**
-         * <p>The downstream client information, in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>114.<em><strong>.</strong></em>.<strong>:dts</strong>******</p>
-         */
         @NameInMap("ConsumptionClient")
         public String consumptionClient;
 
-        /**
-         * <p>The end of the time range for change tracking. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-06-21T10:17:21Z</p>
-         */
         @NameInMap("EndTimestamp")
         public String endTimestamp;
 
-        /**
-         * <p>The error message returned if change tracking failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxxxxxx</p>
-         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        /**
-         * <p>The time when the change tracking instance was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-06-21T02:48:20Z</p>
-         */
         @NameInMap("InstanceCreateTime")
         public String instanceCreateTime;
 
-        /**
-         * <p>The time when the change tracking task was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-06-21T02:48:20Z</p>
-         */
         @NameInMap("JobCreateTime")
         public String jobCreateTime;
 
-        /**
-         * <p>The billing method of the change tracking instance. Valid values:</p>
-         * <ul>
-         * <li><strong>PrePaid</strong>: subscription</li>
-         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PrePaid</p>
-         */
         @NameInMap("PayType")
         public String payType;
 
-        /**
-         * <p>The connection settings of the source instance.</p>
-         */
         @NameInMap("SourceEndpoint")
         public DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceSourceEndpoint sourceEndpoint;
 
-        /**
-         * <p>The status of the change tracking task. Valid values:</p>
-         * <ul>
-         * <li><strong>NotStarted</strong>: The task is not started.</li>
-         * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
-         * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
-         * <li><strong>Starting</strong>: The task is being started.</li>
-         * <li><strong>Normal</strong>: The task is running as expected.</li>
-         * <li><strong>Abnormal</strong>: The task is not running as expected.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The topic of the change tracking instance.</p>
-         * <blockquote>
-         * <p> This parameter is returned only if your change tracking instances are of the new version and you have called the <a href="https://help.aliyun.com/document_detail/122863.html">CreateConsumerGroup</a> operation to create a consumer group.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>cn_hangzhou_rm_bp1162kryivb8****_dtstest_version2</p>
-         */
         @NameInMap("SubscribeTopic")
         public String subscribeTopic;
 
-        /**
-         * <p>The types of operations that are tracked by the task.</p>
-         */
         @NameInMap("SubscriptionDataType")
         public DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceSubscriptionDataType subscriptionDataType;
 
-        /**
-         * <p>The endpoint of the change tracking instance.</p>
-         */
         @NameInMap("SubscriptionHost")
         public DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceSubscriptionHost subscriptionHost;
 
-        /**
-         * <p>The ID of the change tracking instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-bp1162kryivb8****</p>
-         */
         @NameInMap("SubscriptionInstanceID")
         public String subscriptionInstanceID;
 
-        /**
-         * <p>The name of the change tracking instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtstest</p>
-         */
         @NameInMap("SubscriptionInstanceName")
         public String subscriptionInstanceName;
 
-        /**
-         * <p>The objects for change tracking.</p>
-         */
         @NameInMap("SubscriptionObject")
         public DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceSubscriptionObject subscriptionObject;
 
-        /**
-         * <p>The collection of tags.</p>
-         */
         @NameInMap("Tags")
         public DescribeSubscriptionInstancesResponseBodySubscriptionInstancesSubscriptionInstanceTags tags;
 

@@ -171,97 +171,45 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGadInstancesResponseBodyInstancesInstances extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2024-05-29 23:55:58</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>MySQL</p>
-         */
         @NameInMap("DbEngineType")
         public String dbEngineType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("DbInstanceCount")
         public Integer dbInstanceCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rg-a76s8afa****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("InstanceRegion")
         public String instanceRegion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DR</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rm-sadfasfa****</p>
-         */
         @NameInMap("MasterDbInstanceId")
         public String masterDbInstanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("MasterDbInstanceName")
         public String masterDbInstanceName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("MasterDbInstanceRegion")
         public String masterDbInstanceRegion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("MasterDbInstanceZoneId")
         public String masterDbInstanceZoneId;
 
         @NameInMap("MasterEngineArchType")
         public Integer masterEngineArchType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rg-aekzq276dmnaxqa</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>running</p>
-         */
         @NameInMap("Status")
         public String status;
 

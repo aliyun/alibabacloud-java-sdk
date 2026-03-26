@@ -1771,7 +1771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看工作流任务结果</p>
+     * <p>Creates a document parsing task.</p>
      * 
      * @param request CreateDocParserJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1823,7 +1823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看工作流任务结果</p>
+     * <p>Creates a document parsing task.</p>
      * 
      * @param request CreateDocParserJobRequest
      * @return CreateDocParserJobResponse
@@ -2983,7 +2983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>请求所有数据校验任务数据</p>
+     * <p>Verifies data migration tasks and data synchronization tasks</p>
      * 
      * @param request DescribeCheckJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3039,7 +3039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>请求所有数据校验任务数据</p>
+     * <p>Verifies data migration tasks and data synchronization tasks</p>
      * 
      * @param request DescribeCheckJobsRequest
      * @return DescribeCheckJobsResponse
@@ -3855,7 +3855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看工作流任务结果</p>
+     * <p>Retrieves the result of a document parsing task.</p>
      * 
      * @param request DescribeDocParserJobResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3899,7 +3899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看工作流任务结果</p>
+     * <p>Retrieves the result of a document parsing task.</p>
      * 
      * @param request DescribeDocParserJobResultRequest
      * @return DescribeDocParserJobResultResponse
@@ -3911,7 +3911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看工作流任务结果</p>
+     * <p>Queries the execution status of a document parsing task.</p>
      * 
      * @param request DescribeDocParserJobStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3955,7 +3955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看工作流任务结果</p>
+     * <p>Queries the execution status of a document parsing task.</p>
      * 
      * @param request DescribeDocParserJobStatusRequest
      * @return DescribeDocParserJobStatusResponse
@@ -4095,8 +4095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The latency of incremental data migration or synchronization.
-     * \\\\\&gt;  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
+     * <p>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
      * 
      * @param request DescribeDtsJobDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4152,8 +4151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The latency of incremental data migration or synchronization.
-     * \\\\\&gt;  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
+     * <p>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
      * 
      * @param request DescribeDtsJobDetailRequest
      * @return DescribeDtsJobDetailResponse
@@ -4565,7 +4563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询GAD实例列表</p>
+     * <p>Queries the GAD instances.</p>
      * 
      * @param request DescribeGadInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4629,7 +4627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询GAD实例列表</p>
+     * <p>Queries the GAD instances.</p>
      * 
      * @param request DescribeGadInstancesRequest
      * @return DescribeGadInstancesResponse
@@ -5127,7 +5125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询预检查创建GAD订单任务结果</p>
+     * <p>Queries the result of a precheck task before a GAD instance is created.</p>
      * 
      * @param request DescribePreCheckCreateGadOrderResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5175,7 +5173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询预检查创建GAD订单任务结果</p>
+     * <p>Queries the result of a precheck task before a GAD instance is created.</p>
      * 
      * @param request DescribePreCheckCreateGadOrderResultRequest
      * @return DescribePreCheckCreateGadOrderResultResponse
@@ -6161,7 +6159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除从角色</p>
+     * <p>Removes a secondary instance</p>
      * 
      * @param request DetachGadInstanceDbMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6209,7 +6207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除从角色</p>
+     * <p>Removes a secondary instance</p>
      * 
      * @param request DetachGadInstanceDbMemberRequest
      * @return DetachGadInstanceDbMemberResponse
@@ -7539,7 +7537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改GAD实例名称</p>
+     * <p>Modifies the name of a GAD instance.</p>
      * 
      * @param request ModifyGadInstanceNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7587,7 +7585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改GAD实例名称</p>
+     * <p>Modifies the name of a GAD instance.</p>
      * 
      * @param request ModifyGadInstanceNameRequest
      * @return ModifyGadInstanceNameResponse
@@ -7879,7 +7877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预检查创建GAD订单</p>
+     * <p>Prechecks before a GAD instance is created.</p>
      * 
      * @param request PreCheckCreateGadOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7955,7 +7953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预检查创建GAD订单</p>
+     * <p>Prechecks before a GAD instance is created.</p>
      * 
      * @param request PreCheckCreateGadOrderRequest
      * @return PreCheckCreateGadOrderResponse
@@ -8229,7 +8227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调转双向任务的方向</p>
+     * <p>Reverse the direction of a two-way synchronization task.</p>
      * 
      * @param request ReverseTwoWayDirectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8273,7 +8271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调转双向任务的方向</p>
+     * <p>Reverse the direction of a two-way synchronization task.</p>
      * 
      * @param request ReverseTwoWayDirectionRequest
      * @return ReverseTwoWayDirectionResponse
@@ -9423,7 +9421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>物理迁移任务切换上云</p>
+     * <p>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</p>
      * 
      * @param request SwitchPhysicalDtsJobToCloudRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9471,7 +9469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>物理迁移任务切换上云</p>
+     * <p>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</p>
      * 
      * @param request SwitchPhysicalDtsJobToCloudRequest
      * @return SwitchPhysicalDtsJobToCloudResponse
@@ -9942,8 +9940,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The operation that you want to perform. Set the value to <strong>WhiteIpList</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>If the \\<em>\\<em>source or destination instance\\</em>\\</em> is a \\<em>\\<em>self-managed database\\</em>\\</em> or a \\<em>\\<em>third-party cloud database\\</em>\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\(<del>176627</del>).
-     * \\&gt;  If the \\<em>\\<em>source or destination database\\</em>\\</em> is an \\<em>\\<em>ApsaraDB database instance\\</em>\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\<em>\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\</em>\\</em>, you do not need to add the CIDR blocks. When you click \\<em>\\<em>Set Whitelist and Next\\</em>\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</p>
+     * <p>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
+     * \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</p>
      * 
      * @param request WhiteIpListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10038,8 +10036,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The operation that you want to perform. Set the value to <strong>WhiteIpList</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>If the \\<em>\\<em>source or destination instance\\</em>\\</em> is a \\<em>\\<em>self-managed database\\</em>\\</em> or a \\<em>\\<em>third-party cloud database\\</em>\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\(<del>176627</del>).
-     * \\&gt;  If the \\<em>\\<em>source or destination database\\</em>\\</em> is an \\<em>\\<em>ApsaraDB database instance\\</em>\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\<em>\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\</em>\\</em>, you do not need to add the CIDR blocks. When you click \\<em>\\<em>Set Whitelist and Next\\</em>\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</p>
+     * <p>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
+     * \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</p>
      * 
      * @param request WhiteIpListRequest
      * @return WhiteIpListResponse
