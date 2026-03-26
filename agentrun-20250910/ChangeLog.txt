@@ -1,3 +1,11 @@
+2026-03-26 Version: 5.6.0
+- Support API CreateTool.
+- Support API DeleteTool.
+- Support API GetTool.
+- Support API ListTools.
+- Support API UpdateTool.
+
+
 2026-03-25 Version: 5.5.3
 - Update API ListSandboxes: add request parameters sandboxId.
 
