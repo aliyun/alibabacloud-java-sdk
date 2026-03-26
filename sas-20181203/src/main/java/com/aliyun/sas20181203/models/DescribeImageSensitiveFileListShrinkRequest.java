@@ -209,6 +209,9 @@ public class DescribeImageSensitiveFileListShrinkRequest extends TeaModel {
     @NameInMap("ScanRange")
     public String scanRangeShrink;
 
+    /**
+     * <p>敏感文件Key列表</p>
+     */
     @NameInMap("SensitiveKeyList")
     public java.util.List<String> sensitiveKeyList;
 

@@ -1,3 +1,8 @@
+2026-03-26 Version: 9.1.1
+- Update API DescribeImageListBySensitiveFile: add response parameters Body.ImageInfos.$.InstanceName.
+- Update API ModifyNoticeConfig: add request parameters FocusLevel.
+
+
 2026-03-24 Version: 9.1.0
 - Support API DescribeSuspiciousSecurityEventyStatistics.
 - Support API GetAttackEventDashboard.

@@ -43564,6 +43564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizType", request.bizType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.focusLevel)) {
+            query.put("FocusLevel", request.focusLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.project)) {
             query.put("Project", request.project);
         }

@@ -154,6 +154,9 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
         /**
          * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
          * 
@@ -263,6 +266,14 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeImageListBySensitiveFileResponseBodyImageInfos setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public DescribeImageListBySensitiveFileResponseBodyImageInfos setLastScanTime(Long lastScanTime) {

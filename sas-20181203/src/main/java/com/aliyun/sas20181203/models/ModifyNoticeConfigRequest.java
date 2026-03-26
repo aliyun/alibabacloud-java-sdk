@@ -16,6 +16,9 @@ public class ModifyNoticeConfigRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    @NameInMap("FocusLevel")
+    public String focusLevel;
+
     /**
      * <p>The identifier of the notification item. Valid values:</p>
      * <ul>
@@ -109,6 +112,14 @@ public class ModifyNoticeConfigRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public ModifyNoticeConfigRequest setFocusLevel(String focusLevel) {
+        this.focusLevel = focusLevel;
+        return this;
+    }
+    public String getFocusLevel() {
+        return this.focusLevel;
     }
 
     public ModifyNoticeConfigRequest setProject(String project) {
