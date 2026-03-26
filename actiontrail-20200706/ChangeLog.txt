@@ -1,3 +1,12 @@
+2026-03-26 Version: 2.5.0
+- Support API DisableInsight.
+- Support API GetInsightSelectors.
+- Support API GetInsightTypes.
+- Support API GetInsightsEventsCount.
+- Support API LookupInsightEvents.
+- Support API PutInsightSelectors.
+
+
 2025-12-04 Version: 2.4.0
 - Support API DeleteDataEventSelector.
 - Support API GetDataEventSelector.

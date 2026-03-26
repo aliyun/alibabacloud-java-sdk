@@ -1042,6 +1042,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>关闭insight</p>
+     * 
+     * @param request DisableInsightRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableInsightResponse
+     */
+    public DisableInsightResponse disableInsightWithOptions(DisableInsightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.insightType)) {
+            query.put("InsightType", request.insightType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableInsight"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableInsightResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭insight</p>
+     * 
+     * @param request DisableInsightRequest
+     * @return DisableInsightResponse
+     */
+    public DisableInsightResponse disableInsight(DisableInsightRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableInsightWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Enables the Insights feature</p>
      * 
      * @param request EnableInsightRequest
@@ -1585,6 +1629,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取跟踪insights配置</p>
+     * 
+     * @param request GetInsightSelectorsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInsightSelectorsResponse
+     */
+    public GetInsightSelectorsResponse getInsightSelectorsWithOptions(GetInsightSelectorsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.trailName)) {
+            query.put("TrailName", request.trailName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInsightSelectors"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInsightSelectorsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取跟踪insights配置</p>
+     * 
+     * @param request GetInsightSelectorsRequest
+     * @return GetInsightSelectorsResponse
+     */
+    public GetInsightSelectorsResponse getInsightSelectors(GetInsightSelectorsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInsightSelectorsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取查询账号开启insight的类型</p>
+     * 
+     * @param request GetInsightTypesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInsightTypesResponse
+     */
+    public GetInsightTypesResponse getInsightTypesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInsightTypes"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInsightTypesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取查询账号开启insight的类型</p>
+     * @return GetInsightTypesResponse
+     */
+    public GetInsightTypesResponse getInsightTypes() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInsightTypesWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>得到当前账号的insights事件数量</p>
+     * 
+     * @param request GetInsightsEventsCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInsightsEventsCountResponse
+     */
+    public GetInsightsEventsCountResponse getInsightsEventsCountWithOptions(GetInsightsEventsCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("Date", request.date);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInsightsEventsCount"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInsightsEventsCountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>得到当前账号的insights事件数量</p>
+     * 
+     * @param request GetInsightsEventsCountRequest
+     * @return GetInsightsEventsCountResponse
+     */
+    public GetInsightsEventsCountResponse getInsightsEventsCount(GetInsightsEventsCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInsightsEventsCountWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This topic describes how to query the status of a sample single-account trail named <code>trail-test</code>.</p>
      * 
@@ -1866,6 +2040,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询Insight事件</p>
+     * 
+     * @param request LookupInsightEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LookupInsightEventsResponse
+     */
+    public LookupInsightEventsResponse lookupInsightEventsWithOptions(LookupInsightEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lookupAttribute)) {
+            query.put("LookupAttribute", request.lookupAttribute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LookupInsightEvents"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LookupInsightEventsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Insight事件</p>
+     * 
+     * @param request LookupInsightEventsRequest
+     * @return LookupInsightEventsResponse
+     */
+    public LookupInsightEventsResponse lookupInsightEvents(LookupInsightEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.lookupInsightEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建事件选择器</p>
      * 
      * @param request PutDataEventSelectorRequest
@@ -1918,6 +2152,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutDataEventSelectorResponse putDataEventSelector(PutDataEventSelectorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putDataEventSelectorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改跟踪insights功能</p>
+     * 
+     * @param request PutInsightSelectorsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PutInsightSelectorsResponse
+     */
+    public PutInsightSelectorsResponse putInsightSelectorsWithOptions(PutInsightSelectorsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.insightSelectors)) {
+            query.put("InsightSelectors", request.insightSelectors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trailName)) {
+            query.put("TrailName", request.trailName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutInsightSelectors"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutInsightSelectorsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改跟踪insights功能</p>
+     * 
+     * @param request PutInsightSelectorsRequest
+     * @return PutInsightSelectorsResponse
+     */
+    public PutInsightSelectorsResponse putInsightSelectors(PutInsightSelectorsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.putInsightSelectorsWithOptions(request, runtime);
     }
 
     /**
