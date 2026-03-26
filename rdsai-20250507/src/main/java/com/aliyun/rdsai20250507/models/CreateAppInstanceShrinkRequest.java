@@ -34,6 +34,9 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Components")
+    public String componentsShrink;
+
     /**
      * <p>A reserved parameter.</p>
      */
@@ -179,6 +182,14 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateAppInstanceShrinkRequest setComponentsShrink(String componentsShrink) {
+        this.componentsShrink = componentsShrink;
+        return this;
+    }
+    public String getComponentsShrink() {
+        return this.componentsShrink;
     }
 
     public CreateAppInstanceShrinkRequest setDBInstanceConfigShrink(String DBInstanceConfigShrink) {

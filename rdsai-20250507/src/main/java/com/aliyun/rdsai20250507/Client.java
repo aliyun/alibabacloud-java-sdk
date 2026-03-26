@@ -157,6 +157,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateAppInstanceShrinkRequest request = new CreateAppInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.components)) {
+            request.componentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.components, "Components", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.DBInstanceConfig)) {
             request.DBInstanceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.DBInstanceConfig, "DBInstanceConfig", "json");
         }
@@ -172,6 +176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentsShrink)) {
+            query.put("Components", request.componentsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceConfigShrink)) {
@@ -449,6 +457,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ReportLanguage", request.reportLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.reportRegionId)) {
+            query.put("ReportRegionId", request.reportRegionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.reportType)) {
             query.put("ReportType", request.reportType);
         }
@@ -519,6 +531,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
             query.put("ReportLanguage", request.reportLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportRegionId)) {
+            query.put("ReportRegionId", request.reportRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.reportType)) {

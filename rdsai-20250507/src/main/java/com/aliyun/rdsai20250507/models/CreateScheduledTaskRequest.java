@@ -51,6 +51,9 @@ public class CreateScheduledTaskRequest extends TeaModel {
     @NameInMap("ReportLanguage")
     public String reportLanguage;
 
+    @NameInMap("ReportRegionId")
+    public String reportRegionId;
+
     @NameInMap("ReportType")
     public String reportType;
 
@@ -123,6 +126,14 @@ public class CreateScheduledTaskRequest extends TeaModel {
     }
     public String getReportLanguage() {
         return this.reportLanguage;
+    }
+
+    public CreateScheduledTaskRequest setReportRegionId(String reportRegionId) {
+        this.reportRegionId = reportRegionId;
+        return this;
+    }
+    public String getReportRegionId() {
+        return this.reportRegionId;
     }
 
     public CreateScheduledTaskRequest setReportType(String reportType) {

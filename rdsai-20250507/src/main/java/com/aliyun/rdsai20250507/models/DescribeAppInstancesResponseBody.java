@@ -108,6 +108,36 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeAppInstancesResponseBodyInstancesComponents extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeAppInstancesResponseBodyInstancesComponents build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAppInstancesResponseBodyInstancesComponents self = new DescribeAppInstancesResponseBodyInstancesComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAppInstancesResponseBodyInstancesComponents setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeAppInstancesResponseBodyInstancesComponents setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeAppInstancesResponseBodyInstances extends TeaModel {
         /**
          * <p>The name of the AI application.</p>
@@ -126,6 +156,9 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
          */
         @NameInMap("AppType")
         public String appType;
+
+        @NameInMap("Components")
+        public java.util.List<DescribeAppInstancesResponseBodyInstancesComponents> components;
 
         /**
          * <p>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</p>
@@ -227,6 +260,14 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         }
         public String getAppType() {
             return this.appType;
+        }
+
+        public DescribeAppInstancesResponseBodyInstances setComponents(java.util.List<DescribeAppInstancesResponseBodyInstancesComponents> components) {
+            this.components = components;
+            return this;
+        }
+        public java.util.List<DescribeAppInstancesResponseBodyInstancesComponents> getComponents() {
+            return this.components;
         }
 
         public DescribeAppInstancesResponseBodyInstances setDBInstanceName(String DBInstanceName) {

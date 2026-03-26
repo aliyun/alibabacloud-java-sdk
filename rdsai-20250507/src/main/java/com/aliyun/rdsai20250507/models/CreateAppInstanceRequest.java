@@ -34,6 +34,9 @@ public class CreateAppInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Components")
+    public java.util.List<CreateAppInstanceRequestComponents> components;
+
     /**
      * <p>A reserved parameter.</p>
      */
@@ -181,6 +184,14 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateAppInstanceRequest setComponents(java.util.List<CreateAppInstanceRequestComponents> components) {
+        this.components = components;
+        return this;
+    }
+    public java.util.List<CreateAppInstanceRequestComponents> getComponents() {
+        return this.components;
+    }
+
     public CreateAppInstanceRequest setDBInstanceConfig(CreateAppInstanceRequestDBInstanceConfig DBInstanceConfig) {
         this.DBInstanceConfig = DBInstanceConfig;
         return this;
@@ -275,6 +286,25 @@ public class CreateAppInstanceRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class CreateAppInstanceRequestComponents extends TeaModel {
+        @NameInMap("Type")
+        public String type;
+
+        public static CreateAppInstanceRequestComponents build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceRequestComponents self = new CreateAppInstanceRequestComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceRequestComponents setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class CreateAppInstanceRequestDBInstanceConfig extends TeaModel {

@@ -22,6 +22,9 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("AppType")
     public String appType;
 
+    @NameInMap("Components")
+    public java.util.List<DescribeAppInstanceAttributeResponseBodyComponents> components;
+
     /**
      * <p>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</p>
      * 
@@ -157,6 +160,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         return this.appType;
     }
 
+    public DescribeAppInstanceAttributeResponseBody setComponents(java.util.List<DescribeAppInstanceAttributeResponseBodyComponents> components) {
+        this.components = components;
+        return this;
+    }
+    public java.util.List<DescribeAppInstanceAttributeResponseBodyComponents> getComponents() {
+        return this.components;
+    }
+
     public DescribeAppInstanceAttributeResponseBody setDBInstanceName(String DBInstanceName) {
         this.DBInstanceName = DBInstanceName;
         return this;
@@ -283,6 +294,36 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class DescribeAppInstanceAttributeResponseBodyComponents extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeAppInstanceAttributeResponseBodyComponents build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAppInstanceAttributeResponseBodyComponents self = new DescribeAppInstanceAttributeResponseBodyComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAppInstanceAttributeResponseBodyComponents setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeAppInstanceAttributeResponseBodyComponents setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
 }

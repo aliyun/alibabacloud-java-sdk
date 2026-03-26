@@ -1,3 +1,11 @@
+2026-03-26 Version: 2.4.2
+- Update API CreateAppInstance: add request parameters Components.
+- Update API CreateInspectionTask: add request parameters ReportRegionId.
+- Update API CreateScheduledTask: add request parameters ReportRegionId.
+- Update API DescribeAppInstanceAttribute: add response parameters Body.Components.
+- Update API DescribeAppInstances: add response parameters Body.Instances.$.Components.
+
+
 2026-03-23 Version: 2.4.1
 - Update API CreateEdgeFunction: add request parameters Code.DownloadUrl.
 - Update API UpdateEdgeFunction: add request parameters Code.DownloadUrl.
