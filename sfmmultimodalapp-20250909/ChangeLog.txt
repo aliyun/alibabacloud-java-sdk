@@ -1,3 +1,10 @@
+2026-03-26 Version: 1.1.1
+- Update API CreateMemory: add request parameters AutoUpdate.
+- Update API CreateMemory: add request parameters ExpirationTime.
+- Update API CreateMemory: add request parameters Prompt.
+- Update API CreateMemory: add response parameters Body.Data.MemoryNodes.$.OldContent.
+
+
 2026-03-02 Version: 1.1.0
 - Support API CreateMemory.
 - Support API CreateProfile.

@@ -113,6 +113,9 @@ public class CreateMemoryResponseBody extends TeaModel {
         @NameInMap("MemoryNodeId")
         public String memoryNodeId;
 
+        @NameInMap("OldContent")
+        public String oldContent;
+
         public static CreateMemoryResponseBodyDataMemoryNodes build(java.util.Map<String, ?> map) throws Exception {
             CreateMemoryResponseBodyDataMemoryNodes self = new CreateMemoryResponseBodyDataMemoryNodes();
             return TeaModel.build(map, self);
@@ -140,6 +143,14 @@ public class CreateMemoryResponseBody extends TeaModel {
         }
         public String getMemoryNodeId() {
             return this.memoryNodeId;
+        }
+
+        public CreateMemoryResponseBodyDataMemoryNodes setOldContent(String oldContent) {
+            this.oldContent = oldContent;
+            return this;
+        }
+        public String getOldContent() {
+            return this.oldContent;
         }
 
     }

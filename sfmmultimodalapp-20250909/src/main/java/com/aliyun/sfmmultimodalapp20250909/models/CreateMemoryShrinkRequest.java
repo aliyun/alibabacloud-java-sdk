@@ -13,8 +13,14 @@ public class CreateMemoryShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("AutoUpdate")
+    public Boolean autoUpdate;
+
     @NameInMap("Content")
     public String content;
+
+    @NameInMap("ExpirationTime")
+    public Integer expirationTime;
 
     @NameInMap("MessagesJson")
     public String messagesJson;
@@ -28,6 +34,9 @@ public class CreateMemoryShrinkRequest extends TeaModel {
      */
     @NameInMap("ProjectId")
     public String projectId;
+
+    @NameInMap("Prompt")
+    public String prompt;
 
     /**
      * <p>This parameter is required.</p>
@@ -60,12 +69,28 @@ public class CreateMemoryShrinkRequest extends TeaModel {
         return this.appId;
     }
 
+    public CreateMemoryShrinkRequest setAutoUpdate(Boolean autoUpdate) {
+        this.autoUpdate = autoUpdate;
+        return this;
+    }
+    public Boolean getAutoUpdate() {
+        return this.autoUpdate;
+    }
+
     public CreateMemoryShrinkRequest setContent(String content) {
         this.content = content;
         return this;
     }
     public String getContent() {
         return this.content;
+    }
+
+    public CreateMemoryShrinkRequest setExpirationTime(Integer expirationTime) {
+        this.expirationTime = expirationTime;
+        return this;
+    }
+    public Integer getExpirationTime() {
+        return this.expirationTime;
     }
 
     public CreateMemoryShrinkRequest setMessagesJson(String messagesJson) {
@@ -90,6 +115,14 @@ public class CreateMemoryShrinkRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public CreateMemoryShrinkRequest setPrompt(String prompt) {
+        this.prompt = prompt;
+        return this;
+    }
+    public String getPrompt() {
+        return this.prompt;
     }
 
     public CreateMemoryShrinkRequest setUserDefinedId(String userDefinedId) {
