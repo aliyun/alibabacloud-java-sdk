@@ -54,7 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateApiKey"),
             new TeaPair("version", "2026-03-18"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/bailianControl/apiKey/createApiKey"),
+            new TeaPair("pathname", "/maas/apikeys"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -81,27 +81,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>删除apiKey</p>
      * 
-     * @param request DeleteApiKeyRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteApiKeyResponse
      */
-    public DeleteApiKeyResponse deleteApiKeyWithOptions(DeleteApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
-            query.put("apiKeyId", request.apiKeyId);
-        }
-
+    public DeleteApiKeyResponse deleteApiKeyWithOptions(String apiKeyId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("headers", headers)
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteApiKey"),
             new TeaPair("version", "2026-03-18"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/bailianControl/apiKey/deleteApiKey"),
+            new TeaPair("pathname", "/maas/apikeys/" + com.aliyun.openapiutil.Client.getEncodeParam(apiKeyId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -114,41 +106,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>删除apiKey</p>
-     * 
-     * @param request DeleteApiKeyRequest
      * @return DeleteApiKeyResponse
      */
-    public DeleteApiKeyResponse deleteApiKey(DeleteApiKeyRequest request) throws Exception {
+    public DeleteApiKeyResponse deleteApiKey(String apiKeyId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteApiKeyWithOptions(request, headers, runtime);
+        return this.deleteApiKeyWithOptions(apiKeyId, headers, runtime);
     }
 
     /**
      * <b>summary</b> : 
      * <p>查询ApiKey详情</p>
      * 
-     * @param request GetApiKeyRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetApiKeyResponse
      */
-    public GetApiKeyResponse getApiKeyWithOptions(GetApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
-            query.put("apiKeyId", request.apiKeyId);
-        }
-
+    public GetApiKeyResponse getApiKeyWithOptions(String apiKeyId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("headers", headers)
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetApiKey"),
             new TeaPair("version", "2026-03-18"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/bailianControl/apiKey/getApiKey"),
+            new TeaPair("pathname", "/maas/apikeys/" + com.aliyun.openapiutil.Client.getEncodeParam(apiKeyId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -161,14 +143,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>查询ApiKey详情</p>
-     * 
-     * @param request GetApiKeyRequest
      * @return GetApiKeyResponse
      */
-    public GetApiKeyResponse getApiKey(GetApiKeyRequest request) throws Exception {
+    public GetApiKeyResponse getApiKey(String apiKeyId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getApiKeyWithOptions(request, headers, runtime);
+        return this.getApiKeyWithOptions(apiKeyId, headers, runtime);
     }
 
     /**
@@ -211,7 +191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListApiKeys"),
             new TeaPair("version", "2026-03-18"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/bailianControl/apiKeys"),
+            new TeaPair("pathname", "/maas/apikeys"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -266,7 +246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListWorkspaces"),
             new TeaPair("version", "2026-03-18"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/bailianControl/workspaces"),
+            new TeaPair("pathname", "/maas/workspaces"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -298,13 +278,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateApiKeyResponse
      */
-    public UpdateApiKeyResponse updateApiKeyWithOptions(UpdateApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateApiKeyResponse updateApiKeyWithOptions(String apiKeyId, UpdateApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
-            query.put("apiKeyId", request.apiKeyId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("description", request.description);
         }
@@ -317,7 +293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateApiKey"),
             new TeaPair("version", "2026-03-18"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/bailianControl/apiKey/updateApiKey"),
+            new TeaPair("pathname", "/maas/apikeys/" + com.aliyun.openapiutil.Client.getEncodeParam(apiKeyId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -334,9 +310,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param request UpdateApiKeyRequest
      * @return UpdateApiKeyResponse
      */
-    public UpdateApiKeyResponse updateApiKey(UpdateApiKeyRequest request) throws Exception {
+    public UpdateApiKeyResponse updateApiKey(String apiKeyId, UpdateApiKeyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateApiKeyWithOptions(request, headers, runtime);
+        return this.updateApiKeyWithOptions(apiKeyId, request, headers, runtime);
     }
 }

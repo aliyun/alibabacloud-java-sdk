@@ -12,8 +12,6 @@ public class CreateApiKeyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>llm-y3kv9qctnlytgmga</p>
      */
