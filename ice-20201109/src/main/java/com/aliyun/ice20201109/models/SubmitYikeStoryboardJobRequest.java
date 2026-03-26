@@ -11,6 +11,9 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     @NameInMap("AspectRatio")
     public String aspectRatio;
 
+    @NameInMap("ExecMode")
+    public String execMode;
+
     /**
      * <strong>example:</strong>
      * <p><a href="http://test.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
@@ -54,6 +57,9 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
      */
     @NameInMap("ShotSplitMode")
     public String shotSplitMode;
+
+    @NameInMap("SkipFailureShot")
+    public Boolean skipFailureShot;
 
     /**
      * <strong>example:</strong>
@@ -105,6 +111,14 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
         return this.aspectRatio;
     }
 
+    public SubmitYikeStoryboardJobRequest setExecMode(String execMode) {
+        this.execMode = execMode;
+        return this;
+    }
+    public String getExecMode() {
+        return this.execMode;
+    }
+
     public SubmitYikeStoryboardJobRequest setFileURL(String fileURL) {
         this.fileURL = fileURL;
         return this;
@@ -151,6 +165,14 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     }
     public String getShotSplitMode() {
         return this.shotSplitMode;
+    }
+
+    public SubmitYikeStoryboardJobRequest setSkipFailureShot(Boolean skipFailureShot) {
+        this.skipFailureShot = skipFailureShot;
+        return this;
+    }
+    public Boolean getSkipFailureShot() {
+        return this.skipFailureShot;
     }
 
     public SubmitYikeStoryboardJobRequest setSourceType(String sourceType) {

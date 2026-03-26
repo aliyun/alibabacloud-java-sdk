@@ -9276,7 +9276,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetMediaProducingJobResponse getMediaProducingJobWithOptions(GetMediaProducingJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -9285,7 +9289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2020-11-09"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -16050,6 +16054,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>故事板任务恢复继续执行任务</p>
+     * 
+     * @param request ResumeYikeStoryboardJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResumeYikeStoryboardJobResponse
+     */
+    public ResumeYikeStoryboardJobResponse resumeYikeStoryboardJobWithOptions(ResumeYikeStoryboardJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResumeYikeStoryboardJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeYikeStoryboardJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>故事板任务恢复继续执行任务</p>
+     * 
+     * @param request ResumeYikeStoryboardJobRequest
+     * @return ResumeYikeStoryboardJobResponse
+     */
+    public ResumeYikeStoryboardJobResponse resumeYikeStoryboardJob(ResumeYikeStoryboardJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resumeYikeStoryboardJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries online editing projects by creation time and status.</p>
      * 
      * @param request SearchEditingProjectRequest
@@ -21377,6 +21425,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AspectRatio", request.aspectRatio);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.execMode)) {
+            query.put("ExecMode", request.execMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.modelParams)) {
             query.put("ModelParams", request.modelParams);
         }
@@ -21391,6 +21443,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.shotPromptMode)) {
             query.put("ShotPromptMode", request.shotPromptMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skipFailureShot)) {
+            query.put("SkipFailureShot", request.skipFailureShot);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {

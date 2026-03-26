@@ -273,6 +273,12 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         @NameInMap("OutputUrl")
         public String outputUrl;
 
+        @NameInMap("StoryboardInfoList")
+        public String storyboardInfoList;
+
+        @NameInMap("SuccessStoryboardIds")
+        public String successStoryboardIds;
+
         /**
          * <strong>example:</strong>
          * <p>[\&quot;st_2118280473\&quot;]</p>
@@ -307,6 +313,22 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         }
         public String getOutputUrl() {
             return this.outputUrl;
+        }
+
+        public GetYikeStoryboardJobResponseBodyJobResult setStoryboardInfoList(String storyboardInfoList) {
+            this.storyboardInfoList = storyboardInfoList;
+            return this;
+        }
+        public String getStoryboardInfoList() {
+            return this.storyboardInfoList;
+        }
+
+        public GetYikeStoryboardJobResponseBodyJobResult setSuccessStoryboardIds(String successStoryboardIds) {
+            this.successStoryboardIds = successStoryboardIds;
+            return this;
+        }
+        public String getSuccessStoryboardIds() {
+            return this.successStoryboardIds;
         }
 
         public GetYikeStoryboardJobResponseBodyJobResult setSuccessStoryboardList(String successStoryboardList) {
